@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ### -ExceptIfFromMemberOf
 The ExceptIfFromMemberOf parameter specifies an exception for the auto-labeling policy rule that looks for messages sent by group members. You identify the group members by their email addresses.
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]
@@ -455,7 +455,7 @@ The ExceptIfSentTo parameter specifies an exception for the auto-labeling policy
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use this exception in auto-labeling policies that are scoped only to Exchange.
 
@@ -646,7 +646,7 @@ The SentTo parameter specifies a condition for the auto-sensitivity policy rule 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use this condition in auto-sensitivity policies that are scoped only to Exchange.
 

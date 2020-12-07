@@ -411,7 +411,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The CalendarRepairSchedule parameter specifies the intervals each week during which the Calendar Repair Assistant applies checks for calendar failures.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`. You can specify multiple schedules separated by commas: `"Schedule1","Schedule2",..."ScheduleN"`.
 
 You can use the following values for days:
 
@@ -1030,7 +1030,7 @@ This parameter is used for coexistence with Exchange 2010. Specifically, this pa
 
 The LogDirectorySizeLimitForManagedFolders parameter specifies the maximum size of all managed folder logs from a single mailbox database in the managed folder log directory on the Mailbox server. When a set of log files reaches its maximum size, the server deletes the oldest log files first.
 
-Every mailbox database on the server uses a different log file name prefix (for example, Managed\_Folder\_Assistant[Mailbox database name]). Therefore, the maximum size of the managed folder log directory is the number of mailbox databases multiplied by the value of the LogDirectorySizeLimitForManagedFolders parameter. Other files aren't counted in the total size calculation. Renaming old log files or copying other files into the managed folder log directory could cause the directory to exceed its specified maximum size.
+Every mailbox database on the server uses a different log file name prefix (for example, `Managed_Folder_Assistant<Mailbox database name>`). Therefore, the maximum size of the managed folder log directory is the number of mailbox databases multiplied by the value of the LogDirectorySizeLimitForManagedFolders parameter. Other files aren't counted in the total size calculation. Renaming old log files or copying other files into the managed folder log directory could cause the directory to exceed its specified maximum size.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -1188,7 +1188,7 @@ Accept wildcard characters: False
 
 The ManagedFolderAssistantSchedule parameter specifies the intervals each week during which the Managed Folder Assistant applies messaging records management (MRM) settings to managed folders in mailboxes on the Mailbox server.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`. You can specify multiple schedules separated by commas: `"Schedule1","Schedule2",..."ScheduleN"`.
 
 You can use the following values for days:
 
@@ -1826,7 +1826,7 @@ Accept wildcard characters: False
 ### -SharingPolicySchedule
 The SharingPolicySchedule parameter specifies the intervals each week during which the sharing policy runs on the Mailbox server. The Sharing Policy Assistant checks permissions on shared calendar items and contact folders in users' mailboxes against the assigned sharing policy. The assistant lowers or removes permissions according to the policy.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`. You can specify multiple schedules separated by commas: `"Schedule1","Schedule2",..."ScheduleN"`.
 
 You can use the following values for days:
 

@@ -285,7 +285,7 @@ Distribution groups will be created in the Users\\Groups container.
 
 The words curse, bad, and offensive will be blocked from being used in distribution group names.
 
-All distribution groups will be prefixed with "DL\_" and suffixed with an underscore (\_) and the user's department and country code.
+All distribution groups will be prefixed with `DL_` and suffixed with an underscore (\_\) and the user's department and country code.
 
 ### Example 2
 ```powershell
@@ -1846,7 +1846,7 @@ This parameter is available only in on-premises Exchange.
 
 The MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter specifies whether the default email address policy is automatically applied to the Exchange recipient. The default value is $true. If this parameter is set to $true, Exchange automatically adds new email addresses to the Exchange recipient when email address policies are added or modified in the Exchange organization. If this parameter is set to $false, you must manually add new email addresses to the Exchange recipient when email address policies are added or modified.
 
-If you change the value of the MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter from $false to $true, any email addresses that you defined by using the MicrosoftExchangeRecipientEmailAddresses parameter are preserved. However, the value of the MicrosoftExchangeRecipientPrimarySmtpAddress parameter reverts to MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@\<Accepted Domain in Highest Priority Email Address Policy\>.
+If you change the value of the MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter from $false to $true, any email addresses that you defined by using the MicrosoftExchangeRecipientEmailAddresses parameter are preserved. However, the value of the MicrosoftExchangeRecipientPrimarySmtpAddress parameter reverts to `MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@<Accepted Domain in Highest Priority Email Address Policy>`.
 
 ```yaml
 Type: Boolean

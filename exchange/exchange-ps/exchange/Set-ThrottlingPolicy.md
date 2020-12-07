@@ -1499,7 +1499,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the object in Active Directory. The default policy is named DefaultThrottlingPolicy\<GUID\>.
+The Name parameter specifies the name of the object in Active Directory. The default policy is named `DefaultThrottlingPolicy<GUID>`.
 
 ```yaml
 Type: String

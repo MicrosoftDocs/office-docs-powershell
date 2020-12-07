@@ -678,7 +678,7 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 

@@ -417,13 +417,13 @@ Accept wildcard characters: False
 ### -ExternalPostmasterAddress
 The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is blank ($null).
 
-The default value means the external postmaster address is postmaster@\<DefaultAcceptedDomain\> in the following locations:
+The default value means the external postmaster address is `postmaster@<DefaultAcceptedDomain>` in the following locations:
 
 - On Hub Transport servers or the Transport service on Mailbox servers.
 - On Edge Transport servers that are subscribed to the Exchange organization.
 - In Exchange Online.
 
-On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is postmaster@\<EdgeTransportServerFQDN\>.
+On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is `postmaster@<EdgeTransportServerFQDN>`.
 
 To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
 
@@ -478,7 +478,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 Although these DSN codes are monitored by default, the associated NDRs aren't copied to the Exchange recipient or to the external postmaster address if no mailbox is assigned to the Exchange recipient or to the external postmaster address. By default, no mailbox is assigned to the Exchange recipient or to the external postmaster address.
 
-To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of postmaster@\<Authoritative domain\> to the mailbox.
+To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of `postmaster@<AuthoritativeDomain>` to the mailbox.
 
 ```yaml
 Type: MultiValuedProperty

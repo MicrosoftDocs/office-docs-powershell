@@ -139,9 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -Domains
-The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format \<Domain\>: \<SharingPolicyAction\>.
+The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format `Domain:SharingPolicyAction`.
 
-The following sharing policy action values can be used:
+The following SharingPolicyAction values can be used:
 
 - CalendarSharingFreeBusySimple: Share free/busy hours only.
 - CalendarSharingFreeBusyDetail: Share free/busy hours, subject, and location.

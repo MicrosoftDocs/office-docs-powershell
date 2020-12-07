@@ -91,7 +91,7 @@ The ManagedBy parameter specifies a user who owns the group. You need to use thi
 - Email address
 - GUID
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...).
+You can specify multiple owners by using the following syntax: `@("User1","User2",..."UserN")`.
 
 The users you specify with this parameter aren't automatically added to the group. To add members to the group, use the Update-EOPDistributionGroupMember cmdlet.
 
@@ -160,7 +160,7 @@ You can use any value that uniquely identifies the recipient. For example:
 - Email address
 - GUID
 
-You can specify multiple recipients by using the following syntax: @("\<recipient1\>","\<recipient2\>"...).
+You can specify multiple recipients by using the following syntax: `@("Recipient1","Recipient2",..."RecipientN")`.
 
 ```yaml
 Type: String[]

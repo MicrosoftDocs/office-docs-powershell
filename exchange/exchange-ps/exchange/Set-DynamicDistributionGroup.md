@@ -1157,7 +1157,7 @@ You can specify the following types of servers as expansion servers:
 - An Exchange 2013 Mailbox server.
 - An Exchange 2010 Hub Transport server.
 
-When you specify an expansion server, use the ExchangeLegacyDN. You can find this value by running the command: Get-ExchangeServer \<ServerName\> | Format-List ExchangeLegacyDN. An example value for this parameter is "/o=Contoso/ou=Exchange Administrative Group(FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Mailbox01".
+When you specify an expansion server, use the ExchangeLegacyDN. You can find this value by running the command: `Get-ExchangeServer <ServerName> | Format-List ExchangeLegacyDN`. An example value for this parameter is "/o=Contoso/ou=Exchange Administrative Group(FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Mailbox01".
 
 ```yaml
 Type: String
@@ -1299,7 +1299,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this dynamic distribution group. Although messages send on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Group\>), replies to these messages are delivered to the group, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this dynamic distribution group. Although messages send on behalf of the group clearly show the sender in the From field (`<Sender> on behalf of <Group>`), replies to these messages are delivered to the group, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 

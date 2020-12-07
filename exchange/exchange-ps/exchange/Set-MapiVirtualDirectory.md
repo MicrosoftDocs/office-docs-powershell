@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ### -ExternalUrl
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
 
-This setting enforces the Secure Sockets Layer (SSL) protocol and uses the default SSL port. Valid input for this parameter uses the syntax https://\<Domain Name\>/mapi.
+This setting enforces the Secure Sockets Layer (SSL) protocol and uses the default SSL port. Valid input for this parameter uses the syntax `https://<Domain Name>/mapi`(for example, `https://external.contoso.com/mapi`).
 
 When you use the InternalUrl or ExternalUrl parameters, you need to specify one or more authentication values by using the IISAuthenticationMethods parameter.
 
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ### -InternalUrl
 The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
 
-This setting enforces the Secure Sockets Layer (SSL) protocol and uses the default SSL port. Valid input for this parameter uses the syntax https://\<Domain Name\>/mapi.
+This setting enforces the Secure Sockets Layer (SSL) protocol and uses the default SSL port. Valid input for this parameter uses the syntax `https://<Domain Name>/mapi` (for example, `https://internal.contoso.com/mapi`).
 
 When you use the InternalUrl or ExternalUrl parameters, you need to specify one or more authentication values by using the IISAuthenticationMethods parameter.
 

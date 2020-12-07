@@ -270,7 +270,7 @@ The CalendarMemberReadOnly switch specifies whether to set read-only Calendar pe
 - To set read-only Calendar permissions, use the CalendarMemberReadOnly switch without a value.
 - To remove read-only Calendar permissions, use this exact syntax: -CalendarMemberReadOnly:$false.
 
-To view the current value of the CalendarMemberReadOnly property on a Microsoft 365 Group, replace \<EmailAddress\> with the email address of the group, and run this command: Get-UnifiedGroup -Identity \<EmailAddress\> -IncludeAllProperties | Format-List \*Calendar\*.
+To view the current value of the CalendarMemberReadOnly property on a Microsoft 365 Group, replace `<EmailAddress>` with the email address of the group, and run this command: `Get-UnifiedGroup -Identity <EmailAddress> -IncludeAllProperties | Format-List *Calendar*`.
 
 ```yaml
 Type: SwitchParameter
@@ -773,7 +773,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Microsoft 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Office365Group\>), replies to these messages are delivered to the group, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Microsoft 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (`<Sender> on behalf of <Microsoft 365 Group>`), replies to these messages are delivered to the group, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
@@ -992,7 +992,7 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 

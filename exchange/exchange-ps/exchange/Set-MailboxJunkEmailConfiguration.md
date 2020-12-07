@@ -186,8 +186,8 @@ The Enabled parameter enables or disables the junk email rule on the mailbox (a 
 
 You can view the status of the junk email rule by running either of the following commands to find the Enabled property value:
 
-- Get-MailboxJunkEmailConfiguration -Identity \<MailboxIdentity\>
-- On-premises Exchange only: Get-InboxRule "Junk E-mail Rule" -Mailbox \<MailboxIdentity\> -IncludeHidden
+- `Get-MailboxJunkEmailConfiguration -Identity <MailboxIdentity>`
+- On-premises Exchange only: `Get-InboxRule "Junk E-mail Rule" -Mailbox <MailboxIdentity> -IncludeHidden`
 
 The state of the junk email rule on the mailbox doesn't affect the client-side junk email settings that are available in the Outlook Junk Email Filter. Even when the junk email rule is disabled in the mailbox, Outlook can still move messages to the Junk Email folder. For example, if Outlook determines the message is spam, or the sender is defined in the Blocked Senders list, Outlook can move the message to the Junk Email folder. For more information, see [Overview of the Junk Email Filter](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
 

@@ -756,7 +756,7 @@ You can specify the following types of servers as expansion servers:
 - An Exchange 2013 or later Mailbox server.
 - An Exchange 2010 Hub Transport server.
 
-When you specify an expansion server, use the ExchangeLegacyDN. You can find this value by running the command: Get-ExchangeServer \<ServerName\> | Format-List ExchangeLegacyDN. An example value for this parameter is "/o=Contoso/ou=Exchange Administrative Group(FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Mailbox01".
+When you specify an expansion server, use the ExchangeLegacyDN. You can find this value by running the command: `Get-ExchangeServer <ServerName> | Format-List ExchangeLegacyDN`. An example value for this parameter is "/o=Contoso/ou=Exchange Administrative Group(FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Mailbox01".
 
 ```yaml
 Type: String
@@ -898,7 +898,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this group. Although messages send on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Group\>), replies to these messages are delivered to the group, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this group. Although messages send on behalf of the group clearly show the sender in the From field (`<Sender> on behalf of <Group>`), replies to these messages are delivered to the group, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
@@ -1059,9 +1059,9 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple owners and overwrite all existing entries, use the following syntax: \<owner1\>,\<owner2\>,...\<ownerN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<owner1\>","\<owner2\>",..."\<ownerN\>".
+To enter multiple owners and overwrite all existing entries, use the following syntax: `Owner1,Owner2,...OwnerN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Owner1","Owner2",..."OwnerN"`.
 
-To add or remove owners without affecting other existing entries, use the following syntax: @{Add="\<owner1\>","\<owner2\>"...; Remove="\<owner3\>","\<owner4\>"...}.
+To add or remove owners without affecting other existing entries, use the following syntax: `@{Add="Owner1","Owner2",...; Remove="Owner3","Owner4"...}`.
 
 An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
 
@@ -1468,7 +1468,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters `! # $ % ^ & - _ { } ~`. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String

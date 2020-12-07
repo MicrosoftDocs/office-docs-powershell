@@ -833,7 +833,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail contact. Although messages sent on behalf of the mail contact clearly show the sender in the From field (\<Sender\> on behalf of \<Mail contact\>), replies to these messages are delivered to the mail contact, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail contact. Although messages sent on behalf of the mail contact clearly show the sender in the From field (`<Sender> on behalf of <Mail contact>`), replies to these messages are delivered to the mail contact, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 

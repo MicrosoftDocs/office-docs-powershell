@@ -165,7 +165,7 @@ The DlIdentity parameter specifies the distribution group (also known as a distr
 
 All the properties and membership of the distribution group are copied to the Microsoft 365 Group.
 
-The alias and proxy addresses of the distribution group are moved to the Microsoft 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
+The alias and proxy addresses of the distribution group are moved to the Microsoft 365 Group, and are replaced on the distribution group by the values `DLMigrated_<GUID>`. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
 
 Microsoft 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Microsoft 365 Group. The Microsoft 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Microsoft 365 Group.
 
@@ -214,7 +214,7 @@ If you don't use the Alias parameter when you create a Microsoft 365 Group, the 
 
 When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
-The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Microsoft 365 Group ("Alias\_\<ExternalDirectoryObjectId\>"\).
+The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Microsoft 365 Group (`<Alias>_<ExternalDirectoryObjectId>`).
 
 ```yaml
 Type: String
@@ -510,7 +510,7 @@ The Members parameter specifies the recipients (mail-enabled objects) that are m
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -528,7 +528,7 @@ Accept wildcard characters: False
 ### -Name
 This parameter has been deprecated and is no longer used.
 
-Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Microsoft 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\).
+Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Microsoft 365 Group (`Name_<RandomGUID>`). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value (`<Alias>_<ExternalDirectoryObjectId>`).
 
 ```yaml
 Type: String

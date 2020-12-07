@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ### -NotifyUser
 The NotifyUser parameter specifies the email addressesfor notification messages. You can specify internal and external email addresses.
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

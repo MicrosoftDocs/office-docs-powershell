@@ -84,9 +84,9 @@ New-ExchangeCertificate
 
 This example creates a self-signed certificate with the following settings:
 
-The Subject value is CN=\<ServerName\> (for example, CN=Mailbox01).
+The Subject value is `CN=<ServerName>` (for example, CN=Mailbox01).
 
-The Domains (subject alternative names) value is \<ServerName\>, \<ServerFQDN\> (for example, Mailbox01,Mailbox01.contoso.com).
+The Domains (subject alternative names) value is `<ServerName>,<ServerFQDN>` (for example, `Mailbox01,Mailbox01.contoso.com`).
 
 The Services value is IMAP,POP,SMTP
 
@@ -323,7 +323,7 @@ For example, if the organization has the accepted domains woodgrovebank.com and 
 
 When you use this switch:
 
-- If you've already included the value autodiscover.\<AcceptedDomain\> in the DomainName parameter, the value isn't duplicated in the Subject Alternative Name field.
+- If you've already included the value `autodiscover.<AcceptedDomain>` in the DomainName parameter, the value isn't duplicated in the Subject Alternative Name field.
 - For new self-signed certificates, if you don't use the Services parameter, the certificate is only assigned to SMTP.
 
 ```yaml
@@ -527,7 +527,7 @@ The SubjectName parameter specifies the Subject field of the certificate request
 
 Every certificate requires a value for the Subject field, and only one value is allowed. The requestor attempts to match the destination server name or FQDN with the common name (CN) value of subject.
 
-This parameter uses the syntax: [C=\<CountryOrRegion\>,S=\<StateOrProvince\>,L=LocalityOrCity,O=\<Organization\>,OU=\<Department\>],CN=\<HostNameOrFQDN\>. Although the only required value is CN=\<HostNameOrFQDN\>, you should always include C=\<CountryOrRegion\> for certificate requests, but other values might also be required by the certification authority.
+This parameter uses the syntax: `[C=CountryOrRegion,S=StateOrProvince,L=LocalityOrCity,O=Organization,OU=Department],CN=HostNameOrFQDN`. Although the only required value is `CN=HostNameOrFQDN`, you should always include `C=CountryOrRegion` for certificate requests, but other values might also be required by the certification authority.
 
 For example, if you want the certificate's subject to be mail.contoso.com in the United States, you can use any of the following values:
 

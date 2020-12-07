@@ -110,7 +110,7 @@ The AddressLists parameter specifies the address lists or global address lists t
 - Distinguished name (DN)
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can find the identify values of address lists and global address lists by using the Get-AddressList and Get-GlobalAddressList cmdlets.
 
@@ -302,7 +302,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 

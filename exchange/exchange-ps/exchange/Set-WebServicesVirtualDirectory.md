@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateAuthentication
-The CertificateAuthentication parameter specifies whether certificate authentication is enabled. This parameter affects the \<Servername\>/ews/management/ virtual directory. It doesn't affect the \<Servername\>/ews/ virtual directory.
+The CertificateAuthentication parameter specifies whether certificate authentication is enabled. This parameter affects the `<Servername>/ews/management/` virtual directory. It doesn't affect the `<Servername>/ews/` virtual directory.
 
 ```yaml
 Type: Boolean

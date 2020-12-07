@@ -134,7 +134,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If no mailboxes are specified, then no mailboxes are placed on hold.
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ### -SharePointLocation
 The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
-To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 SharePoint Online sites can't be added to the policy until they have been indexed. If no sites are specified, then no sites are placed on hold.
 

@@ -150,7 +150,7 @@ The DatabaseList parameter specifies a list of databases to which the scope shou
 - Distinguished name (DN)
 - GUID
 
-You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the DatabaseRestrictionFilter, ServerList, RecipientRestrictionFilter, RecipientRoot, or ServerRestrictionFilter parameters.
 
@@ -233,7 +233,7 @@ The ServerList parameter specifies a list of servers to which the scope should b
 - Distinguished name (DN)
 - Exchange Legacy DN
 
-You can specify multiple values separated by commas. If the values contains spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>,"..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contains spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerRestrictionFilter parameters.
 

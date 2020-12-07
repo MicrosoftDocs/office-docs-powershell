@@ -43,10 +43,10 @@ This example removes the specified user configuration item from the mailbox juli
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user configuration item that you want to remove. This parameter uses the syntax \<MailboxFolder\>\\\<ItemName\>:
+The Identity parameter specifies the user configuration item that you want to remove. This parameter uses the syntax MailboxFolder\ItemName:
 
-- Valid values for \<MailboxFolder\> are folder names (for example, Inbox or Calendar), the value Configuration, or the value Root. Wildcards (\*) aren't supported.
-- Valid values for \<ItemName\> start with IPM.Configuration (for example, IPM.Configuration.Aggregated.OwaUserConfiguration. Wildcards (\*) are supported.
+- Valid values for MailboxFolder are folder names (for example, Inbox or Calendar), the value Configuration, or the value Root. Wildcards (\*) aren't supported.
+- Valid values for ItemName start with IPM.Configuration (for example, IPM.Configuration.Aggregated.OwaUserConfiguration. Wildcards (\*) are supported.
 
 ```yaml
 Type: MailboxUserConfigurationIdParameter
