@@ -47,8 +47,12 @@ Get the cross users that have been moved out the current SPO site
 ## PARAMETERS
 
 ### -Direction
+Used to specify move direction.
 
-PARAMVALUE: String
+Possible values
+
+- MoveIn
+- MoveOut
 
 ```yaml
 Type: String
