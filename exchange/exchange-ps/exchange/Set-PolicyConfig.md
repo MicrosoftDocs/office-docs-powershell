@@ -254,7 +254,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleErrorAction
-{{ Fill RuleErrorAction Description }}
+The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
+
+- Ignore
+- RetryThenBlock (This is the default value)
 
 ```yaml
 Type: PolicyRuleErrorAction
@@ -271,7 +274,11 @@ Accept wildcard characters: False
 ```
 
 ### -SenderAddressLocation
-{{ Fill SenderAddressLocation Description }}
+The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
+
+- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value.
+- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
+- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 
 ```yaml
 Type: PolicySenderAddressLocation
