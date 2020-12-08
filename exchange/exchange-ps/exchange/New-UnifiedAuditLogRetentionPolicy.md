@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ### -Operations
 The Operations parameter specifies the audit log operations that are retained by the policy. For a list of the available values for this parameter, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If you use this parameter, you must also use the RecordTypes parameter to specify the record type. You can't use this parameter if you've specified more than one value for the RecordTypes parameter.
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter specifies the audit logs that are retained by the policy based on the ID of the user who performed the action.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

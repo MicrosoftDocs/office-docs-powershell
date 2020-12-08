@@ -48,7 +48,7 @@ The Identity parameter specifies the address list that you want to update. You c
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 ```yaml
 Type: AddressListIdParameter

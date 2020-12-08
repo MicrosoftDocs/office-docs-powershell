@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Queue
-The Queue parameter specifies the identity of the queue that contains the messages that you want to display. Valid input for this parameter uses the syntax \<Server\>\\\<Queue\> or \<Queue\>, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in Find queues and messages in queues in the Exchange Management Shell.
+The Queue parameter specifies the identity of the queue that contains the messages that you want to display. Valid input for this parameter uses the syntax `<Server>\<Queue>` or `<Queue>`, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
 
 If you use the Queue parameter, you can't use the Identity, Filter or Server parameters.
 
