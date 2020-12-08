@@ -330,7 +330,7 @@ Accept wildcard characters: False
 ### -ExceptUsernameMatchesAnyOfPatterns
 This parameter is available only in the cloud-based service.
 
-The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character.
+The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
 You can enter multiple values separated by commas.
 
@@ -393,7 +393,7 @@ Accept wildcard characters: False
 ### -UsernameMatchesAnyOfPatterns
 This parameter is available only in the cloud-based service.
 
-The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character. This parameter does not work with the -AnyOfProtocols UniversalOutlook parameter.
+The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character. This parameter does not work with the -AnyOfProtocols UniversalOutlook parameter.
 
 You can enter multiple values separated by commas.
 

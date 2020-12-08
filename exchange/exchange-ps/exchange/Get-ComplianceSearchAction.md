@@ -84,7 +84,7 @@ This example shows a summary list of all compliance search actions.
 
 ### Example 2
 ```powershell
-Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
+Get-ComplianceSearchAction -Identity "Case 1234\_Preview" | Format-List
 ```
 
 This example shows details about the compliance search action named "Case 1234\_Preview"
@@ -94,7 +94,7 @@ This example shows details about the compliance search action named "Case 1234\_
 ### -Identity
 The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
 
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> . For example, Case 1234\_Preview.
+- Name: The compliance search action name uses the syntax `"Compliance Search Name\_Action"`. For example, `"Case 1234\_Preview"`.
 - JobRunId (GUID)
 
 ```yaml
@@ -109,7 +109,6 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
-
 
 ### -Case
 This parameter is reserved for internal Microsoft use.

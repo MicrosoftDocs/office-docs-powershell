@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ### -DefaultAliasPrefixEnabled
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
-- $true: Aliases get the default prefix text. This is the default value. In Microsoft 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
+- $true: Aliases get the default prefix text. This is the default value. In Microsoft 365, the default prefix text is `SMO-` (for example, the alias value `BugBash_2016` becomes `SMO-BugBash_2016`). In on-premises Exchange, the default prefix text is `SM-` (for example, the alias value `BugBash_2016` becomes `SM-BugBash_2016`).
 - $false: Aliases don't get the default prefix text.
 
 The value of this parameter is related to the value of the AliasPrefix parameter. If you specify a text string for AliasPrefix, the DefaultAliasPrefixEnabled value is ignored. Specifying a text value for AliasPrefix automatically sets the value to $false, but even if you set it to $true, the default alias prefix text isn't used.

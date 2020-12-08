@@ -13,7 +13,7 @@ ms.reviewer: navgupta
 # Get-EXOMailboxPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 Use the Get-EXOMailboxPermission cmdlet to retrieve permissions on a mailbox.
 
@@ -192,6 +192,8 @@ The user that you specify for this parameter must be a user or security group (a
 - Distinguished name (DN)
 - Canonical DN
 - GUID
+
+**Note**: Currently, the value that you provide for this parameter is case sensitive.
 
 ```yaml
 Type: String

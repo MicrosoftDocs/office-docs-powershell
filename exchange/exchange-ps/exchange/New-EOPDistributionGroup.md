@@ -91,7 +91,7 @@ The ManagedBy parameter specifies a user who owns the group. You need to use thi
 - Email address
 - GUID
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...).
+You can specify multiple owners by using the following syntax: `@("User1","User2",..."UserN")`.
 
 The users you specify with this parameter aren't automatically added to the group. To add members to the group, use the Update-EOPDistributionGroupMember cmdlet.
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the email alias of the distribution group. The Alias parameter value is used to generate the primary SMTP email address if you don't use the PrimarySmtpAddress parameter.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters: ``! # $ % & ' * + - / = ? ^ _ ` { | } ~``. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 If you don't use the Alias parameter when you create a group, the value of the Name parameter is used for the alias. This value is also used in the primary SMTP email address. Spaces are removed and unsupported characters are converted to question marks (?).
 
@@ -160,7 +160,7 @@ You can use any value that uniquely identifies the recipient. For example:
 - Email address
 - GUID
 
-You can specify multiple recipients by using the following syntax: @("\<recipient1\>","\<recipient2\>"...).
+You can specify multiple recipients by using the following syntax: `@("Recipient1","Recipient2",..."RecipientN")`.
 
 ```yaml
 Type: String[]

@@ -884,7 +884,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters `! # $ % ^ & - _ { } ~`. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -921,7 +921,8 @@ The SimpleDisplayName parameter is used to display an alternative description of
 - a - z
 - A - Z
 - 0 - 9
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":", and "?".
+- space
+- `" ' ( ) + , - . / : ?`
 
 ```yaml
 Type: String
@@ -1043,17 +1044,17 @@ Accept wildcard characters: False
 ### -UMDtmfMap
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
-- emailAddress:\<integers\>
-- lastNameFirstName:\<integers\>
-- firstNameLastName:\<integers\>
+- `emailAddress:<integers>`
+- `lastNameFirstName:<integers>`
+- `firstNameLastName:<integers>`
 
-To enter values that overwrite all existing entries, use the following syntax: emailAddress:\<integers\>,lastNameFirstName:\<integers\>,firstNameLastName:\<integers\>.
+To enter values that overwrite all existing entries, use the following syntax: `emailAddress:<integers>,lastNameFirstName:<integers>,firstNameLastName:<integers>`.
 
-If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only emailAddress:\<integers\>, all existing lastNameFirstName and firstNameLastName values are removed.
+If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only `emailAddress:<integers>`, all existing lastNameFirstName and firstNameLastName values are removed.
 
-To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
+To add or remove values without affecting other existing entries, use the following syntax: `@{Add="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"; Remove="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"}`.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use `@{Add="emailAddress:<integers1>","emailAddress:<integers2>}` to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1071,7 +1072,7 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
 
 ```yaml
 Type: String

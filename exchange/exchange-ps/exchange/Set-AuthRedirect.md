@@ -51,7 +51,7 @@ This example sets the TargetURL value for all existing OAuth redirection objects
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the existing OAuth redirection object that you want to modify. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
+The Identity parameter specifies the existing OAuth redirection object that you want to modify. The object name uses the syntax `AuthRedirect-Bearer-GUID`. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
 
 ```yaml
 Type: AuthRedirectIdParameter

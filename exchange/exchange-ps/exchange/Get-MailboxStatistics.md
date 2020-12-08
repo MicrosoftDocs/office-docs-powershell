@@ -126,14 +126,16 @@ This example returns the summary move history for the completed move request for
 
 ### Example 8
 ```powershell
-$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory; $temp.MoveHistory[0]
+$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory
+$temp.MoveHistory[0]
 ```
 
 This example returns the detailed move history for the completed move request for Ayla Kol's mailbox. This example uses a temporary variable to store the mailbox statistics object. If the mailbox has been moved multiple times, there are multiple move reports. The last move report is always MoveReport[0].
 
 ### Example 9
 ```powershell
-$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport; $temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
+$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport
+$temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
 ```
 
 This example returns the detailed move history and a verbose detailed move report for Ayla Kol's mailbox. This example uses a temporary variable to store the move request statistics object and outputs the move report to a CSV file.
@@ -382,7 +384,7 @@ This parameter is available only in on-premises Exchange.
 
 The IncludeQuarantineDetails switch specifies whether to return additional quarantine details about the mailbox that aren't otherwise included in the results. You can use these details to determine when and why the mailbox was quarantined.
 
-Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, Get-MailboxStatistics \<MailboxIdentity\> -IncludeQuarantineDetails | Format-List Quarantine\*.
+Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, `Get-MailboxStatistics <MailboxIdentity> -IncludeQuarantineDetails | Format-List Quarantine*`.
 
 ```yaml
 Type: SwitchParameter

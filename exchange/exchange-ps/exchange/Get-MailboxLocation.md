@@ -70,7 +70,7 @@ In Exchange Online, this example returns the mailbox location information for th
 Get-MailboxLocation -Identity e15664af-82ed-4635-b02a-df7c2e03d950
 ```
 
-In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of Get-Mailbox -Identity \<MailboxIdentity\> | Format-List ExchangeGuid).
+In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of `Get-Mailbox -Identity <MailboxIdentity> | Format-List ExchangeGuid`).
 
 ## PARAMETERS
 
@@ -101,12 +101,12 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the either of the following formats:
 
-- \<TenantGUID\>\\\<MailboxGUID\>
-- \<MailboxGUID\>
+- TenantGUID\\MailboxGUID
+- MailboxGUID
 
-In Exchange Server or Exchange Online, you can run the following command to find and compare the \<MailboxGUID\> values for the user: Get-Mailbox -Identity \<MailboxIdentity\> \| Format-List *GUID,MailboxLocations.
+In Exchange Server or Exchange Online, you can run the following command to find and compare the MailboxGUID values for the user: `Get-Mailbox -Identity <MailboxIdentity> | Format-List *GUID,MailboxLocations`.
 
-In Exchange Online, you can find the \<TenantGUID\> and \<MailboxGUID\> values after you run Get-MailboxLocation with the User parameter.
+In Exchange Online, you can find the TenantGUID and MailboxGUID values after you run Get-MailboxLocation with the User parameter.
 
 You can't use this parameter with the User parameter.
 

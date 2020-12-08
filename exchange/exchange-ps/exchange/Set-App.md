@@ -47,7 +47,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$a= Get-DistributionGroupMember -Identity "Finance Team"; Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
+$a= Get-DistributionGroupMember -Identity "Finance Team"
+Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
 ```
 
 This example changes the organization app named FinanceTestApp, which was installed to everyone in the organization, to be provided to members of the Finance Team group and to be enabled by default.
@@ -226,7 +227,7 @@ Valid values are mailboxes or mail users in your organization. You can use any v
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>". Maximum size of the list is 1000 recipients.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`. Maximum size of the list is 1000 recipients.
 
 You use this parameter with the OrganizationApp switch.
 

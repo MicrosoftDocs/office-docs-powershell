@@ -44,7 +44,8 @@ This example adds the custom resource properties Room/Whiteboard and Equipment/V
 
 ### Example 2
 ```powershell
-Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
+Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"
+Remove="Equipment/Laptop"}
 ```
 
 This example adds the custom resource property Room/TV and removes Equipment/Laptop without affecting other custom resource properties that are already configured.
@@ -89,11 +90,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourcePropertySchema
-The ResourcePropertySchema parameter specifies the custom resource property that you want to make available to room or equipment mailboxes. This parameter uses the syntax Room/\<Text\> or Equipment/\<Text\> where the \<Text\> value doesn't contain spaces. For example, Room/Whiteboard or Equipment/Van. You can specify multiple values separated by commas.
+The ResourcePropertySchema parameter specifies the custom resource property that you want to make available to room or equipment mailboxes. This parameter uses the syntax `Room/<Text>` or `Equipment/<Text>` where the `<Text>` value doesn't contain spaces. For example, `Room/Whiteboard` or `Equipment/Van`. You can specify multiple values separated by commas.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty

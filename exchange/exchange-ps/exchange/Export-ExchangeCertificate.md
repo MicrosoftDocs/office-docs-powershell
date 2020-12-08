@@ -107,8 +107,8 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate or certificate request that you want to export. Valid values are:
 
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-- \<Thumbprint\>
+- `ServerNameOrFQDN\Thumbprint`
+- `Thumbprint`
 
 You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\<Server>\<Share>`). If the value contains spaces, enclose the value in quotation marks (").
+The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

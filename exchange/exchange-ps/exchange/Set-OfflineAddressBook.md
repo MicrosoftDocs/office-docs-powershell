@@ -99,7 +99,7 @@ The AddressLists parameter specifies the address lists or global address lists t
 - Distinguished name (DN)
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can find the identify values of address lists and global address lists by using the Get-AddressList and Get-GlobalAddressList cmdlets.
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredAttributes
-The ConfiguredAttributes parameter specifies the recipient MAPI properties that are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
+The ConfiguredAttributes parameter specifies the recipient MAPI properties that are available in the OAB. This parameter uses the syntax: `"Name1,Type1","Name2,Type2",..."NameN,TypeN"` where Name is the name of the MAPI property (for example, MobileTelephoneNumber), and Type is the value ANR (ambiguous name resolution), Value, or Indicator.
 
 To reset this parameter back to the default values, use the UseDefaultAttributes switch.
 
@@ -409,7 +409,7 @@ Note: In Exchange 2013 or later, this parameter is no longer responsible for the
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -524,11 +524,11 @@ The VirtualDirectories parameter specifies the OAB virtual directories that acce
 
 You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 The default value of this parameter is the Client Access services (frontend) and backend OAB virtual directories on the Mailbox server that holds the OAB generation mailbox (the GeneratingMailbox parameter or SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}) when you created the OAB (for example, Mailbox01\\OAB (Default Web Site),Mailbox01\\OAB (Exchange Back End).
 

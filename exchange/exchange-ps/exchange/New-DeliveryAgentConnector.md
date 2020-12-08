@@ -62,7 +62,7 @@ The address space for the connector is c=US;a=Fabrikam;p=Contoso.
 ## PARAMETERS
 
 ### -AddressSpaces
-The AddressSpaces parameter specifies the domain names for which this delivery agent connector is responsible. The syntax for entering an address space is as follows: \<AddressSpaceType\>:\<AddressSpace\>;\<AddressSpaceCost\>. You must enclose each address space in quotation marks (").
+The AddressSpaces parameter specifies the domain names that the delivery agent connector is responsible for. The complete syntax for entering an address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`. Enclose each address space in quotation marks (").
 
 ```yaml
 Type: MultiValuedProperty
