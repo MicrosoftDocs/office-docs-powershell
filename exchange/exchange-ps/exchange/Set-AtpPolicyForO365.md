@@ -123,7 +123,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
