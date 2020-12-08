@@ -32,7 +32,8 @@ Get-MobileDevice -Mailbox <MailboxIdParameter>
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -47,7 +48,8 @@ Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -282,7 +284,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following properties:
 

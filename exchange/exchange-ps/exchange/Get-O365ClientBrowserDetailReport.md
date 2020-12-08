@@ -25,7 +25,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-O365ClientBrowserDetailReport [-Browser <String>] [-BrowserVersion <String>] [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-WindowsLiveID <String>] [<CommonParameters>]
+Get-O365ClientBrowserDetailReport [-Browser <String>]
+ [-BrowserVersion <String>]
+ [-EndDate <DateTime>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WindowsLiveID <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

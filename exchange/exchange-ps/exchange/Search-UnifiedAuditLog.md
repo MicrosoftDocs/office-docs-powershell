@@ -47,6 +47,10 @@ If you want to programmatically download data from the Microsoft 365 audit log, 
 
 This cmdlet is available in Office 365 operated by 21Vianet, but it won't return any results.
 
+The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
+
+`$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null`
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -58,7 +62,7 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
 
 This example searches the unified audit log for all events from May 1, 201812:00AM to May 2, 2018 12:00AM.
 
-Note: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
+**Note**: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
 ### Example 2
 ```powershell
@@ -67,8 +71,7 @@ Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM"
 
 This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2018.
 
->[!NOTE]
-> If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
+**Note** If you use the same date for the StartDate and EndDate parameters, you need to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
 ### Example 3
 ```powershell
@@ -77,8 +80,7 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "Unified
 
 This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
-> [!NOTE]
-> If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
+**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
 ### Example 4
 ```powershell
@@ -197,7 +199,7 @@ The ObjectIds parameter filters the log entries by object ID. The object ID is t
 
 The ObjectId value appears in the AuditData (also known as Details) property of the event.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: String[]
@@ -215,7 +217,7 @@ Accept wildcard characters: False
 ### -Operations
 The Operations parameter filters the log entries by operation. The available values for this parameter depend on the RecordType value. For a list of the available values for this parameter, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: String[]
@@ -231,79 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the log entries by record type. Valid values are:
-
-- AeD
-- AirInvestigation
-- ApplicationAudit
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- Campaign
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- ComplianceDLPSharePointClassification
-- ComplianceSupervisionExchange
-- CustomerKeyServiceEncryption
-- CRM
-- DataCenterSecurityCmdlet
-- DataGovernance
-- DataInsightsRestApiAudit
-- Discovery
-- DLPEndpoint
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemAggregated
-- ExchangeItemGroup
-- HRSignal
-- HygieneEvent
-- InformationWorkerProtection
-- InformationBarrierPolicyApplication
-- Kaizala
-- LabelContentExplorer
-- MailSubmission
-- MicrosoftFlow
-- MicrosoftForms
-- MicrosoftTeamsAnalytics
-- MicrosoftTeams
-- MicrosoftTeamsAdmin
-- MicrosoftTeamsDevice
-- MicrosoftTeamsAddOns
-- MicrosoftStream
-- MicrosoftTeamsSettingsOperation
-- MipAutoLabelSharePointItem
-- MipAutoLabelSharePointPolicyLocation
-- MIPLabel
-- OfficeNative
-- OneDrive
-- PowerBIAudit
-- Project
-- PowerAppsApp
-- PowerAppsPlan
-- Quarantine
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointCommentOperation
-- SharePointContentTypeOperation
-- SharePointFileOperation
-- SharePointFieldOperation
-- SharePointListOperation
-- SharePointListItemOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- SyntheticProbe
-- ThreatFinder
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- TeamsHealthcare
-- WorkplaceAnalytics
-- Yammer
+The RecordType parameter filters the log entries by record type. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 ```yaml
 Type: AuditRecordType
@@ -340,7 +270,7 @@ The SessionCommand parameter specifies how much information is returned and how 
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
 - ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results.
 
-**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.
+**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
 ```yaml
 Type: UnifiedAuditSessionCommand
@@ -394,7 +324,7 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter filters the log entries by the ID of the user who performed the action.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: String[]
@@ -419,9 +349,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
-The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
-
-$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
 
 ## NOTES
 

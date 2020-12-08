@@ -34,18 +34,21 @@ New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter>
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
  [-SkipDatabaseLogFolderCreation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Recovery
 ```
-New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter> [-Recovery]
+New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter>
+ [-Recovery]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
  [-SkipDatabaseLogFolderCreation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -180,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -EdbFilePath
-The EdbFilePath parameter specifies the path to the database files. The default value is %programfiles%\\Microsoft\\Exchange Server\\V15\\Mailbox\\\<Database name\>.edb.
+The EdbFilePath parameter specifies the path to the database files. The default location is `%ExchangeInstallPath%Mailbox\<Mailbox DB Name>\<Mailbox DB Name>.edb`.
 
 ```yaml
 Type: EdbFilePath
@@ -244,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogFolderPath
-The LogFolderPath parameter specifies the folder location for log files.
+The LogFolderPath parameter specifies the folder location for log files.The default location is `%ExchangeInstallPath%Mailbox\<Mailbox DB Name>`
 
 ```yaml
 Type: NonRootLocalLongFullPath

@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxSentItemsConfiguration [-DomainController <Fqdn>] [-Identity <MailboxIdParameter>]
+Get-MailboxSentItemsConfiguration [-DomainController <Fqdn>]
+ [-Identity <MailboxIdParameter>]
  [<CommonParameters>]
 ```
 

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallRouterSettings [[-Server] <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMCallRouterSettings [[-Server] <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

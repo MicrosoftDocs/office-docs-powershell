@@ -32,12 +32,15 @@ New-ManagedFolder [-Name] <String> -DefaultFolderType <DefaultManagedFolderType>
  [-LocalizedComment <MultiValuedProperty>]
  [-MustDisplayCommentEnabled <Boolean>]
  [-Organization <OrganizationIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ManagedCustomFolder
 ```
-New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <MultiValuedProperty>] [-StorageQuota <Unlimited>]
+New-ManagedFolder [-Name] <String> -FolderName <String>
+ [-LocalizedFolderName <MultiValuedProperty>]
+ [-StorageQuota <Unlimited>]
  [-BaseFolderOnly <Boolean>]
  [-Comment <String>]
  [-Confirm]
@@ -45,7 +48,8 @@ New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <M
  [-LocalizedComment <MultiValuedProperty>]
  [-MustDisplayCommentEnabled <Boolean>]
  [-Organization <OrganizationIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

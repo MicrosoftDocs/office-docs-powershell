@@ -38,7 +38,8 @@ Set-EdgeSyncServiceConfig [-Identity] <EdgeSyncServiceConfigIdParameter>
  [-Name <String>]
  [-OptionDuration <EnhancedTimeSpan>]
  [-RecipientSyncInterval <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

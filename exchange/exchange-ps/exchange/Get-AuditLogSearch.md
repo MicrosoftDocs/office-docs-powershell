@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuditLogSearch [[-Identity] <AuditLogSearchIdParameter>] [-CreatedAfter <ExDateTime>]
- [-CreatedBefore <ExDateTime>] [-ResultSize <Int32>] [-Type <String>] [<CommonParameters>]
+Get-AuditLogSearch [[-Identity] <AuditLogSearchIdParameter>]
+ [-CreatedAfter <ExDateTime>]
+ [-CreatedBefore <ExDateTime>]
+ [-ResultSize <Int32>]
+ [-Type <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +51,22 @@ Get-AuditLogSearch -Type admin
 This example returns a list of current administrator audit log searches.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the GUID for an audit log search. You can run the command Get-AuditLogSearch | Format-List Identity to display the GUIDs for all current audit log searches.
+
+```yaml
+Type: AuditLogSearchIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -CreatedAfter
 The CreatedAfter parameter filters the results to audit log searches that were created after the specified date.
@@ -81,22 +101,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID for an audit log search. You can run the command Get-AuditLogSearch | Format-List Identity to display the GUIDs for all current audit log searches.
-
-```yaml
-Type: AuditLogSearchIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

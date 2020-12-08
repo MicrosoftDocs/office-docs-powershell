@@ -25,9 +25,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-HybridMailflow [-CentralizedTransportEnabled <Boolean>] [-CertificateSubject <String>] [-Confirm]
- [-InboundIPs <IPRange[]>] [-OnPremisesFQDN <Fqdn>] [-OutboundDomains <SmtpDomainWithSubdomains[]>]
- [-SecureMailEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+Set-HybridMailflow [-CentralizedTransportEnabled <Boolean>]
+ [-CertificateSubject <String>]
+ [-Confirm]
+ [-InboundIPs <IPRange[]>]
+ [-OnPremisesFQDN <Fqdn>]
+ [-OutboundDomains <SmtpDomainWithSubdomains[]>]
+ [-SecureMailEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

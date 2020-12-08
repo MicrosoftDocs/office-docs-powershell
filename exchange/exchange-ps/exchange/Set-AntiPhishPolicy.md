@@ -52,7 +52,8 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-TargetedUserActionRecipients <MultiValuedProperty>]
  [-TargetedUserProtectionAction <ImpersonationAction>]
  [-TargetedUsersToProtect <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,14 +70,13 @@ This example modifies the default antiphish policy named Office365 AntiPhish Def
 
 ### Example 2
 ```powershell
-Set-AntiPhishPolicy -Identity "Office365 AntiPhish Default" -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedDomainProtectionAction Quarantine -EnableTargetedUserProtection $true -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -TargetedUserProtectionAction Quarantine -EnableMailboxIntelligence $true -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -EnableUnusualCharactersSafetyTips $true
+Set-AntiPhishPolicy -Identity "Office365 AntiPhish Default" -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedDomainProtectionAction Quarantine -EnableTargetedUserProtection $true -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -TargetedUserProtectionAction Quarantine -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -EnableUnusualCharactersSafetyTips $true
 ```
 
-In Advanced Threat Protection, this example modifies the default antiphish policy named Office365 AntiPhish Default with the following settings:
+In Microsoft Defender for Office 365, this example modifies the default antiphish policy named Office365 AntiPhish Default with the following settings:
 
 - Enables organization domains protection for all accepted domains, and targeted domains protection for fabrikam.com.
 - Specifies Mai Fujito (mfujito@fabrikam.com) as a user to protect from impersonation.
-- Enables mailbox intelligence.
 - Enables mailbox intelligence protection, and specifies the quarantine action.
 - Enables impersonation safety tips (impersonated domains, impersonated users, and unusual characters).
 
@@ -200,12 +200,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMailboxIntelligence
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in domain and user impersonation protection. Valid values are:
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (artificial intelligence that determines user email patterns with their frequent contacts). Valid values are::
 
-- $true: Use mailbox intelligence in domain and user impersonation protection.
-- $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
+- $true: Mailbox intelligence is enabled. This is the default value.
+- $false: Mailbox intelligence is disabled.
 
 ```yaml
 Type: Boolean
@@ -221,12 +221,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMailboxIntelligenceProtection
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableMailboxIntelligenceProtection specifies whether to enable or disable intelligence based impersonation protection. Valid values are:
+The EnableMailboxIntelligenceProtection specifies whether to enable or disable enhanced impersonation results based on each user's individual sender map. This intelligence allows Microsoft 365 to customize user impersonation detection and better handle false positives. Valid values are:
 
-- $true: Enable intelligence based impersonation protection.
-- $false: Don't enable intelligence based impersonation protection. This is the default value.
+- $true: Enable mailbox intelligence based impersonation protection.
+- $false: Don't enable mailbox intelligence based impersonation protection. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationDomainsProtection
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Microsoft 365 organization. Valid values are:
 
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimilarDomainsSafetyTips
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The EnableSimilarDomainsSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for domain impersonation detections. Valid values are:
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimilarUsersSafetyTips
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The EnableSimilarUsersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for user impersonation detections. Valid values are:
 
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetedDomainsProtection
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The EnableTargetedDomainsProtection parameter specifies whether to enable domain impersonation protection for a list of specified domains. Valid values are:
 
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetedUserProtection
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The EnableTargetedUserProtection parameter specifies whether to enable user impersonation protection for a list of specified users. Valid values are:
 
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnusualCharactersSafetyTips
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The EnableUnusualCharactersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for unusual characters in domain and user impersonation detections. Valid values are:
 
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedDomains
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The ExcludedDomains parameter specifies an exception for impersonation protection that looks for the specified domains in the message sender. You can specify multiple domains separated by commas.
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedSenders
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The ExcludedSenders parameter specifies an exception for impersonation protection that looks for the specified message sender. You can specify multiple email addresses separated by commas.
 
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImpersonationProtectionState
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The ImpersonationProtectionState parameter specifies the configuration of impersonation protection. Valid values are:
 
@@ -452,7 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxIntelligenceProtectionAction
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The MailboxIntelligenceProtectionAction parameter specifies what to do with messages that fail mailbox intelligence protection. Valid values are:
 
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxIntelligenceProtectionActionRecipients
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The MailboxIntelligenceProtectionActionRecipients parameter specifies the recipients to add to detected messages when the MailboxIntelligenceProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhishThresholdLevel
-This setting is part of advanced settings and is only available in Advanced Threat Protection.
+This setting is part of advanced settings and is only available in Microsoft Defender for Office 365.
 
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
@@ -554,7 +554,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainActionRecipients
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The TargetedDomainActionRecipients parameter specifies the recipients to add to detected domain impersonation messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -574,7 +574,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainProtectionAction
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
 
@@ -599,7 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainsToProtect
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The TargetedDomainsToProtect parameter specifies the domains that are included in domain impersonation protection when the EnableTargetedDomainsProtection parameter is set to $true.
 
@@ -619,7 +619,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserActionRecipients
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected user impersonation messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -639,7 +639,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserProtectionAction
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages. You specify the protected users in the TargetedUsersToProtect parameter. Valid values are:
 
@@ -664,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUsersToProtect
-This setting is part of impersonation protection and is only available in Advanced Threat Protection.
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The TargetedUsersToProtect parameter specifies the users that are included in user impersonation protection when the EnableTargetedUserProtection parameter is set to $true.
 

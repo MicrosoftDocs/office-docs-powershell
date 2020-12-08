@@ -28,7 +28,8 @@ Export-AutoDiscoverConfig -TargetForestDomainController <String>
  [-PreferredSourceFqdn <Fqdn>]
  [-SourceForestCredential <PSCredential>]
  [-TargetForestCredential <PSCredential>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

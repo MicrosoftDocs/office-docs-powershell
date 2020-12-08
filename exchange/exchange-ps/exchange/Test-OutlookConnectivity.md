@@ -22,8 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Probe
 ```
-Test-OutlookConnectivity [-ProbeIdentity] <String> [-Credential <PSCredential>] [-Hostname <String>]
- [-MailboxId <MailboxIdParameter>] [-RunFromServerId <ServerIdParameter>] [-TimeOutSeconds <String>]
+Test-OutlookConnectivity [-ProbeIdentity] <String>
+ [-Credential <PSCredential>]
+ [-Hostname <String>]
+ [-MailboxId <MailboxIdParameter>]
+ [-RunFromServerId <ServerIdParameter>]
+ [-TimeOutSeconds <String>]
  [<CommonParameters>]
 ```
 
@@ -36,7 +40,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <Protocol>
  [-MonitoringContext]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RpcProxyServer
@@ -45,15 +50,15 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAuto
  [-Archive <Boolean>]
  [-Confirm]
  [-MailboxCredential <PSCredential>]
+ [-MonitoringContext]
  [-RpcAuthenticationType <RpcAuthenticationType>]
  [-RpcClientAccessServer <ClientAccessServerIdParameter>]
  [-RpcProxyAuthenticationType <RPCProxyAuthenticationType>]
  [-RpcProxyServer <ServerIdParameter>]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
-
- [-MonitoringContext]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RpcTestType
@@ -69,7 +74,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <RpcTes
  [-RpcProxyTestType <RpcProxyTestType>]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### WSTestType
@@ -81,7 +87,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Virtual
  [-MonitoringContext]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -403,15 +410,15 @@ The ProbeIdentity parameter specifies the probe to use. Valid values are:
 
 Outlook Anywhere (RPC over HTTP) probes:
 
-- Outlook.Protocol\OutlookRpcSelfTestProbe: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- Outlook.Protocol\OutlookRpcDeepTestProbe: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530").
+- `Outlook.Protocol\OutlookRpcSelfTestProbe`: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe`: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
 
 MAPI over HTTP probes:
 
-- OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530").
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe`: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe`: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
 
 ```yaml
 Type: String
@@ -509,8 +516,8 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. Valid values are:
 
-- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, https://CAS01).
-- External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, https://mail.contoso.com).
+- Internal: Refers to the local computer name (`https://<localcomputername>`, for example, `https://CAS01`).
+- External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, `https://mail.contoso.com`).
 
 ```yaml
 Type: RpcProxyTestType

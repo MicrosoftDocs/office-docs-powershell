@@ -49,7 +49,8 @@ Set-Mailboxsearch [-Identity] <SearchObjectIdParameter>
  [-StatisticsStartIndex <Int32>]
  [-StatusMailRecipients <RecipientIdParameter[]>]
  [-TargetMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -529,7 +530,7 @@ The SourceMailboxes parameter specifies the mailboxes to be searched. You can us
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To use this parameter, the AllSourceMailboxes parameter needs to be $false (the default value).
 
@@ -599,7 +600,7 @@ The StatusMailRecipients parameter specifies one or more recipients to receive a
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]

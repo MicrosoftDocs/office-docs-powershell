@@ -27,7 +27,8 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
  [-DomainController <Fqdn>]
  [-Confirm]
  [-HoldCleanup]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### HoldCleanup
@@ -37,17 +38,20 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCle
  [-Confirm]
  [-FullCrawl]
  [-InactiveMailbox]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### StopHoldCleanup
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
+ [-StopHoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
  [-InactiveMailbox]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,45 +22,54 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RelativeRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
+ [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CustomRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
+ [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-Confirm]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RecipientOrganizationalUnitScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExclusiveScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>] [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
+ [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RecipientAdministrativeUnitScope
@@ -70,7 +79,8 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> -RecipientA
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

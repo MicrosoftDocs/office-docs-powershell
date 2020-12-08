@@ -22,14 +22,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GlobalCatalog
 ```
-Get-DomainController [-GlobalCatalog] [-Forest <Fqdn>]
- [-Credential <NetworkCredential>] [<CommonParameters>]
+Get-DomainController [-GlobalCatalog]
+ [-Forest <Fqdn>]
+ [-Credential <NetworkCredential>]
+ [<CommonParameters>]
 ```
 
 ### DomainController
 ```
 Get-DomainController [-DomainName <Fqdn>]
- [-Credential <NetworkCredential>] [<CommonParameters>]
+ [-Credential <NetworkCredential>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +45,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$UserCredentials = Get-Credential; Get-DomainController -DomainName corp.contoso.com -Credential $UserCredentials | Format-Table -AutoSize Name, ADSite
+$UserCredentials = Get-Credential
+Get-DomainController -DomainName corp.contoso.com -Credential $UserCredentials | Format-Table -AutoSize Name,ADSite
 ```
 
 This example retrieves a list of global catalog servers in the corp.contoso.com domain. Because a different set of credentials are required to access this domain, the Get-Credential cmdlet is used to obtain the username and password from the user.

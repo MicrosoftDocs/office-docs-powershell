@@ -28,7 +28,8 @@ Set-RpcClientAccess -Server <ServerIdParameter>
  [-EncryptionRequired <Boolean>]
  [-MaximumConnections <Int32>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

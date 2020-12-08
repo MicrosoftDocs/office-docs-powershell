@@ -34,7 +34,8 @@ New-ComplianceTag [-Name] <String>
  [-RetentionDuration <Unlimited>]
  [-RetentionType <String>]
  [-ReviewerEmail <SmtpAddress[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

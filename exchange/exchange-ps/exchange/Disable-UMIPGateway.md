@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
+Disable-UMIPGateway [-Identity] <UMIPGatewayIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Immediate <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

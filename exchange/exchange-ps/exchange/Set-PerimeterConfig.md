@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PerimeterConfig [-Confirm] [-GatewayIPAddresses <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-PerimeterConfig [-Confirm]
+ [-GatewayIPAddresses <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

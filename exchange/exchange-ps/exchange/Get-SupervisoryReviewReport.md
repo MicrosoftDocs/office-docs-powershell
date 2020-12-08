@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewReport [-EndDate <DateTime>] [-Page <Int32>] [-PageSize <Int32>]
- [-Policies <MultiValuedProperty>] [-Reviewers <MultiValuedProperty>] [-StartDate <DateTime>]
+Get-SupervisoryReviewReport [-EndDate <DateTime>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-Policies <MultiValuedProperty>]
+ [-Reviewers <MultiValuedProperty>]
+ [-StartDate <DateTime>]
  [<CommonParameters>]
 ```
 

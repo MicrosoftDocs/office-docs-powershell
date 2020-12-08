@@ -27,7 +27,8 @@ Clear-MobileDevice [-Identity] <MobileDeviceIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-NotificationEmailAddresses <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

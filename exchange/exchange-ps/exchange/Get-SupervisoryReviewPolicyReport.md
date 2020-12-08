@@ -23,8 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewPolicyReport [-EndDate <DateTime>] [-Page <Int32>] [-PageSize <Int32>]
- [-Policies <MultiValuedProperty>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-SupervisoryReviewPolicyReport [-EndDate <DateTime>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-Policies <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

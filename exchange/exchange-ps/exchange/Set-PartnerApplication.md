@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ACSTrustApplication
 ```
-Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-ApplicationIdentifier <String>] [-Realm <String>]
+Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
+ [-ApplicationIdentifier <String>]
+ [-Realm <String>]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -33,12 +35,15 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-Application
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuthMetadataUrl
 ```
-Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
+Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
+ [-AuthMetadataUrl <String>]
+ [-TrustAnySSLCertificate]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -49,12 +54,14 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-AuthMetadat
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshAuthMetadata
 ```
-Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-RefreshAuthMetadata]
+Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
+ [-RefreshAuthMetadata]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -65,7 +72,8 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-RefreshAuth
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,14 +24,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MapiVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-MapiVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +50,9 @@ This example returns a summary list of the MAPI virtual directories on the serve
 
 ### Example 2
 ```powershell
-Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
+Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List
+Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List
+Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
 ```
 
 These examples return detailed information for the MAPI virtual directory named "mapi (Default Web Site)" on the server named ContosoMail. All three commands do the same thing.
@@ -65,11 +69,11 @@ This example returns a summary list of all MAPI virtual directories in the clien
 ### -Identity
 The Identity parameter specifies the MAPI virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 You can't use the Identity and Server parameters in the same command.
 

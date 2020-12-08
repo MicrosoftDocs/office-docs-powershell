@@ -22,22 +22,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### DialPlan
 ```
-Get-UMActiveCalls -DialPlan <UMDialPlanIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls -DialPlan <UMDialPlanIdParameter>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### ServerInstance
 ```
-Get-UMActiveCalls -InstanceServer <UMServer> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls -InstanceServer <UMServer>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### UMIPGateway
 ```
-Get-UMActiveCalls -IPGateway <UMIPGatewayIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls -IPGateway <UMIPGatewayIdParameter>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Get-UMActiveCalls [-Server <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls [-Server <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

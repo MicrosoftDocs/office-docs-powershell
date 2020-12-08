@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ResubmitRequest [[-Identity] <ResubmitRequestIdentityParameter>] [-Server <ServerIdParameter>]
+Get-ResubmitRequest [[-Identity] <ResubmitRequestIdentityParameter>]
+ [-Server <ServerIdParameter>]
  [<CommonParameters>]
 ```
 

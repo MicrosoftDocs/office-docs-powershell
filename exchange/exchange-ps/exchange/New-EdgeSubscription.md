@@ -21,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>] [-Confirm]
- [-CreateInboundSendConnector <Boolean>] [-CreateInternetSendConnector <Boolean>]
- [-DomainController <Fqdn>] [-FileData <Byte[]>] [-FileName <LongPath>] [-Force] [-Site <AdSiteIdParameter>]
- [-WhatIf] [<CommonParameters>]
+New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>]
+ [-Confirm]
+ [-CreateInboundSendConnector <Boolean>]
+ [-CreateInternetSendConnector <Boolean>]
+ [-DomainController <Fqdn>]
+ [-FileData <Byte[]>]
+ [-FileName <LongPath>]
+ [-Force]
+ [-Site <AdSiteIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +50,8 @@ This example creates the Edge Subscription file. It should be run on your Edge T
 
 ### Example 2
 ```powershell
-[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
+[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0
+New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
 This example imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name. Importing the Edge Subscription file completes the Edge Subscription process. You must run this command on the Mailbox server.
@@ -151,7 +159,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the byte-encoded data object that contains the Edge Subscription file information.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 You can only use this parameter when you're running this command on a Mailbox server.
 

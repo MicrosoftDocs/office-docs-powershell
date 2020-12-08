@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>] [-Case <String>] [-DistributionDetail] [-IncludeBindings]
+Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>]
+ [-Case <String>]
+ [-DistributionDetail]
+ [-IncludeBindings]
  [<CommonParameters>]
 ```
 
@@ -45,6 +48,26 @@ Get-CaseHoldPolicy -Identity "Regulation 123 Compliance"
 This example displays detailed information for the policy named "Regulation 123 Compliance".
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the case hold policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Case
 The Case parameter specifies the case hold policy that you want to view by using the eDiscovery case that's associated with the policy. You can use the following values to identify the eDiscovery case:
@@ -91,26 +114,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the case hold policy that you want to view. You can use any value that uniquely identifies the policy. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: PolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

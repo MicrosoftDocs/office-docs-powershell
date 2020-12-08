@@ -45,7 +45,8 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 
 ### MigrationMoveRequestQueue
 ```
-Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-MailboxGuid <Guid>]
+Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter>
+ [-MailboxGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
@@ -56,7 +57,8 @@ Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-MailboxGuid 
 
 ### MigrationMRSInstance
 ```
-Get-MoveRequestStatistics -MRSInstance <Fqdn> [-MailboxGuid <Guid>]
+Get-MoveRequestStatistics -MRSInstance <Fqdn>
+ [-MailboxGuid <Guid>]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```

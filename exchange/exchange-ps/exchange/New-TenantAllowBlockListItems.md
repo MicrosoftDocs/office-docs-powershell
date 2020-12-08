@@ -7,7 +7,7 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX, NOFOLLOW
+ROBOTS: NOINDEX
 ---
 
 # New-TenantAllowBlockListItems
@@ -89,7 +89,7 @@ The Entries parameter specifies the URL or files that you want to add to the Ten
 - URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list#url-syntax-for-the-tenant-allowedblocked-list).
 - Files: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 
-To enter multiple values, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't mix URL and file values or allow and block actions in the same command. You can't modify existing URL or file values after you create the entry (there's no Entries parameter on the Set-TenantAllowBlockListItems cmdlet).
 

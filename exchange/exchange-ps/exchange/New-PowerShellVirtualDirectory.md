@@ -21,10 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PowerShellVirtualDirectory [-Name] <String> [-BasicAuthentication <Boolean>] [-Confirm]
- [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-RequireSSL <Boolean>]
- [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>] [-WhatIf]
- [-WindowsAuthentication <Boolean>] [<CommonParameters>]
+New-PowerShellVirtualDirectory [-Name] <String>
+ [-BasicAuthentication <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-RequireSSL <Boolean>]
+ [-Role <VirtualDirectoryRole>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [-WindowsAuthentication <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

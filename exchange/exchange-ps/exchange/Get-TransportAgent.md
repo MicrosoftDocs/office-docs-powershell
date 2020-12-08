@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportAgent [[-Identity] <TransportAgentObjectId>] [-DomainController <Fqdn>]
- [-TransportService <TransportService>] [<CommonParameters>]
+Get-TransportAgent [[-Identity] <TransportAgentObjectId>]
+ [-DomainController <Fqdn>]
+ [-TransportService <TransportService>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

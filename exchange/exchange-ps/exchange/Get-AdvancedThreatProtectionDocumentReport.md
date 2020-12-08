@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-AdvancedThreatProtectionDocumentReport cmdlet to view the results of Office 365 Advanced Threat Protection (ATP) actions for files in SharePoint Online, OneDrive for Business and Microsoft Teams in your cloud-based organization.
+Use the Get-AdvancedThreatProtectionDocumentReport cmdlet to view the results of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams in your Microsoft Defender for Office 365 organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -38,7 +38,7 @@ Get-AdvancedThreatProtectionDocumentReport
 ```
 
 ## DESCRIPTION
-For more information about this feature, see [ATP for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+For more information about this feature, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
 
 For the reporting period and organization you specify, the cmdlet returns the following information:
 
@@ -58,7 +58,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AdvancedThreatProtectionTrafficReport -Organization contoso.com -StartDate "4/26/2018" -EndDate "4/28/2018" | Format-Table
 ```
 
-This example returns the aggregated report of ATP detections for the specified organization during the specified date range.
+This example returns the aggregated report of detections for the specified organization during the specified date range.
 
 ## PARAMETERS
 

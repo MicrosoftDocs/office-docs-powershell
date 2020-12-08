@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Rotate-DkimSigningConfig [-Identity] <DkimSigningConfigIdParameter> [-Confirm] [-KeySize <UInt16>] [-WhatIf]
+Rotate-DkimSigningConfig [-Identity] <DkimSigningConfigIdParameter>
+ [-Confirm]
+ [-KeySize <UInt16>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

@@ -31,6 +31,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-BlockAccessScope <BlockAccessScope>]
  [-Comment <String>]
  [-Confirm]
+ [-ContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
@@ -45,6 +46,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfAccessScope <AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
@@ -56,8 +58,11 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfFromScope <FromScope>]
+ [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsWords <PswsHashtable>]
  [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
+ [-ExceptIfMessageTypeMatches <MessageTypes>]
  [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
  [-ExceptIfSenderDomainIs <MultiValuedProperty>]
@@ -66,16 +71,21 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
  [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyMatchesPatterns <MultiValuedProperty>]
  [-ExpiryDate <DateTime>]
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
  [-FromAddressMatchesPatterns <MultiValuedProperty>]
  [-FromMemberOf <SmtpAddress[]>]
+ [-FromScope <FromScope>]
  [-GenerateAlert <MultiValuedProperty>]
  [-GenerateIncidentReport <MultiValuedProperty>]
+ [-HasSenderOverride <Boolean>]
  [-HeaderContainsWords <PswsHashtable>]
  [-HeaderMatchesPatterns <PswsHashtable>]
  [-IncidentReportContent <ReportContentOption[]>]
+ [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomText <String>]
@@ -97,10 +107,13 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
+ [-SubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
  [-ProcessingLimitExceeded <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -304,6 +317,24 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentCharacterSetContainsWords
+The ContentCharacterSetContainsWords parameter specifies a condition for the rule that looks for character set names in messages.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
@@ -577,6 +608,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfContentCharacterSetContainsWords
+The ExceptIfContentCharacterSetContainsWords parameter specifies an exception for the rule that looks for character set names in messages.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfContentContainsSensitiveInformation
 The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
 
@@ -799,6 +848,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfFromScope
+The ExceptIfFromScope parameter specifies an exception for the rule that looks for the location of message senders. Valid values are:
+
+- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: FromScope
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfHasSenderOverride
+The ExceptIfHasSenderOverride parameter specifies an exception for the rule that looks for messages where the sender chose to override a DLP policy. Valid values are:
+
+- $true: Look for messages where the sender took action to override a DLP policy.
+- $false: Don't look for messages where the sender took action to override a DLP policy.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfHeaderContainsWords
 The HeaderContainsWords parameter specifies an exception for the DLP rule that looks for words in a header field.
 
@@ -826,6 +917,33 @@ You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfMessageTypeMatches
+The ExceptIfMessageTypeMatches parameter specifies an exception for the rule that looks for messages of the specified type. Valid values are:
+
+- ApprovalRequest: Moderation request messages sent to moderators.
+- AutomaticForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
+- AutomaticReply: Out of office (OOF) messages configured by the user.
+- Calendaring: Meeting requests and responses.
+- Encrypted: Encrypted messages.
+- PermissionControlled: Messages that have specific permissions configured.
+- ReadReceipt: Read receipts.
+- Signed: Digitally signed messages.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MessageTypes
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -992,6 +1110,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfSubjectOrBodyContainsWords
+The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception for the rule that looks for words in the Subject field or body of messages.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: <MultiValuedProperty>
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSubjectOrBodyMatchesPatterns
+The ExceptIfSubjectOrBodyMatchesPatterns parameter specifies an exception for the rule that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: <MultiValuedProperty>
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExpiryDate
 This parameter is reserved for internal Microsoft use.
 
@@ -1086,6 +1242,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FromScope
+The FromScope parameter specifies a condition for the rule that looks for the location of message senders. Valid values are:
+
+- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: FromScope
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GenerateAlert
 The GenerateAlert parameter specifies an action for the DLP rule that notifies the specified users when the conditions of the rule are met. Valid values are:
 
@@ -1119,6 +1296,27 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HasSenderOverride
+The SenderOverride parameter specifies a condition for the rule that looks for messages where the sender chose to override a DLP policy. Valid values are:
+
+- $true: Look for messages where the sender took action to override a DLP policy.
+- $false: Don't look for messages where the sender took action to override a DLP policy.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1195,6 +1393,33 @@ Therefore, if you use any of these redundant values with the value Default, they
 
 ```yaml
 Type: ReportContentOption[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageTypeMatches
+The MessageTypeMatches parameter specifies a condition for the rule that looks for messages of the specified type. Valid values are:
+
+- ApprovalRequest: Moderation request messages sent to moderators.
+- AutomaticForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
+- AutomaticReply: Out of office (OOF) messages configured by the user.
+- Calendaring: Meeting requests and responses.
+- Encrypted: Encrypted messages.
+- PermissionControlled: Messages that have specific permissions configured.
+- ReadReceipt: Read receipts.
+- Signed: Digitally signed messages.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MessageTypes
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1608,6 +1833,44 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubjectOrBodyContainsWords
+The SubjectOrBodyContainsWords parameter specifies a condition for the rule that looks for words in the Subject field or body of messages.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: <MultiValuedProperty>
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubjectOrBodyMatchesPatterns
+The SubjectOrBodyMatchesPatterns parameter specifies a condition for the rule that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: <MultiValuedProperty>
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

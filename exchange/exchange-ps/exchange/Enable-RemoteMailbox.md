@@ -30,12 +30,14 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Room]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
  [-Confirm]
@@ -43,12 +45,14 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Equipment]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
  [-Confirm]
@@ -56,31 +60,37 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Archive
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Archive] [-ArchiveName <MultiValuedProperty>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Archive]
+ [-ArchiveName <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Shared]
  [-ACLableSyncedObjectEnabled [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf]] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -222,9 +232,9 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters: ``! # $ % & ' * + - / = ? ^ _ ` { | } ~``. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 

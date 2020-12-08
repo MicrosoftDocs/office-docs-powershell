@@ -49,7 +49,7 @@ The network region 'RegionRedmond' is created beforehand and 'MicrosoftSite1' wi
 
 ###-------------------------- Example 2 --------------------------
 ```powershell
-PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way"
+PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true
 ```
 
 The command shown in Example 2 sets the network site 'site2' with description 'site 2'. This site is enabled for LBR. The example associates the site with network region 'RedmondRegion' and with location policy 'TestLocationPolicy'.

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-App [-Identity] <AppIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+Enable-App [-Identity] <AppIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter> [-Confirm] [-WhatIf]
+Remove-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

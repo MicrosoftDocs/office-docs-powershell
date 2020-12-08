@@ -12,9 +12,7 @@ ms.reviewer:
 # Import-RecipientDataProperty
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
-
-Use the Import-RecipientDataProperty cmdlet to add a picture or an audio file of a spoken name to a mailbox or contact. The picture and audio files display on the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook and Outlook on the web.
+Use the Import-RecipientDataProperty cmdlet to add a picture or an audio file of a spoken name to a mailbox or contact. The picture and audio files display on the global address list property dialog box, contact card, reading pane, and meeting requests in Outlook and Outlook on the web.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -22,18 +20,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ImportPicture
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-Picture]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]>
+ [-Picture]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ImportSpokenName
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-SpokenName]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]>
+ [-SpokenName]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,24 +61,6 @@ This example imports the picture file for Ayla Kol.
 
 ## PARAMETERS
 
-### -FileData
-The FileData parameter specifies the location and file name of the picture or audio file.
-
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
-
-```yaml
-Type: Byte[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox or contact that you're adding the picture or spoken name file to. You can use any value that uniquely identifies the user. For example:
 
@@ -95,6 +79,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -FileData
+The FileData parameter specifies the location and file name of the picture or audio file.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -118,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+This parameter is available only in on-premises Exchange.
+
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

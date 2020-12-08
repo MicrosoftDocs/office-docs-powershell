@@ -21,9 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <DefaultStateForUser>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-OrganizationApp]
- [-ProvidedTo <ClientExtensionProvidedTo>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
+Set-App [-Identity] <AppIdParameter>
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -40,7 +47,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$a= Get-DistributionGroupMember -Identity "Finance Team"; Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
+$a= Get-DistributionGroupMember -Identity "Finance Team"
+Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
 ```
 
 This example changes the organization app named FinanceTestApp, which was installed to everyone in the organization, to be provided to members of the Finance Team group and to be enabled by default.
@@ -166,6 +174,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrivateCatalog
+The PrivateCatalog switch specifies that the app you want to modify is located in a private catalog. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProvidedTo
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid value are:
 
@@ -203,7 +227,7 @@ Valid values are mailboxes or mail users in your organization. You can use any v
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>". Maximum size of the list is 1000 recipients.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`. Maximum size of the list is 1000 recipients.
 
 You use this parameter with the OrganizationApp switch.
 
@@ -228,22 +252,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateCatalog
-The PrivateCatalog switch specifies that the app you want to modify is located in a private catalog. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

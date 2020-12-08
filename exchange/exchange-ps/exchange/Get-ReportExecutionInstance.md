@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ReportExecutionInstance [-Identity <InstanceIdParameter>] [-ScheduleId <MultiValuedProperty>]
+Get-ReportExecutionInstance [-Identity <InstanceIdParameter>]
+ [-ScheduleId <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 

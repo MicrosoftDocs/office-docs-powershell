@@ -166,7 +166,8 @@ Set-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter>
  [-SchedulesMaxConcurrency <Unlimited>]
  [-SchedulesRechargeRate <Unlimited>]
  [-ThrottlingPolicyScope <ThrottlingPolicyScopeType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -182,7 +183,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$a = Get-ThrottlingPolicy RemoteSiteUserPolicy; $a | Set-ThrottlingPolicy -EwsMaxConcurrency 4
+$a = Get-ThrottlingPolicy RemoteSiteUserPolicy
+$a | Set-ThrottlingPolicy -EwsMaxConcurrency 4
 ```
 
 This example modifies a throttling policy so that users associated with this policy can have a maximum of four concurrent requests running in Exchange Web Services.
@@ -1497,7 +1499,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the object in Active Directory. The default policy is named DefaultThrottlingPolicy\<GUID\>.
+The Name parameter specifies the name of the object in Active Directory. The default policy is named `DefaultThrottlingPolicy<GUID>`.
 
 ```yaml
 Type: String

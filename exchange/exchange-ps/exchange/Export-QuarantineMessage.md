@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Export-QuarantineMessage cmdlet to export quarantined messages and files from your cloud-based organization. Messages are exported to .eml message files so you can open them in Outlook.
 
-For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the files are exported in Base64 format.
+For files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the files are exported in Base64 format.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-QuarantineMessage -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +36,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$e = Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7; $e.BodyEncoding; $e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
+$e = Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
+$e.BodyEncoding
+$e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
 ```
 
 This example exports the quarantined message with the specified Identity value.
@@ -51,7 +54,9 @@ Notes:
 
 ### Example 2
 ```powershell
-$e = Export-QuarantineMessage -Identity 9c6bb3e8-db9e-4823-9759-08d594179bd3\7fec89fe-41b0-ae67-4887-5bede017d111; $bytes = [Convert]::FromBase64String($e.eml); [IO.File]::WriteAllBytes("C:\My Documents\Export1.txt", $bytes)
+$e = Export-QuarantineMessage -Identity 9c6bb3e8-db9e-4823-9759-08d594179bd3\7fec89fe-41b0-ae67-4887-5bede017d111
+$bytes = [Convert]::FromBase64String($e.eml)
+[IO.File]::WriteAllBytes("C:\My Documents\Export1.txt", $bytes)
 ```
 
 This example exports the quarantined file with the specified Identity value. The first command exports the file to a Base 64 string. The next two commands convert the string to byte format and write it to the output file.

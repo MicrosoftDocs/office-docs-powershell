@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SharingPolicy [[-Identity] <SharingPolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-SharingPolicy [[-Identity] <SharingPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

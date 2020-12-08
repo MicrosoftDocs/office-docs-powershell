@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ManagementScope [-Identity] <ManagementScopeIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-WhatIf] [<CommonParameters>]
+Remove-ManagementScope [-Identity] <ManagementScopeIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

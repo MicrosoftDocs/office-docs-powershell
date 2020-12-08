@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
- -StartDate <DateTime> [-DeliveryStatus <String>]
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
+ [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
  [-Locale <CultureInfo>]
@@ -101,17 +101,17 @@ Accept wildcard characters: False
 ### -ReportType
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
-- ATPReport: Advanced Threat Protection File Types Report and Advanced Threat Protection Message Disposition Report
-- ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
-- ATPDocument: Advanced Threat Protection Content Malware Report for files in SharePoint, OneDrive and Microsoft Teams.
+- ATPReport: Defender for Office 365 File types report and Defender for Office 365 Message disposition report
+- ATPV2: Exchange Online Protection and Defender for Office 365 Malware detection in email report.
+- ATPDocument: Defender for Office 365 Content Malware Report for Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 - DLP: Data Loss Prevention Report.
 - Malware: Malware Detections Report.
 - MessageTrace: Message Trace Report.
 - MessageTraceDetail: Message Trace Details Report.
-- Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
+- Phish: Exchange Online Protection and Defender for Office 365 E-mail Phish Report.
 - SPAM: SPAM Detections Report.
 - Spoof: Spoof Mail Report.
-- TransportRule: Transport or Mail FLow Rules Report.
+- TransportRule: Transport or Mail Flow Rules Report.
 - UnifiedDLP: Unified Data Loss Prevention Report.
 
 You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ### -NotifyAddress
 The NotifyAddress parameter specifies the email addresses of internal recipients to notify when the historical search is complete. The email address must be in an accepted domain that's configured for your organization. You can enter multiple email addresses separated by commas.
 
-To view the results of the historical search, you need to specify at least one email address for the NotifyAddress parameter. Otherwise, you need to click on the completed message trace in the Exchange admin center at Mail flow \> Message trace.
+To view the results of the historical search, you need to specify at least one email address for the NotifyAddress parameter. Otherwise, you need to click on the completed message trace in the Exchange admin center at **Mail flow** \> **Message trace**.
 
 ```yaml
 Type: MultiValuedProperty

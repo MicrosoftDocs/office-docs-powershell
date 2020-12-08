@@ -45,7 +45,8 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress>
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-UsePreferMessageFormat <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnabledUser
@@ -73,12 +74,14 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <Se
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-UsePreferMessageFormat <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesID
 ```
-New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString> [-ExternalEmailAddress <ProxyAddress>]
+New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString>
+ [-ExternalEmailAddress <ProxyAddress>]
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
@@ -97,12 +100,14 @@ New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Passwo
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FederatedUser
 ```
-New-MailUser [-Name] <String> -FederatedIdentity <String> [-ExternalEmailAddress <ProxyAddress>]
+New-MailUser [-Name] <String> -FederatedIdentity <String>
+ [-ExternalEmailAddress <ProxyAddress>]
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
@@ -121,7 +126,8 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> [-ExternalEmailAddress
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesFederatedUser
@@ -145,12 +151,14 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServic
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableRoomMailboxAccount
 ```
-New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
+New-MailUser [-Name] <String>
+ [-MicrosoftOnlineServicesID <WindowsLiveId>]
  [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
@@ -164,7 +172,8 @@ New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-RemotePowerShellEnabled <Boolean>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -181,7 +190,8 @@ This example creates a new mail user for Ed Meadows in the contoso.com cloud-bas
 
 ### Example 2
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
+$password = Read-Host "Enter password" -AsSecureString
+New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
 ```
 
 This example is similar to the first, except contoso.com is now an on-premises Exchange organization, and you use a separate command to enter the password so it isn't stored in clear text.
@@ -323,9 +333,9 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters: ``! # $ % & ' * + - / = ? ^ _ ` { | } ~``. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
@@ -604,7 +614,7 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -730,7 +740,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters `! # $ % ^ & - _ { } ~`. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String

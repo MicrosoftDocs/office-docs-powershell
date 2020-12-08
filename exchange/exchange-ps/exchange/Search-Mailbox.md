@@ -36,12 +36,14 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EstimateResult
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
+ [-EstimateResultOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DoNotIncludeArchive]
@@ -50,7 +52,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -67,7 +70,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,22 +114,6 @@ This example searches all mailboxes in your organization for messages that conta
 
 ## PARAMETERS
 
-### -EstimateResultOnly
-The EstimateResultOnly switch specifies that only an estimate of the total number and size of messages returned by the search be provided. Messages aren't copied to the target mailbox. You can't use this switch with the TargetMailbox parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: EstimateResult
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -150,6 +138,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -EstimateResultOnly
+The EstimateResultOnly switch specifies that only an estimate of the total number and size of messages returned by the search be provided. Messages aren't copied to the target mailbox. You can't use this switch with the TargetMailbox parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EstimateResult
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

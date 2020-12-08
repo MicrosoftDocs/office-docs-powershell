@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CrossForest
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-LinkedCredential <PSCredential>]
+New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter>
+ [-LinkedCredential <PSCredential>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
@@ -35,7 +36,8 @@ New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGr
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
@@ -53,7 +55,8 @@ New-RoleGroup [-Name] <String>
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,7 +93,8 @@ This example creates a role group and enables Isabel to add or remove members to
 
 ### Example 4
 ```powershell
-$Credentials = Get-Credential; New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
+$Credentials = Get-Credential
+New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
 ```
 
 This example creates a linked role group that enables the members of the Toronto Administrators USG in the Contoso user forest to manage recipients located in the Toronto office. The custom recipient scope, Toronto Recipients, limits the scope of the roles assigned to the role group to recipients who have their City property set to Toronto. The Mail Recipients role is assigned to the role group.
@@ -99,7 +103,8 @@ The first command retrieves the credentials using the Get-Credential cmdlet and 
 
 ### Example 5
 ```powershell
-$RoleGroup = Get-RoleGroup "Recipient Management"; New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
+$RoleGroup = Get-RoleGroup "Recipient Management"
+New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
 ```
 
 This example takes an existing role group and copies the roles from that role group into a new custom role group. This can be useful if you want to create a role group similar to an existing role group but don't want to manually create all the role assignments. For example, you might want to create a role group that has most, but not all, of the management roles assigned to the Recipient Management role group.
@@ -395,7 +400,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, } and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters `! # $ % ^ & - _ { } ~`. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String

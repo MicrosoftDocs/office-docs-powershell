@@ -48,7 +48,8 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
  [-TrustedMailInboundEnabled <Boolean>]
  [-TrustedMailOutboundEnabled <Boolean>]
  [-UseSimpleDisplayName <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -601,7 +602,7 @@ Accept wildcard characters: False
 ### -UseSimpleDisplayName
 The UseSimpleDisplayName parameter specifies whether the sender's simple display name is used for the From email address in messages sent to recipients in the remote domain. Valid values are:
 
-- $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is "EmailAddress \<EmailAddress\>".
+- $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is `EmailAddress <EmailAddress>`.
 - $false: Simple display names aren't used in messages sent to recipients in the remote domain. This is the default value.
 
 ```yaml

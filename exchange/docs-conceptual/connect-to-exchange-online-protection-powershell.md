@@ -34,9 +34,9 @@ To use the older, less secure remote PowerShell connection instructions that [wi
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forum.
 
-## Connect to Exchange Online Protection PowerShell using MFA
+## Connect to Exchange Online Protection PowerShell using MFA and modern authentication
 
-If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online Protection PowerShell without using MFA](#connect-to-exchange-online-protection-powershell-without-using-mfa) section.
+If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online Protection PowerShell using modern authentication](#connect-to-exchange-online-protection-powershell-using-modern-authentication) section.
 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
@@ -77,7 +77,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](https:/
 Disconnect-ExchangeOnline
 ```
 
-## Connect to Exchange Online Protection PowerShell without using MFA
+## Connect to Exchange Online Protection PowerShell using modern authentication
 
 If your account doesn't use multi-factor authentication, use the steps in this section.
 
@@ -91,20 +91,23 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 
 2. Run the following command:
 
+   > [!NOTE]
+   > You can skip this step and omit the _Credential_ parameter in the next step to be prompted to enter the username and password after you run the **Connect-IPPSSession** command. If you omit the _Credential_ parameter and include the _UserPrincipalName_ parameter in the next step, you're only prompted to enter the password after you run the **Connect-IPPSSession** command.
+
    ```powershell
    $UserCredential = Get-Credential
    ```
 
    In the **Windows PowerShell Credential Request** dialog box that appears, type your work or school account and password, and then click **OK**.
 
-3. The command that you need to run uses the following syntax:
+3. The last command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri <URL> [-PSSessionOption $ProxyOptions]
+   Connect-IPPSSession [-Credential $UserCredential] -ConnectionUri <URL> [-PSSessionOption $ProxyOptions]
    ```
 
    - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
-   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
+   - If you're behind a proxy server, store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) cmdlet in a variable (for example, `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value> [-ProxyAuthentication <Value>] [-ProxyCredential <Value>]`). Then, use the variable (`$ProxyOptions`) as the value for the _PSSessionOption_ parameter.
 
    **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
 
@@ -121,7 +124,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
-> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline
@@ -133,13 +136,13 @@ The Exchange Online Protection Protection cmdlets are imported into your local W
 
 If you receive errors, check the following requirements:
 
-- A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
+- A common problem is an incorrect password. Run the three steps again and pay close attention to the username and password that you use.
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online Protection organization.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online Protection.
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
-- The account you use to connect to Exchange Online Protection PowerShell must be represented as a [mail user in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/manage-mail-users-in-eop) (created manually or by directory synchronization). If the account is not visible in the Exchange admin center (EAC) as a mail user at **Recipients** \> **Contacts**, you'll receive the following error when you try to connect:
+- The account that you use to connect to Exchange Online Protection PowerShell must be represented as a [mail user in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/manage-mail-users-in-eop) (created manually or by directory synchronization). If the account is not visible in the Exchange admin center (EAC) as a mail user at **Recipients** \> **Contacts**, you'll receive the following error when you try to connect:
 
   > Import-PSSession : Running the Get-Command command in a remote session reported the following error: Processing data for a remote command failed with the following error message: The request for the Windows Remote Shell with ShellId <GUID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.
 

@@ -25,7 +25,8 @@ Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExportLegacyRules]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +40,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
+$file = Export-TransportRuleCollection
+Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\My Docs folder.
@@ -48,12 +50,31 @@ This example exports transport rules. Rule data is first exported to the variabl
 
 ### Example 2
 ```powershell
-$file = Export-TransportRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
+$file = Export-TransportRuleCollection -ExportLegacyRules
+Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 In Exchange Server 2010, this example exports legacy transport rules created in Exchange 2007 using the ExportLegacyRules switch. The cmdlet should be run from an Exchange 2010 Hub Transport server. The exported rules collection can then be imported to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
 
 ## PARAMETERS
+
+### -Identity
+This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
+
+The Identity parameter specifies the name or GUID of a transport rule to be exported.
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -109,24 +130,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
-
-The Identity parameter specifies the name or GUID of a transport rule to be exported.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

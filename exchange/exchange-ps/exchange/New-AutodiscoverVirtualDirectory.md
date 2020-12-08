@@ -21,13 +21,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AutodiscoverVirtualDirectory [-ApplicationRoot <String>] [-AppPoolId <String>]
- [-BasicAuthentication <Boolean>] [-Confirm] [-DigestAuthentication <Boolean>]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-Path <String>] [-WebSiteName <String>] [-WhatIf]
- [-WindowsAuthentication <Boolean>] [-WSSecurityAuthentication <Boolean>]
- [-OAuthAuthentication <Boolean>] [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>]
+New-AutodiscoverVirtualDirectory [-ApplicationRoot <String>]
+ [-AppPoolId <String>]
+ [-BasicAuthentication <Boolean>]
+ [-Confirm]
+ [-DigestAuthentication <Boolean>]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-OAuthAuthentication <Boolean>]
+ [-Path <String>]
+ [-Role <VirtualDirectoryRole>]
+ [-Server <ServerIdParameter>]
+ [-WebSiteName <String>]
+ [-WhatIf]
+ [-WindowsAuthentication <Boolean>]
+ [-WSSecurityAuthentication <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -180,7 +192,7 @@ Accept wildcard characters: False
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
-- Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
+- Single SPN or comma delimited list of valid SPNs: The SPN value format is `Protocol\FQDN`. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -255,6 +267,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OAuthAuthentication
+The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
+
+- $true: OAuth authentication is enabled. This is the default value.
+- $false: OAuth authentication is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Path
 The Path parameter specifies the file system path of the virtual directory. We recommend using this parameter only when you need to use a custom location for the virtual directory files. The default value is blank ($null), which indicates the default location is used.
 
@@ -268,6 +299,48 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Role
+The Role parameter species the configuration for the virtual directory. Valid values are:
+
+- ClientAccess: Configure the virtual directory for the Client Access (frontend) services on the Mailbox server.
+- Mailbox: Configure the virtual directory for the backend services on the Mailbox server.
+
+Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
+
+```yaml
+Type: VirtualDirectoryRole
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Server
+The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- ExchangeLegacyDN
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -338,67 +411,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OAuthAuthentication
-The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
-
-- $true: OAuth authentication is enabled. This is the default value.
-- $false: OAuth authentication is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Role
-The Role parameter species the configuration for the virtual directory. Valid values are:
-
-- ClientAccess: Configure the virtual directory for the Client Access (frontend) services on the Mailbox server.
-- Mailbox: Configure the virtual directory for the backend services on the Mailbox server.
-
-Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
-
-```yaml
-Type: VirtualDirectoryRole
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- ExchangeLegacyDN
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

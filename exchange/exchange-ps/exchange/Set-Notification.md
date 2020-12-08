@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Notification [-Identity] <EwsStoreObjectIdParameter> -NotificationEmails <MultiValuedProperty>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Settings
@@ -33,7 +34,8 @@ Set-Notification [-Identity] <EwsStoreObjectIdParameter> -NotificationEmails <Mu
 Set-Notification -NotificationEmails <MultiValuedProperty> -ProcessType <AsyncOperationType>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
