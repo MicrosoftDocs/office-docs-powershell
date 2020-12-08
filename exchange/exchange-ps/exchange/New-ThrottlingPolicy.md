@@ -173,7 +173,7 @@ New-ThrottlingPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-By default, there is one default throttling policy named GlobalThrottlingPolicy\_\<GUID\> with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
+By default, there is one default throttling policy named `GlobalThrottlingPolicy_<GUID>` with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
 
 For more information about how to control how resources are consumed by individual users, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
 
@@ -193,7 +193,7 @@ In Exchange Server 2010, this example creates a non-default throttling policy. A
 New-ThrottlingPolicy -Name ITUserPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
 ```
 
-This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>. After you create this policy, you must associate it with specific users.
+This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy `GlobalThrottlingPolicy_<GUID>`. After you create this policy, you must associate it with specific users.
 
 ### Example 3
 ```powershell
@@ -207,7 +207,7 @@ In Exchange Server 2010, this example creates a policy for a tenant that sets th
 New-ThrottlingPolicy -Name AllUsersEWSPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
 ```
 
-This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>.
+This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy `GlobalThrottlingPolicy_<GUID>`.
 
 ### Example 5
 ```powershell
@@ -233,7 +233,7 @@ This example creates a throttling policy that restricts a user to be able to onl
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name of the object in Active Directory. The default policy is named DefaultThrottlingPolicy\<GUID\>.
+The Name parameter specifies the name of the object in Active Directory. The default policy is named `DefaultThrottlingPolicy<GUID>`.
 
 ```yaml
 Type: String

@@ -61,7 +61,9 @@ Sets the maximum concurrent connections to 10.
 
 ### Example 2
 ```powershell
-$ConnectorConfig = Get-DeliveryAgentConnector "Contoso X.400 Connector"; $ConnectorConfig.AddressSpaces += "X400:c=US;p=Fabrikam;a=Contoso;o=Sales;1"; $ConnectorConfig.SourceTransportServers += Hub04; Set-DeliveryAgentConnector "Contoso X.400 Connector" -AddressSpaces $ConnectorConfig.AddressSpaces -SourceTransportServers $ConnectorConfig.SourceTransportServers
+$ConnectorConfig = Get-DeliveryAgentConnector "Contoso X.400 Connector"
+$ConnectorConfig.AddressSpaces += "X400:c=US;p=Fabrikam;a=Contoso;o=Sales;1"
+$ConnectorConfig.SourceTransportServers += Hub04; Set-DeliveryAgentConnector "Contoso X.400 Connector" -AddressSpaces $ConnectorConfig.AddressSpaces -SourceTransportServers $ConnectorConfig.SourceTransportServers
 ```
 
 This example uses the temporary variable $ConnectorConfig to add the address space c=US;p=Fabrikam;a=Contoso;o=Sales to the delivery agent connector Contoso X.400 Connector and also adds the server Hub04 to the list of servers that host the connector.
@@ -85,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressSpaces
-The AddressSpaces parameter specifies the domain names for which this delivery agent connector is responsible. The syntax for entering an address space is as follows: \<AddressSpaceType\>:\<AddressSpace\>;\<AddressSpaceCost\>. You must enclose each address space in quotation marks (").
+The AddressSpaces parameter specifies the domain names that the delivery agent connector is responsible for. The complete syntax for entering an address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`. Enclose each address space in quotation marks (").
 
 ```yaml
 Type: MultiValuedProperty

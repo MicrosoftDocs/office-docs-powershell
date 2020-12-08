@@ -46,7 +46,7 @@ This example removes the message classification named "My Message Classification
 The Identity parameter specifies the message classification that you want to remove. You can use any value that uniquely identifies the message classification. For example:
 
 - Name
-- Identity: Default\\<Name\> or \<Locale\>\\<Name\>; for example, "Default\My Message Classification" or "es-ES\My Message Classification".
+- Identity: `Default\<Name>` or `<Locale>\<Name>` (for example, `"Default\My Message Classification"` or `"es-ES\My Message Classification"`).
 - ClassificationID (GUID)
 
 ```yaml

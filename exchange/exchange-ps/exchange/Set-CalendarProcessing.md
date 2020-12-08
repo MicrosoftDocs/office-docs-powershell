@@ -401,7 +401,7 @@ The BookInPolicy parameter specifies users or groups who are allowed to submit i
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -691,9 +691,11 @@ Accept wildcard characters: False
 ### -MinimumDurationInMinutes
 This parameter is available only in the cloud-based service.
 
-The MinimumDurationInMinutes parameter specifies the minimum duration in minutes for meeting requests. A valid value is an integer from 0 through INT32 (2147483647). The default value is 0, which means there is no minimum duration.
+The MinimumDurationInMinutes parameter specifies the minimum duration in minutes for meeting requests in workspace mailboxes. A valid value is an integer from 0 through INT32 (2147483647). The default value is 0, which means there is no minimum duration.
 
 For recurring meetings, the value of this parameter applies to the length of an individual meeting instance.
+
+This parameter only works on workspace mailboxes.
 
 ```yaml
 Type: Int32
@@ -813,7 +815,7 @@ The RequestInPolicy parameter specifies users who are allowed to submit in-polic
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -838,7 +840,7 @@ The RequestOutOfPolicy parameter specifies users who are allowed to submit out-o
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -863,7 +865,7 @@ The ResourceDelegates parameter specifies users can approve or reject requests t
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]

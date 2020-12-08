@@ -43,13 +43,17 @@ This example exports a single message to the specified file path. Because the Ex
 
 ### Example 2
 ```powershell
-Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False; $Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"; $Temp=$Temp.Replace("<","_"); $Temp=$Temp.Replace(">","_"); Export-Message $_.Identity | AssembleMessage -Path $Temp}
+Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False
+$Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"
+$Temp=$Temp.Replace("<","_")
+$Temp=$Temp.Replace(">","_")
+Export-Message $_.Identity | AssembleMessage -Path $Temp}
 ```
 
 This example retrieves all messages from the specified queue. The query results are then piped to the Export-Message command, and all the messages are copied to individual .eml files. The Internet Message IDs of each message are used as the file names. To accomplish this, the command does the following:
 
 - Retrieves all messages in a specific queue using the Get-Message cmdlet.
-- The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets ("\>" and "\<") which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
+- The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets (`<` and `>`) which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
 - The ForEach-Object cmdlet also exports the message using the file name prepared.
 
 ## PARAMETERS

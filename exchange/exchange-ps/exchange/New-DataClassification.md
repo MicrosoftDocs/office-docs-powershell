@@ -41,7 +41,11 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte; $Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"; $Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte; $Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"; New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
+$Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte
+$Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"
+$Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte
+$Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"
+New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
 ```
 
 This example creates a new data classification rule named "Contoso Employee-Customer Confidential" that uses the document fingerprints of the files C:\\My Documents\\Contoso Employee Template.docx and D:\\Data\\Contoso Customer Template.docx.

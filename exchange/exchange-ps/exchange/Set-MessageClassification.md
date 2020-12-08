@@ -57,7 +57,7 @@ This example makes the following configuration changes to the message classifica
 The Identity parameter specifies the message classification that you want to modify. You can use any value that uniquely identifies the message classification. For example:
 
 - Name
-- Identity: Default\\<Name\> or \<Locale\>\\<Name\>; for example, "Default\My Message Classification" or "es-ES\My Message Classification".
+- Identity: `Default\<Name>` or `<Locale>\<Name>`; for example, `"Default\My Message Classification"` or `"es-ES\My Message Classification"`.
 - ClassificationID (GUID)
 
 ```yaml
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ### -ClassificationID
 The ClassificationID parameter specifies the classification ID (GUID) of an existing message classification that you want to import and use in your Exchange organization. Use this parameter if you're configuring message classifications that span two Exchange forests in the same organization.
 
-To find the ClassificationID value of the message classification, replace \<MessageClassificationName\> with the name of the message classification and run the following command: Get-MessageCalssification -Identity "\<MessageClassificationName\>.
+To find the ClassificationID value of the message classification, replace `<MessageClassificationName>` with the name of the message classification and run the following command: `Get-MessageClassification -Identity "<MessageClassificationName>"`.
 
 ```yaml
 Type: Guid

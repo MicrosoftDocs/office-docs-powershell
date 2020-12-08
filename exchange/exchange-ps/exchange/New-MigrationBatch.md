@@ -829,7 +829,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - LocalFailures
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a back slash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder, but not the well-known Notes folder, use the following syntax: `\#Notes\#`.
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
 
@@ -877,7 +877,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - LocalFailures
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a back slash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder, but not the well-known Notes folder, use the following syntax: `\#Notes\#`.
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
 ```yaml

@@ -99,7 +99,8 @@ This example removes the mailbox and the user account for the user named John Ro
 
 ### Example 3
 ```powershell
-$Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
+$Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}
+Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
 This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.

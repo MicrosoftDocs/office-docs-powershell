@@ -98,7 +98,7 @@ This example returns all export requests that have the name DB01toPST where the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when the request was created using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>. Exchange automatically precedes the request with the mailbox's alias.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specified a name for the export request when the request was created using the New-MailboxExportRequest cmdlet, use the following syntax: `Alias\Name`. Exchange automatically precedes the request with the mailbox's alias.
 
 This parameter can't be with the following parameters:
 

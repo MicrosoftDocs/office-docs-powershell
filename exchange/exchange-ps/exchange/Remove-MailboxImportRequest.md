@@ -78,7 +78,7 @@ This example removes all completed import requests.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you created the request using the Name parameter, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you created the request using the Name parameter, use the following syntax: `Alias\Name`.
 
 You can't use this parameter with the RequestGuid parameter.
 

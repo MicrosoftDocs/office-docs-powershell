@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ### -Mailboxes
 The Mailboxes parameter specifies the mailbox to retrieve mailbox audit log entries from.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
  If you don't specify a value, mailbox audit logs for all mailboxes in the organization are returned.
 

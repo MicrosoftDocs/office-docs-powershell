@@ -13,7 +13,7 @@ ms.reviewer: navgupta
 # Get-EXOCasMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 Use the Get-EXOCasMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
 
@@ -24,13 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity (Default)
 ```
 Get-EXOCasMailbox [[-Identity] <String>]
- [-Filter <String>]
+ [-ActiveSyncDebugLogging]
  [-ExternalDirectoryObjectId <Guid>]
+ [-Filter <String>]
+ [-GetImapProtocolLog]
+ [-GetPopProtocolLog]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <String>]
+ [-PrimarySmtpAddress <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
  [-ProtocolSettings]
+ [-ReadIsOptimizedForAccessibility]
  [-ResultSize <Unlimited>]
+ [-SendLogsTo <String[]>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -38,12 +45,18 @@ Get-EXOCasMailbox [[-Identity] <String>]
 ### Anr
 ```
 Get-EXOCasMailbox [-Anr <String>]
+ [-ActiveSyncDebugLogging]
  [-Filter <String>]
+ [-GetImapProtocolLog]
+ [-GetPopProtocolLog]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
  [-ProtocolSettings]
+ [-ReadIsOptimizedForAccessibility]
  [-ResultSize <Unlimited>]
+ [-SendLogsTo <String[]>]
  [<CommonParameters>]
 ```
 
@@ -70,7 +83,7 @@ This example returns the values of the following client access settings for the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the following values to identify the mailbox:
+The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the following values:
 
 - User ID or user principal name (UPN)
 - GUID
@@ -85,7 +98,7 @@ Otherwise, you can use any other value that uniquely identifies the mailbox. For
 - LegacyExchangeDN
 - SamAccountName
 
-You can't use this parameter with the Anr parameter.
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -109,6 +122,8 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 - LastName
 - Alias
 
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
+
 ```yaml
 Type: String
 Parameter Sets: Anr
@@ -122,8 +137,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+### -ActiveSyncDebugLogging
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -### -ExternalDirectoryObjectId
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Anr, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
@@ -163,6 +196,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GetImapProtocolLog
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GetPopProtocolLog
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreDefaultScope
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OrganizationalUnit
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
@@ -181,6 +262,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -241,7 +340,25 @@ The ProtocolSettings switch returns the server names, TCP ports and encryption m
 - ExternalSmtpSettings
 - InternalSmtpSettings
 
-To see these values, you need to use a formatting cmdlet. For example, Get-CasMailbox laura@contoso.com -ProtocolSettings | Format-List.
+You don't need to specify a value with this switch.
+
+To see these values, you need to use a formatting cmdlet. For example, `Get-CasMailbox laura@contoso.com -ProtocolSettings | Format-List`.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadIsOptimizedForAccessibility
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -272,8 +389,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SendLogsTo
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, Identity or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String
@@ -294,14 +429,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The following Input parameters are not supported in Get-EXOCasMailbox:
+The following Get-CasMailbox parameters are not available or supported in Get-EXOCasMailbox:
 
 - IgnoreDefaultScope
 - ReadIsOptimizedForAccessibility
 - SortBy
-- GetImapProtocolLog
-- GetPopProtocolLog
-- SendLogsTo
+
 
 ## OUTPUTS
 

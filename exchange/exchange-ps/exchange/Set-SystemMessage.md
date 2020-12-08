@@ -61,14 +61,14 @@ The Identity parameter specifies the custom system message that you want to modi
 
 The identity value of a system message uses one of these formats:
 
-- System messages for enhanced status codes: \<Language\>\\\<Internal \| External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
-- System messages for quotas: \<Language\>\\\<QuotaMessageType\>. For example, En\\ProhibitSendReceiveMailBox.
+- System messages for enhanced status codes: `Language\<Internal | External>\DSNCode`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
+- System messages for quotas: `Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailBox`.
 
-\<Language\>: For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+Language: For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
-\<DSNcode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\Default DSNs.html".
+DSNCode: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
 
-\<QuotaMessageType\>: Valid value are:
+QuotaMessageType: Valid value are:
 
 Mailbox size quotas:
 
@@ -197,24 +197,24 @@ This parameter can contain text and HTML tags. The maximum length is 512 charact
 
 The following HTML tags are available:
 
-- \<B\> and \</B\> (bold)
-- \<EM\> and \</EM\> (italic)
-- \<BR\> (line break)
-- \<P\> and \</P\> (paragraph)
-- \<A HREF="url"\> and \</A\> (hyperlink)
+- `<B>` and `</B>` (bold)
+- `<EM>` and `</EM>` (italic)
+- `<BR>` (line break)
+- `<P>` and `</P>` (paragraph)
+- `<A HREF="url">` and `</A>` (hyperlink)
 
 You need to use single quotation marks (not double quotation marks) around the complete text string if you use the hyperlink tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
 
 Use the following escape codes for these special characters:
 
-- &lt; for \<.
-- &gt; for \>.
-- &quot; for ".
-- &amp; for &.
+- `&lt;` for \<
+- `&gt;` for \>
+- `&quot;` for "
+- `&amp;` for &
 
 Here's an example value for this parameter that uses HTML tags and special characters:
 
-'You tried to send a message to a \<B\>disabled\</B\> mailbox. Please visit \<A HREF="https://it.contoso.com"\>Internal Support\</A\> or contact &quot;InfoSec&quot; for more information.'
+`'You tried to send a message to a <B>disabled</B> mailbox. Please visit <A HREF="https://it.contoso.com">Internal Support</A> or contact &quot;InfoSec&quot; for more information.'`
 
 ```yaml
 Type: String

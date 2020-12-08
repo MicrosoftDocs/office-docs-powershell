@@ -7,7 +7,7 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX, NOFOLLOW
+ROBOTS: NOINDEX
 ---
 
 # Get-TenantAllowBlockListItems

@@ -29,7 +29,7 @@ Update-Module -Name Microsoft.Online.SharePoint.PowerShell
 
 To open the SharePoint Online Management Shell command prompt, from the **Start** screen, type **sharepoint**, and then click **SharePoint Online Management Shell**.
 
-[!Video https://www.youtube.com/embed/TMzHAWEQjlk]
+[!VIDEO https://www.youtube.com/embed/TMzHAWEQjlk]
 
 ## To connect with a user name and password ##
 

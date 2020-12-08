@@ -52,7 +52,7 @@ This example adds a server monitoring override that disables the responder Activ
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityConfigDCServerReboot", not "ad\\activedirectoryconnectivityconfigdcserverreboot".
+The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax `HealthSet\MonitoringItemName[\TargetResource]`. Note that the values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityConfigDCServerReboot`, not `ad\activedirectoryconnectivityconfigdcserverreboot`.
 
 You can use Get-ServerHealth to find the correct object for the monitoring item you want to override.
 
