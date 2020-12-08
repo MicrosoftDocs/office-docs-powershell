@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-PolicyConfig cmdlet to 
+Use the Set-PolicyConfig cmdlet to modify the endpoint restrictions that are configured in the organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -92,7 +92,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -156,7 +155,24 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpGlobalSettings
-{{ Fill EndpointDlpGlobalSettings Description }}
+
+The EndpointDlpGlobalSettings parameter specifies the global endpoints. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
+
+The value of `<Setting>` is one of the supported values.
+
+Example values:
+
+- `@{"Setting"="PathExclusion"; "Value"="C:\Windows";}`
+- `@{"Setting"="PathExclusion"; "Value"="%AppData%\Mozilla";}`
+- `@{"Setting"="PathExclusion"; "Value"="C:\Users\*\Desktop";}`
+- `@{"Setting"="UnallowedApp"="Notepad ++;"Executable"="notepad++"}`
+- `@{"Setting"="UnallowedApp"="Executable"="cmd"}`
+- `@{"Setting"="UnallowedBrowser"="Chrome";"Executable"="chrome"}`
+- `@{"Setting"="CloudAppRestrictions"="Allow"}`
+- `@{"Setting"="CloudAppRestrictionList"="1.1.2.2"}`
+- `@{"Setting"="CloudAppRestrictionList"="subdomain.com"}`
+- `@{"Setting"="CloudAppRestrictionList"="another.differentdomain.edu"}`
+- `@{"Setting"="ShowEndpointJustificationDropdown"; "True";}`
 
 ```yaml
 Type: PswsHashtable[]

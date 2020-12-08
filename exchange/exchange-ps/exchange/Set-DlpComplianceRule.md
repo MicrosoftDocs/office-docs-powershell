@@ -529,7 +529,25 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpRestrictions
-{{ Fill EndpointDlpRestrictions Description }}
+The EndpointDlpRestrictions parameter specifies the restricted endpoints. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
+
+The value of `<Setting>` is one of the supported values.
+
+The value of `<Value>` is Audit, Block, Ignore, or Warn.
+
+Example values:
+
+- `@{"Setting"="Print"; "Value"="Block"}`
+- `@{"Setting"="CopyPaste"; "Value"="Block";}`
+- `@{"Setting"="ScreenCapture"; "Value"="Block";}`
+- `@{"Setting"="RemovableMedia"; "Value"="Block";}`
+- `@{"Setting"="NetworkShare"; "Value"="Block";}`
+- `@{"Setting"="Print"; "Value"="Audit";}`
+- `@{"Setting"="UnallowedApps"; "Value"="notepad"; "value2"="Microsoft Notepad"}`
+
+When you use the values Block or Warn in this parameter, you also need to use the NotifyUser parameter.
+
+You can view and configure the available restrictions with the Get-PolicyConfig and Set-PolicyConfig cmdlets.
 
 ```yaml
 Type: PswsHashtable[]
@@ -629,7 +647,7 @@ Accept wildcard characters: False
 ### -ExceptIfContentContainsSensitiveInformation
 The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
+This parameter uses the following syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 

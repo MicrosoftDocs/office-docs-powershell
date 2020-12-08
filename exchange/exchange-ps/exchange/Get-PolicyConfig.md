@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-PolicyConfig cmdlet to 
+Use the Get-PolicyConfig cmdlet to view the endpoint restrictions that are configured in the organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,7 +34,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Get-PolicyConfig
 ```
 
-{{ Add example description here }}
+This example returns the endpoint restrictions that are available in the organization.
 
 ## PARAMETERS
 
