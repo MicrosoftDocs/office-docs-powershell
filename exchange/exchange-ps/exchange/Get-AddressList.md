@@ -72,7 +72,7 @@ The Identity parameter specifies the address list that you want to view. You can
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 You can't use this parameter with the Container or SearchText parameters.
 
@@ -95,7 +95,7 @@ The Container parameter filters the results based on the location of the address
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 You can't use this parameter with the Identity or SearchText parameters.
 

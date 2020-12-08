@@ -58,8 +58,8 @@ This example modifies the existing rule that has the rule ID value x2hlsdpGmUifj
 The Identity parameter specifies the Sweep rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
-- Exchange Online: \<mailbox alias\>\\\<RuleId\> (for example, rzaher\\x2hlsdpGmUifjFgxxGIOJw==.
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleId\> (for example, contoso.com/Users/Rick Zaher\\x2hlsdpGmUifjFgxxGIOJw==.
+- Exchange Online: `MailboxAlias\RuleID` (for example, `rzaher\2hlsdpGmUifjFgxxGIOJw==`).
+- On-premises Exchange: `MailboxCanonicalName\RuleID` (for example, `contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==`).
 
 You can get these identity values by using the Get-SweepRule cmdlet.
 

@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ### -Mailboxes
 The Mailboxes parameter specifies the mailboxes to retrieve mailbox audit log entries from. You can use this parameter to search audit logs for multiple mailboxes.
 
-You enter multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+You enter multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the ShowDetails switch.
 

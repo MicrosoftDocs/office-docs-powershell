@@ -96,9 +96,9 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters: ``! # $ % & ' * + - / = ? ^ _ ` { | } ~``. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
@@ -150,7 +150,7 @@ Valid values for this parameter are individual senders in your organization (mai
 - Email address
 - GUID
 
-To enter multiple senders, use the following syntax: \<sender1\>,\<sender2\>,...\<senderX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderX\>".
+You can specify multiple senders separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
 The senders you specify for this parameter are automatically copied to the AcceptMessagesOnlyFromSendersOrMembers property. Therefore, you can't use the AcceptMessagesOnlyFrom and AcceptMessagesOnlyFromSendersOrMembers parameters in the same command.
 
@@ -200,7 +200,7 @@ Valid values for this parameter are recipients in your organization. You can use
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -515,22 +515,20 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
-- Use the \<Type\> value SMTP on the address.
-- The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
+- Use the Type value SMTP on the address.
+- The first email address when you don't use any Type values, or when you use multiple lowercase smtp Type values.
 - If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
-
-To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
 ```yaml
 Type: ProxyAddress[]
@@ -592,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail-enabled public folder. Although messages send on behalf of the public folder clearly show the sender in the From field (\<Sender\> on behalf of \<PublicFolder\>), replies to these messages are delivered to the public folder, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail-enabled public folder. Although messages send on behalf of the public folder clearly show the sender in the From field (`<Sender> on behalf of <PublicFolder>`), replies to these messages are delivered to the public folder, not the sender.
 
 The sender you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
@@ -603,7 +601,7 @@ The sender you specify for this parameter must be a mailbox, mail user or mail-e
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 By default, this parameter is blank, which means no one else has permission to send on behalf of this public folder.
 
@@ -741,7 +739,7 @@ Valid values for this parameter are individual senders in your organization (mai
 - Email address
 - GUID
 
-To enter multiple senders, use the following syntax: \<sender1\>,\<sender2\>,...\<senderX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderX\>".
+You can specify multiple senders separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
 The senders you specify for this parameter are automatically copied to the RejectMessagesFromSendersOrMembers property. Therefore, you can't use the RejectMessagesFrom and RejectMessagesFromSendersOrMembers parameters in the same command.
 

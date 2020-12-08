@@ -36,7 +36,8 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-$edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0; New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
+$edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0
+New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
 
 This example creates a new DLP EDM schema. The first command reads the schema in the XML file to a variable, and the second command uses that information to create the DLP EDM schema.

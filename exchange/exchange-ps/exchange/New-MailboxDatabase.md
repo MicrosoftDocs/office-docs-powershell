@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -EdbFilePath
-The EdbFilePath parameter specifies the path to the database files. The default value is %programfiles%\\Microsoft\\Exchange Server\\V15\\Mailbox\\\<Database name\>.edb.
+The EdbFilePath parameter specifies the path to the database files. The default location is `%ExchangeInstallPath%Mailbox\<Mailbox DB Name>\<Mailbox DB Name>.edb`.
 
 ```yaml
 Type: EdbFilePath
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogFolderPath
-The LogFolderPath parameter specifies the folder location for log files.
+The LogFolderPath parameter specifies the folder location for log files.The default location is `%ExchangeInstallPath%Mailbox\<Mailbox DB Name>`
 
 ```yaml
 Type: NonRootLocalLongFullPath

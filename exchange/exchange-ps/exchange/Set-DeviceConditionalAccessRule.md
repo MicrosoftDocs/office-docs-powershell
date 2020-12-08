@@ -98,7 +98,7 @@ This example modifies the specified mobile device conditional access rule to blo
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device conditional access rule that you want to modify. The name of the rule uses the syntax \<Mobile device conditional access policy name\>{\<GUID value\>}. For example, Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}. You can find the name value by running the command: Get-DeviceConfigurationRule | Format-List Name.
+The Identity parameter specifies the mobile device conditional access rule that you want to modify. The name of the rule uses the syntax `<Mobile device conditional access policy name>{<GUID value>}`. For example, `Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}`. You can find the name value by running the command: Get-DeviceConfigurationRule | Format-List Name.
 
 ```yaml
 Type: ComplianceRuleIdParameter

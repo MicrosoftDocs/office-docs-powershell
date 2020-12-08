@@ -60,7 +60,8 @@ This example allows members of the US Discovery Managers role group to perform a
 
 ### Example 4
 ```powershell
-$DG = Get-DistributionGroup "Ottawa Users"; New-ComplianceSecurityFilter -FilterName DGFilter -Users eDiscoveryManager -Filters "Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'" -Action Search
+$DG = Get-DistributionGroup "Ottawa Users"
+New-ComplianceSecurityFilter -FilterName DGFilter -Users eDiscoveryManager -Filters "Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'" -Action Search
 ```
 
 This example assigns allows members of the eDiscovery Manager role group to only search the mailboxes of members of the Ottawa Users distribution group.
@@ -69,7 +70,8 @@ This example requires you to connect to Security & Compliance Center PowerShell 
 
 ### Example 5
 ```powershell
-$DG = Get-DistributionGroup "Executive Team"; New-ComplianceSecurityFilter -FilterName NoExecutivesPreview -Users all -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" -Action Purge
+$DG = Get-DistributionGroup "Executive Team"
+New-ComplianceSecurityFilter -FilterName NoExecutivesPreview -Users all -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" -Action Purge
 ```
 
 This example prevents any user from deleting content from the mailboxes of members of the Executive Team distribution group.

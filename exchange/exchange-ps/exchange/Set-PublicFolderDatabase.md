@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ### -MaintenanceSchedule
 The MaintenanceSchedule parameter specifies the store maintenance schedule.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ### -QuotaNotificationSchedule
 The QuotaNotificationSchedule parameter specifies the interval at which warning messages are sent when public folders exceed their specified size limit.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 ### -ReplicationSchedule
 The ReplicationSchedule parameter specifies the time intervals during which replication of public folders or contents may occur.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 

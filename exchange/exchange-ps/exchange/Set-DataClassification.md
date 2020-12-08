@@ -58,14 +58,23 @@ This example removes the existing Spanish translation from the data classificati
 
 ### Example 3
 ```powershell
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte; $Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DataClassification "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint); Set-DataClassification $Contoso_Confidential.Identity -FingerPrints $Array
+$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte
+$Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
+$Contoso_Confidential = Get-DataClassification "Contoso Confidential"
+$Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
+$Array.Add($Benefits_FingerPrint)
+Set-DataClassification $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
 This example modifies the existing data classification rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
 
 ### Example 4
 ```powershell
-$cc = Get-DataClassification "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DataClassification $cc.Identity -FingerPrints $a
+$cc = Get-DataClassification "Contoso Confidential"
+$a = [System.Collections.ArrayList]($cc.Fingerprints)
+$a
+$a.RemoveAt(0)
+Set-DataClassification $cc.Identity -FingerPrints $a
 ```
 
 This example modifies the data classification rule named "Contoso Confidential" by removing an existing document fingerprint without affecting other document fingerprints that are already defined.

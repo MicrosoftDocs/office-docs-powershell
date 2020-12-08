@@ -52,8 +52,8 @@ The Identity parameter specifies the Inbox rule that you want to disable. You ca
 
 - Name
 - RuleIdentity property (for example, 16752869479666417665).
-- Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
-- On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
+- Exchange Online: `MailboxAlias\RuleIdentity` (for example, `rzaher\16752869479666417665`).
+- On-premises Exchange: `MailboxCanonicalName\RuleIdentity` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
 Type: InboxRuleIdParameter

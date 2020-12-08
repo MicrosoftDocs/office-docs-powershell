@@ -440,7 +440,7 @@ The RetentionEnabled parameter specifies whether the tag is enabled. When set to
 
 Messages with a disabled tag are still considered tagged, so any default policy tags in the user's retention policy aren't applied to such messages.
 
-When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
+When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as `DISABLED_<Original Name>`.
 
 ```yaml
 Type: Boolean
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 ### -RetentionId
 The RetentionId parameter specifies an alternate tag ID to ensure the retention tag found on mailbox items tagged in one Exchange organization matches the tag when the mailbox is moved to another Exchange organization (for example, in a cross-forest deployment or in a cross-premises deployment, when a mailbox is moved from an on-premises Exchange server to the cloud, or a cloud-based mailbox is moved to an on-premises Exchange server).
 
-It's not ordinarily required to specify or modify the RetentionId parameter for a retention tag. The parameter is populated automatically by \<scriptname\> when importing retention tags in a cross-forest or cross-premises deployment.
+Typically, you don't need to specify or modify the RetentionId parameter for a retention tag. This parameter is populated automatically when importing retention tags in a cross-forest or cross-premises deployment.
 
 ```yaml
 Type: Guid

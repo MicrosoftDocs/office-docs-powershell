@@ -95,7 +95,7 @@ The ManagedBy parameter specifies a user who owns the group. You can use any val
 - Email address
 - GUID
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...). The values that you specify will overwrite the current list of owners.
+You can specify multiple owners by using the following syntax: `@("Owner1","Owner2",..."OwnerN")`. The values that you specify will overwrite the current list of owners.
 
 The users you specify with this parameter aren't automatically added to the group. To add members to the group, use the Update-EOPDistributionGroupMember cmdlet.
 
