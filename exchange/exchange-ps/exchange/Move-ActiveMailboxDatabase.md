@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ### -SkipActiveCopyChecks
 The SkipActiveCopyChecks switch specifies whether to skip checking the current active copy to see if it's currently a seeding source for any passive databases. You don't need to specify a value with this switch.
 
-Note: When you use this switch, you can move a database that's currently a seeding source, which cancels the seed operation.
+**Note**: When you use this switch, you can move a database that's currently a seeding source, which cancels the seed operation.
 
 ```yaml
 Type: SwitchParameter
