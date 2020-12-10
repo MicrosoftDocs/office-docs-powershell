@@ -1645,7 +1645,7 @@ The LeanPopoutEnabled parameter specifies whether to enable faster loading of po
 - $true: Lean pop-outs are enabled.
 - $false: Lean pop-outs are disabled. This is the default value.
 
-Notes:
+**Notes**:
 
 - Lean pop-outs aren't available for messages that contain attachments or information rights management (IRM) restrictions.
 - Outlook add-ins and Skype for Business Online presence aren't available with lean pop-outs.

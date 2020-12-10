@@ -711,7 +711,7 @@ The AutoExpandingArchive switch enables the unlimited archiving feature (called 
 
 After you enable auto-expanding archiving, additional storage space is automatically added to the user's archive mailbox when it approaches the storage limit.
 
-Notes:
+**Notes**:
 
 - The user's archive mailbox has to be enabled before auto-expanding archiving can be enabled.
 - After you enable auto-expanding archiving for the user's mailbox, it can't be disabled.

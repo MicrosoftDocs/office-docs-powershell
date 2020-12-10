@@ -91,7 +91,7 @@ $<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false
 
 This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their user principal name (UPN). The text file must contain one UPN on each line like this:
 
-> akol@contoso.com <br/> tjohnston@contoso.com <br/> kakers@contoso.com
+> akol@contoso.com <br> tjohnston@contoso.com <br> kakers@contoso.com
 
 After you populate the text file with the user accounts you want to update, run the following commands:
 

@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Get-HoldCompliancePolicy to view existing preservation policies in the Security & Compliance Center.
 
-Note: The Get-HoldCompliancePolicy cmdlet has been replaced by the Get-RetentionCompliancePolicy cmdlet. If you have scripts that use Get-HoldCompliancePolicy, update them to use Get-RetentionCompliancePolicy.
+**Note**: The Get-HoldCompliancePolicy cmdlet has been replaced by the Get-RetentionCompliancePolicy cmdlet. If you have scripts that use Get-HoldCompliancePolicy, update them to use Get-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

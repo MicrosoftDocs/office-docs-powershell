@@ -64,7 +64,7 @@ The following introductory video shows you how to connect to and use Exchange On
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
-  
+
   ```dos
   winrm get winrm/config/client/auth
   ```

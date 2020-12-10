@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-TransportServer cmdlet to modify settings that are associated with the Hub Transport server role or the Edge Transport server role.
 
-Note: In Exchange 2013 or later, use the Set-TransportService cmdlet instead. If you have scripts that use Set-TransportServer, update them to use Set-TransportService.
+**Note**: In Exchange 2013 or later, use the Set-TransportService cmdlet instead. If you have scripts that use Set-TransportServer, update them to use Set-TransportService.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

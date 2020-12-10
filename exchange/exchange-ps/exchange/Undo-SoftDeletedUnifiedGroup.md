@@ -63,7 +63,7 @@ The SoftDeletedObject parameter specifies the soft-deleted Microsoft 365 Group t
 - SamAccountName
 - User ID or user principal name (UPN)
 
-Note: You might need to use the DistinguishedName or ExchangeGuid property to identify the soft-deleted Microsoft 365 Group, because it's possible for an active Microsoft 365 Group and a soft-deleted Microsoft 365 Group to have the same primary SMTP address.
+**Note**: You might need to use the DistinguishedName or ExchangeGuid property to identify the soft-deleted Microsoft 365 Group, because it's possible for an active Microsoft 365 Group and a soft-deleted Microsoft 365 Group to have the same primary SMTP address.
 
 ```yaml
 Type: UnifiedGroupIdParameter
