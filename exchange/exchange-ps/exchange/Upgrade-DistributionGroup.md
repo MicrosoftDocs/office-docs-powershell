@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Upgrade-DistributionGroup cmdlet to upgrade distribution groups to Microsoft 365 Groups. This cmdlet only works on distribution groups, not mail-enabled security groups.
 
-Note: Before you use this cmdlet, verify there are no email address policies that you created with the IncludeUnifiedGroupRecipients parameter; otherwise the command will fail. Remove and recreate the email address policies after you upgrade your distribution groups to Microsoft 365 Groups.
+**Note**: Before you use this cmdlet, verify there are no email address policies that you created with the IncludeUnifiedGroupRecipients parameter; otherwise the command will fail. Remove and recreate the email address policies after you upgrade your distribution groups to Microsoft 365 Groups.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 

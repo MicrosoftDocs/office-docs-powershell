@@ -69,7 +69,7 @@ The connection-related cmdlets that are available in the EXO V2 module are liste
 
 |EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
-|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
+|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <p> or <p> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
 |[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
 |[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
 |
@@ -127,7 +127,7 @@ The procedures in this section explain how to install, update, and uninstall the
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
-  
+
   ```dos
   winrm get winrm/config/client/auth
   ```
@@ -362,7 +362,7 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 - You can now use `FolderId` as an identity parameter in **Get-EXOMailboxFolderPermission**. You can get the `FolderId` value using **Get-MailboxFolder**. For example:
 
   `Get-MailboxFolderPermission -Identity <UPN>:<Folder-Path>`
-  
+
   `Get-MailboxFolderPermission -Identity <UPN>:\<Folder-Id>`
 
 - Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors which led to failures have been resolved.

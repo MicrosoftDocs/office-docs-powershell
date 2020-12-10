@@ -269,7 +269,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 To empty the list of email addresses and domains, use the value $null.
 
-Notes:
+**Notes**:
 
 - All email addresses in the global address list (GAL) are automatically considered as trusted senders, so you don't need to add them to the list.
 - You can't directly modify the Safe Recipients list by using this cmdlet. You use this parameter to modify the Safe Senders list, and the email addresses and domains are synchronized to the Safe Recipients list.

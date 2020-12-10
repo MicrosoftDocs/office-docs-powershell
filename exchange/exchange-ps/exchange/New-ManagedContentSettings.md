@@ -106,7 +106,7 @@ Valid parameter values for custom message classes include:
 - The asterisk (\*) wildcard character, which indicates that the content settings apply to all message classes.
 - A specific message class that has the asterisk wildcard character. The asterisk wildcard character must appear as the last character in the message class. For example, IPM.NOTE\* (includes IPM.NOTE and all subclasses) or IPM.NOTE.\* (includes the subclasses for IPM.NOTE but not IPM.NOTE itself). \*.NOTE and IPM.\*.NOTE aren't valid values.
 
-Notes:
+**Notes**:
 
 - When wildcard characters are used, these policies apply only to message classes that don't have a specific content setting. Therefore, IPM.NOTE.SMIME overrides IPM.NOTE.\*.
 - Specific settings supersede general settings, for example, Voicemail supersedes AllMailboxContent.
