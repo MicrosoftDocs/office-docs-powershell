@@ -620,7 +620,9 @@ Accept wildcard characters: False
 ### -ExceptIfContentCharacterSetContainsWords
 The ExceptIfContentCharacterSetContainsWords parameter specifies an exception for the rule that looks for character set names in messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+To specify multiple words, this parameter uses the syntax: `Word1,word2,...wordN`. Don't use leading or trailing spaces.
+
+Supported character sets are `big5, din_66003, euc-jp, euc-kr, gb18030, gb2312, hz-gb-2312, iso-2022-jp, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, koi8-r, koi8-u, ks_c_5601-1987, ns_4551-1, sen_850200_b, shift_jis, utf-7, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-874`.
 
 ```yaml
 Type: MultiValuedProperty
