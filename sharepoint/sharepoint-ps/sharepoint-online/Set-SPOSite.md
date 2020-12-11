@@ -556,7 +556,7 @@ Accept wildcard characters: False
 ### -DisableAppViews
 
 Disables the Power Apps button.
-Possible values
+Possible values:
 
 - Disabled
 - NotDisabled
