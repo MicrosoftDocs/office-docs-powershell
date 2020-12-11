@@ -48,6 +48,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
+ [-SkipRules]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
@@ -880,6 +881,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Onboarding
@@ -1092,6 +1094,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipRules
+This parameter is available only in the cloud-based service.
+
+The SkipRules switch specifies that you want to skip rule migration during GSuite onboarding. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
