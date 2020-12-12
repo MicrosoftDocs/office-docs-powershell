@@ -560,6 +560,7 @@ Possible values:
 
 - Disabled
 - NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: AppViewsPolicy
@@ -579,6 +580,7 @@ Possible values
 
 - Disabled
 - NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
