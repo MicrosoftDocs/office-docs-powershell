@@ -574,7 +574,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
-Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/en-us/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links).
+Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
 Possible values
 
 - Disabled
