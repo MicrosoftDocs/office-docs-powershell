@@ -563,7 +563,6 @@ The ArchiveTargetDatabase parameter specifies the destination mailbox database f
 
 If you don't use this parameter, the archive is moved to the same database as the primary mailbox.
 
-
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRemote, MigrationLocal, MigrationRemoteCrossTenant
