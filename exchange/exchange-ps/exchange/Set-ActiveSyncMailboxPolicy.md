@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-ActiveSyncMailboxPolicy cmdlet to apply a variety of Mobile Device mailbox policy settings to a server. You can set any of the parameters by using one command.
 
-Note: In Exchange 2013 or later, use the Set-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Set-ActiveSyncMailboxPolicy, update them to use Set-MobileDeviceMailboxPolicy.
+**Note**: In Exchange 2013 or later, use the Set-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Set-ActiveSyncMailboxPolicy, update them to use Set-MobileDeviceMailboxPolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
