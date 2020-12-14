@@ -96,7 +96,6 @@ Get-CASMailbox chris@contoso.com | Format-List Ews*
 
 This example returns all Exchange Web Services settings for the user chris@contoso.com.
 
-
 ### Example 4
 ```powershell
 Get-CASMailbox -RecipientTypeDetails SharedMailbox | Select *
