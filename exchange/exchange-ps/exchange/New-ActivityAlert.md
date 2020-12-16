@@ -225,7 +225,7 @@ The Type parameter specifies the type alert. Valid values are:
 - SimpleAggregation: An alert is created based on the activities defined by the Operation and Condition parameters, the number of activities specified by the Threshold parameter, and the time period specified by the TimeWindow parameter.
 - AnomalousAggregation: An alert is created based the activities defined by the Operation and Condition parameters, and the number of activities specified by the Multiplier parameter.
 
-Note: You can't change the Type value in an existing activity alert.
+**Note**: You can't change the Type value in an existing activity alert.
 
 ```yaml
 Type: AlertType

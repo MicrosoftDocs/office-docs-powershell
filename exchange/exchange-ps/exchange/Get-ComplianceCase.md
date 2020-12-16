@@ -48,7 +48,6 @@ Get-ComplianceCase -Identity "Contoso Legal" | Format-List
 
 This example returns detailed information for the core eDiscovery case named Contoso Legal.
 
-
 ### Example 3
 ```powershell
 Get-ComplianceCase -CaseType AdvancedEdiscovery

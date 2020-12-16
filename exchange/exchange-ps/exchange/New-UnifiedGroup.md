@@ -190,7 +190,7 @@ The AccessType parameter specifies the privacy type for the Microsoft 365 Group.
 
 You can change the privacy type at any point in the lifecycle of the group.
 
-Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
+**Note**: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
 ```yaml
 Type: ModernGroupTypeInfo
@@ -435,7 +435,7 @@ The HiddenGroupMembershipEnabled switch specifies whether to hide the members of
 
 You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a Microsoft 365 Group group that represents students enrolled in a class).
 
-Note: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
+**Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter

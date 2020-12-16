@@ -539,7 +539,6 @@ The following Get-Mailbox parameters aren't available or functional in Get-EXOMa
 - PublicFolder
 - SortBy
 
-
 ## OUTPUTS
 
 ###  

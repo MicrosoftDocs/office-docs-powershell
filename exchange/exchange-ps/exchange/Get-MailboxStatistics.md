@@ -222,7 +222,6 @@ You can use any value that uniquely identifies the server. For example:
 
 If you don't use this parameter, the command is run on the local server.
 
-
 ```yaml
 Type: ServerIdParameter
 Parameter Sets: Database, Identity

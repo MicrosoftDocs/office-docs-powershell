@@ -519,7 +519,7 @@ This parameter is available only in the cloud-based service.
 
 The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Azure Active Directory Portal.
 
-Note: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
+**Note**: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
 
 Valid values are:
 
@@ -1124,7 +1124,6 @@ The IsDefault switch specifies whether the Outlook on the web policy is the defa
 If another policy is currently set as the default, this switch replaces the old default policy with this policy.
 
 **Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
-
 
 ```yaml
 Type: SwitchParameter
