@@ -324,8 +324,6 @@ If you don't use this parameter, the status report isn't sent.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)

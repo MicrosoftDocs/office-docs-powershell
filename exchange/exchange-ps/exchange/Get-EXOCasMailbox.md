@@ -435,7 +435,6 @@ The following Get-CasMailbox parameters are not available or supported in Get-EX
 - ReadIsOptimizedForAccessibility
 - SortBy
 
-
 ## OUTPUTS
 
 ###  

@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplaySenderName
-Note: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
+**Note**: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
 
 The DisplaySenderName parameter specifies whether to show the sender's Display Name in the From email address for messages sent to recipients in the remote domain. Valid values are:
 

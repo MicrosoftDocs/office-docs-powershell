@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the New-HoldCompliancePolicy cmdlet to create new preservation policies in the Security & Compliance Center.
 
-Note: The New-HoldCompliancePolicy cmdlet has been replaced by the New-RetentionCompliancePolicy cmdlet. If you have scripts that use New-HoldCompliancePolicy, update them to use New-RetentionCompliancePolicy.
+**Note**: The New-HoldCompliancePolicy cmdlet has been replaced by the New-RetentionCompliancePolicy cmdlet. If you have scripts that use New-HoldCompliancePolicy, update them to use New-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

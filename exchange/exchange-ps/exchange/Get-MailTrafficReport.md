@@ -184,7 +184,7 @@ The Domain parameter filters the results by an accepted domain in the cloud-base
 
 If you don't use the Domain parameter, the message count for your entire organization is returned. This includes messages that were sent from or to unregistered domains that are attributed to your organization. Unregistered domains can be attributed to your organization in hybrid or EOP standalone configurations.
 
-Notes:
+**Notes**:
 
 - Messages that are sent to recipients in multiple domains are counted differently at the domain level versus the organizational level. At the domain level, the message is counted for each different domain. At the organizational level, the message is counted only once. Therefore, if you add up the total number of received messages for each domain, the value might not match the total number of received messages for the organization.
 - The Domain value is Others for messages that were sent from or to unregistered domains that are attributed to your organization (messages in domains that aren't configured as accepted domains in your organization).
