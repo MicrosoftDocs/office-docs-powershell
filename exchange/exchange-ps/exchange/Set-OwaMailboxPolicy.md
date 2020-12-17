@@ -1125,7 +1125,6 @@ If another policy is currently set as the default, this switch replaces the old 
 
 **Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

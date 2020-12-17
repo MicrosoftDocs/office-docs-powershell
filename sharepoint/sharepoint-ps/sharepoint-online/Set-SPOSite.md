@@ -555,7 +555,12 @@ Accept wildcard characters: False
 
 ### -DisableAppViews
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+Disables the Power Apps button.
+Possible values:
+
+- Disabled
+- NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: AppViewsPolicy
@@ -570,8 +575,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
+Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+Possible values
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+- Disabled
+- NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -586,8 +595,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
+Disables the Power Automate button.
+Possible values
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+- Disabled
+- NotDisabled
 
 ```yaml
 Type: FlowsPolicy
