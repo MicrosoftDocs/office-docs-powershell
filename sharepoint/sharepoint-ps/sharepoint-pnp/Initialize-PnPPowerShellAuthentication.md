@@ -99,7 +99,7 @@ Accept pipeline input: False
 ```
 
 ### -CertificatePath
-Password for the certificate being created
+File path to use an existing certificate.
 
 ```yaml
 Type: String
