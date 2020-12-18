@@ -98,18 +98,6 @@ Position: 8
 Accept pipeline input: False
 ```
 
-### -CertificatePath
-Password for the certificate being created
-
-```yaml
-Type: String
-Parameter Sets: Existing Certificate
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
 ### -CommonName
 Common Name (e.g. server FQDN or YOUR name). defaults to 'pnp.contoso.com'
 
