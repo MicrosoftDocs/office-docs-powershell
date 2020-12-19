@@ -63,9 +63,7 @@ Example 3 creates a new site collection for the current company with specified s
 
 ### -CompatibilityLevel
 
-Specifies the version of templates to use when you are creating a new site collection. This value sets the initial CompatibilityLevel value for the site collection. When this parameter is not specified, the CompatibilityLevel will be by default the highest possible version for the Web application.
-
-Note: It can only be set to "15". Other values are not valid and will cause error.
+This parameter no longer has any effect and only accepts a value of '15'.
 
 ```yaml
 Type: Int32
