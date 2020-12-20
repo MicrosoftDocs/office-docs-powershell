@@ -27,7 +27,7 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
- [-EnableAntispoofEnforcement <Boolean>]
+ [-EnableSpoofIntelligence <Boolean>]
  [-Enabled <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
  [-EnableMailboxIntelligenceProtection <Boolean>]
@@ -158,10 +158,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableAntispoofEnforcement
+### -EnableSpoofIntelligence
 This setting is part of spoof protection.
 
-The EnableAntispoofEnforcement parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
+The EnableSpoofIntelligence parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
 
 - $true: Antispoofing is enabled for the policy. This is the default and recommended value. You specify the spoofed senders to allow or block using the Set-PhishFilterPolicy cmdlet.
 - $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
