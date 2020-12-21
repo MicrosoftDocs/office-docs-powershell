@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentInvitationCount
-Determines the number of invites to send out to the application instance of the policy-based recording application.
+Determines the number of invites to send out to the application instance of the policy-based recording application. Can be set to 1 or 2 only. 
 
 In situations where application resiliency is a necessity, multiple invites can be sent to the same application for the same call or meeting.
 If multiple such invites are accepted, then it means that multiple instances of this application are in the call or meeting and each of those instances can record independent of the others.

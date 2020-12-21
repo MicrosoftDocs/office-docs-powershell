@@ -50,7 +50,6 @@ Get-UnifiedAuditLogRetentionPolicy -RecordType ExchangeItem | Format-List Name,D
 
 This example lists the configurable properties for all audit log retention policies that apply to audit records the record type of ExchangeItem.
 
-
 ## PARAMETERS
 
 ### -Operation
