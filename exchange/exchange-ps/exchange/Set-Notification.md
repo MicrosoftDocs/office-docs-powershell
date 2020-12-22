@@ -16,6 +16,12 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-Notification cmdlet to modify notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notification events are related to:
 
+- Mailbox moves and migrations.
+- Expiring and expired certificates.
+- Exporting mailbox content to .pst files.
+- Importing mailbox content from .pst files.
+- Restoring deleted mailboxes.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

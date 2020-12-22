@@ -617,7 +617,6 @@ The TargetedUserActionRecipients parameter specifies the replacement or additi
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
 
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
