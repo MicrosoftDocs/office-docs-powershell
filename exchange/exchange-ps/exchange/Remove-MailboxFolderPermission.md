@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
+ [-ResetDelegateUserCollection]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf]
@@ -41,6 +42,13 @@ Remove-MailboxFolderPermission -Identity kim@contoso.com:\Training -User john@co
 ```
 
 This example removes John's permissions to the Training folder in Kim's mailbox.
+
+### Example 2
+```powershell
+Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
+```
+
+This example clears corrupted deleagte user collection in Kim's mailbox.
 
 ## PARAMETERS
 
@@ -141,6 +149,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetDelegateUserCollection
+This parameter is available only in the cloud-based service.
+
+The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when add/set/remove some delegate user permissions, then you can try to run this switch to clear corrupted existing delegate user collection.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
