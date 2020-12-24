@@ -48,7 +48,7 @@ This example removes John's permissions to the Training folder in Kim's mailbox.
 Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
 ```
 
-This example clears corrupted deleagte user collection in Kim's mailbox.
+This example will clear any corrupted delegate information from Kim’s mailbox.
 
 ## PARAMETERS
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ### -ResetDelegateUserCollection
 This parameter is available only in the cloud-based service.
 
-The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when add/set/remove some delegate user permissions, then you can try to run this switch to clear corrupted existing delegate user collection.
+The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when add/set/remove some delegate user permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
 
 ```yaml
 Type: SwitchParameter
