@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ### -ResetDelegateUserCollection
 This parameter is available only in the cloud-based service.
 
-The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when add/set/remove some delegate user permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
+The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when trying to add, change, or remove delegate permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
 
 ```yaml
 Type: SwitchParameter
