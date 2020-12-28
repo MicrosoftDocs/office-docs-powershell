@@ -615,7 +615,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available or functional in Exchange Server 2010, Exchange 2016 and Exchange 2019
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
 
