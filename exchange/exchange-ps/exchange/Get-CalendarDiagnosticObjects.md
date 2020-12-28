@@ -49,11 +49,11 @@ Some of the more interesting properties that are returned in the results are:
 
 - AppointmentState: 1 = The appointment is a meeting, 2 = The appointment has been received, 4 = The appointment has been cancelled, and 8 = the appointment is a forwarded appointment.
 - CalendarLogTriggerAction: The action that's taken on the item (for example, Create or Update).
-- ClientInfoString: The entity that made the change (for example, Client=OWA;\<AdditionalDetails\>, Client=WebServices;\<AdditionalDetails\>;, or Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;).
+- ClientInfoString: The entity that made the change (for example, `Client=OWA;<AdditionalDetails>`, `Client=WebServices;<AdditionalDetails>`;, or `Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;`).
 - MeetingRequestType: 1 = The meeting message is a meeting request, 65536 = The meeting message is a full update to an existing meeting, 131072 = The meeting message is an informational update to an existing meeting, 262144 = The meeting message is a silent update, 524288 = The update is outdated, or 1048576 = The meeting message is forwarded to a delegate, and the copy is marked as informational.
 - OriginalLastModifiedTime: Used as the primary sort field to order the events.
 - ResponseType: 0 = The organizer hasn't received a response, 1 = The organizer's copy of the meeting, 2 = Tentative, 3 = Accept, 4 = Decline, or 5 = The attendee hasn't responded.
-- ResponsibleUserName: The LegacyExchangeDN value of the user who made the change (for example, /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=BN6PR11MB1587/cn=Microsoft System Attendant or /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=696eea97d3c449eab648920d03385efb-admin).
+- ResponsibleUserName: The LegacyExchangeDN value of the user who made the change (for example, `/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=BN6PR11MB1587/cn=Microsoft System Attendant` or `/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=696eea97d3c449eab648920d03385efb-admin`).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -68,7 +68,9 @@ This example retrieves the calendar diagnostic logs from Pedro Pizarro's mailbox
 
 ### Example 2
 ```powershell
-$A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true; $A | Select-Object *,@{n='OLMT'; e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
+$A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true
+$A | Select-Object *,@{n='OLMT'
+e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
 ```
 
 This is the same as the previous example, but now the results are sorted by original last modified time.

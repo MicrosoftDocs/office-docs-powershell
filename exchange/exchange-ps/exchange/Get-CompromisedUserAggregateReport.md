@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailFlowStatusReport -StartDate 06-01-2020 -EndDate 06-10-2020 -Action Restricted
+Get-CompromisedUserAggregateReport -StartDate 06-01-2020 -EndDate 06-10-2020 -Action Restricted
 ```
 
 This example returns all restricted user accounts for the specified date range.

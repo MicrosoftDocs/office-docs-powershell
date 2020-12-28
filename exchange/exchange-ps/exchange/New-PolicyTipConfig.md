@@ -56,7 +56,7 @@ This example sets the informational URL in Policy Tips to the value `https://www
 ### -Name
 The Name parameter specifies the custom Policy Tip you want to modify. Valid input for this parameter is one of the following values:
 
-- \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
+- `Locale\Action`: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
 - Url
 
 There can be only one custom Policy Tip with the value Url for the Name parameter. For the remaining Policy Tip actions, there can be only one custom Policy Tip for each combination of locale and action. For example, there can be only one custom Policy Tip with the Name value en\\NotifyOnly, but you can create additional custom Policy Tips with the values de\\NotifyOnly and fr\\NotifyOnly for the Name parameter.

@@ -50,7 +50,7 @@ Get-ExchangeCertificate [[-Thumbprint] <String>]
 By default, this cmdlet returns the following certificate properties in the summary list view:
 
 - Thumbprint: The unique digest of the certificate data. An example thumbprint value is 78E1BE82F683EE6D8CB9B9266FC1185AE0890C41.
-- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, the WMSvc-\<ServerName\> certificate that's used for the IIS Web Management Service).
+- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, the `WMSvc-<ServerName>` certificate that's used for the IIS Web Management Service).
 - Subject: Contains the X.500 value in the certificate's Subject Name field. The important part is the CN= value.
 
 If you append | Format-List to the command, the cmdlet returns these additional certificate properties:
@@ -67,7 +67,7 @@ If you append | Format-List to the command, the cmdlet returns these additional 
 - SerialNumber: The unique serial number of the certificate.
 - Status: The status of the certificate. Values are DateInvalid, Invalid, PendingRequest, RevocationCheckFailure, Revoked, Unknown, Untrusted or Valid
 
-If you append | Format-List \* to the command, the cmdlet returns these additional certificate properties:
+If you append ` | Format-List *` to the command, the cmdlet returns these additional certificate properties:
 
 - Archived
 - CertificateRequest: This property contains the hash value of the certificate request.
@@ -76,7 +76,7 @@ If you append | Format-List \* to the command, the cmdlet returns these addition
 - Extensions
 - FriendlyName
 - Handle
-- Identity: This value is \<ServerFQDN\>\\\<Thumbprint\>
+- Identity: This value uses the syntax ServerFQDN\\Thumbprint.
 - IISServices
 - IssuerName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName.
 - KeyIdentifier
@@ -88,7 +88,7 @@ If you append | Format-List \* to the command, the cmdlet returns these addition
 - ServicesStringForm
 - SignatureAlgorithm: Typically, this value is System.Security.Cryptography.Oid.
 - SubjectKeyIdentifier
-- SubjectName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName .
+- SubjectName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName.
 - Version: Typically, this value is 3.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -162,8 +162,8 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate that you want to view. Valid values are:
 
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-- \<Thumbprint\>
+- `ServerNameOrFQDN\Thumbprint`
+- `Thumbprint`
 
 You can't use this parameter with the Server parameter.
 

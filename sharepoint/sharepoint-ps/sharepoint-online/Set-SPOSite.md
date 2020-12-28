@@ -35,7 +35,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>][<CommonParameters>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
+ [-RemoveLabel] [<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -69,6 +70,10 @@ For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates 
 You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+
+For OneDrive for Business site collection, the only valid parameters are Identity, AllowDownloadingNonWebViewableFiles, AllowEditing, ConditionalAccessPolicy, DefaultLinkPermission, DefaultSharingLinkType, DisableCompanyWideSharingLinks, LimitedAccessFileType, LockState, Owner, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode, ShowPeoplePickerSuggestionsForGuestUsers, StorageQuota, and StorageWarningLevel.
+
+For Groups site collection, the only valid parameters  are Identity, AllowSelfServiceUpgrade, DefaultLinkPermission, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, DisableSharingForNonOwners, LockState, Owner, ResourceQuota, ResourceQuotaWarningLevel, SandboxedCodeActivationCapability, SharingCapability, ShowPeoplePickerSuggestionsForGuestUsers, SocialBarOnSitePagesDisabled, StorageQuota, StorageQuotaReset, and StorageQuotaWarningLevel.
 
 ## EXAMPLES
 
@@ -550,7 +555,12 @@ Accept wildcard characters: False
 
 ### -DisableAppViews
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+Disables the Power Apps button.
+Possible values:
+
+- Disabled
+- NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: AppViewsPolicy
@@ -565,8 +575,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
+Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+Possible values
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+- Disabled
+- NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -581,8 +595,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
+Disables the Power Automate button.
+Possible values
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+- Disabled
+- NotDisabled
 
 ```yaml
 Type: FlowsPolicy
@@ -891,6 +908,20 @@ Type: GUID
 Required: False
 Position: Named
 Default value: None
+```
+
+### -RemoveLabel
+This parameter allows you to remove the assigned sensitivity label on a site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ParamSet5
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters

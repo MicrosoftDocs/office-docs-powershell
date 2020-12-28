@@ -55,7 +55,7 @@ This example suspends all import requests that are in progress by using the Get-
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you created the request by using the Name parameter, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you created the request by using the Name parameter, use the following syntax: `Alias\Name`.
 
 ```yaml
 Type: MailboxImportRequestIdParameter

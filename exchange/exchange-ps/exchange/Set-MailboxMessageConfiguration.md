@@ -751,7 +751,7 @@ By default, no default From address is specified on the mailbox. When no default
 - The primary email address on the mailbox is used for all new messages.
 - The To address of the incoming message is used as the From address for all replies or forwarded messages.
 
-You can find the available values for SendAddressDefault on a mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
+You can find the available values for SendAddressDefault on a mailbox by running the command `Get-SendAddress -Mailbox <MailboxIdentity>`.
 
 ```yaml
 Type: String

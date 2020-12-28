@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ### -ClassificationID
 The ClassificationID parameter specifies the classification ID (GUID) of an existing message classification that you want to import and use in your Exchange organization. Use this parameter if you're configuring message classifications that span two Exchange forests in the same organization.
 
-To find the ClassificationID value of the message classification, replace \<MessageClassificationName\> with the name of the message classification and run the following command: Get-MessageCalssification -Identity "\<MessageClassificationName\>.
+To find the ClassificationID value of the message classification, replace `<MessageClassificationName>` with the name of the message classification and run the following command: `Get-MessageClassification -Identity "<MessageClassificationName>"`.
 
 ```yaml
 Type: Guid

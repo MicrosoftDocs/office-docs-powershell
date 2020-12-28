@@ -78,7 +78,7 @@ In Exchange 2010, this example sets the folder to replicate only on weekends.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
+The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -424,7 +424,7 @@ The Replicas parameter specifies a list of public folder databases with which to
 - Distinguished name (DN)
 - GUID
 
-You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: DatabaseIdParameter[]
@@ -444,7 +444,7 @@ This parameter is available or functional only in Exchange Server 2010
 
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 

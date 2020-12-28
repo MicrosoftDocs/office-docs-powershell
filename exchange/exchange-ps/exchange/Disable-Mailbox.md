@@ -284,7 +284,7 @@ This parameter is available only in the cloud-based service.
 
 The PermanentlyDisable switch specifies whether to permanently disable the mailbox. You don't need to specify a value with this switch.
 
-Notes:
+**Notes**:
 
 - You can only use this switch on user mailboxes that aren't licensed and aren't on hold.
 - When the Exchange Online license is removed from a mailbox without following other deprovisioning steps, this may leave the mailbox in a hard-deleted state. In this case, this parameter is not useful. You can use it, for example, in hybrid Exchange environments.

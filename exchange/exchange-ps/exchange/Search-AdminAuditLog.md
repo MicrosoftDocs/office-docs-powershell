@@ -39,7 +39,7 @@ Search-AdminAuditLog
 ## DESCRIPTION
 If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
 
-Note: In Exchange Online PowerShell, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
+**Note**: In Exchange Online PowerShell, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
 
 For more information about the structure and properties of the audit log, [Administrator audit log structure](https://docs.microsoft.com/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
 
@@ -70,7 +70,8 @@ The command completed successfully
 
 ### Example 3
 ```powershell
-$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
+$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog
+$LogEntries | ForEach { $_.CmdletParameters }
 ```
 
 This example displays all the comments written to the administrator audit log by the Write-AdminAuditLog cmdlet.
@@ -196,7 +197,7 @@ The ObjectIds parameter filters the results by the object that was modified (the
 
 You'll likely need to use other filtering parameters on this cmdlet to narrow down the results and identify the types of objects that you're interested in. In the results of this cmdlet, this property is named **ObjectModified**.
 
-To enter multiple values, use the following syntax: Value1,Value2,...ValueN. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "Value 1","Value 2",..."Value N".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -293,7 +294,7 @@ The UserIds parameter filters the results by the user who made the change (who r
 
 A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
 
-To enter multiple values, use the following syntax: User1,User2,...UserN. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "User 1","User 2",..."User N".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"User1","User2",..."UserN"`.
 
 In the results of this cmdlet, this property is named **Caller**
 

@@ -107,7 +107,7 @@ Either way, take note of your module name. You'll need it in the next steps.
 
 ### Step 5: Verify your PSSession variable name
 
-**Note**: This step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present). **If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step**.
+**Note**: This step is required in Exchange, Skype for Business Online and other products that use remote PowerShell. **If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step**.
 
 Check the details of your connection instructions, but your session information is stored in a variable. For example, in the Exchange connection instructions, the variable is `$Session`. You'll use this variable name in later steps.
 
@@ -178,7 +178,7 @@ You have two choices:
 
 - \<ModuleName\> is the value you found in [Step 4](#step-4-find-your-module-name) (for example, `tmp_byivwzpq.e1k` or `Microsoft.Online.SharePoint.PowerShell`).
 
-- \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) _and is required only if the connection instructions used remote PowerShell (one or more **xxx-xxxSession** commands)_.
+- \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) _and is required only if the connection uses remote PowerShell_.
 
   Failure to use the _Session_ parameter in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recognized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
 
@@ -338,7 +338,10 @@ When you're done editing the topics, upload them to GitHub. Note that you need t
    ![Open a pull request page](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
-> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
+>
+> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.
+> 
+> The point is: click any green buttons that are presented to you until there are no more.
 
 ### Step 9: Add the new cmdlets to the TOC file
 
@@ -386,7 +389,10 @@ After you're done editing the TOC files:
    ![Open a pull request page](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
-> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
+>
+> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.
+>
+> The point is: click any green buttons that are presented to you until there are no more.
 
 ## Appendix
 

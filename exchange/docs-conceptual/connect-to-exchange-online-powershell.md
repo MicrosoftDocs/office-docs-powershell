@@ -34,9 +34,9 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 > [!TIP]
 > Having problems? Ask in the [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542) forum.
 
-## Connect to Exchange Online PowerShell using MFA
+## Connect to Exchange Online PowerShell using MFA and modern authentication
 
-If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell without using MFA](#connect-to-exchange-online-powershell-without-using-mfa) section.
+If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell using modern authentication](#connect-to-exchange-online-powershell-using-modern-authentication) section.
 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
@@ -84,7 +84,7 @@ If your account uses multi-factor authentication, use the steps in this section.
    **This example connects to Exchange Online PowerShell to manage another tenant**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -DelegatedOrganization adatum.onmicrosoft.com
+   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -ShowProgress $true -DelegatedOrganization adatum.onmicrosoft.com
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
@@ -96,7 +96,7 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](http
 Disconnect-ExchangeOnline
 ```
 
-## Connect to Exchange Online PowerShell without using MFA
+## Connect to Exchange Online PowerShell using modern authentication
 
 If your account doesn't use multi-factor authentication, use the steps in this section.
 
@@ -110,21 +110,24 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 
 2. Run the following command:
 
+   > [!NOTE]
+   > You can skip this step and omit the _Credential_ parameter in the next step to be prompted to enter the username and password after you run the **Connect-ExchangeOnline** command. If you omit the _Credential_ parameter and include the _UserPrincipalName_ parameter in the next step, you're only prompted to enter the password after you run the **Connect-ExchangeOnline** command.
+
    ```powershell
    $UserCredential = Get-Credential
    ```
 
    In the **Windows PowerShell Credential Request** dialog box that appears, type your work or school account and password, and then click **OK**.
 
-3. The command that you need to run uses the following syntax:
+3. The last command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+   Connect-ExchangeOnline [-Credential $UserCredential] -ShowProgress $true [-ShowBanner:$false] [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
    ```
 
    - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
    - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
-   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
+   - If you're behind a proxy server, store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) cmdlet in a variable (for example, `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value> [-ProxyAuthentication <Value>] [-ProxyCredential <Value>]`). Then, use the variable (`$ProxyOptions`) as the value for the _PSSessionOption_ parameter.
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 
@@ -159,7 +162,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
-> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline
@@ -171,11 +174,11 @@ The Exchange Online cmdlets are imported into your local Windows PowerShell sess
 
 If you receive errors, check the following requirements:
 
-- A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
+- A common problem is an incorrect password. Run the three steps again and pay close attention to the username and password that you use.
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online.
 
-- The account you use to connect to must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
+- The account that you use to connect to must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 

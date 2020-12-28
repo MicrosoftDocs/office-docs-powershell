@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ### -Recipients
 The Recipients parameter specifies one or more email addresses to send a test message to. The email addresses need to be in the domain that's configured on the connector.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
