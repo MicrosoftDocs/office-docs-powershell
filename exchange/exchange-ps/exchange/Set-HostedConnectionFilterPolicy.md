@@ -52,7 +52,7 @@ This example modifies the connection filter policy named Default with the follow
 
 ### Example 2
 ```powershell
-Set-HostedConnectionFilterPolicy "Default" -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
+Set-HostedConnectionFilterPolicy "Default" -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5"; Remove="192.168.1.10"}
 ```
 
 This example modifies the connection filter policy named Default with the following settings:
@@ -164,7 +164,7 @@ You enter the IP addresses using the following syntax:
 - IP range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254.
 - CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid network mask values are /24 through /32.
 
-You can specify multiple IP addresses of the same type separated by commas. For example, \<single IP1\>, \<single IP2\> or \<CIDR IP1\>, \<CIDR IP2\>. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: @{Add="\<single IP1\>","\<IP range1\>",\<CIDR IP1\>...}.
+You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -188,7 +188,7 @@ You enter the IP addresses using the following syntax:
 - IP range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254.
 - CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid network mask values are /24 through /32.
 
-You can specify multiple IP addresses of the same type separated by commas. For example, \<single IP1\>, \<single IP2\> or \<CIDR IP1\>, \<CIDR IP2\>. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: @{Add="\<single IP1\>","\<IP range1\>",\<CIDR IP1\>...}.
+You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
 
 ```yaml
 Type: MultiValuedProperty

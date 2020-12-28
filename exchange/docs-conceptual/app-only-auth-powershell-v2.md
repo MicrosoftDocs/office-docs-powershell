@@ -13,7 +13,6 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-ROBOTS: NOINDEX, NOFOLLOW
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with modern authentication and app-only authentication."
 ---
 
@@ -41,7 +40,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
-  
+
 - Connect using a certificate object:
 
   ```powershell
@@ -49,6 +48,9 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```
 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
+
+> [!TIP]
+> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
 ## How does it work?
 
@@ -73,7 +75,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    - Create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
    - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this topic for instructions for generating certificates in PowerShell.
-   
+
      > [!NOTE]
      > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 

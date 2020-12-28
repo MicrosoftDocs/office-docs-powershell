@@ -80,9 +80,7 @@ Set-MailboxSearch -Identity "Legal-ProjectX" -AllPublicFolderSources $true
 
 In on-premises Exchange, this example adds all public folders to the existing mailbox search named Legal-ProjectX.
 
-Note:
-
-If we wanted to place the results of this search on In-Place Hold, the AllSourceMailboxes parameter must be set to $false. We could still include specific mailboxes in the search by using the SourceMailboxes parameter.
+**Note**: If we wanted to place the results of this search on In-Place Hold, the AllSourceMailboxes parameter must be set to $false. We could still include specific mailboxes in the search by using the SourceMailboxes parameter.
 
 ## PARAMETERS
 
@@ -530,7 +528,7 @@ The SourceMailboxes parameter specifies the mailboxes to be searched. You can us
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To use this parameter, the AllSourceMailboxes parameter needs to be $false (the default value).
 
@@ -600,7 +598,7 @@ The StatusMailRecipients parameter specifies one or more recipients to receive a
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]

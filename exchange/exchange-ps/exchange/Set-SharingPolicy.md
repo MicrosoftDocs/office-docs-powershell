@@ -139,18 +139,18 @@ Accept wildcard characters: False
 ```
 
 ### -Domains
-The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format \<Domain\>: \<SharingPolicyAction\>.
+The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format `Domain:SharingPolicyAction`.
 
-The following sharing policy action values can be used:
+The following SharingPolicyAction values can be used:
 
 - CalendarSharingFreeBusySimple: Share free/busy hours only.
 - CalendarSharingFreeBusyDetail: Share free/busy hours, subject, and location.
 - CalendarSharingFreeBusyReviewer: Share free/busy hours, subject, location, and the body of the message or calendar item.
 - ContactsSharing: Share contacts only.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 A domain doesn't include subdomains. You need to configure each subdomain separately.
 

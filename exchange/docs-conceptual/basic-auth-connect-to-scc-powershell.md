@@ -23,15 +23,15 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
 > [!NOTE]
 > The procedures in this topic won't work if:
-> 
+>
 > - Your account uses multi-factor authentication (MFA).
-> 
+>
 > - Your organization uses federated authentication.
-> 
+>
 > - A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs.
-> 
+>
 > In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
-> 
+>
 > Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 ## What do you need to know before you begin?

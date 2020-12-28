@@ -70,7 +70,7 @@ This example changes the second export request Ayla\\MailboxExport1 to accept up
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specify a name for the export request, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specify a name for the export request, use the following syntax: `Alias\Name`.
 
 ```yaml
 Type: MailboxExportRequestIdParameter

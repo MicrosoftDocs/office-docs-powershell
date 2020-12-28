@@ -46,7 +46,6 @@ Get-DlpKeywordDictionary | Foreach-Object { Remove-DlpKeywordDictionary -Identit
 
 This example removes all the DLP keyword dictionaries with a Confirm on each removal.
 
-
 ## PARAMETERS
 
 ### -Identity

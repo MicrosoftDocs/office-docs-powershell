@@ -55,7 +55,7 @@ Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 15.0.0-15.4737.999
 
 This example prevents Outlook Anywhere connections by Outlook 2013 clients that don't have KB3054940 installed (version 15.0.4737.1000) on the server named MBX01.
 
-Note: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
+**Note**: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
 
 ## PARAMETERS
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ### -MaximumConnections
 The MaximumConnections parameter specifies the maximum number of concurrent client connections that are allowed by the Microsoft Exchange RPC Client Access service. The default value is 65536.
 
-Note: Although you can configure a non-default value for this parameter, changes to this setting aren't enforced.
+**Note**: Although you can configure a non-default value for this parameter, changes to this setting aren't enforced.
 
 ```yaml
 Type: Int32

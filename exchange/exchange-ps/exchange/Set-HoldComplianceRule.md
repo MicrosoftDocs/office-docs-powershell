@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Set-HoldComplianceRule cmdlet to modify existing preservation rules in the Security & Compliance Center.
 
-Note: The Set-HoldComplianceRule cmdlet has been replaced by the Set-RetentionComplianceRule cmdlet. If you have scripts that use Set-HoldComplianceRule, update them to use Set-RetentionComplianceRule.
+**Note**: The Set-HoldComplianceRule cmdlet has been replaced by the Set-RetentionComplianceRule cmdlet. If you have scripts that use Set-HoldComplianceRule, update them to use Set-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

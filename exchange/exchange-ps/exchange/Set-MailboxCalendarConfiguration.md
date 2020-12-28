@@ -814,13 +814,13 @@ This parameter is available only in the cloud-based service.
 
 The WeatherLocations parameter specifies one or more locations to display the weather for in the calendar in Outlook on the web.
 
-This parameter uses the syntax: LocationId:\<LocationID\>;Name:\<Name\>;Latitude:\<Latitude\>;Longitude:\<Longitude\>. For example, LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132.
+This parameter uses the syntax: `LocationId:<LocationID>;Name:<Name>;Latitude:<Latitude>;Longitude:<Longitude>`. For example, `LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132`.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For this parameter, "\<value1\>" is "LocationId:\<LocationID1\>;Name:\<Name1\>;Latitude:\<Latitude1\>;Longitude:\<Longitude1\>", and "\<value2\>" is "LocationId:\<LocationID2\>;Name:\<Name2\>;Latitude:\<Latitude2\>;Longitude:\<Longitude2\>"
+For this parameter, each Value is `LocationId:<LocationID>;Name:<Name>;Latitude:<Latitude>;Longitude:<Longitude>`.
 
 You can configure a maximum of 5 weather locations.
 

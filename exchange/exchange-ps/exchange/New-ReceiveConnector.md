@@ -417,7 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bindings
-The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax "\<IPv4 Address\>:\<TCP Port\>","\<IPv6 Address\>:\<TCP Port\>". You can specify an IPv4 address and port, and IPv6 address and port, or both. The IP address values 0.0.0.0 or [::]: indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
+The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax `"IPv4Address:TCPPort","IPv6Address:TCPPort"`. You can specify an IPv4 address and port, an IPv6 address and port, or both. The IP address values 0.0.0.0 or `[::]` indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
 
 You need to specify a valid local IP address from the network adapters of the Exchange server. If you specify an invalid local IP address, the Microsoft Exchange Transport service might fail to start when the service is restarted.
 
@@ -570,7 +570,7 @@ The RemoteIPRanges parameter specifies the remote IP addresses that the Receive 
 - IP address range: For example, 192.168.1.1-192.168.1.254.
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
 
-You can specify multiple value separated by commas ("\<value1\>","\<value2\>"...).
+You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
 
 Multiple Receive connectors on the same server can have overlapping remote IP address ranges as long as one IP address range is completely overlapped by another. For example, you can configure the following remote IP address ranges on different Receive connectors on the same server:
 
@@ -732,7 +732,7 @@ The Banner parameter specifies a custom SMTP 220 banner that's displayed to remo
 
 The default value of this parameter is blank ($null), which uses the following SMTP banner:
 
-220 \<Servername\> Microsoft ESMTP MAIL service ready at \<RegionalDay-Date-24HourTimeFormat\>\<RegionalTimeZoneOffset\>
+`220 <ServerName> Microsoft ESMTP MAIL service ready at <RegionalDay-Date-24HourTimeFormat><RegionalTimeZoneOffset>`
 
 ```yaml
 Type: String
@@ -908,7 +908,7 @@ The DefaultDomain parameter specifies the default accepted domain to use for the
 
 Although you can configure any accepted domain as the default domain, you typically specify an authoritative domain. The default domain is used by:
 
-- The external postmaster address: postmaster@\<default domain\>.
+- The external postmaster address: `postmaster@<default domain>`.
 - Encapsulated non-SMTP email addresses (Internet Mail Connector Encapsulated Address or IMCEA encapsulation).
 - The primary address for all recipients in the default email address policy. If you configure another accepted domain as the default domain, the default email address policy isn't automatically updated.
 
@@ -1713,7 +1713,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is `"<I>X.500Issuer<S>X.500Subject"`. The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"`, and then use the value $TLSCertName for this parameter.
 
 ```yaml
 Type: SmtpX509Identifier
@@ -1733,18 +1733,18 @@ The TlsDomainCapabilities parameter specifies the capabilities that the Receive 
 
 This parameter uses the following syntax:
 
-"\<domain1\>:\<capability1\>,\<capability 2\>\>"...,"\<domain2\>:\<capability1\>,\<capability2\>..."...
+`"Domain1:Capability1,Capability2,"...,"Domain2:Capability1,Capability2,...",...`
 
-At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values for this scenario are:
+You can only use this parameter in Exchange hybrid deployments, and the valid Capability values are:
 
 - AcceptCloudServicesMail (Exchange 2013 or later)
 - AcceptOorgProtocol (Exchange 2010)
 
-There are more available values but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
+More Capability values are available, but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
 
-The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
+The available Domain values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
-For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail".
+For example, `"contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail"`.
 
 ```yaml
 Type: MultiValuedProperty

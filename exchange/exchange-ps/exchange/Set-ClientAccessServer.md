@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ClientAccessServer cmdlet to modify settings that are associated with the Client Access server role.
 
-Note: In Exchange 2013 or later, use the Set-ClientAccessService cmdlet instead. If you have scripts that use Set-ClientAccessServer, update them to use Set-ClientAccessService.
+**Note**: In Exchange 2013 or later, use the Set-ClientAccessService cmdlet instead. If you have scripts that use Set-ClientAccessServer, update them to use Set-ClientAccessService.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -148,9 +148,9 @@ The AutoDiscoverSiteScope parameter specifies the Active Directory site that the
 
 To see the available Active Directory sites, use the Get-ADSite cmdlet.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty

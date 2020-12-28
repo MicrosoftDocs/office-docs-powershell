@@ -47,7 +47,7 @@ This example changes the export key on the export compliance search action named
 ### -Identity
 The Identity parameter specifies the compliance search action that you want to modify. You can use any value that uniquely identifies the compliance search action. For example:
 
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> (for example, Case 1234\_Preview).
+- Name: The compliance search action name uses the syntax `"Compliance Search Name_Action"` (for example, `"Case 1234_Preview`).
 - JobRunId (GUID)
 
 ```yaml

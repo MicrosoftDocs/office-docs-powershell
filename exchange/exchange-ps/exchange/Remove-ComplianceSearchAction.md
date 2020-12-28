@@ -37,14 +37,14 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Remove-ComplianceSearchAction -Identity "Case 1234_Preview"
 ```
 
-This example the compliance search action named "Case 1234\_Preview"
+This example removes the compliance search action named `Case 1234_Preview`.
 
 ## PARAMETERS
 
 ### -Identity
 The Identity parameter specifies the compliance search action that you want to remove. You can use any value that uniquely identifies the compliance search action. For example:
 
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> . For example, Case 1234\_Preview.
+- Name: The compliance search action name uses the syntax `"Compliance Search Name_Action"` . For example, `"Case 1234_Preview"`.
 - JobRunId (GUID)
 
 ```yaml

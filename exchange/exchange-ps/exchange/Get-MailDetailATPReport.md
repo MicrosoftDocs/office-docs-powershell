@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection (ATP) detections in your cloud-based organization for the last 10 days.
+Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Microsoft Defender for Office 365 detections in your cloud-based organization for the last 10 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -41,9 +41,9 @@ Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity.
 
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 For the reporting period you specify, the cmdlet returns the following information:
 
@@ -72,7 +72,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailDetailATPReport -StartDate 7/22/2018 -EndDate 7/31/2018
 ```
 
-This example returns the Advanced Threat Protection actions for the last 10 days in July, 2018. (Note: Customers with Advanced Threat Protection subscription will be able to get up to 30 days of data.)
+This example returns the actions for the last 10 days in July, 2018. (Note: Customers with Defender for Office 365 subscriptions will be able to get up to 30 days of data.)
 
 ## PARAMETERS
 
@@ -129,12 +129,12 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-Email phish EventTypes:
+Email phishing EventTypes:
 
 - Advanced phish filter (Indicates a message caught by the machine learning model.)
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
-- ATP-generated URL reputation\* (Indicates a message with a known malicious URL caught by ATP.)
+- ATP-generated URL reputation\* (Indicates a message with a known malicious URL caught Defender for Office 365.)
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 - Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
 - EOP URL Reputation (Indicates a message with a known malicious URL caught by EOP.)
@@ -147,21 +147,21 @@ Email malware EventTypes:
 
 - Anti-malware engine\* (Indicates a message caught by the anti-malware engine.)
 - Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
-- ATP-generated file reputation\* (Indicates a message with a known malicious file blocked by ATP.)
-- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
-- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
+- ATP-generated file reputation\* (Indicates a message with a known malicious file blocked Defender for Office 365.)
+- ATP Safe Attachments\* (Indicates a message with a malicious attachment blocked Defender for Office 365.)
+- ATP Safe Links\* (Indicates when a malicious link is blocked Defender for Office 365.)
 - File Detonation\* (Indicates a message with a malicious attachment blocked by the detonation service.)
 - Malware ZAP (Indicates a message with malware detected and auto-purged after delivery.)
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
 
 Content malware EventTypes:
 
-- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
-- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP or E5.)
+- AtpDocumentMalware\* (Indicates malicious content detected by Safe Attachments.)
+- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires Defender for Office 365 or E5.)
 
-\* These features require a standalone Office 365 ATP or E5 subscription.
+\* Requires Defender for Office 365 (included in Microsoft 365 E5 or in an add-in subscription).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

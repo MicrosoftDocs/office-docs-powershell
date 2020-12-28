@@ -200,7 +200,7 @@ The SentTo parameter specifies one or more recipients as a rule condition. You c
 
 You can also specify the SMTP email address of an external recipient.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 When you specify multiple recipients, messages sent to any of the specified recipients are considered a match.
 
