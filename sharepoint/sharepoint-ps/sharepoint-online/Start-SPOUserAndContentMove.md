@@ -20,7 +20,7 @@ Starts the ability to move a user closer to their sites.
 
 ```powershell
 Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocation] <String>
- [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [-OverwriteOdb]
+ [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>]
  [[-Notify] <String>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
 ```
 
@@ -85,23 +85,6 @@ Applicable: SharePoint Online
 
 Required: False
 Position: 6
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverwriteOdb
-
-This parameter can be used to overrite a OneDrive in the destination location, if there is one present. This is only recommended in cases where an administrator wants to replace a OneDrive that already exists in the destination location, with the moved OneDrive. 
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
