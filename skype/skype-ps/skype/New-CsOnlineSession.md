@@ -60,11 +60,21 @@ Import-PSSession $sfbSession
 
 Establishes a Skype for Business Online Remote PowerShell session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
 
+### EXAMPLE 4
+```
+Import-Module MicrosoftTeams
+Connect-MicrosoftTeams
+$sfbSession = New-CsOnlineSession
+Import-PSSession $sfbSession
+```
+
+Connects an authenticated account to use for Microsoft Teams cmdlet requests, then establishes a Skype for Business Online Remote PowerShell session using the same credentials.
+
 ## PARAMETERS
 
 ### -UserName
 Specifies the Skype for Business Online administrator account name to be used when prompting for credentials.
-Please Note: UserName has been deprecated and is not available in the Teams Powershell module. Please use the Credential parameter to provide username and password. 
+Please Note: UserName has been deprecated and is not available in the Teams Powershell module. Please use the Credential parameter to provide username and password.
 
 ```yaml
 Type: String
@@ -99,6 +109,7 @@ Accept wildcard characters: False
 
 ### -OAuthAccessToken
 Specifies an access token already acquired by the Skype for Business Online administrator, or Syndicated Partner administrator.
+Please Note: OAuthAccessToken is not available in the Teams Powershell module.
 
 ```yaml
 Type: SecureString
@@ -113,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideAdminDomain
-Specifies the domain of the tenant to be managed. This is used when the administrator has permissions to manage more than one tenant. For example, Syndicated Partner administrators commonly manage several tenants. 
+Specifies the domain of the tenant to be managed. This is used when the administrator has permissions to manage more than one tenant. For example, Syndicated Partner administrators commonly manage several tenants.
 
 ```yaml
 Type: String
@@ -129,6 +140,7 @@ Accept wildcard characters: False
 
 ### -OverrideDiscoveryUri
 Specifies Skype for Business Auto Discovery URI.
+Please Note: OverrideDiscoveryUri is not available in the Teams Powershell module.
 Optional.
 
 ```yaml
@@ -161,6 +173,7 @@ Accept wildcard characters: False
 
 ### -OverrideAccessTokenResourceUri
 Specifies Skype for Business Remote Powershell Authorization Token URI.
+Please Note: OverrideAccessTokenResourceUri is not available in the Teams Powershell module.
 Optional.
 
 ```yaml
