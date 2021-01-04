@@ -392,7 +392,7 @@ Accept wildcard characters: False
 
 ### -MaxCompatibilityLevel
 
-Specifies the upper bound on the compatibility level for new sites.
+The only valid value is "15".
 
 ```yaml
 Type: Int32
@@ -408,7 +408,7 @@ Accept wildcard characters: False
 
 ### -MinCompatibilityLevel
 
-Specifies the lower bound on the compatibility level for new sites.
+The only valid value is "15".
 
 ```yaml
 Type: Int32
