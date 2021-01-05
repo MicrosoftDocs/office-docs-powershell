@@ -104,6 +104,21 @@ Accept wildcard characters: False
 
 ### -PolicyType
 The type of the policy to be assigned.
+Possible values:
+- CallingLineIdentity
+- OnlineVoiceRoutingPolicy
+- TeamsAppSetupPolicy
+- TeamsCallingPolicy
+- TeamsCallParkPolicy
+- TeamsChannelsPolicy
+- TeamsComplianceRecordingPolicy
+- TenantDialPlan
+- TeamsEducationAssignmentsAppPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMeetingPolicy
+- TeamsMessagingPolicy
+- TeamsShiftsPolicy
+- TeamsUpdateManagementPolicy
 
 ```yaml
 Type: String
