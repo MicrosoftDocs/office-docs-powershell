@@ -672,7 +672,7 @@ Specifies the sharing mode for external domains.
 Possible values are:
 - None - Do not restrict sharing by domain
 - AllowList - Sharing is allowed only with external users that have account on domains specified within -SharingAllowedDomainList
-- BlockList - Sharing is allowed with external users in all domains expect in domains specified within -SharingBlockedDomainList
+- BlockList - Sharing is allowed with external users in all domains except in domains specified within -SharingBlockedDomainList
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
