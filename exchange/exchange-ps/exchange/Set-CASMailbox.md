@@ -834,7 +834,7 @@ This parameter is available only in on-premises Exchange.
 
 The MAPIBlockOutlookVersions parameter blocks access to the mailbox for specific versions of Outlook.
 
-For example, if you specify the value 15.0.4569.1503, only Outlook 2013 Service Pack 1 (SP1) or later clients are allowed to access the mailbox. Earlier versions of Outlook are blocked.
+For example, if you specify the value 15.0.4569, only Outlook 2013 Service Pack 1 (SP1) or later clients are allowed to access the mailbox. Earlier versions of Outlook are blocked.
 
 The default value is blank. To reset this parameter, use the value $null.
 
