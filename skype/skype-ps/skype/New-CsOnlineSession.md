@@ -138,42 +138,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverrideDiscoveryUri
-Specifies Skype for Business Auto Discovery URI.
-Please Note: OverrideDiscoveryUri is not available in the Teams Powershell module.
-Optional.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OverridePowerShellUri
 Specifies Skype for Business Remote Powershell URI.
-Optional.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideAccessTokenResourceUri
-Specifies Skype for Business Remote Powershell Authorization Token URI.
-Please Note: OverrideAccessTokenResourceUri is not available in the Teams Powershell module.
 Optional.
 
 ```yaml
