@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the New-RpcClientAccess cmdlet to create configuration information for the Exchange RPC Client Access service on a Client Access server. This setup task is performed by default on new installations of the Client Access server role on Microsoft Exchange Server 2010.
+Use the New-RpcClientAccess cmdlet to create configuration information for the Exchange RPC Client Access service on a Client Access server. This set up task is performed by default on new installations of the Client Access server role on Microsoft Exchange Server 2010.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

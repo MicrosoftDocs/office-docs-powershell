@@ -1023,7 +1023,7 @@ The QuarantineRetentionPeriod parameter specifies the number of days that spam m
 - PhishSpamAction
 - SpamAction
 
-A valid value is an integer between 1 and 30. The default value is 30.
+A valid value is an integer between 1 and 30.
 
 After the time period expires, the message is deleted.
 

@@ -162,13 +162,13 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet, which creates the rule and then assign it to the specified tenant dial plan using [Set-CsTenantDialPlan](Set-CsTenantDialPlan.md) cmdlet.
 
 Each time a new tenant dial plan is created, a new voice normalization rule with default settings is also created for that site, service, or per-user tenant dial plan.
 By default, the Identity of the new voice normalization rule is the tenant dial plan Identity followed by a slash and then followed by the name Prefix All.
 (For example, TAG:Redmond/Prefix All.) The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
-You can create a new normalization rule by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
+You can create a new normalization rule by calling the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet.
 
 ```yaml
 Type: List
