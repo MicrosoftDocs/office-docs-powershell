@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDefaults
-The ApplyDefaults switch specifies whether to apply the correct defaults to the related internal IIS application settings. Typically, this switch is used only by Exchange setup during the installation of Exchange Cumulative Updates or Service Packs and you shouldn't need to use it.
+The ApplyDefaults switch specifies whether to apply the correct defaults to the related internal IIS application settings. Typically, this switch is used only by Exchange Setup during the installation of Exchange Cumulative Updates or Service Packs and you shouldn't need to use it.
 
 This switch doesn't affect the values you configure by using the IISAuthenticationMethods, InternalUrl or ExternalUrl parameters.
 
