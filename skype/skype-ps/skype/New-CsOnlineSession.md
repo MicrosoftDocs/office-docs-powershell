@@ -18,15 +18,7 @@ Creates a persistent connection to Microsoft Skype for Business Online DataCente
 
 ### Credential (Default)
 ```
-New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>]
- [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
-```
-
-### OAuthAccessToken
-```
-New-CsOnlineSession [-OAuthAccessToken <SecureString>] [-OverrideAdminDomain <String>]
- [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
+New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>] [-OverridePowerShellUri <Uri>]
  [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
 ```
 
@@ -76,22 +68,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OAuthAccessToken
-Specifies an access token already acquired by the Skype for Business Online administrator, or Syndicated Partner administrator.
-Please Note: OAuthAccessToken is not available in the Teams Powershell module.
-
-```yaml
-Type: SecureString
-Parameter Sets: OAuthAccessToken
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
