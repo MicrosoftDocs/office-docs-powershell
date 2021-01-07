@@ -60,33 +60,7 @@ Import-PSSession $sfbSession
 
 Establishes a Skype for Business Online Remote PowerShell session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
 
-### EXAMPLE 4
-```
-Import-Module MicrosoftTeams
-Connect-MicrosoftTeams
-$sfbSession = New-CsOnlineSession
-Import-PSSession $sfbSession
-```
-
-Connects an authenticated account to use for Microsoft Teams cmdlet requests, then establishes a Skype for Business Online Remote PowerShell session using the same credentials.
-
 ## PARAMETERS
-
-### -UserName
-Specifies the Skype for Business Online administrator account name to be used when prompting for credentials.
-Please Note: UserName has been deprecated and is not available in the Teams Powershell module. Please use the Credential parameter to provide username and password.
-
-```yaml
-Type: String
-Parameter Sets: UserName
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Credential
 Specifies a Skype for Business Online administrator, or Syndicated Partner administrator account.
