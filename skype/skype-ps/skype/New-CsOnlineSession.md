@@ -18,8 +18,7 @@ Creates a persistent connection to Microsoft Skype for Business Online DataCente
 
 ### Credential (Default)
 ```
-New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>] [-OverridePowerShellUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
+New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>] [-OverridePowerShellUri <Uri>] [-TeamsEnvironmentName <String>]  [-SessionOption <PSSessionOption>] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
