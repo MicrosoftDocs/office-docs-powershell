@@ -48,7 +48,6 @@ This cmdlet supports retrieving details of a team template available to your ten
 
 Returns template in JSON format for templates that have locale set to en-US and template names that include ‘test’the universe of templates the admin’s tenant has access to.
 
-```json
 {
   "templateId": "cefcf333-91a9-43d0-919f-bbca5b7d2b24",
   "displayName": "test",
@@ -132,7 +131,6 @@ Returns template in JSON format for templates that have locale set to en-US and 
   "modifiedOn": "2020-08-21T13:02:48.2021992Z",
   "shortDescription": "test"
 }
-```
 
 ### EXAMPLE 2
 
