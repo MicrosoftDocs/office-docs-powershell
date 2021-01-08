@@ -45,13 +45,7 @@ Get a list of available team templates
 
 ```powershell
 Get-CsTeamTemplateList -Locale en-US
-```
 
-Returns all en-US templates within the universe of templates the admin’s tenant has access to.
-
-Note: All 1P Microsoft templates will always be returned in the specified locale.
-
-```powershell
 OdataId                                                         Name                           ShortDescription                 Chann AppCo
                                                                                                                                 elCou unt
                                                                                                                                 nt
@@ -61,6 +55,10 @@ OdataId                                                         Name            
 /api/teamtemplates/v1.0/retailStore/Public/en-US                Organize a Store               Collaborate with your retail ... 3     1
 /api/teamtemplates/v1.0/retailManagerCollaboration/Public/en-US Retail - Manager Collaboration Collaborate with managers acr... 3     1
 ```
+
+Returns all en-US templates within the universe of templates the admin’s tenant has access to.
+
+Note: All 1P Microsoft templates will always be returned in the specified locale.
 
 ### EXAMPLE 2
 
