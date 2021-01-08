@@ -66,11 +66,7 @@ OdataId                                                         Name            
 
 ```powershell
 (Get-CsTeamTemplateList -Locale en-US) | where ChannelCount -GT 3
-```
 
-Returns all en-US templates that have 3 channels within the universe of templates the admin’s tenant has access to.
-
-```powershell
 OdataId                                                 Name                           ShortDescription                 Chann AppCo
                                                                                                                         elCou unt
                                                                                                                         nt
@@ -78,6 +74,8 @@ OdataId                                                 Name                    
 /api/teamtemplates/v1.0/healthcareWard/Public/en-US     Collaborate on Patient Care    Collaborate on patient care i... 6     1
 /api/teamtemplates/v1.0/healthcareHospital/Public/en-US Hospital                       Facilitate collaboration with... 6     1
 ```
+
+Returns all en-US templates that have 3 channels within the universe of templates the admin’s tenant has access to.
 
 ## PARAMETERS
 
