@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -TestTextExtractionResults
-The TestTextExtractionResults parameter specifies the extracted text from the "Test-TextExtraction" cmdlet as the input text stream.
+The TestTextExtractionResults parameter specifies the extracted text from the Test-TextExtraction cmdlet as the input text stream.
 
 ```yaml
 Type: TestTextExtractionResult[]
