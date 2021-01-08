@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Description
 The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to and any other information that helps to identify the purpose of the tenant dial plan.
-Maximum characters: 512.
+Maximum characters: 1040.
 
 ```yaml
 Type: String
@@ -110,7 +110,7 @@ The ExternalAccessPrefix parameter is a number (or set of numbers) that designat
 (For example, to tenant-dial an outside line, first press 9.) This prefix is ignored by the normalization rules, although these rules are applied to the remainder of the number.
 
 The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
-This parameter must match the regular expression \[0-9\]{1,4}: that is, it must be a value 0 through 9 and one to four digits in length.
+The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
 The default value is 9.
 
 ```yaml
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan.
-This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
+This name must be unique among all tenant dial plans.
 
 This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
