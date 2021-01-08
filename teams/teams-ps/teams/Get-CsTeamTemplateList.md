@@ -252,7 +252,7 @@ INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter\
 \[TenantId \<String\>\]:\
 \[UserId \<String\>\]: UserId.\
 Supports Guid.\
-Eventually UPN and SIP.\
+Eventually UPN and SIP.
 
 ## RELATED LINKS
 

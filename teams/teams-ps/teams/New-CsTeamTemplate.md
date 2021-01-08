@@ -21,45 +21,45 @@ This cmdlet lets you provision a new team template for use in Microsoft Teams. L
 ### NewExpanded (Default)
 
 ```powershell
-New-CsTeamTemplate -Locale \<String\> -DisplayName \<String\> -ShortDescription \<String\>
- [-App \<ITeamsAppTemplate[]\>] [-Category \<String[]\>] [-Channel \<IChannelTemplate[]\>] [-Classification \<String\>]
- [-Description \<String\>] [-DiscoverySettingShowInTeamsSearchAndSuggestion] [-FunSetting \<ITeamFunSettings\>]
- [-GuestSetting \<ITeamGuestSettings\>] [-Icon \<String\>] [-IsMembershipLimitedToOwner]
- [-MemberSetting \<ITeamMemberSettings\>] [-MessagingSetting \<ITeamMessagingSettings\>]
- [-OwnerUserObjectId \<String\>] [-PublishedBy \<String\>] [-Specialization \<String\>] [-TemplateId \<String\>]
- [-Uri \<String\>] [-Visibility \<String\>] [-Break] [-HttpPipelineAppend \<SendAsyncStep[]\>]
- [-HttpPipelinePrepend \<SendAsyncStep[]\>] [-Proxy \<Uri\>] [-ProxyCredential \<PSCredential\>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [\<CommonParameters\>]
+New-CsTeamTemplate -Locale <String> -DisplayName <String> -ShortDescription <String>
+ [-App <ITeamsAppTemplate[]>] [-Category <String[]>] [-Channel <IChannelTemplate[]>] [-Classification <String>]
+ [-Description <String>] [-DiscoverySettingShowInTeamsSearchAndSuggestion] [-FunSetting <ITeamFunSettings>]
+ [-GuestSetting <ITeamGuestSettings>] [-Icon <String>] [-IsMembershipLimitedToOwner]
+ [-MemberSetting <ITeamMemberSettings>] [-MessagingSetting <ITeamMessagingSettings>]
+ [-OwnerUserObjectId <String>] [-PublishedBy <String>] [-Specialization <String>] [-TemplateId <String>]
+ [-Uri <String>] [-Visibility <String>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### New
 
 ```powershell
-New-CsTeamTemplate -Locale \<String\> -Body \<ICreateTemplateFromRequest\> [-Break]
- [-HttpPipelineAppend \<SendAsyncStep[]\>] [-HttpPipelinePrepend \<SendAsyncStep[]\>] [-Proxy \<Uri\>]
- [-ProxyCredential \<PSCredential\>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [\<CommonParameters\>]
+New-CsTeamTemplate -Locale <String> -Body <ICreateTemplateFromRequest> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewViaIdentityExpanded
 
 ```powershell
-New-CsTeamTemplate -InputObject \<IConfigApiBasedCmdletsIdentity\> -DisplayName \<String\>
- -ShortDescription \<String\> [-App \<ITeamsAppTemplate[]\>] [-Category \<String[]\>] [-Channel \<IChannelTemplate[]\>]
- [-Classification \<String\>] [-Description \<String\>] [-DiscoverySettingShowInTeamsSearchAndSuggestion]
- [-FunSetting \<ITeamFunSettings\>] [-GuestSetting \<ITeamGuestSettings\>] [-Icon \<String\>]
- [-IsMembershipLimitedToOwner] [-MemberSetting \<ITeamMemberSettings\>]
- [-MessagingSetting \<ITeamMessagingSettings\>] [-OwnerUserObjectId \<String\>] [-PublishedBy \<String\>]
- [-Specialization \<String\>] [-TemplateId \<String\>] [-Uri \<String\>] [-Visibility \<String\>] [-Break]
- [-HttpPipelineAppend \<SendAsyncStep[]\>] [-HttpPipelinePrepend \<SendAsyncStep[]\>] [-Proxy \<Uri\>]
- [-ProxyCredential \<PSCredential\>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [\<CommonParameters\>]
+New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName <String>
+ -ShortDescription <String> [-App <ITeamsAppTemplate[]>] [-Category <String[]>] [-Channel <IChannelTemplate[]>]
+ [-Classification <String>] [-Description <String>] [-DiscoverySettingShowInTeamsSearchAndSuggestion]
+ [-FunSetting <ITeamFunSettings>] [-GuestSetting <ITeamGuestSettings>] [-Icon <String>]
+ [-IsMembershipLimitedToOwner] [-MemberSetting <ITeamMemberSettings>]
+ [-MessagingSetting <ITeamMessagingSettings>] [-OwnerUserObjectId <String>] [-PublishedBy <String>]
+ [-Specialization <String>] [-TemplateId <String>] [-Uri <String>] [-Visibility <String>] [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewViaIdentity
 
 ```powershell
-New-CsTeamTemplate -InputObject \<IConfigApiBasedCmdletsIdentity\> -Body \<ICreateTemplateFromRequest\> [-Break]
- [-HttpPipelineAppend \<SendAsyncStep[]\>] [-HttpPipelinePrepend \<SendAsyncStep[]\>] [-Proxy \<Uri\>]
- [-ProxyCredential \<PSCredential\>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [\<CommonParameters\>]
+New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICreateTemplateFromRequest> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## EXAMPLES
@@ -780,8 +780,8 @@ INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter\
 [TenantId \<String\>]:\
 [UserId \<String\>]: UserId.\
 Supports Guid.\
-Eventually UPN and SIP.\
-\
+Eventually UPN and SIP.
+
 MEMBERSETTING \<ITeamMemberSettings\>: Member role settings for the team.\
 AllowAddRemoveApp \<Boolean\>: Gets or sets a value indicating whether members can add or remove apps in the team.\
 AllowCreatePrivateChannel \<Boolean\>: Gets or Sets a value indicating whether members can create Private channels.\
@@ -789,8 +789,8 @@ AllowCreateUpdateChannel \<Boolean\>: Gets or sets a value indicating whether me
 AllowCreateUpdateRemoveConnector \<Boolean\>: Gets or sets a value indicating whether members can add, edit, or remove connectors in the team.\
 AllowCreateUpdateRemoveTab \<Boolean\>: Gets or sets a value indicating whether members can add, edit or remove pinned tabs in the team.\
 AllowDeleteChannel \<Boolean\>: Gets or sets a value indicating whether members can delete team channels.\
-UploadCustomApp \<Boolean\>: Gets or sets a value indicating is allowed to upload custom apps.\
-\
+UploadCustomApp \<Boolean\>: Gets or sets a value indicating is allowed to upload custom apps.
+
 MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features within the teamThese are settings the team owner should be able to modify from UI\
 after team creation.\
 AllowChannelMention \<Boolean\>: Gets or sets a value indicating whether team members can at-mention entire channels in team conversations.\

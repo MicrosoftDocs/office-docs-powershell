@@ -312,7 +312,7 @@ INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter\
   \[PortInOrderId \<String\>\]: \
   \[SubnetId \<String\>\]: \
   \[TenantId \<String\>\]: \
-  \[UserId \<String\>\]: UserId.\
+  \[UserId \<String\>\]: UserId.
 
 Supports Guid.
 Eventually UPN and SIP.
