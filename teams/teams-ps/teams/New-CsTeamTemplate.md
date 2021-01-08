@@ -71,12 +71,7 @@ New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICreateT
 # open json in your favorite editor, make changes
 
 New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
-```
 
-Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
-Step 2: Create a new template from the JSON file named “input”.
-
-```json
 {
   "id": "061fe692-7da7-4f65-a57b-0472cf0045af",
   "name": "New Template",
@@ -91,6 +86,9 @@ Step 2: Create a new template from the JSON file named “input”.
   "@odata.id": "/api/teamtemplates/v1.0/061fe692-7da7-4f65-a57b-0472cf0045af/Tenant/en-US"
 }
 ```
+
+Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
+Step 2: Create a new template from the JSON file named “input”.
 
 ### EXAMPLE 2
 
@@ -110,9 +108,7 @@ New-CsTeamTemplate `
   id="b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
   isFavoriteByDefault=$false; `
 }
-```
 
-```json
 {
   "id": "061fe692-7da7-4f65-a57b-0472cf0045af",
   "name": "New Template",

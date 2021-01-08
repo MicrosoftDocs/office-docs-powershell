@@ -69,17 +69,9 @@ Update-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICrea
 ```powershell
 (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR') > input.json
 # open json in your favorite editor, make changes
-```
 
-Step 1: Creates a JSON file of the template you have specified.
-
-```powershell
 Update-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' -Body (Get-Content '.\input.json' | Out-String)
-```
 
-Step 2: Updates the template with JSON file you have edited.
-
-```json
 {
   "id": "bfd1ccc8-40f4-4996-833f-461947d23348",
   "name": "Hi Im another powershell-created template",
@@ -95,6 +87,9 @@ Step 2: Updates the template with JSON file you have edited.
   "@odata.id": "/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR"
 }
 ```
+
+Step 1: Creates a JSON file of the template you have specified.
+Step 2: Updates the template with JSON file you have edited.
 
 ### EXAMPLE 2
 
@@ -113,9 +108,7 @@ isFavoriteByDefault= $true `
   id= "b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
   isFavoriteByDefault= $false `
 }
-```
 
-```json
 {
   "id": "bfd1ccc8-40f4-4996-833f-461947d23348",
   "name": "New Template",
