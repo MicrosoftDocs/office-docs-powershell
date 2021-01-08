@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Test-TextExtraction cmdlet to find out the text that is extracted from a given email in Exchange flow.
+Use the Test-TextExtraction cmdlet to find the text that is extracted from a specified email message in Exchange flow.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,7 +30,7 @@ Test-TextExtraction [-FileData] <Byte[]>
 ```
 
 ## DESCRIPTION
-This cmdlet returns the text that is found in a file in exchange. The Microsoft classification engine uses this text to classify content and determine which sensitive information types are found in this file/message.
+This cmdlet returns the text that is found in a file in Exchange. The Microsoft classification engine uses this text to classify content and determine which sensitive information types are found in this file/message.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -38,30 +38,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ 
 $content = Test-TextExtraction -FileData (Get-Content -Path '.\finalcial data.msg' -Encoding byte -ReadCount 0)
 $content.ExtractedResults
-}}
 ```
 
-{{ This example returns the text extracted from the email "financial data.msg" }}
+This example returns the text that's extracted from the email "financial data.msg"
 
 ### Example 2
 ```powershell
-{{ 
 $content = Test-TextExtraction -FileData (Get-Content -Path '.\finalcial data.msg' -Encoding byte -ReadCount 0)
 Test-DataClassification -TestTextExtractionResults $tr.ExtractedResults
-}}
 ```
 
-{{ This example extracts the text from the email "financial data.msg" and returns the sensitive information types, their confidence and count. }}
+This example extracts the text from the email "financial data.msg" and returns the sensitive information types, their confidence, and count.
 
 ## PARAMETERS
 
 ### -FileData
-The FileData parameter specifies the path of the file from which text should be extracted.
+The FileData parameter specifies the name and path of the file from which text should be extracted.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
 
 ```yaml
 Type: Byte[]
