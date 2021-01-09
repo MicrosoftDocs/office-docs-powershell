@@ -111,7 +111,6 @@ The ExternalAccessPrefix parameter is a number (or set of numbers) that designat
 
 The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
 The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
-The default value is 9.
 
 ```yaml
 Type: String
