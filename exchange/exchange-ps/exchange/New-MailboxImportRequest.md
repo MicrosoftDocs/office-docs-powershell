@@ -482,12 +482,12 @@ Accept wildcard characters: False
 ### -ConflictResolutionOption
 The ConflictResolutionOption parameter specifies what to do if there are multiple matching messages in the target. Valid values are:
 
-- ForceCopy
+- ForceCopy (not available in Exchange Server 2013.)
 - KeepAll
 - KeepLatestItem
 - KeepSourceItem (This is the default value.)
-- KeepTargetItem
-- UpdateFromSource
+- KeepTargetItem (not available in Exchange Server 2013.)
+- UpdateFromSource (not available in Exchange Server 2013.)
 
 ```yaml
 Type: ConflictResolutionOption
