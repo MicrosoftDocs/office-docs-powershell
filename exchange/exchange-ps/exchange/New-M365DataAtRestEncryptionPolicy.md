@@ -39,10 +39,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-M365DataAtRestEncryptionPolicy -Name "US Mailboxes" -AzureKeyIDs "https://contoso.vault.azure.net/keys/key1/",https://contoso.vault.azure.net/keys/key2/" -Description "Root key for mailboxes located in US territories"
 ```
 
-{{ Add example description here }}
+This example creates a data encryption policy named US Mailboxes with the specified Azure Key Vault keys and description.
 
 ## PARAMETERS
 
