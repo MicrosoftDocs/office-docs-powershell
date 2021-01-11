@@ -207,12 +207,7 @@ This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 This parameter must contain a value.
-However, if you don't provide a value, a default value will be supplied.
-The default value for a Global tenant dial plan is Prefix All.
-The default value for a site-level tenant dial plan is the name of the site.
-The default value for a service is the name of the service (Registrar or PSTN gateway) followed by an underscore, followed by the service fully qualified domain name (FQDN).
-For example: Registrar_pool0.litwareinc.com.
-The default value for a per-user tenant dial plan is the Identity of the tenant dial plan.
+However, if you don't provide a value, a default value matching the Identity of the tenant dial plan will be supplied.
 
 ```yaml
 Type: String
