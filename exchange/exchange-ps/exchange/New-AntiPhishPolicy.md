@@ -27,13 +27,13 @@ New-AntiPhishPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
- [-EnableAntiSpoofEnforcement <Boolean>]
  [-Enabled <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
  [-EnableMailboxIntelligenceProtection <Boolean>]
  [-EnableOrganizationDomainsProtection <Boolean>]
  [-EnableSimilarDomainsSafetyTips <Boolean>]
  [-EnableSimilarUsersSafetyTips <Boolean>]
+ [-EnableSpoofIntelligence <Boolean>]
  [-EnableTargetedDomainsProtection <Boolean>]
  [-EnableTargetedUserProtection <Boolean>]
  [-EnableUnauthenticatedSender <Boolean>]
@@ -153,27 +153,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableAntispoofEnforcement
-This setting is part of spoof protection.
-
-The EnableAntispoofEnforcement parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
-
-- $true: Antispoofing is enabled for the policy. This is the default and recommended value. You specify the spoofed senders to allow or block using the Set-PhishFilterPolicy cmdlet.
-- $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Enabled
 The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
@@ -284,6 +263,27 @@ The EnableSimilarUsersSafetyTips parameter specifies whether to enable the s
 
 - $true: Safety tips for similar users are enabled.
 - $false: Safety tips for similar users are disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSpoofIntelligence
+This setting is part of spoof protection.
+
+The EnableSpoofIntelligence parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
+
+- $true: Antispoofing is enabled for the policy. This is the default and recommended value. You specify the spoofed senders to allow or block using the Set-PhishFilterPolicy cmdlet.
+- $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
 
 ```yaml
 Type: Boolean
