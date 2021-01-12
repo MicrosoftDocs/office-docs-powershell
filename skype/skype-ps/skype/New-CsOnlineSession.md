@@ -18,16 +18,7 @@ Creates a persistent connection to Microsoft Skype for Business Online DataCente
 
 ### Credential (Default)
 ```
-New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>]
- [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
-```
-
-### OAuthAccessToken
-```
-New-CsOnlineSession [-OAuthAccessToken <SecureString>] [-OverrideAdminDomain <String>]
- [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
+New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>] [-OverridePowerShellUri <Uri>] [-TeamsEnvironmentName <String>]  [-SessionOption <PSSessionOption>] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
@@ -62,22 +53,6 @@ Establishes a Skype for Business Online Remote PowerShell session using multi-fa
 
 ## PARAMETERS
 
-### -UserName
-Specifies the Skype for Business Online administrator account name to be used when prompting for credentials.
-Please Note: UserName has been deprecated and is not available in the Teams Powershell module. Please use the Credential parameter to provide username and password. 
-
-```yaml
-Type: String
-Parameter Sets: UserName
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Credential
 Specifies a Skype for Business Online administrator, or Syndicated Partner administrator account.
 
@@ -97,23 +72,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OAuthAccessToken
-Specifies an access token already acquired by the Skype for Business Online administrator, or Syndicated Partner administrator.
-
-```yaml
-Type: SecureString
-Parameter Sets: OAuthAccessToken
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OverrideAdminDomain
-Specifies the domain of the tenant to be managed. This is used when the administrator has permissions to manage more than one tenant. For example, Syndicated Partner administrators commonly manage several tenants. 
+Specifies the domain of the tenant to be managed. This is used when the administrator has permissions to manage more than one tenant. For example, Syndicated Partner administrators commonly manage several tenants.
 
 ```yaml
 Type: String
@@ -127,40 +87,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverrideDiscoveryUri
-Specifies Skype for Business Auto Discovery URI.
-Optional.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OverridePowerShellUri
 Specifies Skype for Business Remote Powershell URI.
-Optional.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideAccessTokenResourceUri
-Specifies Skype for Business Remote Powershell Authorization Token URI.
 Optional.
 
 ```yaml
