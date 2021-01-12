@@ -66,10 +66,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-M365DataAtRestEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
 ```
 
-{{ Add example description here }}
+This example disabled the data at rest encryption policy named US Mailboxes.
+
+### Example 2
+```powershell
+Set-M365DataAtRestEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
+```
+
+This example updates the data at rest encryption policy named Europe Mailboxes after one of the associated keys has been rotated in the Azure Key Vault.
 
 ## PARAMETERS
 
@@ -196,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -Refresh
-{{ Fill Refresh Description }}
+Use the Refresh switch to update the data at rest encryption policy in Exchange Online after you rotate any of the associated keys in the Azure Key Vault. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
