@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Default
+### Identity
 ```
 Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
@@ -79,6 +79,7 @@ Set-OrganizationConfig
  [-MailTipsGroupMetricsEnabled <Boolean>]
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
+ [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <Boolean>]
@@ -507,7 +508,7 @@ The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposab
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -563,7 +564,7 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -583,7 +584,7 @@ After you enable AutodiscoverPartialDirSync, it will take approximately 3 hours 
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -601,7 +602,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -621,7 +622,7 @@ After you enable auto-expanding archiving, additional storage space is automatic
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -644,7 +645,7 @@ Microsoft Bookings is an online and mobile app for small businesses who provide 
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -665,7 +666,7 @@ The BookingsPaymentsEnabled parameter specifies whether to enable online payment
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -730,7 +731,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -960,7 +961,7 @@ The DefaultGroupAccessType parameter specifies the default access type for Micro
 
 ```yaml
 Type: ModernGroupObjectType
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -1117,7 +1118,7 @@ The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable 
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -1410,7 +1411,7 @@ The ExchangeNotificationEnabled parameter enables or disables Exchange notificat
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -1428,7 +1429,7 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -1441,7 +1442,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -1466,7 +1467,7 @@ Focused Inbox is a replacement for Clutter that separates the Inbox into the Foc
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -1821,6 +1822,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageRemindersEnabled
+This parameter is available only in the cloud-based service.
+
+The MessageRemindersEnabled parameter enables or disables the message reminders feature in the organization. Valid values are:
+
+- $true: Message reminders are enabled. A message is moved to the top of the user's inbox if Outlook determines that the message requires follow-up or a reply. Only one message is moved at a time, and the user must take action on the message before another message is moved to the top of the Inbox.
+- $false: Message reminders are disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MicrosoftExchangeRecipientEmailAddresses
 This parameter is available only in on-premises Exchange.
 
@@ -1920,7 +1942,7 @@ This setting will affect Outlook desktop at some point in the future.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2007,7 +2029,7 @@ The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing)
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2037,7 +2059,7 @@ The Outlook for iOS and Android feature and services that are not FedRAMP compli
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2055,7 +2077,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2073,7 +2095,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2094,7 +2116,7 @@ The OutlookPayEnabled parameter enables or disables Microsoft Pay in the Microso
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2284,7 +2306,7 @@ The PublicFolderShowClientControl parameter enables or disables access to public
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange 2019, Exchange Online
 
@@ -2498,7 +2520,7 @@ There are three scenarios where meeting update messages are not auto-processed r
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2539,7 +2561,7 @@ The WebPushNotificationsDisabled parameter specifies whether to enable or disabl
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -2560,7 +2582,7 @@ The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
