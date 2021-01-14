@@ -104,6 +104,7 @@ The RetentionDuration parameter specifies how long audit log records are kept. V
 - SixMonths
 - NineMonths
 - TwelveMonths
+- TenYears
 
 This parameter is required when modifying an audit log retention policy.
 
@@ -111,7 +112,7 @@ This parameter is required when modifying an audit log retention policy.
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
 Applicable: Security & Compliance Center
 
 Required: True
