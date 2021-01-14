@@ -36,7 +36,7 @@ Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-**Note**: If you run Get-SafeLinksAggregateReport without specifying a date range, the command will return an unspecified error.
+**Note**: If you run Get-SafeLinksDetailReport without specifying a date range, the command will return an unspecified error.
 
 Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
 
