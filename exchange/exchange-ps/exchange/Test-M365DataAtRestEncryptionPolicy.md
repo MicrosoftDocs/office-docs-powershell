@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Test-M365DataAtRestEncryptionPolicy -Identity "Contoso Corporate"
 ```
 
-This example tests the data at rest encryption policy named Contos Corporate.
+This example tests the data at rest encryption policy named Contoso Corporate.
 
 ## PARAMETERS
 
