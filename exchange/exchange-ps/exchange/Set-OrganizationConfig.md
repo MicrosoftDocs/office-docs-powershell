@@ -2020,8 +2020,6 @@ Accept wildcard characters: False
 ### -OutlookGifPickerDisabled
 This parameter is available only in the cloud-based service.
 
-This feature is currently in Preview, is not available everywhere, and is subject to change.
-
 The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature that's built into the Compose page in Outlook on the web. Valid values are:
 
 - $true: GIF Search in Outlook on the web is disabled.
