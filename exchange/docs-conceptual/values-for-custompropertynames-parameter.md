@@ -28,20 +28,14 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 
 |CustomPropertyNames|Description|
 |---|---|
-|AbchContactId|Id for this contact in the address book clearing house (ABCH).|
-|AbchPersonIdGuid|PersonIDGuid object in ABCH and Skype based service. Supports explicit, implicit and 3rd party relationships for any MSA or Skype users.|
-|AbchPersonId|Internal ID for a person object in ABCH. Supports explicit, implicit and 3rd party relationships for any MSA or Skype users.|
 |AddOnlineMeetingOnFinalize|Add online meeting on finalize flag.|
 |AllAttachmentsHidden|The AllAttachmentsHidden property displays whether or not there are non-inline attachments inside the protected message.|
 |AppointmentAuxiliaryFlags|Detect whether the meeting request is a forwarded meeting (for example, IsForwardedMeeting or AttendeeCount).|
 |AppointmentClass|AppointmentClass is the MessageClass of the calendar item from which a meeting message is created.|
-|AppointmentColor|Calendar Item Color.|
 |AppointmentCounterEndWhole|End time proposal.|
 |AppointmentCounterProposalCount|Current counter proposal count.|
 |AppointmentCounterProposal|Indicates whether a Meeting Response object is a counter proposal.|
 |AppointmentCounterStartWhole|Start time proposal.|
-|AppointmentExtractTime|A UTC time that indicates the time when the above software copied the properties to the calendar item.|
-|AppointmentExtractVersion|A 64-bit number indicating the version number of the software that copied the properties to the calendar item.|
 |AppointmentLastSequenceNumber|If AppointmentSequenceNumber doesn't match, then use AppointmentLastSequenceNumber to decide if this stale incoming request.|
 |AppointmentProposedDuration|Proposed duration of the meeting in total minutes.|
 |AppointmentRecurrenceBlob|Holds a copy of recurring information only from Recurring Masters.|
@@ -53,17 +47,14 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |AppointmentStateInternal|Gets the state of this appointment (for example, Meeting or Received).|
 |AppointmentState|Gets the state of this appointment (for example, Meeting or Received).|
 |AttendeeCriticalChangeTime|The attendee's critical change time.|
-|AttendeeListDetails|Additional details for the list of attendees.|
 |BirthdayContactAttributionDisplayName|Property used to indicate the name of the contact associated with the birthday event.|
 |BirthdayContactId|Represents the birthday contact ID property.|
 |BirthdayPersonId|Represents the birthday person ID property used to associate multiple contact object to a single, aggregate person.|
 |Birthday|Birthday of the contact.|
-|CalendarInteropActionQueueHasDataInternal|Flag indication there are calendar interop pending actions.|
-|CalendarInteropActionQueueInternal|Blob representing action queue for calendar interop pending actions.|
 |CalendarItemExperienceTypeInternal|Experience type for a calendar item, used by client to render custom user experiences for different types of calendar items.|
 |CalendarItemType|The Calendar Item Type (for example, RecurringMaster).|
 |CalendarLogTriggerAction|The action thats taken on the item (for example, Create or Update).|
-|CalendarOriginatorId|Set the calendar originator Id to the owner of this mailbox since it is a new calendar item being create.|
+|CalendarOriginatorId|Identification of the organizer to prevent unintentional takeover of a meeting by other users.|
 |CalendarProcessed|Check if the meeting message has been processed by XSO.|
 |CalendarProcessingSteps|This is a set of flags for the various steps we completed in the stages of processing.|
 |ChangeHighlight|Encapsulates information on the change highlights of a meeting request.|
@@ -74,19 +65,12 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |ClientInfoString|The entity that made the change (for example, `Client=OWA;<AdditionalDetails>, Client=WebServices;<AdditionalDetails>;`, or `Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;`).|
 |ClientIntent|What the intent of the client is from any changes that are made to the item.|
 |ClientProcessName|Client process name (for example, OUTLOOK.EXE).|
-|ClipEndTime|Maximum Supported EndTime.|
-|ClipStartTime|Minimum Supported StartTime.|
-|CoOrganizerResponseTime|The time at which the coauthoring invitation was responded to.|
-|CoOrganizerStatus|The coauthoring status of this item:  None, Pending, Accepted, or Declined.|
-|CoOrganizerVerificationToken|The verification token provided along with the co-organizer invitation.|
-|CoOrganizers|The list of co-organizers of the meeting.|
 |ConferenceInfo|ConferenceInfo property is used by legacy online meeting and by calling the UCWA APIs we've updated the meeting.|
 |ConferenceTelURI|The conference tel uri for online meeting.|
 |ConferenceType|The type of conferencing that will be used during the meeting.|
 |ConnectedCalendarEventSourceData|Property that contains the data of a connected calendar event as received from source.|
 |CreationHash|A hash that identifies the original request to create an event.|
 |CreationTime|Creation time of the item.|
-|DeclinedOccurrencesBlob|An array of declined occurrences.|
 |DisallowNewTimeProposal|Specifies whether recipients of the meeting request can propose a new time for the meeting.|
 |DisplayAttendeesAll|List of All the Attendees.|
 |DisplayAttendeesCc|Who to display the Attendees list CC line.|
@@ -105,8 +89,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |EstimatedTentativeCount|An estimated count of the number of attendees which tentatively accepted a meeting.|
 |EventClientId|Client-generated string representing id for series of calendar events.|
 |EventDraft|Flag indicating whether calendar event is in the draft state.|
-|EventEmailReminderTimer|Timer property for Event Email Reminders.|
-|EventPushReminderTimer|Timer property for Push Notification Reminders.|
 |EventResponseTrackingSource|Event response tracking status.|
 |EventTimeBasedInboxRemindersState|Property that contains the state for time-based inbox reminders pertaining to calendar events.|
 |EventTimeBasedInboxReminders|Property that contains time-based inbox reminders pertaining to calendar events.|
@@ -114,7 +96,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |ExceptionalAttendees|Bool value whether there are Exceptional Attendees.|
 |ExceptionalBody|Bool value whether there are Exceptional Body is changed.|
 |ExternalSharingMasterId|If copy of remote calendar in shared in calendar do not set organizer as it is not simply owner of a current mailbox It will sync back from master copy where it will be evaluated properly at save.|
-|FinalizedMeetingPollSeriesId|SeriesId of finalized meeting poll. Used in conjunction with FindTime an Outlook add-in for scheduling meetings. The organizer can send multiple time options through FindTime and minimize the back and forth emails in scheduling.|
 |ForwardNotificationRecipients|List of Forwarded Recipients.|
 |FreeBusyStatus|Free/busy status associated with the event.|
 |From|From e-mail address.|
@@ -137,7 +118,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |IsHiddenFromLegacyClients|Flag deciding whether modern calendar item should be hidden for legacy clients.|
 |IsMeetingPollEvent|Is meeting poll event boolean flag.|
 |IsMeeting|Value indicating whether the calendar event is a meeting.|
-|IsPreservedDeclinedMeeting|Is meeting declined by the user preserved on the user's calendar.|
 |IsProcessed|True if the message has been processed either by XSO or by Outlook.|
 |IsPublishedCalendarItem|Whether a calendar event (schedule) has been published.|
 |IsRecurring|Value indicating whether the calendar event is recurring.|
@@ -149,7 +129,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |ItemClass|Contains a text string that identifies the sender-defined message class, such as IPM.Note.|
 |ItemId|Object Store ItemId.|
 |ItemVersion|Version of the item.|
-|LastExecutedCalendarInteropAction|Information on last executed calendar interop action.|
 |LastModifiedTime|Gets the date and time this item was last modified.|
 |LocationAddressInternal|One of the properties that define the enhanced location and their corresponding default values.|
 |Location|Gets the location of the calendar event.|
@@ -161,12 +140,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |MapiPRStartDate|MapiPR(Pattern Recurrence) StartDate of Meeting.|
 |MapiStartTime|StartTime of Meeting.|
 |MasterGlobalObjectId|Holds the original GUID of the item in case another process needs to change it.|
-|MeetingPollAddAttendeesParametersBlob|Blob representing serialized meeting poll add attendees parameters set on the series message.|
-|MeetingPollAttendeesDataRaw|Meeting poll attendees data.|
-|MeetingPollProposeOptionsParametersBlob|Blob representing serialized meeting poll propose options parameters set on the series message.|
-|MeetingPollProposeOptionsRequestsBlob|Blob representing serialized meeting poll propose options request set on the poll master.|
-|MeetingPollResponseParametersBlob|Blob representing serialized meeting poll response parameters set on the series message.|
-|MeetingPollSystemEmailStatus|Meeting poll system email status.|
 |MeetingRequestType|Defines the type of meeting request.|
 |MeetingRequestWasSent|Value indicating whether the meeting request has already been sent.|
 |MeetingUniqueId|Meeting unique ID used to link meeting history to master meeting item.|
@@ -175,7 +148,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |MiddleTierServerBuildVersion|EXO Build Version.|
 |MiddleTierServerName|Backend Mailbox ServerName.|
 |NormalizedSubject|Subject of the meeting.|
-|NprAttachmentTrackingMetadataRaw|Properties that need to be copied to the meeting request for NPR(Non Pattern Recurrence) An NPR series is a recurring series where all of the events have different start and end times (for example, Mon 10-12, Thurs 11-11:30, Fri 3-4:45) but have other properties in common .NPR instances of the same series are single events tied together by the same SeriesMasterId, which is the Id of the NPR series master.|
 |OccurrencesExceptionalViewProperties|Blob representing the exceptional properties of instances of an NPR.|
 |OldLocation|Saved old location before updating new location.|
 |OldStartWhole|Old time properties on the updated meeting request.|
@@ -201,7 +173,6 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |PropertyChangeMetadataProcessingFlags|Flags representing property change metadata processing behavior.|
 |PropertyChangeMetadataRaw|Blob representing property change metadata for Series exception management purposes.|
 |PublishedCalendarItemUrl|The url for a published calendar event (schedule).|
-|PushReminders|Property that contains push reminders.|
 |RawAttendeeInformation|Stores raw attendee information provided by a client, to help troubleshoot and debug attendee translation issues.|
 |ReceivedBy|Gets the ReceivedBy property of the e-mail message.|
 |ReceivedRepresenting|Returns received on behalf display name for delegate meeting message own meeting.|
@@ -219,10 +190,7 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |SentRepresentingEntryId|The entry id of the the sent representing person.|
 |SentRepresentingType|The address type of the sent representing person.|
 |SeriesId|String representing id for series of calendar events.|
-|SeriesMasterId|The ID of the master item of an NPR instance.|
-|SeriesMessageContainsPollResponse|Boolean flag on meeting poll response messages indicating whether series message contains poll response blob or not.|
 |SeriesReminderIsSet|Flag indicating whether reminder is set for the whole series.|
-|SeriesSequenceNumber|The sequence number of an NPR-related message.|
 |Size|Size in Bytes of the Meeting Message.|
 |SkypeTeamsMeetingUrl|The meeting url for Teams meeting.|
 |SkypeTeamsProperties|The relevant properties for Teams meeting.|
