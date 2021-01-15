@@ -183,7 +183,8 @@ Accept wildcard characters: False
 ### -Filter
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
- Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
+ Currently, you can filter by these properties: Owner, Template, LockState, Url.
+ If the Template property is used then it must be the only condition with either the -eq or -ne operator.
 
 Note: The operator values are case-sensitive.  
 
