@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Limit
 
-Specifies the maximum number of users returned. The default value is to return 500 users. To return all users specify the value "All".
+Specifies the maximum number of users returned. The default value is to return 500 users. To return all users specify the value "All". Note that using "All" may get this powershell command throttled (HTTP 429).
 
 ```yaml
 Type: String
