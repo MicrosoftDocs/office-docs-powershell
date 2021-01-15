@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Format <RuleCollectionFormat>]
  [-ExportLegacyRules]
  [-WhatIf]
  [<CommonParameters>]
@@ -61,7 +62,11 @@ In Exchange Server 2010, this example exports legacy transport rules created in 
 ### -Identity
 This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
 
-The Identity parameter specifies the name or GUID of a transport rule to be exported.
+The Identity parameter specifies the transport rule that you want to export. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: RuleIdParameter
@@ -125,6 +130,28 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Format
+This parameter is available only in the cloud-based service.
+
+The Format parameter specifics the format of the exported transport rule collection. Valid values are:
+
+- RuleCollectionXML
+- InternalXML
+- DlpMigrationRuleCollection
+
+```yaml
+Type: RuleCollectionFormat
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
