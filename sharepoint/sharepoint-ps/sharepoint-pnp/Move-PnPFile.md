@@ -54,28 +54,28 @@ Allows moving a file or folder to a different location inside the same document 
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:>Move-PnPFile -SiteRelativeUrl "Shared Documents/Document.docx" -TargetUrl "/sites/project/Archive/Document2.docx"
+PS C:\> Move-PnPFile -SiteRelativeUrl "Shared Documents/Document.docx" -TargetUrl "/sites/project/Archive/Document2.docx"
 ```
 
 Moves a file named Document.docx located in the document library named "Shared Documents" in the current site to the document library named "Archive" in the same site, renaming the file to Document2.docx. If a file named Document2.docx already exists at the destination, it won't perform the move.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:>Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Document.docx -TargetUrl "/sites/project/Archive/Document.docx" -OverwriteIfAlreadyExists
+PS C:\> Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Document.docx" -TargetUrl "/sites/project/Archive/Document.docx" -OverwriteIfAlreadyExists
 ```
 
 Moves a file named Document.docx located in the document library named "Shared Documents" in the current site to the document library named "Archive" in the same site. If a file named Document.docx already exists at the destination, it will overwrite it.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:>Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Document.docx" -TargetServerRelativeLibrary "/sites/otherproject/Shared Documents" -OverwriteIfAlreadyExists -AllowSchemaMismatch -AllowSmallerVersionLimitOnDestination
+PS C:\> Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Document.docx" -TargetServerRelativeLibrary "/sites/otherproject/Shared Documents" -OverwriteIfAlreadyExists -AllowSchemaMismatch -AllowSmallerVersionLimitOnDestination
 ```
 
 Moves a file named Document.docx located in the document library named "Shared Documents" in the current site to the document library named "Shared Documents" in another site collection "otherproject" allowing it to overwrite an existing file Document.docx in the destination, allowing the fields to be different on the destination document library from the source document library and allowing a lower document version limit on the destination compared to the source.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:>Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Archive" -TargetServerRelativeLibrary "/sites/archive/Project" -AllowSchemaMismatch -AllowSmallerVersionLimitOnDestination
+PS C:\> Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Archive" -TargetServerRelativeLibrary "/sites/archive/Project" -AllowSchemaMismatch -AllowSmallerVersionLimitOnDestination
 ```
 
 Moves a folder named Archive located in the document library named "Shared Documents" in the current site to the document library named "Project" in another site collection "archive" not allowing it to overwrite an existing folder named "Archive" in the destination, allowing the fields to be different on the destination document library from the source document library and allowing a lower document version limit on the destination compared to the source.
