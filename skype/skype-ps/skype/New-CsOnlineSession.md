@@ -55,10 +55,8 @@ Establishes a Skype for Business Online Remote PowerShell session using multi-fa
 
 ### -Credential
 Specifies a Skype for Business Online administrator, or Syndicated Partner administrator account.
+Enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
 
-Type a Skype for Business Online administrator account name, such as "admin@contoso.com", or enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
-
-When you type an account name, you will be prompted for a password.
 
 ```yaml
 Type: PSCredential
