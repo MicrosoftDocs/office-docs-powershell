@@ -143,9 +143,9 @@ The following properties are returned:
 
 --AllowSelfServiceUpgrade
 
---SiteDefinedSharingCapability-returns the stored value of the site policy.
+--SiteDefinedSharingCapability, (returns the stored value of the site policy.)
 
---SharingCapability --returns the effective access level (the site policy and the tenant policy combined.
+--SharingCapability, (returns the effective access level, which is the site policy and the tenant policy combined.)
 
 ```yaml
 Type: SwitchParameter
