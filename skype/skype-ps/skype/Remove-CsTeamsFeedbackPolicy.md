@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Internal Microsoft use
+Internal Microsoft use.
 
 ```yaml
 Type: Object
