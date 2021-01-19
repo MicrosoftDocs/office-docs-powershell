@@ -102,6 +102,7 @@ Set the receiveSurveysMode parameter to enabled to allow users who are assigned 
 Possible values:
  - Enabled
  - Disabled
+ - EnabledUserOverride
 
 ```yaml
 Type: String
