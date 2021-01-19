@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Internal Microsoft use
+Internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
