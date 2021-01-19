@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Internal Microsoft use
+Internal Microsoft use.
 
 ```yaml
 Type: Object
