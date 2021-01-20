@@ -13,7 +13,6 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-ROBOTS: NOINDEX, NOFOLLOW
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with modern authentication and app-only authentication."
 ---
 
@@ -41,7 +40,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
-  
+
 - Connect using a certificate object:
 
   ```powershell
@@ -50,11 +49,14 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
+> [!TIP]
+> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+
 ## How does it work?
 
 The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
 
-## Setup app-only authentication
+## Set up app-only authentication
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
@@ -73,7 +75,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    - Create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
    - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this topic for instructions for generating certificates in PowerShell.
-   
+
      > [!NOTE]
      > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
@@ -121,25 +123,27 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
 You need to assign the API permission `Exchange.ManageAsApp` so the application can manage Exchange Online. API permissions are required because they have consent flow enabled, which allows auditing (directory roles don't have consent flow).
 
-1. Select **API permissions**.
+1. Select **Manifest** in the left-hand navigation under **Manage**.
 
-2. In the **Configured permissions** page that appears, click **Add permission**.
+2. Locate the `requiredResourceAccess` property in the manifest, and add the following inside the square brackets (`[]`):
 
-3. In the flyout that appears, select **Exchange**.
+   ```json
+   {
+       "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+       "resourceAccess": [
+           {
+               "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
+               "type": "Role"
+           }
+       ]
+   }
+   ```
 
-   ![Select Exchange API permssions](media/app-only-auth-exchange-api-perms.png)
+3. Select **Save**.
 
-4. In the flyout that appears, click **Application permissions**.
+4. Select **API permissions** under **Manage**. Confirm that the **Exchange.ManageAsApp** permission is listed.
 
-5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
-
-   ![Select Exchange.ManageAsApp permssions](media/app-only-auth-exchange-manageasapp.png)
-
-   When you're finished, click **Add permissions**.
-
-6. Back on the **Configured permissions** page that appears, click **Grant admin consent for \<tenant name\>**, and select **Yes** in the dialog that appears.
-
-7. Close the flyout when you're finished.
+5. Select **Grant admin consent for org** and accept the consent dialog.
 
 ## Step 3: Generate a self-signed certificate
 

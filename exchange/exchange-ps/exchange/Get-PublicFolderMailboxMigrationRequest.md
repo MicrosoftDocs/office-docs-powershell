@@ -83,7 +83,7 @@ This example returns duplicate public folder migration requests (requests create
 ## PARAMETERS
 
 ### -BatchName
-The BatchName parameter filters the results by the friendly BatchName value that was assigned when the batch job was created. The format of this value is: MigrationService:\<Batch name provided at batch creation\>.
+The BatchName parameter filters the results by the friendly BatchName value that was assigned when the batch job was created. The format of this value is: `MigrationService:<Batch name provided at batch creation>`.
 
 You can't use this parameter with the Identity parameter.
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request that you want to view. The value uses the syntax: \\PublicFolderMailboxMigration\<GUID\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request that you want to view. The value uses the syntax: `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
 
 You can't use this parameter with the following parameters:
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the public folder mailbox migration request. If the name was not specified at creation, the default value is PublicFolderMailboxMigration\<GUID\> (for example, PublicFolderMailboxMigration2ffdef13-01b9-4586-af2b-d5a5482010a8).
+The Name parameter specifies the name of the public folder mailbox migration request. If the name was not specified at creation, the default value is `PublicFolderMailboxMigration<GUID>` (for example, `PublicFolderMailboxMigration2ffdef13-01b9-4586-af2b-d5a5482010a8`).
 
 You can't use this parameter with the Identity parameter.
 

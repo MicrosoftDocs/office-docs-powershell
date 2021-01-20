@@ -50,7 +50,7 @@ This example removes all existing OAuth redirection objects from your organizati
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the existing OAuth redirection object that you want to remove. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
+The Identity parameter specifies the existing OAuth redirection object that you want to remove. The object name uses the syntax `AuthRedirect-Bearer-GUID`. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
 
 ```yaml
 Type: AuthRedirectIdParameter

@@ -51,12 +51,12 @@ This example updates the vt1tenantDialPlan9 tenant dial plan to use an external 
 
 ### -------------------------- Example 2 --------------------------
 ```
-$nr2 = Get-CsVoiceNormalizationRule -Identity Global/NR2
+$nr2 = Get-CsVoiceNormalizationRule -Identity "US/US Long Distance"
 
 Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
 ```
 
-This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the Global/NR2 normalization rules.
+This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the US/US Long Distance normalization rules.
 
 
 ## PARAMETERS
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -Description
 The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to or any other information that helps to identify the purpose of the tenant dial plan.
-Maximum characters is 512.
+Maximum characters is 1040.
 
 ```yaml
 Type: String
@@ -99,8 +99,7 @@ The ExternalAccessPrefix parameter is a number (or set of numbers) that designat
 (For example, to tenant-dial an outside line, first dial 9). This prefix is ignored by the normalization rules, although these rules will be applied to the rest of the number.
 The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
 
-The value of this parameter must match the regular expression \[0-9\]{1,4}.
-This means it must be a value one to four digits in length, with each digit being a number 0 through 9.
+The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
 
 ```yaml
 Type: String
@@ -134,10 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope, or for per-user plans a name, to identify the tenant dial plan to modify.
-For example, a site Identity is in the format site:\<sitename\>, where sitename is the name of the site.
-A tenant dial plan at the service scope is a Registrar or PSTN gateway service, where the Identity value is formatted in this way: Registrar:Redmond.litwareinc.com.
-A per-user Identity is a unique string value.
+The Identity parameter is a unique identifier that designates the name of the tenant dial plan to modify.
 
 ```yaml
 Type: XdsIdentity
@@ -207,9 +203,9 @@ Accept wildcard characters: False
 
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan.
-This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
+This name must be unique among all tenant dial plans.
 
-This string can be up to 256 characters long.
+This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 ```yaml

@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplaySenderName
-Note: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
+**Note**: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
 
 The DisplaySenderName parameter specifies whether to show the sender's Display Name in the From email address for messages sent to recipients in the remote domain. Valid values are:
 
@@ -602,7 +602,7 @@ Accept wildcard characters: False
 ### -UseSimpleDisplayName
 The UseSimpleDisplayName parameter specifies whether the sender's simple display name is used for the From email address in messages sent to recipients in the remote domain. Valid values are:
 
-- $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is "EmailAddress \<EmailAddress\>".
+- $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is `EmailAddress <EmailAddress>`.
 - $false: Simple display names aren't used in messages sent to recipients in the remote domain. This is the default value.
 
 ```yaml

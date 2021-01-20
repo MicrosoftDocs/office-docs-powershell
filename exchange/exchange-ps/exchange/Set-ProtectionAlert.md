@@ -67,7 +67,6 @@ Set-ProtectionAlert -Identity "Content search deleted" -NotifyUserOnFilterMatch:
 
 This example modifies an alert so that even though it's configured for aggregated activity, a notification is triggered during a match for the activity. A threshold of 10 detections and a TimeWindow of two hours are also configured in the same command.
 
-
 ## PARAMETERS
 
 ### -Identity

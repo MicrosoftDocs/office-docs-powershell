@@ -61,7 +61,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
+New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling
+Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
 This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.

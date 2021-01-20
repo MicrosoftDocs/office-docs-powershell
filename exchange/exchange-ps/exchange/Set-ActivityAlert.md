@@ -50,12 +50,14 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-$NU = Get-ActivityAlert "Contoso Elevation of Privilege"; $NU.NotifyUser.Add("chris@fabrikam.com"); Set-ActivityAlert "Contoso Elevation of Privilege" -NotifyUser $NU.NotifyUser
+$NU = Get-ActivityAlert "Contoso Elevation of Privilege"
+$NU.NotifyUser.Add("chris@fabrikam.com")
+Set-ActivityAlert "Contoso Elevation of Privilege" -NotifyUser $NU.NotifyUser
 ```
 
 This example adds the external user chris@fabrikam.com to the list of recipients that email notifications are sent to for the activity alert named Contoso Elevation of Privilege.
 
-Note: To remove an existing email address from the list of recipients, change the value NotifyUser.Add to NotifyUser.Remove.
+**Note**: To remove an existing email address from the list of recipients, change the value NotifyUser.Add to NotifyUser.Remove.
 
 ### Example 2
 ```powershell
@@ -250,7 +252,7 @@ Accept wildcard characters: False
 ### -NotifyUser
 The NotifyUser parameter specifies the email address of the recipients who will receive the notification emails. You can specify internal and external email addresses.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To modify the existing list of recipients, see the Examples section.
 
@@ -272,7 +274,7 @@ The Operation parameter specifies the activities that trigger activity alerts.
 
 A valid value for this parameter is an activity that's available in the Microsoft 365 audit log. For a description of these activities, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 For the syntax that you use to modify an existing list of Operations values, see the Examples section.
 
@@ -389,7 +391,7 @@ The UserId parameter specifies who you want to monitor.
 - If you specify a user's email address, you'll receive an email notification when the user performs the specified activity. You can specify multiple email addresses separated by commas.
 - If this parameter is blank ($null), you'll receive an email notification when any user in your organization performs the specified activity.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can only use this parameter on activity alerts that have the Type property values Custom or ElevationOfPrivilege.
 

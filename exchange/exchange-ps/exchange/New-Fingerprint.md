@@ -38,7 +38,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte; $Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
+$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte
+$Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
 
 This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DataClassification cmdlet in the same PowerShell session.

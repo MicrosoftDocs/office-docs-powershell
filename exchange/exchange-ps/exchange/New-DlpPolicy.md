@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ### -Parameters
 The Parameters parameter specifies the parameter values that are required by the DLP policy template that you specify using the Template or TemplateData parameters. DLP policy templates may contain parameters that need to be populated with values from your organization. For example, a DLP policy template may include an exception group that defines users who are exempt from the DLP policy.
 
-Valid input for this parameter is in the format: @{\<parameter1\>="\<value1\>";\<parameter2\>="\<value2\>"...}.
+This parameter uses the syntax: `@{Parameter1="Value1";Parameter2="Value2"...}`.
 
 ```yaml
 Type: Hashtable
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -TemplateData
 The TemplateData parameter specifies an external DLP policy template file from which you can create a new DLP policy. You can't use the TemplateData and Template parameters in the same command.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 ```yaml
 Type: Byte[]

@@ -50,7 +50,7 @@ The Identity parameter specifies the Receive connector that you want to remove. 
 - Name
 - Distinguished name (DN)
 - GUID
-- \<ServerName\>\\\<Name\>
+- ServerName\\Name
 
 ```yaml
 Type: ReceiveConnectorIdParameter

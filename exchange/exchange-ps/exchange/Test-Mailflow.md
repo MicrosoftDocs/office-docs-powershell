@@ -105,14 +105,14 @@ Test-Mailflow [[-Identity] <ServerIdParameter>]
 ## DESCRIPTION
 The Test-Mailflow cmdlet tests mail submission, transport, and delivery. The cmdlet verifies that each Mailbox server can successfully send itself a message. You can also use this cmdlet to verify that the system mailbox on one Mailbox server can successfully send a message to the system mailbox on another Mailbox server. A system mailbox is required on all servers that are involved in the test.
 
-The test messages are available in the target user or system mailbox. The message subject is Test-Mailflow \<GUID\>, and the message body contains the text This is a Test-Mailflow probe message.
+The test messages are available in the target user or system mailbox. The message subject is `Test-Mailflow <GUID>`, and the message body contains the text `This is a Test-Mailflow probe message`.
 
 The Test-Mailflow results are displayed on-screen. The interesting values in the results are:
 
 - TestMailflowResult: The values returned are typically Success or \*FAILURE\*.
 - MessageLatencyTime: The time required to complete the test (deliver the test message). The value uses the syntax hh:mm:ss.ffff where hh = hours, mm = minutes, ss = seconds and ffff = fractions of a second.
 
-You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding "\> \<filename\>" to the command. For example:
+You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding `> <filename>` to the command. For example: `Test-Mailflow -AutoDiscoverTargetMailboxServer | ConvertTo-Csv > "C:\My Documents\test-mailflow 2020-05-01.csv"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

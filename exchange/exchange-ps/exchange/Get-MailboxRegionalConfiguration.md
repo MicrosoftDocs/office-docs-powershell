@@ -107,11 +107,11 @@ The VerifyDefaultFolderNameLanguage switch verifies that the default folder name
 
 The results are displayed in the DefaultFolderNameMatchingUserLanguage property. To see this property, you need to pipeline the results of the command to the Format-List or Format-Table cmdlets. For example:
 
-- Get-MailboxRegionalConfiguration -Identity \<MailboxIdentity\> -VerifyDefaultFolderNameLanguage | Format-List
+- `Get-MailboxRegionalConfiguration -Identity <MailboxIdentity> -VerifyDefaultFolderNameLanguage | Format-List`
 
 Or
 
-- Get-MailboxRegionalConfiguration -Identity \<MailboxIdentity\> -VerifyDefaultFolderNameLanguage | Format-Table Language,DefaultFolderNameMatchingUserLanguage
+- `Get-MailboxRegionalConfiguration -Identity <MailboxIdentity> -VerifyDefaultFolderNameLanguage | Format-Table Language,DefaultFolderNameMatchingUserLanguage`
 
 If you view the DefaultFolderNameMatchingUserLanguage property without using the VerifyDefaultFolderNameLanguage switch, the value is always $false, even if the default folder names are localized in the language that's specified for the mailbox.
 
