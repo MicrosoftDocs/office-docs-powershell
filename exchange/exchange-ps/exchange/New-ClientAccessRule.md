@@ -43,7 +43,7 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
 ## DESCRIPTION
 Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
-Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
+**Note**: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 - ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.

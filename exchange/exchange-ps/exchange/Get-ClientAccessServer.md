@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ClientAccessServer cmdlet to view settings that are associated with the Client Access server role.
 
-Note: In Exchange 2013 or later, use the Get-ClientAccessService cmdlet instead. If you have scripts that use Get-ClientAccessServer, update them to use Get-ClientAccessService.
+**Note**: In Exchange 2013 or later, use the Get-ClientAccessService cmdlet instead. If you have scripts that use Get-ClientAccessServer, update them to use Get-ClientAccessService.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -73,7 +73,6 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
-
 
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.

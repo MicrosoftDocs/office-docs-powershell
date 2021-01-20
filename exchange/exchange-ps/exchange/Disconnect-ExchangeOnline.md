@@ -10,7 +10,6 @@ ms.author: chrisda
 ms.reviewer: navgupta
 ---
 
-
 # Disconnect-ExchangeOnline
 
 ## SYNOPSIS

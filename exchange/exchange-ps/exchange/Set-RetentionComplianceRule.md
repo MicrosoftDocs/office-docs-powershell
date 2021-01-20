@@ -79,6 +79,8 @@ You view and create labels by using the Get-ComplianceTag and New-ComplianceTag 
 
 You can't use this parameter with the Name or PublishComplianceTag parameters.
 
+You can't use this parameter for Teams retention rules.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -134,6 +136,8 @@ This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minC
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
+You can't use this parameter for Teams retention rules.
+
 ```yaml
 Type: PswsHashtable[]
 Parameter Sets: (All)
@@ -188,6 +192,8 @@ The ContentMatchQuery parameter specifies a content search filter.
 
 This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
+You can't use this parameter for Teams retention rules.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -215,7 +221,9 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 
 Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
 
-You can specify multiple item class values by using the syntax "Value1","Value2",..."ValueN".
+You can specify multiple item class values by using the following syntax: `"Value1","Value2",..."ValueN"`.
+
+You can't use this parameter for Teams retention rules.
 
 ```yaml
 Type: MultiValuedProperty
@@ -235,6 +243,8 @@ The ExpirationDateOption parameter specifies whether the expiration date is calc
 
 - CreationAgeInDays
 - ModificationAgeInDays
+
+You can't use this parameter for Teams retention rules.
 
 ```yaml
 Type: String
@@ -296,6 +306,8 @@ The RetentionDurationDisplayHint parameter specifies the units that are used to 
 - Years
 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
+
+You can't use this parameter for Teams retention rules.
 
 ```yaml
 Type: HoldDurationHint

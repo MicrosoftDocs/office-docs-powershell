@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-TransportServer cmdlet to view settings that are associated with the Hub Transport server role or the Edge Transport server role.
 
-Note: In Exchange 2013 or later, use the Get-TransportService cmdlet instead. If you have scripts that use Get-TransportServer, update them to use Get-TransportService.
+**Note**: In Exchange 2013 or later, use the Get-TransportService cmdlet instead. If you have scripts that use Get-TransportServer, update them to use Get-TransportService.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

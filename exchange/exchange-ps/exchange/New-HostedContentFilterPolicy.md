@@ -74,7 +74,6 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-TestModeAction <SpamFilteringTestModeAction>]
  [-TestModeBccToRecipients <MultiValuedProperty>]
  [-WhatIf]
- [-ZapEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1002,7 +1001,7 @@ The QuarantineRetentionPeriod parameter specifies the number of days that spam m
 - PhishSpamAction
 - SpamAction
 
-A valid value is an integer between 1 and 30. The default value is 30.
+A valid value is an integer between 1 and 30. The default value is 15.
 
 After the time period expires, the message is deleted.
 
@@ -1163,22 +1162,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ZapEnabled
-This parameter has been deprecated and is no longer used. Use the PhishZapEnabled and SpamZapEnabled parameters instead.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
