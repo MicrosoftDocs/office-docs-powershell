@@ -20,7 +20,7 @@ This cmdlet updates a custom policy package.
 ## SYNTAX
 
 ```
-Update-CsCustomPolicyPackage -Identity <String> -PolicyList <PolicyTypeAndName[]> [-Description <String>] [<CommonParameters>]
+Update-CsCustomPolicyPackage -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,14 +31,13 @@ This cmdlet updates a custom policy package with new package settings. For more 
 
 ### Example 1
 ```powershell
-PS C:\> Update-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList @{ PolicyType = "TeamsMessagingPolicy"; PolicyName = "MyMessagingPolicy" }
+PS C:\> Update-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList "TeamsMessagingPolicy, MyMessagingPolicy"
 ```
 
 Updates the custom package named "MyPackage" to have one policy in the package: a messaging policy of name "MyMessagingPolicy".
 ### Example 2
 ```powershell
-PS C:\> $policyList = @(@{ PolicyType = "TeamsMessagingPolicy"; PolicyName = "MyMessagingPolicy" }, @{ PolicyType = "TeamsMeetingPolicy"; PolicyName = "MyMeetingPolicy" })
-PS C:\> Update-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList $policyList -Description "My package"
+PS C:\> Update-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList "TeamsMessagingPolicy, MyMessagingPolicy", "TeamsMeetingPolicy, MyMeetingPolicy" -Description "My package"
 ```
 
 Updates the custom package named "MyPackage" to have a description of "My package" and two policies in the package: a messaging policy of name "MyMessagingPolicy" and a meeting policy of name "MyMeetingPolicy".
@@ -55,7 +54,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -63,15 +62,15 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies to be included in the updated package. It should be constructed as an array of hash tables containing a policy type and a policy name. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy?view=skype-ps) and [Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmessagingpolicy?view=skype-ps).
+A list of one or more policies to be included in the updated package. To specifiy the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy?view=skype-ps) and [Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmessagingpolicy?view=skype-ps).
 
 ```yaml
-Type: PolicyTypeAndName[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -87,7 +86,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

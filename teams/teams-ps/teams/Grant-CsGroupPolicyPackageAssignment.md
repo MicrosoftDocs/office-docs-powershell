@@ -13,14 +13,12 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
-
 This cmdlet assigns a policy package to a group in a tenant.
 
 ## SYNTAX
 
 ```
-Grant-CsGroupPolicyPackageAssignment -GroupId <String> -PackageName <String> [-PolicyRankings <PolicyRanking[]>] [<CommonParameters>]
+Grant-CsGroupPolicyPackageAssignment -GroupId <String> -PackageName <String> [-PolicyRankings <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,8 +43,7 @@ Assigns the Education_PrimaryStudent policy package to the group. The group will
 
 ### Example 2
 ```powershell
-PS C:\> $policyRankings = @(@{ PolicyType = "TeamsMessagingPolicy"; Rank = 1 }, @{ PolicyType = "TeamsMeetingPolicy"; Rank = 1 }, @{ PolicyType = "TeamsCallingPolicy"; Rank = 2 })
-PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_Teacher -PolicyRankings $policyRankings
+PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_Teacher -PolicyRankings "TeamsMessagingPolicy, 1", "TeamsMeetingPolicy, 1", "TeamsCallingPolicy, 2"
 ```
 
 Assigns the Education_Teacher policy package to the group. The group will receive a policy ranking of 1 for TeamsMessagingPolicy policy type, a policy ranking of 1 for TeamsMeetingPolicy policy type and a policy ranking of 2 for TeamsCallingPolicy policy type. For each unspecified policy type in the package, the group will receive the lowest policy ranking if it is newly assigned to the group. If a policy type was already assigned to the group, the group will receive the same policy ranking as before.
@@ -63,7 +60,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -79,7 +76,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -87,15 +84,15 @@ Accept wildcard characters: False
 
 ### -PolicyRankings
 
-The policy rankings for each of the policy types in the package. It should be constructed as an array of hash tables containing a policy type and a rank. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Rank must be a number greater than or equal to 1.
+The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank must be a number greater than or equal to 1.
 
 ```yaml
-Type: PolicyRanking[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
