@@ -993,6 +993,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EventsFromEmailConfiguration](Get-EventsFromEmailConfiguration.md)
 
+### [Get-ExternalInOutlook](Get-ExternalInOutlook.md)
+
 ### [Get-FocusedInbox](Get-FocusedInbox.md)
 
 ### [Get-InboxRule](Get-InboxRule.md)
@@ -1118,6 +1120,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-Clutter](Set-Clutter.md)
 
 ### [Set-EventsFromEmailConfiguration](Set-EventsFromEmailConfiguration.md)
+
+### [Set-ExternalInOutlook](Set-ExternalInOutlook.md)
 
 ### [Set-FocusedInbox](Set-FocusedInbox.md)
 
