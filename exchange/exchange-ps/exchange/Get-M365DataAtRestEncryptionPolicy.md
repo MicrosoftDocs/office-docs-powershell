@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-M365DataAtRestEncryptionPolicy cmdlet to view existing Microsoft 365 data at rest encryption policies.
+Use the Get-M365DataAtRestEncryptionPolicy cmdlet to view existing Microsoft 365 data-at-rest encryption policies.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -31,6 +31,10 @@ Get-M365DataAtRestEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter
 ```
 
 ## DESCRIPTION
+M365 data-at-rest encryption policy cmdlets are accessible to compliance administrator role as part of the Exchange Online infrastructure. For more information, see [Overview of M365 Customer Key at the tenant level](https://docs.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details).
+
+You can create and assign a data-at-rest encryption policy at the tenant level by using the appropriate M365DataAtRestEncryptionPolicy cmdlets in Exchange Online PowerShell.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -40,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-M365DataAtRestEncryptionPolicy
 ```
 
-This example returns a summary list of all data at rest encryption policies.
+This example returns a summary list of all data-at-rest encryption policies.
 
 ### Example 2
 ```powershell
@@ -52,7 +56,7 @@ This example returns detailed information about the policy named Contoso Corpora
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the data at rest encryption policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the data-at-rest encryption policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
