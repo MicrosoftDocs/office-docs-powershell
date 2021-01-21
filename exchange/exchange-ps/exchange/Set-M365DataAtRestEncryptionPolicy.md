@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-M365DataAtRestEncryptionPolicy cmdlet to enable or disable a Microsoft 365 data at rest encryption policy.
+Use the Set-M365DataAtRestEncryptionPolicy cmdlet to modify Microsoft 365 data-at-rest encryption policies in Exchange Online.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -69,19 +69,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-M365DataAtRestEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
 ```
 
-This example disabled the data at rest encryption policy named US Mailboxes.
+This example disabled the data-at-rest encryption policy named US Mailboxes.
 
 ### Example 2
 ```powershell
 Set-M365DataAtRestEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
 ```
 
-This example updates the data at rest encryption policy named Europe Mailboxes after one of the associated keys has been rotated in the Azure Key Vault.
+This example updates the data-at-rest encryption policy named Europe Mailboxes after one of the associated keys has been rotated in the Azure Key Vault.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the data at rest encryption policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the data-at-rest encryption policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the data at rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -Refresh
-Use the Refresh switch to update the data at rest encryption policy in Exchange Online after you rotate any of the associated keys in the Azure Key Vault. You don't need to specify a value with this switch.
+Use the Refresh switch to update the data-at-rest encryption policy in Exchange Online after you rotate any of the associated keys in the Azure Key Vault. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

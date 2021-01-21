@@ -135,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomPropertyNames
-The CustomPropertyNames parameter returns the specified calendar item custom property in the results. You can specify multiple values separated by commas.
+The CustomPropertyNames parameter returns the specified calendar item custom property in the results. For valid values, see [Values for the CustomPropertyNames parameter in Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/values-for-custompropertynames-parameter).
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
