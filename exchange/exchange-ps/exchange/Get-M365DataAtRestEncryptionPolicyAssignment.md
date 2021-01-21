@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-M365DataAtRestEncryptionPolicyAssignment cmdlet to view the currently assigned Microsoft 365 data at rest encryption policy.
+Use the Get-M365DataAtRestEncryptionPolicyAssignment cmdlet to view the currently assigned Microsoft 365 data-at-rest encryption policy.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -38,14 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-M365DataAtRestEncryptionPolicyAssignment
 ```
 
-This example returns a summary list of all data at rest encryption policy assignments.
+This example returns a summary list of all data-at-rest encryption policy assignments.
 
 ### Example 2
 ```powershell
 Get-M365DataAtRestEncryptionPolicyAssignment | Format-List
 ```
 
-This example returns detailed information for all data at rest encryption policy assignments.
+This example returns detailed information for all data-at-rest encryption policy assignments.
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
