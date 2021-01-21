@@ -33,21 +33,25 @@ New-M365DataAtRestEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedPro
 ```
 
 ## DESCRIPTION
+M365 data-at-rest encryption policy cmdlets are accessible to compliance administrator role as part of the Exchange Online infrastructure. For more information, see [Overview of M365 Customer Key  at the tenant level](https://docs.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details).
+
+Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy.     
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-M365DataAtRestEncryptionPolicy -Name "US Mailboxes" -AzureKeyIDs "https://contoso.vault.azure.net/keys/key1/",https://contoso.vault.azure.net/keys/key2/" -Description "Root key for mailboxes located in US territories"
+New-M365DataAtRestEncryptionPolicy -Name "Default_Policy" -AzureKeyIDs "https://contosoWestUSvault01.vault.azure.net/keys/Key_01","https://contosoEastUSvault01.vault.azure.net/keys/Key_02" -Description "Tenant default policy"
 ```
 
-This example creates a data-at-rest encryption policy named US Mailboxes with the specified Azure Key Vault keys and description.
+This example creates a Microsoft 365 data-at-rest encryption policy named Default_Policy with the specified Azure Key Vault keys and description.
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the Microsoft 365 data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
