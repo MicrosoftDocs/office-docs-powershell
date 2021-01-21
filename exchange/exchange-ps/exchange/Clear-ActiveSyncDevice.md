@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmailAddresses
-The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation.
+The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation. You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

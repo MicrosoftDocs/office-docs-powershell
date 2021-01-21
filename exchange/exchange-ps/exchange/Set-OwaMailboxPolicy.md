@@ -615,18 +615,18 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available or functional only in on-premises Exchange.
 
-The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
+The DelegateAccessEnabled parameter specifies whether delegates can use Outlook on the web or Outlook Web App to open folders that they have delegate access to. Valid values are:
 
-- $true: Delegates can open the mailbox in Outlook Web App. This is the default value.
-- $false: Delegates can't open the mailbox in Outlook Web App.
+- $true: Delegates can open the mailbox in Outlook on the web. This is the default value.
+- $false: Delegates can't open the mailbox in Outlook on the web.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1124,7 +1124,6 @@ The IsDefault switch specifies whether the Outlook on the web policy is the defa
 If another policy is currently set as the default, this switch replaces the old default policy with this policy.
 
 **Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
-
 
 ```yaml
 Type: SwitchParameter

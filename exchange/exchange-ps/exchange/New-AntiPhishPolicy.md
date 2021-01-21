@@ -27,13 +27,13 @@ New-AntiPhishPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
- [-EnableAntiSpoofEnforcement <Boolean>]
  [-Enabled <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
  [-EnableMailboxIntelligenceProtection <Boolean>]
  [-EnableOrganizationDomainsProtection <Boolean>]
  [-EnableSimilarDomainsSafetyTips <Boolean>]
  [-EnableSimilarUsersSafetyTips <Boolean>]
+ [-EnableSpoofIntelligence <Boolean>]
  [-EnableTargetedDomainsProtection <Boolean>]
  [-EnableTargetedUserProtection <Boolean>]
  [-EnableUnauthenticatedSender <Boolean>]
@@ -144,27 +144,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAntispoofEnforcement
-This setting is part of spoof protection.
-
-The EnableAntispoofEnforcement parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
-
-- $true: Antispoofing is enabled for the policy. This is the default and recommended value. You specify the spoofed senders to allow or block using the Set-PhishFilterPolicy cmdlet.
-- $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online
 
 Required: False
@@ -298,6 +277,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSpoofIntelligence
+This setting is part of spoof protection.
+
+The EnableSpoofIntelligence parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
+
+- $true: Antispoofing is enabled for the policy. This is the default and recommended value. You specify the spoofed senders to allow or block using the Set-PhishFilterPolicy cmdlet.
+- $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableTargetedDomainsProtection
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
@@ -345,7 +345,7 @@ This setting is part of spoof protection.
 
 The EnableUnauthenticatedSender parameter enables or disables unauthenticated sender identification in Outlook. Valid values are:
 
-- $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication. The via tag (chris@contoso.com <u>via</u> michelle@fabrikam.com) is added if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the MAIL FROM address.
+- $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication. The via tag (chris@contoso.com <u>via</u> fabrikam.com) is added if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the MAIL FROM address.
 - $false: A question mark is never applied to the sender's photo. The via tag is still added if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address.
 
 To prevent these identifiers from being added to messages from specific senders, you have the following options:
@@ -616,7 +616,6 @@ This setting is part of impersonation protection and is only available in Micros
 The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected user impersonation messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
-
 
 ```yaml
 Type: MultiValuedProperty
