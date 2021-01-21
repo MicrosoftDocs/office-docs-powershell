@@ -35,9 +35,9 @@ Update-Module -Name Microsoft.Online.SharePoint.PowerShell
 
 To open the SharePoint Online Management Shell command prompt, from the **Start** screen, type **sharepoint**, and then click **SharePoint Online Management Shell**.
 
-> [!Video https://www.youtube.com/embed/TMzHAWEQjlk]
+> [!VIDEO https://www.youtube.com/embed/TMzHAWEQjlk]
 
-## To connect with a user name and password ##
+## To connect with a user name and password
 
 1. Run the following command at the SharePoint Online Management Shell command prompt:
 
@@ -49,7 +49,7 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 To assign a user the SharePoint admin role, see [Assign admin roles](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
 
-## To connect with multifactor authentication (MFA) ##
+## To connect with multifactor authentication (MFA)
 
 1. Run the following command at the SharePoint Online Management Shell command prompt:
 
