@@ -16,7 +16,7 @@ search.appverid: MET150
 description: "Learn about the valid values for the CustomPropertyNames parameter on the the Get-CalendarDiagnosticsLog cmdlet in Exchange Online PowerShell."
 ---
 
-## Values for the CustomPropertyNames parameter in Exchange Online PowerShell
+# Values for the CustomPropertyNames parameter in Exchange Online PowerShell
 
 The _CustomPropertyNames_ parameter on the [Get-CalendarDiagnosticObjects](https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects) cmdlet returns the specified properties in the results.
 
