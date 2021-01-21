@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-M365DataAtRestEncryptionPolicyAssignment cmdlet to assign a Microsoft 365 data at rest encryption policy.
+Use the Set-M365DataAtRestEncryptionPolicyAssignment cmdlet to assign a Microsoft 365 data-at-rest encryption policy at the tenant level.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -36,12 +36,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy "Contoso Corporate"
 ```
 
-This example assigns the data at rest encryption policy named Contoso Corporate.
+This example assigns the data-at-rest encryption policy named Contoso Corporate.
 
 ## PARAMETERS
 
 ### -DataEncryptionPolicy
-The DataEncryptionPolicy parameter specifies the data at rest encryption policy. You can use any value that uniquely identifies the policy. For example:
+The DataEncryptionPolicy parameter specifies the data-at-rest encryption policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
