@@ -12,9 +12,9 @@ ms.reviewer:
 
 # Grant-CsTeamsFeedbackPolicy
 
-Use this cmdlet to grant a specific Teams Feedback policy to a user.
-
 ## SYNOPSIS
+
+Use this cmdlet to grant a specific Teams Feedback policy to a user.
 
 ## SYNTAX
 
