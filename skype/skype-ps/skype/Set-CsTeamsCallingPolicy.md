@@ -20,18 +20,12 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
- [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
-  [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
- [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
- [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
-  [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
- [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>]  [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -145,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Use this to pipe a specific calling policy to be set.  You can only modify the global policy, so can only pass the global instance of the Calling Policy.
+Use this to pipe a specific calling policy to be set. You can only modify the global policy, so can only pass the global instance of the Calling Policy.
 
 ```yaml
 Type: PSObject
@@ -251,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voice mail.  Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride.
+Enables inbound calls to be routed to voice mail. Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride.
 
 ```yaml
 Type: String
@@ -317,7 +311,7 @@ Possible values
 - Disabled
 - UserOverride
 
-[!NOTE] This parameter is not available for use.
+**Note**: This parameter is not available for use.
 
 ```yaml
 Type: Object
