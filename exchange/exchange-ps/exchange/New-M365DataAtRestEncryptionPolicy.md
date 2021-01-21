@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data at rest encryption policy.
+Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -42,12 +42,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-M365DataAtRestEncryptionPolicy -Name "US Mailboxes" -AzureKeyIDs "https://contoso.vault.azure.net/keys/key1/",https://contoso.vault.azure.net/keys/key2/" -Description "Root key for mailboxes located in US territories"
 ```
 
-This example creates a data at rest encryption policy named US Mailboxes with the specified Azure Key Vault keys and description.
+This example creates a data-at-rest encryption policy named US Mailboxes with the specified Azure Key Vault keys and description.
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the data at rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

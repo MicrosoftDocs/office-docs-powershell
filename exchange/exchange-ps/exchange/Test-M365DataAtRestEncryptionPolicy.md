@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Test-M365DataAtRestEncryptionPolicy cmdlet to
+Use the Test-M365DataAtRestEncryptionPolicy cmdlet to test an existing M365 data-at-rest encryption policy.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -40,18 +40,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Test-M365DataAtRestEncryptionPolicy -Identity "Contoso Corporate"
 ```
 
-This example tests the data at rest encryption policy named Contoso Corporate.
+This example tests the data-at-rest encryption policy named Contoso Corporate.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the data at rest encryption policy that you want to test. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the data-at-rest encryption policy that you want to test. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
 
-You can find the existing data at rest encryption policies by using the Get-M365DataAtRestEncryptionPolicy cmdlet.
+You can find the existing data-at-rest encryption policies by using the Get-M365DataAtRestEncryptionPolicy cmdlet.
 
 ```yaml
 Type: DataEncryptionPolicyIdParameter
