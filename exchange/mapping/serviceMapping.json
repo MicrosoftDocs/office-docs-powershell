@@ -936,6 +936,8 @@
   "Set-DlpSensitiveInformationType": "policy-and-compliance-dlp",
   "Set-DlpSensitiveInformationTypeRulePackage": "policy-and-compliance-dlp",
   "Set-PolicyTipConfig": "policy-and-compliance-dlp",
+  "Test-DataClassification": "policy-and-compliance-dlp",
+  "Test-TextExtraction": "policy-and-compliance-dlp",
   "Add-ComplianceCaseMember": "policy-and-compliance-ediscovery",
   "Add-eDiscoveryCaseAdmin": "policy-and-compliance-ediscovery",
   "Get-CaseHoldPolicy": "policy-and-compliance-ediscovery",
