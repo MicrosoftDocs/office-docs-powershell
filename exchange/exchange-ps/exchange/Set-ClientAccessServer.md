@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ClientAccessServer cmdlet to modify settings that are associated with the Client Access server role.
 
-Note: In Exchange 2013 or later, use the Set-ClientAccessService cmdlet instead. If you have scripts that use Set-ClientAccessServer, update them to use Set-ClientAccessService.
+**Note**: In Exchange 2013 or later, use the Set-ClientAccessService cmdlet instead. If you have scripts that use Set-ClientAccessServer, update them to use Set-ClientAccessService.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

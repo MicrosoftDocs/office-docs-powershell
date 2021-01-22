@@ -33,7 +33,7 @@ Get-ConnectionByClientTypeReport [-EndDate <DateTime>]
 ```
 
 ## DESCRIPTION
-Note: There's a 7-day lag in the client connection information that's returned by this cmdlet. For example, if you run the cmdlet on June 18, 2018, you can't retrieve information about connections made to mailboxes between June 13, 2018 and June 15, 2018. To get connection information for that date range, you need to run the cmdlet on June 22, 2018 or later.
+**Note**: There's a 7-day lag in the client connection information that's returned by this cmdlet. For example, if you run the cmdlet on June 18, 2018, you can't retrieve information about connections made to mailboxes between June 13, 2018 and June 15, 2018. To get connection information for that date range, you need to run the cmdlet on June 22, 2018 or later.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

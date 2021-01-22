@@ -88,10 +88,10 @@ In on-premises Exchange, this example clears the disabled email address template
 
 ### Example 3
 ```powershell
-Set-EmailAddressPolicy -Identity 'Office 365 Groups' -EnabledEmailAddressTemplates "SMTP:@contoso.com","@contoso.onmicrosoft.com","smtp:@contoso.microsoftonline.com"
+Set-EmailAddressPolicy -Identity "Office 365 Groups" -EnabledEmailAddressTemplates "SMTP:@contoso.com","smtp:@contoso.onmicrosoft.com","smtp:@contoso.microsoftonline.com"
 ```
 
-In Exchange Online, this example modifies the existing email adress policy named Office 365 Groups by setting the enabled email address templates to "SMTP:@contoso.com", and "@contoso.onmicrosoft.com", and "smtp:@contoso.microsoftonline.com". This will also set the enabled primary SMTP address template to "@contoso.com".
+In Exchange Online, this example modifies the existing email adress policy named "Office 365 Groups" and sets the enabled email address templates to use "@contoso.com" as the primary SMTP address and "@contoso.onmicrosoft.com" and "@contoso.microsoftonline.com" as proxy addresses.
 
 ## PARAMETERS
 
@@ -726,7 +726,7 @@ The Priority parameter specifies the order that the email address policies are e
 
 If you set this parameter to a value that's the same as another email address policy, the priority of the policy that you added first is incremented by 1.
 
-Note: The first email address policy that identifies a recipient configures the recipient's email addresses. All other policies are ignored, even if the first policy is unapplied and can't configure the recipient's email addresses.
+**Note**: The first email address policy that identifies a recipient configures the recipient's email addresses. All other policies are ignored, even if the first policy is unapplied and can't configure the recipient's email addresses.
 
 ```yaml
 Type: EmailAddressPolicyPriority

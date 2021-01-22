@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSync
-The ActiveSync switch specifies whether to include mobile devices that synchronize with Exchange ActiveSync. You don't need to specify a value with this switch.
+The ActiveSync switch filters the results by Exchange ActiveSync devices. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDefaults
-The ApplyDefaults switch specifies whether to apply the correct defaults to the related internal IIS application settings. Typically, this switch is used only by Exchange setup during the installation of Exchange Cumulative Updates or Service Packs and you shouldn't need to use it.
+The ApplyDefaults switch specifies whether to apply the correct defaults to the related internal IIS application settings. Typically, this switch is used only by Exchange Setup during the installation of Exchange Cumulative Updates or Service Packs and you shouldn't need to use it.
 
 This switch doesn't affect the values you configure by using the IISAuthenticationMethods, InternalUrl or ExternalUrl parameters.
 
@@ -181,9 +181,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
-Note:
-
-If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode

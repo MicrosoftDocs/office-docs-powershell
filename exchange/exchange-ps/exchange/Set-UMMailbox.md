@@ -381,7 +381,7 @@ Accept wildcard characters: False
 ### -PhoneProviderId
 This parameter is available only in the cloud-based service.
 
-The PhoneProviderId parameter specifies the user's phone number and mobile service provider. This information is used to provide custom call forwarding and cancelling voice mail setup instructions based on the mobile phone provider.
+The PhoneProviderId parameter specifies the user's phone number and mobile service provider. This information is used to provide custom call forwarding and cancelling voice mail set up instructions based on the mobile phone provider.
 
 ```yaml
 Type: String

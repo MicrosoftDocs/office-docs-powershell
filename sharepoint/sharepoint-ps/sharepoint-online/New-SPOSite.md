@@ -63,10 +63,7 @@ Example 3 creates a new site collection for the current company with specified s
 
 ### -CompatibilityLevel
 
-Specifies the version of templates to use when you are creating a new site collection. This value sets the initial CompatibilityLevel value for the site collection. The values for this parameter can be SharePoint Server. When this parameter is not specified, the CompatibilityLevel will be by default the highest possible version for the Web application.
-
-> [!NOTE]
-> For SharePoint Online Preview, it can only be set to "14" or "15". "14" indicates SharePoint 2010 Products, "15" indicates SharePoint 2013. Other values are not valid and will cause error.
+This parameter no longer has any effect and only accepts a value of '15'.
 
 ```yaml
 Type: Int32
@@ -134,7 +131,7 @@ Accept wildcard characters: False
 
 ### -ResourceQuota
 
-Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (<https://msdn.microsoft.com/en-us/library/gg615462.aspx).> Note that this parameter is now obsolete and has been deprecated.
+Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)). Note that this parameter is now obsolete and has been deprecated.
 
 ```yaml
 Type: Double

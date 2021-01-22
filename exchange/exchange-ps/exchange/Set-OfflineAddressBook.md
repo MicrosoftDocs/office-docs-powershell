@@ -405,7 +405,7 @@ Accept wildcard characters: False
 ### -Schedule
 This parameter is available only in on-premises Exchange.
 
-Note: In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
+**Note**: In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
@@ -429,7 +429,7 @@ Here are some examples:
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
 - "Sun.1:15 AM-Monday.23:00"
 
-Note: In Exchange Online, the read only value of this property is displayed in Coordinated Universal Time (UTC).
+**Note**: In Exchange Online, the read only value of this property is displayed in Coordinated Universal Time (UTC).
 
 ```yaml
 Type: Schedule

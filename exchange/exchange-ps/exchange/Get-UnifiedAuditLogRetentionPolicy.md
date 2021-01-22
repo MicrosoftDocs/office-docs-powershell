@@ -50,7 +50,6 @@ Get-UnifiedAuditLogRetentionPolicy -RecordType ExchangeItem | Format-List Name,D
 
 This example lists the configurable properties for all audit log retention policies that apply to audit records the record type of ExchangeItem.
 
-
 ## PARAMETERS
 
 ### -Operation
@@ -93,12 +92,13 @@ The RetentionDuration parameter filters the policy results by the retention dura
 - SixMonths
 - NineMonths
 - TwelveMonths
+- TenYears
 
 ```yaml
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
 Applicable: Security & Compliance Center
 
 Required: False
