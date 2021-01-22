@@ -36,12 +36,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy "Contoso Corporate"
 ```
 
-This example assigns the data-at-rest encryption policy named Contoso Corporate.
+This example assigns the Microsoft 365 data-at-rest encryption policy named Contoso Corporate.
 
 ## PARAMETERS
 
 ### -DataEncryptionPolicy
-The DataEncryptionPolicy parameter specifies the data-at-rest encryption policy. You can use any value that uniquely identifies the policy. For example:
+The DataEncryptionPolicy parameter specifies the Microsoft 365 data-at-rest encryption policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)

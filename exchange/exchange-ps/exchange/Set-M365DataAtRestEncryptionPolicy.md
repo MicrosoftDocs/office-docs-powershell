@@ -22,19 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### DCAdminPurgeKeyRequest
-```
-Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
- [-Confirm]
- [-Description <String>]
- [-DomainController <Fqdn>]
- [-Enabled <Boolean>]
- [-Force]
- [-Name <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### TenantAdminPurgeKeyRequest
 ```
 Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Confirm]
@@ -66,17 +53,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-M365DataAtRestEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
+Set-M365DataAtRestEncryptionPolicy -Identity "Tenant Default Policy" -Enabled $false
 ```
 
-This example disabled the data-at-rest encryption policy named US Mailboxes.
+This example disabled the Microsoft 365 data-at-rest encryption policy named Tenant Default Policy.
 
 ### Example 2
 ```powershell
-Set-M365DataAtRestEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
+Set-M365DataAtRestEncryptionPolicy -Identity "Tenant Default Policy" -Refresh
 ```
 
-This example updates the data-at-rest encryption policy named Europe Mailboxes after one of the associated keys has been rotated in the Azure Key Vault.
+This example updates the Microsoft 365 data-at-rest encryption policy named Tenant Default Policy after one of the associated keys has been rotated in the Azure Key Vault.
 
 ## PARAMETERS
 
@@ -187,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the Microsoft 365 data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -203,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -Refresh
-Use the Refresh switch to update the data-at-rest encryption policy in Exchange Online after you rotate any of the associated keys in the Azure Key Vault. You don't need to specify a value with this switch.
+Use the Refresh switch to update the Microsoft 365 data-at-rest encryption policy in Exchange Online after you rotate any of the associated keys in the Azure Key Vault. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
