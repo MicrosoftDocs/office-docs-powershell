@@ -22,19 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### DCAdminPurgeKeyRequest
-```
-Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
- [-Confirm]
- [-Description <String>]
- [-DomainController <Fqdn>]
- [-Enabled <Boolean>]
- [-Force]
- [-Name <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### TenantAdminPurgeKeyRequest
 ```
 Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Confirm]
