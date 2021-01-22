@@ -1,29 +1,28 @@
 ---
-external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-m365dataatrestencryptionpolicy
-applicable: Exchange Online
-title: Get-M365DataAtRestEncryptionPolicy
+external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/test-textextraction
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+title: Test-TextExtraction
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-M365DataAtRestEncryptionPolicy
+
+# Test-TextExtraction
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-M365DataAtRestEncryptionPolicy cmdlet to view existing Microsoft 365 data-at-rest encryption policies.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+Use the Test-TextExtraction cmdlet to find the text that is extracted from a specified email message in Exchange flow.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-M365DataAtRestEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>]
+Test-TextExtraction [-FileData] <Byte[]>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf]
@@ -31,9 +30,7 @@ Get-M365DataAtRestEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter
 ```
 
 ## DESCRIPTION
-M365 data-at-rest encryption policy cmdlets are accessible to compliance administrator role as part of the Exchange Online infrastructure. For more information, see [Overview of M365 Customer Key at the tenant level](https://docs.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details).
-
-You can create and assign a Microsoft 365 data-at-rest encryption policy at the tenant level by using the appropriate M365DataAtRestEncryptionPolicy cmdlets in Exchange Online PowerShell.
+This cmdlet returns the text that is found in a file in Exchange. The Microsoft classification engine uses this text to classify content and determine which sensitive information types are found in this file/message.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -41,37 +38,37 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-M365DataAtRestEncryptionPolicy
+$content = Test-TextExtraction -FileData (Get-Content -Path '.\finalcial data.msg' -Encoding byte -ReadCount 0)
+$content.ExtractedResults
 ```
 
-This example returns a summary list of all Microsoft 365 data-at-rest encryption policies.
+This example returns the text that's extracted from the email "financial data.msg"
 
 ### Example 2
 ```powershell
-Get-M365DataAtRestEncryptionPolicy -Identity "Contoso Corporate" | Format-List
+$content = Test-TextExtraction -FileData (Get-Content -Path '.\finalcial data.msg' -Encoding byte -ReadCount 0)
+Test-DataClassification -TestTextExtractionResults $tr.ExtractedResults
 ```
 
-This example returns detailed information about the policy named Contoso Corporate.
+This example extracts the text from the email "financial data.msg" and returns the sensitive information types, their confidence, and count.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the Microsoft 365 data-at-rest encryption policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+### -FileData
+The FileData parameter specifies the name and path of the file from which text should be extracted.
 
-- Name
-- Distinguished name (DN)
-- GUID
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
 
 ```yaml
-Type: DataEncryptionPolicyIdParameter
+Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-Required: False
+Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -85,7 +82,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -95,13 +92,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -111,13 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

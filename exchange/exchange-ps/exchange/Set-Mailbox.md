@@ -5249,10 +5249,11 @@ Accept wildcard characters: False
 ### -Type
 The Type parameter specifies the mailbox type for the mailbox. Valid values are:
 
+- Equipment
 - Regular
 - Room
-- Equipment
 - Shared
+- Workspace (cloud-only)
 
 ```yaml
 Type: ConvertibleMailboxSubType
