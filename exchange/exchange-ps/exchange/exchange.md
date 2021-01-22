@@ -1902,6 +1902,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
 
+### [Test-DataClassification](Test-DataClassification.md)
+
+### [Test-TextExtraction](Test-TextExtraction.md)
+
 ## policy-and-compliance-ediscovery Cmdlets
 ### [Add-ComplianceCaseMember](Add-ComplianceCaseMember.md)
 
