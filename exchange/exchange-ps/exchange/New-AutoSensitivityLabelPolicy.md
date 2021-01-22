@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplySensitivityLabel
-The AppleSensitivityLabel parameter specifies which label to use for the autolabel policy.
+The ApplySensitivityLabel parameter specifies the label to use for the autolabel policy.
 
 ```yaml
 Type: String
