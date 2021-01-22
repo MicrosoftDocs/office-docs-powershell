@@ -44,7 +44,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-AdSiteLink](Set-AdSiteLink.md)
 
-## advanced-threat-protection Cmdlets
+## defender-for-office-365 Cmdlets
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
 
 ### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
