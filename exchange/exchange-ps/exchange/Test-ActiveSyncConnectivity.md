@@ -24,10 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] <String>]
- [-AllowUnsecureAccess] [-Confirm] [-DomainController <Fqdn>] [-LightMode] [-MailboxCredential <PSCredential>]
- [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-MonitoringInstance <String>]
- [-ResetTestAccountCredentials] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
- [-UseAutodiscoverForClientAccessServer] [-WhatIf] [<CommonParameters>]
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-MonitoringInstance <String>]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-UseAutodiscoverForClientAccessServer]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,9 +56,7 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 - Latency(MS): The time required to complete the test in milliseconds.
 - Error: Any error messages that were encountered.
 
-You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
-
-Test-ActiveSyncConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\EAS Test.html"
+You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding `> <filename>` to the command. For example: `Test-ActiveSyncConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\My Documents\EAS Test.html"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -69,22 +77,6 @@ Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "ht
 This example tests the Exchange ActiveSync connectivity for the mailbox PaulS using the Autodiscover URL.
 
 ## PARAMETERS
-
-### -AllowUnsecureAccess
-The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClientAccessServer
 The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed and is responsible for accepting client connections.
@@ -108,6 +100,40 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -URL
+The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
+
+You can't use this parameter with the ClientAccessServer parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUnsecureAccess
+The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -286,24 +312,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -URL
-The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
-
-You can't use this parameter with the ClientAccessServer parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

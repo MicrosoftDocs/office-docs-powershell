@@ -26,14 +26,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### ManagedBy
 ```
 Get-EligibleDistributionGroupForMigration [-ManagedBy <GeneralRecipientIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

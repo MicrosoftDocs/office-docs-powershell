@@ -27,7 +27,8 @@ Add-IPBlockListEntry -IPAddress <IPAddress>
  [-Confirm]
  [-ExpirationTime <DateTime>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IPRange
@@ -37,7 +38,8 @@ Add-IPBlockListEntry -IPRange <IPRange>
  [-Confirm]
  [-ExpirationTime <DateTime>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

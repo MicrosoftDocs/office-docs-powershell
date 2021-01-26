@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

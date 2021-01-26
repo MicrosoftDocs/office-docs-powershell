@@ -23,8 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty>
- -Trustee <SecurityPrincipalIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,24 +44,6 @@ Remove-RecipientPermission "Help Desk" -AccessRights SendAs -Trustee "Ayla Kol"
 This example removes the SendAs permission from the user Ayla Kol for the mailbox Help Desk. Ayla can't send messages that appear to come directly from the Help Desk mailbox.
 
 ## PARAMETERS
-
-### -AccessRights
-The AccessRights parameter specifies the permission.
-
-Valid input for this parameter is SendAs.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the target recipient. The user or group specified by the Trustee parameter can no longer operate on this recipient.
@@ -89,6 +73,24 @@ Applicable: Exchange Online
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccessRights
+The AccessRights parameter specifies the permission.
+
+Valid input for this parameter is SendAs.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

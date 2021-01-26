@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Release-QuarantineMessage cmdlet to release messages from quarantine in your cloud-based organization. You can release messages to all original recipients, or to specific recipients.
 
-For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
+For files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -26,33 +26,39 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### OrgReleaseToUser
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] -User <String[]>
+Release-QuarantineMessage -User <String[]> [-Identities <QuarantineMessageIdentity[]>]
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrgReleaseToAll
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] [-ReleaseToAll]
+Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>]
+ [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
  [-Delete]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identities
 ```
-Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
+Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
@@ -62,7 +68,8 @@ Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,10 +102,11 @@ This example releases all messages to all original recipients.
 
 ### Example 4
 ```powershell
-$q = Get-QuarantineMessage -QuarantineTypes SPOMalware; $q[-1] | Release-QuarantineMessage -ReleaseToAll
+$q = Get-QuarantineMessage -QuarantineTypes SPOMalware
+$q[-1] | Release-QuarantineMessage -ReleaseToAll
 ```
 
-This example releases a file that was quarantined as part of Office 365 Advanced Threat Protection. The first command stores all SharePoint Online, OneDrive for Business and Microsoft Teams quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
+This example releases a file that was quarantined as part of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. The first command stores all quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
 
 ## PARAMETERS
 

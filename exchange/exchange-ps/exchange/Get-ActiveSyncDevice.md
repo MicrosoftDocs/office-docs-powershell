@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ActiveSyncDevice cmdlet to retrieve the list of devices in your organization that have active Exchange ActiveSync partnerships.
 
-Note: In Exchange 2013 or later, use the Get-MobileDevice cmdlet instead. If you have scripts that use Get-ActiveSyncDevice, update them to use Get-MobileDevice.
+**Note**: In Exchange 2013 or later, use the Get-MobileDevice cmdlet instead. If you have scripts that use Get-ActiveSyncDevice, update them to use Get-MobileDevice.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +29,9 @@ Get-ActiveSyncDevice -Mailbox <MailboxIdParameter>
  [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [-Monitoring] [<CommonParameters>]
+ [-SortBy <String>]
+ [-Monitoring]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -39,7 +41,9 @@ Get-ActiveSyncDevice [[-Identity] <ActiveSyncDeviceIdParameter>]
  [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [-Monitoring] [<CommonParameters>]
+ [-SortBy <String>]
+ [-Monitoring]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,6 +68,26 @@ Get-ActiveSyncDevice -Mailbox "Redmond\TonySmith"
 This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the ActiveSync device that you want to view. You can use any value that uniquely identifies the device. For example:
+
+- GUID
+- DeviceIdentity
+- Multi-TenantID
+
+```yaml
+Type: ActiveSyncDeviceIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Mailbox
 The Mailbox parameter specifies the mailbox that has the associated ActiveSync device that you want to view. You can use any value that uniquely identifies the mailbox. For example:
@@ -156,26 +180,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the ActiveSync device that you want to view. You can use any value that uniquely identifies the device. For example:
-
-- GUID
-- DeviceIdentity
-- Multi-TenantID
-
-```yaml
-Type: ActiveSyncDeviceIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
@@ -236,7 +240,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following properties:
 

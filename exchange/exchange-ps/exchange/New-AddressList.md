@@ -48,7 +48,8 @@ New-AddressList [-Name] <String> -IncludedRecipients <WellKnownRecipientType>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CustomFilter
@@ -59,7 +60,8 @@ New-AddressList [-Name] <String> -RecipientFilter <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -553,7 +555,7 @@ The Container parameter specifies where to create the address list. Valid input 
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 If you don't use this parameter,the address list is created under the root (\\).
 

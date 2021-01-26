@@ -26,7 +26,8 @@ Remove-DistributionGroup [-Identity] <DistributionGroupIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

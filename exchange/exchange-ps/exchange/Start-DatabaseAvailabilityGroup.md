@@ -26,7 +26,8 @@ Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParamete
  [-ConfigurationOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MailboxSet
@@ -35,7 +36,8 @@ Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParamete
  [-ConfigurationOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,22 +63,6 @@ This example starts the members of the DAG DAG1 in the Active Directory site Red
 
 ## PARAMETERS
 
-### -ActiveDirectorySite
-The ActiveDirectorySite parameter specifies whether to start all DAG members in the specified site.
-
-```yaml
-Type: AdSiteIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the name of the DAG being started.
 
@@ -88,6 +74,22 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ActiveDirectorySite
+The ActiveDirectorySite parameter specifies whether to start all DAG members in the specified site.
+
+```yaml
+Type: AdSiteIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

@@ -28,21 +28,22 @@ Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter
  [-DomainController <Fqdn>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Remove-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAceObject>
+Remove-PublicFolderAdministrativePermission[[-Identity] <PublicFolderIdParameter>] -Instance <PublicFolderAdministrativeAceObject>
  [-AccessRights <MultiValuedProperty>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
- [[-Identity] <PublicFolderIdParameter>]
- [-InheritanceType <ActiveDirectorySecurityInheritance>]
+  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

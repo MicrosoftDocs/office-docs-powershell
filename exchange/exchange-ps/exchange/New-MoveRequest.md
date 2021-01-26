@@ -24,8 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### MigrationOutbound
 ```
-New-MoveRequest [-Identity]
- <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteCredential <PSCredential>] [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn>
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteHostName <Fqdn>
+ [-Outbound]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteGlobalCatalog <Fqdn>]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-ArchiveDomain <String>]
@@ -65,7 +67,10 @@ New-MoveRequest [-Identity]
 
 ### MigrationRemote
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCredential <PSCredential>] [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn>
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteHostName <Fqdn>
+ [-Remote]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteGlobalCatalog <Fqdn>]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-ArchiveDomain <String>]
@@ -105,8 +110,8 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
 
 ### MigrationRemoteLegacy
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PSCredential>
- -RemoteGlobalCatalog <Fqdn> [-RemoteLegacy]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PSCredential> -RemoteGlobalCatalog <Fqdn>
+ [-RemoteLegacy]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-BadItemLimit <Unlimited>]
@@ -182,7 +187,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
 
 ### MigrationOutboundCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn>
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-Outbound]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-BadItemLimit <Unlimited>]
@@ -213,7 +218,8 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTe
 
 ### MigrationRemoteCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-TargetDatabase <DatabaseIdParameter>]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-Remote]
+ [-TargetDatabase <DatabaseIdParameter>]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-ArchiveTargetDatabase <DatabaseIdParameter>]
@@ -556,7 +562,6 @@ The ArchiveTargetDatabase parameter specifies the destination mailbox database f
 - GUID
 
 If you don't use this parameter, the archive is moved to the same database as the primary mailbox.
-
 
 ```yaml
 Type: DatabaseIdParameter

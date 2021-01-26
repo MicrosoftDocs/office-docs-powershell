@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AvailabilityReportOutage [-SiteName] <String> -Comment <String> -DowntimeMinutes <Double>
- -ReportDate <ExDateTime> [-Confirm] [-Force] [-ReportingDatabase <String>] [-ReportingServer <Fqdn>] [-WhatIf]
+New-AvailabilityReportOutage [-SiteName] <String> -Comment <String> -DowntimeMinutes <Double> -ReportDate <ExDateTime>
+ [-Confirm]
+ [-Force]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

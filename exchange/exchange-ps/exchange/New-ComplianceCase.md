@@ -29,7 +29,8 @@ New-ComplianceCase [-Name] <String>
  [-ExternalId <String>]
  [-SecondaryCaseType <String>]
  [-SourceCaseType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +75,7 @@ The CaseType parameter specifies the type of compliance case that you want to cr
 
 - AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under eDiscovery > Advanced eDiscovery.
 - ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft 365 compliance center, trainable classifiers are displayed under Data classification > Trainable classifiers.
-- ComplianceWorkspace: This value is reserved for internal Microsoft use. 
+- ComplianceWorkspace: This value is reserved for internal Microsoft use.
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Security & Compliance Center, Data investigation cases are displayed on the Data investigations page.
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under Data privacy > Data subject requests.
 - eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Security & Compliance Center, core eDiscovery cases are displayed under eDiscovery > eDiscovery. This is the default value.

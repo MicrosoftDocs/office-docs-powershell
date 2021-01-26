@@ -22,9 +22,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OutlookProtectionRule [-Identity] <RuleIdParameter>
- [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-FromDepartment <String[]>] [-Name <String>] [-Priority <Int32>] [-SentTo <MultiValuedProperty>]
- [-SentToScope <ToUserScope>] [-UserCanOverride <Boolean>] [-WhatIf] [<CommonParameters>]
+ [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-FromDepartment <String[]>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-SentTo <MultiValuedProperty>]
+ [-SentToScope <ToUserScope>]
+ [-UserCanOverride <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

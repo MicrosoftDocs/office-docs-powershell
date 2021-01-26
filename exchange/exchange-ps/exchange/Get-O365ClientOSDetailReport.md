@@ -25,7 +25,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-O365ClientOSDetailReport [-EndDate <DateTime>] [-OperatingSystem <String>] [-OperatingSystemVersion <String>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-WindowsLiveID <String>] [<CommonParameters>]
+Get-O365ClientOSDetailReport [-EndDate <DateTime>]
+ [-OperatingSystem <String>]
+ [-OperatingSystemVersion <String>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WindowsLiveID <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

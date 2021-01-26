@@ -22,12 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Server
 ```
-Get-EventLogLevel -Server <ServerIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-EventLogLevel -Server <ServerIdParameter>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-EventLogLevel [[-Identity] <ECIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-EventLogLevel [[-Identity] <ECIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,8 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-DeviceTenantRule [-Identity] <ComplianceRuleIdParameter>
  [-ApplyPolicyTo <PolicyResourceScope>]
- [-BlockUnsupportedDevices <Boolean>] [-Confirm] [-DomainController <Fqdn>]
- [-ExclusionList <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-BlockUnsupportedDevices <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExclusionList <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,7 +147,7 @@ The ExclusionList parameter specifies the security groups to exclude from this p
 
 This parameter uses the GUID value of the group. To find this GUID value, run the command Get-Group | Format-Table Name,GUID.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

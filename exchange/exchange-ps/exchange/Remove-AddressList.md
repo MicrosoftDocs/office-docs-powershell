@@ -23,8 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Recursive]
- [-WhatIf] [<CommonParameters>]
+Remove-AddressList [-Identity] <AddressListIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Recursive]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +56,7 @@ The Identity parameter specifies the address list that you want to remove. You c
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 If the address list has child address lists that you also want to remove, you need to use the Recursive switch.
 

@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MonitoringItemHelp [-Identity] <String> -Server <ServerIdParameter> [<CommonParameters>]
+Get-MonitoringItemHelp [-Identity] <String> -Server <ServerIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +40,7 @@ This example retrieves health set information for a monitoring item on the serve
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
+The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax: `<HealthSet>\<MonitoringItemName>[\<TargetResource>]`. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
 
 ```yaml
 Type: String

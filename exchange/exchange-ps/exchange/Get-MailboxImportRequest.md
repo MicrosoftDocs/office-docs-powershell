@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailboxImportRequest [[-Identity] <MailboxImportRequestIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### MailboxFiltering
@@ -41,7 +42,8 @@ Get-MailboxImportRequest
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### MailboxLocationFiltering
@@ -56,7 +58,8 @@ Get-MailboxImportRequest
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,7 +100,7 @@ This example returns all import requests that have the name Recovered where the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you specify a name for the import request, use the following syntax: \<alias\>\\\<name\>. Microsoft Exchange automatically precedes the request with the mailbox's alias.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you specify a name for the import request, use the following syntax: `Alias\Name`. Microsoft Exchange automatically precedes the request with the mailbox's alias.
 
 You can't use this parameter with the following parameters:
 

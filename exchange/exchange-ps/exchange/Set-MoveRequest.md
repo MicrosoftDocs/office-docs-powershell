@@ -48,7 +48,8 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-StartAfter <DateTime>]
  [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,7 +129,6 @@ The ArchiveTargetDatabase parameter specifies the target mailbox database for th
 - GUID
 
 You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
-
 
 ```yaml
 Type: DatabaseIdParameter

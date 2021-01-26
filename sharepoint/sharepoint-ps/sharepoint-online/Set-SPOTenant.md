@@ -97,6 +97,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
+ [-IncludeAtAGlanceInShareEmails]
  [<CommonParameters>]
 ```
 
@@ -263,6 +264,8 @@ The valid values are:
 - WebPreviewableFiles
 - ServerRenderedFilesOnly
 
+**Note**: ServerRendered (Office Only) and WebPreviewable (All supported files). 
+
 ```yaml
 Type: BlockDownloadLinksFileTypes
 Parameter Sets: (All)
@@ -389,7 +392,7 @@ Accept wildcard characters: False
 
 ### -MaxCompatibilityLevel
 
-Specifies the upper bound on the compatibility level for new sites.
+The only valid value is "15".
 
 ```yaml
 Type: Int32
@@ -405,7 +408,7 @@ Accept wildcard characters: False
 
 ### -MinCompatibilityLevel
 
-Specifies the lower bound on the compatibility level for new sites.
+The only valid value is "15".
 
 ```yaml
 Type: Int32

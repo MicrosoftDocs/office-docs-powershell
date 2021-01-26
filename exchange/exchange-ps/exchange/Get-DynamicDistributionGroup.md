@@ -31,7 +31,8 @@ Get-DynamicDistributionGroup [-Anr <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -45,7 +46,8 @@ Get-DynamicDistributionGroup [[-Identity] <DynamicGroupIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### ManagedBySet
@@ -57,7 +59,8 @@ Get-DynamicDistributionGroup [-ManagedBy <GeneralRecipientIdParameter>]
  [-IgnoreDefaultScope]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [<CommonParameters>]
 ```
@@ -92,7 +95,8 @@ This example returns all dynamic distribution groups whose names contain the str
 
 ### Example 4
 ```powershell
-$FTE = Get-DynamicDistributionGroup "Full Time Employees"; Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
+$FTE = Get-DynamicDistributionGroup "Full Time Employees"
+Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
 ```
 
 This example returns the members for the dynamic distribution group named Full Time Employees. The first command stores the dynamic distribution group object in the variable $FTE. The second command uses the Get-Recipient cmdlet to list the recipients that match the criteria defined for the dynamic distribution group.
@@ -329,7 +333,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following properties:
 

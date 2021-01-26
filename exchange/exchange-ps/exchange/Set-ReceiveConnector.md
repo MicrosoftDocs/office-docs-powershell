@@ -21,32 +21,64 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter> [-AdvertiseClientSettings <Boolean>]
+Set-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter>
+ [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
- [-Banner <String>] [-BareLinefeedRejectionEnabled <Boolean>] [-BinaryMimeEnabled <Boolean>]
- [-Bindings <MultiValuedProperty>] [-ChunkingEnabled <Boolean>] [-Comment <String>] [-Confirm]
- [-ConnectionInactivityTimeout <EnhancedTimeSpan>] [-ConnectionTimeout <EnhancedTimeSpan>]
- [-DefaultDomain <AcceptedDomainIdParameter>] [-DeliveryStatusNotificationEnabled <Boolean>]
- [-DomainController <Fqdn>] [-DomainSecureEnabled <Boolean>] [-EightBitMimeEnabled <Boolean>]
- [-EnableAuthGSSAPI <Boolean>] [-Enabled <Boolean>]
- [-EnhancedStatusCodesEnabled <Boolean>] [-ExtendedProtectionPolicy <ExtendedProtectionPolicySetting>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <Boolean>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <MessageRateSourceFlags>] [-Name <String>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BareLinefeedRejectionEnabled <Boolean>]
+ [-BinaryMimeEnabled <Boolean>]
+ [-Bindings <MultiValuedProperty>]
+ [-ChunkingEnabled <Boolean>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <Boolean>]
+ [-EightBitMimeEnabled <Boolean>]
+ [-EnableAuthGSSAPI <Boolean>]
+ [-Enabled <Boolean>]
+ [-EnhancedStatusCodesEnabled <Boolean>]
+ [-ExtendedProtectionPolicy <ExtendedProtectionPolicySetting>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <Boolean>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <MessageRateSourceFlags>]
+ [-Name <String>]
  [-OrarEnabled <Boolean>]
  [-PermissionGroups <PermissionGroups>]
- [-PipeliningEnabled <Boolean>] [-ProtocolLoggingLevel <ProtocolLoggingLevel>]
- [-RemoteIPRanges <MultiValuedProperty>] [-RequireEHLODomain <Boolean>] [-RequireTLS <Boolean>]
- [-SizeEnabled <SizeMode>] [-SuppressXAnonymousTls <Boolean>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-SmtpUtf8Enabled <Boolean>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <ServerRole>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <Boolean>]
+ [-PipeliningEnabled <Boolean>]
+ [-ProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-RejectReservedSecondLevelRecipientDomains <Boolean>]
  [-RejectReservedTopLevelRecipientDomains <Boolean>]
- [-RejectSingleLabelRecipientDomains <Boolean>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <Boolean>]
+ [-RemoteIPRanges <MultiValuedProperty>]
+ [-RequireEHLODomain <Boolean>]
+ [-RequireTLS <Boolean>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <SizeMode>]
+ [-SmtpUtf8Enabled <Boolean>]
+ [-SuppressXAnonymousTls <Boolean>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TransportRole <ServerRole>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,7 +105,7 @@ The Identity parameter specifies the Receive connector that you want to modify. 
 - Name
 - Distinguished name (DN)
 - GUID
-- \<ServerName\>\\\<Name\>
+- ServerName\\Name
 
 ```yaml
 Type: ReceiveConnectorIdParameter
@@ -139,12 +171,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuthTarpitInterval
+The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that may be abusing the connection. The default value is 5 seconds.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+
+When you set the value to 00:00:00, you disable the authentication tarpit interval. Setting the value to more than a few seconds can cause timeouts and mail flow issues.
+
+You can configure the delay for other SMTP failure responses by using the TarpitInterval parameter.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Banner
 The Banner parameter specifies a custom SMTP 220 banner that's displayed to remote messaging servers that connect to the Receive connector. When you specify a value, enclose the value in quotation marks, and start the value with 220 (the default "Service ready" SMTP response code).
 
 The default value of this parameter is blank ($null), which uses the following SMTP banner:
 
-220 \<Servername\> Microsoft ESMTP MAIL service ready at \<RegionalDay-Date-24HourTimeFormat\>\<RegionalTimeZoneOffset\>
+`220 <ServerName> Microsoft ESMTP MAIL service ready at <RegionalDay-Date-24HourTimeFormat><RegionalTimeZoneOffset>`
 
 ```yaml
 Type: String
@@ -202,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bindings
-The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax "\<IPv4 Address\>:\<TCP Port\>","\<IPv6 Address\>:\<TCP Port\>". You can specify an IPv4 address and port, and IPv6 address and port, or both. The IP address values 0.0.0.0 or [::]: indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
+The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax `"IPv4Address:TCPPort","IPv6Address:TCPPort"`. You can specify an IPv4 address and port, an IPv6 address and port, or both. The IP address values 0.0.0.0 or `[::]` indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
 
 You need to specify a valid local IP address from the network adapters of the Exchange server. If you specify an invalid local IP address, the Microsoft Exchange Transport service might fail to start when the service is restarted.
 
@@ -337,7 +391,7 @@ The DefaultDomain parameter specifies the default accepted domain to use for the
 
 Although you can configure any accepted domain as the default domain, you typically specify an authoritative domain. The default domain is used by:
 
-- The external postmaster address: postmaster@\<default domain\>.
+- The external postmaster address: `postmaster@<default domain>`.
 - Encapsulated non-SMTP email addresses (Internet Mail Connector Encapsulated Address or IMCEA encapsulation).
 - The primary address for all recipients in the default email address policy. If you configure another accepted domain as the default domain, the default email address policy isn't automatically updated.
 
@@ -534,7 +588,7 @@ The Fqdn parameter specifies the destination FQDN that's shown to connected mess
 
 The default value is the FQDN of theExchange server that contains the Receive connector (for example edge01.contoso.com). You can specify a different FQDN (for example, mail.contoso.com).
 
-Don't modify this value on the default Receive connector named Default \<Server Name\> on Mailbox servers. If you have multiple Mailbox servers in your organization, internal mail flow between Mailbox servers fails if you change the FQDN value on this Receive connector.
+Don't modify this value on the default Receive connector named `Default <Server Name>` on Mailbox servers. If you have multiple Mailbox servers in your organization, internal mail flow between Mailbox servers fails if you change the FQDN value on this Receive connector.
 
 ```yaml
 Type: Fqdn
@@ -959,14 +1013,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RejectReservedSecondLevelRecipientDomains
+The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
+
+- $true: RCPT TO commands that contain reserved second-level domains are rejected.
+- $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectReservedTopLevelRecipientDomains
+The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
+
+- $true: RCPT TO commands that contain reserved TLDs are rejected.
+- $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectSingleLabelRecipientDomains
+The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
+
+- $true: RCPT TO commands that contain single-label domains are rejected.
+- $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoteIPRanges
 The RemoteIPRanges parameter specifies the remote IP addresses that the Receive connector accepts messages from. Valid values are:
 
-- Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11 .
+- Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
 - IP address range: For example, 192.168.1.1-192.168.1.254.
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
 
-You can specify multiple value separated by commas ("\<value1\>","\<value2\>"...).
+You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
 
 Multiple Receive connectors on the same server can have overlapping remote IP address ranges as long as one IP address range is completely overlapped by another. For example, you can configure the following remote IP address ranges on different Receive connectors on the same server:
 
@@ -1027,6 +1138,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ServiceDiscoveryFqdn
+The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualified domain name (FQDN). for the Receive connector.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SizeEnabled
 The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used on the Receive connector. Valid values are:
 
@@ -1041,6 +1168,22 @@ Type: SizeMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpUtf8Enabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1092,87 +1235,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TlsDomainCapabilities
-The TlsDomainCapabilities parameter specifies the capabilities that the Receive connector makes available to specific hosts outside of the organization. Remote hosts are authenticated with TLS with certificate validation before these capabilities are offered.
-
-This parameter uses the following syntax:
-
-"\<domain1\>:\<capability1\>,\<capability 2\>\>"...,"\<domain2\>:\<capability1\>,\<capability2\>..."...
-
-At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values for this scenario are:
-
-- AcceptCloudServicesMail (Exchange 2013 or later)
-- AcceptOorgProtocol (Exchange 2010)
-
-There are more available values but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
-
-The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
-
-For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceDiscoveryFqdn
-The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualified domain name (FQDN). for the Receive connector.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SmtpUtf8Enabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)" and then use the value $TLSCertName for this parameter.
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is `"<I>X.500Issuer<S>X.500Subject"`. The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"` and then use the value $TLSCertName for this parameter.
 
 ```yaml
 Type: SmtpX509Identifier
@@ -1187,8 +1251,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TlsDomainCapabilities
+The TlsDomainCapabilities parameter specifies the capabilities that the Receive connector makes available to specific hosts outside of the organization. Remote hosts are authenticated with TLS with certificate validation before these capabilities are offered.
+
+This parameter uses the following syntax:
+
+`"Domain1:Capability1,Capability2,"...,"Domain2:Capability1,Capability2,...",...`
+
+You can only use this parameter in Exchange hybrid deployments, and the valid Capability values are:
+
+- AcceptCloudServicesMail (Exchange 2013 or later)
+- AcceptOorgProtocol (Exchange 2010)
+
+More Capability values are available, but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
+
+The available Domain values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
+
+For example, `"contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TransportRole
-The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created.. Valid values are:
+The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created. Valid values are:
 
 - FrontendTransport: The Front End Transport service where client or external SMTP connections occur.
 - HubTransport: The Transport service where Exchange server and proxied client SMTP connections occur.
@@ -1208,77 +1303,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuthTarpitInterval
-The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that may be abusing the connection. The default value is 5 seconds.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
-
-When you set the value to 00:00:00, you disable the authentication tarpit interval. Setting the value to more than a few seconds can cause timeouts and mail flow issues.
-
-You can configure the delay for other SMTP failure responses by using the TarpitInterval parameter.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: EnhancedTimeSpan
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectReservedSecondLevelRecipientDomains
-The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
-
-- $true: RCPT TO commands that contain reserved second-level domains are rejected.
-- $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectReservedTopLevelRecipientDomains
-The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
-
-- $true: RCPT TO commands that contain reserved TLDs are rejected.
-- $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectSingleLabelRecipientDomains
-The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
-
-- $true: RCPT TO commands that contain single-label domains are rejected.
-- $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

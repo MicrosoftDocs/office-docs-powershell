@@ -24,14 +24,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-IPAllowListEntry -IPAddress <IPAddress>
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-IPAllowListEntry [[-Identity] <IPListEntryIdentity>]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

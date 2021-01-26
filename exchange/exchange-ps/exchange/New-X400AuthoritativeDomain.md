@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-X400AuthoritativeDomain [-Name] <String> -X400DomainName <X400Domain> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-X400ExternalRelay <Boolean>] [<CommonParameters>]
+New-X400AuthoritativeDomain [-Name] <String> -X400DomainName <X400Domain>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-X400ExternalRelay <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

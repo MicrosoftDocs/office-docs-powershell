@@ -27,17 +27,20 @@ Get-PublicFolderMoveRequestStatistics [-Identity] <PublicFolderMoveRequestIdPara
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
- [-ReportOnly] [<CommonParameters>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
+Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-RequestGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
- [-ReportOnly] [<CommonParameters>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

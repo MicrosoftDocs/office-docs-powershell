@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,8 @@ This example displays the message header of the quarantined message that has the
 
 ### Example 2
 ```powershell
-$qMessages = Get-QuarantineMessage; Get-QuarantineMessageHeader $qMessages[0].Identity
+$qMessages = Get-QuarantineMessage
+Get-QuarantineMessageHeader $qMessages[0].Identity
 ```
 
 This example displays the message header of the first message that's returned by Get-QuarantineMessage cmdlet.

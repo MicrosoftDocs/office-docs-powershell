@@ -21,9 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Invoke-ComplianceSearchActionStep [[-Identity] <ComplianceSearchActionIdParameter>]
- -Parameters <PSObject>
- -Step <Int32>
+Invoke-ComplianceSearchActionStep [[-Identity] <ComplianceSearchActionIdParameter>] -Parameters <PSObject> -Step <Int32>
  [<CommonParameters>]
 ```
 

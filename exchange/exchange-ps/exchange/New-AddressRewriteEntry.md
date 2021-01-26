@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AddressRewriteEntry [-Name] <String> -ExternalAddress <String> -InternalAddress <String> [-Confirm]
- [-DomainController <Fqdn>] [-ExceptionList <MultiValuedProperty>] [-OutboundOnly <Boolean>] [-WhatIf]
+New-AddressRewriteEntry [-Name] <String> -ExternalAddress <String> -InternalAddress <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExceptionList <MultiValuedProperty>]
+ [-OutboundOnly <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

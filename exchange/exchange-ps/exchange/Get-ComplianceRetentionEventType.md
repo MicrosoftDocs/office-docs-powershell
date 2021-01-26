@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>] [-LoadTag] [<CommonParameters>]
+Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>]
+ [-LoadTag]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

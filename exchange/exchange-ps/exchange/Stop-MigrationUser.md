@@ -23,7 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Stop-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-Confirm] [-Partition <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Stop-MigrationUser [[-Identity] <MigrationUserIdParameter>]
+ [-Confirm]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +43,24 @@ Stop-MigrationUser -Identity laura@contoso.com
 This example stops the migration of the user laura@contoso.com.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the email address of the user that's being migrated.
+
+You can also identify the user by the GUID value in the MigrationUser property from the output of the Get-MigrationUser cmdlet. This identification method is useful if you accidentally submitted the same user in multiple batches.
+
+```yaml
+Type: MigrationUserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -56,24 +78,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the email address of the user that's being migrated.
-
-You can also identify the user by the GUID value in the MigrationUser property from the output of the Get-MigrationUser cmdlet. This identification method is useful if you accidentally submitted the same user in multiple batches.
-
-```yaml
-Type: MigrationUserIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -24,16 +24,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Owner
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
+Get-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-Owner]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### AccessRights
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipalIdParameter>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-User <SecurityPrincipalIdParameter>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]

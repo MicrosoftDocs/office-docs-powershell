@@ -29,7 +29,8 @@ Update-SiteMailbox [-Identity] <RecipientIdParameter>
  [-FullSync]
  [-Server <String>]
  [-Target <TargetType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

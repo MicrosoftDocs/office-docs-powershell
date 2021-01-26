@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SyncMailPublicFolder [-Identity] <MailPublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Remove-SyncMailPublicFolder [-Identity] <MailPublicFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +50,7 @@ The Identity parameter specifies the mail-enabled public folder object that you 
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<TopLevelPublicFolderName\>\\\<PublicFolderName\>
+- Path (`\<TopLevelPublicFolderName>\<PublicFolderName>`)
 
 ```yaml
 Type: MailPublicFolderIdParameter

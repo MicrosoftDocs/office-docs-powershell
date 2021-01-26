@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### OrganizationSegmentsAllowed
 ```
-Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsAllowed <MultiValuedProperty>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-SegmentsAllowed <MultiValuedProperty>]
  [-Comment <String>]
  [-State <EopInformationBarrierPolicyState>]
  [<CommonParameters>]
@@ -30,7 +31,8 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsAllowed <Mu
 
 ### OrganizationSegmentAllowedFilter
 ```
-Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentAllowedFilter <String>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-SegmentAllowedFilter <String>]
  [-Comment <String>]
  [-State <EopInformationBarrierPolicyState>]
  [<CommonParameters>]
@@ -38,7 +40,8 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentAllowedFilte
 
 ### OrganizationSegmentsBlocked
 ```
-Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsBlocked <MultiValuedProperty>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-SegmentsBlocked <MultiValuedProperty>]
  [-Comment <String>]
  [-State <EopInformationBarrierPolicyState>]
  [<CommonParameters>]

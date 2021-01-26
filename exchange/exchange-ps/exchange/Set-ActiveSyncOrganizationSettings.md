@@ -21,7 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <Boolean>] [-AllowRMSSupportForUnenlightenedApps <Boolean>] [-Confirm] [-DefaultAccessLevel <DeviceAccessLevel>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
+ [-AdminMailRecipients <MultiValuedProperty>]
+ [-AllowAccessForUnSupportedPlatform <Boolean>]
+ [-AllowRMSSupportForUnenlightenedApps <Boolean>]
+ [-Confirm]
+ [-DefaultAccessLevel <DeviceAccessLevel>]
+ [-DomainController <Fqdn>]
+ [-OtaNotificationMailInsert <String>]
+ [-UserMailInsert <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,12 +48,28 @@ This example sets the default access level to quarantine and sets two administra
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the ActiveSync organization settings object that you want to modify. The default name of this object is Mobile Mailbox Settings.
+
+```yaml
+Type: ActiveSyncOrganizationSettingsIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AdminMailRecipients
 The AdminMailRecipients parameter specifies the email addresses of the administrators for reporting purposes.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -75,6 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRMSSupportForUnenlightenedApps
+This parameter is available or functional only in the cloud-based service.
+
 The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
 
 - $true
@@ -149,22 +177,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the ActiveSync organization settings object that you want to modify. The default name of this object is Mobile Mailbox Settings.
-
-```yaml
-Type: ActiveSyncOrganizationSettingsIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

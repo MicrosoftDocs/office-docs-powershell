@@ -28,7 +28,8 @@ New-RetentionPolicyTag [-Name] <String>
  [-AddressForJournaling <RecipientIdParameter>]
  [-AgeLimitForRetention <EnhancedTimeSpan>]
  [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-IsDefaultAutoGroupPolicyTag]
  [-IsDefaultModeratedRecipientsPolicyTag]
  [-JournalingEnabled <Boolean>]
@@ -43,12 +44,14 @@ New-RetentionPolicyTag [-Name] <String>
  [-RetentionId <Guid>]
  [-SystemTag <Boolean>]
  [-Type <ElcFolderType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpgradeManagedFolder
 ```
-New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
+New-RetentionPolicyTag [-Name] <String>
+ [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -59,7 +62,8 @@ New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdPar
  [-MustDisplayCommentEnabled <Boolean>]
  [-SystemTag <Boolean>]
  [-Type <ElcFolderType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -401,7 +405,7 @@ The RetentionEnabled parameter specifies whether the tag is enabled. When set to
 
 Messages with a disabled tag are still considered tagged, so any tags of the same type as the disabled tag in the user's retention policy aren't applied to such messages.
 
-When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
+When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as `DISABLED_<Original Name>`.
 
 ```yaml
 Type: Boolean

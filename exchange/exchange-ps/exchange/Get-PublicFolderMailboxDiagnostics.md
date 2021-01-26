@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-PublicFolderMailboxDiagnostics [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IncludeDumpsterInfo] [-IncludeHierarchyInfo] [-WhatIf] [<CommonParameters>]
+Get-PublicFolderMailboxDiagnostics [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IncludeDumpsterInfo]
+ [-IncludeHierarchyInfo]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

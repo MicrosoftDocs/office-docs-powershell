@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Initialize
 ```
-Install-UnifiedCompliancePrerequisite [-ForceInitialize] [-PolicyCenterSiteOwner <SmtpAddress>]
+Install-UnifiedCompliancePrerequisite [-ForceInitialize]
+ [-PolicyCenterSiteOwner <SmtpAddress>]
  [<CommonParameters>]
 ```
 
@@ -37,10 +38,10 @@ Install-UnifiedCompliancePrerequisite [-LoadOnly]
 ## DESCRIPTION
 This cmdlet returns the following information about the Compliance Policy Center:
 
-- SharepointRootSiteUrl: This value is typically https://\<domain\>.sharepoint.com/.
-- SharepointTenantAdminUrl: This value uses the format https://\<domain\>-admin.sharepoint.com/.
+- SharepointRootSiteUrl: This value is typically `https://<domain>.sharepoint.com/`.
+- SharepointTenantAdminUrl: This value uses the format `https://<domain>-admin.sharepoint.com/`.
 - SharepointSuccessInitializedUtc: The time that the Compliance Policy Center was last initialized in coordinated universal time (UTC).
-- SharepointPolicyCenterSiteUrl: This value is typically https://\<domain\>.sharepoint.com/sites/compliancepolicycenter.
+- SharepointPolicyCenterSiteUrl: This value is typically `https://<domain>.sharepoint.com/sites/compliancepolicycenter`.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 

@@ -23,8 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>] [-DomainController <Fqdn>]
- [-IncludeExtendedDomainInfo] [<CommonParameters>]
+Get-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeExtendedDomainInfo]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

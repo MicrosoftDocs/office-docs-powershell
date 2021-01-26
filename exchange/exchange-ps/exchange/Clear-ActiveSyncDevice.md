@@ -16,15 +16,20 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Clear-ActiveSyncDevice cmdlet to delete all data from a mobile device.
 
-Note: In Exchange 2013 or later, use the Clear-MobileDevice cmdlet instead. If you have scripts that use Clear-ActiveSyncDevice, update them to use Clear-MobileDevice.
+**Note**: In Exchange 2013 or later, use the Clear-MobileDevice cmdlet instead. If you have scripts that use Clear-ActiveSyncDevice, update them to use Clear-MobileDevice.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Clear-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter> [-Cancel] [-Confirm]
- [-DomainController <Fqdn>] [-NotificationEmailAddresses <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Clear-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter>
+ [-Cancel]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -129,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmailAddresses
-The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation.
+The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation. You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Remove-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +50,7 @@ The Identity parameter specifies the Receive connector that you want to remove. 
 - Name
 - Distinguished name (DN)
 - GUID
-- \<ServerName\>\\\<Name\>
+- ServerName\\Name
 
 ```yaml
 Type: ReceiveConnectorIdParameter

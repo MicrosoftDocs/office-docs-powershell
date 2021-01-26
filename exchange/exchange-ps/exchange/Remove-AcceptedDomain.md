@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AcceptedDomain [-Identity] <AcceptedDomainIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-AcceptedDomain [-Identity] <AcceptedDomainIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

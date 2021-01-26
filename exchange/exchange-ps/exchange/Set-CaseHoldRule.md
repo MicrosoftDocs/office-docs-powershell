@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-CaseHoldRule [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm]
- [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-Disabled <Boolean>] [-WhatIf] [<CommonParameters>]
+Set-CaseHoldRule [-Identity] <ComplianceRuleIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentDateFrom <DateTime>]
+ [-ContentDateTo <DateTime>]
+ [-ContentMatchQuery <String>]
+ [-Disabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
