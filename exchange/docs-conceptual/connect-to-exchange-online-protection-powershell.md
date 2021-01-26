@@ -19,17 +19,19 @@ description: "Learn how to use the Exchange Online PowerShell V2 module to conne
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
 
-**This topic contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.**
+**This article contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.**
 
 To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
 
 ## What do you need to know before you begin?
 
-- **The procedures in this topic are only for Microsoft 365 organizations that don't have Exchange Online mailboxes**. For example, you have a standalone EOP subscription that protects your on-premises email environment. If your Microsoft 365 subscription includes Exchange Online mailboxes, you can't connect to EOP PowerShell; instead, you [connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+- **The procedures in this article are only for Microsoft 365 organizations that don't have Exchange Online mailboxes**. For example, you have a standalone EOP subscription that protects your on-premises email environment. If your Microsoft 365 subscription includes Exchange Online mailboxes, you can't connect to EOP PowerShell; instead, you [connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-  If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell. Use the Exchange Online PowerShell connection instructions in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) instead of the instructions in this topic.
+  If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell. Use the Exchange Online PowerShell connection instructions in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) instead of the instructions in this article.
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the topic assume that you've already installed the module.
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the article assume that you've already installed the module.
+
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in standalone EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/feature-permissions-in-eop).
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forum.
