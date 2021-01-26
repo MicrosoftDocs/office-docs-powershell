@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewTopCasesReport [-EndDate <System.DateTime>] [-Page <Int32>] [-PageSize <Int32>]
- [-StartDate <System.DateTime>] [<CommonParameters>]
+Get-SupervisoryReviewTopCasesReport [-EndDate <System.DateTime>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-StartDate <System.DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMAutoAttendant [[-Identity] <UMAutoAttendantIdParameter>] [-DomainController <Fqdn>]
- [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
+Get-UMAutoAttendant [[-Identity] <UMAutoAttendantIdParameter>]
+ [-DomainController <Fqdn>]
+ [-UMDialPlan <UMDialPlanIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

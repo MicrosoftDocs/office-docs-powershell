@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter> [-DomainController <Fqdn>]
+Get-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter>
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

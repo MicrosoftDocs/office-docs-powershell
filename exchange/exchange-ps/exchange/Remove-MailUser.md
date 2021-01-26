@@ -28,7 +28,8 @@ Remove-MailUser [-Identity] <MailUserIdParameter>
  [-IgnoreLegalHold]
  [-KeepWindowsLiveID]
  [-PermanentlyDelete]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

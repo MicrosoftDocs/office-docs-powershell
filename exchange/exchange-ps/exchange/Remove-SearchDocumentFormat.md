@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> [-Confirm] [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+Remove-SearchDocumentFormat [-Identity] <SearchDocumentFormatId>
+ [-Confirm]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

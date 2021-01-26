@@ -10,11 +10,10 @@ ms.author: chrisda
 ms.reviewer: navgupta
 ---
 
-
 # Disconnect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to disconnect from remote PowerShell sessions that you opened using the Connect-ExchangeOnline or Connect-IPPSSession cmdlets.
 
@@ -23,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disconnect-ExchangeOnline [-Confirm] [-WhatIf] [<CommonParameters>]
+Disconnect-ExchangeOnline [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Preview-QuarantineMessage cmdlet to preview the contents of quarantined messages in your cloud-based organization.
-
-**Note**: This cmdlet isn't available for files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams.
+Use the Preview-QuarantineMessage cmdlet to preview the contents of quarantined messages in your cloud-based organization. This cmdlet doesn't work on files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -25,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Preview-QuarantineMessage -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Preview-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

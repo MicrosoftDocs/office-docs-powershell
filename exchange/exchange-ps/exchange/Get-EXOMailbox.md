@@ -13,7 +13,7 @@ ms.reviewer: navgupta
 # Get-EXOMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 Use the Get-EXOMailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
@@ -25,14 +25,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-EXOMailbox [[-Identity] <String>]
  [-Archive]
+ [-Async]
  [-ExternalDirectoryObjectId <Guid>]
  [-Filter <String>]
+ [-GroupMailbox]
  [-InactiveMailboxOnly]
  [-IncludeInactiveMailbox]
  [-MailboxPlan <String>]
+ [-Migration]
  [-OrganizationalUnit <String>]
+ [-PrimarySmtpAddress <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
+ [-PublicFolder]
  [-RecipientTypeDetails <String[]>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
@@ -44,13 +49,17 @@ Get-EXOMailbox [[-Identity] <String>]
 ```
 Get-EXOMailbox [-Anr <String>]
  [-Archive]
+ [-Async]
  [-Filter <String>]
+ [-GroupMailbox]
  [-InactiveMailboxOnly]
  [-IncludeInactiveMailbox]
  [-MailboxPlan <String>]
+ [-Migration]
  [-OrganizationalUnit <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
+ [-PublicFolder]
  [-RecipientTypeDetails <String[]>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
@@ -76,7 +85,6 @@ Get-EXOMailbox -PropertySets Archive
 
 This example returns the Properties that are defined in Archive property set. For a complete list of these properties, see [Get-EXOMailbox property sets](https://docs.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailbox-property-sets).
 
-
 ### Example 3
 ```powershell
 Get-EXOMailbox -Properties Name,DistinguishedName,Guid -PropertySets Archive,Audit
@@ -97,7 +105,7 @@ This example returns the specified properties for the mailbox John@contoso.com.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the following values to identify the mailbox:
+The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the following values:
 
 - User ID or user principal name (UPN)
 - GUID
@@ -112,7 +120,7 @@ Otherwise, you can use any value that uniquely identifies the mailbox. For examp
 - LegacyExchangeDN
 - SamAccountName
 
-You can't use this parameter with the Anr parameter.
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -135,6 +143,8 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 - FirstName
 - LastName
 - Alias
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -165,8 +175,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Async
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Anr, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
@@ -195,6 +223,22 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -270,6 +314,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Migration
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OrganizationalUnit
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
@@ -288,6 +348,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -337,6 +415,22 @@ For more information about the properties that are included in each property set
 
 ```yaml
 Type: PropertySet[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -413,7 +507,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, Identity or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String
@@ -435,14 +531,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 
-The following Get-Mailbox parameters aren't available in Get-EXOMailbox:
+The following Get-Mailbox parameters aren't available or functional in Get-EXOMailbox:
 
-- PublicFolder
+- Async
 - GroupMailbox
 - Migration
+- PublicFolder
 - SortBy
-- Async
-
 
 ## OUTPUTS
 

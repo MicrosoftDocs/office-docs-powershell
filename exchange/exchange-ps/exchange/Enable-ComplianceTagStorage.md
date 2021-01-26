@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-ComplianceTagStorage [-Confirm] [-WhatIf] [<CommonParameters>]
+Enable-ComplianceTagStorage [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

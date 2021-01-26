@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-JournalArchiving [-Identity] <MailboxIdParameter> [-Confirm] [-PreserveMailUser] [-WhatIf]
+Disable-JournalArchiving [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-PreserveMailUser]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

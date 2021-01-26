@@ -23,19 +23,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Settings
 ```
 Get-Notification [-Settings] -ProcessType <AsyncOperationType>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-Notification [[-Identity] <EwsStoreObjectIdParameter>] [-Summary]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-Notification [[-Identity] <EwsStoreObjectIdParameter>]
+ [-Summary]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-Notification [-ProcessType <AsyncOperationType>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-Notification [-ProcessType <AsyncOperationType>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <ExDateTime>]
+ [-Summary]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

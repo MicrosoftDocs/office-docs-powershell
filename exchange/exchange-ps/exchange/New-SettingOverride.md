@@ -23,15 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SettingOverride [-Name] <String> -Component <String> -Parameters <MultiValuedProperty> -Reason <String>
- -Section <String>
+New-SettingOverride [-Name] <String> -Component <String> -Parameters <MultiValuedProperty> -Reason <String> -Section <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
  [-MaxVersion <Version>]
  [-MinVersion <Version>]
  [-Server <String[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,10 +97,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...). For example:
+The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax: `@("Parameter1=Value1","Parameter2=Value2"...)`. For example:
 
-- @("Enabled=true")
-- @("IMServerName=\<SkypePoolFQDN\>","IMCertificateThumbprint=\<ThumbprintGUID\>")
+- `@("Enabled=true")`
+- `@("IMServerName=<SkypePoolFQDN>","IMCertificateThumbprint=<ThumbprintGUID>")`
 
 ```yaml
 Type: MultiValuedProperty

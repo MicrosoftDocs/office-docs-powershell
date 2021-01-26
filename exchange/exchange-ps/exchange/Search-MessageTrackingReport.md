@@ -24,21 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### SearchAsSender
 ```
-Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddress> [-BypassDelegateChecking]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-DoNotResolve]
- [-MessageEntryId <String>]
- [-MessageId <String>]
- [-ResultSize <Unlimited>]
- [-Subject <String>]
- [-TraceLevel <TraceLevel>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### SearchAsRecipient
-```
-Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <SmtpAddress[]>]
+Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddress>
  [-BypassDelegateChecking]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -48,7 +34,25 @@ Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <Smtp
  [-ResultSize <Unlimited>]
  [-Subject <String>]
  [-TraceLevel <TraceLevel>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### SearchAsRecipient
+```
+Search-MessageTrackingReport [-Identity] <MailboxIdParameter>
+ [-Recipients <SmtpAddress[]>]
+ [-BypassDelegateChecking]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-MessageEntryId <String>]
+ [-MessageId <String>]
+ [-ResultSize <Unlimited>]
+ [-Subject <String>]
+ [-TraceLevel <TraceLevel>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

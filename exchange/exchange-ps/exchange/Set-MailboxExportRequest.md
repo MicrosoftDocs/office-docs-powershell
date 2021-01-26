@@ -24,11 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Rehome
 ```
-Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-RehomeRequest]
+Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter>
+ [-RehomeRequest]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -47,7 +49,8 @@ Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter>
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +70,7 @@ This example changes the second export request Ayla\\MailboxExport1 to accept up
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specify a name for the export request, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specify a name for the export request, use the following syntax: `Alias\Name`.
 
 ```yaml
 Type: MailboxExportRequestIdParameter

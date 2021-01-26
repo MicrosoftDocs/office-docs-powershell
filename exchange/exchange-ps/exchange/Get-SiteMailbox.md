@@ -29,7 +29,8 @@ Get-SiteMailbox [[-Identity] <RecipientIdParameter>]
  [-DeletedSiteMailbox]
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -30,7 +30,8 @@ Update-PublicFolderMailbox [-Identity] <MailboxIdParameter>
  [-InvokeSynchronizer]
  [-ReconcileFolders]
  [-SuppressStatus]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### InvokeSingleFolderSynchronizer
@@ -39,7 +40,8 @@ Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFol
  [-CreateAssociatedDumpster]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -29,19 +29,22 @@ Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentN
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtendedProperties
 ```
-Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> [-ExtendedProperties]
+Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter>
+ [-ExtendedProperties]
  [-Archive]
  [-Confirm]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,6 +68,33 @@ This example retrieves the calendar permissions diagnostic log for the mailbox n
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies that mailbox that contains the diagnostics logs that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: GeneralMailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ComponentName
 The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises Exchange or Exchange Online). Valid values include:
 
@@ -83,7 +113,9 @@ The ComponentName parameter specifies the component that you want to retrieve th
 - RemindersAssistant
 - SharingMigrationAssistant
 - SharingSyncAssistant
+- SubstrateHoldTracking
 - SweepRules
+- TimeProfile
 
 ```yaml
 Type: String
@@ -111,33 +143,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies that mailbox that contains the diagnostics logs that you want to view. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: GeneralMailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

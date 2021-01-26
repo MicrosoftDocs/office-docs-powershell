@@ -25,7 +25,8 @@ Remove-MobileDeviceMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

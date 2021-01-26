@@ -68,9 +68,9 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 ## Install the Exchange Online Remote PowerShell Module
 
 > [!NOTE]
-> 
+>
 > - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
-> 
+>
 > - If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module.
 
 You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
@@ -151,7 +151,7 @@ After you sign in, the Security & Compliance Center cmdlets are imported into yo
 
 If you receive errors, check the following requirements:
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security & Compliance Center.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to the Security & Compliance Center.
 
 - The account you use to connect to the Security & Compliance Center must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 

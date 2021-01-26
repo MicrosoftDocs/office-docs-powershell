@@ -16,20 +16,33 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
 
-Note: In Exchange Server 2010 Service Pack 1 (SP1) or later, use the New-MailboxRestoreRequest cmdlet instead of the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
+**Note**: In Exchange Server 2010 Service Pack 1 (SP1) or later, use the New-MailboxRestoreRequest cmdlet instead of the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter>
- -RecoveryMailbox <StoreMailboxIdParameter> -TargetFolder <String> [-AllowDuplicates]
- [-AllContentKeywords <String[]>] [-AttachmentFilenames <String[]>] [-BadItemLimit <Int32>] [-Confirm]
- [-ContentKeywords <String[]>] [-EndDate <DateTime>] [-ExcludeFolders <MapiFolderPath[]>]
- [-GlobalCatalog <Fqdn>] [-IncludeFolders <MapiFolderPath[]>] [-Locale <CultureInfo>] [-MaxThreads <Int32>]
- [-RecipientKeywords <String[]>] [-SenderKeywords <String[]>] [-StartDate <DateTime>]
- [-SubjectKeywords <String[]>] [-ValidateOnly] [-WhatIf] [<CommonParameters>]
+Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter> -RecoveryMailbox <StoreMailboxIdParameter> -TargetFolder <String>
+ [-AllowDuplicates]
+ [-AllContentKeywords <String[]>]
+ [-AttachmentFilenames <String[]>]
+ [-BadItemLimit <Int32>]
+ [-Confirm]
+ [-ContentKeywords <String[]>]
+ [-EndDate <DateTime>]
+ [-ExcludeFolders <MapiFolderPath[]>]
+ [-GlobalCatalog <Fqdn>]
+ [-IncludeFolders <MapiFolderPath[]>]
+ [-Locale <CultureInfo>]
+ [-MaxThreads <Int32>]
+ [-RecipientKeywords <String[]>]
+ [-SenderKeywords <String[]>]
+ [-StartDate <DateTime>]
+ [-SubjectKeywords <String[]>]
+ [-ValidateOnly]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxSentItemsConfiguration [-Confirm] [-DomainController <Fqdn>] [-Identity <MailboxIdParameter>]
- [-SendAsItemsCopiedTo <SentItemsCopiedTo>] [-SendOnBehalfOfItemsCopiedTo <SentItemsCopiedTo>] [-WhatIf]
+Set-MailboxSentItemsConfiguration [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Identity <MailboxIdParameter>]
+ [-SendAsItemsCopiedTo <SentItemsCopiedTo>]
+ [-SendOnBehalfOfItemsCopiedTo <SentItemsCopiedTo>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

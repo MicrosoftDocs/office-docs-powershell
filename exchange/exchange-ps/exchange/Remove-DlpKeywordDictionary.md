@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter> [-Confirm] [-WhatIf]
+Remove-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -43,7 +45,6 @@ Get-DlpKeywordDictionary | Foreach-Object { Remove-DlpKeywordDictionary -Identit
 ```
 
 This example removes all the DLP keyword dictionaries with a Confirm on each removal.
-
 
 ## PARAMETERS
 

@@ -22,7 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Remove-RoleGroupMember [-Identity] <RoleGroupIdParameter> -Member <SecurityPrincipalIdParameter>
- [-BypassSecurityGroupManagerCheck] [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

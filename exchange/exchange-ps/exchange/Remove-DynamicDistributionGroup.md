@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Remove-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,105 +22,139 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExchangeRemoteMoveAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeRemoteMove]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhereAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeOutlookAnywhere]
  [-Confirm]
  [-MailboxPermission <MigrationMailboxPermission>]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PSTImport
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-FilePath <String>] [-PSTImport]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-FilePath <String>]
+ [-PSTImport]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhere
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn> [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn>
+ [-ExchangeOutlookAnywhere]
  [-Authentication <AuthenticationMethod>]
  [-EmailAddress <SmtpAddress>]
- [-MailboxPermission <MigrationMailboxPermission>] [-TestMailbox <MailboxIdParameter>]
+ [-MailboxPermission <MigrationMailboxPermission>]
+ [-TestMailbox <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
+Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolder]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeRemoteMove
 ```
-Test-MigrationServerAvailability -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-ExchangeRemoteMove]
+Test-MigrationServerAvailability -RemoteServer <Fqdn>
+ [-Credentials <PSCredential>]
+ [-ExchangeRemoteMove]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TestEndpoint
 ```
 Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IMAP
 ```
-Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
- [-Authentication <AuthenticationMethod>] [-Security <NIMAPSecurityMechanism]
+Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32>
+ [-Imap]
+ [-Authentication <AuthenticationMethod>]
+ [-Security <NIMAPSecurityMechanism]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Gmail
 ```
-Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
+Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]>
+ [-Gmail]
+ [-EmailAddress <SmtpAddress>]
  [-Confirm]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Compliance
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance] [-RemoteServer <Fqdn>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance]
+ [-RemoteServer <Fqdn>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolderToUnifiedGroup
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolderToUnifiedGroup] [-TestMailbox <MailboxIdParameter>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolderToUnifiedGroup]
+ [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LegacyPublicFolderToUnifiedGroup
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
+Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolderToUnifiedGroup]
  [-Authentication <AuthenticationMethod>]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolder
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolder]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -151,14 +185,16 @@ For IMAP migrations, this example verifies the connection to the IMAP mail serve
 
 ### Example 2
 ```powershell
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
+$Credentials = Get-Credential
+Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
 
 ### Example 3
 ```powershell
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
+$Credentials = Get-Credential
+Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
 This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
@@ -172,7 +208,8 @@ This example verifies the connection settings to a remote server using the setti
 
 ### Example 5
 ```powershell
-$MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
+$MRSEndpoints = (Get-MigrationEndpoint).Identity
+Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
 
 This example tests multiple existing endpoints.
@@ -515,7 +552,7 @@ This parameter is available only in the cloud-based service.
 
 The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
 
-Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+Use the following format for the value of this parameter: `([System.IO.File]::ReadAllBytes(<path of the JSON file>))`. For example: `-CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\service-account.json"))`.
 
 ```yaml
 Type: Byte[]

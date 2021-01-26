@@ -23,11 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OMEMessageStatus -MessageId <String> [<CommonParameters>]
+Get-OMEMessageStatus -MessageId <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-If encryption for the message was successfully revoked, the command will return the message: The encrypted email with the subject "\<subject\>" and Message ID "\<messageId>\" was successfully revoked.
+If encryption for the message was successfully revoked, the command will return the message: `The encrypted email with the subject "<subject>" and Message ID "<messageId>" was successfully revoked`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

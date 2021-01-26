@@ -21,8 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-UMAutoAttendant [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-PilotIdentifierList <MultiValuedProperty>] [-SpeechEnabled <Boolean>] [-Status <StatusEnum] [-WhatIf] [<CommonParameters>]
+New-UMAutoAttendant [-Name] <String> -UMDialPlan <UMDialPlanIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>]
+ [-PilotIdentifierList <MultiValuedProperty>]
+ [-SpeechEnabled <Boolean>]
+ [-Status <StatusEnum]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

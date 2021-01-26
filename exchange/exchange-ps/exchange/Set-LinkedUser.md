@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-LinkedUser [-Identity] <UserIdParameter> [-CertificateSubject <MultiValuedProperty>] [-Confirm] [-WhatIf]
+Set-LinkedUser [-Identity] <UserIdParameter>
+ [-CertificateSubject <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateSubject
-The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate. The syntax of the CertificateSubject value is X509:\<I\>Issuer\<S\>Subject. The values of Issuer and Subject are required and must be in X.500 format. To remove the value of CertificateSubject, specify the value $null.
+The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate. The syntax of the CertificateSubject value is `X509:<I>Issuer<S>Subject`. The values of Issuer and Subject are required and must be in X.500 format. To remove the value of CertificateSubject, specify the value $null.
 
 ```yaml
 Type: MultiValuedProperty

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OrganizationSegment [-Identity] <PolicyIdParameter> [-UserGroupFilter <String>] [<CommonParameters>]
+Set-OrganizationSegment [-Identity] <PolicyIdParameter>
+ [-UserGroupFilter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

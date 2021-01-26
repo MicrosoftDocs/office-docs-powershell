@@ -26,13 +26,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-SettingOverride [-Identity] <SettingOverrideIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Force]
  [-MaxVersion <Version>]
  [-MinVersion <Version>]
  [-Parameters <MultiValuedProperty>]
  [-Reason <String>]
  [-Server <String[]>]
  [-WhatIf]
- [-Force]
  [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SettingOverride -Identity "Change OAB Generation" -Server Mailbox01 -Component TimeBasedAssistants -Section OABGeneratorAssistant -Parameters @("WorkCycle=03:00:00")
+Set-SettingOverride -Identity "Change OAB Generation" -Server Mailbox01 -Parameters @("WorkCycle=03:00:00")
 ```
 
 This example modifies the setting override named Change OAB Generation on the server named Mailbox01 by changing the OAB generation interval to 3 hours.
@@ -164,10 +164,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...). For example:
+The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax: `@("Parameter1=Value1","Parameter2=Value2"...)`. For example:
 
-- @("Enabled=true")
-- @("IMServerName=\<SkypePoolFQDN\>","IMCertificateThumbprint=\<ThumbprintGUID\>")
+- `@("Enabled=true")`
+- `@("IMServerName=<SkypePoolFQDN>","IMCertificateThumbprint=<ThumbprintGUID>")`
 
 ```yaml
 Type: MultiValuedProperty

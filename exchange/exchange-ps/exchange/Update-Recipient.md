@@ -25,7 +25,8 @@ Update-Recipient [-Identity] <RecipientIdParameter>
  [-Confirm]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

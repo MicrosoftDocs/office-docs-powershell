@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ComplianceCase [-Identity] <ComplianceCaseIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-ComplianceCase [-Identity] <ComplianceCaseIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

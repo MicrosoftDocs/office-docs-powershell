@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DetailsTemplate [-Identity] <DetailsTemplateIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Pages <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-DetailsTemplate [-Identity] <DetailsTemplateIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Pages <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

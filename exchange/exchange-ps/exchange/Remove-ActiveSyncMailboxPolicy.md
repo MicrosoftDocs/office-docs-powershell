@@ -16,15 +16,19 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-ActiveSyncMailboxPolicy cmdlet to remove mobile device mailbox policies.
 
-Note: In Exchange 2013 or later, use the Remove-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Remove-ActiveSyncMailboxPolicy, update them to use Remove-MobileDeviceMailboxPolicy.
+**Note**: In Exchange 2013 or later, use the Remove-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Remove-ActiveSyncMailboxPolicy, update them to use Remove-MobileDeviceMailboxPolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-WhatIf] [<CommonParameters>]
+Remove-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
+Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -46,7 +50,7 @@ This example associates a user with a username of tonysmith to the throttling po
 
 ### Example 2
 ```powershell
-$b = Get-ThrottlingPolicy ITStaffPolicy;
+$b = Get-ThrottlingPolicy ITStaffPolicy
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 

@@ -21,7 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm] [-ContentMatchQuery <String>] [-Disabled <Boolean>] [-WhatIf] [<CommonParameters>]
+New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-Disabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

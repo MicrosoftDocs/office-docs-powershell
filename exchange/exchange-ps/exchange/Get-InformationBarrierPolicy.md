@@ -22,12 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### InformationBarrierDefault (Default)
 ```
-Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+Get-InformationBarrierPolicy [-ExoPolicyId <Guid>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>] [-ExoPolicyId <Guid>] [<CommonParameters>]
+Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>]
+ [-ExoPolicyId <Guid>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

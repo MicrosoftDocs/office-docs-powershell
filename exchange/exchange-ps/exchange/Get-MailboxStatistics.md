@@ -31,12 +31,14 @@ Get-MailboxStatistics -Database <DatabaseIdParameter> [[-StoreMailboxIdentity] <
  [-IncludeMoveHistory]
  [-IncludeMoveReport]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive]
+Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
  [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeMoveHistory]
@@ -56,7 +58,8 @@ Get-MailboxStatistics -Server <ServerIdParameter>
  [-IncludeMoveReport]
  [-IncludePassive]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,14 +126,16 @@ This example returns the summary move history for the completed move request for
 
 ### Example 8
 ```powershell
-$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory; $temp.MoveHistory[0]
+$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory
+$temp.MoveHistory[0]
 ```
 
 This example returns the detailed move history for the completed move request for Ayla Kol's mailbox. This example uses a temporary variable to store the mailbox statistics object. If the mailbox has been moved multiple times, there are multiple move reports. The last move report is always MoveReport[0].
 
 ### Example 9
 ```powershell
-$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport; $temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
+$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport
+$temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
 ```
 
 This example returns the detailed move history and a verbose detailed move report for Ayla Kol's mailbox. This example uses a temporary variable to store the move request statistics object and outputs the move report to a CSV file.
@@ -158,6 +163,29 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+This parameter is available only in on-premises Exchange.
+
+The StoreMailboxIdentity parameter specifies the mailbox identity when used with the Database parameter to return statistics for a single mailbox on the specified database. You can use one of the following values:
+
+- MailboxGuid
+- LegacyDN
+
+Use this syntax to retrieve information about disconnected mailboxes, which don't have a corresponding Active Directory object or that has a corresponding Active Directory object that doesn't point to the disconnected mailbox in the mailbox database.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
@@ -193,7 +221,6 @@ You can use any value that uniquely identifies the server. For example:
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
 
 ```yaml
 Type: ServerIdParameter
@@ -356,7 +383,7 @@ This parameter is available only in on-premises Exchange.
 
 The IncludeQuarantineDetails switch specifies whether to return additional quarantine details about the mailbox that aren't otherwise included in the results. You can use these details to determine when and why the mailbox was quarantined.
 
-Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, Get-MailboxStatistics \<MailboxIdentity\> -IncludeQuarantineDetails | Format-List Quarantine\*.
+Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, `Get-MailboxStatistics <MailboxIdentity> -IncludeQuarantineDetails | Format-List Quarantine*`.
 
 ```yaml
 Type: SwitchParameter
@@ -407,29 +434,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -StoreMailboxIdentity
-This parameter is available only in on-premises Exchange.
-
-The StoreMailboxIdentity parameter specifies the mailbox identity when used with the Database parameter to return statistics for a single mailbox on the specified database. You can use one of the following values:
-
-- MailboxGuid
-- LegacyDN
-
-Use this syntax to retrieve information about disconnected mailboxes, which don't have a corresponding Active Directory object or that has a corresponding Active Directory object that doesn't point to the disconnected mailbox in the mailbox database.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -5,9 +5,7 @@ applicable: Skype for Business Online
 title: Remove-CsTeamsMobilityPolicy
 schema: 2.0.0
 manager: ritikag
-author: saragava
-ms.author: saragava
-ms.reviewer:
+ms.reviewer: ritikag
 ---
 
 

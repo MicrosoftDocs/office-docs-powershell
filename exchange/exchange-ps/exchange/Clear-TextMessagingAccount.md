@@ -25,7 +25,8 @@ Clear-TextMessagingAccount [-Identity] <MailboxIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

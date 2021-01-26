@@ -22,24 +22,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### MDBResubmit
 ```
-Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Destination <Guid>]
+Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime>
+ [-Destination <Guid>]
  [-Confirm]
  [-CorrelationId <Guid>]
  [-Server <ServerIdParameter>]
  [-TestOnly <Boolean>]
  [-UnresponsivePrimaryServers <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ConditionalResubmit
 ```
-Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-MessageId <String>] [-Recipient <String>] [-ResubmitTo <String>] [-Sender <String>]
+Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime>
+ [-MessageId <String>]
+ [-Recipient <String>]
+ [-ResubmitTo <String>]
+ [-Sender <String>]
  [-Confirm]
  [-CorrelationId <Guid>]
  [-Server <ServerIdParameter>]
  [-TestOnly <Boolean>]
  [-UnresponsivePrimaryServers <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-The Destination parameter specifies the GUID of the destination mailbox database. To find the GUID of the mailbox database, run the command: Get-MailboxDatabase -Server \<servername\> | Format-List Name,GUID.
+The Destination parameter specifies the GUID of the destination mailbox database. To find the GUID of the mailbox database, run the command: `Get-MailboxDatabase -Server <ServerName> | Format-List Name,GUID`.
 
 You can't use this parameter with the Recipient, ResubmitTo, or Sender parameters.
 

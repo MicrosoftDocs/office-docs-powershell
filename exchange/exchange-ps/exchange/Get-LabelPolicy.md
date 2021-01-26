@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-LabelPolicy [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-LabelPolicy [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

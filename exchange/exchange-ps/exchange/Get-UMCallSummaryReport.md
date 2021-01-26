@@ -21,9 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallSummaryReport -GroupBy <GroupBy> [-DomainController <Fqdn>]
+Get-UMCallSummaryReport -GroupBy <GroupBy>
+ [-DomainController <Fqdn>]
  [-UMDialPlan <UMDialPlanIdParameter>]
- [-UMIPGateway <UMIPGatewayIdParameter>] [<CommonParameters>]
+ [-UMIPGateway <UMIPGatewayIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
