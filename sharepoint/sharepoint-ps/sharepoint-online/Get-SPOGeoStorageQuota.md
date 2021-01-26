@@ -50,7 +50,7 @@ Get the storage size quota of the current location.
 
 ### -AllLocations
 
-PARAMVALUE: SwitchParameter
+Use this parameter to retrieve the storage size quota of all locations.
 
 ```yaml
 Type: SwitchParameter

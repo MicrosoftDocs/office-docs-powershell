@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-PopSettings [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-PopSettings [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

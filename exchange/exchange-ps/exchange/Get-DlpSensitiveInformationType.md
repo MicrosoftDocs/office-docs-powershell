@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>] [<CommonParameters>]
+Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

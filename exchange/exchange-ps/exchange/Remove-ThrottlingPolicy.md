@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-Force] [<CommonParameters>]
+Remove-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +47,11 @@ This example removes the user throttling policy ClientThrottlingPolicy2.
 
 ### Example 2
 ```powershell
-$policy = Get-ThrottlingPolicy ClientThrottlingPolicy2; $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}; $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}; foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}; Remove-ThrottlingPolicy ClientThrottlingPolicy2
+$policy = Get-ThrottlingPolicy ClientThrottlingPolicy2
+$mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}
+$defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}
+foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}
+Remove-ThrottlingPolicy ClientThrottlingPolicy2
 ```
 
 You can't remove a policy that's associated with any users. This example reassigns the users subject to ClientThrottlingPolicy2 to the default policy. Then, it removes ClientThrottlingPolicy2.
@@ -103,22 +111,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
@@ -127,6 +119,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

@@ -27,7 +27,8 @@ Get-SiteMailboxDiagnostics [-Identity] <RecipientIdParameter>
  [-BypassOwnerCheck]
  [-Confirm]
  [-SendMeEmail]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

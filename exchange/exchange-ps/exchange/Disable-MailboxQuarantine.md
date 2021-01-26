@@ -24,35 +24,46 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Disable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MailboxOrMailUserIdentity
 ```
-Disable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-IncludePassive]
+Disable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-IncludePassive]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### StoreMailboxIdentity
 ```
-Disable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter> [-IncludePassive]
+Disable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
+ [-IncludePassive]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IncludeAllMailboxes
 ```
-Disable-MailboxQuarantine -Database <DatabaseIdParameter> [-IncludeAllMailboxes] [-IncludePassive]
+Disable-MailboxQuarantine -Database <DatabaseIdParameter>
+ [-IncludeAllMailboxes]
+ [-IncludePassive]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IncludeAllDatabases
 ```
-Disable-MailboxQuarantine -Server <ServerIdParameter> [-IncludeAllDatabases] [-IncludePassive]
+Disable-MailboxQuarantine -Server <ServerIdParameter>
+ [-IncludeAllDatabases]
+ [-IncludePassive]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

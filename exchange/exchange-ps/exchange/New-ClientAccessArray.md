@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ClientAccessArray [[-Name] <String>] -Fqdn <Fqdn> -Site <AdSiteIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+New-ClientAccessArray [[-Name] <String>] -Fqdn <Fqdn> -Site <AdSiteIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,41 +22,53 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Arbitration
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-DisableLastArbitrationMailboxAllowed] [-DisableArbitrationMailboxWithOABsAllowed]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-Arbitration]
+ [-DisableLastArbitrationMailboxAllowed]
+ [-DisableArbitrationMailboxWithOABsAllowed]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Archive
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Archive] [-PermanentlyDisable]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-Archive]
+ [-PermanentlyDisable]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-PublicFolder]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-PublicFolder]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-RemoteArchive]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoteArchive]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -272,7 +284,7 @@ This parameter is available only in the cloud-based service.
 
 The PermanentlyDisable switch specifies whether to permanently disable the mailbox. You don't need to specify a value with this switch.
 
-Notes:
+**Notes**:
 
 - You can only use this switch on user mailboxes that aren't licensed and aren't on hold.
 - When the Exchange Online license is removed from a mailbox without following other deprovisioning steps, this may leave the mailbox in a hard-deleted state. In this case, this parameter is not useful. You can use it, for example, in hybrid Exchange environments.

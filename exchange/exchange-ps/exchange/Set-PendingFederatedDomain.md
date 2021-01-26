@@ -23,8 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PendingFederatedDomain [[-Identity] <OrganizationIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-PendingAccountNamespace <SmtpDomain>] [-PendingDomains <SmtpDomain[]>] [-WhatIf] [<CommonParameters>]
+Set-PendingFederatedDomain [[-Identity] <OrganizationIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-PendingAccountNamespace <SmtpDomain>]
+ [-PendingDomains <SmtpDomain[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +47,22 @@ Set-PendingFederatedDomain -PendingDomains contoso.com,sales.contoso.com
 This example adds the pending domains contoso.com and sales.contoso.com to the existing federation trust.
 
 ## PARAMETERS
+
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -75,22 +96,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

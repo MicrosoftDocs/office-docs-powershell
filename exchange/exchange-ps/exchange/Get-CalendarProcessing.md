@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CalendarProcessing [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-CalendarProcessing [-Identity] <MailboxIdParameter>
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

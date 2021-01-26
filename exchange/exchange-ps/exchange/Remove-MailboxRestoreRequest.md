@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Force]
+Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
+ [-Force]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
@@ -33,7 +35,8 @@ Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Fo
 Remove-MailboxRestoreRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +72,7 @@ This example cancels the restore request by using the RequestGuid parameter for 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: `Alias\Name`.
 
 If you didn't specify a name for the restore request when it was created, Exchange automatically generated a default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
 

@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-PhishFilterPolicy [-Identity] <HostedConnectionFilterPolicyIdParameter> -SpoofAllowBlockList <String>
  [-Action <SetPhishFilterPolicyAction>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

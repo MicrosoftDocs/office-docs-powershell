@@ -43,9 +43,11 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-ApplyWaterMarkingFontSize <Int32>]
  [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
  [-ApplyWaterMarkingText <String>]
+ [-ColumnAssetCondition <String>]
  [-Comment <String>]
  [-Conditions <MultiValuedProperty>]
  [-Confirm]
+ [-ContentType <MipLabelContentType>]
  [-DisplayName <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <Boolean>]
@@ -66,6 +68,15 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-Priority <Int32>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
+ [-SiteAndGroupProtectionAllowAccessToGuestUsers <System.Boolean>]
+ [-SiteAndGroupProtectionAllowEmailFromGuestUsers <System.Boolean>]
+ [-SiteAndGroupProtectionAllowFullAccess <System.Boolean>]
+ [-SiteAndGroupProtectionAllowLimitedAccess <System.Boolean>]
+ [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
+ [-SiteAndGroupProtectionEnabled <System.Boolean>]
+ [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
+ [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
+ [-SqlAssetCondition <String>]
  [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -113,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables client-specific features and capabilities for a sensitivity label. The settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For more information how to configure these advanced settings, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
 
 ```yaml
 Type: PswsHashtable
@@ -502,6 +513,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ColumnAssetCondition
+{{ Fill ColumnAssetCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -544,6 +571,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentType
+{{ Fill ContentType Description }}
+
+```yaml
+Type: MipLabelContentType
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
@@ -1065,6 +1108,38 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteExternalSharingControlType
+{{ Fill SiteExternalSharingControlType Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SqlAssetCondition
+{{ Fill SqlAssetCondition Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

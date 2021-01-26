@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-SingleNodeOnly]
+Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>]
+ [-SingleNodeOnly]
  [-DomainController <Fqdn>]
  [-IncludeContainers]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Search
@@ -33,7 +35,8 @@ Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-S
 Get-OrganizationalUnit [-SearchText <String>]
  [-DomainController <Fqdn>]
  [-IncludeContainers]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

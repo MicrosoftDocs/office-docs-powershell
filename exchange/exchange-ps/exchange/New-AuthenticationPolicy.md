@@ -45,7 +45,8 @@ New-AuthenticationPolicy [[-Name] <String>]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

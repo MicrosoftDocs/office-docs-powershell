@@ -16,15 +16,18 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-ActiveSyncDevice cmdlet to remove mobile device partnerships that identify the devices that are configured to synchronize with user mailboxes.
 
-Note: In Exchange 2013 or later, use the Remove-MobileDevice cmdlet instead. If you have scripts that use Remove-ActiveSyncDevice, update them to use Remove-MobileDevice.
+**Note**: In Exchange 2013 or later, use the Remove-MobileDevice cmdlet instead. If you have scripts that use Remove-ActiveSyncDevice, update them to use Remove-MobileDevice.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Remove-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

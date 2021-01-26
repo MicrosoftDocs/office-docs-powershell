@@ -21,13 +21,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SweepRule [-Identity] <SweepRuleIdParameter> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
- [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
- [-Mailbox <MailboxIdParameter>] [-Name <String>] [-Provider <String>] [-Sender <RecipientIdParameter>]
+Set-SweepRule [-Identity] <SweepRuleIdParameter>
+ [-Confirm]
+ [-DestinationFolder <MailboxFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>]
+ [-KeepForDays <Int32>]
+ [-KeepLatest <Int32>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Name <String>]
+ [-Provider <String>]
+ [-Sender <RecipientIdParameter>]
  [-SourceFolder <MailboxFolderIdParameter>]
  [-SystemCategory <SystemCategoryType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,8 +58,8 @@ This example modifies the existing rule that has the rule ID value x2hlsdpGmUifj
 The Identity parameter specifies the Sweep rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
-- Exchange Online: \<mailbox alias\>\\\<RuleId\> (for example, rzaher\\x2hlsdpGmUifjFgxxGIOJw==.
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleId\> (for example, contoso.com/Users/Rick Zaher\\x2hlsdpGmUifjFgxxGIOJw==.
+- Exchange Online: `MailboxAlias\RuleID` (for example, `rzaher\2hlsdpGmUifjFgxxGIOJw==`).
+- On-premises Exchange: `MailboxCanonicalName\RuleID` (for example, `contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==`).
 
 You can get these identity values by using the Get-SweepRule cmdlet.
 

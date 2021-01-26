@@ -22,18 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>]
+ [-GetChildren]
  [-DomainController <Fqdn>]
  [-MailFolderOnly]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>]
+ [-Recurse]
  [-DomainController <Fqdn>]
  [-MailFolderOnly]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,40 +49,75 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxFolder -Identity Tony:\Inbox
+Get-MailboxFolder -Identity :\Inbox | Format List
 ```
 
-This example retrieves the Inbox folder in Tony's mailbox. The Identity parameter is supplied in the format of \<Mailbox Identity\>:\<Folder\>.
+This example returns detailed information about the Inbox folder in your own mailbox.
 
 ### Example 2
 ```powershell
-Get-MailboxFolder -Identity Tony
+Get-MailboxFolder
 ```
 
-This example returns the root folders in Tony's mailbox. The Identity parameter is supplied in the format of \<Mailbox Identity\>.
+This example returns a summary list of the root folders in your own mailbox.
 
 ### Example 3
 ```powershell
-Get-MailboxFolder -Identity Tony -GetChildren -MailFolderOnly
+Get-MailboxFolder -GetChildren -MailFolderOnly
 ```
 
-This example returns the first level of mail folders in Tony's mailbox.
+This example returns the first level of mail folders in your own mailbox.
 
 ### Example 4
 ```powershell
-Get-MailboxFolder -Identity Tony:\Inbox -GetChildren
+Get-MailboxFolder -Identity :\Inbox -GetChildren
 ```
 
-This example returns information about all the subfolders under Inbox in Tony's mailbox.
+This example returns information about all the subfolders under Inbox in your own mailbox.
 
 ### Example 5
 ```powershell
-Get-MailboxFolder -Identity Tony:\Inbox -Recurse
+Get-MailboxFolder -Identity :\Inbox -Recurse
 ```
 
-This example returns all levels of folders under Inbox in Tony's mailbox.
+This example returns a summary list of all levels of folders under Inbox in your own mailbox.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox folder that you want to view. The syntax is `[MailboxID]:[\ParentFolder][\SubFolder]`.
+
+You can only run this cmdlet on your own mailbox, so you don't need to (or can't) specify a `MailboxID` value.
+
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox.
+
+Example values for this parameter are `john@contoso.com:`, `John:\Inbox`.
+
+```yaml
+Type: MailboxFolderIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -GetChildren
 The GetChildren switch specifies whether to return only the first level of subfolders under the specified parent folder. You don't need to specify a value with this switch.
@@ -131,39 +170,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox folder that you want to view. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
-
-For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox.
-
-Example values for this parameter are `john@contoso.com:`, `John:\Inbox`.
-
-```yaml
-Type: MailboxFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

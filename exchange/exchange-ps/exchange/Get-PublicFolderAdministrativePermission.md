@@ -22,16 +22,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-User <SecurityPrincipalIdParameter>]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
+ [-User <SecurityPrincipalIdParameter>]
  [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Owner
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-Owner]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
+ [-Owner]
  [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

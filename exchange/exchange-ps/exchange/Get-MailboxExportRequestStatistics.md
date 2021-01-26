@@ -24,20 +24,33 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-ReportOnly] [<CommonParameters>]
+Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MRSInstance
 ```
-Get-MailboxExportRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-RequestGuid <Guid>]
+Get-MailboxExportRequestStatistics -MRSInstance <Fqdn>
+ [-DomainController <Fqdn>]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-RequestGuid <Guid>] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly]
+Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-RequestGuid <Guid>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-ReportOnly]
  [<CommonParameters>]
 ```
 
@@ -93,7 +106,7 @@ This example returns additional information for all the export requests that hav
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: `Alias\Name`.
 
 This parameter can't be used with the RequestGuid or RequestQueue parameters.
 

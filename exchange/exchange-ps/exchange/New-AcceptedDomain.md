@@ -25,7 +25,8 @@ New-AcceptedDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DomainType <AcceptedDomainType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

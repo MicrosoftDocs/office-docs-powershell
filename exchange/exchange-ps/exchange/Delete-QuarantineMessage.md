@@ -24,13 +24,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identities
 ```
-Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
 ```
-Delete-QuarantineMessage -Identity <QuarantineMessageIdentity> [-Confirm] [-WhatIf] [<CommonParameters>]
+Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,14 +53,16 @@ This example deletes the quarantined message with the specified Identity value.
 
 ### Example 2
 ```powershell
-$ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identity $ids[4]
+$ids = Get-QuarantineMessage | select -ExpandProperty Identity
+Delete-QuarantineMessage -Identity $ids[4]
 ```
 
 This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on).
 
 ### Example 3
 ```powershell
-$ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identities $ids -Identity 000
+$ids = Get-QuarantineMessage | select -ExpandProperty Identity
+Delete-QuarantineMessage -Identities $ids -Identity 000
 ```
 
 This example deletes all quarantined messages. The Identity parameter is required, but the value 000 is ignored.

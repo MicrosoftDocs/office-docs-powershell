@@ -25,7 +25,8 @@ Remove-CalendarEvents [-Identity] <MailboxIdParameter> -QueryWindowInDays <Int32
  [-Confirm]
  [-PreviewOnly]
  [-QueryStartDate <ExDateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

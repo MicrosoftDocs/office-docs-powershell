@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DkimSigningConfig [[-Identity] <DkimSigningConfigIdParameter>] [<CommonParameters>]
+Get-DkimSigningConfig [[-Identity] <DkimSigningConfigIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

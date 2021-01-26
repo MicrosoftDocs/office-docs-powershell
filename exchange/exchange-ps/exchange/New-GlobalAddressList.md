@@ -46,7 +46,8 @@ New-GlobalAddressList [-Name] <String> -IncludedRecipients <WellKnownRecipientTy
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CustomFilter
@@ -55,7 +56,8 @@ New-GlobalAddressList [-Name] <String> -RecipientFilter <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

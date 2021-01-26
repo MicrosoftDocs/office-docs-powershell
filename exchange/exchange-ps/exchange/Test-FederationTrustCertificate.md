@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-FederationTrustCertificate [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Test-FederationTrustCertificate [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SupervisoryReviewPolicyV2 [-Name] <String> -Reviewers <String[]> [-Comment <String>] [-Confirm] [-Force]
- [-WhatIf] [<CommonParameters>]
+New-SupervisoryReviewPolicyV2 [-Name] <String> -Reviewers <String[]>
+ [-Comment <String>]
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ComplianceRetentionEventType -Identity <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
+Remove-ComplianceRetentionEventType -Identity <PolicyIdParameter>
+ [-Confirm]
+ [-ForceDeletion]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,31 +21,59 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-AccessTelephoneNumbers <MultiValuedProperty>]
- [-AllowDialPlanSubscribers <Boolean>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <Boolean>]
- [-AllowHeuristicADCallingLineIdResolution <Boolean>] [-AudioCodec <AudioCodecEnum>]
- [-AutomaticSpeechRecognitionEnabled <Boolean>] [-CallAnsweringRulesEnabled <Boolean>]
- [-CallSomeoneEnabled <Boolean>] [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
- [-ConfiguredInternationalGroups <MultiValuedProperty>] [-Confirm]
- [-ContactAddressList <AddressListIdParameter>] [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
+Set-UMDialPlan [-Identity] <UMDialPlanIdParameter>
+ [-AccessTelephoneNumbers <MultiValuedProperty>]
+ [-AllowDialPlanSubscribers <Boolean>]
+ [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>]
+ [-AllowExtensions <Boolean>]
+ [-AllowHeuristicADCallingLineIdResolution <Boolean>]
+ [-AudioCodec <AudioCodecEnum>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
+ [-CallAnsweringRulesEnabled <Boolean>]
+ [-CallSomeoneEnabled <Boolean>]
+ [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
+ [-ConfiguredInternationalGroups <MultiValuedProperty>]
+ [-Confirm]
+ [-ContactAddressList <AddressListIdParameter>]
+ [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
  [-ContactScope <CallSomeoneScopeEnum>]
- [-CountryOrRegionCode <String>] [-DefaultLanguage <UMLanguage>] [-DefaultOutboundCallingLineId <String>]
+ [-CountryOrRegionCode <String>]
+ [-DefaultLanguage <UMLanguage>]
+ [-DefaultOutboundCallingLineId <String>]
  [-DialByNamePrimary <DialByNamePrimaryEnum>]
- [-DialByNameSecondary <DialByNameSecondaryEnum>] [-DomainController <Fqdn>]
- [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>] [-Extension <String>] [-FaxEnabled <Boolean>]
- [-ForceUpgrade] [-InCountryOrRegionNumberFormat <NumberFormat>]
- [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>] [-InfoAnnouncementFilename <String>]
- [-InputFailuresBeforeDisconnect <Int32>] [-InternationalAccessCode <String>]
- [-InternationalNumberFormat <NumberFormat>] [-LegacyPromptPublishingPoint <String>]
+ [-DialByNameSecondary <DialByNameSecondaryEnum>]
+ [-DomainController <Fqdn>]
+ [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>]
+ [-Extension <String>]
+ [-FaxEnabled <Boolean>]
+ [-ForceUpgrade]
+ [-InCountryOrRegionNumberFormat <NumberFormat>]
+ [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>]
+ [-InfoAnnouncementFilename <String>]
+ [-InputFailuresBeforeDisconnect <Int32>]
+ [-InternationalAccessCode <String>]
+ [-InternationalNumberFormat <NumberFormat>]
+ [-LegacyPromptPublishingPoint <String>]
  [-LogonFailuresBeforeDisconnect <Int32>]
  [-MatchedNameSelectionMethod <DisambiguationFieldEnum>]
- [-MaxCallDuration <Int32>] [-MaxRecordingDuration <Int32>] [-Name <String>] [-NationalNumberPrefix <String>]
- [-NumberingPlanFormats <MultiValuedProperty>] [-OperatorExtension <String>] [-OutsideLineAccessCode <String>]
- [-PilotIdentifierList <MultiValuedProperty>] [-RecordingIdleTimeout <Int32>]
- [-SendVoiceMsgEnabled <Boolean>] [-TUIPromptEditingEnabled <Boolean>]
- [-UMAutoAttendant <UMAutoAttendantIdParameter>] [-VoIPSecurity <UMVoIPSecurityType>]
- [-WelcomeGreetingEnabled <Boolean>] [-WelcomeGreetingFilename <String>] [-WhatIf] [<CommonParameters>]
+ [-MaxCallDuration <Int32>]
+ [-MaxRecordingDuration <Int32>]
+ [-Name <String>]
+ [-NationalNumberPrefix <String>]
+ [-NumberingPlanFormats <MultiValuedProperty>]
+ [-OperatorExtension <String>]
+ [-OutsideLineAccessCode <String>]
+ [-PilotIdentifierList <MultiValuedProperty>]
+ [-RecordingIdleTimeout <Int32>]
+ [-SendVoiceMsgEnabled <Boolean>]
+ [-TUIPromptEditingEnabled <Boolean>]
+ [-UMAutoAttendant <UMAutoAttendantIdParameter>]
+ [-VoIPSecurity <UMVoIPSecurityType>]
+ [-WelcomeGreetingEnabled <Boolean>]
+ [-WelcomeGreetingFilename <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +103,9 @@ This example configures the UM dial plan MyDialPlan to use a welcome greeting.
 
 ### Example 3
 ```powershell
-$csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
+$csv=import-csv "C:\MyInCountryGroups.csv"
+Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv
+Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
 ```
 
 This example configures the UM dial plan MyDialPlan with dialing rules.

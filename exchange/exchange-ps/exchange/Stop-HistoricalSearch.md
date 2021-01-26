@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Stop-HistoricalSearch -JobId <Guid> [<CommonParameters>]
+Stop-HistoricalSearch -JobId <Guid>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

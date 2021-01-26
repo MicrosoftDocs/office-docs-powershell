@@ -21,7 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-MigrationUser [-Identity] <MigrationUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force] [-Partition <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-MigrationUser [-Identity] <MigrationUserIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

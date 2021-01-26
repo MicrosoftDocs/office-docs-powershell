@@ -32,7 +32,8 @@ Set-MigrationUser [-Identity] <MigrationUserIdParameter>
  [-Partition <MailboxIdParameter>]
  [-StartAfter <DateTime>]
  [-SyncNow]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

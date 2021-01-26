@@ -22,39 +22,48 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CurrentCertificateParameter
 ```
-Set-AuthConfig -CertificateThumbprint <String> [-SkipImmediateCertificateDeployment]
+Set-AuthConfig -CertificateThumbprint <String>
+ [-SkipImmediateCertificateDeployment]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublishAuthCertificateParameter
 ```
-Set-AuthConfig [-ClearPreviousCertificate] [-PublishCertificate]
+Set-AuthConfig [-ClearPreviousCertificate]
+ [-PublishCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### NewCertificateParameter
 ```
-Set-AuthConfig [-NewCertificateEffectiveDate <DateTime>] [-NewCertificateThumbprint <String>] [-SkipImmediateCertificateDeployment]
+Set-AuthConfig [-NewCertificateEffectiveDate <DateTime>]
+ [-NewCertificateThumbprint <String>]
+ [-SkipImmediateCertificateDeployment]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuthConfigSettings
 ```
-Set-AuthConfig [-Realm <String>] [-ServiceName <String>]
+Set-AuthConfig [-Realm <String>]
+ [-ServiceName <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

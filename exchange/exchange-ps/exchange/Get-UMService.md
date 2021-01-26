@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMService [[-Identity] <UMServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMService [[-Identity] <UMServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

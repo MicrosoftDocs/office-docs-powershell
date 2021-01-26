@@ -21,18 +21,49 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
- [-AssistantName <String>] [-City <String>] [-Company <String>] [-Confirm] [-CountryOrRegion <CountryInfo>]
- [-CreateDTMFMap <Boolean>] [-Department <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-Fax <String>] [-FirstName <String>] [-HomePhone <String>] [-IgnoreDefaultScope] [-Initials <String>]
- [-LastName <String>] [-Manager <UserContactIdParameter>] [-MobilePhone <String>] [-Name <String>]
- [-Notes <String>] [-Office <String>] [-OtherFax <MultiValuedProperty>] [-OtherHomePhone <MultiValuedProperty>]
- [-OtherTelephone <MultiValuedProperty>] [-Pager <String>] [-Phone <String>] [-PhoneticDisplayName <String>]
- [-PostalCode <String>] [-PostOfficeBox <MultiValuedProperty>] [-SeniorityIndex <Int32>]
- [-SimpleDisplayName <String>] [-StateOrProvince <String>] [-StreetAddress <String>]
- [-TelephoneAssistant <String>] [-Title <String>] [-UMCallingLineIds <MultiValuedProperty>]
- [-UMDtmfMap <MultiValuedProperty>] [-WebPage <String>] [-WhatIf] [-WindowsEmailAddress <SmtpAddress>]
- [-GeoCoordinates <GeoCoordinates>] [<CommonParameters>]
+Set-Contact [-Identity] <ContactIdParameter>
+ [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
+ [-AssistantName <String>]
+ [-City <String>]
+ [-Company <String>]
+ [-Confirm]
+ [-CountryOrRegion <CountryInfo>]
+ [-CreateDTMFMap <Boolean>]
+ [-Department <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Fax <String>]
+ [-FirstName <String>]
+ [-GeoCoordinates <GeoCoordinates>]
+ [-HomePhone <String>]
+ [-IgnoreDefaultScope]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-Manager <UserContactIdParameter>]
+ [-MobilePhone <String>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-Office <String>]
+ [-OtherFax <MultiValuedProperty>]
+ [-OtherHomePhone <MultiValuedProperty>]
+ [-OtherTelephone <MultiValuedProperty>]
+ [-Pager <String>]
+ [-Phone <String>]
+ [-PhoneticDisplayName <String>]
+ [-PostalCode <String>]
+ [-PostOfficeBox <MultiValuedProperty>]
+ [-SeniorityIndex <Int32>]
+ [-SimpleDisplayName <String>]
+ [-StateOrProvince <String>]
+ [-StreetAddress <String>]
+ [-TelephoneAssistant <String>]
+ [-Title <String>]
+ [-UMCallingLineIds <MultiValuedProperty>]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-WebPage <String>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -272,6 +303,25 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeoCoordinates
+The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
+
+- Latitude and longitude: For example, "47.644125;-122.122411"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
+
+```yaml
+Type: GeoCoordinates
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -581,7 +631,8 @@ The SimpleDisplayName parameter is used to display an alternative description of
 - a - z
 - A - Z
 - 0 - 9
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":" and "?".
+- space
+- `" ' ( ) + , - . / : ?`
 
 This parameter is meaningful only if the contact is mail-enabled.
 
@@ -681,17 +732,17 @@ Accept wildcard characters: False
 ### -UMDtmfMap
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
-- emailAddress:\<integers\>
-- lastNameFirstName:\<integers\>
-- firstNameLastName:\<integers\>
+- `emailAddress:<integers>`
+- `lastNameFirstName:<integers>`
+- `firstNameLastName:<integers>`
 
-To enter values that overwrite all existing entries, use the following syntax: emailAddress:\<integers\>,lastNameFirstName:\<integers\>,firstNameLastName:\<integers\>.
+To enter values that overwrite all existing entries, use the following syntax: `emailAddress:<integers>,lastNameFirstName:<integers>,firstNameLastName:<integers>`.
 
-If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only emailAddress:\<integers\>, all existing lastNameFirstName and firstNameLastName values are removed.
+If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only `emailAddress:<integers>`, all existing lastNameFirstName and firstNameLastName values are removed.
 
-To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
+To add or remove values without affecting other existing entries, use the following syntax: `@{Add="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"; Remove="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"}`.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use `@{Add="emailAddress:<integers1>","emailAddress:<integers2>}` to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -751,25 +802,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeoCoordinates
-The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
-
-- Latitude and longitude: For example, "47.644125;-122.122411"
-- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
-
-```yaml
-Type: GeoCoordinates
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

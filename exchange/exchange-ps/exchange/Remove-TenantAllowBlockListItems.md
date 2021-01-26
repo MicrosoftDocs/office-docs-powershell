@@ -7,7 +7,7 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX, NOFOLLOW
+ROBOTS: NOINDEX
 ---
 
 # Remove-TenantAllowBlockListItems
@@ -26,7 +26,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType> [-OutputJson] [<CommonParameters>]
+Remove-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
+ [-OutputJson]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

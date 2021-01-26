@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AvailabilityConfig [-Confirm] [-DomainController <Fqdn>] [-OrgWideAccount <SecurityPrincipalIdParameter>]
- [-PerUserAccount <SecurityPrincipalIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-AvailabilityConfig [-Confirm]
+ [-DomainController <Fqdn>]
+ [-OrgWideAccount <SecurityPrincipalIdParameter>]
+ [-PerUserAccount <SecurityPrincipalIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

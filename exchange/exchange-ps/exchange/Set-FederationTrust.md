@@ -33,7 +33,8 @@ Set-FederationTrust [-Identity] <FederationTrustIdParameter> -ApplicationUri <St
 
 ### PublishFederationCertificate
 ```
-Set-FederationTrust [-Identity] <FederationTrustIdParameter> [-PublishFederationCertificate]
+Set-FederationTrust [-Identity] <FederationTrustIdParameter>
+ [-PublishFederationCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Name <String>]
@@ -50,7 +51,8 @@ Set-FederationTrust [-Identity] <FederationTrustIdParameter>
  [-Name <String>]
  [-RefreshMetadata]
  [-Thumbprint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

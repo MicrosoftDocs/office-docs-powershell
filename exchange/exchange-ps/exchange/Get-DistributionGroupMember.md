@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-ReadFromDomainController] [-ResultSize <Unlimited>]
+Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -42,7 +46,8 @@ This example returns the existing distribution group members for the distributio
 
 ### Example 2
 ```powershell
-Set-ADServerSettings -ViewEntireForest $true; Get-DistributionGroupMember -Identity "Marketing Worldwide"
+Set-ADServerSettings -ViewEntireForest $true
+Get-DistributionGroupMember -Identity "Marketing Worldwide"
 ```
 
 This example sets the scope of the search to the entire forest by running the Set-ADServerSettings cmdlet, then the Get-DistributionGroupMember cmdlet searches the entire forest for the distribution group members in the Marketing Worldwide distribution group.

@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-OAuthConnectivity -Service <ModServiceType> -TargetUri <Uri> [-AppOnly] [-Confirm]
- [-Mailbox <MailboxIdParameter>] [-OrganizationDomain <String>] [-ReloadConfig] [-UseCachedToken] [-WhatIf]
+Test-OAuthConnectivity -Service <ModServiceType> -TargetUri <Uri>
+ [-AppOnly]
+ [-Confirm]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationDomain <String>]
+ [-ReloadConfig]
+ [-UseCachedToken]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

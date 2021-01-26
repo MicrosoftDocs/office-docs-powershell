@@ -27,31 +27,40 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ImportFromFile
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString> [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
+ [-ExtranetCertificationUrl <Uri>]
+ [-IntranetCertificationUrl <Uri>]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshTemplates
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-RefreshTemplates]
+Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString>
+ [-RefreshTemplates]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RMSOnline
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-RefreshTemplates]
+Import-RMSTrustedPublishingDomain [-Name] <String>
+ [-RMSOnline]
+ [-RefreshTemplates]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,8 +81,8 @@ This example imports a TPD from an AD RMS server into a cloud-based organization
 
 - Path to exported XML file: C:\\My Documents\\Contoso.xml
 - Password of exported XML file: Pa$$word1
-- External licensing URL: https://rms.contoso.com/\_wmcs/licensing
-- Internal licensing URL: https://RMS01/\_wmcs/licensing
+- External licensing URL: `https://rms.contoso.com/_wmcs/licensing`
+- Internal licensing URL: `https://RMS01/_wmcs/licensing`
 - TPD name: Contoso TPD
 
 ## PARAMETERS
@@ -81,7 +90,7 @@ This example imports a TPD from an AD RMS server into a cloud-based organization
 ### -ExtranetLicensingUrl
 The ExtranetLicensingUrl parameter specifies the external licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the ExtranetLicensingUrl parameter is https://\<FQDN\>/\_wmcs/licensing.
+By default, the value of the ExtranetLicensingUrl parameter is `https://<FQDN>/_wmcs/licensing`.
 
 ```yaml
 Type: Uri
@@ -99,7 +108,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the XML file you want to import. The XML file contains the TPD you exported from the on-premises AD RMS server.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 ```yaml
 Type: Byte[]
@@ -117,7 +126,7 @@ Accept wildcard characters: False
 ### -IntranetLicensingUrl
 The IntranetLicensingUrl parameter specifies the internal licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the IntranetLicensingUrl parameter is https://\<server name\>/\_wmcs/licensing.
+By default, the value of the IntranetLicensingUrl parameter is `https://<server name>/_wmcs/licensing`.
 
 ```yaml
 Type: Uri

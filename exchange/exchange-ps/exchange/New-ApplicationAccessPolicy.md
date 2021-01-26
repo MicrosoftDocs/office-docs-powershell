@@ -27,7 +27,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
  [-Confirm]
  [-Description <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +38,7 @@ Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an app
 
 A limit of 100 policies per Microsoft 365 tenant is enforced as of today. An error message stating "A tenant cannot have more than 100 policies." will be displayed if this number is exceeded.
 
-While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
+While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn't have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
 
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
@@ -140,7 +141,7 @@ For example:
 
 This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter:
 
-- Discovery mailboxes  
+- Discovery mailboxes
 - Dynamic distribution groups
 - Distribution groups
 - Shared mailboxes
@@ -198,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn’t work on this cmdlet.
+The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter

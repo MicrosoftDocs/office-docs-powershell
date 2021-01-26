@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ACSTrustApplication
 ```
-New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm <String>]
+New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String>
+ [-Realm <String>]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -32,12 +33,14 @@ New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm 
  [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuthMetadataUrl
 ```
-New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String>
+ [-TrustAnySSLCertificate]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -47,7 +50,8 @@ New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLC
  [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

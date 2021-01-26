@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-ServiceHealth [[-Server] <ServerIdParameter>] [-ActiveDirectoryTimeout <Int32>] [-Confirm]
- [-DomainController <Fqdn>] [-MonitoringContext <Boolean>] [-WhatIf] [<CommonParameters>]
+Test-ServiceHealth [[-Server] <ServerIdParameter>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

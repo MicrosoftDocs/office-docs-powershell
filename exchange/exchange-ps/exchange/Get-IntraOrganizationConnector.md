@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-IntraOrganizationConnector [[-Identity] <IntraOrganizationConnectorIdParameter>] [-DomainController <Fqdn>]
+Get-IntraOrganizationConnector [[-Identity] <IntraOrganizationConnectorIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

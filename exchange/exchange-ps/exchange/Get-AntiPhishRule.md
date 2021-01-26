@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AntiPhishRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-AntiPhishRule [[-Identity] <RuleIdParameter>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

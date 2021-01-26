@@ -22,12 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Test-ExchangeSearch [[-Identity] <MailboxIdParameter>] [-Archive]
+Test-ExchangeSearch [[-Identity] <MailboxIdParameter>]
+ [-Archive]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IndexingTimeoutInSeconds <Int32>]
  [-MonitoringContext]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Database
@@ -37,7 +39,8 @@ Test-ExchangeSearch [-MailboxDatabase <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-IndexingTimeoutInSeconds <Int32>]
  [-MonitoringContext]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -47,7 +50,8 @@ Test-ExchangeSearch [-Server <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-IndexingTimeoutInSeconds <Int32>]
  [-MonitoringContext]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,6 +78,35 @@ Test-ExchangeSearch -Identity john@contoso.com -Verbose
 This example tests Exchange Search results for the mailbox database on which the specified mailbox resides. The Verbose switch is used to display detailed information.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox that you want to test Exchange Search against. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the MailboxDatabase or Server parameters.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Archive
 The Archive switch specifies that the test be run against the archive mailbox for the mailbox user specified in the Identity parameter. When the Archive switch is used, you must also use the Identity parameter to specify the mailbox.
@@ -123,35 +156,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox that you want to test Exchange Search against. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-You can't use this parameter with the MailboxDatabase or Server parameters.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

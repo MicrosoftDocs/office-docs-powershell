@@ -21,12 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SweepRule [-Name] <String> -Provider <String> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
- [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
- [-Mailbox <MailboxIdParameter>] [-Sender <RecipientIdParameter>] [-SourceFolder <MailboxFolderIdParameter>]
+New-SweepRule [-Name] <String> -Provider <String>
+ [-Confirm]
+ [-DestinationFolder <MailboxFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>]
+ [-KeepForDays <Int32>]
+ [-KeepLatest <Int32>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Sender <RecipientIdParameter>]
+ [-SourceFolder <MailboxFolderIdParameter>]
  [-SystemCategory <SystemCategoryType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-EdgeSynchronization [-Confirm] [-ForceFullSync] [-ForceUpdatecookie] [-Server <ServerIdParameter>]
- [-TargetServer <String>] [-WhatIf] [<CommonParameters>]
+Start-EdgeSynchronization [-Confirm]
+ [-ForceFullSync]
+ [-ForceUpdatecookie]
+ [-Server <ServerIdParameter>]
+ [-TargetServer <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

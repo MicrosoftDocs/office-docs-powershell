@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-DlpPolicyCollection [[-Identity] <DlpPolicyIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Export-DlpPolicyCollection [[-Identity] <DlpPolicyIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -34,12 +37,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$file = Export-DlpPolicyCollection; Set-Content -Path "C:\My Documents\Contoso PII.xml" -Value $file.FileData -Encoding Byte
+$file = Export-DlpPolicyCollection
+Set-Content -Path "C:\My Documents\Contoso PII.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports all the elements of the existing DLP policies to the file C:\\My Documents\\Contoso PII.xml.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the DLP policy you want to export. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy.
+
+```yaml
+Type: DlpPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -75,22 +95,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the DLP policy you want to export. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy.
-
-```yaml
-Type: DlpPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IPBlockListConfig [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-ExternalMailEnabled <Boolean>] [-InternalMailEnabled <Boolean>]
- [-MachineEntryRejectionResponse <AsciiString>] [-StaticEntryRejectionResponse <AsciiString>] [-WhatIf]
+Set-IPBlockListConfig [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-MachineEntryRejectionResponse <AsciiString>]
+ [-StaticEntryRejectionResponse <AsciiString>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

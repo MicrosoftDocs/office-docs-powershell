@@ -22,18 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExportPicture
 ```
-Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-Picture]
+Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter>
+ [-Picture]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExportSpokenName
 ```
-Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-SpokenName]
+Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter>
+ [-SpokenName]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

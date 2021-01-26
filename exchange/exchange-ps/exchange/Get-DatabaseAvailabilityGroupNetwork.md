@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DatabaseAvailabilityGroupNetwork [[-Identity] <DatabaseAvailabilityGroupNetworkIdParameter>]
- [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

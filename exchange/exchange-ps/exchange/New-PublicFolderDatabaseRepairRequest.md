@@ -21,9 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PublicFolderDatabaseRepairRequest [-Database] <DatabaseIdParameter>
- -CorruptionType <PublicFolderDatabaseCorruptionType[]> [-Confirm] [-DetectOnly] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+New-PublicFolderDatabaseRepairRequest [-Database] <DatabaseIdParameter> -CorruptionType <PublicFolderDatabaseCorruptionType[]>
+ [-Confirm]
+ [-DetectOnly]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

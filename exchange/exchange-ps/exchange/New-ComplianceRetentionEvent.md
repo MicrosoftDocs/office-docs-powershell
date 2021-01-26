@@ -30,7 +30,8 @@ New-ComplianceRetentionEvent -Name <String>
  [-EventType <ComplianceRuleIdParameter>]
  [-ExchangeAssetIdQuery <String>]
  [-SharePointAssetIdQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

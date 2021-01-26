@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SiteMailboxProvisioningPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
+Get-SiteMailboxProvisioningPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

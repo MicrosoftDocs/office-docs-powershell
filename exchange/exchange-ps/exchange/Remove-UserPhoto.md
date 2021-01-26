@@ -26,16 +26,21 @@ Remove-UserPhoto [-Identity] <MailboxIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClearMailboxPhoto
 ```
-Remove-UserPhoto [-Identity] <MailboxIdParameter> [-ClearMailboxPhotoRecord] [-GroupMailbox] [-PhotoType <String>]
+Remove-UserPhoto [-Identity] <MailboxIdParameter>
+ [-ClearMailboxPhotoRecord]
+ [-GroupMailbox]
+ [-PhotoType <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

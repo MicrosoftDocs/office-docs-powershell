@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Thumbprint
 ```
-Remove-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
+Remove-ExchangeCertificate [-Thumbprint] <String>
+ [-Server <ServerIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +35,8 @@ Remove-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
 Remove-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,6 +81,31 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the certificate that you want to remove. Valid values are:
+
+- `ServerNameOrFQDN\Thumbprint`
+- `Thumbprint`
+
+You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
+
+You can't use this parameter with the Server parameter.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: ExchangeCertificateIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -154,31 +182,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the certificate that you want to remove. Valid values are:
-
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-- \<Thumbprint\>
-
-You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
-
-You can't use this parameter with the Server parameter.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: ExchangeCertificateIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

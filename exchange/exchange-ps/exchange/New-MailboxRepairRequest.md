@@ -27,17 +27,20 @@ New-MailboxRepairRequest [-Database] <DatabaseIdParameter> -CorruptionType <Mail
  [-DetectOnly]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
-New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]> [-Archive]
+New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]>
+ [-Archive]
  [-Confirm]
  [-DetectOnly]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,7 +84,8 @@ This example detects and repairs all corruption types for Ayla Kol's mailbox and
 
 ### Example 5
 ```powershell
-$Mailbox = Get-MailboxStatistics annb; New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
+$Mailbox = Get-MailboxStatistics annb
+New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
 ```
 
 This example creates a variable that identifies Ann Beebe's mailbox and then uses the variable to specify the values for the Database and StoreMailbox parameters to create a request to detect and repair all corruption types.
@@ -199,6 +203,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -StoreMailbox
+The StoreMailbox parameter specifies the mailbox GUID of the mailbox you want to repair or detect corruption in. Use this parameter with the Database parameter.
+
+Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Archive
 The Archive switch specifies whether to repair or detect corruption the archive mailbox that's associated with the specified mailbox. You don't need to specify a value with this switch.
 
@@ -283,24 +305,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMailbox
-The StoreMailbox parameter specifies the mailbox GUID of the mailbox you want to repair or detect corruption in. Use this parameter with the Database parameter.
-
-Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

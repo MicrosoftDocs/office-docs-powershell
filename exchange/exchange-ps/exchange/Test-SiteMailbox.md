@@ -29,7 +29,8 @@ Test-SiteMailbox [[-Identity] <RecipientIdParameter>]
  [-RequestorIdentity <RecipientIdParameter>]
  [-SharePointUrl <Uri>]
  [-UseAppTokenOnly]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

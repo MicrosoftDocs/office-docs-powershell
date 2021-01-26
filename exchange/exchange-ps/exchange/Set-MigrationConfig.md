@@ -28,7 +28,8 @@ Set-MigrationConfig
  [-MaxConcurrentMigrations <Unlimited>]
  [-MaxNumberOfBatches <Int32>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

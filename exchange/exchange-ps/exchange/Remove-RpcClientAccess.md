@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-RPCClientAccess -Server <ServerIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

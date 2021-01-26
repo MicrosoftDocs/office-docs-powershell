@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyIdParameter> [-Force] [<CommonParameters>]
+Remove-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyIdParameter>
+ [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +50,8 @@ This example returns the junk email configuration for the user named David Pelto
 
 ### Example 2
 ```powershell
-$AllUsers = Get-Mailbox -ResultSize unlimited -RecipientTypeDetails UserMailbox; $AllUsers | foreach {Get-MailboxJunkEmailConfiguration -Identity $_.UserPrincipalName} | Where {$_.Enabled -eq $false} | Format-Table -Auto Identity,Enabled
+$AllUsers = Get-Mailbox -ResultSize unlimited -RecipientTypeDetails UserMailbox
+$AllUsers | foreach {Get-MailboxJunkEmailConfiguration -Identity $_.UserPrincipalName} | Where {$_.Enabled -eq $false} | Format-Table -Auto Identity,Enabled
 ```
 
 This example returns a summary list of all mailboxes in your organization where the junk email rule is disabled. The first command stores all user mailboxes in a variable. The second command parses through the mailboxes and returns the FQDN of the mailboxes where the junk email rule is disabled.
