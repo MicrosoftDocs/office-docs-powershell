@@ -32,7 +32,7 @@ Group policy assignment allows you to easily manage policies across different su
 Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 
 Group policy assignment is currently limited to the following policy types:
-CallingLineIdentity (Caller ID policies), OnlineVoiceRoutingPolicy (Voice Routing policies), TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
+CallingLineIdentity (Caller ID policies), TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
 
 ## EXAMPLES
 
@@ -104,6 +104,20 @@ Accept wildcard characters: False
 
 ### -PolicyType
 The type of the policy to be assigned.
+Possible values:
+- CallingLineIdentity
+- TeamsAppSetupPolicy
+- TeamsCallingPolicy
+- TeamsCallParkPolicy
+- TeamsChannelsPolicy
+- TeamsComplianceRecordingPolicy
+- TenantDialPlan
+- TeamsEducationAssignmentsAppPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMeetingPolicy
+- TeamsMessagingPolicy
+- TeamsShiftsPolicy
+- TeamsUpdateManagementPolicy
 
 ```yaml
 Type: String

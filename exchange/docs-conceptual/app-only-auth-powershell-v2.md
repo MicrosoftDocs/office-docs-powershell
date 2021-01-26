@@ -50,13 +50,16 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
 > [!TIP]
-> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+>
+> - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+>
+> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth#exchange).
 
 ## How does it work?
 
 The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
 
-## Setup app-only authentication
+## Set up app-only authentication
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
