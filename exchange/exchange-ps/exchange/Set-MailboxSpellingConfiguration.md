@@ -21,10 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-CheckBeforeSend <Boolean>]
+Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter>
+ [-CheckBeforeSend <Boolean>]
  [-Confirm]
  [-DictionaryLanguage <SpellCheckerSupportedLanguage>]
- [-DomainController <Fqdn>] [-IgnoreMixedDigits <Boolean>] [-IgnoreUppercase <Boolean>] [-WhatIf]
+ [-DomainController <Fqdn>]
+ [-IgnoreMixedDigits <Boolean>]
+ [-IgnoreUppercase <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

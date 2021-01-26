@@ -29,7 +29,8 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRig
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -38,22 +39,23 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipal
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Add-MailboxPermission -Instance <MailboxAcePresentationObject>
+Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-User <SecurityPrincipalIdParameter>]
  [-AutoMapping <Boolean>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
- [[-Identity] <MailboxIdParameter>]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,9 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter> [-AddReviewers <String[]>] [-Comment <String>]
- [-Confirm] [-Force] [-RemoveReviewers <String[]>] [-RetentionPeriodInDays <Int32>] [-Reviewers <String[]>]
- [-WhatIf] [<CommonParameters>]
+Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
+ [-AddReviewers <String[]>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Force]
+ [-RemoveReviewers <String[]>]
+ [-RetentionPeriodInDays <Int32>]
+ [-Reviewers <String[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

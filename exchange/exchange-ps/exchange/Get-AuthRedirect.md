@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuthRedirect [[-Identity] <AuthRedirectIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AuthRedirect [[-Identity] <AuthRedirectIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +49,22 @@ This example shows detailed information about the OAuth redirection object named
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the existing OAuth redirection object that you want to view. The object name uses the syntax `AuthRedirect-Bearer-GUID`.
+
+```yaml
+Type: AuthRedirectIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -60,22 +78,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the existing OAuth redirection object that you want to view. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>.
-
-```yaml
-Type: AuthRedirectIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RpcClientAccess [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-RpcClientAccess [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

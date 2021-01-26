@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Resume-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

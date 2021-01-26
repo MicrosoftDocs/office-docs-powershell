@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-OutboundConnector [-Identity] <OutboundConnectorIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -25,7 +25,8 @@ Add-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdPara
  [-Confirm]
  [-DomainController <Fqdn>]
  [-SkipDagValidation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

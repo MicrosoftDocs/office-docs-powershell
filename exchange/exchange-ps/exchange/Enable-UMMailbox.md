@@ -34,12 +34,14 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolic
  [-PINExpired <Boolean>]
  [-SIPResourceIdentifier <String>]
  [-ValidateOnly]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CloudVoiceMail
 ```
-Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
+Enable-UMMailbox [-Identity] <MailboxIdParameter>
+ [-EnableCloudVoiceMail]
  [-AutomaticSpeechRecognitionEnabled <Boolean>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -53,7 +55,8 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
  [-SIPResourceIdentifier <String>]
  [-UMMailboxPolicy <MailboxPolicyIdParameter>]
  [-ValidateOnly]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

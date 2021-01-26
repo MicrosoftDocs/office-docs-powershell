@@ -23,9 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AddressBookPolicy [-Identity] <MailboxPolicyIdParameter> [-AddressLists <AddressListIdParameter[]>]
- [-Confirm] [-DomainController <Fqdn>] [-GlobalAddressList <GlobalAddressListIdParameter>] [-Name <String>]
- [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-RoomList <AddressListIdParameter>] [-WhatIf]
+Set-AddressBookPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AddressLists <AddressListIdParameter[]>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-GlobalAddressList <GlobalAddressListIdParameter>]
+ [-Name <String>]
+ [-OfflineAddressBook <OfflineAddressBookIdParameter>]
+ [-RoomList <AddressListIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

@@ -24,14 +24,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
 Get-ManagedFolder [-Mailbox <MailboxIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

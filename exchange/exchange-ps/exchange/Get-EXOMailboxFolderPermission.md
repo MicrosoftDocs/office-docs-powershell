@@ -13,7 +13,7 @@ ms.reviewer: navgupta
 # Get-EXOMailboxFolderPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 Use the Get-ExOMailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
@@ -23,16 +23,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-EXOMailboxFolderPermission [[-Identity] <String>]
- [-User <String>]
- [-GroupMailbox]
  [-ExternalDirectoryObjectId <Guid>]
+ [-GroupMailbox]
+ [-PrimarySmtpAddress <String>]
+ [-User <String>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to retrieve folder level permission in the mailbox. 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you.
+Use this cmdlet to retrieve folder level permission in the mailbox.
 
 ## EXAMPLES
 
@@ -64,6 +64,8 @@ Otherwise, you can use any value that uniquely identifies the mailbox. For examp
 - LegacyExchangeDN
 - SamAccountName
 
+You can't use this parameter with the ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -78,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
@@ -109,6 +113,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -User
 The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
@@ -135,7 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String

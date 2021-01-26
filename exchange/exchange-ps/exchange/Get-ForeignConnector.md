@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ForeignConnector [[-Identity] <ForeignConnectorIdParameter>] [-DomainController <Fqdn>]
+Get-ForeignConnector [[-Identity] <ForeignConnectorIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

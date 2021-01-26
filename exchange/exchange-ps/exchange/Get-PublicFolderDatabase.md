@@ -26,7 +26,8 @@ Get-PublicFolderDatabase -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-IncludePreExchange2010]
  [-Status]
- [-IncludeCorrupted] [<CommonParameters>]
+ [-IncludeCorrupted]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -35,7 +36,8 @@ Get-PublicFolderDatabase [[-Identity] <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludePreExchange2010]
  [-Status]
- [-IncludeCorrupted] [<CommonParameters>]
+ [-IncludeCorrupted]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,8 +134,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 
 ### -IncludePreExchange2010
 This parameter is available or functional only in Exchange Server 2010.

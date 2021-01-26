@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SettingOverride [[-Identity] <SettingOverrideIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-SettingOverride [[-Identity] <SettingOverrideIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

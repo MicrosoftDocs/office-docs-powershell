@@ -40,9 +40,9 @@ Import-Module platyPS
 
 This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
 
-To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
+To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell, and the value is most likely `$Session`.
 
-If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell to connect, you can skip this step.
+If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step.
 
 ### Step 5: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
 
@@ -159,7 +159,10 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
    ![Open a pull request page](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
-> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
+>
+> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.
+>
+> The point is: click any green buttons that are presented to you until there are no more.
 
 ## Remove existing parameters from existing topics
 

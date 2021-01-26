@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DatabaseAvailabilityGroup [[-Identity] <DatabaseAvailabilityGroupIdParameter>] [-DomainController <Fqdn>]
- [-Status] [<CommonParameters>]
+Get-DatabaseAvailabilityGroup [[-Identity] <DatabaseAvailabilityGroupIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

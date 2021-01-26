@@ -26,7 +26,8 @@ Remove-PublicFolderMoveRequest [-Identity] <PublicFolderMoveRequestIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
@@ -34,7 +35,8 @@ Remove-PublicFolderMoveRequest [-Identity] <PublicFolderMoveRequestIdParameter>
 Remove-PublicFolderMoveRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

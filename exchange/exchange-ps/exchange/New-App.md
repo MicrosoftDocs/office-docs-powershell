@@ -22,7 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExtensionOfficeMarketplace
 ```
-New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
+New-App [-Etoken <String>]
+ [-Mailbox <MailboxIdParameter>]
+ [-MarketplaceCorrelationID <String>]
+ [-MarketplaceAssetID <String>]
+ [-MarketplaceQueryMarket <String>]
+ [-MarketplaceServicesUrl <String>]
+ [-MarketplaceUserProfileType <String>]
  [-AllowReadWriteMailbox]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
@@ -33,7 +39,8 @@ New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelat
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtensionFileData
@@ -50,7 +57,8 @@ New-App [-FileData <Byte[]>]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtensionFileStream
@@ -67,7 +75,8 @@ New-App [-FileStream <Stream>]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtensionPrivateURL
@@ -84,7 +93,8 @@ New-App [-Url <Uri>]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -245,7 +255,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 ```yaml
 Type: Byte[]
@@ -453,7 +463,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can use an organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
+The UserList parameter specifies who can use an organizational app. This parameter is limited to 1000 users. In the cloud-based service, this value is less relevant as Office Add-in management is moving to [Centralized Deployment](https://docs.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
+
+Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
 - Name
 - Alias
@@ -466,7 +478,7 @@ The UserList parameter specifies who can use an organizational app. Valid values
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You use this parameter with the OrganizationApp switch.
 

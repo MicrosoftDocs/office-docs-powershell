@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PublicFolder [-Name] <String> [-Confirm] [-DomainController <Fqdn>] [-EformsLocaleId <CultureInfo>]
- [-Path <PublicFolderIdParameter>] [-Server <ServerIdParameter>]
- [-WhatIf] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+New-PublicFolder [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EformsLocaleId <CultureInfo>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Path <PublicFolderIdParameter>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -130,6 +136,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Mailbox
+The Mailbox parameter specifies the hierarchy public folder mailbox where you want this public folder created. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Path
 The Path parameter specifies the location of the folder in the folder hierarchy, for example, \\Legal\\Cases.
 
@@ -179,33 +212,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Mailbox
-The Mailbox parameter specifies the hierarchy public folder mailbox where you want this public folder created. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

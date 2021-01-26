@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Stop-InformationBarrierPoliciesApplication [-Identity] <PolicyIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-JournalRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-JournalRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

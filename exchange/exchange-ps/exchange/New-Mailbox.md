@@ -55,7 +55,8 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesID
@@ -94,7 +95,8 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Arbitration
@@ -125,7 +127,8 @@ New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPri
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
@@ -154,7 +157,8 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuxAuditLog
@@ -183,7 +187,8 @@ New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DisabledUser
@@ -222,7 +227,8 @@ New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-Use
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Discovery
@@ -255,7 +261,8 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableRoomMailboxAccount
@@ -286,7 +293,8 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnli
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
@@ -321,7 +329,8 @@ New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrinc
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FederatedUser
@@ -348,7 +357,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <Remov
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### InactiveMailbox
@@ -386,7 +396,8 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <S
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Linked
@@ -424,12 +435,19 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedRoomMailbox
 ```
-New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom] [-Office <String>] [-Password <SecureString>] [-Phone <String>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
+ [-LinkedRoom]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-Phone <String>]
+ [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -462,7 +480,8 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesFederatedUser
@@ -488,7 +507,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Migration
@@ -519,7 +539,8 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
@@ -550,7 +571,8 @@ New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFro
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
@@ -589,7 +611,8 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemovedMailbox
@@ -627,7 +650,8 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Passw
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
@@ -666,7 +690,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int3
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Scheduling
@@ -697,7 +722,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <Str
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
@@ -732,7 +758,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -742,7 +769,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
+$password = Read-Host "Enter password" -AsSecureString
+New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user Chris Ashton in Active Directory and creates a mailbox for the user. The mailbox is located on Mailbox Database 1. The password must be reset at the next logon. To set the initial value of the password, this example creates a variable ($password), prompts you to enter a password, and assigns that password to the variable as a SecureString object.
@@ -763,7 +791,9 @@ This example creates an enabled user account in Active Directory and a room mail
 
 ### Example 4
 ```powershell
-New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales; Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG; Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
+New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales
+Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG
+Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
 This example creates the shared mailbox "Sales Department" and grants Full Access and Send on Behalf permissions for the security group "MarketingSG". Users who are members of the security group will be granted the permissions to the mailbox.
@@ -1204,7 +1234,7 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
 
 ```yaml
 Type: String
@@ -1281,9 +1311,9 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
@@ -1666,7 +1696,11 @@ Accept wildcard characters: False
 ### -MailboxRegion
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The MailboxRegion parameter specifies the geo location for the mailbox in multi-geo environments.
+
+To see the list of configured geo locations in Microsoft 365 Multi-Geo, run the following command: `Get-OrganizationConfig | Select -ExpandProperty AllowedMailboxRegions | Format-Table`. To view your central geo location, run the following command: `Get-OrganizationConfig | Select DefaultMailboxRegion`.
+
+ For more information, see [Administering Exchange Online mailboxes in a multi-geo environment](https://docs.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo).
 
 ```yaml
 Type: String
@@ -1729,7 +1763,7 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -1994,7 +2028,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String

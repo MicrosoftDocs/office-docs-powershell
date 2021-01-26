@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

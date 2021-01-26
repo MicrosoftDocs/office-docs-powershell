@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RMSTrustedPublishingDomain [[-Identity] <RmsTrustedPublishingDomainIdParameter>] [-Default] [<CommonParameters>]
+Get-RMSTrustedPublishingDomain [[-Identity] <RmsTrustedPublishingDomainIdParameter>]
+ [-Default]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

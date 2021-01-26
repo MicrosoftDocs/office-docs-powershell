@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-JournalRuleCollection [-FileData] <Byte[]> [[-Identity] <RuleIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Import-JournalRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +43,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0; Import-JournalRuleCollection -FileData $Data
+[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0
+Import-JournalRuleCollection -FileData $Data
 ```
 
 This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.
@@ -49,10 +53,26 @@ The first step retrieves journal rules from the previously exported XML file Exp
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of a journal rule to be imported.
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -FileData
 The FileData parameter specifies the variable name that contains the content of the XML file.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 ```yaml
 Type: Byte[]
@@ -99,22 +119,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of a journal rule to be imported.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

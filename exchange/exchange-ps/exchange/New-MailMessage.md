@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter> [-BodyFormat <MailBodyFormat>]
- [-Confirm] [-DomainController <Fqdn>] [-Subject <String>] [-WhatIf] [<CommonParameters>]
+New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter>
+ [-BodyFormat <MailBodyFormat>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Subject <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

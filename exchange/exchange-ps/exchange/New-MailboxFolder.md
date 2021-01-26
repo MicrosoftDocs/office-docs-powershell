@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MailboxFolder [-Name] <String> -Parent <MailboxFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+New-MailboxFolder [-Name] <String> -Parent <MailboxFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,24 +37,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-MailboxFolder -Parent Tony:\Inbox -Name Personal
-```
-
-This example creates the folder Personal under the Inbox folder of Tony's mailbox.
-
-### Example 2
-```powershell
-New-MailboxFolder -Parent Tony -Name Personal
-```
-
-This example creates the folder Personal in the root folder hierarchy of Tony's mailbox.
-
-### Example 3
-```powershell
 New-MailboxFolder -Parent :\Inbox -Name Personal
 ```
 
-This example creates the folder Personal under the Inbox folder in the mailbox for Tony who's running the command.
+This example creates the folder named Personal under the Inbox folder of your own mailbox.
+
+### Example 2
+```powershell
+New-MailboxFolder -Parent :\ -Name Personal
+```
+
+This example creates the folder named Personal in the root folder hierarchy of your own mailbox.
 
 ## PARAMETERS
 
@@ -72,7 +68,11 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-The Parent parameter specifies where to create the new mailbox folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
+The Parent parameter specifies where to create the new mailbox folder. The syntax is `[MailboxID]:\[ParentFolder][\SubFolder]`.
+
+You can only run this cmdlet on your own mailbox, so you don't need to (or can't) specify a `MailboxID` value.
+
+To specify the root folder hierarchy of your own mailbox, use the value `:\`.
 
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 

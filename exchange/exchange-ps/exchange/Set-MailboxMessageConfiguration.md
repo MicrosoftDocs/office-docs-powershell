@@ -23,26 +23,48 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-AfterMoveOrDeleteBehavior <AfterMoveOrDeleteBehavior>]
- [-AlwaysShowBcc <Boolean>] [-AlwaysShowFrom <Boolean>] [-AutoAddSignature <Boolean>]
+ [-AlwaysShowBcc <Boolean>]
+ [-AlwaysShowFrom <Boolean>]
+ [-AutoAddSignature <Boolean>]
+ [-AutoAddSignatureOnMobile <Boolean>]
+ [-AutoAddSignatureOnReply <Boolean>]
+ [-CheckForForgottenAttachments <Boolean>]
  [-Confirm]
  [-ConversationSortOrder <ConversationSortOrder>]
- [-DefaultFontColor <String>] [-DefaultFontFlags <FontFlags>]
- [-DefaultFontName <String>] [-DefaultFontSize <Int32>] [-DefaultFormat <MailFormat>]
- [-DomainController <Fqdn>] [-EmptyDeletedItemsOnLogoff <Boolean>] [-HideDeletedItems <Boolean>]
- [-IgnoreDefaultScope] [-NewItemNotification <NewItemNotification>]
- [-PreviewMarkAsReadBehavior <PreviewMarkAsReadBehavior>] [-PreviewMarkAsReadDelaytime <Int32>]
- [-ReadReceiptResponse <ReadReceiptResponse>] [-SendAddressDefault <String>]
- [-ShowConversationAsTree <Boolean>] [-SignatureHtml <String>] [-SignatureText <String>] [-WhatIf]
- [-AutoAddSignatureOnMobile <Boolean>] [-CheckForForgottenAttachments <Boolean>]
- [-EmailComposeMode <EmailComposeMode>] [-SignatureTextOnMobile <String>]
- [-UseDefaultSignatureOnMobile <Boolean>] [-AutoAddSignatureOnReply <Boolean>]
- [-GlobalReadingPanePosition <MailReadingPanePosition>] [-IsFavoritesFolderTreeCollapsed <Boolean>]
- [-IsMailRootFolderTreeCollapsed <Boolean>] [-IsReplyAllTheDefaultResponse <Boolean>]
- [-LinkPreviewEnabled <Boolean>] [-MailFolderPaneExpanded <Boolean>]
+ [-DefaultFontColor <String>]
+ [-DefaultFontFlags <FontFlags>]
+ [-DefaultFontName <String>]
+ [-DefaultFontSize <Int32>]
+ [-DefaultFormat <MailFormat>]
+ [-DomainController <Fqdn>]
+ [-EmailComposeMode <EmailComposeMode>]
+ [-EmptyDeletedItemsOnLogoff <Boolean>]
+ [-GlobalReadingPanePosition <MailReadingPanePosition>]
+ [-HideDeletedItems <Boolean>]
+ [-IgnoreDefaultScope]
+ [-IsFavoritesFolderTreeCollapsed <Boolean>]
+ [-IsMailRootFolderTreeCollapsed <Boolean>]
+ [-IsReplyAllTheDefaultResponse <Boolean>]
+ [-LinkPreviewEnabled <Boolean>]
+ [-MailFolderPaneExpanded <Boolean>]
  [-NavigationPaneViewOption <NavigationPaneView>]
- [-PreferAccessibleContent <Boolean>] [-ShowPreviewTextInListView <Boolean>]
- [-ShowReadingPaneOnFirstLoad <Boolean>] [-ShowSenderOnTopInListView <Boolean>]
- [-ShowUpNext <Boolean>] [<CommonParameters>]
+ [-NewItemNotification <NewItemNotification>]
+ [-PreferAccessibleContent <Boolean>]
+ [-PreviewMarkAsReadBehavior <PreviewMarkAsReadBehavior>]
+ [-PreviewMarkAsReadDelaytime <Int32>]
+ [-ReadReceiptResponse <ReadReceiptResponse>]
+ [-SendAddressDefault <String>]
+ [-ShowConversationAsTree <Boolean>]
+ [-ShowPreviewTextInListView <Boolean>]
+ [-ShowReadingPaneOnFirstLoad <Boolean>]
+ [-ShowSenderOnTopInListView <Boolean>]
+ [-ShowUpNext <Boolean>]
+ [-SignatureHtml <String>]
+ [-SignatureText <String>]
+ [-SignatureTextOnMobile <String>]
+ [-UseDefaultSignatureOnMobile <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -166,6 +188,65 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoAddSignatureOnMobile
+The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
+
+Valid input for this parameter is $true or $false. The default value is $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoAddSignatureOnReply
+The AutoAddSignature parameter specifies whether to automatically add signatures to reply email messages created in Outlook on the web. Valid values are:
+
+- $true: Email signatures are automatically added to reply messages.
+- $false: Email signatures aren't automatically added to reply messages.
+
+The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckForForgottenAttachments
+The CheckForForgottenAttachments parameter shows or hides the attachment warning prompt when the user creates messages in Outlook on the web.
+
+Valid input for this parameter is $true or $false. The default value is $true.
+
+For example, the user creates a message that includes the text "Please see the attached Word document", but the user doesn't attach a file, and clicks Send. If this value is set to $true, the user gets a warning prompt so they can go back to the message and attach a file. If this value is set to $false, the user doesn't get the warning prompt.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -331,6 +412,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EmailComposeMode
+The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
+
+- Inline: New messages and replies are created in the preview pane. This is the default value.
+- SeparateForm: New messages and replies are created in a new browser window.
+
+```yaml
+Type: EmailComposeMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EmptyDeletedItemsOnLogoff
 The EmptyDeletedItemsOnLogoff parameter specifies whether to delete items from the Deleted Items folder when the user logs out of Outlook on the web.
 
@@ -341,6 +441,26 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GlobalReadingPanePosition
+The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
+
+- Off
+- Bottom
+- Right (This is the default value)
+
+```yaml
+Type: MailReadingPanePosition
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -380,330 +500,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NewItemNotification
-The NewItemNotification parameter specifies how to provide notification for the arrival of new items for the user in Outlook on the web. You can use the following values:
-
-- Sound
-- EMailToast
-- VoiceMailToast
-- FaxToast
-- None
-- All
-
-The default value is All.
-
-```yaml
-Type: NewItemNotification
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreviewMarkAsReadBehavior
-The PreviewMarkAsReadBehavior parameter specifies the options for marking an item as Read in the reading pane for the user in Outlook on the web. You can use the following values:
-
-- Delayed: This value uses the delay interval specified by the PreviewMarkAsReadDelaytime parameter.
-- OnSelectionChange
-- Never
-
-The default value is OnSelectionChange.
-
-```yaml
-Type: PreviewMarkAsReadBehavior
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreviewMarkAsReadDelaytime
-The PreviewMarkAsReadDelaytime parameter specifies the time in seconds to wait before marking an item as Read for the user in Outlook on the web.
-
-Valid input for this parameter is an integer between 0 and 30. The default value is 5 seconds.
-
-This parameter is meaningful only if you set the PreviewMarkAsReadBehavior parameter to the value Delayed.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReadReceiptResponse
-The ReadReceiptResponse parameter specifies how to respond to requests for read receipts for the user in Outlook on the web. You can use the following values:
-
-- DoNotAutomaticallySend
-- AlwaysSend
-- NeverSend
-
-The default value is DoNotAutomaticallySend.
-
-```yaml
-Type: ReadReceiptResponse
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SendAddressDefault
-This parameter is available only in the cloud-based service.
-
-The SendAddressDefault parameter specifies the default From email address when the user has POP, IMAP, or Hotmail subscriptions configured on their mailbox. Users can override the default From address when they create an email message in Outlook on the web.
-
-You can use one of the following values:
-
-- Blank, which is represented by the value $null. This indicates no default From address is specified.
-- The user's primary email address. For example, bob@contoso.com.
-- The GUID of a POP, IMAP, or Hotmail subscription that's configured on the user's mailbox.
-
-By default, no default From address is specified on the mailbox. When no default From address is specified, the default behavior is:
-
-- The primary email address on the mailbox is used for all new messages.
-- The To address of the incoming message is used as the From address for all replies or forwarded messages.
-
-You can find the available values for SendAddressDefault on a mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowConversationAsTree
-The ShowConversationAsTree parameter specifies how to sort messages in the list view in an expanded conversation for the user in Outlook on the web.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SignatureHtml
-The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
-
-To automatically add this email signature to HTML-formatted messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to $true.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SignatureText
-The SignatureText parameter specifies the email signature that's available to the user in plain text messages in Outlook on the web. This parameter supports all Unicode characters.
-
-To automatically add the email signature to plain text messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to the value $true.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoAddSignatureOnMobile
-The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CheckForForgottenAttachments
-The CheckForForgottenAttachments parameter shows or hides the attachment warning prompt when the user creates messages in Outlook on the web.
-
-Valid input for this parameter is $true or $false. The default value is $true.
-
-For example, the user creates a message that includes the text "Please see the attached Word document", but the user doesn't attach a file, and clicks Send. If this value is set to $true, the user gets a warning prompt so they can go back to the message and attach a file. If this value is set to $false, the user doesn't get the warning prompt.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmailComposeMode
-The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
-
-- Inline: New messages and replies are created in the preview pane. This is the default value.
-- SeparateForm: New messages and replies are created in a new browser window.
-
-```yaml
-Type: EmailComposeMode
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SignatureTextOnMobile
-The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
-
-To automatically add the email signature to messages created by the user in Outlook on the web for devices, the AutoAddSignatureOnMobile parameter must be set to the value $true.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseDefaultSignatureOnMobile
-The UseDefaultSignatureOnMobile parameter specifies whether to add the default email signature to messages created by the user in Outlook on the web for devices. The user configures the default signature in Outlook.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoAddSignatureOnReply
-The AutoAddSignature parameter specifies whether to automatically add signatures to reply email messages created in Outlook on the web. Valid values are:
-
-- $true: Email signatures are automatically added to reply messages.
-- $false: Email signatures aren't automatically added to reply messages.
-
-The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalReadingPanePosition
-The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
-
-- Off
-- Bottom
-- Right (This is the default value)
-
-```yaml
-Type: MailReadingPanePosition
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -831,6 +627,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NewItemNotification
+The NewItemNotification parameter specifies how to provide notification for the arrival of new items for the user in Outlook on the web. You can use the following values:
+
+- Sound
+- EMailToast
+- VoiceMailToast
+- FaxToast
+- None
+- All
+
+The default value is All.
+
+```yaml
+Type: NewItemNotification
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreferAccessibleContent
 The PreferAccessibleContent parameter specifies whether to prefer accessible content in Outlook on the web. Valid values are:
 
@@ -842,6 +663,119 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewMarkAsReadBehavior
+The PreviewMarkAsReadBehavior parameter specifies the options for marking an item as Read in the reading pane for the user in Outlook on the web. You can use the following values:
+
+- Delayed: This value uses the delay interval specified by the PreviewMarkAsReadDelaytime parameter.
+- OnSelectionChange
+- Never
+
+The default value is OnSelectionChange.
+
+```yaml
+Type: PreviewMarkAsReadBehavior
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewMarkAsReadDelaytime
+The PreviewMarkAsReadDelaytime parameter specifies the time in seconds to wait before marking an item as Read for the user in Outlook on the web.
+
+Valid input for this parameter is an integer between 0 and 30. The default value is 5 seconds.
+
+This parameter is meaningful only if you set the PreviewMarkAsReadBehavior parameter to the value Delayed.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadReceiptResponse
+The ReadReceiptResponse parameter specifies how to respond to requests for read receipts for the user in Outlook on the web. You can use the following values:
+
+- DoNotAutomaticallySend
+- AlwaysSend
+- NeverSend
+
+The default value is DoNotAutomaticallySend.
+
+```yaml
+Type: ReadReceiptResponse
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendAddressDefault
+This parameter is available only in the cloud-based service.
+
+The SendAddressDefault parameter specifies the default From email address when the user has POP, IMAP, or Hotmail subscriptions configured on their mailbox. Users can override the default From address when they create an email message in Outlook on the web.
+
+You can use one of the following values:
+
+- Blank, which is represented by the value $null. This indicates no default From address is specified.
+- The user's primary email address. For example, bob@contoso.com.
+- The GUID of a POP, IMAP, or Hotmail subscription that's configured on the user's mailbox.
+
+By default, no default From address is specified on the mailbox. When no default From address is specified, the default behavior is:
+
+- The primary email address on the mailbox is used for all new messages.
+- The To address of the incoming message is used as the From address for all replies or forwarded messages.
+
+You can find the available values for SendAddressDefault on a mailbox by running the command `Get-SendAddress -Mailbox <MailboxIdentity>`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowConversationAsTree
+The ShowConversationAsTree parameter specifies how to sort messages in the list view in an expanded conversation for the user in Outlook on the web.
+
+Valid input for this parameter is $true or $false. The default value is $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -918,6 +852,94 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureHtml
+The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
+
+To automatically add this email signature to HTML-formatted messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to $true.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureText
+The SignatureText parameter specifies the email signature that's available to the user in plain text messages in Outlook on the web. This parameter supports all Unicode characters.
+
+To automatically add the email signature to plain text messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to the value $true.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureTextOnMobile
+The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
+
+To automatically add the email signature to messages created by the user in Outlook on the web for devices, the AutoAddSignatureOnMobile parameter must be set to the value $true.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseDefaultSignatureOnMobile
+The UseDefaultSignatureOnMobile parameter specifies whether to add the default email signature to messages created by the user in Outlook on the web for devices. The user configures the default signature in Outlook.
+
+Valid input for this parameter is $true or $false. The default value is $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

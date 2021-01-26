@@ -22,32 +22,41 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AuthMetadataUrl
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
+Set-AuthServer [-Identity] <AuthServerIdParameter>
+ [-AuthMetadataUrl <String>]
+ [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### NativeClientAuthServer
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <Boolean>] [-TrustAnySSLCertificate]
+Set-AuthServer [-Identity] <AuthServerIdParameter>
+ [-AuthMetadataUrl <String>]
+ [-IsDefaultAuthorizationEndpoint <Boolean>]
+ [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshAuthMetadata
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-RefreshAuthMetadata]
+Set-AuthServer [-Identity] <AuthServerIdParameter>
+ [-RefreshAuthMetadata]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

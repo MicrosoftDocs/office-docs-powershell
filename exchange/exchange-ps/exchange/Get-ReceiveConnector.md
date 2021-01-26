@@ -23,13 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Get-ReceiveConnector [[-Identity] <ReceiveConnectorIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
 Get-ReceiveConnector [-Server <ServerIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +81,7 @@ The Identity parameter specifies the Receive connector that you want to view. Yo
 - Name
 - Distinguished name (DN)
 - GUID
-- \<ServerName\>\\\<Name\>
+- ServerName\\Name
 
 You can't use this parameter with the Server parameter.
 

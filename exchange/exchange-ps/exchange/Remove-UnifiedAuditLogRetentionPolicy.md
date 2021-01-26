@@ -25,7 +25,8 @@ Remove-UnifiedAuditLogRetentionPolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ForceDeletion]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +36,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-Remove-UnifiedAuditLogRetentionPolicy -Identity "SearchQueryPerformed by app@sharepoint" 
+Remove-UnifiedAuditLogRetentionPolicy -Identity "SearchQueryPerformed by app@sharepoint"
 ```
 
 This example deletes the audit log retention policy named "SearchQueryPerformed by app@sharepoint".

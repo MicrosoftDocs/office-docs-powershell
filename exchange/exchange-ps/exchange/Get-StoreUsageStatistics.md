@@ -22,23 +22,29 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Database
 ```
-Get-StoreUsageStatistics -Database <DatabaseIdParameter> [-CopyOnServer <ServerIdParameter>]
+Get-StoreUsageStatistics -Database <DatabaseIdParameter>
+ [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
- [-Filter <String>] [<CommonParameters>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-StoreUsageStatistics [-Identity] <GeneralMailboxIdParameter> [-CopyOnServer <ServerIdParameter>]
+Get-StoreUsageStatistics [-Identity] <GeneralMailboxIdParameter>
+ [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
- [-Filter <String>] [<CommonParameters>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Get-StoreUsageStatistics -Server <ServerIdParameter> [-IncludePassive]
+Get-StoreUsageStatistics -Server <ServerIdParameter>
+ [-IncludePassive]
  [-DomainController <Fqdn>]
- [-Filter <String>] [<CommonParameters>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,9 +23,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailTrafficSummaryReport [-Category <String>] [-DlpPolicy <MultiValuedProperty>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-Expression <Expression>] [-Page <Int32>]
- [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [-TransportRule <MultiValuedProperty>]
+Get-MailTrafficSummaryReport [-Category <String>]
+ [-DlpPolicy <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-TransportRule <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 

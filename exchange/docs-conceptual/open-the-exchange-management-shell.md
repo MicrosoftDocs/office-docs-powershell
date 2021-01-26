@@ -44,7 +44,7 @@ When you open the Exchange Management Shell you can perform administrative tasks
   ```dos
   exshell.psc1 & exchange.ps1
   ```
-  
+
 ## Open the Exchange Management Shell in Windows Server 2016 or Windows 10
 
 Click **Start** > **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.

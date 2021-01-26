@@ -35,7 +35,8 @@ Set-MailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-RetainDeletedItemsFor <EnhancedTimeSpan>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

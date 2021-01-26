@@ -22,20 +22,33 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ConnectionSettingsFilter
 ```
-Get-MigrationEndpoint -ConnectionSettings <ExchangeConnectionSettings> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-MigrationEndpoint -ConnectionSettings <ExchangeConnectionSettings>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### TypeFilter
 ```
-Get-MigrationEndpoint -Type <MigrationType> [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [-DiagnosticInfo <String>] [<CommonParameters>]
+Get-MigrationEndpoint -Type <MigrationType>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-DiagnosticInfo <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MigrationEndpoint [[-Identity] <MigrationEndpointIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [-DiagnosticInfo <String>] [<CommonParameters>]
+Get-MigrationEndpoint [[-Identity] <MigrationEndpointIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-DiagnosticInfo <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

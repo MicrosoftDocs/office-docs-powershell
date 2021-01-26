@@ -23,7 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-PushNotificationProxy [-Confirm] [-Organization <String>] [-Uri <String>] [-WhatIf] [<CommonParameters>]
+Enable-PushNotificationProxy [-Confirm]
+ [-Organization <String>]
+ [-Uri <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

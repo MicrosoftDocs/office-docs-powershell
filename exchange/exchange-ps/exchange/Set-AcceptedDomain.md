@@ -21,13 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter> [-AddressBookEnabled <Boolean>]
- [-Confirm] [-DomainController <Fqdn>]
+Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter>
+ [-AddressBookEnabled <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-DomainType <AcceptedDomainType>]
- [-MakeDefault <Boolean>] [-Name <String>]
- [-OutboundOnly <Boolean>] [-PendingRemoval <Boolean>] [-WhatIf]
- [-EnableNego2Authentication <Boolean>] [-MatchSubDomains <Boolean>]
- [-PendingCompletion <Boolean>] [<CommonParameters>]
+ [-EnableNego2Authentication <Boolean>]
+ [-MakeDefault <Boolean>]
+ [-MatchSubDomains <Boolean>]
+ [-Name <String>]
+ [-OutboundOnly <Boolean>]
+ [-PendingCompletion <Boolean>]
+ [-PendingRemoval <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,15 +135,29 @@ The DomainType parameter specifies the accepted domain type. Valid values are:
 - InternalRelay: This is a type of non-authoritative domain. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's under your control. The external messaging system is responsible for generating NDRs for unresolved recipients. Use this value to treat messages that are sent to the domain as internal messages.
 - ExternalRelay: This is a type of non-authoritative domain that's available only in on-premises Exchange organizations. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's completely outside of your control. The external messaging system is responsible for generating NDRs for unresolved recipients.
 
-Note:
-
-For the value InternalRelay or ExternalRelay you typically use mail users or mail contacts to relay the messages to the external messaging system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
+**Note**: For the value InternalRelay or ExternalRelay, you typically use mail users or mail contacts to relay the messages to the external messaging system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
 
 ```yaml
 Type: AcceptedDomainType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNego2Authentication
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -162,6 +183,22 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MatchSubDomains
+The MatchSubDomains parameter enables mail to be sent by and received from users on any subdomain of this accepted domain. The default value is $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -208,6 +245,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PendingCompletion
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PendingRemoval
 This parameter is reserved for internal Microsoft use.
 
@@ -232,54 +285,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableNego2Authentication
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MatchSubDomains
-The MatchSubDomains parameter enables mail to be sent by and received from users on any subdomain of this accepted domain. The default value is $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PendingCompletion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

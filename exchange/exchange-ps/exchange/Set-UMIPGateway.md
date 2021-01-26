@@ -34,7 +34,8 @@ Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter>
  [-Port <Int32>]
  [-Simulator <Boolean>]
  [-Status <GatewayStatus>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

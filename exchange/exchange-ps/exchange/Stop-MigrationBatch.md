@@ -25,7 +25,8 @@ Stop-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

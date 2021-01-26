@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Move-AddressList [-Identity] <AddressListIdParameter> -Target <AddressListIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Move-AddressList [-Identity] <AddressListIdParameter> -Target <AddressListIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +48,7 @@ The Identity parameter specifies the address list that you want to move. You can
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 ```yaml
 Type: AddressListIdParameter
@@ -66,7 +69,7 @@ The Container parameter specifies where to move the address list. Valid input fo
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `"\AddressListName"` or `"\ContainerName\AddressListName"` (for example, `"\All Users"` or `"\All Contacts\Marketing"`)
 
 ```yaml
 Type: AddressListIdParameter

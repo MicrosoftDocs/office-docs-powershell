@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AntiPhishRule [-Identity] <RuleIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-AntiPhishRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

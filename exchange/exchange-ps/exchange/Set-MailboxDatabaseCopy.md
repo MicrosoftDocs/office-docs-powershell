@@ -29,7 +29,8 @@ Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
  [-ReplayLagMaxDelay <EnhancedTimeSpan>]
  [-ReplayLagTime <EnhancedTimeSpan>]
  [-TruncationLagTime <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

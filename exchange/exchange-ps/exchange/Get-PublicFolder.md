@@ -22,24 +22,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-GetChildren]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-GetChildren]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-Recurse]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-Recurse]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### LostAndFound
@@ -49,7 +53,8 @@ Get-PublicFolder [-LostAndFound]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -59,7 +64,8 @@ Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -166,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
+The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
 
 ```yaml
 Type: PublicFolderIdParameter

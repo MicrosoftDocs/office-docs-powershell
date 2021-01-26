@@ -22,11 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-MoveRequest [-Identity] <MoveRequestIdParameter> [-Force]
+Remove-MoveRequest [-Identity] <MoveRequestIdParameter>
+ [-Force]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ProxyToMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MigrationMoveRequestQueue
@@ -35,7 +37,8 @@ Remove-MoveRequest -MailboxGuid <Guid> -MoveRequestQueue <DatabaseIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ProxyToMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

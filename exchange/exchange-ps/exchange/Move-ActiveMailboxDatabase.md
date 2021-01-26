@@ -35,7 +35,8 @@ Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParamete
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -53,12 +54,14 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>] [-MoveAllDatabasesOrNone]
+Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
+ [-MoveAllDatabasesOrNone]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -71,12 +74,14 @@ Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnSer
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SkipAllChecks
 ```
-Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter> [-SkipAllChecks]
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter>
+ [-SkipAllChecks]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -89,7 +94,8 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer]
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -195,6 +201,22 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ActivateOnServer
+The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
+
+```yaml
+Type: MailboxServerIdParameter
+Parameter Sets: Identity, Server
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -SkipAllChecks
 The SkipAllChecks switch specifies whether to skip all checks. You don't need to specify a value with this switch.
 
@@ -212,22 +234,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActivateOnServer
-The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
-
-```yaml
-Type: MailboxServerIdParameter
-Parameter Sets: Identity, Server
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -323,7 +329,7 @@ Accept wildcard characters: False
 ### -SkipActiveCopyChecks
 The SkipActiveCopyChecks switch specifies whether to skip checking the current active copy to see if it's currently a seeding source for any passive databases. You don't need to specify a value with this switch.
 
-Note: When you use this switch, you can move a database that's currently a seeding source, which cancels the seed operation.
+**Note**: When you use this switch, you can move a database that's currently a seeding source, which cancels the seed operation.
 
 ```yaml
 Type: SwitchParameter

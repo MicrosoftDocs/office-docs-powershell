@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Export
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
+New-ComplianceSearchAction [-SearchName] <String[]>
+ [-Export]
  [-ActionName <String>]
  [-ArchiveFormat <ComplianceExportArchiveFormat>]
  [-Confirm]
@@ -46,29 +47,35 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
  [-SearchNames <String[]>]
  [-SharePointArchiveFormat <ComplianceExportArchiveFormat>]
  [-Version <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Preview
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Preview]
+New-ComplianceSearchAction [-SearchName] <String[]>
+ [-Preview]
  [-ActionName <String>]
  [-Confirm]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
- [-IncludeCredential] [-JobOptions <Int32>]
+ [-IncludeCredential]
+ [-JobOptions <Int32>]
  [-ReferenceActionName <String>]
  [-Region <String>]
  [-RetryOnError]
  [-Scenario <ComplianceSearchActionScenario>]
  [-SearchNames <String[]>]
  [-Version <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Purge
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Purge] [-PurgeType <ComplianceDestroyType>]
+New-ComplianceSearchAction [-SearchName] <String[]>
+ [-Purge]
+ [-PurgeType <ComplianceDestroyType>]
  [-ActionName <String>]
  [-Confirm]
  [-Force]
@@ -81,7 +88,8 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Purge] [-PurgeType <Compli
  [-Scenario <ComplianceSearchActionScenario>]
  [-SearchNames <String[]>]
  [-Version <String>]
- [-WhatIf]] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -445,7 +453,7 @@ Accept wildcard characters: False
 ### -Purge
 The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
 
-Notes:
+**Notes**:
 
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 - You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see [Search for and delete email messages in your Microsoft 365 organization](https://docs.microsoft.com/microsoft-365/compliance/search-for-and-delete-messages-in-your-organization).

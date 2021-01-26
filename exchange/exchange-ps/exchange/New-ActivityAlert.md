@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AnomalousOperationAuditAlert
 ```
-New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Type <AlertType>
+New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
+ [-Operation <MultiValuedProperty>]
  [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
@@ -34,12 +35,14 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-ScopeLevel <AlertScopeLevel>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SimpleAggregationAuditAlert
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+ [-Operation <MultiValuedProperty>]
  [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
@@ -51,12 +54,14 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-ScopeLevel <AlertScopeLevel>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty>
+ [-Type <AlertType>]
  [-Category <AlertRuleCategory>]
  [-Confirm]
  [-Description <String>]
@@ -66,7 +71,8 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
  [-RecordType <AuditRecordType>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,7 +131,7 @@ Accept wildcard characters: False
 ### -NotifyUser
 The NotifyUser parameter specifies the email addressesfor notification messages. You can specify internal and external email addresses.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -219,7 +225,7 @@ The Type parameter specifies the type alert. Valid values are:
 - SimpleAggregation: An alert is created based on the activities defined by the Operation and Condition parameters, the number of activities specified by the Threshold parameter, and the time period specified by the TimeWindow parameter.
 - AnomalousAggregation: An alert is created based the activities defined by the Operation and Condition parameters, and the number of activities specified by the Multiplier parameter.
 
-Note: You can't change the Type value in an existing activity alert.
+**Note**: You can't change the Type value in an existing activity alert.
 
 ```yaml
 Type: AlertType
@@ -375,39 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert. Valid values are:
-
-- AeD
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- CRM
-- DataCenterSecurityCmdlet
-- Discovery
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemGroup
-- MicrosoftTeams
-- OneDrive
-- PowerBIAudit
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointFileOperation
-- SharePointListOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- WorkplaceAnalytics
-- Yammer
+The RecordType parameter specifies a record type label for the activity alert. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 

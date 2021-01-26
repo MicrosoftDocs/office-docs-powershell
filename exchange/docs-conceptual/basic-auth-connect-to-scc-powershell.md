@@ -23,15 +23,15 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
 > [!NOTE]
 > The procedures in this topic won't work if:
-> 
+>
 > - Your account uses multi-factor authentication (MFA).
-> 
+>
 > - Your organization uses federated authentication.
-> 
+>
 > - A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs.
-> 
+>
 > In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
-> 
+>
 > Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 ## What do you need to know before you begin?
@@ -133,7 +133,7 @@ If you receive errors, check the following requirements:
 
 - Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security & Compliance Center.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to the Security & Compliance Center.
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
