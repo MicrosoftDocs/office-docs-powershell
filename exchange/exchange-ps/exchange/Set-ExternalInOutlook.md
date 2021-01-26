@@ -30,7 +30,7 @@ Set-ExternalInOutlook [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-If your organization already uses mail flow rules (also known as transport rules) to add text to the subject line of messages from external senders, you should disable those rules before you enable this feature.
+If your organization already uses mail flow rules (also known as transport rules) to add text to the subject line of messages from external senders, you should disable those rules before you enable this feature to avoid duplication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowList
-The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive the External icon in area of the subject line. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
+The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
