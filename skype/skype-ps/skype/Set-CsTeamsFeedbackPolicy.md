@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsfeedbackpolicy
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsfeedbackpolicy
 applicable: Skype for Business Online
-title: New-CsTeamsFeedbackPolicy
+title: Set-CsTeamsFeedbackPolicy
 schema: 2.0.0
 manager: bulenteg
 ms.author: tomkau
@@ -10,29 +10,30 @@ author: tomkau
 ms.reviewer:
 ---
 
-# New-CsTeamsFeedbackPolicy
+# Set-CsTeamsFeedbackPolicy
 
 ## SYNOPSIS
-Use this cmdlet to control whether users in your organization can send feedback about Teams to Microsoft through Give feedback and whether they receive the survey.
+
+Use this cmdlet to modify a Teams feedback policy.
 
 ## SYNTAX
 
 ```
-New-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
- [-UserInitiatedMode <String>] [-ReceiveSurveysMode <String>] [-Force]
+Set-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
+ [-ReceiveSurveysMode <String>] [-UserInitiatedMode <String>] [-Force] [-Instance <Object>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to control whether users in your organization can send feedback about Teams to Microsoft through Give feedback and whether they receive the survey. By default, all users in your organization are automatically assigned the global (Org-wide default) policy and the Give feedback feature and survey are enabled in the policy. The exception is Teams for Education, where the features are enabled for teachers and disabled for students. For more information, visit [Manage feedback policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/manage-feedback-policies-in-teams).
+Modifies a Teams feedback policy.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsFeedbackPolicy -identity "New Hire Feedback Policy" -userInitiatedMode disabled -receiveSurveysMode disabled
+PS C:\> Set-CsTeamsFeedbackPolicy -identity "New Hire Feedback Policy" -userInitiatedMode enabled -receiveSurveysMode disabled
 ```
 
-In this example, we create a feedback policy called New Hire Feedback Policy and we turn off the ability to give feedback through Give feedback and the survey.
+In this example, the policy "New Hire Feedback Policy" is modified, sets the userInitiatedMode parameter to enabled and the receiveSurveysMode parameter to disabled.
 
 ## PARAMETERS
 
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Suppress all non-fatal errors.
+Suppresses any confirmation prompts that would otherwise be displayed before making changes and suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-A unique identifier.
+The unique identifier of the policy.
 
 ```yaml
 Type: Object
@@ -81,11 +82,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InMemory
-The InMemory parameter creates an object reference without actually committing the object as a permanent change.
+### -Instance
+Internal Microsoft use.
 
 ```yaml
-Type: SwitchParameter
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -102,7 +103,6 @@ Set the receiveSurveysMode parameter to enabled to allow users who are assigned 
 Possible values:
  - Enabled
  - Disabled
- - EnabledUserOverride
 
 ```yaml
 Type: String
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Internal Microsoft use only.
+Internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -135,7 +135,7 @@ Accept wildcard characters: False
  Set the userInitiatedMode parameter to enabled to allow users who are assigned the policy to give feedback.
  Setting the parameter to disabled turns off the feature and users who are assigned the policy don't have the option to give feedback.
 
- Possible values:
+Possible values:
  - Enabled
  - Disabled
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### None
+### System.Management.Automation.PSObject
 
 ## OUTPUTS
 

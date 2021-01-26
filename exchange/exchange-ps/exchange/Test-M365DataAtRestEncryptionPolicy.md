@@ -1,29 +1,29 @@
 ---
-external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-mailboxsearch
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-title: Remove-MailboxSearch
+external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/test-m365dataatrestencryptionpolicy
+applicable: Exchange Online
+title: Test-M365DataAtRestEncryptionPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Remove-MailboxSearch
+# Test-M365DataAtRestEncryptionPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in the cloud-based service.
 
-Use the Remove-MailboxSearch cmdlet to remove a mailbox search.
+Use the Test-M365DataAtRestEncryptionPolicy cmdlet to test an existing Microsoft 365 data-at-rest encryption policy.
 
-**Note**: As of October 2020, the \*-MailboxSearch cmdlets are retired in Exchange Online PowerShell. Use the \*-ComplianceSearch cmdlets in Security & Compliance Center PowerShell instead. For more information, see [Retirement of legacy eDiscovery tools](https://docs.microsoft.com/microsoft-365/compliance/legacy-ediscovery-retirement).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-MailboxSearch [-Identity] <SearchObjectIdParameter>
+Test-M365DataAtRestEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf]
@@ -31,34 +31,38 @@ Remove-MailboxSearch [-Identity] <SearchObjectIdParameter>
 ```
 
 ## DESCRIPTION
-In on-premises Exchange, mailbox searches are used for In-Place eDiscovery and In-Place Hold. You can't remove an In-Place Hold without first disabling the hold.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-MailboxSearch -Identity "Project Contoso"
+Test-M365DataAtRestEncryptionPolicy -Identity "Contoso Corporate"
 ```
 
-This example removes the mailbox search Project Contoso.
+This example tests the Microsoft 365 data-at-rest encryption policy named Contoso Corporate.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name of the mailbox search.
+The Identity parameter specifies the Microsoft 365 data-at-rest encryption policy that you want to test. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can find the existing data-at-rest encryption policies by using the Get-M365DataAtRestEncryptionPolicy cmdlet.
 
 ```yaml
-Type: SearchObjectIdParameter
+Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
-Required: True
-Position: 1
+Required: False
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -72,7 +76,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -82,15 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -106,7 +108,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -121,12 +123,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

@@ -50,7 +50,10 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
 > [!TIP]
-> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+>
+> - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+>
+> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth#exchange).
 
 ## How does it work?
 
