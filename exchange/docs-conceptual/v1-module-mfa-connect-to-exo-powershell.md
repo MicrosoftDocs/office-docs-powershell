@@ -25,6 +25,8 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
 - Estimated time to complete: 5 minutes
 
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/permissions-exo).
+
 - You can use the following versions of Windows:
 
   - Windows 10

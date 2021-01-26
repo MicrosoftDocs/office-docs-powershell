@@ -31,6 +31,8 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - Estimated time to complete: 5 minutes
 
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+
 - You can use the following versions of Windows:
 
   - Windows 10
