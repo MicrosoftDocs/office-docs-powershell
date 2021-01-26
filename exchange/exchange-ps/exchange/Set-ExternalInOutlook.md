@@ -48,7 +48,7 @@ This example enables external sender identification in supported versions of Out
 Set-ExternalInOutlook -AllowList admin@fabrikam.com,admin@fourthcoffee.com
 ```
 
-This example prevents the specified email addresses from receiving External in the subject line in supported versions of Outlook.
+This example prevents the specified email addresses from receiving the External icon in the area of the subject line in supported versions of Outlook.
 
 ### Example 3
 ```powershell
@@ -76,13 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowList
-The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive the External tag in the subject line. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
+The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive the External icon in area of the subject line. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This parameter is meaningful only when the value of the Enabled parameter is $true.
+
+The maximum number of entries is 30, and the total size of all entries can't exceed one kilobyte.
 
 ```yaml
 Type: MultiValuedProperty
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter enables or disables external sender identification in supported versions of Outlook. Valid values are:
 
-- $true: External sender identification in Outlook is enabled. The word External is automatically prepended to the subject line of messages from external senders. To exempt specific senders or sender domains from this identification, use the AllowList parameter.
+- $true: External sender identification in Outlook is enabled. An External icon is added in the area of the subject line of messages from external senders. To exempt specific senders or sender domains from this identification, use the AllowList parameter.
 - $false: External sender identification in Outlook is disabled.
 
 ```yaml
