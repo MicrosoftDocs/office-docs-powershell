@@ -66,7 +66,7 @@ The DsnCode parameter specifies the enhanced status code for the custom system m
 
 Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. You can specify a default code that's included with Exchange, or you can specify a custom code.
 
-To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\Default DSNs.html".
+To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
 
 You need to use this parameter with the Language and Internal parameters.
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-The Language parameter specifies the language of the message \(for example, en for English or ja for Japanese). For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+The Language parameter specifies the language of the message (for example, en for English or ja for Japanese). For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
 You need to use this parameter with the DsnCode or QuotaMessageType parameters.
 
@@ -189,22 +189,22 @@ This parameter can contain text and HTML tags. The maximum length is 512 charact
 
 The following HTML tags are available:
 
-- \<B\> and \</B\> (bold)
-- \<EM\> and \</EM\> (italic)
-- \<BR\> (line break)
-- \<P\> and \</P\> (paragraph)
-- \<A HREF="url"\> and \</A\> (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
+- `<B>` and `</B>` (bold)
+- `<EM>` and `</EM>` (italic)
+- `<BR>` (line break)
+- `<P>` and `</P>` (paragraph)
+- `<A HREF="url">` and `</A>` (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
 
 Use the following escape codes for these special characters:
 
-- &lt; for \<.
-- &gt; for \>.
-- &quot; for ".
-- &amp; for &.
+- `&lt;` for \<
+- `&gt;` for \>
+- `&quot;` for "
+- `&amp;` for &
 
 Here's an example value for this parameter that uses HTML tags and special characters:
 
-'You tried to send a message to a \<B\>disabled\</B\> mailbox. Please visit \<A HREF="https://it.contoso.com"\>Internal Support\</A\> or contact &quot;InfoSec&quot; for more information.'
+`'You tried to send a message to a <B>disabled</B> mailbox. Please visit <A HREF="https://it.contoso.com">Internal Support</A> or contact &quot;InfoSec&quot; for more information.'`
 
 ```yaml
 Type: String

@@ -40,6 +40,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Label <String>]
  [-Phone <String>]
  [-PostalCode <String>]
+ [-SpaceType <String>]
  [-State <String>]
  [-Street <String>]
  [-Tags <String[]>]
@@ -333,6 +334,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SpaceType
+The SpaceType parameter specifies the type of space. Valid values are:
+
+- CustomerSpace
+- WorkArea
+- Custom
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -State
 The State parameter specifies the room's state or province.
 
@@ -368,7 +389,7 @@ Accept wildcard characters: False
 ### -Tags
 The Tags parameter specifies additional features of the room (for example, details like the type of view or furniture type).
 
-You can specify multiple labels separated by commas: \<Label1\>,\<Label2\>,...\<LabelN\>. If the labels contains spaces, enclose the value in quotation marks: "\<Label1\>","\<Label2\>",..."\<LabelN\>".
+You can specify multiple labels separated by commas. If the labels contains spaces, enclose the values in quotation marks: `"Label 1","Label 2",..."Label N"`.
 
 ```yaml
 Type: String[]

@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -EncryptionParameters
 
-PARAMVALUE: EncryptionParameters
+An EncryptionParameters object. See New-SPOMigrationEncryptionParameters https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters for more information.
 
 ```yaml
 Type: EncryptionParameters

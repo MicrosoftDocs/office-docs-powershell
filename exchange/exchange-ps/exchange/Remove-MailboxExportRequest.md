@@ -76,7 +76,7 @@ This example cancels the export request by using the RequestGuid parameter for a
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). Use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). Use the following syntax: `Alias\Name`.
 
 You can't use this parameter with the RequestGuid parameter.
 

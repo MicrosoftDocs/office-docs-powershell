@@ -50,7 +50,7 @@ The Identity parameter specifies the mail-enabled public folder object that you 
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<TopLevelPublicFolderName\>\\\<PublicFolderName\>
+- Path (`\<TopLevelPublicFolderName>\<PublicFolderName>`)
 
 ```yaml
 Type: MailPublicFolderIdParameter

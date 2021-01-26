@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleWorkflowEpisodeTimeout
-{{Fill SingleWorkflowEpisodeTimeout Description}}
+Amount of time in seconds given to the workflow to run.
 
 ```yaml
 Type: Int32

@@ -73,7 +73,7 @@ In on-premises Exchange, this example adds the Location parameter to the Mailbox
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the role entry to change. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
+The Identity parameter specifies the role entry that you want to modify. This parameter uses the syntax: `<management role>\<role entry name>` (for example, `CustomRole\Set-Mailbox`).
 
 For more information about how management role entries work, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 

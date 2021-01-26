@@ -68,9 +68,9 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 ## Install the Exchange Online Remote PowerShell Module
 
 > [!NOTE]
-> 
+>
 > - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
-> 
+>
 > - If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module.
 
 You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):

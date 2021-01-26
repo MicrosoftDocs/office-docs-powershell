@@ -74,7 +74,8 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 
 ### Example 2
 ```powershell
-$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
+$mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"
+$mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 
 In Exchange Server, this example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
@@ -128,7 +129,7 @@ The Identity parameter specifies the mailbox that contains the deleted items tha
 - SamAccountName
 - User ID or user principal name (UPN)
 
-In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
@@ -307,16 +308,16 @@ The SourceFolder parameter specifies where to search for deleted items in the ma
 
 - DeletedItems: The Deleted Items folder.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
-- PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
+- PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
 If you don't use this parameter, the command will search all of these folders.
 
 ```yaml
 Type: RecoverableItemsFolderType
-Parameter Sets: OnPremises
+Parameter Sets: (All)
 Aliases:
-Accepted values: DeletedItems | RecoverableItems
-Applicable: Exchange Server 2016, Exchange Server 2019
+Accepted values: DeletedItems | RecoverableItems | PurgedItems
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

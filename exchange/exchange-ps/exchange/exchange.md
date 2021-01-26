@@ -44,7 +44,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-AdSiteLink](Set-AdSiteLink.md)
 
-## advanced-threat-protection Cmdlets
+## defender-for-office-365 Cmdlets
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
 
 ### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
@@ -762,6 +762,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-IRMConfiguration](Get-IRMConfiguration.md)
 
+### [Get-M365DataAtRestEncryptionPolicy](Get-M365DataAtRestEncryptionPolicy.md)
+
+### [Get-M365DataAtRestEncryptionPolicyAssignment](Get-M365DataAtRestEncryptionPolicyAssignment.md)
+
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
 
 ### [Get-OMEMessageStatus](Get-OMEMessageStatus.md)
@@ -780,6 +784,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ExchangeCertificate](New-ExchangeCertificate.md)
 
+### [New-M365DataAtRestEncryptionPolicy](New-M365DataAtRestEncryptionPolicy.md)
+
 ### [New-OMEConfiguration](New-OMEConfiguration.md)
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
@@ -791,6 +797,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
 ### [Set-IRMConfiguration](Set-IRMConfiguration.md)
+
+### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
+
+### [Set-M365DataAtRestEncryptionPolicyAssignment](Set-M365DataAtRestEncryptionPolicyAssignment.md)
 
 ### [Set-OMEConfiguration](Set-OMEConfiguration.md)
 
@@ -1899,6 +1909,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DlpSensitiveInformationTypeRulePackage](Set-DlpSensitiveInformationTypeRulePackage.md)
 
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
+
+### [Test-DataClassification](Test-DataClassification.md)
+
+### [Test-TextExtraction](Test-TextExtraction.md)
 
 ## policy-and-compliance-ediscovery Cmdlets
 ### [Add-ComplianceCaseMember](Add-ComplianceCaseMember.md)

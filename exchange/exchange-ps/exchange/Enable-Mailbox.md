@@ -586,9 +586,9 @@ This parameter is available only in on-premises Exchange.
 
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 ### -ArchiveName
 The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App.
 
-If you don't use this parameter, the default value is In-Place Archive - \<Mailbox User's Display Name\>.
+If you don't use this parameter, the default value is `In-Place Archive - <Mailbox User's Display Name>`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -711,7 +711,7 @@ The AutoExpandingArchive switch enables the unlimited archiving feature (called 
 
 After you enable auto-expanding archiving, additional storage space is automatically added to the user's archive mailbox when it approaches the storage limit.
 
-Notes:
+**Notes**:
 
 - The user's archive mailbox has to be enabled before auto-expanding archiving can be enabled.
 - After you enable auto-expanding archiving for the user's mailbox, it can't be disabled.

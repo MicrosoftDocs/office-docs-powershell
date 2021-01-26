@@ -69,7 +69,6 @@ Get-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -Filte
 
 This example returns all of the available recoverable deleted messages with the specified subject in the mailboxes of both malik@contoso.com and lillian@contoso.com for the specified date/time range.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -86,7 +85,7 @@ The Identity parameter specifies the mailbox that contains the deleted items tha
 - SamAccountName
 - User ID or user principal name (UPN)
 
-In tExchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
@@ -247,30 +246,16 @@ The SourceFolder parameter specifies where to search for deleted items in the ma
 
 - DeletedItems: The Deleted Items folder.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
-- PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
+- PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
 If you don't use this parameter, the command will search all of these folders.
 
 ```yaml
 Type: RecoverableItemsFolderType
-Parameter Sets: OnPremises
-Aliases:
-Accepted values: DeletedItems | RecoverableItems
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RecoverableItemsFolderType
-Parameter Sets: Cloud
+Parameter Sets: (All)
 Aliases:
 Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
