@@ -1808,10 +1808,10 @@ Accept wildcard characters: False
 ### -FindTimeAttendeeAuthenticationEnabled
 This parameter is available only in the cloud-based service.
 
-The FindTimeAttendeeAuthenticationEnabled parameter manages organizer permission to enable or disable the requirement for attendees to verify their identity in meeting polls using the FindTime Outlook add-in. Valid values are:
+The FindTimeAttendeeAuthenticationEnabled parameter controls whether attendees are required to verify their identity in meeting polls using the FindTime Outlook add-in. Valid values are:
 
-- $true: Attendees are required to validate their identity (Always On). Setting is managed by the organization, cannot be changed by meeting organizer.
-- $false: 'Require attendees to verify their identity defaults' to On, but meeting organizer is allowed to set it Off.
+- $true: Attendees are required to validate their identity and the meeting organizer can't turn off this setting (Always On).
+- $false: By default, attendees are required to verify their identity, but the meeting organizer is allowed to turn this setting off.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1831,10 +1831,10 @@ Accept wildcard characters: False
 ### -FindTimeAutoScheduleDisabled
 This parameter is available only in the cloud-based service.
 
-The FindTimeAutoScheduleDisabled parameter manages organizer permission to enable or disable automatically scheduling the meeting once a consensus is reached in meeting polls using the FindTime Outlook add-in. Valid values are:
+The FindTimeAutoScheduleDisabled parameter controls automatically scheduling the meeting once a consensus is reached in meeting polls using the FindTime Outlook add-in. Valid values are:
 
-- $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting (Off). Setting is managed by the organization, cannot be changed by meeting organizer. 
-- $false: Reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to set it On.
+- $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
+- $false: By default, reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to turn on this setting.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1854,12 +1854,10 @@ Accept wildcard characters: False
 ### -FindTimeOnlineMeetingOptionDisabled
 This parameter is available only in the cloud-based service.
 
-The FindTimeOnlineMeetingOptionDisabled parameter enables or disables the **Online meeting** checkbox for Teams or Skype in meeting polls using the FindTime Outlook add-in. Valid values are:
+The FindTimeOnlineMeetingOptionDisabled parameter controls the availability of the **Online meeting** checkbox for Teams or Skype in meeting polls using the FindTime Outlook add-in. Valid values are:
 
-- $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime. Setting is managed by the organization, cannot be changed by meeting organizer. 
-- $false: The **Online meeting** checkbox is available in the meeting poll in FindTime.
-
-When **Online meeting** checkbox is not available, if your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
+- $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
+- $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting. 
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
