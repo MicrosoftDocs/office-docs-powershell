@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the New-HoldComplianceRule cmdlet to create new preservation rules in the Security & Compliance Center.
 
-Note: The New-HoldComplianceRule cmdlet has been replaced by the New-RetentionComplianceRule cmdlet. If you have scripts that use New-HoldComplianceRule, update them to use New-RetentionComplianceRule.
+**Note**: The New-HoldComplianceRule cmdlet has been replaced by the New-RetentionComplianceRule cmdlet. If you have scripts that use New-HoldComplianceRule, update them to use New-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

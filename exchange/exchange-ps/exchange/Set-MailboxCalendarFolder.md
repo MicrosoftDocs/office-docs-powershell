@@ -37,7 +37,7 @@ Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter>
 ```
 
 ## DESCRIPTION
-The Set-MailboxCalendarFolder cmdlet configures publishing information. The calendar folder can be configured as follows:
+The Set-MailboxCalendarFolder cmdlet configures calendar publishing information. The calendar folder can be configured as follows:
 
 - Whether the calendar folder is enabled for publishing
 - Range of start and end calendar days to publish
@@ -115,14 +115,14 @@ Accept wildcard characters: False
 ```
 
 ### -DetailLevel
-The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. You can use the following values:
+The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
-- AvailabilityOnly
+- AvailabilityOnly (This is the default value)
 - LimitedDetails
 - FullDetails
 - Editor
 
-The default value is AvailabilityOnly.
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: DetailLevelEnumType
@@ -156,17 +156,17 @@ Accept wildcard characters: False
 ```
 
 ### -PublishDateRangeFrom
-The PublishDateRangeFrom parameter specifies the number of days of calendar information to publish before the current date. You can use the following values:
+The PublishDateRangeFrom parameter specifies the start date of calendar information to publish (past information). Valid values are:
 
 - OneDay
 - ThreeDays
 - OneWeek
 - OneMonth
-- ThreeMonths
+- ThreeMonths (This is the default value)
 - SixMonths
 - OneYear
 
-The default value is ThreeMonths.
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: DateRangeEnumType
@@ -182,17 +182,17 @@ Accept wildcard characters: False
 ```
 
 ### -PublishDateRangeTo
-The PublishDateRangeTo parameter specifies the number of days of calendar information to publish after the current date. You can use the following values:
+The PublishDateRangeTo parameter specifies the end date of calendar information to publish (future information). Valid values are:
 
 - OneDay
 - ThreeDays
 - OneWeek
 - OneMonth
-- ThreeMonths
+- ThreeMonths (This is the default value)
 - SixMonths
 - OneYear
 
-The default value is ThreeMonths.
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: DateRangeEnumType
@@ -208,7 +208,10 @@ Accept wildcard characters: False
 ```
 
 ### -PublishEnabled
-The PublishEnabled parameter specifies whether the specified calendar should be enabled for publishing. The default value is $true.
+The PublishEnabled parameter specifies whether to publish the specified calendar information. Valid values are:
+
+- $true: The calendar information is published.
+- $false: The calendar information is not published. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -224,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetUrl
-The ResetUrl parameter replaces the existing non-public URL with a new URL for a calendar that has been published without being publicly searchable.
+The ResetUrl switch replaces the existing non-public URL with a new URL for a calendar that has been published without being publicly searchable. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -240,7 +243,12 @@ Accept wildcard characters: False
 ```
 
 ### -SearchableUrlEnabled
-The SearchableUrlEnabled parameter specifies whether the published calendar URL can be searched on the web. The default value is $false.
+The SearchableUrlEnabled parameter specifies whether the published calendar URL is discoverable on the web.
+
+- $true: The published calendar URL is discoverable on the web.
+- $false: The published calendar URL is not discoverable on the web. This is the default value.
+
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: Boolean
@@ -273,6 +281,8 @@ Accept wildcard characters: False
 
 ### -UseHttps
 The UseHttps switch specifies whether to use HTTPS for the published URL of the calendar folder. You don't need to specify a value with this switch.
+
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: SwitchParameter

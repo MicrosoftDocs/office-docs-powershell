@@ -56,7 +56,10 @@ Returns a single user from SharePoint Online in a multi-geo tenant and validates
 
 ### -ValidDataLocation
 
-PARAMVALUE: $true | $false
+Use this parameter to validate the location of the data. The acceptable values for this parameter are:
+
+- $False
+- $True
 
 ```yaml
 Type: Boolean

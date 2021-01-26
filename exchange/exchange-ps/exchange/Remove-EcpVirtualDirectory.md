@@ -47,11 +47,11 @@ This example removes the ECP virtual directory named ecp located on the default 
 ### -Identity
 The Identity parameter specifies the ECP virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 Remote removal of an ECP virtual directory isn't supported. You need run this command from the local computer.
 

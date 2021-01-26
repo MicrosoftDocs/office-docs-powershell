@@ -87,8 +87,8 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate that you want to remove. Valid values are:
 
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-- \<Thumbprint\>
+- `ServerNameOrFQDN\Thumbprint`
+- `Thumbprint`
 
 You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
 

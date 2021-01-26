@@ -64,7 +64,7 @@ This example adds a global monitoring override that disables the StorageLogicalD
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the probe, monitor, or responder. This parameter uses the syntax \<HealthSetName\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityServerReboot", not "ad\\activedirectoryconnectivityserverreboot".
+The Identity parameter specifies the identity of the probe, monitor, or responder. This parameter uses the syntax `HealthSetName\MonitoringItemName[\TargetResource]`. Note that the values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityServerReboot`, not `ad\activedirectoryconnectivityserverreboot`.
 
 ```yaml
 Type: String

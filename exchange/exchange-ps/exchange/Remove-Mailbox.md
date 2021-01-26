@@ -99,7 +99,8 @@ This example removes the mailbox and the user account for the user named John Ro
 
 ### Example 3
 ```powershell
-$Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
+$Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}
+Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
 This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
@@ -392,7 +393,7 @@ This parameter is available only in the cloud-based service.
 
 The PermanentlyDelete switch specifies whether to immediately and permanently delete (purge) the mailbox, which prevents you from recovering or restoring the mailbox. You don't need to specify a value with this switch.
 
-Notes:
+**Notes**:
 
 - This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes). Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet as shown in Example 3 in this topic.
 - This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).

@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Remove-HoldCompliancePolicy cmdlet to remove preservation policies from the Security & Compliance Center.
 
-Note: The Remove-HoldCompliancePolicy cmdlet has been replaced by the Remove-RetentionCompliancePolicy cmdlet. If you have scripts that use Remove-HoldCompliancePolicy, update them to use Remove-RetentionCompliancePolicy.
+**Note**: The Remove-HoldCompliancePolicy cmdlet has been replaced by the Remove-RetentionCompliancePolicy cmdlet. If you have scripts that use Remove-HoldCompliancePolicy, update them to use Remove-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

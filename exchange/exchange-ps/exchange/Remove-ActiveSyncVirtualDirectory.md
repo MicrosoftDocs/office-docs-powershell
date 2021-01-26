@@ -61,11 +61,11 @@ This example removes a custom Exchange ActiveSync virtual directory from the ser
 ### -Identity
 The Identity parameter specifies the Exchange ActiveSync virtual directory that you want to remove. You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 ```yaml
 Type: VirtualDirectoryIdParameter

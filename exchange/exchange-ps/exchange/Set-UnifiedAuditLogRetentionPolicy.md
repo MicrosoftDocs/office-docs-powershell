@@ -104,6 +104,7 @@ The RetentionDuration parameter specifies how long audit log records are kept. V
 - SixMonths
 - NineMonths
 - TwelveMonths
+- TenYears
 
 This parameter is required when modifying an audit log retention policy.
 
@@ -111,7 +112,7 @@ This parameter is required when modifying an audit log retention policy.
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
 Applicable: Security & Compliance Center
 
 Required: True
@@ -159,7 +160,7 @@ Accept wildcard characters: False
 ### -Operations
 The Operations parameter specifies the audit log operations that are retained by the policy. The values you specify will overwrite any existing entries. For a list of the available values for this parameter, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -175,81 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordTypes
-The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. The values you specify will overwrite any existing entries. Valid values are:
+The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
-- AeD
-- AirInvestigation
-- ApplicationAudit
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- CRM
-- Campaign
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- ComplianceDLPSharePointClassification
-- ComplianceSupervisionExchange
-- CustomerKeyServiceEncryption
-- DLPEndpoint
-- DataCenterSecurityCmdlet
-- DataGovernance
-- DataInsightsRestApiAudit
-- Discovery
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemAggregated
-- ExchangeItemGroup
-- HRSignal
-- HygieneEvent
-- InformationBarrierPolicyApplication
-- InformationWorkerProtection
-- Kaizala
-- LabelContentExplorer
-- MIPLabel
-- MailSubmission
-- MicrosoftFlow
-- MicrosoftForms
-- MicrosoftStream
-- MicrosoftTeams
-- MicrosoftTeamsAdmin
-- MicrosoftTeamsAnalytics
-- MicrosoftTeamsDevice
-- MicrosoftTeamsShifts
-- MipAutoLabelExchangeItem
-- MipAutoLabelSharePointItem
-- MipAutoLabelSharePointPolicyLocation
-- OfficeNative
-- OneDrive
-- PowerAppsApp
-- PowerAppsPlan
-- PowerBIAudit
-- Project
-- Quarantine
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointCommentOperation
-- SharePointContentTypeOperation
-- SharePointFieldOperation
-- SharePointFileOperation
-- SharePointListItemOperation
-- SharePointListOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- SyntheticProbe
-- TeamsHealthcare
-- ThreatFinder
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- WorkplaceAnalytics
-- Yammer
-
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The values you specify will overwrite any existing entries.
 
 ```yaml
 Type: MultiValuedProperty
@@ -266,7 +195,7 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter specifies the audit logs that are retained by the policy based on the ID of the user who performed the action. The values you specify will overwrite any existing entries.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

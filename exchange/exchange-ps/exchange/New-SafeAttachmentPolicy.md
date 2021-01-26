@@ -36,7 +36,7 @@ New-SafeAttachmentPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Office 365 Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets to associate the policy with a rule.
 

@@ -27,6 +27,7 @@ Set-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParamete
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-TargetAddressDomains <MultiValuedProperty>]
+ [-TargetSharingEpr <Uri>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -146,6 +147,24 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetSharingEpr
+This parameter is available only in the cloud-based service.
+
+The TargetSharingEpr parameter specifies the URL of the target Exchange Web Services that will be used in the Intra-Organization connector.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -EDBFilePath
-The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
+The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is `%ExchangeInstallPath%Mailbox\LocalCopies\MBDatabase.edb`. This file path can't be the same as the path for the backup copy of the database.
 
 ```yaml
 Type: EdbFilePath
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -EDBFilePath
-The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
+The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is ``%ExchangeInstallPath%Mailbox\LocalCopies\MBDatabase.edb`. This file path can't be the same as the path for the backup copy of the database.
 
 ```yaml
 Type: EdbFilePath

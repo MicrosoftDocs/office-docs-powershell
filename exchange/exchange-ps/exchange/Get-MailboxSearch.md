@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxSearch cmdlet to view mailbox searches that are in progress, complete or stopped.
 
+**Note**: As of October 2020, the \*-MailboxSearch cmdlets are retired in Exchange Online PowerShell. Use the \*-ComplianceSearch cmdlets in Security & Compliance Center PowerShell instead. For more information, see [Retirement of legacy eDiscovery tools](https://docs.microsoft.com/microsoft-365/compliance/legacy-ediscovery-retirement).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -47,7 +49,7 @@ Get-MailboxSearch -InPlaceHoldIdentity <String>
 ```
 
 ## DESCRIPTION
-In on-premises Exchange and Exchange Online, a mailbox search is used to perform an In-Place eDiscovery or to place users on an In-Place Hold. Use the Get-MailboxSearch cmdlet to retrieve details of either type of mailbox search.
+In on-premises Exchange, a mailbox search is used to perform an In-Place eDiscovery or to place users on an In-Place Hold. Use the Get-MailboxSearch cmdlet to retrieve details of either type of mailbox search.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -71,7 +73,8 @@ The Identity parameter is a positional parameter. Positional parameters can be u
 
 ### Example 3
 ```powershell
-(Get-Mailbox Mark).InPlaceHolds; Get-MailboxSearch -InPlaceHoldIdentity 9953d0f0fd03415e949d4b41c5a28cbb
+(Get-Mailbox Mark).InPlaceHolds
+Get-MailboxSearch -InPlaceHoldIdentity 9953d0f0fd03415e949d4b41c5a28cbb
 ```
 
 This example retrieves the In-Place Holds that a user is placed on. The first command outputs GUIDs of In-Place Holds. The last command retrieves a mailbox search based on the GUID of the In-Place Hold that the user is placed on.

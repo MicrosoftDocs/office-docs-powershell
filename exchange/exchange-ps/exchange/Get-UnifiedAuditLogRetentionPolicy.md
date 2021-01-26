@@ -50,13 +50,12 @@ Get-UnifiedAuditLogRetentionPolicy -RecordType ExchangeItem | Format-List Name,D
 
 This example lists the configurable properties for all audit log retention policies that apply to audit records the record type of ExchangeItem.
 
-
 ## PARAMETERS
 
 ### -Operation
 The Operations parameter filters the results by the operations that are specified in the policy. For a list of the available values for this parameter, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: String
@@ -72,79 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the results by the record types that are defined in the policy. Valid values are:
-
-- AeD
-- AirInvestigation
-- ApplicationAudit
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- CRM
-- Campaign
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- ComplianceDLPSharePointClassification
-- ComplianceSupervisionExchange
-- CustomerKeyServiceEncryption
-- DLPEndpoint
-- DataCenterSecurityCmdlet
-- DataGovernance
-- DataInsightsRestApiAudit
-- Discovery
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemAggregated
-- ExchangeItemGroup
-- HRSignal
-- HygieneEvent
-- InformationBarrierPolicyApplication
-- InformationWorkerProtection
-- Kaizala
-- LabelContentExplorer
-- MIPLabel
-- MailSubmission
-- MicrosoftFlow
-- MicrosoftForms
-- MicrosoftStream
-- MicrosoftTeams
-- MicrosoftTeamsAdmin
-- MicrosoftTeamsAnalytics
-- MicrosoftTeamsDevice
-- MicrosoftTeamsShifts
-- MipAutoLabelExchangeItem
-- MipAutoLabelSharePointItem
-- MipAutoLabelSharePointPolicyLocation
-- OfficeNative
-- OneDrive
-- PowerAppsApp
-- PowerAppsPlan
-- PowerBIAudit
-- Project
-- Quarantine
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointCommentOperation
-- SharePointContentTypeOperation
-- SharePointFieldOperation
-- SharePointFileOperation
-- SharePointListItemOperation
-- SharePointListOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- SyntheticProbe
-- TeamsHealthcare
-- ThreatFinder
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- WorkplaceAnalytics
-- Yammer
+The RecordType parameter filters the results by the record types that are defined in the policy. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 ```yaml
 Type: AuditRecordType
@@ -165,12 +92,13 @@ The RetentionDuration parameter filters the policy results by the retention dura
 - SixMonths
 - NineMonths
 - TwelveMonths
+- TenYears
 
 ```yaml
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
 Applicable: Security & Compliance Center
 
 Required: False
@@ -183,7 +111,7 @@ Accept wildcard characters: False
 ### -UserId
 The UserIds parameter filters the policy results by the ID of the users who are specified in the policy.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: String

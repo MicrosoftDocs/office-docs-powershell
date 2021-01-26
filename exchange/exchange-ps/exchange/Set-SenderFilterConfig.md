@@ -93,9 +93,9 @@ The BlockedDomains parameter specifies the domain names to block. When the Sende
 
 Valid input for this parameter is one or more domains or subdomains. Wildcard characters aren't permitted. For example, if you specify the values contoso.com and marketing.contoso.com, only messages from those domains are blocked by the Sender Filter agent. Messages from sales.contoso.com aren't blocked by the Sender Filter agent.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The maximum number of entries for this parameter is 800.
 
@@ -117,9 +117,9 @@ The BlockedDomainsAndSubdomains parameter specifies the domain names to block. W
 
 Valid input for this parameter is one or more domains. Wildcard characters aren't permitted. For example, if you specify the value contoso.com, messages from contoso.com, sales.contoso.com, and all other subdomains of contoso.com are blocked by the Sender Filter agent.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The maximum number of entries for this parameter is 800.
 
@@ -139,9 +139,9 @@ Accept wildcard characters: False
 ### -BlockedSenders
 The BlockedSenders parameter specifies one or more SMTP email addresses to block. When the Sender Filter agent encounters a message from a sender on this list, the Sender Filter agent takes the action specified by the Action parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The maximum number of entries for this parameter is 800.
 

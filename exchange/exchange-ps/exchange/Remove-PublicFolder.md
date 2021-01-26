@@ -54,7 +54,7 @@ This example deletes the public folder Directory Folder and all its child public
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name and path of the public folder you want to remove. A valid value uses the syntax: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
+The Identity parameter specifies the name and path of the public folder you want to remove. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
 
 ```yaml
 Type: PublicFolderIdParameter
