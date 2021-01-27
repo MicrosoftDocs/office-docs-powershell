@@ -12,7 +12,7 @@ ms.reviewer:
 # New-MailboxRestoreRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other. More detailed instructions are documented at https://docs.microsoft.com/en-us/microsoft-365/compliance/restore-an-inactive-mailbox?view=o365-worldwide.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
@@ -197,7 +197,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+The properties used to find disconnected mailboxes and restore a mailbox are different from Exchange server and Exchange Online.
+
+This example users the Get-Mailbox cmdlet to find the deleted mailbox Exchange GUID which is necessary to restore the mailbox contents.
+
+## Example 1 - Exchange Online
+```powershell
+Get-Mailbox -SoftDeletedMailbox "User Name" | format-list ExchangeGuid
+```
+
+### Example 2 - Exchange Online
+```powershell
+New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllLegacyDNMismatch
+```
+
+### Example 1 - Exchange Server
 ```powershell
 Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason
 ```
@@ -206,14 +220,14 @@ To create a restore request, you must provide the DisplayName, LegacyDN, or Mail
 
 This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
 
-### Example 2
+### Example 2 - Exchange Server
 ```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
 
 This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
 
-### Example 3
+### Example 3 - Exchange Server
 ```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
