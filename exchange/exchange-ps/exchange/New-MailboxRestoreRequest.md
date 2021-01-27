@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
-The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange server and Exchange Online. For more information about Exchange Online, see [Restore an inative mailbox](https://docs.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox).
+The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inative mailbox](https://docs.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -199,7 +199,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-## Example 1
+### Example 1
 ```powershell
 Get-Mailbox -SoftDeletedMailbox "User Name" | Format-List ExchangeGUID
 New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllLegacyDNMismatch
