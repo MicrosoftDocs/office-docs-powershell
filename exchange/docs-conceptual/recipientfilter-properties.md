@@ -141,7 +141,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_Initials_|_initials_|String (wildcards accepted).||
 |_InPlaceHolds_|_msExchUserHoldPolicies_|String||
 |_InPlaceHoldsRaw_|n/a|String||
-|_InternetEncoding_|_internetEncoding_|Integer|For valid values, see the Remarks section in the topic, [Encoding Class](https://docs.microsoft.com/dotnet/api/system.text.encoding).|
+|_InternetEncoding_|_internetEncoding_|Integer|For valid values, see the Remarks section in the article, [Encoding Class](https://docs.microsoft.com/dotnet/api/system.text.encoding).|
 |_IsDirSynced_|_msExchIsMSODirsynced_|Boolean (`$true` or `$false`)||
 |_IsExcludedFromServingHierarchy_|n/a|Boolean (`$true` or `$false`)||
 |_IsHierarchyReady_|n/a|Boolean (`$true` or `$false`)||
