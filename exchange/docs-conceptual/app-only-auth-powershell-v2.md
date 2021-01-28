@@ -207,6 +207,8 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 
 3. Select one of the supported roles. On the **Assignments** page that appears, click **Add assignments**
 
-4. In the **Add assignments** flyout that appears, find and select the application, and then click **Add**.
+4. In the **Add assignments** flyout that appears, click **No member selected**, find and select the application, and then click **Select**. Again in **Add assignments**, click **Next >**.
 
    ![Add a role assignment](media/app-only-auth-role-assignment.png)
+   
+5. Provide a justification for this assignment and then click **Assign**.
