@@ -18,7 +18,7 @@ description: "Admins can lear about the property sets that are available in the 
 
 # Property sets in Exchange Online PowerShell V2 cmdlets
 
-This topic describes the property sets that are available in the **Get-EXO\*** cmdlets in the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md). For more information about property sets, see [Properties and property sets in the EXO V2 module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exo-v2-module).
+This article describes the property sets that are available in the **Get-EXO\*** cmdlets in the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md). For more information about property sets, see [Properties and property sets in the EXO V2 module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exo-v2-module).
 
 For more information about filtering in the EXO V2 module, see [Filters in the EXO V2 module](filters-v2.md).
 
