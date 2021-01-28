@@ -230,11 +230,11 @@ When creating your own custom OPath filters, consider the following items:
 
 ## Recipient filter documentation
 
-The following table contains links to topics that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
+The following table contains links to articles that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
 
 ****
 
-|Topic|Description|
+|Article|Description|
 |---|---|
 |[Filterable properties for the RecipientFilter parameter on Exchange cmdlets](recipientfilter-properties.md)|Learn more about the filterable properties that are available for the _RecipientFilter_ parameter.|
 |[Filterable properties for the Filter parameter on Exchange cmdlets](filter-properties.md) |Learn more about the filterable properties that are available for the _Filter_ parameter.|
