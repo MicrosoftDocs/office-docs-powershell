@@ -29,7 +29,7 @@ Update-TeamsAppInstallation [-AppInstallationId <String>] [-AppId <String>] -Use
 
 ## DESCRIPTION
 Update a Teams App in Microsoft Teams.
-
+This wont update teams client, this will update an application installed on the user/team
 Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://docs.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://docs.microsoft.com/microsoftteams/teams-powershell-release-notes).
 
 ## EXAMPLES
