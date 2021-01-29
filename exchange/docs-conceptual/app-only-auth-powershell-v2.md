@@ -249,50 +249,31 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Exchange administrator
 - Global Reader
 
-The required procedures in the Azure AD portal are different based on the age, nature, and licensing of your organization. Select the experience that works best for you.
-
 For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/roles/manage-roles-portal).
-
-### New instructions
 
 1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
-2. Under **Manage**, select **Roles and administrators**.
+   ![Click View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
+
+2. On the **Overview** page that appears, under **Manage**, select **Roles and administrators**.
 
    ![Select Roles and administrators from the overview page](media/exo-app-only-auth-select-roles-and-administrators.png)
 
-3. On the **Roles and administrators** page that appears, find and select one of the supported roles, click the ellipses (...) for the role.
+3. On the **Roles and administrators** page that appears, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
-   ![Find and select a supported role before clicking the ellipses](media/exo-app-only-auth-find-and-select-supported-role.png)
+   ![Find and select a supported role by clicking on the role name](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-   In the dialog that appears, choose **Description**.
-
-4. On the role description page that appears, under **Manage**, select **Assignments**.
-
-   ![Select Assignments on the role description page](media/exo-app-only-auth-role-description-page-click-assignments.png)
-
-5. On the **Assignments** page that appears, click **Add assignments**.
+4. On the **Assignments** page that opens, click **Add assignments**.
 
    ![Select Add assignments on the role assignments page](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
-6. In the **Add assignments** flyout that appears, start typing the name of the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad). When you see the app, select it, and then click **Add**.
+5. In the **Add assignments** flyout that appears, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
+
 
    ![Select Add assignments on the role assignments page](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
-7. Back on the **Assignments** page, verify that the app has been assigned to the role.
+   When you're finished, click **Add**.
+
+6. Back on the **Assignments** page, verify that the app has been assigned to the role.
 
    ![The role assignments page after to added the app to the role](media/exo-app-only-auth-app-assigned-to-role.png)
-
-### Original instructions
-
-1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
-
-2. Under **Manage**, select **Roles and administrators**.
-
-3. Select one of the supported roles. On the **Assignments** page that appears, click **Add assignments**
-
-4. In the **Add assignments** flyout that appears, click **No member selected**, find and select the application, and then click **Select**. Again in **Add assignments**, click **Next >**.
-
-   ![Add a role assignment](media/app-only-auth-role-assignment.png)
-
-5. Provide a justification for this assignment and then click **Assign**.
