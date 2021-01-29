@@ -126,7 +126,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
      Note that you can't create credentials for [native applications](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
-   ![Register an application](media/exo-app-only-auth-register-app.png)
+     ![Register an application](media/exo-app-only-auth-register-app.png)
 
    When you're finished, click **Register**.
 
