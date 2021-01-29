@@ -19,7 +19,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> This feature and the required `2.0.3` version of the EXO V2 module are now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> The required `2.0.3` version of the EXO V2 module for this feature is now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -30,7 +30,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<My Password>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
   ```
 
 - Connect using a certificate thumbprint:
@@ -51,7 +51,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 
 > [!TIP]
 >
-> - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+> - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 >
 > - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth#exchange).
 
@@ -100,25 +100,33 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 ## Step 1: Register the application in Azure AD
 
-If you encounter problems, check the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
+**Note**: If you encounter problems, check the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
 1. Open the Azure AD portal at <https://portal.azure.com/>.
 
 2. Under **Manage Azure Active Directory**, click **View**.
 
-3. On the **Overview** page that appears, select **App registrations** under **Management**.
+   ![Click View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
 
-4. On the **App registrations** that appears, click **New registration**. On the **Register an application** page that appears, configure the following settings:
+3. On the **Overview** page that appears, under **Manage**, select **App registrations**.
 
-   - **Name**: Enter something descriptive.
+   ![Select App registrations](media/exo-app-only-auth-select-app-registrations.png)
 
-   - **Supported account types**: Select **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)**.
+4. On the **App registrations** that appears, click **New registration**.
 
-   - **Redirect URI (optional)**: In the first box, select **Web**. In the second box, enter the URI where the access token is sent.
+   ![Select New registration on the App registrations page](media/exo-app-only-auth-new-app-registration.png)
+
+   On the **Register an application** page that appears, configure the following settings:
+
+   - **Name**: Enter something descriptive. For example, ExO PowerShell CBA.
+
+   - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
+
+   - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
      Note that you can't create credentials for [native applications](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
-   ![Register an application](media/app-only-auth-register-app.png)
+   ![Register an application](media/exo-app-only-auth-register-app.png)
 
    When you're finished, click **Register**.
 
@@ -128,7 +136,11 @@ If you encounter problems, check the [required permissions](https://docs.microso
 
 You need to assign the API permission `Exchange.ManageAsApp` so the application can manage Exchange Online. API permissions are required because they have consent flow enabled, which allows auditing (directory roles don't have consent flow).
 
-1. On the app page under **Management**, select **Manifest**. On the **Manifest** page that opens, find the `requiredResourceAccess` property (on or about line 55).
+1. On the app page under **Management**, select **Manifest**.
+
+   ![Select Manifest on the application properties page](media/exo-app-only-auth-select-manifest.png)
+
+2. On the **Manifest** page that appears, find the `requiredResourceAccess` entry (on or about line 44).
 
    Modify the `resourceAppId`, `resourceAccess`, `id`, and `type` values as shown in the following code snippet:
 
@@ -146,13 +158,25 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
    ],
    ```
 
-2. When you're finished, click **Save**.
+   When you're finished, click **Save**.
 
-3. Still on the **Manifest** page, select **API permissions** under **Management**. On the **API permissions** page that appears, do the following steps:
+3. Still on the **Manifest** page, under **Management**, select **API permissions**.
 
-   - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** permission is listed.
+   ![Select API permissions on the application properties page](media/exo-app-only-auth-select-api-permissions.png)
 
-   - **Status**: The current value is **Not granted for \<Organization\>**. Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that appears, and then click **Yes**. The **Status** value should now be **Granted for \<Organization\>**.
+   On the **API permissions** page that appears, do the following steps:
+
+   - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
+
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
+
+     ![Original incorrect API permissions](media/exo-app-only-auth-original-permissions.png)
+
+     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that appears, and then click **Yes**.
+
+     The **Status** value should now be **Granted for \<Organization\>**.
+
+     ![Admin consent granted](media/exo-app-only-auth-admin-consent-granted.png)
 
 4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
 
@@ -176,14 +200,14 @@ Create a self-signed x.509 certificate using one of the following methods:
 - Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1) script to generate SHA1 certificates.
 
   ```powershell
-  .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2020-04-01 -EndDate 2022-04-01
+  .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
   ```
 
 ## Step 4: Attach the certificate to the Azure AD application
 
 After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
-1. On the **Apps registration** page, select your application.
+1. On the **Apps registration** page from the end of Step 2, select your application.
 
    If you need to get back to **Apps registration** page, do the following steps:
 
@@ -191,13 +215,27 @@ After you register the certificate with your application, you can use the public
    2. Under **Manage Azure Active Directory**, click **View**.
    3. Under **Manage**, select **App registrations**.
 
-2. On the application page that appears, select **Certificates & secrets** under **Manage**. On the **Certificates & secrets** page that opens, click **Upload certificate**.
+   ![Apps registration page where you select your app](media/exo-app-only-auth-app-registration-page.png)
 
-   ![Click Upload certificate](media/app-only-auth-upload-cert.png)
+2. On the application page that appears, under **Manage**, select **Certificates & secrets**.
 
-3. In the dialog that appears, browse to the self-signed certificate (`.cer` file) you created in the previous step, and then click **Add**.
+   ![Select Certificates & Secrets on the application properties page](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-4. Close the current **Certificates & secrets** page and the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
+3. On the **Certificates & secrets** page that appears, click **Upload certificate**.
+
+   ![Select Upload certificate on the Certificates & secrets page](media/exo-app-only-auth-select-upload-certificate.png)
+
+   In the dialog that appears, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
+
+   ![Browse to the certificate and then click Add](media/exo-app-only-auth-upload-certificate-dialog.png)
+
+   When you're finished, click **Add**.
+
+   The certificate is now shown in the **Certificates** section.
+
+   ![Application page showing that the certificate was added](media/exo-app-only-auth-certificate-successfully-added.png)
+
+4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
 ## Step 5: Assign Azure AD roles to the application
 
@@ -211,45 +249,41 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Exchange administrator
 - Global Reader
 
-The required procedures in the Azure AD portal are different based on whether you have the Preview experience. Select the experience that works best for you.
+The required procedures in the Azure AD portal are different based on the age, nature, and licensing of your organization. Select the experience that works best for you.
 
-### Preview instructions
+For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/roles/manage-roles-portal).
 
-1. On the mail Azure AD portal page at <https://portal.azure.com/>, click **View** under **Manage Azure Active Directory**.
+### New instructions
 
-2. On the **Overview** page that appears, select **Groups** under **Manage**. In the **All groups** page that opens, select **New group**.
+1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
-3. In the **New group** page that appears, configure the following settings:
+2. Under **Manage**, select **Roles and administrators**.
 
-   - **Group type**: Verify **Security** is selected.
-   - **Group name**: Enter a unique and descriptive name.
-   - **Description**: Enter an optional description for the group.
-   - **Azure AD roles can be assigned to the group (Preview)**: Slide the toggle to **Yes**.
-   - **Owners**: Click **No owners selected**. In the **Add owners** flyout that appears, find and select one or more group owners. When you're finished, click **Select**.
-   - **Members**: Click **No members selected**. In the **Add members** flyout that appears, find and select one or more group members. When you're finished, click **Select**.
-   - **Roles**: Click **No roles selected**. In the **Directory roles** flyout that appears, find and select one of the supported roles. When you're finished, click **Select**.
+   ![Select Roles and administrators from the overview page](media/exo-app-only-auth-select-roles-and-administrators.png)
 
-   When you're finished, click **Create**.
+3. On the **Roles and administrators** page that appears, find and select one of the supported roles, click the ellipses (...) for the role.
 
-4. Read the **New group** confirmation dialog that appears, and then click **Yes**. In the confirmation dialog that appears
+   ![Find and select a supported role before clicking the ellipses](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-5. Back on the **All groups** page, close the page (don't close the browser tab).
+   In the dialog that appears, choose **Description**.
 
-6. Back on the **Overview** page, select **App registrations** under **Management**. On the **App registrations** page that appears, select the application you created.
+4. On the role description page that appears, under **Manage**, select **Assignments**.
 
-7. ???
+   ![Select Assignments on the role description page](media/exo-app-only-auth-role-description-page-click-assignments.png)
+
+5. On the **Assignments** page that appears, click **Add assignments**.
+
+   ![Select Add assignments on the role assignments page](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
+
+6. In the **Add assignments** flyout that appears, start typing the name of the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad). When you see the app, select it, and then click **Add**.
+
+   ![Select Add assignments on the role assignments page](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
+
+7. Back on the **Assignments** page, verify that the app has been assigned to the role.
+
+   ![The role assignments page after to added the app to the role](media/exo-app-only-auth-app-assigned-to-role.png)
 
 ### Original instructions
-
-Azure AD has more than 50 admin roles available. For app-only authentication in Exchange Online, we currently support the previously mentioned roles:
-
-- Global administrator
-- Compliance administrator
-- Security reader
-- Security administrator
-- Helpdesk administrator
-- Exchange administrator
-- Global Reader
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
@@ -260,5 +294,5 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 4. In the **Add assignments** flyout that appears, click **No member selected**, find and select the application, and then click **Select**. Again in **Add assignments**, click **Next >**.
 
    ![Add a role assignment](media/app-only-auth-role-assignment.png)
-   
+
 5. Provide a justification for this assignment and then click **Assign**.
