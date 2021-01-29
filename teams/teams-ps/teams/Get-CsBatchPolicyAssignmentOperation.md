@@ -36,9 +36,11 @@ This cmdlets returns the status of all batch policy assignment operations for th
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```powershell
 Get-CsBatchPolicyAssignmentOperation
+```
 
+```output
 OperationId                          OperationName           OverallStatus CreatedTime          CreatedBy
 -----------                          -------------           ------------- -----------          ---------
 e640a5c9-c74f-4df7-b62e-4b01ae878bdc Assigning Kiosk mtg     Completed     1/30/2020 3:21:07 PM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
@@ -49,9 +51,11 @@ e640a5c9-c74f-4df7-b62e-4b01ae878bdc Assigning Kiosk mtg     Completed     1/30/
 In this example, the status of all batch assignment operations is returned.
 
 ### EXAMPLE 2
-```
+```powershell
 Get-CsBatchPolicyAssignmentOperation -OperationId 01b9b2b7-5dbb-487c-b4ea-887c7c66559c  | fl
+```
 
+```output
 OperationId     : 01b9b2b7-5dbb-487c-b4ea-887c7c66559c
 OperationName   : Assigning allow calling
 OverallStatus   : Completed
@@ -69,9 +73,11 @@ UserState       : {f0d9c148-27c1-46f5-9685-544d20170ea1, cc05e18d-5fc0-4096-8461
 In this example, the details of a specific operation are returned.
 
 ### EXAMPLE 3
-```
+```powershell
 Get-CsBatchPolicyAssignmentOperation -OperationId 001141c3-1daa-4da1-88e9-66cc01c511e1 | Select -ExpandProperty UserState
+```
 
+```output
 Id                                    Result           State
 --                                    ------           -----
 f0d9c148-27c1-46f5-9685-544d20170ea1  Success          Completed
