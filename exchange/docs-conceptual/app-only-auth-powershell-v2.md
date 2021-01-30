@@ -269,7 +269,7 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
 5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
-   ![Select Add assignments on the role assignments page](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
+   ![Find and select your app on the Add assignments flyout](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
    When you're finished, click **Add**.
 
