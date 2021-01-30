@@ -82,7 +82,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
      > [!NOTE]
      > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
-4. [Step 4: Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
+4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
 
 5. [Assign Azure AD roles to the application](#step-5-assign-azure-ad-roles-to-the-application)
 
@@ -108,15 +108,15 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    ![Click View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
 
-3. On the **Overview** page that appears, under **Manage**, select **App registrations**.
+3. On the **Overview** page that opens, under **Manage**, select **App registrations**.
 
    ![Select App registrations](media/exo-app-only-auth-select-app-registrations.png)
 
-4. On the **App registrations** that appears, click **New registration**.
+4. On the **App registrations** page that opens, click **New registration**.
 
    ![Select New registration on the App registrations page](media/exo-app-only-auth-new-app-registration.png)
 
-   On the **Register an application** page that appears, configure the following settings:
+   On the **Register an application** page that opens, configure the following settings:
 
    - **Name**: Enter something descriptive. For example, ExO PowerShell CBA.
 
@@ -130,7 +130,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    When you're finished, click **Register**.
 
-5. Leave the app page that appears open. You'll use it in the next step.
+5. Leave the app page that you return to open. You'll use it in the next step.
 
 ## Step 2: Assign API permissions to the application
 
@@ -140,7 +140,7 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
    ![Select Manifest on the application properties page](media/exo-app-only-auth-select-manifest.png)
 
-2. On the **Manifest** page that appears, find the `requiredResourceAccess` entry (on or about line 44).
+2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 44).
 
    Modify the `resourceAppId`, `resourceAccess`, `id`, and `type` values as shown in the following code snippet:
 
@@ -164,7 +164,7 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
    ![Select API permissions on the application properties page](media/exo-app-only-auth-select-api-permissions.png)
 
-   On the **API permissions** page that appears, do the following steps:
+   On the **API permissions** page that opens, do the following steps:
 
    - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
 
@@ -172,7 +172,7 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
      ![Original incorrect API permissions](media/exo-app-only-auth-original-permissions.png)
 
-     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that appears, and then click **Yes**.
+     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then click **Yes**.
 
      The **Status** value should now be **Granted for \<Organization\>**.
 
@@ -207,7 +207,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
-1. On the **Apps registration** page from the end of Step 2, select your application.
+1. On the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
 
    If you need to get back to **Apps registration** page, do the following steps:
 
@@ -217,15 +217,15 @@ After you register the certificate with your application, you can use the public
 
    ![Apps registration page where you select your app](media/exo-app-only-auth-app-registration-page.png)
 
-2. On the application page that appears, under **Manage**, select **Certificates & secrets**.
+2. On the application page that opens, under **Manage**, select **Certificates & secrets**.
 
    ![Select Certificates & Secrets on the application properties page](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-3. On the **Certificates & secrets** page that appears, click **Upload certificate**.
+3. On the **Certificates & secrets** page that opens, click **Upload certificate**.
 
    ![Select Upload certificate on the Certificates & secrets page](media/exo-app-only-auth-select-upload-certificate.png)
 
-   In the dialog that appears, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
+   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
 
    ![Browse to the certificate and then click Add](media/exo-app-only-auth-upload-certificate-dialog.png)
 
@@ -255,11 +255,11 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
    ![View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
 
-2. On the **Overview** page that appears, under **Manage**, select **Roles and administrators**.
+2. On the **Overview** page that opens, under **Manage**, select **Roles and administrators**.
 
    ![Select Roles and administrators from the overview page](media/exo-app-only-auth-select-roles-and-administrators.png)
 
-3. On the **Roles and administrators** page that appears, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
+3. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
    ![Find and select a supported role by clicking on the role name](media/exo-app-only-auth-find-and-select-supported-role.png)
 
@@ -267,10 +267,9 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
    ![Select Add assignments on the role assignments page](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
-5. In the **Add assignments** flyout that appears, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
+5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
-
-   ![Select Add assignments on the role assignments page](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
+   ![Find and select your app on the Add assignments flyout](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
    When you're finished, click **Add**.
 
