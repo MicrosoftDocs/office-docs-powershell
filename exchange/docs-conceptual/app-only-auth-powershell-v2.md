@@ -253,7 +253,7 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
 1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
-   ![Click View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
+   ![View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
 
 2. On the **Overview** page that appears, under **Manage**, select **Roles and administrators**.
 
