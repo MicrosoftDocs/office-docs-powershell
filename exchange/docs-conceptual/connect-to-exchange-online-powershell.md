@@ -27,7 +27,10 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the article assume that you've already installed the module.
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+
+  > [!NOTE]
+  > The rest of the instructions in the article assume that you've already installed the module.
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/permissions-exo).
 
@@ -169,6 +172,43 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](http
 ```powershell
 Disconnect-ExchangeOnline
 ```
+
+## PowerShell 7 log in experiences
+
+This section describes log in experiences that are available on in PowerShell 7 and version 2.0.5 or later of the EXO V2 module.
+
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+
+### Interactive scripting using browser-based single sign-on
+
+Browser-based single sign-on (SSO) is the default log in method in PowerShell 7. The **Connect-ExchangeOnline** command opens the Azure AD login page in the default browser. After you enter your credentials, older Exchange Online cmdlets and EXO V2 module cmdlets are available in the resulting PowerShell session.
+
+If you use the _UserPrincipalName_ parameter in the command, the UPN value is used on the login page in the browser.
+
+```powershell
+Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com
+```
+
+### Device-based log in
+
+Use device-based log in when no browser is available (and therefore, you can't see the login page):
+
+```powershell
+Connect-ExchangeOnline -Device
+```
+
+### Inline credentials
+
+You can enter your credentials directly in the PowerShell window without the need to go to the browser for SSO.
+
+> [!NOTE]
+> This method does not work with accounts that use MFA.
+
+This method is an improvement on the _Credential_ parameter, because you don't need to store the credentials locally in a script, and you can enter the credentials directly in an interactive PowerShell session.
+
+  ```powershell
+  Connect-ExchangeOnline -InlineCredential
+  ```
 
 ## How do you know this worked?
 

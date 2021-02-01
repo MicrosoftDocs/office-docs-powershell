@@ -94,21 +94,43 @@ The procedures in this section explain how to install, update, and uninstall the
 
 ### Prerequisites for the EXO V2 module
 
-- Windows PowerShell 5.1 is the latest version of PowerShell that's publicly supported by the EXO V2 module. Support for later versions of PowerShell (and by definition, support for Linux or Mac) is a work in progress<sup>\*</sup>.
+Versions 2.0.5 of the module brings official support for PowerShell 7 in Windows, Linux, and Apple macOS.
 
-- You can use the following versions of Windows:
+For more information about PowerShell 7, see [Announcing PowerShell 7.0](https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/).
 
-  - Windows 10
-  - Windows 8.1
-  - Windows Server 2019
-  - Windows Server 2016
-  - Windows Server 2012 or Windows Server 2012 R2
-  - Windows 7 Service Pack 1 (SP1)<sup>\*\*</sup>
-  - Windows Server 2008 R2 SP1<sup>\*\*</sup>
+#### Apple macOS
 
-  <sup>\*</sup> The `2.0.4-Preview2` version of the module supports PowerShell 7 in Linux and Windows. For more information, see the [PowerShell Core support in the EXO V2 module](#powershell-core-support-in-the-exo-v2-module) section later in this article.
+The following versions of macOS are supported in the EXO V2 module version 2.0.5 or later:
 
-  <sup>\*\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+- macOS 11 Big Sur or later
+- macOS 10.15 Catalina
+- macOS 10.14 Mojave
+
+For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7.1&preserve-view=true).
+
+#### Linux
+
+PowerShell 7 is supported by many versions of Linux.
+
+For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true)
+
+#### Windows
+
+- Windows PowerShell 5.1 is supported by all versions of the EXO V2 module. PowerShell 7 or later is supported in version 2.0.5 or later of the EXO V2 module.
+
+  - You can use the following versions of Windows:
+
+    - Windows 10
+    - Windows 8.1<sup>1</sup>
+    - Windows Server 2019
+    - Windows Server 2016
+    - Windows Server 2012 or Windows Server 2012 R2<sup>1</sup>
+    - Windows 7 Service Pack 1 (SP1)<sup>1</sup>,<sup>2</sup>
+    - Windows Server 2008 R2 SP1<sup>1</sup>,<sup>2</sup>
+
+    <sup>1</sup> PowerShell 7 or later on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
+
+    <sup>2</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines. Windows PowerShell 5.1 on this version of Windows requires the Microsoft .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -171,12 +193,6 @@ To install the EXO V2 module for the first time, complete the following steps **
      Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
      ```
 
-     For example, to install the `2.0.4-Preview2` version that's required for [PowerShell Core support](#powershell-core-support-in-the-exo-v2-module), run the following command:
-
-     ```powershell
-     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.4-Preview2 -AllowPrerelease
-     ```
-
      When you're finished, enter **Y** to accept the license agreement.
 
 For detailed syntax and parameter information, see [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module).
@@ -207,12 +223,6 @@ If the module is already installed on your computer, you can run the following c
      Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
      ```
 
-     For example, to upgrade to the `2.0.4-Preview2` version that's required for [PowerShell Core support](#powershell-core-support-in-the-exo-v2-module), run the following command:
-
-     ```powershell
-     Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.4-Preview2 -AllowPrerelease
-     ```
-
      When you're finished, enter **Y** to accept the license agreement.
 
 3. To confirm that the update was successful, run the following commands to check the version information of the module that's installed:
@@ -238,46 +248,6 @@ Uninstall-Module -Name ExchangeOnlineManagement
 ```
 
 For detailed syntax and parameter information, see [Uninstall-Module](https://docs.microsoft.com/powershell/module/powershellget/uninstall-module).
-
-## PowerShell Core support in the EXO V2 module
-
-> [!NOTE]
-> The version of the EXO V2 module that's required for PowerShell Core support is currently in Preview.
-
-The `2.0.4-Preview2` version supports PowerShell 7 in Linux and Windows environments. This Preview version of the module enables admins to use Linux computers for day-to-day management of their Exchange Online organizations.
-
-**Notes**:
-
-- PowerShell 7 in MacOS is not supported.
-- The Preview version of the module works with Windows PowerShell 5.1.
-
-To install the `2.0.4-Preview2` version of the module, see the [Install and maintain the EXO V2 module](#install-and-maintain-the-exo-v2-module) section in this article.
-
-For more information about PowerShell 7, see [Announcing PowerShell 7.0](https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/).
-
-The `2.0.4-Preview2` version of the module supports the following new login experiences in PowerShell 7:
-
-- **Interactive scripting using browser-based single sign-on (SSO)**: This is the default method in PowerShell Core. The **Connect-ExchangeOnline** command opens the Azure AD login page in the default browser. After you enter your credentials, older Exchange Online cmdlets and newer EXO V2 cmdlets are available in the resulting PowerShell session.
-
-  If you use the _UserPrincipalName_ parameter in the command, the UPN value is used on the login page in the browser.
-
-  ```powershell
-  Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com
-  ```
-
-- **Device-based login**: Use this method when no browser is available (and therefore, you can't see the login page).
-
-  ```powershell
-  Connect-ExchangeOnline -Device
-  ```
-
-- **Enter credentials directly in the PowerShell window**: Use this method if you want to connect to Exchange Online in PowerShell 7 without going to the browser for SSO authentication. This method doesn't support MFA-enabled accounts. This method is an improvement on the _Credential_ parameter, because you don't need to store the credentials locally in a script, and you can enter the credentials directly in an interactive PowerShell session.
-
-  ```powershell
-  Connect-ExchangeOnline -InlineCredential
-  ```
-
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 ## Properties and property sets in the EXO V2 module
 
@@ -321,113 +291,92 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 ## Release notes
 
-### Current release: Version 2.0.3
+Unless otherwise noted, the current release of the EXO V2 module contains all features of previous releases.
+
+### Current release: Version 2.0.5
+
+- PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the EXO V2 module](#prerequisites-for-the-exo-v2-module) section in this article.
+
+  The EXO V2 module in PowerShell 7 on Linux devices also supports browser-based single sign-on (SSO). For more information, see [Interactive scripting using browser-based single sign-on](connect-to-exchange-online-powershell.md#interactive-scripting-using-browser-based-single-sign-on).
+
+- The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets have been replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**.Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](https://docs.microsoft.com/workplace-analytics/myanalytics/setup/configure-myanalytics).
+
+- Real time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) has been enabled in EXO V2 Module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
+
+- The new _InlineCredential_ allows you to pass the credentials of non-MFA accounts on the go without storing the credentials in a variable first.
+
+- The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
+
+- The interactive sign-in process now uses a more secure method to fetch access tokens using safe reply URLs.
+
+### Previous releases
+
+#### Version 2.0.3
 
 - General availability of certificate based authentication (CBA), which enables using modern authentication in unattended scripting or background automation scenarios. The available certificate storage locations are:
-
   - Remote in the Azure Key Value (the _Certificate_) parameter. This option enhances security by fetching the certificate only at runtime.
   - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
   - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
-
   For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) and [App-only authentication for unattended scripts in the EXO V2 module](app-only-auth-powershell-v2.md).
-
 - Connect to Exchange Online PowerShell and Security Compliance Center PowerShell simultaneously in a single PowerShell window.
-
 - The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
-
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
-
 - Optimized latency of the first V2 cmdlet call. Lab results show the first call latency has been reduced from 8 seconds to approximately 1 second. Actual results will depend on the cmdlet result size and the tenant environment.
-
-### Previous releases
 
 #### Version 1.0.1
 
 - General Availability (GA) version of the EXO V2 module. It is stable and ready for use in production environments.
-
 - **Get-EXOMobileDeviceStatistics** cmdlet now supports the _Identity_ parameter.
-
 - Improved reliability of session auto-reconnect in certain cases where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto-reconnect logic.
-
 - Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
-
 - Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check [Filters in the EXO V2 module](filters-v2.md) for attributes that aren't supported in filters.
 
 #### Version 0.4578.0
 
 - Added support for configuring the Briefing Email for your organization at the user level with **Set-UserBriefingConfig** and **Get-UserBriefingConfig** cmdlets.
-
 - Support for session cleanup using **Disconnect-ExchangeOnline** cmdlet. This cmdlet is the V2 equivalent of `Get-PSSession | Remove-PSSession`. In addition to cleaning up session object and local files, it also removes the access token from cache, which is used for authenticating against V2 cmdlets.
-
 - You can now use `FolderId` as an identity parameter in **Get-EXOMailboxFolderPermission**. You can get the `FolderId` value using **Get-MailboxFolder**. For example:
-
   `Get-MailboxFolderPermission -Identity <UPN>:<Folder-Path>`
-
   `Get-MailboxFolderPermission -Identity <UPN>:\<Folder-Id>`
-
 - Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors which led to failures have been resolved.
-
 - Optimized memory usage when a session is created by re-using any existing module with a new session instead of creating a new one every time session is imported.
 
 #### Version 0.4368.1
 
 - Added support for Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
-
-- Hide the announcement banner using the _ShowBanner_ switch. Run the following command to hide the banner:
-
-  ```powershell
-  Connect-ExchangeOnline -ShowBanner:$false
-  ```
-
+- Hiding the announcement banner is available using the _ShowBanner_ switch (`-ShowBanner:$false`).
 - Terminate cmdlet execution on client exception.
-
 - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
 
 #### Version 0.3582.0
 
 - Support for prefix during session creation.
-
   - You can create only 1 session at a time that contains prefixed cmdlets.
   - Note that the EXO V2 cmdlets will not be prefixed as they already have the prefix EXO, so don't use `EXO` as a prefix.
-
 - Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine. Note that remote PowerShell cmdlets require WinRM Basic Auth, and they won't be available if it's disabled.
-
 - Identity parameter for V2 cmdlets now supports Name and Alias as well. Note that using Alias or Name slows down the performance of V2 cmdlets, so we don't recommend using them.
-
 - Fixed issue where the data type of attributes returned by V2 cmdlet was different from remote PowerShell cmdlets. We still have few attributes which have differing data types, and we plan to handle them in coming months.
-
 - Fixed bug: Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
 
 #### Version 0.3555.1
 
 - Fixed a bug where piped cmdlets were failing with the following error due to an authentication issue:
-
   > Cannot invoke the pipeline because the runspace is not in the Opened state. Current state of the runspace is 'Closed'.
 
 #### Version 0.3527.4
 
 - Updated Get-Help content.
-
 - Fixed an issue in **Get-Help** where the *-Online* parameter was redirecting to a non-existent page with error code 400.
 
 #### Version 0.3527.3
 
 - Added support for managing Exchange for a different tenant using delegation flow.
-
 - Works in tandem with other PowerShell modules in a single PS window.
-
 - Added support for positional parameters.
-
 - Date Time field now supports client locale.
-
 - Bug fix: PSCredential empty when passed during Connect-ExchangeOnline.
-
 - Bug fix: Client module error when filter contained $null.
-
 - Sessions created internal to EXO V2 Module now have names (naming pattern: ExchangeOnlineInternalSession_%SomeNumber%).
-
 - Bug fix: Remote PowerShell cmdlets intermittently failing due to time the difference between token expiry and the PSSession going idle.
-
 - Major security update.
-
 - Bug fixes and enhancements.
