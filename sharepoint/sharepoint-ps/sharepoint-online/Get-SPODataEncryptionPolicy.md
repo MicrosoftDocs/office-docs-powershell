@@ -19,7 +19,7 @@ ms.reviewer:
 ## SYNTAX
 
 ```powershell
-Get-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [<CommonParameters>]
+Get-SPODataEncryptionPolicy
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 ### Example 1
 
 ```powershell
-Get-SPODataEncryptionPolicy -Identity https://contoso-admin.sharepoint.com
+Get-SPODataEncryptionPolicy
 ```
 
 The output from this cmdlet includes:
@@ -53,22 +53,6 @@ The output from this cmdlet includes:
   - **Rolling:** A key roll is in progress. If your geo is in this state, you'll also be shown information on what percentage of sites have completed the key roll operation so that you can monitor progress.
 
 ## PARAMETERS
-
-### -Identity
-
-Specifies the URL of the admin site collection.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 
