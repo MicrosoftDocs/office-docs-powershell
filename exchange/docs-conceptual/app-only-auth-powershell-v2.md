@@ -19,7 +19,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> This feature and the required `2.0.3` version of the EXO V2 module are now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> The required `2.0.3` version of the EXO V2 module for this feature is now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -30,7 +30,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<My Password>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
   ```
 
 - Connect using a certificate thumbprint:
@@ -50,7 +50,10 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
 > [!TIP]
-> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the  _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+>
+> - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+>
+> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth#exchange).
 
 ## How does it work?
 
@@ -62,24 +65,26 @@ An initial onboarding is required for authentication using application objects. 
 
 For a detailed visual flow about creating applications in Azure AD, see <https://aka.ms/azuread-app>.
 
-1. Register the application in Azure AD at <https://portal.azure.com>.
+1. [Register the application in Azure AD](#step-1-register-the-application-in-azure-ad).
 
-2. Assign permissions to access Exchange Online.
+2. [Assign Exchange Online API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
    An application object has the default permission `User.Read`. For the application object to access Exchange Online resources, it needs to have the Application permission `Exchange.ManageAsApp`.
 
-3. Attach a certificate.
+3. [Generate a self-signed certificate](#step-3-generate-a-self-signed-certificate)
 
    - For app-only authentication in Azure AD,  you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app, and the permissions granted to the app.
 
    - Create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
-   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this topic for instructions for generating certificates in PowerShell.
+   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this article for instructions for generating certificates in PowerShell.
 
      > [!NOTE]
      > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
-4. Assign RBAC roles
+4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
+
+5. [Assign Azure AD roles to the application](#step-5-assign-azure-ad-roles-to-the-application)
 
    The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Azure AD, you can use any of the built-in roles. The following roles are supported:
 
@@ -93,100 +98,146 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 ## Appendix
 
-## Step 1: Application registration in Azure AD
+## Step 1: Register the application in Azure AD
 
-If you encounter problems, check the [required permssions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
+**Note**: If you encounter problems, check the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
-1. Go to the Azure AD portal at <https://portal.azure.com/> and sign in with your Azure AD account.
+1. Open the Azure AD portal at <https://portal.azure.com/>.
 
 2. Under **Manage Azure Active Directory**, click **View**.
 
-3. Under **Manage**, select **App registrations** and then click **New registration**.
+   ![Click View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
 
-4. In the **Register an application** page that appears, configure the following settings:
+3. On the **Overview** page that opens, under **Manage**, select **App registrations**.
 
-   - **Name**: Enter something descriptive.
+   ![Select App registrations](media/exo-app-only-auth-select-app-registrations.png)
 
-   - **Supported account types**: Select **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)**.
+4. On the **App registrations** page that opens, click **New registration**.
 
-   - **Redirect URI (optional)**: In the first box, select **Web**. In the second box, enter the URI where the access token is sent.
+   ![Select New registration on the App registrations page](media/exo-app-only-auth-new-app-registration.png)
+
+   On the **Register an application** page that opens, configure the following settings:
+
+   - **Name**: Enter something descriptive. For example, ExO PowerShell CBA.
+
+   - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
+
+   - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
      Note that you can't create credentials for [native applications](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
-   ![Register an application](media/app-only-auth-register-app.png)
+     ![Register an application](media/exo-app-only-auth-register-app.png)
 
    When you're finished, click **Register**.
 
-   Leave the page that appears open. You'll use it in the next step.
+5. Leave the app page that you return to open. You'll use it in the next step.
 
 ## Step 2: Assign API permissions to the application
 
 You need to assign the API permission `Exchange.ManageAsApp` so the application can manage Exchange Online. API permissions are required because they have consent flow enabled, which allows auditing (directory roles don't have consent flow).
 
-1. Select **Manifest** in the left-hand navigation under **Manage**.
+1. On the app page under **Management**, select **Manifest**.
 
-2. Locate the `requiredResourceAccess` property in the manifest, and add the following inside the square brackets (`[]`):
+   ![Select Manifest on the application properties page](media/exo-app-only-auth-select-manifest.png)
+
+2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 44).
+
+   Modify the `resourceAppId`, `resourceAccess`, `id`, and `type` values as shown in the following code snippet:
 
    ```json
-   {
-       "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
-       "resourceAccess": [
-           {
+   "requiredResourceAccess": [
+      {
+         "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+         "resourceAccess": [
+            {
                "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
                "type": "Role"
-           }
-       ]
-   }
+            }
+         ]
+      }
+   ],
    ```
 
-3. Select **Save**.
+   When you're finished, click **Save**.
 
-4. Select **API permissions** under **Manage**. Confirm that the **Exchange.ManageAsApp** permission is listed.
+3. Still on the **Manifest** page, under **Management**, select **API permissions**.
 
-5. Select **Grant admin consent for org** and accept the consent dialog.
+   ![Select API permissions on the application properties page](media/exo-app-only-auth-select-api-permissions.png)
+
+   On the **API permissions** page that opens, do the following steps:
+
+   - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
+
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
+
+     ![Original incorrect API permissions](media/exo-app-only-auth-original-permissions.png)
+
+     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then click **Yes**.
+
+     The **Status** value should now be **Granted for \<Organization\>**.
+
+     ![Admin consent granted](media/exo-app-only-auth-admin-consent-granted.png)
+
+4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
 
 ## Step 3: Generate a self-signed certificate
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to `.cer` and `.pfx`.
-
-```powershell
-# Create certificate
-$mycert = New-SelfSignedCertificate -DnsName "example.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
-
-# Export certificate to .pfx file
-$mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "1234" -Force -AsPlainText)
-
-# Export certificate to .cer file
-$mycert | Export-Certificate -FilePath mycert.cer
-```
-
-- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.
+- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default).
 
   ```powershell
-  .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2020-04-01 -EndDate 2022-04-01
+  # Create certificate
+  $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
+
+  # Export certificate to .pfx file
+  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@s$w0rd1234" -AsPlainText -Force)
+
+  # Export certificate to .cer file
+  $mycert | Export-Certificate -FilePath mycert.cer
+  ```
+
+- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1) script to generate SHA1 certificates.
+
+  ```powershell
+  .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
   ```
 
 ## Step 4: Attach the certificate to the Azure AD application
 
 After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
-1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
+1. On the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
 
-2. Under **Manage**, select **App registrations**.
+   If you need to get back to **Apps registration** page, do the following steps:
 
-3. On the **App registrations** page that appears, select your application.
+   1. Open the Azure AD portal at <https://portal.azure.com/>.
+   2. Under **Manage Azure Active Directory**, click **View**.
+   3. Under **Manage**, select **App registrations**.
 
-4. Under **Manage**, select **Certificates & secrets**.
+   ![Apps registration page where you select your app](media/exo-app-only-auth-app-registration-page.png)
 
-5. On the **Certificates & secrets** page that opens, click **Upload certificate**.
+2. On the application page that opens, under **Manage**, select **Certificates & secrets**.
 
-   ![Click Upload certificate](media/app-only-auth-upload-cert.png)
+   ![Select Certificates & Secrets on the application properties page](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-6. In the dialog that appears, browse to the self-signed certificate (`.cer` file) you created in the previous step, and then click **Add**.
+3. On the **Certificates & secrets** page that opens, click **Upload certificate**.
 
-## Step 5: Assign a role to the application
+   ![Select Upload certificate on the Certificates & secrets page](media/exo-app-only-auth-select-upload-certificate.png)
+
+   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
+
+   ![Browse to the certificate and then click Add](media/exo-app-only-auth-upload-certificate-dialog.png)
+
+   When you're finished, click **Add**.
+
+   The certificate is now shown in the **Certificates** section.
+
+   ![Application page showing that the certificate was added](media/exo-app-only-auth-certificate-successfully-added.png)
+
+4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
+
+## Step 5: Assign Azure AD roles to the application
 
 Azure AD has more than 50 admin roles available. For app-only authentication in Exchange Online, we currently support the previously mentioned roles:
 
@@ -198,12 +249,30 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Exchange administrator
 - Global Reader
 
-1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
+For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/roles/manage-roles-portal).
 
-2. Under **Manage**, select **Roles and administrators**.
+1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
-3. Select one of the supported roles. On the **Assignments** page that appears, click **Add assignments**
+   ![View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
 
-4. In the **Add assignments** flyout that appears, find and select the application, and then click **Add**.
+2. On the **Overview** page that opens, under **Manage**, select **Roles and administrators**.
 
-   ![Add a role assignment](media/app-only-auth-role-assignment.png)
+   ![Select Roles and administrators from the overview page](media/exo-app-only-auth-select-roles-and-administrators.png)
+
+3. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
+
+   ![Find and select a supported role by clicking on the role name](media/exo-app-only-auth-find-and-select-supported-role.png)
+
+4. On the **Assignments** page that opens, click **Add assignments**.
+
+   ![Select Add assignments on the role assignments page](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
+
+5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
+
+   ![Find and select your app on the Add assignments flyout](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
+
+   When you're finished, click **Add**.
+
+6. Back on the **Assignments** page, verify that the app has been assigned to the role.
+
+   ![The role assignments page after to added the app to the role](media/exo-app-only-auth-app-assigned-to-role.png)

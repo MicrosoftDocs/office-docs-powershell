@@ -48,7 +48,7 @@ This example removes John's permissions to the Training folder in Kim's mailbox.
 Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
 ```
 
-This example will clear any corrupted delegate information from Kim’s mailbox.
+This example will clear any corrupted delegate information from Kim's mailbox.
 
 ## PARAMETERS
 
