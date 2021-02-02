@@ -181,11 +181,7 @@ Disconnect-ExchangeOnline
 
 ## PowerShell 7 log in experiences
 
-This section describes the log in experiences that are available in version 2.0.4 or later of the EXO V2 module in PowerShell 7 after you load the module in your current PowerShell session by running the following command:
-
-```powershell
-Import-Module ExchangeOnlineManagement
-```
+This section describes the log in experiences that are available in version 2.0.4 or later of the EXO V2 module in PowerShell 7.
 
 For more information about the operating systems that are supported by the EXO V2 module in PowerShell 7, see [Supported operating systems for the EXO V2 module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exo-v2-module).
 
