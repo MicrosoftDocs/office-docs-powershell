@@ -43,7 +43,9 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell using modern authentication](#connect-to-exchange-online-powershell-using-modern-authentication) section.
 
-1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
+**Note**: For other sign in methods that are available in PowerShell 7, see the [PowerShell 7 log in experiences](#powershell-7-log-in-experiences) section later in this topic.
+
+1. In a PowerShell window, load the EXO V2 module by running the following command:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
@@ -54,48 +56,49 @@ If your account uses multi-factor authentication, use the steps in this section.
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+   Connect-ExchangeOnline -UserPrincipalName <UPN> [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
    - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
    - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
+   - The progress bar is now shown by default, so `-ShowProgress $true` is no longer required. To hide the progress bar, use this exact syntax: `-ShowProgress:$false`.
 
    **This example connects to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -ShowProgress $true
+   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com
    ```
 
    **This example connects to Exchange Online PowerShell in an Office 365 Germany organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.de -ShowProgress $true -ExchangeEnvironmentName O365GermanyCloud
+   Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.de -ExchangeEnvironmentName O365GermanyCloud
    ```
 
    **This example connects to Exchange Online PowerShell in a Microsoft GCC High organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName laura@blueyonderairlines.us -ShowProgress $true -ExchangeEnvironmentName O365USGovGCCHigh
+   Connect-ExchangeOnline -UserPrincipalName laura@blueyonderairlines.us -ExchangeEnvironmentName O365USGovGCCHigh
    ```
 
    **This example connects to Exchange Online PowerShell in a Microsoft 365 DoD organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName julia@adatum.mil -ShowProgress $true -ExchangeEnvironmentName O365USGovDoD
+   Connect-ExchangeOnline -UserPrincipalName julia@adatum.mil -ExchangeEnvironmentName O365USGovDoD
    ```
 
    **This example connects to Exchange Online PowerShell to manage another tenant**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -ShowProgress $true -DelegatedOrganization adatum.onmicrosoft.com
+   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -DelegatedOrganization adatum.onmicrosoft.com
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
-> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
 ```powershell
 Disconnect-ExchangeOnline
@@ -105,7 +108,9 @@ Disconnect-ExchangeOnline
 
 If your account doesn't use multi-factor authentication, use the steps in this section.
 
-1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
+**Note**: For other sign in methods that are available in PowerShell 7, see the [PowerShell 7 log in experiences](#powershell-7-log-in-experiences) section later in this topic.
+
+1. In a PowerShell window, load the EXO V2 module by running the following command:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
@@ -122,52 +127,53 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    $UserCredential = Get-Credential
    ```
 
-   In the **Windows PowerShell Credential Request** dialog box that appears, type your work or school account and password, and then click **OK**.
+   In the credentials prompt, enter your work or school account and password.
 
 3. The last command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline [-Credential $UserCredential] -ShowProgress $true [-ShowBanner:$false] [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+   Connect-ExchangeOnline [-Credential $UserCredential] [-ShowBanner:$false] [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
    ```
 
    - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
    - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
    - If you're behind a proxy server, store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) cmdlet in a variable (for example, `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value> [-ProxyAuthentication <Value>] [-ProxyCredential <Value>]`). Then, use the variable (`$ProxyOptions`) as the value for the _PSSessionOption_ parameter.
+   - The progress bar is now shown by default, so `-ShowProgress $true` is no longer required. To hide the progress bar, use this exact syntax: `-ShowProgress:$false`.
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true
+   Connect-ExchangeOnline -Credential $UserCredential
    ```
 
    **Connect to Exchange Online PowerShell in an Office 365 Germany organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365GermanyCloud
+   Connect-ExchangeOnline -Credential $UserCredential -ExchangeEnvironmentName O365GermanyCloud
    ```
 
    **Connect to Exchange Online PowerShell in an Office 365 operated by 21Vianet organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365China
+   Connect-ExchangeOnline -Credential $UserCredential -ExchangeEnvironmentName O365China
    ```
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 GCC High organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365USGovGCCHigh
+   Connect-ExchangeOnline -Credential $UserCredential -ExchangeEnvironmentName O365USGovGCCHigh
    ```
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 DoD organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365USGovDoD
+   Connect-ExchangeOnline -Credential $UserCredential -ExchangeEnvironmentName O365USGovDoD
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
-> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline
@@ -175,7 +181,13 @@ Disconnect-ExchangeOnline
 
 ## PowerShell 7 log in experiences
 
-This section describes the log in experiences that are available in version 2.0.4 or later of the EXO V2 module in PowerShell 7.
+This section describes the log in experiences that are available in version 2.0.4 or later of the EXO V2 module in PowerShell 7 after you load the module in your current PowerShell session by running the following command:
+
+```powershell
+Import-Module ExchangeOnlineManagement
+```
+
+For more information about the operating systems that are supported by the EXO V2 module in PowerShell 7, see [Supported operating systems for the EXO V2 module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exo-v2-module).
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
@@ -204,7 +216,7 @@ The command returns a URL and unique code that's tied to the session. You need t
 You can enter your credentials directly in the PowerShell window without the need to go to the browser for SSO.
 
 > [!NOTE]
-> This method does not work with accounts that use MFA.
+> This method does not work with accounts that use multi-factor authentication.
 
 This method is an improvement on the _Credential_ parameter, because you don't need to store the credentials locally in a script, and you can enter the credentials directly in an interactive PowerShell session.
 
@@ -214,7 +226,7 @@ This method is an improvement on the _Credential_ parameter, because you don't n
 
 ## How do you know this worked?
 
-The Exchange Online cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-Mailbox**, and see the results.
+The Exchange Online cmdlets are imported into your local PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-Mailbox**, and see the results.
 
 If you receive errors, check the following requirements:
 

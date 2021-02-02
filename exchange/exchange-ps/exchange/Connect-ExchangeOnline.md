@@ -112,16 +112,16 @@ This example connects to Exchange Online in an unattended scripting scenario usi
 Connect-ExchangeOnline -Device
 ```
 
-In Windows PowerShell 7.0 or later using version 2.0.4-Preview2 or later in Linux, this example connects to Exchange Online using single sign-on (SSO) in interactive scripting scenarios on computers that don't have web browsers.
+In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online using single sign-on (SSO) in interactive scripting scenarios on computers that don't have web browsers.
 
-The command prints a URL along with a unique code that's tied to the session. You need to open the printed URL in a browser on any computer, and you need to enter the unique code. After you complete the login in the web browser, the session in the Windows Powershell window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
 ### Example 7
 ```powershell
 Connect-ExchangeOnline -InlineCredential
 ```
 
-In Windows PowerShell 7.0 or later using version 2.0.4-Preview2 or later in Linux, this example connects to Exchange Online in interactive scripting scenarios by passing credentials directly in the Windows PowerShell window.
+In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online in interactive scripting scenarios by passing credentials directly in the PowerShell window.
 
 ## PARAMETERS
 
@@ -566,8 +566,8 @@ Accept wildcard characters: False
 ### -ShowProgress
 The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The progress bar shows number of objects received and total number of objects requested. Valid values are:
 
-- $true: The progress bar is displayed.
-- $false: The progress bar isn't displayed. This is the default value.
+- $true: The progress bar is displayed. This is the default value.
+- $false: The progress bar isn't displayed.
 
 ```yaml
 Type: Boolean
