@@ -15,7 +15,7 @@ ms.reviewer: navgupta
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
 
 To connect to other PowerShell environments (for example, Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
@@ -422,11 +422,11 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
+**Note**: This parameter is available only in version 2.0.4 or later, and only in PowerShell 7.
 
 The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
 
-This switch works only in Windows PowerShell 7.0 or later for connections to Exchange Online in Linux. The command prints a URL along with a unique code that's tied to the session. You need to open the printed URL in a browser on any computer, and you need to enter the unique code. After you complete the login in the web browser, the session in the Windows Powershell window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
 ```yaml
 Type: SwitchParameter
@@ -458,11 +458,13 @@ Accept wildcard characters: False
 ```
 
 ### -InlineCredential
-**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
+**Note**: This parameter is available only in version 2.0.4 or later, and only in PowerShell 7.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
-This switch works only in Windows PowerShell 7.0 or later for connections to Exchange Online in Linux. This switch is similar to the Credential parameter, but with added security. The InlineCredential switch doesn't require you to store the credentials locally in the script, and you can enter credentials directly in an interactive PowerShell session.
+This switch is similar to the Credential parameter, but with added security. The InlineCredential switch doesn't require you to store the credentials locally in the script, and you can enter credentials directly in an interactive PowerShell session.
+
+This switch does not work with accounts that use MFA.
 
 ```yaml
 Type: SwitchParameter

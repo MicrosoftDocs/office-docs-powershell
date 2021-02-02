@@ -175,7 +175,7 @@ Disconnect-ExchangeOnline
 
 ## PowerShell 7 log in experiences
 
-This section describes log in experiences that are available on in PowerShell 7 and version 2.0.5 or later of the EXO V2 module.
+This section describes the log in experiences that are available in version 2.0.4 or later of the EXO V2 module in PowerShell 7.
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
@@ -196,6 +196,8 @@ Use device-based log in when no browser is available (and therefore, you can't s
 ```powershell
 Connect-ExchangeOnline -Device
 ```
+
+The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
 ### Inline credentials
 
