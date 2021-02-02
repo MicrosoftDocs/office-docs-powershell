@@ -221,7 +221,9 @@ When creating your own custom OPath filters, consider the following items:
   - `-like` (string comparison)
   - `-notlike` (string comparison)
 
-- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. The **-like** operator is used to find pattern matches in rich types (for example, strings) whereas the **-eq** operator is used to find an exact match.
+- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. Use the **-like** operator to find pattern matches in rich types (for example, strings). Use the **-eq** operator to find an exact match.
+
+  When you use the **-like** operator in Exchange Online PowerShell, the wildcard character is supported only as a suffix. For example, `"Department -like 'sales*'"` is allowed; `"Department -like '*sales'"` is not allowed.
 
 - For more information about operators you can use, see:
 
