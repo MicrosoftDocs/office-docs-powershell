@@ -100,6 +100,7 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Microsoft 365 Group property that you want to modify. Valid values are:
 
+- Aggregators
 - Members
 - Owners
 - Subscribers
