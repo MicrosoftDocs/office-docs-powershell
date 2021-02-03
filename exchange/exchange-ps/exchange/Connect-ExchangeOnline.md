@@ -112,7 +112,7 @@ This example connects to Exchange Online in an unattended scripting scenario usi
 Connect-ExchangeOnline -Device
 ```
 
-In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online using single sign-on (SSO) in interactive scripting scenarios on computers that don't have web browsers.
+In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online in interactive scripting scenarios on computers that don't have web browsers.
 
 The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
