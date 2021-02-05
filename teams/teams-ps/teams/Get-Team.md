@@ -19,13 +19,13 @@ This cmdlet supports retrieving teams with particular properties/information, in
 ### Identity
 ```
 Get-Team -GroupId <String> [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
- [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>]
+ [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
 ```
 
 ### Filters
 ```
 Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-DisplayName <String>]
- [-MailNickName <String>] [<CommonParameters>]
+ [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
 ```
 
 ## DESCRIPTION
