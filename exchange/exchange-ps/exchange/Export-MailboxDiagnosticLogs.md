@@ -113,7 +113,9 @@ The ComponentName parameter specifies the component that you want to retrieve th
 - RemindersAssistant
 - SharingMigrationAssistant
 - SharingSyncAssistant
+- SubstrateHoldTracking
 - SweepRules
+- TimeProfile
 
 ```yaml
 Type: String

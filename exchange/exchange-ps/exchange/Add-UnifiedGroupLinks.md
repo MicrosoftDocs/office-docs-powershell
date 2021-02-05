@@ -34,9 +34,7 @@ Microsoft 365 Groups are group objects that are available across Microsoft 365 s
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
->
- [!NOTE]
-> Only members can be owners of a group, so you must first add a user as member before adding it as an owner.
+**Note**: Only members can be owners of a group, so you must first add a user as member before adding it as an owner.
 
 ## EXAMPLES
 
@@ -102,6 +100,7 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Microsoft 365 Group property that you want to modify. Valid values are:
 
+- Aggregators
 - Members
 - Owners
 - Subscribers
