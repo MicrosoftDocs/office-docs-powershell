@@ -20,7 +20,7 @@ description: "Admins can learn about the installation, maintenance, and design o
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell.
 
-For connection instructions using the EXO V2 module, see the following topics:
+For connection instructions using the EXO V2 module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 
@@ -28,7 +28,7 @@ For connection instructions using the EXO V2 module, see the following topics:
 
 - [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
 
-The rest of this topic explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
+The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
 
 ## Report bugs and issues for the EXO V2 module
 
@@ -42,7 +42,7 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 The module contains a small set of exclusive Exchange Online PowerShell cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). When you first open the module, you'll only see these exclusive cmdlets. After you [connect to your Exchange Online organization](connect-to-exchange-online-powershell.md), you'll see all of the familiar cmdlets that are available in Exchange Online PowerShell.
 
-The module use modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to enable the Basic authentication setting in WinRM as explained [later in this topic](#prerequisites-for-the-exo-v2-module).
+The module use modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to enable the Basic authentication setting in WinRM as explained [later in this article](#prerequisites-for-the-exo-v2-module).
 
 The Exchange Online cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents, but the equivalent cmdlets are still available (after you connect).
 
@@ -69,7 +69,7 @@ The connection-related cmdlets that are available in the EXO V2 module are liste
 
 |EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
-|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
+|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <p> or <p> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
 |[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
 |[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
 |
@@ -106,9 +106,9 @@ The procedures in this section explain how to install, update, and uninstall the
   - Windows 7 Service Pack 1 (SP1)<sup>\*\*</sup>
   - Windows Server 2008 R2 SP1<sup>\*\*</sup>
 
-  <sup>\*</sup> The `2.0.4-Preview2` version of the module supports PowerShell 7 in Linux and Windows. For more information, see the [PowerShell Core support in the EXO V2 module](#powershell-core-support-in-the-exo-v2-module) section later in this topic.
+  <sup>\*</sup> The `2.0.4-Preview2` version of the module supports PowerShell 7 in Linux and Windows. For more information, see the [PowerShell Core support in the EXO V2 module](#powershell-core-support-in-the-exo-v2-module) section later in this article.
 
-  <sup>\*\*</sup> This version of Windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -127,7 +127,7 @@ The procedures in this section explain how to install, update, and uninstall the
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
-  
+
   ```dos
   winrm get winrm/config/client/auth
   ```
@@ -251,7 +251,7 @@ The `2.0.4-Preview2` version supports PowerShell 7 in Linux and Windows environm
 - PowerShell 7 in MacOS is not supported.
 - The Preview version of the module works with Windows PowerShell 5.1.
 
-To install the `2.0.4-Preview2` version of the module, see the [Install and maintain the EXO V2 module](#install-and-maintain-the-exo-v2-module) section in this topic.
+To install the `2.0.4-Preview2` version of the module, see the [Install and maintain the EXO V2 module](#install-and-maintain-the-exo-v2-module) section in this article.
 
 For more information about PowerShell 7, see [Announcing PowerShell 7.0](https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/).
 
@@ -362,7 +362,7 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 - You can now use `FolderId` as an identity parameter in **Get-EXOMailboxFolderPermission**. You can get the `FolderId` value using **Get-MailboxFolder**. For example:
 
   `Get-MailboxFolderPermission -Identity <UPN>:<Folder-Path>`
-  
+
   `Get-MailboxFolderPermission -Identity <UPN>:\<Folder-Id>`
 
 - Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors which led to failures have been resolved.

@@ -128,7 +128,6 @@ Accept wildcard characters: False
 ### -IPGateway
 The IPGateway parameter specifies the UM IP gateway for which you want to retrieve active calls.
 
-
 You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.
 
 ```yaml

@@ -70,7 +70,7 @@ The sample script [Remove Duplicate public folder MRS Requests](https://gallery.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request that you want to remove. This value uses the syntax \\PublicFolderMailboxMigration\<GUID\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request that you want to remove. This value uses the syntax `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
 
 You can't use this parameter with the RequestGuid or RequestQueue parameters.
 

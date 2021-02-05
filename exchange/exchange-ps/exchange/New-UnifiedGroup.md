@@ -128,7 +128,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
+New-UnifiedGroup -DisplayName "Engineering Department" -Alias "engineering"
 ```
 
 This example creates a new Microsoft 365 Group named Engineering Department.
@@ -165,7 +165,7 @@ The DlIdentity parameter specifies the distribution group (also known as a distr
 
 All the properties and membership of the distribution group are copied to the Microsoft 365 Group.
 
-The alias and proxy addresses of the distribution group are moved to the Microsoft 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
+The alias and proxy addresses of the distribution group are moved to the Microsoft 365 Group, and are replaced on the distribution group by the values `DLMigrated_<GUID>`. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
 
 Microsoft 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Microsoft 365 Group. The Microsoft 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Microsoft 365 Group.
 
@@ -190,7 +190,7 @@ The AccessType parameter specifies the privacy type for the Microsoft 365 Group.
 
 You can change the privacy type at any point in the lifecycle of the group.
 
-Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
+**Note**: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
 ```yaml
 Type: ModernGroupTypeInfo
@@ -208,13 +208,13 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 If you don't use the Alias parameter when you create a Microsoft 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
 
-When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
-The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Microsoft 365 Group ("Alias\_\<ExternalDirectoryObjectId\>"\).
+The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Microsoft 365 Group (`<Alias>_<ExternalDirectoryObjectId>`).
 
 ```yaml
 Type: String
@@ -368,22 +368,20 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
-- Use the \<Type\> value SMTP on the address.
-- The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
+- Use the Type value SMTP on the address.
+- The first email address when you don't use any Type values, or when you use multiple lowercase smtp Type values.
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
-
-To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
 ```yaml
 Type: ProxyAddressCollection
@@ -437,7 +435,7 @@ The HiddenGroupMembershipEnabled switch specifies whether to hide the members of
 
 You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a Microsoft 365 Group group that represents students enrolled in a class).
 
-Note: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
+**Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter
@@ -512,7 +510,7 @@ The Members parameter specifies the recipients (mail-enabled objects) that are m
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -530,7 +528,7 @@ Accept wildcard characters: False
 ### -Name
 This parameter has been deprecated and is no longer used.
 
-Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Microsoft 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\).
+Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Microsoft 365 Group (`Name_<RandomGUID>`). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value (`<Alias>_<ExternalDirectoryObjectId>`).
 
 ```yaml
 Type: String

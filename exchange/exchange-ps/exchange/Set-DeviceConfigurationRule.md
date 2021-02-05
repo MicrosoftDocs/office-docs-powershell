@@ -97,7 +97,7 @@ This example modifies the specified mobile device configuration rule to block sc
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device configuration rule that you want to modify. The name of the rule uses the syntax \<Mobile device configuration policy name\>{\<GUID value\>}. For example, Engineering Group{914f151c-394b-4da9-9422-f5a2f65dec30}..
+The Identity parameter specifies the mobile device configuration rule that you want to modify. The name of the rule uses the syntax `<Mobile device configuration policy name\{<GUID value\}`. For example, `Engineering Group{914f151c-394b-4da9-9422-f5a2f65dec30}`.
 
 ```yaml
 Type: ComplianceRuleIdParameter

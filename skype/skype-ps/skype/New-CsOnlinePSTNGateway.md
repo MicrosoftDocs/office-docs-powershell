@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateRingingWhileLocatingUser
-This parameter is applicableis only for Direct Routing in non-media bypass mode. Sometimes inbound calls from the public switched telephone network (PSTN) to Teams clients can take longer than expected to be established. This can occur for various reasons. When this happens, the caller might not hear anything, the Teams client doesn't ring, and the call might be canceled by some telecommunications providers. This parameter helps to avoid unexpected silences that can occur in this scenario. When enabled for inbound calls from the PSTN to Teams clients, a distinctive audio signal is played to the caller to indicate that Teams is in the process of establishing the call.
+This parameter is applicable only for Direct Routing in non-media bypass mode. Sometimes inbound calls from the public switched telephone network (PSTN) to Teams clients can take longer than expected to be established. This can occur for various reasons. When this happens, the caller might not hear anything, the Teams client doesn't ring, and some telecommunications providers might cancel the call. This parameter helps to avoid unexpected silences that can occur in this scenario. When enabled for inbound calls from the PSTN to Teams clients, a distinctive audio signal is played to the caller to indicate that Teams is in the process of establishing the call.
 
 ```yaml
 Type: Boolean

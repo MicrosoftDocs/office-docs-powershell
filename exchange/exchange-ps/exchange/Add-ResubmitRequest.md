@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-The Destination parameter specifies the GUID of the destination mailbox database. To find the GUID of the mailbox database, run the command: Get-MailboxDatabase -Server \<servername\> | Format-List Name,GUID.
+The Destination parameter specifies the GUID of the destination mailbox database. To find the GUID of the mailbox database, run the command: `Get-MailboxDatabase -Server <ServerName> | Format-List Name,GUID`.
 
 You can't use this parameter with the Recipient, ResubmitTo, or Sender parameters.
 

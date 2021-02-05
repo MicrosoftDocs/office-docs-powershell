@@ -37,14 +37,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$OnPremisesCreds = Get-Credential; $TenantCreds = Get-Credential; Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
+$OnPremisesCreds = Get-Credential
+$TenantCreds = Get-Credential
+Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
 ```
 
 This example defines the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 for enterprises organization.
 
-Use the first command to specify your on-premises organization credentials. For example, run this command and enter \<domain\>\\admin@contoso.com and the associated password in the resulting Windows PowerShell Credential Request dialog box.
+Use the first command to specify your on-premises organization credentials. For example, run this command and enter `<domain>\admin@contoso.com` and the associated password in the resulting Windows PowerShell Credential Request dialog box.
 
-Use the second command to specify your Microsoft 365 organization credentials. For example, run this command and then enter admin@contoso.onmicrosoft.com and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
+Use the second command to specify your Microsoft 365 organization credentials. For example, run this command and then enter `admin@contoso.onmicrosoft.com` and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
 
 Use the last command to define the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 organization.
 

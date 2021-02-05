@@ -27,12 +27,12 @@ The group policy assignment rank is set at the time a policy is being assigned t
 
 It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list.
 
-Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups. 
+Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups up to 100000 users. Segment your users into smaller groups, or make use of default policies for the majority of users with the most common policies and only use groups for those users that require other policies.
 
 Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 
 Group policy assignment is currently limited to the following policy types:
-CallingLineIdentity (Caller ID policies), OnlineVoiceRoutingPolicy (Voice Routing policies), TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
+CallingLineIdentity (Caller ID policies), TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
 
 ## EXAMPLES
 
@@ -104,6 +104,20 @@ Accept wildcard characters: False
 
 ### -PolicyType
 The type of the policy to be assigned.
+Possible values:
+- CallingLineIdentity
+- TeamsAppSetupPolicy
+- TeamsCallingPolicy
+- TeamsCallParkPolicy
+- TeamsChannelsPolicy
+- TeamsComplianceRecordingPolicy
+- TenantDialPlan
+- TeamsEducationAssignmentsAppPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMeetingPolicy
+- TeamsMessagingPolicy
+- TeamsShiftsPolicy
+- TeamsUpdateManagementPolicy
 
 ```yaml
 Type: String

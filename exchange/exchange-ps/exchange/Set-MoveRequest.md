@@ -130,7 +130,6 @@ The ArchiveTargetDatabase parameter specifies the target mailbox database for th
 
 You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
 
-
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: (All)

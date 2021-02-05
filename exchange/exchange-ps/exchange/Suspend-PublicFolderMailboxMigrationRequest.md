@@ -44,7 +44,7 @@ This example suspends the specified public folder mailbox migration request.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request that you want to suspend. This value uses the syntax \\PublicFolderMailboxMigration\<GUID\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request that you want to suspend. This value uses the syntax `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
 
 ```yaml
 Type: PublicFolderMailboxMigrationRequestIdParameter

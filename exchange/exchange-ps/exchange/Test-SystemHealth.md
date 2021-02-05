@@ -60,7 +60,8 @@ This example gathers data about your Exchange system.
 
 ### Example 2
 ```powershell
-$temp=Test-SystemHealth -OutData; Set-Content -Value $temp.FileData -Path d:\temp\SystemHealthOutData.xml -Encoding Byte
+$temp=Test-SystemHealth -OutData
+Set-Content -Value $temp.FileData -Path d:\temp\SystemHealthOutData.xml -Encoding Byte
 ```
 
 This example saves the output data as a byte stream to the temporary variable $temp. Then the content is written to the file SystemHealthOutData.xml using the Set-Content cmdlet.

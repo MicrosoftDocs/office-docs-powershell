@@ -74,7 +74,6 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-TestModeAction <SpamFilteringTestModeAction>]
  [-TestModeBccToRecipients <MultiValuedProperty>]
  [-WhatIf]
- [-ZapEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -100,7 +99,7 @@ This example creates a spam filter policy named Contoso Executives with the foll
 ### -Name
 The Name parameter specifies a unique name for the spam filter policy. If the value contains spaces, enclose the value in quotation marks (").
 
-Don't use the following characters in the name value: \\, %, &, \*, +, /, =, ?, {, }, \|, \<, \>, (, ), ;, :, [, ], comma (,), or double quotation mark (").
+Don't use the following characters in the name value: `\ % & * + / = ? { } | < > ( ) ; : [ ] , "`.
 
 ```yaml
 Type: String
@@ -165,9 +164,9 @@ The AllowedSenderDomains parameter specifies trusted domains that aren't process
 
 **Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -187,9 +186,9 @@ The AllowedSenders parameter specifies a list of trusted senders that skip spam 
 
 **Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -209,9 +208,9 @@ The BlockedSenderDomains parameter specifies domains that are always marked as s
 
 **Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -231,9 +230,9 @@ The BlockedSenders parameter specifies senders that are always marked as spam so
 
 **Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -648,9 +647,9 @@ af, ar, az, be, bg, bn, br, bs, ca, cs, cy, da, de, el, en, eo, es, et, eu, fa, 
 
 A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Note that not all possible language codes are available as input for this parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list, use the value $null.
 
@@ -1002,7 +1001,7 @@ The QuarantineRetentionPeriod parameter specifies the number of days that spam m
 - PhishSpamAction
 - SpamAction
 
-A valid value is an integer between 1 and 30. The default value is 30.
+A valid value is an integer between 1 and 30. The default value is 15.
 
 After the time period expires, the message is deleted.
 
@@ -1049,9 +1048,9 @@ AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, 
 
 A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list, use the value $null.
 
@@ -1163,22 +1162,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ZapEnabled
-This parameter has been deprecated and is no longer used. Use the PhishZapEnabled and SpamZapEnabled parameters instead.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

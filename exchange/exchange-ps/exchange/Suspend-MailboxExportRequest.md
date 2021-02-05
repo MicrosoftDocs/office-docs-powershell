@@ -53,7 +53,7 @@ This example suspends all export requests that are in progress by using the Get-
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). Use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). Use the following syntax: `Alias\Name`.
 
 ```yaml
 Type: MailboxExportRequestIdParameter
