@@ -214,6 +214,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NumberOfThreads
+Specifies the number of threads to use. The accepted values range from 1 to 20.
+
+```yaml
+Type: Int32
+Parameter Sets: All
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
