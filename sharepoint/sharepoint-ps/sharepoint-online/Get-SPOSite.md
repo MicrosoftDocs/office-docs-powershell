@@ -129,23 +129,27 @@ Use this parameter to get additional property information on a site collection. 
 
 The following properties are returned:
 
---ResourceUsageCurrent
+- ResourceUsageCurrent
 
---ResourceUsageAverage
+- ResourceUsageAverage
 
---StorageUsageCurrent
+- StorageUsageCurrent
 
---LockIssue
+- LockIssue
 
---WebsCount
+- WebsCount
 
---CompatibilityLevel
+- CompatibilityLevel
 
---AllowSelfServiceUpgrade
+- AllowSelfServiceUpgrade
 
---SiteDefinedSharingCapability-returns the stored value of the site policy.
+- SiteDefinedSharingCapability
 
---SharingCapability --returns the effective access level (the site policy and the tenant policy combined.
+Returns the stored value of the site policy.
+
+- SharingCapability
+
+Returns the effective access level, which is the site policy and the tenant policy combined.
 
 ```yaml
 Type: SwitchParameter
