@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SpoofMailReport cmdlet to view information about insider spoofing in your cloud-based organization for the past 10 days. Insider spoofing is where the sender's email address in an inbound message appears to represent your organization, but the actual identity of the sender is different. Insider spoofing is a common tactic that's used in phishing messages to obtain user credentials or steal money.
-
-This cmdlet is only available in Microsoft 365 Enterprise E5 or Microsoft Defender for Office 365 licenses.
+Use the Get-SpoofMailReport cmdlet to view information about spoofed senders in your cloud-based organization for the past 90 days. Spoofing is where the sender of the inbound message is different than the actual source of the message (for example, the sender is lila@contoso.com, but the message was sent from the email infrastructure of fabrikam.com).
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -38,16 +36,16 @@ Get-SpoofMailReport [-Action <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-The spoof mail report is a feature in Defender for Office 36 that you can use to query information about insider spoofing detections in the last 30 days. For the reporting period you specify, the Get-SpoofMailReport cmdlet returns the following information:
+For the reporting period you specify, the Get-SpoofMailReport cmdlet returns the following information:
 
 - Date: Date the message was sent.
 - Event Type: Typically, this value is SpoofMail.
 - Direction: This value is Inbound.
-- Domain: The sender domain. This corresponds to one of your organization's accepted domains.
+- Domain: The domain of the sender's email address.
 - Action: Typically, this value is GoodMail or CaughtAsSpam.
-- Spoofed Sender: The spoofed email address or domain in your organization from which the messages appear to be coming.
-- True Sender: The organizational domain of the PTR record, or pointer record, of the sending IP address, also known as the reverse DNS address. If the sending IP address does not have a PTR record, this field will be blank and the Sender IP column will be filled in. Both columns will not be filled in at the same time.
-- Sender IP: The IP address or address range of the source messaging server. If the sending IP address does have a PTR record, this field will be blank and the True Sender column will be filled in. Both columns will not be filled in at the same time.
+- Spoofed Sender: The spoofed email address or domain that appears in the From address of the message.
+- True Sender: The domain from the reverse DNS lookup (PTR record) of the source IP address. If the source IP address does not have a PTR record, this field will be blank and the Sender IP column will be filled in. Both columns will not be filled in at the same time.
+- Sender IP: The IP address or address range of the source messaging server only if the message's source IP address does not have a reverse DNS (PTR) record. True Sender and Sender IP are never filled in at the same time.
 - Count: The number of spoofed messages that were sent to your organization from the source messaging server during the specified time period.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -56,7 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-SpoofMailReport -StartDate 03/01/2016 -EndDate 03/31/2016
+Get-SpoofMailReport -StartDate 03/01/2020 -EndDate 03/11/2020
 ```
 
 This example shows the insider spoofing detections in your organization during the month of March 2016.

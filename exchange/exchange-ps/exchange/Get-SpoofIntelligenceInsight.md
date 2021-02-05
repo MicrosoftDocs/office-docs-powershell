@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SpoofIntelligenceInsight cmdlet to view
+Use the Get-SpoofIntelligenceInsight cmdlet to view spoofed senders that were allowed or blocked by spoof intelligence during the last 7 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-SpoofIntelligenceInsight
 ```
 
-{{ Add example description here }}
+This example returns information about spoofed senders during the last 7 days.
 
 ## PARAMETERS
 
