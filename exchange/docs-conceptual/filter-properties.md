@@ -36,7 +36,7 @@ You use the _Filter_ parameter to create OPATH filters based on the properties o
 For more information about recipients filters in Exchange PowerShell, see [Recipient filters in Exchange PowerShell commands](recipient-filters.md).
 
 > [!NOTE]
-> The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
+> The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this article.
 
 ## Filterable properties
 

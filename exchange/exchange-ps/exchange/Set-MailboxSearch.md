@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxSearch cmdlet to modify an existing mailbox search.
 
+**Note**: As of October 2020, the \*-MailboxSearch cmdlets are retired in Exchange Online PowerShell. Use the \*-ComplianceSearch cmdlets in Security & Compliance Center PowerShell instead. For more information, see [Retirement of legacy eDiscovery tools](https://docs.microsoft.com/microsoft-365/compliance/legacy-ediscovery-retirement).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -54,9 +56,9 @@ Set-Mailboxsearch [-Identity] <SearchObjectIdParameter>
 ```
 
 ## DESCRIPTION
-In on-premises Exchange and Exchange Online, mailbox searches are used for In-Place eDiscovery and In-Place Hold. For In-Place eDiscovery, unless specified, mailboxes on all Mailbox servers in an organization are searched. To create an In-Place Hold, you need to specify the mailboxes to place on hold using the SourceMailboxes parameter. The search can be stopped, started, modified, and removed.
+In on-premises Exchange, mailbox searches are used for In-Place eDiscovery and In-Place Hold. For In-Place eDiscovery, unless specified, mailboxes on all Mailbox servers in an organization are searched. To create an In-Place Hold, you need to specify the mailboxes to place on hold using the SourceMailboxes parameter. The search can be stopped, started, modified, and removed.
 
-By default, mailbox searches are performed across all Exchange 2016 and Exchange 2013 Mailbox servers in an Exchange organization, unless you constrain the search to fewer mailboxes by using the SourceMailboxes parameter. To search mailboxes on Exchange 2010 Mailbox servers, run the command on an Exchange 2010 server.
+By default, mailbox searches are performed across all Exchange 2013 or later Mailbox servers in an organization, unless you constrain the search to fewer mailboxes by using the SourceMailboxes parameter. To search mailboxes on Exchange 2010 Mailbox servers, run the command on an Exchange 2010 server.
 
 If the In-Place eDiscovery search you want to modify is running, stop it before using the Set-MailboxSearch cmdlet. When restarting a search, any previous search results are removed from the target mailbox.
 

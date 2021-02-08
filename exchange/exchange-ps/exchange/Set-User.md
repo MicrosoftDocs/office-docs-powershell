@@ -26,6 +26,8 @@ Set-User [-Identity] <UserIdParameter>
  [-Arbitration]
  [-AssistantName <String>]
  [-AuthenticationPolicy <String>]
+ [-BlockCloudCache <Boolean>]
+ [-CanHaveCloudCache <Boolean>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
  [-Company <String>]
@@ -67,6 +69,7 @@ Set-User [-Identity] <UserIdParameter>
  [-SamAccountName <String>]
  [-SeniorityIndex <Int32>]
  [-SimpleDisplayName <String>]
+ [-SkipDualWrite]
  [-StateOrProvince <String>]
  [-StreetAddress <String>]
  [-StsRefreshTokensValidFrom <DateTime>]
@@ -75,6 +78,7 @@ Set-User [-Identity] <UserIdParameter>
  [-UMCallingLineIds <MultiValuedProperty>]
  [-UMDtmfMap <MultiValuedProperty>]
  [-UserPrincipalName <String>]
+ [-VIP <Boolean>]
  [-WebPage <String>]
  [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>]
@@ -196,6 +200,42 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockCloudCache
+This parameter is available only in the cloud-based service.
+
+{{ Fill BlockCloudCache Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CanHaveCloudCache
+This parameter is available only in the cloud-based service.
+
+{{ Fill CanHaveCloudCache Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -724,9 +764,7 @@ The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Ex
 
 Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 
->
- [!CAUTION]
-> This switch permanently deletes the existing cloud mailbox and its associated archive, prevents you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.
+**Caution**: This switch permanently deletes the existing cloud mailbox and its associated archive, prevents you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.
 
 ```yaml
 Type: SwitchParameter
@@ -937,6 +975,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipDualWrite
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StateOrProvince
 The StateOrProvince parameter specifies the user's state or province.
 
@@ -1079,6 +1135,29 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VIP
+This parameter is available only in the cloud-based service.
+
+The VIP parameter specifies whether the user is a priority account. Valid values are:
+
+- $true: The user is a priority account.
+- $false: The user is not a priority account.
+
+For more information about priority accounts, see [Manage and monitor priority accounts](https://docs.microsoft.com/microsoft-365/admin/setup/priority-accounts).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
