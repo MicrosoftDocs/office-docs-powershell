@@ -26,7 +26,7 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
  [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
  [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
