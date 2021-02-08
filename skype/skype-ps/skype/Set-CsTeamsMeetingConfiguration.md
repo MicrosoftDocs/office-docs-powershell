@@ -343,7 +343,7 @@ Possible values:
 - False
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
