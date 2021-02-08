@@ -335,6 +335,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableAppInteractionForAnonymousUsers
+Determines if anonymous users can interact with apps in meetings. Set to TRUE to disable App interaction.
+Possible values:
+
+- True
+- False
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 
 Internal Microsoft use
