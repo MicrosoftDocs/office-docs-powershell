@@ -22,17 +22,13 @@ Note: All custom templates will be retrieved, regardless of the locale specifica
 ### Get (Default)
 
 ```powershell
-Get-CsTeamTemplateList -Locale <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [<CommonParameters>]
+Get-CsTeamTemplateList [[-PublicTemplateLocale] <String>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 
 ```powershell
-Get-CsTeamTemplateList -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
- [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
- [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+Get-CsTeamTemplateList -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +40,7 @@ Get a list of available team templates
 ### EXAMPLE 1
 
 ```powershell
-Get-CsTeamTemplateList -Locale en-US
+Get-CsTeamTemplateList
 
 OdataId                                                         Name                           ShortDescription                 Chann AppCo
                                                                                                                                 elCou unt
@@ -58,12 +54,12 @@ OdataId                                                         Name            
 
 Returns all en-US templates within the universe of templates the admin’s tenant has access to.
 
-Note: All 1P Microsoft templates will always be returned in the specified locale.
+Note: All 1P Microsoft templates will always be returned in the specified locale. If the locale is not specified, en-US will be used.
 
 ### EXAMPLE 2
 
 ```powershell
-(Get-CsTeamTemplateList -Locale en-US) | where ChannelCount -GT 3
+(Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
 
 OdataId                                                 Name                           ShortDescription                 Chann AppCo
                                                                                                                         elCou unt
@@ -77,7 +73,7 @@ Returns all en-US templates that have 3 channels within the universe of template
 
 ## PARAMETERS
 
-### -Locale
+### -PublicTemplateLocale
 
 The language and country code of templates localization.
 
@@ -86,9 +82,9 @@ Type: String
 Parameter Sets: Get
 Aliases:
 
-Required: True
-Position: Named
-Default value: None
+Required: False
+Position: 1
+Default value: 'en-US'
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -107,102 +103,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Break
-
-Wait for .NET debugger to attach
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelineAppend
-
-SendAsync Pipeline Steps to be appended to the front of the pipeline
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Proxy
-
-The URI for the proxy server to use
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyCredential
-
-Credentials for a proxy server to use for the remote call
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyUseDefaultCredentials
-
-Use the default credentials for the proxy
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
