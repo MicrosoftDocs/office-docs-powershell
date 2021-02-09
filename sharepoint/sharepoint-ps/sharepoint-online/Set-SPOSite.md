@@ -846,7 +846,7 @@ Accept wildcard characters: False
 
 ### -ProtectionLevelName
 
-Policy tag.
+The conditional access protection level name. For example "urn:microsoft:req1"
 
 ```yaml
 Type: String
