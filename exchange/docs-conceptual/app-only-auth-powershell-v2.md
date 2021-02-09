@@ -19,7 +19,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> The required `2.0.3` version of the EXO V2 module for this feature is now Generally Available. For instructions on how to install or update to this version of the module (or a later version), see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> The features and procedures described in this article require version 2.0.3 or later of the EXO V2 module. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -134,7 +134,8 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 ## Step 2: Assign API permissions to the application
 
-You need to assign the API permission `Exchange.ManageAsApp` so the application can manage Exchange Online. API permissions are required because they have consent flow enabled, which allows auditing (directory roles don't have consent flow).
+> [!NOTE]
+> The procedures in this section replace any default permissions that were automatically configured for the new app. The app doesn't need the default permissions that were replaced.
 
 1. On the app page under **Management**, select **Manifest**.
 
