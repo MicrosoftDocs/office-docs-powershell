@@ -112,11 +112,13 @@ For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell
 
 #### Linux
 
-The main target of Linux support for the EXO V2 module is Ubuntu. Other Linux distributions have not been tested.
+The EXO V2 module is officially supported in the following distributions of Linux:
 
-The EXO V2 module is not supported in Red Hat Enterprise Linux (RHEL).
+- Ubuntu 18.04/20.04
 
-For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true)
+If you have trouble using the EXO V2 module on other distributions of Linux, send email to the following address: `exocmdletpreview[at]service[dot]microsoft[dot]com`. The email address is purposefully obfuscated to avoid spam.
+
+For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true).
 
 #### Windows
 
@@ -313,8 +315,6 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
 - The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets have been replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**.Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](https://docs.microsoft.com/workplace-analytics/myanalytics/setup/configure-myanalytics).
 
 - Real-time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) has been enabled in EXO V2 Module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
-
-- The new _InlineCredential_ parameter allows you to pass the credentials of non-MFA accounts on the go without storing the credentials in a variable first.
 
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
 
