@@ -32,7 +32,14 @@ Connect-MicrosoftTeams -TenantId <String> -CertificateThumbprint <String> -Appli
 ### AccessToken
 ```
 Connect-MicrosoftTeams [-TenantId <String>] -AadAccessToken <String> [-MsAccessToken <String>]
- -AccountId <String> [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ConfigAccessToken <String>] -AccountId <String> [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ManagedServiceLogin
+```
+Connect-MicrosoftTeams [-TenantId <String>] [-AccountId <String>] [-Identity] [-ManagedServicePort <Int32>]
+ [-ManagedServiceHostName <String>] [-ManagedServiceSecret <SecureString>] [-LogLevel <LogLevel>]
+ [-LogFilePath <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -278,6 +285,82 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -ConfigAccessToken
+{{ Fill ConfigAccessToken Description }}
+
+```yaml
+Type: String
+Parameter Sets: AccessToken
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Login using managed service identity in the current environment.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ManagedServiceLogin
+Aliases: MSI, ManagedService
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedServiceHostName
+Host name for managed service login.
+
+```yaml
+Type: String
+Parameter Sets: ManagedServiceLogin
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedServicePort
+Port number for managed service login.
+
+```yaml
+Type: Int32
+Parameter Sets: ManagedServiceLogin
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedServiceSecret
+Secret, used for some kinds of managed service login.
+
+```yaml
+Type: SecureString
+Parameter Sets: ManagedServiceLogin
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
