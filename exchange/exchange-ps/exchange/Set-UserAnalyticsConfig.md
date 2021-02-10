@@ -12,11 +12,6 @@ ms.reviewer:
 # Set-UserAnalyticsConfig
 
 ## SYNOPSIS
-
-> [!Important] 
-> This cmdlet is no longer available. Instead, please use [Set-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig?view=exchange-ps).
-
-
 This cmdlet is available only in the cloud-based service.
 
 **Note**: This cmdlet has been replaced by [Get-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig).
