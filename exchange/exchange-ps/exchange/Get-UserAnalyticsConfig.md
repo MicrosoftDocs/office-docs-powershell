@@ -11,9 +11,11 @@ ms.reviewer:
 
 # Get-UserAnalyticsConfig
 
-**Important**: This cmdlet is no longer available. Instead, please use [Get-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig?view=exchange-ps).
-
 ## SYNOPSIS
+
+> [!Important] 
+> This cmdlet is no longer available. Instead, please use [Get-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig?view=exchange-ps).
+
 This cmdlet is available only in the cloud-based service.
 
 Use the Get-TenantAnalyticsConfig cmdlet to view the MyAnalytics privacy settings for cloud-based users.
