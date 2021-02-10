@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-SPODisableSpacesActivation
 
 ## SYNOPSIS
-Disables the SharePoint Space (Preview) activation.
+Disables the SharePoint Spaces activation.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Set-SPODisableSpacesActivation [-Disable] <Boolean> [-Scope] <String> [[-Identit
 ```
 
 ## DESCRIPTION
-Disables the SharePoint Space (Preview) activation either at Tenant level or Site level.
+Disables the SharePoint Spaces activation either at Tenant level or Site level.
 
 ## EXAMPLES
 
