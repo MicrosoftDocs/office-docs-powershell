@@ -811,8 +811,9 @@ This parameter is available only in on-premises Exchange.
 
 The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
 
-- FolderRules
 - FolderACLs
+- FolderProperties
+- FolderRules
 - InitialConnectionValidation
 
 Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
