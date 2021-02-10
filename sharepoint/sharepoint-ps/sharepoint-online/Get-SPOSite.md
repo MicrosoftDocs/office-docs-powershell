@@ -188,6 +188,7 @@ Accept wildcard characters: False
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
  Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
+ Using the -or operator to include an additional filter is not supported.
 
 Note: The operator values are case-sensitive.  
 
