@@ -38,7 +38,6 @@ Set-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-MRSProxyEnabled <Boolean>]
  [-MRSProxyMaxConnections <Unlimited>]
  [-OAuthAuthentication <Boolean>]
- [-OAuthAuthentication <Boolean>]
  [-UpdateManagementVirtualDirectory]
  [-WhatIf]
  [-WindowsAuthentication <Boolean>]

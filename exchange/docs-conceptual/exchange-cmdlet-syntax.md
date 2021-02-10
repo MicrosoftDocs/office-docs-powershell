@@ -14,13 +14,13 @@ description: "Learn about the structure and syntax of cmdlets in Exchange PowerS
 
 # Exchange cmdlet syntax
 
-Exchange cmdlet reference topics use a standardized method that describes key aspects about the cmdlet. For example:
+Exchange cmdlet reference articles use a standardized method that describes key aspects about the cmdlet. For example:
 
 - Parameters that are available on the cmdlet.
 - Values that each parameter accepts.
 - Parameters that can be used together, and parameters that need to be used separately.
 
-This topic explains these conventions, and also the syntax that's required to run commands in Exchange PowerShell.
+This article explains these conventions, and also the syntax that's required to run commands in Exchange PowerShell.
 
 ## Command conventions in Exchange PowerShell
 
