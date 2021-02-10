@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
+The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inative mailbox](https://docs.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -191,7 +193,7 @@ The mailbox won't be marked as Disabled until the Microsoft Exchange Information
 
 Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
 
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Example 1 later in this topic.
+To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this topic.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -199,26 +201,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason
+Get-Mailbox -SoftDeletedMailbox "User Name" | Format-List ExchangeGUID
+New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllLegacyDNMismatch
 ```
 
-To create a restore request, you must provide the DisplayName, LegacyDN, or MailboxGUID for the soft-deleted or disabled mailbox.
-
-This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
+In Exchange Online, this example uses the Get-Mailbox cmdlet to find the ExchangeGUID value of the mailbox, which is required to restore the mailbox contents.
 
 ### Example 2
 ```powershell
+Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyExchangeDN,DisplayName,MailboxGUID, DisconnectReason
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
 
-This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
+In on-premises Exchange, this example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyExchangeDN, and MailboxGUID (valid source mailbox identity values) for all mailboxes in the mailbox database named MBD01 that have a disconnect reason of SoftDeleted or Disabled.
+
+Using this information, the source mailbox with the MailboxGUID value 1d20855f-fd54-4681-98e6-e249f7326ddd is restored to the target mailbox that has the Alias value Ayla.
 
 ### Example 3
 ```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
 
-This example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
+In on-premises Exchange, this example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
 
 ## PARAMETERS
 
