@@ -335,10 +335,10 @@ Accept wildcard characters: False
 ### -SkipMerging
 The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
 
-- FolderRules
 - FolderACLs
-- InitialConnectionValidation
 - FolderProperties
+- FolderRules
+- InitialConnectionValidation
 
 Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
 
