@@ -73,6 +73,7 @@ Spam detections
 - SpamContentFiltered: Messages that passed the initial IP and SMTP filters and were filtered based on content, rules or other spam configurations.
 
 Spam analysis - content-filtered spam
+
 - Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see [Advanced spam filtering options](https://docs.microsoft.com/microsoft-365/security/office-365-security/advanced-spam-filtering-asf-options).
 - Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
 - Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see [What's the difference between junk email and bulk email?](https://docs.microsoft.com/microsoft-365/security/office-365-security/what-s-the-difference-between-junk-email-and-bulk-email).
@@ -81,6 +82,7 @@ Spam analysis - content-filtered spam
 - Spam\_SenderBlocked: Messages that were filtered because the sender was on a block list.
 
 Spam analysis - non-spam messages
+
 - NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see [Advanced spam filtering options](https://docs.microsoft.com/microsoft-365/security/office-365-security/advanced-spam-filtering-asf-options).
 - NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
 - NonSpam\_BulkPassed: Messages that were determined not to be bulk mail.
@@ -182,7 +184,7 @@ The Domain parameter filters the results by an accepted domain in the cloud-base
 
 If you don't use the Domain parameter, the message count for your entire organization is returned. This includes messages that were sent from or to unregistered domains that are attributed to your organization. Unregistered domains can be attributed to your organization in hybrid or EOP standalone configurations.
 
-Notes:
+**Notes**:
 
 - Messages that are sent to recipients in multiple domains are counted differently at the domain level versus the organizational level. At the domain level, the message is counted for each different domain. At the organizational level, the message is counted only once. Therefore, if you add up the total number of received messages for each domain, the value might not match the total number of received messages for the organization.
 - The Domain value is Others for messages that were sent from or to unregistered domains that are attributed to your organization (messages in domains that aren't configured as accepted domains in your organization).

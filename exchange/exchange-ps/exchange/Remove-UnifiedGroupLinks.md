@@ -80,7 +80,7 @@ You can use any value that uniquely identifies the recipient. For example:
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -98,11 +98,10 @@ Accept wildcard characters: False
 ### -LinkType
 The LinkType parameter specifies the Microsoft 365 Group property that you want to modify. Valid values are:
 
+- Aggregators
 - Members
 - Owners
 - Subscribers
-- Aggregators
-- EventSubscribers
 
 ```yaml
 Type: LinkType

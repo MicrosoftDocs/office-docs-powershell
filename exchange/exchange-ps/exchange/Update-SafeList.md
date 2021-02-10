@@ -49,7 +49,8 @@ This example updates Safe Senders List data for the single user kim@contoso.com.
 
 ### Example 2
 ```powershell
-Set-AdServerSettings -ViewEntireForest $true; Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Update-Safelist
+Set-AdServerSettings -ViewEntireForest $true
+Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Update-Safelist
 ```
 
 This example updates safelist data for all user mailboxes in your Exchange organization. By default, the Exchange Management Shell is configured to retrieve or modify objects that reside in the domain in which the Exchange server resides. Therefore, to retrieve all the mailboxes in your Exchange organization, you must first set the scope of the Exchange Management Shell to the entire forest using the Set-AdServerSettings cmdlet.

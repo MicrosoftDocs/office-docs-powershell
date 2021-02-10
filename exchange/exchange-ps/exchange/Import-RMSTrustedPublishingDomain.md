@@ -81,8 +81,8 @@ This example imports a TPD from an AD RMS server into a cloud-based organization
 
 - Path to exported XML file: C:\\My Documents\\Contoso.xml
 - Password of exported XML file: Pa$$word1
-- External licensing URL: https://rms.contoso.com/\_wmcs/licensing
-- Internal licensing URL: https://RMS01/\_wmcs/licensing
+- External licensing URL: `https://rms.contoso.com/_wmcs/licensing`
+- Internal licensing URL: `https://RMS01/_wmcs/licensing`
 - TPD name: Contoso TPD
 
 ## PARAMETERS
@@ -90,7 +90,7 @@ This example imports a TPD from an AD RMS server into a cloud-based organization
 ### -ExtranetLicensingUrl
 The ExtranetLicensingUrl parameter specifies the external licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the ExtranetLicensingUrl parameter is https://\<FQDN\>/\_wmcs/licensing.
+By default, the value of the ExtranetLicensingUrl parameter is `https://<FQDN>/_wmcs/licensing`.
 
 ```yaml
 Type: Uri
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ### -IntranetLicensingUrl
 The IntranetLicensingUrl parameter specifies the internal licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the IntranetLicensingUrl parameter is https://\<server name\>/\_wmcs/licensing.
+By default, the value of the IntranetLicensingUrl parameter is `https://<server name>/_wmcs/licensing`.
 
 ```yaml
 Type: Uri

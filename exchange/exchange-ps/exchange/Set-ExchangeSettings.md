@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigPairs
-The ConfigName parameter specifies the available Exchange setting that you want to add, remove, or update in the Exchange settings object. Valid values for this parameter are determined by the configuration schema that was specified by the Name parameter on the New-ExchangeSettings cmdlet. The syntax for a value is \<key\>=\<value\>. You can separate multiple values separated by commas.
+The ConfigName parameter specifies the available Exchange setting that you want to add, remove, or update in the Exchange settings object. Valid values for this parameter are determined by the configuration schema that was specified by the Name parameter on the New-ExchangeSettings cmdlet. The syntax for a value is `<Key>=<Value>`. You can separate multiple values separated by commas.
 
 You can't use the ConfigPairs parameter with the ConfigName or ConfigValue parameters.
 

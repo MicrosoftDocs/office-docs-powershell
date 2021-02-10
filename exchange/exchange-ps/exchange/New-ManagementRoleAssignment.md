@@ -113,7 +113,8 @@ This example assigns the Mail Recipients role to the Tier 2 Help Desk role group
 
 ### Example 2
 ```powershell
-Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
+Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole
+New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
 ```
 
 This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role.

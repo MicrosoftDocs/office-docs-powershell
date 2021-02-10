@@ -48,8 +48,8 @@ Set-RMSTrustedPublishingDomain "Contoso TPD" -Default -ExtranetLicensingUrl http
 This example makes the following changes to the existing TPD Contoso TPD:
 
 - Sets Contoso TPD as the default TPD for the organization.
-- Sets the external licensing URL to https://rms.contoso.com/\_wmcs/licensing.
-- Sets the external certification URL to https://rms.contoso.com/\_wmcs/certification/servercertification.asmx
+- Sets the external licensing URL to `https://rms.contoso.com/_wmcs/licensing`.
+- Sets the external certification URL to `https://rms.contoso.com/_wmcs/certification/servercertification.asmx`.
 
 ## PARAMETERS
 

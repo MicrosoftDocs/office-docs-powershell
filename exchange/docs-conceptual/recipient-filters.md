@@ -197,7 +197,7 @@ When creating your own custom OPath filters, consider the following items:
 
   ****
 
-  |Search value|OPath filter <br/> enclosed in <br/> double quotation marks|OPath filter <br/> enclosed in <br/> single quotation marks|OPath filter enclosed in <br/> braces|
+  |Search value|OPath filter <br> enclosed in <br> double quotation marks|OPath filter <br> enclosed in <br> single quotation marks|OPath filter enclosed in <br> braces|
   |---|:---:|:---:|:---:|
   |`'Text'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |`"Text"`|||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
@@ -221,7 +221,9 @@ When creating your own custom OPath filters, consider the following items:
   - `-like` (string comparison)
   - `-notlike` (string comparison)
 
-- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. The **-like** operator is used to find pattern matches in rich types (for example, strings) whereas the **-eq** operator is used to find an exact match.
+- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. Use the **-like** operator to find pattern matches in rich types (for example, strings). Use the **-eq** operator to find an exact match.
+
+  When you use the **-like** operator in Exchange Online PowerShell, the wildcard character is supported only as a suffix. For example, `"Department -like 'sales*'"` is allowed; `"Department -like '*sales'"` is not allowed.
 
 - For more information about operators you can use, see:
 
@@ -230,11 +232,11 @@ When creating your own custom OPath filters, consider the following items:
 
 ## Recipient filter documentation
 
-The following table contains links to topics that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
+The following table contains links to articles that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
 
 ****
 
-|Topic|Description|
+|Article|Description|
 |---|---|
 |[Filterable properties for the RecipientFilter parameter on Exchange cmdlets](recipientfilter-properties.md)|Learn more about the filterable properties that are available for the _RecipientFilter_ parameter.|
 |[Filterable properties for the Filter parameter on Exchange cmdlets](filter-properties.md) |Learn more about the filterable properties that are available for the _Filter_ parameter.|

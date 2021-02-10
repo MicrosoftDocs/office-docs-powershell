@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientViewRoot
-The RecipientViewRoot parameter specifies the organizational unit (OU) to include in the recipient scope for this session. When you specify a recipient scope with this parameter, only the recipients included in the scope are returned. To specify an OU, use the syntax \<FQDN of domain\>/\<OU tree\>.
+The RecipientViewRoot parameter specifies the organizational unit (OU) to include in the recipient scope for this session. When you specify a recipient scope with this parameter, only the recipients included in the scope are returned. To specify an OU, use the syntax `<FQDN of domain>/<OU tree>`.
 
 ```yaml
 Type: String

@@ -491,6 +491,8 @@ The RetryDistribution switch redistributes the policy to all OneDrive for Busine
 
 Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
+**Note**: Because the process of retrying distribution is a significant operation, run it only if necessary and for one policy at a time. It is not intended to be run every time you update a policy. If you run a script to update multiple policies, wait until the policy distribution is successful before running the command again for the next policy.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RetryDistributionParameterSet
