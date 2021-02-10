@@ -555,7 +555,12 @@ Accept wildcard characters: False
 
 ### -DisableAppViews
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+Disables the Power Apps button.
+Possible values:
+
+- Disabled
+- NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: AppViewsPolicy
@@ -570,8 +575,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
+Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+Possible values
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+- Disabled
+- NotDisabled
+- Unknown (not settable)
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -586,8 +595,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
+Disables the Power Automate button.
+Possible values
 
-PARAMVALUE: Unknown | Disabled | NotDisabled
+- Disabled
+- NotDisabled
 
 ```yaml
 Type: FlowsPolicy
@@ -655,17 +667,14 @@ Accept wildcard characters: False
 
 ### -SharingDomainRestrictionMode
 
-Specifies the external sharing mode for domains.
+Specifies the sharing mode for external domains.
 
-The following values are:
+Possible values are:
+- None - Do not restrict sharing by domain
+- AllowList - Sharing is allowed only with external users that have account on domains specified within -SharingAllowedDomainList
+- BlockList - Sharing is allowed with external users in all domains except in domains specified within -SharingBlockedDomainList
 
-None
-
-AllowList
-
-BlockList
-
-For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: SharingDomainRestrictionModes
@@ -717,10 +726,10 @@ The default link type for the site collection
 
 PARAMVALUE: None | AnonymousAccess | Internal | Direct
 
-None - Respect the organization default sharing link type
-AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
-Internal - Sets the default sharing link for this site to the "organization" link or company shareable link
-Direct - Sets the default sharing link for this site to the "Specific people" link
+- None - Respect the organization default sharing link type
+- AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
+- Internal - Sets the default sharing link for this site to the "organization" link or company shareable link
+- Direct - Sets the default sharing link for this site to the "Specific people" link
 
 ```yaml
 Type: SharingLinkType
@@ -760,9 +769,9 @@ The default link permission for the site collection
 
 PARAMVALUE: None | View | Edit
 
-None - Respect the organization default link permission
-View - Sets the default link permission for the site to "view" permissions
-Edit - Sets the default link permission for the site to "edit" permissions
+- None - Respect the organization default link permission
+- View - Sets the default link permission for the site to "view" permissions
+- Edit - Sets the default link permission for the site to "edit" permissions
 
 ```yaml
 Type: SharingPermissionType
@@ -782,9 +791,9 @@ Choose whether to override the anonymous or anyone link expiration policy on thi
 
 PARAMVALUE: None | False | True
 
-None - Respect the organization-level policy for anonymous or anyone link expiration
-False - Respect the organization-level policy for anonymous or anyone link expiration
-True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
+- None - Respect the organization-level policy for anonymous or anyone link expiration
+- False - Respect the organization-level policy for anonymous or anyone link expiration
+- True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
 
 ```yaml
 Type: Boolean

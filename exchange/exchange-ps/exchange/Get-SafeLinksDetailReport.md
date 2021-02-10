@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SafeLinksAggregateReport cmdlet to return to return detailed information about Safe Links.
+Use the Get-SafeLinksDetailReport cmdlet to return to return detailed information about Safe Links results for the last 7 days. Yesterday is the most recent date that you can specify.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -36,7 +36,8 @@ Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-The Get-SafeLinksDetailReport cmdlet returns information about URL clicks for the last 7 days.
+**Note**: If you run Get-SafeLinksDetailReport without specifying a date range, the command will return an unspecified error.
+
 Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
 
 This cmdlet returns the following information:
@@ -62,7 +63,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-SafeLinksDetailReport -StartDate 06-07-2020 -EndDate 06-10-2020 -Action Allowed,Blocked -AppNameList "Email Client","Teams"  -Domain google.com,teams.com -RecipientAddress faith@contoso.com,chris@contoso.com
+Get-SafeLinksDetailReport -StartDate 06-07-2020 -EndDate 06-10-2020 -Action Allowed,Blocked -AppNameList "Email Client","Teams" -Domain google.com,teams.com -RecipientAddress faith@contoso.com,chris@contoso.com
 ```
 
 This example returns filters the results by the following information:
@@ -111,7 +112,7 @@ The AppNameList parameter filters the results by the app where the link was foun
 - Visio
 - Word
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -148,6 +149,8 @@ Accept wildcard characters: False
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+
+Yesterday is the most recent date that you can specify. You can't specify a date that's older than 7 days.
 
 ```yaml
 Type: System.DateTime
@@ -215,6 +218,8 @@ Accept wildcard characters: False
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+
+Yesterday is the most recent date that you can specify. You can't specify a date that's older than 7 days.
 
 ```yaml
 Type: System.DateTime

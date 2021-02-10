@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ### -NotifyAddress
 The NotifyAddress parameter specifies the email addresses of internal recipients to notify when the historical search is complete. The email address must be in an accepted domain that's configured for your organization. You can enter multiple email addresses separated by commas.
 
-To view the results of the historical search, you need to specify at least one email address for the NotifyAddress parameter. Otherwise, you need to click on the completed message trace in the Exchange admin center at Mail flow \> Message trace.
+To view the results of the historical search, you need to specify at least one email address for the NotifyAddress parameter. Otherwise, you need to click on the completed message trace in the Exchange admin center at **Mail flow** \> **Message trace**.
 
 ```yaml
 Type: MultiValuedProperty

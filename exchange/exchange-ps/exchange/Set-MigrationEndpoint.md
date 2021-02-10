@@ -377,7 +377,7 @@ This parameter is available only in the cloud-based service.
 
 The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
 
-Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+Use the following format for the value of this parameter: `([System.IO.File]::ReadAllBytes(path of the JSON file>))`. For example: `-CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\service-account.json")`)
 
 ```yaml
 Type: Byte[]

@@ -33,10 +33,10 @@ For the reporting period you specify, the cmdlet returns the following informati
 
 - Organization
 - Date
-- SensitiveType: The GUID value of the DLP sensitive information type. To match the GUID value to the name of the sensitive information type, replace \<GUID\> with the GUID value and run this command: Get-DlpSensitiveInformationType -Identity \<GUID\>.
+- SensitiveType: The GUID value of the DLP sensitive information type. To match the GUID value to the name of the sensitive information type, replace `<GUID>` with the GUID value and run this command: `Get-DlpSensitiveInformationType -Identity <GUID>`.
 - DocumentCount: The number of documents that contain the detected sensitive information type.
 - ProtectionStatus: Values are Unprotected (the sensitive information type is not defined in any DLP policy) or Protected (the sensitive information type is defined in a DLP policy).
-- DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace \<GUID\> with the GUID value and run this command: Get-DlpComplianceRule -Identity \<GUID\>.
+- DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace `<GUID>` with the GUID value and run this command: `Get-DlpComplianceRule -Identity <GUID>`.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ### -SensitiveType
 The SensitiveType parameter filters the results by the specified sensitive information type. A valid value is the GUID of the sensitive information type (for example, 0e9b3178-9678-47dd-a509-37222ca96b42). To find the GUID value of a sensitive information type, run this command: Get-DlpSensitiveInformationType.
 
-You can enter multiple values separated by commas: "\<Value1\>","\<Value2\>"..."\<ValueN\>".
+You can enter multiple values separated by commas: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

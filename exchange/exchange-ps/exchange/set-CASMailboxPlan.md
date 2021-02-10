@@ -55,7 +55,7 @@ The Identity parameter specifies the CAS mailbox plan that you want to modify. Y
 - Distinguished name (DN)
 - GUID
 
-The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>, respectively).
+The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, `ExchangeOnlineEnterprise` and `ExchangeOnlineEnterprise-<GUID>`, respectively).
 
 ```yaml
 Type: MailboxPlanIdParameter
