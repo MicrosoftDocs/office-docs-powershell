@@ -20,18 +20,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Rehome
-```
-Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
- [-RehomeRequest]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-RemoteHostName <Fqdn>]
- [-RequestExpiryInterval <Unlimited>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### Identity
 ```
 Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
@@ -47,6 +35,17 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Rehome
+```
+Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-RehomeRequest]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -300,7 +299,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
