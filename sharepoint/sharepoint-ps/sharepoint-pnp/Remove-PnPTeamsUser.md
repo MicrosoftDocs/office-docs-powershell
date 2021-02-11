@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpteamsuser
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPTeamsUser
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPTeamsUser.html
 ---
-
+ 
 # Remove-PnPTeamsUser
 
 ## SYNOPSIS
@@ -14,47 +15,34 @@ title: Remove-PnPTeamsUser
 
   * Microsoft Graph API: Group.ReadWrite.All
 
-Removes users from a team.
+Removes a user from a team.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPTeamsUser -Team <TeamsTeamPipeBind>
-                    -User <String>
-                    [-Role <String>]
-                    [-Force [<SwitchParameter>]]
-                    [-ByPassPermissionCheck [<SwitchParameter>]]
+Remove-PnPTeamsUser -Team <TeamsTeamPipeBind> -User <String> [-Role <String>] [-Force] 
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPTeamsUser -Team MyTeam -User john@doe.com
 ```
 
 Removes the user specified from both owners and members of the team.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Get-PnPTeamsUser -Team MyTeam -User john@doe.com -Owner
+Remove-PnPTeamsUser -Team MyTeam -User john@doe.com -Role Owner
 ```
 
 Removes the user john@doe.com from the owners of the team, but retains the user as a member.
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Force
 Specifying the Force parameter will skip the confirmation question.
@@ -65,7 +53,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Role
@@ -79,7 +69,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Team
@@ -91,7 +83,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -User
@@ -103,9 +97,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

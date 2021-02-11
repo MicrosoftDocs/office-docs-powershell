@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantsite
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPTenantSite
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPTenantSite.html
 ---
-
+ 
 # Remove-PnPTenantSite
 
 ## SYNOPSIS
@@ -16,13 +17,11 @@ title: Remove-PnPTenantSite
 
 Removes a site collection
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPTenantSite -Url <String>
-                     [-SkipRecycleBin [<SwitchParameter>]]
-                     [-Force [<SwitchParameter>]]
-                     [-Connection <PnPConnection>]
+Remove-PnPTenantSite [-Url] <String> [-SkipRecycleBin] [-Force] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,28 +29,42 @@ Removes a site collection which is listed in your tenant administration site.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso
+Remove-PnPTenantSite -Url "https://tenant.sharepoint.com/sites/contoso"
 ```
 
 This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso'  and put it in the recycle bin.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso -Force -SkipRecycleBin
+Remove-PnPTenantSite -Url "https://tenant.sharepoint.com/sites/contoso" -Force -SkipRecycleBin
 ```
 
 This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso' with force and it will skip the recycle bin.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
-Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso -FromRecycleBin
+Remove-PnPTenantSite -Url "https://tenant.sharepoint.com/sites/contoso" -FromRecycleBin
 ```
 
 This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso' from the recycle bin.
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 Do not ask for confirmation.
@@ -62,13 +75,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SkipRecycleBin
 Do not add to the tenant scoped recycle bin when selected.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +90,9 @@ Aliases: SkipTrash
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -89,21 +104,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

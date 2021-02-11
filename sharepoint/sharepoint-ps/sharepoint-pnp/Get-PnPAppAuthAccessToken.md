@@ -1,20 +1,21 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpappauthaccesstoken
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAppAuthAccessToken.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPAppAuthAccessToken
 ---
-
+  
 # Get-PnPAppAuthAccessToken
 
 ## SYNOPSIS
 Returns the access token
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPAppAuthAccessToken [-Connection <PnPConnection>]
+Get-PnPAppAuthAccessToken [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +23,7 @@ Returns the access token from the current client context (only works with App-On
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $accessToken = Get-PnPAppAuthAccessToken
 ```
@@ -40,13 +41,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-## OUTPUTS
-
-### System.String
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

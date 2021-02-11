@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpupabulkimportjob
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPUPABulkImportJob
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPUPABulkImportJob.html
 ---
-
+ 
 # New-PnPUPABulkImportJob
 
 ## SYNOPSIS
@@ -16,15 +17,12 @@ title: New-PnPUPABulkImportJob
 
 Submit up a new user profile bulk import job.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPUPABulkImportJob -Folder <String>
-                        -Path <String>
-                        -UserProfilePropertyMapping <Hashtable>
-                        -IdProperty <String>
-                        [-IdType <ImportProfilePropertiesUserIdType>]
-                        [-Connection <PnPConnection>]
+New-PnPUPABulkImportJob [-Folder] <String> [-Path] <String> [-UserProfilePropertyMapping] <Hashtable>
+ [-IdProperty] <String> [[-IdType] <ImportProfilePropertiesUserIdType>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +30,7 @@ See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profil
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 @" 
  {
@@ -56,6 +54,20 @@ This will submit a new user profile bulk import job to SharePoint Online.
 
 ## PARAMETERS
 
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Folder
 Site or server relative URL of the folder to where you want to store the import job file.
 
@@ -65,7 +77,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IdProperty
@@ -77,7 +91,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 3
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IdType
@@ -86,10 +102,13 @@ The type of profile identifier (Email/CloudId/PrincipalName). Defaults to Email.
 ```yaml
 Type: ImportProfilePropertiesUserIdType
 Parameter Sets: (All)
+Accepted values: Email, CloudId, PrincipalName
 
 Required: False
 Position: 4
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Path
@@ -101,7 +120,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 1
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -UserProfilePropertyMapping
@@ -113,21 +134,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: 2
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

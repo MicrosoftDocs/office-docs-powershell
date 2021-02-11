@@ -1,21 +1,21 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpaccesstoken
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAccessToken.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPAccessToken
 ---
-
+  
 # Get-PnPAccessToken
 
 ## SYNOPSIS
 Returns the current OAuth Access token
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPAccessToken [-Decoded [<SwitchParameter>]]
-                   [-ByPassPermissionCheck [<SwitchParameter>]]
+Get-PnPAccessToken [-Decoded] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +23,7 @@ Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API. Doesn't work
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPAccessToken
 ```
@@ -31,18 +31,6 @@ Get-PnPAccessToken
 Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Decoded
 Returns the details from the access token in a decoded manner
@@ -53,9 +41,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

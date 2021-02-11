@@ -1,45 +1,35 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplistinformationrightsmanagement
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPListInformationRightsManagement
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPListInformationRightsManagement.html
 ---
-
+ 
 # Set-PnPListInformationRightsManagement
 
 ## SYNOPSIS
 Get the site closure status of the site which has a site policy applied
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPListInformationRightsManagement -List <ListPipeBind>
-                                       [-Enable <Boolean>]
-                                       [-EnableExpiration <Boolean>]
-                                       [-EnableRejection <Boolean>]
-                                       [-AllowPrint <Boolean>]
-                                       [-AllowScript <Boolean>]
-                                       [-AllowWriteCopy <Boolean>]
-                                       [-DisableDocumentBrowserView <Boolean>]
-                                       [-DocumentAccessExpireDays <Int>]
-                                       [-DocumentLibraryProtectionExpireDate <DateTime>]
-                                       [-EnableDocumentAccessExpire <Boolean>]
-                                       [-EnableDocumentBrowserPublishingView <Boolean>]
-                                       [-EnableGroupProtection <Boolean>]
-                                       [-EnableLicenseCacheExpire <Boolean>]
-                                       [-LicenseCacheExpireDays <Int>]
-                                       [-GroupName <String>]
-                                       [-PolicyDescription <String>]
-                                       [-PolicyTitle <String>]
-                                       [-TemplateId <String>]
-                                       [-Web <WebPipeBind>]
-                                       [-Connection <PnPConnection>]
+Set-PnPListInformationRightsManagement -List <ListPipeBind> [-Enable <Boolean>] [-EnableExpiration <Boolean>]
+ [-EnableRejection <Boolean>] [-AllowPrint <Boolean>] [-AllowScript <Boolean>] [-AllowWriteCopy <Boolean>]
+ [-DisableDocumentBrowserView <Boolean>] [-DocumentAccessExpireDays <Int32>]
+ [-DocumentLibraryProtectionExpireDate <DateTime>] [-EnableDocumentAccessExpire <Boolean>]
+ [-EnableDocumentBrowserPublishingView <Boolean>] [-EnableGroupProtection <Boolean>]
+ [-EnableLicenseCacheExpire <Boolean>] [-LicenseCacheExpireDays <Int32>] [-GroupName <String>]
+ [-PolicyDescription <String>] [-PolicyTitle <String>] [-TemplateId <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPListInformationRightsManagement -List "Documents" -Enabled $true
 ```
@@ -57,7 +47,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowScript
@@ -69,7 +61,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowWriteCopy
@@ -81,199 +75,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -DisableDocumentBrowserView
-Sets a value indicating whether to block Office Web Application Companion applications (WACs) from showing this document.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -DocumentAccessExpireDays
-Sets the number of days after which the downloaded document will expire.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -DocumentLibraryProtectionExpireDate
-Sets the date after which the Information Rights Management (IRM) protection of this document library will stop.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Enable
-Specifies whether Information Rights Management (IRM) is enabled for the list.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableDocumentAccessExpire
-Sets a value indicating whether the downloaded document will expire.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableDocumentBrowserPublishingView
-Sets a value indicating whether to enable Office Web Application Companion applications (WACs) to publishing view.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableExpiration
-Specifies whether Information Rights Management (IRM) expiration is enabled for the list.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableGroupProtection
-Sets a value indicating whether the permission of the downloaded document is applicable to a group.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableLicenseCacheExpire
-Sets whether a user must verify their credentials after some interval.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableRejection
-Specifies whether Information Rights Management (IRM) rejection is enabled for the list.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -GroupName
-Sets the group name (email address) that the permission is also applicable to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -LicenseCacheExpireDays
-Sets the number of days that the application that opens the document caches the IRM license. When these elapse, the application will connect to the IRM server to validate the license.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -List
-The list to set Information Rights Management (IRM) settings for.
-
-```yaml
-Type: ListPipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -PolicyDescription
-Sets the permission policy description.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -PolicyTitle
-Sets the permission policy title.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -TemplateId
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -285,21 +89,237 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -DisableDocumentBrowserView
+Sets a value indicating whether to block Office Web Application Companion applications (WACs) from showing this document.
 
 ```yaml
-Type: WebPipeBind
+Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -DocumentAccessExpireDays
+Sets the number of days after which the downloaded document will expire.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentLibraryProtectionExpireDate
+Sets the date after which the Information Rights Management (IRM) protection of this document library will stop.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Enable
+Specifies whether Information Rights Management (IRM) is enabled for the list.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDocumentAccessExpire
+Sets a value indicating whether the downloaded document will expire.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDocumentBrowserPublishingView
+Sets a value indicating whether to enable Office Web Application Companion applications (WACs) to publishing view.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableExpiration
+Specifies whether Information Rights Management (IRM) expiration is enabled for the list.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableGroupProtection
+Sets a value indicating whether the permission of the downloaded document is applicable to a group.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableLicenseCacheExpire
+Sets whether a user must verify their credentials after some interval.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRejection
+Specifies whether Information Rights Management (IRM) rejection is enabled for the list.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupName
+Sets the group name (email address) that the permission is also applicable to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LicenseCacheExpireDays
+Sets the number of days that the application that opens the document caches the IRM license. When these elapse, the application will connect to the IRM server to validate the license.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -List
+The list to set Information Rights Management (IRM) settings for.
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyDescription
+Sets the permission policy description.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTitle
+Sets the permission policy title.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TemplateId
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
