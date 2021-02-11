@@ -25,7 +25,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String>
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Archive]
  [-Confirm]
  [-DisplayName <String>]
@@ -52,7 +51,6 @@ New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <
 New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrincipalName <String>]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Archive]
  [-Confirm]
  [-DisplayName <String>]
@@ -79,7 +77,6 @@ New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrin
 New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Archive]
  [-Confirm]
  [-DisplayName <String>]
@@ -106,7 +103,6 @@ New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-Use
 New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Archive]
  [-Confirm]
  [-DisplayName <String>]
@@ -133,7 +129,6 @@ New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPr
 New-RemoteMailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Archive]
  [-Confirm]
  [-DisplayName <String>]
@@ -383,35 +378,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ArbitrationMailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
