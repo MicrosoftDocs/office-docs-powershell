@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 

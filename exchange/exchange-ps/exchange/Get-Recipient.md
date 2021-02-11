@@ -200,13 +200,15 @@ Accept wildcard characters: False
 ```
 
 ### -Capabilities
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -1180,19 +1180,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: RemovedMailboxIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, FederatedUser, MicrosoftOnlineServicesFederatedUser, RemoteArchive, RemovedMailbox
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Room
 The Room switch is required to create room mailboxes. You don't need to specify a value with this switch.
 
@@ -1716,7 +1703,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicy
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ManagedFolderMailboxPolicy parameter specifies the managed folder mailbox policy to enable for the mailbox that you create.
 
@@ -1734,7 +1721,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicyAllowed
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for clients using versions of Microsoft Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
