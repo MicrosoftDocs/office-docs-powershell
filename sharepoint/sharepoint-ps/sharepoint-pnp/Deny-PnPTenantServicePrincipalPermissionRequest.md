@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/deny-pnptenantserviceprincipalpermissionrequest
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Deny-PnPTenantServicePrincipalPermissionRequest.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Deny-PnPTenantServicePrincipalPermissionRequest
 ---
-
+  
 # Deny-PnPTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
@@ -16,12 +17,11 @@ title: Deny-PnPTenantServicePrincipalPermissionRequest
 
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Deny-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>
-                                                [-Force [<SwitchParameter>]]
-                                                [-Connection <PnPConnection>]
+Deny-PnPTenantServicePrincipalPermissionRequest -RequestId <Guid> [-Force]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,31 +29,9 @@ Denies a permission request for the current tenant's "SharePoint Online Client" 
 
 Denying a permission request removes that request from the list of permission requests.
 
+## EXAMPLES
+
 ## PARAMETERS
-
-### -Force
-Specifying the Force parameter will skip the confirmation question.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -RequestId
-
-
-```yaml
-Type: GuidPipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -64,9 +42,40 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Specifying the Force parameter will skip the confirmation question.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestId
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

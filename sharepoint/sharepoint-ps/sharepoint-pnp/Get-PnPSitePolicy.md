@@ -1,42 +1,43 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitepolicy
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSitePolicy
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSitePolicy.html
 ---
-
+ 
 # Get-PnPSitePolicy
 
 ## SYNOPSIS
 Retrieves all or a specific site policy
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPSitePolicy [-AllAvailable [<SwitchParameter>]]
-                  [-Name <String>]
-                  [-Web <WebPipeBind>]
-                  [-Connection <PnPConnection>]
+Get-PnPSitePolicy [-AllAvailable] [-Name <String>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPSitePolicy
 ```
 
 Retrieves the current applied site policy.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPSitePolicy -AllAvailable
 ```
 
 Retrieves all available site policies.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPSitePolicy -Name "Contoso HBI"
 ```
@@ -54,19 +55,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Name
-Retrieves a site policy with a specific name
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -78,25 +69,28 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -Name
+Retrieves a site policy with a specific name
 
 ```yaml
-Type: WebPipeBind
+Type: String
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
 
-### OfficeDevPnP.Core.Entities.SitePolicyEntity
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpuserprofileproperty
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPUserProfileProperty
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPUserProfileProperty.html
 ---
-
+ 
 # Set-PnPUserProfileProperty
 
 ## SYNOPSIS
@@ -16,22 +17,18 @@ title: Set-PnPUserProfileProperty
 
 Office365 only: Uses the tenant API to retrieve site information. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.
 
-## SYNTAX 
+## SYNTAX
 
 ### Single
 ```powershell
-Set-PnPUserProfileProperty -Value <String>
-                           -Account <String>
-                           -PropertyName <String>
-                           [-Connection <PnPConnection>]
+Set-PnPUserProfileProperty -Account <String> -PropertyName <String> -Value <String>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### Multi
 ```powershell
-Set-PnPUserProfileProperty -Values <String[]>
-                           -Account <String>
-                           -PropertyName <String>
-                           [-Connection <PnPConnection>]
+Set-PnPUserProfileProperty -Account <String> -PropertyName <String> -Values <String[]>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,14 +36,14 @@ Requires a connection to a SharePoint Tenant Admin site.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'SPS-Location' -Value 'Stockholm'
 ```
 
 Sets the SPS-Location property for the user as specified by the Account parameter
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'MyProperty' -Values 'Value 1','Value 2'
 ```
@@ -60,47 +57,13 @@ The account of the user, formatted either as a login name, or as a claims identi
 
 ```yaml
 Type: String
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -PropertyName
-The property to set, for instance SPS-Skills or SPS-Location
-
-```yaml
-Type: String
-Parameter Sets: __AllParameterSets
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Value
-The value to set in the case of a single value property
-
-```yaml
-Type: String
-Parameter Sets: Single
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Values
-The values set in the case of a multi value property, e.g. "Value 1","Value 2"
-
-```yaml
-Type: String[]
-Parameter Sets: Multi
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -112,9 +75,54 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PropertyName
+The property to set, for instance SPS-Skills or SPS-Location
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Value
+The value to set in the case of a single value property
+
+```yaml
+Type: String
+Parameter Sets: Single
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Values
+The values set in the case of a multi value property, e.g. "Value 1","Value 2"
+
+```yaml
+Type: String[]
+Parameter Sets: Multi
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

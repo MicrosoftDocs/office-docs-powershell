@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsiteclassification
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSiteClassification
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteClassification.html
 ---
-
+ 
 # Get-PnPSiteClassification
 
 ## SYNOPSIS
@@ -16,15 +17,17 @@ title: Get-PnPSiteClassification
 
 Returns the defined Site Classifications for the tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPSiteClassification [-ByPassPermissionCheck [<SwitchParameter>]]
+Get-PnPSiteClassification  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPSiteClassification
 ```
@@ -33,18 +36,7 @@ Returns the currently set site classifications for the tenant.
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

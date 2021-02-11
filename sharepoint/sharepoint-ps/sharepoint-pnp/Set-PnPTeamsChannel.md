@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpteamschannel
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTeamsChannel
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTeamsChannel.html
 ---
-
+ 
 # Set-PnPTeamsChannel
 
 ## SYNOPSIS
@@ -16,38 +17,32 @@ title: Set-PnPTeamsChannel
 
 Updates an existing Teams Channel
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPTeamsChannel -Team <TeamsTeamPipeBind>
-                    -Identity <TeamsChannelPipeBind>
-                    [-DisplayName <String>]
-                    [-Description <String>]
-                    [-ByPassPermissionCheck [<SwitchParameter>]]
+Set-PnPTeamsChannel -Team <TeamsTeamPipeBind> -Identity <TeamsChannelPipeBind> [-DisplayName <String>] [-Description <String>] [-IsFavoriteByDefault <Boolean>]
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPTeamsChannel -Team "MyTeam" -Channel "MyChannel" -DisplayName "My Channel"
 ```
 
 Updates the channel called 'MyChannel' to have the display name set to 'My Channel'
 
-## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+### EXAMPLE 2
+```powershell
+Set-PnPTeamsChannel -Team "MyTeam" -Channel "MyChannel" -IsFavoriteByDefault $true
 ```
+
+Updates the channel called 'MyChannel' to make it visible to members.
+
+## PARAMETERS
 
 ### -Description
 Changes the description of the specified channel.
@@ -58,7 +53,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayName
@@ -70,11 +67,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
-Specify the channel id of the team to retrieve.
+Specify the channel id or display name of the channel to use.
 
 ```yaml
 Type: TeamsChannelPipeBind
@@ -82,7 +81,23 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -IsFavoriteByDefault
+Allows you to specify if the channel is by default visible for members
+
+```yaml
+Type: Boolean
+Parameter Sets: Public channel
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Team
@@ -94,9 +109,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

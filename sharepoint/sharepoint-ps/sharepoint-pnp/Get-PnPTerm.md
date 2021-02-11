@@ -1,75 +1,72 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpterm
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTerm
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTerm.html
 ---
-
+ 
 # Get-PnPTerm
 
 ## SYNOPSIS
-Returns a taxonomy term
+Returns a Term Store Term.
 
-## SYNTAX 
-
-### 
-```powershell
-Get-PnPTerm [-Includes <String[]>]
-            [-IncludeChildTerms [<SwitchParameter>]]
-            [-Connection <PnPConnection>]
-```
+## SYNTAX
 
 ### By Term Id
 ```powershell
-Get-PnPTerm -Identity <Id, Name or Object>
-            [-TermStore <Id, Name or Object>]
-            [-IncludeChildTerms [<SwitchParameter>]]
-            [-Connection <PnPConnection>]
+Get-PnPTerm
+    -Identity <Guid>
+    [-TermStore <Guid>]
+    [-IncludeChildTerms] [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
 ```
 
-### By Termset
+### By Term Name
 ```powershell
-Get-PnPTerm -TermSet <Id, Title or TaxonomyItem>
-            -TermGroup <Id, Title or TermGroup>
-            [-Identity <Id, Name or Object>]
-            [-TermStore <Id, Name or Object>]
-            [-Recursive [<SwitchParameter>]]
-            [-IncludeChildTerms [<SwitchParameter>]]
-            [-Connection <PnPConnection>]
+Get-PnPTerm
+    -Identity <Name>
+    -TermSet <Guid|Name>
+    -TermGroup <Guid|Name>
+    [-TermStore <Guid>]
+    [-Recursive] 
+    [-IncludeChildTerms] [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Retries a Term Store Term.
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTerm -TermSet "Departments" -TermGroup "Corporate"
 ```
 
 Returns all term in the termset "Departments" which is in the group "Corporate" from the site collection termstore
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPTerm -Identity "Finance" -TermSet "Departments" -TermGroup "Corporate"
 ```
 
 Returns the term named "Finance" in the termset "Departments" from the termgroup called "Corporate" from the site collection termstore
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPTerm -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermSet "Departments" -TermGroup "Corporate"
 ```
 
 Returns the term named with the given id, from the "Departments" termset in a term group called "Corporate" from the site collection termstore
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPTerm -Identity "Small Finance" -TermSet "Departments" -TermGroup "Corporate" -Recursive
 ```
 
-Returns the term named "Small Finance", from the "Departments" termset in a term group called "Corporate" from the site collection termstore even if it's a subterm below "Finance"
+Returns the term named "Small Finance", from the "Departments" termset in a term group called "Corporate" from the site collection termstore even if it is a subterm below "Finance"
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 $term = Get-PnPTerm -Identity "Small Finance" -TermSet "Departments" -TermGroup "Corporate" -Include Labels
 $term.Labels
@@ -78,90 +75,6 @@ $term.Labels
 Returns all the localized labels for the term named "Small Finance", from the "Departments" termset in a term group called "Corporate"
 
 ## PARAMETERS
-
-### -Identity
-The Id or Name of a Term
-
-```yaml
-Type: Id, Name or Object
-Parameter Sets: By Term Id, By Termset
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -IncludeChildTerms
-Includes the hierarchy of child terms if available
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: __AllParameterSets
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Includes
-Specify properties to include when retrieving objects from the server.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Recursive
-Find the first term recursively matching the label in a term hierarchy.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: By Termset
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -TermGroup
-Name of the termgroup to check.
-
-```yaml
-Type: Id, Title or TermGroup
-Parameter Sets: By Termset
-
-Required: True
-Position: 0
-Accept pipeline input: True
-```
-
-### -TermSet
-Name of the termset to check.
-
-```yaml
-Type: Id, Title or TaxonomyItem
-Parameter Sets: By Termset
-
-Required: True
-Position: 0
-Accept pipeline input: True
-```
-
-### -TermStore
-Term store to check; if not specified the default term store is used.
-
-```yaml
-Type: Id, Name or Object
-Parameter Sets: By Term Id, By Termset
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -172,13 +85,96 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Identity
+The Id or Name of a Term
 
-### Microsoft.SharePoint.Client.Taxonomy.Term
+```yaml
+Type: GenericObjectNameIdPipeBind<Microsoft.SharePoint.Client.Taxonomy.Term>
+Parameter Sets: All
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeChildTerms
+Includes the hierarchy of child terms if available
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Recursive
+Find the first term recursively matching the label in a term hierarchy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TermGroup
+Name of the termgroup to check.
+
+```yaml
+Type: TermGroupPipeBind
+Parameter Sets: By Termset
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -TermSet
+Name of the termset to check.
+
+```yaml
+Type: TaxonomyItemPipeBind<TermSet>
+Parameter Sets: By Termset
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -TermStore
+Term store to use; if not specified the default term store is used.
+
+```yaml
+Type: GenericObjectNameIdPipeBind<TermStore>
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

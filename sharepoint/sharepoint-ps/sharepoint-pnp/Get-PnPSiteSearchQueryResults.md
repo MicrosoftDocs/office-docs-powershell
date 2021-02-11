@@ -1,73 +1,71 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitesearchqueryresults
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSiteSearchQueryResults
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteSearchQueryResults.html
 ---
-
+ 
 # Get-PnPSiteSearchQueryResults
 
 ## SYNOPSIS
 Executes a search query to retrieve indexed site collections
 
-## SYNTAX 
+## SYNTAX
 
-### Limit
+### Limit (Default)
 ```powershell
-Get-PnPSiteSearchQueryResults [-StartRow <Int>]
-                              [-MaxResults <Int>]
-                              [-Query <String>]
-                              [-Web <WebPipeBind>]
-                              [-Connection <PnPConnection>]
+Get-PnPSiteSearchQueryResults [[-Query] <String>] [-StartRow <Int32>] [-MaxResults <Int32>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### All
 ```powershell
-Get-PnPSiteSearchQueryResults [-All [<SwitchParameter>]]
-                              [-Query <String>]
-                              [-Web <WebPipeBind>]
-                              [-Connection <PnPConnection>]
+Get-PnPSiteSearchQueryResults [[-Query] <String>] [-All] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPSiteSearchQueryResults
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPSiteSearchQueryResults -Query "WebTemplate:STS"
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search which have are based on the STS (Team Site) template
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPSiteSearchQueryResults -Query "WebTemplate:SPSPERS"
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search which have are based on the SPSPERS (MySite) template, up to the MaxResult limit
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPSiteSearchQueryResults -Query "Title:Intranet*"
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search of which the title starts with the word Intranet
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Get-PnPSiteSearchQueryResults -MaxResults 10
 ```
 
 Returns the top 10 site collections indexed by SharePoint Search
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
 Get-PnPSiteSearchQueryResults -All
 ```
@@ -85,43 +83,9 @@ Parameter Sets: All
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -MaxResults
-Maximum amount of search results to return. Default and max is 500 search results.
-
-```yaml
-Type: Int
-Parameter Sets: Limit
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Query
-Search query in Keyword Query Language (KQL) to execute to refine the returned sites. If omitted, all indexed sites will be returned.
-
-```yaml
-Type: String
-Parameter Sets: __AllParameterSets
-
-Required: False
-Position: 0
-Accept pipeline input: True
-```
-
-### -StartRow
-Search result item to start returning the results from. Useful for paging. Leave at 0 to return all results.
-
-```yaml
-Type: Int
-Parameter Sets: Limit
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -133,25 +97,56 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -MaxResults
+Maximum amount of search results to return. Default and max is 500 search results.
 
 ```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: Limit
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Query
+Search query in Keyword Query Language (KQL) to execute to refine the returned sites. If omitted, all indexed sites will be returned.
 
-### List<System.Object>
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StartRow
+Search result item to start returning the results from. Useful for paging. Leave at 0 to return all results.
+
+```yaml
+Type: Int32
+Parameter Sets: Limit
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

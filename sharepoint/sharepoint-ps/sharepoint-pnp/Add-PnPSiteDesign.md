@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitedesign
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPSiteDesign.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPSiteDesign
 ---
-
+  
 # Add-PnPSiteDesign
 
 ## SYNOPSIS
@@ -16,22 +17,19 @@ title: Add-PnPSiteDesign
 
 Creates a new Site Design on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPSiteDesign -Title <String>
-                  -SiteScriptIds <GuidPipeBind[]>
-                  -WebTemplate <SiteWebTemplate>
-                  [-Description <String>]
-                  [-IsDefault [<SwitchParameter>]]
-                  [-PreviewImageAltText <String>]
-                  [-PreviewImageUrl <String>]
-                  [-Connection <PnPConnection>]
+Add-PnPSiteDesign -Title <String> -SiteScriptIds <Guid[]> [-Description <String>] [-IsDefault]
+ [-PreviewImageAltText <String>] [-PreviewImageUrl <String>] -WebTemplate <SiteWebTemplate>
+ [-Connection <PnPConnection>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPSiteDesign -Title "My Company Design" -SiteScriptIds "e84dcb46-3ab9-4456-a136-66fc6ae3d3c5","6def687f-0e08-4f1e-999c-791f3af9a600" -Description "My description" -WebTemplate TeamSite
 ```
@@ -40,88 +38,19 @@ Adds a new Site Design, with the specified title and description. When applied i
 
 ## PARAMETERS
 
-### -Description
-The description of the site design
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -IsDefault
-Specifies if the site design is a default site design
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -PreviewImageAltText
-Sets the text for the preview image
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -PreviewImageUrl
-Sets the url to the preview image
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SiteScriptIds
-An array of guids of site scripts
-
-```yaml
-Type: GuidPipeBind[]
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Title
-The title of the site design
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -WebTemplate
-Specifies the type of site to which this design applies
-
-```yaml
-Type: SiteWebTemplate
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -133,9 +62,127 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description of the site design
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDefault
+Specifies if the site design is a default site design
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewImageAltText
+Sets the text for the preview image
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewImageUrl
+Sets the url to the preview image
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteScriptIds
+An array of guids of site scripts
+
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+The title of the site design
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WebTemplate
+Specifies the type of site to which this design applies
+
+```yaml
+Type: SiteWebTemplate
+Parameter Sets: (All)
+Accepted values: TeamSite, CommunicationSite, GrouplessTeamSite
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

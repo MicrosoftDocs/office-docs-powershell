@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsiteclassification
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPSiteClassification.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPSiteClassification
 ---
-
+  
 # Add-PnPSiteClassification
 
 ## SYNOPSIS
@@ -14,57 +15,49 @@ title: Add-PnPSiteClassification
 
   * Microsoft Graph API: Directory.ReadWrite.All
 
-Adds one ore more site classification values to the list of possible values
+Adds one or more site classification values to the list of possible values
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPSiteClassification -Classifications <String>
-                          [-ByPassPermissionCheck [<SwitchParameter>]]
+Add-PnPSiteClassification -Classifications <System.Collections.Generic.List`1[System.String]> [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPSiteClassification -Classifications "Top Secret"
 ```
 
 Adds the "Top Secret" classification to the already existing classification values.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Add-PnPSiteClassification -Classifications "Top Secret","For Your Eyes Only"
+Add-PnPSiteClassification -Classifications "Top Secret","HBI"
 ```
 
 Adds the "Top Secret" and the "For Your Eyes Only" classification to the already existing classification values.
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Classifications
 
-
 ```yaml
-Type: String
+Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+
