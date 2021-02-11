@@ -1069,7 +1069,7 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForSharepoint
 This parameter is available only in the cloud-based service.
 
-The ConnectorsEnabledForSharepoint parameter specifies whether to enable or disable connected apps on Sharepoint. Valid values are:
+The ConnectorsEnabledForSharepoint parameter specifies whether to enable or disable connected apps on SharePoint. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
 - $false: Connectors are disabled.

@@ -13,7 +13,7 @@ ms.author: trgreen
 
 ## SYNOPSIS
 
-Removes a given site from the list of organizational news sites based on its URL in your Sharepoint Online Tenant
+Removes a given site from the list of organizational news sites based on its URL in your SharePoint Online Tenant
 
 ## SYNTAX
 
