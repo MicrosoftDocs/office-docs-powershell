@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-UMMailbox [-Identity] <MailboxIdParameter>
- [-AirSyncNumbers <MultiValuedProperty>]
  [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
  [-AnonymousCallersCanLeaveMessages <Boolean>]
  [-AutomaticSpeechRecognitionEnabled <Boolean>]
@@ -108,24 +107,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -AirSyncNumbers
-This parameter is available or functional only in Exchange Server 2010.
-
-The AirSyncNumbers parameter specifies whether to register a mobile phone number with a hosted voice mail service. Each UM mailbox can have up to three numbers defined and numbers must be in E.164 format.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
