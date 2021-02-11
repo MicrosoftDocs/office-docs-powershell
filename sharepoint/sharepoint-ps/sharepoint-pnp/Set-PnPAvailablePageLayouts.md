@@ -1,38 +1,40 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpavailablepagelayouts
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPAvailablePageLayouts
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPAvailablePageLayouts.html
 ---
-
+ 
 # Set-PnPAvailablePageLayouts
 
 ## SYNOPSIS
 Sets the available page layouts for the current site
 
-## SYNTAX 
+## SYNTAX
 
 ### SPECIFIC
 ```powershell
-Set-PnPAvailablePageLayouts -PageLayouts <String[]>
-                            [-Web <WebPipeBind>]
-                            [-Connection <PnPConnection>]
+Set-PnPAvailablePageLayouts -PageLayouts <String[]> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### ALL
 ```powershell
-Set-PnPAvailablePageLayouts -AllowAllPageLayouts [<SwitchParameter>]
-                            [-Web <WebPipeBind>]
-                            [-Connection <PnPConnection>]
+Set-PnPAvailablePageLayouts [-AllowAllPageLayouts] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### INHERIT
 ```powershell
-Set-PnPAvailablePageLayouts -InheritPageLayouts [<SwitchParameter>]
-                            [-Web <WebPipeBind>]
-                            [-Connection <PnPConnection>]
+Set-PnPAvailablePageLayouts [-InheritPageLayouts] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
+
+## EXAMPLES
 
 ## PARAMETERS
 
@@ -45,31 +47,9 @@ Parameter Sets: ALL
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -InheritPageLayouts
-Set the available page layouts to inherit from the parent site.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: INHERIT
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -PageLayouts
-An array of page layout files to set as available page layouts for the site.
-
-```yaml
-Type: String[]
-Parameter Sets: SPECIFIC
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -81,21 +61,42 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -InheritPageLayouts
+Set the available page layouts to inherit from the parent site.
 
 ```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: INHERIT
 
-Required: False
+Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -PageLayouts
+An array of page layout files to set as available page layouts for the site.
+
+```yaml
+Type: String[]
+Parameter Sets: SPECIFIC
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

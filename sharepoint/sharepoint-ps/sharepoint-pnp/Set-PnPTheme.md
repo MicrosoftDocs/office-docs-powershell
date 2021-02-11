@@ -1,26 +1,23 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptheme
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTheme
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTheme.html
 ---
-
+ 
 # Set-PnPTheme
 
 ## SYNOPSIS
 Sets the theme of the current web.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPTheme [-ColorPaletteUrl <String>]
-             [-FontSchemeUrl <String>]
-             [-BackgroundImageUrl <String>]
-             [-ResetSubwebsToInherit [<SwitchParameter>]]
-             [-UpdateRootWebOnly [<SwitchParameter>]]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Set-PnPTheme [-ColorPaletteUrl <String>] [-FontSchemeUrl <String>] [-BackgroundImageUrl <String>]
+ [-ResetSubwebsToInherit] [-UpdateRootWebOnly] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,28 +25,24 @@ Set-PnPTheme [-ColorPaletteUrl <String>]
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPTheme
 ```
 
 Removes the current theme and resets it to the default.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPTheme -ColorPaletteUrl _catalogs/theme/15/company.spcolor
 ```
 
-
-
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPTheme -ColorPaletteUrl _catalogs/theme/15/company.spcolor -BackgroundImageUrl 'style library/background.png'
 ```
 
-
-
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPTheme -ColorPaletteUrl _catalogs/theme/15/company.spcolor -BackgroundImageUrl 'style library/background.png' -ResetSubwebsToInherit
 ```
@@ -67,7 +60,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ColorPaletteUrl
@@ -79,43 +74,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -FontSchemeUrl
-Specifies the Font Scheme Url based on the site or server relative url
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ResetSubwebsToInherit
-Resets subwebs to inherit the theme from the rootweb
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -UpdateRootWebOnly
-Updates only the rootweb, even if subwebs are set to inherit the theme.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -127,21 +88,56 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -FontSchemeUrl
+Specifies the Font Scheme Url based on the site or server relative url
 
 ```yaml
-Type: WebPipeBind
+Type: String
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -ResetSubwebsToInherit
+Resets subwebs to inherit the theme from the rootweb
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateRootWebOnly
+Updates only the rootweb, even if subwebs are set to inherit the theme.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

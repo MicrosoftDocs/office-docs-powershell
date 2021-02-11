@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -32,7 +31,6 @@ Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>]
 ```
 Get-ManagedFolder [-Mailbox <MailboxIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -109,24 +107,6 @@ This cmdlet retrieves all the folders that apply to the specified mailbox.
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: Mailbox
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see [Multi-Tenant Support](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff923272(v=exchg.141)).
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 

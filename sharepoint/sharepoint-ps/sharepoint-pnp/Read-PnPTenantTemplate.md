@@ -1,26 +1,28 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/read-pnptenanttemplate
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Read-PnPTenantTemplate
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Read-PnPTenantTemplate.html
 ---
-
+ 
 # Read-PnPTenantTemplate
 
 ## SYNOPSIS
 Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Read-PnPTenantTemplate -Path <String>
-                       [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
+Read-PnPTenantTemplate [-Path] <String>
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Read-PnPTenantTemplate -Path template.pnp
 ```
@@ -38,21 +40,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
+Default value: None
 Accept pipeline input: False
-```
-
-### -TemplateProviderExtensions
-Allows you to specify ITemplateProviderExtension to execute while loading the template.
-
-```yaml
-Type: ITemplateProviderExtension[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

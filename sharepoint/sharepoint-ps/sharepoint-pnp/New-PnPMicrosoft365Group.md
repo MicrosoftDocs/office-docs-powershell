@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpmicrosoft365group
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPMicrosoft365Group
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPMicrosoft365Group.html
 ---
-
+ 
 # New-PnPMicrosoft365Group
 
 ## SYNOPSIS
@@ -16,45 +17,40 @@ title: New-PnPMicrosoft365Group
 
 Creates a new Microsoft 365 Group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPMicrosoft365Group -DisplayName <String>
-                         -Description <String>
-                         -MailNickname <String>
-                         [-Owners <String[]>]
-                         [-Members <String[]>]
-                         [-IsPrivate [<SwitchParameter>]]
-                         [-GroupLogoPath <String>]
-                         [-CreateTeam [<SwitchParameter>]]
-                         [-Force [<SwitchParameter>]]
-                         [-ByPassPermissionCheck [<SwitchParameter>]]
+New-PnPMicrosoft365Group -DisplayName <String> -Description <String> -MailNickname <String>
+ [-Owners <String[]>] [-Members <String[]>] [-IsPrivate] [-GroupLogoPath <String>] [-CreateTeam] [-Force]
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname
 ```
 
 Creates a public Microsoft 365 Group with all the required properties
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers
 ```
 
 Creates a public Microsoft 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -IsPrivate
 ```
 
 Creates a private Microsoft 365 Group with all the required properties
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers -IsPrivate
 ```
@@ -62,18 +58,6 @@ New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -Ma
 Creates a private Microsoft 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -CreateTeam
 Creates a Microsoft Teams team associated with created group
@@ -84,7 +68,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Description
@@ -96,7 +82,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayName
@@ -108,7 +96,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
@@ -120,7 +110,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -GroupLogoPath
@@ -132,7 +124,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IsPrivate
@@ -144,7 +138,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MailNickname
@@ -156,7 +152,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Members
@@ -168,7 +166,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Owners
@@ -180,9 +180,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-groups)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-groups)
+

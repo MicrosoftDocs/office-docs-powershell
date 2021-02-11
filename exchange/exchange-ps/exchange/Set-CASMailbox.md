@@ -33,7 +33,6 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-ECPEnabled <Boolean>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmwsEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -364,27 +363,6 @@ Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmwsEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
-The EmwsEnabled parameter enables or disables access to the mailbox using the Exchange Management Web Service. Valid values are:
-
-- $true: Access to the mailbox using EMWS is enabled.
-- $false: Access to the mailbox using EMWS is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

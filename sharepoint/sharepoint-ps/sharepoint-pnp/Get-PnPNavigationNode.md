@@ -1,58 +1,57 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpnavigationnode
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPNavigationNode
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPNavigationNode.html
 ---
-
+ 
 # Get-PnPNavigationNode
 
 ## SYNOPSIS
 Returns all or a specific navigation node
 
-## SYNTAX 
+## SYNTAX
 
-### All nodes by location
+### All nodes by location (Default)
 ```powershell
-Get-PnPNavigationNode [-Location <NavigationType>]
-                      [-Tree [<SwitchParameter>]]
-                      [-Web <WebPipeBind>]
-                      [-Connection <PnPConnection>]
+Get-PnPNavigationNode [-Location <NavigationType>] [-Tree] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### A single node by ID
 ```powershell
-Get-PnPNavigationNode [-Id <Int>]
-                      [-Tree [<SwitchParameter>]]
-                      [-Web <WebPipeBind>]
-                      [-Connection <PnPConnection>]
+Get-PnPNavigationNode [-Id <Int32>] [-Tree] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPNavigationNode
 ```
 
 Returns all navigation nodes in the quicklaunch navigation
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPNavigationNode -Location QuickLaunch
 ```
 
 Returns all navigation nodes in the quicklaunch navigation
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPNavigationNode -Location TopNavigationBar
 ```
 
 Returns all navigation nodes in the top navigation bar
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 $node = Get-PnPNavigationNode -Id 2030
 PS> $children = $node.Children
@@ -62,16 +61,32 @@ Returns the selected navigation node and retrieves any children
 
 ## PARAMETERS
 
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Id
 The Id of the node to retrieve
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: A single node by ID
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Location
@@ -80,10 +95,13 @@ The location of the nodes to retrieve. Either TopNavigationBar, QuickLaunch, Sea
 ```yaml
 Type: NavigationType
 Parameter Sets: All nodes by location
+Accepted values: TopNavigationBar, QuickLaunch, SearchNav, Footer
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Tree
@@ -95,33 +113,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

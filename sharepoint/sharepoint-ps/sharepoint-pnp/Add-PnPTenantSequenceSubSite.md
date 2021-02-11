@@ -1,26 +1,29 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenantsequencesubsite
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPTenantSequenceSubSite.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPTenantSequenceSubSite
 ---
-
+  
 # Add-PnPTenantSequenceSubSite
 
 ## SYNOPSIS
 Adds a tenant sequence sub site object to a tenant sequence site object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPTenantSequenceSubSite -SubSite <TeamNoGroupSubSite>
-                             -Site <SiteCollection>
+Add-PnPTenantSequenceSubSite -SubSite <TeamNoGroupSubSite> -Site <SiteCollection>  
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPTenantSequenceSubSite -Site $mysite -SubSite $mysubsite
 ```
@@ -28,6 +31,21 @@ Add-PnPTenantSequenceSubSite -Site $mysite -SubSite $mysubsite
 Adds an existing subsite object to an existing sequence site object
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Site
 The site to add the subsite to
@@ -38,7 +56,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -SubSite
@@ -50,9 +70,28 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -1,21 +1,22 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/disable-pnpsharingfornonownersofsite
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Disable-PnPSharingForNonOwnersOfSite.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Disable-PnPSharingForNonOwnersOfSite
 ---
-
+  
 # Disable-PnPSharingForNonOwnersOfSite
 
 ## SYNOPSIS
 Configures the site to only allow sharing of the site and items in the site by owners
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Disable-PnPSharingForNonOwnersOfSite [-Identity <SitePipeBind>]
-                                     [-Connection <PnPConnection>]
+Disable-PnPSharingForNonOwnersOfSite [-Identity <SitePipeBind>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +24,7 @@ Configures the site to only allow sharing of the site and items in the site by o
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Disable-PnPSharingForNonOwnersOfSite
 ```
@@ -31,19 +32,6 @@ Disable-PnPSharingForNonOwnersOfSite
 Restricts sharing of the site and items in the site only to owners
 
 ## PARAMETERS
-
-### -Identity
-
-
-```yaml
-Type: SitePipeBind
-Parameter Sets: (All)
-Aliases: Url
-
-Required: False
-Position: Named
-Accept pipeline input: True
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -54,9 +42,27 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+
+```yaml
+Type: SitePipeBind
+Parameter Sets: (All)
+Aliases: Url
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+
