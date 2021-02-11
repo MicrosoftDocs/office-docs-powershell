@@ -1,36 +1,36 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/restore-pnpfileversion
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Restore-PnPFileVersion
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Restore-PnPFileVersion.html
 ---
-
+ 
 # Restore-PnPFileVersion
 
 ## SYNOPSIS
 Restores a specific file version.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Restore-PnPFileVersion -Url <String>
-                       [-Identity <FileVersionPipeBind>]
-                       [-Force [<SwitchParameter>]]
-                       [-Web <WebPipeBind>]
-                       [-Connection <PnPConnection>]
+Restore-PnPFileVersion -Url <String> [-Identity <FileVersionPipeBind>] [-Force] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Restore-PnPFileVersion -Url Documents/MyDocument.docx -Identity 512
 ```
 
 Restores the file version with Id 512
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Restore-PnPFileVersion -Url Documents/MyDocument.docx -Identity "Version 1.0"
 ```
@@ -39,52 +39,8 @@ Restores the file version with label "Version 1.0"
 
 ## PARAMETERS
 
-### -Force
-If provided, no confirmation will be requested and the action will be performed
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Identity
-
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: FileVersionPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Url
-
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: PnPConnection
@@ -92,23 +48,54 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-Only applicable to: SharePoint Online
+### -Force
+If provided, no confirmation will be requested and the action will be performed
 
 ```yaml
-Type: WebPipeBind
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -Identity
+
+```yaml
+Type: FileVersionPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Url
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

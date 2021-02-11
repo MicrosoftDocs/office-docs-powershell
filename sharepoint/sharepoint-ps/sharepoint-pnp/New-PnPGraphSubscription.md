@@ -1,26 +1,23 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpgraphsubscription
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPGraphSubscription
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPGraphSubscription.html
 ---
-
+ 
 # New-PnPGraphSubscription
 
 ## SYNOPSIS
 Creates a new Microsof Graph Subscription which allows your webhook API to be called when a change occurs in Microsoft Graph
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPGraphSubscription -ChangeType <GraphSubscriptionChangeType>
-                         -NotificationUrl <String>
-                         -Resource <String>
-                         [-ExpirationDateTime <DateTime>]
-                         [-ClientState <String>]
-                         [-LatestSupportedTlsVersion <GraphSubscriptionTlsVersion>]
-                         [-ByPassPermissionCheck [<SwitchParameter>]]
+New-PnPGraphSubscription -ChangeType <GraphSubscriptionChangeType> -NotificationUrl <String> -Resource <String>
+ [-ExpirationDateTime <DateTime>] [-ClientState <String>]
+ [-LatestSupportedTlsVersion <GraphSubscriptionTlsVersion>]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,14 +25,14 @@ Creates a new Microsof Graph Subscription. The required Azure Active Directory a
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPGraphSubscription -ChangeType Create -NotificationUrl https://mywebapiservice/notifications -Resource "me/mailFolders('Inbox')/messages" -ExpirationDateTime (Get-Date).AddDays(1) -ClientState [Guid]::NewGuid().ToString()
 ```
 
 Creates a new Microsoft Graph subscription listening for incoming mail during the next 24 hours in the inbox of the user under which the connection has been made and will signal the URL provided through NotificationUrl when a message comes in
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 New-PnPGraphSubscription -ChangeType Updates -NotificationUrl https://mywebapiservice/notifications -Resource "Users" -ExpirationDateTime (Get-Date).AddHours(1) -ClientState [Guid]::NewGuid().ToString()
 ```
@@ -44,28 +41,19 @@ Creates a new Microsoft Graph subscription listening for changes to user objects
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -ChangeType
 The event(s) the subscription should trigger on
 
 ```yaml
 Type: GraphSubscriptionChangeType
 Parameter Sets: (All)
+Accepted values: Created, Updated, Deleted
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ClientState
@@ -77,7 +65,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ExpirationDateTime
@@ -89,7 +79,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LatestSupportedTlsVersion
@@ -98,10 +90,13 @@ Specifies the latest version of Transport Layer Security (TLS) that the notifica
 ```yaml
 Type: GraphSubscriptionTlsVersion
 Parameter Sets: (All)
+Accepted values: v1_0, v1_1, v1_2, v1_3
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NotificationUrl
@@ -113,7 +108,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Resource
@@ -125,9 +122,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

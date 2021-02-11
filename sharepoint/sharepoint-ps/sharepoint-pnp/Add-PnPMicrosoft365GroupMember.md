@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpmicrosoft365groupmember
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPMicrosoft365GroupMember.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPMicrosoft365GroupMember
 ---
-
+  
 # Add-PnPMicrosoft365GroupMember
 
 ## SYNOPSIS
@@ -16,25 +17,24 @@ title: Add-PnPMicrosoft365GroupMember
 
 Adds members to a particular Microsoft 365 Group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPMicrosoft365GroupMember -Identity <Microsoft365GroupPipeBind>
-                               -Users <String[]>
-                               [-RemoveExisting [<SwitchParameter>]]
-                               [-ByPassPermissionCheck [<SwitchParameter>]]
+Add-PnPMicrosoft365GroupMember -Identity <Microsoft365GroupPipeBind> -Users <String[]> [-RemoveExisting] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPMicrosoft365GroupMember -Identity "Project Team" -Users "john@contoso.onmicrosoft.com","jane@contoso.onmicrosoft.com"
 ```
 
 Adds the provided two users as additional members to the Microsoft 365 Group named "Project Team"
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPMicrosoft365GroupMember -Identity "Project Team" -Users "john@contoso.onmicrosoft.com","jane@contoso.onmicrosoft.com" -RemoveExisting
 ```
@@ -42,18 +42,6 @@ Add-PnPMicrosoft365GroupMember -Identity "Project Team" -Users "john@contoso.onm
 Sets the provided two users as the only members of the Microsoft 365 Group named "Project Team" by removing any current existing members first
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Identity
 The Identity of the Microsoft 365 Group to add members to
@@ -64,7 +52,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -RemoveExisting
@@ -76,7 +66,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Users
@@ -88,9 +80,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-members)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-members)
+
+

@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphubsite
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPHubSite.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPHubSite
 ---
-
+  
 # Get-PnPHubSite
 
 ## SYNOPSIS
@@ -16,24 +17,26 @@ title: Get-PnPHubSite
 
 Retrieve all or a specific hubsite.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPHubSite [-Connection <PnPConnection>]
+Get-PnPHubSite [[-Identity] <HubSitePipeBind>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPHubSite
 ```
 
 Returns all hubsite properties
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Get-PnPHubSite -Identity https://contoso.sharepoint.com/sites/myhubsite
+Get-PnPHubSite -Identity "https://contoso.sharepoint.com/sites/myhubsite"
 ```
 
 Returns the properties of the specified hubsite
@@ -49,9 +52,27 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+{{ Fill Identity Description }}
+
+```yaml
+Type: HubSitePipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -23,6 +23,7 @@ New-CsOnlineAudioFile -FileName <String> -Content <Byte[]> [-Tenant <Guid>] [<Co
 
 ## DESCRIPTION
 The New-CsOnlineAudioFile cmdlet creates a new audio file for use with the Organizational Auto Attendant (OAA) service.
+Please note, to import a new audio file for use with the Auto Attendant (AA) or Call Queue (CQ) service, please use [Import-CSOnlineAudioFile](Import-CSOnlineAudioFile.md). 
 
 ## EXAMPLES
 
