@@ -59,7 +59,6 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxRetriesForLocalSiteShadow <Int32>]
  [-MaxRetriesForRemoteSiteShadow <Int32>]
  [-MaxSendSize <Unlimited>]
- [-OrganizationFederatedMailbox <SmtpAddress>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
  [-RejectMessageOnShadowFailure <Boolean>]
  [-Rfc2231EncodingEnabled <Boolean>]
@@ -909,24 +908,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OrganizationFederatedMailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The OrganizationFederatedMailbox parameter specifies the SMTP address of the federated mailbox used for federated delivery with other organizations.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

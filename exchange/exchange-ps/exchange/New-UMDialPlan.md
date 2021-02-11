@@ -25,7 +25,6 @@ New-UMDialPlan [-Name] <String> -CountryOrRegionCode <String> -NumberOfDigitsInE
  [-AccessTelephoneNumbers <MultiValuedProperty>]
  [-Confirm]
  [-DefaultLanguage <UMLanguage>]
- [-DefaultOutboundCallingLineId <String>]
  [-DomainController <Fqdn>]
  [-FaxEnabled <Boolean>]
  [-GenerateUMMailboxPolicy <Boolean>]
@@ -160,24 +159,6 @@ Type: UMLanguage
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultOutboundCallingLineId
-This parameter is available or functional only in Exchange Server 2010.
-
-The DefaultOutboundCallingLineId parameter specifies the phone number that a Unified Messaging server would use as the calling line ID when placing an outbound call. By default, this is set to $null and only the extension number of the UM-enabled user that places the outbound call is used.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
