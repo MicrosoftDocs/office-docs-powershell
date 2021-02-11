@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-UMMailboxPolicy [-Name] <String> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-SharedUMDialPlan]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -108,24 +107,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharedUMDialPlan
-This parameter is available or functional only in Exchange Server 2010.
-
-The SharedUMDialPlan parameter specifies whether the new UM mailbox policy being created is linked or associated with a dial plan outside the scope of the organization. If you specify this parameter, the UM mailbox policy can be linked with another tenant's dial plan. This parameter is used during tenant provisioning and is only used in a data center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

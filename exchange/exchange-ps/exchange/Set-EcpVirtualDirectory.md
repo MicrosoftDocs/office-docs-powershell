@@ -38,7 +38,6 @@ Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-FormsAuthentication <Boolean>]
  [-GzipLevel <GzipLevel>]
  [-InternalUrl <Uri>]
- [-LiveIdAuthentication <Boolean>]
  [-OwaOptionsEnabled <Boolean>]
  [-WhatIf]
  [-WindowsAuthentication <Boolean>]
@@ -341,24 +340,6 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LiveIdAuthentication
-This parameter is available or functional only in Exchange Server 2010.
-
-The LiveIdAuthentication parameter specifies whether Windows Live ID authentication is enabled for the Exchange Control Panel virtual directory.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter>
+New-MailMessage
+ [[-Body] <String>]
  [-BodyFormat <MailBodyFormat>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -80,35 +81,6 @@ New-MailMessage -Subject "Delivery Information" -Body "Click here to see details
 This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
 ## PARAMETERS
-
-### -Mailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The Mailbox parameter specifies the target mailbox where the message is created. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Body
 The Body parameter specifies the content of the body section of the new email message.
