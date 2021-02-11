@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphomesite
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPHomeSite.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPHomeSite
 ---
-
+  
 # Get-PnPHomeSite
 
 ## SYNOPSIS
@@ -16,15 +17,17 @@ title: Get-PnPHomeSite
 
 Returns the home site url for your tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPHomeSite [-Connection <PnPConnection>]
+Get-PnPHomeSite [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPHomeSite
 ```
@@ -42,9 +45,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

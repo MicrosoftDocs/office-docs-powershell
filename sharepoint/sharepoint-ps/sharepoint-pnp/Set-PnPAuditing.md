@@ -1,77 +1,70 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpauditing
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPAuditing
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPAuditing.html
 ---
-
+ 
 # Set-PnPAuditing
 
 ## SYNOPSIS
 Set Auditing setting for a site
 
-## SYNTAX 
-
-### Specific flags
-```powershell
-Set-PnPAuditing [-RetentionTime <Int>]
-                [-TrimAuditLog [<SwitchParameter>]]
-                [-EditItems [<SwitchParameter>]]
-                [-CheckOutCheckInItems [<SwitchParameter>]]
-                [-MoveCopyItems [<SwitchParameter>]]
-                [-DeleteRestoreItems [<SwitchParameter>]]
-                [-EditContentTypesColumns [<SwitchParameter>]]
-                [-SearchContent [<SwitchParameter>]]
-                [-EditUsersPermissions [<SwitchParameter>]]
-                [-Connection <PnPConnection>]
-```
+## SYNTAX
 
 ### Enable all
 ```powershell
-Set-PnPAuditing -EnableAll [<SwitchParameter>]
-                [-RetentionTime <Int>]
-                [-TrimAuditLog [<SwitchParameter>]]
-                [-Connection <PnPConnection>]
+Set-PnPAuditing [-EnableAll] [-RetentionTime <Int32>] [-TrimAuditLog] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Disable All
 ```powershell
-Set-PnPAuditing -DisableAll [<SwitchParameter>]
-                [-Connection <PnPConnection>]
+Set-PnPAuditing [-DisableAll] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+### Specific flags
+```powershell
+Set-PnPAuditing [-RetentionTime <Int32>] [-TrimAuditLog] [-EditItems] [-CheckOutCheckInItems] [-MoveCopyItems]
+ [-DeleteRestoreItems] [-EditContentTypesColumns] [-SearchContent] [-EditUsersPermissions]
+ [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPAuditing -EnableAll
 ```
 
 Enables all auditing settings for the current site
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPAuditing -DisableAll
 ```
 
 Disables all auditing settings for the current site
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPAuditing -RetentionTime 7
 ```
 
 Sets the audit log trimming to 7 days, this also enables the automatic trimming of the audit log
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPAuditing -TrimAuditLog
 ```
 
 Enables the automatic trimming of the audit log
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Set-PnPAuditing -RetentionTime 7 -CheckOutCheckInItems -MoveCopyItems -SearchContent
 ```
@@ -94,127 +87,9 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -DeleteRestoreItems
-Audit deleting or restoring items
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -DisableAll
-Disable all audit flags
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Disable All
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -EditContentTypesColumns
-Audit editing content types and columns
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EditItems
-Audit editing items
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EditUsersPermissions
-Audit editing users and permissions
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -EnableAll
-Enable all audit flags
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Enable all
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -MoveCopyItems
-Audit moving or copying items to another location in the site.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -RetentionTime
-Set the retention time
-
-```yaml
-Type: Int
-Parameter Sets: Specific flags, Enable all
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SearchContent
-Audit searching site content
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -TrimAuditLog
-Trim the audit log
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Specific flags, Enable all
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -226,9 +101,152 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteRestoreItems
+Audit deleting or restoring items
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableAll
+Disable all audit flags
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Disable All
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EditContentTypesColumns
+Audit editing content types and columns
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EditItems
+Audit editing items
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EditUsersPermissions
+Audit editing users and permissions
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAll
+Enable all audit flags
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Enable all
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveCopyItems
+Audit moving or copying items to another location in the site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionTime
+Set the retention time
+
+```yaml
+Type: Int32
+Parameter Sets: Enable all, Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SearchContent
+Audit searching site content
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrimAuditLog
+Trim the audit log
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Enable all, Specific flags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

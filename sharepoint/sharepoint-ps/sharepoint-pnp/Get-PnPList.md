@@ -1,51 +1,50 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplist
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPList.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPList
 ---
-
+  
 # Get-PnPList
 
 ## SYNOPSIS
 Returns lists from SharePoint
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
-Get-PnPList [-Includes <String[]>]
-            [-Identity <ListPipeBind>]
-            [-ThrowExceptionIfListNotFound [<SwitchParameter>]]
-            [-Web <WebPipeBind>]
-            [-Connection <PnPConnection>]
+Get-PnPList [[-Identity] <ListPipeBind>] [-ThrowExceptionIfListNotFound] 
+ [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPList
 ```
 
 Returns all lists in the current web
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPList -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
 ```
 
 Returns a list with the given id
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPList -Identity Lists/Announcements
 ```
 
 Returns a list with the given url
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPList | Where-Object {$_.RootFolder.ServerRelativeUrl -like "/lists/*"}
 ```
@@ -53,6 +52,20 @@ Get-PnPList | Where-Object {$_.RootFolder.ServerRelativeUrl -like "/lists/*"}
 This examples shows how to do wildcard searches on the list URL. It returns all lists whose URL starts with "/lists/" This could also be used to search for strings inside of the URL.
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 The ID, name or Url (Lists/MyList) of the list
@@ -63,19 +76,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: 0
-Accept pipeline input: True
-```
-
-### -Includes
-Specify properties to include when retrieving objects from the server.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -ThrowExceptionIfListNotFound
@@ -87,37 +90,15 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-The web to apply the command to. Omit this parameter to use the current web.
 
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.List
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

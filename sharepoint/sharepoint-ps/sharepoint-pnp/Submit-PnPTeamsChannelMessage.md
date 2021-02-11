@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/submit-pnpteamschannelmessage
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Submit-PnPTeamsChannelMessage
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Submit-PnPTeamsChannelMessage.html
 ---
-
+ 
 # Submit-PnPTeamsChannelMessage
 
 ## SYNOPSIS
@@ -16,27 +17,25 @@ title: Submit-PnPTeamsChannelMessage
 
 Sends a message to a Microsoft Teams Channel.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Submit-PnPTeamsChannelMessage -Team <TeamsTeamPipeBind>
-                              -Channel <TeamsChannelPipeBind>
-                              -Message <String>
-                              [-ContentType <TeamChannelMessageContentType>]
-                              [-Important [<SwitchParameter>]]
-                              [-ByPassPermissionCheck [<SwitchParameter>]]
+Submit-PnPTeamsChannelMessage -Team <TeamsTeamPipeBind> -Channel <TeamsChannelPipeBind> -Message <String>
+ [-ContentType <TeamChannelMessageContentType>] [-Important]  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Submit-PnPTeamsChannelMessage -Team MyTestTeam -Channel "My Channel" -Message "A new message"
 ```
 
 Sends "A new message" to the specified channel
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Submit-PnPTeamsChannelMessage -Team MyTestTeam -Channel "My Channel" -Message "<strong>A bold new message</strong>" -ContentType Html
 ```
@@ -44,18 +43,6 @@ Submit-PnPTeamsChannelMessage -Team MyTestTeam -Channel "My Channel" -Message "<
 Sends the message, formatted as html to the specified channel
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Channel
 Specify the group id, mailNickname or display name of the team to use.
@@ -66,7 +53,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ContentType
@@ -75,10 +64,13 @@ Specify to set the content type of the message, either Text or Html.
 ```yaml
 Type: TeamChannelMessageContentType
 Parameter Sets: (All)
+Accepted values: Text, Html
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Important
@@ -90,7 +82,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Message
@@ -102,7 +96,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Team
@@ -114,9 +110,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

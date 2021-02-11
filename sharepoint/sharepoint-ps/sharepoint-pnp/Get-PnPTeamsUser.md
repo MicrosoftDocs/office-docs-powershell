@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpteamsuser
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTeamsUser
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTeamsUser.html
 ---
-
+ 
 # Get-PnPTeamsUser
 
 ## SYNOPSIS
@@ -16,56 +17,59 @@ title: Get-PnPTeamsUser
 
 Returns owners, members or guests from a team.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTeamsUser -Team <TeamsTeamPipeBind>
-                 [-Role <String>]
-                 [-ByPassPermissionCheck [<SwitchParameter>]]
+Get-PnPTeamsUser -Team <TeamsTeamPipeBind> [-Channel <TeamsChannelPipeBind>] [-Role <String>]
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTeamsUser -Team MyTeam
 ```
 
 Returns all owners, members or guests from the specified team.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPTeamsUser -Team MyTeam -Role Owner
 ```
 
 Returns all owners from the specified team.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPTeamsUser -Team MyTeam -Role Member
 ```
 
 Returns all members from the specified team.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPTeamsUser -Team MyTeam -Role Guest
 ```
 
-Returns all guestss from the specified team.
+Returns all guests from the specified team.
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
+### -Channel
+Specify the channel id or display name of the channel to use.
 
 ```yaml
-Type: SwitchParameter
+Type: TeamsChannelPipeBind
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Role
@@ -74,10 +78,13 @@ Specify to filter on the role of the user
 ```yaml
 Type: String
 Parameter Sets: (All)
+Accepted values: Owner, Member, Guest
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Team
@@ -89,9 +96,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenant
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenant
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenant.html
 ---
-
+ 
 # Get-PnPTenant
 
 ## SYNOPSIS
@@ -16,10 +17,10 @@ title: Get-PnPTenant
 
 Returns organization-level site collection properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTenant [-Connection <PnPConnection>]
+Get-PnPTenant [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +33,7 @@ You must have the SharePoint Online admin or Global admin role to run the cmdlet
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTenant
 ```
@@ -50,9 +51,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

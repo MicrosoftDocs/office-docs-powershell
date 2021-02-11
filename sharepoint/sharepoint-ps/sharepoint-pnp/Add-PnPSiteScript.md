@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitescript
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPSiteScript.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPSiteScript
 ---
-
+  
 # Add-PnPSiteScript
 
 ## SYNOPSIS
@@ -16,18 +17,17 @@ title: Add-PnPSiteScript
 
 Creates a new Site Script on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPSiteScript -Title <String>
-                  -Content <String>
-                  [-Description <String>]
-                  [-Connection <PnPConnection>]
+Add-PnPSiteScript -Title <String> [-Description <String>] -Content <String> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPSiteScript -Title "My Site Script" -Description "A more detailed description" -Content $script
 ```
@@ -36,40 +36,19 @@ Adds a new Site Script, where $script variable contains the script.
 
 ## PARAMETERS
 
-### -Content
-A JSON string containing the site script
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Description
-The description of the site script
-
-```yaml
-Type: String
-Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Title
-The title of the site script
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -81,9 +60,70 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Content
+A JSON string containing the site script
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description of the site script
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+The title of the site script
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

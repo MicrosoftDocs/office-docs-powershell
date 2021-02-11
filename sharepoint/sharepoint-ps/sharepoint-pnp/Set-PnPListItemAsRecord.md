@@ -1,36 +1,36 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplistitemasrecord
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPListItemAsRecord
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPListItemAsRecord.html
 ---
-
+ 
 # Set-PnPListItemAsRecord
 
 ## SYNOPSIS
 Declares a list item as a record, for more information, see https://docs.microsoft.com/sharepoint/governance/records-management-in-sharepoint-server
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPListItemAsRecord -List <ListPipeBind>
-                        -Identity <ListItemPipeBind>
-                        [-DeclarationDate <DateTime>]
-                        [-Web <WebPipeBind>]
-                        [-Connection <PnPConnection>]
+Set-PnPListItemAsRecord [-List] <ListPipeBind> -Identity <ListItemPipeBind> [-DeclarationDate <DateTime>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPListItemAsRecord -List "Documents" -Identity 4
 ```
 
 Declares the document in the documents library with id 4 as a record
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPListItemAsRecord -List "Documents" -Identity 4 -DeclarationDate $date
 ```
@@ -38,6 +38,20 @@ Set-PnPListItemAsRecord -List "Documents" -Identity 4 -DeclarationDate $date
 Declares the document in the documents library with id as a record
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DeclarationDate
 The declaration date
@@ -48,7 +62,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -60,7 +76,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -72,33 +90,14 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
