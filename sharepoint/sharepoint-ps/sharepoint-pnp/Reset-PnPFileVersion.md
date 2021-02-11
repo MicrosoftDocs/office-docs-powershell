@@ -1,41 +1,37 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/reset-pnpfileversion
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Reset-PnPFileVersion
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Reset-PnPFileVersion.html
 ---
-
+ 
 # Reset-PnPFileVersion
 
 ## SYNOPSIS
 Resets a file to its previous version
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Reset-PnPFileVersion -ServerRelativeUrl <String>
-                     [-CheckinType <CheckinType>]
-                     [-CheckInComment <String>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <PnPConnection>]
+Reset-PnPFileVersion -ServerRelativeUrl <String> [-CheckinType <CheckinType>] [-CheckInComment <String>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Reset-PnPFileVersion -ServerRelativeUrl "/sites/test/office365.png"
 ```
 
-
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Reset-PnPFileVersion -ServerRelativeUrl "/sites/test/office365.png" -CheckinType MajorCheckin -Comment "Restored to previous version"
 ```
-
-
 
 ## PARAMETERS
 
@@ -48,7 +44,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -CheckinType
@@ -57,22 +55,13 @@ The check in type to use. Defaults to Major.
 ```yaml
 Type: CheckinType
 Parameter Sets: (All)
+Accepted values: MinorCheckIn, MajorCheckIn, OverwriteCheckIn
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -ServerRelativeUrl
-The server relative URL of the file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -84,21 +73,28 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -ServerRelativeUrl
+The server relative URL of the file.
 
 ```yaml
-Type: WebPipeBind
+Type: String
 Parameter Sets: (All)
 
-Required: False
+Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantcdnenabled
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenantCdnEnabled
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantCdnEnabled.html
 ---
-
+ 
 # Get-PnPTenantCdnEnabled
 
 ## SYNOPSIS
@@ -16,11 +17,10 @@ title: Get-PnPTenantCdnEnabled
 
 Retrieves if the Office 365 Content Delivery Network has been enabled.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTenantCdnEnabled -CdnType <SPOTenantCdnType>
-                        [-Connection <PnPConnection>]
+Get-PnPTenantCdnEnabled -CdnType <SPOTenantCdnType> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ Enables or disabled the public or private Office 365 Content Delivery Network (C
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTenantCdnEnabled -CdnType Public
 ```
@@ -43,10 +43,13 @@ The type of cdn to retrieve the origins from
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
+Accepted values: Public, Private
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -58,9 +61,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

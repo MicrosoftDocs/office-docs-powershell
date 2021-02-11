@@ -1,32 +1,32 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpextensibilityhandlerobject
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPExtensibilityHandlerObject
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPExtensibilityHandlerObject.html
 ---
-
+ 
 # New-PnPExtensibilityHandlerObject
 
 ## SYNOPSIS
-Creates an ExtensibilityHandler Object, to be used by the Get-PnPProvisioningTemplate cmdlet
+Creates an ExtensibilityHandler Object, to be used by the Get-PnPSiteTemplate cmdlet
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPExtensibilityHandlerObject -Assembly <String>
-                                  -Type <String>
-                                  [-Configuration <String>]
-                                  [-Disabled [<SwitchParameter>]]
+New-PnPExtensibilityHandlerObject [-Assembly] <String> -Type <String> [-Configuration <String>] [-Disabled]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-
 $handler = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler
-Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler
+Get-PnPSiteTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler
 ```
 
 This will create a new ExtensibilityHandler object that is run during extraction of the template
@@ -42,7 +42,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -Configuration
@@ -54,7 +56,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Disabled
@@ -66,7 +70,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Type
@@ -78,13 +84,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-## OUTPUTS
-
-### OfficeDevPnP.Core.Framework.Provisioning.Model.ExtensibilityHandler
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,36 +1,43 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptaxonomyitem
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTaxonomyItem
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTaxonomyItem.html
 ---
-
+ 
 # Get-PnPTaxonomyItem
 
 ## SYNOPSIS
 Returns a taxonomy item
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTaxonomyItem -TermPath <String>
-                    [-Connection <PnPConnection>]
+Get-PnPTaxonomyItem [-TermPath] <String> [-Connection <PnPConnection>]  
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
+
+## EXAMPLES
 
 ## PARAMETERS
 
-### -TermPath
-The path, delimited by | of the taxonomy item to retrieve, alike GROUPLABEL|TERMSETLABEL|TERMLABEL
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: Term
+Aliases: cf
 
-Required: True
-Position: 0
-Accept pipeline input: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -42,13 +49,42 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -TermPath
+The path, delimited by | of the taxonomy item to retrieve, alike GROUPLABEL|TERMSETLABEL|TERMLABEL
 
-### Microsoft.SharePoint.Client.Taxonomy.TaxonomyItem
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Term
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

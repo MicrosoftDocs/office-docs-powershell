@@ -1,11 +1,12 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnporgnewssite
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPOrgNewsSite
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPOrgNewsSite.html
 ---
-
+ 
 # Remove-PnPOrgNewsSite
 
 ## SYNOPSIS
@@ -16,11 +17,10 @@ title: Remove-PnPOrgNewsSite
 
 Removes a given site from the list of organizational news sites.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind>
-                      [-Connection <PnPConnection>]
+Remove-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,26 +28,14 @@ Removes a given site from the list of organizational news sites based on its URL
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Remove-PnPOrgNewsSite -OrgNewsSiteUrl https://tenant.sharepoint.com/sites/mysite
+Remove-PnPOrgNewsSite -OrgNewsSiteUrl "https://tenant.sharepoint.com/sites/mysite"
 ```
 
 This example removes the specified site from list of organization's news sites.
 
 ## PARAMETERS
-
-### -OrgNewsSiteUrl
-The site to be removed from list of organization's news sites
-
-```yaml
-Type: SitePipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -58,9 +46,26 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrgNewsSiteUrl
+The site to be removed from list of organization's news sites
+
+```yaml
+Type: SitePipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

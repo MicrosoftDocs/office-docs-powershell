@@ -1,22 +1,22 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpproperty
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPProperty
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPProperty.html
 ---
-
+ 
 # Get-PnPProperty
 
 ## SYNOPSIS
 Returns a previously not loaded property of a ClientObject
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPProperty -ClientObject <ClientObject>
-                -Property <String[]>
-                [-Connection <PnPConnection>]
+Get-PnPProperty [-ClientObject] <ClientObject> [-Property] <String[]> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,9 +24,8 @@ Will populate properties of an object and optionally, if needed, load the value 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-
 $web = Get-PnPWeb
 Get-PnPProperty -ClientObject $web -Property Id, Lists
 $web.Lists
@@ -34,9 +33,8 @@ $web.Lists
 
 Will load both the Id and Lists properties of the specified Web object.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-
 $list = Get-PnPList -Identity 'Site Assets'
 Get-PnPProperty -ClientObject $list -Property Views
 ```
@@ -54,19 +52,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
+Default value: None
 Accept pipeline input: False
-```
-
-### -Property
-The properties to load. If one property is specified its value will be returned to the output.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: True
-Position: 1
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -78,13 +66,26 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Property
+The properties to load. If one property is specified its value will be returned to the output.
 
-### Microsoft.SharePoint.Client.ClientObject
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
