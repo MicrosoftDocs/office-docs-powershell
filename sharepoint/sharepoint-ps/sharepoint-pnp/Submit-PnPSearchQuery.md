@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Submit-PnPSearchQuery.h
 # Submit-PnPSearchQuery
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Submit-PnPSearchQuery.md to change this file.
+
 Executes an arbitrary search query against the SharePoint search index
 
 ## SYNTAX

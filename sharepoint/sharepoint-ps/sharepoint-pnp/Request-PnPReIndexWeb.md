@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Request-PnPReIndexWeb.h
 # Request-PnPReIndexWeb
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Request-PnPReIndexWeb.md to change this file.
+
 Marks the web for full indexing during the next incremental crawl
 
 ## SYNTAX

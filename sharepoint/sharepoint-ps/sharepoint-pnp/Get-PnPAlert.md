@@ -10,6 +10,10 @@ title: Get-PnPAlert
 # Get-PnPAlert
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAlert.md to change this file.
+
 Returns registered alerts for a user.
 
 ## SYNTAX

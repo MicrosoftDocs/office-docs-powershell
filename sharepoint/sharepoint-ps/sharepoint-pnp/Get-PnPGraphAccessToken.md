@@ -10,6 +10,10 @@ title: Get-PnPGraphAccessToken
 # Get-PnPGraphAccessToken
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPGraphAccessToken.md to change this file.
+
 Returns the current OAuth Access token for the Microsoft Graph API
 
 ## SYNTAX

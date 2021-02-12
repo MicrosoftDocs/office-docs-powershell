@@ -10,6 +10,10 @@ title: Add-PnPRoleDefinition
 # Add-PnPRoleDefinition
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPRoleDefinition.md to change this file.
+
 Adds a Role Defintion (Permission Level) to the site collection in the current context
 
 ## SYNTAX

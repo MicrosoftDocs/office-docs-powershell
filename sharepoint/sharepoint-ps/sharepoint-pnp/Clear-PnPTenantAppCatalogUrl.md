@@ -11,6 +11,10 @@ title: Clear-PnPTenantAppCatalogUrl
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnPTenantAppCatalogUrl.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site

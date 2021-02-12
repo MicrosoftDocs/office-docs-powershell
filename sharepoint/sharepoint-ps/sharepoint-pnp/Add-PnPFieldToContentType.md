@@ -10,6 +10,10 @@ title: Add-PnPFieldToContentType
 # Add-PnPFieldToContentType
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPFieldToContentType.md to change this file.
+
 Adds an existing site column to a content type
 
 ## SYNTAX

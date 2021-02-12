@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPMicrosoft365G
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPMicrosoft365GroupOwner.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All

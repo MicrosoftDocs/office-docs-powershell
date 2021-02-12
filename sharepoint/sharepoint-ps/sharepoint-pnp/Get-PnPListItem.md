@@ -10,6 +10,10 @@ title: Get-PnPListItem
 # Get-PnPListItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPListItem.md to change this file.
+
 Retrieves list items
 
 ## SYNTAX

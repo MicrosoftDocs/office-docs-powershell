@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Read-PnPTenantTemplate.
 # Read-PnPTenantTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Read-PnPTenantTemplate.md to change this file.
+
 Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.
 
 ## SYNTAX

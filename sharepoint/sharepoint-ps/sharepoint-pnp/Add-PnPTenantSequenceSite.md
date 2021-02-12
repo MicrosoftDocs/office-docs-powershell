@@ -10,6 +10,10 @@ title: Add-PnPTenantSequenceSite
 # Add-PnPTenantSequenceSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTenantSequenceSite.md to change this file.
+
 Adds a existing tenant sequence site object to a tenant template
 
 ## SYNTAX

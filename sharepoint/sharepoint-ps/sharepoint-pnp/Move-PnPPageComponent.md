@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Move-PnPPageComponent.h
 # Move-PnPPageComponent
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Move-PnPPageComponent.md to change this file.
+
 Moves a page component to a different section/column
 
 ## SYNTAX

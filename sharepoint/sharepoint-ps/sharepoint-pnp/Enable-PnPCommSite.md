@@ -10,6 +10,10 @@ title: Enable-PnPCommSite
 # Enable-PnPCommSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Enable-PnPCommSite.md to change this file.
+
 Enables the modern communication site experience on a classic team site.
 
 ## SYNTAX

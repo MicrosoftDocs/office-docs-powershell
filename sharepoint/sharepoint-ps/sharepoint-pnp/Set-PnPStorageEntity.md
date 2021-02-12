@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPStorageEntity.ht
 # Set-PnPStorageEntity
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPStorageEntity.md to change this file.
+
 Set Storage Entities / Farm Properties in either the tenant scoped app catalog or the site collection app catalog.
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPSiteCollectionTe
 # New-PnPSiteCollectionTermStore
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPSiteCollectionTermStore.md to change this file.
+
 Creates the site collection term store if it doesn't exist yet or if it does it will return the already existing site collection term store
 
 ## SYNTAX

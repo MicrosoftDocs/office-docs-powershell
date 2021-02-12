@@ -10,6 +10,10 @@ title: Disable-PnPSharingForNonOwnersOfSite
 # Disable-PnPSharingForNonOwnersOfSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Disable-PnPSharingForNonOwnersOfSite.md to change this file.
+
 Configures the site to only allow sharing of the site and items in the site by owners
 
 ## SYNTAX

@@ -10,6 +10,10 @@ title: Get-PnPApplicationCustomizer
 # Get-PnPApplicationCustomizer
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPApplicationCustomizer.md to change this file.
+
 Returns all SharePoint Framework client side extension application customizers
 
 ## SYNTAX

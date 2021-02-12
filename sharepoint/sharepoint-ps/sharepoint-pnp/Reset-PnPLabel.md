@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Reset-PnPLabel.html
 # Reset-PnPLabel
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Reset-PnPLabel.md to change this file.
+
 Resets a retention label on the specified list or library to None
 
 ## SYNTAX

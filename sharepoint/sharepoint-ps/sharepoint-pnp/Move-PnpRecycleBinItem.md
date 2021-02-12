@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Move-PnpRecycleBinItem.
 # Move-PnPRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Move-PnpRecycleBinItem.md to change this file.
+
 Moves all items or a specific item in the first stage recycle bin of the current site collection to the second stage recycle bin
 
 ## SYNTAX

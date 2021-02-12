@@ -10,6 +10,10 @@ title: convert-pnpsitetemplatetomarkdown
 # Convert-PnPSiteTemplateToMarkdown
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Convert-PnPSiteTemplateToMarkdown.md to change this file.
+
 Converts an existing PnP Site Template to a markdown report
 
 ## SYNTAX

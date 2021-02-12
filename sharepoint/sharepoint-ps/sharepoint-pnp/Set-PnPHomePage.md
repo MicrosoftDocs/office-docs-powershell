@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPHomePage.html
 # Set-PnPHomePage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPHomePage.md to change this file.
+
 Sets the home page of the current web.
 
 ## SYNTAX

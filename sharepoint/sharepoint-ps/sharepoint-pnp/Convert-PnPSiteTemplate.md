@@ -10,6 +10,10 @@ title: Convert-PnPSiteTemplate
 # Convert-PnPSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Convert-PnPSiteTemplate.md to change this file.
+
 Converts a provisioning template to an other schema version
 
 ## SYNTAX

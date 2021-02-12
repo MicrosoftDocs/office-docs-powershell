@@ -10,6 +10,10 @@ title: Export-PnPTaxonomy
 # Export-PnPTaxonomy
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPTaxonomy.md to change this file.
+
 Exports a taxonomy to either the output or to a file.
 
 ## SYNTAX

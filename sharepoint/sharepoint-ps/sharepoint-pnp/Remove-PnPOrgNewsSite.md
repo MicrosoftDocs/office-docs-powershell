@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPOrgNewsSite.h
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPOrgNewsSite.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site
@@ -24,7 +28,7 @@ Remove-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind> [-Connection <PnPConnection
 ```
 
 ## DESCRIPTION
-Removes a given site from the list of organizational news sites based on its URL in your Sharepoint Online Tenant.
+Removes a given site from the list of organizational news sites based on its URL in your SharePoint Online Tenant.
 
 ## EXAMPLES
 

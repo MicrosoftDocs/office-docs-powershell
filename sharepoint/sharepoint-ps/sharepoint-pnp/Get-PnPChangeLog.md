@@ -10,6 +10,10 @@ title: Get-PnPChangeLog
 # Get-PnPChangeLog
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPChangeLog.md to change this file.
+
 Returns the changelog for PnP PowerShell
 
 ## SYNTAX

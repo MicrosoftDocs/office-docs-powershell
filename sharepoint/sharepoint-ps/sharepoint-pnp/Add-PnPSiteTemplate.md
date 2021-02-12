@@ -10,6 +10,10 @@ title: Add-PnPSiteTemplate
 # Add-PnPSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPSiteTemplate.md to change this file.
+
 Adds a PnP Site Template object to a tenant template
 
 ## SYNTAX

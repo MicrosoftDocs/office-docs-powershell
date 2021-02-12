@@ -10,6 +10,10 @@ title: Add-PnPApplicationCustomizer
 # Add-PnPApplicationCustomizer
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPApplicationCustomizer.md to change this file.
+
 Adds a SharePoint Framework client side extension application customizer
 
 ## SYNTAX

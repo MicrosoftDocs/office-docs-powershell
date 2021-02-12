@@ -10,6 +10,10 @@ title: Add-PnPWebPartToWebPartPage
 # Add-PnPWebPartToWebPartPage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPWebPartToWebPartPage.md to change this file.
+
 Adds a web part to a web part page in a specified zone
 
 ## SYNTAX

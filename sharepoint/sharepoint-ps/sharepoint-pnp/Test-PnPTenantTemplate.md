@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Test-PnPTenantTemplate.
 # Test-PnPTenantTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Test-PnPTenantTemplate.md to change this file.
+
 Tests a tenant template for invalid references
 
 ## SYNTAX
