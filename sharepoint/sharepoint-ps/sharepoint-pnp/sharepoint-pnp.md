@@ -1,2265 +1,1027 @@
 ---
-Module Name: PnP.Powershell
-title: PnP PowerShell
-author: erwinvanhunen
+Module Name: PnP PowerShell
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+title: sharepoint-pnp
 ---
 
-# PnP PowerShell
+# SharePoint PnP PowerShell
 
 ## Description
 
-The following cmdlet references are for PnP PowerShell
+The following cmdlet references are for SharePoint PnP.
 
-## PnP PowerShell Cmdlets
+## sharepoint-pnp Cmdlets
 
-#### [Add-PnPAlert](Add-PnPAlert.md)
-Adds an alert for a user to a list
+## [Add-PnPSiteCollectionAdmin](Add-PnPSiteCollectionAdmin.md)
+{{Manually Enter Add-PnPSiteCollectionAdmin Description Here}}
 
-#### [Add-PnPApp](Add-PnPApp.md)
-Add/uploads an available app to the app catalog
+### [Add-PnPSiteCollectionAppCatalog](Add-PnPSiteCollectionAppCatalog.md)
+{{Manually Enter Add-PnPSiteCollectionAppCatalog Description Here}}
 
-#### [Add-PnPApplicationCustomizer](Add-PnPApplicationCustomizer.md)
-Adds a SharePoint Framework client side extension application customizer
+### [Add-PnPSiteDesign](Add-PnPSiteDesign.md)
+{{Manually Enter Add-PnPSiteDesign Description Here}}
 
-#### [Add-PnPContentType](Add-PnPContentType.md)
-Adds a new content type
+### [Add-PnPSiteDesignTask](Add-PnPSiteDesignTask.md)
+{{Manually Enter Add-PnPSiteDesignTask Description Here}}
 
-#### [Add-PnPContentTypeToDocumentSet](Add-PnPContentTypeToDocumentSet.md)
-Adds a content type to a document set
+### [Add-PnPSiteScript](Add-PnPSiteScript.md)
+{{Manually Enter Add-PnPSiteScript Description Here}}
 
-#### [Add-PnPContentTypeToList](Add-PnPContentTypeToList.md)
-Adds a new content type to a list
+### [Add-PnPStoredCredential](Add-PnPStoredCredential.md)
+{{Manually Enter Add-PnPStoredCredential Description Here}}
 
-#### [Add-PnPCustomAction](Add-PnPCustomAction.md)
-Adds a custom action
+### [Add-PnPTaxonomyField](Add-PnPTaxonomyField.md)
+{{Manually Enter Add-PnPTaxonomyField Description Here}}
 
-#### [Add-PnPDataRowsToSiteTemplate](Add-PnPDataRowsToSiteTemplate.md)
-Adds datarows to a list inside a PnP Provisioning Template
+### [Add-PnPTenantCdnOrigin](Add-PnPTenantCdnOrigin.md)
+{{Manually Enter Add-PnPTenantCdnOrigin Description Here}}
 
-#### [Add-PnPDocumentSet](Add-PnPDocumentSet.md)
-Creates a new document set in a library.
+### [Add-PnPTenantSequence](Add-PnPTenantSequence.md)
+{{Manually Enter Add-PnPTenantSequence Description Here}}
 
-#### [Add-PnPEventReceiver](Add-PnPEventReceiver.md)
-Adds a new remote event receiver
+### [Add-PnPTenantSequenceSite](Add-PnPTenantSequenceSite.md)
+{{Manually Enter Add-PnPTenantSequenceSite Description Here}}
 
-#### [Add-PnPField](Add-PnPField.md)
-Add a field
+### [Add-PnPTenantSequenceSubSite](Add-PnPTenantSequenceSubSite.md)
+{{Manually Enter Add-PnPTenantSequenceSubSite Description Here}}
 
-#### [Add-PnPFieldFromXml](Add-PnPFieldFromXml.md)
-Adds a field to a list or as a site column based upon a CAML/XML field definition
+### [Add-PnPTenantTheme](Add-PnPTenantTheme.md)
+{{Manually Enter Add-PnPTenantTheme Description Here}}
 
-#### [Add-PnPFieldToContentType](Add-PnPFieldToContentType.md)
-Adds an existing site column to a content type
+### [Add-PnPUserToGroup](Add-PnPUserToGroup.md)
+{{Manually Enter Add-PnPUserToGroup Description Here}}
 
-#### [Add-PnPFile](Add-PnPFile.md)
-Uploads a file to Web
+### [Add-PnPView](Add-PnPView.md)
+{{Manually Enter Add-PnPView Description Here}}
 
-#### [Add-PnPFileToSiteTemplate](Add-PnPFileToSiteTemplate.md)
-Adds a file to a PnP Provisioning Template
+### [Add-PnPWebhookSubscription](Add-PnPWebhookSubscription.md)
+{{Manually Enter Add-PnPWebhookSubscription Description Here}}
 
-#### [Add-PnPFolder](Add-PnPFolder.md)
-Creates a folder within a parent folder
+### [Add-PnPWebPartToWebPartPage](Add-PnPWebPartToWebPartPage.md)
+{{Manually Enter Add-PnPWebPartToWebPartPage Description Here}}
 
-#### [Add-PnPGroupMember](Add-PnPGroupMember.md)
-Adds a user to a SharePoint group
+### [Add-PnPWebPartToWikiPage](Add-PnPWebPartToWikiPage.md)
+{{Manually Enter Add-PnPWebPartToWikiPage Description Here}}
 
-#### [Add-PnPHtmlPublishingPageLayout](Add-PnPHtmlPublishingPageLayout.md)
-Adds a HTML based publishing page layout
+### [Add-PnPWikiPage](Add-PnPWikiPage.md)
+{{Manually Enter Add-PnPWikiPage Description Here}}
 
-#### [Add-PnPHubSiteAssociation](Add-PnPHubSiteAssociation.md)
-**Required Permissions**
+### [Add-PnPWorkflowDefinition](Add-PnPWorkflowDefinition.md)
+{{Manually Enter Add-PnPWorkflowDefinition Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Add-PnPWorkflowSubscription](Add-PnPWorkflowSubscription.md)
+{{Manually Enter Add-PnPWorkflowSubscription Description Here}}
 
-Connects a site to a hubsite.
+### [Apply-PnPProvisioningTemplate](Apply-PnPProvisioningTemplate.md)
+{{Manually Enter Apply-PnPProvisioningTemplate Description Here}}
 
-#### [Add-PnPHubToHubAssociation](Add-PnPHubToHubAssociation.md)
-**Required Permissions**
+### [Apply-PnPTenantTemplate](Apply-PnPTenantTemplate.md)
+{{Manually Enter Apply-PnPTenantTemplate Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Approve-PnPTenantServicePrincipalPermissionRequest](Approve-PnPTenantServicePrincipalPermissionRequest.md)
+{{Manually Enter Approve-PnPTenantServicePrincipalPermissionRequest Description Here}}
 
-Associates a hub site to a hub site.
+### [Clear-PnPDefaultColumnValues](Clear-PnPDefaultColumnValues.md)
+{{Manually Enter Clear-PnPDefaultColumnValues Description Here}}
 
-#### [Add-PnPIndexedProperty](Add-PnPIndexedProperty.md)
-Marks the value of the propertybag key specified to be indexed by search.
+### [Clear-PnPListItemAsRecord](Clear-PnPListItemAsRecord.md)
+{{Manually Enter Clear-PnPListItemAsRecord Description Here}}
 
-#### [Add-PnPJavaScriptBlock](Add-PnPJavaScriptBlock.md)
-Adds a link to a JavaScript snippet/block to a web or site collection
+### [Clear-PnpRecycleBinItem](Clear-PnpRecycleBinItem.md)
+{{Manually Enter Clear-PnpRecycleBinItem Description Here}}
 
-#### [Add-PnPJavaScriptLink](Add-PnPJavaScriptLink.md)
-Adds a link to a JavaScript file to a web or sitecollection, valid only for SharePoint classic site experience.
+### [Clear-PnPTenantRecycleBinItem](Clear-PnPTenantRecycleBinItem.md)
+{{Manually Enter Clear-PnPTenantRecycleBinItem Description Here}}
 
-#### [Add-PnPListFoldersToSiteTemplate](Add-PnPListFoldersToSiteTemplate.md)
-Adds folders to a list in a PnP Provisioning Template
+### [Connect-PnPMicrosoftGraph](Connect-PnPMicrosoftGraph.md)
+{{Manually Enter Connect-PnPMicrosoftGraph Description Here}}
 
-#### [Add-PnPListItem](Add-PnPListItem.md)
-Adds an item to the list and sets the creation time to the current date and time. The author is set to the current authenticated user executing the cmdlet. In order to set the author to a different user, please refer to Set-PnPListItem.
+### [Connect-PnPOnline](Connect-PnPOnline.md)
+{{Manually Enter Connect-PnPOnline Description Here}}
 
-#### [Add-PnPMasterPage](Add-PnPMasterPage.md)
-Adds a Masterpage
+### [Convert-PnPFolderToProvisioningTemplate](Convert-PnPFolderToProvisioningTemplate.md)
+{{Manually Enter Convert-PnPFolderToProvisioningTemplate Description Here}}
 
-#### [Add-PnPMicrosoft365GroupMember](Add-PnPMicrosoft365GroupMember.md)
-**Required Permissions**
+### [Convert-PnPProvisioningTemplate](Convert-PnPProvisioningTemplate.md)
+{{Manually Enter Convert-PnPProvisioningTemplate Description Here}}
 
-  *  Microsoft Graph API: All of Group.ReadWrite.All, User.ReadWrite.All
+### [ConvertTo-PnPClientSidePage](ConvertTo-PnPClientSidePage.md)
+{{Manually Enter ConvertTo-PnPClientSidePage Description Here}}
 
-Adds members to a particular Microsoft 365 Group
+### [Copy-PnPFile](Copy-PnPFile.md)
+{{Manually Enter Copy-PnPFile Description Here}}
 
-#### [Add-PnPMicrosoft365GroupOwner](Add-PnPMicrosoft365GroupOwner.md)
-**Required Permissions**
+### [Copy-PnPItemProxy](Copy-PnPItemProxy.md)
+{{Manually Enter Copy-PnPItemProxy Description Here}}
 
-  *  Microsoft Graph API: All of Group.ReadWrite.All, User.ReadWrite.All
+### [Deny-PnPTenantServicePrincipalPermissionRequest](Deny-PnPTenantServicePrincipalPermissionRequest.md)
+{{Manually Enter Deny-PnPTenantServicePrincipalPermissionRequest Description Here}}
 
-Adds members to a owners of a Microsoft 365 Group
+### [Disable-PnPFeature](Disable-PnPFeature.md)
+{{Manually Enter Disable-PnPFeature Description Here}}
 
-#### [Add-PnPMicrosoft365GroupToSite](Add-PnPMicrosoft365GroupToSite.md)
-**Required Permissions**
+### [Disable-PnPInPlaceRecordsManagementForSite](Disable-PnPInPlaceRecordsManagementForSite.md)
+{{Manually Enter Disable-PnPInPlaceRecordsManagementForSite Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Disable-PnPPowerShellTelemetry](Disable-PnPPowerShellTelemetry.md)
+{{Manually Enter Disable-PnPPowerShellTelemetry Description Here}}
 
-Groupifies a classic team site by creating a Microsoft 365 group for it and connecting the site with the newly created group
+### [Disable-PnPResponsiveUI](Disable-PnPResponsiveUI.md)
+{{Manually Enter Disable-PnPResponsiveUI Description Here}}
 
-#### [Add-PnPNavigationNode](Add-PnPNavigationNode.md)
-Adds an item to a navigation element
+### [Disable-PnPSiteClassification](Disable-PnPSiteClassification.md)
+{{Manually Enter Disable-PnPSiteClassification Description Here}}
 
-#### [Add-PnPOrgAssetsLibrary](Add-PnPOrgAssetsLibrary.md)
-**Required Permissions**
+### [Disable-PnPTenantServicePrincipal](Disable-PnPTenantServicePrincipal.md)
+{{Manually Enter Disable-PnPTenantServicePrincipal Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Disconnect-PnPOnline](Disconnect-PnPOnline.md)
+{{Manually Enter Disconnect-PnPOnline Description Here}}
 
-Adds a given document library as a organizational asset source
+### [Enable-PnPFeature](Enable-PnPFeature.md)
+{{Manually Enter Enable-PnPFeature Description Here}}
 
-#### [Add-PnPOrgNewsSite](Add-PnPOrgNewsSite.md)
-**Required Permissions**
+### [Enable-PnPInPlaceRecordsManagementForSite](Enable-PnPInPlaceRecordsManagementForSite.md)
+{{Manually Enter Enable-PnPInPlaceRecordsManagementForSite Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Enable-PnPPowerShellTelemetry](Enable-PnPPowerShellTelemetry.md)
+{{Manually Enter Enable-PnPPowerShellTelemetry Description Here}}
 
-Adds the site as an organization news source in your tenant
+### [Enable-PnPResponsiveUI](Enable-PnPResponsiveUI.md)
+{{Manually Enter Enable-PnPResponsiveUI Description Here}}
 
-#### [Add-PnPPage](Add-PnPPage.md)
-Adds a Page
+### [Enable-PnPSiteClassification](Enable-PnPSiteClassification.md)
+{{Manually Enter Enable-PnPSiteClassification Description Here}}
 
-#### [Add-PnPPageSection](Add-PnPPageSection.md)
-Adds a new section to a page
+### [Enable-PnPTenantServicePrincipal](Enable-PnPTenantServicePrincipal.md)
+{{Manually Enter Enable-PnPTenantServicePrincipal Description Here}}
 
-#### [Add-PnPPageTextPart](Add-PnPPageTextPart.md)
-Adds a text element to a client-side page.
+### [Export-PnPClientSidePage](Export-PnPClientSidePage.md)
+{{Manually Enter Export-PnPClientSidePage Description Here}}
 
-#### [Add-PnPPageWebPart](Add-PnPPageWebPart.md)
-Adds a web part to a page
+### [Export-PnPTaxonomy](Export-PnPTaxonomy.md)
+{{Manually Enter Export-PnPTaxonomy Description Here}}
 
-#### [Add-PnPPlannerBucket](Add-PnPPlannerBucket.md)
-**Required Permissions**
+### [Export-PnPTermGroupToXml](Export-PnPTermGroupToXml.md)
+{{Manually Enter Export-PnPTermGroupToXml Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
-  
-Adds a new bucket to a Planner plan
+### [Find-PnPFile](Find-PnPFile.md)
+{{Manually Enter Find-PnPFile Description Here}}
 
-#### [Add-PnPPlannerTask](Add-PnPPlannerTask.md)
-**Required Permissions**
+### [Get-PnPAccessToken](Get-PnPAccessToken.md)
+{{Manually Enter Get-PnPAccessToken Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
+### [Get-PnPAlert](Get-PnPAlert.md)
+{{Manually Enter Get-PnPAlert Description Here}}
 
-Adds a new task to a planner bucket
+### [Get-PnPApp](Get-PnPApp.md)
+{{Manually Enter Get-PnPApp Description Here}}
 
-#### [Add-PnPPublishingImageRendition](Add-PnPPublishingImageRendition.md)
-Adds an Image Rendition if the Name of the Image Rendition does not already exist. This prevents creating two Image Renditions that share the same name.
+### [Get-PnPAppAuthAccessToken](Get-PnPAppAuthAccessToken.md)
+{{Manually Enter Get-PnPAppAuthAccessToken Description Here}}
 
-#### [Add-PnPPublishingPage](Add-PnPPublishingPage.md)
-Adds a publishing page
+### [Get-PnPAppInstance](Get-PnPAppInstance.md)
+{{Manually Enter Get-PnPAppInstance Description Here}}
 
-#### [Add-PnPPublishingPageLayout](Add-PnPPublishingPageLayout.md)
-Adds a publishing page layout
+### [Get-PnPAuditing](Get-PnPAuditing.md)
+{{Manually Enter Get-PnPAuditing Description Here}}
 
-#### [Add-PnPRoleDefinition](Add-PnPRoleDefinition.md)
-Adds a Role Defintion (Permission Level) to the site collection in the current context
+### [Get-PnPAuthenticationRealm](Get-PnPAuthenticationRealm.md)
+{{Manually Enter Get-PnPAuthenticationRealm Description Here}}
 
-#### [Add-PnPSiteClassification](Add-PnPSiteClassification.md)
-**Required Permissions**
+### [Get-PnPAvailableClientSideComponents](Get-PnPAvailableClientSideComponents.md)
+{{Manually Enter Get-PnPAvailableClientSideComponents Description Here}}
 
-  * Microsoft Graph API: Directory.ReadWrite.All
+### [Get-PnPAzureADManifestKeyCredentials](Get-PnPAzureADManifestKeyCredentials.md)
+{{Manually Enter Get-PnPAzureADManifestKeyCredentials Description Here}}
 
-Adds one or more site classification values to the list of possible values
+### [Get-PnPAzureCertificate](Get-PnPAzureCertificate.md)
+{{Manually Enter Get-PnPAzureCertificate Description Here}}
 
-#### [Add-PnPSiteCollectionAdmin](Add-PnPSiteCollectionAdmin.md)
-Adds one or more users as site collection administrators to the site collection in the current context
+### [Get-PnPClientSideComponent](Get-PnPClientSideComponent.md)
+{{Manually Enter Get-PnPClientSideComponent Description Here}}
 
-#### [Add-PnPSiteCollectionAppCatalog](Add-PnPSiteCollectionAppCatalog.md)
-**Required Permissions**
+### [Get-PnPClientSidePage](Get-PnPClientSidePage.md)
+{{Manually Enter Get-PnPClientSidePage Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPConnection](Get-PnPConnection.md)
+{{Manually Enter Get-PnPConnection Description Here}}
 
-Adds a Site Collection scoped App Catalog to a site
+### [Get-PnPContentType](Get-PnPContentType.md)
+{{Manually Enter Get-PnPContentType Description Here}}
 
-#### [Add-PnPSiteDesign](Add-PnPSiteDesign.md)
-**Required Permissions**
+### [Get-PnPContentTypePublishingHubUrl](Get-PnPContentTypePublishingHubUrl.md)
+{{Manually Enter Get-PnPContentTypePublishingHubUrl Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPContext](Get-PnPContext.md)
+{{Manually Enter Get-PnPContext Description Here}}
 
-Creates a new Site Design on the current tenant.
+### [Get-PnPCustomAction](Get-PnPCustomAction.md)
+{{Manually Enter Get-PnPCustomAction Description Here}}
 
-#### [Add-PnPSiteDesignTask](Add-PnPSiteDesignTask.md)
-This command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-PnPSiteDesign is limited to 30 actions and subactions).
-This command is intended to replace Invoke-PnPSiteDesign and is useful when you need to apply a large number of actions or multiple site scripts.
+### [Get-PnPDefaultColumnValues](Get-PnPDefaultColumnValues.md)
+{{Manually Enter Get-PnPDefaultColumnValues Description Here}}
 
-#### [Add-PnPSiteScript](Add-PnPSiteScript.md)
-**Required Permissions**
+### [Get-PnPDocumentSetTemplate](Get-PnPDocumentSetTemplate.md)
+{{Manually Enter Get-PnPDocumentSetTemplate Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPEventReceiver](Get-PnPEventReceiver.md)
+{{Manually Enter Get-PnPEventReceiver Description Here}}
 
-Creates a new Site Script on the current tenant.
+### [Get-PnPException](Get-PnPException.md)
+{{Manually Enter Get-PnPException Description Here}}
 
-#### [Add-PnPSiteTemplate](Add-PnPSiteTemplate.md)
-Adds a PnP Site Template object to a tenant template
+### [Get-PnPFeature](Get-PnPFeature.md)
+{{Manually Enter Get-PnPFeature Description Here}}
 
-#### [Add-PnPStoredCredential](Add-PnPStoredCredential.md)
-Adds a credential to the Windows Credential Manager
+### [Get-PnPField](Get-PnPField.md)
+{{Manually Enter Get-PnPField Description Here}}
 
-#### [Add-PnPTaxonomyField](Add-PnPTaxonomyField.md)
-Add a taxonomy field
+### [Get-PnPFile](Get-PnPFile.md)
+{{Manually Enter Get-PnPFile Description Here}}
 
-#### [Add-PnPTeamsChannel](Add-PnPTeamsChannel.md)
-**Required Permissions**
+### [Get-PnPFolder](Get-PnPFolder.md)
+{{Manually Enter Get-PnPFolder Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
+### [Get-PnPFolderItem](Get-PnPFolderItem.md)
+{{Manually Enter Get-PnPFolderItem Description Here}}
 
-Adds a channel to an existing Microsoft Teams instance.
+### [Get-PnPGroup](Get-PnPGroup.md)
+{{Manually Enter Get-PnPGroup Description Here}}
 
-#### [Add-PnPTeamsTab](Add-PnPTeamsTab.md)
-**Required Permissions**
+### [Get-PnPGroupMembers](Get-PnPGroupMembers.md)
+{{Manually Enter Get-PnPGroupMembers Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
+### [Get-PnPGroupPermissions](Get-PnPGroupPermissions.md)
+{{Manually Enter Get-PnPGroupPermissions Description Here}}
 
-Adds a tab to an existing Channel
+### [Get-PnPHealthScore](Get-PnPHealthScore.md)
+{{Manually Enter Get-PnPHealthScore Description Here}}
 
-#### [Add-PnPTeamsTeam](Add-PnPTeamsTeam.md)
-Adds a Teams team to an existing, group connected, site collection
+### [Get-PnPHideDefaultThemes](Get-PnPHideDefaultThemes.md)
+{{Manually Enter Get-PnPHideDefaultThemes Description Here}}
 
-#### [Add-PnPTeamsUser](Add-PnPTeamsUser.md)
-**Required Permissions**
+### [Get-PnPHomePage](Get-PnPHomePage.md)
+{{Manually Enter Get-PnPHomePage Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
+### [Get-PnPHubSite](Get-PnPHubSite.md)
+{{Manually Enter Get-PnPHubSite Description Here}}
 
-Adds a user to an existing Microsoft Teams instance.
+### [Get-PnPIndexedPropertyKeys](Get-PnPIndexedPropertyKeys.md)
+{{Manually Enter Get-PnPIndexedPropertyKeys Description Here}}
 
-#### [Add-PnPTenantCdnOrigin](Add-PnPTenantCdnOrigin.md)
-**Required Permissions**
+### [Get-PnPInPlaceRecordsManagement](Get-PnPInPlaceRecordsManagement.md)
+{{Manually Enter Get-PnPInPlaceRecordsManagement Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPJavaScriptLink](Get-PnPJavaScriptLink.md)
+{{Manually Enter Get-PnPJavaScriptLink Description Here}}
 
-Adds a new origin to the public or private content delivery network (CDN).
+### [Get-PnPLabel](Get-PnPLabel.md)
+{{Manually Enter Get-PnPLabel Description Here}}
 
-#### [Add-PnPTenantSequence](Add-PnPTenantSequence.md)
-Adds a tenant sequence object to a tenant template
+### [Get-PnPList](Get-PnPList.md)
+{{Manually Enter Get-PnPList Description Here}}
 
-#### [Add-PnPTenantSequenceSite](Add-PnPTenantSequenceSite.md)
-Adds a existing tenant sequence site object to a tenant template
+### [Get-PnPListInformationRightsManagement](Get-PnPListInformationRightsManagement.md)
+{{Manually Enter Get-PnPListInformationRightsManagement Description Here}}
 
-#### [Add-PnPTenantSequenceSubSite](Add-PnPTenantSequenceSubSite.md)
-Adds a tenant sequence sub site object to a tenant sequence site object
+### [Get-PnPListItem](Get-PnPListItem.md)
+{{Manually Enter Get-PnPListItem Description Here}}
 
-#### [Add-PnPTenantTheme](Add-PnPTenantTheme.md)
-**Required Permissions**
+### [Get-PnPListRecordDeclaration](Get-PnPListRecordDeclaration.md)
+{{Manually Enter Get-PnPListRecordDeclaration Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPMasterPage](Get-PnPMasterPage.md)
+{{Manually Enter Get-PnPMasterPage Description Here}}
 
-Adds or updates a theme to the tenant.
+### [Get-PnPNavigationNode](Get-PnPNavigationNode.md)
+{{Manually Enter Get-PnPNavigationNode Description Here}}
 
-#### [Add-PnPTermToTerm](Add-PnPTermToTerm.md)
-Adds a new term to an existing term.
+### [Get-PnPPowerShellTelemetryEnabled](Get-PnPPowerShellTelemetryEnabled.md)
+{{Manually Enter Get-PnPPowerShellTelemetryEnabled Description Here}}
 
-#### [Add-PnPView](Add-PnPView.md)
-Adds a view to a list
+### [Get-PnPProperty](Get-PnPProperty.md)
+{{Manually Enter Get-PnPProperty Description Here}}
 
-#### [Add-PnPWebhookSubscription](Add-PnPWebhookSubscription.md)
-Adds a new Webhook subscription
+### [Get-PnPPropertyBag](Get-PnPPropertyBag.md)
+{{Manually Enter Get-PnPPropertyBag Description Here}}
 
-#### [Add-PnPWebPartToWebPartPage](Add-PnPWebPartToWebPartPage.md)
-Adds a web part to a web part page in a specified zone
+### [Get-PnPProvisioningTemplate](Get-PnPProvisioningTemplate.md)
+{{Manually Enter Get-PnPProvisioningTemplate Description Here}}
 
-#### [Add-PnPWebPartToWikiPage](Add-PnPWebPartToWikiPage.md)
-Adds a web part to a wiki page in a specified table row and column
+### [Get-PnPProvisioningTemplateFromGallery](Get-PnPProvisioningTemplateFromGallery.md)
+{{Manually Enter Get-PnPProvisioningTemplateFromGallery Description Here}}
 
-#### [Add-PnPWikiPage](Add-PnPWikiPage.md)
-Adds a wiki page
+### [Get-PnPPublishingImageRendition](Get-PnPPublishingImageRendition.md)
+{{Manually Enter Get-PnPPublishingImageRendition Description Here}}
 
-#### [Approve-PnPTenantServicePrincipalPermissionRequest](Approve-PnPTenantServicePrincipalPermissionRequest.md)
-**Required Permissions**
+### [Get-PnPRecycleBinItem](Get-PnPRecycleBinItem.md)
+{{Manually Enter Get-PnPRecycleBinItem Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPRequestAccessEmails](Get-PnPRequestAccessEmails.md)
+{{Manually Enter Get-PnPRequestAccessEmails Description Here}}
 
-Approves a permission request for the current tenant's "SharePoint Online Client" service principal
+### [Get-PnPRoleDefinition](Get-PnPRoleDefinition.md)
+{{Manually Enter Get-PnPRoleDefinition Description Here}}
 
-#### [Clear-PnPDefaultColumnValues](Clear-PnPDefaultColumnValues.md)
-Clear default column values for a document library
+### [Get-PnPSearchConfiguration](Get-PnPSearchConfiguration.md)
+{{Manually Enter Get-PnPSearchConfiguration Description Here}}
 
-#### [Clear-PnPListItemAsRecord](Clear-PnPListItemAsRecord.md)
-Undeclares a list item as a record
+### [Get-PnPSearchCrawlLog](Get-PnPSearchCrawlLog.md)
+{{Manually Enter Get-PnPSearchCrawlLog Description Here}}
 
-#### [Clear-PnPMicrosoft365GroupMember](Clear-PnPMicrosoft365GroupMember.md)
-**Required Permissions**
+### [Get-PnPSite](Get-PnPSite.md)
+{{Manually Enter Get-PnPSite Description Here}}
 
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All, GroupMember.ReadWrite.All
+### [Get-PnPSiteClassification](Get-PnPSiteClassification.md)
+{{Manually Enter Get-PnPSiteClassification Description Here}}
 
-Removes all current members from a particular Microsoft 365 Group
+### [Get-PnPSiteClosure](Get-PnPSiteClosure.md)
+{{Manually Enter Get-PnPSiteClosure Description Here}}
 
-#### [Clear-PnPMicrosoft365GroupOwner](Clear-PnPMicrosoft365GroupOwner.md)
-**Required Permissions**
+### [Get-PnPSiteCollectionAdmin](Get-PnPSiteCollectionAdmin.md)
+{{Manually Enter Get-PnPSiteCollectionAdmin Description Here}}
 
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
+### [Get-PnPSiteCollectionTermStore](Get-PnPSiteCollectionTermStore.md)
+{{Manually Enter Get-PnPSiteCollectionTermStore Description Here}}
 
-Removes all current owners from a particular Microsoft 365 Group (aka Unified Group)
+### [Get-PnPSiteDesign](Get-PnPSiteDesign.md)
+{{Manually Enter Get-PnPSiteDesign Description Here}}
 
-#### [Clear-PnpRecycleBinItem](Clear-PnpRecycleBinItem.md)
-Permanently deletes all or a specific recycle bin item
+### [Get-PnPSiteDesignRights](Get-PnPSiteDesignRights.md)
+{{Manually Enter Get-PnPSiteDesignRights Description Here}}
 
-#### [Clear-PnPTenantAppCatalogUrl](Clear-PnPTenantAppCatalogUrl.md)
-**Required Permissions**
+### [Get-PnPSiteDesignRun](Get-PnPSiteDesignRun.md)
+{{Manually Enter Get-PnPSiteDesignRun Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPSiteDesignRunStatus](Get-PnPSiteDesignRunStatus.md)
+{{Manually Enter Get-PnPSiteDesignRunStatus Description Here}}
 
-Removes the url of the tenant scoped app catalog. It will not delete the site collection itself.
+### [Get-PnPSiteDesignTask](Get-PnPSiteDesignTask.md)
+{{Manually Enter Get-PnPSiteDesignTask Description Here}}
 
-#### [Clear-PnPTenantRecycleBinItem](Clear-PnPTenantRecycleBinItem.md)
-**Required Permissions**
+### [Get-PnPSitePolicy](Get-PnPSitePolicy.md)
+{{Manually Enter Get-PnPSitePolicy Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPSiteScript](Get-PnPSiteScript.md)
+{{Manually Enter Get-PnPSiteScript Description Here}}
 
-Permanently deletes a site collection from the tenant scoped recycle bin
+### [Get-PnPSiteSearchQueryResults](Get-PnPSiteSearchQueryResults.md)
+{{Manually Enter Get-PnPSiteSearchQueryResults Description Here}}
 
-#### [Connect-PnPOnline](Connect-PnPOnline.md)
-Connect to a SharePoint site
+### [Get-PnPStorageEntity](Get-PnPStorageEntity.md)
+{{Manually Enter Get-PnPStorageEntity Description Here}}
 
-#### [Convert-PnPFolderToSiteTemplate](Convert-PnPFolderToSiteTemplate.md)
-Creates a pnp package file of an existing template xml, and includes all files in the current folder
+### [Get-PnPStoredCredential](Get-PnPStoredCredential.md)
+{{Manually Enter Get-PnPStoredCredential Description Here}}
 
-#### [Convert-PnPSiteTemplate](Convert-PnPSiteTemplate.md)
-Converts a provisioning template to an other schema version
+### [Get-PnPSubWebs](Get-PnPSubWebs.md)
+{{Manually Enter Get-PnPSubWebs Description Here}}
 
-#### [Convert-PnPSiteTemplateToMarkdown](Convert-PnPSiteTemplateToMarkdown.md)
-Converts an existing PnP Site Template to a markdown report
+### [Get-PnPTaxonomyItem](Get-PnPTaxonomyItem.md)
+{{Manually Enter Get-PnPTaxonomyItem Description Here}}
 
-#### [ConvertTo-PnPClientSidePage](ConvertTo-PnPClientSidePage.md)
-Converts a classic page (wiki or web part page) into a Client-Side Page
+### [Get-PnPTaxonomySession](Get-PnPTaxonomySession.md)
+{{Manually Enter Get-PnPTaxonomySession Description Here}}
 
-#### [ConvertTo-PnPPage](ConvertTo-PnPPage.md)
-Converts a classic page (wiki or web part page) into a modern page
+### [Get-PnPTenant](Get-PnPTenant.md)
+{{Manually Enter Get-PnPTenant Description Here}}
 
-#### [Copy-PnPFile](Copy-PnPFile.md)
-Copies a file or folder to a different location. This location can be within the same document library, same site, same site collection or even to another site collection on the same tenant. Currently there is a 200MB file size limit for the file or folder to be copied. Notice that if copying between sites or to a subsite you cannot specify a target filename, only a folder name.
+### [Get-PnPTenantAppCatalogUrl](Get-PnPTenantAppCatalogUrl.md)
+{{Manually Enter Get-PnPTenantAppCatalogUrl Description Here}}
 
-#### [Copy-PnPItemProxy](Copy-PnPItemProxy.md)
-Proxy cmdlet for using Copy-Item between SharePoint provider and FileSystem provider
+### [Get-PnPTenantCdnEnabled](Get-PnPTenantCdnEnabled.md)
+{{Manually Enter Get-PnPTenantCdnEnabled Description Here}}
 
-#### [Deny-PnPTenantServicePrincipalPermissionRequest](Deny-PnPTenantServicePrincipalPermissionRequest.md)
-**Required Permissions**
+### [Get-PnPTenantCdnOrigin](Get-PnPTenantCdnOrigin.md)
+{{Manually Enter Get-PnPTenantCdnOrigin Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPTenantCdnPolicies](Get-PnPTenantCdnPolicies.md)
+{{Manually Enter Get-PnPTenantCdnPolicies Description Here}}
 
-Denies a permission request for the current tenant's "SharePoint Online Client" service principal
+### [Get-PnPTenantRecycleBinItem](Get-PnPTenantRecycleBinItem.md)
+{{Manually Enter Get-PnPTenantRecycleBinItem Description Here}}
 
-#### [Disable-PnPFeature](Disable-PnPFeature.md)
-Disables a feature
+### [Get-PnPTenantSequence](Get-PnPTenantSequence.md)
+{{Manually Enter Get-PnPTenantSequence Description Here}}
 
-#### [Disable-PnPFlow](Disable-PnPFlow.md)
-Disables a specific flow
+### [Get-PnPTenantSequenceSite](Get-PnPTenantSequenceSite.md)
+{{Manually Enter Get-PnPTenantSequenceSite Description Here}}
 
-#### [Disable-PnPPowerShellTelemetry](Disable-PnPPowerShellTelemetry.md)
-Disables PnP PowerShell telemetry tracking
+### [Get-PnPTenantServicePrincipal](Get-PnPTenantServicePrincipal.md)
+{{Manually Enter Get-PnPTenantServicePrincipal Description Here}}
 
-#### [Disable-PnPSharingForNonOwnersOfSite](Disable-PnPSharingForNonOwnersOfSite.md)
-Configures the site to only allow sharing of the site and items in the site by owners
+### [Get-PnPTenantServicePrincipalPermissionGrants](Get-PnPTenantServicePrincipalPermissionGrants.md)
+{{Manually Enter Get-PnPTenantServicePrincipalPermissionGrants Description Here}}
 
-#### [Disable-PnPSiteClassification](Disable-PnPSiteClassification.md)
-**Required Permissions**
+### [Get-PnPTenantServicePrincipalPermissionRequests](Get-PnPTenantServicePrincipalPermissionRequests.md)
+{{Manually Enter Get-PnPTenantServicePrincipalPermissionRequests Description Here}}
 
-  * Microsoft Graph API: Directory.ReadWrite.All
+### [Get-PnPTenantSite](Get-PnPTenantSite.md)
+{{Manually Enter Get-PnPTenantSite Description Here}}
 
-Disables Site Classifications for the tenant
+### [Get-PnPTenantTheme](Get-PnPTenantTheme.md)
+{{Manually Enter Get-PnPTenantTheme Description Here}}
 
-#### [Disable-PnPTenantServicePrincipal](Disable-PnPTenantServicePrincipal.md)
-**Required Permissions**
+### [Get-PnPTerm](Get-PnPTerm.md)
+{{Manually Enter Get-PnPTerm Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPTermGroup](Get-PnPTermGroup.md)
+{{Manually Enter Get-PnPTermGroup Description Here}}
 
-Enables the current tenant's "SharePoint Online Client" service principal.
+### [Get-PnPTermSet](Get-PnPTermSet.md)
+{{Manually Enter Get-PnPTermSet Description Here}}
 
-#### [Disconnect-PnPOnline](Disconnect-PnPOnline.md)
-Disconnects the context.
+### [Get-PnPTheme](Get-PnPTheme.md)
+{{Manually Enter Get-PnPTheme Description Here}}
 
-#### [Enable-PnPCommSite](Enable-PnPCommSite.md)
-Enables the modern communication site experience on a classic team site.
+### [Get-PnPTimeZoneId](Get-PnPTimeZoneId.md)
+{{Manually Enter Get-PnPTimeZoneId Description Here}}
 
-#### [Enable-PnPFeature](Enable-PnPFeature.md)
-Enables a feature
+### [Get-PnPUnifiedGroup](Get-PnPUnifiedGroup.md)
+{{Manually Enter Get-PnPUnifiedGroup Description Here}}
 
-#### [Enable-PnPFlow](Enable-PnPFlow.md)
-Enables a specific flow
+### [Get-PnPUnifiedGroupMembers](Get-PnPUnifiedGroupMembers.md)
+{{Manually Enter Get-PnPUnifiedGroupMembers Description Here}}
 
-#### [Enable-PnPPowerShellTelemetry](Enable-PnPPowerShellTelemetry.md)
-Enables PnP PowerShell telemetry tracking.
+### [Get-PnPUnifiedGroupOwners](Get-PnPUnifiedGroupOwners.md)
+{{Manually Enter Get-PnPUnifiedGroupOwners Description Here}}
 
-#### [Enable-PnPSiteClassification](Enable-PnPSiteClassification.md)
-**Required Permissions**
+### [Get-PnPUPABulkImportStatus](Get-PnPUPABulkImportStatus.md)
+{{Manually Enter Get-PnPUPABulkImportStatus Description Here}}
 
-  * Microsoft Graph API: Directory.ReadWrite.All
+### [Get-PnPUser](Get-PnPUser.md)
+{{Manually Enter Get-PnPUser Description Here}}
 
-Enables Site Classifications for the tenant
+### [Get-PnPUserProfileProperty](Get-PnPUserProfileProperty.md)
+{{Manually Enter Get-PnPUserProfileProperty Description Here}}
 
-#### [Enable-PnPTenantServicePrincipal](Enable-PnPTenantServicePrincipal.md)
-**Required Permissions**
+### [Get-PnPView](Get-PnPView.md)
+{{Manually Enter Get-PnPView Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPWeb](Get-PnPWeb.md)
+{{Manually Enter Get-PnPWeb Description Here}}
 
-Enables the current tenant's "SharePoint Online Client" service principal.
+### [Get-PnPWebhookSubscriptions](Get-PnPWebhookSubscriptions.md)
+{{Manually Enter Get-PnPWebhookSubscriptions Description Here}}
 
-#### [Export-PnPFlow](Export-PnPFlow.md)
-Exports the Flow
+### [Get-PnPWebPart](Get-PnPWebPart.md)
+{{Manually Enter Get-PnPWebPart Description Here}}
 
-#### [Export-PnPListToSiteTemplate](Export-PnPListToSiteTemplate.md)
-Exports one or more lists to provisioning template
+### [Get-PnPWebPartProperty](Get-PnPWebPartProperty.md)
+{{Manually Enter Get-PnPWebPartProperty Description Here}}
 
-#### [Export-PnPPage](Export-PnPPage.md)
-Exports a Client Side Page to a PnP Provisioning Template
+### [Get-PnPWebPartXml](Get-PnPWebPartXml.md)
+{{Manually Enter Get-PnPWebPartXml Description Here}}
 
-#### [Export-PnPPageMapping](Export-PnPPageMapping.md)
-Get's the built-in maping files or a custom mapping file for your publishing portal page layouts. These mapping files are used to tailor the page transformation experience.
+### [Get-PnPWebTemplates](Get-PnPWebTemplates.md)
+{{Manually Enter Get-PnPWebTemplates Description Here}}
 
-#### [Export-PnPTaxonomy](Export-PnPTaxonomy.md)
-Exports a taxonomy to either the output or to a file.
+### [Get-PnPWikiPageContent](Get-PnPWikiPageContent.md)
+{{Manually Enter Get-PnPWikiPageContent Description Here}}
 
-#### [Export-PnPTermGroupToXml](Export-PnPTermGroupToXml.md)
-Exports a taxonomy TermGroup to either the output or to an XML file.
+### [Get-PnPWorkflowDefinition](Get-PnPWorkflowDefinition.md)
+{{Manually Enter Get-PnPWorkflowDefinition Description Here}}
 
-#### [Export-PnPUserInfo](Export-PnPUserInfo.md)
-**Required Permissions**
+### [Get-PnPWorkflowInstance](Get-PnPWorkflowInstance.md)
+{{Manually Enter Get-PnPWorkflowInstance Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Get-PnPWorkflowSubscription](Get-PnPWorkflowSubscription.md)
+{{Manually Enter Get-PnPWorkflowSubscription Description Here}}
 
-Export user information from site user information list.
+### [Grant-PnPHubSiteRights](Grant-PnPHubSiteRights.md)
+{{Manually Enter Grant-PnPHubSiteRights Description Here}}
 
-#### [Export-PnPUserProfile](Export-PnPUserProfile.md)
-**Required Permissions**
+### [Grant-PnPSiteDesignRights](Grant-PnPSiteDesignRights.md)
+{{Manually Enter Grant-PnPSiteDesignRights Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Grant-PnPTenantServicePrincipalPermission](Grant-PnPTenantServicePrincipalPermission.md)
+{{Manually Enter Grant-PnPTenantServicePrincipalPermission Description Here}}
 
-Export user profile data.
+### [Import-PnPAppPackage](Import-PnPAppPackage.md)
+{{Manually Enter Import-PnPAppPackage Description Here}}
 
-#### [Find-PnPFile](Find-PnPFile.md)
-Finds a file in the virtual file system of the web.
+### [Import-PnPTaxonomy](Import-PnPTaxonomy.md)
+{{Manually Enter Import-PnPTaxonomy Description Here}}
 
-#### [Get-PnPAADUser](Get-PnPAADUser.md)
-**Required Permissions**
+### [Import-PnPTermGroupFromXml](Import-PnPTermGroupFromXml.md)
+{{Manually Enter Import-PnPTermGroupFromXml Description Here}}
 
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All
+### [Import-PnPTermSet](Import-PnPTermSet.md)
+{{Manually Enter Import-PnPTermSet Description Here}}
 
-Retrieves users from Azure Active Directory. By default the following properties will be loaded: BusinessPhones, DisplayName, GivenName, JobTitle, Mail, MobilePhone, OfficeLocation, PreferredLanguage, Surname, UserPrincipalName, Id, AccountEnabled
+### [Install-PnPApp](Install-PnPApp.md)
+{{Manually Enter Install-PnPApp Description Here}}
 
-#### [Get-PnPAccessToken](Get-PnPAccessToken.md)
-Returns the current OAuth Access token
+### [Install-PnPSolution](Install-PnPSolution.md)
+{{Manually Enter Install-PnPSolution Description Here}}
 
-#### [Get-PnPAlert](Get-PnPAlert.md)
-Returns registered alerts for a user.
+### [Invoke-PnPQuery](Invoke-PnPQuery.md)
+{{Manually Enter Invoke-PnPQuery Description Here}}
 
-#### [Get-PnPApp](Get-PnPApp.md)
-Returns the available apps from the app catalog
+### [Invoke-PnPSiteDesign](Invoke-PnPSiteDesign.md)
+{{Manually Enter Invoke-PnPSiteDesign Description Here}}
 
-#### [Get-PnPAppAuthAccessToken](Get-PnPAppAuthAccessToken.md)
-Returns the access token
+### [Invoke-PnPWebAction](Invoke-PnPWebAction.md)
+{{Manually Enter Invoke-PnPWebAction Description Here}}
 
-#### [Get-PnPAppErrors](Get-PnPAppErrors.md)
-**Required Permissions**
+### [Measure-PnPList](Measure-PnPList.md)
+{{Manually Enter Measure-PnPList Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Measure-PnPResponseTime](Measure-PnPResponseTime.md)
+{{Manually Enter Measure-PnPResponseTime Description Here}}
 
-Returns application errors.
+### [Measure-PnPWeb](Measure-PnPWeb.md)
+{{Manually Enter Measure-PnPWeb Description Here}}
 
-#### [Get-PnPAppInfo](Get-PnPAppInfo.md)
-Returns information about installed apps.
+### [Move-PnPClientSideComponent](Move-PnPClientSideComponent.md)
+{{Manually Enter Move-PnPClientSideComponent Description Here}}
 
-#### [Get-PnPApplicationCustomizer](Get-PnPApplicationCustomizer.md)
-Returns all SharePoint Framework client side extension application customizers
+### [Move-PnPFile](Move-PnPFile.md)
+{{Manually Enter Move-PnPFile Description Here}}
 
-#### [Get-PnPAuditing](Get-PnPAuditing.md)
-Get the Auditing setting of a site
+### [Move-PnPFolder](Move-PnPFolder.md)
+{{Manually Enter Move-PnPFolder Description Here}}
 
-#### [Get-PnPAuthenticationRealm](Get-PnPAuthenticationRealm.md)
-Returns the authentication realm
+### [Move-PnPItemProxy](Move-PnPItemProxy.md)
+{{Manually Enter Move-PnPItemProxy Description Here}}
 
-#### [Get-PnPAvailableClientSideComponents](Get-PnPAvailableClientSideComponents.md)
-Gets the available client side components on a particular page
+### [Move-PnPListItemToRecycleBin](Move-PnPListItemToRecycleBin.md)
+{{Manually Enter Move-PnPListItemToRecycleBin Description Here}}
 
-#### [Get-PnPAvailableLanguage](Get-PnPAvailableLanguage.md)
-Returns the available languages on the current web
+### [Move-PnpRecycleBinItem](Move-PnpRecycleBinItem.md)
+{{Manually Enter Move-PnpRecycleBinItem Description Here}}
 
-#### [Get-PnPAzureCertificate](Get-PnPAzureCertificate.md)
-Get PEM values and manifest settings for an existing certificate (.pfx) for use when using CSOM via an app-only ADAL application.
+### [New-PnPAzureCertificate](New-PnPAzureCertificate.md)
+{{Manually Enter New-PnPAzureCertificate Description Here}}
 
-See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.
+### [New-PnPExtensibilityHandlerObject](New-PnPExtensibilityHandlerObject.md)
+{{Manually Enter New-PnPExtensibilityHandlerObject Description Here}}
 
-KeyCredentials contains the ADAL app manifest sections.
+### [New-PnPGroup](New-PnPGroup.md)
+{{Manually Enter New-PnPGroup Description Here}}
 
-Certificate contains the PEM encoded certificate.
+### [New-PnPList](New-PnPList.md)
+{{Manually Enter New-PnPList Description Here}}
 
-PrivateKey contains the PEM encoded private key of the certificate.
+### [New-PnPPersonalSite](New-PnPPersonalSite.md)
+{{Manually Enter New-PnPPersonalSite Description Here}}
 
-#### [Get-PnPBrowserIdleSignout](Get-PnPBrowserIdleSignout.md)
-Used to retrieve the current configuration values for Idle session sign-out policy.
+### [New-PnPProvisioningTemplate](New-PnPProvisioningTemplate.md)
+{{Manually Enter New-PnPProvisioningTemplate Description Here}}
 
-#### [Get-PnPBuiltInDesignPackageVisibility](Get-PnPBuiltInDesignPackageVisibility.md)
-Gets the visibility of the available built-in Design Packages.
+### [New-PnPProvisioningTemplateFromFolder](New-PnPProvisioningTemplateFromFolder.md)
+{{Manually Enter New-PnPProvisioningTemplateFromFolder Description Here}}
 
-#### [Get-PnPChangeLog](Get-PnPChangeLog.md)
-Returns the changelog for PnP PowerShell
+### [New-PnPSite](New-PnPSite.md)
+{{Manually Enter New-PnPSite Description Here}}
 
-#### [Get-PnPConnection](Get-PnPConnection.md)
-Returns the current context
+### [New-PnPTenantSequence](New-PnPTenantSequence.md)
+{{Manually Enter New-PnPTenantSequence Description Here}}
 
-#### [Get-PnPContentType](Get-PnPContentType.md)
-Retrieves a content type
+### [New-PnPTenantSequenceCommunicationSite](New-PnPTenantSequenceCommunicationSite.md)
+{{Manually Enter New-PnPTenantSequenceCommunicationSite Description Here}}
 
-#### [Get-PnPContentTypePublishingHubUrl](Get-PnPContentTypePublishingHubUrl.md)
-Returns the url to Content Type Publishing Hub
+### [New-PnPTenantSequenceTeamNoGroupSite](New-PnPTenantSequenceTeamNoGroupSite.md)
+{{Manually Enter New-PnPTenantSequenceTeamNoGroupSite Description Here}}
 
-#### [Get-PnPContext](Get-PnPContext.md)
-Returns the current context
+### [New-PnPTenantSequenceTeamNoGroupSubSite](New-PnPTenantSequenceTeamNoGroupSubSite.md)
+{{Manually Enter New-PnPTenantSequenceTeamNoGroupSubSite Description Here}}
 
-#### [Get-PnPCustomAction](Get-PnPCustomAction.md)
-Return user custom actions
+### [New-PnPTenantSequenceTeamSite](New-PnPTenantSequenceTeamSite.md)
+{{Manually Enter New-PnPTenantSequenceTeamSite Description Here}}
 
-#### [Get-PnPDefaultColumnValues](Get-PnPDefaultColumnValues.md)
-Gets the default column values for all folders in document library
+### [New-PnPTenantSite](New-PnPTenantSite.md)
+{{Manually Enter New-PnPTenantSite Description Here}}
 
-#### [Get-PnPDeletedMicrosoft365Group](Get-PnPDeletedMicrosoft365Group.md)
-**Required Permissions**
+### [New-PnPTenantTemplate](New-PnPTenantTemplate.md)
+{{Manually Enter New-PnPTenantTemplate Description Here}}
 
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+### [New-PnPTerm](New-PnPTerm.md)
+{{Manually Enter New-PnPTerm Description Here}}
 
-Gets one deleted Microsoft 365 Group or a list of deleted Microsoft 365 Groups
+### [New-PnPTermGroup](New-PnPTermGroup.md)
+{{Manually Enter New-PnPTermGroup Description Here}}
 
-#### [Get-PnPDiagnostics](Get-PnPDiagnostics.md)
-Returns diagnostic information
+### [New-PnPTermSet](New-PnPTermSet.md)
+{{Manually Enter New-PnPTermSet Description Here}}
 
-#### [Get-PnPDisableSpacesActivation](Get-PnPDisableSpacesActivation.md)
-**Required Permissions**
+### [New-PnPUnifiedGroup](New-PnPUnifiedGroup.md)
+{{Manually Enter New-PnPUnifiedGroup Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [New-PnPUPABulkImportJob](New-PnPUPABulkImportJob.md)
+{{Manually Enter New-PnPUPABulkImportJob Description Here}}
 
-Retrieves if SharePoint Spaces is disabled on the entire tenant
+### [New-PnPUser](New-PnPUser.md)
+{{Manually Enter New-PnPUser Description Here}}
 
-#### [Get-PnPDocumentSetTemplate](Get-PnPDocumentSetTemplate.md)
-Retrieves a document set template
+### [New-PnPWeb](New-PnPWeb.md)
+{{Manually Enter New-PnPWeb Description Here}}
 
-#### [Get-PnPEventReceiver](Get-PnPEventReceiver.md)
-Return registered eventreceivers
+### [Publish-PnPApp](Publish-PnPApp.md)
+{{Manually Enter Publish-PnPApp Description Here}}
 
-#### [Get-PnPException](Get-PnPException.md)
-Returns the last exception that occurred
+### [Read-PnPProvisioningTemplate](Read-PnPProvisioningTemplate.md)
+{{Manually Enter Read-PnPProvisioningTemplate Description Here}}
 
-#### [Get-PnPExternalUser](Get-PnPExternalUser.md)
-**Required Permissions**
+### [Read-PnPTenantTemplate](Read-PnPTenantTemplate.md)
+{{Manually Enter Read-PnPTenantTemplate Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Register-PnPHubSite](Register-PnPHubSite.md)
+{{Manually Enter Register-PnPHubSite Description Here}}
 
-Returns external users in the tenant.
+### [Remove-PnPAlert](Remove-PnPAlert.md)
+{{Manually Enter Remove-PnPAlert Description Here}}
 
-#### [Get-PnPFeature](Get-PnPFeature.md)
-Returns all activated or a specific activated feature
+### [Remove-PnPApp](Remove-PnPApp.md)
+{{Manually Enter Remove-PnPApp Description Here}}
 
-#### [Get-PnPField](Get-PnPField.md)
-Returns a field from a list or site
+### [Remove-PnPClientSideComponent](Remove-PnPClientSideComponent.md)
+{{Manually Enter Remove-PnPClientSideComponent Description Here}}
 
-#### [Get-PnPFile](Get-PnPFile.md)
-Downloads a file.
+### [Remove-PnPClientSidePage](Remove-PnPClientSidePage.md)
+{{Manually Enter Remove-PnPClientSidePage Description Here}}
 
-#### [Get-PnPFileVersion](Get-PnPFileVersion.md)
-Retrieves all versions of a file.
+### [Remove-PnPContentType](Remove-PnPContentType.md)
+{{Manually Enter Remove-PnPContentType Description Here}}
 
-#### [Get-PnPFlow](Get-PnPFlow.md)
-Returns the flows for a given environment
+### [Remove-PnPContentTypeFromDocumentSet](Remove-PnPContentTypeFromDocumentSet.md)
+{{Manually Enter Remove-PnPContentTypeFromDocumentSet Description Here}}
 
-#### [Get-PnPFlowEnvironment](Get-PnPFlowEnvironment.md)
-Retrieves the Microsoft Flow environments for the current tenant.
+### [Remove-PnPContentTypeFromList](Remove-PnPContentTypeFromList.md)
+{{Manually Enter Remove-PnPContentTypeFromList Description Here}}
 
-#### [Get-PnPFolder](Get-PnPFolder.md)
-Return a folder object
+### [Remove-PnPCustomAction](Remove-PnPCustomAction.md)
+{{Manually Enter Remove-PnPCustomAction Description Here}}
 
-#### [Get-PnPFolderItem](Get-PnPFolderItem.md)
-List content in folder
+### [Remove-PnPEventReceiver](Remove-PnPEventReceiver.md)
+{{Manually Enter Remove-PnPEventReceiver Description Here}}
 
-#### [Get-PnPFooter](Get-PnPFooter.md)
-Gets the configuration regarding the footer of the current web
+### [Remove-PnPField](Remove-PnPField.md)
+{{Manually Enter Remove-PnPField Description Here}}
 
-#### [Get-PnPGraphAccessToken](Get-PnPGraphAccessToken.md)
-Returns the current OAuth Access token for the Microsoft Graph API
+### [Remove-PnPFieldFromContentType](Remove-PnPFieldFromContentType.md)
+{{Manually Enter Remove-PnPFieldFromContentType Description Here}}
 
-#### [Get-PnPGraphSubscription](Get-PnPGraphSubscription.md)
-**Required Permissions**
+### [Remove-PnPFile](Remove-PnPFile.md)
+{{Manually Enter Remove-PnPFile Description Here}}
 
-  * Microsoft Graph API : Subscription.Read.All
+### [Remove-PnPFileFromProvisioningTemplate](Remove-PnPFileFromProvisioningTemplate.md)
+{{Manually Enter Remove-PnPFileFromProvisioningTemplate Description Here}}
 
-Gets subscriptions from Microsoft Graph.
+### [Remove-PnPFolder](Remove-PnPFolder.md)
+{{Manually Enter Remove-PnPFolder Description Here}}
 
-#### [Get-PnPGroup](Get-PnPGroup.md)
-Returns a specific SharePoint group or all SharePoint groups in site.
+### [Remove-PnPGroup](Remove-PnPGroup.md)
+{{Manually Enter Remove-PnPGroup Description Here}}
 
-#### [Get-PnPGroupMember](Get-PnPGroupMember.md)
-Retrieves all members of a group
+### [Remove-PnPHubSiteAssociation](Remove-PnPHubSiteAssociation.md)
+{{Manually Enter Remove-PnPHubSiteAssociation Description Here}}
 
-#### [Get-PnPGroupPermissions](Get-PnPGroupPermissions.md)
-Returns the permissions for a specific SharePoint group
+### [Remove-PnPIndexedProperty](Remove-PnPIndexedProperty.md)
+{{Manually Enter Remove-PnPIndexedProperty Description Here}}
 
-#### [Get-PnPHideDefaultThemes](Get-PnPHideDefaultThemes.md)
-**Required Permissions**
+### [Remove-PnPJavaScriptLink](Remove-PnPJavaScriptLink.md)
+{{Manually Enter Remove-PnPJavaScriptLink Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Remove-PnPList](Remove-PnPList.md)
+{{Manually Enter Remove-PnPList Description Here}}
 
-Returns if the default / OOTB themes should be visible to users or not.
+### [Remove-PnPListItem](Remove-PnPListItem.md)
+{{Manually Enter Remove-PnPListItem Description Here}}
 
-#### [Get-PnPHomePage](Get-PnPHomePage.md)
-Return the homepage
+### [Remove-PnPNavigationNode](Remove-PnPNavigationNode.md)
+{{Manually Enter Remove-PnPNavigationNode Description Here}}
 
-#### [Get-PnPHomeSite](Get-PnPHomeSite.md)
-**Required Permissions**
+### [Remove-PnPPropertyBagValue](Remove-PnPPropertyBagValue.md)
+{{Manually Enter Remove-PnPPropertyBagValue Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Remove-PnPPublishingImageRendition](Remove-PnPPublishingImageRendition.md)
+{{Manually Enter Remove-PnPPublishingImageRendition Description Here}}
 
-Returns the home site url for your tenant
+### [Remove-PnPRoleDefinition](Remove-PnPRoleDefinition.md)
+{{Manually Enter Remove-PnPRoleDefinition Description Here}}
 
-#### [Get-PnPHubSite](Get-PnPHubSite.md)
-**Required Permissions**
+### [Remove-PnPSearchConfiguration](Remove-PnPSearchConfiguration.md)
+{{Manually Enter Remove-PnPSearchConfiguration Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Remove-PnPSiteClassification](Remove-PnPSiteClassification.md)
+{{Manually Enter Remove-PnPSiteClassification Description Here}}
 
-Retrieve all or a specific hubsite.
+### [Remove-PnPSiteCollectionAdmin](Remove-PnPSiteCollectionAdmin.md)
+{{Manually Enter Remove-PnPSiteCollectionAdmin Description Here}}
 
-#### [Get-PnPHubSiteChild](Get-PnPHubSiteChild.md)
-**Required Permissions**
+### [Remove-PnPSiteCollectionAppCatalog](Remove-PnPSiteCollectionAppCatalog.md)
+{{Manually Enter Remove-PnPSiteCollectionAppCatalog Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Remove-PnPSiteDesign](Remove-PnPSiteDesign.md)
+{{Manually Enter Remove-PnPSiteDesign Description Here}}
 
-Retrieves all sites linked to a specific hub site
+### [Remove-PnPSiteDesignTask](Remove-PnPSiteDesignTask.md)
+{{Manually Enter Remove-PnPSiteDesignTask Description Here}}
 
-#### [Get-PnPIndexedPropertyKeys](Get-PnPIndexedPropertyKeys.md)
-Returns the keys of the property bag values that have been marked for indexing by search
+### [Remove-PnPSiteScript](Remove-PnPSiteScript.md)
+{{Manually Enter Remove-PnPSiteScript Description Here}}
 
-#### [Get-PnPInPlaceRecordsManagement](Get-PnPInPlaceRecordsManagement.md)
-Returns if the place records management feature is enabled.
+### [Remove-PnPStorageEntity](Remove-PnPStorageEntity.md)
+{{Manually Enter Remove-PnPStorageEntity Description Here}}
 
-#### [Get-PnPIsSiteAliasAvailable](Get-PnPIsSiteAliasAvailable.md)
-Validates if a certain alias is still available to be used to create a new site collection for. If it is not, it will propose an alternative alias and URL which is still available.
+### [Remove-PnPStoredCredential](Remove-PnPStoredCredential.md)
+{{Manually Enter Remove-PnPStoredCredential Description Here}}
 
-#### [Get-PnPJavaScriptLink](Get-PnPJavaScriptLink.md)
-Returns all or a specific custom action(s) with location type ScriptLink
+### [Remove-PnPTaxonomyItem](Remove-PnPTaxonomyItem.md)
+{{Manually Enter Remove-PnPTaxonomyItem Description Here}}
 
-#### [Get-PnPKnowledgeHubSite](Get-PnPKnowledgeHubSite.md)
-**Required Permissions**
+### [Remove-PnPTenantCdnOrigin](Remove-PnPTenantCdnOrigin.md)
+{{Manually Enter Remove-PnPTenantCdnOrigin Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Remove-PnPTenantSite](Remove-PnPTenantSite.md)
+{{Manually Enter Remove-PnPTenantSite Description Here}}
 
-Gets the Knowledge Hub Site URL for your tenant
+### [Remove-PnPTenantTheme](Remove-PnPTenantTheme.md)
+{{Manually Enter Remove-PnPTenantTheme Description Here}}
 
-#### [Get-PnPLabel](Get-PnPLabel.md)
-Gets the Office 365 retention label/tag of the specified list or library (if applicable)
+### [Remove-PnPTermGroup](Remove-PnPTermGroup.md)
+{{Manually Enter Remove-PnPTermGroup Description Here}}
 
-#### [Get-PnPList](Get-PnPList.md)
-Returns lists from SharePoint
+### [Remove-PnPUnifiedGroup](Remove-PnPUnifiedGroup.md)
+{{Manually Enter Remove-PnPUnifiedGroup Description Here}}
 
-#### [Get-PnPListInformationRightsManagement](Get-PnPListInformationRightsManagement.md)
-Get the site closure status of the site which has a site policy applied
+### [Remove-PnPUser](Remove-PnPUser.md)
+{{Manually Enter Remove-PnPUser Description Here}}
 
-#### [Get-PnPListItem](Get-PnPListItem.md)
-Retrieves list items
+### [Remove-PnPUserFromGroup](Remove-PnPUserFromGroup.md)
+{{Manually Enter Remove-PnPUserFromGroup Description Here}}
 
-#### [Get-PnPListPermissions](Get-PnPListPermissions.md)
-Returns the permissions for a specific SharePoint List given a user or group by id.
+### [Remove-PnPView](Remove-PnPView.md)
+{{Manually Enter Remove-PnPView Description Here}}
 
-#### [Get-PnPListRecordDeclaration](Get-PnPListRecordDeclaration.md)
-Returns the manual record declaration settings for a list
+### [Remove-PnPWeb](Remove-PnPWeb.md)
+{{Manually Enter Remove-PnPWeb Description Here}}
 
-#### [Get-PnPMasterPage](Get-PnPMasterPage.md)
-Returns the URLs of the default Master Page and the custom Master Page.
+### [Remove-PnPWebhookSubscription](Remove-PnPWebhookSubscription.md)
+{{Manually Enter Remove-PnPWebhookSubscription Description Here}}
 
-#### [Get-PnPMicrosoft365Group](Get-PnPMicrosoft365Group.md)
-**Required Permissions**
+### [Remove-PnPWebPart](Remove-PnPWebPart.md)
+{{Manually Enter Remove-PnPWebPart Description Here}}
 
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All
+### [Remove-PnPWikiPage](Remove-PnPWikiPage.md)
+{{Manually Enter Remove-PnPWikiPage Description Here}}
 
-Gets one Microsoft 365 Group or a list of Microsoft 365 Groups
+### [Remove-PnPWorkflowDefinition](Remove-PnPWorkflowDefinition.md)
+{{Manually Enter Remove-PnPWorkflowDefinition Description Here}}
 
-#### [Get-PnPMicrosoft365GroupMembers](Get-PnPMicrosoft365GroupMembers.md)
-**Required Permissions**
+### [Remove-PnPWorkflowSubscription](Remove-PnPWorkflowSubscription.md)
+{{Manually Enter Remove-PnPWorkflowSubscription Description Here}}
 
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All, User.Read.All, User.ReadWrite.All
+### [Rename-PnPFile](Rename-PnPFile.md)
+{{Manually Enter Rename-PnPFile Description Here}}
 
-Gets members of a particular Microsoft 365 Group (aka Unified Group).
+### [Rename-PnPFolder](Rename-PnPFolder.md)
+{{Manually Enter Rename-PnPFolder Description Here}}
 
-#### [Get-PnPMicrosoft365GroupOwners](Get-PnPMicrosoft365GroupOwners.md)
-**Required Permissions**
+### [Request-PnPReIndexList](Request-PnPReIndexList.md)
+{{Manually Enter Request-PnPReIndexList Description Here}}
 
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All
+### [Request-PnPReIndexWeb](Request-PnPReIndexWeb.md)
+{{Manually Enter Request-PnPReIndexWeb Description Here}}
 
-Gets owners of a particular Microsoft 365 Group
+### [Reset-PnPFileVersion](Reset-PnPFileVersion.md)
+{{Manually Enter Reset-PnPFileVersion Description Here}}
 
-#### [Get-PnPNavigationNode](Get-PnPNavigationNode.md)
-Returns all or a specific navigation node
+### [Resolve-PnPFolder](Resolve-PnPFolder.md)
+{{Manually Enter Resolve-PnPFolder Description Here}}
 
-#### [Get-PnPOffice365CurrentServiceStatus](Get-PnPOffice365CurrentServiceStatus.md)
-**Required Permissions**
+### [Restore-PnpRecycleBinItem](Restore-PnpRecycleBinItem.md)
+{{Manually Enter Restore-PnpRecycleBinItem Description Here}}
 
-  * Microsoft Office 365 Management API: ServiceHealth.Read
+### [Restore-PnPTenantRecycleBinItem](Restore-PnPTenantRecycleBinItem.md)
+{{Manually Enter Restore-PnPTenantRecycleBinItem Description Here}}
 
-Gets current service status of the Office 365 Services from the Office 365 Management API
+### [Resume-PnPWorkflowInstance](Resume-PnPWorkflowInstance.md)
+{{Manually Enter Resume-PnPWorkflowInstance Description Here}}
 
-#### [Get-PnPOffice365HistoricalServiceStatus](Get-PnPOffice365HistoricalServiceStatus.md)
-**Required Permissions**
+### [Revoke-PnPSiteDesignRights](Revoke-PnPSiteDesignRights.md)
+{{Manually Enter Revoke-PnPSiteDesignRights Description Here}}
 
-  * Microsoft Office 365 Management API: ServiceHealth.Read
+### [Revoke-PnPTenantServicePrincipalPermission](Revoke-PnPTenantServicePrincipalPermission.md)
+{{Manually Enter Revoke-PnPTenantServicePrincipalPermission Description Here}}
 
-Gets the historical service status of the Office 365 Services of the last 7 days from the Office 365 Management API
+### [Save-PnPProvisioningTemplate](Save-PnPProvisioningTemplate.md)
+{{Manually Enter Save-PnPProvisioningTemplate Description Here}}
 
-#### [Get-PnPOffice365ServiceMessage](Get-PnPOffice365ServiceMessage.md)
-**Required Permissions**
+### [Save-PnPTenantTemplate](Save-PnPTenantTemplate.md)
+{{Manually Enter Save-PnPTenantTemplate Description Here}}
 
-  * Microsoft Office 365 Management API: ServiceHealth.Read
+### [Send-PnPMail](Send-PnPMail.md)
+{{Manually Enter Send-PnPMail Description Here}}
 
-Gets the service messages regarding services in Office 365 from the Office 365 Management API
+### [Set-PnPAppSideLoading](Set-PnPAppSideLoading.md)
+{{Manually Enter Set-PnPAppSideLoading Description Here}}
 
-#### [Get-PnPOffice365Services](Get-PnPOffice365Services.md)
-**Required Permissions**
+### [Set-PnPAuditing](Set-PnPAuditing.md)
+{{Manually Enter Set-PnPAuditing Description Here}}
 
-  * Microsoft Office 365 Management API: ServiceHealth.Read
+### [Set-PnPAvailablePageLayouts](Set-PnPAvailablePageLayouts.md)
+{{Manually Enter Set-PnPAvailablePageLayouts Description Here}}
 
-Gets the services available in Office 365 from the Office 365 Management API
+### [Set-PnPClientSidePage](Set-PnPClientSidePage.md)
+{{Manually Enter Set-PnPClientSidePage Description Here}}
 
-#### [Get-PnPOrgAssetsLibrary](Get-PnPOrgAssetsLibrary.md)
-**Required Permissions**
+### [Set-PnPClientSideText](Set-PnPClientSideText.md)
+{{Manually Enter Set-PnPClientSideText Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPClientSideWebPart](Set-PnPClientSideWebPart.md)
+{{Manually Enter Set-PnPClientSideWebPart Description Here}}
 
-Returns the list of all the configured organizational asset libraries
+### [Set-PnPContext](Set-PnPContext.md)
+{{Manually Enter Set-PnPContext Description Here}}
 
-#### [Get-PnPOrgNewsSite](Get-PnPOrgNewsSite.md)
-**Required Permissions**
+### [Set-PnPDefaultColumnValues](Set-PnPDefaultColumnValues.md)
+{{Manually Enter Set-PnPDefaultColumnValues Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPDefaultContentTypeToList](Set-PnPDefaultContentTypeToList.md)
+{{Manually Enter Set-PnPDefaultContentTypeToList Description Here}}
 
-Returns the list of all the configured organizational news sites.
+### [Set-PnPDefaultPageLayout](Set-PnPDefaultPageLayout.md)
+{{Manually Enter Set-PnPDefaultPageLayout Description Here}}
 
-#### [Get-PnPPage](Get-PnPPage.md)
-Returns a page
+### [Set-PnPDocumentSetField](Set-PnPDocumentSetField.md)
+{{Manually Enter Set-PnPDocumentSetField Description Here}}
 
-#### [Get-PnPPageComponent](Get-PnPPageComponent.md)
-Retrieve one or more page components from a page
+### [Set-PnPField](Set-PnPField.md)
+{{Manually Enter Set-PnPField Description Here}}
 
-#### [Get-PnPPlannerBucket](Get-PnPPlannerBucket.md)
-**Required Permissions**
+### [Set-PnPFileCheckedIn](Set-PnPFileCheckedIn.md)
+{{Manually Enter Set-PnPFileCheckedIn Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
-  * Microsoft Graph API: Group.Read.All
+### [Set-PnPFileCheckedOut](Set-PnPFileCheckedOut.md)
+{{Manually Enter Set-PnPFileCheckedOut Description Here}}
 
-Returns all or a specific Planner bucket
+### [Set-PnPGroup](Set-PnPGroup.md)
+{{Manually Enter Set-PnPGroup Description Here}}
 
-#### [Get-PnPPlannerPlan](Get-PnPPlannerPlan.md)
-**Required Permissions**
+### [Set-PnPGroupPermissions](Set-PnPGroupPermissions.md)
+{{Manually Enter Set-PnPGroupPermissions Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
-  * Microsoft Graph API: Group.Read.All
-  
-Returns all or a specific Planner plan for a Microsoft 365 Group.
+### [Set-PnPHideDefaultThemes](Set-PnPHideDefaultThemes.md)
+{{Manually Enter Set-PnPHideDefaultThemes Description Here}}
 
-#### [Get-PnPPlannerTask](Get-PnPPlannerTask.md)
-**Required Permissions**
+### [Set-PnPHomePage](Set-PnPHomePage.md)
+{{Manually Enter Set-PnPHomePage Description Here}}
 
-  * Microsoft Graph API: Group.ReadWrite.All
-  * Microsoft Graph API: Group.Read.All
+### [Set-PnPHubSite](Set-PnPHubSite.md)
+{{Manually Enter Set-PnPHubSite Description Here}}
 
-Returns Planner tasks
+### [Set-PnPIndexedProperties](Set-PnPIndexedProperties.md)
+{{Manually Enter Set-PnPIndexedProperties Description Here}}
 
-#### [Get-PnPPowerShellTelemetryEnabled](Get-PnPPowerShellTelemetryEnabled.md)
-Returns true if the PnP PowerShell Telemetry has been enabled.
+### [Set-PnPInPlaceRecordsManagement](Set-PnPInPlaceRecordsManagement.md)
+{{Manually Enter Set-PnPInPlaceRecordsManagement Description Here}}
 
-#### [Get-PnPProperty](Get-PnPProperty.md)
-Returns a previously not loaded property of a ClientObject
+### [Set-PnPLabel](Set-PnPLabel.md)
+{{Manually Enter Set-PnPLabel Description Here}}
 
-#### [Get-PnPPropertyBag](Get-PnPPropertyBag.md)
-Returns the property bag values.
+### [Set-PnPList](Set-PnPList.md)
+{{Manually Enter Set-PnPList Description Here}}
 
-#### [Get-PnPPublishingImageRendition](Get-PnPPublishingImageRendition.md)
-Returns all image renditions or if Identity is specified a specific one
+### [Set-PnPListInformationRightsManagement](Set-PnPListInformationRightsManagement.md)
+{{Manually Enter Set-PnPListInformationRightsManagement Description Here}}
 
-#### [Get-PnPRecycleBinItem](Get-PnPRecycleBinItem.md)
-Returns the items in the recycle bin from the context
+### [Set-PnPListItem](Set-PnPListItem.md)
+{{Manually Enter Set-PnPListItem Description Here}}
 
-#### [Get-PnPRequestAccessEmails](Get-PnPRequestAccessEmails.md)
-Returns the request access e-mail addresses
+### [Set-PnPListItemAsRecord](Set-PnPListItemAsRecord.md)
+{{Manually Enter Set-PnPListItemAsRecord Description Here}}
 
-#### [Get-PnPRoleDefinition](Get-PnPRoleDefinition.md)
-Retrieves a Role Definitions of a site
+### [Set-PnPListItemPermission](Set-PnPListItemPermission.md)
+{{Manually Enter Set-PnPListItemPermission Description Here}}
 
-#### [Get-PnPSearchConfiguration](Get-PnPSearchConfiguration.md)
-Returns the search configuration
+### [Set-PnPListPermission](Set-PnPListPermission.md)
+{{Manually Enter Set-PnPListPermission Description Here}}
 
-#### [Get-PnPSearchCrawlLog](Get-PnPSearchCrawlLog.md)
-Returns entries from the SharePoint search crawl log. Make sure you are granted access to the crawl log via the SharePoint search admin center at https://<tenant>-admin.sharepoint.com/_layouts/15/searchadmin/crawllogreadpermission.aspx in order to run this cmdlet.
+### [Set-PnPListRecordDeclaration](Set-PnPListRecordDeclaration.md)
+{{Manually Enter Set-PnPListRecordDeclaration Description Here}}
 
-#### [Get-PnPSearchSettings](Get-PnPSearchSettings.md)
-Retrieves search settings for a site
+### [Set-PnPMasterPage](Set-PnPMasterPage.md)
+{{Manually Enter Set-PnPMasterPage Description Here}}
 
-#### [Get-PnPSharingForNonOwnersOfSite](Get-PnPSharingForNonOwnersOfSite.md)
-Returns $false if sharing of the site and items in the site is restricted only to owners or $true if members and owners are allowed to share
+### [Set-PnPMinimalDownloadStrategy](Set-PnPMinimalDownloadStrategy.md)
+{{Manually Enter Set-PnPMinimalDownloadStrategy Description Here}}
 
-#### [Get-PnPSite](Get-PnPSite.md)
-Returns the current site collection from the context.
+### [Set-PnPPropertyBagValue](Set-PnPPropertyBagValue.md)
+{{Manually Enter Set-PnPPropertyBagValue Description Here}}
 
-#### [Get-PnPSiteClassification](Get-PnPSiteClassification.md)
-**Required Permissions**
+### [Set-PnPProvisioningTemplateMetadata](Set-PnPProvisioningTemplateMetadata.md)
+{{Manually Enter Set-PnPProvisioningTemplateMetadata Description Here}}
 
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All
+### [Set-PnPRequestAccessEmails](Set-PnPRequestAccessEmails.md)
+{{Manually Enter Set-PnPRequestAccessEmails Description Here}}
 
-Returns the defined Site Classifications for the tenant
+### [Set-PnPSearchConfiguration](Set-PnPSearchConfiguration.md)
+{{Manually Enter Set-PnPSearchConfiguration Description Here}}
 
-#### [Get-PnPSiteClosure](Get-PnPSiteClosure.md)
-Get the site closure status of the site which has a site policy applied
+### [Set-PnPSite](Set-PnPSite.md)
+{{Manually Enter Set-PnPSite Description Here}}
 
-#### [Get-PnPSiteCollectionAdmin](Get-PnPSiteCollectionAdmin.md)
-Returns the current site collection administrators of the site collection in the current context
+### [Set-PnPSiteClosure](Set-PnPSiteClosure.md)
+{{Manually Enter Set-PnPSiteClosure Description Here}}
 
-#### [Get-PnPSiteCollectionAppCatalogs](Get-PnPSiteCollectionAppCatalogs.md)
-Returns site collection scoped app catalogs
+### [Set-PnPSiteDesign](Set-PnPSiteDesign.md)
+{{Manually Enter Set-PnPSiteDesign Description Here}}
 
-#### [Get-PnPSiteCollectionTermStore](Get-PnPSiteCollectionTermStore.md)
-Returns the site collection term store if it exists or else it will not return anything
+### [Set-PnPSitePolicy](Set-PnPSitePolicy.md)
+{{Manually Enter Set-PnPSitePolicy Description Here}}
 
-#### [Get-PnPSiteDesign](Get-PnPSiteDesign.md)
-**Required Permissions**
+### [Set-PnPSiteScript](Set-PnPSiteScript.md)
+{{Manually Enter Set-PnPSiteScript Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPStorageEntity](Set-PnPStorageEntity.md)
+{{Manually Enter Set-PnPStorageEntity Description Here}}
 
-Retrieve Site Designs that have been registered on the current tenant.
+### [Set-PnPTaxonomyFieldValue](Set-PnPTaxonomyFieldValue.md)
+{{Manually Enter Set-PnPTaxonomyFieldValue Description Here}}
 
-#### [Get-PnPSiteDesignRights](Get-PnPSiteDesignRights.md)
-**Required Permissions**
+### [Set-PnPTenant](Set-PnPTenant.md)
+{{Manually Enter Set-PnPTenant Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPTenantCdnEnabled](Set-PnPTenantCdnEnabled.md)
+{{Manually Enter Set-PnPTenantCdnEnabled Description Here}}
 
-Returns the principals with design rights on a specific Site Design
+### [Set-PnPTenantCdnPolicy](Set-PnPTenantCdnPolicy.md)
+{{Manually Enter Set-PnPTenantCdnPolicy Description Here}}
 
-#### [Get-PnPSiteDesignRun](Get-PnPSiteDesignRun.md)
-Retrieves a list of site designs applied to a specified site collection. If the WebUrl parameter is not specified we show the list of designs applied to the current site. The returned output includes the ID of the scheduled job, the web and site IDs, and the site design ID, version, and title.
+### [Set-PnPTenantSite](Set-PnPTenantSite.md)
+{{Manually Enter Set-PnPTenantSite Description Here}}
 
-#### [Get-PnPSiteDesignRunStatus](Get-PnPSiteDesignRunStatus.md)
-**Required Permissions**
+### [Set-PnPTheme](Set-PnPTheme.md)
+{{Manually Enter Set-PnPTheme Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPTraceLog](Set-PnPTraceLog.md)
+{{Manually Enter Set-PnPTraceLog Description Here}}
 
-Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
+### [Set-PnPUnifiedGroup](Set-PnPUnifiedGroup.md)
+{{Manually Enter Set-PnPUnifiedGroup Description Here}}
 
-#### [Get-PnPSiteDesignTask](Get-PnPSiteDesignTask.md)
-Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design task and the URL for the site where the site design is scheduled to be applied.
+### [Set-PnPUserProfileProperty](Set-PnPUserProfileProperty.md)
+{{Manually Enter Set-PnPUserProfileProperty Description Here}}
 
-#### [Get-PnPSiteGroup](Get-PnPSiteGroup.md)
-**Required Permissions**
+### [Set-PnPView](Set-PnPView.md)
+{{Manually Enter Set-PnPView Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPWeb](Set-PnPWeb.md)
+{{Manually Enter Set-PnPWeb Description Here}}
 
-Gets all the groups in the current or specified site collection.
+### [Set-PnPWebhookSubscription](Set-PnPWebhookSubscription.md)
+{{Manually Enter Set-PnPWebhookSubscription Description Here}}
 
-#### [Get-PnPSitePolicy](Get-PnPSitePolicy.md)
-Retrieves all or a specific site policy
+### [Set-PnPWebPartProperty](Set-PnPWebPartProperty.md)
+{{Manually Enter Set-PnPWebPartProperty Description Here}}
 
-#### [Get-PnPSiteScript](Get-PnPSiteScript.md)
-**Required Permissions**
+### [Set-PnPWebPermission](Set-PnPWebPermission.md)
+{{Manually Enter Set-PnPWebPermission Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Set-PnPWebTheme](Set-PnPWebTheme.md)
+{{Manually Enter Set-PnPWebTheme Description Here}}
 
-Retrieve Site Scripts that have been registered on the current tenant.
+### [Set-PnPWikiPageContent](Set-PnPWikiPageContent.md)
+{{Manually Enter Set-PnPWikiPageContent Description Here}}
 
-#### [Get-PnPSiteScriptFromList](Get-PnPSiteScriptFromList.md)
-**Required Permissions**
+### [Start-PnPWorkflowInstance](Start-PnPWorkflowInstance.md)
+{{Manually Enter Start-PnPWorkflowInstance Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Stop-PnPWorkflowInstance](Stop-PnPWorkflowInstance.md)
+{{Manually Enter Stop-PnPWorkflowInstance Description Here}}
 
-Generates a Site Script from an existing list
+### [Submit-PnPSearchQuery](Submit-PnPSearchQuery.md)
+{{Manually Enter Submit-PnPSearchQuery Description Here}}
 
-#### [Get-PnPSiteScriptFromWeb](Get-PnPSiteScriptFromWeb.md)
-**Required Permissions**
+### [Test-PnPListItemIsRecord](Test-PnPListItemIsRecord.md)
+{{Manually Enter Test-PnPListItemIsRecord Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Test-PnPOffice365GroupAliasIsUsed](Test-PnPOffice365GroupAliasIsUsed.md)
+{{Manually Enter Test-PnPOffice365GroupAliasIsUsed Description Here}}
 
-Generates a Site Script from an existing site
+### [Test-PnPTenantTemplate](Test-PnPTenantTemplate.md)
+{{Manually Enter Test-PnPTenantTemplate Description Here}}
 
-#### [Get-PnPSiteSearchQueryResults](Get-PnPSiteSearchQueryResults.md)
-Executes a search query to retrieve indexed site collections
+### [Uninstall-PnPApp](Uninstall-PnPApp.md)
+{{Manually Enter Uninstall-PnPApp Description Here}}
 
-#### [Get-PnPSiteTemplate](Get-PnPSiteTemplate.md)
-Generates a provisioning site template from a web
+### [Uninstall-PnPAppInstance](Uninstall-PnPAppInstance.md)
+{{Manually Enter Uninstall-PnPAppInstance Description Here}}
 
-#### [Get-PnPSiteUserInvitations](Get-PnPSiteUserInvitations.md)
-**Required Permissions**
+### [Uninstall-PnPSolution](Uninstall-PnPSolution.md)
+{{Manually Enter Uninstall-PnPSolution Description Here}}
 
-* SharePoint: Access to the SharePoint Tenant Administration site
+### [Unpublish-PnPApp](Unpublish-PnPApp.md)
+{{Manually Enter Unpublish-PnPApp Description Here}}
 
-Searches against all stored sharing links and retrieves the email invites
+### [Unregister-PnPHubSite](Unregister-PnPHubSite.md)
+{{Manually Enter Unregister-PnPHubSite Description Here}}
 
-#### [Get-PnPStorageEntity](Get-PnPStorageEntity.md)
-Retrieve Storage Entities / Farm Properties from either the Tenant App Catalog or from the current site if it has a site scope app catalog.
+### [Update-PnPApp](Update-PnPApp.md)
+{{Manually Enter Update-PnPApp Description Here}}
 
-#### [Get-PnPStoredCredential](Get-PnPStoredCredential.md)
-Get a credential
-
-#### [Get-PnPStructuralNavigationCacheSiteState](Get-PnPStructuralNavigationCacheSiteState.md)
-Get the structural navigation caching state for a site collection.
-
-#### [Get-PnPStructuralNavigationCacheWebState](Get-PnPStructuralNavigationCacheWebState.md)
-Get the structural navigation caching state for a web.
-
-#### [Get-PnPSubWeb](Get-PnPSubWeb.md)
-Returns the subwebs of the current web
-
-#### [Get-PnPTaxonomyItem](Get-PnPTaxonomyItem.md)
-Returns a taxonomy item
-
-#### [Get-PnPTaxonomySession](Get-PnPTaxonomySession.md)
-Returns a taxonomy session
-
-#### [Get-PnPTeamsApp](Get-PnPTeamsApp.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of AppCatalog.Read.All, Directory.ReadWrite.All
-
-Gets one Microsoft Teams App or a list of all apps.
-
-#### [Get-PnPTeamsChannel](Get-PnPTeamsChannel.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
-
-Gets the channels for a specified Team.
-
-#### [Get-PnPTeamsChannelMessage](Get-PnPTeamsChannelMessage.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Sends a message to a Microsoft Teams Channel.
-
-#### [Get-PnPTeamsTab](Get-PnPTeamsTab.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
-
-Gets one or all tabs in a channel.
-
-#### [Get-PnPTeamsTeam](Get-PnPTeamsTeam.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
-
-Gets one Microsoft Teams Team or a list of Teams.
-
-#### [Get-PnPTeamsUser](Get-PnPTeamsUser.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
-
-Returns owners, members or guests from a team.
-
-#### [Get-PnPTenant](Get-PnPTenant.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns organization-level site collection properties
-
-#### [Get-PnPTenantAppCatalogUrl](Get-PnPTenantAppCatalogUrl.md)
-Retrieves the url of the tenant scoped app catalog
-
-#### [Get-PnPTenantCdnEnabled](Get-PnPTenantCdnEnabled.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Retrieves if the Office 365 Content Delivery Network has been enabled.
-
-#### [Get-PnPTenantCdnOrigin](Get-PnPTenantCdnOrigin.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns the current registered origins from the public or private content delivery network (CDN).
-
-#### [Get-PnPTenantCdnPolicies](Get-PnPTenantCdnPolicies.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns the CDN Policies for the specified CDN (Public | Private).
-
-#### [Get-PnPTenantId](Get-PnPTenantId.md)
-Returns the Tenant ID
-
-#### [Get-PnPTenantRecycleBinItem](Get-PnPTenantRecycleBinItem.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns all modern and classic site collections in the tenant scoped recycle bin
-
-#### [Get-PnPTenantSequence](Get-PnPTenantSequence.md)
-Returns one ore more provisioning sequence object(s) from a tenant template
-
-#### [Get-PnPTenantSequenceSite](Get-PnPTenantSequenceSite.md)
-Returns one ore more sites from a tenant template
-
-#### [Get-PnPTenantServicePrincipal](Get-PnPTenantServicePrincipal.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns the current tenant's "SharePoint Online Client" service principal.
-
-#### [Get-PnPTenantServicePrincipalPermissionGrants](Get-PnPTenantServicePrincipalPermissionGrants.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Gets the collection of permission grants for the "SharePoint Online Client" service principal
-
-#### [Get-PnPTenantServicePrincipalPermissionRequests](Get-PnPTenantServicePrincipalPermissionRequests.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Gets the collection of permission requests for the "SharePoint Online Client" service principal
-
-#### [Get-PnPTenantSite](Get-PnPTenantSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Retrieve site information.
-
-#### [Get-PnPTenantSyncClientRestriction](Get-PnPTenantSyncClientRestriction.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns organization-level OneDrive synchronization restriction settings
-
-#### [Get-PnPTenantTemplate](Get-PnPTenantTemplate.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Generates a provisioning tenant template from a site. If the site is a hubsite any connected site will be included.
-
-#### [Get-PnPTenantTheme](Get-PnPTenantTheme.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns all or a specific theme
-
-#### [Get-PnPTerm](Get-PnPTerm.md)
-Returns a Term Store Term.
-
-#### [Get-PnPTermGroup](Get-PnPTermGroup.md)
-Returns a taxonomy term group
-
-#### [Get-PnPTermLabel](Get-PnPTermLabel.md)
-Returns all or a specific translation label for a term.
-
-#### [Get-PnPTermSet](Get-PnPTermSet.md)
-Returns a taxonomy term set
-
-#### [Get-PnPTheme](Get-PnPTheme.md)
-Returns the current theme/composed look of the current web.
-
-#### [Get-PnPTimeZoneId](Get-PnPTimeZoneId.md)
-Returns a time zone ID
-
-#### [Get-PnPUnifiedAuditLog](Get-PnPUnifiedAuditLog.md)
-**Required Permissions**
-
-  * Microsoft Office 365 Management API: ActivityFeed.Read
-
-Gets unified audit logs from the Office 365 Management API. Requires the Azure Active Directory application permission 'ActivityFeed.Read'.
-
-#### [Get-PnPUPABulkImportStatus](Get-PnPUPABulkImportStatus.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Get user profile bulk import status.
-
-#### [Get-PnPUser](Get-PnPUser.md)
-Returns site users of current web
-
-#### [Get-PnPUserOneDriveQuota](Get-PnPUserOneDriveQuota.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Retrieves the current quota set on the OneDrive for Business site for a specific user
-
-#### [Get-PnPUserProfileProperty](Get-PnPUserProfileProperty.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.
-
-#### [Get-PnPView](Get-PnPView.md)
-Returns one or all views from a list
-
-#### [Get-PnPWeb](Get-PnPWeb.md)
-Returns the current web object
-
-#### [Get-PnPWebhookSubscriptions](Get-PnPWebhookSubscriptions.md)
-Gets all the Webhook subscriptions of the resource
-
-#### [Get-PnPWebPart](Get-PnPWebPart.md)
-Returns a web part definition object
-
-#### [Get-PnPWebPartProperty](Get-PnPWebPartProperty.md)
-Returns a web part property
-
-#### [Get-PnPWebPartXml](Get-PnPWebPartXml.md)
-Returns the web part XML of a web part registered on a site
-
-#### [Get-PnPWebTemplates](Get-PnPWebTemplates.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns the available classic web templates
-
-#### [Get-PnPWikiPageContent](Get-PnPWikiPageContent.md)
-Gets the contents/source of a wiki page
-
-#### [Grant-PnPHubSiteRights](Grant-PnPHubSiteRights.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
-
-#### [Grant-PnPSiteDesignRights](Grant-PnPSiteDesignRights.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Grants the specified principals rights to use the site design.
-
-#### [Grant-PnPTenantServicePrincipalPermission](Grant-PnPTenantServicePrincipalPermission.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-* Microsoft Graph API : Directory.ReadWrite.All
-
-Explicitly grants a specified permission to the "SharePoint Online Client Extensibility Web Application Principal" service principal for SPFx solutions.
-
-#### [Import-PnPTaxonomy](Import-PnPTaxonomy.md)
-Imports a taxonomy from either a string array or a file
-
-#### [Import-PnPTermGroupFromXml](Import-PnPTermGroupFromXml.md)
-Imports a taxonomy TermGroup from either the input or from an XML file.
-
-#### [Import-PnPTermSet](Import-PnPTermSet.md)
-Imports a taxonomy term set from a file in the standard format.
-
-#### [Install-PnPApp](Install-PnPApp.md)
-Installs an available app from the app catalog
-
-#### [Invoke-PnPBatch](Invoke-PnPBatch.md)
-Executes the batch
-
-#### [Invoke-PnPQuery](Invoke-PnPQuery.md)
-Executes the currently queued actions
-
-#### [Invoke-PnPSiteDesign](Invoke-PnPSiteDesign.md)
-Apply a Site Design to an existing site. * Requires Tenant Administration Rights *
-
-#### [Invoke-PnPSiteSwap](Invoke-PnPSiteSwap.md)
-Invokes a job to swap the location of a site with another site while archiving the original site.
-
-#### [Invoke-PnPSiteTemplate](Invoke-PnPSiteTemplate.md)
-Applies a site template to a web
-
-#### [Invoke-PnPSPRestMethod](Invoke-PnPSPRestMethod.md)
-Invokes a REST request towards a SharePoint site
-
-#### [Invoke-PnPTenantTemplate](Invoke-PnPTenantTemplate.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Applies a tenant template to the current tenant. You must have the Office 365 Global Admin role to run this cmdlet successfully.
-
-#### [Invoke-PnPWebAction](Invoke-PnPWebAction.md)
-Executes operations on web, lists and list items.
-
-#### [Measure-PnPList](Measure-PnPList.md)
-Returns statistics on the list object. This may fail on lists larger than the list view threshold
-
-#### [Measure-PnPWeb](Measure-PnPWeb.md)
-Returns statistics on the web object
-
-#### [Move-PnPFile](Move-PnPFile.md)
-Moves a file or folder to a different location
-
-#### [Move-PnPFolder](Move-PnPFolder.md)
-Move a folder to another location in the current web. If you want to move a folder to a different site collection, use the Move-PnPFile cmdlet instead, which also supports moving folders and also accross site collections.
-
-#### [Move-PnPItemProxy](Move-PnPItemProxy.md)
-Proxy cmdlet for using Move-Item between SharePoint provider and FileSystem provider
-
-#### [Move-PnPListItemToRecycleBin](Move-PnPListItemToRecycleBin.md)
-Moves an item from a list to the Recycle Bin
-
-#### [Move-PnPPageComponent](Move-PnPPageComponent.md)
-Moves a page component to a different section/column
-
-#### [Move-PnpRecycleBinItem](Move-PnpRecycleBinItem.md)
-Moves all items or a specific item in the first stage recycle bin of the current site collection to the second stage recycle bin
-
-#### [New-PnPAzureCertificate](New-PnPAzureCertificate.md)
-Generate a new 2048bit self-signed certificate and manifest settings for use when using CSOM via an app-only ADAL application.
-
-See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.
-
-KeyCredentials contains the ADAL app manifest sections.
-
-Certificate contains the PEM encoded certificate.
-
-PrivateKey contains the PEM encoded private key of the certificate.
-
-#### [New-PnPBatch](New-PnPBatch.md)
-Creates a new batch
-
-#### [New-PnPExtensibilityHandlerObject](New-PnPExtensibilityHandlerObject.md)
-Creates an ExtensibilityHandler Object, to be used by the Get-PnPSiteTemplate cmdlet
-
-#### [New-PnPGraphSubscription](New-PnPGraphSubscription.md)
-Creates a new Microsof Graph Subscription which allows your webhook API to be called when a change occurs in Microsoft Graph
-
-#### [New-PnPGroup](New-PnPGroup.md)
-Adds group to the Site Groups List and returns a group object
-
-#### [New-PnPList](New-PnPList.md)
-Creates a new list
-
-#### [New-PnPMicrosoft365Group](New-PnPMicrosoft365Group.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.Create, Group.ReadWrite.All
-
-Creates a new Microsoft 365 Group
-
-#### [New-PnPPersonalSite](New-PnPPersonalSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Office365 only: Creates a personal / OneDrive For Business site
-
-#### [New-PnPPlannerPlan](New-PnPPlannerPlan.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Creates a new Planner plan.
-
-#### [New-PnPSdnProvider](New-PnPSdnProvider.md)
-Adds a new Software-Defined Networking (SDN) provider
-
-#### [New-PnPSite](New-PnPSite.md)
-Creates either a communication site or a Microsoft 365 group-connected team site
-
-#### [New-PnPSiteCollectionTermStore](New-PnPSiteCollectionTermStore.md)
-Creates the site collection term store if it doesn't exist yet or if it does it will return the already existing site collection term store
-
-#### [New-PnPSiteGroup](New-PnPSiteGroup.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Creates a new group in a SharePoint Online site collection.
-
-#### [New-PnPSiteTemplate](New-PnPSiteTemplate.md)
-Creates a new provisioning template object
-
-#### [New-PnPSiteTemplateFromFolder](New-PnPSiteTemplateFromFolder.md)
-Generates a provisioning template from a given folder, including only files that are present in that folder
-
-#### [New-PnPTeamsApp](New-PnPTeamsApp.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of AppCatalog.ReadWrite.All, Directory.ReadWrite.All
-
-Adds an app to the Teams App Catalog.
-
-#### [New-PnPTeamsTeam](New-PnPTeamsTeam.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Creates a new Team in Microsoft Teams. The cmdlet will create a Microsoft 365 group and then add a team to the group.
-
-#### [New-PnPTenantSequence](New-PnPTenantSequence.md)
-Creates a new tenant sequence object
-
-#### [New-PnPTenantSequenceCommunicationSite](New-PnPTenantSequenceCommunicationSite.md)
-Creates a communication site object
-
-#### [New-PnPTenantSequenceTeamNoGroupSite](New-PnPTenantSequenceTeamNoGroupSite.md)
-Creates a new team site without a Microsoft 365 group in-memory object
-
-#### [New-PnPTenantSequenceTeamNoGroupSubSite](New-PnPTenantSequenceTeamNoGroupSubSite.md)
-Creates a team site subsite with no Microsoft 365 group object
-
-#### [New-PnPTenantSequenceTeamSite](New-PnPTenantSequenceTeamSite.md)
-Creates a team site object
-
-#### [New-PnPTenantSite](New-PnPTenantSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Creates a new (classic) site collection for the current tenant
-
-#### [New-PnPTenantTemplate](New-PnPTenantTemplate.md)
-Creates a new tenant template object
-
-#### [New-PnPTerm](New-PnPTerm.md)
-Creates a taxonomy term
-
-#### [New-PnPTermGroup](New-PnPTermGroup.md)
-Creates a taxonomy term group
-
-#### [New-PnPTermLabel](New-PnPTermLabel.md)
-Creates a localized label for a taxonomy term
-
-#### [New-PnPTermSet](New-PnPTermSet.md)
-Creates a taxonomy term set
-
-#### [New-PnPUPABulkImportJob](New-PnPUPABulkImportJob.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Submit up a new user profile bulk import job.
-
-#### [New-PnPUser](New-PnPUser.md)
-Adds a user to the built-in Site User Info List and returns a user object
-
-#### [New-PnPWeb](New-PnPWeb.md)
-Creates a new subweb under the current web
-
-#### [Publish-PnPApp](Publish-PnPApp.md)
-Publishes/Deploys/Trusts an available app in the app catalog
-
-#### [Read-PnPSiteTemplate](Read-PnPSiteTemplate.md)
-Loads/Reads a PnP file from the file system or a string
-
-#### [Read-PnPTenantTemplate](Read-PnPTenantTemplate.md)
-Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.
-
-#### [Receive-PnPCopyMoveJobStatus](Receive-PnPCopyMoveJobStatus.md)
-This cmdlets receives Copy or Move job status which is being returned by Copy-PnPFile or Move-PnPFile when using the -NoWait parameter
-
-#### [Register-PnPAppCatalogSite](Register-PnPAppCatalogSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Creates a new App Catalog Site and sets this site as the Tenant App Catalog
-
-#### [Register-PnPAzureADApp](Register-PnPAzureADApp.md)
-Register an Azure AD App and optionally creates a new self-signed certificate to use with the application registration.
-
-#### [Register-PnPHubSite](Register-PnPHubSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Registers a site as a hubsite
-
-#### [Register-PnPManagementShellAccess](Register-PnPManagementShellAccess.md)
-Registers access to the tenant for the PnP Management Shell Multi-Tenant Azure AD Application
-
-#### [Remove-PnPAlert](Remove-PnPAlert.md)
-Removes an alert for a user
-
-#### [Remove-PnPApp](Remove-PnPApp.md)
-Removes an app from the app catalog
-
-#### [Remove-PnPApplicationCustomizer](Remove-PnPApplicationCustomizer.md)
-Removes a SharePoint Framework client side extension application customizer
-
-#### [Remove-PnPContentType](Remove-PnPContentType.md)
-Removes a content type from a web
-
-#### [Remove-PnPContentTypeFromDocumentSet](Remove-PnPContentTypeFromDocumentSet.md)
-Removes a content type from a document set
-
-#### [Remove-PnPContentTypeFromList](Remove-PnPContentTypeFromList.md)
-Removes a content type from a list
-
-#### [Remove-PnPCustomAction](Remove-PnPCustomAction.md)
-Removes a custom action
-
-#### [Remove-PnPDeletedMicrosoft365Group](Remove-PnPDeletedMicrosoft365Group.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Permanently removes one deleted Microsoft 365 Group
-
-#### [Remove-PnPEventReceiver](Remove-PnPEventReceiver.md)
-Remove an eventreceiver
-
-#### [Remove-PnPExternalUser](Remove-PnPExternalUser.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes one ore more external users from the tenant.
-
-#### [Remove-PnPField](Remove-PnPField.md)
-Removes a field from a list or a site
-
-#### [Remove-PnPFieldFromContentType](Remove-PnPFieldFromContentType.md)
-Removes a site column from a content type
-
-#### [Remove-PnPFile](Remove-PnPFile.md)
-Removes a file.
-
-#### [Remove-PnPFileFromSiteTemplate](Remove-PnPFileFromSiteTemplate.md)
-Removes a file from a PnP Provisioning Template
-
-#### [Remove-PnPFileVersion](Remove-PnPFileVersion.md)
-Removes all or a specific file version.
-
-#### [Remove-PnPFlow](Remove-PnPFlow.md)
-Removes the specified flow
-
-#### [Remove-PnPFolder](Remove-PnPFolder.md)
-Deletes a folder within a parent folder
-
-#### [Remove-PnPGraphSubscription](Remove-PnPGraphSubscription.md)
-Removes an existing Microsoft Graph subscription. Required Azure Active Directory application permission depends on the resource the subscription exists on, see https://docs.microsoft.com/graph/api/subscription-delete#permissions.
-
-#### [Remove-PnPGroup](Remove-PnPGroup.md)
-Removes a group from a web.
-
-#### [Remove-PnPGroupMember](Remove-PnPGroupMember.md)
-Removes a user from a group
-
-#### [Remove-PnPHomeSite](Remove-PnPHomeSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes the currently set site as the home site
-
-#### [Remove-PnPHubSiteAssociation](Remove-PnPHubSiteAssociation.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Disconnects a site from a hubsite.
-
-#### [Remove-PnPHubToHubAssociation](Remove-PnPHubToHubAssociation.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes the selected hub site from its parent hub.
-
-#### [Remove-PnPIndexedProperty](Remove-PnPIndexedProperty.md)
-Removes a key from propertybag to be indexed by search. The key and it's value remain in the propertybag, however it will not be indexed anymore.
-
-#### [Remove-PnPJavaScriptLink](Remove-PnPJavaScriptLink.md)
-Removes a JavaScript link or block from a web or sitecollection
-
-#### [Remove-PnPKnowledgeHubSite](Remove-PnPKnowledgeHubSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes the Knowledge Hub Site setting for your tenant
-
-#### [Remove-PnPList](Remove-PnPList.md)
-Deletes a list
-
-#### [Remove-PnPListItem](Remove-PnPListItem.md)
-Deletes an item from a list
-
-#### [Remove-PnPMicrosoft365Group](Remove-PnPMicrosoft365Group.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes one Microsoft 365 Group
-
-#### [Remove-PnPMicrosoft365GroupMember](Remove-PnPMicrosoft365GroupMember.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All, GroupMember.ReadWrite.All
-
-Removes members from a particular Microsoft 365 Group
-
-#### [Remove-PnPMicrosoft365GroupOwner](Remove-PnPMicrosoft365GroupOwner.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
-
-Removes owners from a particular Microsoft 365 Group
-
-#### [Remove-PnPNavigationNode](Remove-PnPNavigationNode.md)
-Removes a menu item from either the quicklaunch or top navigation
-
-#### [Remove-PnPOrgAssetsLibrary](Remove-PnPOrgAssetsLibrary.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a given document library as a organizational asset source
-
-#### [Remove-PnPOrgNewsSite](Remove-PnPOrgNewsSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a given site from the list of organizational news sites.
-
-#### [Remove-PnPPage](Remove-PnPPage.md)
-Removes a page
-
-#### [Remove-PnPPageComponent](Remove-PnPPageComponent.md)
-Removes a page component from a page
-
-#### [Remove-PnPPlannerBucket](Remove-PnPPlannerBucket.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a planner bucket
-
-#### [Remove-PnPPlannerPlan](Remove-PnPPlannerPlan.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a planner plan
-
-#### [Remove-PnPPlannerTask](Remove-PnPPlannerTask.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a Planner task
-
-#### [Remove-PnPPropertyBagValue](Remove-PnPPropertyBagValue.md)
-Removes a value from the property bag
-
-#### [Remove-PnPPublishingImageRendition](Remove-PnPPublishingImageRendition.md)
-Removes an existing image rendition
-
-#### [Remove-PnPRoleDefinition](Remove-PnPRoleDefinition.md)
-Remove a Role Definition from a site
-
-#### [Remove-PnPSdnProvider](Remove-PnPSdnProvider.md)
-Removes Software-Defined Networking (SDN) Support in your SharePoint Online tenant.
-
-#### [Remove-PnPSearchConfiguration](Remove-PnPSearchConfiguration.md)
-Remove the search configuration
-
-#### [Remove-PnPSiteClassification](Remove-PnPSiteClassification.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Directory.ReadWrite.All
-
-Removes one or more existing site classification values from the list of available values
-
-#### [Remove-PnPSiteCollectionAdmin](Remove-PnPSiteCollectionAdmin.md)
-Removes one or more users as site collection administrators from the site collection in the current context
-
-#### [Remove-PnPSiteCollectionAppCatalog](Remove-PnPSiteCollectionAppCatalog.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a Site Collection scoped App Catalog from a site
-
-#### [Remove-PnPSiteCollectionTermStore](Remove-PnPSiteCollectionTermStore.md)
-Removes the site collection term store if it exists or else nothing will happen
-
-#### [Remove-PnPSiteDesign](Remove-PnPSiteDesign.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a Site Design
-
-#### [Remove-PnPSiteDesignTask](Remove-PnPSiteDesignTask.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a Site Design Task. If the execution of the associated site script has already started the execution will not be terminated.
-
-#### [Remove-PnPSiteGroup](Remove-PnPSiteGroup.md)
-Removes a group from a web.
-
-#### [Remove-PnPSiteScript](Remove-PnPSiteScript.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a Site Script
-
-#### [Remove-PnPSiteUserInvitations](Remove-PnPSiteUserInvitations.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Searches against all stored sharing links and removes an email invite.
-
-#### [Remove-PnPStorageEntity](Remove-PnPStorageEntity.md)
-Remove Storage Entities / Farm Properties from either the tenant scoped app catalog or the current site collection if the site has a site collection scoped app catalog
-
-#### [Remove-PnPStoredCredential](Remove-PnPStoredCredential.md)
-Removes a credential from the Credential Manager
-
-#### [Remove-PnPTaxonomyItem](Remove-PnPTaxonomyItem.md)
-Removes a taxonomy item
-
-#### [Remove-PnPTeamsApp](Remove-PnPTeamsApp.md)
-**Required Permissions**
-
-  * Microsoft Graph API: AppCatalog.ReadWrite.All
-
-Removes an app from the Teams AppCatalog.
-
-#### [Remove-PnPTeamsChannel](Remove-PnPTeamsChannel.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a channel from a Microsoft Teams instance.
-
-#### [Remove-PnPTeamsTab](Remove-PnPTeamsTab.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a Microsoft Teams tab in a channel.
-
-#### [Remove-PnPTeamsTeam](Remove-PnPTeamsTeam.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a Microsoft Teams Team instance
-
-#### [Remove-PnPTeamsUser](Remove-PnPTeamsUser.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Removes a user from a team.
-
-#### [Remove-PnPTenantCdnOrigin](Remove-PnPTenantCdnOrigin.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes an origin from the Public or Private content delivery network (CDN).
-
-#### [Remove-PnPTenantSite](Remove-PnPTenantSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a site collection
-
-#### [Remove-PnPTenantSyncClientRestriction](Remove-PnPTenantSyncClientRestriction.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Returns organization-level OneDrive synchronization restriction settings
-
-#### [Remove-PnPTenantTheme](Remove-PnPTenantTheme.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a theme
-
-#### [Remove-PnPTerm](Remove-PnPTerm.md)
-Removes a taxonomy term from the term store.
-
-#### [Remove-PnPTermGroup](Remove-PnPTermGroup.md)
-Removes a taxonomy term group and all its containing termsets
-
-#### [Remove-PnPTermLabel](Remove-PnPTermLabel.md)
-Removes a single label/translation from a term.
-
-#### [Remove-PnPUser](Remove-PnPUser.md)
-Removes a specific user from the site collection User Information List
-
-#### [Remove-PnPUserInfo](Remove-PnPUserInfo.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Removes a user from the user information list of a specific site collection.
-
-#### [Remove-PnPUserProfile](Remove-PnPUserProfile.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Export user profile data.
-
-#### [Remove-PnPView](Remove-PnPView.md)
-Deletes a view from a list
-
-#### [Remove-PnPWeb](Remove-PnPWeb.md)
-Removes a subweb in the current web
-
-#### [Remove-PnPWebhookSubscription](Remove-PnPWebhookSubscription.md)
-Removes a Webhook subscription from the resource
-
-#### [Remove-PnPWebPart](Remove-PnPWebPart.md)
-Removes a web part from a page
-
-#### [Remove-PnPWikiPage](Remove-PnPWikiPage.md)
-Removes a wiki page
-
-#### [Rename-PnPFile](Rename-PnPFile.md)
-Renames a file in its current location
-
-#### [Rename-PnPFolder](Rename-PnPFolder.md)
-Renames a folder
-
-#### [Repair-PnPSite](Repair-PnPSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Checks and repairs the site collection and its contents.
-
-#### [Request-PnPAccessToken](Request-PnPAccessToken.md)
-Requests an OAuth Access token
-
-#### [Request-PnPPersonalSite](Request-PnPPersonalSite.md)
-Requests that one or more users be enqueued for a Personal Site to be created.
-
-#### [Request-PnPReIndexList](Request-PnPReIndexList.md)
-Marks the list for full indexing during the next incremental crawl
-
-#### [Request-PnPReIndexWeb](Request-PnPReIndexWeb.md)
-Marks the web for full indexing during the next incremental crawl
-
-#### [Reset-PnPFileVersion](Reset-PnPFileVersion.md)
-Resets a file to its previous version
-
-#### [Reset-PnPLabel](Reset-PnPLabel.md)
-Resets a retention label on the specified list or library to None
-
-#### [Reset-PnPMicrosoft365GroupExpiration](Reset-PnPMicrosoft365GroupExpiration.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
-
-Renews the Microsoft 365 Group by extending its expiration with the number of days defined in the group expiration policy set on the Azure Active Directory
-
-#### [Reset-PnPUserOneDriveQuotaToDefault](Reset-PnPUserOneDriveQuotaToDefault.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Resets the current quota set on the OneDrive for Business site for a specific user to the tenant default
-
-#### [Resolve-PnPFolder](Resolve-PnPFolder.md)
-Returns a folder from a given site relative path, and will create it if it does not exist.
-
-#### [Restore-PnPDeletedMicrosoft365Group](Restore-PnPDeletedMicrosoft365Group.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Restores one deleted Microsoft 365 Group
-
-#### [Restore-PnPFileVersion](Restore-PnPFileVersion.md)
-Restores a specific file version.
-
-#### [Restore-PnPRecycleBinItem](Restore-PnPRecycleBinItem.md)
-Restores the provided recycle bin item to its original location
-
-#### [Restore-PnPTenantRecycleBinItem](Restore-PnPTenantRecycleBinItem.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Restores a site collection from the tenant scoped recycle bin
-
-#### [Revoke-PnPHubSiteRights](Revoke-PnPHubSiteRights.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Revoke permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
-
-#### [Revoke-PnPSiteDesignRights](Revoke-PnPSiteDesignRights.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Revokes the specified principals rights to use the site design.
-
-#### [Revoke-PnPTenantServicePrincipalPermission](Revoke-PnPTenantServicePrincipalPermission.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-* Microsoft Graph API : Directory.ReadWrite.All
-
-Revokes a permission that was previously granted to the "SharePoint Online Client Extensibility Web Application Service Principal" service principal.
-
-#### [Revoke-PnPUserSession](Revoke-PnPUserSession.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Provides IT administrators the ability to logout a user's O365 sessions across all their devices.
-
-#### [Save-PnPPageConversionLog](Save-PnPPageConversionLog.md)
-Persists the current client side page conversion log data to the loggers linked to the last used page transformation run. Needs to be used in conjunction with the -LogSkipFlush flag on the ConvertTo-PnPPage cmdlet
-
-#### [Save-PnPSiteTemplate](Save-PnPSiteTemplate.md)
-Saves a PnP site template to the file system
-
-#### [Save-PnPTenantTemplate](Save-PnPTenantTemplate.md)
-Saves a PnP provisioning hierarchy to the file system
-
-#### [Send-PnPMail](Send-PnPMail.md)
-Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified. See detailed help for more information.
-
-#### [Set-PnPApplicationCustomizer](Set-PnPApplicationCustomizer.md)
-Updates a SharePoint Framework client side extension application customizer
-
-#### [Set-PnPAppSideLoading](Set-PnPAppSideLoading.md)
-Enables the App SideLoading Feature on a site
-
-#### [Set-PnPAuditing](Set-PnPAuditing.md)
-Set Auditing setting for a site
-
-#### [Set-PnPAvailablePageLayouts](Set-PnPAvailablePageLayouts.md)
-Sets the available page layouts for the current site
-
-#### [Set-PnPBrowserIdleSignout](Set-PnPBrowserIdleSignout.md)
-Sets the current configuration values for Idle session sign-out policy.
-
-#### [Set-PnPBuiltInDesignPackageVisibility](Set-PnPBuiltInDesignPackageVisibility.md)
-Sets the visibility of the available built-in Design Packages at moment of site creation.
-
-#### [Set-PnPContext](Set-PnPContext.md)
-Set the ClientContext
-
-#### [Set-PnPDefaultColumnValues](Set-PnPDefaultColumnValues.md)
-Sets default column values for a document library
-
-#### [Set-PnPDefaultContentTypeToList](Set-PnPDefaultContentTypeToList.md)
-Sets the default content type for a list
-
-#### [Set-PnPDefaultPageLayout](Set-PnPDefaultPageLayout.md)
-Sets a specific page layout to be the default page layout for a publishing site
-
-#### [Set-PnPDisableSpacesActivation](Set-PnPDisableSpacesActivation.md)
-Sets if SharePoint Spaces should be disabled
-
-#### [Set-PnPDocumentSetField](Set-PnPDocumentSetField.md)
-Sets a site column from the available content types to a document set
-
-#### [Set-PnPField](Set-PnPField.md)
-Changes one or more properties of a field in a specific list or for the whole web
-
-#### [Set-PnPFileCheckedIn](Set-PnPFileCheckedIn.md)
-Checks in a file
-
-#### [Set-PnPFileCheckedOut](Set-PnPFileCheckedOut.md)
-Checks out a file
-
-#### [Set-PnPFolderPermission](Set-PnPFolderPermission.md)
-Sets folder permissions. Use Get-PnPRoleDefinition to retrieve all available roles you can add or remove using this cmdlet.
-
-#### [Set-PnPFooter](Set-PnPFooter.md)
-Configures the footer of the current web
-
-#### [Set-PnPGraphSubscription](Set-PnPGraphSubscription.md)
-Updates an existing Microsoft Graph subscription. Required Azure Active Directory application permission depends on the resource the subscription exists on, see https://docs.microsoft.com/graph/api/subscription-delete#permissions.
-
-#### [Set-PnPGroup](Set-PnPGroup.md)
-Updates a group
-
-#### [Set-PnPGroupPermissions](Set-PnPGroupPermissions.md)
-Adds and/or removes permissions of a specific SharePoint group
-
-#### [Set-PnPHideDefaultThemes](Set-PnPHideDefaultThemes.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Defines if the default / OOTB themes should be visible to users or not.
-
-#### [Set-PnPHomePage](Set-PnPHomePage.md)
-Sets the home page of the current web.
-
-#### [Set-PnPHomeSite](Set-PnPHomeSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets the home site for your tenant
-
-#### [Set-PnPHubSite](Set-PnPHubSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets hub site properties
-
-#### [Set-PnPIndexedProperties](Set-PnPIndexedProperties.md)
-Marks values of the propertybag to be indexed by search. Notice that this will overwrite the existing flags, i.e. only the properties you define with the cmdlet will be indexed.
-
-#### [Set-PnPInPlaceRecordsManagement](Set-PnPInPlaceRecordsManagement.md)
-Activates or deactivates in the place records management feature.
-
-#### [Set-PnPKnowledgeHubSite](Set-PnPKnowledgeHubSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets the Knowledge Hub Site for your tenant
-
-#### [Set-PnPLabel](Set-PnPLabel.md)
-Sets a retention label on the specified list or library. Use Reset-PnPLabel to remove the label again.
-
-#### [Set-PnPList](Set-PnPList.md)
-Updates list settings
-
-#### [Set-PnPListInformationRightsManagement](Set-PnPListInformationRightsManagement.md)
-Get the site closure status of the site which has a site policy applied
-
-#### [Set-PnPListItem](Set-PnPListItem.md)
-Updates a list item
-
-#### [Set-PnPListItemAsRecord](Set-PnPListItemAsRecord.md)
-Declares a list item as a record, for more information, see https://docs.microsoft.com/sharepoint/governance/records-management-in-sharepoint-server
-
-#### [Set-PnPListItemPermission](Set-PnPListItemPermission.md)
-Sets list item permissions. Use Get-PnPRoleDefinition to retrieve all available roles you can add or remove using this cmdlet.
-
-#### [Set-PnPListPermission](Set-PnPListPermission.md)
-Sets list permissions
-
-#### [Set-PnPListRecordDeclaration](Set-PnPListRecordDeclaration.md)
-The RecordDeclaration parameter supports 4 values:
-
-AlwaysAllowManualDeclaration
-NeverAllowManualDeclaration
-UseSiteCollectionDefaults
-
-#### [Set-PnPMasterPage](Set-PnPMasterPage.md)
-Set the masterpage
-
-#### [Set-PnPMicrosoft365Group](Set-PnPMicrosoft365Group.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Sets Microsoft 365 Group properties
-
-#### [Set-PnPMinimalDownloadStrategy](Set-PnPMinimalDownloadStrategy.md)
-Activates or deactivates the minimal downloading strategy.
-
-#### [Set-PnPPage](Set-PnPPage.md)
-Sets parameters of a page
-
-#### [Set-PnPPageTextPart](Set-PnPPageTextPart.md)
-Set text part properties
-
-#### [Set-PnPPageWebPart](Set-PnPPageWebPart.md)
-Set Web Part properties
-
-#### [Set-PnPPlannerBucket](Set-PnPPlannerBucket.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates an existing Planner bucket
-
-#### [Set-PnPPlannerPlan](Set-PnPPlannerPlan.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates an existing Planner plan
-
-#### [Set-PnPPlannerTask](Set-PnPPlannerTask.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates an existing task
-
-#### [Set-PnPPropertyBagValue](Set-PnPPropertyBagValue.md)
-Sets a property bag value
-
-#### [Set-PnPRequestAccessEmails](Set-PnPRequestAccessEmails.md)
-Sets Request Access Email on a web
-
-#### [Set-PnPSearchConfiguration](Set-PnPSearchConfiguration.md)
-Sets the search configuration
-
-#### [Set-PnPSearchSettings](Set-PnPSearchSettings.md)
-Sets search settings for a site
-
-#### [Set-PnPSite](Set-PnPSite.md)
-Sets Site Collection properties.
-
-#### [Set-PnPSiteClosure](Set-PnPSiteClosure.md)
-Opens or closes a site which has a site policy applied
-
-#### [Set-PnPSiteDesign](Set-PnPSiteDesign.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Updates a Site Design on the current tenant.
-
-#### [Set-PnPSiteGroup](Set-PnPSiteGroup.md)
-Updates the SharePoint Online owner and permission levels on a group inside a site collection.
-
-#### [Set-PnPSitePolicy](Set-PnPSitePolicy.md)
-Sets a site policy
-
-#### [Set-PnPSiteScript](Set-PnPSiteScript.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Updates an existing Site Script on the current tenant.
-
-#### [Set-PnPSiteTemplateMetadata](Set-PnPSiteTemplateMetadata.md)
-Sets metadata of a provisioning template
-
-#### [Set-PnPStorageEntity](Set-PnPStorageEntity.md)
-Set Storage Entities / Farm Properties in either the tenant scoped app catalog or the site collection app catalog.
-
-#### [Set-PnPStructuralNavigationCacheSiteState](Set-PnPStructuralNavigationCacheSiteState.md)
-Enable or disable caching for all webs in a site collection.
-
-#### [Set-PnPStructuralNavigationCacheWebState](Set-PnPStructuralNavigationCacheWebState.md)
-Enable or disable caching for all webs in a site collection.
-
-#### [Set-PnPTaxonomyFieldValue](Set-PnPTaxonomyFieldValue.md)
-Sets a taxonomy term value in a listitem field
-
-#### [Set-PnPTeamifyPromptHidden](Set-PnPTeamifyPromptHidden.md)
-Hides the teamify prompt for a site
-
-#### [Set-PnPTeamsChannel](Set-PnPTeamsChannel.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates an existing Teams Channel
-
-#### [Set-PnPTeamsTab](Set-PnPTeamsTab.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates Teams Tab settings
-
-#### [Set-PnPTeamsTeam](Set-PnPTeamsTeam.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates an existing Team.
-
-#### [Set-PnPTeamsTeamArchivedState](Set-PnPTeamsTeamArchivedState.md)
-**Required Permissions**
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
-
-Sets the archived state of a team.
-
-#### [Set-PnPTeamsTeamPicture](Set-PnPTeamsTeamPicture.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Sets the picture of an existing team.
-
-#### [Set-PnPTenant](Set-PnPTenant.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets organization-level site collection properties
-
-#### [Set-PnPTenantAppCatalogUrl](Set-PnPTenantAppCatalogUrl.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets the url of the tenant scoped app catalog
-
-#### [Set-PnPTenantCdnEnabled](Set-PnPTenantCdnEnabled.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Enables or disabled the public or private Office 365 Content Delivery Network (CDN).
-
-#### [Set-PnPTenantCdnPolicy](Set-PnPTenantCdnPolicy.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets the CDN Policies for the specified CDN (Public | Private).
-
-#### [Set-PnPTenantSite](Set-PnPTenantSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Updates settings of a site collection
-
-#### [Set-PnPTenantSyncClientRestriction](Set-PnPTenantSyncClientRestriction.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets organization-level sync client restriction properties
-
-#### [Set-PnPTerm](Set-PnPTerm.md)
-Updates a term
-
-#### [Set-PnPTermGroup](Set-PnPTermGroup.md)
-Updates an existing term group
-
-#### [Set-PnPTermSet](Set-PnPTermSet.md)
-Updates an existing TermSet
-
-#### [Set-PnPTheme](Set-PnPTheme.md)
-Sets the theme of the current web.
-
-#### [Set-PnPTraceLog](Set-PnPTraceLog.md)
-Turn log tracing on or off
-
-#### [Set-PnPUserOneDriveQuota](Set-PnPUserOneDriveQuota.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Sets the quota on the OneDrive for Business site for a specific user
-
-#### [Set-PnPUserProfileProperty](Set-PnPUserProfileProperty.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Office365 only: Uses the tenant API to retrieve site information. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.
-
-#### [Set-PnPView](Set-PnPView.md)
-Change view properties
-
-#### [Set-PnPWeb](Set-PnPWeb.md)
-Sets properties on a web
-
-#### [Set-PnPWebhookSubscription](Set-PnPWebhookSubscription.md)
-Updates a Webhook subscription
-
-#### [Set-PnPWebPartProperty](Set-PnPWebPartProperty.md)
-Sets a web part property
-
-#### [Set-PnPWebPermission](Set-PnPWebPermission.md)
-Sets a web permissions
-
-#### [Set-PnPWebTheme](Set-PnPWebTheme.md)
-Sets the theme of the current web.
-
-#### [Set-PnPWikiPageContent](Set-PnPWikiPageContent.md)
-Sets the contents of a wikipage
-
-#### [Submit-PnPSearchQuery](Submit-PnPSearchQuery.md)
-Executes an arbitrary search query against the SharePoint search index
-
-#### [Submit-PnPTeamsChannelMessage](Submit-PnPTeamsChannelMessage.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Sends a message to a Microsoft Teams Channel.
-
-#### [Sync-PnPAppToTeams](Sync-PnPAppToTeams.md)
-Synchronize an app from the tenant app catalog to the Microsoft Teams app catalog
-
-#### [Test-PnPListItemIsRecord](Test-PnPListItemIsRecord.md)
-Checks if a list item is a record
-
-#### [Test-PnPMicrosoft365GroupAliasIsUsed](Test-PnPMicrosoft365GroupAliasIsUsed.md)
-Tests if a given alias is already used used
-
-#### [Test-PnPSite](Test-PnPSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Checks the site collection and its contents.
-
-#### [Test-PnPTenantTemplate](Test-PnPTenantTemplate.md)
-Tests a tenant template for invalid references
-
-#### [Uninstall-PnPApp](Uninstall-PnPApp.md)
-Uninstalls an available add-in from the site
-
-#### [Unpublish-PnPApp](Unpublish-PnPApp.md)
-Unpublishes/retracts an available add-in from the app catalog
-
-#### [Unregister-PnPHubSite](Unregister-PnPHubSite.md)
-**Required Permissions**
-
-* SharePoint: Access to the SharePoint Tenant Administration site
-
-Unregisters a site as a hubsite
-
-#### [Update-PnPApp](Update-PnPApp.md)
-Updates an available app from the app catalog
-
-#### [Update-PnPSiteClassification](Update-PnPSiteClassification.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Directory.ReadWrite.All
-
-Updates Site Classifications for the tenant
-
-#### [Update-PnPTeamsApp](Update-PnPTeamsApp.md)
-**Required Permissions**
-
-  * Microsoft Graph API: Group.ReadWrite.All
-
-Updates an existing app in the Teams App Catalog.
-
-#### [Update-PnPUserType](Update-PnPUserType.md)
-Updates an available app from the app catalog
-
+### [Update-PnPSiteClassification](Update-PnPSiteClassification.md)
+{{Manually Enter Update-PnPSiteClassification Description Here}}
