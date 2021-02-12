@@ -24,7 +24,7 @@ To install a nightly build of PnP PowerShell:
 Install-Module -Name PnP.PowerShell -AllowPrerelease
 ```
 
-See the [articles](https://pnp.github.io/powershell/articles) section for more information on authentication and configuration. All [cmdlets](https://pnp.github.io/powershell/cmdlets/Add-PnPAlert.html) have been documented too.
+See the [authentication](https://pnp.github.io/powershell/articles/authentication.html) page for more information on authentication and configuration. All [cmdlets](https://pnp.github.io/powershell/cmdlets/Add-PnPAlert.html) have been documented too.
 
 ## I've found a bug, where do I need to log an issue or create a PR
 
