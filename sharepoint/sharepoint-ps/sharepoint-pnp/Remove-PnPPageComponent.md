@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPPageComponent
 # Remove-PnPPageComponent
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPPageComponent.md to change this file.
+
 Removes a page component from a page
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPSiteCollectio
 # Remove-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPSiteCollectionAdmin.md to change this file.
+
 Removes one or more users as site collection administrators from the site collection in the current context
 
 ## SYNTAX

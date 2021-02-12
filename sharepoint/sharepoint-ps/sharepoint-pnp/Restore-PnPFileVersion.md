@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Restore-PnPFileVersion.
 # Restore-PnPFileVersion
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Restore-PnPFileVersion.md to change this file.
+
 Restores a specific file version.
 
 ## SYNTAX

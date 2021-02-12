@@ -10,6 +10,10 @@ title: Add-PnPWebPartToWikiPage
 # Add-PnPWebPartToWikiPage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPWebPartToWikiPage.md to change this file.
+
 Adds a web part to a wiki page in a specified table row and column
 
 ## SYNTAX

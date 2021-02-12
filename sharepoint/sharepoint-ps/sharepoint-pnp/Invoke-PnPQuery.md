@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Invoke-PnPQuery.html
 # Invoke-PnPQuery
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPQuery.md to change this file.
+
 Executes the currently queued actions
 
 ## SYNTAX

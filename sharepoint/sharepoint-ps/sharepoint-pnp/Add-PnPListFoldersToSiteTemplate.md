@@ -10,6 +10,10 @@ title: Add-PnPListFoldersToSiteTemplate
 # Add-PnPListFoldersToSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPListFoldersToSiteTemplate.md to change this file.
+
 Adds folders to a list in a PnP Provisioning Template
 
 ## SYNTAX

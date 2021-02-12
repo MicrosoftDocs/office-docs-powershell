@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPGroupPermissions
 # Set-PnPGroupPermissions
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPGroupPermissions.md to change this file.
+
 Adds and/or removes permissions of a specific SharePoint group
 
 ## SYNTAX

@@ -9,6 +9,10 @@ title: Save-PnPPageConversionLog
 # Save-PnPPageConversionLog
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Save-PnPPageConversionLog.md to change this file.
+
 Persists the current client side page conversion log data to the loggers linked to the last used page transformation run. Needs to be used in conjunction with the -LogSkipFlush flag on the ConvertTo-PnPPage cmdlet
 
 ## SYNTAX 

@@ -10,6 +10,10 @@ title: Get-PnPFeature
 # Get-PnPFeature
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFeature.md to change this file.
+
 Returns all activated or a specific activated feature
 
 ## SYNTAX

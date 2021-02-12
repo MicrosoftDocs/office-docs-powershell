@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPAzureCertificate
 # New-PnPAzureCertificate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPAzureCertificate.md to change this file.
+
 Generate a new 2048bit self-signed certificate and manifest settings for use when using CSOM via an app-only ADAL application.
 
 See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.

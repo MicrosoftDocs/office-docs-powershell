@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantSequenceSi
 # Get-PnPTenantSequenceSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantSequenceSite.md to change this file.
+
 Returns one ore more sites from a tenant template
 
 ## SYNTAX

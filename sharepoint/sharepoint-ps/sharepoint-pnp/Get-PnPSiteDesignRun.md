@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteDesignRun.ht
 # Get-PnPSiteDesignRun
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteDesignRun.md to change this file.
+
 Retrieves a list of site designs applied to a specified site collection. If the WebUrl parameter is not specified we show the list of designs applied to the current site. The returned output includes the ID of the scheduled job, the web and site IDs, and the site design ID, version, and title.
 
 ## SYNTAX

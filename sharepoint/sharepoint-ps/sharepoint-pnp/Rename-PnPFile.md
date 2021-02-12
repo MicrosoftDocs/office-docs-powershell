@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Rename-PnPFile.html
 # Rename-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Rename-PnPFile.md to change this file.
+
 Renames a file in its current location
 
 ## SYNTAX

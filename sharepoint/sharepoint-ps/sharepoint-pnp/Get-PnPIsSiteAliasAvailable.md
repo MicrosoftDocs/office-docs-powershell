@@ -10,6 +10,10 @@ title: Get-PnPIsSiteAliasAvailable
 # Get-PnPIsSiteAliasAvailable
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPIsSiteAliasAvailable.md to change this file.
+
 Validates if a certain alias is still available to be used to create a new site collection for. If it is not, it will propose an alternative alias and URL which is still available.
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantSequence.h
 # Get-PnPTenantSequence
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantSequence.md to change this file.
+
 Returns one ore more provisioning sequence object(s) from a tenant template
 
 ## SYNTAX

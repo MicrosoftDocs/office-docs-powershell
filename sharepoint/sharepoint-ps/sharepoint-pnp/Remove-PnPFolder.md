@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPFolder.html
 # Remove-PnPFolder
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPFolder.md to change this file.
+
 Deletes a folder within a parent folder
 
 ## SYNTAX

@@ -10,6 +10,10 @@ title: Add-PnPTenantSequenceSubSite
 # Add-PnPTenantSequenceSubSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTenantSequenceSubSite.md to change this file.
+
 Adds a tenant sequence sub site object to a tenant sequence site object
 
 ## SYNTAX

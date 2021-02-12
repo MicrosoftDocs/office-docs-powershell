@@ -10,6 +10,10 @@ title: Export-PnPTermGroupToXml
 # Export-PnPTermGroupToXml
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPTermGroupToXml.md to change this file.
+
 Exports a taxonomy TermGroup to either the output or to an XML file.
 
 ## SYNTAX

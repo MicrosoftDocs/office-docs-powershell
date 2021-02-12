@@ -9,6 +9,10 @@ title: Invoke-PnPSPRestMethod
 # Invoke-PnPSPRestMethod
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPSPRestMethod.md to change this file.
+
 Invokes a REST request towards a SharePoint site
 
 ## SYNTAX 

@@ -10,6 +10,10 @@ title: Get-PnPListPermissions
 # Get-PnPListPermissions
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPListPermissions.md to change this file.
+
 Returns the permissions for a specific SharePoint List given a user or group by id.
 
 ## SYNTAX

@@ -10,6 +10,10 @@ title: Get-PnPAzureCertificate
 # Get-PnPAzureCertificate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAzureCertificate.md to change this file.
+
 Get PEM values and manifest settings for an existing certificate (.pfx) for use when using CSOM via an app-only ADAL application.
 
 See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.

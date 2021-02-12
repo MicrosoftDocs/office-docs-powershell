@@ -1,7 +1,9 @@
 ---
 Module Name: PnP.Powershell
 title: PnP PowerShell
+author: erwinvanhunen
 ---
+
 # PnP PowerShell
 
 ## Description

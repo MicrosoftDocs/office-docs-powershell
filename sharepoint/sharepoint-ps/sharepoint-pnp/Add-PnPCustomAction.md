@@ -10,6 +10,10 @@ title: Add-PnPCustomAction
 # Add-PnPCustomAction
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPCustomAction.md to change this file.
+
 Adds a custom action
 
 ## SYNTAX

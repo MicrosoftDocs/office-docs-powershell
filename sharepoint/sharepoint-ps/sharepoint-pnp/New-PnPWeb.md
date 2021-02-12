@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPWeb.html
 # New-PnPWeb
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPWeb.md to change this file.
+
 Creates a new subweb under the current web
 
 ## SYNTAX

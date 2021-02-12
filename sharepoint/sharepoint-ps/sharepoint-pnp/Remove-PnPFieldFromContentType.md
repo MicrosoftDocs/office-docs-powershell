@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPFieldFromCont
 # Remove-PnPFieldFromContentType
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPFieldFromContentType.md to change this file.
+
 Removes a site column from a content type
 
 ## SYNTAX

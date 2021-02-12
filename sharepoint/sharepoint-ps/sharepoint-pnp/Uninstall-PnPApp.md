@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Uninstall-PnPApp.html
 # Uninstall-PnPApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Uninstall-PnPApp.md to change this file.
+
 Uninstalls an available add-in from the site
 
 ## SYNTAX

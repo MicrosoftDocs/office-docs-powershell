@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Import-PnPTermGroupFrom
 # Import-PnPTermGroupFromXml
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Import-PnPTermGroupFromXml.md to change this file.
+
 Imports a taxonomy TermGroup from either the input or from an XML file.
 
 ## SYNTAX

@@ -10,6 +10,10 @@ title: Get-PnPFolderItem
 # Get-PnPFolderItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFolderItem.md to change this file.
+
 List content in folder
 
 ## SYNTAX

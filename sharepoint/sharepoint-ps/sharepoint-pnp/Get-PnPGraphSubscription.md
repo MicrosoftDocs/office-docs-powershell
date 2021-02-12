@@ -11,6 +11,10 @@ title: Get-PnPGraphSubscription
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPGraphSubscription.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API : Subscription.Read.All

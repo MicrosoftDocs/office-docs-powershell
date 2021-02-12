@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Send-PnPMail.html
 # Send-PnPMail
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Send-PnPMail.md to change this file.
+
 Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified. See detailed help for more information.
 
 ## SYNTAX

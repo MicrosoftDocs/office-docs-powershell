@@ -10,6 +10,10 @@ title: Get-PnPFolder
 # Get-PnPFolder
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFolder.md to change this file.
+
 Return a folder object
 
 ## SYNTAX

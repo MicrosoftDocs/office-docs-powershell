@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPWeb.html
 # Remove-PnPWeb
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPWeb.md to change this file.
+
 Removes a subweb in the current web
 
 ## SYNTAX

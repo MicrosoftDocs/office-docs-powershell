@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPDefaultPageLayou
 # Set-PnPDefaultPageLayout
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPDefaultPageLayout.md to change this file.
+
 Sets a specific page layout to be the default page layout for a publishing site
 
 ## SYNTAX
