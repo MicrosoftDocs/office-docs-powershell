@@ -41,8 +41,6 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-FlightEventsFromEmailEnabled <Boolean>]
  [-HotelEventsFromEmailEnabled <Boolean>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
- [-LocalEventsEnabled <LocalEventsEnabledStatus>]
- [-LocalEventsLocation <LocalEventsLocation>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
  [-ReminderSoundEnabled <Boolean>]
@@ -141,15 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -AgendaPaneEnabled
-This parameter is available only in the cloud-based service.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -520,38 +516,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalEventsEnabled
-PARAMVALUE: FirstRun | Disabled | Enabled
-
-```yaml
-Type: LocalEventsEnabledStatus
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalEventsLocation
-PARAMVALUE: LocalEventsLocation
-
-```yaml
-Type: LocalEventsLocation
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
