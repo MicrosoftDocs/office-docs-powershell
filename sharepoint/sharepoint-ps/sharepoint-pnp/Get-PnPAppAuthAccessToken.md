@@ -10,6 +10,10 @@ title: Get-PnPAppAuthAccessToken
 # Get-PnPAppAuthAccessToken
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAppAuthAccessToken.md to change this file.
+
 Returns the access token
 
 ## SYNTAX

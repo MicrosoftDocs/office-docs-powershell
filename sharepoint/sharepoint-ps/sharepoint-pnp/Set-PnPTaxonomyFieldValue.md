@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTaxonomyFieldVal
 # Set-PnPTaxonomyFieldValue
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTaxonomyFieldValue.md to change this file.
+
 Sets a taxonomy term value in a listitem field
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPUser.html
 # New-PnPUser
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPUser.md to change this file.
+
 Adds a user to the built-in Site User Info List and returns a user object
 
 ## SYNTAX

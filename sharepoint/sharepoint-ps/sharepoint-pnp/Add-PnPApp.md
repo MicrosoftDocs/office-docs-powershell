@@ -10,6 +10,10 @@ title: Add-PnPApp
 # Add-PnPApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPApp.md to change this file.
+
 Add/uploads an available app to the app catalog
 
 ## SYNTAX

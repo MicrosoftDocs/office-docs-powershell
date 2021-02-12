@@ -10,6 +10,10 @@ title: Copy-PnPFile
 # Copy-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Copy-PnPFile.md to change this file.
+
 Copies a file or folder to a different location. This location can be within the same document library, same site, same site collection or even to another site collection on the same tenant. Currently there is a 200MB file size limit for the file or folder to be copied. Notice that if copying between sites or to a subsite you cannot specify a target filename, only a folder name.
 
 ## SYNTAX

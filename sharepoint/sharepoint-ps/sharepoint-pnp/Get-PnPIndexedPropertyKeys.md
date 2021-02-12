@@ -10,6 +10,10 @@ title: Get-PnPIndexedPropertyKeys
 # Get-PnPIndexedPropertyKeys
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPIndexedPropertyKeys.md to change this file.
+
 Returns the keys of the property bag values that have been marked for indexing by search
 
 ## SYNTAX

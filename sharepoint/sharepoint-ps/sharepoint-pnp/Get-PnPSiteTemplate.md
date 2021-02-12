@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteTemplate.htm
 # Get-PnPSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteTemplate.md to change this file.
+
 Generates a provisioning site template from a web
 
 ## SYNTAX

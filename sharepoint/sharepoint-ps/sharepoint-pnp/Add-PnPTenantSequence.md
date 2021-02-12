@@ -10,6 +10,10 @@ title: Add-PnPTenantSequence
 # Add-PnPTenantSequence
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTenantSequence.md to change this file.
+
 Adds a tenant sequence object to a tenant template
 
 ## SYNTAX

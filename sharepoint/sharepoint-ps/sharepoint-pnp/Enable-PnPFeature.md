@@ -10,6 +10,10 @@ title: Enable-PnPFeature
 # Enable-PnPFeature
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Enable-PnPFeature.md to change this file.
+
 Enables a feature
 
 ## SYNTAX

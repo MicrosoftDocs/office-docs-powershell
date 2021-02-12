@@ -10,6 +10,10 @@ title: Clear-PnPRecycleBinItem
 # Clear-PnPRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnpRecycleBinItem.md to change this file.
+
 Permanently deletes all or a specific recycle bin item
 
 ## SYNTAX

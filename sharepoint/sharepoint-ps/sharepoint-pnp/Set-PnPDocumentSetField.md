@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPDocumentSetField
 # Set-PnPDocumentSetField
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPDocumentSetField.md to change this file.
+
 Sets a site column from the available content types to a document set
 
 ## SYNTAX

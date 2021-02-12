@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPStructuralNaviga
 # Set-PnPStructuralNavigationCacheWebState
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPStructuralNavigationCacheWebState.md to change this file.
+
 Enable or disable caching for all webs in a site collection.
 
 ## SYNTAX

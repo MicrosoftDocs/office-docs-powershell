@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPGroupMember.h
 # Remove-PnPGroupMember
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPGroupMember.md to change this file.
+
 Removes a user from a group
 
 ## SYNTAX

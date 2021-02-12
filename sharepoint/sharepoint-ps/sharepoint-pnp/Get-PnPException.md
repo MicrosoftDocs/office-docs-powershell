@@ -10,6 +10,10 @@ title: Get-PnPException
 # Get-PnPException
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPException.md to change this file.
+
 Returns the last exception that occurred
 
 ## SYNTAX

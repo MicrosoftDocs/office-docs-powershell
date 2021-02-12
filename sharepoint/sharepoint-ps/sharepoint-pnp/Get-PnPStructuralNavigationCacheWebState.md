@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPStructuralNaviga
 # Get-PnPStructuralNavigationCacheWebState
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPStructuralNavigationCacheWebState.md to change this file.
+
 Get the structural navigation caching state for a web.
 
 ## SYNTAX

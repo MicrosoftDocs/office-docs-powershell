@@ -10,6 +10,10 @@ title: Disable-PnPFeature
 # Disable-PnPFeature
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Disable-PnPFeature.md to change this file.
+
 Disables a feature
 
 ## SYNTAX

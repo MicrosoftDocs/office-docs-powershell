@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Update-PnPUserType.html
 # Update-PnPUserType
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Update-PnPUserType.md to change this file.
+
 Updates an available app from the app catalog
 
 ## SYNTAX

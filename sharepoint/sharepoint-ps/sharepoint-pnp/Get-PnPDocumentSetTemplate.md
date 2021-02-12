@@ -10,6 +10,10 @@ title: Get-PnPDocumentSetTemplate
 # Get-PnPDocumentSetTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPDocumentSetTemplate.md to change this file.
+
 Retrieves a document set template
 
 ## SYNTAX
