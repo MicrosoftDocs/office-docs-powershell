@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/disable-pnpsiteclassification
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Disable-PnPSiteClassification.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Disable-PnPSiteClassification
 ---
-
+  
 # Disable-PnPSiteClassification
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Disable-PnPSiteClassification.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,15 +21,17 @@ title: Disable-PnPSiteClassification
 
 Disables Site Classifications for the tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Disable-PnPSiteClassification [-ByPassPermissionCheck [<SwitchParameter>]]
+Disable-PnPSiteClassification [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Disable-PnPSiteClassification
 ```
@@ -33,18 +40,8 @@ Disables Site Classifications for your tenant.
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

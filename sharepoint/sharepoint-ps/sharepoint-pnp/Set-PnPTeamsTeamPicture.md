@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpteamsteampicture
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTeamsTeamPicture
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTeamsTeamPicture.html
 ---
-
+ 
 # Set-PnPTeamsTeamPicture
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTeamsTeamPicture.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,12 +21,10 @@ title: Set-PnPTeamsTeamPicture
 
 Sets the picture of an existing team.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPTeamsTeamPicture -Team <TeamsTeamPipeBind>
-                        -Path <String>
-                        [-ByPassPermissionCheck [<SwitchParameter>]]
+Set-PnPTeamsTeamPicture -Team <TeamsTeamPipeBind> -Path <String>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +32,7 @@ Notice that this cmdlet will immediately return but it can take a few hours befo
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPTeamsTeamPicture -Team "MyTeam" -Path "c:\myimage.jpg"
 ```
@@ -37,18 +40,6 @@ Set-PnPTeamsTeamPicture -Team "MyTeam" -Path "c:\myimage.jpg"
 Updates the channel called 'MyChannel' to have the display name set to 'My Channel'
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Path
 The path to the image file.
@@ -59,7 +50,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Team
@@ -71,9 +64,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
