@@ -30,7 +30,7 @@ This is useful when you want to associate this application instance with another
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Remove-CsOnlineApplicationInstanceAssociation -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+Remove-CsOnlineApplicationInstanceAssociation -Identities "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 ```
 
 This example removes the configuration association for the application instance that has the identity of "f7a821dc-2d69-5ae8-8525-bcb4a4556093".

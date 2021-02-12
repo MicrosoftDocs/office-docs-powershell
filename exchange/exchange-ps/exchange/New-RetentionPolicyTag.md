@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -202,13 +202,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultAutoGroupPolicyTag
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -218,13 +220,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultModeratedRecipientsPolicyTag
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -234,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -252,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -342,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageFormatForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 

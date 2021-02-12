@@ -663,7 +663,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyJournalingMigrationEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 will be reformatted by Exchange 2010.
 

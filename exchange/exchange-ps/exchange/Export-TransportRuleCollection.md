@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExportLegacyRules
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ExportLegacyRules switch is required to export transport rules from Exchange 2007. You don't need to specify a value with this switch.
 
