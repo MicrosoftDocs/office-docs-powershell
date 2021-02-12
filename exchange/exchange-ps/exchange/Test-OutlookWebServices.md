@@ -12,7 +12,7 @@ ms.reviewer:
 # Test-OutlookWebServices
 
 ## SYNOPSIS
-This cmdlet is available only in Exchange Server 2010.
+This cmdlet is available or functional only in Exchange Server 2010.
 
 Use the Test-OutlookWebServices cmdlet to verify the Autodiscover service settings for Microsoft Outlook on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
 
@@ -61,7 +61,7 @@ The Identity parameter specifies any valid address in the forest. If you specify
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013
 
 Required: False
 Position: 1
@@ -73,13 +73,22 @@ Accept wildcard characters: False
 ### -ClientAccessServer
 This parameter is available or functional only in Exchange Server 2010.
 
-The ClientAccessServer parameter specifies the Client Access server that the client accesses.
+The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- GUID
+
+You can't use this parameter with the AutoDiscoverServer parameter.
 
 ```yaml
 Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -98,13 +107,13 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: Exchange Server 2010, Exchange Server 2013
 ```
 
 ### -DomainController
@@ -114,7 +123,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013
 
 Required: False
 Position: Named
@@ -130,7 +139,7 @@ The MonitoringContext parameter specifies whether the results of the command inc
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013
 
 Required: False
 Position: Named
@@ -146,7 +155,7 @@ The TargetAddress parameter specifies the recipient that's used to test whether 
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013
 
 Required: False
 Position: Named
@@ -162,7 +171,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013
 
 Required: False
 Position: Named

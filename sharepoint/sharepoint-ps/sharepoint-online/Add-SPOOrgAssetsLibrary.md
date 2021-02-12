@@ -38,7 +38,7 @@ Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/brandin
 ```
 ### Example 2
 
-This example adds https://contoso.sharepoint.com/sites/branding/Templates as a designated library for organization assets. Templates is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library. OrgAssetType is the type of Sharepoint library.
+This example adds https://contoso.sharepoint.com/sites/branding/Templates as a designated library for organization assets. Templates is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library. OrgAssetType is the type of SharePoint library.
 
 ```powershell
 Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/branding/Templates -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Templates/contosologo.jpg -OrgAssetType OfficeTemplateLibrary
