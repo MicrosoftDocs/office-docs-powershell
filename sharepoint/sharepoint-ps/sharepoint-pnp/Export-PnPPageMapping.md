@@ -9,6 +9,10 @@ title: Export-PnPPageMapping
 # Export-PnPPageMapping
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPPageMapping.md to change this file.
+
 Get's the built-in maping files or a custom mapping file for your publishing portal page layouts. These mapping files are used to tailor the page transformation experience.
 
 ## SYNTAX 

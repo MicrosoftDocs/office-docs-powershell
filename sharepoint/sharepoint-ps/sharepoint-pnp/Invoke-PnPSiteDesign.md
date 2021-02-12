@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Invoke-PnPSiteDesign.ht
 # Invoke-PnPSiteDesign
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPSiteDesign.md to change this file.
+
 Apply a Site Design to an existing site. * Requires Tenant Administration Rights *
 
 ## SYNTAX

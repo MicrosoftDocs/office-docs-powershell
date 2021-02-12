@@ -8,6 +8,10 @@ schema: 2.0.0
 # Remove-PnPFlow
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPFlow.md to change this file.
+
 Removes the specified flow
 
 ## SYNTAX

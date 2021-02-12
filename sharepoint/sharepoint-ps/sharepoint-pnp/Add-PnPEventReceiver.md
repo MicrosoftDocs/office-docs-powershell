@@ -10,6 +10,10 @@ title: Add-PnPEventReceiver
 # Add-PnPEventReceiver
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPEventReceiver.md to change this file.
+
 Adds a new remote event receiver
 
 ## SYNTAX

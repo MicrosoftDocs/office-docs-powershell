@@ -10,6 +10,10 @@ title: Add-PnPPageWebPart
 # Add-PnPWebPart
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPageWebPart.md to change this file.
+
 Adds a web part to a page
 
 ## SYNTAX

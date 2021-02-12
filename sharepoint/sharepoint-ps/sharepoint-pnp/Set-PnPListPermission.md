@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPListPermission.h
 # Set-PnPListPermission
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPListPermission.md to change this file.
+
 Sets list permissions
 
 ## SYNTAX

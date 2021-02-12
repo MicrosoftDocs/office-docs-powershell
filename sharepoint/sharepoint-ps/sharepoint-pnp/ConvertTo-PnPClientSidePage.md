@@ -9,6 +9,10 @@ title: ConvertTo-PnPClientSidePage
 # ConvertTo-PnPClientSidePage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/ConvertTo-PnPClientSidePage.md to change this file.
+
 Converts a classic page (wiki or web part page) into a Client-Side Page
 
 ## SYNTAX 

@@ -10,6 +10,10 @@ title: Get-PnPContext
 # Get-PnPContext
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPContext.md to change this file.
+
 Returns the current context
 
 ## SYNTAX

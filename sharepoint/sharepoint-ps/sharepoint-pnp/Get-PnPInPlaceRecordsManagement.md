@@ -10,6 +10,10 @@ title: Get-PnPInPlaceRecordsManagement
 # Get-PnPInPlaceRecordsManagement
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPInPlaceRecordsManagement.md to change this file.
+
 Returns if the place records management feature is enabled.
 
 ## SYNTAX

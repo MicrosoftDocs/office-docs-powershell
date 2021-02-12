@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Read-PnPSiteTemplate.ht
 # Read-PnPSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Read-PnPSiteTemplate.md to change this file.
+
 Loads/Reads a PnP file from the file system or a string
 
 ## SYNTAX

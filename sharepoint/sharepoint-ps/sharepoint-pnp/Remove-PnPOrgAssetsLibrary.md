@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPOrgAssetsLibr
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPOrgAssetsLibrary.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site
@@ -25,7 +29,7 @@ Remove-PnPOrgAssetsLibrary -LibraryUrl <String> [-ShouldRemoveFromCdn <Boolean>]
 ```
 
 ## DESCRIPTION
-Removes a given document library as a organizational asset source based on its server relative URL in your Sharepoint Online Tenant. It will not remove the document library itself. It may take some time before this change will be reflected in the webinterface.
+Removes a given document library as a organizational asset source based on its server relative URL in your SharePoint Online Tenant. It will not remove the document library itself. It may take some time before this change will be reflected in the webinterface.
 
 ## EXAMPLES
 

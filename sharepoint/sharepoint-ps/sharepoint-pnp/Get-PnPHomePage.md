@@ -10,6 +10,10 @@ title: Get-PnPHomePage
 # Get-PnPHomePage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPHomePage.md to change this file.
+
 Return the homepage
 
 ## SYNTAX

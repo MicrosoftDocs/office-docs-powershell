@@ -11,6 +11,10 @@ title: Get-PnPMicrosoft365GroupMembers
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPMicrosoft365GroupMembers.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All, User.Read.All, User.ReadWrite.All

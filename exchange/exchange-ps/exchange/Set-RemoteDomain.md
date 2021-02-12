@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceDomain
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Exchange Online organization. Valid values are:
 

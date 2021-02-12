@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPNavigationNod
 # Remove-PnPNavigationNode
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPNavigationNode.md to change this file.
+
 Removes a menu item from either the quicklaunch or top navigation
 
 ## SYNTAX

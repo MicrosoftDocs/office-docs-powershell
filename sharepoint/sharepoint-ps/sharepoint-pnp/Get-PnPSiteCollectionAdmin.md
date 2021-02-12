@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteCollectionAd
 # Get-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteCollectionAdmin.md to change this file.
+
 Returns the current site collection administrators of the site collection in the current context
 
 ## SYNTAX

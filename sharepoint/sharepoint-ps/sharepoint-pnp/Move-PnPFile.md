@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Move-PnPFile.html
 # Move-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Move-PnPFile.md to change this file.
+
 Moves a file or folder to a different location
 
 ## SYNTAX

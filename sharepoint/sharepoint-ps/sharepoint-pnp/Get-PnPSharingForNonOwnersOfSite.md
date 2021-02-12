@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSharingForNonOwn
 # Get-PnPSharingForNonOwnersOfSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSharingForNonOwnersOfSite.md to change this file.
+
 Returns $false if sharing of the site and items in the site is restricted only to owners or $true if members and owners are allowed to share
 
 ## SYNTAX

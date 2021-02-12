@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantAppCatalog
 # Get-PnPTenantAppCatalogUrl
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantAppCatalogUrl.md to change this file.
+
 Retrieves the url of the tenant scoped app catalog
 
 ## SYNTAX

@@ -10,6 +10,10 @@ title: Get-PnPField
 # Get-PnPField
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPField.md to change this file.
+
 Returns a field from a list or site
 
 ## SYNTAX

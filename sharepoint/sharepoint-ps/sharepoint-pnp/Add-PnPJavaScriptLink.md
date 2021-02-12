@@ -10,6 +10,10 @@ title: Add-PnPJavaScriptLink
 # Add-PnPJavaScriptLink
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPJavaScriptLink.md to change this file.
+
 Adds a link to a JavaScript file to a web or sitecollection, valid only for SharePoint classic site experience.
 
 ## SYNTAX

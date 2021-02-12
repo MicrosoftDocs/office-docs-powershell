@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Import-PnPTermSet.html
 # Import-PnPTermSet
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Import-PnPTermSet.md to change this file.
+
 Imports a taxonomy term set from a file in the standard format.
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPProperty.html
 # Get-PnPProperty
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPProperty.md to change this file.
+
 Returns a previously not loaded property of a ClientObject
 
 ## SYNTAX

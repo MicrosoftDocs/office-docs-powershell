@@ -10,6 +10,10 @@ title: Get-PnPFileVersion
 # Get-PnPFileVersion
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFileVersion.md to change this file.
+
 Retrieves all versions of a file.
 
 ## SYNTAX

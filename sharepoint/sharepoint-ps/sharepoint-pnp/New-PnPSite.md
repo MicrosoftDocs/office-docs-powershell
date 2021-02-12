@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPSite.html
 # New-PnPSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPSite.md to change this file.
+
 Creates either a communication site or a Microsoft 365 group-connected team site
 
 ## SYNTAX

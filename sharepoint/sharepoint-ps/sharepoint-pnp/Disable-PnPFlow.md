@@ -8,6 +8,10 @@ schema: 2.0.0
 # Disable-PnPFlow
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Disable-PnPFlow.md to change this file.
+
 Disables a specific flow
 
 ## SYNTAX

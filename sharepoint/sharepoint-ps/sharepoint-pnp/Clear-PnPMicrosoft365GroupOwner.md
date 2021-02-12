@@ -11,6 +11,10 @@ title: Clear-PnPMicrosoft365GroupOwner
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnPMicrosoft365GroupOwner.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All

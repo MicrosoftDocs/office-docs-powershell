@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPSiteGroup.html
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPSiteGroup.md to change this file.
+
+
 Updates the SharePoint Online owner and permission levels on a group inside a site collection.
 
 ## SYNTAX

@@ -9,6 +9,10 @@ title: ConvertTo-PnPPage
 # ConvertTo-PnPPage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/ConvertTo-PnPPage.md to change this file.
+
 Converts a classic page (wiki or web part page) into a modern page
 
 ## SYNTAX 

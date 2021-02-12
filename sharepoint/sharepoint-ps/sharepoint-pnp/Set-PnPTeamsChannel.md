@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTeamsChannel.htm
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTeamsChannel.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API: Group.ReadWrite.All

@@ -10,6 +10,10 @@ title: Get-PnPCustomAction
 # Get-PnPCustomAction
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPCustomAction.md to change this file.
+
 Return user custom actions
 
 ## SYNTAX

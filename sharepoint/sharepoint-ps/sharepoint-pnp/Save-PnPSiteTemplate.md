@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Save-PnPSiteTemplate.ht
 # Save-PnPSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Save-PnPSiteTemplate.md to change this file.
+
 Saves a PnP site template to the file system
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Unpublish-PnPApp.html
 # Unpublish-PnPApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Unpublish-PnPApp.md to change this file.
+
 Unpublishes/retracts an available add-in from the app catalog
 
 ## SYNTAX
