@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-compliancesearch
-applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Set-ComplianceSearch
 schema: 2.0.0
 author: chrisda
@@ -39,14 +39,10 @@ Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-Name <String>]
- [-OneDriveLocation <String[]>]
- [-OneDriveLocationExclusion <String[]>]
  [-PublicFolderLocation <String[]>]
  [-RefinerNames <String[]>]
  [-RemoveExchangeLocation <String[]>]
  [-RemoveExchangeLocationExclusion <String[]>]
- [-RemoveOneDriveLocation <String[]>]
- [-RemoveOneDriveLocationExclusion <String[]>]
  [-RemovePublicFolderLocation <String[]>]
  [-RemoveSharePointLocation <String[]>]
  [-RemoveSharePointLocationExclusion <String[]>]
@@ -104,7 +100,7 @@ You can find these values by running the command Get-ComplianceSearch | Format-T
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: True
 Position: 1
@@ -125,7 +121,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -146,7 +142,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -162,7 +158,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -178,7 +174,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -196,7 +192,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -214,7 +210,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -240,7 +236,7 @@ The mailbox types that are affected by the value of this parameter include:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -259,7 +255,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -277,7 +273,7 @@ This parameter uses a text search string or a query that's formatted by using th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -293,7 +289,7 @@ The Description parameter specifies a description for the compliance search. If 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -317,7 +313,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -338,7 +334,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -354,7 +350,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -364,6 +360,8 @@ Accept wildcard characters: False
 ```
 
 ### -HoldNames
+This parameter is available only in the cloud-based service.
+
 The HoldNames parameter specifies that the content locations that have been placed on hold in the eDiscovery case will be searched. You use the value All for this parameter. You can use this parameter only for compliance searches that are associated with an eDiscovery case.
 
 If the content locations in the compliance search include mailboxes, you also need to use the ExchangeLocation parameter with the value $null. Similarly, if the compliance search includes SharePoint sites, you also need to use the SharePointLocation parameter withthe value $null.
@@ -374,7 +372,7 @@ Also, if a content location was placed on a query-based case hold, only items th
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -395,7 +393,7 @@ The IncludeUserAppContent parameter specifies that you want to search the cloud-
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -413,7 +411,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -429,39 +427,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -471,13 +437,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderLocation
+This parameter is available only in the cloud-based service.
+
 The PublicFolderLocation parameter specifies that you want to include all public folders in the search. You use the value All for this parameter.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -487,13 +455,15 @@ Accept wildcard characters: False
 ```
 
 ### -RefinerNames
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -514,7 +484,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -535,39 +505,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveOneDriveLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveOneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -577,13 +515,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePublicFolderLocation
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -593,6 +533,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
+This parameter is available only in the cloud-based service.
+
 The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -601,7 +543,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -611,6 +553,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationExclusion
+This parameter is available only in the cloud-based service.
+
 This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -619,7 +563,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -629,6 +573,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
+This parameter is available only in the cloud-based service.
+
 The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -637,7 +583,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -647,6 +593,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationExclusion
+This parameter is available only in the cloud-based service.
+
 This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -655,7 +603,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -673,7 +621,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019, Microsoft 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
