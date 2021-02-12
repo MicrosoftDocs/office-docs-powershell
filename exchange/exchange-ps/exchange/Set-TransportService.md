@@ -2062,7 +2062,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-This parameter is available only in Exchange Server 2013.
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 Cumulative Update 7 (CU7) or later, so this parameter has no effect in those versions of Exchange 2013.
 
@@ -2076,7 +2076,7 @@ For example, to specify 60 days for this parameter, use 60.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2086,7 +2086,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-This parameter is available only in Exchange Server 2013.
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
 
@@ -2108,7 +2108,7 @@ The value of the ServerStatisticsLogMaxFileSize parameter must be less than or e
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2118,7 +2118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-This parameter is available only in Exchange Server 2013.
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
 
@@ -2140,7 +2140,7 @@ The value of the ServerStatisticsLogMaxFileSize parameter must be less than or e
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2150,7 +2150,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-This parameter is available only in Exchange Server 2013.
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
 
@@ -2160,7 +2160,7 @@ The ServerStatisticsLogPath parameter specifies the location of server statistic
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

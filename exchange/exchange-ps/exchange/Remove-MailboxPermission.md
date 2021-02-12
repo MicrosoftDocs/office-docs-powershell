@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearAutoMapping
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
 
@@ -234,7 +234,7 @@ To re-add auto-mapping capability on the mailbox for other users, run the comman
 Type: SwitchParameter
 Parameter Sets: ClearAutoMapping
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: Named
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetDefault
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ResetDefault switch resets the default security descriptor of the mailbox. Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
 
@@ -348,7 +348,7 @@ Also, because this switch removes FullAccess permission from other users on the 
 Type: SwitchParameter
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: Named
