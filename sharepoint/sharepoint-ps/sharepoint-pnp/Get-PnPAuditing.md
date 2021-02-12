@@ -10,6 +10,10 @@ title: Get-PnPAuditing
 # Get-PnPAuditing
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAuditing.md to change this file.
+
 Get the Auditing setting of a site
 
 ## SYNTAX

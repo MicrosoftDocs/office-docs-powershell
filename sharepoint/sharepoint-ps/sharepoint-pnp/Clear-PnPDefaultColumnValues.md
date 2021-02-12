@@ -10,6 +10,10 @@ title: Clear-PnPDefaultColumnValues
 # Clear-PnPDefaultColumnValues
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnPDefaultColumnValues.md to change this file.
+
 Clear default column values for a document library
 
 ## SYNTAX

@@ -10,6 +10,10 @@ title: Find-PnPFile
 # Find-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Find-PnPFile.md to change this file.
+
 Finds a file in the virtual file system of the web.
 
 ## SYNTAX

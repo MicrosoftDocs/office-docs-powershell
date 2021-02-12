@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPFileCheckedOut.h
 # Set-PnPFileCheckedOut
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPFileCheckedOut.md to change this file.
+
 Checks out a file
 
 ## SYNTAX

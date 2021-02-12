@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPRoleDefinitio
 # Remove-PnPRoleDefinition
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPRoleDefinition.md to change this file.
+
 Remove a Role Definition from a site
 
 ## SYNTAX

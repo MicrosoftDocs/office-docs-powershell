@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPTenantSequenceTe
 # New-PnPTenantSequenceTeamNoGroupSubSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPTenantSequenceTeamNoGroupSubSite.md to change this file.
+
 Creates a team site subsite with no Microsoft 365 group object
 
 ## SYNTAX

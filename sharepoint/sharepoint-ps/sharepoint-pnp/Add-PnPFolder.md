@@ -10,6 +10,10 @@ title: Add-PnPFolder
 # Add-PnPFolder
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPFolder.md to change this file.
+
 Creates a folder within a parent folder
 
 ## SYNTAX

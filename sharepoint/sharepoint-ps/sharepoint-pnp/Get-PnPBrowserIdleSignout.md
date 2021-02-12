@@ -10,6 +10,10 @@ title: Get-PnPBrowserIdleSignout
 # Get-PnPBrowserIdleSignout
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPBrowserIdleSignout.md to change this file.
+
 Used to retrieve the current configuration values for Idle session sign-out policy.
 
 ## SYNTAX

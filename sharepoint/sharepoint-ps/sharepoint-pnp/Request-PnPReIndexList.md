@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Request-PnPReIndexList.
 # Request-PnPReIndexList
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Request-PnPReIndexList.md to change this file.
+
 Marks the list for full indexing during the next incremental crawl
 
 ## SYNTAX

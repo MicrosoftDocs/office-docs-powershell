@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPGraphSubscriptio
 # New-PnPGraphSubscription
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPGraphSubscription.md to change this file.
+
 Creates a new Microsof Graph Subscription which allows your webhook API to be called when a change occurs in Microsoft Graph
 
 ## SYNTAX

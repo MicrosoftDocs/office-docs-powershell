@@ -10,6 +10,10 @@ title: Get-PnPGroupPermissions
 # Get-PnPGroupPermissions
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPGroupPermissions.md to change this file.
+
 Returns the permissions for a specific SharePoint group
 
 ## SYNTAX

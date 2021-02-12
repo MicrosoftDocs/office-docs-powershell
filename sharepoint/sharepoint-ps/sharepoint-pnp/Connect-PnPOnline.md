@@ -10,6 +10,10 @@ title: Connect-PnPOnline
 # Connect-PnPOnline
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Connect-PnPOnline.md to change this file.
+
 Connect to a SharePoint site
 
 ## SYNTAX

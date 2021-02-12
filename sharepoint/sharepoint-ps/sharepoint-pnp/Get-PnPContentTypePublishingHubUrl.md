@@ -10,6 +10,10 @@ title: Get-PnPContentTypePublishingHubUrl
 # Get-PnPContentTypePublishingHubUrl
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPContentTypePublishingHubUrl.md to change this file.
+
 Returns the url to Content Type Publishing Hub
 
 ## SYNTAX

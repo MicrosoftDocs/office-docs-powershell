@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Publish-PnPApp.html
 # Publish-PnPApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Publish-PnPApp.md to change this file.
+
 Publishes/Deploys/Trusts an available app in the app catalog
 
 ## SYNTAX

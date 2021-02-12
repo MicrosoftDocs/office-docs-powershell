@@ -10,6 +10,10 @@ title: Add-PnPPublishingImageRendition
 # Add-PnPPublishingImageRendition
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPublishingImageRendition.md to change this file.
+
 Adds an Image Rendition if the Name of the Image Rendition does not already exist. This prevents creating two Image Renditions that share the same name.
 
 ## SYNTAX

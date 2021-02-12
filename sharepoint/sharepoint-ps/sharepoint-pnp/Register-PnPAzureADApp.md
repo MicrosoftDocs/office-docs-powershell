@@ -9,6 +9,10 @@ title: Register-PnPAzureADApp
 # Register-PnPAzureADApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Register-PnPAzureADApp.md to change this file.
+
 Register an Azure AD App and optionally creates a new self-signed certificate to use with the application registration.
 
 ## SYNTAX 

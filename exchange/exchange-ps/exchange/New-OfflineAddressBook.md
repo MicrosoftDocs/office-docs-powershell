@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
 
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDistributionEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is distributed via public folders. If the value of the PublicFolderDistributionEnabled parameter is $true, the OAB is distributed via public folders.
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipPublicFolderInitialization
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The SkipPublicFolderInitialization parameter specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. The OAB isn't available for download until the next site folder maintenance cycle has completed. You don't have to specify a value with the SkipPublicFolderInitialization parameter. Omitting this parameter may cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
 
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -Versions
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Versions parameter specifies what version of OAB to generate. The allowed values are:
 

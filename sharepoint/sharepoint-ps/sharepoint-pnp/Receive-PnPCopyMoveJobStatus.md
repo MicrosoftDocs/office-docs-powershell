@@ -8,6 +8,10 @@ schema: 2.0.0
 # Receive-PnPCopyMoveJobStatus
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Receive-PnPCopyMoveJobStatus.md to change this file.
+
 This cmdlets receives Copy or Move job status which is being returned by Copy-PnPFile or Move-PnPFile when using the -NoWait parameter
 
 ## SYNTAX

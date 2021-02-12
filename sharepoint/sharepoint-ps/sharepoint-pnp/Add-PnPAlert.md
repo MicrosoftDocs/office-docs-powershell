@@ -10,6 +10,10 @@ title: Add-PnPAlert
 # Add-PnPAlert
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPAlert.md to change this file.
+
 Adds an alert for a user to a list
 
 ## SYNTAX

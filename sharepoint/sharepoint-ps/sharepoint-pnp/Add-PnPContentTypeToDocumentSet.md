@@ -10,6 +10,10 @@ title: Add-PnPContentTypeToDocumentSet
 # Add-PnPContentTypeToDocumentSet
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPContentTypeToDocumentSet.md to change this file.
+
 Adds a content type to a document set
 
 ## SYNTAX

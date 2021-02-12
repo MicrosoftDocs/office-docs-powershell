@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Sync-PnPAppToTeams.html
 # Sync-PnPAppToTeams
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Sync-PnPAppToTeams.md to change this file.
+
 Synchronize an app from the tenant app catalog to the Microsoft Teams app catalog
 
 ## SYNTAX

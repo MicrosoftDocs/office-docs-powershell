@@ -10,6 +10,10 @@ title: Get-PnPDefaultColumnValues
 # Get-PnPDefaultColumnValues
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPDefaultColumnValues.md to change this file.
+
 Gets the default column values for all folders in document library
 
 ## SYNTAX

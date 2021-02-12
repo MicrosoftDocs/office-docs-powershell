@@ -10,6 +10,10 @@ title: Get-PnPGroup
 # Get-PnPGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPGroup.md to change this file.
+
 Returns a specific SharePoint group or all SharePoint groups in site.
 
 ## SYNTAX
