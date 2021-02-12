@@ -27,7 +27,7 @@ Get-MyAnalyticsFeatureConfig -Identity <String>
 ```
 
 ## DESCRIPTION
-To run this cmdlet, you need to be a member of the 'Global Administrator' or the 'Exchange Administrator' directory role group in the destination organization. To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#role-template-ids). 
+To run this cmdlet, you need to be a member of the 'Global Administrator' or the 'Exchange Administrator' directory role group in the destination organization. To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids). 
 
 ## EXAMPLES
 
