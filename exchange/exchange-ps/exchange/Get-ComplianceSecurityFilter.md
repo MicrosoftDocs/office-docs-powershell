@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-ComplianceSecurityFilter cmdlet to view compliance security filters in the Security & Compliance Center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Microsoft 365 organization.
 
@@ -65,7 +65,7 @@ The Action parameter filters the results by the type of search action that a fil
 Type: ComplianceSecurityFilterActionType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ The FilterName parameter specifies the name of the compliance security filter th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ The User parameter filters the results by the user who gets a filter applied to 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

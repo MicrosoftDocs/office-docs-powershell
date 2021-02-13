@@ -1857,7 +1857,7 @@ This parameter is available only in the cloud-based service.
 The FindTimeOnlineMeetingOptionDisabled parameter controls the availability of the **Online meeting** checkbox for Teams or Skype in meeting polls using the FindTime Outlook add-in. Valid values are:
 
 - $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
-- $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting. 
+- $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
