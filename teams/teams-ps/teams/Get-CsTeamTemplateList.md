@@ -75,7 +75,7 @@ Returns all en-US templates that have 3 channels within the universe of template
 
 ### -PublicTemplateLocale
 
-The language and country code of templates localization.
+The language and country code of templates localization for Microsoft team templates. This will not be applied to your tenant custom team templates. Defaults to en-US.
 
 ```yaml
 Type: String
