@@ -67,24 +67,10 @@ New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICreateT
 ### EXAMPLE 1
 
 ```powershell
-(Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US') \> input.json
+PS C:> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US') > input.json
 # open json in your favorite editor, make changes
 
-New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
-
-{
-  "id": "061fe692-7da7-4f65-a57b-0472cf0045af",
-  "name": "New Template",
-  "scope": "Tenant",
-  "shortDescription": "New Description",
-  "iconUri": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "channelCount": 2,
-  "appCount": 2,
-  "modifiedOn": "2020-12-10T18:46:52.7231705Z",
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "locale": "en-US",
-  "@odata.id": "/api/teamtemplates/v1.0/061fe692-7da7-4f65-a57b-0472cf0045af/Tenant/en-US"
-}
+PS C:> New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
 ```
 
 Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
@@ -93,36 +79,53 @@ Step 2: Create a new template from the JSON file named “input”.
 ### EXAMPLE 2
 
 ```powershell
-New-CsTeamTemplate `
--Locale en-US `
--DisplayName 'New Template' `
--ShortDescription 'New Description' `
--App @{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'} `
--Channel @{ `
-  displayName="General"; `
-  id="General"; `
-  isFavoriteByDefault=$true; `
-}, `
+PS C:> $template = Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US'
+PS C:> $template | Format-List # show the output object as it would be accessed
+
+PS C:> $template.ExtendedProperty.Category = $null # unset category to copy from public template
+PS C:> $template.DisplayName = 'New Template from object'
+PS C:> $template.TeamDefinition.Channel[1].DisplayName += ' modified'
+## add a new channel to the channel list
+PS C:> $template.TeamDefinition.Channel += `
 @{ `
   displayName="test"; `
   id="b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
   isFavoriteByDefault=$false; `
 }
 
-{
-  "id": "061fe692-7da7-4f65-a57b-0472cf0045af",
-  "name": "New Template",
-  "scope": "Tenant",
-  "shortDescription": "New Description",
-  "iconUri": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "channelCount": 2,
-  "appCount": 2,
-  "modifiedOn": "2020-12-10T18:46:52.7231705Z",
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "locale": "en-US",
-  "@odata.id": "/api/teamtemplates/v1.0/061fe692-7da7-4f65-a57b-0472cf0045af/Tenant/en-US"
-}
+PS C:> New-CsTeamTemplate -Locale en-US -Body $template
 ```
+
+Create a template using a complex object syntax.
+
+### EXAMPLE 3
+
+```powershell
+PS C:> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
+DisplayName='New Template'; `
+ExtendedProperty=@{`
+  ShortDescription='Short Definition'`
+};`
+Description='New Description'; `
+TeamDefinition=@{`
+  App=@{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'}; `
+  Channel=@{ `
+    displayName = "General"; `
+    id= "General"; `
+    isFavoriteByDefault= $true `
+    }, `
+    @{ `
+      displayName= "test"; `
+      id= "b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
+      isFavoriteByDefault= $false `
+    }`
+  }`
+}
+
+PS C:> New-CsTeamTemplate -Locale en-US -Body $template
+```
+
+Create template from scratch
 
 ## PARAMETERS
 

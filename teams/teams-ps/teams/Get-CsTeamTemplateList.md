@@ -40,16 +40,7 @@ Get a list of available team templates
 ### EXAMPLE 1
 
 ```powershell
-Get-CsTeamTemplateList
-
-OdataId                                                         Name                           ShortDescription                 Chann AppCo
-                                                                                                                                elCou unt
-                                                                                                                                nt
--------                                                         ----                           ----------------                 ----- -----
-/api/teamtemplates/v1.0/healthcareWard/Public/en-US             Collaborate on Patient Care    Collaborate on patient care i... 6     1
-/api/teamtemplates/v1.0/healthcareHospital/Public/en-US         Hospital                       Facilitate collaboration with... 6     1
-/api/teamtemplates/v1.0/retailStore/Public/en-US                Organize a Store               Collaborate with your retail ... 3     1
-/api/teamtemplates/v1.0/retailManagerCollaboration/Public/en-US Retail - Manager Collaboration Collaborate with managers acr... 3     1
+PS C:> Get-CsTeamTemplateList
 ```
 
 Returns all en-US templates within the universe of templates the admin’s tenant has access to.
@@ -59,14 +50,7 @@ Note: All 1P Microsoft templates will always be returned in the specified locale
 ### EXAMPLE 2
 
 ```powershell
-(Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
-
-OdataId                                                 Name                           ShortDescription                 Chann AppCo
-                                                                                                                        elCou unt
-                                                                                                                        nt
--------                                                 ----                           ----------------                 ----- -----
-/api/teamtemplates/v1.0/healthcareWard/Public/en-US     Collaborate on Patient Care    Collaborate on patient care i... 6     1
-/api/teamtemplates/v1.0/healthcareHospital/Public/en-US Hospital                       Facilitate collaboration with... 6     1
+PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
 ```
 
 Returns all en-US templates that have 3 channels within the universe of templates the admin’s tenant has access to.

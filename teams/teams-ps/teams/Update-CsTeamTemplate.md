@@ -67,25 +67,10 @@ Update-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICrea
 ### EXAMPLE 1
 
 ```powershell
-(Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR') > input.json
+PS C:> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR') > input.json
 # open json in your favorite editor, make changes
 
 Update-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' -Body (Get-Content '.\input.json' | Out-String)
-
-{
-  "id": "bfd1ccc8-40f4-4996-833f-461947d23348",
-  "name": "Hi Im another powershell-created template",
-  "scope": "Tenant",
-  "description": "Contoso Pharmaceuticals External Project description 123",
-  "shortDescription": "12345678io",
-  "iconUri": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "channelCount": 5,
-  "appCount": 8,
-  "modifiedOn": "2020-12-10T18:50:46.8617235Z",
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "locale": "fr-FR",
-  "@odata.id": "/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR"
-}
 ```
 
 Step 1: Creates a JSON file of the template you have specified.
@@ -94,7 +79,36 @@ Step 2: Updates the template with JSON file you have edited.
 ### EXAMPLE 2
 
 ```powershell
-Update-CsTeamTemplate  -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' `
+PS C:> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
+DisplayName='New Template'; `
+ExtendedProperty=@{`
+  ShortDescription='Short Definition'`
+};`
+Description='New Description'; `
+TeamDefinition=@{`
+  App=@{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'}; `
+  Channel=@{ `
+    displayName = "General"; `
+    id= "General"; `
+    isFavoriteByDefault= $true `
+    }, `
+    @{ `
+      displayName= "test"; `
+      id= "b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
+      isFavoriteByDefault= $false `
+    }`
+  }`
+}
+
+PS C:> Update-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' -Body $template
+```
+
+Update to a new object
+
+### EXAMPLE 3
+
+```powershell
+PS C:> Update-CsTeamTemplate  -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' `
 -Locale en-US -DisplayName 'New Template' `
 -ShortDescription 'New Description' `
 -App @{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'} `
@@ -107,20 +121,6 @@ isFavoriteByDefault= $true `
   displayName= "test"; `
   id= "b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
   isFavoriteByDefault= $false `
-}
-
-{
-  "id": "bfd1ccc8-40f4-4996-833f-461947d23348",
-  "name": "New Template",
-  "scope": "Tenant",
-  "shortDescription": "New Description",
-  "iconUri": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "channelCount": 2,
-  "appCount": 2,
-  "modifiedOn": "2020-12-10T18:53:58.5153001Z",
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "locale": "fr-FR",
-  "@odata.id": "/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR"
 }
 ```
 

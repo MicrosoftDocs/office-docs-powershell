@@ -43,99 +43,15 @@ This cmdlet supports retrieving details of a team template available to your ten
 ### EXAMPLE 1
 
 ```powershell
-(Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Get-CsTeamTemplate -OdataId $_.OdataId}
-
-{
-  "templateId": "cefcf333-91a9-43d0-919f-bbca5b7d2b24",
-  "displayName": "test",
-  "description": "test",
-  "schemaVersion": "v1.0",
-  "scope": "Tenant",
-  "locale": "en-US",
-  "icon": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "discoverySettings": {
-    "showInTeamsSearchAndSuggestions": false
-  },
-  "visibility": "Private",
-  "channels": [
-    {
-      "id": "General",
-      "displayName": "General",
-      "isFavoriteByDefault": true,
-      "tabs": [ ]
-    },
-    {
-      "id": "744414e7-01d7-4108-bf95-b3d0441150c7",
-      "displayName": "test",
-      "description": "",
-      "isFavoriteByDefault": true,
-      "tabs": [ ]
-    },
-    {
-      "id": "ca606482-13f6-4611-9061-e7f47e556d8e",
-      "displayName": "test123",
-      "description": "",
-      "isFavoriteByDefault": false,
-      "tabs": [ ]
-    },
-    {
-      "id": "a94d85ec-b7d7-44e9-83f6-86a4f4dc8da9",
-      "displayName": "1234",
-      "description": "",
-      "isFavoriteByDefault": false,
-      "tabs": [ ]
-    }
-  ],
-  "memberSettings": {
-    "allowCreateUpdateChannels": false,
-    "allowDeleteChannels": false,
-    "allowAddRemoveApps": false,
-    "uploadCustomApp": false,
-    "allowCreateUpdateRemoveTabs": false,
-    "allowCreateUpdateRemoveConnectors": false,
-    "allowCreatePrivateChannels": false
-  },
-  "guestSettings": {
-    "allowCreateUpdateChannels": false,
-    "allowDeleteChannels": false
-  },
-  "messagingSettings": {
-    "allowUserEditMessages": false,
-    "allowUserDeleteMessages": false,
-    "allowOwnerDeleteMessages": false,
-    "allowTeamMentions": false,
-    "allowChannelMentions": false
-  },
-  "funSettings": {
-    "allowGiphy": false,
-    "allowStickersAndMemes": false,
-    "allowCustomMemes": false
-  },
-  "isMembershipLimitedToOwners": false,
-  "apps": [
-    {
-      "id": "26bc2873-6023-480c-a11b-76b66605ce8c"
-    },
-    {
-      "id": "com.microsoft.teamspace.tab.planner"
-    },
-    {
-      "id": "com.microsoft.teamspace.tab.vsts"
-    }
-  ],
-  "isDynamicMembership": false,
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "modifiedOn": "2020-08-21T13:02:48.2021992Z",
-  "shortDescription": "test"
-}
+PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Get-CsTeamTemplate -OdataId $_.OdataId}
 ```
 
-Returns template in JSON format for templates that have locale set to en-US and template names that include ‘test’the universe of templates the admin’s tenant has access to.
+Within the universe of templates the admin’s tenant has access to, returns a template definition object (displayed as a JSON by default) for every custom and every Microsoft en-US template which names include ‘test’.
 
 ### EXAMPLE 2
 
 ```powershell
-Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/cefcf333-91a9-43d0-919f-bbca5b7d2b24/Tenant/en-US' > 'config.json'
+PS C:> Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/cefcf333-91a9-43d0-919f-bbca5b7d2b24/Tenant/en-US' > 'config.json'
 ```
 
 Saves the template with specified template ID as a JSON file.
