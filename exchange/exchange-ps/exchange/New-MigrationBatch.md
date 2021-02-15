@@ -1011,7 +1011,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderToUnifiedGroup
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The PublicFolderToUnifiedGroup switch specifies a migration from public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
@@ -1019,7 +1019,7 @@ The PublicFolderToUnifiedGroup switch specifies a migration from public folders 
 Type: SwitchParameter
 Parameter Sets: PublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: Named

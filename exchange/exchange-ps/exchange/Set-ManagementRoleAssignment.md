@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the role assignment to.
 
@@ -308,7 +308,7 @@ You can't use this parameter with any of the other scope parameters.
 Type: AdministrativeUnitIdParameter
 Parameter Sets: RecipientAdministrativeUnitScope
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named

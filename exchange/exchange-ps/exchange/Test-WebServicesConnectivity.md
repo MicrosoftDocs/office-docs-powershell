@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### ClientAccessServer2010
+### Default
 ```
 Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>]
  [-AllowUnsecureAccess]
@@ -151,9 +151,9 @@ You can't use this parameter with the AutoDiscoverServer parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: ClientAccessServer2010
+Parameter Sets: Default, ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
