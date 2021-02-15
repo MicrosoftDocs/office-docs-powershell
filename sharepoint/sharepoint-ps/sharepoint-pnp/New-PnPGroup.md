@@ -1,39 +1,38 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpgroup
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPGroup
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPGroup.html
 ---
-
+ 
 # New-PnPGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPGroup.md to change this file.
+
 Adds group to the Site Groups List and returns a group object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPGroup -Title <String>
-             [-Description <String>]
-             [-Owner <String>]
-             [-AllowRequestToJoinLeave [<SwitchParameter>]]
-             [-AutoAcceptRequestToJoinLeave [<SwitchParameter>]]
-             [-AllowMembersEditMembership [<SwitchParameter>]]
-             [-DisallowMembersViewMembership [<SwitchParameter>]]
-             [-RequestToJoinEmail <String>]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+New-PnPGroup -Title <String> [-Description <String>] [-Owner <String>] [-AllowRequestToJoinLeave]
+ [-AutoAcceptRequestToJoinLeave] [-AllowMembersEditMembership] [-OnlyAllowMembersViewMembership]
+ [-DisallowMembersViewMembership] [-RequestToJoinEmail <String>] [-SetAssociatedGroup <AssociatedGroupType>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPGroup -Title "My Site Users"
 ```
-
-
 
 ## PARAMETERS
 
@@ -46,7 +45,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowRequestToJoinLeave
@@ -58,7 +59,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AutoAcceptRequestToJoinLeave
@@ -70,67 +73,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Description
-The description for the group
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -DisallowMembersViewMembership
-A switch parameter that disallows group members to view membership.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Owner
-The owner for the group, which can be a user or another group
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -RequestToJoinEmail
-The e-mail address to which membership requests are sent
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Title
-The Title of the group
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -142,25 +87,113 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -Description
+The description for the group
 
 ```yaml
-Type: WebPipeBind
+Type: String
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -DisallowMembersViewMembership
+A switch parameter that disallows group members to view membership.
 
-### Microsoft.SharePoint.Client.Group
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnlyAllowMembersViewMembership
+{{ Fill OnlyAllowMembersViewMembership Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Owner
+The owner for the group, which can be a user or another group
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestToJoinEmail
+The e-mail address to which membership requests are sent
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SetAssociatedGroup
+{{ Fill SetAssociatedGroup Description }}
+
+```yaml
+Type: AssociatedGroupType
+Parameter Sets: (All)
+Accepted values: None, Visitors, Members, Owners
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+The Title of the group
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

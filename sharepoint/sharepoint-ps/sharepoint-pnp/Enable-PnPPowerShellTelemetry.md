@@ -1,20 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnppowershelltelemetry
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Enable-PnPPowerShellTelemetry.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Enable-PnPPowerShellTelemetry
 ---
-
+  
 # Enable-PnPPowerShellTelemetry
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Enable-PnPPowerShellTelemetry.md to change this file.
+
 Enables PnP PowerShell telemetry tracking.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Enable-PnPPowerShellTelemetry [-Force [<SwitchParameter>]]
+Enable-PnPPowerShellTelemetry [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,14 +27,14 @@ In order to help to make PnP PowerShell better, we can track anonymous telemetry
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Enable-PnPPowerShellTelemetry
 ```
 
 Will prompt you to confirm to enable telemetry tracking.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Enable-PnPPowerShellTelemetry -Force
 ```
@@ -47,9 +52,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

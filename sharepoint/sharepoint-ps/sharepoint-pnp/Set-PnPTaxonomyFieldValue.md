@@ -1,60 +1,60 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptaxonomyfieldvalue
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTaxonomyFieldValue
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTaxonomyFieldValue.html
 ---
-
+ 
 # Set-PnPTaxonomyFieldValue
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTaxonomyFieldValue.md to change this file.
+
 Sets a taxonomy term value in a listitem field
 
-## SYNTAX 
+## SYNTAX
 
-### ITEMS
+### ITEM (Default)
 ```powershell
-Set-PnPTaxonomyFieldValue -ListItem <ListItem>
-                          -InternalFieldName <String>
-                          [-Terms <Hashtable>]
-                          [-Connection <PnPConnection>]
-```
-
-### ITEM
-```powershell
-Set-PnPTaxonomyFieldValue -TermId <GuidPipeBind>
-                          -ListItem <ListItem>
-                          -InternalFieldName <String>
-                          [-Label <String>]
-                          [-Connection <PnPConnection>]
+Set-PnPTaxonomyFieldValue -ListItem <ListItem> -InternalFieldName <String> -TermId <Guid>
+ [-Label <String>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### PATH
 ```powershell
-Set-PnPTaxonomyFieldValue -TermPath <String>
-                          -ListItem <ListItem>
-                          -InternalFieldName <String>
-                          [-Connection <PnPConnection>]
+Set-PnPTaxonomyFieldValue -ListItem <ListItem> -InternalFieldName <String> -TermPath <String>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+### ITEMS
+```powershell
+Set-PnPTaxonomyFieldValue -ListItem <ListItem> -InternalFieldName <String> [-Terms <Hashtable>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPTaxonomyFieldValue -ListItem $item -InternalFieldName 'Department' -TermId 863b832b-6818-4e6a-966d-2d3ee057931c
 ```
 
 Sets the field called 'Department' to the value of the term with the ID specified
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPTaxonomyFieldValue -ListItem $item -InternalFieldName 'Department' -TermPath 'CORPORATE|DEPARTMENTS|HR'
 ```
 
 Sets the field called 'Department' to the term called HR which is located in the DEPARTMENTS termset, which in turn is located in the CORPORATE termgroup.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPTaxonomyFieldValue -ListItem $item -InternalFieldName 'Department' -Terms @{"TermId1"="Label1";"TermId2"="Label2"}
 ```
@@ -63,16 +63,32 @@ Sets the field called 'Department' with multiple terms by ID and label. You can 
 
 ## PARAMETERS
 
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InternalFieldName
 The internal name of the field
 
 ```yaml
 Type: String
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Label
@@ -84,7 +100,9 @@ Parameter Sets: ITEM
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ListItem
@@ -92,23 +110,27 @@ The list item to set the field value to
 
 ```yaml
 Type: ListItem
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermId
 The Id of the Term
 
 ```yaml
-Type: GuidPipeBind
+Type: Guid
 Parameter Sets: ITEM
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermPath
@@ -120,7 +142,9 @@ Parameter Sets: PATH
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Terms
@@ -132,21 +156,12 @@ Parameter Sets: ITEMS
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

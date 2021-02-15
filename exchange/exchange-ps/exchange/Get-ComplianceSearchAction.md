@@ -111,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -Case
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

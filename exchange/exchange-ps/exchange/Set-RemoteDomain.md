@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceDomain
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Exchange Online organization. Valid values are:
 
@@ -609,6 +609,22 @@ The UseSimpleDisplayName parameter specifies whether the sender's simple display
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False

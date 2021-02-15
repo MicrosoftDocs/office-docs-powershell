@@ -52,7 +52,7 @@ The OrganizationGuid parameter specifies the on-premises organization in a hybri
 Type: OnPremisesOrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: 2
