@@ -35,10 +35,6 @@ This cmdlets returns the effective policies for a user, based on either direct p
 
 This cmdlet does not currently support returning policies for multiple users.
 
-The user identity can be found in Azure AD PowerShell using the following command: `Get-AzureADUser -ObjectID [AzureAD Username e.g a.smith@example.com]`.
-
-Alternatively, the command can use the AzureAD username instead of the ObjectID, for example: `Get-CsUserPolicyAssignment -Identity <a.smith@example.com> [-PolicyType <String>]`.
-
 ## EXAMPLES
 
 ### Example 1
@@ -94,6 +90,8 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 
 ### -Identity
 The identify of the user whose policy assignments will be returned.
+
+The -Identity parameter can be in the form of the users ObjectID (taken from Azure AD) or in the form of the UPN (a.smith@example.com)
 
 ```yaml
 Type: String
