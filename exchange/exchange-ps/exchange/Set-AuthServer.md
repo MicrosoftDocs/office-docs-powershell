@@ -27,6 +27,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf]
@@ -41,6 +42,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf]
@@ -53,6 +55,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-RefreshAuthMetadata]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf]
@@ -145,6 +148,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainName
+{{ Fill DomainName Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

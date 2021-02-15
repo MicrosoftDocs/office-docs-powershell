@@ -1,24 +1,26 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptermlabel
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPTermLabel
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPTermLabel.html
 ---
-
+ 
 # New-PnPTermLabel
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPTermLabel.md to change this file.
+
 Creates a localized label for a taxonomy term
 
-## SYNTAX 
+## SYNTAX
+
 
 ```powershell
-New-PnPTermLabel -Term <Id, Title or TaxonomyItem>
-                 -Name <String>
-                 -Lcid <Int>
-                 [-IsDefault [<SwitchParameter>]]
-                 [-Connection <PnPConnection>]
+New-PnPTermLabel -Term <TaxonomyTermPipeBind> -Name <String> -Lcid <Int32> [-IsDefault] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,14 +28,14 @@ Creates a localized label for a taxonomy term. Use Get-PnPTerm -Include Labels t
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPTermLabel -Name "Finanzwesen" -Lcid 1031 -Term (Get-PnPTerm -Identity "Finance" -TermSet "Departments" -TermGroup "Corporate")
 ```
 
 Creates a new localized taxonomy label in German (LCID 1031) named "Finanzwesen" for the term "Finance" in the termset Departments which is located in the "Corporate" termgroup
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPTerm -Identity "Finance" -TermSet "Departments" -TermGroup "Corporate" | New-PnPTermLabel -Name "Finanzwesen" -Lcid 1031
 ```
@@ -47,23 +49,27 @@ Makes this new label the default label
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Lcid
 The locale id to use for the localized term
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Name
@@ -75,37 +81,26 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Term
-The term to add the localized label to
+The term to add the localized label to.
 
 ```yaml
-Type: Id, Title or TaxonomyItem
+Type: TaxonomyTermPipeBind
 Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.Taxonomy.Label
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

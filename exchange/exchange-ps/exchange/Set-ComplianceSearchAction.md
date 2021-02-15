@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-ComplianceSearchAction
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available or functional only in on-premises Exchange.
 
 Use the Set-ComplianceSearchAction cmdlet to change the export key on export compliance search actions in on-premises Exchange.
 
@@ -54,7 +54,7 @@ The Identity parameter specifies the compliance search action that you want to m
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: True
 Position: 1
@@ -72,7 +72,7 @@ This parameter is only meaningful on export compliance search actions.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -101,13 +101,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

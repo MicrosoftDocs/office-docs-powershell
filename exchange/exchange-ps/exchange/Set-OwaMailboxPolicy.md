@@ -33,6 +33,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
  [-BookingsMailboxCreationEnabled <Boolean>]
+ [-BoxAttachmentsEnabled <Boolean>]
  [-CalendarEnabled <Boolean>]
  [-ChangePasswordEnabled <Boolean>]
  [-ClassicAttachmentsEnabled <Boolean>]
@@ -47,6 +48,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DisableFacebook]
  [-DisplayPhotosEnabled <Boolean>]
  [-DomainController <Fqdn>]
+ [-DropboxAttachmentsEnabled <Boolean>]
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
@@ -59,6 +61,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ForceWebReadyDocumentViewingFirstOnPublicComputers <Boolean>]
  [-FreCardsEnabled <Boolean>]
  [-GlobalAddressListEnabled <Boolean>]
+ [-GoogleDriveAttachmentsEnabled <Boolean>]
  [-GroupCreationEnabled <Boolean>]
  [-InstantMessagingEnabled <Boolean>]
  [-InstantMessagingType <InstantMessagingTypeOptions>]
@@ -109,7 +112,6 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-TextMessagingEnabled <Boolean>]
  [-ThemeSelectionEnabled <Boolean>]
  [-ThirdPartyAttachmentsEnabled <Boolean>]
- [-ThirdPartyFileProvidersEnabled <Boolean>]
  [-UMIntegrationEnabled <Boolean>]
  [-UNCAccessOnPrivateComputersEnabled <Boolean>]
  [-UNCAccessOnPublicComputersEnabled <Boolean>]
@@ -453,6 +455,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BoxAttachmentsEnabled
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CalendarEnabled
 This parameter is functional only in on-premises Exchange.
 
@@ -739,6 +759,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DropboxAttachmentsEnabled
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExplicitLogonEnabled
 This parameter is available only in on-premises Exchange.
 
@@ -1001,6 +1039,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GoogleDriveAttachmentsEnabled
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
@@ -1013,7 +1069,7 @@ The GroupCreationEnabled parameter specifies whether Microsoft 365 Group creatio
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1406,7 +1462,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
@@ -1792,7 +1848,7 @@ The SilverlightEnabled parameter specifies whether a user can use Microsoft Silv
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1802,7 +1858,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook on the web. Valid values are:
 
@@ -1813,7 +1869,7 @@ The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whe
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1836,7 +1892,7 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1859,7 +1915,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1953,7 +2009,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAttachmentsEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1963,27 +2019,7 @@ To enable or disable third party attachments in Outlook on the web, use the Addi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyFileProvidersEnabled
-This parameter is available only in the cloud-based service.
-
-This parameter has been deprecated and is no longer used.
-
-To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2090,7 +2126,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserVoiceEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The UserVoiceEnabled parameter specifies whether to enable or disable Outlook UserVoice in Outlook on the web. Outlook UserVoice is a customer feedback area that's available in Microsoft 365. Valid values are:
 
@@ -2101,7 +2137,7 @@ The UserVoiceEnabled parameter specifies whether to enable or disable Outlook Us
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

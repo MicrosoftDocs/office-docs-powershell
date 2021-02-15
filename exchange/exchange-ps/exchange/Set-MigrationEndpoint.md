@@ -363,7 +363,7 @@ For an IMAP migration, the Security parameter specifies the encryption method us
 Type: IMAPSecurityMechanism
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
