@@ -1580,7 +1580,8 @@ Accept wildcard characters: False
 ### -RemoveMailboxProvisioningConstraint
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveMailboxProvisioningConstraint Description }}
+Removes the mailbox provisioning constraint from the user. 
+This parameter should be used when the provisioning constraint is no longer needed, or if it's preventing the mailbox from being moved.
 
 ```yaml
 Type: SwitchParameter
