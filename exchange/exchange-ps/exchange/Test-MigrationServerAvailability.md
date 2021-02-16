@@ -449,13 +449,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PublicFolder, MrsProxyPublicFolder
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -465,13 +467,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabaseServerLegacyDN
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named

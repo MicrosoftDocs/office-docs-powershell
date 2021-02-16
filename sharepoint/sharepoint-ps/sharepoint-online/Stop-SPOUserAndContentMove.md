@@ -24,7 +24,7 @@ Stop-SPOUserAndContentMove [-UserPrincipalName] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Stops the ability to move a user's content related objects in a Sharepoint Online Tenant
+Stops the ability to move a user's content related objects in a SharePoint Online Tenant
 
 ## EXAMPLES
 

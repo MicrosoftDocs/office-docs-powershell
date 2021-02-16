@@ -61,7 +61,7 @@ New-RetentionCompliancePolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-New policies are not valid and will not be applied until a retention rule is added to the policy. In addition, at least one location parameter must be defined to create a retention policy.
+New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](New-RetentionComplianceRule.md). In addition, at least one location parameter must be defined to create a retention policy.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
@@ -70,9 +70,11 @@ You need to be assigned permissions in the Security & Compliance Center before y
 ### Example 1
 ```powershell
 New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
+New-RetentionComplianceRule -Name RetUnlimited -Policy "Regulation 123 Compliance" -RetentionDuration Unlimited
 ```
 
-This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+The first command in this example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+The second command creates a new retention rule named "RetUnlimited" and adds it to the retention policy created with the fist command.
 
 ## PARAMETERS
 

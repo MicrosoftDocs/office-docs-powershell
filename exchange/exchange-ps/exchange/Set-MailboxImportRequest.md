@@ -22,23 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Rehome
-```
-Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
- [-RehomeRequest]
- [-AzureSharedAccessSignatureToken <String>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-RequestExpiryInterval <Unlimited>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### Identity
 ```
 Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-AcceptLargeDataLoss]
- [-AzureSharedAccessSignatureToken <String>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
@@ -47,10 +34,18 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Priority <RequestPriority>]
- [-RemoteCredential <PSCredential>]
- [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Rehome
+```
+Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -106,24 +101,6 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureSharedAccessSignatureToken
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -307,44 +284,6 @@ Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteCredential
-This parameter is available only in on-premises Exchange.
-
-The RemoteCredential parameter specifies the username and password an administrator who has permission to perform the mailbox import request.
-
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
-
-```yaml
-Type: PSCredential
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteHostName
-This parameter is available only in on-premises Exchange.
-
-The RemoteHostName parameter specifies the FQDN of the cross-forest organization from which you're configuring the import request.
-
-```yaml
-Type: Fqdn
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

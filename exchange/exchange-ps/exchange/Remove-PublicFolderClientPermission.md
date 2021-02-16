@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The AccessRights parameter specifies the rights being removed. This parameter accepts the following values:
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
