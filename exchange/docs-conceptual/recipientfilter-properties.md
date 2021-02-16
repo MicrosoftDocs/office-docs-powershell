@@ -39,7 +39,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
 
-- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`).
+- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`). In Exchange Online PowerShell, you can't use the wildcard as a prefix (for example, `"Property -like '*abc'"`) is not allowed).
 
 - The Value column in the table describes the acceptable values for the *filter*, not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
 
@@ -141,7 +141,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_Initials_|_initials_|String (wildcards accepted).||
 |_InPlaceHolds_|_msExchUserHoldPolicies_|String||
 |_InPlaceHoldsRaw_|n/a|String||
-|_InternetEncoding_|_internetEncoding_|Integer|For valid values, see the Remarks section in the topic, [Encoding Class](https://docs.microsoft.com/dotnet/api/system.text.encoding).|
+|_InternetEncoding_|_internetEncoding_|Integer|For valid values, see the Remarks section in the article, [Encoding Class](https://docs.microsoft.com/dotnet/api/system.text.encoding).|
 |_IsDirSynced_|_msExchIsMSODirsynced_|Boolean (`$true` or `$false`)||
 |_IsExcludedFromServingHierarchy_|n/a|Boolean (`$true` or `$false`)||
 |_IsHierarchyReady_|n/a|Boolean (`$true` or `$false`)||

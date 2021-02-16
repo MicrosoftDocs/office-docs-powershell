@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesignrunstatus
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSiteDesignRunStatus
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteDesignRunStatus.html
 ---
-
+ 
 # Get-PnPSiteDesignRunStatus
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteDesignRunStatus.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,16 +21,18 @@ title: Get-PnPSiteDesignRunStatus
 
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPSiteDesignRunStatus -Run <TenantSiteDesignRun>
-                           [-Connection <PnPConnection>]
+Get-PnPSiteDesignRunStatus -Run <TenantSiteDesignRun> [-Connection <PnPConnection>]  
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $myrun = Get-PnPSiteDesignRun -WebUrl "https://contoso.sharepoint.com/sites/project-playbook" -SiteDesignId cefd782e-sean-4814-a68a-b33b116c302f
 Get-PnPSiteDesignRunStatus -Run $myrun
@@ -35,16 +42,19 @@ This example gets the run for a specific site design applied to a site and sets 
 
 ## PARAMETERS
 
-### -Run
-The site design run for the desired set of script action details.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: TenantSiteDesignRun
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -56,9 +66,41 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Run
+The site design run for the desired set of script action details.
+
+```yaml
+Type: TenantSiteDesignRun
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

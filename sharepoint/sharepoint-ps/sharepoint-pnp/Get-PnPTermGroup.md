@@ -1,43 +1,49 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptermgroup
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTermGroup
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTermGroup.html
 ---
-
+ 
 # Get-PnPTermGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTermGroup.md to change this file.
+
 Returns a taxonomy term group
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
-Get-PnPTermGroup [-Includes <String[]>]
-                 [-Identity <Id, Title or TaxonomyItem>]
-                 [-TermStore <Id, Name or Object>]
-                 [-Connection <PnPConnection>]
+Get-PnPTermGroup
+ [-Identity <TaxonomyTermGroupPipeBind>]
+ [-TermStore <TaxonomyTermStorePipeBind>]
+ [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTermGroup
 ```
 
 Returns all Term Groups in the site collection termstore
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPTermGroup -Identity "Departments"
 ```
 
 Returns the termgroup named "Departments" from the site collection termstore
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPTermGroup -Identity ab2af486-e097-4b4a-9444-527b251f1f8d
 ```
@@ -50,56 +56,33 @@ Returns the termgroup with the given ID from the site collection termstore
 Name of the taxonomy term group to retrieve.
 
 ```yaml
-Type: Id, Title or TaxonomyItem
+Type: TaxonomyTermGroupPipeBind
 Parameter Sets: (All)
 Aliases: GroupName
 
 Required: False
 Position: 0
-Accept pipeline input: True
-```
-
-### -Includes
-Specify properties to include when retrieving objects from the server.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -TermStore
-Term store to check; if not specified the default term store is used.
+Term store to use; if not specified the default term store is used.
 
 ```yaml
-Type: Id, Name or Object
+Type: TaxonomyTermStorePipeBind
 Parameter Sets: (All)
 Aliases: TermStoreName
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.Taxonomy.TermGroup
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

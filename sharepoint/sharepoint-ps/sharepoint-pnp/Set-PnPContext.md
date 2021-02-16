@@ -1,20 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpcontext
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPContext
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPContext.html
 ---
-
+ 
 # Set-PnPContext
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPContext.md to change this file.
+
 Set the ClientContext
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPContext -Context <ClientContext>
+Set-PnPContext [-Context] <ClientContext> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +27,7 @@ Sets the Client Context to use by the cmdlets, which allows easy context switchi
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Connect-PnPOnline -Url $siteAurl -Credentials $credentials
 $ctx = Get-PnPContext
@@ -32,8 +37,6 @@ Get-PnPList # returns the lists from the site specified with $siteBurl
 Set-PnPContext -Context $ctx # switch back to site A
 Get-PnPList # returns the lists from site A
 ```
-
-
 
 ## PARAMETERS
 
@@ -46,9 +49,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: 1
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpmicrosoft365group
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPMicrosoft365Group
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPMicrosoft365Group.html
 ---
-
+ 
 # Set-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPMicrosoft365Group.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,51 +21,48 @@ title: Set-PnPMicrosoft365Group
 
 Sets Microsoft 365 Group properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind>
-                         [-DisplayName <String>]
-                         [-Description <String>]
-                         [-Owners <String[]>]
-                         [-Members <String[]>]
-                         [-IsPrivate [<SwitchParameter>]]
-                         [-GroupLogoPath <String>]
-                         [-CreateTeam [<SwitchParameter>]]
-                         [-ByPassPermissionCheck [<SwitchParameter>]]
+Set-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind> [-DisplayName <String>] [-Description <String>]
+ [-Owners <String[]>] [-Members <String[]>] [-IsPrivate] [-GroupLogoPath <String>] [-CreateTeam]
+ [-HideFromAddressLists <Boolean>] [-HideFromOutlookClients <Boolean>] 
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPMicrosoft365Group -Identity $group -DisplayName "My Displayname"
 ```
 
 Sets the display name of the group where $group is a Group entity
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPMicrosoft365Group -Identity $groupId -Descriptions "My Description" -DisplayName "My DisplayName"
 ```
 
 Sets the display name and description of a group based upon its ID
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPMicrosoft365Group -Identity $group -GroupLogoPath ".\MyLogo.png"
 ```
 
 Sets a specific Microsoft 365 Group logo
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPMicrosoft365Group -Identity $group -IsPrivate:$false
 ```
 
 Sets a group to be Public if previously Private
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Set-PnPMicrosoft365Group -Identity $group -Owners demo@contoso.com
 ```
@@ -68,18 +70,6 @@ Set-PnPMicrosoft365Group -Identity $group -Owners demo@contoso.com
 Sets demo@contoso.com as owner of the group
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -CreateTeam
 Creates a Microsoft Teams team associated with created group
@@ -90,7 +80,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Description
@@ -102,7 +94,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayName
@@ -114,7 +108,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -GroupLogoPath
@@ -126,7 +122,37 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideFromAddressLists
+Controls whether the group is hidden or shown in the Global Address List (GAL).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideFromOutlookClients
+Controls whether the group shows in the Outlook left-hand navigation.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -138,7 +164,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -IsPrivate
@@ -150,7 +178,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Members
@@ -162,7 +192,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Owners
@@ -174,9 +206,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Documentation](https://docs.microsoft.com/graph/api/group-update)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-update)
+

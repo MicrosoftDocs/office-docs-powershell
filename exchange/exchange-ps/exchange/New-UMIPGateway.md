@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-UMIPGateway [-Name] <String> -Address <UMSmartHost>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-GlobalCallRoutingScheme <UMGlobalCallRoutingScheme>]
  [-IPAddressFamily <IPAddressFamily>]
  [-UMDialPlan <UMDialPlanIdParameter>]
  [-WhatIf]
@@ -124,24 +123,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalCallRoutingScheme
-This parameter is available or functional only in Exchange Server 2010.
-
-The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the value is E.164, the IP gateway accepts the call.
-
-```yaml
-Type: UMGlobalCallRoutingScheme
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

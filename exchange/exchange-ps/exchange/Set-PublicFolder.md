@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The HiddenFromAddressListsEnabled parameter specifies whether to hide the public folder from address lists.
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalReplicaAgeLimit
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The LocalReplicaAgeLimit parameter specifies the age limit of the replica on the connected server, if there is a replica on it.
 
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -Replicas
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationSchedule
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
@@ -496,7 +496,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseAgeDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseAgeDefaults parameter specifies whether to use the database age limit.
 
@@ -539,7 +539,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseQuotaDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseQuotaDefaults parameter specifies whether to use the public store quota limits.
 
@@ -557,7 +557,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseReplicationSchedule
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseReplicationSchedule parameter specifies whether to use the public folder replication schedule.
 
@@ -575,7 +575,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseRetentionDefaults parameter specifies whether to use the database retention defaults.
 

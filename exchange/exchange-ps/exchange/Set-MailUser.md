@@ -1261,13 +1261,15 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftOnlineServicesID
+This parameter is available only in the cloud-based service.
+
 The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
 
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1578,7 +1580,9 @@ Accept wildcard characters: False
 ### -RemoveMailboxProvisioningConstraint
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveMailboxProvisioningConstraint Description }}
+The RemoveMailboxProvisioningConstraint switch removes the mailbox provisioning constraint from the user. You don't need to specify a value with this switch.
+
+You should use this switch when the provisioning constraint is no longer needed, or if it's preventing the mailbox from being moved.
 
 ```yaml
 Type: SwitchParameter
