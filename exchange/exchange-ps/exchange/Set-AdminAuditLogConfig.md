@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnifiedAuditLogIngestionEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Microsoft 365 audit log. Valid values are:
 
@@ -320,7 +320,7 @@ The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or dis
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
