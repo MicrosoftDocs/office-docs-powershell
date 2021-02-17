@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-onlinemeetingconfiguration
-applicable: Exchange Online
+applicable: Exchange Server 2019, Exchange Online
 title: Get-OnlineMeetingConfiguration
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-OnlineMeetingConfiguration
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available or functional only in the cloud-based service.
 
 Use the Get-OnlineMeetingConfiguration cmdlet to view status and usage information about Skype Meetings and Skype for Business Online for mailboxes. Skype Meetings automatically includes Skype for Business Online conference join information in Exchange Online meeting invitations.
 
@@ -66,12 +66,30 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
