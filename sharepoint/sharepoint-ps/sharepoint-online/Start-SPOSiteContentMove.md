@@ -21,16 +21,18 @@ Start a job to move a particular user or group of users to be moved across geo l
 ### UrlAndDestinationDataLocation
 
 ```powershell
-Start-SPOSiteContentMove [-Url] <String> [-DestinationDataLocation] <String>
+Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
- [-ValidationOnly] [<CommonParameters>]
+ [-ValidationOnly] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] [-SuppressAllWarnings]
+ [-SuppressBcsCheck][<CommonParameters>]
 ```
 
 ### UrlAndDestinationUrl
 
 ```powershell
-Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
- [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
+Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
+ [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] 
+ [-SuppressAllWarnings] [-SuppressBcsCheck] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +46,7 @@ UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move 
 ### EXAMPLE 1
 
 ```powershell
-Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR 
+Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR 
 ```
 
 Starts the movement of the content on <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination.
@@ -52,7 +54,7 @@ Starts the movement of the content on <https://contosoenergy.sharepoint.com/site
 ### EXAMPLE 2
 
 ```powershell
-Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
+Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
 ```
 
 Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination with a preffered start time window of 1 to 12 hours from the move schedule operation.
@@ -60,7 +62,7 @@ Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> to th
 ### EXAMPLE 3
 
 ```powershell
-Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationUrl https://contosoenergyEUR.sharepoint.com/sites/hrEU -DestinationDataLocation EUR
+Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationUrl https://contosoenergyEUR.sharepoint.com/sites/hrEU -DestinationDataLocation EUR
 ```
 
 Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> and allows site rename to <https://contosoenergyEUR.sharepoint.com/sites/hrEU> as part of the geo move operation.
@@ -148,7 +150,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Url
+### -SourceSiteUrl
 
 Specifies the source URL of the site collection you want to move. 
 
@@ -175,6 +177,66 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressAllWarnings
+Suppress all warning messages.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressBcsCheck
+Suppress checking for Business Connectivity Services used with the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 10
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressMarketplaceAppCheck
+Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressWorkflow2013Check
+Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
