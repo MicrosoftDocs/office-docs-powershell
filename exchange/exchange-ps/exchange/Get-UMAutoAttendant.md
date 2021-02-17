@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-umautoattendant
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-UMAutoAttendant
 schema: 2.0.0
 author: chrisda
@@ -68,7 +68,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ The Identity parameter specifies the identifier for the UM auto attendant that's
 Type: UMAutoAttendantIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: 1
@@ -100,7 +100,7 @@ The UMDialPlan parameter specifies whether to display all the UM auto attendants
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
