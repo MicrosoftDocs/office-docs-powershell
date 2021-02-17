@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-umipgateway
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Set-UMIPGateway
 schema: 2.0.0
 author: chrisda
@@ -86,7 +86,7 @@ The Identity parameter specifies the identifier for the UM IP gateway being modi
 Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: True
 Position: 1
@@ -102,7 +102,7 @@ The Address parameter specifies the IP address or the fully qualified domain nam
 Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ The DelayedSourcePartyInfoEnabled parameter specifies whether Unified Messaging 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ The ForceUpgrade switch specifies whether you're prompted for confirmation befor
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use Inter
 Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ The MessageWaitingIndicatorAllowed parameter specifies whether to enable the UM 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ The Name parameter specifies the display name for the UM IP gateway. This displa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ The OutcallsAllowed parameter specifies whether to allow this UM IP gateway to b
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ The Port parameter specifies the IP port on which the IP gateway or IP PBX is li
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ The Simulator parameter specifies the simulator used for the UM IP gateway being
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -293,7 +293,7 @@ The Status parameter specifies whether to enable or disable the UM IP gateway. V
 Type: GatewayStatus
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named

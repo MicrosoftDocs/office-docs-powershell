@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/enable-umautoattendant
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Enable-UMAutoAttendant
 schema: 2.0.0
 author: chrisda
@@ -51,7 +51,7 @@ The Identity parameter specifies the identifier for the UM auto attendant being 
 Type: UMAutoAttendantIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: True
 Position: 1
@@ -70,7 +70,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
