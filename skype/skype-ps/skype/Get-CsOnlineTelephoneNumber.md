@@ -189,7 +189,7 @@ Accept wildcard characters: False
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
-* "Service" for numbers assigned to conferencing support, call queue or auto attendant
+* "Service" for numbers assigned to conferencing support, call queue or auto attendant.
 
 * "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
