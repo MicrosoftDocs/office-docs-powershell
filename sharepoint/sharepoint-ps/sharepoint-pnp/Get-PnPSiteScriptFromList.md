@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitescriptfromlist
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSiteScriptFromList
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteScriptFromList.html
 ---
-
+ 
 # Get-PnPSiteScriptFromList
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteScriptFromList.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,11 +21,10 @@ title: Get-PnPSiteScriptFromList
 
 Generates a Site Script from an existing list
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPSiteScriptFromList -Url <String>
-                          [-Connection <PnPConnection>]
+Get-PnPSiteScriptFromList -Url <String> [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,14 +32,14 @@ This command allows a Site Script to be generated off of an existing list on you
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Get-PnPSiteScriptFromList -Url https://contoso.sharepoint.com/sites/teamsite/lists/MyList
+Get-PnPSiteScriptFromList -Url "https://contoso.sharepoint.com/sites/teamsite/lists/MyList"
 ```
 
 Returns the generated Site Script JSON from the list "MyList" at the provided Url
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPSiteScriptFromList -Url "https://contoso.sharepoint.com/sites/teamsite/Shared Documents"
 ```
@@ -44,16 +48,19 @@ Returns the generated Site Script JSON from the default document library at the 
 
 ## PARAMETERS
 
-### -Url
-Specifies the URL of the list to generate a Site Script from
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -65,9 +72,41 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Url
+Specifies the URL of the list to generate a Site Script from
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

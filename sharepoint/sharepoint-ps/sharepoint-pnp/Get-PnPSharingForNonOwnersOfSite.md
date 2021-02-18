@@ -1,21 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsharingfornonownersofsite
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSharingForNonOwnersOfSite
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSharingForNonOwnersOfSite.html
 ---
-
+ 
 # Get-PnPSharingForNonOwnersOfSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSharingForNonOwnersOfSite.md to change this file.
+
 Returns $false if sharing of the site and items in the site is restricted only to owners or $true if members and owners are allowed to share
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPSharingForNonOwnersOfSite [-Identity <SitePipeBind>]
-                                 [-Connection <PnPConnection>]
+Get-PnPSharingForNonOwnersOfSite [-Identity <SitePipeBind>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +27,7 @@ Returns $false if sharing of the site and items in the site is restricted only t
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPSharingForNonOwnersOfSite
 ```
@@ -31,19 +35,6 @@ Get-PnPSharingForNonOwnersOfSite
 Returns $false if sharing of the site and items in the site is restricted only to owners or $true if members and owners are allowed to share
 
 ## PARAMETERS
-
-### -Identity
-
-
-```yaml
-Type: SitePipeBind
-Parameter Sets: (All)
-Aliases: Url
-
-Required: False
-Position: Named
-Accept pipeline input: True
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -54,13 +45,26 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Identity
 
-### System.Boolean
+```yaml
+Type: SitePipeBind
+Parameter Sets: (All)
+Aliases: Url
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

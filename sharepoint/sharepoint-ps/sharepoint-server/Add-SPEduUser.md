@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-speduuser
 applicable: SharePoint Server 2013
 title: Add-SPEduUser

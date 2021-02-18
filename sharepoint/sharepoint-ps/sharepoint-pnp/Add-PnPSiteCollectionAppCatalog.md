@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitecollectionappcatalog
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPSiteCollectionAppCatalog.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPSiteCollectionAppCatalog
 ---
-
+  
 # Add-PnPSiteCollectionAppCatalog
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPSiteCollectionAppCatalog.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,16 +21,17 @@ title: Add-PnPSiteCollectionAppCatalog
 
 Adds a Site Collection scoped App Catalog to a site
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
-                                [-Connection <PnPConnection>]
+Add-PnPSiteCollectionAppCatalog -Site <SitePipeBind> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/FinanceTeamsite"
 ```
@@ -33,18 +39,6 @@ Add-PnPSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/Fina
 This will add a SiteCollection app catalog to the specified site
 
 ## PARAMETERS
-
-### -Site
-Url of the site to add the app catalog to.
-
-```yaml
-Type: SitePipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -55,9 +49,27 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Site
+Url of the site to add the app catalog to.
+
+```yaml
+Type: SitePipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Documentation](https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog#configure-and-manage-site-collection-app-catalogs)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog#configure-and-manage-site-collection-app-catalogs)
+
+

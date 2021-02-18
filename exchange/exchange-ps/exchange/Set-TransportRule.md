@@ -1013,7 +1013,7 @@ When you specify multiple properties, or multiple values for the same property, 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1842,7 +1842,7 @@ When you specify multiple properties, or multiple values for the same property, 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3213,7 +3213,7 @@ This parameter supports plain text, HTML tags and the following keywords that us
 Type: DisclaimerText
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3420,7 +3420,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncidentReportOriginalMail
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter has been deprecated and is no longer used. Use the IncidentReportContent parameter instead. The value AttachOriginalMail on the IncidentReportContent parameter is equivalent to setting this parameter to the value IncludeOriginalMail.
 

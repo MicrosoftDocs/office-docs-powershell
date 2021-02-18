@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IgnoreDefaultScope]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -103,27 +102,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreDefaultScope
-This parameter is available or functional only in Exchange Server 2010.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-- You can only use the distinguished name (DN) for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

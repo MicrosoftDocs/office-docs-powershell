@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsite
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPTenantSite
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPTenantSite.html
 ---
-
+ 
 # New-PnPTenantSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPTenantSite.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,39 +21,28 @@ title: New-PnPTenantSite
 
 Creates a new (classic) site collection for the current tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPTenantSite -Title <String>
-                  -Url <String>
-                  -Owner <String>
-                  -TimeZone <Int>
-                  [-Lcid <UInt32>]
-                  [-Template <String>]
-                  [-ResourceQuota <Double>]
-                  [-ResourceQuotaWarningLevel <Double>]
-                  [-StorageQuota <Int>]
-                  [-StorageQuotaWarningLevel <Int>]
-                  [-RemoveDeletedSite [<SwitchParameter>]]
-                  [-Wait [<SwitchParameter>]]
-                  [-Force [<SwitchParameter>]]
-                  [-Connection <PnPConnection>]
+New-PnPTenantSite -Title <String> -Url <String> -Owner <String> [-Lcid <UInt32>] [-Template <String>]
+ -TimeZone <Int32> [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>] [-StorageQuota <Int64>]
+ [-StorageQuotaWarningLevel <Int64>] [-RemoveDeletedSite] [-Wait] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-PnPTenantSite cmdlet creates a new site collection for the current company. However, creating a new SharePoint
-Online site collection fails if a deleted site with the same URL exists in the Recycle Bin. If you want to use this command for an on-premises farm, please refer to http://blogs.msdn.com/b/vesku/archive/2014/06/09/provisioning-site-collections-using-sp-app-model-in-on-premises-with-just-csom.aspx 
+The New-PnPTenantSite cmdlet creates a new site collection for the current company. However, creating a new SharePoint Online site collection fails if a deleted site with the same URL exists in the Recycle Bin
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-New-PnPTenantSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Owner user@example.org -TimeZone 4 -Template STS#0
+New-PnPTenantSite -Title Contoso -Url "https://tenant.sharepoint.com/sites/contoso" -Owner user@example.org -TimeZone 4 -Template STS#0
 ```
 
 This will add a site collection with the title 'Contoso', the url 'https://tenant.sharepoint.com/sites/contoso', the timezone 'UTC+01:00',the owner 'user@example.org' and the template used will be STS#0, a TeamSite
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 New-PnPTenantSite -Title Contoso -Url /sites/contososite -Owner user@example.org -TimeZone 4 -Template STS#0
 ```
@@ -57,16 +51,18 @@ This will add a site collection with the title 'Contoso', the url 'https://tenan
 
 ## PARAMETERS
 
-### -Force
-Do not ask for confirmation.
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SwitchParameter
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Lcid
@@ -78,7 +74,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Owner
@@ -90,13 +88,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RemoveDeletedSite
 Specifies if any existing site with the same URL should be removed from the recycle bin
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +102,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ResourceQuota
@@ -116,7 +116,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ResourceQuotaWarningLevel
@@ -128,31 +130,37 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -StorageQuota
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
 
 ```yaml
-Type: Int
+Type: Int64
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -StorageQuotaWarningLevel
 Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageQuota parameter
 
 ```yaml
-Type: Int
+Type: Int64
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Template
@@ -164,19 +172,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TimeZone
 Use Get-PnPTimeZoneId to retrieve possible timezone values
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -188,7 +200,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -200,11 +214,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Wait
-
 
 ```yaml
 Type: SwitchParameter
@@ -212,27 +227,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
 
-[Locale IDs](https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint)
-
-[Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14))
-
-[Provisioning site collections using SP App model in on-premises with just CSOM](https://docs.microsoft.com/archive/blogs/vesku/provisioning-site-collections-using-sp-app-model-in-on-premises-with-just-csom)

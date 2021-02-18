@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpmicrosoft365groupowner
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPMicrosoft365GroupOwner
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPMicrosoft365GroupOwner.html
 ---
-
+ 
 # Remove-PnPMicrosoft365GroupOwner
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPMicrosoft365GroupOwner.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,17 +21,18 @@ title: Remove-PnPMicrosoft365GroupOwner
 
 Removes owners from a particular Microsoft 365 Group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPMicrosoft365GroupOwner -Identity <Microsoft365GroupPipeBind>
-                                 -Users <String[]>
-                                 [-ByPassPermissionCheck [<SwitchParameter>]]
+Remove-PnPMicrosoft365GroupOwner -Identity <Microsoft365GroupPipeBind> -Users <String[]>
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPMicrosoft365GroupOwner -Identity "Project Team" -Users "john@contoso.onmicrosoft.com","jane@contoso.onmicrosoft.com"
 ```
@@ -34,18 +40,6 @@ Remove-PnPMicrosoft365GroupOwner -Identity "Project Team" -Users "john@contoso.o
 Removes the provided two users as owners from the Microsoft 365 Group named "Project Team"
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Identity
 The Identity of the Microsoft 365 Group to remove owners from
@@ -56,7 +50,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -Users
@@ -68,9 +64,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Documentation](https://docs.microsoft.com/graph/api/group-delete-owners)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-delete-owners)
+
