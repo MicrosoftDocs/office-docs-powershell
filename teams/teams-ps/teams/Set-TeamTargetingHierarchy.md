@@ -20,6 +20,8 @@ Upload a hierarchy to the tenant. A tenant may only have 1 active hierarchy. Eac
 Set-TeamTargetingHierarchyStatus [-FilePath <String>]
 ```
 
+## DESCRIPTION
+
 ## EXAMPLES
 
 ### Example 1
@@ -29,7 +31,6 @@ PS C:\> Set-TeamTargetingHierarchy -FilePath d:\hier.csv
 Key       Value
 ---       -----
 requestId c67e86109d88479e9708c3b7e8ff7217
-
 ```
 
 ### Sample CSV File
