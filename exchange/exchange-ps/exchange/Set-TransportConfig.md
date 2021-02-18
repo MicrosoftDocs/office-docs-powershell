@@ -49,6 +49,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-InternalDsnSendHtml <Boolean>]
  [-InternalSMTPServers <MultiValuedProperty>]
  [-JournalingReportNdrTo <SmtpAddress>]
+ [-JournalMessageExpirationDays <Int32>]
  [-LegacyJournalingMigrationEnabled <Boolean>]
  [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
  [-MaxAllowedAgentGeneratedMessageDepthPerAgent <UInt32>]
@@ -654,6 +655,24 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JournalMessageExpirationDays
+This parameter is available only in the cloud-based service.
+
+The JournalMessageExpirationDays parameter extends the number of days that undeliverable journal reports are queued before they expire. A valid value is an integer from 0 to 7. The default value is 0, which means undeliverable journal reports are treated like regular undeliverable messages.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
