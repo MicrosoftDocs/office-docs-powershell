@@ -1328,24 +1328,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NpsSurveysEnabled	
-This parameter is avaialble only in the cloud-based service.
+### -NpsSurveysEnabled
+This parameter is available only in the cloud-based service.
 
 The NpsSurveysEnabled parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvements in free text. Valid values are:
 
 - $true: The NPS survey is available in Outlook on the web. This is the default value.
 - $false: The NPS survey isn't available in Outlook on the web.
 
-```yaml	
-Type: Boolean	
-Parameter Sets: (All)	
-Aliases:	
-Applicable: Exchange Online	
-Required: False	
-Position: Named	
-Default value: None	
-Accept pipeline input: False	
-Accept wildcard characters: False	
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OneDriveAttachmentsEnabled

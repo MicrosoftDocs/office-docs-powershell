@@ -76,7 +76,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResultSize	
+### -ResultSize
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
