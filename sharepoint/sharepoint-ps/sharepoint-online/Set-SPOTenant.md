@@ -83,7 +83,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SyncPrivacyProfileProperties <Boolean>]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
- [-ContentTypeSyncSiteTemplatesList MySites]
+ [-ContentTypeSyncSiteTemplatesList [String[]]]
  [-ExcludeSiteTemplate]
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
@@ -1494,7 +1494,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
+### -ContentTypeSyncSiteTemplatesList [String[]] [-ExcludeSiteTemplate]
 
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites).
 
@@ -1503,6 +1503,32 @@ In case you want the Content Type Hub to push content types to OneDrive for Busi
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using: `Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate`.
+
+```yaml
+Type: String[]
+Parameter Sets: ParameterSetContentTypeSyncSiteTemplatesList
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeSiteTemplate
+Excludes the specified template from Content Type hub content type synchronization. Must be used with `-ContentTypeSyncSiteTemplatesList [String[]]`.
+ 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ParameterSetContentTypeSyncSiteTemplatesList
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ConditionalAccessPolicy
 
@@ -1634,8 +1660,7 @@ Accept wildcard characters: False
 
 Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
 
-> [!NOTE]
-> Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
+Note: Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
 
 The valid values are:
 True - Enables the Policy.
