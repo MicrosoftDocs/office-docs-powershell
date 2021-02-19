@@ -1079,7 +1079,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstantMessagingEnabled
-The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. Valid values are:
+The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 - $false: Instant messaging isn't available in Outlook on the web.
