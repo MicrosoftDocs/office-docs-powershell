@@ -422,7 +422,7 @@ The EmailComposeMode parameter specifies how the user creates messages in Outloo
 Type: EmailComposeMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
