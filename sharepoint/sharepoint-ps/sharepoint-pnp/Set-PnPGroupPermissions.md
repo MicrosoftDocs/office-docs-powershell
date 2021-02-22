@@ -1,59 +1,61 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpgrouppermissions
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPGroupPermissions
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPGroupPermissions.html
 ---
-
+ 
 # Set-PnPGroupPermissions
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPGroupPermissions.md to change this file.
+
 Adds and/or removes permissions of a specific SharePoint group
 
-## SYNTAX 
+## SYNTAX
 
-### ByName
 ```powershell
-Set-PnPGroupPermissions -Identity <GroupPipeBind>
-                        [-List <ListPipeBind>]
-                        [-AddRole <String[]>]
-                        [-RemoveRole <String[]>]
-                        [-Web <WebPipeBind>]
-                        [-Connection <PnPConnection>]
+Set-PnPGroupPermissions [-Identity] <GroupPipeBind> [-List <ListPipeBind>] [-AddRole <String[]>]
+ [-RemoveRole <String[]>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPGroupPermissions -Identity 'My Site Members' -AddRole Contribute
 ```
 
 Adds the 'Contribute' permission to the SharePoint group with the name 'My Site Members'
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPGroupPermissions -Identity 'My Site Members' -RemoveRole 'Full Control' -AddRole 'Read'
 ```
 
 Removes the 'Full Control' from and adds the 'Contribute' permissions to the SharePoint group with the name 'My Site Members'
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPGroupPermissions -Identity 'My Site Members' -AddRole @('Contribute', 'Design')
 ```
 
 Adds the 'Contribute' and 'Design' permissions to the SharePoint group with the name 'My Site Members'
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPGroupPermissions -Identity 'My Site Members' -RemoveRole @('Contribute', 'Design')
 ```
 
 Removes the 'Contribute' and 'Design' permissions from the SharePoint group with the name 'My Site Members'
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Set-PnPGroupPermissions -Identity 'My Site Members' -List 'MyList' -RemoveRole @('Contribute')
 ```
@@ -71,44 +73,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Identity
-Get the permissions of a specific group by name
-
-```yaml
-Type: GroupPipeBind
-Parameter Sets: ByName
-Aliases: Name
-
-Required: True
-Position: 0
-Accept pipeline input: True
-```
-
-### -List
-The list to apply the command to.
-
-```yaml
-Type: ListPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -RemoveRole
-Name of the permission set to remove from this SharePoint group
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -120,21 +87,57 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -Identity
+Get the permissions of a specific group by name
 
 ```yaml
-Type: WebPipeBind
+Type: GroupPipeBind
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -List
+The list to apply the command to.
+
+```yaml
+Type: ListPipeBind
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -RemoveRole
+Name of the permission set to remove from this SharePoint group
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-umipgateway
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: New-UMIPGateway
 schema: 2.0.0
 author: chrisda
@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-UMIPGateway [-Name] <String> -Address <UMSmartHost>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-GlobalCallRoutingScheme <UMGlobalCallRoutingScheme>]
  [-IPAddressFamily <IPAddressFamily>]
  [-UMDialPlan <UMDialPlanIdParameter>]
  [-WhatIf]
@@ -70,7 +69,7 @@ The Address parameter specifies the IP address configured on the IP gateway or S
 Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -86,7 +85,7 @@ The Name parameter specifies the display name for the UM IP gateway. The name fo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
@@ -105,7 +104,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -123,25 +122,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalCallRoutingScheme
-This parameter is available or functional only in Exchange Server 2010.
-
-The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the value is E.164, the IP gateway accepts the call.
-
-```yaml
-Type: UMGlobalCallRoutingScheme
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -161,7 +142,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use Inter
 Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -177,7 +158,7 @@ The UMDialPlan parameter specifies the UM dial plan to be associated with the UM
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -193,7 +174,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

@@ -21,7 +21,7 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - Estimated time to complete each procedure: less than 5 minutes
 
-- Microsoft 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
+- Microsoft 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this article to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
 
 - You can only use Exchange Online PowerShell to perform this procedure. To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
@@ -88,7 +88,7 @@ $<VariableName> = Get-Content <text file>
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
-This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
+The following example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
 
 > akol@contoso.com <br> tjohnston@contoso.com <br> kakers@contoso.com
 
@@ -99,7 +99,7 @@ $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
 ```powershell
-$NPS | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
+$NPS | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 ## View the Exchange Online PowerShell access for users

@@ -1,14 +1,18 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/convertto-pnpclientsidepage
-applicable: SharePoint Online
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/ConvertTo-PnPClientSidePage.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: ConvertTo-PnPClientSidePage
 ---
-
+  
 # ConvertTo-PnPClientSidePage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/ConvertTo-PnPClientSidePage.md to change this file.
+
 Converts a classic page (wiki or web part page) into a Client-Side Page
 
 ## SYNTAX 
@@ -706,3 +710,5 @@ Accept pipeline input: False
 ## RELATED LINKS
 
 [SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+
+

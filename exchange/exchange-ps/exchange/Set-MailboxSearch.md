@@ -102,9 +102,26 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -AllSourceMailboxes
-This parameter is available only in on-premises Exchange.
+### -AllPublicFolderSources
+The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
 
+- $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
+- $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllSourceMailboxes
 The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
 
 - $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
@@ -114,7 +131,7 @@ The AllSourceMailboxes parameter specifies whether to include all mailboxes in t
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -177,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotIncludeArchive
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The DoNotIncludeArchive parameter specifies whether items in the user's Archive mailbox are included in mailbox searches. By default, items in the user's Archive mailbox are included in mailbox searches. If set to $true, the DoNotIncludeArchive parameter instructs Multi-Mailbox Search to exclude archive mailboxes from the search.
 
@@ -455,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchDumpster
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
 
@@ -650,27 +667,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllPublicFolderSources
-This parameter is available only in on-premises Exchange.
-
-The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
-
-- $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-- $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

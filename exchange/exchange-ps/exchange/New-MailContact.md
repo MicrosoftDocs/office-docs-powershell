@@ -36,7 +36,6 @@ New-MailContact -Name <String> -ExternalEmailAddress <ProxyAddress>
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-UsePreferMessageFormat <Boolean>]
@@ -391,22 +390,6 @@ Valid input for this parameter is an organizational unit (OU) or domain that's r
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideRecipientQuotas
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection

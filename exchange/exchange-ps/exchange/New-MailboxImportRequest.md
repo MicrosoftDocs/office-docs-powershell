@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive.
 
-NOTE: This cmdlet is no longer supported in Exchange Online. To import a .pst file in Exchange Online, see [Use network upload to import PST files](https://docs.microsoft.com/microsoft-365/compliance/use-network-upload-to-import-pst-files).
+**Note**: This cmdlet is no longer supported in Exchange Online. To import a .pst file in Exchange Online, see [Use network upload to import PST files](https://docs.microsoft.com/microsoft-365/compliance/use-network-upload-to-import-pst-files).
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
@@ -45,8 +45,6 @@ New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <Lo
  [-MRSServer <Fqdn>]
  [-Name <String>]
  [-Priority <RequestPriority>]
- [-RemoteCredential <PSCredential>]
- [-RemoteHostName <Fqdn>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
  [-Suspend]
@@ -78,75 +76,6 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
  [-MigrationMailbox <MailboxIdParameter>]
  [-Name <String>]
  [-Priority <RequestPriority>]
- [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-SourceRootFolder <String>]
- [-Suspend]
- [-SuspendComment <String>]
- [-TargetRootFolder <String>]
- [-WhatIf]
- [-WorkloadType <RequestWorkloadType>]
- [<CommonParameters>]
-```
-
-### AzureImportRequest
-```
-New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStorageAccountUri <Uri> -AzureSharedAccessSignatureToken <String>
- [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <FAICopyOption>]
- [-AzureStatusPublishEndpointInfo <String>]
- [-BadItemLimit <Unlimited>]
- [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm]
- [-ConflictResolutionOption <ConflictResolutionOption>]
- [-ContentCodePage <Int32>]
- [-DomainController <Fqdn>]
- [-ExcludeDumpster]
- [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>]
- [-IsArchive]
- [-LargeItemLimit <Unlimited>]
- [-MigrationMailbox <MailboxIdParameter>]
- [-MRSContentFilterSasUri <Uri>]
- [-Name <String>]
- [-Priority <RequestPriority>]
- [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-SourceRootFolder <String>]
- [-Suspend]
- [-SuspendComment <String>]
- [-TargetRootFolder <String>]
- [-WhatIf]
- [-WorkloadType <RequestWorkloadType>]
- [<CommonParameters>]
-```
-
-### RemoteRequest
-```
-New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath <LongPath> -RemoteHostName <Fqdn>
- [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <FAICopyOption>]
- [-BadItemLimit <Unlimited>]
- [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm]
- [-ConflictResolutionOption <ConflictResolutionOption>]
- [-ContentCodePage <Int32>]
- [-DomainController <Fqdn>]
- [-ExcludeDumpster]
- [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>]
- [-IsArchive]
- [-LargeItemLimit <Unlimited>]
- [-MigrationMailbox <MailboxIdParameter>]
- [-Name <String>]
- [-Priority <RequestPriority>]
- [-RemoteCredential <PSCredential>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
@@ -210,7 +139,7 @@ If you don't grant this permission, you will receive an error message stating th
 
 ```yaml
 Type: LongPath
-Parameter Sets: Mailbox, MailboxImportRequest
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -265,50 +194,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -RemoteFilePath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: LongPath
-Parameter Sets: RemoteRequest
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteHostName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: RemoteRequest
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Fqdn
-Parameter Sets: Mailbox
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AcceptLargeDataLoss
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
@@ -344,60 +229,6 @@ Type: FAICopyOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureBlobStorageAccountUri
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: Uri
-
-```yaml
-Type: Uri
-Parameter Sets: AzureImportRequest
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureSharedAccessSignatureToken
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: AzureImportRequest
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureStatusPublishEndpointInfo
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: AzureImportRequest
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -712,23 +543,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: AzureImportRequest, MailboxImportRequest, RemoteRequest
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MRSContentFilterSasUri
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Uri
-Parameter Sets: AzureImportRequest
+Parameter Sets: MailboxImportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -740,7 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
 
@@ -791,26 +606,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoteCredential
-This parameter is available only in on-premises Exchange.
-
-The RemoteCredential parameter specifies the credentials of an administrator who has permission to perform the mailbox import request.
-
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
-
-```yaml
-Type: PSCredential
-Parameter Sets: Mailbox, RemoteRequest
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RequestExpiryInterval
 The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
 
@@ -823,7 +618,7 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: AzureImportRequest, MailboxImportRequest, RemoteRequest
+Parameter Sets: MailboxImportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -855,7 +650,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: AzureImportRequest, MailboxImportRequest, RemoteRequest
+Parameter Sets: MailboxImportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 

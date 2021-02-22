@@ -66,6 +66,8 @@ The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the correspo
 
 `WARNING: The user 'user1@contoso.com' currently has enabled values for: AllowUserChat, AllowPrivateCalling, AllowPrivateMeetingScheduling, AllowChannelMeetingScheduling, however these values will be ignored. This is because you are granting this user TeamsUpgradePolicy with mode=SfBWithTeamsCollab, which causes the Teams client to behave as if they are disabled.`
 
+Please note: These warning messages are not affected by the -WarningAction parameter.
+
 ## EXAMPLES
 
 ### Example 1: Grant Policy to an individual user

@@ -33,7 +33,6 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-ECPEnabled <Boolean>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmwsEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -372,27 +371,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EmwsEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
-The EmwsEnabled parameter enables or disables access to the mailbox using the Exchange Management Web Service. Valid values are:
-
-- $true: Access to the mailbox using EMWS is enabled.
-- $false: Access to the mailbox using EMWS is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EwsAllowEntourage
 The EwsAllowEntourage parameter enables or disables access to the mailbox by Microsoft Entourage clients that use Exchange Web Services (for example, Entourage 2008 for Mac, Web Services Edition).
 
@@ -539,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -HasActiveSyncDevicePartnership
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The HasActiveSyncDevicePartnership parameter specifies whether the mailbox has an Exchange ActiveSync device partnership established. Valid values are:
 
