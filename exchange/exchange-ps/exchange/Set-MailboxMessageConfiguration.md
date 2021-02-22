@@ -413,6 +413,8 @@ Accept wildcard characters: False
 ```
 
 ### -EmailComposeMode
+This parameter is available only in on-premises Exchange.
+
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
 - Inline: New messages and replies are created in the preview pane. This is the default value.
