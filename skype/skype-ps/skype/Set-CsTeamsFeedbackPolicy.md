@@ -20,7 +20,9 @@ Use this cmdlet to modify a Teams feedback policy.
 
 ```
 Set-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
- [-ReceiveSurveysMode <String>] [-UserInitiatedMode <String>] [-Force] [-Instance <Object>]
+ [-ReceiveSurveysMode <String>] [-UserInitiatedMode <String>] [-AllowEmailCollection <Boolean>]
+ [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>]
+ [-Force] [-Instance <Object>]
 ```
 
 ## DESCRIPTION
@@ -99,10 +101,12 @@ Accept wildcard characters: False
 
 ### -ReceiveSurveysMode
 Set the receiveSurveysMode parameter to enabled to allow users who are assigned the policy to receive the survey.
+Set it to EnabledUserOverride to have users receive the survey and allow them to opt out.
 
 Possible values:
  - Enabled
  - Disabled
+ - EnabledUserOverride
 
 ```yaml
 Type: String
@@ -147,6 +151,51 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEmailCollection
+Set this to TRUE to enable Email collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLogCollection
+Set this to TRUE to enable log collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowScreenshotCollection
+Set this to TRUE to enable Screenshot collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
