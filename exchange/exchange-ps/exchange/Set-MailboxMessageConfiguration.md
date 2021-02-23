@@ -413,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailComposeMode
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
@@ -424,7 +424,7 @@ The EmailComposeMode parameter specifies how the user creates messages in Outloo
 Type: EmailComposeMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
