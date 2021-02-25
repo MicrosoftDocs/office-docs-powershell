@@ -1943,7 +1943,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Routing. Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Routing. Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -2066,9 +2066,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-This parameter is available or functional only in Exchange Server 2013.
-
-Server statistics aren't available in Exchange 2013 Cumulative Update 7 (CU7) or later, so this parameter has no effect in those versions of Exchange 2013.
+This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxAge parameter specifies the maximum duration that the server statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -2090,9 +2088,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-This parameter is available or functional only in Exchange Server 2013.
-
-Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
+This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the server statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB.
 
@@ -2122,9 +2118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-This parameter is available or functional only in Exchange Server 2013.
-
-Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
+This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxFileSize parameter specifies the maximum file size for the server statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -2154,9 +2148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-This parameter is available or functional only in Exchange Server 2013.
-
-Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
+This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogPath parameter specifies the location of server statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ServerStats. Setting the value of this parameter to $null disables server statistics logging.
 

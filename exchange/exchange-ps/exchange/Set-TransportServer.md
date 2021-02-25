@@ -257,7 +257,12 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUserStatisticsLogPath
-The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ActiveUsersStats. Setting the value of this parameter to $null disables server statistics logging.
+The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ActiveUsersStats.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ActiveUsersStats.
+
+Setting the value of this parameter to $null disables server statistics logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -510,7 +515,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogPath
-The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
+The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Connectivity
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Connectivity.
+
+Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1359,7 +1369,12 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingPath
-The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing. The path must be local to the Exchange server.
+The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\PipelineTracing.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing.
+
+The path must be local to the Exchange server.
 
 Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter.
 
@@ -1619,7 +1634,12 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive. Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
+The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ProtocolLog\\SmtpReceive.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive.
+
+Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1731,7 +1751,12 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Routing. Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Routing.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Routing.
+
+Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1823,7 +1848,12 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend. Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
+The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ProtocolLog\\SmtpSend.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend.
+
+Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1839,7 +1869,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-This parameter has been deprecated and is no longer used.
+This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxAge parameter specifies the maximum duration that the server statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1861,7 +1891,19 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-This parameter has been deprecated and is no longer used.
+This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+
+The ServerStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the server statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB. When you enter a value, qualify the value with one of the following:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are treated as bytes.
+
+The value of the ServerStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ServerStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log directory.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1877,7 +1919,19 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-This parameter has been deprecated and is no longer used.
+This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+
+The ServerStatisticsLogMaxFileSize parameter specifies the maximum file size for the server statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are treated as bytes.
+
+The value of the ServerStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ServerStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log files.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1893,7 +1947,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-This parameter has been deprecated and is no longer used.
+This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+
+The ServerStatisticsLogPath parameter specifies the location of the server statistics log. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ServerStats.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ServerStats.
+
+Setting the value of this parameter to $null disables server statistics logging.
 
 ```yaml
 Type: LocalLongFullPath
