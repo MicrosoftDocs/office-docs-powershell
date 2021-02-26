@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
-applicable: Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0
 author: chrisda
