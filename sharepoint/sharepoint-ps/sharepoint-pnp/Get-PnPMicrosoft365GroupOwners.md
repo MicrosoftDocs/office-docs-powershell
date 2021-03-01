@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpmicrosoft365groupowners
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPMicrosoft365GroupOwners.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPMicrosoft365GroupOwners
 ---
-
+  
 # Get-PnPMicrosoft365GroupOwners
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPMicrosoft365GroupOwners.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,23 +21,24 @@ title: Get-PnPMicrosoft365GroupOwners
 
 Gets owners of a particular Microsoft 365 Group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPMicrosoft365GroupOwners -Identity <Microsoft365GroupPipeBind>
-                               [-ByPassPermissionCheck [<SwitchParameter>]]
+Get-PnPMicrosoft365GroupOwners -Identity <Microsoft365GroupPipeBind> [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPMicrosoft365GroupOwners -Identity $groupId
 ```
 
 Retrieves all the owners of a specific Microsoft 365 Group based on its ID
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPMicrosoft365GroupOwners -Identity $group
 ```
@@ -40,18 +46,6 @@ Get-PnPMicrosoft365GroupOwners -Identity $group
 Retrieves all the owners of a specific Microsoft 365 Group based on the group's object instance
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Identity
 The Identity of the Microsoft 365 Group.
@@ -62,9 +56,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

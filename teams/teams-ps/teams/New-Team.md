@@ -169,6 +169,7 @@ Accept wildcard characters: False
 An admin who is allowed to create on behalf of another user should use this flag to specify the desired owner of the group. 
 This user will be added as both a member and an owner of the group. 
 If not specified, the user who creates the team will be added as both a member and an owner.
+Please note: This parameter is mandatory, if connected using Certificate Based Authentication.
 
 ```yaml
 Type: String

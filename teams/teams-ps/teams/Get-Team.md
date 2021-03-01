@@ -19,13 +19,13 @@ This cmdlet supports retrieving teams with particular properties/information, in
 ### Identity
 ```
 Get-Team -GroupId <String> [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
- [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>]
+ [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
 ```
 
 ### Filters
 ```
 Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-DisplayName <String>]
- [-MailNickName <String>] [<CommonParameters>]
+ [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
 ```
 
 ## DESCRIPTION
@@ -211,6 +211,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NumberOfThreads
+Specifies the number of threads to use. The accepted values range from 1 to 20.
+
+```yaml
+Type: Int32
+Parameter Sets: All
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

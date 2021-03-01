@@ -56,6 +56,8 @@ The Get-DlpDetailReport cmdlet returns detailed information about specific DLP r
 - EventType
 - Action
 - ObjectId
+- Recipients
+- AttachmentNames
 
 To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://docs.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport) cmdlet.
 

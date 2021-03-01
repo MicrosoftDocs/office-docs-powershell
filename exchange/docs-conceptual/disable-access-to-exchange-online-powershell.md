@@ -88,7 +88,7 @@ $<VariableName> = Get-Content <text file>
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
-This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
+The following example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
 
 > akol@contoso.com <br> tjohnston@contoso.com <br> kakers@contoso.com
 
@@ -99,7 +99,7 @@ $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
 ```powershell
-$NPS | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
+$NPS | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 ## View the Exchange Online PowerShell access for users
