@@ -254,6 +254,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -377,6 +378,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -500,6 +502,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -623,6 +626,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -744,6 +748,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <System.DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -866,6 +871,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -988,6 +994,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -2530,6 +2537,24 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforcedTimestamps
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnforcedTimestamps Description }}
+
+```yaml
+Type: String
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
