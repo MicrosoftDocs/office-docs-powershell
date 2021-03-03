@@ -263,7 +263,7 @@ Onboarding and offboarding in Exchange Online
 - Cutover Exchange migration: This is another type of onboarding migration and is used to migrate all mailboxes in an on-premises Exchange organization to Exchange Online. You can migrate a maximum of 1,000 Exchange Server 2003, Exchange Server 2007, or Exchange Server 2010 mailboxes using a cutover migration. Mailboxes will be automatically provisioned in Exchange Online when you perform a cutover Exchange migration. For more information, see Example 5.
 - Staged Exchange migration: You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. Migrating mailboxes from Exchange 2010 or later versions of Exchange isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization. For more information, see Example 6.
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
-- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online. For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
+- Google Workplace (formerly G Suite) migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online. For a Google Workplace migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -363,7 +363,7 @@ ludeFolders "Payment"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-A G Suite migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
+A Google Workplace migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
 ## PARAMETERS
 
@@ -679,9 +679,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service for IMAP migration and Google Workplace migration.
 
-The ContentFilter parameter uses OPath filter syntax to filter the messages by Received date. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+The ContentFilter parameter uses OPath filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
 
 - `"Received -gt '8/23/2020'"`
 - `"Received -le '2019/01/01'"`
@@ -703,7 +703,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilterLanguage
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service for IMAP migration and Google Workplace migration.
 
 The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
 
@@ -799,9 +799,9 @@ Accept wildcard characters: False
 ### -ExcludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration or G Suite migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the source email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration or Google Workplace migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the source email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
 
-For IMAP migration, use folder names relative to the IMAP root on the source mail server. For G Suite migration, use label names on the source mail server.
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For Google Workplace migration, use label names on the source mail server.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
@@ -847,9 +847,9 @@ Accept wildcard characters: False
 ### -IncludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration or G Suite migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the source mail server or use label names for G Suite migration. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration or Google Workplace migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
 
-For IMAP migration, use folder names relative to the IMAP root on the source mail server. For G Suite migration, use label names on the source mail server.
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For Google Workplace migration, use label names on the source mail server.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
