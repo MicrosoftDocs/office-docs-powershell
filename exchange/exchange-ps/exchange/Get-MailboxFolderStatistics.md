@@ -96,6 +96,14 @@ Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -Incl
 
 This example uses the IncludeAnalysis switch to view the statistics of Tony's Recoverable Items folder.
 
+### Example 5
+```powershell
+$All = Get-Mailbox -ResultSize Unlimited
+$All | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize}
+```
+
+This example uses the FolderScope parameter to view inbox folders statistics for all mailboxes.
+
 ## PARAMETERS
 
 ### -Identity
