@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceDomain
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Exchange Online organization. Valid values are:
 
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 ### -RequiredCharsetCoverage
 The RequiredCharsetCoverage parameter specifies a percentage threshold for characters in a message that must match to apply your organization's preferred character set before switching to automatic character set detection.
 
-For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the UNICODE characters and automatically determines the best matching character set to use.
+For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the Unicode characters and automatically determines the best matching character set to use.
 
 If recipients in the remote domain use characters that span character sets, you might want to specify a lower percentage to ensure that your organization's preferred character set is used during content conversion.
 
@@ -609,6 +609,22 @@ The UseSimpleDisplayName parameter specifies whether the sender's simple display
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False

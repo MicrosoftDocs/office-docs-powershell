@@ -1,28 +1,33 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpweb
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPWeb
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPWeb.html
 ---
-
+ 
 # Get-PnPWeb
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPWeb.md to change this file.
+
 Returns the current web object
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
-Get-PnPWeb [-Includes <String[]>]
-           [-Identity <WebPipeBind>]
-           [-Connection <PnPConnection>]
+Get-PnPWeb [[-Identity] <WebPipeBind>] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPWeb
 ```
@@ -30,30 +35,6 @@ Get-PnPWeb
 This will return the current web
 
 ## PARAMETERS
-
-### -Identity
-The guid of the web or web object
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: True
-```
-
-### -Includes
-Specify properties to include when retrieving objects from the server.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -64,13 +45,26 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Identity
+The guid of the web or web object
 
-### Microsoft.SharePoint.Client.Web
+```yaml
+Type: WebPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

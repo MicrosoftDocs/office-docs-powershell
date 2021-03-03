@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-ummailbox
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Set-UMMailbox
 schema: 2.0.0
 author: chrisda
@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-UMMailbox [-Identity] <MailboxIdParameter>
- [-AirSyncNumbers <MultiValuedProperty>]
  [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
  [-AnonymousCallersCanLeaveMessages <Boolean>]
  [-AutomaticSpeechRecognitionEnabled <Boolean>]
@@ -102,30 +101,12 @@ The Identity parameter specifies the mailbox tht you want to modify. You can use
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -AirSyncNumbers
-This parameter is available or functional only in Exchange Server 2010.
-
-The AirSyncNumbers parameter specifies whether to register a mobile phone number with a hosted voice mail service. Each UM mailbox can have up to three numbers defined and numbers must be in E.164 format.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -136,7 +117,7 @@ The AllowUMCallsFromNonUsers parameter specifies whether to exclude the mailbox 
 Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -152,7 +133,7 @@ The AnonymousCallersCanLeaveMessages parameter specifies whether diverted calls 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -168,7 +149,7 @@ The AutomaticSpeechRecognitionEnabled parameter specifies whether users can use 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -184,7 +165,7 @@ The CallAnsweringAudioCodec parameter specifies the audio codec used to encode v
 Type: AudioCodecEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -200,7 +181,7 @@ The CallAnsweringRulesEnabled parameter specifies whether users can configure or
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -219,7 +200,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -237,7 +218,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -253,7 +234,7 @@ The FaxEnabled parameter specifies whether a user is allowed to receive incoming
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -276,7 +257,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -301,7 +282,7 @@ If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's L
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -319,7 +300,7 @@ When you're integrating Unified Messaging and Lync Server or Skype for Business 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -335,7 +316,7 @@ The Name parameter specifies the display name for the user. The display name is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -351,7 +332,7 @@ The OperatorNumber parameter specifies the string of digits for the personal ope
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -403,7 +384,7 @@ The PinlessAccessToVoiceMailEnabled parameter specifies whether UM-enabled users
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -419,7 +400,7 @@ The PlayOnPhoneEnabled parameter specifies whether a user can use the Play on Ph
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -435,7 +416,7 @@ The SubscriberAccessEnabled parameter specifies whether the users are allowed su
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -451,7 +432,7 @@ The TUIAccessToCalendarEnabled parameter specifies whether UM-enabled users can 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -467,7 +448,7 @@ The TUIAccessToEmailEnabled parameter specifies whether users can access their i
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -483,7 +464,7 @@ The UMMailboxPolicy parameter specifies the UM mailbox policy associated with th
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -499,7 +480,7 @@ The UMSMSNotificationOption parameter specifies whether a UM-enabled user gets S
 Type: UMSMSNotificationOptions
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -533,7 +514,7 @@ The VoiceMailAnalysisEnabled parameter specifies whether a copy of each voice ma
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -549,7 +530,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named

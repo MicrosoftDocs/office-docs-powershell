@@ -1,21 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfooter
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFooter.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPFooter
 ---
-
+  
 # Get-PnPFooter
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFooter.md to change this file.
+
 Gets the configuration regarding the footer of the current web
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPFooter [-Web <WebPipeBind>]
-              [-Connection <PnPConnection>]
+Get-PnPFooter [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +27,7 @@ Allows the current configuration of the footer in the current web to be retrieve
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPFooter
 ```
@@ -41,21 +45,15 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

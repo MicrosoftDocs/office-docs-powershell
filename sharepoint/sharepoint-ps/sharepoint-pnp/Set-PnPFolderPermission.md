@@ -1,78 +1,69 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfolderpermission
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPFolderPermission
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPFolderPermission.html
 ---
-
+ 
 # Set-PnPFolderPermission
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPFolderPermission.md to change this file.
+
 Sets folder permissions. Use Get-PnPRoleDefinition to retrieve all available roles you can add or remove using this cmdlet.
 
-## SYNTAX 
+## SYNTAX
 
-### Inherit
+### User (Default)
 ```powershell
-Set-PnPFolderPermission -List <ListPipeBind>
-                        -Identity <FolderPipeBind>
-                        [-InheritPermissions [<SwitchParameter>]]
-                        [-SystemUpdate [<SwitchParameter>]]
-                        [-Web <WebPipeBind>]
-                        [-Connection <PnPConnection>]
+Set-PnPFolderPermission [-List] <ListPipeBind> -Identity <FolderPipeBind> -User <String> [-AddRole <String>]
+ [-RemoveRole <String>] [-ClearExisting] [-SystemUpdate] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Group
 ```powershell
-Set-PnPFolderPermission -Group <GroupPipeBind>
-                        -List <ListPipeBind>
-                        -Identity <FolderPipeBind>
-                        [-AddRole <String>]
-                        [-RemoveRole <String>]
-                        [-ClearExisting [<SwitchParameter>]]
-                        [-SystemUpdate [<SwitchParameter>]]
-                        [-Web <WebPipeBind>]
-                        [-Connection <PnPConnection>]
+Set-PnPFolderPermission [-List] <ListPipeBind> -Identity <FolderPipeBind> -Group <GroupPipeBind>
+ [-AddRole <String>] [-RemoveRole <String>] [-ClearExisting] [-SystemUpdate] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
-### User
+### Inherit
 ```powershell
-Set-PnPFolderPermission -User <String>
-                        -List <ListPipeBind>
-                        -Identity <FolderPipeBind>
-                        [-AddRole <String>]
-                        [-RemoveRole <String>]
-                        [-ClearExisting [<SwitchParameter>]]
-                        [-SystemUpdate [<SwitchParameter>]]
-                        [-Web <WebPipeBind>]
-                        [-Connection <PnPConnection>]
+Set-PnPFolderPermission [-List] <ListPipeBind> -Identity <FolderPipeBind> [-InheritPermissions] [-SystemUpdate]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPFolderPermission -List 'Shared Documents' -Identity 'Shared Documents\Folder' -User 'user@contoso.com' -AddRole 'Contribute'
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for the folder named 'Folder' located in the root of the library 'Shared Documents'
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPFolderPermission -List 'Documents' -Identity 'Shared Documents\Folder\Subfolder' -User 'user@contoso.com' -RemoveRole 'Contribute'
 ```
 
 Removes the 'Contribute' permission to the user 'user@contoso.com' for the folder named 'Subfolder' located in the folder 'Folder' which is located in the root of the library 'Shared Documents'
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPFolderPermission -List 'Documents' -Identity 'Shared Documents\Folder' -User 'user@contoso.com' -AddRole 'Contribute' -ClearExisting
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for the folder named 'Folder' located in the root of the library 'Shared Documents' and removes all other permissions
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPFolder -Url 'Shared Documents\Folder' | Set-PnPFolderPermission -List 'Documents' -InheritPermissions
 ```
@@ -90,7 +81,9 @@ Parameter Sets: User, Group
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ClearExisting
@@ -102,93 +95,9 @@ Parameter Sets: User, Group
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Group
-
-
-```yaml
-Type: GroupPipeBind
-Parameter Sets: Group
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Identity
-The ID of the folder, the server relative URL to the folder or actual Folder object
-
-```yaml
-Type: FolderPipeBind
-Parameter Sets: __AllParameterSets
-
-Required: True
-Position: Named
-Accept pipeline input: True
-```
-
-### -InheritPermissions
-Inherit permissions from the parent, removing unique permissions
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Inherit
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -List
-The ID, Title or Url of the list the folder is part of
-
-```yaml
-Type: ListPipeBind
-Parameter Sets: __AllParameterSets
-
-Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -RemoveRole
-The role that must be removed from the group or user
-
-```yaml
-Type: String
-Parameter Sets: User, Group
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SystemUpdate
-Update the folder permissions without creating a new version or triggering MS Flow.
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -User
-
-
-```yaml
-Type: String
-Parameter Sets: User
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -200,21 +109,110 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -Group
 
 ```yaml
-Type: WebPipeBind
+Type: GroupPipeBind
+Parameter Sets: Group
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The ID of the folder, the server relative URL to the folder or actual Folder object
+
+```yaml
+Type: FolderPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -InheritPermissions
+Inherit permissions from the parent, removing unique permissions
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Inherit
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -List
+The ID, Title or Url of the list the folder is part of
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveRole
+The role that must be removed from the group or user
+
+```yaml
+Type: String
+Parameter Sets: User, Group
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SystemUpdate
+Update the folder permissions without creating a new version or triggering MS Flow.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -User
+
+```yaml
+Type: String
+Parameter Sets: User
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/restore-pnptenantrecyclebinitem
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Restore-PnPTenantRecycleBinItem
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Restore-PnPTenantRecycleBinItem.html
 ---
-
+ 
 # Restore-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Restore-PnPTenantRecycleBinItem.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,13 +21,11 @@ title: Restore-PnPTenantRecycleBinItem
 
 Restores a site collection from the tenant scoped recycle bin
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Restore-PnPTenantRecycleBinItem -Url <String>
-                                [-Wait [<SwitchParameter>]]
-                                [-Force [<SwitchParameter>]]
-                                [-Connection <PnPConnection>]
+Restore-PnPTenantRecycleBinItem -Url <String> [-Wait] [-Force] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,21 +33,35 @@ The Restore-PnPTenantRecycleBinItem cmdlet allows a site collection that has bee
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Restore-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso
+Restore-PnPTenantRecycleBinItem -Url "https://tenant.sharepoint.com/sites/contoso"
 ```
 
 This will restore the deleted site collection with the url 'https://tenant.sharepoint.com/sites/contoso' to its original location
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Restore-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso -Wait
+Restore-PnPTenantRecycleBinItem -Url "https://tenant.sharepoint.com/sites/contoso" -Wait
 ```
 
 This will restore the deleted site collection with the url 'https://tenant.sharepoint.com/sites/contoso' to its original location and will wait with executing further PowerShell commands until the site collection restore has completed
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 If provided, no confirmation will be asked to restore the site collection from the tenant recycle bin
@@ -55,7 +72,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -67,7 +86,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Wait
@@ -79,21 +100,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

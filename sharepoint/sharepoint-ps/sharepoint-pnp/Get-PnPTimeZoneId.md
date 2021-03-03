@@ -1,20 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptimezoneid
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTimeZoneId
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTimeZoneId.html
 ---
-
+ 
 # Get-PnPTimeZoneId
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTimeZoneId.md to change this file.
+
 Returns a time zone ID
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTimeZoneId [-Match <String>]
+Get-PnPTimeZoneId [[-Match] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,14 +27,14 @@ In order to create a new classic site you need to specify the timezone this site
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTimeZoneId
 ```
 
 This will return all time zone IDs in use by Office 365.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPTimeZoneId -Match Stockholm
 ```
@@ -47,15 +52,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: 0
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-## OUTPUTS
-
-### List<SharePointPnP.PowerShell.Commands.GetTimeZoneId+Zone>
-
-Returns a list of matching zones. Use the ID property of the object for use in New-SPOTenantSite
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
