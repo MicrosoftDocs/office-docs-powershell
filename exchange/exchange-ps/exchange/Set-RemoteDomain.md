@@ -505,7 +505,7 @@ Accept wildcard characters: False
 ### -RequiredCharsetCoverage
 The RequiredCharsetCoverage parameter specifies a percentage threshold for characters in a message that must match to apply your organization's preferred character set before switching to automatic character set detection.
 
-For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the UNICODE characters and automatically determines the best matching character set to use.
+For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the Unicode characters and automatically determines the best matching character set to use.
 
 If recipients in the remote domain use characters that span character sets, you might want to specify a lower percentage to ensure that your organization's preferred character set is used during content conversion.
 
