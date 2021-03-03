@@ -59,10 +59,10 @@ This example returns statistics only for calendar folders.
 
 ### Example 3
 ```powershell
-Get-EXOMailbox -ResultSize Unlimited | Get-EXOMailboxFolderStatistics -FolderScope Inbox | ft Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize
+Get-EXOMailbox -ResultSize Unlimited | Get-EXOMailboxFolderStatistics -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize
 ```
 
-This example uses the FolderScope parameter to view inbox folders statistics for all mailboxes.
+This example uses the FolderScope parameter to view Inbox folder statistics for all mailboxes.
 
 
 ## PARAMETERS
