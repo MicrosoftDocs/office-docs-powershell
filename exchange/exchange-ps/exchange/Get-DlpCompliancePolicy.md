@@ -45,6 +45,23 @@ Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 
 This example displays detailed information for the DLP policy named "PII Limited".
 
+### Example 3
+```powershell
+Get-DlpCompliancePolicy -Identity "PII Limited" DistributionDetail | Format-List DistributionStatus
+```
+
+This example displays distribution details for a DLP policy.
+
+### Example 4
+```powershell
+$dlp = Get-DlpCompliancePolicy;ForEach ($d in $dlp){Get-DlpCompliancePolicy -DistributionDetail $d.name | fl Name,DistributionStatus}
+```
+
+This example gets all of the DLP policies in a environment and displays the distribution status for each.
+
+
+
+
 ## PARAMETERS
 
 ### -DistributionDetail
@@ -62,6 +79,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -Identity
 The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
