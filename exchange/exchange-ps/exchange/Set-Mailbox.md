@@ -3003,20 +3003,7 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
-
-You can use any value that uniquely identifies the Group Mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
+The GroupMailbox switch is required to modify Microsoft 365 Groups in Exchange Online. You don't need to specify a value with this switch.
 
 ```yaml
 Type: MailboxIdParameter

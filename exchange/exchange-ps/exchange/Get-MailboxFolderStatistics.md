@@ -28,7 +28,7 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
  [-Archive]
  [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
- [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-FolderScope <ElcFolderType>]
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
@@ -37,12 +37,24 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-AuditLog]
+Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>]
+ [-AuditLog]
+ [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
- [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-FolderScope <ElcFolderType>]
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
+```
+
+### Database
+```
+Get-MailboxFolderStatistics -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
  [-DiagnosticInfo <String>]
+ [-FolderScope <ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
  [<CommonParameters>]
 ```
@@ -126,6 +138,42 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Database
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Archive
 The Archive switch specifies whether to return the usage statistics of the archive associated with the mailbox or mail user. You don't need to specify a value with this switch.
 
@@ -185,7 +233,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Identity, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -222,7 +270,7 @@ The FolderScope parameter specifies the scope of the search by folder type. Vali
 - Tasks
 
 ```yaml
-Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
+Type: ElcFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
