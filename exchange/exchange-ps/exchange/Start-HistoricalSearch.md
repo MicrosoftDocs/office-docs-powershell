@@ -24,16 +24,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
+ [-CompressFile <Boolean>]
  [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
+ [-EncryptionTemplate <String>]
+ [-EncryptionType <String>]
  [-Locale <CultureInfo>]
  [-MessageID <MultiValuedProperty>]
+ [-NetworkMessageID <>]
  [-NotifyAddress <MultiValuedProperty>]
  [-OriginalClientIP <String>]
  [-RecipientAddress <MultiValuedProperty>]
  [-SenderAddress <MultiValuedProperty>]
  [-TransportRule <MultiValuedProperty>]
+ [-Url <String>]
  [<CommonParameters>]
 ```
 
@@ -147,6 +152,22 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -CompressFile
+{{ Fill CompressFile Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeliveryStatus
 The DeliveryStatus parameter filters the results by the delivery status of the message. You can use one of the following values:
 
@@ -203,6 +224,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EncryptionTemplate
+{{ Fill EncryptionTemplate Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionType
+{{ Fill EncryptionType Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Locale
 The Locale parameter filters the results by the locale of the message.
 
@@ -226,6 +279,22 @@ The MessageId parameter filters the results by the Message-ID header field of th
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkMessageID
+{{ Fill NetworkMessageID Description }}
+
+```yaml
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -308,6 +377,22 @@ The TransportRule parameter filters the results by the name of the transport rul
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Url
+{{ Fill Url Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
