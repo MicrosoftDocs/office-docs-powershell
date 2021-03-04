@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
   > [!Note]
   > Skype for Business Online Connector is currently part of the latest Teams PowerShell module. If you're using the latest Teams PowerShell public release, you don't need to install the Skype for Business Online Connector.
-  > With Teams PowerShell Module 2.0 New-CsOnlineSession has been deprecated and is no longer required to connect Skype for Business Online. It has been replaced with Connect-MicrosoftTeams.
+  > With Teams PowerShell Module New-CsOnlineSession has been deprecated and is no longer required to connect Skype for Business Online. It has been replaced with Connect-MicrosoftTeams.
 
 
 Creates a persistent connection to Microsoft Skype for Business Online DataCenter.
