@@ -397,7 +397,7 @@ Accept wildcard characters: False
 ### -Gmail
 This parameter is available only in the cloud-based service.
 
-The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a G Suite tenant to Exchange Online mailboxes.
+The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a Google Workspace (formerly G Suite) tenant to Exchange Online mailboxes.
 
 ```yaml
 Type: SwitchParameter

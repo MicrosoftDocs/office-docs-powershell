@@ -23,11 +23,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AccessRights
 ```
 Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+ [-BypassMasterAccountSid]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
+ [-SoftDeletedMailbox]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -39,6 +42,7 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
@@ -50,8 +54,10 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
 ### Owner
 ```
 Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
+ [-BypassMasterAccountSid]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-WhatIf]
  [<CommonParameters>]
@@ -60,6 +66,7 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
 ### ClearAutoMapping
 ```
 Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-BypassMasterAccountSid]
  [-ClearAutoMapping]
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
@@ -243,6 +250,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BypassMasterAccountSid
+This parameter is available only in the cloud-based service.
+
+{{ Fill BypassMasterAccountSid Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, ClearAutoMapping
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -288,6 +313,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill GroupMailbox Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, Instance
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -351,6 +394,24 @@ Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeletedMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill SoftDeletedMailbox Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

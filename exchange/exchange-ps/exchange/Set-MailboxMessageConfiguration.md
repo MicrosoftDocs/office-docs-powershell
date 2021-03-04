@@ -37,6 +37,7 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultFontSize <Int32>]
  [-DefaultFormat <MailFormat>]
  [-DomainController <Fqdn>]
+ [-EchoGroupMessageBackToSubscribedSender <Boolean>]
  [-EmailComposeMode <EmailComposeMode>]
  [-EmptyDeletedItemsOnLogoff <Boolean>]
  [-GlobalReadingPanePosition <MailReadingPanePosition>]
@@ -404,6 +405,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EchoGroupMessageBackToSubscribedSender
+This parameter is available only in the cloud-based service.
+
+{{ Fill EchoGroupMessageBackToSubscribedSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

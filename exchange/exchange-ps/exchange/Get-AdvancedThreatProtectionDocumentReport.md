@@ -34,6 +34,7 @@ Get-AdvancedThreatProtectionDocumentReport
  [-PageSize <Int32>]
  [-ProbeTag <String>]
  [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -220,6 +221,22 @@ Use the short date format which is defined in the Regional Options settings on t
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SummarizeBy
+{{ Fill SummarizeBy Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

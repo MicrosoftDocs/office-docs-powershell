@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MigrationEndpoint cmdlet to configure the connection settings for cross-forests moves, remote move migrations, cutover or staged Exchange migrations, IMAP migrations, and G Suite migrations.
+Use the New-MigrationEndpoint cmdlet to configure the connection settings for cross-forests moves, remote move migrations, cutover or staged Exchange migrations, IMAP migrations, and Google Workspace (formerly G Suite) migrations.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -219,7 +219,7 @@ The New-MigrationEndpoint cmdlet configures the connection settings for differen
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. A cutover Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-- G Suite migration: Migration mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data.  G Suite migrations require the use of a Gmail endpoint.
+- Google Workspace migration: Migration mailbox data from a Google Workspace tenant to Exchange Online.  For a Google Workspace migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
 
@@ -419,7 +419,7 @@ Accept wildcard characters: False
 ### -Gmail
 This parameter is available only in the cloud-based service.
 
-The Gmail switch specifies the type of endpoint for G Suite migrations. You don't need to specify a value with this switch.
+The Gmail switch specifies the type of endpoint for Google Workspace migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
