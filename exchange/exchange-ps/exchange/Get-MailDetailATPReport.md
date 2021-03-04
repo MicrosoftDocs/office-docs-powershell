@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
+Get-MailDetailATPReport
+ [-DataSource <String>]
+ [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
@@ -75,6 +77,22 @@ Get-MailDetailATPReport -StartDate 7/22/2018 -EndDate 7/31/2018
 This example returns the actions for the last 10 days in July, 2018. (Note: Customers with Defender for Office 365 subscriptions will be able to get up to 30 days of data.)
 
 ## PARAMETERS
+
+### -DataSource
+{{ Fill DataSource Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Direction
 The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.

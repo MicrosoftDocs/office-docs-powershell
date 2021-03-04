@@ -38,6 +38,7 @@ New-AntiPhishPolicy [-Name] <String>
  [-EnableTargetedUserProtection <Boolean>]
  [-EnableUnauthenticatedSender <Boolean>]
  [-EnableUnusualCharactersSafetyTips <Boolean>]
+ [-EnableViaTag <Boolean>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
  [-ImpersonationProtectionState <ImpersonationProtectionState>]
@@ -45,6 +46,7 @@ New-AntiPhishPolicy [-Name] <String>
  [-MailboxIntelligenceProtectionActionRecipients <MultiValuedProperty>]
  [-PhishThresholdLevel <Int32>]
  [-PolicyTag <String>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [-SimilarUsersSafetyTipsCustomText <String>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
  [-TargetedDomainProtectionAction <ImpersonationAction>]
@@ -387,6 +389,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableViaTag
+{{ Fill EnableViaTag Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExcludedDomains
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
@@ -520,6 +538,23 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecommendedPolicyType
+{{ Fill RecommendedPolicyType Description }}
+
+```yaml
+Type: RecommendedPolicyType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Custom, Standard, Strict
 Applicable: Exchange Online
 
 Required: False
