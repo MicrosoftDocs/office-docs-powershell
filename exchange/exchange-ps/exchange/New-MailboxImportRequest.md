@@ -55,7 +55,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <Lo
  [<CommonParameters>]
 ```
 
-### MailboxImportRequest
+### MailboxLocationId
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
@@ -85,6 +85,40 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
  [-TargetRootFolder <String>]
  [-WhatIf]
  [-WorkloadType <RequestWorkloadType>]
+ [<CommonParameters>]
+```
+
+### AzureImportRequest
+```
+New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStorageAccountUri <Uri> -AzureSharedAccessSignatureToken <String>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-AzureStatusPublishEndpointInfo <String>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentCodePage <Int32>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-MRSContentFilterSasUri <Uri>]
+ [-MigrationBatch <MigrationBatchIdParameter>]
+ [-MigrationMailbox <MailboxIdParameter>]
+ [-MigrationUser <MigrationUserIdParameter>]
+ [-Name <String>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipInitialConnectionValidation]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourceRootFolder <String>]
+ [-SuspendComment <String>]
+ [-Suspend]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -125,35 +159,10 @@ This example imports all of the .pst files on a shared folder. Each .pst file na
 
 ## PARAMETERS
 
-### -FilePath
-This parameter is available only in on-premises Exchange.
-
-The FilePath parameter specifies the network share path of the .pst file from which data is imported, for example, \\\\SERVER01\\PST Files\\ToImport.pst.
-
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
-
-- To import PST files from the share: Read permission
-- To save exported PST files to the share: Read/Write permission.
-
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
-
-```yaml
-Type: LongPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Mailbox
 The Mailbox parameter specifies the destination mailbox where the content is being imported to.
 
-In Exchange 2016 CU7 or later and Exchange Online, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
+In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
 
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
@@ -183,7 +192,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: MailboxImportRequest
+Parameter Sets: MailboxLocationId
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -194,11 +203,71 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AzureBlobStorageAccountUri
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Uri
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureSharedAccessSignatureToken
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePath
+This parameter is available only in on-premises Exchange.
+
+The FilePath parameter specifies the network share path of the .pst file from which data is imported, for example, \\\\SERVER01\\PST Files\\ToImport.pst.
+
+You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+
+- To import PST files from the share: Read permission
+- To save exported PST files to the share: Read/Write permission.
+
+If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+
+```yaml
+Type: LongPath
+Parameter Sets: Mailbox, MailboxLocationId
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AcceptLargeDataLoss
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
-In Exchange 2013 or later or Exchange Online, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+In Exchange 2013 or later, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
 In Exchange 2010, you need to use this switch if you set the BadItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
@@ -237,14 +306,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AzureStatusPublishEndpointInfo
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BadItemLimit
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
 
 ```yaml
 Type: Unlimited
@@ -317,7 +402,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - KeepAll
 - KeepLatestItem
 - KeepSourceItem (This is the default value)
-- KeepTargetItem (Exchage 2016 or later)
+- KeepTargetItem (Exchange 2016 or later)
 - UpdateFromSource (Exchange 2016 or later)
 
 ```yaml
@@ -334,7 +419,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCodePage
-The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst filesare used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) topic.
+The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) topic.
 
 ```yaml
 Type: Int32
@@ -484,7 +569,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 
 ```yaml
 Type: InternalMrsFlag[]
-Parameter Sets: (All)
+Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -523,8 +608,6 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -538,14 +621,68 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MigrationBatch
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use
+
+```yaml
+Type: MigrationBatchIdParameter
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MigrationMailbox
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MailboxIdParameter
-Parameter Sets: MailboxImportRequest
+Type: MailboxIdParameter, AzureImportRequest
+Parameter Sets: MailboxLocationId
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationUser
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MigrationUserIdParameter
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MRSContentFilterSasUri
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Uri
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -595,7 +732,7 @@ The Priority parameter specifies the order in which this request should be proce
 
 ```yaml
 Type: RequestPriority
-Parameter Sets: (All)
+Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -618,9 +755,27 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: MailboxImportRequest
+Parameter Sets: MailboxLocationId, AzureImportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipInitialConnectionValidation
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -650,7 +805,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: MailboxImportRequest
+Parameter Sets: MailboxLocationId, AzureImportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -748,7 +903,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RequestWorkloadType
-Parameter Sets: (All)
+Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 

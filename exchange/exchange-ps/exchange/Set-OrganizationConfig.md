@@ -2781,7 +2781,7 @@ The PublicFolderShowClientControl parameter enables or disables access to public
 Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2016, Exchange 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
