@@ -29,6 +29,7 @@ Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-ImapEnabled <Boolean>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
  [-PopEnabled <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -161,6 +162,22 @@ The PopEnabled parameter enables or disables access to the mailbox by using POP3
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Online
 
 Required: False
