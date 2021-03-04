@@ -54,13 +54,10 @@ This example displays distribution details for a DLP policy.
 
 ### Example 4
 ```powershell
-$dlp = Get-DlpCompliancePolicy;ForEach ($d in $dlp){Get-DlpCompliancePolicy -DistributionDetail $d.name | fl Name,DistributionStatus}
+$dlp = Get-DlpCompliancePolicy; ForEach ($d in $dlp){Get-DlpCompliancePolicy -DistributionDetail $d.name | Format-List Name,DistributionStatus}
 ```
 
 This example gets all of the DLP policies in a environment and displays the distribution status for each.
-
-
-
 
 ## PARAMETERS
 
