@@ -22,6 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
+ [-AcceptUntrustedCertificates <Boolean>]
+ [-ApplicationId <String>]
+ [-AppSecretKeyVaultUrl <String>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-Credentials <PSCredential>]
@@ -96,6 +99,60 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AcceptUntrustedCertificates
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptUntrustedCertificates Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationId
+This parameter is available only in the cloud-based service.
+
+{{ Fill ApplicationId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppSecretKeyVaultUrl
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppSecretKeyVaultUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

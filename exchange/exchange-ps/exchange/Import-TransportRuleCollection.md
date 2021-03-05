@@ -53,7 +53,7 @@ This example imports a transport rule collection from the XML file named Exporte
 ## PARAMETERS
 
 ### -Identity
-This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to import. You can use any value that uniquely identifies the rule. For example:
 
@@ -65,7 +65,7 @@ The Identity parameter specifies the transport rule that you want to import. You
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1

@@ -80,6 +80,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
+ [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
@@ -105,6 +106,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
  [-OutlookPayEnabled <Boolean>]
+ [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
@@ -1805,6 +1807,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalInOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FindTimeAttendeeAuthenticationEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2586,6 +2606,24 @@ The OutlookPayEnabled parameter enables or disables Microsoft Pay in the Microso
 
 - $true: Payments in Outlook are enabled.
 - $False: Payments in Outlook are disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookTextPredictionDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookTextPredictionDisabled Description }}
 
 ```yaml
 Type: Boolean

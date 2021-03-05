@@ -285,12 +285,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -301,6 +304,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -322,6 +326,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -409,12 +414,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -425,6 +433,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -446,6 +455,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -533,12 +543,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -549,6 +562,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -570,6 +584,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -657,12 +672,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -673,6 +691,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -694,6 +713,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -779,11 +799,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -794,6 +817,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -815,6 +839,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <System.DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -902,11 +927,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -917,6 +945,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -939,6 +968,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -1025,11 +1055,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -1040,6 +1073,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -1062,6 +1096,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
@@ -3714,6 +3749,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageCopyForSMTPClientSubmissionEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageCopyForSMTPClientSubmissionEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallProcessingEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallProcessingEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageTracking
 This parameter is available only in on-premises Exchange.
 
@@ -3867,6 +3938,24 @@ Type: SecureString
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NonCompliantDevices
+This parameter is available only in the cloud-based service.
+
+{{ Fill NonCompliantDevices Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -5350,6 +5439,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateEnforcedTimestamp
+This parameter is available only in the cloud-based service.
+
+{{ Fill UpdateEnforcedTimestamp Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseDatabaseQuotaDefaults
 The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values that are configured on the mailbox or on the mailbox database. Valid values are:
 
@@ -5371,7 +5478,7 @@ The applicable quota values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -5381,7 +5488,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses the MailboxRetention attribute value that's configured on the mailbox database. This value controls how long deleted mailboxes are kept in the database before they are permanently removed (purged). The default value is 30 days. Valid values are:
 
@@ -5392,7 +5499,7 @@ The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses th
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
