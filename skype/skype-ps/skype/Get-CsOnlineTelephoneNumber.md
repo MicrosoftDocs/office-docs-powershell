@@ -22,8 +22,24 @@ Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedP
 ```
 
 ## DESCRIPTION
-Here is an example of the output of the `Get-CsOnlineTelephoneNumber` cmdlet.
+Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
+Note: By default the result size is limited to 500 items, specify a higher result size using ResultSize parameter.
 
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
+```
+
+This example gets the attributes of a specific phone number.
+
+### -------------------------- Example 2 --------------------------
+```
+PS C:\> Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
+```
+
+```output
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
 
 ActivationState : Activated
@@ -57,20 +73,6 @@ UserId :
 IsManagedByServiceDesk : True
 
 PortInOrderStatus :
-
-
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
-```
-
-This example gets the attributes of a specific phone number.
-
-### -------------------------- Example 2 --------------------------
-```
-PS C:\> Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
 ```
 
 This example gets the phone numbers with the city code designating New York, New York.
