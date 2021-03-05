@@ -30,6 +30,7 @@ Get-User [-Anr <String>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IsVIP]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
  [-ReadFromDomainController]
@@ -49,6 +50,7 @@ Get-User [[-Identity] <UserIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IsVIP]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
  [-ReadFromDomainController]
@@ -282,6 +284,26 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsVIP
+This parameter is available only in the cloud-based service.
+
+The IsVIP switch filters the results by priority accounts.
+
+For more information about priority accounts, see [Manage and monitor priority accounts](https://docs.microsoft.com/microsoft-365/admin/setup/priority-accounts).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

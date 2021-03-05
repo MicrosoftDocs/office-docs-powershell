@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Details
 ```
 Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-RecipientAddress <String[]>]
  [-SenderAddress <String[]>]
  [<CommonParameters>]
 ```
@@ -39,6 +40,8 @@ Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
  [-MyItems]
  [-Page <Int32>]
  [-PageSize <Int32>]
+ [-PolicyName <String>]
+ [-PolicyTypes <QuarantinePolicyTypeEnum[]>]
  [-QuarantineTypes <QuarantineMessageTypeEnum[]>]
  [-RecipientAddress <String[]>]
  [-Reported <Boolean>]
@@ -244,6 +247,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyName
+{{ Fill PolicyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTypes
+{{ Fill PolicyTypes Description }}
+
+```yaml
+Type: QuarantinePolicyTypeEnum[]
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -QuarantineTypes
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
@@ -279,7 +314,7 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 
 ```yaml
 Type: String[]
-Parameter Sets: Summary
+Parameter Sets: All
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
