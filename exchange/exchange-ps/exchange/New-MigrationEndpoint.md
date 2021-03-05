@@ -40,6 +40,7 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress>
  [-Autodiscover]
  [-ExchangeOutlookAnywhere]
+ [-AcceptUntrustedCertificates]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -58,6 +59,7 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential>
  [-EmailAddress <SmtpAddress>]
  [-ExchangeOutlookAnywhere]
  [-ExchangeServer <String>]
+ [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -79,11 +81,14 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential>
 New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
  [-Credentials <PSCredential>]
  [-ExchangeRemoteMove]
+ [-ApplicationId <String>]
+ [-AppSecretKeyVaultUrl <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
+ [-RemoteTenant <String>]
  [-SkipVerification]
  [-WhatIf]
  [<CommonParameters>]
@@ -110,6 +115,7 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
  [-IMAP]
  [-Port <Int32>]
  [-Security <IMAPSecurityMechanism>]
+ [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -623,6 +629,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AcceptUntrustedCertificates
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptUntrustedCertificates Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, IMAP
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationId
+This parameter is available only in the cloud-based service.
+
+{{ Fill ApplicationId Description }}
+
+```yaml
+Type: String
+Parameter Sets: ExchangeRemoteMove
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppSecretKeyVaultUrl
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppSecretKeyVaultUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: ExchangeRemoteMove
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Authentication
 This parameter is available only in the cloud-based service.
 
@@ -801,6 +861,24 @@ For an IMAP migration, the Port parameter specifies the TCP port number used by 
 ```yaml
 Type: Int32
 Parameter Sets: IMAP
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteTenant
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoteTenant Description }}
+
+```yaml
+Type: String
+Parameter Sets: ExchangeRemoteMove
 Aliases:
 Applicable: Exchange Online
 

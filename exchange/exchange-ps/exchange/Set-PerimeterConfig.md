@@ -45,7 +45,7 @@ This example shows how to add an IP address to cloud-based safelists where the g
 ## PARAMETERS
 
 ### -Identity
-You don't need to use this parameter. The one and only PerimeterConfig object in the organization is named Tenant Perimeter Settings.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter

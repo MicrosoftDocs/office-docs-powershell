@@ -24,6 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Identities
+```
+Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
+ [<CommonParameters>]
+```
+
+### IdentityOnly
 ```
 Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [<CommonParameters>]
@@ -63,14 +70,12 @@ This example exports the quarantined file with the specified Identity value. The
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the quarantined message that you want to export. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
-
-You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+### -Identities
+{{ Fill Identities Description }}
 
 ```yaml
-Type: QuarantineMessageIdentity
-Parameter Sets: (All)
+Type: QuarantineMessageIdentity[]
+Parameter Sets: Identities
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -78,6 +83,37 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the quarantined message that you want to export. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
+
+You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+
+```yaml
+Type: QuarantineMessageIdentity
+Parameter Sets: Identities
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: QuarantineMessageIdentity
+Parameter Sets: IdentityOnly
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

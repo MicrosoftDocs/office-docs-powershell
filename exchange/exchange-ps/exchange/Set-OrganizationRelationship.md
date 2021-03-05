@@ -32,11 +32,14 @@ Set-OrganizationRelationship [-Identity] <OrganizationRelationshipIdParameter>
  [-FreeBusyAccessEnabled <Boolean>]
  [-FreeBusyAccessLevel <FreeBusyAccessLevel>]
  [-FreeBusyAccessScope <GroupIdParameter>]
+ [-MailboxMoveCapability <MailboxMoveCapability>]
  [-MailboxMoveEnabled <Boolean>]
+ [-MailboxMovePublishedScopes <MultiValuedProperty>]
  [-MailTipsAccessEnabled <Boolean>]
  [-MailTipsAccessLevel <MailTipsAccessLevel>]
  [-MailTipsAccessScope <GroupIdParameter>]
  [-Name <String>]
+ [-OAuthApplicationId <String>]
  [-OrganizationContact <SmtpAddress>]
  [-PhotosEnabled <Boolean>]
  [-TargetApplicationUri <Uri>]
@@ -282,6 +285,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailboxMoveCapability
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxMoveCapability Description }}
+
+```yaml
+Type: MailboxMoveCapability
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MailboxMoveEnabled
 The MailboxMoveEnabled parameter specifies whether the organization relationship enables moving mailboxes to or from the external organization. Valid values are:
 
@@ -293,6 +314,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxMovePublishedScopes
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxMovePublishedScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -385,6 +424,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OAuthApplicationId
+This parameter is available only in the cloud-based service.
+
+{{ Fill OAuthApplicationId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
