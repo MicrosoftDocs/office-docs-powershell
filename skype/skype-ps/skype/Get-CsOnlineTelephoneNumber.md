@@ -189,9 +189,11 @@ Accept wildcard characters: False
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
-* "Service" for numbers assigned to conferencing support.
+* "Service" for numbers assigned to conferencing support, call queue or auto attendant.
 
 * "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+
+The values for the InventoryType parameter are case-sensitive.
 
 ```yaml
 Type: MultiValuedProperty
