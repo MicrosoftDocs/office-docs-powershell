@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
-This parameter isn't available in Exchange Server 2019.
+This parameter is available or functional only in Exchange 2016 or earlier.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 
@@ -364,7 +364,7 @@ The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

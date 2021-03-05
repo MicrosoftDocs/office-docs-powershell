@@ -25,6 +25,7 @@ Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <Mai
  [-ResetDelegateUserCollection]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Force]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -133,6 +134,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
