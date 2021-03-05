@@ -74,6 +74,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-LinkedInEnabled <Boolean>]
  [-LocalEventsEnabled <Boolean>]
  [-LogonAndErrorLanguage <Int32>]
+ [-MessagePreviewsDisabled <Boolean>]
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
@@ -102,6 +103,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-SearchFoldersEnabled <Boolean>]
  [-SetPhotoEnabled <Boolean>]
  [-SetPhotoURL <String>]
+ [-ShowOnlineArchiveEnabled <Boolean>]
  [-SignaturesEnabled <Boolean>]
  [-SilverlightEnabled <Boolean>]
  [-SkipCreateUnifiedGroupCustomSharepointClassification <Boolean>]
@@ -353,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The AllowOfflineOn parameter specifies when Outlook Web App in offline mode is available for supported web browsers. Valid values are:
 
@@ -474,7 +476,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
@@ -485,7 +487,7 @@ The CalendarEnabled parameter specifies whether to enable or disable the calenda
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -495,7 +497,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
@@ -506,7 +508,7 @@ The ChangePasswordEnabled parameter specifies whether users can change their pas
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -580,7 +582,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContactsEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook Web App. Valid values are:
 
@@ -591,7 +593,7 @@ The ContactsEnabled parameter specifies whether to enable or disable Contacts in
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -778,7 +780,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitLogonEnabled
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The ExplicitLogonEnabled parameter specifies whether to allow a user to open someone else's mailbox in Outlook on the web (provided that user has permissions to the mailbox). Valid values are:
 
@@ -789,7 +791,7 @@ The ExplicitLogonEnabled parameter specifies whether to allow a user to open som
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1003,7 +1005,7 @@ Accept wildcard characters: False
 ```
 
 ### -FreCardsEnabled
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1011,7 +1013,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1285,6 +1287,24 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessagePreviewsDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessagePreviewsDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1818,6 +1838,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowOnlineArchiveEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ShowOnlineArchiveEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SignaturesEnabled
 The SignaturesEnabled parameter specifies whether to enable or disable the use of signatures in Outlook on the web. Valid values are:
 
@@ -1926,7 +1964,7 @@ Accept wildcard characters: False
 ```
 
 ### -TasksEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The TasksEnabled parameter specifies whether Tasks folder is available in Outlook Web App. Valid values are:
 
@@ -1939,7 +1977,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
