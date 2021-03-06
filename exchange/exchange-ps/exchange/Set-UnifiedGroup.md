@@ -75,6 +75,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-SensitivityLabelId <Sustem.Guid>]
  [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
  [-WhatIf]
@@ -1105,6 +1106,24 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SensitivityLabelId
+This parameter is available only in the cloud-based service.
+
+{{ Fill SensitivityLabelId Description }}
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

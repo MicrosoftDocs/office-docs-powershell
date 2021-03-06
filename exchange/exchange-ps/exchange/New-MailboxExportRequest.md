@@ -518,6 +518,8 @@ If the user creates a personal folder with the same name as a well-known folder 
 
 Wildcard characters can't be used in folder names.
 
+To exclude the Recoverable Items folder, you must use the ExcludeDumpster parameter.
+
 ```yaml
 Type: String[]
 Parameter Sets: Mailbox, MailboxExportRequest
@@ -561,6 +563,8 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a backslash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
+
+The Recoverable Items folder is always included if you don't use the ExcludeDumpster parameter, regardless of the list of folders you provide.
 
 ```yaml
 Type: String[]
@@ -623,7 +627,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

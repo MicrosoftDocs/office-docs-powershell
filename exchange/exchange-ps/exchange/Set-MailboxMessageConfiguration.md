@@ -37,6 +37,7 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultFontSize <Int32>]
  [-DefaultFormat <MailFormat>]
  [-DomainController <Fqdn>]
+ [-EchoGroupMessageBackToSubscribedSender <Boolean>]
  [-EmailComposeMode <EmailComposeMode>]
  [-EmptyDeletedItemsOnLogoff <Boolean>]
  [-GlobalReadingPanePosition <MailReadingPanePosition>]
@@ -412,7 +413,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EchoGroupMessageBackToSubscribedSender
+This parameter is available only in the cloud-based service.
+
+{{ Fill EchoGroupMessageBackToSubscribedSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EmailComposeMode
+This parameter is available or functional only in on-premises Exchange.
+
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
 - Inline: New messages and replies are created in the preview pane. This is the default value.

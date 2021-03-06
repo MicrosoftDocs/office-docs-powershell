@@ -256,6 +256,7 @@ This parameter has been deprecated and is no longer used.
 Type: String
 Parameter Sets: Identity
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

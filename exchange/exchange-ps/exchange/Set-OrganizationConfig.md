@@ -80,6 +80,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
+ [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
@@ -105,6 +106,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
  [-OutlookPayEnabled <Boolean>]
+ [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
@@ -1805,6 +1807,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalInOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FindTimeAttendeeAuthenticationEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2600,6 +2620,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookTextPredictionDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookTextPredictionDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PermanentlyDeleteDisabled
 This parameter is available only in Exchange Server 2010.
 
@@ -2781,7 +2819,7 @@ The PublicFolderShowClientControl parameter enables or disables access to public
 Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2016, Exchange 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

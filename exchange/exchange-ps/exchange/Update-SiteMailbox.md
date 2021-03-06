@@ -27,6 +27,7 @@ Update-SiteMailbox [-Identity] <RecipientIdParameter>
  [-BypassOwnerCheck]
  [-Confirm]
  [-FullSync]
+ [-Organization <OrganizationIdParameter>]
  [-Server <String>]
  [-Target <TargetType>]
  [-WhatIf]
@@ -122,6 +123,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

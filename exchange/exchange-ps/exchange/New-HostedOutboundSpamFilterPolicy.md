@@ -34,6 +34,7 @@ New-HostedOutboundSpamFilterPolicy [-Name] <String>
  [-RecipientLimitExternalPerHour <UInt32>]
  [-RecipientLimitInternalPerHour <UInt32>]
  [-RecipientLimitPerDay <UInt32>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [<CommonParameters>]
 ```
 
@@ -252,6 +253,23 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecommendedPolicyType
+{{ Fill RecommendedPolicyType Description }}
+
+```yaml
+Type: RecommendedPolicyType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Custom, Standard, Strict
+Applicable: Exchange Online
 
 Required: False
 Position: Named
