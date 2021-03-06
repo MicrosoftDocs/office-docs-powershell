@@ -22,21 +22,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExchangeRemoteMoveAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
- [-Autodiscover]
- [-ExchangeRemoteMove]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhereAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
- [-Autodiscover]
- [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+ [-AcceptUntrustedCertificates]
  [-Confirm]
  [-MailboxPermission <MigrationMailboxPermission>]
+ [-Partition <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf]
@@ -45,34 +44,34 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <Smtp
 
 ### PSTImport
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
- [-FilePath <String>]
- [-PSTImport]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-FilePath <String>] [-PSTImport]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhere
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn>
- [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn> [-ExchangeOutlookAnywhere]
+ [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
  [-EmailAddress <SmtpAddress>]
  [-MailboxPermission <MigrationMailboxPermission>]
  [-TestMailbox <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
- [-PublicFolder]
+Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -84,6 +83,7 @@ Test-MigrationServerAvailability -RemoteServer <Fqdn>
  [-Credentials <PSCredential>]
  [-ExchangeRemoteMove]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -92,27 +92,29 @@ Test-MigrationServerAvailability -RemoteServer <Fqdn>
 ```
 Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### IMAP
 ```
-Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32>
- [-Imap]
+Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
+ [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
  [-Security <NIMAPSecurityMechanism]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Gmail
 ```
-Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]>
- [-Gmail]
+Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail]
  [-EmailAddress <SmtpAddress>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -123,6 +125,7 @@ Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]>
 Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance]
  [-RemoteServer <Fqdn>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -133,6 +136,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn
  [-PublicFolderToUnifiedGroup]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -144,6 +148,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDataba
  [-Authentication <AuthenticationMethod>]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -153,6 +158,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDataba
 Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
  [-PublicFolder]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -397,7 +403,7 @@ Accept wildcard characters: False
 ### -Gmail
 This parameter is available only in the cloud-based service.
 
-The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a G Suite tenant to Exchange Online mailboxes.
+The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a Google Workspace (formerly G Suite) tenant to Exchange Online mailboxes.
 
 ```yaml
 Type: SwitchParameter
@@ -602,6 +608,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AcceptUntrustedCertificates
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptUntrustedCertificates Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, IMAP
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Authentication
 This parameter is available only in the cloud-based service.
 
@@ -672,6 +696,24 @@ This parameter isn't used for testing the connection to the remote server for a 
 ```yaml
 Type: MigrationMailboxPermission
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

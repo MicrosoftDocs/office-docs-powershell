@@ -29,6 +29,7 @@ New-SafeAttachmentPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [-Redirect <Boolean>]
  [-RedirectAddress <SmtpAddress>]
  [-WhatIf]
@@ -155,6 +156,22 @@ This parameter isn't used. To enable or disable a safe attachment policy, use th
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecommendedPolicyType
+{{ Fill RecommendedPolicyType Description }}
+
+```yaml
+Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
