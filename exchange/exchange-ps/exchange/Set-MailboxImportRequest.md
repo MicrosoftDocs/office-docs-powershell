@@ -26,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-AcceptLargeDataLoss]
+ [-AzureSharedAccessSignatureToken <String>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
@@ -35,7 +36,9 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-LargeItemLimit <Unlimited>]
  [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
+ [-SkipInitialConnectionValidation]
  [-SkipMerging <SkippableMergeComponent[]>]
+ [-SkippedItemApprovalTime <System.DateTime>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -45,6 +48,7 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
 Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-RehomeRequest]
  [-RequestExpiryInterval <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
@@ -313,6 +317,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipInitialConnectionValidation
+This parameter is available only in the cloud-based service
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipMerging
 The SkipMerging parameter specifies the steps in the import that should be skipped. This parameter is used primarily for debugging purposes.
 
@@ -321,6 +343,24 @@ Type: SkippableMergeComponent[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkippedItemApprovalTime
+This parameter is available only in the cloud-based service
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: System.DateTime
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

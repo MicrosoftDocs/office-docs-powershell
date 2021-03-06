@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewrule
 applicable: Security & Compliance Center
-title: Get-SupervisoryReviewRule
+title: Exchange Online, Get-SupervisoryReviewRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-SupervisoryReviewRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-SupervisoryReviewRule cmdlet to modify supervisory review rules in the Security & Compliance Center. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
 
@@ -62,7 +62,7 @@ The Identity parameter specifies the supervisory review rule that you want to vi
 - GUID
 
 ```yaml
-Type: ComplianceRuleIdParameter
+Type: Exchange Online, ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -82,7 +82,7 @@ The Policy parameter filters the results by supervisory review policy that's ass
 - GUID
 
 ```yaml
-Type: PolicyIdParameter
+Type: Exchange Online, PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
