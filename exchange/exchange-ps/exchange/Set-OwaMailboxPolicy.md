@@ -2048,17 +2048,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAttachmentsEnabled
-This parameter is available or functional only in the cloud-based service.
+This parameter is available only in on-premises Exchange.
 
-This parameter has been deprecated and is no longer used.
-
-To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

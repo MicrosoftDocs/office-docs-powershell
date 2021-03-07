@@ -728,13 +728,15 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
+This parameter is available only in on-premises Exchange.
+
 The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority and last update time.
 
 ```yaml
 Type: RequestPriority
 Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

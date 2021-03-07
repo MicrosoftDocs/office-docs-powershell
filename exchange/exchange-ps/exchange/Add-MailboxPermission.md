@@ -177,13 +177,15 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+This parameter is available only in on-premises Exchange.
+
 This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: MailboxAcePresentationObject
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named

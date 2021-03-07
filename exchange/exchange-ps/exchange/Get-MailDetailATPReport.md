@@ -29,7 +29,6 @@ Get-MailDetailATPReport
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
  [-MalwareName <MultiValuedProperty>]
  [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>]
@@ -183,22 +182,6 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
