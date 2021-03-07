@@ -29,7 +29,6 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-ScopeLevel <AlertScopeLevel>]
@@ -48,7 +47,6 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Threshold <I
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-ScopeLevel <AlertScopeLevel>]
@@ -66,7 +64,6 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-Severity <RuleSeverity>]
@@ -335,22 +332,6 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
