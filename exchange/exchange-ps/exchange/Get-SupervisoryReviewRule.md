@@ -62,10 +62,10 @@ The Identity parameter specifies the supervisory review rule that you want to vi
 - GUID
 
 ```yaml
-Type: Exchange Online, ComplianceRuleIdParameter
+Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1
@@ -82,10 +82,10 @@ The Policy parameter filters the results by supervisory review policy that's ass
 - GUID
 
 ```yaml
-Type: Exchange Online, PolicyIdParameter
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
