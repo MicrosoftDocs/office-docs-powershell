@@ -101,7 +101,6 @@ New-TransportRule [-Name] <String>
  [-ExceptIfHeaderMatchesPatterns <Pattern []>]
  [-ExceptIfManagerAddresses <RecipientIdParameter []>]
  [-ExceptIfManagerForEvaluatedUser <EvaluatedUser>]
- [-ExceptIfMessageContainsAllDataClassifications <Hashtable []>]
  [-ExceptIfMessageContainsDataClassifications <Hashtable []>]
  [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
  [-ExceptIfMessageTypeMatches <MessageType>]
@@ -146,7 +145,6 @@ New-TransportRule [-Name] <String>
  [-LogEventText <EventLogText>]
  [-ManagerAddresses <RecipientIdParameter []>]
  [-ManagerForEvaluatedUser <EvaluatedUser>]
- [-MessageContainsAllDataClassifications <Hashtable []>]
  [-MessageContainsDataClassifications <Hashtable []>]
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <MessageType>]
@@ -2324,24 +2322,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExceptIfMessageContainsAllDataClassifications
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExceptIfMessageContainsDataClassifications
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -3542,24 +3522,6 @@ Type: EvaluatedUser
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageContainsAllDataClassifications
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-DlpSensitiveInformationType
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DlpSensitiveInformationType cmdlet to list the sensitive information types that are defined for your organization in the Security & Compliance Center. Sensitive information types are used by Data Loss Prevention (DLP) rules to check for sensitive information such as social security, passport, or credit card numbers.
 
@@ -58,7 +58,7 @@ The Identity parameter specifies the sensitive information type that you want to
 Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
