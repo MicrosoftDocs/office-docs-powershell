@@ -31,7 +31,6 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
@@ -255,22 +254,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Enabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: Identity
-Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

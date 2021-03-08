@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date: 9/29/2015
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Normal
