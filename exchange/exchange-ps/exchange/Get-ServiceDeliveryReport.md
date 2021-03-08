@@ -23,8 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ServiceDeliveryReport [-Expression <Expression>]
- [-ProbeTag <String>]
+Get-ServiceDeliveryReport [-ProbeTag <String>]
  [-Recipient <SmtpAddress>]
  [<CommonParameters>]
 ```
@@ -42,22 +41,6 @@ Get-ServiceDeliveryReport -Recipient chris@contoso.com
 This example shows the delivery path information for the recipient chris@contoso.com.
 
 ## PARAMETERS
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ProbeTag
 This parameter is reserved for internal Microsoft use.

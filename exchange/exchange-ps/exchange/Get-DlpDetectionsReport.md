@@ -29,7 +29,6 @@ Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
  [-DlpComplianceRule <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-Source <MultiValuedProperty>]
@@ -170,22 +169,6 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance Center

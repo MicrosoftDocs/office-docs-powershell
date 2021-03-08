@@ -1066,6 +1066,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
+This parameter is available only in on-premises Exchange.
+
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
@@ -1075,7 +1077,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2569,13 +2571,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryDialPlan
+This parameter is available only in on-premises Exchange.
+
 The SecondaryDialPlan parameter specifies a secondary UM dial plan to use. This parameter is provided to create a secondary proxy address.
 
 ```yaml
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2647,6 +2651,8 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
+This parameter is available only in on-premises Exchange.
+
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
 - `emailAddress:<integers>`
@@ -2665,7 +2671,7 @@ If you use this syntax, you don't need to specify all of the DTMF map values, an
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

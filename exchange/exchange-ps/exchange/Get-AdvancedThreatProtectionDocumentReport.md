@@ -29,7 +29,6 @@ Get-AdvancedThreatProtectionDocumentReport
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Organization <OrganizationIdParameter>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
@@ -144,22 +143,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter specifies the organization for which the report is being presented.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

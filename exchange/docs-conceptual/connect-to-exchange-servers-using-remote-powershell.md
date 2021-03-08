@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Priority
