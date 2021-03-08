@@ -28,7 +28,7 @@ New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Te
 ```
 
 ## DESCRIPTION
-The New-CsOnlineSchedule cmdlet creates a new schedule for the Organizational Auto Attendant (OAA) service. The OAA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
+The New-CsOnlineSchedule cmdlet creates a new schedule for the Auto Attendant (AA) service. The AA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
 
 **NOTE**
 - The type of the schedule cannot be altered after the schedule is created.
@@ -80,8 +80,6 @@ This example creates a fixed schedule that is active from December 24, 2017 to D
 
 ### -------------------------- Example 5 --------------------------
 ```powershell
-$dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
-$dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
 $notInEffectSchedule = New-CsOnlineSchedule -Name "NotInEffect" -FixedSchedule
 ```
 
@@ -319,6 +317,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 [New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
 
-[New-CsOrganizationalAutoAttendantCallFlow](New-CsOrganizationalAutoAttendantCallFlow.md)
+[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
 
-[New-CsOrganizationalAutoAttendantCallHandlingAssociation](New-CsOrganizationalAutoAttendantCallHandlingAssociation.md)
+[New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md)
+
+[New-CsAutoAttendant](New-CsAutoAttendant.md)

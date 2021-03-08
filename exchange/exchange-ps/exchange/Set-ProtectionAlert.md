@@ -33,7 +33,6 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Description <String>]
  [-Disabled <Boolean>]
  [-Filter <String>]
- [-Name <String>]
  [-NotificationCulture <CultureInfo>]
  [-NotifyUser <MultiValuedProperty>]
  [-NotifyUserOnFilterMatch <Boolean>]
@@ -296,22 +295,6 @@ Malware
 - Mail:ThreatName
 
 You can specify multiple criteria by using the -and comparison operator.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the unique name for the alert policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

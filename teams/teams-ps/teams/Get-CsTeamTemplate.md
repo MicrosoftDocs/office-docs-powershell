@@ -197,9 +197,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorObject
-
 ### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamTemplate
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorObject
 
 ## NOTES
 
@@ -207,30 +207,27 @@ COMPLEX PARAMETER PROPERTIES
 
 To create the parameters described below, construct a hash table containing the appropriate properties.
 For information on hash tables, run Get-Help about_Hash_Tables.
-
-INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter\
-  \[Bssid \<String\>\]: \
-  \[ChassisId \<String\>\]: \
-  \[CivicAddressId \<String\>\]: Civic address id.\
-  \[Country \<String\>\]: \
-  \[GroupId \<String\>\]: The ID of a group whose policy assignments will be returned.\
-  \[Id \<String\>\]: \
-  \[Identity \<String\>\]: \
-  \[Locale \<String\>\]: The language and country code of templates localization.\
-  \[LocationId \<String\>\]: Location id.\
-  \[OdataId \<String\>\]: A composite URI of a template.\
-  \[OperationId \<String\>\]: The ID of a batch policy assignment operation.\
-  \[OrderId \<String\>\]: \
-  \[PackageName \<String\>\]: The name of a specific policy package\
-  \[PolicyType \<String\>\]: The policy type for which group policy assignments will be returned.\
-  \[Port \<String\>\]: \
-  \[PortInOrderId \<String\>\]: \
-  \[SubnetId \<String\>\]: \
-  \[TenantId \<String\>\]: \
-  \[UserId \<String\>\]: UserId.
-
-Supports Guid.
-Eventually UPN and SIP.
+INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
+  - `[Bssid <String>]`: 
+  - `[ChassisId <String>]`: 
+  - `[CivicAddressId <String>]`: Civic address id.
+  - `[Country <String>]`: 
+  - `[GroupId <String>]`: The ID of a group whose policy assignments will be returned.
+  - `[Id <String>]`: 
+  - `[Identity <String>]`: 
+  - `[Locale <String>]`: 
+  - `[LocationId <String>]`: Location id.
+  - `[OdataId <String>]`: A composite URI of a template.
+  - `[OperationId <String>]`: The ID of a batch policy assignment operation.
+  - `[OrderId <String>]`: 
+  - `[PackageName <String>]`: The name of a specific policy package
+  - `[PolicyType <String>]`: The policy type for which group policy assignments will be returned.
+  - `[Port <String>]`: 
+  - `[PortInOrderId <String>]`: 
+  - `[PublicTemplateLocale <String>]`: Language and country code for localization of publicly available templates.
+  - `[SubnetId <String>]`: 
+  - `[TenantId <String>]`: 
+  - `[UserId <String>]`: UserId. Supports Guid. Eventually UPN and SIP.
 
 ## RELATED LINKS
 

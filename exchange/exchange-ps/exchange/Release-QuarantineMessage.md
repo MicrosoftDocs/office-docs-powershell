@@ -42,7 +42,6 @@ Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity
  [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
- [-Delete]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -244,24 +243,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Delete
-This parameter has been deprecated and is no longer used.
-
-To delete quarantined messages, use the Delete-QuarantineMessage cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: OrgReleaseToAll
-Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

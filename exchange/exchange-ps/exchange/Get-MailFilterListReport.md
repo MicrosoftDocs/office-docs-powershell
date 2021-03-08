@@ -25,7 +25,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailFilterListReport
  [-Domain <MultiValuedProperty>]
- [-Expression <Expression>]
  [-ProbeTag <String>]
  [-SelectionTarget <MultiValuedProperty>]
  [<CommonParameters>]
@@ -58,22 +57,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
