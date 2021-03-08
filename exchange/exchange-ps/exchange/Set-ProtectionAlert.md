@@ -34,6 +34,7 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Disabled <Boolean>]
  [-Filter <String>]
  [-NotificationCulture <CultureInfo>]
+ [-NotificationEnabled <Boolean>]
  [-NotifyUser <MultiValuedProperty>]
  [-NotifyUserOnFilterMatch <Boolean>]
  [-NotifyUserSuppressionExpiryDate <DateTime>]
@@ -43,6 +44,7 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
+ [-VolumeThreshold <System.UInt64>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -327,6 +329,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotificationEnabled
+{{ Fill NotificationEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyUser
 This parameter is reserved for internal Microsoft use.
 
@@ -485,6 +503,22 @@ You can only use this parameter when the AggregationType parameter value is Simp
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VolumeThreshold
+{{ Fill VolumeThreshold Description }}
+
+```yaml
+Type: System.UInt64
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
