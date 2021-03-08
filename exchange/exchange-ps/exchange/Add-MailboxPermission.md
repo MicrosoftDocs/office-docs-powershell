@@ -27,6 +27,7 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRig
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf]
@@ -38,6 +39,7 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRig
 Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipalIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-WhatIf]
  [<CommonParameters>]
@@ -52,6 +54,7 @@ Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePr
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf]
@@ -174,13 +177,15 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+This parameter is available only in on-premises Exchange.
+
 This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: MailboxAcePresentationObject
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -314,6 +319,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, Instance
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -22,18 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### MyAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String>
- [<CommonParameters>]
-```
-
-### TeamAnalytics
-```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -TeamAnalyticsEnabled <Boolean>
- [-PrivacyMode <String>]
- [-TeamAnalyticsManagerViewEnabled <Boolean>]
- [<CommonParameters>]
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +72,7 @@ The PrivacyMode parameter specifies the MyAnalytics privacy setting for the user
 
 ```yaml
 Type: String
-Parameter Sets: MyAnalytics
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -90,51 +80,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: TeamAnalytics
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -TeamAnalyticsEnabled
-PARAMVALUE: Boolean
-
-```yaml
-Type: Boolean
-Parameter Sets: TeamAnalytics
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TeamAnalyticsManagerViewEnabled
-PARAMVALUE: Boolean
-
-```yaml
-Type: Boolean
-Parameter Sets: TeamAnalytics
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -35,7 +35,6 @@ New-ComplianceSearch [-Name] <String>
  [-Language <CultureInfo>]
  [-LogLevel <ComplianceJobLogLevel>]
  [-PublicFolderLocation <String[]>]
- [-PublicFolderLocationExclusion <String[]>]
  [-RefinerNames <String[]>]
  [-SharePointLocation <String[]>]
  [-SharePointLocationExclusion <String[]>]
@@ -318,13 +317,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceJobLogLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -337,24 +338,6 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 The PublicFolderLocation parameter specifies that you want to include all public folders in the search. You use the value All for this parameter.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderLocationExclusion
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
@@ -428,13 +411,15 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

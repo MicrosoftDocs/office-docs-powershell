@@ -24,11 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DistributionGroup [-Name] <String>
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
+ [-BccBlocked <Boolean>]
  [-BypassNestedModerationEnabled <Boolean>]
  [-Confirm]
  [-CopyOwnerToMember]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
+ [-HiddenGroupMembershipEnabled]
  [-IgnoreNamingPolicy]
  [-ManagedBy <MultiValuedProperty>]
  [-MemberDepartRestriction <MemberUpdateType>]
@@ -154,6 +156,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BccBlocked
+This parameter is available only in the cloud-based service.
+
+{{ Fill BccBlocked Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BypassNestedModerationEnabled
 The ByPassNestedModerationEnabled parameter specifies how to handle message approval when a moderated group contains other moderated groups as members. Valid values are:
 
@@ -240,6 +260,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HiddenGroupMembershipEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill HiddenGroupMembershipEnabled Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

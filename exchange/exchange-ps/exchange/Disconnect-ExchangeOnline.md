@@ -39,14 +39,21 @@ Disconnect-ExchangeOnline closes any active session and clears the cache. After 
 Disconnect-ExchangeOnline
 ```
 
-This example asks for confirmation before disconnecting the current PowerShell session with Exchange Online.
+This example asks for confirmation before disconnecting the current Exchange Online PowerShell session.
 
 ### Example 2
 ```powershell
 Disconnect-ExchangeOnline -Confirm:$false
 ```
 
-This example disconnects the current PowerShell session with Exchange Online silently and without a confirmation prompt.
+This example disconnects the current Exchange Online PowerShell session without a confirmation prompt. Note that the following notification text is still displayed: `Removed the PSSession <ConnectionName> connected to outlook.office365.com Disconnected successfully !`.
+
+### Example 3
+```powershell
+Disconnect-ExchangeOnline -Confirm:$false -InformationAction Ignore -ErrorAction SilentlyContinue
+```
+
+This example silently disconnects the current Exchange Online PowerShell session, without a confirmation prompt or any notification text.
 
 ## PARAMETERS
 
