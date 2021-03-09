@@ -185,29 +185,43 @@ The EXO V2 module is supported in the following versions of Windows:
 
 ### Install the EXO V2 module
 
-To install the EXO V2 module for the first time, complete the following steps **in an elevated PowerShell window** (or instead include `-Scope CurrentUser` in the `Install-Module` command below):
+To install the EXO V2 module for the first time, complete the following steps:
 
 1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget).
 
-2. Close and re-open the window.
+2. Close and re-open the Windows PowerShell window.
 
 3. Now you can use the **Install-Module** cmdlet to install the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if one is available.
 
-   - To install **the latest public version** of the module, run the following command:
+   - To install **the latest public version** of the module, run **one** of the the following commands:
 
-     ```powershell
-     Install-Module -Name ExchangeOnlineManagement
-     ```
+     - In an elevated PowerShell window (all users):
 
-     Enter **Y** to accept the license agreement.
+       ```powershell
+       Install-Module -Name ExchangeOnlineManagement
+       ```
 
-   - To install **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run the following command:
+     - Only for the current user account:
 
-     ```powershell
-     Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
-     ```
+       ```powershell
+       Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser
+       ```
 
-     When you're finished, enter **Y** to accept the license agreement.
+   - To install **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands:
+
+     - In an elevated PowerShell window (all users):
+
+       ```powershell
+       Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
+       ```
+
+     - Only for the current user account:
+
+       ```powershell
+       Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease -Scope CurrentUser
+       ```
+
+   When you're finished, enter **Y** to accept the license agreement.
 
 For detailed syntax and parameter information, see [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module).
 
@@ -221,23 +235,37 @@ If the module is already installed on your computer, you can run the following c
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-2. You can use the **Update-Module** cmdlet **in an elevated PowerShell window** to update the EXO V2 module from the PowerShell Gallery. If you installed with `-Scope CurrentUser` then there is no need to use elevation.  Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if one is available.
+2. You can use the **Update-Module** cmdlet to update the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if one is available.
 
-   - To upgrade to **the latest public version** of the module, run the following command:
+   - To upgrade to **the latest public version** of the module, run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
 
-     ```powershell
-     Update-Module -Name ExchangeOnlineManagement
-     ```
+     - In an elevated PowerShell window (all users):
 
-     Enter **Y** to accept the license agreement.
+       ```powershell
+       Update-Module -Name ExchangeOnlineManagement
+       ```
 
-   - To upgrade to **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run the following command:
+     - Only for the current user account:
 
-     ```powershell
-     Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
-     ```
+       ```powershell
+       Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser
+       ```
 
-     When you're finished, enter **Y** to accept the license agreement.
+   - To upgrade to **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
+
+     - In an elevated PowerShell window (all users):
+
+       ```powershell
+       Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
+       ```
+
+     - Only for the current user account:
+
+       ```powershell
+       Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease -Scope CurrentUser
+       ```
+
+   When you're finished, enter **Y** to accept the license agreement.
 
 3. To confirm that the update was successful, run the following commands to check the version information of the module that's installed:
 
