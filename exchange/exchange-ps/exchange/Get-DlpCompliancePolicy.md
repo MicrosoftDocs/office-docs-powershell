@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-IncludeExtendedProperties <Boolean>]
  [-DistributionDetail]
  [<CommonParameters>]
 ```
@@ -61,23 +62,6 @@ This example gets all of the DLP policies in a environment and displays the dist
 
 ## PARAMETERS
 
-### -DistributionDetail
-The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
 ### -Identity
 The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
@@ -96,6 +80,38 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DistributionDetail
+The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeExtendedProperties
+{{ Fill IncludeExtendedProperties Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

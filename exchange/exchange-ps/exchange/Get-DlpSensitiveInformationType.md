@@ -22,6 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+ [-IncludeDetails]
+ [-IncludeElements <ClassificationPrimitiveElementType>]
+ [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -64,6 +67,54 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -IncludeDetails
+{{ Fill IncludeDetails Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeElements
+{{ Fill IncludeElements Description }}
+
+```yaml
+Type: ClassificationPrimitiveElementType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

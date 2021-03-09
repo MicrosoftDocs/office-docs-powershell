@@ -96,7 +96,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStora
  [-AzureStatusPublishEndpointInfo <String>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
- [-CompletedRequestAgeLimit <>]
+ [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <ConflictResolutionOption>]
  [-ContentCodePage <Int32>]
