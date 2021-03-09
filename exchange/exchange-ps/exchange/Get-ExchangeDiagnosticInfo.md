@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exchangediagnosticinfo
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ExchangeDiagnosticInfo
 schema: 2.0.0

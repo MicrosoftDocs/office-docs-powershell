@@ -22,6 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ComplianceRetentionEvent [-Identity <PolicyIdParameter>]
+ [-BeginDateTime <System.DateTime>]
+ [-DomainController <Fqdn>]
+ [-EndDateTime <System.DateTime>]
+ [-PreviewOnly]
  [<CommonParameters>]
 ```
 
@@ -63,6 +67,70 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -BeginDateTime
+{{ Fill BeginDateTime Description }}
+
+```yaml
+Type: System.DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndDateTime
+{{ Fill EndDateTime Description }}
+
+```yaml
+Type: System.DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewOnly
+{{ Fill PreviewOnly Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -618,26 +618,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScopeDetails
-This parameter is available only in the cloud-based service.
-
-This parameter requires the Export or Compliance Search roles in the Security & Compliance Center. By default, these roles are assigned only to the eDiscovery Manager role group.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ComplianceScopeDetail[]
-Parameter Sets: Export
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SearchNames
 This parameter is available only in the cloud-based service.
 

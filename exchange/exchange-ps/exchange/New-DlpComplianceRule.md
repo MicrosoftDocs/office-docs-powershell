@@ -1715,6 +1715,7 @@ You can use this action in DLP policies that are scoped only to Exchange.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -37,6 +37,7 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 ```
 Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
  [-DiagnosticInfo <String>]
+ [-DiagnosticOnly]
  [-IncludeReport]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-ReportOnly]
@@ -228,6 +229,24 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticOnly
+This parameter is available only in the cloud-based service.
+
+{{ Fill DiagnosticOnly Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online

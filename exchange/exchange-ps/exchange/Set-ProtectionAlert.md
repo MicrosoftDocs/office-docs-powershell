@@ -33,8 +33,8 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Description <String>]
  [-Disabled <Boolean>]
  [-Filter <String>]
- [-Name <String>]
  [-NotificationCulture <CultureInfo>]
+ [-NotificationEnabled <Boolean>]
  [-NotifyUser <MultiValuedProperty>]
  [-NotifyUserOnFilterMatch <Boolean>]
  [-NotifyUserSuppressionExpiryDate <DateTime>]
@@ -44,6 +44,7 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
+ [-VolumeThreshold <System.UInt64>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -310,11 +311,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies the unique name for the alert policy. If the value contains spaces, enclose the value in quotation marks (").
+### -NotificationCulture
+The NotificationCulture parameter specifies the language or locale that's used for notifications.
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
-Type: String
+Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -326,13 +329,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NotificationCulture
-The NotificationCulture parameter specifies the language or locale that's used for notifications.
-
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+### -NotificationEnabled
+{{ Fill NotificationEnabled Description }}
 
 ```yaml
-Type: CultureInfo
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -502,6 +503,22 @@ You can only use this parameter when the AggregationType parameter value is Simp
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VolumeThreshold
+{{ Fill VolumeThreshold Description }}
+
+```yaml
+Type: System.UInt64
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

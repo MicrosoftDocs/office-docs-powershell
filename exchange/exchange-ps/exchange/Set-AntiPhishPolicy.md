@@ -38,6 +38,7 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-EnableTargetedUserProtection <Boolean>]
  [-EnableUnauthenticatedSender <Boolean>]
  [-EnableUnusualCharactersSafetyTips <Boolean>]
+ [-EnableViaTag <Boolean>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
  [-ImpersonationProtectionState <ImpersonationProtectionState>]
@@ -379,6 +380,22 @@ The EnableUnusualCharactersSafetyTips parameter specifies whether to enable 
 
 - $true: Safety tips for unusual characters are enabled.
 - $false: Safety tips for unusual characters are disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableViaTag
+{{ Fill EnableViaTag Description }}
 
 ```yaml
 Type: Boolean

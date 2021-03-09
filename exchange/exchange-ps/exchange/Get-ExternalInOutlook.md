@@ -1,20 +1,20 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessageheader
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
-title: Get-QuarantineMessageHeader
+online version: https://docs.microsoft.com/powershell/module/exchange/get-externalinoutlook
+applicable: Exchange Online
+title: Get-ExternalInOutlook
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-QuarantineMessageHeader
+# Get-ExternalInOutlook
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-QuarantineMessageHeader cmdlet to view the message header of a quarantined message. The command will fail if the specified message is not in quarantine.
+Use the Get-ExternalInOutlook cmdlet to view the configuration of external sender identification that's available in supported versions of Outlook.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -23,12 +23,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity>
- [<CommonParameters>]
+Get-ExternalInOutlook [[-Identity] <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Standard SMTP message header syntax is described in RFC 5322. This cmdlet displays the message header exactly as it appears in the message. Individual header fields are not unfolded.
+The important properties that are returned in the output of this cmdlet are:
+
+- Enabled: True means the feature is enabled; False means the feature is disabled.
+- AllowList: The list of exceptions. Messages received from the specified senders or senders in the specified domains don't receive the External icon in the area of subject line.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -36,36 +38,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-QuarantineMessageHeader 65ab8c7d-dcd3-4067-7c60-08d116c001c3\8b677327-0ef3-166b-e108-ff6cb380d191
+Get-ExternalInOutlook
 ```
 
-This example displays the message header of the quarantined message that has the specified Identity value.
-
-### Example 2
-```powershell
-$qMessages = Get-QuarantineMessage
-Get-QuarantineMessageHeader $qMessages[0].Identity
-```
-
-This example displays the message header of the first message that's returned by Get-QuarantineMessage cmdlet.
+This example returns the settings of the external sender identification feature for the organization.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the quarantined message that you want to view the header for. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
-
-You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+The Identity parameter specifies the GUID of the external sender identification object that you want to view. Although this parameter is available, you don't need to use it.
 
 ```yaml
-Type: QuarantineMessageIdentity
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online
 
-Required: True
-Position: Named
+Required: False
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

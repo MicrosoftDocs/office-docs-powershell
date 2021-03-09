@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-LabelPolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -70,6 +71,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Security & Compliance Center
 
 Required: False

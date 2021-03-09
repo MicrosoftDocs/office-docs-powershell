@@ -4,6 +4,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 ms.reviewer: navgupta
@@ -33,6 +34,8 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
   > The rest of the instructions in the article assume that you've already installed the module.
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/permissions-exo).
+
+  To find the permissions that are required to run specific Exchange Online cmdlets, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
 
 - If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection (EOP), your EOP PowerShell connection instructions are the same as Exchange Online PowerShell as described in this article.
 

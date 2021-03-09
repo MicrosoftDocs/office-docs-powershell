@@ -596,25 +596,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disabled
-The Disabled parameter specifies whether to enable or disable the sensitivity label. Valid values are:
-
-- $true: The label is disabled.
-- $False: The label is enabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisplayName
 The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in any client that supports sensitivity labels. This includes Word, Excel, PowerPoint, Outlook, SharePoint, Teams, and Power BI.
 

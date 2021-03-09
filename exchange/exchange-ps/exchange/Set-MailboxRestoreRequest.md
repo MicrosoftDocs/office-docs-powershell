@@ -34,18 +34,23 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-Priority <RequestPriority>]
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
+ [-SkipInitialConnectionValidation]
  [-SkipMerging <SkippableMergeComponent[]>]
+ [-SkippedItemApprovalTime <DateTime>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Rehome
 ```
-Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-RehomeRequest]
+Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-RehomeRequest]
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
+ [-SkipInitialConnectionValidation]
+ [-SkippedItemApprovalTime <DateTime>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -185,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -193,7 +198,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -203,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalFlags
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
 
@@ -211,7 +216,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -248,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
@@ -265,7 +270,7 @@ The Priority parameter specifies the order in which the request should be proces
 Type: RequestPriority
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -275,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -RehomeRequest
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The RehomeRequest switch specifies that the mailbox restore request be moved to a different mailbox database. Use this parameter to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
 
@@ -283,7 +288,7 @@ The RehomeRequest switch specifies that the mailbox restore request be moved to 
 Type: SwitchParameter
 Parameter Sets: Rehome
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: Named
@@ -331,6 +336,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipInitialConnectionValidation
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipMerging
 The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
 
@@ -346,6 +369,24 @@ Type: SkippableMergeComponent[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkippedItemApprovalTime
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DateTime
+Parameter Sets: Identity, Rehome
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
