@@ -144,9 +144,13 @@ Determines whether real-time captions are available for the Guest users in Teams
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: DisabledUserOverride
-Accept pipelin input: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
