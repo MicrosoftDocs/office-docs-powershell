@@ -535,6 +535,19 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
+```yaml
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EncryptRMSTemplate
 The EncryptRMSTemplate parameter specifies an action for the DLP rule that applies rights management service (RMS) templates to files. You identify the RMS template by name. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -1669,6 +1682,7 @@ You can use this action in DLP policies that are scoped only to Exchange.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

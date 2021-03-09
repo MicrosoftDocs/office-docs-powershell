@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-DlpSensitiveInformationTypeRulePackage [-FileData] <Byte[]>
  [-Confirm]
+ [-MigrationId <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -72,6 +73,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationId
+{{ Fill MigrationId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

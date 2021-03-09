@@ -25,6 +25,7 @@ Get-TransportRule [[-Identity] <RuleIdParameter>]
  [-DomainController <Fqdn>]
  [-State <RuleState>]
  [-DlpPolicy <String>]
+ [-ExcludeConditionActionDetails <Boolean>]
  [-Filter <String>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -140,6 +141,27 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeConditionActionDetails
+This parameter is available only in the cloud-based service.
+
+The ExcludeConditionActionDetails parameter specifies whether to hide specific details from the results. Valid values are:
+
+- $true: The Description, Conditions, and Actions properties, as well as any configured condition, exception and action property values are blank.
+- $false: No properties or property values are hidden. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
