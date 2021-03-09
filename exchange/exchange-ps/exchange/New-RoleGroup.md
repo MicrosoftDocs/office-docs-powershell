@@ -51,6 +51,7 @@ New-RoleGroup [-Name] <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Force]
+ [-Id <Guid>]
  [-ManagedBy <MultiValuedProperty>]
  [-Members <MultiValuedProperty>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
@@ -298,6 +299,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+This parameter is available only in Security & Compliance Center PowerShell.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

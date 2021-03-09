@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-ComplianceRetentionEventType -Identity <PolicyIdParameter>
  [-Confirm]
  [-ForceDeletion]
+ [-PreviewOnly]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -83,6 +84,22 @@ Accept wildcard characters: False
 
 ### -ForceDeletion
 The ForceDeletion switch forces the removal of the retention event type. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewOnly
+{{ Fill PreviewOnly Description }}
 
 ```yaml
 Type: SwitchParameter

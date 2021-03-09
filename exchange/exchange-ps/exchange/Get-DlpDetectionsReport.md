@@ -28,6 +28,7 @@ Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
  [-DlpCompliancePolicy <MultiValuedProperty>]
  [-DlpComplianceRule <MultiValuedProperty>]
  [-EndDate <DateTime>]
+ [-Expression <Expression>]
  [-EventType <MultiValuedProperty>]
  [-Page <Int32>]
  [-PageSize <Int32>]
@@ -172,6 +173,24 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Expression
+This parameter is available only in Security & Compliance Center PowerShell
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Expression
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

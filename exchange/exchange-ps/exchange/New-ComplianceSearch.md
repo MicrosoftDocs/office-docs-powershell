@@ -31,6 +31,7 @@ New-ComplianceSearch [-Name] <String>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
+ [-IncludeOrgContent <Boolean>]
  [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-LogLevel <ComplianceJobLogLevel>]
@@ -266,6 +267,22 @@ Also, if a content location was placed on a query-based case hold, only items th
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeOrgContent
+{{ Fill IncludeOrgContent Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
