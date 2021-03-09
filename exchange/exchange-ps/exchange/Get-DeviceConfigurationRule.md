@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-deviceconfigurationrule
-applicable: Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-DeviceConfigurationRule
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-DeviceConfigurationRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DeviceConfigurationRule cmdlet to view mobile device configuration rules in the Security & Compliance Center.
 
@@ -55,6 +55,22 @@ This example shows details about the mobile device configuration rule named Lega
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax `<Mobile device configuration policy name>{<GUID value>}`. For example, `Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}`.
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -CompareToWorkload
 The CompareToWorkload switch specifies whether to compare the mobile device configuration rule to Intune rules. You don't need to specify a value with this switch.
 
@@ -84,22 +100,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax `<Mobile device configuration policy name>{<GUID value>}`. For example, `Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}`.
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

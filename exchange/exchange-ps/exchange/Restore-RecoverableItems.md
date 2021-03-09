@@ -206,7 +206,7 @@ The FilterItemType parameter filters the results by the specified MessageClass (
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -314,10 +314,10 @@ If you don't use this parameter, the command will search all of these folders.
 
 ```yaml
 Type: RecoverableItemsFolderType
-Parameter Sets: (All)
+Parameter Sets: OnPrem
 Aliases:
-Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Accepted values: DeletedItems | RecoverableItems, DeletedItems | RecoverableItems | PurgedItems
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

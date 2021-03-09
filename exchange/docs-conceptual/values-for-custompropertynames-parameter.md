@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:

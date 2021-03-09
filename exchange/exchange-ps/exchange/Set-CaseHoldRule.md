@@ -24,8 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-CaseHoldRule [-Identity] <ComplianceRuleIdParameter>
  [-Comment <String>]
  [-Confirm]
- [-ContentDateFrom <DateTime>]
- [-ContentDateTo <DateTime>]
  [-ContentMatchQuery <String>]
  [-Disabled <Boolean>]
  [-WhatIf]
@@ -92,42 +90,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContentDateFrom
-The ContentDateFrom parameter specifies the start date of the date range.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContentDateTo
-The ContentDateTo parameter specifies the end date of the date range.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

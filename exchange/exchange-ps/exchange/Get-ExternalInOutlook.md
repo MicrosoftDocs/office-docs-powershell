@@ -1,20 +1,20 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-servicedeliveryreport
-applicable: Exchange Online, Exchange Online Protection
-title: Get-ServiceDeliveryReport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-externalinoutlook
+applicable: Exchange Online
+title: Get-ExternalInOutlook
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-ServiceDeliveryReport
+# Get-ExternalInOutlook
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ServiceDeliveryReport cmdlet to view information about the message delivery path for a specified recipient.
+Use the Get-ExternalInOutlook cmdlet to view the configuration of external sender identification that's available in supported versions of Outlook.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -23,54 +23,41 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ServiceDeliveryReport [-ProbeTag <String>]
- [-Recipient <SmtpAddress>]
- [<CommonParameters>]
+Get-ExternalInOutlook [[-Identity] <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+The important properties that are returned in the output of this cmdlet are:
+
+- Enabled: True means the feature is enabled; False means the feature is disabled.
+- AllowList: The list of exceptions. Messages received from the specified senders or senders in the specified domains don't receive the External icon in the area of subject line.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-ServiceDeliveryReport -Recipient chris@contoso.com
+Get-ExternalInOutlook
 ```
 
-This example shows the delivery path information for the recipient chris@contoso.com.
+This example returns the settings of the external sender identification feature for the organization.
 
 ## PARAMETERS
 
-### -ProbeTag
-This parameter is reserved for internal Microsoft use.
+### -Identity
+The Identity parameter specifies the GUID of the external sender identification object that you want to view. Although this parameter is available, you don't need to use it.
 
 ```yaml
-Type: String
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Recipient
-The Recipient parameter specifies the email address of the recipient you want to test.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -80,12 +67,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

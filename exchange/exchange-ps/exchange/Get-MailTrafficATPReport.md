@@ -30,9 +30,10 @@ Get-MailTrafficATPReport
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
+ [-NumberOfRows <Int32>]
  [-Page <Int32>]
  [-PageSize <Int32>]
+ [-PivotBy <MultiValuedProperty>]
  [-ProbeTag <String>]
  [-StartDate <DateTime>]
  [-SummarizeBy <MultiValuedProperty>]
@@ -219,11 +220,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Expression
-This parameter is reserved for internal Microsoft use.
+### -NumberOfRows
+The NumberOfRows parameter specifies the number of rows to return in the report. The maximum value is 10000.
 
 ```yaml
-Type: Expression
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -256,6 +257,22 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PivotBy
+{{ Fill PivotBy Description }}
+
+```yaml
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

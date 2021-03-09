@@ -24,7 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-Place [-Identity] <RecipientIdParameter>
+ [-Confirm]
  [-ResultSize <Unlimited>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -72,6 +74,22 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 This parameter is reserved for internal Microsoft use.
 
@@ -79,6 +97,22 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Online
 
 Required: False
