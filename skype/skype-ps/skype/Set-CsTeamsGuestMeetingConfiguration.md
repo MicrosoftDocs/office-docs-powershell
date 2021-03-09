@@ -139,6 +139,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LiveCaptionsEnabledType
+Determines whether real-time captions are available for the Guest users in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
+
+```yaml
+Type: String
+Position: Named
+Default value: DisabledUserOverride
+Accept pipelin input: False
+Accept wildcard characters: False
+```
+
 ### -ScreenSharingMode
 Determines the mode in which guests can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens
 
