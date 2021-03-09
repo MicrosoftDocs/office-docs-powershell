@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveCaptionsEnabledType
-Determines whether real-time captions are available for the Guest users in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
+Determines whether real-time captions are available for guests in Teams meetings. Set this to DisabledUserOverride to allow guests to turn on live captions. Set this to Disabled to prohibit.
 
 ```yaml
 Type: String
