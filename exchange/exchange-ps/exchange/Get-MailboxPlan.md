@@ -28,7 +28,6 @@ Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>]
  [-Credential <PSCredential>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [<CommonParameters>]
@@ -145,22 +144,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OrganizationalUnit
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

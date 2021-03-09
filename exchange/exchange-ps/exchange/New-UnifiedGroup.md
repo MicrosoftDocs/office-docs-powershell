@@ -45,6 +45,7 @@ New-UnifiedGroup [-DisplayName <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-SensitivityLabelId <Sustem.Guid>]
  [-SuppressWarmupMessage]
  [-WhatIf]
  [<CommonParameters>]
@@ -72,6 +73,7 @@ New-UnifiedGroup [-DisplayName <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-SensitivityLabelId <Sustem.Guid>]
  [-SuppressWarmupMessage]
  [-WhatIf]
  [<CommonParameters>]
@@ -100,6 +102,7 @@ New-UnifiedGroup [-DisplayName <String>]
  [-Owner <RecipientIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-SensitivityLabelId <Sustem.Guid>]
  [-SuppressWarmupMessage]
  [-WhatIf]
  [<CommonParameters>]
@@ -609,6 +612,24 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 ```yaml
 Type: Boolean
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SensitivityLabelId
+This parameter is available only in the cloud-based service.
+
+{{ Fill SensitivityLabelId Description }}
+
+```yaml
+Type: System.Guid
+Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
 Aliases:
 Applicable: Exchange Online
 

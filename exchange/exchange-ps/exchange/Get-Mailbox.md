@@ -146,24 +146,6 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [<CommonParameters>]
 ```
 
-### AsyncParameterSet
-```
-Get-Mailbox -Async -Properties <String[]>
- [-Archive]
- [-Filter <String>]
- [-GroupMailbox]
- [-InactiveMailboxOnly]
- [-IncludeInactiveMailbox]
- [-Migration]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PublicFolder]
- [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <Unlimited>]
- [-SoftDeletedMailbox]
- [-SortBy <String>]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 When you use the Get-Mailbox cmdlet in on-premises Exchange environments to view the quota settings for a mailbox, you first need to check the value of the UseDatabaseQuotaDefaults property. The value True means per-mailbox quota settings are ignored, and you need to use the Get-MailboxDatabase cmdlet to see the actual values. If the UseDatabaseQuotaDefaults property is False, the per-mailbox quota settings are used, so what you see with the Get-Mailbox cmdlet are the actual quota values for the mailbox.
 
@@ -262,24 +244,6 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Async
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AsyncParameterSet
-Aliases:
-Applicable: Exchange Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -496,7 +460,7 @@ To include active and inactive mailboxes in the results, don't use this switch. 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Parameter Sets: AnrSet, Identity, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 
@@ -518,7 +482,7 @@ To return only inactive mailboxes in the results, don't use this switch. Instead
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Parameter Sets: AnrSet, Identity, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 
@@ -756,7 +720,7 @@ Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Parameter Sets: AnrSet, Identity, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 
