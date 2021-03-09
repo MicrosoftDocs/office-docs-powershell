@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpCompliancePolicy [-Name] <String>
+ [-AlertProperties <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
  [-EndpointDlpLocation <MultiValuedProperty>]
