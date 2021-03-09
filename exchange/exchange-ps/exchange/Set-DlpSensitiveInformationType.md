@@ -26,7 +26,6 @@ Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Fingerprints <MultiValuedProperty>]
- [-IsDefault]
  [-Locale <CultureInfo>]
  [-Name <String>]
  [-WhatIf]
@@ -141,24 +140,6 @@ The Fingerprints parameter specifies the byte-encoded document files that are us
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-The IsDefault switch is used with the Locale parameter to specify the default language for the sensitive information type rule. The default Locale value is stored in the DefaultCulture property.
-
-When you change the default Locale value, the Name value of the sensitive information type rule changes to match the Name value that's associated with the new default locale. The original Name value when the rule was created is permanently stored the LocalizedName property.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

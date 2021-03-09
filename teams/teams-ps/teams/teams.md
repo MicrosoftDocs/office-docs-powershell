@@ -59,9 +59,6 @@ The following cmdlet references are for Microsoft Teams.
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
 
-### [New-CsOnlineSession](https://docs.microsoft.com/powershell/module/skype/new-csonlinesession?view=skype-ps)
-{{Manually Enter New-Team Description Here}}
-
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
 

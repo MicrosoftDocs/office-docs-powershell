@@ -56,7 +56,7 @@ The Set-MigrationBatch cmdlet configures your existing migration batches to migr
 - Cutover Exchange migration
 - Staged Exchange migration
 - IMAP migration
-- G Suite migration
+- Google Workspace (formerly G Suite) migration
 
 Some settings can be applied both to the batch as well as to individual users within the batch. It is important to note that when a setting is applied to a user it will override any corresponding setting on the batch.
 

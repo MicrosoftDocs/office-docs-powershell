@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PerimeterConfig [-Confirm]
+Set-PerimeterConfig [[-Identity] <OrganizationIdParameter>]
+ [-Confirm]
  [-GatewayIPAddresses <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
@@ -42,6 +43,22 @@ Set-PerimeterConfig -GatewayIPAddresses 123.0.0.1
 This example shows how to add an IP address to cloud-based safelists where the gateway server relays email to the cloud-based service from internal email servers only.
 
 ## PARAMETERS
+
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
