@@ -185,7 +185,7 @@ The EXO V2 module is supported in the following versions of Windows:
 
 ### Install the EXO V2 module
 
-To install the EXO V2 module for the first time, complete the following steps **in an elevated PowerShell window**:
+To install the EXO V2 module for the first time, complete the following steps **in an elevated PowerShell window** (or instead include `-Scope CurrentUser` in the `Install-Module` command below):
 
 1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget).
 
@@ -221,7 +221,7 @@ If the module is already installed on your computer, you can run the following c
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-2. You can use the **Update-Module** cmdlet **in an elevated PowerShell window** to update the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if one is available.
+2. You can use the **Update-Module** cmdlet **in an elevated PowerShell window** to update the EXO V2 module from the PowerShell Gallery. If you installed with `-Scope CurrentUser` then there is no need to use elevation.  Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if one is available.
 
    - To upgrade to **the latest public version** of the module, run the following command:
 
