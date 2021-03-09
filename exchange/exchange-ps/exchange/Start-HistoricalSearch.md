@@ -32,7 +32,7 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <Hi
  [-EncryptionType <String>]
  [-Locale <CultureInfo>]
  [-MessageID <MultiValuedProperty>]
- [-NetworkMessageID <>]
+ [-NetworkMessageID <MultiValuedProperty>]
  [-NotifyAddress <MultiValuedProperty>]
  [-OriginalClientIP <String>]
  [-RecipientAddress <MultiValuedProperty>]
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 {{ Fill NetworkMessageID Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

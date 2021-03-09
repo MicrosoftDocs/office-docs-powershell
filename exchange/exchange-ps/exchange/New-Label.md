@@ -42,10 +42,12 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-ApplyWaterMarkingFontName <String>]
  [-ApplyWaterMarkingFontSize <System.Int32>]
  [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
+ [-ColumnAssetCondition <String>]
  [-ApplyWaterMarkingText <String>]
  [-Comment <String>]
  [-Conditions <MultiValuedProperty>]
  [-Confirm]
+ [-ContentType <MipLabelContentType>]
  [-EncryptionAipTemplateScopes <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
@@ -73,6 +75,8 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
+ [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
+ [-SqlAssetCondition <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -529,6 +533,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ColumnAssetCondition
+{{ Fill ColumnAssetCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -571,6 +591,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentType
+{{ Fill ContentType Description }}
+
+```yaml
+Type: MipLabelContentType
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
@@ -1081,6 +1117,38 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteExternalSharingControlType
+{{ Fill SiteExternalSharingControlType Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SqlAssetCondition
+{{ Fill SqlAssetCondition Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

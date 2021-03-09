@@ -58,7 +58,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: True
 Position: Named
@@ -68,13 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyId
-The PolicyId parameter specifies
+{{ Fill PolicyId Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: True
 Position: Named
