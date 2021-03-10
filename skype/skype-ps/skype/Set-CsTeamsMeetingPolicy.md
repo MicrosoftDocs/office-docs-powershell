@@ -814,16 +814,16 @@ Accept wildcard characters: False
 ### -AllowMeetingRegistration
 
 Possible values:
-- true
-- false
+- Everyone
+- EveryonenCompany
 
 ```yaml
-Type: Boolean
+Type: Strrng
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: EveryoneInCompany
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
