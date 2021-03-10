@@ -27,8 +27,19 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-Confirm]
  [-ExchangeLocationLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
+ [-Force]
+ [-MigrationId <String>]
  [-ModernGroupLocation <MultiValuedProperty>]
  [-ModernGroupLocationException <MultiValuedProperty>]
+ [-OneDriveLocation <MultiValuedProperty>]
+ [-OneDriveLocationException <MultiValuedProperty>]
+ [-PublicFolderLocation <MultiValuedProperty>]
+ [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-SharePointLocationException <MultiValuedProperty>]
+ [-SkypeLocation <MultiValuedProperty>]
+ [-SkypeLocationException <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -185,6 +196,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationId
+{{ Fill MigrationId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ModernGroupLocation
 The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
@@ -209,6 +252,150 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Setting
+{{ Fill Setting Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Settings
+PARAMVALUE: PswsHashtable
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkypeLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkypeLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
 

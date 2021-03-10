@@ -51,6 +51,7 @@ New-RoleGroup [-Name] <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Force]
+ [-Id <Guid>]
  [-ManagedBy <MultiValuedProperty>]
  [-Members <MultiValuedProperty>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
@@ -229,7 +230,7 @@ If you use the CustomRecipientWriteScope parameter, you can't use the RecipientO
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -306,6 +307,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Id
+This parameter is available only in Security & Compliance Center PowerShell.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LinkedCredential
 This parameter is available only in on-premises Exchange.
 
@@ -337,7 +356,7 @@ If you want to add more than one user or USG, separate them using commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

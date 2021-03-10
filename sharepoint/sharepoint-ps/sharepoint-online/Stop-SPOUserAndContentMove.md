@@ -34,7 +34,7 @@ Stops the ability to move a user's content related objects in a SharePoint Onlin
 Stop-SPOUserAndContentMove -UserPrincipalName "TesIser@contoso.com"
 ```
 
-This example stops the ability to moves the movement of the objects for the "TesIser@contoso.com" in the current Tenant
+This example stops the ability to move the "TesIser@contoso.com" user content in the current Tenant.
 
 ### EXAMPLE 2
 

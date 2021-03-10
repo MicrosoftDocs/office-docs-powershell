@@ -25,7 +25,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-RetentionCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
- [-DynamicScopeLocation <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
@@ -120,22 +119,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DynamicScopeLocation
-{{Fill DynamicScopeLocation Description}}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Default
-Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
