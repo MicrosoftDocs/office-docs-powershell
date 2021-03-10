@@ -52,6 +52,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
+ [-FeedbackEnabled <Boolean>]
  [-ForceSaveAttachmentFilteringEnabled <Boolean>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
  [-ForceSaveMimeTypes <MultiValuedProperty>]
@@ -831,6 +832,27 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FeedbackEnabled
+This cmdlet is available only in the cloud-based service.
+
+The FeedbackEnabled parameter enables or disables inline feedback requests for various features in Outlook on the web. Valid values are:
+
+- $true: Inline feedback requests are enabled.
+- $false: Inline feedback requests are disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
