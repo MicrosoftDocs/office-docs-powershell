@@ -843,10 +843,12 @@ Accept wildcard characters: False
 ### -FeedbackEnabled
 This cmdlet is available only in the cloud-based service.
 
-The FeedbackEnabled parameter enables or disables inline feedback requests for various features in Outlook on the web. Valid values are:
+The FeedbackEnabled parameter specifies whether to enable or disable inline feedback surveys in Outlook on the web. Valid values are:
 
-- $true: Inline feedback requests are enabled.
-- $false: Inline feedback requests are disabled.
+- $true: Inline feedback surveys are enabled. This is the default value.
+- $false: Inline feedback surveys are disabled.
+
+ Surveys allow users to provide feedback on specific features. For example, for the text predictions feature, the inline feedback "Are the above autocomplete suggestions helpful (yes/no)?" is shown. If a user chooses "no" they can provide specific feedback.
 
 ```yaml
 Type: Boolean
