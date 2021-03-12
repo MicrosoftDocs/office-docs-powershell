@@ -28,7 +28,10 @@ Register-PnPAzureADApp -ApplicationName <String>
                                        [-CommonName <String>]
                                        [-OutPath <String>]
                                        [-Store <StoreLocation>]
-                                       [-Scopes <String[]>]
+                                       [-GraphApplicationPermissions <Permission[]>]
+                                       [-GraphDelegatePermissions <Permission[]>]
+                                       [-SharePointApplicationPermissions <Permission[]>]
+                                       [-SharePointDelegatePermissions <Permission[]>]
                                        [-Country <String>]
                                        [-State <String>]
                                        [-Locality <String>]
@@ -48,7 +51,10 @@ Register-PnPAzureADApp  -CertificatePath <String>
                         [-Password <SecureString>]
                         [-DeviceLogin]
                         [-Interactive]
-                        [-Scopes <String[]>]
+                        [-GraphApplicationPermissions <Permission[]>]
+                        [-GraphDelegatePermissions <Permission[]>]
+                        [-SharePointApplicationPermissions <Permission[]>]
+                        [-SharePointDelegatePermissions <Permission[]>]
                         [-CertificatePassword <SecureString>]
                         [-NoPopup]
 ```
@@ -76,7 +82,7 @@ Creates a new Azure AD Application registration which will use the existing priv
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Register-PnPAzureADApp -ApplicationName TestApp -Tenant yourtenant.onmicrosoft.com -Store CurrentUser -Scopes "MSGraph.User.Read.All","SPO.Sites.Read.All" -Username "yourname@domain.com" -Password (Read-Host -AsSecureString -Prompt "Enter Password")
+Register-PnPAzureADApp -ApplicationName TestApp -Tenant yourtenant.onmicrosoft.com -Store CurrentUser -GraphApplicationPermissions "User.Read.All" -SharePointApplicationPermissions "Sites.Read.All" -Username "yourname@domain.com" -Password (Read-Host -AsSecureString -Prompt "Enter Password")
 ```
 
 Creates a new Azure AD Application registration, creates a new self signed certificate, and adds it to the local certificate store. It will upload the certificate to the azure app registration and it will request the following permissions: Sites.Read.All, User.Read.All
@@ -248,11 +254,47 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -Scopes
-Specify which permissions scopes to request.
+### -GraphApplicationPermissions
+Specify which Microsoft Graph Application permissions to request.
 
 ```yaml
-Type: String[]
+Type: Permission[]
+Parameter Sets: Generate Certificate
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
+### -GraphDelegatePermissions
+Specify which Microsoft Graph Delegate permissions to request.
+
+```yaml
+Type: Permission[]
+Parameter Sets: Generate Certificate
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
+### -SharePointApplicationPermissions
+Specify which Microsoft SharePoint Application permissions to request.
+
+```yaml
+Type: Permission[]
+Parameter Sets: Generate Certificate
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
+### -SharePointDelegatePermissions
+Specify which Microsoft SharePoint Delegate permissions to request.
+
+```yaml
+Type: Permission[]
 Parameter Sets: Generate Certificate
 
 Required: False
