@@ -882,12 +882,17 @@ Accept wildcard characters: False
 ### -RetainDeletedItemsUntilBackup
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
-- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
-- $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
+- $true: Deleted items in mailboxes are kept until the next mailbox database backup. This value could effectively override the deleted DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameters.
+
+This settings applies to all mailboxes in the database that don't have their own RetainDeletedItemsUntilBackup value configured.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
-This settings applies to all mailboxes in the database that don't have this value specifically configured.
+**Note**: If you set the value of this parameter to $true when the value of the UseDatabaseRetentionDefaults parameter on a specific mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+
+- Run the following command: `Import-Module ActiveDirectory`.
+- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
 
 ```yaml
 Type: Boolean
