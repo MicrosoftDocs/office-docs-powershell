@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
+ [-Archive]
  [-Confirm]
  [-DateFormat <String>]
  [-DomainController <Fqdn>]
@@ -101,6 +102,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Archive
+This parameter is available only in the cloud-based service.
+
+{{ Fill Archive Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

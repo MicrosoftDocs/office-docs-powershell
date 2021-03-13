@@ -49,7 +49,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-WebServicesVirtualDirectory -ServerMBX01
+Get-WebServicesVirtualDirectory -Server MBX01
 ```
 
 This example returns a summary list of all EWS virtual directories on the server named MBX01.

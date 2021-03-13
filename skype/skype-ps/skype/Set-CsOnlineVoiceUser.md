@@ -33,6 +33,12 @@ Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneN
 
 This example sets the telephone number and location for a user identified by the user ObjectID.
 
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineVoiceUser -Identity user@domain.com -TelephoneNumber $null
+```
+
+This example removes the telephone number for a user identified by the user's SIP address.
 
 ## PARAMETERS
 

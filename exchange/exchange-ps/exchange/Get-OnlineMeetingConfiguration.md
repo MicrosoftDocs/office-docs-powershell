@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-onlinemeetingconfiguration
-applicable: Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-OnlineMeetingConfiguration
 schema: 2.0.0
 author: chrisda
@@ -66,7 +66,7 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
@@ -84,7 +84,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

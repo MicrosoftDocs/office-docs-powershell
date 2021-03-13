@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer: navgupta
@@ -185,14 +186,14 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default).
+- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
 
   ```powershell
   # Create certificate
   $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
   # Export certificate to .pfx file
-  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@s$w0rd1234" -AsPlainText -Force)
+  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@ssw0Rd1234" -AsPlainText -Force)
 
   # Export certificate to .cer file
   $mycert | Export-Certificate -FilePath mycert.cer

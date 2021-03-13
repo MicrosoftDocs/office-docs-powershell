@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-authenticationpolicy
-applicable: Exchange Online
+applicable: Exchange Server 2019, Exchange Online
 title: New-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
