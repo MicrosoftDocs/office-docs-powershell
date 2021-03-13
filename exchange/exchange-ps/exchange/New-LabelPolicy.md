@@ -25,7 +25,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-ExchangeLocationLocation <MultiValuedProperty>]
+ [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
  [-MigrationId <String>]
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Setting
-{{ Fill Setting Description }}
+PARAMVALUE: PswsHashtable
 
 ```yaml
 Type: PswsHashtable
