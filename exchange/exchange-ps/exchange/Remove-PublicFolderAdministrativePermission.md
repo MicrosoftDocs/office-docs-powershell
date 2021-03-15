@@ -39,7 +39,7 @@ Remove-PublicFolderAdministrativePermission[[-Identity] <PublicFolderIdParameter
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
-  [-InheritanceType <ActiveDirectorySecurityInheritance>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf]
