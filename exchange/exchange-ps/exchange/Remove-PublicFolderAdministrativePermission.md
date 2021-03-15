@@ -34,7 +34,7 @@ Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter
 
 ### Instance
 ```
-Remove-PublicFolderAdministrativePermission[[-Identity] <PublicFolderIdParameter>] -Instance <PublicFolderAdministrativeAceObject>
+Remove-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParameter>] -Instance <PublicFolderAdministrativeAceObject>
  [-AccessRights <MultiValuedProperty>]
  [-Confirm]
  [-Deny]
