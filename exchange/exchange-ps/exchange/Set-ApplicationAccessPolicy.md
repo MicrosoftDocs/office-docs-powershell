@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Set1
 ```
 Set-ApplicationAccessPolicy [-Identity] <ApplicationAccessPolicyIdParameter>
  [-Description <String>]

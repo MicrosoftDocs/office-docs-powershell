@@ -231,7 +231,8 @@ Enable-Mailbox [-Identity] <UserIdParameter>
 ```
 Enable-Mailbox [-Identity] <UserIdParameter>]
  [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>

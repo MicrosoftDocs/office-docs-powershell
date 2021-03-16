@@ -166,7 +166,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]

@@ -275,19 +275,59 @@ If the module is already installed on your computer, you can run the following c
 
 For detailed syntax and parameter information, see [Update-Module](https://docs.microsoft.com/powershell/module/powershellget/update-module).
 
-**Note**: If you receive the following error:
+### Troubleshoot installing the EXO V2 module
 
-> The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
+- If you receive the following error:
 
-Update your installation of the PowerShellGet module to the latest version as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget). Be sure to close and re-open the elevated PowerShell window before you attempt to update the ExchangeOnlineManagement module again.
+  > The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
+
+  Update your installation of the PowerShellGet module to the latest version as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget). Be sure to close and re-open the PowerShell window before you attempt to update the ExchangeOnlineManagement module again.
+
+- As of April 2020, the PowerShell Gallery only supports connections using TLS 1.2 or later. For more information, see [PowerShell Gallery TLS Support](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/).
+
+  To check your current settings in the Microsoft .NET Framework, run the following command in Windows PowerShell:
+
+  ```powershell
+  [Net.ServicePointManager]::SecurityProtocol
+  ```
+
+  As described in the PowerShell Gallery TLS Support article, to *temporarily* change the security protocol to TLS 1.2 to install the PowerShellGet or ExchangeOnlineManagement modules, run the following command in Windows PowerShell *before* you install the module:
+
+  ```powershell
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
+  ```
+
+  To *permanently* enable strong cryptography in the Microsoft .NET Framework version 4.x or later, run one of the following commands based on your Windows architecture:
+
+  - x64:
+
+    ```powershell
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft.NetFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
+    ```
+
+  - x86
+
+    ```powershell
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft.NetFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
+    ```
+
+  For more information, see [SchUseStrongCrypto](/dotnet/framework/network-programming/tls#schusestrongcrypto).
 
 ### Uninstall the EXO V2 module
 
-To uninstall the module, run the following command **in an elevated PowerShell window**:
+To uninstall the module, run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
 
-```powershell
-Uninstall-Module -Name ExchangeOnlineManagement
-```
+- In an elevated PowerShell window (all users):
+
+  ```powershell
+  Uninstall-Module -Name ExchangeOnlineManagement
+  ```
+
+- Only for the current user account:
+
+  ```powershell
+  Uninstall-Module -Name ExchangeOnlineManagement
+  ```
 
 For detailed syntax and parameter information, see [Uninstall-Module](https://docs.microsoft.com/powershell/module/powershellget/uninstall-module).
 
