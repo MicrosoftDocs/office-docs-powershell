@@ -16,8 +16,6 @@ ms.reviewer:
 
 Do not use.
 
-## SYNTAX
-
 ## DESCRIPTION
 
 Do not use.
