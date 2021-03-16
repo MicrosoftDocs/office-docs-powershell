@@ -14,36 +14,25 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Remove user profile from the tenant.
-
-## SYNTAX
-
-```powershell
-Remove-SPOUserProfile -LoginName <String> [<CommonParameters>]
-```
+Do not use.
 
 ## DESCRIPTION
 
-Can be used to remove the SharePoint user profile from the tenant.
-
-> [!NOTE]
-> The User must be first be deleted from AAD before the user profile can be deleted. You can use the Azure AD cmdlet Remove-AzureADUser for this action
+Do not use.
 
 ## EXAMPLES
 
 ### ------------ Example 1 --------------------
 
 ```powershell
-Remove-SPOUserProfile -LoginName joe.healy@contoso.com
-```
 
-Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the SharePoint Online User Profiles of the particular tenant.
+```
 
 ## PARAMETERS
 
 ### -LoginName
 
-Specifies the login name of the user which user profile is deleted.
+Do not use.
 
 ```yaml
 Type: String
