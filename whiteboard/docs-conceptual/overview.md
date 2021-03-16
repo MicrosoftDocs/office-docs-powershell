@@ -39,7 +39,6 @@ Set-ExecutionPolicy RemoteSigned
 
 Note: For more information on Execution_Policies, go to <https://go.microsoft.com/fwlink/p/?LinkID=135170>.
 
-
 ## User IDs
 
 Cmdlets taking user IDs use the ID from Azure Active Directory. To get a user ID, you can use the Microsoft Graph Explorer. For more information, go to <https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/user_get>.
