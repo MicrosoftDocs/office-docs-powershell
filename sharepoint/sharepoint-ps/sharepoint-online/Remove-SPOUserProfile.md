@@ -16,17 +16,13 @@ ms.reviewer:
 
 Do not use.
 
+## SYNTAX
+
 ## DESCRIPTION
 
 Do not use.
 
 ## EXAMPLES
-
-### ------------ Example 1 --------------------
-
-```powershell
-
-```
 
 ## PARAMETERS
 
