@@ -26,4 +26,4 @@ The following articles provide information about using Exchange Online Protectio
 
 - To learn about the structure and layout of the cmdlet reference articles in Exchange Online Protection PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 
-- For a sample script that lets admins who manage multiple organizations apply configuration settings to all of their organizations, see [Sample script for applying EOP settings to multiple tenants](https://docs.microsoft.com/microsoft-365/security/office-365-security/sample-script-for-applying-eop-settings-to-multiple-tenants).
+- For a sample script that lets admins who manage multiple organizations apply configuration settings to all of their organizations, see [Sample script for applying EOP settings to multiple tenants](/microsoft-365/security/office-365-security/sample-script-for-applying-eop-settings-to-multiple-tenants).

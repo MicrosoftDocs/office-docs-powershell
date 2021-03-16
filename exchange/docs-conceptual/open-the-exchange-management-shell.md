@@ -19,7 +19,7 @@ When you open the Exchange Management Shell you can perform administrative tasks
 
 - On the Exchange server directly or in a Remote Desktop Connection session.
 
-- On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange management tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools).
+- On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange management tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools).
 
 ## What do you need to know before you begin?
 
@@ -27,7 +27,7 @@ When you open the Exchange Management Shell you can perform administrative tasks
 
 - To do the procedures in this article, you need to be assigned at least one management role (typically, via membership in a role group). After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC).
 
-  For more information, see [Exchange Server permissions](https://docs.microsoft.com/exchange/permissions/permissions).
+  For more information, see [Exchange Server permissions](/exchange/permissions/permissions).
 
 - If you want to run the Exchange Management Shell from a local installation of the Exchange management tools, you need to consider remote PowerShell access for your user account. By default, users are allowed to use remote PowerShell to connect to an Exchange server. However, you can block remote PowerShell access for a user account. For more information, see [Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md).
 
