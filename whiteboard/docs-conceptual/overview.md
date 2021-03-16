@@ -21,6 +21,26 @@ Set-ExecutionPolicy RemoteSigned
 
 Note: For more information on Execution_Policies, go to <https://go.microsoft.com/fwlink/p/?LinkID=135170>.
 
+Copy and Paste the following command to install using PowerShellGet:
+
+```powershell
+Install-Module -Name WhiteboardAdmin
+```
+
+By default, the PowerShell Gallery (PSGallery) isn't configured as a trusted repository for **PowerShellGet**. The first time you use the PSGallery, you'll see the following message:
+
+```console
+Untrusted repository
+
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the `Set-PSRepository` cmdlet.
+
+Are you sure you want to install the modules from 'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
+```
+
+Answer **Yes** or **Yes to All** to continue with the installation.
+
 ## User IDs
 
 Cmdlets taking user IDs use the ID from Azure Active Directory. To get a user ID, you can use the Microsoft Graph Explorer. For more information, go to <https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/user_get>.
