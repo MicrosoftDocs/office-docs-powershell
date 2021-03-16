@@ -33,7 +33,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
   > [!NOTE]
   > The rest of the instructions in the article assume that you've already installed the module.
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/permissions-exo).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   To find the permissions that are required to run specific Exchange Online cmdlets, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
 
@@ -63,9 +63,9 @@ If your account uses multi-factor authentication, use the steps in this section.
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
-   - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
-   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
+   - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
+   - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](/office365/servicedescriptions/office-365-platform-service-description/partners).
+   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
    - The progress bar is now shown by default, so `-ShowProgress $true` is no longer required. To hide the progress bar, use this exact syntax: `-ShowProgress:$false`.
 
    **This example connects to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
@@ -98,7 +98,7 @@ If your account uses multi-factor authentication, use the steps in this section.
    Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -DelegatedOrganization adatum.onmicrosoft.com
    ```
 
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
@@ -138,9 +138,9 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-ExchangeOnline [-Credential $UserCredential] [-ShowBanner:$false] [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
    ```
 
-   - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
-   - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
-   - If you're behind a proxy server, store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) cmdlet in a variable (for example, `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value> [-ProxyAuthentication <Value>] [-ProxyCredential <Value>]`). Then, use the variable (`$ProxyOptions`) as the value for the _PSSessionOption_ parameter.
+   - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
+   - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](/office365/servicedescriptions/office-365-platform-service-description/partners).
+   - If you're behind a proxy server, store the output of the [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption) cmdlet in a variable (for example, `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value> [-ProxyAuthentication <Value>] [-ProxyCredential <Value>]`). Then, use the variable (`$ProxyOptions`) as the value for the _PSSessionOption_ parameter.
    - The progress bar is now shown by default, so `-ShowProgress $true` is no longer required. To hide the progress bar, use this exact syntax: `-ShowProgress:$false`.
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
@@ -173,7 +173,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-ExchangeOnline -Credential $UserCredential -ExchangeEnvironmentName O365USGovDoD
    ```
 
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
@@ -188,7 +188,7 @@ This section describes the log in experiences that are available in version 2.0.
 
 For more information about the operating systems that are supported by the EXO V2 module in PowerShell 7, see [Supported operating systems for the EXO V2 module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exo-v2-module).
 
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 
 ### Interactive scripting using browser-based single sign-on
 
