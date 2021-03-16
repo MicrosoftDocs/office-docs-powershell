@@ -16,7 +16,7 @@ ms.reviewer:
 
 Do not use.
 
-## SYNTAX`
+## SYNTAX
 
 ## DESCRIPTION
 
