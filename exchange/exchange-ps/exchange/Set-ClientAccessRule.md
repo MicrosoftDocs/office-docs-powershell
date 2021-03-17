@@ -33,7 +33,7 @@ Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
  [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
- [-ExceptIfAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
+ [-ExceptAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
  [-ExceptUserIsMemberOf <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Name <String>]

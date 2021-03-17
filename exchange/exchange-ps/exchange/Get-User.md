@@ -37,6 +37,7 @@ Get-User [-Anr <String>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-Sortby <String>]
+ [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -57,6 +58,7 @@ Get-User [[-Identity] <UserIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-Sortby <String>]
+ [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -460,7 +462,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 

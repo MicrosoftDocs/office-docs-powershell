@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter>
  [-Confirm]
  [-Description <String>]
- [-DomainController <Fqdn>]
  [-Fingerprints <MultiValuedProperty>]
  [-Locale <CultureInfo>]
  [-Name <String>]

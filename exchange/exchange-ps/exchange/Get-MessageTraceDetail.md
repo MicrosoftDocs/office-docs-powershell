@@ -62,7 +62,16 @@ This example uses the Get-MessageTrace cmdlet to retrieve message trace informat
 ## PARAMETERS
 
 ### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+The MessageTraceId parameter is used with the recipient address to uniquely identify a message trace and obtain more details. A MessageTraceId is generated for every message that's processed by the system.
+
+The MessageTraceId value is available in the output of the following cmdlets:
+
+- Get-MessageTrace
+- Get-MailDetailATPReport
+- Get-MailDetailDlpPolicyReport
+- Get-MailDetailMalwareReport
+- Get-MailDetailSpamReport
+- Get-MailDetailTransportRuleReport
 
 ```yaml
 Type: Guid
