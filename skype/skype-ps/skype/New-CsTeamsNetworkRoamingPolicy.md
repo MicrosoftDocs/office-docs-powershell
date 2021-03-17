@@ -4,7 +4,7 @@ Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsnetworkroamingpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsNetworkRoamingPolicy
-author: tristan-msft
+author: TristanChen-msft
 ms.author: jiaych
 ms.reviewer: 
 manager: mreddy
