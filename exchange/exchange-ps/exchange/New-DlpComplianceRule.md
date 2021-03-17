@@ -477,7 +477,7 @@ The Disabled parameter specifies whether the DLP rule is disabled. Valid values 
 - $false: The rule is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -496,7 +496,7 @@ The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule
 - $false: Don't look for password protected files.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -515,7 +515,7 @@ The DocumentIsUnsupported parameter specifies a condition for the DLP rule that 
 - $false: Don't look for unsupported files that can't be scanned.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -798,7 +798,7 @@ The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the
 - $false: Don't look for password protected files.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -817,7 +817,7 @@ The ExceptIfDocumentIsUnsupported parameter specifies an exception for the DLP r
 - $false: Don't look for unsupported files that can't be scanned.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1121,7 +1121,7 @@ The ExceptIfProcessingLimitExceeded parameter specifies an exception for the DLP
 - $false: Don't look for files where scanning couldn't complete.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -2256,7 +2256,7 @@ The StopPolicyProcessing parameter specifies an action that stops processing mor
 - $false: Continue processing more rules after this one.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
