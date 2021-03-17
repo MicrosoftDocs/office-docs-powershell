@@ -22,9 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Set1
 ```
-Remove-ApplicationAccessPolicy -[Identity] <ApplicationAccessPolicyIdParameter>
+Remove-ApplicationAccessPolicy [-Identity] <ApplicationAccessPolicyIdParameter>
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]

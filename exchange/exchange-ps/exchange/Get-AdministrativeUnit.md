@@ -27,6 +27,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-AdministrativeUnit [[-Identity] <AdministrativeUnitIdParameter>]
  [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf]
  [<CommonParameters>]
 ```
