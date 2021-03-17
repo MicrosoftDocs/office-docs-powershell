@@ -63,7 +63,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-EncryptionTemplateId <String>]
  [-Identity <MasterIdParameter>]
  [-LabelActions <MultiValuedProperty>]
- [-LocaleSettings <<MultiValuedProperty>]
+ [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-Setting <PswsHashtable>]
@@ -569,7 +569,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MulitValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
