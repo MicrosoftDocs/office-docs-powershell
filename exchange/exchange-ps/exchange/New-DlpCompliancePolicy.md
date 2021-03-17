@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by its email address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 
 ```yaml
@@ -196,8 +196,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedByMemberOf
 The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
-
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 ```yaml
 Type: SmtpAddress[]
@@ -286,9 +285,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
-The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by its email address.
+The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 
 ```yaml
@@ -307,7 +306,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedByMemberOf
 The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 ```yaml
 Type: SmtpAddress[]
