@@ -48,7 +48,7 @@ This example displays detailed information for the DLP policy named "PII Limited
 
 ### Example 3
 ```powershell
-Get-DlpCompliancePolicy -Identity "PII Limited" DistributionDetail | Format-List DistributionStatus
+Get-DlpCompliancePolicy -Identity "PII Limited" -DistributionDetail | Format-List DistributionStatus
 ```
 
 This example displays distribution details for a DLP policy.
