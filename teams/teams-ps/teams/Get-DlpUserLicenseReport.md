@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user.
+This cmdlet tells whether a user has required license to export their messages via [change notification subscription](https://docs.microsoft.com/en-us/graph/teams-licenses)
 
 ## SYNTAX
 
