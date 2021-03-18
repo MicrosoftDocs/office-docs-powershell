@@ -40,4 +40,13 @@ Returns license info and total messages sent by users in last 7 days.
 
 No. of days starting from today. Acceptable values are 7, 30, 90 and 180.
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
