@@ -15,17 +15,17 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Get-CsTeamsNetworkRoamingPolicy allows IT Admins to view policies for the Network Roaming and Bandwidth Control experiences in Microsoft Teams 
+Get-CsTeamsNetworkRoamingPolicy allows IT Admins to view policies for the Network Roaming and Bandwidth Control experiences in Microsoft Teams.
 
 ## SYNTAX
 
 ```
-Get-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsNetworkRoamingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTeamsNetworkRoamingPolicy [-Tenant <Guid>] [-Filter <String>]
 ```
 
 ## DESCRIPTION
@@ -33,20 +33,20 @@ Returns information about the Teams Network Roaming Policies configured for use 
 
 The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific settings from the TeamsMeetingPolicy to be rendered dynamically based upon the location of the Teams client.  The TeamsNetworkRoamingPolicy cannot be granted to a user but instead can be assigned to a network site.  The settings from the TeamsMeetingPolicy included are AllowIPVideo and MediaBitRateKb. When a Teams client is connected to a network site where a CsTeamRoamingPolicy is assigned, these two settings from the TeamsRoamingPolicy will be used instead of the settings from the TeamsMeetingPolicy.   
 
-More on impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
+More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsTeamsNetworkRoamingPolicy
+PS C:\> Get-CsTeamsNetworkRoamingPolicy
 ```
 
 In Example 1, Get-CsTeamsNetworkRoamingPolicy is called without any additional parameters; this returns a collection of all the teams network roaming policies configured for use in your organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsTeamsNetworkRoamingPolicy -Identity OfficePolicy
+PS C:\> Get-CsTeamsNetworkRoamingPolicy -Identity OfficePolicy
 ```
 
 In Example 2, Get-CsTeamsNetworkRoamingPolicy is used to return the network roaming policy that has an Identity OfficePolicy.
@@ -56,7 +56,7 @@ Because identities are unique, this command will never return more than one item
 
 ### -Identity
 Unique identifier of the policy to be returned.
-If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
+If this parameter is omitted, then all the Teams Network Roaming Policies configured for use in your organization will be returned.
 
 ```yaml
 Type: XdsIdentity

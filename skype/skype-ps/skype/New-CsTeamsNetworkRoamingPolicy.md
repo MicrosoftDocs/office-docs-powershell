@@ -15,12 +15,12 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-New-CsTeamsNetworkRoamingPolicy allows IT Admins to create policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams 
+New-CsTeamsNetworkRoamingPolicy allows IT Admins to create policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
 
 ## SYNTAX
 
 ```
-New-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>] [-AllowIPVideo <Boolean>] [-MediaBitRateKb <Integer>] [-Description <String>] [-LocalStore] [<CommonParameters>]
+New-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>] [-AllowIPVideo <Boolean>] [-MediaBitRateKb <Integer>] [-Description <String>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ Creates new Teams Network Roaming Policies configured for use in your organizati
 
 The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific settings from the TeamsMeetingPolicy to be rendered dynamically based upon the location of the Teams client.  The TeamsNetworkRoamingPolicy cannot be granted to a user but instead can be assigned to a network site.  The settings from the TeamsMeetingPolicy included are AllowIPVideo and MediaBitRateKb. When a Teams client is connected to a network site where a CsTeamRoamingPolicy is assigned, these two settings from the TeamsRoamingPolicy will be used instead of the settings from the TeamsMeetingPolicy.   
 
-More on impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
+More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
 
 ## EXAMPLES
 
@@ -50,7 +50,6 @@ The command shown in  Example 2 creates a new teams network roaming policy with 
 
 ### -Identity
 Unique identifier of the policy to be returned.
-If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
 
 ```yaml
 Type: XdsIdentity

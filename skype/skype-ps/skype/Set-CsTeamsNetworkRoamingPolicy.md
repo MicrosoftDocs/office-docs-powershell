@@ -20,7 +20,7 @@ Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies fo
 ## SYNTAX
 
 ```
-Set-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>] [-AllowIPVideo <Boolean>] [-MediaBitRateKb <Integer>] [-Description <String>] [-LocalStore] [<CommonParameters>]
+Set-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>] [-AllowIPVideo <Boolean>] [-MediaBitRateKb <Integer>] [-Description <String>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ Updates or creates new Teams Network Roaming Policies configured for use in your
 
 The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific settings from the TeamsMeetingPolicy to be rendered dynamically based upon the location of the Teams client.  The TeamsNetworkRoamingPolicy cannot be granted to a user but instead can be assigned to a network site.  The settings from the TeamsMeetingPolicy included are AllowIPVideo and MediaBitRateKb. When a Teams client is connected to a network site where a CsTeamRoamingPolicy is assigned, these two settings from the TeamsRoamingPolicy will be used instead of the settings from the TeamsMeetingPolicy.   
 
-More on impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
+More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
 
 ## EXAMPLES
 
@@ -37,13 +37,12 @@ More on impact of bit rate setting on bandwidth can be found [here](https://docs
 PS C:\> Set-CsTeamsNetworkRoamingPolicy -Identity "RedmondRoaming" -AllowIPVideo $true -MediaBitRateKb 2000 -Description "Redmond campus roaming policy"
 ```
 
-The command shown in  Example 1 updates the teams network roaming policy with Identity "RedmondRoaming" with IP Video feature enabled and the maximum media bit rate is capped at 2000 Kbps.
+The command shown in  Example 1 updates the teams network roaming policy with Identity "RedmondRoaming" with IP Video feature enabled, and the maximum media bit rate is capped at 2000 Kbps.
 
 ## PARAMETERS
 
 ### -Identity
-Unique identifier of the policy to be returned.
-If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
+Unique identifier of the policy to be modified.
 
 ```yaml
 Type: XdsIdentity
@@ -89,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of the new policy to be created.
+Description of the policy to be edited.
 
 ```yaml
 Type: String

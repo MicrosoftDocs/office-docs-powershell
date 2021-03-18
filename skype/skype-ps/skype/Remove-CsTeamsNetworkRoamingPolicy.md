@@ -28,13 +28,13 @@ Deletes the Teams Network Roaming Policies configured for use in your organizati
 
 The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific settings from the TeamsMeetingPolicy to be rendered dynamically based upon the location of the Teams client.  The TeamsNetworkRoamingPolicy cannot be granted to a user but instead can be assigned to a network site.  The settings from the TeamsMeetingPolicy included are AllowIPVideo and MediaBitRateKb. When a Teams client is connected to a network site where a CsTeamRoamingPolicy is assigned, these two settings from the TeamsRoamingPolicy will be used instead of the settings from the TeamsMeetingPolicy.   
 
-More on impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
+More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/en-us/microsoftteams/prepare-network).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-CsTeamsNetworkRoamingPolicy -Identity OfficePolicy
+PS C:\> Remove-CsTeamsNetworkRoamingPolicy -Identity OfficePolicy
 ```
 
 In Example 1, Remove-CsTeamsNetworkRoamingPolicy is used to delete the network roaming policy that has an Identity OfficePolicy.
@@ -42,7 +42,7 @@ In Example 1, Remove-CsTeamsNetworkRoamingPolicy is used to delete the network r
 ## PARAMETERS
 
 ### -Identity
-Unique identifier of the policy to be returned.
+Unique identifier of the policy to be removed.
 
 ```yaml
 Type: XdsIdentity
