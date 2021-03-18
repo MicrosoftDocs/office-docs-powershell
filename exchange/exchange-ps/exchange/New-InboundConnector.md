@@ -34,6 +34,7 @@ New-InboundConnector [-Name] <String> -SenderDomains <MultiValuedProperty>
  [-EFSkipLastIP <Boolean>]
  [-EFSkipMailGateway <MultiValuedProperty>]
  [-EFTestMode <Boolean>]
+ [-EFUsers <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-RequireTls <Boolean>]
  [-RestrictDomainsToCertificate <Boolean>]

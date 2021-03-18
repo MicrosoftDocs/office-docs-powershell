@@ -106,6 +106,7 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-SharingPolicyWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-SharingSyncWorkCycle <EnhancedTimeSpan>]
  [-SharingSyncWorkCycleCheckpoint <EnhancedTimeSpan>]
+ [-SiteMailboxWorkCycle <EnhancedTimeSpan>]
  [-SiteMailboxWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-StoreDsMaintenanceWorkCycle <EnhancedTimeSpan>]
  [-StoreDsMaintenanceWorkCycleCheckpoint <EnhancedTimeSpan>]
