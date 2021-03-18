@@ -40,6 +40,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-SharePointLocationException <MultiValuedProperty>]
  [-SkypeLocation <MultiValuedProperty>]
  [-SkypeLocationException <MultiValuedProperty>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
