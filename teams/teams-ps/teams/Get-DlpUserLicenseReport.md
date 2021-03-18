@@ -1,16 +1,15 @@
-
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-title: Get-CsUserPolicyPackageRecommendation
+title: Get-DlpUserLicenseReport
 author: icchan
 ms.author: icchan
 manager: amitar
-online version: https://docs.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation
+online version: https://docs.microsoft.com/powershell/module/teams/get-dlpuserlicensereport
 schema: 2.0.0
 ---
 
-# Get-CsUserPolicyPackageRecommendation
+# Get-DlpUserLicenseReport
 
 ## SYNOPSIS
 
@@ -19,28 +18,27 @@ This cmdlet supports retrieving recommendations for which policy packages are be
 ## SYNTAX
 
 ```
-Get-CsUserPolicyPackageRecommendation [-Identity] <String> [<CommonParameters>]
+Get-DlpUserLicenseReport [-Period] <Number> 
 ```
 
 ## DESCRIPTION
 
-This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user. This recommendation is based on tenant and user information such as license types.
-For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet supports retrieving the total no of messages sent by a user in chat/channel and whether a user has required license to sent change notification event when subscribed for chat messages. For more details please review https://docs.microsoft.com/en-us/graph/teams-licenses
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsUserPolicyPackageRecommendation -Identity johndoe@example.com
+PS C:\> Get-DlpUserLicenseReport -Period 7
 ```
 
-Returns recommendations for which policy packages are best suited for johndoe@example.com. The recommendation value per package can either be none, weak, or strong based on how confident the existing signals (e.g. license type) imply a user role.
+Returns license info and total messages sent by users in last 7 days.
 
 ## PARAMETERS
 
-### -Identity
+### -Period
 
-The user that will receive policy package recommendations.
+No. of days starting from today
 
 ```yaml
 Type: String
@@ -63,10 +61,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS
 
-[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
-
-[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
-
-[Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)
