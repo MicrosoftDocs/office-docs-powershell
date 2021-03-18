@@ -20,12 +20,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
 Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
- [-ResetDelegateUserCollection]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
+ [-Confirm]
  [-Force]
+ [-SendNotificationToUser <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ResetDelegateUserCollection
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDelegateUserCollection]
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -94,7 +113,7 @@ The User parameter specifies the mailbox, mail user, or mail-enabled security gr
 
 ```yaml
 Type: MailboxFolderUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -131,7 +150,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -149,25 +168,9 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity, ResetDelegateUserCollection
 Aliases:
 Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -183,7 +186,7 @@ The ResetDelegateUserCollection switch can only be used together with -Identity 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: ResetDelegateUserCollection
 Aliases:
 Applicable: Exchange Online
 
@@ -206,9 +209,25 @@ This parameter only applies to calendar folders.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, ResetDelegateUserCollection
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
