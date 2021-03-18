@@ -27,7 +27,7 @@ This cmdlet supports retrieving the total no of messages sent by a user in chat/
 
 ## EXAMPLES
 
-### Example 1
+### Example
 ```powershell
 PS C:\> Get-DlpUserLicenseReport -Period 7
 ```
