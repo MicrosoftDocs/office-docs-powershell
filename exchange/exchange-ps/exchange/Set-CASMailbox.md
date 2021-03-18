@@ -725,7 +725,7 @@ This parameter is available only in the cloud-based service.
 The MacOutlookEnabled parameter enables or disables access to the mailbox using Outlook for Mac clients that use Microsoft Sync technology. Valid values are:
 
 - $true: Access to the mailbox using Outlook for Mac clients is enabled. This is the default value.
-- $false: Access to the mailbox using Outlook for Mac clients is disabled..
+- $false: Access to the mailbox using Outlook for Mac clients is disabled.
 
 Access for older Outlook for Mac clients that use Exchange Web Services is controlled by the EwsAllowMacOutlook parameter.
 
