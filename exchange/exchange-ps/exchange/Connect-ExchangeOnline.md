@@ -49,7 +49,6 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
- [-SkipImportSession]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
@@ -571,24 +570,6 @@ The ShowProgress parameter shows a visual progress bar in the PowerShell client 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipImportSession
-**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
-
-The SkipImportSession switch skips the import of cmdlets from the remote PowerShell session. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
