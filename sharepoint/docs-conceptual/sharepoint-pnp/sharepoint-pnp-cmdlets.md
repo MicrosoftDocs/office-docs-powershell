@@ -37,7 +37,7 @@ Before you start to work on code change consider starting a discussion in the re
 
 ## Building the source code
 
-Make a clone of the repository, navigate to the build folder in the repository and run Build-Debug.ps1. See more details [here](https://pnp.github.io/powershell/articles/buildingsource.md).
+Make a clone of the repository, navigate to the build folder in the repository and run Build-Debug.ps1. See more details [here](https://pnp.github.io/powershell/articles/buildingsource.html).
 
 ## Updating the documentation
 

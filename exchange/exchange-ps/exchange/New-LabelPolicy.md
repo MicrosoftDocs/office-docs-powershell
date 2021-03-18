@@ -25,7 +25,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-ExchangeLocationLocation <MultiValuedProperty>]
+ [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
  [-MigrationId <String>]
@@ -40,6 +40,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-SharePointLocationException <MultiValuedProperty>]
  [-SkypeLocation <MultiValuedProperty>]
  [-SkypeLocationException <MultiValuedProperty>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -311,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -Setting
-{{ Fill Setting Description }}
+PARAMVALUE: PswsHashtable
 
 ```yaml
 Type: PswsHashtable

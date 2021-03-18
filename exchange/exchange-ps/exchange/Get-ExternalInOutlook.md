@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ExternalInOutlook cmdlet to view the configuration of external sender identification that's available in supported versions of Outlook.
+Use the Get-ExternalInOutlook cmdlet to view the configuration of external sender identification that's available in supported versions of Outlook. Currently, this feature is supported in Outlook on the web and Outlook for iOS and Android.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
