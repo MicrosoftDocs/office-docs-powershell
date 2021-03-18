@@ -22,14 +22,14 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 ### Identity (Default)
 ```
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
