@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams 
+Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
 
 ## SYNTAX
 

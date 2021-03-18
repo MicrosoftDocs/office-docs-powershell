@@ -15,12 +15,12 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Remove-CsTeamsNetworkRoamingPolicy allows IT Admins to delete policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams 
+Remove-CsTeamsNetworkRoamingPolicy allows IT Admins to delete policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
 
 ## SYNTAX
 
 ```
-Remove-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Remove-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>]
 ```
 
 ## DESCRIPTION
