@@ -28,7 +28,7 @@ For more information on policy packages, please review https://docs.microsoft.co
 
 ## EXAMPLES
 
-### Example
+### Example 1
 ```powershell
 PS C:\> Get-CsUserPolicyPackageRecommendation -Identity johndoe@example.com
 ```
