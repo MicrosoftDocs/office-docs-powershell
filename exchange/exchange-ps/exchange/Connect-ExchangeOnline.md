@@ -78,7 +78,7 @@ After the Connect-ExchangeOnline command is complete, the password key in the $U
 
 ### Example 2
 ```powershell
-Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
+Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
 This example connects to Exchange Online PowerShell using modern authentication for the account chris@contoso.com, which uses MFA.
@@ -563,6 +563,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
+Note: Currently, this parameter has no effect.
+
 The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The progress bar shows number of objects received and total number of objects requested. Valid values are:
 
 - $true: The progress bar is displayed. This is the default value.
