@@ -563,12 +563,10 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
-Note: Currently, this parameter has no effect.
-
-The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The progress bar shows number of objects received and total number of objects requested. Valid values are:
+The ShowProgress parameter specifies whether to show or hide the progress bar of imported cmdlets when you connect. Valid values are:
 
 - $true: The progress bar is displayed. This is the default value.
-- $false: The progress bar isn't displayed.
+- $false: Currently, this value has no effect. 
 
 ```yaml
 Type: Boolean
