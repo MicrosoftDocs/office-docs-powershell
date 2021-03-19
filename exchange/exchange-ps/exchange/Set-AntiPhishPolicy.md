@@ -124,7 +124,7 @@ This setting is part of spoof protection.
 
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication (a mixture of traditional SPF, DKIM, and DMARC email authentication checks and proprietary backend intelligence). Valid values are:
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 ```yaml
@@ -182,10 +182,10 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (artificial intelligence that determines user email patterns with their frequent contacts). Valid values are::
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence, which is artificial intelligence (AI) that determines user email patterns with their frequent contacts. Mailbox intelligence helps distinguish between messages from legitimate and impersonated senders based on a recipient's previous communication history. Valid values are:
 
 - $true: Mailbox intelligence is enabled. This is the default value.
-- $false: Mailbox intelligence is disabled.
+- $false: Mailbox intelligence is disabled. The values of the EnableMailboxIntelligenceProtection and MailboxIntelligenceProtectionAction parameters are ignored.
 
 ```yaml
 Type: Boolean
@@ -203,10 +203,14 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligenceProtection
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableMailboxIntelligenceProtection specifies whether to enable or disable enhanced impersonation results based on each user's individual sender map. This intelligence allows Microsoft 365 to customize user impersonation detection and better handle false positives. Valid values are:
+The EnableMailboxIntelligenceProtection specifies whether to enable or disable taking action for impersonation detections from mailbox intelligence results. Valid values are:
 
-- $true: Enable mailbox intelligence based impersonation protection.
-- $false: Don't enable mailbox intelligence based impersonation protection. This is the default value.
+- $true: Take action for impersonation detections from mailbox intelligence results. Use the MailboxIntelligenceProtectionAction parameter to specify the action.
+- $false: Don't take action for impersonation detections from mailbox intelligence results. The value of the MailboxIntelligenceProtectionAction parameter is ignored. This is the default value.
+
+This parameter is meaningful only if the EnableMailboxIntelligence parameter is set to the value $true.
+
+If you set this parameter to the value $false when the value of the EnableMailboxIntelligence parameter is $true, no action is taken on messages based on mailbox intelligence results (for example, lack of communication history). But, but mailbox intelligence can still help reduce impersonation false positives based on frequent contact information.
 
 ```yaml
 Type: Boolean
@@ -473,12 +477,14 @@ This setting is part of impersonation protection and is only available in Micros
 
 The MailboxIntelligenceProtectionAction parameter specifies what to do with messages that fail mailbox intelligence protection. Valid values are:
 
-- NoAction: This is the default value.
+- NoAction: This is the default value. Note that this value has the same result as setting the EnableMailboxIntelligenceProtection parameter to $false when the EnableMailboxIntelligence parameter is $true.
 - BccMessage: Add the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
+
+This parameter is meaningful only if the EnableMailboxIntelligence and EnableMailboxIntelligenceProtection parameters are set to the value $true.
 
 ```yaml
 Type: ImpersonationAction
@@ -598,7 +604,7 @@ The TargetedDomainProtectionAction parameter specifies the action to take on d
 - NoAction: This is the default value.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -663,7 +669,7 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 - NoAction: This is the default value.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 

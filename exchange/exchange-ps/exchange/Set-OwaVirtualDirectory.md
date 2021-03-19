@@ -2570,7 +2570,7 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingSupportedMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead..
+This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead.
 
 ```yaml
 Type: MultiValuedProperty
