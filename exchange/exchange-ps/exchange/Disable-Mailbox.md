@@ -87,7 +87,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Disable-Mailbox -Identity "John Woods"
 ```
 
-This example disables the mailbox of the user named John Woods and removes all mailbox attributes from John's user account..
+This example disables the mailbox of the user named John Woods and removes all mailbox attributes from John's user account.
 
 ### Example 2
 ```powershell
