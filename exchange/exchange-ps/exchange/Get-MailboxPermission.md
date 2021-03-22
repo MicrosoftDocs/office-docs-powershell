@@ -24,10 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Owner
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter>
- [-Owner]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -35,10 +35,10 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter>
 
 ### AccessRights
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter>
- [-User <SecurityPrincipalIdParameter>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipalIdParameter>] [-SoftDeletedMailbox]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -153,6 +153,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to return Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Owner
 The Owner switch returns the owner information for the mailbox that's specified by the Identity parameter. You don't need to specify a value with this switch.
 
@@ -201,6 +219,26 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeletedMailbox
+This parameter is available only in the cloud-based service.
+
+The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -1,51 +1,54 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfeature
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFeature.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPFeature
 ---
-
+  
 # Get-PnPFeature
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFeature.md to change this file.
+
 Returns all activated or a specific activated feature
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
-Get-PnPFeature [-Includes <String[]>]
-               [-Identity <FeaturePipeBind>]
-               [-Scope <FeatureScope>]
-               [-Web <WebPipeBind>]
-               [-Connection <PnPConnection>]
+Get-PnPFeature [[-Identity] <FeaturePipeBind>] [-Scope <FeatureScope>] 
+ [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPFeature
 ```
 
 This will return all activated web scoped features
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPFeature -Scope Site
 ```
 
 This will return all activated site scoped features
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
 This will return a specific activated web scoped feature
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22 -Scope Site
 ```
@@ -53,54 +56,6 @@ Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22 -Scope Site
 This will return a specific activated site scoped feature
 
 ## PARAMETERS
-
-### -Identity
-The feature ID or name to query for, Querying by name is not supported in version 15 of the Client Side Object Model
-
-```yaml
-Type: FeaturePipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: True
-```
-
-### -Includes
-Specify properties to include when retrieving objects from the server.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Scope
-The scope of the feature. Defaults to Web.
-
-```yaml
-Type: FeatureScope
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-The web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -111,13 +66,44 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Identity
+The feature ID or name to query for, Querying by name is not supported in version 15 of the Client Side Object Model
 
-### List<Microsoft.SharePoint.Client.Feature>
+```yaml
+Type: FeaturePipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Scope
+The scope of the feature. Defaults to Web.
+
+```yaml
+Type: FeatureScope
+Parameter Sets: (All)
+Accepted values: Web, Site
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

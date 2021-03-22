@@ -24,8 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Arbitration
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-Arbitration]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -63,8 +62,7 @@ Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Discovery
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-Discovery]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -83,8 +81,7 @@ Enable-Mailbox [-Identity] <UserIdParameter>
 
 ### Equipment
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-Equipment]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -148,8 +145,7 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -
 
 ### PublicFolder
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-PublicFolder]
+Enable-Mailbox [-Identity] <UserIdParameter> [-PublicFolder]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -169,8 +165,7 @@ Enable-Mailbox [-Identity] <UserIdParameter>
 
 ### Room
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-Room]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Room]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -189,8 +184,7 @@ Enable-Mailbox [-Identity] <UserIdParameter>
 
 ### Shared
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-Shared]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Shared]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -229,9 +223,9 @@ Enable-Mailbox [-Identity] <UserIdParameter>
 
 ### Archive
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>]
- [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>]
+Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>
@@ -248,8 +242,7 @@ Enable-Mailbox [-Identity] <UserIdParameter>]
 
 ### AuditLog
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [AuditLog]
+Enable-Mailbox [-Identity] <UserIdParameter> [-AuditLog]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -266,8 +259,7 @@ Enable-Mailbox [-Identity] <UserIdParameter>
 
 ### AutoExpandingArchive
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>
- [-AutoExpandingArchive]
+Enable-Mailbox [-Identity] <UserIdParameter> [-AutoExpandingArchive]
  [-Confirm]
  [-Force]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
@@ -867,7 +859,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicy
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ManagedFolderMailboxPolicy parameter specifies the managed folder mailbox policy to enable for the mailbox that you create. If you don't specify this parameter, the default managed folder mailbox policy is used.
 
@@ -885,7 +877,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicyAllowed
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available in Exchange Server 2010.
 
 The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for  clients using versions of Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 

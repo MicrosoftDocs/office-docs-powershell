@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-authenticationpolicy
-applicable: Exchange Online
+applicable: Exchange Server 2019, Exchange Online
 title: Set-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda

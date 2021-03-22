@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpteamsapp
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPTeamsApp
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPTeamsApp.html
 ---
-
+ 
 # New-PnPTeamsApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPTeamsApp.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,16 +21,17 @@ title: New-PnPTeamsApp
 
 Adds an app to the Teams App Catalog.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPTeamsApp -Path <String>
-                [-ByPassPermissionCheck [<SwitchParameter>]]
+New-PnPTeamsApp -Path <String>  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPTeamsApp -Path c:\myapp.zip
 ```
@@ -33,18 +39,6 @@ New-PnPTeamsApp -Path c:\myapp.zip
 Adds the app as defined in the zip file to the Teams App Catalog
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Path
 The path pointing to the packaged/zip file containing the app
@@ -55,9 +49,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

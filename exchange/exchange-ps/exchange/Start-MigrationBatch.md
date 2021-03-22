@@ -122,13 +122,15 @@ Accept wildcard characters: False
 ```
 
 ### -Validate
+This parameter is available only in on-premises Exchange.
+
 The Validate parameter specifies whether to start the migration batch in the validation stage of the migration process. If you include this parameter, the migration performs a validation check of the mailboxes in the batch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

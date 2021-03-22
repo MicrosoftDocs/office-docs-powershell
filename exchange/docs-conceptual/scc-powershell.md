@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date: 9/29/2015
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Normal
@@ -21,6 +22,6 @@ Security & Compliance Center PowerShell is the administrative interface that ena
 
 - To learn about the structure and layout of the cmdlet reference articles in Security & Compliance Center PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 
-Many of the cmdlets that are available in Security & Compliance Center PowerShell correspond to features that are only available in the Security & Compliance Center, so the related cmdlets are exclusive to Security & Compliance Center PowerShell. But, some cmdlets that are available in Security & Compliance Center PowerShell have the same names and functionality as those in Exchange Online PowerShell (for example, [Get-User](https://docs.microsoft.com/powershell/module/exchange/get-user)).
+Many of the cmdlets that are available in Security & Compliance Center PowerShell correspond to features that are only available in the Security & Compliance Center, so the related cmdlets are exclusive to Security & Compliance Center PowerShell. But, some cmdlets that are available in Security & Compliance Center PowerShell have the same names and functionality as those in Exchange Online PowerShell (for example, [Get-User](/powershell/module/exchange/get-user)).
 
-Also, some features that are available in the Security & Compliance Center (for example, [anti-spam and anti-malware](https://docs.microsoft.com/microsoft-365/security/office-365-security/anti-spam-and-anti-malware-protection) cmdlets are only available in [Exchange Online PowerShell](exchange-online-powershell.md)). Check the **Applies to** value in the cmdlet reference article to verify where the cmdlet actually resides.
+Also, some features that are available in the Security & Compliance Center (for example, [anti-spam and anti-malware](/microsoft-365/security/office-365-security/anti-spam-and-anti-malware-protection) cmdlets are only available in [Exchange Online PowerShell](exchange-online-powershell.md)). Check the **Applies to** value in the cmdlet reference article to verify where the cmdlet actually resides.

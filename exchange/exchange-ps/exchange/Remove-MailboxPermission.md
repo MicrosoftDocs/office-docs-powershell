@@ -23,11 +23,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AccessRights
 ```
 Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+ [-BypassMasterAccountSid]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
+ [-SoftDeletedMailbox]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -39,6 +42,7 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
@@ -50,8 +54,10 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
 ### Owner
 ```
 Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
+ [-BypassMasterAccountSid]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-WhatIf]
  [<CommonParameters>]
@@ -60,6 +66,7 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
 ### ClearAutoMapping
 ```
 Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-BypassMasterAccountSid]
  [-ClearAutoMapping]
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
@@ -224,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearAutoMapping
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
 
@@ -234,9 +241,27 @@ To re-add auto-mapping capability on the mailbox for other users, run the comman
 Type: SwitchParameter
 Parameter Sets: ClearAutoMapping
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassMasterAccountSid
+This parameter is available only in the cloud-based service.
+
+{{ Fill BypassMasterAccountSid Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, ClearAutoMapping
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -296,6 +321,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill GroupMailbox Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, Instance
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
@@ -334,7 +377,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetDefault
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ResetDefault switch resets the default security descriptor of the mailbox. Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
 
@@ -348,9 +391,27 @@ Also, because this switch removes FullAccess permission from other users on the 
 Type: SwitchParameter
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeletedMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill SoftDeletedMailbox Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

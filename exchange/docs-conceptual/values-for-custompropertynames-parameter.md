@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -18,7 +19,7 @@ description: "Learn about the valid values for the CustomPropertyNames parameter
 
 # Values for the CustomPropertyNames parameter in Exchange Online PowerShell
 
-The _CustomPropertyNames_ parameter on the [Get-CalendarDiagnosticObjects](https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects) cmdlet returns the specified properties in the results.
+The _CustomPropertyNames_ parameter on the [Get-CalendarDiagnosticObjects](/powershell/module/exchange/get-calendardiagnosticobjects) cmdlet returns the specified properties in the results.
 
 The article describes the valid values for the _CustomPropertyNames_ parameter.
 

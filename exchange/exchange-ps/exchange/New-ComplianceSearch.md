@@ -31,15 +31,12 @@ New-ComplianceSearch [-Name] <String>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
+ [-IncludeOrgContent <Boolean>]
  [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-LogLevel <ComplianceJobLogLevel>]
- [-OneDriveLocation <String[]>]
- [-OneDriveLocationExclusion <String[]>]
  [-PublicFolderLocation <String[]>]
- [-PublicFolderLocationExclusion <String[]>]
  [-RefinerNames <String[]>]
- [-SearchNames <String[]>]
  [-SharePointLocation <String[]>]
  [-SharePointLocationExclusion <String[]>]
  [-StatusMailRecipients <String[]>]
@@ -128,6 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -Case
+This parameter is available only in the cloud-based service.
+
 The Case parameter specifies the name of a Core eDiscovery case to associate the new compliance search with. If the value contains spaces, enclose the value in quotation marks.
 
 You can't use this parameter to create compliance searches associated with Advanced eDiscovery cases.
@@ -138,7 +137,7 @@ If the Name parameter contains spaces, the value of the ExchangeLocation paramet
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -260,6 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -HoldNames
+This parameter is available only in the cloud-based service.
+
 The HoldNames parameter specifies that the content locations that have been placed on hold in the specified eDiscovery case will be searched. You use the value All for this parameter. You also need to specify the name of an eDiscovery case by using the Case parameter.
 
 Also, if a content location was placed on a query-based case hold, only items that are on hold will be searched when you run this compliance search. For example, if a user was placed on a query-based case hold that preserves items that were sent or created before a specific date, only those items would be searched by using the search criteria specified by this compliance search.
@@ -268,7 +269,23 @@ Also, if a content location was placed on a query-based case hold, only items th
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeOrgContent
+{{ Fill IncludeOrgContent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -317,45 +334,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceJobLogLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -365,29 +352,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderLocation
+This parameter is available only in the cloud-based service.
+
 The PublicFolderLocation parameter specifies that you want to include all public folders in the search. You use the value All for this parameter.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -397,29 +370,15 @@ Accept wildcard characters: False
 ```
 
 ### -RefinerNames
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchNames
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -429,6 +388,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
+This parameter is available only in the cloud-based service.
+
 The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -437,7 +398,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -447,6 +408,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationExclusion
+This parameter is available only in the cloud-based service.
+
 This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -455,7 +418,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -465,13 +428,15 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

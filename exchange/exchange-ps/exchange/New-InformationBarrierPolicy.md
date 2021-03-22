@@ -20,9 +20,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### InformationBarrierDefault (Default)
+### OrganizationSegmentAllowedFilter
 ```
-New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
+New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentAllowedFilter <String>
  [-Comment <String>]
  [-Confirm]
  [-State <EopInformationBarrierPolicyState>]

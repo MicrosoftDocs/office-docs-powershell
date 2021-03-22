@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UserBriefingConfig -Identity <String>
- [-Enabled [<$true | $false>]
+Set-UserBriefingConfig -Identity <String> -Enabled <Boolean>
  [-ResultSize <Unlimited>]
 ```
 
@@ -76,7 +75,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResultSize	
+### -ResultSize
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
