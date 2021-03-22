@@ -28,6 +28,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddOneDriveLocation <MultiValuedProperty>]
  [-AddOneDriveLocationException <MultiValuedProperty>]
+ [-AddOnPremisesScannerDlpLocation <MultiValuedProperty>]
+ [-AddOnPremisesScannerDlpLocationException <MultiValuedProperty>]
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
@@ -36,14 +38,20 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-ExceptIfOneDriveSharedBy <SmtpAddress[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <SmtpAddress[]>]
  [-Force]
  [-Mode <PolicyMode>]
+ [-OneDriveSharedBy <SmtpAddress[]>]
+ [-OneDriveSharedByMemberOf <SmtpAddress[]>]
  [-Priority <Int32>]
  [-RemoveEndpointDlpLocation <MultiValuedProperty>]
  [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
+ [-RemoveOnPremisesScannerDlpLocation <MultiValuedProperty>]
+ [-RemovePremisesScannerDlpLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
@@ -207,6 +215,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddOnPremisesScannerDlpLocation
+{{ Fill AddOnPremisesScannerDlpLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddOnPremisesScannerDlpLocationException
+{{ Fill AddOnPremisesScannerDlpLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddSharePointLocation
 The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
@@ -356,6 +396,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfOneDriveSharedBy
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfOneDriveSharedByMemberOf
+The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
@@ -383,6 +461,43 @@ The Mode parameter specifies the action and notification level of the DLP policy
 ```yaml
 Type: PolicyMode
 Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharedBy
+The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharedByMemberOf
+The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -487,6 +602,38 @@ Accept wildcard characters: False
 This parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOnPremisesScannerDlpLocation
+{{ Fill RemoveOnPremisesScannerDlpLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOnPremisesScannerDlpLocationException
+{{ Fill RemoveOnPremisesScannerDlpLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty

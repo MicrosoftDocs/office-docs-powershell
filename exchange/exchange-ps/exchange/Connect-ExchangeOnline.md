@@ -519,6 +519,7 @@ The Organization parameter specifies the organization that's used in app-only au
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
