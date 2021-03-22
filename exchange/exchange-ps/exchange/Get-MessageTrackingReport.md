@@ -32,7 +32,7 @@ Get-MessageTrackingReport [-Identity] <MessageTrackingReportId>
  [-Recipients <String[]>]
  [-ReportTemplate <ReportTemplate>]
  [-ResultSize <Unlimited>]
- [-Status <_DeliveryStatus>]
+ [-Status <DeliveryStatus>]
  [-TraceLevel <TraceLevel>]
  [<CommonParameters>]
 ```

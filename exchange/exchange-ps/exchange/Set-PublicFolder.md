@@ -26,6 +26,7 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EformsLocaleId <CultureInfo>]
+ [-Force]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-IssueWarningQuota <Unlimited>]
  [-LocalReplicaAgeLimit <EnhancedTimeSpan>]
