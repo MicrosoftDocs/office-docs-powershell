@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-DlpSensitiveInformationType [-Identity] <DataClassificationIdParameter>
  [-Confirm]
- [-DomainController <Fqdn>]
  [-WhatIf]
  [<CommonParameters>]
 ```

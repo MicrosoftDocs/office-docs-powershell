@@ -272,7 +272,7 @@ Accept wildcard characters: False
 {{ Fill PivotBy Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

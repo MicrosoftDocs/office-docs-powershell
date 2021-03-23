@@ -1760,7 +1760,7 @@ Accept wildcard characters: False
 ```
 
 ### -TransportRole
-The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created.. Valid values are:
+The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created. Valid values are:
 
 - FrontendTransport: The Front End Transport service where client or external SMTP connections occur.
 - HubTransport: The Transport service where Exchange server and proxied client SMTP connections occur.
