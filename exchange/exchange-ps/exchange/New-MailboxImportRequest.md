@@ -145,7 +145,7 @@ This example imports a recovered .pst file on SERVER01 into the user Ayla's prim
 
 ### Example 2
 ```powershell
-New-MailboxImportRequest User2 -FilePath \\server\share\User1.pst -IsArchive -TargetRootFolder /
+New-MailboxImportRequest Kweku -FilePath \\server\share\User1.pst -IsArchive -TargetRootFolder /
 ```
 
 This example imports a .pst file into Kweku's archive folder. The TargetRootFolder isn't specified; therefore, content is merged under existing folders and new folders are created if they don't already exist in the target folder structure.

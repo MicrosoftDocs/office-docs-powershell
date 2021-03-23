@@ -60,6 +60,20 @@ PS C:\> Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
 
 Specifies that the organization being managed is in the Teams GCC High environment, so connect to that environment.
 
+### Example 3
+```powershell
+PS C:\> Connect-MicrosoftTeams -TenantId c3eac90d-eb4b-48ef-ac86-7acac472d3cd -CertificateThumbprint 9b6ac64bfb8b48dbb53cca75fb33ce2d -applicationid daaaf729-aaff-45ba-8055-a39dd618fe24
+```
+
+Connects to Microsoft Teams PowerShell using a Certificate and an applicationId.
+
+### Example 4
+```powershell
+PS C:\> Connect-MicrosoftTeams -AadAccessToken c3eac90deb4b48efac867acac472d3cd -AccountId user@domain.com
+```
+
+Connects to Microsoft Teams PowerShell using an Azure Active Directory Graph access token.
+
 ## PARAMETERS
 
 ### -AadAccessToken
