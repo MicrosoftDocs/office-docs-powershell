@@ -223,7 +223,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 Get-Mailbox -SoftDeletedMailbox "User Name" | Format-List ExchangeGUID
-New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllLegacyDNMismatch
+New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllowLegacyDNMismatch
 ```
 
 In Exchange Online, this example uses the Get-Mailbox cmdlet to find the ExchangeGUID value of the mailbox, which is required to restore the mailbox contents.
