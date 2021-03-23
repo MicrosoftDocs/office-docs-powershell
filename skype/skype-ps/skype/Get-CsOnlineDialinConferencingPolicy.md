@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsOnlineDialinConferencingPolicy
 
 ## SYNOPSIS
-Retrieves the available Dial in Conferencing policies in the tenant.
+Retrieves the available Dial-in Conferencing policies in the tenant.
 
 ## SYNTAX
 
@@ -100,4 +100,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
