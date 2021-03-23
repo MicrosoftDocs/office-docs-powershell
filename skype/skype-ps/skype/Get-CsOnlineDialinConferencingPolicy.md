@@ -28,7 +28,7 @@ Get-CsOnlineDialinConferencingPolicy [-Filter <String>] [-LocalStore] [<CommonPa
 ```
 
 ## DESCRIPTION
-Retrieves the available Dial in Conferencing policies in the tenant.
+Retrieves the available Dial-in Conferencing policies in the tenant.
 
 ## EXAMPLES
 
