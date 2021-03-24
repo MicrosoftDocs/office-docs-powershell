@@ -25,6 +25,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
  [-AddRecipients <PswsHashtable>]
+ [-AlertProperties <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ApplyHtmlDisclaimer <PswsHashtable>]
@@ -45,6 +46,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-DocumentSizeOver <ByteQuantifiedSize>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
+ [-EndpointDlpRestrictions <PswsHashtable[]>]
  [-ExceptIfAccessScope <AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -62,6 +64,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfFromMemberOf <SmtpAddress[]>]
  [-ExceptIfFromScope <FromScope>]
  [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsWords <PswsHashtable>]
@@ -80,6 +83,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfUnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-ExceptIfWithImportance <WithImportance>]
  [-ExpiryDate <DateTime>]
  [-From <RecipientIdParameter[]>]
@@ -98,10 +102,12 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
  [-NotifyAllowOverride <OverrideOption[]>]
+ [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
+ [-OnPremisesScannerDlpRestrictions <PswsHashtable[]>]
  [-PrependSubject <String>]
  [-Priority <Int32>]
  [-ProcessingLimitExceeded <Boolean>]
@@ -123,6 +129,8 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
+ [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
+ [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
  [-WithImportance <WithImportance>]
  [<CommonParameters>]
@@ -224,6 +232,22 @@ The AddRecipients parameter specifies an action for the DLP rule that adds the s
 - `@{AddManagerAsRecipientType = "<To | Cc | Bcc>"}`. For example, `@{AddManagerAsRecipientType = "Bcc"}`.
 
 You can use this action in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AlertProperties
+{{ Fill AlertProperties Description }}
 
 ```yaml
 Type: PswsHashtable
@@ -633,6 +657,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndpointDlpRestrictions
+The EndpointDlpRestrictions parameter specifies the restricted endpoints. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
+
+The value of `<Setting>` is one of the supported values.
+
+The value of `<Value>` is Audit, Block, Ignore, or Warn.
+
+Example values:
+
+- `@{"Setting"="Print"; "Value"="Block"}`
+- `@{"Setting"="CopyPaste"; "Value"="Block";}`
+- `@{"Setting"="ScreenCapture"; "Value"="Block";}`
+- `@{"Setting"="RemovableMedia"; "Value"="Block";}`
+- `@{"Setting"="NetworkShare"; "Value"="Block";}`
+- `@{"Setting"="Print"; "Value"="Audit";}`
+- `@{"Setting"="UnallowedApps"; "Value"="notepad"; "value2"="Microsoft Notepad"}`
+
+When you use the values Block or Warn in this parameter, you also need to use the NotifyUser parameter.
+
+You can view and configure the available restrictions with the Get-PolicyConfig and Set-PolicyConfig cmdlets.
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfAccessScope
 The ExceptIfAccessScopeAccessScope parameter specifies an exception for the DLP rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
 
@@ -720,7 +778,7 @@ Accept wildcard characters: False
 ### -ExceptIfContentContainsSensitiveInformation
 The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
+This parameter uses the following syntax: `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -968,6 +1026,22 @@ You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFromMemberOf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1407,6 +1481,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfUnscannableDocumentExtensionIs
+{{ Fill ExceptIfUnscannableDocumentExtensionIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfWithImportance
 The ExceptIfWithImportance parameter specifies an exception for the rule that looks for messages with the specified importance level. Valid values are:
 
@@ -1797,6 +1887,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyEmailCustomSubject
+{{ Fill NotifyEmailCustomSubject Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyEmailCustomText
 The NotifyEmailCustomText parameter specifies the custom text in the email notification message that's sent to recipients when the conditions of the rule are met.
 
@@ -1863,6 +1969,22 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnPremisesScannerDlpRestrictions
+{{ Fill OnPremisesScannerDlpRestrictions Description }}
+
+```yaml
+Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -2339,6 +2461,38 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: <MultiValuedProperty>
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThirdPartyAppDlpRestrictions
+{{ Fill ThirdPartyAppDlpRestrictions Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UnscannableDocumentExtensionIs
+{{ Fill UnscannableDocumentExtensionIs Description }}
+
+```yaml
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
