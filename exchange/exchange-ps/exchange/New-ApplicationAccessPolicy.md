@@ -55,39 +55,39 @@ Every API request using the Outlook REST APIs or Microsoft Graph APIs to a targe
 
 ### Example 1
 ```powershell
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5", "6ac794ca-2697-4137-8754-d2a78ae47d93" -PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
+$AccessPolicy = @{
+  AccessRight = DenyAccess
+  AppId = "3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5", "6ac794ca-2697-4137-8754-d2a78ae47d93"
+  PolicyScopeGroupId = "Engineering Staff"
+  Description = "Engineering Group Policy"
+  
+}
+New-ApplicationAccessPolicy @AccessPolicy
 ```
-
-This example creates a new application access policy with the following settings:
-
-- AccessRight: DenyAccess
-- AppIDs: 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5 and 6ac794ca-2697-4137-8754-d2a78ae47d93
-- PolicyScopeGroupId: Engineering Staff
-- Description: Engineering Group Policy
 
 ### Example 2
 ```powershell
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
+$AccessPolicy = @{
+  AccessRight = RestrictAccess
+  AppId = "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b"
+  PolicyScopeGroupId = EvenUsers@AppPolicyTest2.com
+  Description = "Restrict this app to members of security group EvenUsers."
+  
+}
+New-ApplicationAccessPolicy @AccessPolicy
 ```
-
-This example creates a new application access policy with the following settings:
-
-- AccessRight: RestrictAccess
-- AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
-- PolicyScopeGroupId: EvenUsers@AppPolicyTest2.com
-- Description: Restrict this app to members of security group EvenUsers.
 
 ### Example 3
 ```powershell
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
+$AccessPolicy = @{
+  AccessRight = DenyAccess
+  AppId = "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b"
+  PolicyScopeGroupId = OddUsers@AppPolicyTest2.com
+  Description = "Deny this app access to members of security group OddUsers."
+  
+}
+New-ApplicationAccessPolicy @AccessPolicy
 ```
-
-This example creates a new application access policy with the following settings:
-
-- AccessRight: DenyAccess
-- AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
-- PolicyScopeGroupId: OddUsers@AppPolicyTest2.com
-- Description: Deny this app access to members of security group OddUsers.
 
 ## PARAMETERS
 
