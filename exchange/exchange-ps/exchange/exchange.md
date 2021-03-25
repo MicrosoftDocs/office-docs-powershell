@@ -2091,11 +2091,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
 
+### [Get-OwnerlessGroupPolicy](Get-OwnerlessGroupPolicy.md)
+
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
-### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
-
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
+
+### [Set-OwnerlessGroupPolicy](Set-OwnerlessGroupPolicy.md)
+
+### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
