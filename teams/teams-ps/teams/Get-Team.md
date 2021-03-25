@@ -32,7 +32,7 @@ Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-Display
 This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
 >[!NOTE]
->At times, Get-Team returns multiple results matching the input and not just the exact match for attributes like DisplayName/MailNickName. This is a known behaviour.
+> Get-Team may return multiple results matching the input and not just the exact match for attributes like DisplayName/MailNickName. This is known behavior.
 
 ## EXAMPLES
 
@@ -248,4 +248,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 [New-Team](new-team.md)
 
 [Set-Team](set-team.md)
-
