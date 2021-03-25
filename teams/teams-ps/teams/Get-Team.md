@@ -31,7 +31,7 @@ Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-Display
 ## DESCRIPTION
 This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
->[!NOTE]
+> [!NOTE]
 > Get-Team may return multiple results matching the input and not just the exact match for attributes like DisplayName/MailNickName. This is known behavior.
 
 ## EXAMPLES
