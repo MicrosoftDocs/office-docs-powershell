@@ -30,13 +30,16 @@ Set-OwnerlessGroupPolicy -Enabled <Boolean> -NoOfWeeksToNotify <Int32> -MaxNoOfM
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Using the cmdlet you can enable or disable the ownerless group policy for Microsoft 365 Groups on a tenant. You can also configure additional parameters as part of the policy including sender email address, number of weeks you want to notify active members of ownerless groups and number of members within a ownerless group you want to notify. Optionally you can also specify the specific groups you want to enable this policy on if needed. 
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-{{ Add example code here }}
+ Set-OwnerlessGroupPolicy -enabled $true 
+ -senderEmailAddress admin@contoso.com 
+ -noOfWeeksToNotify 5 
+ -maxNoOfMembersToNotify 5 
+ -enabledGroupIds 1b390686-a8fc-4a2d-b31f-62670552fc99, 4596bdbe-d3c9-4d7b-aa34-a811b76a1366 
 ```
 
 {{ Add example description here }}
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxNoOfMembersToNotify
-The MaxNoOfMembersToNotify parameter specifies the maximum number of members to notify. A valid value is an integer from 1 to 7.
+The MaxNoOfMembersToNotify parameter specifies the maximum number of active members to notify in a ownerless group. A valid value is an integer.
 
 ```yaml
 Type: Int32
@@ -79,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoOfWeeksToNotify
-The NoOfWeeksToNotify parameter specifies the number of weeks to notify the members specified by the MaxNoOfMembersToNotify parameter. A valid value is an integer from 1 to 90.
+The NoOfWeeksToNotify parameter specifies the number of weeks to notify the active members specified by the MaxNoOfMembersToNotify parameter. A valid value is an integer from 1 to 90.
 
 ```yaml
 Type: Int32
@@ -110,21 +113,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BatchRequests
-{{ Fill BatchRequests Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -EnabledGroupIds
 {{ Fill EnabledGroupIds Description }}
