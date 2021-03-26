@@ -29,34 +29,17 @@ Get-OwnerlessGroupPolicy
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Using the cmdlet you can verify if the ownerless group policy for Microsoft 365 Groups is enabled or disabled on the tenant. You can also view  additional parameters as part of the policy including sender email address, number of weeks you want to notify active members of ownerless groups, number of members within a ownerless group you want to notify and specific groups within the tenant on which ownerless group policy is enabled. 
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-{{ Add example code here }}
+Get-OwnerlessGroupPolicy
 ```
 
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -BatchRequests
-{{ Fill BatchRequests Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ResultSize
 This parameter is reserved for internal Microsoft use.
