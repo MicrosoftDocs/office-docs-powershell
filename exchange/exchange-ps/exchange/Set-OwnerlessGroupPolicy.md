@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OwnerlessGroupPolicy -Enabled <Boolean> -NoOfWeeksToNotify <Int32> -MaxNoOfMembersToNotify <Int32> -SenderEmailAddress <String>
- [-BatchRequests]
  [-EnabledGroupIds <String[]>]
  [-ResultSize <Unlimited>]
  [-UseMultithreading]
@@ -30,19 +29,16 @@ Set-OwnerlessGroupPolicy -Enabled <Boolean> -NoOfWeeksToNotify <Int32> -MaxNoOfM
 ```
 
 ## DESCRIPTION
-Using the cmdlet you can enable or disable the ownerless group policy for Microsoft 365 Groups on a tenant. You can also configure additional parameters as part of the policy including sender email address, number of weeks you want to notify active members of ownerless groups and number of members within a ownerless group you want to notify. Optionally you can also specify the specific groups you want to enable this policy on if needed. 
+Use this cmdlet to enable or disable the ownerless group policy for Microsoft 365 Groups in your organization. You can also configure additional policy settings, including sender email address, the number of weeks that you want to notify active members of ownerless groups, and the number of members within a ownerless group that you want to notify. Optionally, you can also specify the Microsoft 365 Groups that you want to enable this policy on.
 
 ## EXAMPLES
 
 ### Example 1
- Set-OwnerlessGroupPolicy -enabled $true 
- -senderEmailAddress admin@contoso.com 
- -noOfWeeksToNotify 5 
- -maxNoOfMembersToNotify 5 
- -enabledGroupIds 1b390686-a8fc-4a2d-b31f-62670552fc99, 4596bdbe-d3c9-4d7b-aa34-a811b76a1366 
+```powershell
+ Set-OwnerlessGroupPolicy -Enabled $true -SenderEmailAddress admin@contoso.com -NoOfWeeksToNotify 5 -MaxNoOfMembersToNotify 5 -EnabledGroupIds 1b390686-a8fc-4a2d-b31f-62670552fc99, 4596bdbe-d3c9-4d7b-aa34-a811b76a1366
 ```
 
-{{ Add example description here }}
+This example configures the ownerless group policy with the specified settings.
 
 ## PARAMETERS
 
@@ -112,7 +108,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -EnabledGroupIds
 {{ Fill EnabledGroupIds Description }}
