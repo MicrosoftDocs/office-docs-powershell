@@ -1341,7 +1341,7 @@ You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
