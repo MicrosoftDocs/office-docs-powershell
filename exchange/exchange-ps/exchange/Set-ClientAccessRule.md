@@ -138,15 +138,17 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfClientIPAddressesOrRanges
-The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IP address. Valid values for this parameter are:
+The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
 
-- A single IP address: For example, 192.168.1.1.
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
+- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
@@ -298,15 +300,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfClientIPAddressesOrRanges
-The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IP address. Valid values for this parameter are:
+The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
 
-- A single IP address: For example, 192.168.1.1.
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
+- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
