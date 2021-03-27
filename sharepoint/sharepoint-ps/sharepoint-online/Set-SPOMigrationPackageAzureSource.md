@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -MigrationSourceLocations
 
-PARAMVALUE: MigrationPackageLocation
+Possible Source locations to migrate
 
 ```yaml
 Type: MigrationPackageLocation
