@@ -305,7 +305,7 @@ For more information about priority accounts, see [Manage and monitor priority a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -344,7 +344,7 @@ Public folder mailboxes are specially designed mailboxes that store the hierarch
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
