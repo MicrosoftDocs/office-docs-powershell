@@ -697,7 +697,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOrganizersToOverrideLobbySettings
-Set this parameter to true to enable Organizers to override lobby settings.
+This parameter has been deprecated and currently has no effect.
 
 ```yaml
 Type: Boolean
