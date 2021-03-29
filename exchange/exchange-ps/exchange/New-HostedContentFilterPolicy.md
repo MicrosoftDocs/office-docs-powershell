@@ -502,7 +502,7 @@ The HighConfidencePhishAction parameter specifies the action to take on messages
 Type: PhishFilteringAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1027,7 +1027,7 @@ Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Custom, Standard, Strict
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

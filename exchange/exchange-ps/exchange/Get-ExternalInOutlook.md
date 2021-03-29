@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-externalinoutlook
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-ExternalInOutlook
 schema: 2.0.0
 author: chrisda
@@ -52,7 +52,7 @@ The Identity parameter specifies the GUID of the external sender identification 
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
