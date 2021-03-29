@@ -815,10 +815,10 @@ Accept wildcard characters: False
 
 Possible values:
 - Everyone
-- EveryonenCompany
+- EveryoneInCompany
 
 ```yaml
-Type: Strrng
+Type: String
 Parameter Sets: (All)
 Aliases:
 Required: False
