@@ -222,6 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
@@ -410,9 +412,7 @@ Accept wildcard characters: False
 ### -SharePointLocationExclusion
 This parameter is available only in the cloud-based service.
 
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]

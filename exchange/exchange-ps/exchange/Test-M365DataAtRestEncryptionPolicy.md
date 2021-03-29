@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-m365dataatrestencryptionpolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Test-M365DataAtRestEncryptionPolicy
 schema: 2.0.0
 author: chrisda
@@ -57,7 +57,7 @@ You can find the existing data-at-rest encryption policies by using the Get-M365
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
@@ -92,7 +92,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

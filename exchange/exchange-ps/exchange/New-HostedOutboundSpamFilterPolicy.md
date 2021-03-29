@@ -269,7 +269,7 @@ Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Custom, Standard, Strict
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

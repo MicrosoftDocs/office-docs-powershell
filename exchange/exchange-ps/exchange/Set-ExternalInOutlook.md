@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-externalinoutlook
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-ExternalInOutlook
 schema: 2.0.0
 author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ExternalInOutlook cmdlet to modify the configuration of external sender identification that's available in supported versions of Outlook.
+Use the Set-ExternalInOutlook cmdlet to modify the configuration of external sender identification that's available in supported versions of Outlook. Currently, this feature is supported in Outlook on the web and Outlook for iOS and Android.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -63,7 +63,7 @@ This example adds and removes the specified email addresses from the exception l
 The Identity parameter specifies the GUID of the external sender identification object that you want to modify. Although this parameter is available, you don't need to use it.
 
 ```yaml
-Type: OrganizationIdParameter
+Type: OrganizationIdParameter, Exchange Online Protection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
