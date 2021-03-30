@@ -23,7 +23,7 @@ Set-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> [-PolicyName 
 ```
 
 ## DESCRIPTION
-This cmdlet will update the policy assignment for a group for a given policy type. The policy instance and/or policy rank can be updated.  Refer to [New-CsGroupPolicyAssignment]() for more details about rank.
+This cmdlet will update the policy assignment for a group for a given policy type. The policy instance and/or policy rank can be updated.  Refer to [New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md) for more details about rank.
 
 ## EXAMPLES
 
