@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfThreads
-Specifies the number of threads to use. The accepted values range from 1 to 20.
+Specifies the number of threads to use. If you have sufficient network bandwidth and want to decrease the time required to retrieve the list of teams, use the -NumberOfThreads parameter, which supports a value from 1 through 20.
 
 ```yaml
 Type: Int32
