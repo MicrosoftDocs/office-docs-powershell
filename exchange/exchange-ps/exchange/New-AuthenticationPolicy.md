@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-authenticationpolicy
-applicable: Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
@@ -77,7 +77,7 @@ The Name parameter specifies the unique name for the authentication policy. The 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -97,7 +97,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -544,7 +544,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Applicable: Exchange Server 2019, Exchange Online
+Applicable: Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -560,7 +560,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Applicable: Exchange Server 2019, Exchange Online
+Applicable: Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

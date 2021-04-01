@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: New-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
@@ -42,13 +42,9 @@ While the scope-based resource access like Mail.Read or Calendar.Read is effecti
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
 1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy.
-
 2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy).
-
 3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access.
-
 4. If there are any Restrict policies for the Application, and the Target Mailbox is not a member of those policies, then application is denied access to the target mailbox.
-
 5. If none of the above conditions are met, then the application is granted access to the requested target mailbox.
 
 ## EXAMPLES
@@ -101,7 +97,7 @@ The AccessRight parameter specifies the permission that you want to assign in th
 Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -119,7 +115,7 @@ You can specify multiple app GUID values separated by commas or you can specify 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -153,7 +149,7 @@ If you need to scope the policy to shared mailboxes, you can add them to a mail 
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -172,7 +168,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -188,7 +184,7 @@ The Description parameter specifies a description for the policy. If the value c
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -204,7 +200,7 @@ The WhatIf switch doesn't work on this cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
