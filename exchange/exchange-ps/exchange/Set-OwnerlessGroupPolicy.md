@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-OwnerlessGroupPolicy -Enabled <Boolean> -NoOfWeeksToNotify <Int32> -MaxNoOfMembersToNotify <Int32> -SenderEmailAddress <String>
  [-EnabledGroupIds <String[]>]
  [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledGroupIds
-Optionally, if you dont want to enable the policy on all the groups in your tenant you can specify a small set of comma separated group guids on which you want to enable the policy. A valid value is a list of upto 10 comma separated group guids. 
+The EnabledGroupIds parameter specifies a list of groups to enable the policy on if you don't want to enable the policy on all groups in your organization. You can specify a maximum of 10 group GUIDs separated by commas.
 
 ```yaml
 Type: String[]
@@ -139,13 +140,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
 ## INPUTS
 
-### None
+###  
 
 ## OUTPUTS
 
-### System.Object
+###  
+
 ## NOTES
 
 ## RELATED LINKS
