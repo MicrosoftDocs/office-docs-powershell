@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-OwnerlessGroupPolicy -Enabled <Boolean> -NoOfWeeksToNotify <Int32> -MaxNoOfMembersToNotify <Int32> -SenderEmailAddress <String>
  [-EnabledGroupIds <String[]>]
  [-ResultSize <Unlimited>]
- [-UseMultithreading]
  [<CommonParameters>]
 ```
 
@@ -62,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxNoOfMembersToNotify
-The MaxNoOfMembersToNotify parameter specifies the maximum number of active members to notify in a ownerless group. A valid value is an integer.
+The MaxNoOfMembersToNotify parameter specifies the maximum number of active members to notify in a ownerless group. A valid value is an integer from 1 to 90. 
 
 ```yaml
 Type: Int32
@@ -78,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoOfWeeksToNotify
-The NoOfWeeksToNotify parameter specifies the number of weeks to notify the active members specified by the MaxNoOfMembersToNotify parameter. A valid value is an integer from 1 to 90.
+The NoOfWeeksToNotify parameter specifies the number of weeks to notify the active members specified by the MaxNoOfMembersToNotify parameter. A valid value is an integer from 1 to 7. 
 
 ```yaml
 Type: Int32
@@ -110,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledGroupIds
-{{ Fill EnabledGroupIds Description }}
+The EnabledGroupIds parameter specifies a list of groups to enable the policy on if you don't want to enable the policy on all groups in your organization. You can specify a maximum of 10 group GUIDs separated by commas.
 
 ```yaml
 Type: String[]
@@ -141,32 +140,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseMultithreading
-{{ Fill UseMultithreading Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-### None
+###  
 
 ## OUTPUTS
 
-### System.Object
+###  
+
 ## NOTES
 
 ## RELATED LINKS
