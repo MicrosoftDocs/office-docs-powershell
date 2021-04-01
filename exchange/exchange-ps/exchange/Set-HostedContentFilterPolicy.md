@@ -504,7 +504,7 @@ The HighConfidencePhishAction parameter specifies the action to take on messages
 Type: PhishFilteringAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

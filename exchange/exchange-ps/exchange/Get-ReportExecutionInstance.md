@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-reportexecutioninstance
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-ReportExecutionInstance
 schema: 2.0.0
 author: chrisda
@@ -56,7 +56,7 @@ The Identity parameter specifies the report execution instance that you want to 
 Type: InstanceIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -72,7 +72,7 @@ The ScheduleId parameter filters the results by the specified ScheduleId propert
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
