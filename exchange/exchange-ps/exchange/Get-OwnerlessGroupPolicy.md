@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-OwnerlessGroupPolicy
  [-ResultSize <Unlimited>]
- [-UseMultithreading]
  [<CommonParameters>]
 ```
 
@@ -46,22 +45,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseMultithreading
-{{ Fill UseMultithreading Description }}
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
