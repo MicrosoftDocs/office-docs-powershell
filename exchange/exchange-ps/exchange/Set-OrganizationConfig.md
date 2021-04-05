@@ -56,8 +56,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-CustomerLockboxEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <ModernGroupObjectType>]
- [-DefaultMinutesToReduceLongEventsBy <Int32>]
- [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderIssueWarningQuota <Unlimited>]
@@ -1226,42 +1224,6 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: Private
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultMinutesToReduceLongEventsBy
-This parameter is available only in the cloud-based service.
-
-{{ Fill DefaultMinutesToReduceLongEventsBy Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultMinutesToReduceShortEventsBy
-This parameter is available only in the cloud-based service.
-
-{{ Fill DefaultMinutesToReduceShortEventsBy Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
