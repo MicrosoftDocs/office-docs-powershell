@@ -3103,7 +3103,10 @@ Accept wildcard characters: False
 ### -WorkspaceTenantEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill WorkspaceTenantEnabled Description }}
+The WorkspaceTenantEnabled parameter enables or disables workspace booking in the organization. Valid values are:
+
+- $true: In Outlook for iOS and Android, the calendar setting for workspace booking is visible and is off by default.
+- $false: In Outlook for iOS and Android, the calendar setting for workspace booking is hidden.
 
 ```yaml
 Type: Boolean
