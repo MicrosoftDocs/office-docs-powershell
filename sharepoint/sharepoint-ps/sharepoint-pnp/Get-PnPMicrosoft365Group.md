@@ -76,7 +76,7 @@ Retrieves all Microsoft 365 Groups in this tenant and includes the URL property 
 ### EXAMPLE 7
 ```powershell
 $groups = Get-PnPMicrosoft365Group -IncludeOwners
-$g[0].Owners
+$groups[0].Owners
 ```
 
 Retrieves all Microsoft 365 Groups in this tenant and retrieves the owners for each group. The owners are available in the "Owners" property of the returned objects.
