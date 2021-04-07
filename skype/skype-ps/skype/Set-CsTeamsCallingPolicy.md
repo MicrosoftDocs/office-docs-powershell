@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -BusyOnBusyEnabledType
-Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. New or incoming calls will be rejected with a busy signal. Valid options are: Enabled, Disabled.
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting value to Disabled.
 
 ```yaml
 Type: String
