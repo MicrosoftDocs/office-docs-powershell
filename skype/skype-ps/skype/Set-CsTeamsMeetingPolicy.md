@@ -892,15 +892,18 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
-This parameter is reserved for internal Microsoft use.
+Possible values:
+
+- Everyone
+- EveryoneInCompany
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
