@@ -45,6 +45,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddSkypeLocation <MultiValuedProperty>]
  [-AddSkypeLocationException <MultiValuedProperty>]
+ [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -459,6 +460,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Applications
+{{ Fill Applications Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 

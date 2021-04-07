@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Default
 ```
 New-RetentionCompliancePolicy [-Name] <String>
+ [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -88,6 +89,22 @@ Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Applications
+{{ Fill Applications Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
