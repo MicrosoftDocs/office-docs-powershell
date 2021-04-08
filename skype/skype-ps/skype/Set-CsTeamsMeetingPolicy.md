@@ -619,7 +619,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether meeting organizers are allowed to download the attendee engagement report. Possible values are:
+
+- Enabled: allow meeting organizer to download a report
+- Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+
+If set to enabled only meeting organizers will get a link to download report in Teams, regular attendees will have no access to it.
 
 ```yaml
 Type: String
