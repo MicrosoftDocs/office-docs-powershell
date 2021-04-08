@@ -306,7 +306,11 @@ Accept wildcard characters: False
 ```
 
 ### -SiteIds
-The SiteIds parameter filters the log entries by site ID. You can specify multiple values separated by commas.
+The SiteIds parameter filters the log entries by the SharePoint site URL.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+If the site URL contains a dash (-), escape the dash character with another dash. For example, for the site `https://contoso.sharepoint.com/sites/hr-project`, use the value `"https://contoso.sharepoint.com/sites/hr--project"`.
 
 ```yaml
 Type: String[]
