@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-scinsights
-applicable: Exchange Online, Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-SCInsights
 schema: 2.0.0
 author: chrisda
@@ -31,7 +31,7 @@ Get-SCInsights [-EndDate <DateTime>]
 This cmdlet returns the following output:
 
 - Organization: The Microsoft 365 domain.
-- Date: The date of the even in Coordinated Universal Time (UTC).
+- Date: The date of the event in Coordinated Universal Time (UTC).
 - InsightType
 - InsightSubType: The value All or Archive.
 - UsersCount: An integer count, or the size in megabytes for the InsightType value.
@@ -68,7 +68,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-externalinoutlook
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-ExternalInOutlook
 schema: 2.0.0
 author: chrisda
@@ -63,7 +63,7 @@ This example adds and removes the specified email addresses from the exception l
 The Identity parameter specifies the GUID of the external sender identification object that you want to modify. Although this parameter is available, you don't need to use it.
 
 ```yaml
-Type: OrganizationIdParameter
+Type: OrganizationIdParameter, Exchange Online Protection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -104,6 +104,8 @@ The Enabled parameter enables or disables external sender identification in supp
 
 - $true: External sender identification in Outlook is enabled. An External icon is added in the area of the subject line of messages from external senders. To exempt specific senders or sender domains from this identification, use the AllowList parameter.
 - $false: External sender identification in Outlook is disabled.
+
+After an admin enables this setting, it can take between 24 and 48 hours for users to see the External icon in messages from external senders in supported versions of Outlook.
 
 ```yaml
 Type: System.Boolean
