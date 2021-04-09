@@ -359,7 +359,11 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities for the sensitivity label policy. The settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For more information how to configure these advanced settings, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+The AdvancedSettings parameter enables client-specific features and capabilities for the sensitivity label policy. 
+
+Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+
+Only the advanced settings of *OutlookDefaultLabel* and *DisableMandatoryInOutlook* are supported by Office apps that support built-in labeling,. These two settings let you have a default label and mandatory labeling configurations that are specific to Outlook email messages, so you can have different configurations for Word, Excel, and PowerPoint documents. For more information, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
 ```yaml
 Type: PswsHashtable
