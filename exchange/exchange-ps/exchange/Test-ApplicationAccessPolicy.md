@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-applicationaccesspolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Test-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
@@ -63,7 +63,7 @@ The Identity parameter specifies the recipient to test. You can use any value th
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -81,7 +81,7 @@ You can specify multiple app GUID values separated by commas.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named

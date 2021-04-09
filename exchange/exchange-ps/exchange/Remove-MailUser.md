@@ -161,7 +161,7 @@ Use the Get-MailUser cmdlet to identify the soft-deleted mail user, and then pip
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

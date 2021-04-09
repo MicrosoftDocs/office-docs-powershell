@@ -275,7 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -BulkThreshold
-The BulkThreshold parameter specifies the BCL that triggers the BulkSpamAction on the message (greater than the specified value, not greater than or equal to). A valid value is an integer from 1 to 9, and the default value is 7. A higher value indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk compliant level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
+The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than the specified BCL value, not greater than or equal to). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 8 or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
+
+A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
 
 ```yaml
 Type: Int32
@@ -504,7 +506,7 @@ The HighConfidencePhishAction parameter specifies the action to take on messages
 Type: PhishFilteringAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

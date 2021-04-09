@@ -207,7 +207,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 ## Step 4: Attach the certificate to the Azure AD application
 
-After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
+After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
 
 1. On the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
 

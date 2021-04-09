@@ -262,14 +262,14 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedPolicyType
-{{ Fill RecommendedPolicyType Description }}
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
 
 ```yaml
 Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Custom, Standard, Strict
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
