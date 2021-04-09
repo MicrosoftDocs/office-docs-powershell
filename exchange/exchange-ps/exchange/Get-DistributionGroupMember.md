@@ -148,7 +148,7 @@ Soft-deleted group members are deleted Microsoft 365 Groups or mailboxes that ar
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

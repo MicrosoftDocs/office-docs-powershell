@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet allows a SharePoint administrators to check the status of a user or site move across geo locations.
+This cmdlet allows SharePoint administrators to check the status of a user or site move across geo locations.
 
 ## SYNTAX
 

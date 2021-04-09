@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SpoofMailReport cmdlet to view information about insider spoofing in your cloud-based organization for the past 10 days. Insider spoofing is where the sender's email address in an inbound message appears to represent your organization, but the actual identity of the sender is different. Insider spoofing is a common tactic that's used in phishing messages to obtain user credentials or steal money.
-
-This cmdlet is only available in Microsoft 365 Enterprise E5 or Microsoft Defender for Office 365 licenses.
+Use the Get-SpoofMailReport cmdlet to view information about insider spoofing in your cloud-based organization for the past 90 days. Insider spoofing is where the sender's email address in an inbound message appears to represent your organization, but the actual identity of the sender is different. Insider spoofing is a common tactic that's used in phishing messages to obtain user credentials or steal money.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -37,7 +35,7 @@ Get-SpoofMailReport [-Action <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-The spoof mail report is a feature in Defender for Office 36 that you can use to query information about insider spoofing detections in the last 30 days. For the reporting period you specify, the Get-SpoofMailReport cmdlet returns the following information:
+The spoof mail report is a feature in Defender for Office 36 that you can use to query information about insider spoofing detections in the last 90 days. For the reporting period you specify, the Get-SpoofMailReport cmdlet returns the following information:
 
 - Date: Date the message was sent.
 - Event Type: Typically, this value is SpoofMail.

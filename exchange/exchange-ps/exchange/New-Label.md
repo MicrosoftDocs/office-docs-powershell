@@ -63,7 +63,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-EncryptionTemplateId <String>]
  [-Identity <MasterIdParameter>]
  [-LabelActions <MultiValuedProperty>]
- [-LocaleSettings <<MultiValuedProperty>]
+ [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-Setting <PswsHashtable>]
@@ -569,7 +569,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MulitValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -718,7 +718,12 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEncryptOnly
-This parameter is reserved for internal Microsoft use.
+The EncryptionEncryptOnly parameter specifies whether the encrypt-only template is applied. Valid values are:
+
+- $true: The encrypt-only template is applied.
+- $false: The encrypt-only template is not applied.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Boolean

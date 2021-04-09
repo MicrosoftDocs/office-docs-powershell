@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AccessToCustomerDataRequest -ApprovalDecision <Approve | Deny | Cancel> -RequestId <String>
+Set-AccessToCustomerDataRequest -ApprovalDecision <AccessToCustomerDataApproverDecision> -RequestId <String>
  [-Comment <String>]
  [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ The ApprovalDecision parameter specifies the approval decision for the customer 
 - Cancel
 
 ```yaml
-Type: Approve | Deny | Cancel
+Type: AccessToCustomerDataApproverDecision
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

@@ -49,7 +49,6 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
- [-SkipImportSession]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
@@ -79,7 +78,7 @@ After the Connect-ExchangeOnline command is complete, the password key in the $U
 
 ### Example 2
 ```powershell
-Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
+Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
 This example connects to Exchange Online PowerShell using modern authentication for the account chris@contoso.com, which uses MFA.
@@ -520,6 +519,7 @@ The Organization parameter specifies the organization that's used in app-only au
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -564,31 +564,13 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
-The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The progress bar shows number of objects received and total number of objects requested. Valid values are:
+The ShowProgress parameter specifies whether to show or hide the progress bar of imported cmdlets when you connect. Valid values are:
 
 - $true: The progress bar is displayed. This is the default value.
-- $false: The progress bar isn't displayed.
+- $false: Currently, this value has no effect. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipImportSession
-**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
-
-The SkipImportSession switch skips the import of cmdlets from the remote PowerShell session. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
