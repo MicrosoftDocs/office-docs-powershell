@@ -95,13 +95,12 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-The Applications parameter specifies the target when Microsoft 365 Groups are included in the policy (the ModernGroups parameter). Valid values are:
+The Applications parameter specifies the target when Microsoft 365 Groups are included in the policy (the ModernGroups parameter is set). Valid values are:
 
 - `Group:Exchange` for the mailbox that's connected to the Microsoft 365 Group.
 - `Group:SharePoint` for the SharePoint site that's connected to the Microsoft 365 Group.
 - `"Group:Exchange","Group:SharePoint"` for both the mailbox and the SharePoint site that are connected to the Microsoft 365 Group.
-
-The default value is blank ($null). If you set a value for the ModernGroupLocation parameter, the default blank value is functionally equivalent to the value `"Group:Exchange","Group:SharePoint"`.
+- blank (`$null`): This is the default value, and is functionally equivalent to the value `"Group:Exchange","Group:SharePoint"`.
 
 ```yaml
 Type: MultiValuedProperty
