@@ -52,6 +52,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
+ [-FeedbackEnabled <Boolean>]
  [-ForceSaveAttachmentFilteringEnabled <Boolean>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
  [-ForceSaveMimeTypes <MultiValuedProperty>]
@@ -831,6 +832,29 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FeedbackEnabled
+This cmdlet is available only in the cloud-based service.
+
+The FeedbackEnabled parameter specifies whether to enable or disable inline feedback surveys in Outlook on the web. Valid values are:
+
+- $true: Inline feedback surveys are enabled. This is the default value.
+- $false: Inline feedback surveys are disabled.
+
+ Surveys allow users to provide feedback on specific features. For example, for the text predictions feature, the inline feedback "Are the above autocomplete suggestions helpful (yes/no)?" is shown. If a user chooses "no" they can provide specific feedback.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
