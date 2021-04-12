@@ -15,6 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 Modifies the previously defined Session Border Controller (SBC) Configuration that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
 
+> [!NOTE]
+> -MediaRelayRoutingLocationOverride - this command is not available for use in direct routing scenarios.
+
 ## SYNTAX
 
 ```
