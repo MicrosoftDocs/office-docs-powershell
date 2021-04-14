@@ -39,11 +39,11 @@ This cmdlet facilitates consolidation of multiple Skype for Business Server depl
 This cmdlet may also be useful for organizations with on-premises deployments of Skype for Business Server that have not properly configured Azure AD Connect. If the organization does not sync msRTCSIP-DeploymentLocator for its users, then Skype for Business Online will attempt to provision online any users with an assigned Skype for Business license, despite there being users on-premises. While the correct fix is to update the configuration for Azure AD Connect to sync those attributes, using Disable-CsOnlineSipDomain can also mitigate the problem until that configuration change can be made. If this cmdlet is run, any users that were previously provisioned online in that domain will be de-provisioned in Skype for Business Online.
 
 **IMPORTANT**
-This cmdlet should not be run for domains that contain users hosted in Skype for Business Online. Any users in a sip domain that are already provisioned *online* will cease to function if you disable the online sip domain:
+This cmdlet should not be run for domains that contain users hosted in Skype for Business Online or Microsoft Teams. Any users in a sip domain that are already provisioned *online* will cease to function if you disable the online sip domain:
 
 - Their SIP addresses will be removed.
-- All contacts and meetings for these users hosted in Skype for Business Online will be deleted.
-- These users will no longer be able to login to the Skype for Business Online environment.
+- All contacts and meetings for these users hosted in Skype for Business Online or Microsoft Teams will be deleted.
+- These users will no longer be able to login to the Skype for Business Online or Microsoft Teams environment.
 - If these users use Teams, they will no longer be able to inter-operate with Skype for Business users, nor will they be able to federate with any users in other organizations.
 
 ## EXAMPLES
