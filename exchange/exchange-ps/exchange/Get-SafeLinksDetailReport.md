@@ -86,6 +86,8 @@ The Action parameter filters the results by action. Valid values are:
 
 You can specify multiple values separated by commas.
 
+Note that the values for this parameter are case sensitive.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -98,7 +100,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
- NOTE: These values for the -Action parameter is case sensitive
 
 ### -AppNameList
 The AppNameList parameter filters the results by the app where the link was found. Valid values are:
