@@ -98,6 +98,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+These values for the Action parameter is case sensitive
 
 ### -AppNameList
 The AppNameList parameter filters the results by the app where the link was found. Valid values are:
