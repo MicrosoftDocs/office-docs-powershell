@@ -30,12 +30,11 @@ Set-MyAnalyticsFeatureConfig -Identity <String>
 ```
 
 ## DESCRIPTION
-
 This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
-* Global Administrator
-* Exchange Administrator
-* Insights Administrator
+- Global Administrator
+- Exchange Administrator
+- Insights Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
