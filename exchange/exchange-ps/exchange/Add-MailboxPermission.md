@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to add permissions to a Microsoft 365 Group mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
