@@ -92,6 +92,8 @@ The AccessRights parameter specifies the rights being removed. Valid values incl
 - ViewInformationStore The administrator has the right to view public folder properties.
 - AllExtendedRights The administrator has the right to modify all public folder properties.
 
+You can specify multiple values separated by commas.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
@@ -148,7 +150,24 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom rights are being removed.
+The User parameter specifies whose admin permissions are being removed from the specified public folder. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter
