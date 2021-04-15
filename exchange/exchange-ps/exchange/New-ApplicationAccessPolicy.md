@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complementary to the permission scopes that are declared by the application.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -32,8 +32,6 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
-
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
 A limit of 100 policies per Microsoft 365 tenant is enforced as of today. An error message stating "A tenant cannot have more than 100 policies." will be displayed if this number is exceeded.
 
