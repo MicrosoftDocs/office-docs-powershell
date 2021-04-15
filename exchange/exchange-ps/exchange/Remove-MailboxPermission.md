@@ -272,7 +272,9 @@ Accept wildcard characters: False
 ### -BypassMasterAccountSid
 This parameter is available only in the cloud-based service.
 
-{{ Fill BypassMasterAccountSid Description }}
+The BypassMasterAccountSid parameter is required when you receive the following error when you try to use this cmdlet: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.`
+
+Typically, you only need to use this parameter in Microsoft Office 365 Dedicated/ITAR legacy environments.
 
 ```yaml
 Type: SwitchParameter
