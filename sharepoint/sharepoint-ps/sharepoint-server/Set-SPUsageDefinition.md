@@ -153,6 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTotalSizeInBytes
+This parameter stores the maximum SQL storage size for the data of this provider.
+
 ```yaml
 Type: Int64
 Parameter Sets: (All)
