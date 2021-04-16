@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsageDatabaseEnabled
-{{Fill UsageDatabaseEnabled Description}}
+Set to export usage data from the local server.
 
 ```yaml
 Type: SwitchParameter
