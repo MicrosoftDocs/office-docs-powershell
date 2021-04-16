@@ -28,7 +28,7 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
  [-Archive]
  [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
- [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-FolderScope <ElcFolderType>]
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
@@ -37,12 +37,24 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-AuditLog]
+Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>]
+ [-AuditLog]
+ [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
- [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-FolderScope <ElcFolderType>]
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
+```
+
+### Database
+```
+Get-MailboxFolderStatistics -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
  [-DiagnosticInfo <String>]
+ [-FolderScope <ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
  [<CommonParameters>]
 ```
@@ -84,6 +96,14 @@ Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -Incl
 
 This example uses the IncludeAnalysis switch to view the statistics of Tony's Recoverable Items folder.
 
+### Example 5
+```powershell
+$All = Get-Mailbox -ResultSize Unlimited
+$All | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize}
+```
+
+This example uses the FolderScope parameter to view inbox folders statistics for all mailboxes.
+
 ## PARAMETERS
 
 ### -Identity
@@ -123,6 +143,42 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Database
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -185,7 +241,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Identity, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -222,7 +278,7 @@ The FolderScope parameter specifies the scope of the search by folder type. Vali
 - Tasks
 
 ```yaml
-Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
+Type: ElcFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

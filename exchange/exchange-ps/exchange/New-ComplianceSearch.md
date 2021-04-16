@@ -31,11 +31,11 @@ New-ComplianceSearch [-Name] <String>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
+ [-IncludeOrgContent <Boolean>]
  [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-LogLevel <ComplianceJobLogLevel>]
  [-PublicFolderLocation <String[]>]
- [-PublicFolderLocationExclusion <String[]>]
  [-RefinerNames <String[]>]
  [-SharePointLocation <String[]>]
  [-SharePointLocationExclusion <String[]>]
@@ -222,6 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
@@ -278,6 +280,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeOrgContent
+{{ Fill IncludeOrgContent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeUserAppContent
 This parameter is available only in the cloud-based service.
 
@@ -318,13 +336,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceJobLogLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -337,24 +357,6 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 The PublicFolderLocation parameter specifies that you want to include all public folders in the search. You use the value All for this parameter.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderLocationExclusion
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
@@ -410,9 +412,7 @@ Accept wildcard characters: False
 ### -SharePointLocationExclusion
 This parameter is available only in the cloud-based service.
 
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
@@ -428,13 +428,15 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

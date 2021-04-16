@@ -26,7 +26,6 @@ Remove-MailUser [-Identity] <MailUserIdParameter>
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-KeepWindowsLiveID]
  [-PermanentlyDelete]
  [-WhatIf]
  [<CommonParameters>]
@@ -149,24 +148,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -KeepWindowsLiveID
-This parameter is available only in the cloud-based service.
-
-The KeepWindowsLiveID switch specifies whether to preserve the Microsoft account (formerly known as a Windows Live ID) that's associated with the deleted mail user. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PermanentlyDelete
 This parameter is available only in the cloud-based service.
 
@@ -180,7 +161,7 @@ Use the Get-MailUser cmdlet to identify the soft-deleted mail user, and then pip
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

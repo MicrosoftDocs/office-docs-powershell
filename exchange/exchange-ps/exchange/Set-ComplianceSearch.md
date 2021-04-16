@@ -24,8 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-AddExchangeLocation <String[]>]
  [-AddExchangeLocationExclusion <String[]>]
- [-AddOneDriveLocation <String[]>]
- [-AddOneDriveLocationExclusion <String[]>]
  [-AddSharePointLocation <String[]>]
  [-AddSharePointLocationExclusion <String[]>]
  [-AllowNotFoundExchangeLocationsEnabled <Boolean>]
@@ -36,6 +34,7 @@ Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
+ [-IncludeOrgContent <Boolean>]
  [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-Name <String>]
@@ -131,6 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationExclusion
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
@@ -151,39 +152,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOneDriveLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddOneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AddSharePointLocation
+This parameter is available only in the cloud-based service.
+
 The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -192,7 +163,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -202,15 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationExclusion
-This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter is available only in the cloud-based service.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -323,6 +294,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
@@ -370,6 +343,22 @@ Also, if a content location was placed on a query-based case hold, only items th
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeOrgContent
+{{ Fill IncludeOrgContent Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -494,6 +483,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationExclusion
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
@@ -555,9 +546,7 @@ Accept wildcard characters: False
 ### -RemoveSharePointLocationExclusion
 This parameter is available only in the cloud-based service.
 
-This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
@@ -595,9 +584,7 @@ Accept wildcard characters: False
 ### -SharePointLocationExclusion
 This parameter is available only in the cloud-based service.
 
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]

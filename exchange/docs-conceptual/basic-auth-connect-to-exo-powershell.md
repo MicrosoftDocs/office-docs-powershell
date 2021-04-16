@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Priority
@@ -33,7 +34,7 @@ The following introductory video shows you how to connect to and use Exchange On
 
 - Estimated time to complete: 5 minutes
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/permissions-exo).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
 - If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, you can use the instructions in this article to connect to your EOP organization.
 
@@ -47,7 +48,7 @@ The following introductory video shows you how to connect to and use Exchange On
   - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -59,7 +60,7 @@ The following introductory video shows you how to connect to and use Exchange On
   Set-ExecutionPolicy RemoteSigned
   ```
 
-  For more information about execution policies, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+  For more information about execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
@@ -113,7 +114,7 @@ The following introductory video shows you how to connect to and use Exchange On
 
      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
 
-     For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
+     For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
 3. Run the following command:
 
@@ -148,10 +149,10 @@ If you receive errors, check the following requirements:
 
 The cmdlets that you use in this article are Windows PowerShell cmdlets. For more information about these cmdlets, see the following articles.
 
-- [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-- [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-- [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-- [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-- [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
+- [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)
+- [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)
+- [Import-PSSession](/powershell/module/microsoft.powershell.utility/import-pssession)
+- [Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)
+- [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
-For more information about managing Microsoft 365, see [Manage Microsoft 365 and Office 365](https://docs.microsoft.com/Office365/).
+For more information about managing Microsoft 365, see [Manage Microsoft 365 and Office 365](/Office365/).

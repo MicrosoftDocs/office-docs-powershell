@@ -60,7 +60,7 @@ In Exchange Server 2010, this example exports legacy transport rules created in 
 ## PARAMETERS
 
 ### -Identity
-This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to export. You can use any value that uniquely identifies the rule. For example:
 
@@ -72,7 +72,7 @@ The Identity parameter specifies the transport rule that you want to export. You
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -151,7 +151,7 @@ The Format parameter specifics the format of the exported transport rule collect
 Type: RuleCollectionFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

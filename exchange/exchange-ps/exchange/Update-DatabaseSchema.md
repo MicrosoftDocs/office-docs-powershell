@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Update-DatabaseSchema cmdlet to upgrade the database schema for one or more databases after an Exchange software update that includes database schema updates has been installed on Mailbox servers in a database availability group (DAG). Some software updates for Exchange may include database schema updates. After such an update has been installed on all members of a DAG, the administrator must run the Update-DatabaseSchema cmdlet for each database in the DAG to trigger the database schema update. The in-place database schema upgrade engine ensures that no schema updates occur until all members of the DAG have compatible versions of the software.
+Use the Update-DatabaseSchema cmdlet to upgrade the database schema for one or more databases after an Exchange software update that includes database schema updates has been installed on Mailbox servers in a database availability group (DAG). Some software updates for Exchange may include database schema updates. After such an update has been installed on all members of a DAG, the administrator must run the Update-DatabaseSchema cmdlet for each database in the DAG and dismount/mount or failover the database to trigger the database schema update. The in-place database schema upgrade engine ensures that no schema updates occur until all members of the DAG have compatible versions of the software.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

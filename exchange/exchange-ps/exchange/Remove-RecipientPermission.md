@@ -79,9 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the permission.
-
-Valid input for this parameter is SendAs.
+The AccessRights parameter specifies the permission that you want to remove from the trustee on the target recipient. The only valid value for this parameter is SendAs.
 
 ```yaml
 Type: MultiValuedProperty
@@ -97,12 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter specifies the user or group from whom you're removing the permission. This prevents the user or group from operating on the recipients specified by the Identity parameter.
-
-You can specify the following types of users or groups:
+The Trustee parameter specifies whose Send As permissions are being removing from the specified target recipient. You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-- Mail users with a cloud-based account
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:

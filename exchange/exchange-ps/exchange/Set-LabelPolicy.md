@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy
-applicable: Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Set-LabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -12,13 +12,26 @@ ms.reviewer:
 # Set-LabelPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity label policies in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
+
+### RetryDistribution
+```
+Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
+ [-AddLabels <MultiValuedProperty>]
+ [-AdvancedSettings <PswsHashtable>]
+ [-Confirm]
+ [-MigrationId <String>]
+ [-NextLabelPolicy <PolicyIdParameter>]
+ [-PreviousLabelPolicy <PolicyIdParameter>]
+ [-RemoveLabels <MultiValuedProperty>]
+ [<CommonParameters>]
+```
 
 ### Identity
 ```
@@ -28,28 +41,48 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-AddLabels <MultiValuedProperty>]
  [-AddModernGroupLocation <MultiValuedProperty>]
  [-AddModernGroupLocationException <MultiValuedProperty>]
+ [-AddOneDriveLocation <MultiValuedProperty>]
+ [-AddOneDriveLocationException <MultiValuedProperty>]
+ [-AddPublicFolderLocation <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-AddSharePointLocationException <MultiValuedProperty>]
+ [-AddSkypeLocation <MultiValuedProperty>]
+ [-AddSkypeLocationException <MultiValuedProperty>]
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>]
+ [-MigrationId <String>]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveLabels <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
  [-RemoveModernGroupLocationException <MultiValuedProperty>]
+ [-RemoveOneDriveLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocationException <MultiValuedProperty>]
+ [-RemovePublicFolderLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-RemoveSkypeLocation <MultiValuedProperty>]
+ [-RemoveSkypeLocationException <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
-### RetryDistribution
+### AdaptiveScopeLocation
 ```
-Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
+Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-AddLabels <MultiValuedProperty>]
  [-AdvancedSettings <PswsHashtable>]
+ [-Comment <String>]
  [-Confirm]
+ [-Force]
+ [-MigrationId <String>]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-PreviousLabelPolicy <PolicyIdParameter>]
  [-RemoveLabels <MultiValuedProperty>]
+ [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -213,8 +246,131 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddOneDriveLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddOneDriveLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPublicFolderLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSharePointLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSharePointLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSkypeLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSkypeLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities for the sensitivity label policy. The settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For more information how to configure these advanced settings, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+The AdvancedSettings parameter enables client-specific features and capabilities for the sensitivity label policy.
+
+Specify this parameter with the identity (name or GUID) of the policy, with key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
+
+Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+
+Supported settings for built-in labeling:
+
+- **OutlookDefaultLabel**: Outlook apps that support this setting apply a default label, or no label. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+
+- **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+
 
 ```yaml
 Type: PswsHashtable
@@ -234,7 +390,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: Identity, AdaptiveScopeLocation
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -264,12 +420,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Enabled
-This parameter is reserved for internal Microsoft use.
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
-Type: Boolean
-Parameter Sets: Identity
+Type: SwitchParameter
+Parameter Sets: AdaptiveScopeLocation
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -280,12 +436,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+### -MigrationId
+{{ Fill MigrationId Description }}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Identity
+Type: String
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -430,6 +586,150 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOneDriveLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOneDriveLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePublicFolderLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSharePointLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSharePointLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSkypeLocation
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSkypeLocationException
+PARAMVALUE: MultiValuedProperty
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Setting
+{{ Fill Setting Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Settings
+PARAMVALUE: PswsHashtable
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
 
