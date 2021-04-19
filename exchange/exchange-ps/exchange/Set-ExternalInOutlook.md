@@ -105,6 +105,8 @@ The Enabled parameter enables or disables external sender identification in supp
 - $true: External sender identification in Outlook is enabled. An External icon is added in the area of the subject line of messages from external senders. To exempt specific senders or sender domains from this identification, use the AllowList parameter.
 - $false: External sender identification in Outlook is disabled.
 
+After an admin enables this setting, it can take between 24 and 48 hours for users to see the External icon in messages from external senders in supported versions of Outlook.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
