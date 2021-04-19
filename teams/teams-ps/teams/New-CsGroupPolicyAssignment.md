@@ -32,10 +32,10 @@ It's helpful to think of rank as determining the position of each policy assignm
 
 Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups up to 100000 users. Segment your users into smaller groups, or make use of default policies for the majority of users with the most common policies and only use groups for those users that require other policies.
 
-Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
+Propagation of the policy assignments to members of the group can take up to 24 hours. Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
 
 Group policy assignment is currently limited to the following policy types:
-CallingLineIdentity (Caller ID policies), TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
+TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
 
 ## EXAMPLES
 
@@ -108,7 +108,6 @@ Accept wildcard characters: False
 ### -PolicyType
 The type of the policy to be assigned.
 Possible values:
-- CallingLineIdentity
 - TeamsAppSetupPolicy
 - TeamsCallingPolicy
 - TeamsCallParkPolicy

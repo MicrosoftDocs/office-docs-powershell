@@ -23,12 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Onboarding
 ```
 New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
+ [-AvoidMergeOverlap]
  [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-ContentFilter <String>]
@@ -37,6 +40,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-DomainController <Fqdn>]
  [-ExcludeDumpsters]
  [-ExcludeFolders <MultiValuedProperty>]
+ [-ForwardingDisposition <GmailForwardingDisposition>]
  [-IncludeFolders <MultiValuedProperty>]
  [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
@@ -44,12 +48,18 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
+ [-RenamePrimaryCalendar]
  [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipMail]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourcePFPrimaryMailboxGuid <Guid>]
  [-StartAfter <DateTime>]
  [-TargetArchiveDatabases <MultiValuedProperty>]
  [-TargetDatabases <MultiValuedProperty>]
@@ -62,8 +72,10 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -78,6 +90,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
  [-ReportInterval <Timespan>]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
@@ -96,6 +109,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
 ### Local
 ```
 New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -111,6 +125,7 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
  [-ReportInterval <Timespan>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
@@ -151,7 +166,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -500,6 +515,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AdoptPreexisting
+This parameter is available only in the cloud-based service.
+
+{{ Fill AdoptPreexisting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, Offboarding, Local
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowIncrementalSyncs
 This parameter is available only in on-premises Exchange.
 
@@ -532,6 +565,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveDomain
+This parameter is available only in the cloud-based service.
+
+{{ Fill ArchiveDomain Description }}
+
+```yaml
+Type: String
+Parameter Sets: Onboarding, Offboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -608,6 +659,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AvoidMergeOverlap
+This parameter is available only in the cloud-based service.
+
+{{ Fill AvoidMergeOverlap Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -723,7 +792,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOnCopy
-The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
+The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -833,6 +902,24 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForwardingDisposition
+This parameter is available only in the cloud-based service.
+
+{{ Fill ForwardingDisposition Description }}
+
+```yaml
+Type: GmailForwardingDisposition
 Parameter Sets: Onboarding
 Aliases:
 Applicable: Exchange Online
@@ -1028,6 +1115,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveOnCopy
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveOnCopy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, Offboarding, Local
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RenamePrimaryCalendar
+This parameter is available only in the cloud-based service.
+
+{{ Fill RenamePrimaryCalendar Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReportInterval
 The ReportInterval parameter specifies how frequently emailed reports should be sent to the email addresses listed within NotificationEmails.
 
@@ -1040,6 +1163,60 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCalendar
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCalendar Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipContacts
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipContacts Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMail
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipMail Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1134,6 +1311,24 @@ Type: MigrationEndpointIdParameter
 Parameter Sets: Onboarding, PublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourcePFPrimaryMailboxGuid
+This parameter is available only in the cloud-based service.
+
+{{ Fill SourcePFPrimaryMailboxGuid Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

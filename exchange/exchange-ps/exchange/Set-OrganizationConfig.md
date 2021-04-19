@@ -56,8 +56,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-CustomerLockboxEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <ModernGroupObjectType>]
- [-DefaultMinutesToReduceLongEventsBy <Int32>]
- [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderIssueWarningQuota <Unlimited>]
@@ -80,6 +78,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
+ [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
@@ -105,6 +104,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
  [-OutlookPayEnabled <Boolean>]
+ [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
@@ -1228,42 +1228,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultMinutesToReduceLongEventsBy
-This parameter is available only in the cloud-based service.
-
-{{ Fill DefaultMinutesToReduceLongEventsBy Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultMinutesToReduceShortEventsBy
-This parameter is available only in the cloud-based service.
-
-{{ Fill DefaultMinutesToReduceShortEventsBy Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultPublicFolderAgeLimit
 The DefaultPublicFolderAgeLimit parameter specifies the default age limit for the contents of public folders across the entire organization. Content in a public folder is automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own AgeLimit setting.
 
@@ -1794,6 +1758,24 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalInOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
@@ -2600,6 +2582,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookTextPredictionDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookTextPredictionDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PermanentlyDeleteDisabled
 This parameter is available only in Exchange Server 2010.
 
@@ -2781,7 +2781,7 @@ The PublicFolderShowClientControl parameter enables or disables access to public
 Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2016, Exchange 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -3103,7 +3103,10 @@ Accept wildcard characters: False
 ### -WorkspaceTenantEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill WorkspaceTenantEnabled Description }}
+The WorkspaceTenantEnabled parameter enables or disables workspace booking in the organization. Valid values are:
+
+- $true: In Outlook for iOS and Android, the calendar setting for workspace booking is visible and is off by default.
+- $false: In Outlook for iOS and Android, the calendar setting for workspace booking is hidden.
 
 ```yaml
 Type: Boolean

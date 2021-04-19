@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpSensitiveInformationType [-Name] <String> -Description <String> -Fingerprints <MultiValuedProperty>
- [-SensitiveInformationTypeRuleCollectionIdentity <SensitiveInformationTypeRuleCollectionIdParameter>]
  [-Confirm]
  [-Locale <CultureInfo>]
  [-WhatIf]
@@ -94,22 +93,6 @@ Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SensitiveInformationTypeRuleCollectionIdentity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ClassificationRuleCollectionIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

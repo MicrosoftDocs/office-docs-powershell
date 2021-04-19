@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-authenticationpolicy
-applicable: Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
@@ -56,7 +56,7 @@ The Identity parameter specifies the authentication policy you want to view. You
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
