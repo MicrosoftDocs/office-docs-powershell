@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpmicrosoft365group
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPMicrosoft365Group
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPMicrosoft365Group.html
 ---
-
+ 
 # Remove-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPMicrosoft365Group.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,30 +21,31 @@ title: Remove-PnPMicrosoft365Group
 
 Removes one Microsoft 365 Group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind>
-                            [-ByPassPermissionCheck [<SwitchParameter>]]
+Remove-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind>  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPMicrosoft365Group -Identity $groupId
 ```
 
 Removes an Microsoft 365 Group based on its ID
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Remove-PnPMicrosoft365Group -Identity $group
 ```
 
 Removes the provided Microsoft 365 Group
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPMicrosoft365Group | ? Visibility -eq "Public" | Remove-PnPMicrosoft365Group
 ```
@@ -47,18 +53,6 @@ Get-PnPMicrosoft365Group | ? Visibility -eq "Public" | Remove-PnPMicrosoft365Gro
 Removes all the public Microsoft 365 Groups
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Identity
 The Identity of the Microsoft 365 Group
@@ -69,9 +63,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

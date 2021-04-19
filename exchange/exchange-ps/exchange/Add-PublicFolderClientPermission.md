@@ -69,7 +69,11 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the rights being added. This parameter accepts the following values:
+The AccessRights parameter specifies the rights that you want to add for the user on the public folder.
+
+You can specify individual folder permissions or roles, which are combinations of permissions. You can specify multiple permissions and roles separated by commas.
+
+The following individual permissions are available:
 
 - ReadItems: The user has the right to read items within the specified public folder.
 - CreateItems: The user has the right to create items within the specified public folder.

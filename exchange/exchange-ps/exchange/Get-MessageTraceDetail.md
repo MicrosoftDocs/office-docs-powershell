@@ -27,7 +27,6 @@ Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
  [-Action <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-Event <MultiValuedProperty>]
- [-Expression <Expression>]
  [-MessageId <String>]
  [-Page <Int32>]
  [-PageSize <Int32>]
@@ -63,7 +62,16 @@ This example uses the Get-MessageTrace cmdlet to retrieve message trace informat
 ## PARAMETERS
 
 ### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+The MessageTraceId parameter is used with the recipient address to uniquely identify a message trace and obtain more details. A MessageTraceId is generated for every message that's processed by the system.
+
+The MessageTraceId value is available in the output of the following cmdlets:
+
+- Get-MessageTrace
+- Get-MailDetailATPReport
+- Get-MailDetailDlpPolicyReport
+- Get-MailDetailMalwareReport
+- Get-MailDetailSpamReport
+- Get-MailDetailTransportRuleReport
 
 ```yaml
 Type: Guid
@@ -145,22 +153,6 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

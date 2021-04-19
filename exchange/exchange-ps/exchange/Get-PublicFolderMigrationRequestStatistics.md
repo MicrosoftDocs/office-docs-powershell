@@ -26,8 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter>
  [-Diagnostic]
+ [-Diagnostic <String>]
  [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
  [-ReportOnly]

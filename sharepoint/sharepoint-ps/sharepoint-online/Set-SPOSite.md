@@ -35,7 +35,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-ProtectionLevelName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
  [-RemoveLabel] [<CommonParameters>]
 ```
 
@@ -667,17 +667,14 @@ Accept wildcard characters: False
 
 ### -SharingDomainRestrictionMode
 
-Specifies the external sharing mode for domains.
+Specifies the sharing mode for external domains.
 
-The following values are:
+Possible values are:
+- None - Do not restrict sharing by domain
+- AllowList - Sharing is allowed only with external users that have account on domains specified within -SharingAllowedDomainList
+- BlockList - Sharing is allowed with external users in all domains except in domains specified within -SharingBlockedDomainList
 
-None
-
-AllowList
-
-BlockList
-
-For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: SharingDomainRestrictionModes
@@ -729,10 +726,10 @@ The default link type for the site collection
 
 PARAMVALUE: None | AnonymousAccess | Internal | Direct
 
-None - Respect the organization default sharing link type
-AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
-Internal - Sets the default sharing link for this site to the "organization" link or company shareable link
-Direct - Sets the default sharing link for this site to the "Specific people" link
+- None - Respect the organization default sharing link type
+- AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
+- Internal - Sets the default sharing link for this site to the "organization" link or company shareable link
+- Direct - Sets the default sharing link for this site to the "Specific people" link
 
 ```yaml
 Type: SharingLinkType
@@ -772,9 +769,9 @@ The default link permission for the site collection
 
 PARAMVALUE: None | View | Edit
 
-None - Respect the organization default link permission
-View - Sets the default link permission for the site to "view" permissions
-Edit - Sets the default link permission for the site to "edit" permissions
+- None - Respect the organization default link permission
+- View - Sets the default link permission for the site to "view" permissions
+- Edit - Sets the default link permission for the site to "edit" permissions
 
 ```yaml
 Type: SharingPermissionType
@@ -794,9 +791,9 @@ Choose whether to override the anonymous or anyone link expiration policy on thi
 
 PARAMVALUE: None | False | True
 
-None - Respect the organization-level policy for anonymous or anyone link expiration
-False - Respect the organization-level policy for anonymous or anyone link expiration
-True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
+- None - Respect the organization-level policy for anonymous or anyone link expiration
+- False - Respect the organization-level policy for anonymous or anyone link expiration
+- True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
 
 ```yaml
 Type: Boolean
@@ -842,6 +839,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ProtectionLevelName
+
+The conditional access protection level name. For example "urn:microsoft:req1"
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

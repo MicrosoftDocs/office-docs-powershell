@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://docs.microsoft.com/en-us/powershell/module/teams/remove-csteamtemplate
+online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate
 title: Remove-CsTeamTemplate
 author: levdavid
 ms.author: legorbun
@@ -39,36 +39,20 @@ Remove-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
 ### EXAMPLE 1
 
 ```powershell
-Remove-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US'
+PS C:> Remove-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US'
 ```
 
-Removes template with OData Id '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US' 
+Removes template with OData Id '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US'.
 
 ### EXAMPLE 2
 
 ```powershell
-(Get-CsTeamTemplateList -Locale en-US) | where Name -like 'test' | ForEach-Object {Remove-CsTeamTemplate -OdataId $_.OdataId}
+PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Remove-CsTeamTemplate -OdataId $_.OdataId}
 ```
 
-Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains ‘test’  
+Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains ‘test’.
 
 ## PARAMETERS
-
-### -OdataId
-
-A composite URI of a template.
-
-```yaml
-Type: String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InputObject
 
@@ -76,7 +60,7 @@ Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: IConfigApiBasedCmdletsIdentity
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
 Parameter Sets: DeleteViaIdentity
 Aliases:
 
@@ -87,6 +71,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -OdataId
+
+A composite URI of a template.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Break
 
 Wait for .NET debugger to attach
@@ -183,15 +182,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -200,14 +198,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -WhatIf
 
-Prompts you for confirmation before running the cmdlet.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -232,38 +231,39 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
 
-To create the parameters described below, construct a hash table containing the appropriate properties.
-For information on hash tables, run Get-Help about_Hash_Tables.
+To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter\
-\[Bssid \<String\>\]:\
-\[ChassisId \<String\>\]:\
-\[CivicAddressId \<String\>\]: Civic address id.\
-\[Country \<String\>\]:\
-\[GroupId \<String\>\]: The ID of a group whose policy assignments will be returned.\
-\[Id \<String\>\]:\
-\[Identity \<String\>\]:\
-\[Locale \<String\>\]: The language and country code of templates localization.\
-\[LocationId \<String\>\]: Location id.\
-\[OdataId \<String\>\]: A composite URI of a template.\
-\[OperationId \<String\>\]: The ID of a batch policy assignment operation.\
-\[OrderId \<String\>\]:\
-\[PackageName \<String\>\]: The name of a specific policy package\
-\[PolicyType \<String\>\]: The policy type for which group policy assignments will be returned.\
-\[Port \<String\>\]:\
-\[PortInOrderId \<String\>\]:\
-\[SubnetId \<String\>\]:\
-\[TenantId \<String\>\]:\
-\[UserId \<String\>\]: UserId.\
-Supports Guid.\
-Eventually UPN and SIP.
+INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
+
+- `[Bssid <String>]`:
+- `[ChassisId <String>]`:
+- `[CivicAddressId <String>]`: Civic address id.
+- `[Country <String>]`:
+- `[GroupId <String>]`: The ID of a group whose policy assignments will be returned.
+- `[Id <String>]`:
+- `[Identity <String>]`:
+- `[Locale <String>]`:
+- `[LocationId <String>]`: Location id.
+- `[OdataId <String>]`: A composite URI of a template.
+- `[OperationId <String>]`: The ID of a batch policy assignment operation.
+- `[OrderId <String>]`:
+- `[PackageName <String>]`: The name of a specific policy package
+- `[PolicyType <String>]`: The policy type for which group policy assignments will be returned.
+- `[Port <String>]`:
+- `[PortInOrderId <String>]`:
+- `[PublicTemplateLocale <String>]`: Language and country code for localization of publicly available templates.
+- `[SubnetId <String>]`:
+- `[TenantId <String>]`:
+- `[UserId <String>]`: UserId. Supports Guid. Eventually UPN and SIP.
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/remove-csteamtemplate)
+- [Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
+- [New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
+- [Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
+- [Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)

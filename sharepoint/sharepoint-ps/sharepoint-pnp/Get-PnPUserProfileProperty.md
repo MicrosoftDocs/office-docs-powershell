@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpuserprofileproperty
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPUserProfileProperty
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPUserProfileProperty.html
 ---
-
+ 
 # Get-PnPUserProfileProperty
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPUserProfileProperty.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,11 +21,10 @@ title: Get-PnPUserProfileProperty
 
 You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet. 
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPUserProfileProperty -Account <String[]>
-                           [-Connection <PnPConnection>]
+Get-PnPUserProfileProperty [-Account] <String[]> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,14 +32,14 @@ Requires a connection to a SharePoint Tenant Admin site.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPUserProfileProperty -Account 'user@domain.com'
 ```
 
 Returns the profile properties for the specified user
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPUserProfileProperty -Account 'user@domain.com','user2@domain.com'
 ```
@@ -53,7 +57,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -65,13 +71,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.UserProfiles.PersonProperties
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

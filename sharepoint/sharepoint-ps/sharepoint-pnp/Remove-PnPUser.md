@@ -1,24 +1,26 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpuser
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPUser
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPUser.html
 ---
-
+ 
 # Remove-PnPUser
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPUser.md to change this file.
+
 Removes a specific user from the site collection User Information List
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPUser -Identity <UserPipeBind>
-               [-Force [<SwitchParameter>]]
-               [-Confirm [<SwitchParameter>]]
-               [-Web <WebPipeBind>]
-               [-Connection <PnPConnection>]
+Remove-PnPUser [-Identity] <UserPipeBind> [-Force]  
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,28 +28,28 @@ This command will allow the removal of a specific user from the User Information
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPUser -Identity 23
 ```
 
 Remove the user with Id 23 from the User Information List of the current site collection
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Remove-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com
 ```
 
 Remove the user with LoginName i:0#.f|membership|user@tenant.onmicrosoft.com from the User Information List of the current site collection
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPUser | ? Email -eq "user@tenant.onmicrosoft.com" | Remove-PnPUser
 ```
 
 Remove the user with e-mail address user@tenant.onmicrosoft.com from the User Information List of the current site collection
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Remove-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com -Confirm:$false
 ```
@@ -65,31 +67,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Force
-Specifying the Force parameter will skip the confirmation question
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Identity
-User ID or login name
-
-```yaml
-Type: UserPipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Accept pipeline input: True
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -101,25 +81,42 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -Force
+Specifying the Force parameter will skip the confirmation question
 
 ```yaml
-Type: WebPipeBind
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Identity
+User ID or login name
 
-### Microsoft.SharePoint.Client.User
+```yaml
+Type: UserPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -38,8 +38,6 @@ Set-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-MRSProxyEnabled <Boolean>]
  [-MRSProxyMaxConnections <Unlimited>]
  [-OAuthAuthentication <Boolean>]
- [-OAuthAuthentication <Boolean>]
- [-UpdateManagementVirtualDirectory]
  [-WhatIf]
  [-WindowsAuthentication <Boolean>]
  [-WSSecurityAuthentication <Boolean>]
@@ -356,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyMaxConnections
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
@@ -384,24 +382,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UpdateManagementVirtualDirectory
-This parameter is available or functional only in Exchange Server 2010.
-
-The UpdateManagementVirtualDirectory parameter makes sure that the Exchange Web Services objects in Active Directory and the respective objects in Internet Information Services (IIS) are up to date and consistent.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

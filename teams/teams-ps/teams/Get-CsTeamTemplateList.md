@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplatelist
+online version: https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist
 title: Get-CsTeamTemplateList
 author: levdavid
 ms.author: legorbun
@@ -22,17 +22,13 @@ Note: All custom templates will be retrieved, regardless of the locale specifica
 ### Get (Default)
 
 ```powershell
-Get-CsTeamTemplateList -Locale <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [<CommonParameters>]
+Get-CsTeamTemplateList [[-PublicTemplateLocale] <String>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 
 ```powershell
-Get-CsTeamTemplateList -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
- [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
- [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+Get-CsTeamTemplateList -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,53 +40,35 @@ Get a list of available team templates
 ### EXAMPLE 1
 
 ```powershell
-Get-CsTeamTemplateList -Locale en-US
+PS C:> Get-CsTeamTemplateList
 ```
 
 Returns all en-US templates within the universe of templates the admin’s tenant has access to.
 
-Note: All 1P Microsoft templates will always be returned in the specified locale.
-
-```powershell
-OdataId                                                         Name                           ShortDescription                 Chann AppCo
-                                                                                                                                elCou unt
-                                                                                                                                nt
--------                                                         ----                           ----------------                 ----- -----
-/api/teamtemplates/v1.0/healthcareWard/Public/en-US             Collaborate on Patient Care    Collaborate on patient care i... 6     1
-/api/teamtemplates/v1.0/healthcareHospital/Public/en-US         Hospital                       Facilitate collaboration with... 6     1
-/api/teamtemplates/v1.0/retailStore/Public/en-US                Organize a Store               Collaborate with your retail ... 3     1
-/api/teamtemplates/v1.0/retailManagerCollaboration/Public/en-US Retail - Manager Collaboration Collaborate with managers acr... 3     1
-```
+Note: All 1P Microsoft templates will always be returned in the specified locale. If the locale is not specified, en-US will be used.
 
 ### EXAMPLE 2
 
 ```powershell
-(Get-CsTeamTemplateList -Locale en-US) | where ChannelCount -GT 3
-
-OdataId                                                 Name                           ShortDescription                 Chann AppCo
-                                                                                                                        elCou unt
-                                                                                                                        nt
--------                                                 ----                           ----------------                 ----- -----
-/api/teamtemplates/v1.0/healthcareWard/Public/en-US     Collaborate on Patient Care    Collaborate on patient care i... 6     1
-/api/teamtemplates/v1.0/healthcareHospital/Public/en-US Hospital                       Facilitate collaboration with... 6     1
+PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
 ```
 
 Returns all en-US templates that have 3 channels within the universe of templates the admin’s tenant has access to.
 
 ## PARAMETERS
 
-### -Locale
+### -PublicTemplateLocale
 
-The language and country code of templates localization.
+The language and country code of templates localization for Microsoft team templates. This will not be applied to your tenant custom team templates. Defaults to en-US.
 
 ```yaml
 Type: String
 Parameter Sets: Get
 Aliases:
 
-Required: True
-Position: Named
-Default value: None
+Required: False
+Position: 1
+Default value: 'en-US'
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -109,102 +87,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Break
-
-Wait for .NET debugger to attach
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelineAppend
-
-SendAsync Pipeline Steps to be appended to the front of the pipeline
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Proxy
-
-The URI for the proxy server to use
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyCredential
-
-Credentials for a proxy server to use for the remote call
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyUseDefaultCredentials
-
-Use the default credentials for the proxy
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -254,8 +136,8 @@ Eventually UPN and SIP.
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/remove-csteamtemplate)
+- [Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
+- [New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
+- [Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
+- [Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)

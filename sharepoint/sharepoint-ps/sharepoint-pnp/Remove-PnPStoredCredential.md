@@ -1,34 +1,38 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpstoredcredential
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPStoredCredential
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPStoredCredential.html
 ---
-
+ 
 # Remove-PnPStoredCredential
 
 ## SYNOPSIS
-Removes a credential
 
-## SYNTAX 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPStoredCredential.md to change this file.
+
+Removes a credential from the Credential Manager
+
+## SYNTAX
 
 ```powershell
-Remove-PnPStoredCredential -Name <String>
-                           [-Force [<SwitchParameter>]]
+Remove-PnPStoredCredential -Name <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Removes a stored credential from the Windows Credential Manager
+Removes a stored credential from the Credential Manager
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Remove-PnPStoredCredential -Name https://tenant.sharepoint.com
+Remove-PnPStoredCredential -Name "https://tenant.sharepoint.com"
 ```
 
-Removes the specified credential from the Windows Credential Manager
+Removes the specified credential from the Credential Manager
 
 ## PARAMETERS
 
@@ -41,7 +45,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Name
@@ -53,9 +59,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

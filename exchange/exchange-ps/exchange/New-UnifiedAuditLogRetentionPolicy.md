@@ -100,12 +100,13 @@ The RetentionDuration parameter specifies how long audit log records are kept. V
 - SixMonths
 - NineMonths
 - TwelveMonths
+- TenYears
 
 ```yaml
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
 Applicable: Security & Compliance Center
 
 Required: True

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://docs.microsoft.com/en-us/powershell/module/teams/new-csteamtemplate
+online version: https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate
 title: New-CsTeamTemplate
 author: levdavid
 ms.author: legorbun
@@ -22,30 +22,8 @@ This cmdlet lets you provision a new team template for use in Microsoft Teams. L
 
 ```powershell
 New-CsTeamTemplate -Locale <String> -DisplayName <String> -ShortDescription <String>
- [-App <ITeamsAppTemplate[]>] [-Category <String[]>] [-Channel <IChannelTemplate[]>] [-Classification <String>]
- [-Description <String>] [-DiscoverySettingShowInTeamsSearchAndSuggestion] [-FunSetting <ITeamFunSettings>]
- [-GuestSetting <ITeamGuestSettings>] [-Icon <String>] [-IsMembershipLimitedToOwner]
- [-MemberSetting <ITeamMemberSettings>] [-MessagingSetting <ITeamMessagingSettings>]
- [-OwnerUserObjectId <String>] [-PublishedBy <String>] [-Specialization <String>] [-TemplateId <String>]
- [-Uri <String>] [-Visibility <String>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### New
-
-```powershell
-New-CsTeamTemplate -Locale <String> -Body <ICreateTemplateFromRequest> [-Break]
- [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
- [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewViaIdentityExpanded
-
-```powershell
-New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName <String>
- -ShortDescription <String> [-App <ITeamsAppTemplate[]>] [-Category <String[]>] [-Channel <IChannelTemplate[]>]
- [-Classification <String>] [-Description <String>] [-DiscoverySettingShowInTeamsSearchAndSuggestion]
+ [-App <ITeamsAppTemplate[]>] [-Category <String[]>] [-Channel <IChannelTemplate[]>]
+ [-Classification <String>] [-Description <String>] [-DiscoverySetting <ITeamDiscoverySettings>]
  [-FunSetting <ITeamFunSettings>] [-GuestSetting <ITeamGuestSettings>] [-Icon <String>]
  [-IsMembershipLimitedToOwner] [-MemberSetting <ITeamMemberSettings>]
  [-MessagingSetting <ITeamMessagingSettings>] [-OwnerUserObjectId <String>] [-PublishedBy <String>]
@@ -54,10 +32,33 @@ New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName <S
  [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### New
+
+```powershell
+New-CsTeamTemplate -Locale <String> -Body <ITeamTemplate> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### NewViaIdentity
 
 ```powershell
-New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICreateTemplateFromRequest> [-Break]
+New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ITeamTemplate> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewViaIdentityExpanded
+
+```powershell
+New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName <String>
+ -ShortDescription <String> [-App <ITeamsAppTemplate[]>] [-Category <String[]>]
+ [-Channel <IChannelTemplate[]>] [-Classification <String>] [-Description <String>]
+ [-DiscoverySetting <ITeamDiscoverySettings>] [-FunSetting <ITeamFunSettings>]
+ [-GuestSetting <ITeamGuestSettings>] [-Icon <String>] [-IsMembershipLimitedToOwner]
+ [-MemberSetting <ITeamMemberSettings>] [-MessagingSetting <ITeamMessagingSettings>]
+ [-OwnerUserObjectId <String>] [-PublishedBy <String>] [-Specialization <String>] [-TemplateId <String>]
+ [-Uri <String>] [-Visibility <String>] [-Break]
  [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
  [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -67,153 +68,63 @@ New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ICreateT
 ### EXAMPLE 1
 
 ```powershell
-(Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US') \> input.json
+PS C:> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US') > input.json
 # open json in your favorite editor, make changes
 
-New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
+PS C:> New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
 ```
 
 Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
 Step 2: Create a new template from the JSON file named “input”.
 
-```json
-{
-  "id": "061fe692-7da7-4f65-a57b-0472cf0045af",
-  "name": "New Template",
-  "scope": "Tenant",
-  "shortDescription": "New Description",
-  "iconUri": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "channelCount": 2,
-  "appCount": 2,
-  "modifiedOn": "2020-12-10T18:46:52.7231705Z",
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "locale": "en-US",
-  "@odata.id": "/api/teamtemplates/v1.0/061fe692-7da7-4f65-a57b-0472cf0045af/Tenant/en-US"
-}
-```
-
 ### EXAMPLE 2
 
 ```powershell
-New-CsTeamTemplate `
--Locale en-US `
--DisplayName 'New Template' `
--ShortDescription 'New Description' `
--App @{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'} `
--Channel @{ `
-  displayName="General"; `
-  id="General"; `
-  isFavoriteByDefault=$true; `
-}, `
+PS C:> $template = Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US'
+PS C:> $template | Format-List # show the output object as it would be accessed
+
+PS C:> $template.Category = $null # unset category to copy from public template
+PS C:> $template.DisplayName = 'New Template from object'
+PS C:> $template.Channel[1].DisplayName += ' modified'
+## add a new channel to the channel list
+PS C:> $template.Channel += `
 @{ `
   displayName="test"; `
   id="b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
   isFavoriteByDefault=$false; `
 }
+
+PS C:> New-CsTeamTemplate -Locale en-US -Body $template
 ```
 
-```json
-{
-  "id": "061fe692-7da7-4f65-a57b-0472cf0045af",
-  "name": "New Template",
-  "scope": "Tenant",
-  "shortDescription": "New Description",
-  "iconUri": "https://statics.teams.cdn.office.net/evergreen-assets/teamtemplates/icons/default_tenant.svg",
-  "channelCount": 2,
-  "appCount": 2,
-  "modifiedOn": "2020-12-10T18:46:52.7231705Z",
-  "modifiedBy": "6c4445f6-a23d-473c-951d-7474d289c6b3",
-  "locale": "en-US",
-  "@odata.id": "/api/teamtemplates/v1.0/061fe692-7da7-4f65-a57b-0472cf0045af/Tenant/en-US"
+Create a template using a complex object syntax.
+
+### EXAMPLE 3
+
+```powershell
+PS C:> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
+DisplayName='New Template';`
+ShortDescription='Short Definition';`
+Description='New Description';`
+App=@{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'};`
+Channel=@{`
+  displayName = "General";`
+  id= "General";`
+  isFavoriteByDefault= $true`
+  },`
+  @{`
+    displayName= "test";`
+    id= "b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475";`
+    isFavoriteByDefault= $false`
+  }`
 }
+
+PS C:> New-CsTeamTemplate -Locale en-US -Body $template
 ```
+
+Create template from scratch
 
 ## PARAMETERS
-
-### -Locale
-
-Gets or sets the locale of template which a created team would be based off. For 1P  
-templates, locale indicates the localized version should be used. For LOB templates, locale is  
-used to locate the LOB template of such locale.
-
-```yaml
-Type: String
-Parameter Sets: NewExpanded, New
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputObject
-
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
-
-```yaml
-Type: IConfigApiBasedCmdletsIdentity
-Parameter Sets: NewViaIdentityExpanded, NewViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Body
-
-The client input for a request to create a template.
-Only admins from Config Api can perform this request.
-To construct, see NOTES section for BODY properties and create a hash table.
-
-```yaml
-Type: ICreateTemplateFromRequest
-Parameter Sets: New, NewViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -DisplayName
-
-Gets or sets the team's DisplayName.
-
-```yaml
-Type: String
-Parameter Sets: NewExpanded, NewViaIdentityExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShortDescription
-
-Gets or sets template short description.
-
-```yaml
-Type: String
-Parameter Sets: NewExpanded, NewViaIdentityExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -App
 
@@ -221,7 +132,7 @@ Gets or sets the set of applications that should be installed in teams created b
 To construct, see NOTES section for APP properties and create a hash table.
 
 ```yaml
-Type: ITeamsAppTemplate[]
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamsAppTemplate[]
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -232,12 +143,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Body
+
+The client input for a request to create a template.
+Only admins from Config Api can perform this request.
+To construct, see NOTES section for BODY properties and create a hash table.
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamTemplate
+Parameter Sets: New, NewViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Category
 
 Gets or sets list of categories.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -254,7 +183,7 @@ Gets or sets the set of channel templates included in the team template.
 To construct, see NOTES section for CHANNEL properties and create a hash table.
 
 ```yaml
-Type: IChannelTemplate[]
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IChannelTemplate[]
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -270,7 +199,7 @@ Accept wildcard characters: False
 Gets or sets the team's classification.Tenant admins configure AAD with the set of possible values.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -286,7 +215,7 @@ Accept wildcard characters: False
 Gets or sets the team's Description.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -297,18 +226,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DiscoverySettingShowInTeamsSearchAndSuggestion
+### -DiscoverySetting
 
-Gets or sets value indicating if team is visible within search and suggestions in Teams clients.
+Governs discoverability of a team.
+To construct, see NOTES section for DISCOVERYSETTING properties and create a hash table.
 
 ```yaml
-Type: SwitchParameter
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamDiscoverySettings
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+
+Gets or sets the team's DisplayName.
+
+```yaml
+Type: System.String
+Parameter Sets: NewExpanded, NewViaIdentityExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -319,7 +265,7 @@ Governs use of fun media like giphy and stickers in the team.
 To construct, see NOTES section for FUNSETTING properties and create a hash table.
 
 ```yaml
-Type: ITeamFunSettings
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamFunSettings
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -336,7 +282,7 @@ Guest role settings for the team.
 To construct, see NOTES section for GUESTSETTING properties and create a hash table.
 
 ```yaml
-Type: ITeamGuestSettings
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamGuestSettings
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -352,7 +298,7 @@ Accept wildcard characters: False
 Gets or sets template icon.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -363,18 +309,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+
+Identity Parameter
+To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
+Parameter Sets: NewViaIdentity, NewViaIdentityExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -IsMembershipLimitedToOwner
 
 Gets or sets whether to limit the membership of the team to owners in the AAD group until an owner "activates" the team.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locale
+
+```yaml
+Type: System.String
+Parameter Sets: New, NewExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -385,7 +362,7 @@ Member role settings for the team.
 To construct, see NOTES section for MEMBERSETTING properties and create a hash table.
 
 ```yaml
-Type: ITeamMemberSettings
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamMemberSettings
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -402,7 +379,7 @@ Governs use of messaging features within the teamThese are settings the team own
 To construct, see NOTES section for MESSAGINGSETTING properties and create a hash table.
 
 ```yaml
-Type: ITeamMessagingSettings
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamMessagingSettings
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -418,7 +395,7 @@ Accept wildcard characters: False
 Gets or sets the AAD user object id of the user who should be set as the owner of the new team.Only to be used when an application or administrative user is making the request on behalf of the specified user.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -434,11 +411,27 @@ Accept wildcard characters: False
 Gets or sets published name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShortDescription
+
+Gets or sets template short description.
+
+```yaml
+Type: System.String
+Parameter Sets: NewExpanded, NewViaIdentityExpanded
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -450,7 +443,7 @@ Accept wildcard characters: False
 The specialization or use case describing the team.Used for telemetry/BI, part of the team context exposed to app developers, and for legacy implementations of differentiated features for education.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -466,7 +459,7 @@ Accept wildcard characters: False
 Gets or sets the id of the base template for the team.Either a Microsoft base template or a custom template.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -482,7 +475,7 @@ Accept wildcard characters: False
 Gets or sets uri to be used for GetTemplate api call.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -498,7 +491,7 @@ Accept wildcard characters: False
 Used to control the scope of users who can view a group/team and its members, and ability to join.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
@@ -605,15 +598,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -622,14 +614,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -WhatIf
 
-Prompts you for confirmation before running the cmdlet.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -646,163 +639,167 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
 
-### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICreateTemplateFromRequest
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamTemplate
 
 ## OUTPUTS
 
 ### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICreateTemplateResponse
 
-### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorObject
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamTemplateErrorResponse
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES\
+ALIASES
 
-To create the parameters described below, construct a hash table containing the appropriate properties.\
-For information on hash tables, run Get-Help about_Hash_Tables.
+COMPLEX PARAMETER PROPERTIES
 
-APP \\<ITeamsAppTemplate[]\\>: Gets or sets the set of applications that should be installed in teams created based on the template.The app catalog is the main \
-directory for information about each app; this set is intended only as a reference.\
-[Id \\<String\\>]: Gets or sets the app's ID in the global apps catalog.\
+To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-BODY \<ICreateTemplateFromRequest\>: The client input for a request to create a template.\
-Only admins from Config Api can perform this request.\
-DiscoverySettingShowInTeamsSearchAndSuggestion \<Boolean\>: Gets or sets value indicating if team is visible within search and suggestions in Teams clients.\
-DisplayName \<String\>: Gets or sets the team's DisplayName.\
-ShortDescription \<String\>: Gets or sets template short description.\
-[App \<ITeamsAppTemplate[]\>]: Gets or sets the set of applications that should be installed in teams created based on the template.\
-The app catalog is the main directory for information about each app; this set is intended only as a reference.\
-[Id \<String\>]: Gets or sets the app's ID in the global apps catalog.\
-[Channel \<IChannelTemplate[]\>]: Gets or sets the set of channel templates included in the team template.\
-[Description \<String\>]: Gets or sets channel description as displayed to users.\
-[DisplayName \<String\>]: Gets or sets channel name as displayed to users.\
-[Id \<String\>]: Gets or sets identifier for the channel template.\[IsFavoriteByDefault \<Boolean?\>]: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel, pinning \
-it for visibility in the UI and using resources to make switching to the channel faster.\
-[Tab \<IChannelTabTemplate[]\>]: Gets or sets collection of tabs that should be added to the channel.\
-[Configuration \<ITeamsTabConfiguration\>]: Represents the configuration of a tab.\
-[ContentUrl \<String\>]: Gets or sets the Url used for rendering tab contents in Teams.\
-[EntityId \<String\>]: Gets or sets the identifier for the entity hosted by the tab provider.\
-[RemoveUrl \<String\>]: Gets or sets the Url that is invoked when the user tries to remove a tab from the FE client.\
-[WebsiteUrl \<String\>]: Gets or sets the Url for showing tab contents outside of Teams.\
-[Id \<String\>]: Gets or sets identifier for the channel tab template.\
-[Key \<String\>]: Gets a unique identifier.\
-[MessageId \<String\>]: Gets or sets id used to identify the chat message associated with the tab.\
-[Name \<String\>]: Gets or sets the tab name displayed to users.\
-[SortOrderIndex \<String\>]: Gets or sets index of the order used for sorting tabs.\
-[TeamsAppId \<String\>]: Gets or sets the app's id in the global apps catalog.\
-[WebUrl \<String\>]: Gets or sets the deep link url of the tab instance.\
-[Classification \<String\>]: Gets or sets the team's classification.\
-Tenant admins configure AAD with the set of possible values.\
-[Description \<String\>]: Gets or sets the team's Description.\
-[FunSetting \<ITeamFunSettings\>]: Governs use of fun media like giphy and stickers in the team.\
-AllowCustomMeme \<Boolean\>: Gets or sets a value indicating whether users are allowed to create and post custom meme images in team conversations.\
-AllowGiphy \<Boolean\>: Gets or sets a value indicating whether users can post giphy content in team conversations.\
-AllowStickersAndMeme \<Boolean\>: Gets or sets a value indicating whether users can post stickers and memes in team conversations.\
-GiphyContentRating \<String\>: Gets or sets the rating filter on giphy content.\
-[GuestSetting \<ITeamGuestSettings\>]: Guest role settings for the team.\
-AllowCreateUpdateChannel \<Boolean\>: Gets or sets a value indicating whether guests can create or edit channels in the team.\
-AllowDeleteChannel \<Boolean\>: Gets or sets a value indicating whether guests can delete team channels.\[IsMembershipLimitedToOwner \<Boolean?\>]: Gets or sets whether to limit the membership of the team to owners in the AAD group until an owner "activates" the \
-team.\
-[MemberSetting \<ITeamMemberSettings\>]: Member role settings for the team.\
-AllowAddRemoveApp \<Boolean\>: Gets or sets a value indicating whether members can add or remove apps in the team.\
-AllowCreatePrivateChannel \<Boolean\>: Gets or Sets a value indicating whether members can create Private channels.\
-AllowCreateUpdateChannel \<Boolean\>: Gets or sets a value indicating whether members can create or edit channels in the team.\
-AllowCreateUpdateRemoveConnector \<Boolean\>: Gets or sets a value indicating whether members can add, edit, or remove connectors in the team.\
-AllowCreateUpdateRemoveTab \<Boolean\>: Gets or sets a value indicating whether members can add, edit or remove pinned tabs in the team.\
-AllowDeleteChannel \<Boolean\>: Gets or sets a value indicating whether members can delete team channels.\
-UploadCustomApp \<Boolean\>: Gets or sets a value indicating is allowed to upload custom apps.\
-[MessagingSetting \<ITeamMessagingSettings\>]: Governs use of messaging features within the team These are settings the team owner should be able to modify from\
-UI after team creation.\
-AllowChannelMention \<Boolean\>: Gets or sets a value indicating whether team members can at-mention entire channels in team conversations.\
-AllowOwnerDeleteMessage \<Boolean\>: Gets or sets a value indicating whether team owners can delete anyone's messages in team conversations.\
-AllowTeamMention \<Boolean\>: Gets or sets a value indicating whether team members can at-mention the entire team in team conversations.\
-AllowUserDeleteMessage \<Boolean\>: Gets or sets a value indicating whether team members can delete their own messages in team conversations.\
-AllowUserEditMessage \<Boolean\>: Gets or sets a value indicating whether team members can edit their own messages in team conversations.\
-[OwnerUserObjectId \<String\>]: Gets or sets the AAD user object id of the user who should be set as the owner of the new team.\
-Only to be used when an application or administrative user is making the request on behalf of the specified user.\
-[Specialization \<String\>]: The specialization or use case describing the team.\
-Used for telemetry/BI, part of the team context exposed to app developers, and for legacy implementations of differentiated features for education.\
-[TemplateId \<String\>]: Gets or sets the id of the base template for the team.\
-Either a Microsoft base template or a custom template.\
-[Visibility \<String\>]: Used to control the scope of users who can view a group/team and its members, and ability to join.\
-[Category \<String[]\>]: Gets or sets list of categories.\
-[Icon \<String\>]: Gets or sets template icon.\
-[PublishedBy \<String\>]: Gets or sets published name.\
-[Uri \<String\>]: Gets or sets uri to be used for GetTemplate api call.\
-\
-CHANNEL \<IChannelTemplate[]\>: Gets or sets the set of channel templates included in the team template.\
-[Description \<String\>]: Gets or sets channel description as displayed to users.\
-[DisplayName \<String\>]: Gets or sets channel name as displayed to users.\
-[Id \<String\>]: Gets or sets identifier for the channel template.\[IsFavoriteByDefault \<Boolean?\>]: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel, pinning \
-it for visibility in the UI and using resources to make switching to the channel faster.\
-[Tab \<IChannelTabTemplate[]\>]: Gets or sets collection of tabs that should be added to the channel.\
-[Configuration \<ITeamsTabConfiguration\>]: Represents the configuration of a tab.\
-[ContentUrl \<String\>]: Gets or sets the Url used for rendering tab contents in Teams.\
-[EntityId \<String\>]: Gets or sets the identifier for the entity hosted by the tab provider.\
-[RemoveUrl \<String\>]: Gets or sets the Url that is invoked when the user tries to remove a tab from the FE client.\
-[WebsiteUrl \<String\>]: Gets or sets the Url for showing tab contents outside of Teams.\
-[Id \<String\>]: Gets or sets identifier for the channel tab template.\
-[Key \<String\>]: Gets a unique identifier.\
-[MessageId \<String\>]: Gets or sets id used to identify the chat message associated with the tab.\
-[Name \<String\>]: Gets or sets the tab name displayed to users.\
-[SortOrderIndex \<String\>]: Gets or sets index of the order used for sorting tabs.\
-[TeamsAppId \<String\>]: Gets or sets the app's id in the global apps catalog.\
-[WebUrl \<String\>]: Gets or sets the deep link url of the tab instance.\
-\
-FUNSETTING \<ITeamFunSettings\>: Governs use of fun media like giphy and stickers in the team.\
-AllowCustomMeme \<Boolean\>: Gets or sets a value indicating whether users are allowed to create and post custom meme images in team conversations.\
-AllowGiphy \<Boolean\>: Gets or sets a value indicating whether users can post giphy content in team conversations.\
-AllowStickersAndMeme \<Boolean\>: Gets or sets a value indicating whether users can post stickers and memes in team conversations.\
-GiphyContentRating \<String\>: Gets or sets the rating filter on giphy content.\
-\
-GUESTSETTING \<ITeamGuestSettings\>: Guest role settings for the team.\
-AllowCreateUpdateChannel \<Boolean\>: Gets or sets a value indicating whether guests can create or edit channels in the team.\
-AllowDeleteChannel \<Boolean\>: Gets or sets a value indicating whether guests can delete team channels.\
-\
-INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter\
-[Bssid \<String\>]:\
-[ChassisId \<String\>]:\
-[CivicAddressId \<String\>]: Civic address id.\
-[Country \<String\>]:\
-[GroupId \<String\>]: The ID of a group whose policy assignments will be returned.\
-[Id \<String\>]:\
-[Identity \<String\>]:\
-[Locale \<String\>]: The language and country code of templates localization.\
-[LocationId \<String\>]: Location id.\
-[OdataId \<String\>]: A composite URI of a template.\
-[OperationId \<String\>]: The ID of a batch policy assignment operation.\
-[OrderId \<String\>]:\
-[PackageName \<String\>]: The name of a specific policy package\
-[PolicyType \<String\>]: The policy type for which group policy assignments will be returned.\
-[Port \<String\>]:\
-[PortInOrderId \<String\>]:\
-[SubnetId \<String\>]:\
-[TenantId \<String\>]:\
-[UserId \<String\>]: UserId.\
-Supports Guid.\
-Eventually UPN and SIP.
+APP <ITeamsAppTemplate[]>: Gets or sets the set of applications that should be installed in teams created based on the template.The app catalog is the main directory for information about each app; this set is intended only as a reference.
 
-MEMBERSETTING \<ITeamMemberSettings\>: Member role settings for the team.\
-AllowAddRemoveApp \<Boolean\>: Gets or sets a value indicating whether members can add or remove apps in the team.\
-AllowCreatePrivateChannel \<Boolean\>: Gets or Sets a value indicating whether members can create Private channels.\
-AllowCreateUpdateChannel \<Boolean\>: Gets or sets a value indicating whether members can create or edit channels in the team.\
-AllowCreateUpdateRemoveConnector \<Boolean\>: Gets or sets a value indicating whether members can add, edit, or remove connectors in the team.\
-AllowCreateUpdateRemoveTab \<Boolean\>: Gets or sets a value indicating whether members can add, edit or remove pinned tabs in the team.\
-AllowDeleteChannel \<Boolean\>: Gets or sets a value indicating whether members can delete team channels.\
-UploadCustomApp \<Boolean\>: Gets or sets a value indicating is allowed to upload custom apps.
+- `[Id <String>]`: Gets or sets the app's ID in the global apps catalog.
 
-MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features within the teamThese are settings the team owner should be able to modify from UI\
-after team creation.\
-AllowChannelMention \<Boolean\>: Gets or sets a value indicating whether team members can at-mention entire channels in team conversations.\
-AllowOwnerDeleteMessage \<Boolean\>: Gets or sets a value indicating whether team owners can delete anyone's messages in team conversations.\
-AllowTeamMention \<Boolean\>: Gets or sets a value indicating whether team members can at-mention the entire team in team conversations.\
-AllowUserDeleteMessage \<Boolean\>: Gets or sets a value indicating whether team members can delete their own messages in team conversations.\
-AllowUserEditMessage \<Boolean\>: Gets or sets a value indicating whether team members can edit their own messages in team conversations.
+BODY <ITeamTemplate>: The client input for a request to create a template.         Only admins from Config Api can perform this request.
+
+- `DisplayName <String>`: Gets or sets the team's DisplayName.
+- `ShortDescription <String>`: Gets or sets template short description.
+- `[App <ITeamsAppTemplate[]>]`: Gets or sets the set of applications that should be installed in teams created based on the template.         The app catalog is the main directory for information about each app; this set is intended only as a reference.
+  - `[Id <String>]`: Gets or sets the app's ID in the global apps catalog.
+- `[Category <String[]>]`: Gets or sets list of categories.
+- `[Channel <IChannelTemplate[]>]`: Gets or sets the set of channel templates included in the team template.
+  - `[Description <String>]`: Gets or sets channel description as displayed to users.
+  - `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
+  - `[Id <String>]`: Gets or sets identifier for the channel template.
+  - `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel,         pinning it for visibility in the UI and using resources to make switching to the channel faster.
+  - `[Tab <IChannelTabTemplate[]>]`: Gets or sets collection of tabs that should be added to the channel.
+    - `[Configuration <ITeamsTabConfiguration>]`: Represents the configuration of a tab.
+      - `[ContentUrl <String>]`: Gets or sets the Url used for rendering tab contents in Teams.
+      - `[EntityId <String>]`: Gets or sets the identifier for the entity hosted by the tab provider.
+      - `[RemoveUrl <String>]`: Gets or sets the Url that is invoked when the user tries to remove a tab from the FE client.
+      - `[WebsiteUrl <String>]`: Gets or sets the Url for showing tab contents outside of Teams.
+    - `[Id <String>]`: Gets or sets identifier for the channel tab template.
+    - `[Key <String>]`: Gets a unique identifier.
+    - `[MessageId <String>]`: Gets or sets id used to identify the chat message associated with the tab.
+    - `[Name <String>]`: Gets or sets the tab name displayed to users.
+    - `[SortOrderIndex <String>]`: Gets or sets index of the order used for sorting tabs.
+    - `[TeamsAppId <String>]`: Gets or sets the app's id in the global apps catalog.
+    - `[WebUrl <String>]`: Gets or sets the deep link url of the tab instance.
+- `[Classification <String>]`: Gets or sets the team's classification.         Tenant admins configure AAD with the set of possible values.
+- `[Description <String>]`: Gets or sets the team's Description.
+- `[DiscoverySetting <ITeamDiscoverySettings>]`: Governs discoverability of a team.
+  - `ShowInTeamsSearchAndSuggestion <Boolean>`: Gets or sets value indicating if team is visible within search and suggestions in Teams clients.
+- `[FunSetting <ITeamFunSettings>]`: Governs use of fun media like giphy and stickers in the team.
+  - `AllowCustomMeme <Boolean>`: Gets or sets a value indicating whether users are allowed to create and post custom meme images in team conversations.
+  - `AllowGiphy <Boolean>`: Gets or sets a value indicating whether users can post giphy content in team conversations.
+  - `AllowStickersAndMeme <Boolean>`: Gets or sets a value indicating whether users can post stickers and memes in team conversations.
+  - `GiphyContentRating <String>`: Gets or sets the rating filter on giphy content.
+- `[GuestSetting <ITeamGuestSettings>]`: Guest role settings for the team.
+  - `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether guests can create or edit channels in the team.
+  - `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether guests can delete team channels.
+- `[Icon <String>]`: Gets or sets template icon.
+- `[IsMembershipLimitedToOwner <Boolean?>]`: Gets or sets whether to limit the membership of the team to owners in the AAD group until an owner "activates" the team.
+- `[MemberSetting <ITeamMemberSettings>]`: Member role settings for the team.
+  - `AllowAddRemoveApp <Boolean>`: Gets or sets a value indicating whether members can add or remove apps in the team.
+  - `AllowCreatePrivateChannel <Boolean>`: Gets or Sets a value indicating whether members can create Private channels.
+  - `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether members can create or edit channels in the team.
+  - `AllowCreateUpdateRemoveConnector <Boolean>`: Gets or sets a value indicating whether members can add, edit, or remove connectors in the team.
+  - `AllowCreateUpdateRemoveTab <Boolean>`: Gets or sets a value indicating whether members can add, edit or remove pinned tabs in the team.
+  - `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether members can delete team channels.
+  - `UploadCustomApp <Boolean>`: Gets or sets a value indicating is allowed to upload custom apps.
+- `[MessagingSetting <ITeamMessagingSettings>]`: Governs use of messaging features within the team         These are settings the team owner should be able to modify from UI after team creation.
+  - `AllowChannelMention <Boolean>`: Gets or sets a value indicating whether team members can at-mention entire channels in team conversations.
+  - `AllowOwnerDeleteMessage <Boolean>`: Gets or sets a value indicating whether team owners can delete anyone's messages in team conversations.
+  - `AllowTeamMention <Boolean>`: Gets or sets a value indicating whether team members can at-mention the entire team in team conversations.
+  - `AllowUserDeleteMessage <Boolean>`: Gets or sets a value indicating whether team members can delete their own messages in team conversations.
+  - `AllowUserEditMessage <Boolean>`: Gets or sets a value indicating whether team members can edit their own messages in team conversations.
+- `[OwnerUserObjectId <String>]`: Gets or sets the AAD user object id of the user who should be set as the owner of the new team.         Only to be used when an application or administrative user is making the request on behalf of the specified user.
+- `[PublishedBy <String>]`: Gets or sets published name.
+- `[Specialization <String>]`: The specialization or use case describing the team.         Used for telemetry/BI, part of the team context exposed to app developers, and for legacy implementations of differentiated features for education.
+- `[TemplateId <String>]`: Gets or sets the id of the base template for the team.         Either a Microsoft base template or a custom template.
+- `[Uri <String>]`: Gets or sets uri to be used for GetTemplate api call.
+- `[Visibility <String>]`: Used to control the scope of users who can view a group/team and its members, and ability to join.
+
+CHANNEL <IChannelTemplate[]>: Gets or sets the set of channel templates included in the team template.
+
+- `[Description <String>]`: Gets or sets channel description as displayed to users.
+- `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
+- `[Id <String>]`: Gets or sets identifier for the channel template.
+- `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel,         pinning it for visibility in the UI and using resources to make switching to the channel faster.
+- `[Tab <IChannelTabTemplate[]>]`: Gets or sets collection of tabs that should be added to the channel.
+  - `[Configuration <ITeamsTabConfiguration>]`: Represents the configuration of a tab.
+    - `[ContentUrl <String>]`: Gets or sets the Url used for rendering tab contents in Teams.
+    - `[EntityId <String>]`: Gets or sets the identifier for the entity hosted by the tab provider.
+    - `[RemoveUrl <String>]`: Gets or sets the Url that is invoked when the user tries to remove a tab from the FE client.
+    - `[WebsiteUrl <String>]`: Gets or sets the Url for showing tab contents outside of Teams.
+  - `[Id <String>]`: Gets or sets identifier for the channel tab template.
+  - `[Key <String>]`: Gets a unique identifier.
+  - `[MessageId <String>]`: Gets or sets id used to identify the chat message associated with the tab.
+  - `[Name <String>]`: Gets or sets the tab name displayed to users.
+  - `[SortOrderIndex <String>]`: Gets or sets index of the order used for sorting tabs.
+  - `[TeamsAppId <String>]`: Gets or sets the app's id in the global apps catalog.
+  - `[WebUrl <String>]`: Gets or sets the deep link url of the tab instance.
+
+DISCOVERYSETTING <ITeamDiscoverySettings>: Governs discoverability of a team.
+
+- `ShowInTeamsSearchAndSuggestion <Boolean>`: Gets or sets value indicating if team is visible within search and suggestions in Teams clients.
+
+FUNSETTING <ITeamFunSettings>: Governs use of fun media like giphy and stickers in the team.
+
+- `AllowCustomMeme <Boolean>`: Gets or sets a value indicating whether users are allowed to create and post custom meme images in team conversations.
+- `AllowGiphy <Boolean>`: Gets or sets a value indicating whether users can post giphy content in team conversations.
+- `AllowStickersAndMeme <Boolean>`: Gets or sets a value indicating whether users can post stickers and memes in team conversations.
+- `GiphyContentRating <String>`: Gets or sets the rating filter on giphy content.
+
+GUESTSETTING <ITeamGuestSettings>: Guest role settings for the team.
+
+- `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether guests can create or edit channels in the team.
+- `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether guests can delete team channels.
+
+INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
+
+- `[Bssid <String>]`:
+- `[ChassisId <String>]`:
+- `[CivicAddressId <String>]`: Civic address id.
+- `[Country <String>]`:
+- `[GroupId <String>]`: The ID of a group whose policy assignments will be returned.
+- `[Id <String>]`:
+- `[Identity <String>]`:
+- `[Locale <String>]`:
+- `[LocationId <String>]`: Location id.
+- `[OdataId <String>]`: A composite URI of a template.
+- `[OperationId <String>]`: The ID of a batch policy assignment operation.
+- `[OrderId <String>]`:
+- `[PackageName <String>]`: The name of a specific policy package
+- `[PolicyType <String>]`: The policy type for which group policy assignments will be returned.
+- `[Port <String>]`:
+- `[PortInOrderId <String>]`:
+- `[PublicTemplateLocale <String>]`: Language and country code for localization of publicly available templates.
+- `[SubnetId <String>]`:
+- `[TenantId <String>]`:
+- `[UserId <String>]`: UserId. Supports Guid. Eventually UPN and SIP.
+
+MEMBERSETTING <ITeamMemberSettings>: Member role settings for the team.
+
+- `AllowAddRemoveApp <Boolean>`: Gets or sets a value indicating whether members can add or remove apps in the team.
+- `AllowCreatePrivateChannel <Boolean>`: Gets or Sets a value indicating whether members can create Private channels.
+- `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether members can create or edit channels in the team.
+- `AllowCreateUpdateRemoveConnector <Boolean>`: Gets or sets a value indicating whether members can add, edit, or remove connectors in the team.
+- `AllowCreateUpdateRemoveTab <Boolean>`: Gets or sets a value indicating whether members can add, edit or remove pinned tabs in the team.
+- `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether members can delete team channels.
+- `UploadCustomApp <Boolean>`: Gets or sets a value indicating is allowed to upload custom apps.
+
+MESSAGINGSETTING <ITeamMessagingSettings>: Governs use of messaging features within the teamThese are settings the team owner should be able to modify from UI after team creation.
+
+- `AllowChannelMention <Boolean>`: Gets or sets a value indicating whether team members can at-mention entire channels in team conversations.
+- `AllowOwnerDeleteMessage <Boolean>`: Gets or sets a value indicating whether team owners can delete anyone's messages in team conversations.
+- `AllowTeamMention <Boolean>`: Gets or sets a value indicating whether team members can at-mention the entire team in team conversations.
+- `AllowUserDeleteMessage <Boolean>`: Gets or sets a value indicating whether team members can delete their own messages in team conversations.
+- `AllowUserEditMessage <Boolean>`: Gets or sets a value indicating whether team members can edit their own messages in team conversations.
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://docs.microsoft.com/en-us/powershell/module/teams/remove-csteamtemplate)
+- [Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
+- [New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
+- [Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
+- [Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)

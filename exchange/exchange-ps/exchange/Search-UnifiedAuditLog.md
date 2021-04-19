@@ -75,7 +75,7 @@ This example searches the unified audit log for all Exchange admin events from 8
 
 ### Example 3
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnLargeSet
 ```
 
 This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
@@ -84,7 +84,7 @@ This example searches the unified audit log for all events from May 1, 2018 to M
 
 ### Example 4
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnLargeSet
 ```
 
 This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2018 to May 8, 2018. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
@@ -267,8 +267,8 @@ Accept wildcard characters: False
 ### -SessionCommand
 The SessionCommand parameter specifies how much information is returned and how it's organized. Valid values are:
 
+- ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results. This is the recommended value if an ordered result is not required and has been optimized for search latency.
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
-- ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results.
 
 **Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
@@ -306,7 +306,11 @@ Accept wildcard characters: False
 ```
 
 ### -SiteIds
-The SiteIds parameter filters the log entries by site ID. You can specify multiple values separated by commas.
+The SiteIds parameter filters the log entries by the SharePoint site URL.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+If the site URL contains a dash (-), escape the dash character with another dash. For example, for the site `https://contoso.sharepoint.com/sites/hr-project`, use the value `"https://contoso.sharepoint.com/sites/hr--project"`.
 
 ```yaml
 Type: String[]

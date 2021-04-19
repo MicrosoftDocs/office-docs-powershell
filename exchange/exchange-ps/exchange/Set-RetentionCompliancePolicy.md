@@ -16,6 +16,8 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Security & Compliance Center.
 
+**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -43,6 +45,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddSkypeLocation <MultiValuedProperty>]
  [-AddSkypeLocationException <MultiValuedProperty>]
+ [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -123,8 +126,6 @@ Accept wildcard characters: False
 
 ### -RetryDistribution
 The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
-
-**Note**: Because the process of retrying distribution is a significant operation, run it only if necessary and for one policy at a time. It is not intended to be run every time you update a policy. If you run a script to update multiple policies, wait until the policy distribution is successful before running the command again for the next policy.
 
 ```yaml
 Type: SwitchParameter
@@ -469,6 +470,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Applications
+The Applications parameter specifies the target when Microsoft 365 Groups are included in the policy (the ModernGroups parameter is set). Valid values are:
+
+- `Group:Exchange` for the mailbox that's connected to the Microsoft 365 Group.
+- `Group:SharePoint` for the SharePoint site that's connected to the Microsoft 365 Group.
+- `"Group:Exchange","Group:SharePoint"` for both the mailbox and the SharePoint site that are connected to the Microsoft 365 Group.
+- blank (`$null`): This is the default value, and is functionally equivalent to the value `"Group:Exchange","Group:SharePoint"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -775,14 +797,14 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictiveRetention
-The RestrictiveRetention parameter specifies whether Preservation Lock is enabled for the policy. Valid values are:
+The RestrictiveRetention parameter specifies whether Preservation Lock is enabled for a retention policy or retention label policy. Valid values are:
 
 - $true: Preservation Lock is enabled for the policy. No one (including an administrator) can turn off the policy or make it less restrictive.
 - $false: Preservation Lock isn't enabled for the policy. This is the default value.
 
-After a policy has been locked, no one can turn off or disable it, or remove content from the policy. And it's not possible to modify or delete content that's subject to the policy during the retention period. The only ways that you can modify the retention policy are by adding content to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
+After a policy has been locked, no one can turn off or disable it, or remove content from the policy. And it's not possible to modify or delete content that's subject to the policy during the retention period. The only way that you can modify the retention policy are by adding content to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
 
-Therefore, before you lock a retention policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
+Therefore, before you lock a policy for retention, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 
 ```yaml
 Type: Boolean
