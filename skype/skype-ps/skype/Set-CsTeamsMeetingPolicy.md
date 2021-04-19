@@ -18,7 +18,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
@@ -37,7 +37,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ### Instance
-```
+```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
@@ -62,8 +62,8 @@ The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing mee
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
-```
+### EXAMPLE 1
+```powershell
 Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
@@ -71,8 +71,8 @@ The command shown in Example 1 uses the Set-CsTeamsMeetingPolicy cmdlet to updat
 This policy will use all the existing values except one: AllowTranscription; in this example, meetings for users with this policy can include real time or post meeting captions and transcriptions.
 
 
-### -------------------------- EXAMPLE 2 -------------------------- 
-```
+### EXAMPLE 2
+```powershell
 Set-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone" -AllowMeetNow $False
 ```
 
@@ -538,7 +538,8 @@ Accept wildcard characters: False
 ### -AllowAnonymousUsersToDialOut
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
 
-Note: This parameter is temporarily disabled.
+> [!NOTE]
+> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean
@@ -619,7 +620,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether meeting organizers are allowed to download the attendee engagement report. Possible values are:
+
+- Enabled: allow the meeting organizer to download the report.
+- Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+
+If set to enabled, only meeting organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
 
 ```yaml
 Type: String
@@ -907,6 +913,7 @@ Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
