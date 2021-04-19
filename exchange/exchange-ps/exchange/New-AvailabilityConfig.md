@@ -44,7 +44,24 @@ This example creates a new availability configuration. The existing account name
 ## PARAMETERS
 
 ### -OrgWideAccount
-The OrgWideAccount parameter specifies an account or security group that has permission to issue proxy Availability service requests on an organization-wide basis.
+The OrgWideAccount parameter specifies who has permission to issue proxy Availability service requests on an organization-wide basis. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users with a Microsoft account
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter

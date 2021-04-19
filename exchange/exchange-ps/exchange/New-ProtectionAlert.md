@@ -464,7 +464,7 @@ Accept wildcard characters: False
 ### -Operation
 The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-You can specify multiple values separated by commas.
+Although this parameter is technically capable of accepting multiple values separated by commas, multiple values don't work.
 
 You can only use this parameter when the ThreatType parameter has the value Activity.
 
