@@ -71,7 +71,11 @@ Accept wildcard characters: False
 ### -AccessRights
 This parameter is available only in Exchange Server 2010.
 
-The AccessRights parameter specifies the rights being removed. This parameter accepts the following values:
+The AccessRights parameter specifies the rights that you want to remove from the user on the public folder.
+
+You can specify individual folder permissions or roles, which are combinations of permissions. You can specify multiple permissions and roles separated by commas.
+
+The following individual permissions are available:
 
 - ReadItems: The user has the right to read items within the specified public folder.
 - CreateItems: The user has the right to create items within the specified public folder.
