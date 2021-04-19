@@ -18,7 +18,6 @@ This cmdlet lets you provision a new team template for use in Microsoft Teams. L
 
 NOTE: The response is a PowerShell object formatted as a JSON for readability. Please refer to the examples for suggested interaction flows for template management.
 
-
 ## SYNTAX
 
 ### NewExpanded (Default)
