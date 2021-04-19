@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer: navgupta
@@ -19,7 +20,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> The required `2.0.3` version of the EXO V2 module for this feature is now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> The features and procedures described in this article require version 2.0.3 or later of the EXO V2 module. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -53,7 +54,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 >
 > - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 >
-> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth#exchange).
+> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
 
 ## How does it work?
 
@@ -61,7 +62,7 @@ The EXO V2 module uses the Active Directory Authentication Library to fetch an a
 
 ## Set up app-only authentication
 
-An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
 
 For a detailed visual flow about creating applications in Azure AD, see <https://aka.ms/azuread-app>.
 
@@ -100,7 +101,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 ## Step 1: Register the application in Azure AD
 
-**Note**: If you encounter problems, check the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
+**Note**: If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
 1. Open the Azure AD portal at <https://portal.azure.com/>.
 
@@ -124,7 +125,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
-     Note that you can't create credentials for [native applications](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
+     Note that you can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
      ![Register an application](media/exo-app-only-auth-register-app.png)
 
@@ -134,7 +135,8 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 ## Step 2: Assign API permissions to the application
 
-You need to assign the API permission `Exchange.ManageAsApp` so the application can manage Exchange Online. API permissions are required because they have consent flow enabled, which allows auditing (directory roles don't have consent flow).
+> [!NOTE]
+> The procedures in this section replace any default permissions that were automatically configured for the new app. The app doesn't need the default permissions that were replaced.
 
 1. On the app page under **Management**, select **Manifest**.
 
@@ -184,14 +186,14 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default).
+- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
 
   ```powershell
   # Create certificate
   $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
   # Export certificate to .pfx file
-  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@s$w0rd1234" -AsPlainText -Force)
+  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@ssw0Rd1234" -AsPlainText -Force)
 
   # Export certificate to .cer file
   $mycert | Export-Certificate -FilePath mycert.cer
@@ -205,7 +207,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 ## Step 4: Attach the certificate to the Azure AD application
 
-After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
+After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
 
 1. On the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
 
@@ -249,7 +251,7 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Exchange administrator
 - Global Reader
 
-For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/roles/manage-roles-portal).
+For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](/azure/active-directory/roles/manage-roles-portal).
 
 1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 

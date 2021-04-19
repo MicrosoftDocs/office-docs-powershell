@@ -117,7 +117,7 @@ A valid value for this parameter is a supported culture code value from the Micr
 Type: CultureInfo
 Parameter Sets: Localized
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: Named

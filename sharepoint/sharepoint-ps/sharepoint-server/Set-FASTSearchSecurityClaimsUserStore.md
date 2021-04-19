@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecurityclaimsuserstore
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
@@ -31,7 +31,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "Sharepoint Users"
+Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "SharePoint Users"
 ```
 
 This example updates the description of the "clm" claims user store.

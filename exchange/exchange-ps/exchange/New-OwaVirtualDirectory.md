@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-OwaVirtualDirectory
- [[-ApplicationRoot <String>]
+ [-ApplicationRoot <String>]
  [-AppPoolId <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 

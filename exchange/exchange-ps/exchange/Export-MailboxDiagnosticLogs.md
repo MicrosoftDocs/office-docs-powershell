@@ -27,6 +27,7 @@ Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentN
  [-Confirm]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
+ [-IncludeInactiveMailboxes]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-WhatIf]
@@ -41,6 +42,7 @@ Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter>
  [-Confirm]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
+ [-IncludeInactiveMailboxes]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-WhatIf]
@@ -213,6 +215,26 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeInactiveMailboxes
+This parameter is available only in the cloud-based service.
+
+The IncludeInactiveMailboxes switch specifies whether to include inactive mailboxes in the results. You don't need to specify a value with this switch.
+
+An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

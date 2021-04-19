@@ -103,6 +103,7 @@ If you use the UserPrincipalName parameter, you don't need to use the AzureADAut
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: 1

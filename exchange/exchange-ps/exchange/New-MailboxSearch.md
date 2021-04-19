@@ -121,8 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllPublicFolderSources
-This parameter is available only in on-premises Exchange.
-
 The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
 
 - $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $false and you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
@@ -132,7 +130,7 @@ The AllPublicFolderSources parameter specifies whether to include all public fol
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -142,8 +140,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllSourceMailboxes
-This parameter is available only in on-premises Exchange.
-
 The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
 
 - $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $false and you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
@@ -153,7 +149,7 @@ The AllSourceMailboxes parameter specifies whether to include all mailboxes in t
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -216,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotIncludeArchive
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The DoNotIncludeArchive parameter specifies whether archive mailboxes are included in the search. By default, archive mailboxes are included in the search. To exclude archive mailboxes, set the DoNotIncludeArchive parameter to $true.
 
@@ -482,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchDumpster
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
 

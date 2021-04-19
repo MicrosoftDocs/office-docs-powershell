@@ -25,10 +25,12 @@ New-ComplianceRetentionEvent -Name <String>
  [-AssetId <String>]
  [-Comment <String>]
  [-Confirm]
+ [-DomainController <Fqdn>]
  [-EventDateTime <DateTime>]
  [-EventTags <MultiValuedProperty>]
  [-EventType <ComplianceRuleIdParameter>]
  [-ExchangeAssetIdQuery <String>]
+ [-PreviewOnly]
  [-SharePointAssetIdQuery <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -123,6 +125,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventDateTime
 The EventDateTime parameter specifies the date-time of the event.
 
@@ -180,6 +198,22 @@ The ExchangeAssetIdQuery parameter specifies the keywords that are used to scope
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewOnly
+{{ Fill PreviewOnly Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

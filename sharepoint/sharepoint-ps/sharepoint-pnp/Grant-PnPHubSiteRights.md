@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnphubsiterights
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Grant-PnPHubSiteRights
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Grant-PnPHubSiteRights.html
 ---
-
+ 
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Grant-PnPHubSiteRights.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,17 +21,20 @@ title: Grant-PnPHubSiteRights
 
 Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Grant-PnPHubSiteRights [-Connection <PnPConnection>]
+Grant-PnPHubSiteRights [-Identity] <HubSitePipeBind> -Principals <String[]> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com"
+Grant-PnPHubSiteRights -Identity "https://contoso.sharepoint.com/sites/hubsite" -Principals "myuser@mydomain.com","myotheruser@mydomain.com"
 ```
 
 This example shows how to grant rights to myuser and myotheruser to associate their sites with the provided Hub Site
@@ -42,9 +50,41 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+{{ Fill Identity Description }}
+
+```yaml
+Type: HubSitePipeBind
+Parameter Sets: (All)
+Aliases: HubSite
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Principals
+{{ Fill Principals Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

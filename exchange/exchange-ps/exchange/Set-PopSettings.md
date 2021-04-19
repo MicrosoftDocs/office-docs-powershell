@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarItemRetrievalOption
-The CalendarItemRetrievalOption parameter specifies how calendar items are presented to POP3 clients.. Valid values are:
+The CalendarItemRetrievalOption parameter specifies how calendar items are presented to POP3 clients. Valid values are:
 
 - 0 or iCalendar. This is the default value.
 - 1 or IntranetUrl.

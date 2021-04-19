@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/upgrade-distributiongroup
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Upgrade-DistributionGroup
 schema: 2.0.0
 author: chrisda
@@ -70,7 +70,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ This parameter is reserved for internal Microsoft use.
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

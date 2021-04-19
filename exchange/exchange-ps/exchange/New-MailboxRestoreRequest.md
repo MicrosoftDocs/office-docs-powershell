@@ -16,43 +16,13 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
+The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inactive mailbox](https://docs.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### MailboxLocationIDMigrationLocalMailboxRestore
-```
-New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
- [-AcceptLargeDataLoss]
- [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <FAICopyOption>]
- [-BadItemLimit <Unlimited>]
- [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm]
- [-ConflictResolutionOption <ConflictResolutionOption>]
- [-DomainController <Fqdn>]
- [-ExcludeDumpster]
- [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>]
- [-LargeItemLimit <Unlimited>]
- [-Name <String>]
- [-Priority <RequestPriority>]
- [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>]
- [-SourceRootFolder <String>]
- [-Suspend]
- [-SuspendComment <String>]
- [-TargetIsArchive]
- [-TargetRootFolder <String>]
- [-TargetType <TargetTypeComponent>]
- [-WhatIf]
- [-WorkloadType <RequestWorkloadType>]
- [<CommonParameters>]
-```
-
-### MailboxIDMigrationLocalMailboxRestore
+### Default
 ```
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
@@ -60,34 +30,55 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
  [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>]
- [-LargeItemLimit <Unlimited>]
  [-MRSServer <Fqdn>]
  [-Name <String>]
  [-Priority <RequestPriority>]
- [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
- [-Suspend]
  [-SuspendComment <String>]
+ [-Suspend]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### CrossTenantRestore
+```
+New-MailboxRestoreRequest -SourceEndpoint <MigrationEndpointIdParameter> -SourceExchangeGuid <Guid> -SourceTenant <SmtpDomain> -TargetMailbox <MailboxLocationIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-CrossTenantRestore]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
+ [-SourceRootFolder <String>]
+ [-SuspendComment <String>]
+ [-Suspend]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
  [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
-### MailboxLocationIDRemoteMailboxRestore
+### MigrationLocalMailboxRestore
 ```
-New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <RemoteRestoreType> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
+New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter>>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
  [-AssociatedMessagesCopyOption <FAICopyOption>]
@@ -117,7 +108,39 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
  [<CommonParameters>]
 ```
 
-### MailboxIDRemoteMailboxRestore
+### RemoteMailboxRestoreMailboxLocationId
+```
+New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-TargetType <TargetTypeComponent>]
+ [-WhatIf]
+ [-WorkloadType <RequestWorkloadType>]
+ [<CommonParameters>]
+```
+
+### RemoteMailboxRestoreMailboxId
 ```
 New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
@@ -149,7 +172,7 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
 
 ### SourceMailbox
 ```
-New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMailbox <MailboxLocationIdParameter>
+New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <RemoteRestoreType> -RemoteCredential <PSCredential> -SourceMailbox <MailboxLocationIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
  [-AssociatedMessagesCopyOption <FAICopyOption>]
@@ -191,7 +214,7 @@ The mailbox won't be marked as Disabled until the Microsoft Exchange Information
 
 Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
 
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Example 1 later in this topic.
+To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this topic.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -199,28 +222,48 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason
+Get-Mailbox -SoftDeletedMailbox "User Name" | Format-List ExchangeGUID
+New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllowLegacyDNMismatch
 ```
 
-To create a restore request, you must provide the DisplayName, LegacyDN, or MailboxGUID for the soft-deleted or disabled mailbox.
-
-This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
+In Exchange Online, this example uses the Get-Mailbox cmdlet to find the ExchangeGUID value of the mailbox, which is required to restore the mailbox contents.
 
 ### Example 2
 ```powershell
+Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyExchangeDN,DisplayName,MailboxGUID, DisconnectReason
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
 
-This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
+In on-premises Exchange, this example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyExchangeDN, and MailboxGUID (valid source mailbox identity values) for all mailboxes in the mailbox database named MBD01 that have a disconnect reason of SoftDeleted or Disabled.
+
+Using this information, the source mailbox with the MailboxGUID value 1d20855f-fd54-4681-98e6-e249f7326ddd is restored to the target mailbox that has the Alias value Ayla.
 
 ### Example 3
 ```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
 
-This example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
+In on-premises Exchange, this example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
 
 ## PARAMETERS
+
+### -CrossTenantRestore
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CrossTenantRestore
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -RemoteCredential
 This parameter is available only in the cloud-based service.
@@ -229,7 +272,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Parameter Sets: SourceMailbox
 Aliases:
 Applicable: Exchange Online
 
@@ -247,7 +290,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
-Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Parameter Sets: SourceMailbox
 Aliases:
 Applicable: Exchange Online
 
@@ -265,7 +308,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Parameter Sets: SourceMailbox
 Aliases:
 Applicable: Exchange Online
 
@@ -283,7 +326,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RemoteRestoreType
-Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Parameter Sets: SourceMailbox
 Aliases:
 Applicable: Exchange Online
 
@@ -305,9 +348,45 @@ The SourceDatabase parameter specifies the identity of the database from which y
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxIDMigrationLocalMailboxRestore
+Parameter Sets: Default, MigrationLocalMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceEndpoint
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: CrossTenantRestore
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceExchangeGuid
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: CrossTenantRestore
+Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -333,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceStoreMailbox
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The SourceStoreMailbox parameter specifies the MailboxGUID of the source mailbox that you want to restore content from.
 
@@ -341,9 +420,27 @@ You can find the MailboxGUID by running the Get-MailboxStatistics cmdlet.
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, MailboxIDRemoteMailboxRestore
+Parameter Sets: Default, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceTenant
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SmtpDomain
+Parameter Sets: CrossTenantRestore
+Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -363,7 +460,7 @@ In Exchange 2013 or earlier, this parameter is the type MailboxOrMailUserIdParam
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore
+Parameter Sets: CrossTenantRestore, RemoteMailboxRestoreMailboxLocationId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -376,7 +473,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: MailboxIDMigrationLocalMailboxRestore, MailboxIDRemoteMailboxRestore
+Parameter Sets: Default, RemoteMailboxRestoreMailboxId
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
 
@@ -490,7 +587,7 @@ The CompletedRequestAgeLimit parameter specifies how long the status of a comple
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
+Parameter Sets: CrossTenantRestore, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -544,7 +641,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -552,7 +649,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -676,7 +773,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 
 ```yaml
 Type: InternalMrsFlag[]
-Parameter Sets: (All)
+Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -703,7 +800,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
+Parameter Sets: CrossTenantRestore, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -715,13 +812,13 @@ Accept wildcard characters: False
 ```
 
 ### -MRSServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: MailboxIDMigrationLocalMailboxRestore
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010
 
@@ -766,7 +863,7 @@ The Priority parameter specifies the order in which the request should be proces
 
 ```yaml
 Type: RequestPriority
-Parameter Sets: (All)
+Parameter Sets: Default, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -791,7 +888,7 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
+Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 
@@ -807,15 +904,16 @@ This parameter is available only in on-premises Exchange.
 
 The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
 
-- FolderRules
 - FolderACLs
+- FolderProperties
+- FolderRules
 - InitialConnectionValidation
 
 Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
 
 ```yaml
 Type: SkippableMergeComponent[]
-Parameter Sets: (All)
+Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -831,7 +929,7 @@ The SourceIsArchive switch specifies that the source mailbox is an archive mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: SourceMailbox
+Parameter Sets: SourceMailboxMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -931,7 +1029,7 @@ The TargetType parameter specifies the type of mailbox that's the target for the
 
 ```yaml
 Type: TargetTypeComponent
-Parameter Sets:  MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
+Parameter Sets: CrossTenantRestore, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -965,7 +1063,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RequestWorkloadType
-Parameter Sets: (All)
+Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
