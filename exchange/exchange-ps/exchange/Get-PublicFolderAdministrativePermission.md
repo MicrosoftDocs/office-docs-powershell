@@ -22,8 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- [-User <SecurityPrincipalIdParameter>]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-User <SecurityPrincipalIdParameter>]
  [-DomainController <Fqdn>]
  [-Server <ServerIdParameter>]
  [<CommonParameters>]
@@ -31,8 +30,7 @@ Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
 
 ### Owner
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- [-Owner]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-Owner]
  [-DomainController <Fqdn>]
  [-Server <ServerIdParameter>]
  [<CommonParameters>]
@@ -101,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies that the command should return only the owner of the public folder.
+The Owner switch returns the owner of the public folder object. You don't need to specify a value with this switch.
+
+You can't use this switch with the User parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +138,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom administrative permissions are sought.
+The User parameter filters the results by who has admin permissions on the specified public folder. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Owner switch.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
