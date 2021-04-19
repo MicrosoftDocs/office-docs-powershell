@@ -898,12 +898,12 @@ Possible values:
 - EveryoneInCompany
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: EveryoneInCompany
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
