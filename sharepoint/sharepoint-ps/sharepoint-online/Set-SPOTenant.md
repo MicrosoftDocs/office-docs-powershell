@@ -99,6 +99,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
  [-IncludeAtAGlanceInShareEmails]
+ [-SyncAadB2BManagementPolicy <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1778,6 +1779,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SyncAadB2BManagementPolicy
+Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://docs.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 
