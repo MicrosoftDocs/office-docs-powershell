@@ -31,7 +31,7 @@ Set-CsConferencingConfiguration [[-Identity] <XdsIdentity>] [-ClientAppSharingPo
  [-HelpdeskExternalUrl <String>] [-HelpdeskInternalUrl <String>] [-MaxBandwidthPerAppSharingServiceMb <UInt64>]
  [-MaxContentStorageMb <UInt16>] [-Organization <String>] [-Force] [-WhatIf] [-Confirm]
  [-MaxUploadFileSizeMb <UInt16>] [-CloudPollServicePrimaryUrl <String>]
- [-CloudPollServiceSecondaryUrl <String>] [<CommonParameters>]
+ [-CloudPollServiceSecondaryUrl <String>] [-EncryptArchivedData <Boolean>] [<CommonParameters>]
 ```
 
 ### Instance
@@ -45,7 +45,7 @@ Set-CsConferencingConfiguration [-Instance <PSObject>] [-ClientAppSharingPort <U
  [-HelpdeskExternalUrl <String>] [-HelpdeskInternalUrl <String>] [-MaxBandwidthPerAppSharingServiceMb <UInt64>]
  [-MaxContentStorageMb <UInt16>] [-Organization <String>] [-Force] [-WhatIf] [-Confirm]
  [-MaxUploadFileSizeMb <UInt16>] [-CloudPollServicePrimaryUrl <String>]
- [-CloudPollServiceSecondaryUrl <String>] [<CommonParameters>]
+ [-CloudPollServiceSecondaryUrl <String>] [-EncryptArchivedData <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -641,6 +641,22 @@ Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptArchivedData
+Boolean flag to turn on/off encryption for a conference’s archived attachments.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
