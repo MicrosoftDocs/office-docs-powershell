@@ -123,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyName
-This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call
+This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call.
+**Preview** The use of the parameter CompanyName is in Preview.
 
 ```yaml
 Type: String
@@ -136,7 +137,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-**Preview** The use of the parameter CompanyName is in Preview.
 
 ### -Confirm
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed. 
@@ -220,6 +220,7 @@ Accept wildcard characters: False
 
 ### -ResourceAccount
 This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/en-us/microsoftteams/manage-resource-accounts
+**Preview** The use of the parameter ResourceAccount is in Preview.
 
 ```yaml
 Type: Guid
@@ -232,7 +233,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-**Preview** The use of the parameter ResourceAccount is in Preview.
 
 ### -ServiceNumber
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
