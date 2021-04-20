@@ -122,6 +122,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompanyName
+This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed. 
 
@@ -202,6 +217,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResourceAccount
+This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/en-us/microsoftteams/manage-resource-accounts
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -ServiceNumber
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
 
@@ -235,36 +266,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -CompanyName
-This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceAccount
-This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/en-us/microsoftteams/manage-resource-accounts
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### -WhatIf
 The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes. 
