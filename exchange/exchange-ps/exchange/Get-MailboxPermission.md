@@ -248,16 +248,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter returns information about the user who has permissions to the mailbox specified by the Identity parameter.
+The User parameter filters the results by who has permissions to the mailbox that's specified by the Identity parameter. You can specify the following types of users or groups (security principals) for this parameter:
 
-The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
 
 - Name
+- Alias
 - Distinguished name (DN)
 - Canonical DN
+- Domain\\Username
+- Email address
 - GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
-You can't use this parameter with the Owner parameter.
+You can't use this parameter with the Owner switch.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

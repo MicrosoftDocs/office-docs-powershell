@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Security & Compliance Center.
+Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Security & Compliance Center for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -51,7 +51,7 @@ This example returns all DLP sensitive information type detections.
 
 ### Example 2
 ```powershell
-Get-DLPSiDetectionsReport -SensitiveType 0e9b3178-9678-47dd-a509-37222ca96b42 -StartDate 4/1/2019 -EndDate 4/8/2019
+Get-DLPSiDetectionsReport -SensitiveType 0e9b3178-9678-47dd-a509-37222ca96b42 -EndDate 4/8/2019
 ```
 
 This example returns detections for the sensitive information type 0e9b3178-9678-47dd-a509-37222ca96b42 (EU Debit Card Number) during the specified date range.
