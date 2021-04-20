@@ -71,7 +71,10 @@ Accept wildcard characters: False
 
 ### -AllowBroadcastTranscription
 
-Specifies whether real-time transcription and translation can be enabled in the broadcast event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+Specifies whether real-time transcription and translation can be enabled in the broadcast event.
+
+> [!NOTE]
+> This setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
 Type: Boolean
