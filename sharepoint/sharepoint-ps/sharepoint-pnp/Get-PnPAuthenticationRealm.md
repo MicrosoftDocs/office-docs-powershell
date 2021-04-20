@@ -10,6 +10,10 @@ title: Get-PnPAuthenticationRealm
 # Get-PnPAuthenticationRealm
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAuthenticationRealm.md to change this file.
+
 Returns the authentication realm
 
 ## SYNTAX

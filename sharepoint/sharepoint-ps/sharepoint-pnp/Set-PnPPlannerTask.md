@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPPlannerTask.html
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPPlannerTask.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API: Group.ReadWrite.All
@@ -22,6 +26,7 @@ Updates an existing task
 ```
 Set-PnPPlannerTask -TaskId <String> [-Title <String>] [-Bucket <PlannerBucketPipeBind>]
  [-PercentComplete <Int32>] [-DueDateTime <DateTime>] [-StartDateTime <DateTime>]
+ [-AssignedTo <String[]
  [<CommonParameters>]
 ```
 
@@ -44,6 +49,12 @@ Set-PnPPlannerTask -TaskId RSNNbc4HM0e7jt-btAKtTZYAFAf0 -Title "New Title" -Buck
 
 This updates the task with the specified id and moves to the bucket "To do"
 
+### Example 3
+```powershell
+Set-PnPPlannerTask -TaskId RSNNbc4HM0e7jt-btAKtTZYAFAf0 -AssignedTo "user@contoso.com","manager@contoso.com"
+```
+
+This updates the task with the specified id replaces the assigned users with the ones specified.
 
 ## PARAMETERS
 
@@ -131,6 +142,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignedTo
+Specify the email(s) of the user to assign the task to. Notice that this will replace existing assignments with the onces specified here.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

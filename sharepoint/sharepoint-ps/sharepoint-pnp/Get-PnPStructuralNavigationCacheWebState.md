@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPStructuralNaviga
 # Get-PnPStructuralNavigationCacheWebState
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPStructuralNavigationCacheWebState.md to change this file.
+
 Get the structural navigation caching state for a web.
 
 ## SYNTAX
@@ -19,7 +23,7 @@ Get-PnPStructuralNavigationCacheWebState [-WebUrl <String>]
 ```
 
 ## DESCRIPTION
-The Get-PnPStructuralNavigationCacheWebState cmdlet can be used to determine if structural navigation caching is enabled or disabled for a web in a site collection. If the WebUrl parameter has not been specified the currently connected to web will be used. [Learn more](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43). 
+The Get-PnPStructuralNavigationCacheWebState cmdlet can be used to determine if structural navigation caching is enabled or disabled for a web in a site collection. If the WebUrl parameter has not been specified the currently connected to web will be used. 
 
 ## EXAMPLES
 

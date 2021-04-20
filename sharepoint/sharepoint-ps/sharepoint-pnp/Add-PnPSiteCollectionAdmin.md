@@ -10,6 +10,10 @@ title: Add-PnPSiteCollectionAdmin
 # Add-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPSiteCollectionAdmin.md to change this file.
+
 Adds one or more users as site collection administrators to the site collection in the current context
 
 ## SYNTAX

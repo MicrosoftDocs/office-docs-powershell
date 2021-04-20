@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTenantSite.html
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTenantSite.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site
@@ -75,10 +79,10 @@ This will add user1@contoso.onmicrosoft.com and user2@contoso.onmicrosoft.com as
 
 ### EXAMPLE 5
 ```powershell
-Set-PnPTenantSite -Identity "https://contoso.sharepoint.com/sites/sales" -NoScriptSite:$false
+Set-PnPTenantSite -Identity "https://contoso.sharepoint.com/sites/sales" -DenyAddAndCustomizePages:$false
 ```
 
-This will enable script support for the site 'https://contoso.sharepoint.com/sites/sales' if disabled.
+This will enable script support for the site 'https://contoso.sharepoint.com/sites/sales'
 
 ## PARAMETERS
 

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Move-PnPItemProxy.html
 # Move-PnPItemProxy
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Move-PnPItemProxy.md to change this file.
+
 Proxy cmdlet for using Move-Item between SharePoint provider and FileSystem provider
 
 ## SYNTAX

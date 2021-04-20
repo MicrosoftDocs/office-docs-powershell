@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPView.html
 # Set-PnPView
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPView.md to change this file.
+
 Change view properties
 
 ## SYNTAX

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Measure-PnPList.html
 # Measure-PnPList
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Measure-PnPList.md to change this file.
+
 Returns statistics on the list object. This may fail on lists larger than the list view threshold
 
 ## SYNTAX

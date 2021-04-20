@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Reset-PnPFileVersion.ht
 # Reset-PnPFileVersion
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Reset-PnPFileVersion.md to change this file.
+
 Resets a file to its previous version
 
 ## SYNTAX

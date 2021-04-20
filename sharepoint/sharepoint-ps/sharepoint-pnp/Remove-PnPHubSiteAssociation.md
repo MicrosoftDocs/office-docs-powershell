@@ -11,11 +11,15 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPHubSiteAssoci
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPHubSiteAssociation.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site
 
-Disconnects a site from a hubsite.
+Removes a hub site association from a site.
 
 ## SYNTAX
 
@@ -24,8 +28,6 @@ Remove-PnPHubSiteAssociation -Site <SitePipeBind> [-Connection <PnPConnection>] 
 ```
 
 ## DESCRIPTION
-Disconnects an site from a hubsite
-
 ## EXAMPLES
 
 ### EXAMPLE 1
@@ -33,7 +35,7 @@ Disconnects an site from a hubsite
 Remove-PnPHubSiteAssociation -Site "https://tenant.sharepoint.com/sites/mysite"
 ```
 
-This example adds the specified site to the hubsite.
+This example removes the hub site association from the specified site.
 
 ## PARAMETERS
 

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Invoke-PnPWebAction.htm
 # Invoke-PnPWebAction
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPWebAction.md to change this file.
+
 Executes operations on web, lists and list items.
 
 ## SYNTAX

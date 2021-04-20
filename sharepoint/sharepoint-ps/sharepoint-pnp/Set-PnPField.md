@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPField.html
 # Set-PnPField
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPField.md to change this file.
+
 Changes one or more properties of a field in a specific list or for the whole web
 
 ## SYNTAX

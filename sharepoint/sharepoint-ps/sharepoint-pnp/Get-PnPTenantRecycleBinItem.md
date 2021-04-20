@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantRecycleBin
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantRecycleBinItem.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site
@@ -24,12 +28,13 @@ Get-PnPTenantRecycleBinItem [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This command will return all the items in the tenant recycle bin for the Office 365 tenant you are connected to. Be sure to connect to the SharePoint Online Admin endpoint (https://yourtenantname-admin.sharepoint.com) in order for this command to work.
+This command will return all the items in the tenant recycle bin for the Office 365 tenant you are connected to. If you are not a SharePoint Tenant Admin connect to the site where you want to manage the recycle bin and use Get-PnPRecycleBinItem.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```powershell
+https://contoso-admin.sharepoint.com
 Get-PnPTenantRecycleBinItem
 ```
 

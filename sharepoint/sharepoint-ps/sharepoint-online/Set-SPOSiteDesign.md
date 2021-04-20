@@ -25,6 +25,7 @@ Set-SPOSiteDesign
   [-WebTemplate <string>]
   [-SiteScripts <SPOSiteScriptPipeBind[]>]
   [-Description <string>]
+  [-ThumbnailUrl <string>]
   [-PreviewImageUrl <string>]
   [-PreviewImageAltText <string>]
   [-IsDefault]
@@ -43,6 +44,7 @@ Set-SPOSiteDesign `
   -Title "Contoso customer tracking - version 2" `
   -WebTemplate "68" `
   -Description "Updated site design for list schema that tracks key customer data in a list" `
+  -ThumbnailUrl "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png" `
   -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
   -PreviewImageAltText "site preview - version 2"
 ```
@@ -120,6 +122,22 @@ Accept wildcard characters: False
 ### -Description
 
 The display description of the site design.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThumbnailUrl
+
+The URL of a thumbnail image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 300 pixels.
 
 ```yaml
 Type: String

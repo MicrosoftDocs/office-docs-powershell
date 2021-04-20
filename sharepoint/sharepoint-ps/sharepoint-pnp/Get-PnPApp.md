@@ -10,6 +10,10 @@ title: Get-PnPApp
 # Get-PnPApp
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPApp.md to change this file.
+
 Returns the available apps from the app catalog
 
 ## SYNTAX

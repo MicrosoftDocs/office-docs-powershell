@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-devicetenantpolicy
-applicable: Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-DeviceTenantPolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-DeviceTenantPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DeviceTenantPolicy cmdlet to view your organization's mobile device tenant policy in the Security & Compliance Center.
 
@@ -53,7 +53,7 @@ The Identity parameter specifies the name of the mobile device tenant policy tha
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1

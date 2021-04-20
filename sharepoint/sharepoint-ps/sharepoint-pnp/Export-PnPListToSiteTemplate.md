@@ -10,6 +10,10 @@ title: Export-PnPListToSiteTemplate
 # Export-PnPListToSiteTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPListToSiteTemplate.md to change this file.
+
 Exports one or more lists to provisioning template
 
 ## SYNTAX

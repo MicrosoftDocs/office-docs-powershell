@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTheme.html
 # Get-PnPTheme
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTheme.md to change this file.
+
 Returns the current theme/composed look of the current web.
 
 ## SYNTAX

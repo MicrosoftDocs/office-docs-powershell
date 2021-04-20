@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Normal
@@ -38,7 +39,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
 - Estimated time to complete: 5 minutes
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Security & Compliance Center](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 - You can use the following versions of Windows:
 
@@ -50,7 +51,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
   - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -62,7 +63,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
   Set-ExecutionPolicy RemoteSigned
   ```
 
-  For more information about execution policies, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+  For more information about execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
@@ -131,7 +132,7 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
+- Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to the Security & Compliance Center.
 
@@ -147,8 +148,8 @@ If you receive errors, check the following requirements:
 
 The cmdlets that you use in this article are Windows PowerShell cmdlets. For more information about these cmdlets, see the following articles.
 
-- [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-- [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-- [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-- [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-- [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
+- [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)
+- [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)
+- [Import-PSSession](/powershell/module/microsoft.powershell.utility/import-pssession)
+- [Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)
+- [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy)

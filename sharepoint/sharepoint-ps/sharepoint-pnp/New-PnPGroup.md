@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/New-PnPGroup.html
 # New-PnPGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPGroup.md to change this file.
+
 Adds group to the Site Groups List and returns a group object
 
 ## SYNTAX

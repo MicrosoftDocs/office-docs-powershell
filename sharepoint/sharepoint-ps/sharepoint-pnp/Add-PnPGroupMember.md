@@ -10,6 +10,10 @@ title: Add-PnPGroupMember
 # Add-PnPGroupMember
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPGroupMember.md to change this file.
+
 Adds a user to a SharePoint group
 
 ## SYNTAX

@@ -11,6 +11,10 @@ title: Get-PnPMicrosoft365GroupOwners
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPMicrosoft365GroupOwners.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All

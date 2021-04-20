@@ -10,6 +10,10 @@ title: Add-PnPTeamsTeam
 # Add-PnPTeamsTeam
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTeamsTeam.md to change this file.
+
 Adds a Teams team to an existing, group connected, site collection
 
 ## SYNTAX

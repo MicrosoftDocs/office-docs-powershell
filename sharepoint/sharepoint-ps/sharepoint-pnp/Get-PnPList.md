@@ -10,6 +10,10 @@ title: Get-PnPList
 # Get-PnPList
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPList.md to change this file.
+
 Returns lists from SharePoint
 
 ## SYNTAX

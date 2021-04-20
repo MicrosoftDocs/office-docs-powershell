@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Register-PnPManagementS
 # Register-PnPManagementShellAccess
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Register-PnPManagementShellAccess.md to change this file.
+
 Registers access to the tenant for the PnP Management Shell Multi-Tenant Azure AD Application
 
 ## SYNTAX
@@ -34,7 +38,19 @@ This cmdlet grants access to the tenant for the PnP Management Shell Multi-Tenan
 Register-PnPManagementShellAccess
 ```
 
-Launches the consent flow to grant the PnP Management Shell Azure AD Application delegate access to the tenant.
+### EXAMPLE 2
+```powershell
+Register-PnPManagementShellAccess -ShowConsentUrl
+```
+
+Launches the consent flow to grant the PnP Management Shell Azure AD Application delegate access to the tenant and also displays the consent URL which can be shared with Azure AD administrators or Global administrators.
+
+### EXAMPLE 3
+```powershell
+Register-PnPManagementShellAccess -ShowConsentUrl -TenantName yourtenant.onmicrosoft.com
+```
+
+Displays the consent URL which can be shared with Azure AD administrators or Global administrators.
 
 ## PARAMETERS
 
@@ -61,6 +77,19 @@ Accepted values: Production, PPE, China, Germany, USGovernment
 Required: False
 Position: Named
 Default value: Production
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantName
+The name of the tenant. Example - ( yourtenant.onmicrosoft.com)
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Show Consent Url
+
+Required: False
+Position: Named
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

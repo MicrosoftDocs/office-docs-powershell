@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Import-PnPTaxonomy.html
 # Import-PnPTaxonomy
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Import-PnPTaxonomy.md to change this file.
+
 Imports a taxonomy from either a string array or a file
 
 ## SYNTAX

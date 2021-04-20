@@ -993,6 +993,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EventsFromEmailConfiguration](Get-EventsFromEmailConfiguration.md)
 
+### [Get-ExternalInOutlook](Get-ExternalInOutlook.md)
+
 ### [Get-FocusedInbox](Get-FocusedInbox.md)
 
 ### [Get-InboxRule](Get-InboxRule.md)
@@ -1118,6 +1120,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-Clutter](Set-Clutter.md)
 
 ### [Set-EventsFromEmailConfiguration](Set-EventsFromEmailConfiguration.md)
+
+### [Set-ExternalInOutlook](Set-ExternalInOutlook.md)
 
 ### [Set-FocusedInbox](Set-FocusedInbox.md)
 
@@ -1830,6 +1834,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpSiDetectionsReport](Get-DlpSiDetectionsReport.md)
 
+### [Get-PolicyConfig](Get-PolicyConfig.md)
+
 ### [Get-PolicyTipConfig](Get-PolicyTipConfig.md)
 
 ### [Import-DlpPolicyCollection](Import-DlpPolicyCollection.md)
@@ -1899,6 +1905,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DlpSensitiveInformationType](Set-DlpSensitiveInformationType.md)
 
 ### [Set-DlpSensitiveInformationTypeRulePackage](Set-DlpSensitiveInformationTypeRulePackage.md)
+
+### [Set-PolicyConfig](Set-PolicyConfig.md)
 
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
 

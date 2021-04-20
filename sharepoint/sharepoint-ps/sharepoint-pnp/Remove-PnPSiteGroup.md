@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPSiteGroup.htm
 # Remove-PnPSiteGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPSiteGroup.md to change this file.
+
 Removes a group from a web.
 
 ## SYNTAX

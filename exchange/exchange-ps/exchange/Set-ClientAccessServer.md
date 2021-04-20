@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogEnabled parameter specifies whether logging is enabled for Information Rights Management (IRM). Valid values are $true or $false. The default value is $true.
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxAge
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxAge parameter specifies the max age for IRM logs. Logs older than the specified value are deleted.
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxDirectorySize
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxDirectorySize parameter specifies the maximum directory size for IRM logs. When the maximum directory size is reached, the server deletes the old log files first.
 
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxFileSize
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxFileSize parameter specifies the maximum size of the IRM log. This value can't be larger than the IrmLogMaxDirectorySize parameter value.
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogPath parameter specifies the location of the IRM log files. The default location is %ExchangeInstallPath%Logging\\IRMLogs.
 
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsOutOfService
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 

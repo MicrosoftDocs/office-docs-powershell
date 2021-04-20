@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPWebhookSubscript
 # Get-PnPWebhookSubscriptions
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPWebhookSubscriptions.md to change this file.
+
 Gets all the Webhook subscriptions of the resource
 
 ## SYNTAX

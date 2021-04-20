@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Restore-PnPRecycleBinIt
 # Restore-PnPRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Restore-PnPRecycleBinItem.md to change this file.
+
 Restores the provided recycle bin item to its original location
 
 ## SYNTAX
@@ -39,10 +43,10 @@ Restores all the items in the first and second stage recycle bins to their origi
 
 ### EXAMPLE 3
 ```powershell
-Restore-PnPRecycleBinItem -All -RowLimit 10000
+Get-PnPRecycleBinItem -RowLimit 10000 | Restore-PnPRecycleBinItem -Force
 ```
 
-Permanently restores up to 10,000 items in the recycle bin
+Permanently restores up to 10,000 items in the recycle bin without asking for confirmation.
 
 ## PARAMETERS
 

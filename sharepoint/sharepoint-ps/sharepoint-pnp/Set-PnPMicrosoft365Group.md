@@ -11,6 +11,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPMicrosoft365Grou
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPMicrosoft365Group.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API: Group.ReadWrite.All
@@ -21,7 +25,7 @@ Sets Microsoft 365 Group properties
 
 ```powershell
 Set-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind> [-DisplayName <String>] [-Description <String>]
- [-Owners <String[]>] [-Members <String[]>] [-IsPrivate] [-GroupLogoPath <String>] [-CreateTeam]
+ [-Owners <String[]>] [-Members <String[]>] [-IsPrivate] [-LogoPath <String>] [-CreateTeam]
  [-HideFromAddressLists <Boolean>] [-HideFromOutlookClients <Boolean>] 
  [<CommonParameters>]
 ```
@@ -109,7 +113,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GroupLogoPath
+### -LogoPath
 The path to the logo file of to set. Logo must be at least 48 pixels wide and may be at most 4 MB in size. Requires Site.ReadWrite.All permissions.
 
 ```yaml

@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteClosure.html
 # Get-PnPSiteClosure
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteClosure.md to change this file.
+
 Get the site closure status of the site which has a site policy applied
 
 ## SYNTAX

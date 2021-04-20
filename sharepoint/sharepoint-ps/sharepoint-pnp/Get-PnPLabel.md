@@ -10,6 +10,10 @@ title: Get-PnPLabel
 # Get-PnPLabel
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPLabel.md to change this file.
+
 Gets the Office 365 retention label/tag of the specified list or library (if applicable)
 
 ## SYNTAX

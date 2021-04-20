@@ -1,6 +1,6 @@
 ---
 Module Name: PnP.PowerShell
-title: Set-PnPStructuralNavigationCacheSiteState
+title: Set-PnPStructuralNavigationCacheWebState
 schema: 2.0.0
 applicable: SharePoint Online
 external help file: PnP.PowerShell.dll-Help.xml
@@ -10,6 +10,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPStructuralNaviga
 # Set-PnPStructuralNavigationCacheWebState
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPStructuralNavigationCacheWebState.md to change this file.
+
 Enable or disable caching for all webs in a site collection.
 
 ## SYNTAX
@@ -19,7 +23,7 @@ Set-PnPStructuralNavigationCacheWebState -IsEnabled <Boolean> [-WebUrl <String>]
 ```
 
 ## DESCRIPTION
-The Set-PnPStructuralNavigationCacheWebtate cmdlet can be used to enable or disable caching for a webs in a site collection. If the WebUrl parameter has not been specified the currently connected to site will be used. [Learn more](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43). 
+The Set-PnPStructuralNavigationCacheWebtate cmdlet can be used to enable or disable caching for a webs in a site collection. If the WebUrl parameter has not been specified the currently connected to site will be used. 
 
 ## EXAMPLES
 

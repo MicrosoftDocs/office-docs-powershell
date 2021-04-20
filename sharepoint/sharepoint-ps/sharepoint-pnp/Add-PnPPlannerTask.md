@@ -11,6 +11,10 @@ title: add-pnpplannertask
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPlannerTask.md to change this file.
+
+
 **Required Permissions**
 
   * Microsoft Graph API: Group.ReadWrite.All
@@ -21,13 +25,12 @@ Adds a new task to a planner bucket
 
 ### By Group
 ```powershell
-Add-PnPPlannerTask -Group <PlannerGroupPipeBind> -Plan <PlannerPlanPipeBind> -Bucket <PlannerBucketPipeBind>
- -Title <String> [<CommonParameters>]
+Add-PnPPlannerTask -Group <PlannerGroupPipeBind> -Plan <PlannerPlanPipeBind> -Bucket <PlannerBucketPipeBind> -Title <String> [-AssignedTo <String[]>]
 ```
 
 ### By Plan Id
 ```powershell
-Add-PnPPlannerTask -Bucket <PlannerBucketPipeBind> -PlanId <String> -Title <String> [<CommonParameters>]
+Add-PnPPlannerTask -Bucket <PlannerBucketPipeBind> -PlanId <String> -Title <String> [-AssignedTo <String[]>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +51,13 @@ Add-PnPPlannerTask -PlanId "QvfkTd1mc02gwxHjHC_43JYABhAy" -Bucket "Todos" -Title
 ```
 
 This cmdlet adds a new task.
+
+### Example 3
+```powershell
+Add-PnPPlannerTask -Group "Marketing" -Plan "Conference Plan" -Bucket "Todos" -Title "Design booth layout" -AssignedTo "user@contoso.com","manager@contoso.com"
+```
+
+This cmdlet adds a new task and assigns to user@contoso.com and manager@contoso.com
 
 
 ## PARAMETERS
@@ -117,6 +127,21 @@ Specify the title of the task
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignedTo
+Specify the email(s) of the user to assign the task to.
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 

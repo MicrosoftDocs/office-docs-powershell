@@ -133,13 +133,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUMCallsFromNonUsers
-The AllowUMCallsFromNonUsers parameter specifies whether to exclude the user from directory searches.
+This parameter is available only in on-premises Exchange.
+
+The AllowUMCallsFromNonUsers parameter specifies whether to exclude the user from Unified Messaging directory searches.
 
 ```yaml
 Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +201,7 @@ You create authentication policies with the New-AuthenticationPolicy cmdlet to b
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -217,7 +219,7 @@ This parameter is available only in the cloud-based service.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -235,7 +237,7 @@ This parameter is available only in the cloud-based service.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -334,6 +336,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
+This parameter is available only in on-premises Exchange.
+
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
@@ -343,7 +347,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -443,7 +447,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -770,7 +774,7 @@ Clearing these attributes might be required in mailbox move and re-licensing sce
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -891,7 +895,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1036,7 +1040,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1098,6 +1102,8 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
+This parameter is available only in on-premises Exchange.
+
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
 - `emailAddress:<integers>`
@@ -1116,7 +1122,7 @@ If you use this syntax, you don't need to specify all of the DTMF map values, an
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1157,7 +1163,7 @@ For more information about priority accounts, see [Manage and monitor priority a
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

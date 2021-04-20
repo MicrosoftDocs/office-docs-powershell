@@ -48,6 +48,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-InternalDsnReportingAuthority <SmtpDomain>]
  [-InternalDsnSendHtml <Boolean>]
  [-InternalSMTPServers <MultiValuedProperty>]
+ [-JournalMessageExpirationDays <Int32>]
  [-JournalingReportNdrTo <SmtpAddress>]
  [-LegacyJournalingMigrationEnabled <Boolean>]
  [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
@@ -106,13 +107,15 @@ To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a
 ## PARAMETERS
 
 ### -Identity
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -397,8 +400,8 @@ Accept wildcard characters: False
 ### -ExternalDsnSendHtml
 The ExternalDsnSendHtml parameter specifies whether external DSN messages should be HTML or plain text. Valid values are:
 
-- $true: DSNs are HTML. This is the default value.
-- $false: DSNs are plain text.
+- $true: External DSNs are HTML. This is the default value.
+- $false: External DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -493,7 +496,7 @@ Accept wildcard characters: False
 ```
 
 ### -HeaderPromotionModeSetting
-The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. Valid values are:
+The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received. Valid values are:
 
 - MustCreate: Exchange creates a named property for each new custom X-header.
 - MayCreate: Exchange creates a named property for each new custom X-header on messages received from authenticated senders. No named properties are created for custom X-headers on messages received from unauthenticated senders.
@@ -608,8 +611,8 @@ Accept wildcard characters: False
 ### -InternalDsnSendHtml
 The InternalDsnSendHtml parameter specifies whether internal DSN messages should be HTML or plain text. Valid values are:
 
-- $true: DSNs are HTML. This is the default value.
-- $false: DSNs are plain text.
+- $true: Internal DSNs are HTML. This is the default value.
+- $false: Internal DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -646,8 +649,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JournalMessageExpirationDays
+This parameter is available only in the cloud-based service.
+
+The JournalMessageExpirationDays parameter extends the number of days that undeliverable journal reports are queued before they expire. A valid value is an integer from 0 to 7. The default value is 0, which means undeliverable journal reports are treated like regular undeliverable messages.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JournalingReportNdrTo
-The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the argument to JournalingReportNdrTo.
+The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter.
 
 ```yaml
 Type: SmtpAddress
@@ -663,7 +684,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyJournalingMigrationEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 will be reformatted by Exchange 2010.
 
