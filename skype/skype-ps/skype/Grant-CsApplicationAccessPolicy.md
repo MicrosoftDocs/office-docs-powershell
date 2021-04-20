@@ -60,20 +60,20 @@ The command shown above assigns the per-user application access policy ASimplePo
 PS C:\> Grant-CsApplicationAccessPolicy -PolicyName "ASimplePolicy" -Global
 ```
 
-The command shown above assigns the per-user application access policy "ASimplePoicy" to all the users in the tenant, except any that have an explicit policy assignment.
+The command shown above assigns the per-user application access policy "ASimplePolicy" to all the users in the tenant, except any that have an explicit policy assignment.
 
 ## PARAMETERS
 
 ### -Identity
 
-Indicates the user (object) ID of the user account to be assigned the per-user application access policy. 
+Indicates the user (object) ID of the user account to be assigned the per-user application access policy. If no Identity is specified application policy is applied on all users in the organization, except any that have an explicit policy assignment.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -PolicyName
 
-Name of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:ASimplePolicy has a PolicyName equal to ASimplePolicy.
+Name of the policy to be assigned. The PolicyName is simply the policy Identity without the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:ASimplePolicy has a PolicyName equal to ASimplePolicy.
 
 ```yaml
 Type: PSListModifier
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Global
 
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. To skip a warning when you do this operation, specify this parameter.
+When you run this cmdlet without specifying a user identity, the policy applies to all users in your tenant,  . To skip a warning when you do this operation, specify this parameter.
 
 ```yaml
 Type: SwitchParameter
