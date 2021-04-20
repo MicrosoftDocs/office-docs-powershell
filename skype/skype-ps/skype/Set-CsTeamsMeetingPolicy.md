@@ -631,7 +631,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether meeting organizers are allowed to download the attendee engagement report. Possible values are:
+
+- Enabled: allow the meeting organizer to download the report.
+- Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+
+If set to enabled, only meeting organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
 
 ```yaml
 Type: String
@@ -904,18 +909,22 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
-This parameter is reserved for internal Microsoft use.
+Possible values:
+
+- Everyone
+- EveryoneInCompany
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
