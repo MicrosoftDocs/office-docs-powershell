@@ -23,6 +23,7 @@ Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string>
 ```
 
 ## DESCRIPTION
+
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode".  Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs what functionality is available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
@@ -79,62 +80,76 @@ The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the correspo
 ## EXAMPLES
 
 ### Example 1: Grant Policy to an individual user
-```
+
+```powershell
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName UpgradeToTeams -Identity mike@contoso.com
 ```
 
 The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  This effectively upgrades the user to Teams only mode. This command will only succeed if the user does not have an on-premises Skype for Business account. 
 
 ### Example 2: Remove Policy for an individual user
-```
+
+```powershell
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName $null -Identity mike@contoso.com
 ```
 
 The above cmdlet removes any policy changes made to user Mike@contoso.com and effectively Inherits the global tenant setting for teams Upgrade. 
 
 ### Example 3: Grant Policy to the entire tenant 
-```
+
+```powershell
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
 To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
 
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
+
 You can get the output on the screen, on CSV or Html format. For Screen Report
-```
+
+```powershell
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 ```
 
 ### Example 5 Get a report on existing TeamsUpgradePolicy users (CSV Report)
-```
+
+```powershell
 $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
 ```
+
 This will create a CSV  file on the Desktop of the current user with the name "TeamsUpgrade.csv"
 
 ### Example 6 Get a report on existing TeamsUpgradePolicy users (HTML Report)
-```
+
+```powershell
 $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
 
 ```
+
 After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
 
 ### Example 7 Get a report on existing TeamsUpgradePolicy users (CSV Report - Oneliner version)
-```
+
+```powershell
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
 ```
+
 This will create a CSV  file on the Desktop of the current user with the name "TeamsUpgrade.csv"
 
 ### Example 8 Get a report on existing TeamsUpgradePolicy users (HTML Report - Oneliner Version)
-```
+
+```powershell
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
 ```
+
 After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
 
 ## PARAMETERS
 
 ### -Identity
+
 The user you want to grant policy to. This can be specified as SIP address, UserPrincipalName, or ObjectId.
 
 ```yaml
@@ -151,6 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
+
 The name of the policy instance.
 
 ```yaml
@@ -167,6 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
+
 Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
 
 ```yaml
@@ -183,6 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateMeetingsToTeams
+
 Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It is not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 
@@ -201,6 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -217,6 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
 Do not use.
 
 ```yaml
