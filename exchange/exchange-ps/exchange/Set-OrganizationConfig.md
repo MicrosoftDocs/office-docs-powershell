@@ -56,6 +56,8 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-CustomerLockboxEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <ModernGroupObjectType>]
+ [-DefaultMinutesToReduceLongEventsBy <Int32>]
+ [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderIssueWarningQuota <Unlimited>]
@@ -398,13 +400,11 @@ In Exchange Online, this example results in meeting updates being auto-processed
 ### -ShortenEventScopeDefault
 This parameter is available only in the cloud-based service
 
-{{ Fill ShortenEventScopeDefault Description }}
+The ShortenEventScopeDefault parameter specifies whether calendar events start late or end early in the organization. Valid values are:
 
-Valid values are:
-
-- None (default value)
-- EndEarly
-- StartLate
+- 0 or None: Calendar events in the organization don't automatically start late or end early. This is the default value.
+- 1 or EndEarly: By default, the end time of all calendar events is reduced by the number of minutes as specified by the values of the DefaultMinutesToReduceLongEventsBy and DefaultMinutesToReduceShortEventsBy parameters.
+- 2 or StartLate: By default, the start time of all calendar events is delayed by the number of minutes as specified by the values of the DefaultMinutesToReduceLongEventsBy and DefaultMinutesToReduceShortEventsBy parameters.
 
 ```yaml
 Type: ShortenEventScopeMode
@@ -1224,6 +1224,48 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: Private
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMinutesToReduceLongEventsBy
+This parameter is available only in the cloud-based service.
+
+The DefaultMinutesToReduceLongEventsBy parameter specifies the number of minutes to reduce calendar events by if the events are 60 minutes or longer. A valid value is an integer from 0 to 29. The default value is 10.
+
+To use this parameter, you also need to include the ShortenEventScopeDefault parameter.
+
+Whether long events start late or end early by the specified number of minutes depends on the value of the ShortenEventScopeDefault parameter (EndEarly or StartLate).
+
+```yaml
+Type: Int32
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMinutesToReduceShortEventsBy
+This parameter is available only in the cloud-based service.
+
+The DefaultMinutesToReduceShortEventsBy parameter specifies the number of minutes to reduce calendar events by if the events are less than 60 minutes long. A valid value is an integer from 0 to 29. The default value is 5.
+
+To use this parameter, you also need to include the ShortenEventScopeDefault parameter.
+
+Whether short events start late or end early by the specified number of minutes depends on the value of the ShortenEventScopeDefault parameter (EndEarly or StartLate).
+
+```yaml
+Type: Int32
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
