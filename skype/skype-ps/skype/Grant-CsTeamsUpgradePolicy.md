@@ -17,7 +17,8 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 
 ## SYNTAX
-```
+
+```powershell
 Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-MigrateMeetingsToTeams] [-Confirm] [<CommonParameters>]
 ```
 
@@ -46,16 +47,22 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 >TeamsUpgradePolicy can be assigned to any Teams user, whether that user have an on-premises account in Skype for Business Server or not. However, **TeamsOnly mode can only be assigned to a user who is already homed in Skype for Business Online**. This is because interop with Skype for Business users and federation as well as Microsoft 365 Phone System functionality are only possible if the user is homed in Skype for Business Online. In addition, you cannot assign TeamsOnly mode as the tenant-wide default if you have any Skype for Business on-premises deployment (which is detected by presence of a lyncdiscover DNS record that points to a location other than Office 365. To make these users TeamsOnly you must first move these users individually to the cloud using `Move-CsUser`.  Once all users have been moved to the cloud, you can [disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid) and then apply TeamsOnly mode at the tenant level to ensure future users are TeamsOnly by default.
 
 
-
-**NOTES:** 
-- TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
-    - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.  
-    - In on-premises with Skype for Business Server, the only available option is to trigger notifications. Skype for Business Server 2015 with CU8 or Skype for Business Server 2019 are required.
-- TeamsUpgradePolicy in Office 365 can be granted to users homed on-premises in hybrid deployments of Skype for Business as follows:
-    - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  To be upgraded to TeamsOnly mode, users must be either homed in Skype for Business Online or have no Skype account anywhere.    
-    - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used. 
-- In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
-- When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+> [!NOTE]
+> - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
+> 
+>     - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.  
+> 
+>     - In on-premises with Skype for Business Server, the only available option is to trigger notifications. Skype for Business Server 2015 with CU8 or Skype for Business Server 2019 are required.
+> 
+> - TeamsUpgradePolicy in Office 365 can be granted to users homed on-premises in hybrid deployments of Skype for Business as follows:
+> 
+>     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  To be upgraded to TeamsOnly mode, users must be either homed in Skype for Business Online or have no Skype account anywhere.    
+> 
+>     - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used. 
+> 
+> - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
+> 
+> - When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 
 When users are in any of the Skype for Business modes (SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings), calling and chat functionality in the Teams app are disabled (but chat in the context of a Teams meeting is still allowed). Similarly, when users are in the SfBOnly or SfBWithTeamsCollab modes, meeting scheduling is disabled. For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
@@ -66,7 +73,8 @@ The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the correspo
 
 `WARNING: The user 'user1@contoso.com' currently has enabled values for: AllowUserChat, AllowPrivateCalling, AllowPrivateMeetingScheduling, AllowChannelMeetingScheduling, however these values will be ignored. This is because you are granting this user TeamsUpgradePolicy with mode=SfBWithTeamsCollab, which causes the Teams client to behave as if they are disabled.`
 
-Please note: These warning messages are not affected by the -WarningAction parameter.
+> [!NOTE]
+> These warning messages are not affected by the -WarningAction parameter.
 
 ## EXAMPLES
 
