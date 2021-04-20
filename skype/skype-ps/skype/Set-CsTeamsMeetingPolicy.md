@@ -18,6 +18,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ## SYNTAX
 
 ### Identity (Default)
+
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
@@ -37,6 +38,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ### Instance
+
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
@@ -56,6 +58,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ## DESCRIPTION
+
 The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
 
 The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing meeting policies that can be assigned to particular users to control Teams features related to meetings.
@@ -72,6 +75,7 @@ This policy will use all the existing values except one: AllowTranscription; in 
 
 
 ### EXAMPLE 2
+
 ```powershell
 Set-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone" -AllowMeetNow $False
 ```
@@ -98,7 +102,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowChannelMeetingScheduling
-Determines whether a user can schedule channel meetings. Set this to TRUE to allow a user to schedule channel meetings. Set this to FALSE to prohibit the user from scheduling channel meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user.
+Determines whether a user can schedule channel meetings. Set this to TRUE to allow a user to schedule channel meetings. Set this to FALSE to prohibit the user from scheduling channel meetings. 
+
+> [!NOTE]
+> This only restricts from scheduling and not from joining a meeting scheduled by another user.
 
 ```yaml
 Type: Boolean
@@ -263,7 +270,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPrivateMeetingScheduling
-Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user.
+Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. 
+
+> [!NOTE]
+> This only restricts from scheduling and not from joining a meeting scheduled by another user.
 
 ```yaml
 Type: Boolean
@@ -536,6 +546,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousUsersToDialOut
+
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
 
 > [!NOTE]
@@ -703,7 +714,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOrganizersToOverrideLobbySettings
-Set this parameter to true to enable Organizers to override lobby settings.
+This parameter has been deprecated and currently has no effect.
 
 ```yaml
 Type: Boolean
