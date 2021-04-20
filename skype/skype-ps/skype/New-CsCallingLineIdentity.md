@@ -136,6 +136,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+**Preview** The use of the parameter CompanyName is in Preview.
 
 ### -Confirm
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed. 
@@ -231,7 +232,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
+**Preview** The use of the parameter ResourceAccount is in Preview.
 
 ### -ServiceNumber
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
