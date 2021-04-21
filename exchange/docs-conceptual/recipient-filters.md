@@ -196,6 +196,8 @@ When creating your own custom OPath filters, consider the following items:
 
   The compatibility of search criteria and the valid characters that you can use to enclose the whole OPath filter are summarized in the following table:
 
+  <br><br>
+
   ****
 
   |Search value|OPath filter <br> enclosed in <br> double quotation marks|OPath filter <br> enclosed in <br> single quotation marks|OPath filter enclosed in <br> braces|
@@ -234,6 +236,8 @@ When creating your own custom OPath filters, consider the following items:
 ## Recipient filter documentation
 
 The following table contains links to articles that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
+
+<br><br>
 
 ****
 

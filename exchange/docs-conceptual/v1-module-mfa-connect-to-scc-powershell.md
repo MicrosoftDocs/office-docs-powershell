@@ -104,6 +104,8 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
 
+     <br><br>
+
      ****
 
      |Microsoft 365 offering|_ConnectionUri_ parameter value|_AzureADAuthorizationEndPointUri_ parameter value|

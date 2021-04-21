@@ -27,6 +27,8 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 The available property sets for the **Get-EXOCasMailbox** cmdlet and the properties they contain are described in the following table:
 
+<br><br>
+
 ****
 
 |PropertySet|Properties|
@@ -55,6 +57,10 @@ For more information, see:
 ## Get-EXOMailbox property sets
 
 The available property sets for the **Get-EXOMailbox** cmdlet and the properties they contain are described in the following table:
+
+<br><br>
+
+****
 
 |PropertySet|Properties|
 |---|---|
@@ -94,6 +100,8 @@ For more information, see:
 
 The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the properties they contain are described in the following table:
 
+<br><br>
+
 ****
 
 |PropertySet|Properties|
@@ -110,6 +118,8 @@ For more information, see:
 ## Get-EXORecipient property sets
 
 The available property sets for the **Get-EXORecipient** cmdlet and the properties they contain are described in the following table:
+
+<br><br>
 
 ****
 
