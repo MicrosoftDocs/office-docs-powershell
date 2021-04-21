@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceAccount
-This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/en-us/microsoftteams/manage-resource-accounts
+This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/microsoftteams/manage-resource-accounts
 **Preview** The use of the parameter ResourceAccount is in Preview.
 
 ```yaml
@@ -306,4 +306,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md) 
 
 [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
-
