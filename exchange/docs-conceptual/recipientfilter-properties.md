@@ -48,7 +48,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
 
-<br><br>
+<br>
 
 ****
 

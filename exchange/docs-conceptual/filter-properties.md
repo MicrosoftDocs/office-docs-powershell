@@ -61,7 +61,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 
 - For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
 
-<br><br>
+<br>
 
 ****
 

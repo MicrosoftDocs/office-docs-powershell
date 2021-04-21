@@ -47,7 +47,7 @@ The Exchange Online cmdlets in the EXO V2 module are meant to replace their olde
 
 The improved Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
 
-<br><br>
+<br>
 
 ****
 
@@ -66,7 +66,7 @@ The improved Exchange Online PowerShell cmdlets that are only available in the E
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
 
-<br><br>
+<br>
 
 ****
 
@@ -79,7 +79,7 @@ The connection-related cmdlets that are available in the EXO V2 module are liste
 
 Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
 
-<br><br>
+<br>
 
 ****
 

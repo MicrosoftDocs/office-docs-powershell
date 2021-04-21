@@ -27,7 +27,7 @@ This article explains these conventions, and also the syntax that's required to 
 
 Exchange PowerShell help follows conventions that indicate what's required or optional, and how to enter parameters and values when you run a command. These command conventions are listed in the following table.
 
-<br><br>
+<br>
 
 ****
 
@@ -111,7 +111,7 @@ If you enclose the string in single quotation marks, the only special character 
 
 The following table shows the valid operators that you can use in an Exchange command. Some of these symbols were also described in the earlier [Command conventions in Exchange PowerShell](#command-conventions-in-exchange-powershell) section. However, these symbols have different meanings when they're used on the command line as operators. For example, the minus sign that's used to indicate a parameter can also be used in a command as a mathematical operator.
 
-<br><br>
+<br>
 
 ****
 
