@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet lets you provision a new team template for use in Microsoft Teams. Learn more about team templates [here](https://docs.microsoft.com/en-us/MicrosoftTeams/get-started-with-teams-templates-in-the-admin-console).
+This cmdlet lets you provision a new team template for use in Microsoft Teams. Learn more about team templates [here](https://docs.microsoft.com/MicrosoftTeams/get-started-with-teams-templates-in-the-admin-console).
 
 ## SYNTAX
 
