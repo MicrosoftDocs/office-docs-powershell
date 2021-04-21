@@ -33,6 +33,8 @@ Generally, you get much better performance in PowerShell cmdlets with server-sid
 
 Although the EXO V2 module supports the majority of filterable attributes, the following attributes are currently not supported for filtering:
 
+<br>
+
 ****
 
 |Cmdlet|Attribute|LDAP Display Name|
