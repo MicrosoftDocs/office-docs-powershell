@@ -18,7 +18,8 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ## SYNTAX
 
 ### Identity (Default)
-```
+
+```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
@@ -37,7 +38,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ### Instance
-```
+
+```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
@@ -56,14 +58,15 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ## DESCRIPTION
+
 The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
 
 The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing meeting policies that can be assigned to particular users to control Teams features related to meetings.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
-```
+### EXAMPLE 1
+```powershell
 Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
@@ -71,8 +74,9 @@ The command shown in Example 1 uses the Set-CsTeamsMeetingPolicy cmdlet to updat
 This policy will use all the existing values except one: AllowTranscription; in this example, meetings for users with this policy can include real time or post meeting captions and transcriptions.
 
 
-### -------------------------- EXAMPLE 2 -------------------------- 
-```
+### EXAMPLE 2
+
+```powershell
 Set-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone" -AllowMeetNow $False
 ```
 
@@ -98,7 +102,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowChannelMeetingScheduling
-Determines whether a user can schedule channel meetings. Set this to TRUE to allow a user to schedule channel meetings. Set this to FALSE to prohibit the user from scheduling channel meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user.
+Determines whether a user can schedule channel meetings. Set this to TRUE to allow a user to schedule channel meetings. Set this to FALSE to prohibit the user from scheduling channel meetings. 
+
+> [!NOTE]
+> This only restricts from scheduling and not from joining a meeting scheduled by another user.
 
 ```yaml
 Type: Boolean
@@ -263,7 +270,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPrivateMeetingScheduling
-Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user.
+Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. 
+
+> [!NOTE]
+> This only restricts from scheduling and not from joining a meeting scheduled by another user.
 
 ```yaml
 Type: Boolean
@@ -536,9 +546,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousUsersToDialOut
+
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
 
-Note: This parameter is temporarily disabled.
+> [!NOTE]
+> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean
@@ -619,7 +631,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether meeting organizers are allowed to download the attendee engagement report. Possible values are:
+
+- Enabled: allow the meeting organizer to download the report.
+- Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+
+If set to enabled, only meeting organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
 
 ```yaml
 Type: String
@@ -697,7 +714,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOrganizersToOverrideLobbySettings
-Set this parameter to true to enable Organizers to override lobby settings.
+This parameter has been deprecated and currently has no effect.
 
 ```yaml
 Type: Boolean
@@ -892,18 +909,22 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
-This parameter is reserved for internal Microsoft use.
+Possible values:
+
+- Everyone
+- EveryoneInCompany
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject

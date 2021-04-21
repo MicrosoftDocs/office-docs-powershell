@@ -130,18 +130,20 @@ All versions of the EXO V2 module are supported in Windows PowerShell 5.1. Power
 The EXO V2 module is supported in the following versions of Windows:
 
 - Windows 10
-- Windows 8.1<sup>3</sup>
+- Windows 8.1<sup>4</sup>
 - Windows Server 2019
 - Windows Server 2016
-- Windows Server 2012 or Windows Server 2012 R2<sup>3</sup>
+- Windows Server 2012 or Windows Server 2012 R2<sup>4</sup>
 - Windows 7 Service Pack 1 (SP1)<sup>1,</sup><sup>2,</sup><sup>3</sup>
 - Windows Server 2008 R2 SP1<sup>1,</sup><sup>2,</sup><sup>3</sup>
 
 <sup>1</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
 
-<sup>2</sup> Windows PowerShell 5.1 on this version of Windows requires the Microsoft .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+<sup>2</sup> This version of Windows doesn't support version 2.0.4 or later of the EXO V2 module. Only version 2.0.3 or earlier is supported.
 
-<sup>3</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
+<sup>3</sup> Windows PowerShell 5.1 on this version of Windows requires the Microsoft .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+
+<sup>4</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
 
 ### Prerequisites for the EXO V2 module
 
