@@ -24,9 +24,7 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 For connection instructions using the EXO V2 module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
-
 - [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md)
-
 - [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
 
 The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
@@ -49,6 +47,8 @@ The Exchange Online cmdlets in the EXO V2 module are meant to replace their olde
 
 The improved Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
 
+<br><br>
+
 ****
 
 |EXO V2 module cmdlet|Older related cmdlet|
@@ -66,6 +66,8 @@ The improved Exchange Online PowerShell cmdlets that are only available in the E
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
 
+<br><br>
+
 ****
 
 |EXO V2 module cmdlet|Older related cmdlet|
@@ -77,14 +79,18 @@ The connection-related cmdlets that are available in the EXO V2 module are liste
 
 Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
 
+<br><br>
+
 ****
 
 |EXO V2 module cmdlet|Comments|
 |---|---|
-|[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|This cmdlet is available in v2.0.4 or later.|
-|[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|This cmdlet is available in v2.0.4 or later.|
-|[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|This cmdlet is being replaced by [Get-UserAnalyticsConfig](/powershell/module/exchange/get-useranalyticsconfig).|
-|[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|This cmdlet is being replaced by [Set-UserAnalyticsConfig](/powershell/module/exchange/set-useranalyticsconfig).|
+|[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
+|[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
+|[Get-OwnerlessGroupPolicy](/powershell/module/exchange/get-ownerlessgrouppolicy)|Available in v2.0.5-Preview1 or later.|
+|[Set-OwnerlessGroupPolicy](/powershell/module/exchange/set-ownerlessgrouppolicy)|Available in v2.0.5-Preview1 or later.|
+|[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Being replaced by [Get-UserAnalyticsConfig](/powershell/module/exchange/get-useranalyticsconfig).|
+|[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Being replaced by [Set-UserAnalyticsConfig](/powershell/module/exchange/set-useranalyticsconfig).|
 |
 
 ## Install and maintain the EXO V2 module
