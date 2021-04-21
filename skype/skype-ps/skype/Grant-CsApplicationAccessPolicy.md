@@ -18,10 +18,14 @@ Assigns a per-user application access policy to one or more users. After assigni
 
 ## SYNTAX
 
-### FileName
+### Identity (Default)
 
 ```
-Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>] [-Global]
+Grant-CsApplicationAccessPolicy [-PolicyName <String>] [-Global]
+```
+### Tenant Wide
+```
+Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>]
 ```
 
 ## DESCRIPTION
