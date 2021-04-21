@@ -66,7 +66,7 @@ The command shown above assigns the per-user application access policy "ASimpleP
 
 ### -Identity
 
-Indicates the user (object) ID of the user account to be assigned the per-user application access policy. If no Identity is specified application policy is applied on all users in the organization, except any that have an explicit policy assignment.
+Indicates the user (object) ID of the user account to be assigned the per-user application access policy. If this parameter is not specified, the application policy is applied to all users in the organization, except any that have an explicit policy assignment.
 
 ```yaml
 Type: UserIdParameter
