@@ -26,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
  [-Recurse]
  [-Server <ServerIdParameter>]
  [-WhatIf]
@@ -106,6 +107,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Mailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill Mailbox Description }}
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Recurse
 The Recurse switch specifies whether all subfolders of the specified folder should be removed. If the Recurse switch isn't specified and the public folder has subfolders, the command doesn't run and an error message is returned.
 
@@ -123,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 

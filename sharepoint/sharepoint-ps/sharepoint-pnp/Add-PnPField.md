@@ -1,89 +1,72 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpfield
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPField.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPField
 ---
-
+  
 # Add-PnPField
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPField.md to change this file.
+
 Add a field
 
-## SYNTAX 
+## SYNTAX
 
-### Add field by XML to list
+### Add field to list (Default)
 ```powershell
-Add-PnPField [-AddToDefaultView [<SwitchParameter>]]
-             [-Required [<SwitchParameter>]]
-             [-Group <String>]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Add-PnPField [-List <ListPipeBind>] -DisplayName <String> -InternalName <String> -Type <FieldType>
+ [-Id <Guid>] [-AddToDefaultView] [-Required] [-Group <String>] [-ClientSideComponentId <Guid>]
+ [-ClientSideComponentProperties <String>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Add field reference to list
 ```powershell
-Add-PnPField -List <ListPipeBind>
-             -Field <FieldPipeBind>
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
-```
-
-### Add field to list
-```powershell
-Add-PnPField -DisplayName <String>
-             -InternalName <String>
-             -Type <FieldType>
-             [-List <ListPipeBind>]
-             [-Id <GuidPipeBind>]
-             [-AddToDefaultView [<SwitchParameter>]]
-             [-Required [<SwitchParameter>]]
-             [-Group <String>]
-             [-ClientSideComponentId <GuidPipeBind>]
-             [-ClientSideComponentProperties <String>]
-             [-Choices <String[]>]
-             [-Formula <String>]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Add-PnPField -List <ListPipeBind> -Field <FieldPipeBind> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Add field to web
 ```powershell
-Add-PnPField -DisplayName <String>
-             -InternalName <String>
-             -Type <FieldType>
-             [-Id <GuidPipeBind>]
-             [-ClientSideComponentId <GuidPipeBind>]
-             [-ClientSideComponentProperties <String>]
-             [-Choices <String[]>]
-             [-Formula <String>]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Add-PnPField -DisplayName <String> -InternalName <String> -Type <FieldType> [-Id <Guid>]
+ [-ClientSideComponentId <Guid>] [-ClientSideComponentProperties <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+### Add field by XML to list
+```powershell
+Add-PnPField [-AddToDefaultView] [-Required] [-Group <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Adds a field to a list or as a site column
+Adds a field (a column) to a list or as a site column. To add a column of type Managed Metadata use the Add-PnPTaxonomyField cmdlet.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPField -Type Calculated -InternalName "C1" -DisplayName "C1" -Formula ="[Title]"
 ```
 
 Adds a new calculated site column with the formula specified
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPField -List "Demo list" -DisplayName "Location" -InternalName "SPSLocation" -Type Choice -Group "Demo Group" -AddToDefaultView -Choices "Stockholm","Helsinki","Oslo"
 ```
 
 This will add a field of type Choice to the list "Demo List".
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
-PS:>Add-PnPField -List "Demo list" -DisplayName "Speakers" -InternalName "SPSSpeakers" -Type MultiChoice -Group "Demo Group" -AddToDefaultView -Choices "Obiwan Kenobi","Darth Vader", "Anakin Skywalker"
+Add-PnPField -List "Demo list" -DisplayName "Speakers" -InternalName "SPSSpeakers" -Type MultiChoice -Group "Demo Group" -AddToDefaultView -Choices "Obiwan Kenobi","Darth Vader", "Anakin Skywalker"
 ```
 
 This will add a field of type Multiple Choice to the list "Demo List". (you can pick several choices for the same item)
@@ -99,155 +82,37 @@ Parameter Sets: Add field to list, Add field by XML to list
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Choices
-Specify choices, only valid if the field type is Choice
-
-```yaml
-Type: String[]
-Parameter Sets: Add field to list
-
-Required: False
-Position: 0
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ClientSideComponentId
 The Client Side Component Id to set to the field
 
-Only applicable to: SharePoint Online
-
 ```yaml
-Type: GuidPipeBind
+Type: Guid
 Parameter Sets: Add field to list, Add field to web
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ClientSideComponentProperties
 The Client Side Component Properties to set to the field
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: String
 Parameter Sets: Add field to list, Add field to web
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -DisplayName
-The display name of the field
-
-```yaml
-Type: String
-Parameter Sets: Add field to list, Add field to web
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Field
-The name of the field, its ID or an actual field object that needs to be added
-
-```yaml
-Type: FieldPipeBind
-Parameter Sets: Add field reference to list
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Formula
-Specify the formula. Only available if the field type is Calculated
-
-```yaml
-Type: String
-Parameter Sets: Add field to list
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Group
-The group name to where this field belongs to
-
-```yaml
-Type: String
-Parameter Sets: Add field to list, Add field by XML to list
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Id
-The ID of the field, must be unique
-
-```yaml
-Type: GuidPipeBind
-Parameter Sets: Add field to list, Add field to web
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -InternalName
-The internal name of the field
-
-```yaml
-Type: String
-Parameter Sets: Add field to list, Add field to web
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -List
-The name of the list, its ID or an actual list object where this field needs to be added
-
-```yaml
-Type: ListPipeBind
-Parameter Sets: Add field to list, Add field reference to list
-
-Required: False
-Position: Named
-Accept pipeline input: True
-```
-
-### -Required
-Switch Parameter if the field is a required field
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Add field to list, Add field by XML to list
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Type
-The type of the field like Choice, Note, MultiChoice. For a complete list of field types visit https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype
-
-```yaml
-Type: FieldType
-Parameter Sets: Add field to list, Add field to web
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -259,25 +124,139 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -DisplayName
+The display name of the field
 
 ```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Add field to list, Add field to web
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Field
+The name of the field, its ID or an actual field object that needs to be added
+
+```yaml
+Type: FieldPipeBind
+Parameter Sets: Add field reference to list
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+The group name to where this field belongs to
+
+```yaml
+Type: String
+Parameter Sets: Add field to list, Add field by XML to list
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Id
+The ID of the field, must be unique
 
-### Microsoft.SharePoint.Client.Field
+```yaml
+Type: Guid
+Parameter Sets: Add field to list, Add field to web
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InternalName
+The internal name of the field
+
+```yaml
+Type: String
+Parameter Sets: Add field to list, Add field to web
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -List
+The name of the list, its ID or an actual list object where this field needs to be added
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: Add field to list
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: Add field reference to list
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Required
+Switch Parameter if the field is a required field
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Add field to list, Add field by XML to list
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+The type of the field like Choice, Note, MultiChoice. For a complete list of field types visit https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype
+
+```yaml
+Type: FieldType
+Parameter Sets: Add field to list, Add field to web
+Accepted values: Invalid, Integer, Text, Note, DateTime, Counter, Choice, Lookup, Boolean, Number, Currency, URL, Computed, Threading, Guid, MultiChoice, GridChoice, Calculated, File, Attachments, User, Recurrence, CrossProjectLink, ModStat, Error, ContentTypeId, PageSeparator, ThreadIndex, WorkflowStatus, AllDayEvent, WorkflowEventType, Geolocation, OutcomeChoice, Location, Thumbnail, MaxItems
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

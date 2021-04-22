@@ -1,22 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/invoke-pnpquery
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Invoke-PnPQuery
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Invoke-PnPQuery.html
 ---
-
+ 
 # Invoke-PnPQuery
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPQuery.md to change this file.
+
 Executes the currently queued actions
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Invoke-PnPQuery [-RetryCount <Int>]
-                [-RetryWait <Int>]
-                [-Connection <PnPConnection>]
+Invoke-PnPQuery [-RetryCount <Int32>] [-RetryWait <Int32>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,14 +27,14 @@ Executes any queued actions / changes on the SharePoint Client Side Object Model
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Invoke-PnPQuery -RetryCount 5
 ```
 
 This will execute any queued actions / changes on the SharePoint Client Side Object Model Context and will retry 5 times in case of throttling.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Invoke-PnPQuery -RetryWait 10
 ```
@@ -39,30 +42,6 @@ Invoke-PnPQuery -RetryWait 10
 This will execute any queued actions / changes on the SharePoint Client Side Object Model Context and delay the execution for 10 seconds before it retries the execution.
 
 ## PARAMETERS
-
-### -RetryCount
-Number of times to retry in case of throttling. Defaults to 10.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -RetryWait
-Delay in seconds. Defaults to 1.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -73,9 +52,40 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryCount
+Number of times to retry in case of throttling. Defaults to 10.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryWait
+Delay in seconds. Defaults to 1.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

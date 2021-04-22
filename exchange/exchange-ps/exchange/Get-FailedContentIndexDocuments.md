@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-FailedContentIndexDocuments
 
 ## SYNOPSIS
-Although this cmdlet is available in on-premises Exchange and in the cloud-based service, it only works in Exchange Server 2016 or earlier.
+This cmdlet is available or functional only in Exchange Server 2016 or earlier.
 
 Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
 
@@ -128,7 +128,7 @@ The MailboxDatabase parameter specifies the database from which to get the mailb
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ The Server parameter specifies a Mailbox server. You can use the following value
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -183,7 +183,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

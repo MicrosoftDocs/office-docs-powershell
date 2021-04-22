@@ -145,6 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAccessServer
+This parameter is available only in Exchange Server 2010
+
 The ClientAccessServer parameter specifies the name of the Client Access server to test. If this parameter is included, all Exchange Outlook Web App virtual directories on the Client Access server are tested against all Exchange Mailbox servers in the local Active Directory site.
 
 Don't use this parameter with the URL parameter.

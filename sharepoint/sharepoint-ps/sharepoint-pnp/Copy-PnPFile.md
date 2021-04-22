@@ -1,132 +1,113 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/copy-pnpfile
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Copy-PnPFile.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Copy-PnPFile
 ---
-
+  
 # Copy-PnPFile
 
 ## SYNOPSIS
-Copies a file or folder to a different location. This location can be within the same document library, same site, same site collection or even to another site collection on the same tenant. Currently there is a 200MB file size limit for the file or folder to be copied.
 
-## SYNTAX 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Copy-PnPFile.md to change this file.
+
+Copies a file or folder to a different location. This location can be within the same document library, same site, same site collection or even to another site collection on the same tenant. Currently there is a 200MB file size limit for the file or folder to be copied. Notice that if copying between sites or to a subsite you cannot specify a target filename, only a folder name.
+
+## SYNTAX
 
 ```powershell
-Copy-PnPFile -SourceUrl <String>
-             -TargetUrl <String>
-             [-OverwriteIfAlreadyExists [<SwitchParameter>]]
-             [-Force [<SwitchParameter>]]
-             [-SkipSourceFolderName [<SwitchParameter>]]
-             [-IgnoreVersionHistory [<SwitchParameter>]]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Copy-PnPFile [-SourceUrl] <String> [-TargetUrl] <String> [-OverwriteIfAlreadyExists] [-Force] [-IgnoreVersionHistory] [-NoWait] [-Connection <PnPConnection>]  
+  [<CommonParameters>]
 ```
 
-### SOURCEURL
-```powershell
-Copy-PnPFile -SourceUrl <String>
-             -TargetUrl <String>
-             [-OverwriteIfAlreadyExists [<SwitchParameter>]]
-             [-Force [<SwitchParameter>]]
-             [-SkipSourceFolderName [<SwitchParameter>]]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
-```
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/MyDocs -TargetUrl /sites/otherproject/Documents -SkipSourceFolderName -OverwriteIfAlreadyExists
+Copy-PnPFile -SourceUrl "Shared Documents/MyProjectfiles" -TargetUrl "/sites/otherproject/Shared Documents" -OverwriteIfAlreadyExists
 ```
 
 Copies a folder named MyDocs in the document library called Documents located in the current site to the root folder of the library named Documents in the site collection otherproject.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-PS:>Copy-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/company.docx" -TargetServerRelativeLibrary "/sites/otherproject/Shared Documents"
+Copy-PnPFile -SourceUrl "/sites/project/Shared Documents/company.docx" -TargetUrl "/sites/otherproject/Shared Documents"
 ```
 
 Copies a file named company.docx located in a document library called Shared Documents in the site collection project to the Shared Documents library in the site collection otherproject. If a file named company.docx already exists, it won't perform the copy.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl /sites/otherproject/Documents/company.docx
+Copy-PnPFile -SourceUrl "Shared Documents/company.docx" -TargetUrl "/sites/otherproject/Shared Documents"
 ```
 
 Copies a file named company.docx located in a document library called Documents in the current site to the site collection otherproject. If a file named company.docx already exists, it won't perform the copy.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
-PS:>Copy-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Archive" -TargetServerRelativeLibrary "/sites/otherproject/Shared Documents" -OverwriteIfAlreadyExists
+Copy-PnPFile -SourceUrl "/sites/project/Shared Documents/Archive" -TargetUrl "/sites/otherproject/Shared Documents" -Overwrite
 ```
 
 Copies a folder named Archive located in a document library called Shared Documents in the site collection project to the Shared Documents library in the site collection otherproject. If a folder named Archive already exists, it will overwrite it.
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl Documents/company2.docx
+Copy-PnPFile -SourceUrl "Documents/company.docx" -TargetUrl "Documents/company2.docx"
 ```
 
 Copies a file named company.docx located in a document library called Documents to a new document named company2.docx in the same library.
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl Documents2/company.docx
+Copy-PnPFile -SourceUrl "Shared Documents/company.docx" -TargetUrl "Shared Documents2/company.docx"
 ```
 
 Copies a file named company.docx located in a document library called Documents to a document library called Documents2 in the same site. 
 
-### ------------------EXAMPLE 7------------------
+### EXAMPLE 7
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl Subsite/Documents/company2.docx
-```
-
-Copies a file named company.docx located in a document library called Documents to the document library named Document in a subsite named Subsite as a new document named company2.docx.
-
-### ------------------EXAMPLE 8------------------
-```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl Subsite/Documents
+Copy-PnPFile -SourceUrl "Shared DocuDocuments/company.docx" -TargetUrl "Subsite/Shared Documents"
 ```
 
 Copies a file named company.docx located in a document library called Documents to the document library named Document in a subsite named Subsite keeping the file name.
 
-### ------------------EXAMPLE 9------------------
+### EXAMPLE 8
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/company.docx -TargetUrl /sites/otherproject/Documents/company.docx -OverwriteIfAlreadyExists
+Copy-PnPFile -SourceUrl "Shared Documents/company.docx" -TargetUrl "/sites/otherproject/Shared Documents" -Overwrite
 ```
 
 Copies a file named company.docx located in a document library called Documents in the current site to the site collection otherproject. If a file named company.docx already exists, it will still perform the copy and replace the original company.docx file.
 
-### ------------------EXAMPLE 10------------------
+### EXAMPLE 9
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/MyDocs -TargetUrl /sites/otherproject/Documents -OverwriteIfAlreadyExists
+Copy-PnPFile -SourceUrl "Shared Documents/MyDocs" -TargetUrl "/sites/otherproject/Documents" -Overwrite
 ```
 
 Copies a folder named MyDocs in the document library called Documents located in the current site to the site collection otherproject. If the MyDocs folder exist it will copy into it, if not it will be created.
 
-### ------------------EXAMPLE 11------------------
+### EXAMPLE 10
 ```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/MyDocs -TargetUrl /sites/otherproject/Documents/MyDocs -SkipSourceFolderName -OverwriteIfAlreadyExists
-```
-
-Copies a folder named MyDocs in the MyDocs folder of the library named Documents. If the MyDocs folder does not exists, it will be created.
-
-### ------------------EXAMPLE 12------------------
-```powershell
-PS:>Copy-PnPFile -SourceUrl Documents/MyDocs -TargetUrl /sites/otherproject/Documents/MyDocs -OverwriteIfAlreadyExists
-```
-
-Copies a folder named MyDocs in the root of the library named Documents. If the MyDocs folder exists in the target, a subfolder also named MyDocs is created.
-
-### ------------------EXAMPLE 13------------------
-```powershell
-PS:>Copy-PnPFile -SourceUrl SubSite1/Documents/company.docx -TargetUrl SubSite2/Documents
+Copy-PnPFile -SourceUrl "SubSite1/Documents/company.docx" -TargetUrl "SubSite2/Documents"
 ```
 
 Copies a file named company.docx in the library named Documents in SubSite1 to the library named Documents in SubSite2.
+
+### EXAMPLE 11
+```powershell
+$job = Copy-PnPFile -SourceUrl "Shared Documents/company.docx" -TargetUrl "SubSite2/Shared Documents" -NoWait
+$jobStatus = Receive-PnPCopyMoveJobStatus -Job $result
+if($jobStatus.JobState == 0)
+{
+  Write-Host "Job finished"
+}
+```
+
+Copies a file named company.docx from the current document library to the documents library in SubSite2. It will not wait for the action to return but returns job information instead. The Receive-PnPCopyMoveJobStatus cmdlet will return the job status.
 
 ## PARAMETERS
 
@@ -139,13 +120,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IgnoreVersionHistory
 If provided, only the latest version of the document will be copied and its history will be discared. If not provided, all historical versions will be copied along.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -153,10 +134,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -OverwriteIfAlreadyExists
+### -Overwrite
 If provided, if a file already exists at the TargetUrl, it will be overwritten. If omitted, the copy operation will be canceled if the file already exists at the TargetUrl location.
 
 ```yaml
@@ -165,36 +148,28 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -SkipSourceFolderName
-If the source is a folder, the source folder name will not be created, only the contents within it
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SourceUrl
-Site or server relative Url specifying the file or folder to copy. Must include the file name if it's a file or the entire path to the folder if it's a folder.
+Site or server relative URL specifying the file or folder to copy. Must include the file name if it is a file or the entire path to the folder if it is a folder.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: SiteRelativeUrl,ServerRelativeUrl
+Aliases: SiteRelativeUrl, ServerRelativeUrl
 
 Required: True
-Position: 0
-Accept pipeline input: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -TargetUrl
-Server relative Url where to copy the file or folder to. Must not include the file name.
+Site or server relative URL where to copy the file or folder to. Must not include the file name.
 
 ```yaml
 Type: String
@@ -203,33 +178,27 @@ Aliases: TargetServerRelativeLibrary
 
 Required: True
 Position: 1
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+### -NoWait
+If specified the task will return immediately after creating the copy job. The cmdlet will return a job object which can be used with Receive-PnPCopyMoveJobStatus to retrieve the status of the job.
 
 ```yaml
-Type: PnPConnection
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -534,7 +534,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named

@@ -27,16 +27,20 @@ New-SafeLinksPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-AllowClickThrough <Boolean>]
  [-Confirm]
+ [-CustomNotificationText <String>]
  [-DeliverMessageAfterScan <Boolean>]
  [-DoNotAllowClickThrough <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-DoNotTrackUserClicks <Boolean>]
  [-EnableForInternalSenders <Boolean>]
+ [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
  [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
+ [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
  [-WhiteListedUrls <String>]
  [<CommonParameters>]
@@ -122,6 +126,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomNotificationText
+{{ Fill CustomNotificationText Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -229,6 +249,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableOrganizationBranding
+{{ Fill EnableOrganizationBranding Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSafeLinksForTeams
 **Note**: As of March 2020, this parameter is in Preview and is available only for members of the Microsoft Teams Technology Adoption Program (TAP).
 
@@ -285,6 +321,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecommendedPolicyType
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+
+```yaml
+Type: RecommendedPolicyType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ScanUrls
 The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
@@ -306,6 +358,22 @@ Accept wildcard characters: False
 
 ### -TrackClicks
 This parameter has been deprecated. Use the DoNotTrackUserClicks parameter instead.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseTranslatedNotificationText
+{{ Fill UseTranslatedNotificationText Description }}
 
 ```yaml
 Type: Boolean

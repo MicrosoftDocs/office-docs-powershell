@@ -63,7 +63,7 @@ This cmdlet returns a Microsoft.Online.SharePoint.Migration. MigrationPackageAzu
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 
 ```powershell
 $azurelocations = Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_TgtPkg -FileContainerUri migration-files -PackageContainerUri migration-package -AccountName migrationstore -AccountKey "nmcXQ+1NctB7BlRVm+8+qWUn6GUFIH7E5ZQPThcjg8SfFWTJ34HthyOEoROwxHYIajpOYxYDt7qUwSEBQlLWoA=="
@@ -71,7 +71,7 @@ $azurelocations = Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\sh
 
 This example creates migration package containers in Azure storage using the supplied account credentials, uploads the package files into them, snapshots the files and lastly returns the connection strings to a PowerShell variable.
 
-### -----------------------EXAMPLE 2-----------------------------
+### EXAMPLE 2
 
 ```powershell
 Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_TgtPkg -MigrationPackageAzureLocations $azurelocations -AccountName migrationstore -AccountKey "nmcXQ+1NctB7BlRVm+8+qWUn6GUFIH7E5ZQPThcjg8SfFWTJ34HthyOEoROwxHYIajpOYxYDt7qUwSEBQlLWoA==" -NoUpload
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -EncryptionParameters
 
-PARAMVALUE: EncryptionParameters
+An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
 
 ```yaml
 Type: EncryptionParameters
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -MigrationSourceLocations
 
-PARAMVALUE: MigrationPackageLocation
+Possible Source locations to migrate.
 
 ```yaml
 Type: MigrationPackageLocation

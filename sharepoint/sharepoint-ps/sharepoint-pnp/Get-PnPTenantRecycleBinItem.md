@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantrecyclebinitem
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenantRecycleBinItem
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantRecycleBinItem.html
 ---
-
+ 
 # Get-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantRecycleBinItem.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,19 +21,20 @@ title: Get-PnPTenantRecycleBinItem
 
 Returns all modern and classic site collections in the tenant scoped recycle bin
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTenantRecycleBinItem [-Connection <PnPConnection>]
+Get-PnPTenantRecycleBinItem [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This command will return all the items in the tenant recycle bin for the Office 365 tenant you are connected to. Be sure to connect to the SharePoint Online Admin endpoint (https://yourtenantname-admin.sharepoint.com) in order for this command to work.
+This command will return all the items in the tenant recycle bin for the Office 365 tenant you are connected to. If you are not a SharePoint Tenant Admin connect to the site where you want to manage the recycle bin and use Get-PnPRecycleBinItem.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
+https://contoso-admin.sharepoint.com
 Get-PnPTenantRecycleBinItem
 ```
 
@@ -45,13 +51,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-## OUTPUTS
-
-### Microsoft.Online.SharePoint.TenantAdministration.DeletedSiteProperties
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

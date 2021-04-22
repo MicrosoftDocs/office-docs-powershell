@@ -1,32 +1,32 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptracelog
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTraceLog
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTraceLog.html
 ---
-
+ 
 # Set-PnPTraceLog
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTraceLog.md to change this file.
+
 Turn log tracing on or off
 
-## SYNTAX 
+## SYNTAX
 
 ### On
 ```powershell
-Set-PnPTraceLog -On [<SwitchParameter>]
-                [-LogFile <String>]
-                [-WriteToConsole [<SwitchParameter>]]
-                [-Level <LogLevel>]
-                [-Delimiter <String>]
-                [-IndentSize <Int>]
-                [-AutoFlush <Boolean>]
+Set-PnPTraceLog [-On] [-LogFile <String>] [-WriteToConsole] [-Level <LogLevel>] [-Delimiter <String>]
+ [-IndentSize <Int32>] [-AutoFlush <Boolean>] [<CommonParameters>]
 ```
 
 ### Off
 ```powershell
-Set-PnPTraceLog -Off [<SwitchParameter>]
+Set-PnPTraceLog [-Off] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,28 +34,28 @@ Defines if tracing should be turned on. PnP Core, which is the foundation of the
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPTraceLog -On -LogFile traceoutput.txt
 ```
 
 This turns on trace logging to the file 'traceoutput.txt' and will capture events of at least 'Information' level.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPTraceLog -On -LogFile traceoutput.txt -Level Debug
 ```
 
 This turns on trace logging to the file 'traceoutput.txt' and will capture debug events.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPTraceLog -On -LogFile traceoutput.txt -Level Debug -Delimiter ","
 ```
 
 This turns on trace logging to the file 'traceoutput.txt' and will write the entries as comma separated. Debug events are captured.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPTraceLog -Off
 ```
@@ -73,7 +73,9 @@ Parameter Sets: On
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Delimiter
@@ -85,19 +87,23 @@ Parameter Sets: On
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IndentSize
 Indents in the tracelog will be with this amount of characters. Defaults to 4.
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: On
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Level
@@ -106,10 +112,13 @@ The level of events to capture. Possible values are 'Debug', 'Error', 'Warning',
 ```yaml
 Type: LogLevel
 Parameter Sets: On
+Accepted values: Debug, Error, Warning, Information
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LogFile
@@ -121,7 +130,9 @@ Parameter Sets: On
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Off
@@ -133,7 +144,9 @@ Parameter Sets: Off
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -On
@@ -145,7 +158,9 @@ Parameter Sets: On
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -WriteToConsole
@@ -157,9 +172,12 @@ Parameter Sets: On
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

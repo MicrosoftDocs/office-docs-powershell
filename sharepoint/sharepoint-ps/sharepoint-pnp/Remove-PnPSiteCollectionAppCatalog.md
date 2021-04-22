@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitecollectionappcatalog
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPSiteCollectionAppCatalog
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPSiteCollectionAppCatalog.html
 ---
-
+ 
 # Remove-PnPSiteCollectionAppCatalog
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPSiteCollectionAppCatalog.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,11 +21,10 @@ title: Remove-PnPSiteCollectionAppCatalog
 
 Removes a Site Collection scoped App Catalog from a site
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
-                                   [-Connection <PnPConnection>]
+Remove-PnPSiteCollectionAppCatalog -Site <SitePipeBind> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +32,7 @@ Notice that this will not remove the App Catalog list and its contents from the 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/FinanceTeamsite"
 ```
@@ -36,18 +40,6 @@ Remove-PnPSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/F
 This will remove a SiteCollection app catalog from the specified site
 
 ## PARAMETERS
-
-### -Site
-Url of the site to remove the app catalog from.
-
-```yaml
-Type: SitePipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -58,9 +50,26 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Site
+Url of the site to remove the app catalog from.
+
+```yaml
+Type: SitePipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

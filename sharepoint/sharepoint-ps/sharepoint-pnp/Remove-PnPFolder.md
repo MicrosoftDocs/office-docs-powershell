@@ -1,37 +1,40 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpfolder
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPFolder
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPFolder.html
 ---
-
+ 
 # Remove-PnPFolder
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPFolder.md to change this file.
+
 Deletes a folder within a parent folder
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPFolder -Name <String>
-                 -Folder <String>
-                 [-Recycle [<SwitchParameter>]]
-                 [-Force [<SwitchParameter>]]
-                 [-Web <WebPipeBind>]
-                 [-Connection <PnPConnection>]
+Remove-PnPFolder -Name <String> -Folder <String> [-Recycle] [-Force] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage
 ```
 
 Removes the folder 'NewFolder' from '_catalogsmasterpage'
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage -Recycle
 ```
@@ -39,6 +42,20 @@ Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage -Recycle
 Removes the folder 'NewFolder' from '_catalogsmasterpage' and is saved in the Recycle Bin
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Folder
 The parent folder in the site
@@ -49,11 +66,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
-
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +79,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Name
@@ -73,11 +93,12 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Recycle
-
 
 ```yaml
 Type: SwitchParameter
@@ -85,33 +106,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

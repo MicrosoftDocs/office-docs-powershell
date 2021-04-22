@@ -2,7 +2,10 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md","**/**.yml"],
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
         "src": "docs-conceptual",
         "version": "sharepoint-ps",
         "dest": "sharepoint",
@@ -12,27 +15,36 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "sharepoint-ps",
         "dest": "sharepoint/sharepoint-ps"
       },
       {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module/sharepoint-ps"
-    }
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "sharepoint-ps",
+        "version": "sharepoint-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "sharepoint-ps",
+        "version": "sharepoint-ps",
+        "dest": "module/sharepoint-ps"
+      }
     ],
     "resource": [
       {
@@ -54,23 +66,27 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "pamgreen-msft",
-      "ms.author" : "pamgreen",
-      "manager" : "pamgreen",
-      "ms.date" : "11/28/2017",
-      "ms.topic" : "reference",
-      "ms.devlang" : "powershell",
+      "author": "pamgreen-msft",
+      "ms.author": "pamgreen",
+      "manager": "pamgreen",
+      "ms.date": "11/28/2017",
+      "ms.topic": "reference",
+      "products": [
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/9d7be3ef-f27c-4c7f-9eba-67c3cd429995",
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+      ],
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
-      "ms.service":{
-        "sharepoint-ps/sharepoint-online/*.yml":"sharepoint-powershell",
-        "sharepoint-ps/sharepoint-pnp/*.yml":"sharepoint-powershell"
+      "ms.service": {
+        "sharepoint-ps/sharepoint-online/*.yml": "sharepoint-powershell",
+        "sharepoint-ps/sharepoint-pnp/*.yml": "sharepoint-powershell"
       },
-      "ms.prod":{
-        "sharepoint-ps/sharepoint-server/*.yml":"sharepoint-2016-powershell"
+      "ms.prod": {
+        "sharepoint-ps/sharepoint-server/*.yml": "sharepoint-2016-powershell"
       }
     },
     "template": [],

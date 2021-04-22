@@ -1,32 +1,39 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsequence
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPTenantSequence
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPTenantSequence.html
 ---
-
+ 
 # New-PnPTenantSequence
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPTenantSequence.md to change this file.
+
 Creates a new tenant sequence object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPTenantSequence [-Id <String>]
+New-PnPTenantSequence [-Id <String>]   [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $sequence = New-PnPTenantSequence
 ```
 
 Creates a new instance of a tenant sequence object.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 $sequence = New-PnPTenantSequence -Id "MySequence"
 ```
@@ -35,18 +42,51 @@ Creates a new instance of a tenant sequence object and sets the Id to the value 
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Id
 Optional Id of the sequence
 
 ```yaml
 Type: String
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
