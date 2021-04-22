@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-MapiVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
+ [-ShowMailboxVirtualDirectories]
  [<CommonParameters>]
 ```
 
@@ -33,6 +34,7 @@ Get-MapiVirtualDirectory -Server <ServerIdParameter>
 Get-MapiVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
+ [-ShowMailboxVirtualDirectories]
  [<CommonParameters>]
 ```
 
@@ -137,6 +139,28 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowMailboxVirtualDirectories
+This parameter is available only in Exchange Server 2013.
+
+The ShowMailboxVirtualDirectories switch shows information about backend virtual directories on Mailbox servers. You don't need to specify a value with this switch.
+
+By default, this cmdlet shows information about virtual directories in the Client Access services on Mailbox servers. Client connections are proxied from the Client Access services on Mailbox servers to the backend services on Mailbox servers. Clients don't connect directly to the backend services.
+
+We recommend that you use this parameter only under the direction of Microsoft Customer Service and Support.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named

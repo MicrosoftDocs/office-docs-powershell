@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 
@@ -208,6 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
+This parameter is available or functional only in on-premises Exchange.
+
 The Mailbox parameter filters the results by the destination mailbox where the content is being imported to.
 
 In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
@@ -244,7 +246,7 @@ Accept wildcard characters: False
 Type: MailboxLocationIdParameter
 Parameter Sets: MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

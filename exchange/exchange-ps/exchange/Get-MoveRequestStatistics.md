@@ -37,6 +37,7 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 ```
 Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
  [-DiagnosticInfo <String>]
+ [-DiagnosticOnly]
  [-IncludeReport]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-ReportOnly]
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSInstance
-This parameter is available or functional only in on-premises Exchange Server 2010.
+This parameter is available only in on-premises Exchange Server 2010.
 
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
@@ -228,6 +229,24 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticOnly
+This parameter is available only in the cloud-based service.
+
+{{ Fill DiagnosticOnly Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online

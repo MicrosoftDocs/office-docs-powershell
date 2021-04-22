@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-casmailbox
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-CASMailbox
 schema: 2.0.0
 author: chrisda
@@ -33,7 +33,6 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-ECPEnabled <Boolean>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmwsEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -125,7 +124,7 @@ The Identity parameter specifies the mailbox that you want to configure. You can
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -269,7 +268,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -364,27 +363,6 @@ Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmwsEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
-The EmwsEnabled parameter enables or disables access to the mailbox using the Exchange Management Web Service. Valid values are:
-
-- $true: Access to the mailbox using EMWS is enabled.
-- $false: Access to the mailbox using EMWS is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -539,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -HasActiveSyncDevicePartnership
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The HasActiveSyncDevicePartnership parameter specifies whether the mailbox has an Exchange ActiveSync device partnership established. Valid values are:
 
@@ -721,7 +699,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsOptimizedForAccessibility
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
@@ -732,7 +710,7 @@ The IsOptimizedForAccessibility parameter specifies whether the mailbox is confi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -747,7 +725,7 @@ This parameter is available only in the cloud-based service.
 The MacOutlookEnabled parameter enables or disables access to the mailbox using Outlook for Mac clients that use Microsoft Sync technology. Valid values are:
 
 - $true: Access to the mailbox using Outlook for Mac clients is enabled. This is the default value.
-- $false: Access to the mailbox using Outlook for Mac clients is disabled..
+- $false: Access to the mailbox using Outlook for Mac clients is disabled.
 
 Access for older Outlook for Mac clients that use Exchange Web Services is controlled by the EwsAllowMacOutlook parameter.
 
@@ -1284,7 +1262,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

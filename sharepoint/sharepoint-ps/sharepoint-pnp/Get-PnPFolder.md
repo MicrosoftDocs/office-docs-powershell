@@ -1,37 +1,33 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfolder
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFolder.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPFolder
 ---
-
+  
 # Get-PnPFolder
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFolder.md to change this file.
+
 Return a folder object
 
-## SYNTAX 
-
-### 
-```powershell
-Get-PnPFolder [-Includes <String[]>]
-              [-Web <WebPipeBind>]
-              [-Connection <PnPConnection>]
-```
+## SYNTAX
 
 ### Folder By Url
 ```powershell
-Get-PnPFolder -Url <String>
-              [-Web <WebPipeBind>]
-              [-Connection <PnPConnection>]
+Get-PnPFolder [-Url] <String> [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
 ### Folders In List
 ```powershell
-Get-PnPFolder -List <ListPipeBind>
-              [-Web <WebPipeBind>]
-              [-Connection <PnPConnection>]
+Get-PnPFolder [-List] <ListPipeBind> [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,21 +35,21 @@ Retrieves a folder if it exists or all folders inside a provided list or library
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPFolder -Url "Shared Documents"
 ```
 
 Returns the folder called 'Shared Documents' which is located in the root of the current web
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPFolder -Url "/sites/demo/Shared Documents"
 ```
 
 Returns the folder called 'Shared Documents' which is located in the root of the current web
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPFolder -List "Shared Documents"
 ```
@@ -62,16 +58,18 @@ Returns the folder(s) residing inside a folder called 'Shared Documents'
 
 ## PARAMETERS
 
-### -Includes
-Specify properties to include when retrieving objects from the server.
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: String[]
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
-Position: 0
+Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -83,7 +81,9 @@ Parameter Sets: Folders In List
 
 Required: True
 Position: 1
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -96,37 +96,15 @@ Aliases: RelativeUrl
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
-### -Web
-The web to apply the command to. Omit this parameter to use the current web.
 
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.Folder
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Resolve-PnPFolder](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Resolve-PnPFolder](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md)
+
+

@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MonitoringItemHelp -Server Exch01 -Identity OutlookMapiHttp.Proxy\CrashEvent.msexchangemapifrontendapppoolEscalate\msexchangemapifrontendapppool | Format-List
 ```
 
-This example retrieves health set information for a monitoring item on the server named Exch01 and displays the output without truncating the results..
+This example retrieves health set information for a monitoring item on the server named Exch01 and displays the output without truncating the results.
 
 ## PARAMETERS
 

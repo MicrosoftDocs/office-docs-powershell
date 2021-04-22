@@ -25,6 +25,7 @@ Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
  [-AddReviewers <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-Enabled <Boolean>]
  [-Force]
  [-RemoveReviewers <String[]>]
  [-RetentionPeriodInDays <Int32>]
@@ -109,6 +110,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Enabled
+{{ Fill Enabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

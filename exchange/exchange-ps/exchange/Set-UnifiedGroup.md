@@ -75,6 +75,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-SensitivityLabelId <Sustem.Guid>]
  [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
  [-WhatIf]
@@ -246,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSubscribeNewMembers
-The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group..
+The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group.
 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
 - If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: -AutoSubscribeNewMembers:$false.
@@ -1105,6 +1106,24 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SensitivityLabelId
+This parameter is available only in the cloud-based service.
+
+{{ Fill SensitivityLabelId Description }}
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

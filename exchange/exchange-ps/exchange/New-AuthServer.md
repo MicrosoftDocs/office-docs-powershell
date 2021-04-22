@@ -26,6 +26,7 @@ New-AuthServer [-Name] <String> -AuthMetadataUrl <String>
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -37,6 +38,7 @@ New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType>
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -47,6 +49,7 @@ New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType>
 New-AuthServer [-Name] <String> -Type <AuthServerType>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -154,6 +157,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainName
+{{ Fill DomainName Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

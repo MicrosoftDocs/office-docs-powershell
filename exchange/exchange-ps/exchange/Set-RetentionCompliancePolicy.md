@@ -45,6 +45,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddSkypeLocation <MultiValuedProperty>]
  [-AddSkypeLocationException <MultiValuedProperty>]
+ [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -459,6 +460,27 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Applications
+The Applications parameter specifies the target when Microsoft 365 Groups are included in the policy (the ModernGroups parameter is set). Valid values are:
+
+- `Group:Exchange` for the mailbox that's connected to the Microsoft 365 Group.
+- `Group:SharePoint` for the SharePoint site that's connected to the Microsoft 365 Group.
+- `"Group:Exchange","Group:SharePoint"` for both the mailbox and the SharePoint site that are connected to the Microsoft 365 Group.
+- blank (`$null`): This is the default value, and is functionally equivalent to the value `"Group:Exchange","Group:SharePoint"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 

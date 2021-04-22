@@ -111,6 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 To set the default retention policy for new mailboxes, use the RetentionPolicy parameter on the Set-MailboxPlan cmdlet.
@@ -119,7 +121,7 @@ To set the default retention policy for new mailboxes, use the RetentionPolicy p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named

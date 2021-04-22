@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-antiphishrule
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-AntiPhishRule
 schema: 2.0.0
 author: chrisda
@@ -60,7 +60,7 @@ The Identity parameter specifies the antiphish rule that you want to view. You c
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
@@ -76,7 +76,7 @@ The State parameter filters the results by the state of the rule. Valid values a
 Type: RuleState
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

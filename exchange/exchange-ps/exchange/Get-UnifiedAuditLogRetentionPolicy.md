@@ -77,6 +77,7 @@ The RecordType parameter filters the results by the record types that are define
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

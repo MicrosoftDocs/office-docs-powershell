@@ -23,12 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Onboarding
 ```
 New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
+ [-AvoidMergeOverlap]
  [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-ContentFilter <String>]
@@ -37,6 +40,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-DomainController <Fqdn>]
  [-ExcludeDumpsters]
  [-ExcludeFolders <MultiValuedProperty>]
+ [-ForwardingDisposition <GmailForwardingDisposition>]
  [-IncludeFolders <MultiValuedProperty>]
  [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
@@ -44,12 +48,18 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
+ [-RenamePrimaryCalendar]
  [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipMail]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourcePFPrimaryMailboxGuid <Guid>]
  [-StartAfter <DateTime>]
  [-TargetArchiveDatabases <MultiValuedProperty>]
  [-TargetDatabases <MultiValuedProperty>]
@@ -62,8 +72,10 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
  [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -78,6 +90,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
  [-ReportInterval <Timespan>]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
@@ -96,6 +109,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
 ### Local
 ```
 New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -111,6 +125,7 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
  [-ReportInterval <Timespan>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
@@ -151,7 +166,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -263,7 +278,7 @@ Onboarding and offboarding in Exchange Online
 - Cutover Exchange migration: This is another type of onboarding migration and is used to migrate all mailboxes in an on-premises Exchange organization to Exchange Online. You can migrate a maximum of 1,000 Exchange Server 2003, Exchange Server 2007, or Exchange Server 2010 mailboxes using a cutover migration. Mailboxes will be automatically provisioned in Exchange Online when you perform a cutover Exchange migration. For more information, see Example 5.
 - Staged Exchange migration: You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. Migrating mailboxes from Exchange 2010 or later versions of Exchange isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization. For more information, see Example 6.
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
-- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online. For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
+- Google Workspace (formerly G Suite) migration: This onboarding migration type migrates mailbox data from a Google Workspace organization to Exchange Online. For a Google Workspace migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -363,7 +378,7 @@ ludeFolders "Payment"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-A G Suite migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
+A Google Workspace migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
 ## PARAMETERS
 
@@ -500,6 +515,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AdoptPreexisting
+This parameter is available only in the cloud-based service.
+
+{{ Fill AdoptPreexisting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, Offboarding, Local
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowIncrementalSyncs
 This parameter is available only in on-premises Exchange.
 
@@ -532,6 +565,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveDomain
+This parameter is available only in the cloud-based service.
+
+{{ Fill ArchiveDomain Description }}
+
+```yaml
+Type: String
+Parameter Sets: Onboarding, Offboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -616,6 +667,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AvoidMergeOverlap
+This parameter is available only in the cloud-based service.
+
+{{ Fill AvoidMergeOverlap Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BadItemLimit
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
@@ -637,8 +706,6 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the cloud-based service.
-
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -652,7 +719,7 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -681,9 +748,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
 
-The ContentFilter parameter uses OPath filter syntax to filter the messages by Received date. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+The ContentFilter parameter uses OPath filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
 
 - `"Received -gt '8/23/2020'"`
 - `"Received -le '2019/01/01'"`
@@ -705,7 +772,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilterLanguage
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
 
 The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
 
@@ -725,7 +792,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOnCopy
-The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
+The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -801,9 +868,9 @@ Accept wildcard characters: False
 ### -ExcludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration or G Suite migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the source email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration or Google Workspace migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the source email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
 
-For IMAP migration, use folder names relative to the IMAP root on the source mail server. For G Suite migration, use label names on the source mail server.
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For Google Workspace migration, use label names on the source mail server.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
@@ -846,12 +913,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForwardingDisposition
+This parameter is available only in the cloud-based service.
+
+{{ Fill ForwardingDisposition Description }}
+
+```yaml
+Type: GmailForwardingDisposition
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration or G Suite migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the source mail server or use label names for G Suite migration. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration or Google Workspace migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
 
-For IMAP migration, use folder names relative to the IMAP root on the source mail server. For G Suite migration, use label names on the source mail server.
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For Google Workspace migration, use label names on the source mail server.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
@@ -1013,7 +1098,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderToUnifiedGroup
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The PublicFolderToUnifiedGroup switch specifies a migration from public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
@@ -1021,9 +1106,45 @@ The PublicFolderToUnifiedGroup switch specifies a migration from public folders 
 Type: SwitchParameter
 Parameter Sets: PublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOnCopy
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveOnCopy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, Offboarding, Local
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RenamePrimaryCalendar
+This parameter is available only in the cloud-based service.
+
+{{ Fill RenamePrimaryCalendar Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1042,6 +1163,60 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCalendar
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCalendar Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipContacts
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipContacts Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMail
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipMail Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1144,9 +1319,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StartAfter
+### -SourcePFPrimaryMailboxGuid
 This parameter is available only in the cloud-based service.
 
+{{ Fill SourcePFPrimaryMailboxGuid Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartAfter
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
@@ -1160,7 +1351,7 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 Type: DateTime
 Parameter Sets: Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
