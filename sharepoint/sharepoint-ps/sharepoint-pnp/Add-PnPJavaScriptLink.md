@@ -1,25 +1,26 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpjavascriptlink
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPJavaScriptLink.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPJavaScriptLink
 ---
-
+  
 # Add-PnPJavaScriptLink
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPJavaScriptLink.md to change this file.
+
 Adds a link to a JavaScript file to a web or sitecollection, valid only for SharePoint classic site experience.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPJavaScriptLink -Name <String>
-                      -Url <String[]>
-                      [-Sequence <Int>]
-                      [-Scope <CustomActionScope>]
-                      [-Web <WebPipeBind>]
-                      [-Connection <PnPConnection>]
+Add-PnPJavaScriptLink -Name <String> -Url <String[]> [-Sequence <Int32>] [-Scope <CustomActionScope>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,14 +28,14 @@ Creates a custom action that refers to a JavaScript file
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js -Sequence 9999 -Scope Site
 ```
 
 Injects a reference to the latest v1 series jQuery library to all pages within the current site collection under the name jQuery and at order 9999
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js
 ```
@@ -42,6 +43,20 @@ Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js
 Injects a reference to the latest v1 series jQuery library to all pages within the current web under the name jQuery
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 Name under which to register the JavaScriptLink
@@ -53,7 +68,9 @@ Aliases: Key
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Scope
@@ -62,22 +79,27 @@ Defines if this JavaScript file will be injected to every page within the curren
 ```yaml
 Type: CustomActionScope
 Parameter Sets: (All)
+Accepted values: Web, Site, All
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Sequence
 Sequence of this JavaScript being injected. Use when you have a specific sequence with which to have JavaScript files being added to the page. I.e. jQuery library first and then jQueryUI.
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -89,33 +111,15 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

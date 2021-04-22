@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes a given public CDN origin based on its identity (id) in your Sharepoint Online Tenant
+Removes a given public CDN origin based on its identity (id) in your SharePoint Online Tenant
 
 ## SYNTAX
 

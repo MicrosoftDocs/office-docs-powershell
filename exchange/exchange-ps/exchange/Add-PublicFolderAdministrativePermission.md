@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the rights that are being added. Valid values include:
+The AccessRights parameter specifies the rights that you want to add for the administrator on the public folder. Valid values include:
 
 - None The administrator has no rights to modify public folder attributes.
 - ModifyPublicFolderACL The administrator has the right to modify client access permissions for the specified folder.
@@ -121,6 +121,10 @@ The AccessRights parameter specifies the rights that are being added. Valid valu
 - AdministerInformationStore The administrator has the right to modify all other public folder properties that aren't defined previously.
 - ViewInformationStore The administrator has the right to view public folder properties.
 - AllExtendedRights The administrator has the right to modify all public folder properties.
+
+You can specify multiple values separated by commas.
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -165,7 +169,26 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies the NT Owner access control list (ACL) on the object. Valid values are the user principal name (UPN), domain\\user, or alias.
+The Owner parameter specifies the owner of the public folder object. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the AccessRights or User parameters.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -181,7 +204,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the UPN, domain\\user, or alias of the user for whom rights are being added.
+The User parameter specifies who gets the admin permissions on the public folder. You can specify the following types of users or groups:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

@@ -89,6 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -Case
+This parameter is available only in the cloud-based service.
+
 The Case parameter filters the results by the name of a Core eDiscovery case that the compliance search is associated with. If the value contains spaces, enclose the value in quotation marks.
 
 You can't use this parameter to view compliance searches associated with Advanced eDiscovery cases.
@@ -97,7 +99,7 @@ You can't use this parameter to view compliance searches associated with Advance
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

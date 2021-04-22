@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplication
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplication

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-MigrationEndpoint cmdlet to edit settings for cutover or staged Exchange migrations, IMAP migrations, G Suite migrations, and remote moves.
+Use the Set-MigrationEndpoint cmdlet to edit settings for cutover or staged Exchange migrations, IMAP migrations, Google Workspace (formerly G Suite) migrations, and remote moves.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -22,6 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
+ [-AcceptUntrustedCertificates <Boolean>]
+ [-ApplicationId <String>]
+ [-AppSecretKeyVaultUrl <String>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-Credentials <PSCredential>]
@@ -53,7 +56,7 @@ Use the Set-MigrationEndpoint cmdlet to configure settings for different types o
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. Cutover Exchange migration requires the use of an Exchange endpoint.
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. Staged Exchange migration requires the use of an Exchange endpoint.
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-- Gmail migration: Migration mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. G Suite migrations require the use of a Gmail endpoint.
+- Gmail migration: Migration mailbox data from a Google Workspace tenant to Exchange Online. For a Google Workspace migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
 - Local: Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
 
 For more information about the different move and migration scenarios, see:
@@ -96,6 +99,60 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AcceptUntrustedCertificates
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptUntrustedCertificates Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationId
+This parameter is available only in the cloud-based service.
+
+{{ Fill ApplicationId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppSecretKeyVaultUrl
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppSecretKeyVaultUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -363,7 +420,7 @@ For an IMAP migration, the Security parameter specifies the encryption method us
 Type: IMAPSecurityMechanism
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named

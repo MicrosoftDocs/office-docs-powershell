@@ -52,6 +52,13 @@ Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 
 This example enables the administrator-installed app FinanceTestApp for user Tony.
 
+### Example 1
+```powershell
+Enable-App -Identity 545d8236-721a-468f-85d8-254eca7cb0da -Mailbox Tony
+```
+
+This example enables the Share to Teams app for user Tony.
+
 ## PARAMETERS
 
 ### -Identity
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the the mailbox. You can use any value that uniquely identifies the mailbox. For example:
+The Mailbox parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias

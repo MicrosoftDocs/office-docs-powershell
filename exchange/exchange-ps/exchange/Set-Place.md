@@ -40,7 +40,6 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Label <String>]
  [-Phone <String>]
  [-PostalCode <String>]
- [-SpaceType <String>]
  [-State <String>]
  [-Street <String>]
  [-Tags <String[]>]
@@ -320,26 +319,6 @@ Accept wildcard characters: False
 
 ### -PostalCode
 The PostalCode parameter specifies the room's postal code.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SpaceType
-The SpaceType parameter specifies the type of space. Valid values are:
-
-- CustomerSpace
-- WorkArea
-- Custom
 
 ```yaml
 Type: String

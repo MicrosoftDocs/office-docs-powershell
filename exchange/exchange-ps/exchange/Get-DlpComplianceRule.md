@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
- [-IncludeExecutionRuleGuids Boolean]
+ [-IncludeExecutionRuleGuids <Boolean>]
  [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 {{ Fill IncludeExecutionRuleGuids Description }}
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

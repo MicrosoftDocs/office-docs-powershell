@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsitescript
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPSiteScript
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPSiteScript.html
 ---
-
+ 
 # Set-PnPSiteScript
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPSiteScript.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,27 +21,25 @@ title: Set-PnPSiteScript
 
 Updates an existing Site Script on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPSiteScript -Identity <TenantSiteScriptPipeBind>
-                  [-Title <String>]
-                  [-Description <String>]
-                  [-Content <String>]
-                  [-Version <Int>]
-                  [-Connection <PnPConnection>]
+Set-PnPSiteScript -Identity <TenantSiteScriptPipeBind> [-Title <String>] [-Description <String>]
+ [-Content <String>] [-Version <Int32>] [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f -Title "My Site Script"
 ```
 
 Updates an existing Site Script and changes the title.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 $script = Get-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f 
 Set-PnPSiteScript -Identity $script -Title "My Site Script"
@@ -46,64 +49,19 @@ Updates an existing Site Script and changes the title.
 
 ## PARAMETERS
 
-### -Content
-A JSON string containing the site script
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Description
-The description of the site script
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Identity
-The guid or an object representing the site script
-
-```yaml
-Type: TenantSiteScriptPipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Title
-The title of the site script
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Version
-Specifies the version of the site script
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -115,9 +73,97 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Content
+A JSON string containing the site script
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description of the site script
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The guid or an object representing the site script
+
+```yaml
+Type: TenantSiteScriptPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+The title of the site script
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+Specifies the version of the site script
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

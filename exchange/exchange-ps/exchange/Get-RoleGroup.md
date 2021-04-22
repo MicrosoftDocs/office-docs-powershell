@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPartnerLinked
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 This ShowPartnerLinked switch specifies whether to return built-in role groups that are of type PartnerRoleGroup. Role groups of this type are used in the cloud-based services to allow partner service providers to manage their customer organizations. These role groups can't be edited and are therefore not shown by default.
 
@@ -183,7 +183,7 @@ This ShowPartnerLinked switch specifies whether to return built-in role groups t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

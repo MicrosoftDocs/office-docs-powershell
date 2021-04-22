@@ -134,12 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group who has Send As permissions. You can specify the following types of users or groups:
-
-You can specify the following types of users or groups:
+The Trustee parameter filters the results by who has Send As permissions on the specified recipient. You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-- Mail users with a Microsoft account (formerly known as a Windows Live ID)
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:
@@ -154,8 +152,6 @@ You can use any value that uniquely identifies the user or group. For example:
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
-
-You need to use this parameter with the Identity parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

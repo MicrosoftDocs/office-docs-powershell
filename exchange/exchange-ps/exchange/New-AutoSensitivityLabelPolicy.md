@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeSender <SmtpAddress[]>]
  [-ExchangeSenderException <SmtpAddress[]>]
@@ -113,25 +112,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Enabled
-The Enabled parameter specifies whether the policy is enabled. Valid values are:
-
-- $true: The policy is enabled.
-- $false: The policy is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

@@ -30,7 +30,6 @@ New-ManagedContentSettings [-Name] <String> -FolderName <ELCFolderIdParameter> -
  [-LabelForJournaling <String>]
  [-MessageFormatForJournaling <JournalingFormat>]
  [-MoveToDestinationFolder <ELCFolderIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [-RetentionAction <RetentionAction>]
  [-RetentionEnabled <Boolean>]
  [-TriggerForRetention <RetentionDateType>]
@@ -274,22 +273,6 @@ The destination folder must be an existing managed custom folder. If it isn't, a
 
 ```yaml
 Type: ELCFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

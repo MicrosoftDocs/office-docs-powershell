@@ -11,7 +11,25 @@ To install and use the Microsoft Whiteboard cmdlets:
 
 1. Open the start menu and search for Windows PowerShell
 2. Right-click on Windows PowerShell and choose Run As Administrator
-3. Type or copy this command into the window and press the Enter key: Install-Module -Name WhiteboardAdmin
+3. Type or copy this command into the window and press the Enter key:
+
+```powershell
+Install-Module -Name WhiteboardAdmin
+```
+
+By default, the PowerShell Gallery (PSGallery) isn't configured as a trusted repository for **PowerShellGet**. The first time you use the PSGallery, you'll see the following message:
+
+```console
+Untrusted repository
+
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the `Set-PSRepository` cmdlet.
+
+Are you sure you want to install the modules from 'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
+```
+
+Answer **Yes** or **Yes to All** to continue with the installation.
 
 You may need to update your execution policy, which you can do by typing or copying this command into the window and pressing the Enter key:
 
