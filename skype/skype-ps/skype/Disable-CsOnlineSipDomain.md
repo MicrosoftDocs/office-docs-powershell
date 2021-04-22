@@ -51,7 +51,7 @@ This cmdlet may also be useful for organizations with on-premises deployments of
 > - If these users use Teams, they will no longer be able to inter-operate with Skype for Business users, nor will they be able to federate with any users in other organizations.
 
 > [!NOTE]
-> If the Tenant is disabled for Regionally Hosted Meetings in Skype for Business Online, Online SIP Domains must be disabled in all regions. You must execute this cmdlet in each region that is added in Allowed Data Location.  
+> If the Tenant is enabled for Regionally Hosted Meetings in Skype for Business Online, Online SIP Domains must be disabled in all regions. You must execute this cmdlet in each region that is added in Allowed Data Location.  
 
 ## EXAMPLES
 
