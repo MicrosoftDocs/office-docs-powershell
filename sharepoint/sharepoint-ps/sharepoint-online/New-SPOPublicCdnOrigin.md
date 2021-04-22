@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Creates a new public CDN on a document library in your Sharepoint Online Tenant
+Creates a new public CDN on a document library in your SharePoint Online Tenant
 
 ## SYNTAX
 

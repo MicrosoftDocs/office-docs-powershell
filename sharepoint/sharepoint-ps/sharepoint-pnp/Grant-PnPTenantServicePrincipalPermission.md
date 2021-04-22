@@ -1,51 +1,46 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnptenantserviceprincipalpermission
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Grant-PnPTenantServicePrincipalPermission
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Grant-PnPTenantServicePrincipalPermission.html
 ---
-
+ 
 # Grant-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Grant-PnPTenantServicePrincipalPermission.md to change this file.
+
+
 **Required Permissions**
 
 * SharePoint: Access to the SharePoint Tenant Administration site
+* Microsoft Graph API : Directory.ReadWrite.All
 
-Explicitly grants a specified permission to the "SharePoint Online Client" service principal
+Explicitly grants a specified permission to the "SharePoint Online Client Extensibility Web Application Principal" service principal for SPFx solutions.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Grant-PnPTenantServicePrincipalPermission -Scope <String>
-                                          -Resource <String>
-                                          [-Connection <PnPConnection>]
+Grant-PnPTenantServicePrincipalPermission -Scope <String> [-Resource <String>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Grant-PnPTenantServicePrincipalPermission -Scope "Group.Read.All" -Resource "Microsoft Graph"
+Grant-PnPTenantServicePrincipalPermission -Scope "Group.Read.All"
 ```
 
 This will explicitly grant the Group.Read.All permission on the Microsoft Graph resource
 
 ## PARAMETERS
-
-### -Resource
-The resource to grant the permission for
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
 
 ### -Scope
 The scope to grant the permission for
@@ -56,7 +51,23 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Resource
+The resource to grant the permission for. Defaults to "Microsoft Graph"
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: Microsoft Graph
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -68,13 +79,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-## OUTPUTS
-
-### OfficeDevPnP.Core.ALM.AppMetadata
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

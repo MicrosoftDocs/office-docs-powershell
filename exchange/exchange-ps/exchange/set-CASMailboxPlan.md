@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-CASMailboxPlan
 schema: 2.0.0
 author: chrisda
@@ -29,6 +29,7 @@ Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-ImapEnabled <Boolean>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
  [-PopEnabled <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -61,7 +62,7 @@ The display name and name of the CAS mailbox plan is the same as the correspondi
 Type: MailboxPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -80,7 +81,7 @@ The ActiveSyncEnabled parameter enables or disables access to the mailbox by usi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -99,7 +100,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ The ImapEnabled parameter enables or disables access to the mailbox by using IMA
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -142,7 +143,7 @@ You can use the Get-OwaMailboxPolicy cmdlet to view the available Outlook on the
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -161,7 +162,23 @@ The PopEnabled parameter enables or disables access to the mailbox by using POP3
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -1,50 +1,51 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/invoke-pnpwebaction
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Invoke-PnPWebAction
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Invoke-PnPWebAction.html
 ---
-
+ 
 # Invoke-PnPWebAction
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPWebAction.md to change this file.
+
 Executes operations on web, lists and list items.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Invoke-PnPWebAction [-Webs <Web[]>]
-                    [-WebAction <Web>]
-                    [-ShouldProcessWebAction <Web>]
-                    [-PostWebAction <Web>]
-                    [-ShouldProcessPostWebAction <Web>]
-                    [-WebProperties <String[]>]
-                    [-ListAction <List>]
-                    [-ShouldProcessListAction <List>]
-                    [-PostListAction <List>]
-                    [-ShouldProcessPostListAction <List>]
-                    [-ListProperties <String[]>]
-                    [-ListItemAction <ListItem>]
-                    [-ShouldProcessListItemAction <ListItem>]
-                    [-ListItemProperties <String[]>]
-                    [-SubWebs [<SwitchParameter>]]
-                    [-DisableStatisticsOutput [<SwitchParameter>]]
-                    [-SkipCounting [<SwitchParameter>]]
-                    [-Web <WebPipeBind>]
-                    [-Connection <PnPConnection>]
+Invoke-PnPWebAction [-ListName <String>] [-Webs <Web[]>]
+ [-WebAction <System.Action`1[Microsoft.SharePoint.Client.Web]>]
+ [-ShouldProcessWebAction <System.Func`2[Microsoft.SharePoint.Client.Web,System.Boolean]>]
+ [-PostWebAction <System.Action`1[Microsoft.SharePoint.Client.Web]>]
+ [-ShouldProcessPostWebAction <System.Func`2[Microsoft.SharePoint.Client.Web,System.Boolean]>]
+ [-WebProperties <String[]>] [-ListAction <System.Action`1[Microsoft.SharePoint.Client.List]>]
+ [-ShouldProcessListAction <System.Func`2[Microsoft.SharePoint.Client.List,System.Boolean]>]
+ [-PostListAction <System.Action`1[Microsoft.SharePoint.Client.List]>]
+ [-ShouldProcessPostListAction <System.Func`2[Microsoft.SharePoint.Client.List,System.Boolean]>]
+ [-ListProperties <String[]>] [-ListItemAction <System.Action`1[Microsoft.SharePoint.Client.ListItem]>]
+ [-ShouldProcessListItemAction <System.Func`2[Microsoft.SharePoint.Client.ListItem,System.Boolean]>]
+ [-ListItemProperties <String[]>] [-SubWebs] [-DisableStatisticsOutput] [-SkipCounting] 
+ [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Invoke-PnPWebAction -ListAction ${function:ListAction}
 ```
 
 This will call the function ListAction on all the lists located on the current web.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Invoke-PnPWebAction -ShouldProcessListAction ${function:ShouldProcessList} -ListAction ${function:ListAction}
 ```
@@ -53,208 +54,19 @@ This will call the function ShouldProcessList, if it returns true the function L
 
 ## PARAMETERS
 
-### -DisableStatisticsOutput
-Will not output statistics after the operation
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -ListAction
-Function to be executed on the list. There is one input parameter of type List
-
-```yaml
-Type: List
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ListItemAction
-Function to be executed on the list item. There is one input parameter of type ListItem
-
-```yaml
-Type: ListItem
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ListItemProperties
-The properties to load for list items.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ListProperties
-The properties to load for list.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -PostListAction
-Function to be executed on the list, this will trigger after list items have been processed. There is one input parameter of type List
-
-```yaml
-Type: List
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -PostWebAction
-Function to be executed on the web, this will trigger after lists and list items have been processed. There is one input parameter of type Web
-
-```yaml
-Type: Web
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ShouldProcessListAction
-Function to be executed on the web that would determine if ListAction should be invoked, There is one input parameter of type List and the function should return a boolean value
-
-```yaml
-Type: List
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ShouldProcessListItemAction
-Function to be executed on the web that would determine if ListItemAction should be invoked, There is one input parameter of type ListItem and the function should return a boolean value
-
-```yaml
-Type: ListItem
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ShouldProcessPostListAction
-Function to be executed on the web that would determine if PostListAction should be invoked, There is one input parameter of type List and the function should return a boolean value
-
-```yaml
-Type: List
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ShouldProcessPostWebAction
-Function to be executed on the web that would determine if PostWebAction should be invoked, There is one input parameter of type Web and the function should return a boolean value
-
-```yaml
-Type: Web
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -ShouldProcessWebAction
-Function to be executed on the web that would determine if WebAction should be invoked, There is one input parameter of type Web and the function should return a boolean value
-
-```yaml
-Type: Web
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SkipCounting
-Will skip the counting process; by doing this you will not get an estimated time remaining
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SubWebs
-Specify if sub webs will be processed
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -WebAction
-Function to be executed on the web. There is one input parameter of type Web
-
-```yaml
-Type: Web
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -WebProperties
-The properties to load for web.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Webs
-Webs you want to process (for example different site collections), will use Web parameter if not specified
-
-```yaml
-Type: Web[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -266,21 +78,281 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -DisableStatisticsOutput
+Will not output statistics after the operation
 
 ```yaml
-Type: WebPipeBind
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListAction
+Function to be executed on the list. There is one input parameter of type List
+
+```yaml
+Type: System.Action`1[Microsoft.SharePoint.Client.List]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListItemAction
+Function to be executed on the list item. There is one input parameter of type ListItem
+
+```yaml
+Type: System.Action`1[Microsoft.SharePoint.Client.ListItem]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListItemProperties
+The properties to load for list items.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListName
+{{ Fill ListName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListProperties
+The properties to load for list.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostListAction
+Function to be executed on the list, this will trigger after list items have been processed. There is one input parameter of type List
+
+```yaml
+Type: System.Action`1[Microsoft.SharePoint.Client.List]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostWebAction
+Function to be executed on the web, this will trigger after lists and list items have been processed. There is one input parameter of type Web
+
+```yaml
+Type: System.Action`1[Microsoft.SharePoint.Client.Web]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldProcessListAction
+Function to be executed on the web that would determine if ListAction should be invoked, There is one input parameter of type List and the function should return a boolean value
+
+```yaml
+Type: System.Func`2[Microsoft.SharePoint.Client.List,System.Boolean]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldProcessListItemAction
+Function to be executed on the web that would determine if ListItemAction should be invoked, There is one input parameter of type ListItem and the function should return a boolean value
+
+```yaml
+Type: System.Func`2[Microsoft.SharePoint.Client.ListItem,System.Boolean]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldProcessPostListAction
+Function to be executed on the web that would determine if PostListAction should be invoked, There is one input parameter of type List and the function should return a boolean value
+
+```yaml
+Type: System.Func`2[Microsoft.SharePoint.Client.List,System.Boolean]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldProcessPostWebAction
+Function to be executed on the web that would determine if PostWebAction should be invoked, There is one input parameter of type Web and the function should return a boolean value
+
+```yaml
+Type: System.Func`2[Microsoft.SharePoint.Client.Web,System.Boolean]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldProcessWebAction
+Function to be executed on the web that would determine if WebAction should be invoked, There is one input parameter of type Web and the function should return a boolean value
+
+```yaml
+Type: System.Func`2[Microsoft.SharePoint.Client.Web,System.Boolean]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCounting
+Will skip the counting process; by doing this you will not get an estimated time remaining
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubWebs
+Specify if sub webs will be processed
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+
+### -WebAction
+Function to be executed on the web. There is one input parameter of type Web
+
+```yaml
+Type: System.Action`1[Microsoft.SharePoint.Client.Web]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WebProperties
+The properties to load for web.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Webs
+Webs you want to process (for example different site collections), will use Web parameter if not specified
+
+```yaml
+Type: Web[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

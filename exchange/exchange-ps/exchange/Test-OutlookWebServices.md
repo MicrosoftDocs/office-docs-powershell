@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-outlookwebservices
-applicable: Exchange Server 2010
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-OutlookWebServices
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Test-OutlookWebServices
 
 ## SYNOPSIS
-This cmdlet is available only in Exchange Server 2010.
+This cmdlet is available or functional only in Exchange Server 2010.
 
 Use the Test-OutlookWebServices cmdlet to verify the Autodiscover service settings for Microsoft Outlook on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
 
@@ -20,6 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+###  Default
 ```
 Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
  [-ClientAccessServer <ClientAccessServerIdParameter>]
@@ -27,6 +28,36 @@ Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
  [-DomainController <Fqdn>]
  [-MonitoringContext <Boolean>]
  [-TargetAddress <RecipientIdParameter[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### AutoDiscoverServer
+```
+Test-OutlookWebServices [[-Identity] <MailboxIdParameter>] -AutoDiscoverServer <ClientAccessServerIdParameter>
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ClientAccessServer
+```
+Test-OutlookWebServices [[-Identity] <MailboxIdParameter>] [-ClientAccessServer <ClientAccessServerIdParameter>]
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### MonitoringContext
+```
+Test-OutlookWebServices [[-Identity] <MailboxIdParameter>] [-MonitoringContext]
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-TrustAnySSLCertificate]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -61,25 +92,59 @@ The Identity parameter specifies any valid address in the forest. If you specify
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -AutoDiscoverServer
+The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name (for example, Exchange01)
+- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+
+You can't use this parameter with the ClientAccessServer parameter.
+
+```yaml
+Type: ClientAccessServerIdParameter
+Parameter Sets: AutoDiscoverServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ClientAccessServer
 This parameter is available or functional only in Exchange Server 2010.
 
-The ClientAccessServer parameter specifies the Client Access server that the client accesses.
+The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- GUID
+
+You can't use this parameter with the AutoDiscoverServer parameter.
 
 ```yaml
 Type: ClientAccessServerIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -98,7 +163,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -112,9 +177,27 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxCredential
+The MailboxCredential parameter specifies the mailbox credential to use for a single mailbox test.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+
+```yaml
+Type: PSCredential
+Parameter Sets: AutoDiscoverServer, ClientAccessServer, MonitoringContext
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -128,9 +211,9 @@ The MonitoringContext parameter specifies whether the results of the command inc
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -144,9 +227,27 @@ The TargetAddress parameter specifies the recipient that's used to test whether 
 
 ```yaml
 Type: RecipientIdParameter[]
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrustAnySSLCertificate
+The TrustAnySSLCertificate switch specifies whether to ignore Secure Sockets Layer (SSL) certificate validation failures. You don't need to specify a value with this switch.
+
+This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AutoDiscoverServer, ClientAccessServer, MonitoringContext
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -162,7 +263,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

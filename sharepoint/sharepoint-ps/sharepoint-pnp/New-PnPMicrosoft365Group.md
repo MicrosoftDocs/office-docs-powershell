@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpmicrosoft365group
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPMicrosoft365Group
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPMicrosoft365Group.html
 ---
-
+ 
 # New-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPMicrosoft365Group.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,45 +21,40 @@ title: New-PnPMicrosoft365Group
 
 Creates a new Microsoft 365 Group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-New-PnPMicrosoft365Group -DisplayName <String>
-                         -Description <String>
-                         -MailNickname <String>
-                         [-Owners <String[]>]
-                         [-Members <String[]>]
-                         [-IsPrivate [<SwitchParameter>]]
-                         [-GroupLogoPath <String>]
-                         [-CreateTeam [<SwitchParameter>]]
-                         [-Force [<SwitchParameter>]]
-                         [-ByPassPermissionCheck [<SwitchParameter>]]
+New-PnPMicrosoft365Group -DisplayName <String> -Description <String> -MailNickname <String>
+ [-Owners <String[]>] [-Members <String[]>] [-IsPrivate] [-LogoPath <String>] [-CreateTeam] [-HideFromAddressLists <Boolean>] [-HideFromOutlookClients <Boolean>] [-Force]
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname
 ```
 
 Creates a public Microsoft 365 Group with all the required properties
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers
+New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -Owners "owner1@domain.com" -Members "member1@domain.com"
 ```
 
 Creates a public Microsoft 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -IsPrivate
 ```
 
 Creates a private Microsoft 365 Group with all the required properties
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers -IsPrivate
 ```
@@ -62,18 +62,6 @@ New-PnPMicrosoft365Group -DisplayName $displayName -Description $description -Ma
 Creates a private Microsoft 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
 ## PARAMETERS
-
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ### -CreateTeam
 Creates a Microsoft Teams team associated with created group
@@ -84,7 +72,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Description
@@ -96,7 +86,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayName
@@ -108,7 +100,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
@@ -120,11 +114,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -GroupLogoPath
-The path to the logo file of to set
+### -LogoPath
+The path to the logo file of to set. Supported formats are .png, .gif and .jpg
 
 ```yaml
 Type: String
@@ -132,7 +128,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IsPrivate
@@ -144,7 +142,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MailNickname
@@ -156,11 +156,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Members
-The array UPN values of the group's members
+The array UserPrincipalName values of the group's members
 
 ```yaml
 Type: String[]
@@ -168,11 +170,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Owners
-The array UPN values of the group's owners
+The array UserPrincipalName values of the group's owners
 
 ```yaml
 Type: String[]
@@ -180,9 +184,40 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideFromAddressLists
+Controls whether the group is hidden or shown in the Global Address List (GAL).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideFromOutlookClients
+Controls whether the group shows in the Outlook left-hand navigation.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-groups)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-groups)
+

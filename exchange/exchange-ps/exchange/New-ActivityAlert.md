@@ -29,7 +29,6 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-ScopeLevel <AlertScopeLevel>]
@@ -48,7 +47,6 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Threshold <I
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-ScopeLevel <AlertScopeLevel>]
@@ -66,7 +64,6 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-Severity <RuleSeverity>]
@@ -151,7 +148,7 @@ The Operation parameter specifies the activity that triggers an activity alert.
 
 A valid value for this parameter is an activity that's available in the Microsoft 365 audit log. For a description of these activities, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-Although this parameter is technically capable of accepting multiple values separated by commas, multiple values don't work.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter if the Type parameter value is ElevationOfPrivilege.
 
@@ -335,22 +332,6 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

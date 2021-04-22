@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
  [-SegmentsAllowed <MultiValuedProperty>]
  [-Comment <String>]
+ [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -34,7 +36,9 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
 Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
  [-SegmentAllowedFilter <String>]
  [-Comment <String>]
+ [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -43,7 +47,9 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
 Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
  [-SegmentsBlocked <MultiValuedProperty>]
  [-Comment <String>]
+ [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -95,6 +101,22 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Security & Compliance Center
 
 Required: False
@@ -171,6 +193,22 @@ Type: EopInformationBarrierPolicyState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Inactive, Active
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Security & Compliance Center
 
 Required: False

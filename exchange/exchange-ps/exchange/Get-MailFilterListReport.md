@@ -62,13 +62,15 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
+This parameter is available only in Security & Compliance Center PowerShell.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Expression
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

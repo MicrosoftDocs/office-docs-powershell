@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpuseronedrivequota
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPUserOneDriveQuota
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPUserOneDriveQuota.html
 ---
-
+ 
 # Set-PnPUserOneDriveQuota
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPUserOneDriveQuota.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,13 +21,11 @@ title: Set-PnPUserOneDriveQuota
 
 Sets the quota on the OneDrive for Business site for a specific user
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPUserOneDriveQuota -Account <String>
-                         -Quota <Int>
-                         -QuotaWarning <Int>
-                         [-Connection <PnPConnection>]
+Set-PnPUserOneDriveQuota [-Account] <String> [-Quota] <Int64> [-QuotaWarning] <Int64>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +33,7 @@ This command allows you to set the quota on the OneDrive for Business site of a 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPUserOneDriveQuota -Account 'user@domain.com' -Quota 5368709120 -QuotaWarning 4831838208
 ```
@@ -42,49 +45,19 @@ Sets the quota on the OneDrive for Business site for the specified user to 5GB (
 ### -Account
 The account of the user, formatted either as a login name, or as a claims identity, e.g. i:0#.f|membership|user@domain.com
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 
 Required: True
 Position: 0
+Default value: None
 Accept pipeline input: False
-```
-
-### -Quota
-The quota to set on the OneDrive for Business site of the user, in bytes
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: True
-Position: 1
-Accept pipeline input: False
-```
-
-### -QuotaWarning
-The quota to set on the OneDrive for Business site of the user when to start showing warnings about the drive nearing being full, in bytes
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: True
-Position: 2
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: PnPConnection
@@ -92,9 +65,40 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Quota
+The quota to set on the OneDrive for Business site of the user, in bytes
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QuotaWarning
+The quota to set on the OneDrive for Business site of the user when to start showing warnings about the drive nearing being full, in bytes
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

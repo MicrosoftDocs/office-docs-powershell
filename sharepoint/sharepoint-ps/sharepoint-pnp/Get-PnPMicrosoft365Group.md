@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpmicrosoft365group
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPMicrosoft365Group.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPMicrosoft365Group
 ---
-
+  
 # Get-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPMicrosoft365Group.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,64 +21,70 @@ title: Get-PnPMicrosoft365Group
 
 Gets one Microsoft 365 Group or a list of Microsoft 365 Groups
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPMicrosoft365Group [-Identity <Microsoft365GroupPipeBind>]
-                         [-ExcludeSiteUrl [<SwitchParameter>]]
-                         [-IncludeClassification [<SwitchParameter>]]
-                         [-IncludeHasTeam [<SwitchParameter>]]
-                         [-ByPassPermissionCheck [<SwitchParameter>]]
+Get-PnPMicrosoft365Group [-Identity <Microsoft365GroupPipeBind>] [-IncludeSiteUrl] [-IncludeOwners] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Get-Microsoft365Group
+Get-PnPMicrosoft365Group
 ```
 
 Retrieves all the Microsoft 365 Groups
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Get-Microsoft365Group -Identity $groupId
+Get-PnPMicrosoft365Group -Identity $groupId
 ```
 
 Retrieves a specific Microsoft 365 Group based on its ID
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
-Get-Microsoft365Group -Identity $groupDisplayName
+Get-PnPMicrosoft365Group -Identity $groupDisplayName
 ```
 
 Retrieves a specific or list of Microsoft 365 Groups that start with the given DisplayName
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
-Get-Microsoft365Group -Identity $groupSiteMailNickName
+Get-PnPMicrosoft365Group -Identity $groupSiteMailNickName
 ```
 
 Retrieves a specific or list of Microsoft 365 Groups for which the email starts with the provided mail nickName
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
-Get-Microsoft365Group -Identity $group
+Get-PnPMicrosoft365Group -Identity $group
 ```
 
 Retrieves a specific Microsoft 365 Group based on its object instance
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
-Get-Microsoft365Group -IncludeIfHasTeam
+Get-PnPMicrosoft365Group -IncludeSiteUrl
 ```
 
-Retrieves all the Microsoft 365 Groups and checks for each of them if it has a Microsoft Team provisioned for it
+Retrieves all Microsoft 365 Groups in this tenant and includes the URL property for the underlying SharePoint site.
+
+### EXAMPLE 7
+```powershell
+$groups = Get-PnPMicrosoft365Group -IncludeOwners
+$g[0].Owners
+```
+
+Retrieves all Microsoft 365 Groups in this tenant and retrieves the owners for each group. The owners are available in the "Owners" property of the returned objects.
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
+### -IncludeSiteUrl
+Include fetching the site URL for Microsoft 365 Groups. This slows down large listings.
 
 ```yaml
 Type: SwitchParameter
@@ -81,11 +92,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -ExcludeSiteUrl
-Exclude fetching the site URL for Microsoft 365 Groups. This speeds up large listings.
+### -IncludeSiteUrl
+Include fetching the group owners. This slows down large listings.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +106,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -105,33 +120,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -IncludeClassification
-Include Classification value of Microsoft 365 Groups
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -IncludeHasTeam
-Include a flag for every Microsoft 365 Group if it has a Microsoft Team provisioned for it. This will slow down the retrieval of Microsoft 365 Groups so only use it if you need it.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+
