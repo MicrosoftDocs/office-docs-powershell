@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date: 2/20/2018
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Normal
@@ -15,13 +16,13 @@ description: "Learn about using PowerShell in Exchange Online"
 
 # Exchange Online PowerShell
 
-Exchange Online PowerShell is the administrative interface that enables you to manage your Microsoft Exchange Online organization from the command line. For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following topics provide information about using Exchange Online PowerShell:
+Exchange Online PowerShell is the administrative interface that enables you to manage your Microsoft Exchange Online organization from the command line. For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following articles provide information about using Exchange Online PowerShell:
 
 - To create a remote PowerShell session to your Exchange Online organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 - To prevent or allow PowerShell access to your Exchange Online organization, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
-- To learn about the structure and layout of the cmdlet reference topics in Exchange Online PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
+- To learn about the structure and layout of the cmdlet reference articles in Exchange Online PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 
 - To find the permissions that you need to run a specific cmdlet, or one or more parameters on a cmdlet, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
 

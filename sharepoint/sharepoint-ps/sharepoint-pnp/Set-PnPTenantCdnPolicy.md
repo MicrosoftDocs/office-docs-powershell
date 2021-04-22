@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTenantCdnPolicy
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnPolicy.html
 ---
-
+ 
 # Set-PnPTenantCdnPolicy
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTenantCdnPolicy.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,13 +21,11 @@ title: Set-PnPTenantCdnPolicy
 
 Sets the CDN Policies for the specified CDN (Public | Private).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPTenantCdnPolicy -CdnType <SPOTenantCdnType>
-                       -PolicyType <SPOTenantCdnPolicyType>
-                       -PolicyValue <String>
-                       [-Connection <PnPConnection>]
+Set-PnPTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPolicyType> -PolicyValue <String>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +33,7 @@ Sets the CDN Policies for the specified CDN (Public | Private).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF"
 ```
@@ -45,34 +48,13 @@ The type of cdn to retrieve the policies from
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
+Accepted values: Public, Private
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -PolicyType
-The type of the policy to set
-
-```yaml
-Type: SPOTenantCdnPolicyType
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -PolicyValue
-The value of the policy to set
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -84,9 +66,41 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyType
+The type of the policy to set
+
+```yaml
+Type: SPOTenantCdnPolicyType
+Parameter Sets: (All)
+Accepted values: IncludeFileExtensions, ExcludeRestrictedSiteClassifications, ExcludeIfNoScriptDisabled
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyValue
+The value of the policy to set
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

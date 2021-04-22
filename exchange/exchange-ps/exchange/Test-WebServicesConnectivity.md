@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### ClientAccessServer2010
+### Default
 ```
 Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>]
  [-AllowUnsecureAccess]
@@ -151,9 +151,9 @@ You can't use this parameter with the AutoDiscoverServer parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: ClientAccessServer2010
+Parameter Sets: Default, ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnsecureAccess
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAutodiscoverForClientAccessServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The UseAutodiscoverForClientAccessServer parameter specifies whether the test should use the Autodiscover service to locate the Client Access server.
 

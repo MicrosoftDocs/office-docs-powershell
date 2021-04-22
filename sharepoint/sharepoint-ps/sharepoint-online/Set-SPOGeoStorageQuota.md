@@ -42,13 +42,13 @@ Sets the SharePoint Online Storage Quota on the EAST US location to 512 MB.
 Set-SPOGeoStorageQuota -GeoLocation NORTHCENTRALUS -StorageQuotaMB 1024
 ```
 
-Sets the SharePoint Online Storage Quota on the **NORTH CENTRAL US** location to 1 TeraBytes (1Tb).
+Sets the SharePoint Online Storage Quota on the **NORTH CENTRAL US** location to 1024 MB (1GB).
 
 ## PARAMETERS
 
 ### -GeoLocation
 
-PARAMVALUE: String
+The desired Geo Location to set.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -StorageQuotaMB
 
-PARAMVALUE: Int64
+SharePoint Online Storage Quota in MegaBytes.
 
 ```yaml
 Type: Int64

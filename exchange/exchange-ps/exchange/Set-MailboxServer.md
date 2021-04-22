@@ -106,6 +106,7 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-SharingPolicyWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-SharingSyncWorkCycle <EnhancedTimeSpan>]
  [-SharingSyncWorkCycleCheckpoint <EnhancedTimeSpan>]
+ [-SiteMailboxWorkCycle <EnhancedTimeSpan>]
  [-SiteMailboxWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-StoreDsMaintenanceWorkCycle <EnhancedTimeSpan>]
  [-StoreDsMaintenanceWorkCycleCheckpoint <EnhancedTimeSpan>]
@@ -407,7 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairSchedule
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CalendarRepairSchedule parameter specifies the intervals each week during which the Calendar Repair Assistant applies checks for calendar failures.
 
@@ -446,7 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairWorkCycle
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The CalendarRepairWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Calendar Repair Assistant. The default value is 1 day.
 
@@ -470,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The CalendarRepairWorkCycleCheckpoint parameter specifies the time span at which all mailboxes on the Mailbox server will be identified as needing work completed on them. The default value is 1 day.
 
@@ -511,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -DarTaskStoreTimeBasedAssistantWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -529,7 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### -DarTaskStoreTimeBasedAssistantWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -551,7 +552,7 @@ The DatabaseCopyActivationDisabledAndMoveNow parameter specifies whether to prev
 
 Valid input for this parameter is $true or $false. The default value is $false.
 
-Setting this parameter to $truewon't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
+Setting this parameter to $true won't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
 
 ```yaml
 Type: Boolean
@@ -587,7 +588,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryProcessorWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -605,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryProcessorWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -703,7 +704,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailboxWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -721,7 +722,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailboxWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -739,7 +740,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMetricsGenerationTime
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The GroupMetricsGenerationTime parameter specifies the time of day when group metrics data is generated on a Mailbox server. You must use the 24-hour clock notation (HH:MM) when specifying the generation time.
 
@@ -757,7 +758,7 @@ Accept wildcard characters: False
 ```
 
 ### -InferenceDataCollectionWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -775,7 +776,7 @@ Accept wildcard characters: False
 ```
 
 ### -InferenceDataCollectionWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -793,7 +794,7 @@ Accept wildcard characters: False
 ```
 
 ### -InferenceTrainingWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -811,7 +812,7 @@ Accept wildcard characters: False
 ```
 
 ### -InferenceTrainingWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -829,7 +830,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogEnabled parameter enables or disables logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
 
@@ -850,7 +851,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxAge
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
@@ -872,7 +873,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxDirectorySize
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 megabytes (MB). When you enter a value, qualify the value with one of the following units:
 
@@ -900,7 +901,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxFileSize
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
 
@@ -926,7 +927,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IrmLogPath parameter specifies the default IRM log directory location. The default value is C:\\Program Files\\Microsoft\\Exchange Server\\ v14\\Logging\\IRMLogs.
 
@@ -982,7 +983,7 @@ Accept wildcard characters: False
 ```
 
 ### -JunkEmailOptionsCommitterWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1128,7 +1129,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxAssociationReplicationWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1146,7 +1147,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxAssociationReplicationWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1164,7 +1165,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxProcessorWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The MailboxProcessorWorkCycle parameter specifies how often to scan for locked mailboxes on the Mailbox server. The default value is 1 day.
 
@@ -1225,7 +1226,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderWorkCycle
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The ManagedFolderWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be processed by the Managed Folder Assistant. The default value is 1 day.
 
@@ -1249,7 +1250,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The ManagedFolderWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
 
@@ -1327,7 +1328,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogEnabled parameter specifies whether message tracking is enabled. The default value is $true.
 
@@ -1345,7 +1346,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogMaxAge
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogMaxAge parameter specifies the message tracking log maximum file age. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1367,7 +1368,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogMaxDirectorySize
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogMaxDirectorySize parameter specifies the maximum size of the message tracking log directory. When the maximum directory size is reached, the server deletes the oldest log files first.
 
@@ -1399,7 +1400,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogMaxFileSize
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the message tracking log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
 
@@ -1424,7 +1425,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogPath
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is C:\\Program Files\\Microsoft\\Exchange Server TransportRoles\\Logs\\MessageTracking. If you set the value of the MessageTrackingLogPath parameter to $null, you effectively disable message tracking. However, if you set the value of the MessageTrackingLogPath parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true, event log errors occur. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
 
@@ -1442,7 +1443,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogSubjectLoggingEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogSubjectLoggingEnabled parameter specifies if the message subject should be included in the message tracking log. The default value is $true.
 
@@ -1540,7 +1541,7 @@ Accept wildcard characters: False
 ```
 
 ### -OABGeneratorWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The OABGeneratorWorkCycle parameter specifies the time span in which the OAB generation on the Mailbox server will be processed. The default value is 8 hours.
 
@@ -1562,7 +1563,7 @@ Accept wildcard characters: False
 ```
 
 ### -OABGeneratorWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The OABGeneratorWorkCycleCheckpoint parameter specifies the time span at which to run OAB generation on the Mailbox server. The default value is 1 hour.
 
@@ -1584,7 +1585,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeopleCentricTriageWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1602,7 +1603,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeopleCentricTriageWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1620,7 +1621,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeopleRelevanceWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1638,7 +1639,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeopleRelevanceWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1656,7 +1657,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProbeTimeBasedAssistantWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1674,7 +1675,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProbeTimeBasedAssistantWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1692,7 +1693,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The PublicFolderWorkCycle parameter is used by the public folder assistant to determine how often the mailboxes in a database are processed by the assistant on the Mailbox server. The default value is 1 day.
 
@@ -1712,7 +1713,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The PublicFolderWorkCycleCheckpoint determines how often the mailbox list for a database is evaluated on the Mailbox server. The processing speed is also calculated. The default value is 1 day.
 
@@ -1752,7 +1753,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchIndexRepairTimeBasedAssistantWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1770,7 +1771,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchIndexRepairTimeBasedAssistantWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1788,7 +1789,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointSignalStoreWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1806,7 +1807,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointSignalStoreWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1861,7 +1862,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingPolicyWorkCycle
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The SharingPolicyWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Sharing Policy Assistant. The default value is 1 day.
 
@@ -1885,7 +1886,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingPolicyWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The SharingPolicyWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
 
@@ -1909,7 +1910,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingSyncWorkCycle
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The SharingSyncWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be synced to the cloud-based service by the Sharing Sync Assistant. The default value is 3 hours.
 
@@ -1933,7 +1934,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingSyncWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The SharingSyncWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 3 hours.
 
@@ -1957,7 +1958,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMailboxWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The SiteMailboxWorkCycle parameter specifies the time span in which the site mailbox information on the Mailbox server will be processed. The default value is 6 hours.
 
@@ -1979,7 +1980,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMailboxWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 The SiteMailboxWorkCycleCheckpoint parameter specifies the time span at which to refresh the site mailbox workcycle on the Mailbox server. The default value is 6 hours.
 
@@ -2001,7 +2002,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreDsMaintenanceWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2019,7 +2020,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreDsMaintenanceWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2037,7 +2038,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreIntegrityCheckWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2055,7 +2056,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreIntegrityCheckWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2073,7 +2074,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreMaintenanceWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2091,7 +2092,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreMaintenanceWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2109,7 +2110,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreScheduledIntegrityCheckWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2127,7 +2128,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreScheduledIntegrityCheckWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2145,7 +2146,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreUrgentMaintenanceWorkCycle
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2163,7 +2164,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreUrgentMaintenanceWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2217,7 +2218,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopNWorkCycle
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The TopNWorkCycle parameter specifies the time span in which all mailboxes that have Unified Messaging on the Mailbox server will be scanned by the TopN Words Assistant. The default value is 7 days.
 
@@ -2241,7 +2242,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopNWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The TopNWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
 
@@ -2265,7 +2266,7 @@ Accept wildcard characters: False
 ```
 
 ### -UMReportingWorkCycle
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The UMReportingWorkCycle parameter specifies the time span in which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server will be scanned by the Unified Messaging Reporting Assistant. The default value is 1 day.
 
@@ -2291,7 +2292,7 @@ Accept wildcard characters: False
 ```
 
 ### -UMReportingWorkCycleCheckpoint
-This parameter is available or functional only in Exchange Server 2010 or Exchange Server 2013.
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
 The UMReportingWorkCycleCheckpoint parameter specifies the time span at which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server will be marked by processing. The default value is 1 day.
 
