@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-dataencryptionpolicy
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Set-DataEncryptionPolicy
 schema: 2.0.0
 author: chrisda
@@ -94,7 +94,7 @@ The Identity parameter specifies the data encryption policy that you want to mod
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 1
@@ -112,7 +112,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -163,7 +163,7 @@ After you use this switch, you can't assign the data encryption policy to other 
 Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -179,7 +179,7 @@ Use the Refresh switch to update the data encryption policy in Exchange Online a
 Type: SwitchParameter
 Parameter Sets: RefreshKey
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -198,7 +198,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The Description parameter specifies an optional description for the data encrypt
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -230,7 +230,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ The Enabled parameter enables or disable the data encryption policy. Valid value
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ Use the Force switch when you're trying to initiate the deletion of all data tha
 Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ The Name parameter specifies the unique name for the data encryption policy. If 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

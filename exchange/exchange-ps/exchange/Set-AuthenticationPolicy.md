@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-authenticationpolicy
-applicable: Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
@@ -81,7 +81,7 @@ The Identity parameter specifies the authentication policy you want to modify. Y
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -102,7 +102,7 @@ The AllowBasicAuthActiveSync switch specifies whether to allow Basic authenticat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ The AllowBasicAuthAutodiscover switch specifies whether to allow Basic authentic
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ The AllowBasicAuthImap switch specifies whether to allow Basic authentication wi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ The AllowBasicAuthMapi switch specifies whether to allow Basic authentication wi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ The AllowBasicAuthOfflineAddressBook switch specifies whether to allow Basic aut
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ The AllowBasicAuthOutlookService switch specifies whether to allow Basic authent
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ The AllowBasicAuthPop switch specifies whether to allow Basic authentication wit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ The AllowBasicAuthPowerShell switch specifies whether to allow Basic authenticat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -270,7 +270,7 @@ The AllowBasicAuthReporting Web Services switch specifies whether to allow Basic
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ The AllowBasicAuthRpc switch specifies whether to allow Basic authentication wit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ The AllowBasicAuthSmtp switch specifies whether to allow Basic authentication wi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -333,7 +333,7 @@ The AllowBasicAuthWebServices switch specifies whether to allow Basic authentica
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -520,7 +520,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -536,7 +536,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

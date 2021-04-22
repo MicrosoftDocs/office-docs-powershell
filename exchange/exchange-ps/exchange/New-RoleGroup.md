@@ -446,7 +446,7 @@ This parameter is available only in the cloud-based service.
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

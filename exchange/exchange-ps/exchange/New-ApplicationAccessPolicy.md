@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: New-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complementary to the permission scopes that are declared by the application.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -33,8 +33,6 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
-
 A limit of 100 policies per Microsoft 365 tenant is enforced as of today. An error message stating "A tenant cannot have more than 100 policies." will be displayed if this number is exceeded.
 
 While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn't have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
@@ -42,13 +40,9 @@ While the scope-based resource access like Mail.Read or Calendar.Read is effecti
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
 1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy.
-
 2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy).
-
 3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access.
-
 4. If there are any Restrict policies for the Application, and the Target Mailbox is not a member of those policies, then application is denied access to the target mailbox.
-
 5. If none of the above conditions are met, then the application is granted access to the requested target mailbox.
 
 ## EXAMPLES
@@ -101,7 +95,7 @@ The AccessRight parameter specifies the permission that you want to assign in th
 Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -119,7 +113,7 @@ You can specify multiple app GUID values separated by commas or you can specify 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -153,7 +147,7 @@ If you need to scope the policy to shared mailboxes, you can add them to a mail 
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -172,7 +166,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -188,7 +182,7 @@ The Description parameter specifies a description for the policy. If the value c
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -204,7 +198,7 @@ The WhatIf switch doesn't work on this cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -69,4 +69,4 @@ You are now ready to use SharePoint Online commands.
 >
 > - There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
 > 
-> - If you need to specify the region of your SharePoint Online environment, use the -Region parameter, for more information refer to [Connect-SPOService](../../sharepoint-ps/sharepoint-online/Connect-SPOService.md) documentation.
+> - If you need to specify the region of your SharePoint Online environment, use the -Region parameter, for more information refer to [Connect-SPOService](https://docs.microsoft.com/powershell/module/sharepoint-online/connect-sposervice) documentation.
