@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsitedesign
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPSiteDesign
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPSiteDesign.html
 ---
-
+ 
 # Set-PnPSiteDesign
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPSiteDesign.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,31 +21,27 @@ title: Set-PnPSiteDesign
 
 Updates a Site Design on the current tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>
-                  [-Title <String>]
-                  [-SiteScriptIds <GuidPipeBind[]>]
-                  [-Description <String>]
-                  [-IsDefault [<SwitchParameter>]]
-                  [-PreviewImageAltText <String>]
-                  [-PreviewImageUrl <String>]
-                  [-WebTemplate <SiteWebTemplate>]
-                  [-Version <Int>]
-                  [-Connection <PnPConnection>]
+Set-PnPSiteDesign -Identity <TenantSiteDesignPipeBind> [-Title <String>] [-SiteScriptIds <GuidPipeBind[]>]
+ [-Description <String>] [-IsDefault] [-PreviewImageAltText <String>] [-PreviewImageUrl <String>]
+ [-WebTemplate <SiteWebTemplate>] [-Version <Int32>] [-Connection <PnPConnection>]  
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPSiteDesign -Identity 046e2e76-67ba-46ca-a5f6-8eb418a7821e -Title "My Updated Company Design"
 ```
 
 Updates an existing Site Design and sets a new title.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 $design = Get-PnPSiteDesign -Identity 046e2e76-67ba-46ca-a5f6-8eb418a7821e
 Set-PnPSiteDesign -Identity $design -Title "My Updated Company Design"
@@ -50,112 +51,19 @@ Updates an existing Site Design and sets a new title.
 
 ## PARAMETERS
 
-### -Description
-The description of the site design
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Identity
-The guid or an object representing the site design
-
-```yaml
-Type: TenantSiteDesignPipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -IsDefault
-Specifies if the site design is a default site design
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -PreviewImageAltText
-Sets the text for the preview image
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -PreviewImageUrl
-Sets the url to the preview image
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SiteScriptIds
-An array of guids of site scripts
-
-```yaml
-Type: GuidPipeBind[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Title
-The title of the site design
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Version
-Specifies the version of the design
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -WebTemplate
-Specifies the type of site to which this design applies
-
-```yaml
-Type: SiteWebTemplate
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -167,9 +75,154 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description of the site design
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The guid or an object representing the site design
+
+```yaml
+Type: TenantSiteDesignPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDefault
+Specifies if the site design is a default site design
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewImageAltText
+Sets the text for the preview image
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewImageUrl
+Sets the url to the preview image
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteScriptIds
+An array of guids of site scripts
+
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+The title of the site design
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+Specifies the version of the design
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WebTemplate
+Specifies the type of site to which this design applies
+
+```yaml
+Type: SiteWebTemplate
+Parameter Sets: (All)
+Accepted values: TeamSite, CommunicationSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

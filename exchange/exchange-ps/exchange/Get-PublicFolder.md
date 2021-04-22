@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
 

@@ -83,7 +83,8 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter>
 ```
 Enable-RemoteMailbox [-Identity] <UserIdParameter>
  [-Shared]
- [-ACLableSyncedObjectEnabled [-Alias <String>]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]

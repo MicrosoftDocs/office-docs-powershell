@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-umconnectivity
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Test-UMConnectivity
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-UMConnectivity cmdlet to test the operation of Unified Messaging (UM) servers.
 
-**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or Exchange 2016, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -144,7 +144,7 @@ The Phone parameter specifies the telephone number or Session Initiation Protoco
 Type: String
 Parameter Sets: TuiLogonSpecific, EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -160,7 +160,7 @@ The PIN parameter specifies the PIN associated with the UM-enabled mailbox.
 Type: String
 Parameter Sets: TuiLogonSpecific
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -176,7 +176,7 @@ The ResetPIN parameter specifies whether to generate or regenerate a new PIN for
 Type: Boolean
 Parameter Sets: PinReset
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -192,7 +192,7 @@ The TUILogon parameter specifies whether the cmdlet tries to log on to one or mo
 Type: Boolean
 Parameter Sets: TuiLogonSpecific
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -208,7 +208,7 @@ The TUILogonAll parameter specifies whether to try to connect to all test mailbo
 Type: Boolean
 Parameter Sets: TuiLogonGeneral
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -224,7 +224,7 @@ The UMDialPlan parameter specifies the UM dial plan to be tested. This parameter
 Type: UMDialPlanIdParameter
 Parameter Sets: TuiLogonSpecific
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -240,7 +240,7 @@ The UMIPGateway parameter specifies the name of the UM IP gateway or IP PBX to u
 Type: UMIPGatewayIdParameter
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -256,7 +256,7 @@ The CallRouter switch specifies whether to test the Microsoft Exchange Unified M
 Type: SwitchParameter
 Parameter Sets: LocalLoop
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ The CertificateThumbprint parameter specifies the certificate thumbprint used fo
 Type: String
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -307,7 +307,7 @@ The DiagDtmfDurationInMilisecs parameter specifies the duration of each digit se
 Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -323,7 +323,7 @@ The DiagDtmfSequence parameter specifies the sequence of digits sent.
 Type: String
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -339,7 +339,7 @@ The DiagInitialSilenceInMilisecs parameter specifies the time period in millisec
 Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -355,7 +355,7 @@ The DiagInterDtmfDiffGapInMilisecs parameter specifies whether to customize the 
 Type: String
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -371,7 +371,7 @@ The DiagInterDtmfGapInMilisecs parameter specifies the time in milliseconds betw
 Type: Int32
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -387,7 +387,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -403,7 +403,7 @@ The From parameter specifies the SIP URI or SIP address that the call originated
 Type: String
 Parameter Sets: EndToEnd
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -419,7 +419,7 @@ The ListenPort parameter specifies the IP port number on which to listen. If not
 Type: Int32
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -435,7 +435,7 @@ The MediaSecured parameter specifies whether to use Secure RTP or RTP (unsecured
 Type: Boolean
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -451,7 +451,7 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -467,7 +467,7 @@ The RemotePort parameter specifies the port used for the call. If not specified,
 Type: Int32
 Parameter Sets: TuiLogonSpecific, TuiLogonGeneral, LocalLoop
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -483,7 +483,7 @@ The Secured parameter specifies whether the test is run in SIP Secured mode.
 Type: Boolean
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -499,7 +499,7 @@ The Timeout parameter specifies the length of time in seconds to wait for the te
 Type: Int32
 Parameter Sets: TuiLogonSpecific, EndToEnd, TuiLogonGeneral, LocalLoop
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -515,7 +515,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

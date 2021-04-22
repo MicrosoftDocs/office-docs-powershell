@@ -27,10 +27,8 @@ Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
  [-Multiplier <Double>]
- [-Name <String>]
  [-NotifyUser <MultiValuedProperty>]
  [-Operation <MultiValuedProperty>]
  [-RecordType <AuditRecordType>]
@@ -181,22 +179,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EmailCulture
 The EmailCulture parameter specifies the language of the notification email message.
 
@@ -222,22 +204,6 @@ You can only use this parameter on activity alerts that have the Type property v
 
 ```yaml
 Type: Double
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

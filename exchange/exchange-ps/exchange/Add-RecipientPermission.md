@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the permission. The only value for this parameter is SendAs.
+The AccessRights parameter specifies the permission that you want to add for the trustee on the target recipient. The only valid value for this parameter is SendAs.
 
 ```yaml
 Type: MultiValuedProperty
@@ -98,12 +98,10 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter specifies the user or group that receives SendAs permission on the recipient specified by the Identity parameter.
-
-You can specify the following types of users or groups (security principals) for this parameter:
+The Trustee parameter specifies the user or group that receives SendAs permission on the recipient specified by the Identity parameter. You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-- Mail users with a Microsoft account (formerly known as a Windows Live ID)
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:

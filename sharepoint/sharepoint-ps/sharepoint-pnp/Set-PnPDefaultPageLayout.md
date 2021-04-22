@@ -1,49 +1,54 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpdefaultpagelayout
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPDefaultPageLayout
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPDefaultPageLayout.html
 ---
-
+ 
 # Set-PnPDefaultPageLayout
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPDefaultPageLayout.md to change this file.
+
 Sets a specific page layout to be the default page layout for a publishing site
 
-## SYNTAX 
+## SYNTAX
 
 ### TITLE
 ```powershell
-Set-PnPDefaultPageLayout -Title <String>
-                         [-Web <WebPipeBind>]
-                         [-Connection <PnPConnection>]
+Set-PnPDefaultPageLayout -Title <String> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### INHERIT
 ```powershell
-Set-PnPDefaultPageLayout -InheritFromParentSite [<SwitchParameter>]
-                         [-Web <WebPipeBind>]
-                         [-Connection <PnPConnection>]
+Set-PnPDefaultPageLayout [-InheritFromParentSite] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPDefaultPageLayout -Title projectpage.aspx
 ```
 
 Sets projectpage.aspx to be the default page layout for the current web
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPDefaultPageLayout -Title test/testpage.aspx
 ```
 
 Sets a page layout in a folder in the Master Page & Page Layout gallery, such as _catalog/masterpage/test/testpage.aspx, to be the default page layout for the current web
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPDefaultPageLayout -InheritFromParentSite
 ```
@@ -51,6 +56,20 @@ Set-PnPDefaultPageLayout -InheritFromParentSite
 Sets the default page layout to be inherited from the parent site
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InheritFromParentSite
 Set the default page layout to be inherited from the parent site.
@@ -61,7 +80,9 @@ Parameter Sets: INHERIT
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -73,33 +94,14 @@ Parameter Sets: TITLE
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 localization_priority: Normal
@@ -17,19 +18,21 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 # V1 module - Connect to Security & Compliance Center PowerShell using MFA
 
 > [!NOTE]
-> The older Exchange Online Remote PowerShell Module that's described in this topic will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
+> The older Exchange Online Remote PowerShell Module that's described in this article will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
 
 If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance Center PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
 
 **Notes**:
 
-- Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
+- Delegated Access Permission (DAP) partners can't use the procedures in this article to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
 
 - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
+
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Security & Compliance Center](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 - You can use the following versions of Windows:
 
@@ -41,7 +44,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
   - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of Windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
@@ -77,7 +80,7 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>, and might not be enabled by default.
 
-1. Open the Exchange admin center (EAC). For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
+1. Open the Exchange admin center (EAC). For instructions, see [Exchange admin center in Exchange Online](/exchange/exchange-admin-center).
 
 2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
@@ -100,6 +103,8 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
    - _\<UPN\>_ is your Microsoft 365 work or school account.
 
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
+
+     <br>
 
      ****
 

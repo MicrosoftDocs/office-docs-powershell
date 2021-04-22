@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spdefaultprofileconfig
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPDefaultProfileConfig

@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnphubsiteassociation
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPHubSiteAssociation.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPHubSiteAssociation
 ---
-
+  
 # Add-PnPHubSiteAssociation
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPHubSiteAssociation.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,12 +21,11 @@ title: Add-PnPHubSiteAssociation
 
 Connects a site to a hubsite.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPHubSiteAssociation -Site <SitePipeBind>
-                          -HubSite <SitePipeBind>
-                          [-Connection <PnPConnection>]
+Add-PnPHubSiteAssociation -Site <SitePipeBind> -HubSite <SitePipeBind> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,14 +33,28 @@ Connects an existing site to a hubsite
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Add-PnPHubSiteAssociation -Site https://tenant.sharepoint.com/sites/mysite -HubSite https://tenant.sharepoint.com/sites/hubsite
+Add-PnPHubSiteAssociation -Site "https://tenant.sharepoint.com/sites/mysite" -HubSite "https://tenant.sharepoint.com/sites/hubsite"
 ```
 
 This example adds the specified site to the hubsite.
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -HubSite
 The hubsite to connect the site to
@@ -47,7 +65,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Site
@@ -59,21 +79,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.access.server.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spaccessservicesdatabase
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPAccessServicesDatabase
