@@ -2934,8 +2934,13 @@ Accept wildcard characters: False
 
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
+Allows mail enabled users send messages and reply with their secondary proxy addresses (aliases) in Outlook on the web. Valid values are:
+$true: Users will be get an option to send messages and reply with their secondary proxy addresses (aliiases)
+$false: Users will be forced to use their primary proxy address for new messages and reply. This is the default value.
+For more information about sending from alias please see https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Exchange&searchterms=59437
 
-{{ Fill SendFromAliasEnabled Description }}
+> [!NOTE]
+> Send from alias will not work in Outlook for desktop
 
 ```yaml
 Type: Boolean
