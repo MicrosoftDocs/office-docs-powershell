@@ -587,7 +587,7 @@ The ContentType parameter specifies where the sensivity label can be applied. Va
 - Site, UnifiedGroup
 - PurviewAssets
 
-Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into "File" and "Email" is not supported.
+Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
 
 ```yaml
 Type: MipLabelContentType
