@@ -2935,7 +2935,14 @@ Accept wildcard characters: False
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill SendFromAliasEnabled Description }}
+The SendFromAliasEnabled parameter allows mailbox users to send messages and reply to messages in Outlook on the web using any of the proxy addresses (secondary email addresses) that are configured on the mailbox. Valid values are:
+
+- $true: Users in Outlook on the web get an option to send messages and reply to messages with a proxy addresses.
+- $false: Users can only send messages and reply to messages using their primary email address. This is the default value.
+
+For more information about the availability of this feature, see the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437).
+
+**Note**: This feature doesn't work in Outlook for Windows or Mac.
 
 ```yaml
 Type: Boolean
