@@ -21,10 +21,6 @@ Assigns a per-user application access policy to one or more users. After assigni
 ### Identity (Default)
 
 ```
-Grant-CsApplicationAccessPolicy [-PolicyName <String>] [-Global]
-```
-### Tenant Wide
-```
 Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>]
 ```
 
