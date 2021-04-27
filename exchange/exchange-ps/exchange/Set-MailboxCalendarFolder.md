@@ -283,7 +283,11 @@ Accept wildcard characters: False
 ### -SharedCalendarSyncStartDate
 This parameter is available only in the cloud-based service.
 
-{{ Fill SharedCalendarSyncStartDate Description }}
+The SharedCalendarSyncStartDate parameter specifies the limit for past events that are visible to delegates in shared calendars. A copy of the shared calendar up to the value specified by this parameter is stored in the delegate's mailbox.
+
+Delegates need to have FullDetails, Editor, or Delegate access to the shared calendar.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
