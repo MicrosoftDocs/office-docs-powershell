@@ -285,11 +285,14 @@ This parameter is available only in the cloud-based service.
 
 **Note**: This parameter is supported only for shared calendars that have been upgraded as described in [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/365-b576ecc3-0945-4d75-85f1-5efafb8a37b4), and is not applicable to any other type of calendar or mailbox folder.
 
-The SharedCalendarSyncStartDate parameter specifies the limit for past events that are visible to delegates in shared calendars. A copy of the shared calendar up to the value specified by this parameter is stored in the delegate's mailbox. Delegates need to have FullDetails, Editor, or Delegate access to the shared calendar. A valid value for this parameter is a date-time value.
+The SharedCalendarSyncStartDate parameter specifies the limit for past events that are visible to users who have access to the specified shared calendar. A copy of the shared calendar with events that go back as far as the value specified by this parameter is stored in the user's mailbox. A valid value for this parameter is a date-time value.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-**Note**: Setting this parameter may cause events to briefly disappear from view in the shared calendar while the calendar is resynchronized.
+**Notes**:
+
+- Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
+- Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
 
 ```yaml
 Type: DateTime
