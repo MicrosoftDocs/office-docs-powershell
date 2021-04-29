@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
 
-- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
 - Office 365 Germany: `https://login.microsoftonline.de/common`
 - Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`
 
