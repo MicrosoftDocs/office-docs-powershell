@@ -17,7 +17,7 @@ Creates new Call Queue in your Skype for Business Online organization.
 
 ## SYNTAX
 
-```
+```powershell
 New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] 
 [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] 
 [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] 
@@ -31,15 +31,15 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
-```
+### Example 1
+```powershell
 New-CsCallQueue -Name "Help Desk" -UseDefaultMusicOnHold $true
 ```
 
 This example creates a Call Queue for the organization named "Help Desk" using default music on hold.
 
-### -------------------------- Example 2 -------------------------- 
-```
+### Example 2
+```powershell
 New-CsCallQueue -Name "Help desk" -RoutingMethod Attendant -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -AllowOptOut $false -AgentAlertTime 30 -OverflowThreshold 15 -OverflowAction Forward -OverflowActionTarget 7fd04db1-1c8e-4fdf-9af5-031514ba1358 -TimeoutThreshold 30 -TimeoutAction Disconnect -MusicOnHoldAudioFileId 1e81adaf-7c3e-4db1-9d61-5d135abb1bcc -WelcomeMusicAudioFileId 0b31bbe5-e2a0-4117-9b6f-956bca6023f8
 
 ```
