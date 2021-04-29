@@ -23,7 +23,7 @@ The _CustomPropertyNames_ parameter on the [Get-CalendarDiagnosticObjects](/powe
 
 The article describes the valid values for the _CustomPropertyNames_ parameter.
 
-<br><br>
+<br>
 
 ****
 

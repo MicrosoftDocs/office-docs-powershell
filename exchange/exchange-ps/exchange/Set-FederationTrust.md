@@ -78,7 +78,7 @@ This example configures the federation trust Microsoft Federation Gateway to use
 
 ### Example 3
 ```powershell
-Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
+Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://nexus.microsoftonline-p.com/federationmetadata/2006-12/federationmetadata.xml
 ```
 
 This example updates the configuration if the tenant is hosted in Microsoft 365 U.S. Government GCC High or DoD environment.
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataUrl
-The MetadataUrl parameter specifies the URL where WS-FederationMetadata is published by the Microsoft Federation Gateway. <br/><br/> **Note**: For GCC High or DoD tenants, use the value https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml.
+The MetadataUrl parameter specifies the URL where WS-FederationMetadata is published by the Microsoft Federation Gateway.
 
 ```yaml
 Type: Uri
