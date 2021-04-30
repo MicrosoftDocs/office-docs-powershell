@@ -14,7 +14,7 @@ ms.author: chrisda
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Get-VivaInsightsSettings cmdlet to check whether user has the access to features in Microsoft Viva Insights in Microsoft Teams settings for users.
+Use the Get-VivaInsightsSettings cmdlet to check whether a user has access to features in Microsoft Viva Insights in Microsoft Teams.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,13 +39,13 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
+PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
 
 UserId : roy@contoso.onmicrosoft.com
 IsInsightsHeadspaceEnabled : True
 ```
 
-This example and the corresponding output shows the configuration of Microsoft Viva Insights in Microsoft Teams for the user roy@contoso.onmicrosoft.com. Features of Headspace are available to Roy.
+This example shows the configuration of Microsoft Viva Insights in Microsoft Teams for the user roy@contoso.onmicrosoft.com. The output of the command shows that the features of Headspace are available to Roy.
 
 ## PARAMETERS
 
