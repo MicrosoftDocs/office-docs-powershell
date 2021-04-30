@@ -14,7 +14,7 @@ ms.author: chrisda
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Get-VivaInsightsSettings cmdlet to view the Microsoft Viva Insights in Microsoft Teams settings for users.
+Use the Get-VivaInsightsSettings cmdlet to check whether a user has access to features in Microsoft Viva Insights in Microsoft Teams.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -22,9 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-VivaInsightsSettings -Identity <String>
- [-BatchRequests]
  [-ResultSize <Unlimited>]
- [-UseMultithreading]
  [<CommonParameters>]
 ```
 
@@ -33,7 +31,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 
 - Global Administrator
 - Exchange Administrator
-- Insights Administrator
+- Teams Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -41,10 +39,13 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
+PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
+
+UserId : roy@contoso.onmicrosoft.com
+IsInsightsHeadspaceEnabled : True
 ```
 
-This example returns the Microsoft Viva Insights in Microsoft Teams settings for the specified user.
+This example shows the configuration of Microsoft Viva Insights in Microsoft Teams for the user roy@contoso.onmicrosoft.com. The output of the command shows that the features of Headspace are available to Roy.
 
 ## PARAMETERS
 
@@ -64,43 +65,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BatchRequests
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResultSize
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseMultithreading
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
