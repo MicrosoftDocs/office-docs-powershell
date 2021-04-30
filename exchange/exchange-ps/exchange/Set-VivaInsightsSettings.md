@@ -14,7 +14,7 @@ ms.author: chrisda
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Set-VivaInsightsSettings cmdlet to modify the Microsoft Viva Insights in Microsoft Teams settings for users.
+Use the Set-VivaInsightsSettings cmdlet for Global admin, Exchange Online admin and Teams admin to control user access of features in Viva Insights.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -22,9 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-VivaInsightsSettings -Identity <String> -Enabled <Boolean> -Feature <String>
- [-BatchRequests]
  [-ResultSize <Unlimited>]
- [-UseMultithreading]
  [<CommonParameters>]
 ```
 
@@ -33,7 +31,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 
 - Global Administrator
 - Exchange Administrator
-- Insights Administrator
+- Teams Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -41,10 +39,10 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -Feature Headspace
+Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -Feature headspace
 ```
 
-This example disables Microsoft Viva Insights in Microsoft Teams for the specified user.
+This example disables access to all the Headspace features in Microsoft Viva Insights in Microsoft Teams for the specified user.
 
 ## PARAMETERS
 
@@ -65,10 +63,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter enables or disables Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
+The Enabled parameter enables or disables access of specific feature of Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
 
-- $true: Microsoft Viva Insights in Microsoft Teams is enabled for the user. This is the default value.
-- $false: Microsoft Viva Insights in Microsoft Teams is disabled for the user.
+- $true: specific feature of Microsoft Viva Insights in Microsoft Teams is enabled for the user.
+- $false: specific feature of Microsoft Viva Insights in Microsoft Teams is disabled for the user.
 
 ```yaml
 Type: Boolean
@@ -84,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -Feature
-The Feature parameter specifies the Microsoft Viva Insights in Microsoft Teams features for the user. Currently, the only valid value is Headspace.
+The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Current valid values are:
+
+- headspace: represent all the features of Headspace
 
 ```yaml
 Type: String
@@ -100,43 +100,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BatchRequests
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResultSize
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseMultithreading
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
