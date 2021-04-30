@@ -21,7 +21,7 @@ Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your 
 ```
 Set-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserOverride <Boolean>]
  [-ServiceNumber <String>] [-CallingIDSubstitute <CallingIDSubstituteType>]
- [-BlockIncomingPstnCallerID <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [-BlockIncomingPstnCallerID <Boolean>] [[-Identity] <XdsIdentity>] [-ResourceAccount <Guid>] [-CompanyName <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -29,7 +29,7 @@ Set-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserO
 ```
 Set-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserOverride <Boolean>]
  [-ServiceNumber <String>] [-CallingIDSubstitute <CallingIDSubstituteType>]
- [-BlockIncomingPstnCallerID <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-BlockIncomingPstnCallerID <Boolean>] [-ResourceAccount <Guid>] [-CompanyName <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -38,12 +38,13 @@ You can either change or block the Caller ID (also called a Calling Line ID) for
 By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
 You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
-Note:
-Identity must be unique.
+Note:  
+- Identity must be unique.
+- ServiceNumber must be a valid Service Number in the Skype for Business Online online telephone number inventory.
+- If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
+- If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
 
-ServiceNumber must be a valid Service Number in the Skype for Business Online Telephone Number Inventory.
-
-If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
+**Preview** The use of the parameters ResourceAccount and CompanyName is in Preview.
 
 ## EXAMPLES
 
@@ -69,6 +70,15 @@ PS C:\> Set-CsCallingLineIdentity -Identity Anonymous -Description "anonymous po
 
 This example modifies the new Anonymous Caller ID policy that blocks the incoming Caller ID.
 
+### Example 4
+```
+$ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
+Set-CsCallingLineIdentity  -Identity DKCQ -CallingIDSubstitute Resource -ResourceAccount $ObjId -CompanyName "Contoso"
+```
+
+This example modifies the Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
+
+
 ## PARAMETERS
 
 ### -BlockIncomingPstnCallerID
@@ -93,7 +103,7 @@ Accept wildcard characters: False
 
 ### -CallingIDSubstitute
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID.
-The possible values are Anonymous, Service and LineUri.
+The possible values are Anonymous, Service, LineUri and Resource.
 
 ```yaml
 Type: CallingIDSubstituteType
@@ -101,6 +111,21 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompanyName
+This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call.
+**Preview** The use of the parameter CompanyName is in Preview.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +224,21 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceAccount
+This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/microsoftteams/manage-resource-accounts.
+**Preview** The use of the parameter ResourceAccount is in Preview.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: None
