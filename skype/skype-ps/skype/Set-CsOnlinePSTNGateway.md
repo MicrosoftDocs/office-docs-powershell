@@ -21,7 +21,7 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignalingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
 [-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
 [-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
-[-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [-Identity <XdsGlobalRelativeIdentity>] 
+[-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride <String>] [-Identity <XdsGlobalRelativeIdentity>] 
 [-BypassMode <String>] [-GenerateRingingWhileLocatingUser <Boolean>] 
 [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
 [-OutboundTeamsNumberTranslationRules <String>] [-PidfloSupported <Boolean>] [-OutboundPSTNNumberTranslationRules <String>] 
@@ -199,10 +199,12 @@ Accept wildcard characters: False
 ```
 
 ### -MediaRelayRoutingLocationOverride
+This parameter is reserved for use with managed carriers.
+
 Allows selecting path for media manually. Direct Routing assigns a datacenter for media path based on the public IP of the SBC. We always select closest to the SBC datacenter. However, in some cases a public IP from for example a US range can be assigned to an SBC located in Europe. In this case we will be using not optimal media path. This parameter allows manually set the preferred region for media traffic. We only recommend setting this parameter if the call logs clearly indicate that automatic assignment of the datacenter for media path does not assign the closest to the SBC datacenter
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
