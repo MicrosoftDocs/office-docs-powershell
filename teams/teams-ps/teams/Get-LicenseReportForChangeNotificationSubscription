@@ -5,11 +5,11 @@ title: Get-DlpUserLicenseReport
 author: anandab
 ms.author: anandab
 manager: alagra
-online version: https://docs.microsoft.com/powershell/module/teams/get-dlpuserlicensereport
+online version: https://docs.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription 
 schema: 2.0.0
 ---
 
-# Get-DlpUserLicenseReport
+# Get-LicenseReportForChangeNotificationSubscription
 
 ## SYNOPSIS
 
@@ -18,7 +18,7 @@ This cmdlet tells whether a user has the required license to export their messag
 ## SYNTAX
 
 ```
-Get-DlpUserLicenseReport [-Period] <Number> 
+Get-LicenseReportForChangeNotificationSubscription [-Period] <Number> 
 ```
 
 ## DESCRIPTION
