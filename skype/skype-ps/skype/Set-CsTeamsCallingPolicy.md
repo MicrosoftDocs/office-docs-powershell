@@ -405,10 +405,11 @@ Accept wildcard characters: False
 ```
 
 ### -SpamFilteringEnabledType
-Determines if Spam filtering is enabled.
+Determines if Spam filtering is enabled and if CAPTCHA IVR is also used.
 
 Possible values:
 - Enabled
+- EnabledWithoutIVR
 - Disabled
 
 ```yaml
