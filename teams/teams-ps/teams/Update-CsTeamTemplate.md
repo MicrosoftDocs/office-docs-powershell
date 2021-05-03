@@ -16,6 +16,8 @@ schema: 2.0.0
 
 This cmdlet submits an operation that updates a custom team template with new team template settings.
 
+NOTE: The response is a PowerShell object formatted as a JSON for readability. Please refer to the examples for suggested interaction flows for template management.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

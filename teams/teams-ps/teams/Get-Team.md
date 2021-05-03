@@ -59,7 +59,7 @@ Returns the team that matches the specified MailNickName
 ```
 PS> Get-Team -DisplayName "Sales and Marketing"
 ```
-Returns the team that matches the specified DisplayName
+Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
 
 ## PARAMETERS
 
