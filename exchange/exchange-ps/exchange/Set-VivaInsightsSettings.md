@@ -14,6 +14,8 @@ ms.author: chrisda
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
+**Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the EXO V2 module.
+
 Use the Set-VivaInsightsSettings cmdlet to control user access to features in Viva Insights.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
