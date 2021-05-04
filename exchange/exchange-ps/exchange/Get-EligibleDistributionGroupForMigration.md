@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-eligibledistributiongroupformigration
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-EligibleDistributionGroupForMigration
 schema: 2.0.0
 author: chrisda
@@ -61,7 +61,7 @@ You can't use this parameter with the ManagedBy parameter.
 Type: DistributionGroupIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -86,7 +86,7 @@ You can't use this parameter with the Identity parameter.
 Type: GeneralRecipientIdParameter
 Parameter Sets: ManagedBy
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -400,13 +400,11 @@ In Exchange Online, this example results in meeting updates being auto-processed
 ### -ShortenEventScopeDefault
 This parameter is available only in the cloud-based service
 
-{{ Fill ShortenEventScopeDefault Description }}
+The ShortenEventScopeDefault parameter specifies whether calendar events start late or end early in the organization. Valid values are:
 
-Valid values are:
-
-- None (default value)
-- EndEarly
-- StartLate
+- 0 or None: Calendar events in the organization don't automatically start late or end early. This is the default value.
+- 1 or EndEarly: By default, the end time of all calendar events is reduced by the number of minutes as specified by the values of the DefaultMinutesToReduceLongEventsBy and DefaultMinutesToReduceShortEventsBy parameters.
+- 2 or StartLate: By default, the start time of all calendar events is delayed by the number of minutes as specified by the values of the DefaultMinutesToReduceLongEventsBy and DefaultMinutesToReduceShortEventsBy parameters.
 
 ```yaml
 Type: ShortenEventScopeMode
@@ -1233,14 +1231,17 @@ Accept wildcard characters: False
 ### -DefaultMinutesToReduceLongEventsBy
 This parameter is available only in the cloud-based service.
 
-{{ Fill DefaultMinutesToReduceLongEventsBy Description }}
+The DefaultMinutesToReduceLongEventsBy parameter specifies the number of minutes to reduce calendar events by if the events are 60 minutes or longer. A valid value is an integer from 0 to 29. The default value is 10.
+
+To use this parameter, you also need to include the ShortenEventScopeDefault parameter.
+
+Whether long events start late or end early by the specified number of minutes depends on the value of the ShortenEventScopeDefault parameter (EndEarly or StartLate).
 
 ```yaml
 Type: Int32
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1251,14 +1252,17 @@ Accept wildcard characters: False
 ### -DefaultMinutesToReduceShortEventsBy
 This parameter is available only in the cloud-based service.
 
-{{ Fill DefaultMinutesToReduceShortEventsBy Description }}
+The DefaultMinutesToReduceShortEventsBy parameter specifies the number of minutes to reduce calendar events by if the events are less than 60 minutes long. A valid value is an integer from 0 to 29. The default value is 5.
+
+To use this parameter, you also need to include the ShortenEventScopeDefault parameter.
+
+Whether short events start late or end early by the specified number of minutes depends on the value of the ShortenEventScopeDefault parameter (EndEarly or StartLate).
 
 ```yaml
 Type: Int32
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2931,7 +2935,14 @@ Accept wildcard characters: False
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill SendFromAliasEnabled Description }}
+The SendFromAliasEnabled parameter allows mailbox users to send messages and reply to messages in Outlook on the web using any of the proxy addresses (secondary email addresses) that are configured on the mailbox. Valid values are:
+
+- $true: Users in Outlook on the web get an option to send messages and reply to messages with a proxy addresses.
+- $false: Users can only send messages and reply to messages using their primary email address. This is the default value.
+
+For more information about the availability of this feature, see the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437).
+
+**Note**: This feature doesn't work in Outlook for Windows or Mac.
 
 ```yaml
 Type: Boolean
@@ -3141,7 +3152,10 @@ Accept wildcard characters: False
 ### -WorkspaceTenantEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill WorkspaceTenantEnabled Description }}
+The WorkspaceTenantEnabled parameter enables or disables workspace booking in the organization. Valid values are:
+
+- $true: In Outlook for iOS and Android, the calendar setting for workspace booking is visible and is off by default.
+- $false: In Outlook for iOS and Android, the calendar setting for workspace booking is hidden.
 
 ```yaml
 Type: Boolean

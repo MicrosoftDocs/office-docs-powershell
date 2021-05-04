@@ -79,7 +79,7 @@ If your account uses multi-factor authentication, use the steps in this section.
    Connect-IPPSSession -UserPrincipalName -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
    ```
 
-For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
@@ -146,7 +146,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
    ```
 
-For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:

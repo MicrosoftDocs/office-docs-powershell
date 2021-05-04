@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ActiveSyncDeviceAutoblockThreshold cmdlet to obtain the Autoblock settings for Microsoft Exchange ActiveSync mobile devices..
+Use the Get-ActiveSyncDeviceAutoblockThreshold cmdlet to obtain the Autoblock settings for Microsoft Exchange ActiveSync mobile devices.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

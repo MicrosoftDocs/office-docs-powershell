@@ -38,7 +38,7 @@ Suspend-Message [-Identity] <MessageIdentity>
 ```
 
 ## DESCRIPTION
-A message already in delivery won't be suspended. Delivery will continue and the message status will be PendingSuspend. If the delivery fails, the message will re-enter the queue and it will then be suspended. You can't suspend a message that's in the Submission queue or poison message queue.
+A message already in delivery won't be suspended. Delivery will continue and the message status will be PendingSuspend. If the delivery fails, the message will re-enter the queue and it will then be suspended. You can't suspend a message that's in the poison message queue.
 
 A message being sent to multiple recipients might be located in multiple queues. If you specify an Identity parameter, the message is suspended in a single queue if that identity matches only a single message. If the identity matches more than one message, you receive an error. To suspend a message in more than one queue in a single operation, you must use the Filter parameter.
 

@@ -414,7 +414,7 @@ Administrative units are Azure Active Directory containers of resources. You can
 Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

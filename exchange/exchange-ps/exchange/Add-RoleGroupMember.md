@@ -89,7 +89,24 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the mailbox, USG, or computer to add to a role group. You can only specify one member at a time. If the member name contains spaces, enclose the name in quotation marks (").
+The Member parameter specifies who you want to add to the role group. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter
