@@ -31,7 +31,7 @@ The rest of this article explains how the module works, how to install and maint
 
 ## Report bugs and issues for the EXO V2 module
 
-When you report an issue, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
 ```powershell
 Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
