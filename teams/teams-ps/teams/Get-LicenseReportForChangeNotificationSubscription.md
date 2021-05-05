@@ -13,7 +13,7 @@ schema: 2.2.0-preview
 
 ## SYNOPSIS
 
-This cmdlet tells whether a user has the required license to export their messages via [change notification subscription](https://docs.microsoft.com/en-us/graph/teams-licenses)
+This cmdlet tells whether a user has the required license to export their messages via [change notification subscription](/graph/teams-licenses)
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-LicenseReportForChangeNotificationSubscription [-Period] <Number>
 
 ## DESCRIPTION
 
-This cmdlet supports retrieving the total number of messages sent by a user in chat/channel and whether a user has the required license(s) to sent change notification events when subscribed for chat or channel messages. For more details please review https://docs.microsoft.com/en-us/graph/teams-licenses
+This cmdlet supports retrieving the total number of messages sent by a user in chat/channel and whether a user has the required license(s) to sent change notification events when subscribed for chat or channel messages. For more details please review [Licenses for subscribing to chat messages](/graph/teams-licenses).
 
 > [!NOTE]
 > This cmdlet is currently supported in preview version only.
