@@ -18,21 +18,22 @@ Use the New-CsCallingLineIdentity cmdlet to create a new Caller ID policy for yo
 ## SYNTAX
 
 ```
-New-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserOverride <Boolean>]
- [-ServiceNumber <String>] [-CallingIDSubstitute <CallingIDSubstituteType>]
- [-BlockIncomingPstnCallerID <Boolean>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CsCallingLineIdentity [-Description <String>] [-ServiceNumber <String>] [-CompanyName <String>] [-Confirm]
+ [-CallingIDSubstitute <CallingIDSubstituteType>] [[-Identity] <XdsIdentity>] [-InMemory] [-Tenant <Guid>]
+ [-BlockIncomingPstnCallerID <Boolean>] [-ResourceAccount <Guid>] [-EnableUserOverride <Boolean>] [-WhatIf]
+ [-Force]
 ```
 
 ## DESCRIPTION
-You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
 Note:  
 - Identity must be unique.
 - ServiceNumber must be a valid Service Number in the Skype for Business Online online telephone number inventory.
 - If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
+- If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
  
-
+**Preview** The use of the parameters ResourceAccount and CompanyName is in Preview.
 
 ## EXAMPLES
 
@@ -56,6 +57,15 @@ New-CsCallingLineIdentity  -Identity Anonymous -Description "anonymous policy" -
 ```
 
 This example creates a new Caller ID policy that blocks the incoming Caller ID.
+
+### Example 4
+```
+$ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
+New-CsCallingLineIdentity  -Identity DKCQ -CallingIDSubstitute Resource -EnableUserOverride $false -ResourceAccount $ObjId -CompanyName "Contoso"
+```
+
+This example creates a new Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
+
 
 ## PARAMETERS
 
@@ -95,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-PARAMVALUE: Anonymous | Service | LineUri
+PARAMVALUE: Anonymous | Service | LineUri | Resource
 
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri.
 
@@ -104,6 +114,22 @@ Type: CallingIDSubstituteType
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompanyName
+This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call.
+**Preview** The use of the parameter CompanyName is in Preview.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -192,6 +218,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResourceAccount
+This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/microsoftteams/manage-resource-accounts
+**Preview** The use of the parameter ResourceAccount is in Preview.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ServiceNumber
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
 
@@ -264,4 +306,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md) 
 
 [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
-
