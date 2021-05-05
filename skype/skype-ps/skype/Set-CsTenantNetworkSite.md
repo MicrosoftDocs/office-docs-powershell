@@ -20,21 +20,21 @@ As an Admin, you can use the Windows PowerShell command, Set-CsTenantNetworkSite
 ### Identity (Default)
 ```
 Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
- [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>] 
+ [-NetworkRoamingPolicy <String>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
  [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NetworkRoamingPolicy <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets. Each network site must be associated with a network region.
 
-A best practice for Location Based Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration.
+A best practice for Location Based Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration. In addition, network sites can also be used for configuring Network Roaming Policy capabilities.
 
 ## EXAMPLES
 
@@ -53,6 +53,13 @@ PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -Network
 ```
 
 The command shown in Example 2 sets the network site 'site2' with description 'site 2'. This site is enabled for LBR. The example associates the site with network region 'RedmondRegion' and with location policy 'TestLocationPolicy'.
+
+###-------------------------- Example 3 --------------------------
+```powershell
+PS C:\> Set-CsTenantNetworkSite -Identity "site3" -Description "site 3" -NetworkRegionID "RedmondRegion" -NetworkRoamingPolicy "TestNetworkRoamingPolicy"
+```
+
+The command shown in Example 3 sets the network site 'site3' with description 'site 3'. This site is enabled network roaming capabilities. The example associates the site with network region 'RedmondRegion' and network roaming policy 'TestNetworkRoamingPolicy'.
 
 ## PARAMETERS
 
@@ -179,6 +186,21 @@ Accept wildcard characters: False
 
 ### -OnlineVoiceRoutingPolicy
 This parameter is deprecated and should not be used.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkRoamingPolicy
+NetworkRoamingPolicy is the identifier for the network roaming policy which the network site will assocaite to.
 
 ```yaml
 Type: String
