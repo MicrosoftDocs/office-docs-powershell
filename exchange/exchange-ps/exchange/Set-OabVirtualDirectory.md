@@ -248,7 +248,7 @@ The PollInterval parameter specifies the time interval in minutes that the distr
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
