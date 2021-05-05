@@ -242,13 +242,15 @@ Accept wildcard characters: False
 ```
 
 ### -PollInterval
+This parameter is available or functional only in Exchange 2010.
+
 The PollInterval parameter specifies the time interval in minutes that the distribution service should poll the offline address book generation server for updates.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
