@@ -1,30 +1,30 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/set-vivainsightssettings
 applicable: Exchange Online
-title: Get-MyAnalyticsFeatureConfig
+title: Set-VivaInsightsSettings
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ---
 
-# Get-MyAnalyticsFeatureConfig
+# Set-VivaInsightsSettings
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Get-MyAnalyticsFeatureConfig cmdlet to view the availability and feature status of MyAnalytics for the specified user.
+**Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the EXO V2 module.
 
-**Note**: This cmdlet replaces the Get-UserAnalyticsConfig and Get-UserBriefingConfig cmdlets.
+Use the Set-VivaInsightsSettings cmdlet to control user access to features in Viva Insights.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MyAnalyticsFeatureConfig -Identity <String>
- [-ResultSize <unlimited>]
+Set-VivaInsightsSettings -Identity <String> -Enabled <Boolean> -Feature <String>
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 
 - Global Administrator
 - Exchange Administrator
-- Insights Administrator
+- Teams Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -41,26 +41,58 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-c:\users\vikram Get-MyAnalyticsFeatureConfig -Identity vikram@contoso.com
-
-UserId : vikram@contoso.com
-PrivacyMode : opt-in
-IsDashboardEnabled : true
-IsAddInEnabled  : true
-IsDigestEmailEnabled : false
+Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -Feature headspace
 ```
 
-This example and the corresponding output shows the MyAnalytics configuration for the user vikram@contoso.com. MyAnalytics is available to Vikram (the PrivacyMode property value is opt-in). The only feature that's disabled is digest email messages.
+This example disables access to all the Headspace features in Microsoft Viva Insights in Microsoft Teams for the specified user.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user you want to view. You identify the user by their email address.
+The Identity parameter specifies the user that you want to modify. You identify the user by their account name (for example, roy@contoso.onmicrosoft.com).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Enabled
+The Enabled parameter enables or disables access to specific features of Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
+
+- $true: The specified features in Microsoft Viva Insights in Microsoft Teams are enabled for the user.
+- $false: The specified features in Microsoft Viva Insights in Microsoft Teams are disabled for the user.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Feature
+The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Current valid values are:
+
+- headspace: Represents all features of Headspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: headspace
 Applicable: Exchange Online
 
 Required: True

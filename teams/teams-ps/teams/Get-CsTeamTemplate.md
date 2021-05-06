@@ -16,6 +16,8 @@ schema: 2.0.0
 
 This cmdlet supports retrieving details of a team template available to your tenant given the team template uri.
 
+NOTE: The returned template definition is a PowerShell object formatted as a JSON for readability. Please refer to the examples for suggested interaction flows for template management.
+
 ## SYNTAX
 
 ### Get (Default)
