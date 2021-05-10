@@ -63,7 +63,7 @@ The command shown in Example 2 created the network site 'site2' with description
 PS C:\> New-CsTenantNetworkSite -NetworkSiteID "site3" -Description "site 3" -NetworkRegionID "RedmondRegion" -NetworkRoamingPolicy "TestNetworkRoamingPolicy"
 ```
 
-The command shown in Example 3 created the network site 'site3' with description 'site 3'. This site is enabled network roaming capabilities. The example associates the site with network region 'RedmondRegion' and network roaming policy 'TestNetworkRoamingPolicy'.
+The command shown in Example 3 created the network site 'site3' with description 'site 3'. This site is enabled for network roaming capabilities. The example associates the site with network region 'RedmondRegion' and network roaming policy 'TestNetworkRoamingPolicy'.
 ## PARAMETERS
 
 ### -Confirm
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkRoamingPolicy
-NetworkRoamingPolicy is the identifier for the network roaming policy which the network site will assocaite to.
+NetworkRoamingPolicy is the identifier for the network roaming policy to which the network site will associate to.
 
 ```yaml
 Type: String
