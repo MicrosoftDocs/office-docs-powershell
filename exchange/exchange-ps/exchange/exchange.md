@@ -1834,6 +1834,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpSiDetectionsReport](Get-DlpSiDetectionsReport.md)
 
+### [Get-PolicyConfig](Get-PolicyConfig.md)
+
 ### [Get-PolicyTipConfig](Get-PolicyTipConfig.md)
 
 ### [Import-DlpPolicyCollection](Import-DlpPolicyCollection.md)
@@ -1903,6 +1905,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DlpSensitiveInformationType](Set-DlpSensitiveInformationType.md)
 
 ### [Set-DlpSensitiveInformationTypeRulePackage](Set-DlpSensitiveInformationTypeRulePackage.md)
+
+### [Set-PolicyConfig](Set-PolicyConfig.md)
 
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
 
@@ -2091,11 +2095,19 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
 
+### [Get-OwnerlessGroupPolicy](Get-OwnerlessGroupPolicy.md)
+
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
+
+### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
+
+### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
+
+### [Set-OwnerlessGroupPolicy](Set-OwnerlessGroupPolicy.md)
 
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
-### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
+### [Set-VivaInsightsSettings](Set-VivaInsightsSettings.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)

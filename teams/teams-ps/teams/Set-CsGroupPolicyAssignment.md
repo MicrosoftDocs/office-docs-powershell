@@ -12,25 +12,29 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** The cmdlet Set-CsGroupPolicyAssignment will be available soon. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
+> [!NOTE]
+> The cmdlet Set-CsGroupPolicyAssignment will be available soon. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
 
+<br/>
 This cmdlet is used to update a group policy assignment.
 
 ## SYNTAX
 
-```
+```powershell
 Set-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> [-PolicyName <String>] [-Rank <Int>]
 ```
 
 ## DESCRIPTION
-This cmdlet will update the policy assignment for a group for a given policy type. The policy instance and/or policy rank can be updated.  Refer to [New-CsGroupPolicyAssignment]() for more details about rank.
+
+This cmdlet will update the policy assignment for a group for a given policy type. The policy instance and/or policy rank can be updated.  Refer to [New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md) for more details about rank.
 
 ## EXAMPLES
 
 ### Example 1
+
 In this example, a new policy of the same type is set without changing the rank.
 
-```
+```powershell
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
 GroupId                              PolicyType         PolicyName Rank CreatedTime           CreatedBy
@@ -49,9 +53,10 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 ```
 
 ### Example 2
+
 In this example, the rank of the policy assignment is updated.
 
-```
+```powershell
 Set-CsGroupPolicyAssignment -GroupId 566b8d39-5c5c-4aaa-bc07-4f36278a1b38 -PolicyType TeamsMeetingPolicy -Rank 1
 
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
@@ -65,6 +70,7 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      2    10/29/20
 ## PARAMETERS
 
 ### -GroupId
+
 The ID of a batch policy assignment operation.
 
 ```yaml
@@ -80,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
+
 The type of the policy assigned.
 
 ```yaml
@@ -95,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
+
 The of the new policy to be assigned.
 
 ```yaml
@@ -110,6 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rank
+
 The new rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
@@ -125,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 

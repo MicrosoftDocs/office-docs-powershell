@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowShareFile
-Designates whether users are able to leverage ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add ShareFile in the client and interact with the files stored there.
+Designates whether users are able to leverage Citrix ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add Citrix ShareFile in the client and interact with the files stored there.
 
 ```yaml
 Type: Boolean
