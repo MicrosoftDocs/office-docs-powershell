@@ -2,11 +2,11 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-LicenseReportForChangeNotificationSubscription
-author: anandab
+author: anandab-msft
 ms.author: anandab
 manager: alagra
 online version: https://docs.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription 
-schema: 2.2.0-preview
+schema: 2.0.0
 ---
 
 # Get-LicenseReportForChangeNotificationSubscription
@@ -30,7 +30,7 @@ This cmdlet is currently supported in preview version only.
 
 ### Example
 ```powershell
-PS C:\> Get-DlpUserLicenseReport -Period 7
+PS C:\> Get-LicenseReportForChangeNotificationSubscription -Period 7
 ```
 
 Returns license info and total messages sent by users in the last 7 days.

@@ -22,7 +22,7 @@ Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignalingPort <Int32>] [-Fa
 [-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
 [-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
 [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride <String>] [-Identity <XdsGlobalRelativeIdentity>] 
-[-BypassMode <String>] [-GenerateRingingWhileLocatingUser <Boolean>] 
+[-BypassMode <String>]  
 [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
 [-OutboundTeamsNumberTranslationRules <String>] [-PidfloSupported <Boolean>] [-OutboundPSTNNumberTranslationRules <String>] 
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -301,19 +301,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-### -GenerateRingingWhileLocatingUser
-This parameter is applicable only for Direct Routing in non-media bypass mode. Sometimes inbound calls from the public switched telephone network (PSTN) to Teams clients can take longer than expected to be established. This can occur for various reasons. When this happens, the caller might not hear anything, the Teams client doesn't ring, and some telecommunications providers might cancel the call. This parameter helps to avoid unexpected silences that can occur in this scenario. When enabled for inbound calls from the PSTN to Teams clients, a distinctive audio signal is played to the caller to indicate that Teams is in the process of establishing the call.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
