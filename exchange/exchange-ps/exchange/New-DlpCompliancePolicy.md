@@ -22,27 +22,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpCompliancePolicy [-Name] <String>
- [-AlertProperties <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
- [-ExceptIfOneDriveSharedBy <SmtpAddress[]>]
- [-ExceptIfOneDriveSharedByMemberOf <SmtpAddress[]>]
+ [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-ExchangeLocation <MultiValuedProperty>]
- [-ExchangeSenderMemberOf <SmtpAddress[]>]
- [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
+ [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
  [-Mode <PolicyMode>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
- [-OneDriveSharedBy <SmtpAddress[]>]
- [-OneDriveSharedByMemberOf <SmtpAddress[]>]
+ [-OneDriveSharedBy <RecipientIdParameter[]>]
+ [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-OnPremisesScannerDlpLocationException <MultiValuedProperty>]
  [-Priority <Int32>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
+ [-SharePointOnPremisesLocationException <MultiValuedProperty>]
+ [-SharePointServerLocation <MultiValuedProperty>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
  [-ThirdPartyAppDlpLocation <MultiValuedProperty>]
@@ -166,7 +167,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -184,7 +185,7 @@ The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -221,7 +222,7 @@ You can enter multiple values separated by commas.
 You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -241,7 +242,7 @@ You can enter multiple values separated by commas.
 You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -334,7 +335,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -352,7 +353,7 @@ The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-e
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -442,6 +443,38 @@ Accept wildcard characters: False
 This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointOnPremisesLocationException
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointServerLocation
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
