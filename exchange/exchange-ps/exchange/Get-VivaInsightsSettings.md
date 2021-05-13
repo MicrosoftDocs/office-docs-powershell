@@ -1,30 +1,31 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/get-vivainsightssettings
 applicable: Exchange Online
-title: Set-UserBriefingConfig
+title: Get-VivaInsightsSettings
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ---
 
-# Set-UserBriefingConfig
+# Get-VivaInsightsSettings
 
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-**Note**: This cmdlet has been replaced by the [Set-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig) cmdlet in the EXO V2 module version 2.0.4 or later.
+**Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the EXO V2 module.
 
-Use the Set-UserBriefingConfig cmdlet to enable or disable the Briefing for a user. For more details about configuring the Briefing, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
+Use the Get-VivaInsightsSettings cmdlet to check whether a user has access to features in Microsoft Viva Insights in Microsoft Teams.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-UserBriefingConfig -Identity <String> -Enabled <Boolean>
+Get-VivaInsightsSettings -Identity <String>
  [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,24 +33,26 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 
 - Global Administrator
 - Exchange Administrator
-- Insights Administrator
+- Teams Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
 ### Example 1
-
 ```powershell
-Set-UserBriefingConfig -Identity lila@contoso.com -Enabled $true
+PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
+
+UserId : roy@contoso.onmicrosoft.com
+IsInsightsHeadspaceEnabled : True
 ```
 
-This example enables the Briefing email for lila@contoso.com.
+This example shows the configuration of Microsoft Viva Insights in Microsoft Teams for the user roy@contoso.onmicrosoft.com. The output of the command shows that the features of Headspace are available to Roy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify (for example, lila@contoso.onmicrosoft.com).
+The Identity parameter specifies the user that you want to view. You identify the user by their account name (for example, roy@contoso.onmicrosoft.com).
 
 ```yaml
 Type: String
@@ -60,25 +63,6 @@ Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Enabled
-The Enabled parameter specifies whether to enable or disable the Briefing email for a specified user's mailbox. Valid values are:
-
-- $true: The daily briefing message is enabled.
-- $false: The daily briefing message is disabled. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -99,6 +83,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
 ## INPUTS
 
 ###  
@@ -110,5 +97,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
-[Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin)

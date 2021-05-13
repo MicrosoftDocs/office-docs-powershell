@@ -36,11 +36,9 @@ This cmdlet enables online provisioning of users in the specified SIP domain. In
 
 Before running this cmdlet for any SIP domain in a Skype for Business Server deployment, you must complete migration of any other existing hybrid SfB deployment that is in progress. All users in an existing hybrid deployment must be moved to the cloud, and that existing hybrid deployment must be detached from Office 365, as described in this article: [Disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid).
 
-> [!IMPORTANT]
-> If you have more than one on-premises deployment of Skype for Business Server, you *must* ensure SharedSipAddressSpace is disabled in all other Skype for Business Server deployments except the deployment containing the SIP domain that is being enabled. 
+Important: If you have more than one on-premises deployment of Skype for Business Server, you *must* ensure SharedSipAddressSpace is disabled in all other Skype for Business Server deployments except the deployment containing the SIP domain that is being enabled. 
 
-> [!NOTE]
-> If the Tenant is enabled for Regionally Hosted Meetings in Skype for Business Online, Online SIP Domains must be Enabled in all regions. You must execute this cmdlet in each region that is added in Allowed Data Location for Skype for Business.  
+Note: If the Tenant is enabled for Regionally Hosted Meetings in Skype for Business Online, Online SIP Domains must be Enabled in all regions. You must execute this cmdlet in each region that is added in Allowed Data Location for Skype for Business.  
 
 ## EXAMPLES
 
