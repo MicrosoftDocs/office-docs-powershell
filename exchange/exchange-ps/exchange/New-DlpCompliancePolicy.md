@@ -27,12 +27,11 @@ New-DlpCompliancePolicy [-Name] <String>
  [-Confirm]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
- [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
+ [-ExceptIfOneDriveSharedBy <SmtpAddress[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <SmtpAddress[]>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
- [-ExceptIfOneDriveSharedBy <SmtpAddress[]>]
- [-ExceptIfOneDriveSharedByMemberOf <SmtpAddress[]>]
  [-Force]
  [-Mode <PolicyMode>]
  [-OneDriveLocation <MultiValuedProperty>]
@@ -161,10 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-This parameter is reserved for internal Microsoft use.
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by its email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
 
 ```yaml
-Type: RecipientIdParameter[]
+Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -175,6 +177,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -ExceptIfOneDriveSharedByMemberOf
+The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -ExchangeLocation
 The ExchangeLocation parameter specifies Exchange Online mailboxes to include in the DLP policy. You can only use the value All for this parameter to include all mailboxes.
@@ -232,42 +253,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExceptIfOneDriveSharedBy
-The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by its email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
-
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfOneDriveSharedByMemberOf
-The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
