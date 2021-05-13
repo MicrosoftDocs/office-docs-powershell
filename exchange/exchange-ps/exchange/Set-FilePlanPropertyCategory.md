@@ -33,9 +33,6 @@ Set-FilePlanPropertyCategory -Identity "Contoso Category" -DisplayName "Parent c
 ```
 
 This example modifies the display name for the custom file plan property category named Contoso Category.
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
