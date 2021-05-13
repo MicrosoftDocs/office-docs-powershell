@@ -11,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyStructure cmdlet to
+Use the Get-FilePlanPropertyStructure cmdlet to the view file plan property structure in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,15 +28,15 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-FilePlanPropertyStructure -IncludeAdditionalInfo
 ```
 
-{{ Add example description here }}
+This example returns the file plan property structure.
 
 ## PARAMETERS
 
 ### -IncludeAdditionalInfo
-{{Fill IncludeAdditionalInfo Description}}
+The IncludeAdditionalInfo switch specifies whether to include additional information in the output of the cmdlet. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -11,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyAuthority cmdlet to
+Use the Get-FilePlanPropertyAuthority cmdlet to view file plan property authorities.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,15 +28,26 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-FilePlanPropertyAuthority | Format-Table Name,Workload,Policy
 ```
 
-{{ Add example description here }}
+This example returns a summary list of all file plan property authorities.
+
+### Example 2
+```powershell
+Get-FilePlanPropertyAuthority -Identity "Contoso Authority"
+```
+
+This example returns detailed information about the custom file plan property authority named Contoso Authority.
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter specifies the custom file plan property authority that you want to view. You can use any value that uniquely identifies the authority. For example:
+
+- Name
+- Distinguished name (DN)
+- Id
 
 ```yaml
 Type: ComplianceRuleIdParameter

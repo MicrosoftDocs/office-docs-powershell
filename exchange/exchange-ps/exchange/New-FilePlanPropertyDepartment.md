@@ -11,14 +11,17 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the New-FilePlanPropertyDepartment cmdlet to
+Use the New-FilePlanPropertyDepartment cmdlet to create file plan property departments.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-FilePlanPropertyDepartment [-Name] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-FilePlanPropertyDepartment [-Name] <String>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,12 +31,28 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-FilePlanPropertyDepartment -Name "Contoso HR"
 ```
 
-{{ Add example description here }}
+This example creates a new file plan property department named Contoso HR.
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies a unique name for the file plan property department. The maximum length is 64 characters. If the value includes spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -49,22 +68,6 @@ Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-{{Fill Name Description}}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -11,15 +11,20 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Import-FilePlanProperty cmdlet to
+Use the Import-FilePlanProperty cmdlet to import file plan properties.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Import-FilePlanProperty [-RawCsv] <String> [-Confirm] [-DomainController <Fqdn>] [-Force] [-ValidateOnly]
- [-WhatIf] [<CommonParameters>]
+Import-FilePlanProperty [-RawCsv] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ValidateOnly]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,12 +34,28 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Import-FilePlanProperty -RawCsv "C:\Data\CSV Import.csv"
 ```
 
-{{ Add example description here }}
+This example imports the specified CSV file.
 
 ## PARAMETERS
+
+### -RawCsv
+The RawCsv parameter specifies the CSV file to import.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -72,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -87,24 +108,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RawCsv
-{{Fill RawCsv Description}}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ValidateOnly
-{{Fill ValidateOnly Description}}
+The ValidateOnly switch validates the CSV file without importing. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

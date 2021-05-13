@@ -11,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Set-FilePlanPropertyCategory cmdlet to
+Use the Set-FilePlanPropertyCategory cmdlet to modify file plan property categories.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,12 +29,35 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-FilePlanPropertyCategory -Identity "Contoso Category" -DisplayName "Parent category for Contoso"
+```
+
+This example modifies the display name for the custom file plan property category named Contoso Category.
 ```
 
 {{ Add example description here }}
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the custom file plan property category that you want to modify. You can use any value that uniquely identifies the category. For example:
+
+- Name
+- Distinguished name (DN)
+- Id
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -56,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{Fill DisplayName Description}}
+The DisplayName parameter specifies the display name of the file plan property category. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -68,22 +91,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{Fill Identity Description}}
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

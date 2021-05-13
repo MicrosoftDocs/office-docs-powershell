@@ -11,15 +11,20 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Set-FilePlanPropertyCitation cmdlet to
+Use the Set-FilePlanPropertyCitation cmdlet to modify file plan property citations.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-FilePlanPropertyCitation [-Identity] <ComplianceRuleIdParameter> [-CitationJurisdiction <String>]
- [-CitationUrl <String>] [-Confirm] [-DisplayName <String>] [-WhatIf] [<CommonParameters>]
+Set-FilePlanPropertyCitation [-Identity] <ComplianceRuleIdParameter>
+ [-CitationJurisdiction <String>]
+ [-CitationUrl <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,15 +34,35 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set--FilePlanPropertyCitation -Identity "Contoso-0001" -CitationUrl https:intra.contoso.com/citation
 ```
 
-{{ Add example description here }}
+This example modifies the citation URL for the custom file plan property citation named Contoso-0001.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the custom file plan property citation that you want to modify. You can use any value that uniquely identifies the citation. For example:
+
+- Name
+- Distinguished name (DN)
+- Id
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -CitationJurisdiction
-{{Fill CitationJurisdiction Description}}
+The CitationJurisdiction parameter specifies the jurisdiction for the file plan property citation. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -53,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -CitationUrl
-{{Fill CitationUrl Description}}
+The CitationJurisdiction parameter specifies the URL for the file plan property citation.
 
 ```yaml
 Type: String
@@ -88,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{Fill DisplayName Description}}
+The DisplayName parameter specifies the display name of the file plan property citation. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -100,22 +125,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{Fill Identity Description}}
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

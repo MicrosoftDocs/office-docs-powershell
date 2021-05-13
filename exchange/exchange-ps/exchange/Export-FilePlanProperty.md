@@ -11,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Export-FilePlanProperty cmdlet to
+Use the Export-FilePlanProperty cmdlet to export file plan properties.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,10 +28,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Export-FilePlanProperty
 ```
 
-{{ Add example description here }}
+The example exports the file plan properties.
 
 ## PARAMETERS
 

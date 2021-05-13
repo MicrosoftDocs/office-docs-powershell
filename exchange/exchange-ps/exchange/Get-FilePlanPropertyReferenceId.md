@@ -11,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyReferenceId cmdlet to
+Use the Get-FilePlanPropertyReferenceId cmdlet to view file plan property reference IDs.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,15 +28,26 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-FilePlanPropertyReferenceId | Format-Table Name,Workload,Policy
 ```
 
-{{ Add example description here }}
+This example returns a summary list of all file plan property reference IDs.
+
+### Example 2
+```powershell
+Get-FilePlanPropertyReferenceId -Identity "Contoso-0001"
+```
+
+This example returns detailed information about the custom file plan property reference ID named Contoso-0001.
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter specifies the custom file plan property reference ID that you want to view. You can use any value that uniquely identifies the reference ID. For example:
+
+- Name
+- Distinguished name (DN)
+- Id
 
 ```yaml
 Type: ComplianceRuleIdParameter
