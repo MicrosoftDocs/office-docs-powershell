@@ -27,6 +27,7 @@ Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
  [-Force]
+ [-MultiStageReviewProperty <String>]
  [-Notes <String>]
  [-RetentionDuration <Unlimited>]
  [-ReviewerEmail <SmtpAddress[]>]
@@ -173,6 +174,22 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiStageReviewProperty
+{{ Fill MultiStageReviewProperty Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

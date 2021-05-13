@@ -28,6 +28,7 @@ New-ComplianceTag [-Name] <String>
  [-FilePlanProperty <String>]
  [-Force]
  [-IsRecordLabel <Boolean>]
+
  [-Notes <String>]
  [-Regulatory <Boolean>]
  [-RetentionAction <String>]
@@ -196,6 +197,22 @@ The IsRecordLabel parameter specifies whether the label is a record label. Valid
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiStageReviewProperty
+{{ Fill MultiStageReviewProperty Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
