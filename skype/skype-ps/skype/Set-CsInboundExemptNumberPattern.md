@@ -22,14 +22,11 @@ Modifies one or more parameters of an exempt number pattern in the tenant list.
 ```powershell
 Set-CsInboundExemptNumberPattern 
  -Identity <String>
- [-Pattern <String>] [-Description <String>] [-Enabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ParentAndRelativeKey
-
-```powershell
-Set-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
- [-Description <String>] -Pattern <String> [-Instance <PSObject>] [-WhatIf] [-Confirm]
+ [-Pattern <String>]
+ [-Description <String>]
+ [-Enabled <Boolean>]
+ [-WhatIf]
+ [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -150,7 +147,7 @@ A displayable name describing the exempt number pattern.
 
 ```yaml
 Type: String
-Parameter Sets: ParentAndRelativeKey
+Parameter Sets: (All)
 Aliases:
 
 Required: True
