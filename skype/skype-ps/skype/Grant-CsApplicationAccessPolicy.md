@@ -21,7 +21,7 @@ Assigns a per-user application access policy to one or more users. After assigni
 ### Identity (Default)
 
 ```
-Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>]
+Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>] [-Global]
 ```
 
 ## DESCRIPTION
