@@ -17,7 +17,7 @@ Returns a specific or the full list of all number patterns exempt from call bloc
 ## SYNTAX
 
 ```
-Get-CsInboundExemptNumberPattern [[-Identity] <String>] [-Tenant <Guid>] [-Filter <Object>] [-LocalStore] [<CommonParameters>]
+Get-CsInboundExemptNumberPattern [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Filter <Object>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
