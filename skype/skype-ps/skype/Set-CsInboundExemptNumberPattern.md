@@ -24,7 +24,8 @@ Set-CsInboundExemptNumberPattern -Identity <String> [-Pattern <String>] [-Descri
 ```
 
 ### ParentAndRelativeKey
-```
+
+```powershell
 Set-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
  [-Description <String>] -Pattern <String> [-Instance <PSObject>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
