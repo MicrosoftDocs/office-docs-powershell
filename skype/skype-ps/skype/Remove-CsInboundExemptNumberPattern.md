@@ -17,7 +17,7 @@ Removes a number pattern exempt from call blocking.
 ## SYNTAX
 
 ```
-Remove-CsInboundExemptNumberPattern -Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsInboundExemptNumberPattern -Identity <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
