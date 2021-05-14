@@ -27,7 +27,7 @@ Set-CsInboundExemptNumberPattern -Identity <String> -Pattern <String>
 ### ParentAndRelativeKey
 ```
 Set-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
- [-Description <String>] -Pattern <String> [-WhatIf] [-Confirm]
+ [-Description <String>] -Pattern <String> [-Instance <PSObject>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -125,6 +125,21 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
