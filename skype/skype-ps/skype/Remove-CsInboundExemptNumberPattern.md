@@ -12,7 +12,7 @@ schema: 2.0.0
 # Remove-CsInboundExemptNumberPattern
 
 ## SYNOPSIS
-Returns a specific or the full list of all number patterns exempt from call blocking.
+Removes a number pattern exempt from call blocking.
 
 ## SYNTAX
 
