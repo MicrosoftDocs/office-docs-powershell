@@ -1,74 +1,48 @@
 ---
-external help file: tmp_4zm1yb3w.jcr-help.xml
-Module Name: tmp_4zm1yb3w.jcr
-online version:
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/remove-csinboundexemptnumberpattern
+applicable: Skype for Business Online and Teams
+author: jenstr
+ms.author: jenstr
+ms.reviewer: 
+manager:
 schema: 2.0.0
 ---
 
 # Remove-CsInboundExemptNumberPattern
 
 ## SYNOPSIS
+Returns a specific or the full list of all number patterns exempt from call blocking.
 
 ## SYNTAX
 
 ```
-Remove-CsInboundExemptNumberPattern [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
- [-AsJob]
+Remove-CsInboundExemptNumberPattern -Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet removes a specific exempt number pattern from the tenant list for call blocking
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-CsInboundExemptNumberPattern -Identity "Exempt1"
 ```
 
-{{ Add example description here }}
+This removes the exempt number patterns with Identity Exempt1.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-{{ Fill Force Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-{{ Fill Identity Description }}
+Unique identifier for the exempt number pattern to be listed.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -76,41 +50,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Fill Tenant Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{ Fill AsJob Description }}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -123,11 +66,19 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
+### None
 
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+You can use Test-CsInboundBlockedNumberPattern to test your call block and exempt phone number ranges.
+
 ## RELATED LINKS
+- [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
+- [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
+- [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
+- [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
+- [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
