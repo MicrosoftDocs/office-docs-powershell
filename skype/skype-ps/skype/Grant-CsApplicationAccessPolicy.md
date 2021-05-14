@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Global
 
-When you run this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify this parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
