@@ -12,7 +12,7 @@ schema: 2.0.0
 # Get-CsInboundExemptNumberPattern
 
 ## SYNOPSIS
-Returns a specific or the list of all number patterns exempt from blocking.
+Returns a specific or the full list of all number patterns exempt from call blocking.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-CsInboundExemptNumberPattern [[-Identity] <String>] [-Tenant <Guid>] [-Filte
 ```
 
 ## DESCRIPTION
-This cmdlet returns a specific or all exempt number patterns added to the tenant list including Name, Description, Enabled (True/False), and Pattern for each.
+This cmdlet returns a specific or all exempt number patterns added to the tenant list for call blocking including Name, Description, Enabled (True/False), and Pattern for each.
 
 ## EXAMPLES
 
@@ -68,6 +68,7 @@ Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
 
 ### -LocalStore
 This parameter is reserved for internal Microsoft use.
@@ -109,7 +110,7 @@ Accept wildcard characters: False
 
 ## NOTES
 
-You can use Test-CsInboundBlockedNumberPattern to test your block and exempt phone number ranges.
+You can use Test-CsInboundBlockedNumberPattern to test your call block and exempt phone number ranges.
 
 ## RELATED LINKS
 - [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
