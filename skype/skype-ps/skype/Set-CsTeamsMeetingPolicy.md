@@ -34,7 +34,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
 [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <String>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -54,7 +54,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
 [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <String>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -831,16 +831,16 @@ Accept wildcard characters: False
 ### -AllowMeetingRegistration
 
 Possible values:
-- Everyone
-- EveryoneInCompany
+- True
+- False
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: Everyone
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
