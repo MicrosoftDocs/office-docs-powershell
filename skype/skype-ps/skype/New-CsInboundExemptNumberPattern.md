@@ -61,7 +61,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Gets or sets the description of the number pattern.
+Sets the description of the number pattern.
 
 ```yaml
 Type: System.String
