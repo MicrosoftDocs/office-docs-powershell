@@ -19,7 +19,7 @@ Extracts and displays the sensitivity label related information attached to an o
 ## SYNTAX
 
 ```powershell
-Get-FileSensitivityLabelInfo -FileUrl <absolute path for file>
+Get-FileSensitivityLabelInfo -FileUrl <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
