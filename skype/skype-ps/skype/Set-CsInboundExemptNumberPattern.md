@@ -19,9 +19,22 @@ Modifies one or more parameters of an exempt number pattern in the tenant list.
 
 ### Identity (Default)
 
-```powershell
+```
 Set-CsInboundExemptNumberPattern 
  -Identity <String>
+ [-Pattern <String>]
+ [-Description <String>]
+ [-Enabled <Boolean>]
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
+```
+
+### Instance
+
+```
+Set-CsInboundExemptNumberPattern 
+ [-Instance <PsObject>]>
  [-Pattern <String>]
  [-Description <String>]
  [-Enabled <Boolean>]
