@@ -39,14 +39,13 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
- [-ExchangeSenderMemberOf <SmtpAddress[]>]
- [-ExchangeSenderMemberOfException <SmtpAddress[]>]
- [-ExceptIfOneDriveSharedBy <SmtpAddress[]>]
- [-ExceptIfOneDriveSharedByMemberOf <SmtpAddress[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
+ [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
  [-Mode <PolicyMode>]
- [-OneDriveSharedBy <SmtpAddress[]>]
- [-OneDriveSharedByMemberOf <SmtpAddress[]>]
+ [-OneDriveSharedBy <RecipientIdParameter[]>]
+ [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-Priority <Int32>]
  [-RemoveEndpointDlpLocation <MultiValuedProperty>]
  [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
@@ -67,8 +66,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
 
 ### RetryDistribution
 ```
-Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
- [-RetryDistribution]
+Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -398,11 +396,31 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-{{ Fill ExceptIfOneDriveSharedBy Description }}
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 ```yaml
 Type: RecipientIdParameter[]
-Parameter Sets: Identity
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfOneDriveSharedByMemberOf
+The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -421,7 +439,7 @@ You can enter multiple values separated by commas.
 You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
@@ -441,46 +459,8 @@ You can enter multiple values separated by commas.
 You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfOneDriveSharedBy
-The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
-
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfOneDriveSharedByMemberOf
-The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
-
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -533,9 +513,8 @@ The OneDriveSharedBy parameter specifies the users to include in the DLP policy.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
-
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -553,7 +532,7 @@ The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-e
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
