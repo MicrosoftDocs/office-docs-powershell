@@ -73,7 +73,7 @@ Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
