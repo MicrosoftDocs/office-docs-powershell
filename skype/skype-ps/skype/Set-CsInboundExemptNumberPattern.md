@@ -15,7 +15,7 @@ schema: 2.0.0
 
 Modifies one or more parameters of an exempt number pattern in the tenant list.
 
-## SYNTAX
+## DESCRIPTION
 
 ### Identity (Default)
 
@@ -26,8 +26,8 @@ Set-CsInboundExemptNumberPattern -Identity <String> -Pattern <String>
 
 ### ParentAndRelativeKey
 ```
-New-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
- [-Description <String>] -Pattern <String> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+Set-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
+ [-Description <String>] -Pattern <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -36,10 +36,18 @@ New-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Bool
 ### EXAMPLE 1
 
 ```powershell
-PS C:> New-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$" -Description "Allow Contoso helpdesk" -Enabled $True
+PS C:> Set-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$"
 ```
 
-Creates a new inbound exempt number pattern for the numbers 1 (312) 555-88882 and 1 (312) 555-88883 and enables it
+Sets the inbound exempt number pattern for AllowContoso1
+
+### EXAMPLE 2
+
+```powershell
+PS C:> Set-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Enabled $False
+```
+
+Disables the exempt number pattern from usage in call blocking
 
 ## PARAMETERS
 
@@ -106,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier for the exempt number pattern to be created.
+Unique identifier for the exempt number pattern to be changed.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -121,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A displayable name describing the exempt number pattern to be created.
+A displayable name describing the exempt number pattern.
 
 ```yaml
 Type: String
@@ -204,7 +212,7 @@ You can use Test-CsInboundBlockedNumberPattern to test your block and exempt pho
 ## RELATED LINKS
 
 - [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
-- [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
+- [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
 - [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
 - [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
 - [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
