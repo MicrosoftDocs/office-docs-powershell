@@ -1,7 +1,11 @@
 ---
-external help file: tmp_4zm1yb3w.jcr-help.xml
-Module Name: tmp_4zm1yb3w.jcr
-online version:
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csinboundexemptnumberpattern
+applicable: Skype for Business Online and Teams
+author: jenstr
+ms.author: jenstr
+ms.reviewer: 
+manager:
 schema: 2.0.0
 ---
 
@@ -9,32 +13,42 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+Modifies one or more parameters of an exempt number pattern in the tenant list.
+
 ## SYNTAX
 
-```
-Set-CsInboundExemptNumberPattern [-Description <Object>] [-Force] [-WhatIf] [-Pattern <Object>] [-Confirm]
- [[-Identity] <Object>] [-Tenant <Object>] [-Enabled <Object>] [-Instance <Object>] [-AsJob]
+### Identity (Default)
+
+```powershell
+Set-CsInboundExemptNumberPattern -Identity <String> -Pattern <String>
+ [-Description <String>] [-Enabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
-{{ Fill in the Description }}
+### ParentAndRelativeKey
+```
+New-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
+ [-Description <String>] -Pattern <String> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:> New-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$" -Description "Allow Contoso helpdesk" -Enabled $True
 ```
 
-{{ Add example description here }}
+Creates a new inbound exempt number pattern for the numbers 1 (312) 555-88882 and 1 (312) 555-88883 and enables it
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -46,10 +60,11 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Sets the description of the number pattern.
 
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,22 +76,22 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+This parameter determines whether the number pattern is enabled for exemption or not.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+The *Force* switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the *Force* switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -91,44 +106,46 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Unique identifier for the exempt number pattern to be created.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Instance
-{{ Fill Instance Description }}
+### -Name
+A displayable name describing the exempt number pattern to be created.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: String
+Parameter Sets: ParentAndRelativeKey
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -Pattern
-{{ Fill Pattern Description }}
+
+A regular expression that the calling number must match in order to be exempt from blocking. It is best pratice to start the regular expression with the hat character and end it with the dollar character. You can use various regular expression test sites on the Internet to validate the expression.
 
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -136,10 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{ Fill Tenant Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -151,11 +168,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -166,28 +184,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{ Fill AsJob Description }}
+### CommonParameters
 
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Management.Automation.PSObject
+### None
 
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+You can use Test-CsInboundBlockedNumberPattern to test your block and exempt phone number ranges.
+
+
 ## RELATED LINKS
+
+- [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
+- [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
+- [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
+- [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
+- [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
