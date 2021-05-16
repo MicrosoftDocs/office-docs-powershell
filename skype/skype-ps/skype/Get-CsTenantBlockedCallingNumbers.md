@@ -73,7 +73,6 @@ Accept wildcard characters: False
 
 ### -LocalStore
 This parameter is reserved for internal Microsoft use.
-PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -113,4 +112,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers.md)
+
 [Test-CsInboundBlockedNumberPattern](Test-CsInboundlockedNumberPattern.md)
