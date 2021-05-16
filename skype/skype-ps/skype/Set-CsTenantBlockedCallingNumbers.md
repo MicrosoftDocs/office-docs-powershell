@@ -22,7 +22,7 @@ Set-CsTenantBlockedCallingNumbers [-Force] [-Name <Object>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Microsoft Direct Routing, Operator Conenct and Calling Plans supports blocking of inbound calls from the public switched telephone network (PSTN). This feature allows a tenant-global list of number patterns to be defined so that the caller ID of every incoming PSTN call to the tenant can be checked against the list for a match. If a match is made, an incoming call is rejected.
+Microsoft Direct Routing, Operator Connect and Calling Plans supports blocking of inbound calls from the public switched telephone network (PSTN). This feature allows a tenant-global list of number patterns to be defined so that the caller ID of every incoming PSTN call to the tenant can be checked against the list for a match. If a match is made, an incoming call is rejected.
 
 The tenant blocked calling numbers includes a list of inbound blocked number patterns. Number patterns are managed through the CsInboundBlockedNumberPattern commands New, Get, Set, and Remove. You can manage a given pattern by using these cmdlets, including the ability to toggle the activation of a given pattern. 
 
