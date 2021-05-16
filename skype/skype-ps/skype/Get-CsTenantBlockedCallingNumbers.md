@@ -113,4 +113,4 @@ Accept wildcard characters: False
 ## RELATED LINKS
 [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers.md)
 
-[Test-CsInboundBlockedNumberPattern](Test-CsInboundlockedNumberPattern.md)
+[Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
