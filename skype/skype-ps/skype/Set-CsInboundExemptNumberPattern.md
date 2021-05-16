@@ -17,31 +17,7 @@ Modifies one or more parameters of an exempt number pattern in the tenant list.
 
 ## DESCRIPTION
 
-### Identity (Default)
-
-```
-Set-CsInboundExemptNumberPattern 
- -Identity <String>
- [-Pattern <String>]
- [-Description <String>]
- [-Enabled <Boolean>]
- [-WhatIf]
- [-Confirm]
- [<CommonParameters>]
-```
-
-### Instance
-
-```
-Set-CsInboundExemptNumberPattern 
- [-Instance <PsObject>]>
- [-Pattern <String>]
- [-Description <String>]
- [-Enabled <Boolean>]
- [-WhatIf]
- [-Confirm]
- [<CommonParameters>]
-```
+This cmdlet modifies one or more parameters of a exempt number pattern in the tenant list.
 
 ## EXAMPLES
 
