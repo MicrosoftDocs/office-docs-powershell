@@ -30,7 +30,7 @@ The tenant blocked calling numbers also includes a list of number patterns exemp
 
 You can test your number blocking by using the Test-CsInboundBlockedNumberPattern command.
 
-The scope of tenant blocked calling numbers is global across the given tenant. This command-let can also turn on/off the blocked calling numbers setting in tenant level.
+The scope of tenant blocked calling numbers is global across the given tenant. This command-let can also turn on/off the blocked calling numbers setting at the tenant level.
 
 To get the current tenant blocked calling numbers setting, use Get-CsTenantBlockedCallingNumbers
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope, and for per-user scope a name, which identifies the TenantBlockedCallingNumbers to set.
+The Identity parameter is a unique identifier which identifies the TenantBlockedCallingNumbers to set.
 
 ```yaml
 Type: Object
