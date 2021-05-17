@@ -1,0 +1,118 @@
+---
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Module Name: MicrosoftTeams
+title: Set-CsTeamsAcsFederationConfiguration
+author: tomkau
+ms.author: tomkau
+online version: https://docs.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration
+schema: 2.0.0
+---
+
+# Set-CsTeamsAcsFederationConfiguration
+
+## SYNOPSIS
+
+**Important:** Functionality described in this document is currently in public preview. This preview version is provided without a service-level agreement, and is not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).
+
+This cmdlet is used to manage the federation configuration between Teams and Azure Communication Services (ACS).
+
+## SYNTAX
+
+```
+Set-CsTeamsAcsFederationConfiguration
+   [-EnableAcsUsers <Boolean>]
+   [-AllowAllAcsResources <Boolean>]
+   [-AllowedAcsResources <String[]>]
+   [-BlockedAcsResources <String[]>]
+   [-WhatIf]
+   [-Confirm]
+   [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, chat, and more. For more information, see [Teams interoperability](https://docs.microsoft.com/en-us/azure/communication-services/concepts/teams-interop).
+
+This cmdlet is used to enable or disable Teams and ACS federation for a Teams tenant, and to specify which ACS resources can connect to Teams. All ACS resources can be allowed, with possible exclusions, or just selected ACS resources can be allowed.
+You must be a Teams service admin, a Teams communication admin, or Global Administrator for your organization to run the cmdlet.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_PrimaryStudent
+```
+
+Assigns the Education_PrimaryStudent policy package to the group. The group will receive the lowest policy ranking for each policy type in the Education_PrimaryStudent package if the policy type is newly assigned to the group. If a policy type was already assigned to the group, the group will receive the same policy ranking as before.
+
+### Example 2
+```powershell
+PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_Teacher -PolicyRankings "TeamsMessagingPolicy, 1", "TeamsMeetingPolicy, 1", "TeamsCallingPolicy, 2"
+```
+
+Assigns the Education_Teacher policy package to the group. The group will receive a policy ranking of 1 for TeamsMessagingPolicy policy type, a policy ranking of 1 for TeamsMeetingPolicy policy type and a policy ranking of 2 for TeamsCallingPolicy policy type. For each unspecified policy type in the package, the group will receive the lowest policy ranking if it is newly assigned to the group. If a policy type was already assigned to the group, the group will receive the same policy ranking as before.
+
+## PARAMETERS
+
+### -GroupId
+
+A group id in the tenant. It can either be a group's object id or a group's email address.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PackageName
+
+The name of a policy package. All policy package names can be found by running Get-CsPolicyPackage. To reset the currently assigned package value for the group, use $null or an empty string "". This will not remove any existing policy assignments to the group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRankings
+
+The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank must be a number greater than or equal to 1.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-CsPolicyPackage](https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage)
+
+[New-CsGroupPolicyAssignment](https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
