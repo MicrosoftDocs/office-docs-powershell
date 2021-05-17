@@ -827,9 +827,13 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicy
 
-Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+This parameter either allows full access from desktop apps, mobile apps, and the web (AllowFullAccess), Allows limited, web-only access (AllowLimitedAccess) or Blocks Access (BlockAccess). Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
-PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
+Possible values:
+- AllowFullAccess
+- AllowLimitedAccess
+- BlockAccess
+
 
 ```yaml
 Type: SPOConditionalAccessPolicyType
