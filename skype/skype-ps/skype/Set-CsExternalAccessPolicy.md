@@ -64,7 +64,7 @@ If you would like to grant this capability to all of your users you can call the
 4.
 Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
 
-The following parameters are not applicable to Skype for Business Online: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
+The following parameters are not applicable to Microsoft Teams or Skype for Business Online: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
