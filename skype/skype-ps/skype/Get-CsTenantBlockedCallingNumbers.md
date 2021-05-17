@@ -4,7 +4,7 @@ applicable: Skype for Business Online
 title: Get-CsTenantBlockedCallingNumbers
 schema: 2.0.0
 manager: roykuntz
-author: jenstr
+author: jenstrier
 ms.author: jenstr
 ---
 
