@@ -18,7 +18,7 @@ This cmdlet is used to manage the federation configuration between Teams and Azu
 
 ## SYNTAX
 
-```
+```powershell
 Set-CsTeamsAcsFederationConfiguration
    [-EnableAcsUsers <Boolean>]
    [-AllowAllAcsResources <Boolean>]
@@ -49,7 +49,7 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $False
 ### Example 2
 In this example, federation is enabled for just one ACS resource.
 
-```
+```powershell
 $allowlist = @('faced04c-2ced-433d-90db-063e424b87b1')
 Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResources $False -AllowedAcsResources $allowlist
 ```
@@ -57,7 +57,7 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResource
 ### Example 3
 In this example, federation is enabled for all ACS resources except for two.
 
-```
+```powershell
 $blocklist = @('bf19b7db-6960-41e5-a139-2aa373474354','dac4607d-d2d0-40e5-84df-6f32ebd1251b')
 Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResources $True -BlockedAcsResources $blocklist
 ```
