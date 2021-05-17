@@ -49,7 +49,7 @@ AllowAllAcsResources : False
 ### Example 2
 In this example, federation has been enabled for all ACS resourced except for two.
 
-```
+```powershell
 $allowlist = @('faced04c-2ced-433d-90db-063e424b87b1')
 Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResources $False -AllowedAcsResources $allowlist
 ```
@@ -57,7 +57,7 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResource
 ### Example 3
 In this example, federation is enabled for all ACS resources except for two.
 
-```
+```powershell
 Get-CsTeamsAcsFederationConfiguration
 
 Identity             : Global
