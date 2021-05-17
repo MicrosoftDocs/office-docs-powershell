@@ -107,6 +107,22 @@ This collection is piped to the `Where-Object` cmdlet, which picks out only thos
 The filtered collection is then piped to the `Set-CsExternalAccessPolicy` cmdlet, which takes each policy and sets the EnableFederationAccess property to True.
 The net result: all external access policies that allow public cloud access will also allow federation access.
 
+### -------------------------- Example 5 ------------------------
+```
+Set-CsExternalAccessPolicy -Identity Global  -EnableAcsFederationAccess $false
+New-CsExternalAccessPolicy -Identity AcsFederationAllowed  -EnableAcsFederationAccess $true
+```
+
+In this example, the Global policy is updated to disallow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation enabled and which can be assigned to selected users for which Team-ACS federation will be allowed.
+
+### -------------------------- Example 5 ------------------------
+```
+Set-CsExternalAccessPolicy -Identity Global  -EnableAcsFederationAccess $true
+New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed  -EnableAcsFederationAccess $false
+```
+
+In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.
+
 
 ## PARAMETERS
 
