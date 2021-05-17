@@ -42,14 +42,14 @@ Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
 2.
-Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
+(Microsoft Teams Only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
 
 3.
 Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
 4.
-(Microsoft Teams Only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
+Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
 
 When you install Skype for Business Server, a global external access policy is automatically created for you.
 In addition to the global policy, you can also create custom external access policies at either the site or the per-user scope.
@@ -61,7 +61,7 @@ New external access policies can be created by using the New-CsExternalAccessPol
 Note that these policies can only be created at the site or the per-user scope; you cannot create a new policy at the global scope.
 In addition, you can have only one external access policy per site: if the Redmond site already has been assigned an external access policy you cannot create a second policy for the site.
 
-The following parameters are not applicable to Skype for Business Online: Description, EnableXmppAccess, Force, Identity, InMemory, PipelineVariable, and Tenant
+The following parameters are not applicable to Microsoft Teams of Skype for Business Online: Description, EnableXmppAccess, Force, Identity, InMemory, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
