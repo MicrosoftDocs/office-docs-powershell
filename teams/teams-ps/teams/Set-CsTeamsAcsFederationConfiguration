@@ -42,15 +42,9 @@ You must be a Teams service admin, a Teams communication admin, or Global Admini
 ```powershell
 PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_PrimaryStudent
 ```
-
 Assigns the Education_PrimaryStudent policy package to the group. The group will receive the lowest policy ranking for each policy type in the Education_PrimaryStudent package if the policy type is newly assigned to the group. If a policy type was already assigned to the group, the group will receive the same policy ranking as before.
 
 ### Example 2
-```powershell
-PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_Teacher -PolicyRankings "TeamsMessagingPolicy, 1", "TeamsMeetingPolicy, 1", "TeamsCallingPolicy, 2"
-```
-
-Assigns the Education_Teacher policy package to the group. The group will receive a policy ranking of 1 for TeamsMessagingPolicy policy type, a policy ranking of 1 for TeamsMeetingPolicy policy type and a policy ranking of 2 for TeamsCallingPolicy policy type. For each unspecified policy type in the package, the group will receive the lowest policy ranking if it is newly assigned to the group. If a policy type was already assigned to the group, the group will receive the same policy ranking as before.
 
 ## PARAMETERS
 
