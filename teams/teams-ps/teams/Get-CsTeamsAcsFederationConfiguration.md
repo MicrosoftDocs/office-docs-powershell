@@ -1,14 +1,14 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-title: Set-CsTeamsAcsFederationConfiguration
+title: Get-CsTeamsAcsFederationConfiguration
 author: tomkau
 ms.author: tomkau
 online version: https://docs.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration
 schema: 2.0.0
 ---
 
-# Set-CsTeamsAcsFederationConfiguration
+# Get-CsTeamsAcsFederationConfiguration
 
 ## SYNOPSIS
 
