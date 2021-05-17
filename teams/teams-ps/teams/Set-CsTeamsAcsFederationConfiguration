@@ -39,59 +39,80 @@ You must be a Teams service admin, a Teams communication admin, or Global Admini
 ## EXAMPLES
 
 ### Example 1
+In this example, federation between Teams and ACS is disabled completely.
+
 ```powershell
-PS C:\> Grant-CsGroupPolicyPackageAssignment -GroupId 1bc0b35f-095a-4a37-a24c-c4b6049816ab -PackageName Education_PrimaryStudent
+Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $False
 ```
-Assigns the Education_PrimaryStudent policy package to the group. The group will receive the lowest policy ranking for each policy type in the Education_PrimaryStudent package if the policy type is newly assigned to the group. If a policy type was already assigned to the group, the group will receive the same policy ranking as before.
 
 ### Example 2
+In this example, federation is enabled for just one ACS resource.
+
+```
+$allowlist = @('faced04c-2ced-433d-90db-063e424b87b1')
+Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResources $False -AllowedAcsResources $allowlist
+```
+
+### Example 3
+In this example, federation is enabled for all ACS resources except for two.
+
+```
+$blocklist = @('bf19b7db-6960-41e5-a139-2aa373474354','dac4607d-d2d0-40e5-84df-6f32ebd1251b')
+Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResources $True -BlockedAcsResources $blocklist
+```
 
 ## PARAMETERS
 
-### -GroupId
+### -EnableAcsUsers
 
-A group id in the tenant. It can either be a group's object id or a group's email address.
+Set to True (default) to enable federation between Teams and ACS. When set to false, all other parameters are ignored.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: 0
-Default value: None
+Type: Boolean
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PackageName
+### -AllowAllAcsResources
 
-The name of a policy package. All policy package names can be found by running Get-CsPolicyPackage. To reset the currently assigned package value for the group, use $null or an empty string "". This will not remove any existing policy assignments to the group.
+When set to True (default), federation is enabled with all ACS resources except for the resources listed in BlockedAcsResources (which can be null/empty), and the parameter AllowedAcsResources is ignored and should be null/empty.
+
+When set to False, federation is disabled with all ACS resources, except for the resources listed in AllowedAcsResources (of which there must be at least one), and the parameter BlockedAcsResources is ignored and must be null/empty.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: 1
-Default value: None
+Type: Boolean
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PolicyRankings
+### -AllowedAcsResources
 
-The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank must be a number greater than or equal to 1.
+The list of the ACS resources (at least one) for which federation is enabled, when AllowAllAcsResources is set to false. If AllowAllAcsResources is set to true, then this list is ignored and should be null/empty.
+
+The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal. A resource cannot be listed in both AllowedAcsResources and BlockedAcsResource.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: 2
-Default value: None
+Position: Named
+Default value: Empty/Null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockedAcsResources
+
+The list of the ACS resources (if any) for which federation is disabled, when AllowAllAcsResources is set to true. If AllowAllAcsResources is set to false, then this list is ignored and must be null/empty.
+
+The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal. A resource cannot be listed in both AllowedAcsResources and BlockedAcsResource.
+
+```yaml
+Type: String[]
+Position: Named
+Default value: Empty/Null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -107,6 +128,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsGroupPolicyAssignment](https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
+[Get-CsTeamsAcsFederationConfiguration](Get-CsTeamsAcsFederationConfiguration.md)
+
+[New-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csexternalaccesspolicy?view=skype-ps)
+
+[Set-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csexternalaccesspolicy?view=skype-ps)
+
+[Grant-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csexternalaccesspolicy?view=skype-ps)
+
+
