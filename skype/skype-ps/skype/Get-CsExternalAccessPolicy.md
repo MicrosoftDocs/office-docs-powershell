@@ -13,7 +13,7 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 Returns information about the external access policies that have been configured for use in your organization.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; and, 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN.
+External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) organize Microsoft Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; and, 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN.
 
 This cmdlet was introduced in Lync Server 2010.
 
@@ -46,7 +46,7 @@ Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
 2.
-(Microsoft Teams Only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
+(Microsoft Teams only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
 
 3.
 Access Skype for Business Server over the Internet, without having to first log on to your internal network.
