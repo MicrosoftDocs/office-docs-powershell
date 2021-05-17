@@ -51,7 +51,7 @@ Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
 2.
-Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
+(Microsoft Teams Only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
 
 3.
 Access Skype for Business Server over the Internet, without having to first log on to your internal network.
@@ -62,7 +62,7 @@ For example, by default the global policy does not allow users to communicate wi
 If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True.
 
 4.
-(Microsoft Teams Only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
+Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
 
 The following parameters are not applicable to Skype for Business Online: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
