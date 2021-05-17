@@ -19,7 +19,7 @@ This cmdlet is used to retrieve the federation configuration between Teams and A
 
 ## SYNTAX
 
-```
+```powershell
 Get-CsTeamsAcsFederationConfiguration
 ```
 
