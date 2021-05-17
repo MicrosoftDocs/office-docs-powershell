@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csinboundexemptnumberpattern
 applicable: Skype for Business Online and Teams
-author: jenstr
+author: jenstrier
 ms.author: jenstr
 ms.reviewer: 
 manager:
