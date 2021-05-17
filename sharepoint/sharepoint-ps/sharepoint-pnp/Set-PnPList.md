@@ -1,79 +1,73 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplist
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPList
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPList.html
 ---
-
+ 
 # Set-PnPList
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPList.md to change this file.
+
 Updates list settings
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPList -Identity <ListPipeBind>
-            [-EnableContentTypes <Boolean>]
-            [-BreakRoleInheritance [<SwitchParameter>]]
-            [-ResetRoleInheritance [<SwitchParameter>]]
-            [-CopyRoleAssignments [<SwitchParameter>]]
-            [-ClearSubscopes [<SwitchParameter>]]
-            [-Title <String>]
-            [-Description <String>]
-            [-Hidden <Boolean>]
-            [-ForceCheckout <Boolean>]
-            [-ListExperience <ListExperience>]
-            [-EnableAttachments <Boolean>]
-            [-EnableFolderCreation <Boolean>]
-            [-EnableVersioning <Boolean>]
-            [-EnableMinorVersions <Boolean>]
-            [-MajorVersions <UInt32>]
-            [-MinorVersions <UInt32>]
-            [-EnableModeration <Boolean>]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Set-PnPList -Identity <ListPipeBind> [-EnableContentTypes <Boolean>] [-BreakRoleInheritance]
+ [-ResetRoleInheritance] [-CopyRoleAssignments] [-ClearSubscopes] [-Title <String>] [-Description <String>]
+ [-Hidden <Boolean>] [-ForceCheckout <Boolean>] [-ListExperience <ListExperience>]
+ [-EnableAttachments <Boolean>] [-EnableFolderCreation <Boolean>] [-EnableVersioning <Boolean>]
+ [-EnableMinorVersions <Boolean>] [-MajorVersions <UInt32>] [-MinorVersions <UInt32>]
+ [-EnableModeration <Boolean>] [-ReadSecurity <ListReadSecurity>] [-WriteSecurity <ListWriteSecurity>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPList -Identity "Demo List" -EnableContentTypes $true
 ```
 
 Switches the Enable Content Type switch on the list
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPList -Identity "Demo List" -Hidden $true
 ```
 
 Hides the list from the SharePoint UI.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPList -Identity "Demo List" -EnableVersioning $true
 ```
 
 Turns on major versions on a list
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPList -Identity "Demo List" -EnableVersioning $true -MajorVersions 20
 ```
 
 Turns on major versions on a list and sets the maximum number of Major Versions to keep to 20.
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Set-PnPList -Identity "Demo Library" -EnableVersioning $true -EnableMinorVersions $true -MajorVersions 20 -MinorVersions 5
 ```
 
 Turns on major versions on a document library and sets the maximum number of Major versions to keep to 20 and sets the maximum of Minor versions to 5.
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
 Set-PnPList -Identity "Demo List" -EnableAttachments $true
 ```
@@ -91,7 +85,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ClearSubscopes
@@ -103,7 +99,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -CopyRoleAssignments
@@ -115,7 +127,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Description
@@ -127,7 +141,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableAttachments
@@ -139,7 +155,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableContentTypes
@@ -151,7 +169,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableFolderCreation
@@ -163,7 +183,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableMinorVersions
@@ -175,7 +197,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableModeration
@@ -187,7 +211,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableVersioning
@@ -199,7 +225,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ForceCheckout
@@ -211,7 +239,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Hidden
@@ -223,7 +253,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -235,21 +267,24 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ListExperience
 Set the list experience: Auto, NewExperience or ClassicExperience
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: ListExperience
 Parameter Sets: (All)
+Accepted values: Auto, NewExperience, ClassicExperience
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MajorVersions
@@ -261,7 +296,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MinorVersions
@@ -273,7 +310,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ResetRoleInheritance
@@ -285,7 +324,38 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ReadSecurity
+Sets the read security for the list
+
+```yaml
+Type: ListReadSecurity
+Parameter Sets: (All)
+Accepted values: AllUsersReadAccess, AllUsersReadAccessOnItemsTheyCreate
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WriteSecurity
+Sets the write security for the list
+
+```yaml
+Type: ListWriteSecurity
+Parameter Sets: (All)
+Accepted values: WriteAllItems, WriteOnlyMyItems, WriteNoItems
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -297,33 +367,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

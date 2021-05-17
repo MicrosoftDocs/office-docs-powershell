@@ -37,8 +37,6 @@ This brief video also covers how to contribute:
 
    In this example, we'll add a link to the **Related Links** section of a topic. To add the link, scroll down to the **Related Links** section and add the link in the correct format.
 
-   ![Image of Edit button on Github](images/add_related_link.png)
-
    **Notes**:
 
    - Files in GitHub are written and edited using Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).

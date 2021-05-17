@@ -1,81 +1,82 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnprecyclebinitem
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPRecycleBinItem
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPRecycleBinItem.html
 ---
-
+ 
 # Get-PnPRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPRecycleBinItem.md to change this file.
+
+Required Permissions * SharePoint: Site Collection Administrator. SharePoint Tenant Admin alone is not enough
 Returns the items in the recycle bin from the context
 
-## SYNTAX 
+## SYNTAX
+
+### All (Default)
+```powershell
+Get-PnPRecycleBinItem [-RowLimit <Int32>] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
+```
 
 ### Identity
 ```powershell
-Get-PnPRecycleBinItem [-Identity <GuidPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+Get-PnPRecycleBinItem [-Identity <Guid>] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
 ### FirstStage
 ```powershell
-Get-PnPRecycleBinItem [-FirstStage [<SwitchParameter>]]
-                      [-RowLimit <Int>]
-                      [-Connection <SPOnlineConnection>]
+Get-PnPRecycleBinItem [-FirstStage] [-RowLimit <Int32>] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
 ### SecondStage
 ```powershell
-Get-PnPRecycleBinItem [-SecondStage [<SwitchParameter>]]
-                      [-RowLimit <Int>]
-                      [-Connection <SPOnlineConnection>]
+Get-PnPRecycleBinItem [-SecondStage] [-RowLimit <Int32>] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
-### All
-```powershell
-Get-PnPRecycleBinItem [-RowLimit <Int>]
-                      [-Connection <SPOnlineConnection>]
-```
-
-### 
-```powershell
-Get-PnPRecycleBinItem [-Includes <String[]>]
-                      [-Connection <SPOnlineConnection>]
-```
+## DESCRIPTION
+This command will return all the items in the recycle bin for the SharePoint site you connected to with Connect-PnPOnline. You must connect as a Site Collection Owner or Administrator. The SharePoint Admin Role in the tenant alone will not work. If you are not a Site Collection Admin connect to the Tenant Admin URL with Connect-PnPOnline and use Get-PnPTenantRecycleBinItem. 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPRecycleBinItem
 ```
 
 Returns all items in both the first and the second stage recycle bins in the current site collection
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPRecycleBinItem -Identity f3ef6195-9400-4121-9d1c-c997fb5b86c2
 ```
 
 Returns all a specific recycle bin item by id
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPRecycleBinItem -FirstStage
 ```
 
 Returns all items in only the first stage recycle bin in the current site collection
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPRecycleBinItem -SecondStage
 ```
 
 Returns all items in only the second stage recycle bin in the current site collection
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Get-PnPRecycleBinItem -RowLimit 10000
 ```
@@ -83,6 +84,20 @@ Get-PnPRecycleBinItem -RowLimit 10000
 Returns items in recycle bin limited by number of results
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FirstStage
 Return all items in the first stage recycle bin
@@ -93,45 +108,37 @@ Parameter Sets: FirstStage
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
 Returns a recycle bin item with a specific identity
 
 ```yaml
-Type: GuidPipeBind
+Type: Guid
 Parameter Sets: Identity
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Includes
-Specify properties to include when retrieving objects from the server.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RowLimit
 Limits return results to specified amount
 
-Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
-
 ```yaml
-Type: Int
-Parameter Sets: FirstStage, SecondStage, All
+Type: Int32
+Parameter Sets: All, FirstStage, SecondStage
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SecondStage
@@ -143,25 +150,13 @@ Parameter Sets: SecondStage
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.RecycleBinItem
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

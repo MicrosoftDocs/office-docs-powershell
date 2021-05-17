@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-MigrationBatch
@@ -22,14 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force] [-Partition <MailboxIdParameter>
- [-WhatIf]] [<CommonParameters>]
+Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Partition <MailboxIdParameter>
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions are deleted and any object related to the migration batch is also deleted.
 
-If you use the Force parameter with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You have to remove the individual migration user requests with the Remove-MigrationUser \<Identity\> -Force command.
+If you use the Force parameter with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -70,8 +74,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -110,7 +113,7 @@ This parameter is available only in on-premises Exchange.
 
 The Force switch specifies whether to remove a corrupted migration batch. Corrupted migration batches have a status of Corrupted. If you try to remove a corrupted migration batch without using this switch, you receive an error saying the migrated batch can't be found.
 
-If you use this parameter to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You have to remove the individual migration user requests with the Remove-MigrationUser \<Identity\> -Force command.
+If you use this parameter to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
 ```yaml
 Type: SwitchParameter

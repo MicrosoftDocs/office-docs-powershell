@@ -1,33 +1,58 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnporgnewssite
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPOrgNewsSite.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPOrgNewsSite
 ---
-
+  
 # Add-PnPOrgNewsSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPOrgNewsSite.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Adds the site as an organization news source in your tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind>
-                   [-Connection <SPOnlineConnection>]
+Add-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Add-PnPOrgNewsSite -OrgNewsSiteUrl https://yourtenant.sharepoint.com/sites/news
+Add-PnPOrgNewsSite -OrgNewsSiteUrl "https://yourtenant.sharepoint.com/sites/news"
 ```
 
 Adds the site as one of multiple possible tenant's organizational news sites
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OrgNewsSiteUrl
 The url of the site to be marked as one of organization's news sites
@@ -38,21 +63,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-RetentionPolicyTag
@@ -43,8 +42,10 @@ Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter>
  [-Name <String>]
  [-RetentionAction <RetentionAction>]
  [-RetentionEnabled <Boolean>]
- [-RetentionId <Guid>] [-SystemTag <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-RetentionId <Guid>]
+ [-SystemTag <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MailboxTask
@@ -62,7 +63,8 @@ Set-RetentionPolicyTag -Mailbox <MailboxIdParameter>
  [-OptionalInMailbox <RetentionPolicyTagIdParameter[]>]
  [-RetentionId <Guid>]
  [-SystemTag <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,23 +110,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies a mailbox for assigning opt-in tags. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You must use this parameter with the OptionalInMailbox parameter.
@@ -143,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -195,8 +188,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -247,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -265,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -353,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageFormatForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -422,11 +414,8 @@ Accept wildcard characters: False
 The RetentionAction parameter specifies the action for the retention policy. Valid values are:
 
 - DeleteAndAllowRecovery: Deletes a message and allows recovery from the Recoverable Items folder.
-
 - MarkAsPastRetentionLimit: Messages are marked as past the retention limit.
-
 - MoveToArchive: Moves a message to the user's archive mailbox. You can use this action for retention tags of type All, Personal, and RecoverableItems.
-
 - PermanentlyDelete: Permanently deletes a message. A message that has been permanently deleted can't be recovered using the Recoverable Items folder. Permanently deleted messages aren't returned in a Discovery search, unless litigation hold is enabled for the mailbox.
 
 The MoveToDeletedItems and MoveToFolder actions are available, but don't work. These actions are available for upgrades from messaging records management (MRM) 1.0 (managed folders) to MRM 2.0 (retention policies). MRM 2.0 was introduced in Exchange 2010 Service Pack 1 (SP1).
@@ -451,7 +440,7 @@ The RetentionEnabled parameter specifies whether the tag is enabled. When set to
 
 Messages with a disabled tag are still considered tagged, so any default policy tags in the user's retention policy aren't applied to such messages.
 
-When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
+When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as `DISABLED_<Original Name>`.
 
 ```yaml
 Type: Boolean
@@ -469,7 +458,7 @@ Accept wildcard characters: False
 ### -RetentionId
 The RetentionId parameter specifies an alternate tag ID to ensure the retention tag found on mailbox items tagged in one Exchange organization matches the tag when the mailbox is moved to another Exchange organization (for example, in a cross-forest deployment or in a cross-premises deployment, when a mailbox is moved from an on-premises Exchange server to the cloud, or a cloud-based mailbox is moved to an on-premises Exchange server).
 
-It's not ordinarily required to specify or modify the RetentionId parameter for a retention tag. The parameter is populated automatically by \<scriptname\> when importing retention tags in a cross-forest or cross-premises deployment.
+Typically, you don't need to specify or modify the RetentionId parameter for a retention tag. This parameter is populated automatically when importing retention tags in a cross-forest or cross-premises deployment.
 
 ```yaml
 Type: Guid

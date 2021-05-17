@@ -1,50 +1,48 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpview
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPView.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPView
 ---
-
+  
 # Add-PnPView
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPView.md to change this file.
+
 Adds a view to a list
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPView -List <ListPipeBind>
-            -Title <String>
-            -Fields <String[]>
-            [-Query <String>]
-            [-ViewType <ViewType>]
-            [-RowLimit <UInt32>]
-            [-Personal [<SwitchParameter>]]
-            [-SetAsDefault [<SwitchParameter>]]
-            [-Paged [<SwitchParameter>]]
-            [-Aggregations <String>]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Add-PnPView [-List] <ListPipeBind> -Title <String> [-Query <String>] -Fields <String[]> [-ViewType <ViewType>]
+ [-RowLimit <UInt32>] [-Personal] [-SetAsDefault] [-Paged] [-Aggregations <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address"
 ```
 
 Adds a view named "Demo view" to the "Demo List" list.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address" -Paged
 ```
 
 Adds a view named "Demo view" to the "Demo List" list and makes sure there's paging on this view.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address" -Aggregations "<FieldRef Name='Title' Type='COUNT'/>"
 ```
@@ -62,7 +60,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Fields
@@ -74,7 +88,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -86,7 +102,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -Paged
@@ -98,7 +116,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Personal
@@ -110,7 +130,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Query
@@ -122,7 +144,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RowLimit
@@ -134,7 +158,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SetAsDefault
@@ -146,7 +172,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -158,7 +186,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ViewType
@@ -167,40 +197,19 @@ The type of view to add.
 ```yaml
 Type: ViewType
 Parameter Sets: (All)
+Accepted values: None, Html, Grid, Recurrence, Chart, Calendar, Gantt
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.View
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

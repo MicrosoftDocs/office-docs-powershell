@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxImportRequest
@@ -27,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailboxImportRequest [[-Identity] <MailboxImportRequestIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### MailboxFiltering
@@ -42,7 +42,8 @@ Get-MailboxImportRequest
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### MailboxLocationFiltering
@@ -57,7 +58,8 @@ Get-MailboxImportRequest
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,20 +100,15 @@ This example returns all import requests that have the name Recovered where the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you specify a name for the import request, use the following syntax: \<alias\>\\\<name\>. Microsoft Exchange automatically precedes the request with the mailbox's alias.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you specify a name for the import request, use the following syntax: `Alias\Name`. Microsoft Exchange automatically precedes the request with the mailbox's alias.
 
 You can't use this parameter with the following parameters:
 
 - BatchName
-
 - Mailbox
-
 - Name
-
 - Status
-
 - Suspend
-
 - HighPriority
 
 ```yaml
@@ -146,14 +143,12 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -195,7 +190,6 @@ This parameter is available only in on-premises Exchange.
 The HighPriority parameter filters the results based on the Priority value that was assigned when the request was created. Valid input for this parameter is $true or $false. Here's how these values filter the results:
 
 - $true Returns requests that were created with the Priority value High, Higher, Highest or Emergency.
-
 - $false Returns requests that were created with the Priority value Normal, Low, Lower or Lowest.
 
 You can't use this parameter with the Identity parameter.
@@ -214,6 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
+This parameter is available or functional only in on-premises Exchange.
+
 The Mailbox parameter filters the results by the destination mailbox where the content is being imported to.
 
 In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
@@ -221,23 +217,14 @@ In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParam
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.
@@ -259,7 +246,7 @@ Accept wildcard characters: False
 Type: MailboxLocationIdParameter
 Parameter Sets: MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -308,23 +295,14 @@ Accept wildcard characters: False
 The Status parameter filters the results based on status. You can use the following values:
 
 - AutoSuspended
-
 - Completed
-
 - CompletedWithWarning
-
 - CompletionInProgress
-
 - Failed
-
 - InProgress
-
 - Queued
-
 - Retrying
-
 - Suspended
-
 - Synced
 
 You can't use this parameter with the Identity parameter.
@@ -368,9 +346,7 @@ This parameter is available only in on-premises Exchange.
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

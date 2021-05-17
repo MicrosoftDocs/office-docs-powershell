@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # New-PublicFolderDatabase
@@ -27,8 +26,8 @@ New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-Organization <OrganizationIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,11 +66,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Mailbox server where you want to create the new public folder database. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 A server can have only one public folder database.
@@ -92,8 +88,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -126,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -EdbFilePath
-The EdbFilePath parameter specifies the full path of the public folder database files.
+The EdbFilePath parameter specifies the full path of the public folder database files. The default location is `%ExchangeInstallPath%Mailbox\<Public Folder DB Name>\<Public Folder DB Name>.edb`
 
 ```yaml
 Type: EdbFilePath
@@ -142,26 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -LogFolderPath
-The LogFolderPath parameter specifies the folder location for log files. The default path is \<ExchangeInstallPath\>V14\\Mailbox.
+The LogFolderPath parameter specifies the folder location for log files. The default location is `%ExchangeInstallPath%Mailbox\<Public Folder DB Name>`.
 
 ```yaml
 Type: NonRootLocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

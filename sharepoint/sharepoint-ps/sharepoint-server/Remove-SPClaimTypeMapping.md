@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spclaimtypemapping
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPClaimTypeMapping
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 
@@ -24,7 +24,7 @@ Remove-SPClaimTypeMapping [-Identity] <SPClaimMappingPipeBind> [-AssignmentColle
 ```
 
 ## DESCRIPTION
-The `Remove-SPClaimMapping` cmdlet deletes a claim type mapping rule from a farm trust STS identity provider.
+The `Remove-SPClaimTypeMapping` cmdlet deletes a claim type mapping rule from a farm trust STS identity provider.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-------------------------
 ```
-Remove-SPClaimMapping "Email" | Get-SPIdentityProvider "LiveIDSTS"
+Get-SPTrustedIdentityTokenIssuer "LiveIDSTS" | Remove-SPClaimTypeMapping "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" 
 ```
 
-This example removes an identity provider named LiveIDSTS.
+This example removes the claim type mapping emailaddress from the LiveIDSTS identity provider.
 
 
 ## PARAMETERS
@@ -44,7 +44,7 @@ This example removes an identity provider named LiveIDSTS.
 ### -Identity
 Specifies the claim mapping to delete.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim mapping rule (for example, Email); or an instance of a valid SPClaimMapping object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim mapping rule (for example, Email); or an instance of a valid SPClaimTypeMapping object.
 
 ```yaml
 Type: SPClaimMappingPipeBind

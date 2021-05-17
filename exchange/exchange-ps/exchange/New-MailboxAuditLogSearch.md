@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MailboxAuditLogSearch
@@ -33,7 +32,8 @@ New-MailboxAuditLogSearch -EndDate <ExDateTime> -StartDate <ExDateTime> -StatusM
  [-Name <String>]
  [-Operations <MultiValuedProperty>]
  [-ShowDetails]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,8 +116,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -193,7 +192,6 @@ Accept wildcard characters: False
 The HasAttachments parameter filters the search by messages that have attachments. Valid values are:
 
 - $true: Only messages with attachments are included in the search.
-
 - $false: Messages with and without attachments are included in the search.
 
 ```yaml
@@ -213,11 +211,8 @@ Accept wildcard characters: False
 The LogonTypes parameter specifies the type of logons. Valid values are:
 
 - Admin: Audit log entries for mailbox access by administrator logons are returned.
-
 - Delegate: Audit log entries for mailbox access by delegates are returned, including access by users with Full Mailbox Access permission.
-
 - External: For Exchange Online mailboxes, audit log entries for mailbox access by Microsoft datacenter administrators are returned.
-
 - Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value requires the ShowDetails switch.
 
 You can enter multiple values separated by commas.
@@ -238,7 +233,7 @@ Accept wildcard characters: False
 ### -Mailboxes
 The Mailboxes parameter specifies the mailbox to retrieve mailbox audit log entries from.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
  If you don't specify a value, mailbox audit logs for all mailboxes in the organization are returned.
 
@@ -275,27 +270,16 @@ Accept wildcard characters: False
 The Operations parameter filters the search results by the operations that are logged by mailbox audit logging. Valid values are:
 
 - Copy
-
 - Create
-
 - FolderBind
-
 - HardDelete
-
 - MailboxLogin
-
 - MessageBind
-
 - Move
-
 - MoveToDeletedItems
-
 - SendAs
-
 - SendOnBehalf
-
 - SoftDelete
-
 - Update
 
 You can enter multiple values separated by commas.

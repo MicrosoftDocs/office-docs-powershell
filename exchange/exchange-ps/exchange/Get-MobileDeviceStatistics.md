@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MobileDeviceStatistics
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MobileDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMobileDeviceStatistics cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMobileDeviceStatistics cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,7 +32,8 @@ Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter>
  [-OWAforDevices]
  [-ShowRecoveryPassword]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -47,7 +46,8 @@ Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
  [-OWAforDevices]
  [-ShowRecoveryPassword]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +66,8 @@ This example retrieves the statistics for the mobile phone configured to synchro
 
 ### Example 2
 ```powershell
-$UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'" | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
+$UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'" | Get-Mailbox
+$UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
 ```
 
 This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
@@ -78,7 +79,7 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
 ```
 
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the Exchange ActiveSync log file and sends it to the System Administrator at admin@contoso.com.
+This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
 
 ## PARAMETERS
 
@@ -86,7 +87,6 @@ This example retrieves the statistics for the mobile phone configured to synchro
 The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
 
 - GUID
-
 - DeviceID
 
 You can't use this parameter with the Mailbox parameter.
@@ -108,23 +108,14 @@ Accept wildcard characters: False
 The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.

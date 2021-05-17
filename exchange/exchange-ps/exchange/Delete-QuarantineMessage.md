@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/delete-quarantinemessage
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Delete-QuarantineMessage
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Delete-QuarantineMessage
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Delete-QuarantineMessage cmdlet to delete quarantine messages from your cloud-based organization
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -25,13 +24,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identities
 ```
-Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
 ```
-Delete-QuarantineMessage -Identity <QuarantineMessageIdentity> [-Confirm] [-WhatIf] [<CommonParameters>]
+Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,14 +53,16 @@ This example deletes the quarantined message with the specified Identity value.
 
 ### Example 2
 ```powershell
-$ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identity $ids[4]
+$ids = Get-QuarantineMessage | select -ExpandProperty Identity
+Delete-QuarantineMessage -Identity $ids[4]
 ```
 
 This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on).
 
 ### Example 3
 ```powershell
-$ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identities $ids -Identity 000
+$ids = Get-QuarantineMessage | select -ExpandProperty Identity
+Delete-QuarantineMessage -Identities $ids -Identity 000
 ```
 
 This example deletes all quarantined messages. The Identity parameter is required, but the value 000 is ignored.
@@ -73,7 +80,7 @@ When you use this parameter, the Identity parameter is required, but the value i
 Type: QuarantineMessageIdentity[]
 Parameter Sets: Identities
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -91,7 +98,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: Identities
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -116,15 +123,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -136,11 +142,13 @@ Accept wildcard characters: False
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

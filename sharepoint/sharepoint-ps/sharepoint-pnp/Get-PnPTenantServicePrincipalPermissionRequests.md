@@ -1,20 +1,30 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantserviceprincipalpermissionrequests
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenantServicePrincipalPermissionRequests
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantServicePrincipalPermissionRequests.html
 ---
-
+ 
 # Get-PnPTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantServicePrincipalPermissionRequests.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTenantServicePrincipalPermissionRequests [-Connection <SPOnlineConnection>]
+Get-PnPTenantServicePrincipalPermissionRequests [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,6 +38,7 @@ A permission request contains the following properties:
 * Resource: The resource that the application requires access to.
 * Scope: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
+## EXAMPLES
 
 ## PARAMETERS
 
@@ -35,14 +46,17 @@ A permission request contains the following properties:
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

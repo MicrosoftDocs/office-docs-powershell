@@ -1,40 +1,41 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpeventreceiver
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPEventReceiver.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPEventReceiver
 ---
-
+  
 # Add-PnPEventReceiver
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPEventReceiver.md to change this file.
+
 Adds a new remote event receiver
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPEventReceiver -Name <String>
-                     -Url <String>
-                     -EventReceiverType <EventReceiverType>
-                     -Synchronization <EventReceiverSynchronization>
-                     [-List <ListPipeBind>]
-                     [-SequenceNumber <Int>]
-                     [-Force [<SwitchParameter>]]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+Add-PnPEventReceiver [-List <ListPipeBind>] -Name <String> -Url <String> -EventReceiverType <EventReceiverType>
+ -Synchronization <EventReceiverSynchronization> [-SequenceNumber <Int32>] [-Force] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPEventReceiver -List "ProjectList" -Name "TestEventReceiver" -Url https://yourserver.azurewebsites.net/eventreceiver.svc -EventReceiverType ItemAdded -Synchronization Asynchronous
 ```
 
 This will add a new remote event receiver that is executed after an item has been added to the ProjectList list
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPEventReceiver -Name "TestEventReceiver" -Url https://yourserver.azurewebsites.net/eventreceiver.svc -EventReceiverType WebAdding -Synchronization Synchronous
 ```
@@ -43,6 +44,20 @@ This will add a new remote event receiver that is executed while a new subsite i
 
 ## PARAMETERS
 
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventReceiverType
 The type of the event receiver like ItemAdded, ItemAdding. See https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.eventreceivertype.aspx for the full list of available types.
 
@@ -50,10 +65,13 @@ The type of the event receiver like ItemAdded, ItemAdding. See https://msdn.micr
 Type: EventReceiverType
 Parameter Sets: (All)
 Aliases: Type
+Accepted values: ItemAdding, ItemUpdating, ItemDeleting, ItemCheckingIn, ItemCheckingOut, ItemUncheckingOut, ItemAttachmentAdding, ItemAttachmentDeleting, ItemFileMoving, ItemVersionDeleting, FieldAdding, FieldUpdating, FieldDeleting, ListAdding, ListDeleting, SiteDeleting, WebDeleting, WebMoving, WebAdding, SiteMovingFromGeoLocation, GroupAdding, GroupUpdating, GroupDeleting, GroupUserAdding, GroupUserDeleting, RoleDefinitionAdding, RoleDefinitionUpdating, RoleDefinitionDeleting, RoleAssignmentAdding, RoleAssignmentDeleting, InheritanceBreaking, InheritanceResetting, WorkflowStarting, ItemAdded, ItemUpdated, ItemDeleted, ItemCheckedIn, ItemCheckedOut, ItemUncheckedOut, ItemAttachmentAdded, ItemAttachmentDeleted, ItemFileMoved, ItemFileConverted, ItemVersionDeleted, FieldAdded, FieldUpdated, FieldDeleted, ListAdded, ListDeleted, SiteDeleted, WebDeleted, WebMoved, WebProvisioned, WebRestored, GroupAdded, GroupUpdated, GroupDeleted, GroupUserAdded, GroupUserDeleted, RoleDefinitionAdded, RoleDefinitionUpdated, RoleDefinitionDeleted, RoleAssignmentAdded, RoleAssignmentDeleted, InheritanceBroken, InheritanceReset, WorkflowStarted, WorkflowPostponed, WorkflowCompleted, EntityInstanceAdded, EntityInstanceUpdated, EntityInstanceDeleted, AppInstalled, AppUpgraded, AppUninstalling, EmailReceived, ContextEvent, InvalidReceiver
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
@@ -65,7 +83,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -77,7 +97,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Name
@@ -89,19 +111,23 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SequenceNumber
 The sequence number where this remote event receiver should be placed
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Synchronization
@@ -111,10 +137,13 @@ The synchronization type: Asynchronous or Synchronous
 Type: EventReceiverSynchronization
 Parameter Sets: (All)
 Aliases: Sync
+Accepted values: DefaultSynchronization, Synchronous, Asynchronous
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -126,37 +155,15 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.EventReceiverDefinition
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

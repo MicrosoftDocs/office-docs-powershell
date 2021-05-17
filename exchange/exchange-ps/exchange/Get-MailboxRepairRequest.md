@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxRepairRequest
@@ -24,34 +23,32 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Database
 ```
 Get-MailboxRepairRequest [-Database] <DatabaseIdParameter> [[-StoreMailbox] <StoreMailboxIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Detailed]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
 Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> [-Archive]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Get-MailboxRepairRequest cmdlet displays information about mailbox repair requests. This information includes:
 
 - The mailbox GUID.
-
 - The type of corruption that was specified when the mailbox repair request was created.
-
 - The progress of the repair request in percentage of completion.
-
 - The number of corruptions detected and fixed.
-
 - The status of the repair request; values are Queued, Running, Succeeded and Failed.
-
 - The date and time when the mailbox repair request was created and when it finished.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -60,7 +57,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxDatabase | Get-MailboxRepairRequest | Format-Table Identity; Get-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5\374289de-b899-42dc-8391-4f8579935f1f | Format-List
+Get-MailboxDatabase | Get-MailboxRepairRequest | Format-Table Identity
+Get-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5\374289de-b899-42dc-8391-4f8579935f1f | Format-List
 ```
 
 This example displays the value of the Identity property for all mailbox repair requests for all mailbox servers in your organization; the second command displays information about a specific mailbox repair request that was returned by the first command.
@@ -74,20 +72,35 @@ This example displays repair request information for the mailbox of Ann Beebe us
 
 ### Example 3
 ```powershell
-$MailboxGuid = Get-MailboxStatistics annb; Get-MailboxRepairRequest -Database $MailboxGuid.Database -StoreMailbox $MailboxGuid.MailboxGuid | Format-List Identity
+$MailboxGuid = Get-MailboxStatistics annb
+Get-MailboxRepairRequest -Database $MailboxGuid.Database -StoreMailbox $MailboxGuid.MailboxGuid | Format-List Identity
 ```
 
 This example uses the Database and StoreMailbox parameters to display the Identity property of the repair request for the mailbox of Ann Beebe.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is `DatabaseGuid\RequestGuid\JobGuid`.
+
+```yaml
+Type: StoreIntegrityCheckJobIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Database
 The Database parameter returns mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Mailbox parameter.
@@ -105,43 +118,18 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>.
-
-```yaml
-Type: StoreIntegrityCheckJobIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Mailbox
 The Mailbox parameter specifies the mailbox that you want to get mailbox repair request information about. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Database parameter.

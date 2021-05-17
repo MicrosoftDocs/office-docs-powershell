@@ -7,8 +7,7 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
-ROBOTS: NOINDEX, NOFOLLOW
+ROBOTS: NOINDEX
 ---
 
 # Set-TenantAllowBlockListItems
@@ -20,7 +19,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Security & Compliance Center.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -84,8 +83,7 @@ The ExpirationDate parameter filters the results by expiration date in Coordinat
 
 To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, `"2016-05-06 14:30:00z"`.
-
+- Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 You can't use this parameter with the NoExpiration switch.

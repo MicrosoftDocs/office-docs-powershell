@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Set-TransportRule
@@ -103,7 +102,6 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ExceptIfHeaderMatchesPatterns <Pattern []>]
  [-ExceptIfManagerAddresses <RecipientIdParameter []>]
  [-ExceptIfManagerForEvaluatedUser <EvaluatedUser>]
- [-ExceptIfMessageContainsAllDataClassifications <Hashtable []>]
  [-ExceptIfMessageContainsDataClassifications <Hashtable []>]
  [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
  [-ExceptIfMessageTypeMatches <MessageType>]
@@ -148,7 +146,6 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-LogEventText <EventLogText>]
  [-ManagerAddresses <RecipientIdParameter []>]
  [-ManagerForEvaluatedUser <EvaluatedUser>]
- [-MessageContainsAllDataClassifications <Hashtable []>]
  [-MessageContainsDataClassifications <Hashtable []>]
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <MessageType>]
@@ -164,6 +161,7 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-RecipientADAttributeMatchesPatterns <Pattern []>]
  [-RecipientAddressContainsWords <Word []>]
  [-RecipientAddressMatchesPatterns <Pattern []>]
+ [-RecipientAddressType <RecipientAddressType>]
  [-RecipientDomainIs <Word []>]
  [-RecipientInSenderList <Word []>]
  [-RedirectMessageTo <RecipientIdParameter []>]
@@ -227,9 +225,7 @@ This example sets the FromMemberOf parameter to a value of Sales-Group, which sp
 The Identity parameter specifies the rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -273,57 +269,31 @@ The ADComparisonAttribute parameter specifies a condition that compares an Activ
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 If you don't use the ADComparisonOperator parameter, the default comparison operator Equal is used.
@@ -349,7 +319,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The ADComparisonOperator parameter specifies the comparison operator for the ADComparisonAttribute parameter. Valid values are:
 
 - Equal (This is the default value)
-
 - NotEqual
 
 ```yaml
@@ -373,11 +342,8 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The AddManagerAsRecipientType parameter specifies an action that delivers or redirects messages to the user that's defined in the sender's Manager attribute. Valid values are:
 
 - To: Add the sender's manager to the To field of the message.
-
 - Cc: Add the sender's manager to the Cco field of the message.
-
 - Bcc: Add the sender's manager to the Bcc field of the message.
-
 - Redirect: Redirect the message to the sender's manager without notifying the sender or the recipients.
 
 This action only works if the sender's Manager attribute is defined.
@@ -403,18 +369,13 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The AddToRecipients parameter specifies an action that adds recipients to the To field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -437,22 +398,17 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AnyOfCcHeader parameter specifies a condition that looks for recipients in the Cc field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -475,22 +431,17 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AnyOfCcHeaderMemberOf parameter specifies a condition that looks for group members in the Cc field of messages. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -514,7 +465,7 @@ The AnyOfRecipientAddressContainsWords parameter specifies a condition that look
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Word[]
@@ -534,11 +485,11 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Pattern[]
@@ -561,22 +512,17 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AnyOfToCcHeader parameter specifies a condition that looks for recipients in the To or Cc fields of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -599,22 +545,17 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AnyOfToCcHeaderMemberOf parameter specifies a condition that looks for group members in the To and Cc fields of messages. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -637,22 +578,17 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AnyOfToHeader parameter specifies a condition that looks for recipients in the To field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -675,22 +611,17 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AnyOfToHeaderMemberOf parameter specifies a condition that looks for group members in the To field of messages. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -735,9 +666,7 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML disclaimer can't be added to a message. Valid values are:
 
 - Wrap: The original message is wrapped in a new message envelope, and the disclaimer is used as the message body for the new message. This is the default value. Subsequent mail flow rules are applied to the new message envelope, not to the original message. Therefore, configure a rule with this action at a lower priority (a higher priority number) than other rules. If the original message can't be wrapped in a new message envelope, the original message isn't delivered. The message is returned to the sender in an non-delivery report (also known as an NDR or bounce message).
-
 - Ignore: The rule is ignored and the message is delivered without the disclaimer.
-
 - Reject: The message is rejected.
 
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Wrap is used.
@@ -763,8 +692,7 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The ApplyHtmlDisclaimerLocation parameter specifies where to insert the HTML disclaimer text in the body of messages. Valid values are:
 
 - Append: The disclaimer is added to the end of the message body. This is the default value.
-
-- Prepend: The disclaimer is inserted to the beginning of the message body.
+- Prepend: The disclaimer is inserted at the beginning of the message body.
 
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Append is used.
 
@@ -811,7 +739,6 @@ This parameter specifies an action or part of an action for the rule.
 The ApplyOME parameter specifies an action that encrypts messages and their attachments by using Office 365 Message Encryption. Valid values are:
 
 - $true: The message and attachments are encrypted.
-
 - $false: The message and attachments aren't encrypted.
 
 ```yaml
@@ -923,7 +850,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AttachmentHasExecutableContent parameter specifies a condition that looks for executable content in message attachments. Valid values are:
 
 - $true: Look for executable content in message attachments.
-
 - $false: Don't look for executable content in message attachments.
 
 ```yaml
@@ -947,7 +873,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
 
 - $true: Look for password protected attachments.
-
 - $false: Don't look for password protected attachments.
 
 ```yaml
@@ -971,7 +896,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
 
 - $true: Look for unsupported file types in messages.
-
 - $false: Don't look for unsupported file types in messages.
 
 For more information, see [Register Filter Pack IFilters with Exchange 2013](https://docs.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
@@ -996,7 +920,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The AttachmentMatchesPatterns parameter specifies a condition that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
 
-You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 Only the first 150 kilobytes (KB) of the attachment is scanned when trying to match a text pattern.
 
@@ -1018,7 +942,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentNameMatchesPatterns parameter specifies a condition that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The AttachmentNameMatchesPatterns parameter specifies a condition that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 ```yaml
 Type: Pattern[]
@@ -1041,7 +965,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AttachmentProcessingLimitExceeded parameter specifies a condition that looks for messages where attachment scanning didn't complete. Valid values are:
 
 - $true: Look for messages where attachment scanning didn't complete.
-
 - $false: Don't look for messages where attachment scanning didn't complete.
 
 You use this condition to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
@@ -1067,31 +990,18 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The AttachmentPropertyContainsWords parameter specifies a condition that looks for words in the properties of attached Office documents. This condition helps integrate mail flow rules (transport rules) with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
 
 - Business Impact
-
 - Compliancy
-
 - Confidentiality
-
 - Department
-
 - Impact
-
 - Intellectual Property
-
 - Personally Identifiable Information
-
 - Personal Information
-
 - Personal Use
-
 - Required Clearance
-
 - PHI
-
 - PII
-
 - Project
-
 - Protected Health Information
 
 The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use leading or trailing spaces.
@@ -1102,7 +1012,7 @@ When you specify multiple properties, or multiple values for the same property, 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1121,16 +1031,14 @@ The AttachmentSizeOver parameter specifies a condition that looks for messages w
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The embedded images are treated as attachments (for example, messages with a picture in the signature); for this reason, we do not recommend using a very small value since unexpected messages will be blocked.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1153,18 +1061,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The BetweenMemberOf1 parameter specifies a condition that looks for messages that are sent between group members. You need to use this parameter with the BetweenMemberOf2 parameter. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1187,18 +1090,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The BetweenMemberOf2 parameter specifies a condition that looks for messages that are sent between group members. You need to use this parameter with the BetweenMemberOf1 parameter. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1221,18 +1119,13 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The BlindCopyTo parameter specifies an action that adds recipients to the Bcc field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1266,8 +1159,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -1313,18 +1205,13 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The CopyTo parameter specifies an action that adds recipients to the Cc field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1347,7 +1234,6 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The DeleteMessage parameter specifies an action that silently drops messages without an NDR. Valid values are:
 
 - $true: Silently drop the message without an NDR.
-
 - $false: Don't silently drop the message.
 
 ```yaml
@@ -1364,21 +1250,20 @@ Accept wildcard characters: False
 ```
 
 ### -Disconnect
-This parameter specifies an action or part of an action for the rule.
+This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
 
-This action is available only on Edge Transport servers in on-premises Exchange.
+This parameter specifies an action or part of an action for the rule.
 
 The Disconnect parameter specifies an action that ends the SMTP connection between the sending server and the Edge Transport server without generating an NDR.
 
 - $true: Silently end the SMTP session without generating an NDR.
-
 - $false: Don't silently end the SMTP session.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1394,7 +1279,7 @@ The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's a
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1433,57 +1318,31 @@ The ExceptIfADComparisonAttribute parameter specifies an exception that compares
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 If you don't use the ExceptIfADComparisonOperator parameter, the default comparison operator Equal is used.
@@ -1509,7 +1368,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfADComparisonOperator parameter specifies the comparison operator for the ExceptIfADComparisonAttribute parameter. Valid values are:
 
 - Equal (This is the default value)
-
 - NotEqual
 
 ```yaml
@@ -1533,22 +1391,17 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAnyOfCcHeader parameter specifies an exception that looks for recipients in the Cc field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1571,22 +1424,17 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAnyOfCcHeaderMemberOf parameter specifies an exception that looks for group members in the Cc field of messages. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1610,7 +1458,7 @@ The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception 
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Word[]
@@ -1630,11 +1478,11 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Pattern[]
@@ -1657,22 +1505,17 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAnyOfToCcHeader parameter specifies an exception that looks for recipients in the To or Cc fields of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1695,22 +1538,17 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAnyOfToCcHeaderMemberOf parameter specifies an exception that looks for group members in the To and Cc fields of messages. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1733,22 +1571,17 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAnyOfToHeader parameter specifies an exception that looks for recipients in the To field of messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1771,22 +1604,17 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAnyOfToHeaderMemberOf parameter specifies an exception that looks for group members in the To field of messages. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+**Note**: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1851,7 +1679,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that looks for executable content in message attachments. Valid values are:
 
 - $true: Look for executable content in message attachments.
-
 - $false: Don't look for executable content in message attachments.
 
 ```yaml
@@ -1875,7 +1702,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
 
 - $true: Look for password protected attachments.
-
 - $false: Don't look for password protected attachments.
 
 ```yaml
@@ -1899,7 +1725,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
 
 - $true: Look for unsupported file types in messages.
-
 - $false: Don't look for unsupported file types in messages.
 
 For more information, see [Register Filter Pack IFilters with Exchange 2013](https://docs.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
@@ -1924,7 +1749,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfAttachmentMatchesPatterns parameter specifies an exception that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
 
-You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 Only the first 150 KB of the attachment is scanned when trying to match a text pattern.
 
@@ -1946,7 +1771,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentNameMatchesPatterns parameter specifies an exception that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfAttachmentNameMatchesPatterns parameter specifies an exception that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 ```yaml
 Type: Pattern[]
@@ -1969,7 +1794,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAttachmentProcessingLimitExceeded parameter specifies an exception that looks for messages where attachment scanning didn't complete. Valid values are:
 
 - $true: Look for messages where attachment scanning didn't complete.
-
 - $false: Don't look for messages where attachment scanning didn't complete.
 
 You use this exception to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
@@ -1995,31 +1819,18 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception that looks for words in the properties of attached Office documents. This condition helps integrate rules with the File Classification Infrastructure (FCI) in Windows Server 2018 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
 
 - Business Impact
-
 - Compliancy
-
 - Confidentiality
-
 - Department
-
 - Impact
-
 - Intellectual Property
-
 - Personally Identifiable Information
-
 - Personal Information
-
 - Personal Use
-
 - Required Clearance
-
 - PHI
-
 - PII
-
 - Project
-
 - Protected Health Information
 
 The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use values with leading or trailing spaces.
@@ -2030,7 +1841,7 @@ When you specify multiple properties, or multiple values for the same property, 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2049,13 +1860,9 @@ The ExceptIfAttachmentSizeOver parameter specifies an exception that looks for m
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -2081,18 +1888,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfBetweenMemberOf1 parameter specifies an exception that looks for messages that are sent between group members. You need to use this parameter with the ExceptIfBetweenMemberOf2 parameter. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -2115,18 +1917,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfBetweenMemberOf2 parameter specifies an exception that looks for messages that are sent between group members. You need to use this parameter with the ExceptIfBetweenMemberOf1 parameter. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -2171,18 +1968,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfFrom parameter specifies an exception that looks for messages from specific senders. You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -2226,7 +2018,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -2251,18 +2043,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfFromMemberOf parameter specifies an exception that looks for messages sent by group members. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -2287,7 +2074,6 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 The ExceptIfFromScope parameter specifies an exception that looks for the location of message senders. Valid values are:
 
 - InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -2312,7 +2098,7 @@ The ExceptIfHasClassification parameter specifies an exception that looks for me
 
 You use the Get-MessageClassification cmdlet to identify the message classification. For example, to find messages with the Company Internal classification, use the following syntax:
 
--ExceptIfHasClassification @(Get-MessageClassification "Company Internal").Identity
+`-ExceptIfHasClassification @(Get-MessageClassification "Company Internal").Identity`
 
 The message classification referred to in this parameter is the custom message classification that you can create in your organization by using the New-MessageClassification cmdlet. It isn't related to the DLP data classification.
 
@@ -2337,7 +2123,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfHasNoClassification parameter specifies an exception that looks for messages with or without any message classifications. Valid values are:
 
 - $true: Look for messages that don't have a message classification.
-
 - $false: Look for messages that have one or more message classifications.
 
 ```yaml
@@ -2361,7 +2146,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfHasSenderOverride parameter specifies an exception that looks for messages where the sender chose to override a DLP policy. Valid values are:
 
 - $true: Look for messages where the sender took action to override a DLP policy.
-
 - $false: Don't look for messages where the sender took action to override a DLP policy.
 
 ```yaml
@@ -2446,7 +2230,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfHeaderMatchesPatterns parameter specifies an exception that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfHeaderMatchesPatterns parameter specifies an exception that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 You specify the header field to search by using the ExceptIfHeaderMatchesMessageHeader parameter.
 
@@ -2471,18 +2255,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfManagerAddresses parameter specifies the users (managers) for the ExceptIfManagerForEvaluatedUser parameter. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You specify if you want to look for these users as managers of senders or recipients by using the ExceptIfManagerForEvaluatedUser parameter.
 
@@ -2507,7 +2286,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfManagerForEvaluatedUser parameter specifies an exception that looks for users in the Manager attribute of senders or recipients. Valid values are:
 
 - Recipient: The user is the manager of a recipient.
-
 - Sender: The user is the manager of the sender.
 
 You specify the users to look for by using the ExceptIfManagerAddresses parameter.
@@ -2525,24 +2303,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExceptIfMessageContainsAllDataClassifications
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExceptIfMessageContainsDataClassifications
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -2550,7 +2310,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfMessageContainsDataClassifications parameter specifies an exception that looks for sensitive information types in the body of messages, and in any attachments.
 
-This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
+This parameter uses the syntax `@{SensitiveInformationType1},@{SensitiveInformationType2},...@{SensitiveInformationTypeN}`. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
 For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
 
@@ -2558,7 +2318,7 @@ For a list of sensitive information types available, see [Sensitive information 
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2577,13 +2337,9 @@ The ExceptIfMessageSizeOver parameter specifies an exception that looks for mess
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -2609,21 +2365,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfMessageTypeMatches parameter specifies an exception that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-
-- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook or Outlook).
-
+- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
 - Encrypted: Encrypted messages.
-
 - Calendaring: Meeting requests and responses.
-
 - PermissionControlled: Messages that have specific permissions configured.
-
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
-
 - Signed: Digitally signed messages.
-
-- ApprovalRequest: Moderations request messages sent to moderators.
-
+- ApprovalRequest: Moderation request messages sent to moderators.
 - ReadReceipt: Read receipts.
 
 ```yaml
@@ -2649,57 +2397,31 @@ The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception t
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
@@ -2731,57 +2453,31 @@ The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Regular Expression". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Regular Expression1,Regular Expression2...","AttributeName2:Regular Expression3,Regular Expression4...".
@@ -2826,7 +2522,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -2874,7 +2570,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2893,7 +2589,6 @@ This condition is available on Mailbox servers and Edge Transport servers. This 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
 - -1: The message is from a trusted sender, so the message bypasses spam filtering.
-
 - Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
 
 The rule looks for messages with an SCL value that's greater than or equal to the specified value.
@@ -2902,7 +2597,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2921,57 +2616,31 @@ The ExceptIfSenderADAttributeContainsWords parameter specifies an exception that
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
@@ -3003,57 +2672,31 @@ The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception th
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Regular Expression". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Regular Expression1,Regular Expression2...","AttributeName2:Regular Expression3,Regular Expression4...".
@@ -3106,7 +2749,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3123,9 +2766,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfSenderIpRanges parameter specifies an exception that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
-
 - IP address range: For example, 192.168.0.1-192.168.0.254.
-
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple IP addresses or ranges separated by commas.
@@ -3151,7 +2792,6 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfSenderManagementRelationship parameter specifies an exception that looks for the relationship between the sender and recipients in messages. Valid values are:
 
 - Manager: The sender is the manager of a recipient.
-
 - DirectReport: A recipient is the manager of the sender.
 
 ```yaml
@@ -3175,18 +2815,13 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfSentTo parameter specifies an exception that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -3207,14 +2842,11 @@ This parameter specifies an exception or part of an exception for the rule. The 
 The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If you remove the group after you create the rule, no exception is made for messages that are sent to members of the group.
 
@@ -3239,11 +2871,8 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfSentToScope parameter specifies an exception that looks for the location of a recipient. Valid values are:
 
 - InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-
 - NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-
 - ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-
 - ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
 
 ```yaml
@@ -3286,7 +2915,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfSubjectMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfSubjectMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 ```yaml
 Type: Pattern[]
@@ -3328,7 +2957,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfSubjectOrBodyMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The ExceptIfSubjectOrBodyMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 ```yaml
 Type: Pattern[]
@@ -3351,9 +2980,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfWithImportance parameter specifies an exception that looks for messages with the specified importance level. Valid values are:
 
 - Low
-
 - Normal
-
 - High
 
 ```yaml
@@ -3397,18 +3024,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The From parameter specifies a condition that looks for messages from specific senders. You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -3452,7 +3074,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The FromAddressMatchesPatterns parameter specifies a condition that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The FromAddressMatchesPatterns parameter specifies a condition that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -3477,18 +3099,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The FromMemberOf parameter specifies a condition that looks for messages sent by group members. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -3513,7 +3130,6 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 The FromScope parameter specifies a condition that looks for the location of message senders. Valid values are:
 
 - InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -3537,15 +3153,10 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The GenerateIncidentReport parameter specifies where to send the incident report that's defined by the IncidentReportContent parameter. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 An incident report is generated for messages that violate a DLP policy in your organization.
@@ -3573,22 +3184,17 @@ The GenerateNotification parameter specifies an action that sends a notification
 This parameter supports plain text, HTML tags and the following keywords that use values from the original message:
 
 - %%From%%
-
 - %%To%%
-
 - %%Cc%%
-
 - %%Subject%%
-
 - %%Headers%%
-
 - %%MessageDate%%
 
 ```yaml
 Type: DisclaimerText
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3606,7 +3212,7 @@ The HasClassification parameter specifies a condition that looks for messages wi
 
 You use the Get-MessageClassification cmdlet to identify the message classification. For example, to find messages with the Company Internal classification, use the following syntax:
 
--HasClassification @(Get-MessageClassification "Company Internal").Identity
+`-HasClassification @(Get-MessageClassification "Company Internal").Identity`
 
 The message classification referred to in this parameter is the custom message classification that you can create in your organization by using the New-MessageClassification cmdlet. It isn't related to the DLP classification.
 
@@ -3631,7 +3237,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The HasNoClassification parameter specifies a condition that looks for messages with or without any message classifications. Valid values are:
 
 - $true: Look for messages that don't have a message classification.
-
 - $false: Look for messages that have one or more message classifications.
 
 ```yaml
@@ -3655,7 +3260,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The HasSenderOverride parameter specifies a condition that looks for messages where the sender chose to override a DLP policy. Valid values are:
 
 - $true: Look for messages where the sender took action to override a DLP policy.
-
 - $false: Don't look for messages where the sender took action to override a DLP policy.
 
 ```yaml
@@ -3740,7 +3344,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The HeaderMatchesPatterns parameter specifies a condition that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The HeaderMatchesPatterns parameter specifies a condition that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 You specify the header field to search by using the HeaderMatchesMessageHeader parameter.
 
@@ -3765,27 +3369,16 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The IncidentReportContent parameter specifies the message properties that are included in the incident report that's generated when a message violates a DLP policy. Valid values are:
 
 - Sender: The sender of the message.
-
 - Recipients: The recipients in the To field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
-
 - Subject: The Subject field of the message.
-
 - CC: The recipients in the Cc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
-
 - BCC: The recipients in the Bcc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
-
 - Severity: The audit severity of the rule that was triggered. If the message was processed by more than one rule, the highest severity is displayed.
-
 - Override: The override if the sender chose to override a PolicyTip. If the sender provided a justification, the first 100 characters of the justification is also included.
-
 - RuleDetections: The list of rules that the message triggered.
-
 - FalsePositive: The false positive if the sender marked the message as a false positive for a PolicyTip.
-
 - DataClassifications: The list of sensitive information types that were detected in the message.
-
 - IdMatch: The sensitive information type that was detected, the exact matched content from the message, and the 150 characters before and after the matched sensitive information.
-
 - AttachOriginalMail: The entire original message as an attachment.
 
 The message ID is always included in the incident report.
@@ -3808,7 +3401,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncidentReportOriginalMail
-This parameter is available or functional only in Exchange Server 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter has been deprecated and is no longer used. Use the IncidentReportContent parameter instead. The value AttachOriginalMail on the IncidentReportContent parameter is equivalent to setting this parameter to the value IncludeOriginalMail.
 
@@ -3819,7 +3412,6 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The IncidentReportOriginalMail parameter specifies whether to include the original message with the incident report. This parameter is used together with the GenerateIncidentReport parameter. Valid values are:
 
 - IncludeOriginalMail
-
 - DoNotIncludeOriginalMail (this is the default value)
 
 ```yaml
@@ -3836,29 +3428,25 @@ Accept wildcard characters: False
 ```
 
 ### -LogEventText
-This parameter specifies an action or part of an action for the rule.
+This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
 
-This action is available only on Edge Transport servers in on-premises Exchange.
+This parameter specifies an action or part of an action for the rule.
 
 The LogEventText parameter specifies an action that creates an entry in the Application log on the local Edge Transport server. The value for this parameter specifies the text that you want to include in the event log entry. If the text contains spaces, enclose the value in quotation marks (").
 
 The entry contains the following information:
 
 - Level: Information
-
 - Source: MSExchange Messaging Policies
-
 - Event ID: 4000
-
 - Task Category: Rules
-
-- EventData: The following message is logged by an action in the rules: \<text you specify\>
+- EventData: `The following message is logged by an action in the rules: <text you specify>`
 
 ```yaml
 Type: EventLogText
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3875,18 +3463,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The ManagerAddresses parameter specifies the users (managers) for the ExceptIfManagerForEvaluatedUser parameter. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You specify if you want to look for these users as managers of senders or recipients by using the ManagerForEvaluatedUser parameter.
 
@@ -3911,7 +3494,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The ManagerForEvaluatedUser parameter specifies a condition that looks for users in the Manager attribute of senders or recipients. Valid values are:
 
 - Recipient: The user is the manager of a recipient.
-
 - Sender: The user is the manager of the sender.
 
 You specify the users to look for by using the ManagerAddresses parameter.
@@ -3929,24 +3511,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MessageContainsAllDataClassifications
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MessageContainsDataClassifications
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3954,7 +3518,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The MessageContainsDataClassifications parameter specifies a condition that looks for sensitive information types in the body of messages, and in any attachments.
 
-This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
+This parameter uses the syntax `@{SensitiveInformationType1},@{SensitiveInformationType2},...@{SensitiveInformationTypeN}`. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
 For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
 
@@ -3964,7 +3528,7 @@ You can specify the notification options by using the NotifySender parameter.
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -3983,13 +3547,9 @@ The MessageSizeOver parameter specifies a condition that looks for messages larg
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -4015,21 +3575,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The MessageTypeMatches parameter specifies a condition that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-
-- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook or Outlook).
-
+- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
 - Encrypted: Encrypted messages.
-
 - Calendaring: Meeting requests and responses.
-
 - PermissionControlled: Messages that have specific permissions configured.
-
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
-
 - Signed: Digitally signed messages.
-
-- ApprovalRequest: Moderations request messages sent to moderators.
-
+- ApprovalRequest: Moderation request messages sent to moderators.
 - ReadReceipt: Read receipts.
 
 ```yaml
@@ -4049,9 +3601,7 @@ Accept wildcard characters: False
 The Mode parameter specifies how the rule operates. Valid values are:
 
 - Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
-
 - AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
-
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml
@@ -4075,7 +3625,6 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The ModerateMessageByManager parameter specifies an action that forwards messages for approval to the user that's specified in the sender's Manager attribute. After the manager approves the message, it's delivered to the recipients. Valid values are:
 
 - $true: Moderation by the sender's manager is enabled.
-
 - $false: Moderation by the sender's manager is disabled.
 
 This action only works if the sender's Manager attribute is defined.
@@ -4101,18 +3650,13 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The ModerateMessageByUser parameter specifies an action that forwards messages for approval to the specified users. After one of the users approves the message, it's delivered to the recipients. You can use ay value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use a distribution group as a moderator.
 
@@ -4153,13 +3697,9 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The NotifySender parameter specifies an action that notifies the sender when messages violate DLP policies. Valid values are:
 
 - NotifyOnly: The sender is notified, but the message is delivered normally.
-
 - RejectMessage: The message is rejected, and the sender is notified.
-
 - RejectUnlessFalsePositiveOverride: The message is rejected unless it's marked as a false positive by the sender.
-
 - RejectUnlessSilentOverride: The message is rejected unless the sender has chosen to override the policy restriction.
-
 - RejectUnlessExplicitOverride: This is the same as RejectUnlessSilentOverride, but the sender can also provide a justification for overriding the policy restriction.
 
 For all values except NotifyOnly, you can specify an enhanced status code and a rejection reason by using the RejectMessageEnhancedStatusCode and RejectMessageReasonText parameters. The default enhanced status code is 5.7.1, and the default rejection reason is Delivery not authorized, message refused.
@@ -4170,7 +3710,7 @@ If you use this parameter, you also need to specify a condition that looks for s
 Type: NotifySenderType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -4184,7 +3724,7 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
 
-The PrependSubject parameter specifies an action that adds text to add to the beginning of the Subject field of messages. The value for this parameter is the text that you want to add. If the text contains spaces, enclose the value in quotation marks (")\>
+The PrependSubject parameter specifies an action that adds text to add to the beginning of the Subject field of messages. The value for this parameter is the text that you want to add. If the text contains spaces, enclose the value in quotation marks (").
 
 Consider ending the value for this parameter with a colon (:) and a space, or at least a space, to separate it from the original subject.
 
@@ -4207,9 +3747,7 @@ The Priority parameter specifies a priority value for the rule that determines t
 Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
 
 - Valid priority values for the existing 8 rules are from 0 through 7.
-
 - Valid priority values for a new rule (the 9th rule) are from 0 through 8.
-
 - The default value for a new rule (the 9th rule) is 8.
 
 If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
@@ -4230,19 +3768,18 @@ Accept wildcard characters: False
 ### -Quarantine
 This parameter specifies an action or part of an action for the rule.
 
-This action is available only on Edge Transport servers in on-premises Exchange.
+In on-premises Exchange, this action is available only on Edge Transport servers.
 
 The Quarantine parameter specifies an action that quarantines messages.
 
 - In on-premises Exchange, messages are delivered to the quarantine mailbox that you've configured as part of Content filtering. If the quarantine mailbox isn't configured, the message is returned to the sender in an NDR.
-
 - In Microsoft 365, messages are delivered to the hosted quarantine.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4261,57 +3798,31 @@ The RecipientADAttributeContainsWords parameter specifies a condition that looks
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
@@ -4343,57 +3854,31 @@ The RecipientADAttributeMatchesPatterns parameter specifies a condition that loo
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Regular Expression". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Regular Expression1,Regular Expression2...","AttributeName2:Regular Expression3,Regular Expression4...".
@@ -4438,7 +3923,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The RecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The RecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -4447,6 +3932,24 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAddressType
+This parameter is available only in the cloud-based service.
+
+{{ Fill RecipientAddressType Description }}
+
+```yaml
+Type: RecipientAddressType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4486,7 +3989,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4503,18 +4006,13 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The RedirectMessageTo parameter specifies a rule action that redirects messages to the specified recipients. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -4609,7 +4107,6 @@ This parameter specifies an action or part of an action for the rule.
 The RemoveOME parameter specifies an action that removes the previous version of Office 365 Message Encryption from messages and their attachments. Valid values are:
 
 - $true: The message and attachments are decrypted.
-
 - $false: The message and attachments aren't decrypted.
 
 ```yaml
@@ -4633,7 +4130,6 @@ This parameter specifies an action or part of an action for the rule.
 The RemoveOMEv2 parameter specifies an action that removes Office 365 Message Encryption from messages and their attachments. Valid values are:
 
 - $true: The message and attachments are decrypted.
-
 - $false: The message and attachments aren't decrypted.
 
 ```yaml
@@ -4657,9 +4153,7 @@ This parameter specifies an action or part of an action for the rule.
 The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Microsoft 365. You can use any value that uniquely identifies the connector. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -4683,7 +4177,6 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The RouteMessageOutboundRequireTls parameter specifies an action that uses Transport Layer Security (TLS) encryption to deliver messages outside your organization. Valid values are:
 
 - $true: The messages must be delivered over a TLS encrypted channel.
-
 - $false: A TLS encrypted channel isn't required to deliver the messages.
 
 ```yaml
@@ -4703,7 +4196,6 @@ Accept wildcard characters: False
 The RuleErrorAction parameter specifies what to do if rule processing can't be completed on messages. Valid values are:
 
 - Ignore: The message is sent anyway. This is the default value.
-
 - Defer: The message is deferred so the rules engine can attempt to process the message again.
 
 ```yaml
@@ -4723,7 +4215,6 @@ Accept wildcard characters: False
 The RuleSubType parameter specifies the rule type. Valid values are:
 
 - Dlp: The rule is associated with a DLP policy.
-
 - None: The rule is a regular rule that isn't associated with a DLP policy.
 
 ```yaml
@@ -4749,7 +4240,6 @@ This condition is available on Mailbox servers and Edge Transport servers. This 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
 - -1: The message is from a trusted sender, so the message bypasses spam filtering.
-
 - Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
 
 The rule looks for messages with an SCL value that's greater than or equal to the specified value.
@@ -4758,7 +4248,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4777,57 +4267,31 @@ The SenderADAttributeContainsWords parameter specifies a condition that looks fo
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
@@ -4859,57 +4323,31 @@ The SenderADAttributeMatchesPatterns parameter specifies a condition that looks 
 You can use any of the following Active Directory attributes:
 
 - City
-
 - Company
-
 - Country
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - DisplayName
-
 - Email
-
 - FaxNumber
-
 - FirstName
-
 - HomePhoneNumber
-
 - Initials
-
 - LastName
-
 - Manager
-
 - MobileNumber
-
 - Notes
-
 - Office
-
 - OtherFaxNumber
-
 - OtherHomePhoneNumber
-
 - OtherPhoneNumber
-
 - PagerNumber
-
 - PhoneNumber
-
 - POBox
-
 - State
-
 - Street
-
 - Title
-
 - UserLogonName
-
 - ZipCode
 
 This parameter uses the syntax: "AttributeName:Regular Expression". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Regular Expression1,Regular Expression2...","AttributeName2:Regular Expression3,Regular Expression4...".
@@ -4933,21 +4371,15 @@ Accept wildcard characters: False
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
 - Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
-
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
-
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 
 Note that message envelope searching is only available for the following conditions and exceptions:
 
 - From and ExceptIfFrom
-
 - FromAddressContainsWords and ExceptIfFromAddressContainsWords
-
 - FromAddressMatchesPatterns and ExceptIfFromAddressMatchesPatterns
-
 - FromMemberOf and ExceptIfFromMemberOf
-
 - SenderDomainIs and ExceptIfSenderDomainIs
 
 ```yaml
@@ -4996,7 +4428,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -5013,9 +4445,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The SenderIpRanges parameter specifies a condition that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
-
 - IP address range: For example, 192.168.0.1-192.168.0.254.
-
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple IP addresses or ranges separated by commas.
@@ -5041,7 +4471,6 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The SenderManagementRelationship parameter specifies a condition that looks for the relationship between the sender and recipients in messages. Valid values are:
 
 - Manager: The sender is the manager of a recipient.
-
 - DirectReport: A recipient is the manager of the sender.
 
 ```yaml
@@ -5065,18 +4494,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -5099,18 +4523,13 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
 
@@ -5135,11 +4554,8 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The SentToScope parameter specifies a condition that looks for the location of recipients. Valid values are:
 
 - InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-
 - NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-
 - ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-
 - ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
 
 ```yaml
@@ -5163,11 +4579,8 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 The SetAuditSeverity parameter specifies an action that sets the severity level of the incident report and the corresponding entry that's written to the message tracking log when messages violate DLP policies. Valid values are:
 
 - DoNotAudit: No audit entry is logged.
-
 - Low: The audit entry is assigned low severity.
-
 - Medium: The audit entry is assigned medium severity.
-
 - High: The audit entry is assigned high severity.
 
 ```yaml
@@ -5231,7 +4644,6 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The SetSCL parameter specifies an action that adds or modifies the SCL value of messages. Valid values are:
 
 - -1: The message is from a trusted sender, so the message bypasses spam filtering.
-
 - Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
 
 ```yaml
@@ -5248,9 +4660,9 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectStatusCode
-This parameter specifies an action or part of an action for the rule.
+This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
 
-This action is available only on Edge Transport servers in on-premises Exchange.
+This parameter specifies an action or part of an action for the rule.
 
 The SmtpRejectMessageRejectStatusCode parameter specifies an action that disconnects the sending server from the Edge Transport server. The value of this parameter is the SMTP code that's used. Valid values are the integers 400 through 500.
 
@@ -5260,7 +4672,7 @@ You can use this parameter with the SmtpRejectMessageRejectText parameter. If yo
 Type: RejectStatusCode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -5270,9 +4682,9 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectText
-This parameter specifies an action or part of an action for the rule.
+This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
 
-This action is available only on Edge Transport servers in on-premises Exchange.
+This parameter specifies an action or part of an action for the rule.
 
 The SmtpRejectMessageRejectText parameter specifies an action that disconnects the sending server from the Edge Transport server. The value of this parameter is the explanation text that's used. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -5282,7 +4694,7 @@ You can use this parameter with the SmtpRejectMessageRejectStatusCode parameter.
 Type: RejectText
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -5299,7 +4711,6 @@ In on-premises Exchange, this action is available on Mailbox servers and Edge Tr
 The StopRuleProcessing parameter specifies an action that stops processing more rules. Valid values are:
 
 - $true: Stop processing more rules.
-
 - $false: Continue processing more rules after this one.
 
 ```yaml
@@ -5342,7 +4753,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The SubjectMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The SubjectMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 ```yaml
 Type: Pattern[]
@@ -5384,7 +4795,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The SubjectOrBodyMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
+The SubjectOrBodyMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 ```yaml
 Type: Pattern[]
@@ -5423,9 +4834,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The WithImportance parameter specifies a condition that looks for messages with the specified importance level. Valid values are:
 
 - Low
-
 - Normal
-
 - High
 
 ```yaml

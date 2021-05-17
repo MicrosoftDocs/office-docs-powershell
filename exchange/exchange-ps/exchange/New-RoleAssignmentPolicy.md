@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-RoleAssignmentPolicy
@@ -22,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-RoleAssignmentPolicy [-Name] <String> [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-IsDefault] [-Roles <RoleIdParameter[]>] [-WhatIf]
+New-RoleAssignmentPolicy [-Name] <String>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-IsDefault]
+ [-Roles <RoleIdParameter[]>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -40,7 +44,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
+New-RoleAssignmentPolicy -Name "End User Policy"
+Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
 ```
 
 This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
@@ -54,7 +59,8 @@ This example creates an assignment policy using the IsDefault switch.
 
 ### Example 3
 ```powershell
-New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
+New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault
+Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
 ```
 
 This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
@@ -84,8 +90,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -128,7 +133,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

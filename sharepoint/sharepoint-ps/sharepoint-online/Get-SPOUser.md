@@ -44,7 +44,7 @@ For more information about how to use parameter sets, see [Cmdlet Parameter Sets
 
 The `Get-SPOUser` cmdlet matches one and only one user or security group.
 
-You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the `Get-SPOUser` cmdlet.
+Be sure to run the `Get-SPOUser` cmdlet using a SharePoint Online administrator or Global Administrator and be a site collection administrator of the queried site.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
 

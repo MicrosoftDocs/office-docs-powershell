@@ -27,7 +27,7 @@ Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitN
  [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
  [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
  [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
- [-EnableDialOutJoinConfirmation <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [-EnableDialOutJoinConfirmation <Boolean>] [[-Identity] <XdsIdentity>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitN
  [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
  [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
  [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
- [-EnableDialOutJoinConfirmation <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-EnableDialOutJoinConfirmation <Boolean>] [-Instance <PSObject>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -431,6 +431,26 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaskPstnNumbersType
+This parameter allows tenant administrators to configure masking of PSTN participant phone numbers in the roster view for Microsoft Teams meetings enabled for Audio Conferencing, scheduled within the organization.
+
+Possible values are:
+- MaskedForExternalUsers (masked to external users)
+- MaskedForAllUsers (masked for everyone)
+- NoMasking (visible to everyone)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: MaskedForExternalUsers
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

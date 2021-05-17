@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-syncmailpublicfolder
-applicable: Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-SyncMailPublicFolder
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Remove-SyncMailPublicFolder
@@ -22,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SyncMailPublicFolder [-Identity] <MailPublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Remove-SyncMailPublicFolder [-Identity] <MailPublicFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,18 +48,15 @@ This cmdlet is only used by the Sync-MailPublicFolders.ps1 script. Don't run thi
 The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
-- Path: (\\\<TopLevelPublicFolderName\>\\\<PublicFolderName\>
+- Path (`\<TopLevelPublicFolderName>\<PublicFolderName>`)
 
 ```yaml
 Type: MailPublicFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
@@ -69,15 +68,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -111,7 +109,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

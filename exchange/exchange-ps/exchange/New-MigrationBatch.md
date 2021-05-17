@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MigrationBatch
@@ -21,9 +20,96 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Onboarding
+```
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-AvoidMergeOverlap]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpsters]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-ForwardingDisposition <GmailForwardingDisposition>]
+ [-IncludeFolders <MultiValuedProperty>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-RemoveOnCopy]
+ [-RenamePrimaryCalendar]
+ [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipMail]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourcePFPrimaryMailboxGuid <Guid>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Offboarding
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AdoptPreexisting]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-RemoveOnCopy]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TargetEndpoint <MigrationEndpointIdParameter>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### Local
 ```
-New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -39,6 +125,7 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
+ [-RemoveOnCopy]
  [-ReportInterval <Timespan>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
@@ -47,7 +134,8 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [-TargetArchiveDatabases <MultiValuedProperty>]
  [-TargetDatabases <MultiValuedProperty>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LocalPublicFolder
@@ -72,12 +160,13 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -95,7 +184,8 @@ New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Preexisting
@@ -117,75 +207,8 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Onboarding
-```
-New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveOnly]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-ExcludeDumpsters]
- [-ExcludeFolders <MultiValuedProperty>]
- [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Offboarding
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveOnly]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TargetEndpoint <MigrationEndpointIdParameter>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolderToUnifiedGroup
@@ -210,7 +233,8 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### WorkflowTemplate
@@ -232,7 +256,8 @@ New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -241,24 +266,19 @@ Use the New-MigrationBatch cmdlet to create a migration batch to migrate mailbox
 Moves in on-premises Exchange organizations
 
 - Local move: A local move is where you move mailboxes from one mailbox database to another. A local move occurs within a single forest. For more information, see Example 1.
-
 - Cross-forest enterprise move: In a cross-forest enterprise move, mailboxes are moved to a different forest. Cross-forest moves are initiated either from the target forest, which is the forest that you want to move the mailboxes to, or from the source forest, which is the forest that currently hosts the mailboxes. For more information, see Example 2.
 
 Onboarding and offboarding in Exchange Online
 
 - Onboarding remote move migration: In a hybrid deployment, you can move mailboxes from an on-premises Exchange organization to Exchange Online. This is also known as an onboarding remote move migration because you on-board mailboxes to Exchange Online. For more information, see Example 3.
-
 - Offboarding remote move migration: You can also perform an offboarding remote move migration, where you migrate Exchange Online mailboxes to your on-premises Exchange organization. For more information, see Example 4.
 
   Both onboarding and offboarding remote move migrations are initiated from your Exchange Online organization.
 
 - Cutover Exchange migration: This is another type of onboarding migration and is used to migrate all mailboxes in an on-premises Exchange organization to Exchange Online. You can migrate a maximum of 1,000 Exchange Server 2003, Exchange Server 2007, or Exchange Server 2010 mailboxes using a cutover migration. Mailboxes will be automatically provisioned in Exchange Online when you perform a cutover Exchange migration. For more information, see Example 5.
-
 - Staged Exchange migration: You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. Migrating mailboxes from Exchange 2010 or later versions of Exchange isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization. For more information, see Example 6.
-
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
-
-- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online.  For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data.
+- Google Workspace (formerly G Suite) migration: This onboarding migration type migrates mailbox data from a Google Workspace organization to Exchange Online. For a Google Workspace migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -266,7 +286,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2; 
+New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2
 Start-MigrationBatch -Identity LocalMove1
 ```
 
@@ -274,18 +294,19 @@ This example creates a migration batch for a local move, where the mailboxes in 
 
 ### Example 2
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials; 
-$CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")); Start-MigrationBatch -Identity $CrossForestBatch.Identity
+$Credentials = Get-Credential
+$MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials
+$CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv"))
+Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
 This example creates a migration batch for a cross-forest enterprise move, where the mailboxes for the mail users specified in the CSV file are moved to a different forest. A new migration endpoint is created, which identifies the domain where the mailboxes are currently located. The endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet. Note that cross-forest moves are initiated from the target forest, which is the forest that you want to move the mailboxes to.
 
 ### Example 3
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")); 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -293,9 +314,9 @@ This example creates a migration batch for an onboarding remote move migration f
 
 ### Example 4
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv")); 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv"))
 Start-MigrationBatch -Identity $OffboardingBatch.Identity
 ```
 
@@ -303,8 +324,8 @@ This example creates a migration batch for an offboarding remote move migration 
 
 ### Example 5
 ```powershell
-$credentials = Get-Credential; 
-$SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials; 
+$credentials = Get-Credential
+$SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials
 New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
 ```
 
@@ -312,9 +333,9 @@ This example creates a migration batch for the cutover Exchange migration Cutove
 
 ### Example 6
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials; 
-$StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv")); 
+$Credentials = Get-Credential
+$MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
+$StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv"))
 Start-MigrationBatch -Identity $StagedBatch1.Identity
 ```
 
@@ -322,7 +343,7 @@ This example creates and starts a migration batch for a staged Exchange migratio
 
 ### Example 7
 ```powershell
-New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993; 
+New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993
 New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
 ```
 
@@ -330,13 +351,34 @@ This example creates a migration endpoint for the connection settings to the IMA
 
 ### Example 8
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"; 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM. This method allows you to start a migration and then leave it to complete after business hours.
+This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM (UTC). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Coordinated Universal Time.
+
+### Example 9
+```powershell
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
+```
+
+This example is the same as Example 8, but the TimeZone parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM (PST). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Pacific Standard Time.
+
+### Example 10
+```powershell
+$MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint
+$OnboardingBatch = New-MigrationBatch -SourceEndpoint $MigrationEndpointGmail.Identity -Name GmailBatch1 -CSVData $([System.IO.File]::ReadAll
+Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -Inc
+ludeFolders "Payment"
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
+```
+
+A Google Workspace migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
 ## PARAMETERS
 
@@ -413,9 +455,7 @@ This parameter is available only in on-premises Exchange.
 The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -475,13 +515,30 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AdoptPreexisting
+This parameter is available only in the cloud-based service.
+
+{{ Fill AdoptPreexisting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, Offboarding, Local
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowIncrementalSyncs
 This parameter is available only in on-premises Exchange.
 
 The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental synchronization. Valid values are:
 
 - $true: Incremental synchronization is enabled. Any new messages that are sent to the source mailbox are copied to the corresponding target mailbox once every 24 hours. This is the default value.
-
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
 
 ```yaml
@@ -501,7 +558,6 @@ Accept wildcard characters: False
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
 - $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columns with misspelled column headers). All unknown columns are treated like extra columns that aren't used by migration.
-
 - $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
@@ -509,6 +565,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveDomain
+This parameter is available only in the cloud-based service.
+
+{{ Fill ArchiveDomain Description }}
+
+```yaml
+Type: String
+Parameter Sets: Onboarding, Offboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -593,6 +667,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AvoidMergeOverlap
+This parameter is available only in the cloud-based service.
+
+{{ Fill AvoidMergeOverlap Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BadItemLimit
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
@@ -614,25 +706,20 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the cloud-based service.
-
-The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
+The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
+- Specify the date/time value in your local time zone: For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -644,8 +731,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -661,8 +747,52 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentFilter
+This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
+
+The ContentFilter parameter uses OPath filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+
+- `"Received -gt '8/23/2020'"`
+- `"Received -le '2019/01/01'"`
+- `"Received -gt '8/23/2015' -and Received -lt '8/23/2020'"`
+
+You can specify the language by using the ContentFilterLanguage parameter.
+
+```yaml
+Type: String
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentFilterLanguage
+This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
+
+The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+
+```yaml
+Type: CultureInfo
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableOnCopy
-The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
+The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -738,8 +868,103 @@ Accept wildcard characters: False
 ### -ExcludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the on-premises messaging system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the on-premises mail server. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration or Google Workspace migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the source email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
 
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For Google Workspace migration, use label names on the source mail server.
+
+Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
+
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, `MyProjects` or `MyProjects/FY2010`.
+
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+
+- Inbox
+- SentItems
+- DeletedItems
+- Calendar
+- Contacts
+- Drafts
+- Journal
+- Tasks
+- Notes
+- JunkEmail
+- CommunicatorHistory
+- Voicemail
+- Fax
+- Conflicts
+- SyncIssues
+- LocalFailures
+- ServerFailures
+
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
+
+Wildcard characters can't be used in folder names.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForwardingDisposition
+This parameter is available only in the cloud-based service.
+
+{{ Fill ForwardingDisposition Description }}
+
+```yaml
+Type: GmailForwardingDisposition
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeFolders
+This parameter is available only in the cloud-based service.
+
+For an IMAP migration or Google Workspace migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
+
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For Google Workspace migration, use label names on the source mail server.
+
+Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
+
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, `MyProjects` or `MyProjects/FY2010`.
+
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+
+- Inbox
+- SentItems
+- DeletedItems
+- Calendar
+- Contacts
+- Drafts
+- Journal
+- Tasks
+- Notes
+- JunkEmail
+- CommunicatorHistory
+- Voicemail
+- Fax
+- Conflicts
+- SyncIssues
+- LocalFailures
+- ServerFailures
+
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
+
+Wildcard characters can't be used in folder names.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Onboarding
@@ -759,7 +984,6 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 For more information about maximum message size values, see the following topics:
 
 - Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-
 - Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
@@ -874,7 +1098,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderToUnifiedGroup
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The PublicFolderToUnifiedGroup switch specifies a migration from public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
@@ -882,9 +1106,45 @@ The PublicFolderToUnifiedGroup switch specifies a migration from public folders 
 Type: SwitchParameter
 Parameter Sets: PublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOnCopy
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveOnCopy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, Offboarding, Local
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RenamePrimaryCalendar
+This parameter is available only in the cloud-based service.
+
+{{ Fill RenamePrimaryCalendar Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -903,6 +1163,60 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCalendar
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCalendar Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipContacts
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipContacts Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMail
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipMail Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -967,7 +1281,6 @@ This parameter is available only in on-premises Exchange.
 The SkipSteps parameter specifies the steps in the staged Exchange migration that you want to skip. Valid values are:
 
 - None (This is the default value)
-
 - SettingTargetAddress: Don't set the target email address on the source mailbox. This setting prevents mail from being forwarded from the original mailbox to the new migrated mailbox.
 
 This parameter is only enforced for staged Exchange migrations.
@@ -989,7 +1302,6 @@ Accept wildcard characters: False
 The SourceEndpoint parameter specifies the migration endpoint to use for the source of the migration batch. You create the migration endpoint by using the New-MigrationEndpoint cmdlet. You can use any value that uniquely identifies the migration endpoint. For example:
 
 - Name (the Identity property value)
-
 - GUID
 
 This parameter defines the settings that are used to connect to the server where the source mailboxes are located.
@@ -1007,26 +1319,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StartAfter
+### -SourcePFPrimaryMailboxGuid
 This parameter is available only in the cloud-based service.
 
+{{ Fill SourcePFPrimaryMailboxGuid Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartAfter
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
+- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
 Parameter Sets: Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1059,7 +1384,6 @@ Accept wildcard characters: False
 The TargetDatabases parameter specifies the identity of the database that you're moving mailboxes to. You can use the following values:
 
 - Database GUID
-
 - Database name
 
 If you don't specify the TargetDatabases parameter for a local move, the cmdlet uses the automatic mailbox distribution logic to select the database.
@@ -1103,7 +1427,6 @@ Accept wildcard characters: False
 The TargetEndpoint parameter specifies the migration endpoint to use for the destination of the migration batch. You create the migration endpoint by using the New-MigrationEndpoint cmdlet. You can use any value that uniquely identifies the migration endpoint. For example:
 
 - Name (the Identity property value)
-
 - GUID
 
 This parameter defines the settings that are used to connect to the destination server where the mailboxes will be moved.
@@ -1124,11 +1447,15 @@ Accept wildcard characters: False
 ### -TimeZone
 The TimeZone parameter specifies the time zone of the administrator who submits the migration batch.
 
-A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
+A valid value for this parameter is a supported time zone key name (for example, `"Pacific Standard Time"`).
 
 To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
-If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
+If the value contains spaces, enclose the value in quotation marks (").
+
+In on-premises Exchange, the default value is the time zone setting of the Exchange server.
+
+In Exchange Online, the default value is `UTC`.
 
 ```yaml
 Type: ExTimeZoneValue
@@ -1163,9 +1490,7 @@ Accept wildcard characters: False
 The WorkflowControlFlags parameter specifies advanced controls for the steps that are performed in the migration. Valid values are:
 
 - None (This is the default value)
-
 - InjectAndForget
-
 - SkipSwitchover
 
 Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
@@ -1184,7 +1509,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowTemplate
-The WorkflowControlFlags parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
+The WorkflowTemplate parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
 ```yaml
 Type: String
@@ -1205,7 +1530,7 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType
+Type: RequestWorkloadType
 Parameter Sets: Local
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019

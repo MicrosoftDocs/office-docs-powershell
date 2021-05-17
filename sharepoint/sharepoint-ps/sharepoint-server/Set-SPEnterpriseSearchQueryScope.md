@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchqueryscope
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchQueryScope
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -28,7 +28,7 @@ Set-SPEnterpriseSearchQueryScope -AlternateResultsPage <String>
 After you upgrade a Search service application to SharePoint Server, you can view shared scopes, but you cannot create, update, or delete them.
 Therefore, you cannot use this cmdlet for shared scopes after upgrade.
 However, you can convert shared scopes to result sources, which serve a similar purpose.
-Similarly, after you upgrade to Sharepoint Server Site Collection to SharePoint Server mode, you can view local scopes, but you cannot create, update, or delete them.
+Similarly, after you upgrade to SharePoint Server Site Collection to SharePoint Server mode, you can view local scopes, but you cannot create, update, or delete them.
 Therefore, you cannot use this cmdlet for local scopes after you upgrade a site collection.
 However, you can convert local scopes to result sources, which serve a similar purpose.
 

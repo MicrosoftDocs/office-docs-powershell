@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MigrationBatch
@@ -44,25 +43,20 @@ Set-MigrationBatch [-Identity] <MigrationBatchIdParameter>
  [-StartAfter <DateTime>]
  [-SyncNow]
  [-Update]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Set-MigrationBatch cmdlet configures your existing migration batches to migrate mailboxes and mailbox data in one of the following scenarios:
 
 - Local move
-
 - Cross-forest move
-
 - Remote move
-
 - Cutover Exchange migration
-
 - Staged Exchange migration
-
 - IMAP migration
-
-- G Suite migration
+- Google Workspace (formerly G Suite) migration
 
 Some settings can be applied both to the batch as well as to individual users within the batch. It is important to note that when a setting is applied to a user it will override any corresponding setting on the batch.
 
@@ -83,7 +77,6 @@ This example updates MigrationBatch01 by approving all of the skipped items for 
 The Identity parameter specifies the migration batch that you want to modify. You can use any value that uniquely identifies the migration batch. For example:
 
 - Name (the Identity property value)
-
 - GUID (the BatchGuid property value)
 
 ```yaml
@@ -105,7 +98,6 @@ This parameter is available only in on-premises Exchange.
 The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental synchronization. Valid values are:
 
 - $true: Incremental synchronization is enabled. Any new messages that are sent to the source mailbox are copied to the corresponding target mailbox once every 24 hours.
-
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization.
 
 ```yaml
@@ -125,7 +117,6 @@ Accept wildcard characters: False
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
 - $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columns with misspelled column headers). All unknown columns are treated like extra columns that aren't used by migration.
-
 - $false: The migration fails if there are any unknown columns in the CSV file. This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
@@ -202,25 +193,20 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the cloud-based service.
-
-The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
+The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
+- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -232,8 +218,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -293,7 +278,6 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 For more information about maximum message size values, see the following topics:
 
 - Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-
 - Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
@@ -336,9 +320,7 @@ The NotificationEmails parameter specifies one or more email addresses that migr
 
 If you don't use this parameter, the status report isn't sent.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -447,9 +429,7 @@ This parameter is available only in on-premises Exchange.
 The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -466,25 +446,20 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is available only in the cloud-based service.
-
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for users within the batch won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
+- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

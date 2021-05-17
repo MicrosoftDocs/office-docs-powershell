@@ -25,6 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-DisplayStartASiteOption <Boolean>]
  [-EnableAIPIntegration <Boolean>]
+ [-EnableAutoNewsDigest <Boolean>]
  [-EnableMinimumVersionRequirement <Boolean>]
  [-EnablePromotedFileHandlers <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
@@ -45,6 +46,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>]
  [-CommentsOnFilesDisabled <Boolean>]
+ [-CommentsOnListItemsDisabled <Boolean>]
  [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultSharingLinkType <SharingLinkType>]
@@ -81,7 +83,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SyncPrivacyProfileProperties <Boolean>]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
- [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]]
+ [-ContentTypeSyncSiteTemplatesList [String[]]]
+ [-ExcludeSiteTemplate]
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-ConditionalAccessPolicyErrorHelpLink <String>]
@@ -94,6 +97,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ExternalUserExpireInDays <Int32>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
+ [-BlockUserInfoVisibility]
+ [-IncludeAtAGlanceInShareEmails]
+ [-SyncAadB2BManagementPolicy <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -260,6 +266,8 @@ The valid values are:
 - WebPreviewableFiles
 - ServerRenderedFilesOnly
 
+**Note**: ServerRendered (Office Only) and WebPreviewable (All supported files). 
+
 ```yaml
 Type: BlockDownloadLinksFileTypes
 Parameter Sets: (All)
@@ -386,7 +394,7 @@ Accept wildcard characters: False
 
 ### -MaxCompatibilityLevel
 
-Specifies the upper bound on the compatibility level for new sites.
+The only valid value is "15".
 
 ```yaml
 Type: Int32
@@ -402,7 +410,7 @@ Accept wildcard characters: False
 
 ### -MinCompatibilityLevel
 
-Specifies the lower bound on the compatibility level for new sites.
+The only valid value is "15".
 
 ```yaml
 Type: Int32
@@ -594,8 +602,8 @@ Note, that some SharePoint system resources such as templates and pages are requ
 
 The valid values are:  
 
-- True (default) - The Everyone claim group is displayed in People Picker.  
-- False - The Everyone claim group is hidden from the People Picker.
+- True - The Everyone claim group is displayed in People Picker. This has been the default for tenants older than March 2018  
+- False (default) - The Everyone claim group is hidden from the People Picker. This has become the new default for new tenants.
 
 ```yaml
 Type: Boolean
@@ -604,7 +612,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -740,6 +748,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommentsOnListItemsDisabled
+
+Disables or enables commenting functionality on list items.
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1470,7 +1495,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
+### -ContentTypeSyncSiteTemplatesList [String[]] [-ExcludeSiteTemplate]
 
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites).
 
@@ -1479,6 +1504,32 @@ In case you want the Content Type Hub to push content types to OneDrive for Busi
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using: `Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate`.
+
+```yaml
+Type: String[]
+Parameter Sets: ParameterSetContentTypeSyncSiteTemplatesList
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeSiteTemplate
+Excludes the specified template from Content Type hub content type synchronization. Must be used with `-ContentTypeSyncSiteTemplatesList [String[]]`.
+ 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ParameterSetContentTypeSyncSiteTemplatesList
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ConditionalAccessPolicy
 
@@ -1610,8 +1661,7 @@ Accept wildcard characters: False
 
 Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
 
-> [!NOTE]
-> Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
+Note: Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
 
 The valid values are:
 True - Enables the Policy.
@@ -1672,6 +1722,71 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockUserInfoVisibility
+
+This feature has not yet been rolled out to Production. Attempting to set this parameter before rollout is complete will result in an error message. More details on this feature will be available on release.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoNewsDigest
+
+Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAtAGlanceInShareEmails
+
+Enable or disable the At A Glance feature in sharing e-mails. This provides the key points and time to read for the shared item if available.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncAadB2BManagementPolicy
+Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://docs.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None

@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-clientaccessrule
-applicable: Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-ClientAccessRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-ClientAccessRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available or functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ClientAccessRule cmdlet to modify existing client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
@@ -27,33 +26,37 @@ Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
  [-AnyOfAuthenticationTypes <MultiValuedProperty>]
  [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-AnyOfProtocols <MultiValuedProperty>]
+ [-AnyOfSourceTcpPortNumbers <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
+ [-ExceptAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
+ [-ExceptUserIsMemberOf <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Name <String>]
  [-Priority <Int32>]
  [-Scope <ClientAccessRulesScope>]
+ [-UserIsMemberOf <MultiValuedProperty>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-UserRecipientFilter <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
-Note: Not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
-
-- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
-
-- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
-
-- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
+**Note**: Not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
+- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
+- IMAP4: BasicAuthentication and OAuthAuthentication.
+- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
+- POP3: BasicAuthentication and OAuthAuthentication.
+- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -72,16 +75,14 @@ This example adds the IP address range 172.17.17.27/16 to the existing client ac
 The Identity parameter specifies the client access rule that you want to modify. You can use any value that uniquely identifies the client access rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ClientAccessRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -97,7 +98,7 @@ The Action parameter specifies the action for the client access rule. Valid valu
 Type: ClientAccessRulesAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -107,31 +108,27 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfAuthenticationTypes
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AnyOfAuthenticationTypes parameter specifies a condition for the client access rule that's based on the client's authentication type.
 
 Valid values for this parameter are:
 
 - AdfsAuthentication
-
 - BasicAuthentication
-
 - CertificateBasedAuthentication
-
 - NonBasicAuthentication
-
 - OAuthAuthentication
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -141,23 +138,23 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfClientIPAddressesOrRanges
-The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IP address. Valid values for this parameter are:
+The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
 
-- A single IP address: For example, 192.168.1.1.
+- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -172,40 +169,45 @@ The AnyOfProtocols parameter specifies a condition for the client access rule th
 Valid values for this parameter are:
 
 - ExchangeActiveSync
-
 - ExchangeAdminCenter
-
 - ExchangeWebServices
-
 - IMAP4
-
 - OfflineAddressBook
-
 - OutlookAnywhere
-
 - OutlookWebApp
-
 - POP3
-
 - PowerShellWebServices
-
 - RemotePowerShell
-
 - REST
-
 - UniversalOutlook (Mail and Calendar app)
 
 **Note**: In Exchange 2019, the only supported values are ExchangeAdminCenter and RemotePowerShell.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyOfSourceTcpPortNumbers
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -217,15 +219,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -243,7 +244,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -259,7 +260,7 @@ The Enabled parameter specifies whether the client access rule is enabled or dis
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -269,31 +270,27 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfAuthenticationTypes
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the client access rule that's based on the client's authentication type.
 
 Valid values for this parameter are:
 
 - AdfsAuthentication
-
 - BasicAuthentication
-
 - CertificateBasedAuthentication
-
 - NonBasicAuthentication
-
 - OAuthAuthentication
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -303,23 +300,23 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfClientIPAddressesOrRanges
-The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IP address. Valid values for this parameter are:
+The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
 
-- A single IP address: For example, 192.168.1.1.
+- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -329,45 +326,66 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfProtocols
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ExceptAnyOfProtocols parameter specifies an exception for the client access rule that's based on the client's protocol.
 
 Valid values for this parameter are:
 
 - ExchangeActiveSync
-
 - ExchangeAdminCenter
-
 - ExchangeWebServices
-
 - IMAP4
-
 - OfflineAddressBook
-
 - OutlookAnywhere
-
 - OutlookWebApp
-
 - POP3
-
 - PowerShellWebServices
-
 - RemotePowerShell
-
 - REST
-
 - UniversalOutlook (Mail and Calendar app)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptAnyOfSourceTcpPortNumbers
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptUserIsMemberOf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -377,19 +395,19 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptUsernameMatchesAnyOfPatterns
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
-The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character.
+The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -405,7 +423,7 @@ The Name parameter specifies a unique name for the client access rule.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -421,7 +439,7 @@ The Priority parameter specifies a priority value for the client access rule. A 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -434,14 +452,29 @@ Accept wildcard characters: False
 The Scope parameter specifies the scope of the client access rule. Valid values are:
 
 - Users: The rule only applies to end-user connections.
-
 - All: The rule applies to all connections (end-users and middle-tier apps).
 
 ```yaml
 Type: ClientAccessRulesScope
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserIsMemberOf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -451,19 +484,19 @@ Accept wildcard characters: False
 ```
 
 ### -UsernameMatchesAnyOfPatterns
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
-The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character.
+The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -473,16 +506,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserRecipientFilter
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"City -eq 'Redmond'"`).
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property.
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -492,28 +522,20 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 The filterable properties that you can use with this parameter are:
 
 - City
-
 - Company
-
 - CountryOrRegion
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - Office
-
 - PostalCode
-
 - StateOrProvince
-
 - StreetAddress
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -529,7 +551,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

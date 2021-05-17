@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Import-TransportRuleCollection
@@ -22,12 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-TransportRuleCollection [-FileData] <Byte[]>
+Import-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte[]>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [[-Identity] <RuleIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,17 +42,44 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
+[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0
+Import-TransportRuleCollection -FileData $Data
 ```
 
-This example imports a transport rule collection from the XML file named ExportedRules.xml in the  C:\\TransportRules folder.
+This example imports a transport rule collection from the XML file named ExportedRules.xml in the C:\\TransportRules folder.
 
 **Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ## PARAMETERS
 
+### -Identity
+This parameter is available or functional only in Exchange Server 2010.
+
+The Identity parameter specifies the transport rule that you want to import. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -FileData
-The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet.
+The FileData parameter specifies the variable name that contains the content of the XML file.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
+
+**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ```yaml
 Type: Byte[]
@@ -71,8 +97,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -121,24 +146,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
-
-The Identity parameter specifies the transport rule to be imported. Use either the GUID or the name of the rule. You can omit the parameter label.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

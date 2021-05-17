@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-O365ClientBrowserDetailReport
@@ -19,37 +18,34 @@ This cmdlet was deprecated in January, 2018. For information about the available
 
 Use the Get-O365ClientBrowserDetailReport cmdlet to get a detailed report of client browser use.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-O365ClientBrowserDetailReport [-Browser <String>] [-BrowserVersion <String>] [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-WindowsLiveID <String>] [<CommonParameters>]
+Get-O365ClientBrowserDetailReport [-Browser <String>]
+ [-BrowserVersion <String>]
+ [-EndDate <DateTime>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WindowsLiveID <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This report provides browser details for all active users. The data contains a maximum of four browsers per user, and are aggregated daily and retained for 5 days. The properties that are returned in the results are described in the following list.
 
 - TenantGuid: Unique identifier of the tenant.
-
 - TenantName: Tenant name.
-
 - Date: The timestamp for the connection for the browser and version combination.
-
 - WindowsLiveID: User ID in the format user@domain.
-
 - DisplayName: User name.
-
 - LastAccessTime: Last date the user connected with this browser and version combination.
-
 - ObjectId: User object ID.
-
 - Browser: Browser name.
-
 - BrowserVersion: Browser version.
-
 - BrowserUsageCount: Number of days this browser and version combination was used during the period of the report
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -76,13 +72,9 @@ This example retrieves the details for the Chrome browser for the current 5 day 
 The Browser parameter filters the report by browser. If you don't use this parameter, all browsers will be included. The accepted values for this parameter are:
 
 - IE
-
 - Firefox
-
 - Chrome
-
 - Safari
-
 - Opera
 
 ```yaml

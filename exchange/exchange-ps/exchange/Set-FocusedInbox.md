@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-focusedinbox
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-FocusedInbox
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-FocusedInbox
@@ -17,14 +16,16 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-FocusedInbox cmdlet to enable or disable Focused Inbox for mailboxes in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <Boolean>] [<CommonParameters>]
+Set-FocusedInbox -Identity <MailboxIdParameter>
+ [-FocusedInboxOn <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,30 +48,21 @@ This example disables Focused Inbox for the mailbox of laura@contoso.com.
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\\\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -83,14 +75,13 @@ Accept wildcard characters: False
 The FocusedInboxOn parameter enables or disables Focused Inbox for the mailbox. Valid values are:
 
 - $true: Focused Inbox is enabled. This is the default value.
-
 - $false: Focused Inbox is disabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

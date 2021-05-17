@@ -1,49 +1,37 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptaxonomyfield
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPTaxonomyField.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPTaxonomyField
 ---
-
+  
 # Add-PnPTaxonomyField
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTaxonomyField.md to change this file.
+
 Add a taxonomy field
 
-## SYNTAX 
-
-### Id
-```powershell
-Add-PnPTaxonomyField -DisplayName <String>
-                     -InternalName <String>
-                     [-TaxonomyItemId <GuidPipeBind>]
-                     [-List <ListPipeBind>]
-                     [-Group <String>]
-                     [-Id <GuidPipeBind>]
-                     [-AddToDefaultView [<SwitchParameter>]]
-                     [-MultiValue [<SwitchParameter>]]
-                     [-Required [<SwitchParameter>]]
-                     [-FieldOptions <AddFieldOptions>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
-```
+## SYNTAX
 
 ### Path
 ```powershell
-Add-PnPTaxonomyField -TermSetPath <String>
-                     -DisplayName <String>
-                     -InternalName <String>
-                     [-TermPathDelimiter <String>]
-                     [-List <ListPipeBind>]
-                     [-Group <String>]
-                     [-Id <GuidPipeBind>]
-                     [-AddToDefaultView [<SwitchParameter>]]
-                     [-MultiValue [<SwitchParameter>]]
-                     [-Required [<SwitchParameter>]]
-                     [-FieldOptions <AddFieldOptions>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+Add-PnPTaxonomyField [-List <ListPipeBind>] -DisplayName <String> -InternalName <String> -TermSetPath <String>
+ [-TermPathDelimiter <String>] [-Group <String>] [-Id <Guid>] [-AddToDefaultView] [-MultiValue]
+ [-Required] [-FieldOptions <AddFieldOptions>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
+```
+
+### Id
+```powershell
+Add-PnPTaxonomyField [-List <ListPipeBind>] -DisplayName <String> -InternalName <String>
+ [-TaxonomyItemId <Guid>] [-Group <String>] [-Id <Guid>] [-AddToDefaultView] [-MultiValue]
+ [-Required] [-FieldOptions <AddFieldOptions>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +39,7 @@ Adds a taxonomy/managed metadata field to a list or as a site column.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPTaxonomyField -DisplayName "Test" -InternalName "Test" -TermSetPath "TestTermGroup|TestTermSet"
 ```
@@ -65,11 +53,27 @@ Switch Parameter if this field must be added to the default view
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayName
@@ -77,11 +81,13 @@ The display name of the field
 
 ```yaml
 Type: String
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -FieldOptions
@@ -89,11 +95,14 @@ Specifies the control settings while adding a field. See https://msdn.microsoft.
 
 ```yaml
 Type: AddFieldOptions
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
+Accepted values: DefaultValue, AddToDefaultContentType, AddToNoContentType, AddToAllContentTypes, AddFieldInternalNameHint, AddFieldToDefaultView, AddFieldCheckDisplayName
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Group
@@ -101,23 +110,27 @@ The group name to where this field belongs to
 
 ```yaml
 Type: String
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Id
 The ID for the field, must be unique
 
 ```yaml
-Type: GuidPipeBind
-Parameter Sets: __AllParameterSets
+Type: Guid
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -InternalName
@@ -125,11 +138,13 @@ The internal name of the field
 
 ```yaml
 Type: String
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -137,11 +152,13 @@ The list object or name where this field needs to be added
 
 ```yaml
 Type: ListPipeBind
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MultiValue
@@ -149,11 +166,13 @@ Switch Parameter if this Taxonomy field can hold multiple values
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Required
@@ -161,23 +180,27 @@ Switch Parameter if the field is a required field
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: __AllParameterSets
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TaxonomyItemId
 The ID of the Taxonomy item
 
 ```yaml
-Type: GuidPipeBind
+Type: Guid
 Parameter Sets: Id
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermPathDelimiter
@@ -189,7 +212,9 @@ Parameter Sets: Path
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermSetPath
@@ -201,37 +226,15 @@ Parameter Sets: Path
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.Field
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

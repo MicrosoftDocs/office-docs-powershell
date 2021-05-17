@@ -1,45 +1,43 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpgroup
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPGroup
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPGroup.html
 ---
-
+ 
 # Set-PnPGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPGroup.md to change this file.
+
 Updates a group
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPGroup -Identity <GroupPipeBind>
-             [-SetAssociatedGroup <AssociatedGroupType>]
-             [-AddRole <String>]
-             [-RemoveRole <String>]
-             [-Title <String>]
-             [-Owner <String>]
-             [-Description <String>]
-             [-AllowRequestToJoinLeave <Boolean>]
-             [-AutoAcceptRequestToJoinLeave <Boolean>]
-             [-AllowMembersEditMembership <Boolean>]
-             [-OnlyAllowMembersViewMembership <Boolean>]
-             [-RequestToJoinEmail <String>]
-             [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+Set-PnPGroup -Identity <GroupPipeBind> [-SetAssociatedGroup <AssociatedGroupType>] [-AddRole <String>]
+ [-RemoveRole <String>] [-Title <String>] [-Owner <String>] [-Description <String>]
+ [-AllowRequestToJoinLeave <Boolean>] [-AutoAcceptRequestToJoinLeave <Boolean>]
+ [-AllowMembersEditMembership <Boolean>] [-OnlyAllowMembersViewMembership <Boolean>]
+ [-RequestToJoinEmail <String>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPGroup -Identity 'My Site Members' -SetAssociatedGroup Members
 ```
 
 Sets the SharePoint group with the name 'My Site Members' as the associated members group
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPGroup -Identity 'My Site Members' -Owner 'site owners'
 ```
@@ -57,7 +55,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowMembersEditMembership
@@ -69,7 +69,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowRequestToJoinLeave
@@ -81,7 +83,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AutoAcceptRequestToJoinLeave
@@ -93,7 +97,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Description
@@ -105,7 +125,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -117,7 +139,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OnlyAllowMembersViewMembership
@@ -129,7 +153,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Owner
@@ -141,7 +167,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RemoveRole
@@ -153,7 +181,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RequestToJoinEmail
@@ -165,7 +195,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SetAssociatedGroup
@@ -174,10 +206,13 @@ One of the associated group types (Visitors, Members, Owners
 ```yaml
 Type: AssociatedGroupType
 Parameter Sets: (All)
+Accepted values: None, Visitors, Members, Owners
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -189,33 +224,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

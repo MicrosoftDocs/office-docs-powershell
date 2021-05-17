@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets the content delivery network (CDN) policies from the tenant level.
+Sets the content delivery network (CDN) policies at the tenant level.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-SPOTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPoli
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+Use this cmdlet to set the content delivery network (CDN) policies at the tenant level.
 
 ## EXAMPLES
 

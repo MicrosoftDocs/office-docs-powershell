@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-applicationaccesspolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Test-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Test-ApplicationAccessPolicy
@@ -17,15 +16,15 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Test-ApplicationAccessPolicy cmdlet to test access right of an application to a specific user/mailbox.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
 ```
-Test-ApplicationAccessPolicy [-Identity] <RecipientIdParameter> -AppId <String> [<CommonParameters>]
+Test-ApplicationAccessPolicy [-Identity] <RecipientIdParameter> -AppId <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,20 +54,16 @@ This example tests access to the user RandomUser9911@AppPolicyTest2.com for the 
 The Identity parameter specifies the recipient to test. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Display name
-
 - Email address
-
 - GUID
 
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -86,7 +81,7 @@ You can specify multiple app GUID values separated by commas.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named

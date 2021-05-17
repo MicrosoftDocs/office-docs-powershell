@@ -1,20 +1,30 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphidedefaultthemes
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPHideDefaultThemes.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPHideDefaultThemes
 ---
-
+  
 # Get-PnPHideDefaultThemes
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPHideDefaultThemes.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns if the default / OOTB themes should be visible to users or not.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPHideDefaultThemes [-Connection <SPOnlineConnection>]
+Get-PnPHideDefaultThemes [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +34,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPHideDefaultThemes
 ```
@@ -37,14 +47,18 @@ This example returns the current setting if the default themes should be visible
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

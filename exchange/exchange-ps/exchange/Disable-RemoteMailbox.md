@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Disable-RemoteMailbox
@@ -22,22 +21,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-Archive] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-IgnoreLegalHold] [-WhatIf] [<CommonParameters>]
+Disable-RemoteMailbox [-Identity] <RemoteMailboxIdParameter>
+ [-Archive]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use the Disable-RemoteMailbox cmdlet to perform the following actions:
 
 - Remove a cloud-based mailbox but keep the associated on-premises user account. To do this, you first need to remove the Exchange Online license for the mailbox. Otherwise, the mailbox won't be removed. The on-premises mail user is automatically converted to a regular user object. You can mail-enable the on-premises user object using the Enable-MailUser cmdlet.
-
 - Disconnect a cloud-based archive mailbox from a cloud-based mailbox. The cloud-based mailbox and the associated on-premises mail user are preserved.
 
 If you want to remove both the cloud-based mailbox and the associated on-premises mail user, use the Remove-RemoteMailbox cmdlet.
 
 Directory synchronization must be configured correctly for a mailbox to be removed from the cloud. Removal of the cloud-based mailbox isn't immediate and depends on the directory synchronization schedule.
 
-Note: If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with Disable-RemoteMailbox \<user\> -Archive and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them may result in an ArchiveGuid mismatch and validation error.
+**Note**: If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with the command `Disable-RemoteMailbox <User> -Archive` and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them may result in an ArchiveGuid mismatch and validation error.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -63,19 +67,12 @@ This example removes the cloud-based archive mailbox but keeps the cloud-based m
 The Identity parameter specifies the cloud-based mailbox. Valid values are:
 
 - ADObjectID
-
 - GUID
-
 - Distinguished name (DN)
-
-- Domain\\SamAccountName
-
+- Domain\\Username
 - User principal name (UPN)
-
 - LegacyExchangeDN
-
 - Email address
-
 - User alias
 
 ```yaml
@@ -112,8 +109,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -151,7 +147,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -168,9 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-The IgnoreLegalHold switch ignores the legal hold status of the mailbox user and allows you to disable a cloud-based mailbox that's on legal hold.
-
-When you disable a mailbox, the mailbox is disconnected from the user account. After you disable a mailbox, you can't include it in a discovery search. Disconnected mailboxes are permanently deleted from the mailbox database after the deleted mailbox retention period expires. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
+The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the remote user. This switch disables the instance of the remote object in the on-premises organization, and the request to disable the mailbox is synchronized to the cloud. However, if the cloud mailbox is on hold, the request to disable the mailbox is blocked, and an error is returned.
 
 ```yaml
 Type: SwitchParameter

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-MailboxRepairRequest
@@ -28,17 +27,20 @@ New-MailboxRepairRequest [-Database] <DatabaseIdParameter> -CorruptionType <Mail
  [-DetectOnly]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
-New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]> [-Archive]
+New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]>
+ [-Archive]
  [-Confirm]
  [-DetectOnly]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +84,8 @@ This example detects and repairs all corruption types for Ayla Kol's mailbox and
 
 ### Example 5
 ```powershell
-$Mailbox = Get-MailboxStatistics annb; New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
+$Mailbox = Get-MailboxStatistics annb
+New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
 ```
 
 This example creates a variable that identifies Ann Beebe's mailbox and then uses the variable to specify the values for the Database and StoreMailbox parameters to create a request to detect and repair all corruption types.
@@ -93,81 +96,43 @@ This example creates a variable that identifies Ann Beebe's mailbox and then use
 The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
 
 - AbandonedMoveDestination: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
-
 - AggregateCounts: Aggregate counts on folders that aren't reflecting correct values.
-
 - BigFunnelMissingPOIs: Exchange 2016.
-
 - BigFunnelPOI: Exchange 2019.
-
 - CleanupFilesFolder: Exchange 2016 or later.
-
 - CleanupGraphNodesWithPropertyError: Exchange 2016 or later.
-
 - CleanupOfficeGraphFolders: Exchange 2016 or later.
-
 - CleanupOfficeGraphSsc: Exchange 2016 or later.
-
 - CleanupOrphanedIndexes: Exchange 2016 or later.
-
 - CleanupTrendingAroundMe: Exchange 2016 or later.
-
 - CorruptJunkRule: Exchange 2013 or later.
-
 - CorruptSearchFolderCriteria: Exchange 2016 or later.
-
 - CorruptedPerUserData: Exchange 2016 or later.
-
 - DropAllLazyIndexes: Exchange 2013 or later.
-
 - EmptyFilesFolder: Exchange 2016 or later.
-
 - Extension1: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension2: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension3: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension4: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension5: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - FocusedInboxCleanup: Exchange 2016 or later.
-
 - FolderACL: Exchange 2013 or later.
-
 - FolderView: Views on folders that aren't returning correct contents.
-
 - ImapId: Exchange 2013 or later.
-
 - LockedMoveTarget: Exchange 2013 or later, but only if the mailbox is locked.
-
 - MessageId
-
 - MessagePtagCn
-
 - MissingSpecialFolders: Exchange 2013 or later.
-
 - OlcFolderCleanup: Exchange 2016 or later.
-
 - ProvisionedFolder: Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned.
-
 - ReduceRedundantAI: Exchange 2016 or later, and only by itself.
-
 - RemovePICWFolder: Exchange 2016 or later, but reserved for internal Microsoft use.
-
 - ReplState: Exchange 2013 or later.
-
 - RestrictionFolder: Exchange 2013 or later.
-
 - RuleMessageClass: Exchange 2013 or later.
-
 - ScheduledCheck: Exchange 2013 or later.
-
 - SearchFolder: Search folder corruption.
-
 - SyncDefaultFolderLocalizationWithMailbox: Exchange 2016 or later.
-
 - UniqueMidIndex: Exchange 2013 or later.
 
 You can specify multiple values separated by commas.
@@ -189,9 +154,7 @@ Accept wildcard characters: False
 The Database parameter repairs or detects corruption in all mailboxes in the specified database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Mailbox parameter.
@@ -215,23 +178,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that you want to repair or detect corruption in. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Database parameter.
@@ -244,6 +198,24 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -StoreMailbox
+The StoreMailbox parameter specifies the mailbox GUID of the mailbox you want to repair or detect corruption in. Use this parameter with the Database parameter.
+
+Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
@@ -272,8 +244,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -334,24 +305,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMailbox
-The StoreMailbox parameter specifies the mailbox GUID of the mailbox you want to repair or detect corruption in. Use this parameter with the Database parameter.
-
-Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

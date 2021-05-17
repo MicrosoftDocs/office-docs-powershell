@@ -1,38 +1,46 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenanttemplate
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenantTemplate
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantTemplate.html
 ---
-
+ 
 # Get-PnPTenantTemplate
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantTemplate.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Generates a provisioning tenant template from a site. If the site is a hubsite any connected site will be included.
 
-## SYNTAX 
+## SYNTAX
 
 ### Extract a template to a file
 ```powershell
-Get-PnPTenantTemplate -Out <String>
-                      [-SiteUrl <String>]
-                      [-Force [<SwitchParameter>]]
-                      [-Configuration <ExtractConfigurationPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+Get-PnPTenantTemplate [-SiteUrl <String>] [-Out] <String> [-Force]
+ [-Configuration <ExtractConfigurationPipeBind>] [-Connection <PnPConnection>]  
+ [<CommonParameters>]
 ```
 
 ### Extract a template as an object
 ```powershell
-Get-PnPTenantTemplate -AsInstance [<SwitchParameter>]
-                      [-SiteUrl <String>]
-                      [-Configuration <ExtractConfigurationPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+Get-PnPTenantTemplate [-SiteUrl <String>] [-AsInstance] [-Configuration <ExtractConfigurationPipeBind>]
+ [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTenantTemplate -Out tenanttemplate.xml
 ```
@@ -44,35 +52,62 @@ Extracts a tenant template
 ### -AsInstance
 Returns the template as an in-memory object, which is an instance of the ProvisioningHierarchy type of the PnP Core Component. It cannot be used together with the -Out parameter.
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Extract a template as an object
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Configuration
 Specify a JSON configuration file to configure the extraction progress.
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: ExtractConfigurationPipeBind
-Parameter Sets: Extract a template to a file, Extract a template as an object
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
 Overwrites the output file if it exists.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -80,13 +115,13 @@ Parameter Sets: Extract a template to a file
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Out
 Filename to write to, optionally including full path
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -94,37 +129,40 @@ Parameter Sets: Extract a template to a file
 
 Required: True
 Position: 0
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SiteUrl
 
-
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: String
-Parameter Sets: Extract a template to a file, Extract a template as an object
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: SPOnlineConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

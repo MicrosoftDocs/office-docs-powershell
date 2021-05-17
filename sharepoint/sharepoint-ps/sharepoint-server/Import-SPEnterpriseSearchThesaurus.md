@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchthesaurus
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPEnterpriseSearchThesaurus
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 
@@ -23,10 +23,10 @@ Import-SPEnterpriseSearchThesaurus -FileName <String> -SearchApplication <Search
 ```
 
 ## DESCRIPTION
-This cmdlet imports a thesaurus dictionary using a .cvs file, and deploys it to the query processing flow.
-A previously deployed thesaurus is overwritten by an import of a new .cvs file.
+This cmdlet imports a thesaurus dictionary using a .csv file, and deploys it to the query processing flow.
+A previously deployed thesaurus is overwritten by an import of a new .csv file.
 
-NOTE: If an empty .cvs file is imported, an empty thesaurus will be deployed.
+NOTE: If an empty .csv file is imported, an empty thesaurus will be deployed.
 No synonyms will then be added to the queries.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
@@ -40,12 +40,12 @@ Import-SPEnterpriseSearchThesaurus -SearchApplication $searchApp -Filename
 \\host\share\thesaurus.csv
 ```
 
-This example imports a thesaurus dictionary .cvs file named thesaurus.csv that is located at \\\\host\share  to the default search service application.
+This example imports a thesaurus dictionary .csv file named thesaurus.csv that is located at \\\\host\share  to the default search service application.
 
 ## PARAMETERS
 
 ### -FileName
-Specifies the full UNC (Universal Naming Convention) path of the .cvs file to be imported.
+Specifies the full UNC (Universal Naming Convention) path of the .csv file to be imported.
 
 ```yaml
 Type: String

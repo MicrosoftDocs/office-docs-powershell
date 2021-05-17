@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Set-User
@@ -27,6 +26,8 @@ Set-User [-Identity] <UserIdParameter>
  [-Arbitration]
  [-AssistantName <String>]
  [-AuthenticationPolicy <String>]
+ [-BlockCloudCache <Boolean>]
+ [-CanHaveCloudCache <Boolean>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
  [-Company <String>]
@@ -77,6 +78,7 @@ Set-User [-Identity] <UserIdParameter>
  [-UMCallingLineIds <MultiValuedProperty>]
  [-UMDtmfMap <MultiValuedProperty>]
  [-UserPrincipalName <String>]
+ [-VIP <Boolean>]
  [-WebPage <String>]
  [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>]
@@ -112,13 +114,9 @@ Performing this procedure on a linked mailbox removes all permissions on the mai
 The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
-
 - UserPrincipalName
 
 ```yaml
@@ -135,13 +133,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUMCallsFromNonUsers
-The AllowUMCallsFromNonUsers parameter specifies whether to exclude the user from directory searches.
+This parameter is available only in on-premises Exchange.
+
+The AllowUMCallsFromNonUsers parameter specifies whether to exclude the user from Unified Messaging directory searches.
 
 ```yaml
 Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -190,9 +190,7 @@ Accept wildcard characters: False
 The AuthenticationPolicy parameter specifies the authentication policy to apply to the user. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 To remove the policy assignment for the user, use the value $null.
@@ -203,7 +201,43 @@ You create authentication policies with the New-AuthenticationPolicy cmdlet to b
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockCloudCache
+This parameter is available only in the cloud-based service.
+
+{{ Fill BlockCloudCache Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CanHaveCloudCache
+This parameter is available only in the cloud-based service.
+
+{{ Fill CanHaveCloudCache Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -265,8 +299,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -303,17 +336,18 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
+This parameter is available only in on-premises Exchange.
+
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
-
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -413,7 +447,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -426,7 +460,6 @@ Accept wildcard characters: False
 The GeoCoordinates parameter specifies the user's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
 - Latitude and longitude: For example, "47.644125;-122.122411"
-
 - Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
 ```yaml
@@ -466,7 +499,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -562,19 +594,12 @@ This parameter is available only in on-premises Exchange.
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this user is a linked user. The master account is the account to which the user links. The master account grants access to the user. You can use one of the following values:
 
 - GUID
-
 - DN
-
 - Domain\\Account
-
 - UPN
-
 - LegacyExchangeDN
-
 - SmtpAddress
-
 - Alias
-
 - $null
 
 If you set this parameter's value to $null, you will unlink the account and convert the linked mailbox into a non-linked user mailbox. The mailbox won't retain the permissions previously set on it such as Send As, full access, folder, and calendar delegation.
@@ -743,14 +768,13 @@ The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Ex
 
 Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 
-> [!CAUTION]
-> This switch permanently deletes the existing cloud mailbox and its associated archive, prevents you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.
+**Caution**: This switch permanently deletes the existing cloud mailbox and its associated archive, prevents you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -845,7 +869,6 @@ Accept wildcard characters: False
 The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Remote PowerShell access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. Valid values are:
 
 - $true: The user has access to remote PowerShell.
-
 - $false: The user doesn't have access to remote PowerShell.
 
 The default value depends on the management roles that are assigned to the user.
@@ -872,7 +895,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -885,7 +908,6 @@ Accept wildcard characters: False
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
-
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
@@ -904,7 +926,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -939,12 +961,10 @@ Accept wildcard characters: False
 The SimpleDisplayName parameter is used to display an alternative description of the object when only a limited set of characters is permitted. Valid characters are:
 
 - a - z
-
 - A - Z
-
 - 0 - 9
-
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":", and "?".
+- space
+- `" ' ( ) + , - . / : ?`
 
 ```yaml
 Type: String
@@ -960,13 +980,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDualWrite
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1018,7 +1040,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1080,27 +1102,27 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
+This parameter is available only in on-premises Exchange.
+
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
-- emailAddress:\<integers\>
+- `emailAddress:<integers>`
+- `lastNameFirstName:<integers>`
+- `firstNameLastName:<integers>`
 
-- lastNameFirstName:\<integers\>
+To enter values that overwrite all existing entries, use the following syntax: `emailAddress:<integers>,lastNameFirstName:<integers>,firstNameLastName:<integers>`.
 
-- firstNameLastName:\<integers\>
+If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only `emailAddress:<integers>`, all existing lastNameFirstName and firstNameLastName values are removed.
 
-To enter values that overwrite all existing entries, use the following syntax: emailAddress:\<integers\>,lastNameFirstName:\<integers\>,firstNameLastName:\<integers\>.
+To add or remove values without affecting other existing entries, use the following syntax: `@{Add="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"; Remove="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"}`.
 
-If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only emailAddress:\<integers\>, all existing lastNameFirstName and firstNameLastName values are removed.
-
-To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
-
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use `@{Add="emailAddress:<integers1>","emailAddress:<integers2>}` to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1112,13 +1134,36 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VIP
+This parameter is available only in the cloud-based service.
+
+The VIP parameter specifies whether the user is a priority account. Valid values are:
+
+- $true: The user is a priority account.
+- $false: The user is not a priority account.
+
+For more information about priority accounts, see [Manage and monitor priority accounts](https://docs.microsoft.com/microsoft-365/admin/setup/priority-accounts).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1144,7 +1189,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn’t work on this cmdlet.
+The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1163,7 +1208,6 @@ Accept wildcard characters: False
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
-
 - In environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.

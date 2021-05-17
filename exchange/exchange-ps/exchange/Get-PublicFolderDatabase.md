@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-PublicFolderDatabase
@@ -27,7 +26,8 @@ Get-PublicFolderDatabase -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-IncludePreExchange2010]
  [-Status]
- [-IncludeCorrupted] [<CommonParameters>]
+ [-IncludeCorrupted]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -36,7 +36,8 @@ Get-PublicFolderDatabase [[-Identity] <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludePreExchange2010]
  [-Status]
- [-IncludeCorrupted] [<CommonParameters>]
+ [-IncludeCorrupted]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,9 +76,7 @@ This example returns information about all public folders on Server01.
 The Identity parameter specifies the public folder database that you want to view. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't the Identity and Server parameters in the same command.
@@ -101,11 +100,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use the Server and Identity parameters in the same command.
@@ -139,10 +135,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
 ### -IncludePreExchange2010
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IncludePreExchange2010 switch specifies whether to include information about Exchange 2003 or Exchange 2007 public folders in the results. You don't need to specify a value with this switch.
 

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-CASMailboxPlan
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-CASMailboxPlan
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-CASMailboxPlan cmdlet to modify Client Access services (CAS) mailbox plans in cloud-based organizations.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,6 +29,7 @@ Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-ImapEnabled <Boolean>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
  [-PopEnabled <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -53,18 +53,16 @@ This example disables Exchange ActiveSync and POP3 access to mailboxes in the CA
 The Identity parameter specifies the CAS mailbox plan that you want to modify. You can use any value that uniquely identifies the CAS mailbox plan. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
-The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>, respectively).
+The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, `ExchangeOnlineEnterprise` and `ExchangeOnlineEnterprise-<GUID>`, respectively).
 
 ```yaml
 Type: MailboxPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -77,14 +75,13 @@ Accept wildcard characters: False
 The ActiveSyncEnabled parameter enables or disables access to the mailbox by using Exchange Active Sync (EAS). Valid values are:
 
 - $true: ActiveSync access to the mailbox is enabled. This is the default value.
-
 - $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -96,15 +93,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -117,14 +113,13 @@ Accept wildcard characters: False
 The ImapEnabled parameter enables or disables access to the mailbox by using IMAP4 clients. Valid values are:
 
 - $true: IMAP4 access to the mailbox is enabled. This is default value for all CAS mailbox plans except ExchangeOnlineDeskless.
-
 - $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -137,9 +132,7 @@ Accept wildcard characters: False
 The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The default value is OwaMailboxPolicy-Default.
@@ -150,7 +143,7 @@ You can use the Get-OwaMailboxPolicy cmdlet to view the available Outlook on the
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -163,14 +156,29 @@ Accept wildcard characters: False
 The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients. Valid values are:
 
 - $true: POP3 access to the mailbox is enabled. This is the default value.
-
 - $false: POP3 access to the mailbox is disabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

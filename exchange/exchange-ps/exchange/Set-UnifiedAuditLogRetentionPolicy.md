@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-unifiedauditlogretentionpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-UnifiedAuditLogRetentionPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-UnifiedAuditLogRetentionPolicy
@@ -28,7 +27,8 @@ Set-UnifiedAuditLogRetentionPolicy [-Identity] <PolicyIdParameter> -Priority <In
  [-Operations <MultiValuedProperty>]
  [-RecordTypes <MultiValuedProperty>]
  [-UserIds <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,16 +58,14 @@ This example modifies an audit log retention policy and changes to retention dur
 The Identity parameter specifies the unified audit log retention policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distingished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -82,7 +80,6 @@ The Priority parameter specifies a priority value for the policy that determines
 Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 8 existing policies:
 
 - Valid priority values for the existing 8 policies are from 7 through 0.
-
 - Valid priority values for a new policy (the 9th policy) are from 8 through 0.
 
 You must use a unique priority value when modifying audit log retention policies. This parameter is required when modifying an audit log retention policy.
@@ -91,7 +88,7 @@ You must use a unique priority value when modifying audit log retention policies
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -104,12 +101,10 @@ Accept wildcard characters: False
 The RetentionDuration parameter specifies how long audit log records are kept. Valid values are:
 
 - ThreeMonths
-
 - SixMonths
-
 - NineMonths
-
 - TwelveMonths
+- TenYears
 
 This parameter is required when modifying an audit log retention policy.
 
@@ -117,8 +112,8 @@ This parameter is required when modifying an audit log retention policy.
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
-Applicable: Office 365 Security & Compliance Center
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -130,15 +125,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -154,7 +148,7 @@ The Description parameter specifies a description for the audit log retention po
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -166,13 +160,13 @@ Accept wildcard characters: False
 ### -Operations
 The Operations parameter specifies the audit log operations that are retained by the policy. The values you specify will overwrite any existing entries. For a list of the available values for this parameter, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -182,158 +176,15 @@ Accept wildcard characters: False
 ```
 
 ### -RecordTypes
-The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. The values you specify will overwrite any existing entries. Valid values are:
+The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
-- AeD
-
-- AirInvestigation
-
-- ApplicationAudit
-
-- AzureActiveDirectory
-
-- AzureActiveDirectoryAccountLogon
-
-- AzureActiveDirectoryStsLogon
-
-- CRM
-
-- Campaign
-
-- ComplianceDLPExchange
-
-- ComplianceDLPSharePoint
-
-- ComplianceDLPSharePointClassification
-
-- ComplianceSupervisionExchange
-
-- CustomerKeyServiceEncryption
-
-- DLPEndpoint
-
-- DataCenterSecurityCmdlet
-
-- DataGovernance
-
-- DataInsightsRestApiAudit
-
-- Discovery
-
-- ExchangeAdmin
-
-- ExchangeAggregatedOperation
-
-- ExchangeItem
-
-- ExchangeItemAggregated
-
-- ExchangeItemGroup
-
-- HRSignal
-
-- HygieneEvent
-
-- InformationBarrierPolicyApplication
-
-- InformationWorkerProtection
-
-- Kaizala
-
-- LabelContentExplorer
-
-- MIPLabel
-
-- MailSubmission
-
-- MicrosoftFlow
-
-- MicrosoftForms
-
-- MicrosoftStream
-
-- MicrosoftTeams
-
-- MicrosoftTeamsAdmin
-
-- MicrosoftTeamsAnalytics
-
-- MicrosoftTeamsDevice
-
-- MicrosoftTeamsShifts
-
-- MipAutoLabelExchangeItem
-
-- MipAutoLabelSharePointItem
-
-- MipAutoLabelSharePointPolicyLocation
-
-- OfficeNative
-
-- OneDrive
-
-- PowerAppsApp
-
-- PowerAppsPlan
-
-- PowerBIAudit
-
-- Project
-
-- Quarantine
-
-- SecurityComplianceAlerts
-
-- SecurityComplianceCenterEOPCmdlet
-
-- SecurityComplianceInsights
-
-- SharePoint
-
-- SharePointCommentOperation
-
-- SharePointContentTypeOperation
-
-- SharePointFieldOperation
-
-- SharePointFileOperation
-
-- SharePointListItemOperation
-
-- SharePointListOperation
-
-- SharePointSharingOperation
-
-- SkypeForBusinessCmdlets
-
-- SkypeForBusinessPSTNUsage
-
-- SkypeForBusinessUsersBlocked
-
-- Sway
-
-- SyntheticProbe
-
-- TeamsHealthcare
-
-- ThreatFinder
-
-- ThreatIntelligence
-
-- ThreatIntelligenceAtpContent
-
-- ThreatIntelligenceUrl
-
-- WorkplaceAnalytics
-
-- Yammer
-
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The values you specify will overwrite any existing entries.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -345,13 +196,13 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter specifies the audit logs that are retained by the policy based on the ID of the user who performed the action. The values you specify will overwrite any existing entries.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -367,7 +218,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewrule
-applicable: Office 365 Security & Compliance Center
-title: Get-SupervisoryReviewRule
+applicable: Security & Compliance Center
+title: Exchange Online, Get-SupervisoryReviewRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-SupervisoryReviewRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-SupervisoryReviewRule cmdlet to modify supervisory review rules in the Security & Compliance Center. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
 
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>]
+Get-SupervisoryReviewRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -58,16 +58,14 @@ This example returns the rule that assigned to the supervisory review policy nam
 The Identity parameter specifies the supervisory review rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1
@@ -80,16 +78,14 @@ Accept wildcard characters: False
 The Policy parameter filters the results by supervisory review policy that's assigned to the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

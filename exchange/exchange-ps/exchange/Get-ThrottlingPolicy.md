@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ThrottlingPolicy
@@ -125,9 +124,7 @@ Accept wildcard characters: False
 The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values:
 
 - Global
-
 - Organization
-
 - Regular
 
 For information about each of these policy scopes, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-umipgateway
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: New-UMIPGateway
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-UMIPGateway
@@ -25,10 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-UMIPGateway [-Name] <String> -Address <UMSmartHost>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-GlobalCallRoutingScheme <UMGlobalCallRoutingScheme>]
  [-IPAddressFamily <IPAddressFamily>]
  [-UMDialPlan <UMDialPlanIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,7 +69,7 @@ The Address parameter specifies the IP address configured on the IP gateway or S
 Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -86,7 +85,7 @@ The Name parameter specifies the display name for the UM IP gateway. The name fo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
@@ -98,15 +97,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -124,25 +122,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalCallRoutingScheme
-This parameter is available or functional only in Exchange Server 2010.
-
-The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the value is E.164, the IP gateway accepts the call.
-
-```yaml
-Type: UMGlobalCallRoutingScheme
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -155,16 +135,14 @@ Accept wildcard characters: False
 The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. Valid values are:
 
 - IPv4Only: The UM IP gateway will only use IPv4 to communicate. This is the default value.
-
 - IPv6Only: The UM IP gateway will only use IPv6.
-
 - Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
 
 ```yaml
 Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -180,7 +158,7 @@ The UMDialPlan parameter specifies the UM dial plan to be associated with the UM
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -196,7 +174,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/g
 applicable: SharePoint Online
 title: Get-SPOSiteUserInvitations
 schema: 2.0.0
-author:
-ms.author:
+author: techwriter40
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Searches against all stored sharing links and retrieves the email invites. 
 
 ## SYNTAX
 
@@ -24,23 +24,23 @@ Get-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [<
 
 ## DESCRIPTION
 
-.
+Searches against all stored sharing links on a Site and retrieves the email invites. 
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Get-SPOSiteUserInvitations -Site https://contoso.sharepoint.com/sites/ContosoWeb1/ -EmailAddress someone@example.com
 ```
 
-.
+This example retrieves email invites stored in the ContosoWeb1 site to the user with email address someone@example.com.
 
 ## PARAMETERS
 
 ### -Site
 
-.
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -EmailAddress
 
-.
+Email Address of the user.
 
 ```yaml
 Type: String

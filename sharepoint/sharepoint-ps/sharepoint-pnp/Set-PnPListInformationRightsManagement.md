@@ -1,45 +1,39 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplistinformationrightsmanagement
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPListInformationRightsManagement
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPListInformationRightsManagement.html
 ---
-
+ 
 # Set-PnPListInformationRightsManagement
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPListInformationRightsManagement.md to change this file.
+
 Get the site closure status of the site which has a site policy applied
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPListInformationRightsManagement -List <ListPipeBind>
-                                       [-Enable <Boolean>]
-                                       [-EnableExpiration <Boolean>]
-                                       [-EnableRejection <Boolean>]
-                                       [-AllowPrint <Boolean>]
-                                       [-AllowScript <Boolean>]
-                                       [-AllowWriteCopy <Boolean>]
-                                       [-DisableDocumentBrowserView <Boolean>]
-                                       [-DocumentAccessExpireDays <Int>]
-                                       [-DocumentLibraryProtectionExpireDate <DateTime>]
-                                       [-EnableDocumentAccessExpire <Boolean>]
-                                       [-EnableDocumentBrowserPublishingView <Boolean>]
-                                       [-EnableGroupProtection <Boolean>]
-                                       [-EnableLicenseCacheExpire <Boolean>]
-                                       [-LicenseCacheExpireDays <Int>]
-                                       [-GroupName <String>]
-                                       [-PolicyDescription <String>]
-                                       [-PolicyTitle <String>]
-                                       [-TemplateId <String>]
-                                       [-Web <WebPipeBind>]
-                                       [-Connection <SPOnlineConnection>]
+Set-PnPListInformationRightsManagement -List <ListPipeBind> [-Enable <Boolean>] [-EnableExpiration <Boolean>]
+ [-EnableRejection <Boolean>] [-AllowPrint <Boolean>] [-AllowScript <Boolean>] [-AllowWriteCopy <Boolean>]
+ [-DisableDocumentBrowserView <Boolean>] [-DocumentAccessExpireDays <Int32>]
+ [-DocumentLibraryProtectionExpireDate <DateTime>] [-EnableDocumentAccessExpire <Boolean>]
+ [-EnableDocumentBrowserPublishingView <Boolean>] [-EnableGroupProtection <Boolean>]
+ [-EnableLicenseCacheExpire <Boolean>] [-LicenseCacheExpireDays <Int32>] [-GroupName <String>]
+ [-PolicyDescription <String>] [-PolicyTitle <String>] [-TemplateId <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPListInformationRightsManagement -List "Documents" -Enabled $true
 ```
@@ -57,7 +51,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowScript
@@ -69,7 +65,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowWriteCopy
@@ -81,7 +79,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableDocumentBrowserView
@@ -93,19 +107,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DocumentAccessExpireDays
 Sets the number of days after which the downloaded document will expire.
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DocumentLibraryProtectionExpireDate
@@ -117,7 +135,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Enable
@@ -129,7 +149,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableDocumentAccessExpire
@@ -141,7 +163,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableDocumentBrowserPublishingView
@@ -153,7 +177,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableExpiration
@@ -165,7 +191,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableGroupProtection
@@ -177,7 +205,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableLicenseCacheExpire
@@ -189,7 +219,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableRejection
@@ -201,7 +233,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -GroupName
@@ -213,19 +247,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LicenseCacheExpireDays
 Sets the number of days that the application that opens the document caches the IRM license. When these elapse, the application will connect to the IRM server to validate the license.
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -237,7 +275,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PolicyDescription
@@ -249,7 +289,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PolicyTitle
@@ -261,11 +303,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TemplateId
-
 
 ```yaml
 Type: String
@@ -273,33 +316,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

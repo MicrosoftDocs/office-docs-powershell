@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ADPermission
@@ -23,14 +22,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Owner
 ```
-Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-Owner]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-ADPermission [-Identity] <ADRawEntryIdParameter>
+ [-Owner]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### AccessRights
 ```
-Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-User <SecurityPrincipalIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-ADPermission [-Identity] <ADRawEntryIdParameter>
+ [-User <SecurityPrincipalIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner switch specifies that the owner of the object specified in the Identity parameter should be returned. If the Owner switch is used, the User parameter can't be used.
+The Owner switch returns the owner of the Active Directory object. You don't need to specify a value with this switch.
+
+You can't use this switch with the User parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -107,9 +112,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies that only the access control entries (ACEs) granted to the specified user on the object specified in the Identity parameter should be returned. If the User parameter is used, the Owner switch can't be used.
+The user parameter filters the results who has permissions on the Active Directory object. You can specify the following types of users or groups (security principals) for this parameter:
 
-If the name of the user contains spaces, enclose the name in quotation marks (").
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

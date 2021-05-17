@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-Mailbox
@@ -56,7 +55,8 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesID
@@ -95,12 +95,13 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Arbitration
 ```
-New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-Arbitration] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -126,7 +127,8 @@ New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPri
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
@@ -155,7 +157,8 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuxAuditLog
@@ -184,7 +187,8 @@ New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DisabledUser
@@ -223,7 +227,8 @@ New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-Use
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Discovery
@@ -256,7 +261,8 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableRoomMailboxAccount
@@ -287,7 +293,8 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnli
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
@@ -322,7 +329,8 @@ New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrinc
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FederatedUser
@@ -349,7 +357,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <Remov
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### InactiveMailbox
@@ -387,7 +396,8 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <S
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Linked
@@ -425,12 +435,19 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedRoomMailbox
 ```
-New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom] [-Office <String>] [-Password <SecureString>] [-Phone <String>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
+ [-LinkedRoom]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-Phone <String>]
+ [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -463,7 +480,8 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesFederatedUser
@@ -489,7 +507,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Migration
@@ -520,7 +539,8 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
@@ -551,7 +571,8 @@ New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFro
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
@@ -590,7 +611,8 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemovedMailbox
@@ -628,7 +650,8 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Passw
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
@@ -667,38 +690,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int3
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Scheduling
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>] [-Scheduling]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
- [-Alias <String>]
- [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>]
- [-Confirm]
- [-Database <DatabaseIdParameter>]
- [-DisplayName <String>]
- [-DomainController <Fqdn>]
- [-FirstName <String>]
- [-Force]
- [-ImmutableId <String>]
- [-Initials <String>]
- [-LastName <String>]
- [-MailboxRegion <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>]
- [-ResetPasswordOnNextLogon <Boolean>]
- [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>]
- [-SharingPolicy <SharingPolicyIdParameter>]
- [-TargetAllMDBs]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
@@ -733,8 +726,40 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
+
+### SupervisoryReviewPolicyMailbox
+```
+New-Mailbox [-Name] <String> [-SupervisoryReviewPolicy]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Archive]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-UserPrincipalName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+ ```
 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -743,7 +768,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
+$password = Read-Host "Enter password" -AsSecureString
+New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user Chris Ashton in Active Directory and creates a mailbox for the user. The mailbox is located on Mailbox Database 1. The password must be reset at the next logon. To set the initial value of the password, this example creates a variable ($password), prompts you to enter a password, and assigns that password to the variable as a SecureString object.
@@ -764,7 +790,9 @@ This example creates an enabled user account in Active Directory and a room mail
 
 ### Example 4
 ```powershell
-New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales; Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG; Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
+New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales
+Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG
+Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
 This example creates the shared mailbox "Sales Department" and grants Full Access and Send on Behalf permissions for the security group "MarketingSG". Users who are members of the security group will be granted the permissions to the mailbox.
@@ -886,7 +914,6 @@ Accept wildcard characters: False
 The EnableRoomMailboxAccount parameter specifies whether to enable the disabled user account that's associated with this room mailbox. Valid values are:
 
 - $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. This allows the account to log on to the room mailbox.
-
 - $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
 
 You need to use this parameter with the Room switch.
@@ -953,7 +980,7 @@ The InactiveMailbox parameter specifies the inactive mailbox that you want to re
 Type: MailboxIdParameter
 Parameter Sets: InactiveMailbox
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -996,21 +1023,20 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedMasterAccount
+This parameter is available only in on-premises Exchange.
+
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -1106,7 +1132,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecureString
-Parameter Sets: Arbitration, DisabledUser, Discovery, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: Arbitration, DisabledUser, Discovery, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1155,19 +1181,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: RemovedMailboxIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, FederatedUser, MicrosoftOnlineServicesFederatedUser, RemoteArchive, RemovedMailbox
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Room
 The Room switch is required to create room mailboxes. You don't need to specify a value with this switch.
 
@@ -1209,7 +1222,7 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
 
 ```yaml
 Type: String
@@ -1226,7 +1239,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: AuxAuditLog, DisabledUser,Discovery, EnableRoomMailboxAccount, Equipment, Linked, LinkedRoomMailbox, Migration, Room, Scheduling, Shared
+Parameter Sets: AuxAuditLog, DisabledUser,Discovery, EnableRoomMailboxAccount, Equipment, Linked, LinkedRoomMailbox, Migration, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1241,9 +1254,7 @@ Accept wildcard characters: False
 The ActiveSyncMailboxPolicy parameter specifies the mobile device mailbox policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:.
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 If you don't use this parameter, the default mobile device mailbox policy is used.
@@ -1267,16 +1278,14 @@ This parameter is available only in on-premises Exchange.
 The AddressBookPolicy parameter specifies the address book policy that's applied to the mailbox. You can use any value that uniquely identifies the address book policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1290,14 +1299,13 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -1323,23 +1331,14 @@ This parameter is available only in on-premises Exchange.
 The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -1377,14 +1376,12 @@ This parameter is available only in on-premises Exchange.
 The ArchiveDatabase parameter specifies the Exchange database that contains the archive that's associated with this mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1442,8 +1439,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -1465,16 +1461,14 @@ This parameter is available only in on-premises Exchange.
 The Database parameter specifies the mailbox database that contains the mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1510,7 +1504,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1665,13 +1659,9 @@ This parameter is available only in the cloud-based service.
 The MailboxPlan parameter specifies the mailbox plan to apply to the mailbox. You can use any value that uniquely identifies the mailbox plan. For example:
 
 - Name
-
 - Alias
-
 - Display name
-
 - Distinguished name (DN)
-
 - GUID
 
 A mailbox plan specifies the permissions and features that are available to a mailbox. In Exchange Online, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center.
@@ -1694,11 +1684,15 @@ Accept wildcard characters: False
 ### -MailboxRegion
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The MailboxRegion parameter specifies the geo location for the mailbox in multi-geo environments.
+
+To see the list of configured geo locations in Microsoft 365 Multi-Geo, run the following command: `Get-OrganizationConfig | Select -ExpandProperty AllowedMailboxRegions | Format-Table`. To view your central geo location, run the following command: `Get-OrganizationConfig | Select DefaultMailboxRegion`.
+
+ For more information, see [Administering Exchange Online mailboxes in a multi-geo environment](https://docs.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo).
 
 ```yaml
 Type: String
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Online
 
@@ -1710,13 +1704,13 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicy
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ManagedFolderMailboxPolicy parameter specifies the managed folder mailbox policy to enable for the mailbox that you create.
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010
 
@@ -1728,7 +1722,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicyAllowed
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for clients using versions of Microsoft Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
@@ -1736,7 +1730,7 @@ Outlook 2003 Service Pack 3 clients are supported but are provided limited funct
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Server 2010
 
@@ -1751,18 +1745,13 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -1783,7 +1772,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -1823,11 +1811,8 @@ The OrganizationalUnit parameter specifies the location in Active Directory wher
 Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -1899,7 +1884,6 @@ Accept wildcard characters: False
 The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Valid values are:
 
 - $true: The user has access to Exchange Online PowerShell, the Exchange Management Shell, and the Exchange admin center (EAC). This is the default value.
-
 - $false: The user has doesn't have access to Exchange Online PowerShell, the Exchange Management Shell, or the EAC.
 
 Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell or the EAC on the local Exchange server.
@@ -1923,7 +1907,6 @@ Accept wildcard characters: False
 The ResetPasswordOnNextLogon parameter specifies whether the user is required to change their password the next time they log on to their mailbox. Valid values are:
 
 - $true: The user is required to change their password the next time they log on to their mailbox.
-
 - $false: The user isn't required to change their password the next time they log on to their mailbox. This is the default value.
 
 ```yaml
@@ -1961,9 +1944,7 @@ This parameter is available only in on-premises Exchange.
 The RetentionPolicy parameter specifies the retention policy that you want applied to this mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished Name (DN)
-
 - GUID
 
 Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained.
@@ -1974,7 +1955,7 @@ If you don't use this parameter, the retention policy named Default MRM Policy i
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1989,9 +1970,7 @@ Accept wildcard characters: False
 The RoleAssignmentPolicy parameter specifies the role assignment policy that's applied to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 In Exchange Online PowerShell, if you don't use this parameter, the default role assignment policy named Default Role Assignment Policy is automatically applied to the mailbox. In on-premises Exchange, no role assignment policy is automatically applied to the mailbox.
@@ -2017,7 +1996,6 @@ Use the RoomMailboxPassword parameter to configure the password for a room mailb
 To use this parameter, you need to be a member of one of the following role groups:
 
 - Exchange Online: The Organization Management role group via the Mail Recipients, Reset Password, and User Options roles, the Help Desk role group via the Reset Password and User Options roles, or the Recipient Management role group via the Mail Recipients and Reset Password roles.
-
 - On-premises Exchange: The Organization Management role group via the Mail Recipients and User Options roles, the Recipient Management role group via the Mail Recipients role, or the Help Desk role group via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
 This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
@@ -2038,11 +2016,11 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -2053,31 +2031,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Scheduling
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Scheduling
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SendModerationNotifications
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
-
 - Internal: Notify senders in the organization when their messages aren't approved.
-
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
@@ -2101,9 +2059,7 @@ This parameter is available only in on-premises Exchange.
 The SharingPolicy parameter specifies the sharing policy that's applied to the mailbox. You can use any value that uniquely identifies the sharing policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-SharingPolicy cmdlet to see the available sharing policies.
@@ -2112,11 +2068,29 @@ If you don't use this parameter, the sharing policy named Default Sharing Policy
 
 ```yaml
 Type: SharingPolicyIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SupervisoryReviewPolicy
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SupervisoryReviewPolicyMailbox
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -2130,7 +2104,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
 Applicable: Exchange Online
 
@@ -2147,9 +2121,7 @@ This parameter is available only in on-premises Exchange.
 The ThrottlingPolicy parameter specifies the throttling policy that's applied to the mailbox. You can use any value that uniquely identifies the throttling policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-ThrottlingPolicy cmdlet to see the available throttling policies.
@@ -2158,7 +2130,7 @@ By default, no throttling policy is applied to the mailbox.
 
 ```yaml
 Type: ThrottlingPolicyIdParameter
-Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Shared, SupervisoryReviewPolicyMailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 

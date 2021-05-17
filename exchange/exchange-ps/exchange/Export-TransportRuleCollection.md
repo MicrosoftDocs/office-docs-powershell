@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Export-TransportRuleCollection
@@ -25,8 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Format <RuleCollectionFormat>]
  [-ExportLegacyRules]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +41,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
+$file = Export-TransportRuleCollection
+Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\My Docs folder.
@@ -49,18 +51,40 @@ This example exports transport rules. Rule data is first exported to the variabl
 
 ### Example 2
 ```powershell
-$file = Export-TransportRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
+$file = Export-TransportRuleCollection -ExportLegacyRules
+Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 In Exchange Server 2010, this example exports legacy transport rules created in Exchange 2007 using the ExportLegacyRules switch. The cmdlet should be run from an Exchange 2010 Hub Transport server. The exported rules collection can then be imported to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
 
 ## PARAMETERS
 
+### -Identity
+This parameter is available or functional only in Exchange Server 2010.
+
+The Identity parameter specifies the transport rule that you want to export. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -97,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExportLegacyRules
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ExportLegacyRules switch is required to export transport rules from Exchange 2007. You don't need to specify a value with this switch.
 
@@ -114,21 +138,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
+### -Format
+This parameter is available only in the cloud-based service.
 
-The Identity parameter specifies the name or GUID of a transport rule to be exported.
+The Format parameter specifics the format of the exported transport rule collection. Valid values are:
+
+- RuleCollectionXML
+- InternalXML
+- DlpMigrationRuleCollection
 
 ```yaml
-Type: RuleIdParameter
+Type: RuleCollectionFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

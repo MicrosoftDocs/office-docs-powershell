@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-recipient
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-Recipient
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-Recipient
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-Recipient cmdlet to view existing recipient objects in your organization. This cmdlet returns all mail-enabled objects (for example, mailboxes, mail users, mail contacts, and distribution groups).
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXORecipient cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXORecipient cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 In cloud environments, to return Microsoft 365 Groups, you need to use the RecipientTypeDetails parameter with the value GroupMailbox.
 
@@ -44,7 +42,8 @@ Get-Recipient [-Anr <String>]
  [-Capabilities <MultiValuedProperty>]
  [-Database <DatabaseIdParameter>]
  [-Properties <String[]>]
- [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -66,7 +65,8 @@ Get-Recipient [[-Identity] <RecipientIdParameter>]
  [-SortBy <String>]
  [-Capabilities <MultiValuedProperty>]
  [-Properties <String[]>]
- [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### DatabaseSet
@@ -84,7 +84,8 @@ Get-Recipient [-Database <DatabaseIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
  [<CommonParameters>]
 ```
 
@@ -104,7 +105,9 @@ Get-Recipient [-RecipientPreviewFilter <String>]
  [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,20 +144,16 @@ This example retrieves information about all the mail contacts in your organizat
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
 - CommonName (CN)
-
 - DisplayName
-
 - FirstName
-
 - LastName
-
 - Alias
 
 ```yaml
 Type: String
 Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -169,14 +168,13 @@ This parameter is available only in the cloud-based service.
 The AuthenticationType parameter specifies the recipient by authentication type. Use one of the following values:
 
 - Federated
-
 - Managed
 
 ```yaml
 Type: AuthenticationType
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -192,7 +190,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -202,13 +200,15 @@ Accept wildcard characters: False
 ```
 
 ### -Capabilities
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -243,9 +243,7 @@ This parameter is available only in on-premises Exchange.
 The Database parameter return all recipients stored on the specified mailbox database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -283,11 +281,8 @@ Accept wildcard characters: False
 The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/filter-properties).
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -298,7 +293,7 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -311,22 +306,17 @@ Accept wildcard characters: False
 The Identity parameter specifies the recipient object that you want to view. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -343,7 +333,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -366,7 +355,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -384,7 +373,7 @@ Soft-deleted recipients are deleted recipients that are still recoverable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -397,18 +386,15 @@ Accept wildcard characters: False
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -424,7 +410,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -440,7 +426,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PropertySet
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -473,11 +459,8 @@ Accept wildcard characters: False
 The RecipientPreviewFilter parameter tests a recipient filter that you would use in a dynamic distribution group, address list, or email address policy. This parameter uses the Opath filter syntax `"Property -ComparisonOperator 'Value'"` (the same syntax as the RecipientFilter parameter).
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
@@ -486,7 +469,7 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -499,19 +482,12 @@ Accept wildcard characters: False
 The RecipientType parameter filters the results by the specified recipient type. Valid values are:
 
 - DynamicDistributionGroup
-
 - MailContact
-
 - MailNonUniversalGroup
-
 - MailUniversalDistributionGroup
-
 - MailUniversalSecurityGroup
-
 - MailUser
-
 - PublicFolder
-
 - UserMailbox
 
 You can specify multiple values separated by commas.
@@ -520,7 +496,7 @@ You can specify multiple values separated by commas.
 Type: RecipientType[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -533,57 +509,31 @@ Accept wildcard characters: False
 The RecipientTypeDetails parameter filters the results by the specified recipient subtype. Valid values are:
 
 - DiscoveryMailbox
-
 - DynamicDistributionGroup
-
 - EquipmentMailbox
-
 - GroupMailbox
-
 - GuestMailUser
-
 - LegacyMailbox
-
 - LinkedMailbox
-
 - LinkedRoomMailbox
-
 - MailContact
-
 - MailForestContact
-
 - MailNonUniversalGroup
-
 - MailUniversalDistributionGroup
-
 - MailUniversalSecurityGroup
-
 - MailUser
-
 - PublicFolder
-
 - PublicFolderMailbox
-
 - RemoteEquipmentMailbox
-
 - RemoteRoomMailbox
-
 - RemoteSharedMailbox
-
 - RemoteTeamMailbox
-
 - RemoteUserMailbox
-
 - RoomList
-
 - RoomMailbox
-
 - SchedulingMailbox
-
 - SharedMailbox
-
 - TeamMailbox
-
 - UserMailbox
 
 You can specify multiple values separated by commas.
@@ -594,7 +544,7 @@ The value of the RecipientType parameter affects the values that you can use for
 Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -610,7 +560,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -622,31 +572,24 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following properties:
 
 - Name
-
 - DisplayName
-
 - Alias
-
 - City
-
 - FirstName
-
 - LastName
-
 - Office
-
 - ServerLegacyDN
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

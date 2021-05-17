@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-RemoteMailbox
@@ -23,66 +22,131 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default
 ```
-New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String> [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String>
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Room
 ```
 New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Equipment
 ```
 New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Shared
 ```
 New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AccountDisabled
 ```
 New-RemoteMailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -99,7 +163,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
+$Credentials = Get-Credential
+New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
 ```
 
 This example creates an on-premises mail user and its associated mailbox in the service. The remote routing address doesn't need to be specified because mail flow between the on-premises organization and the service has been configured. Using this configuration, the New-RemoteMailbox cmdlet automatically calculates the SMTP address of the mailbox to be used with the RemoteRoutingAddress parameter. This example also assumes directory synchronization has been configured.
@@ -110,7 +175,8 @@ After the new mail user is created, directory synchronization synchronizes the n
 
 ### Example 2
 ```powershell
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
+$Credentials = Get-Credential
+New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
 ```
 
 This example does the following steps:
@@ -124,6 +190,22 @@ Creates an archive mailbox in the service for the mailbox.
 As in Example 1, this example assumes that mail flow and directory synchronization have been properly configured.
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies the unique name of the on-premises mail user and the associated mailbox in the service. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AccountDisabled
 The AccountDisabled switch specifies whether to create the mail user in a disabled state. You don't have to specify a value with this switch.
@@ -156,22 +238,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the unique name of the on-premises mail user and the associated mailbox in the service. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -247,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
 
 ```yaml
 Type: String
@@ -275,17 +341,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ACLableSyncedObjectEnabled
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -297,44 +378,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ArbitrationMailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -362,8 +405,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -483,18 +525,13 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -515,7 +552,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -539,11 +575,8 @@ The OnPremisesOrganizationalUnit parameter specifies the organizational unit (OU
 Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 This parameter has no effect on the mailbox in the service.
@@ -581,7 +614,6 @@ Accept wildcard characters: False
 The RemotePowerShellEnabled parameter specifies whether the user can connect to Exchange using remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell on Exchange servers, or to use Windows PowerShell open and import a remote PowerShell session to Exchange. Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell on the local Exchange server. Valid values are:
 
 - $true: The user can use remote PowerShell. This is the default value.
-
 - $false: The user can't use remote PowerShell.
 
 ```yaml
@@ -598,7 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteRoutingAddress
-The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that this user is associated with. This address is created automatically when the service is initially configured in the format of \<your domain\>.mail.onmicrosoft.com.
+The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that this user is associated with. This address is created automatically when the service is initially configured in the format of `<your domain>.mail.onmicrosoft.com`.
 
 If you've configured mail flow between the on-premises organization and the service, such as in a hybrid deployment, you don't need to specify this parameter. The remote routing address is calculated automatically and assigned to the email address policy for the on-premises organization by the Hybrid Configuration wizard.
 
@@ -619,7 +651,6 @@ Accept wildcard characters: False
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
-
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
@@ -636,7 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, } and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -655,9 +686,7 @@ Accept wildcard characters: False
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
-
 - Internal: Notify senders in the organization when their messages aren't approved.
-
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
@@ -683,22 +712,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

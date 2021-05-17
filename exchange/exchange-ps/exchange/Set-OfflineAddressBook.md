@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OfflineAddressBook
@@ -77,9 +76,7 @@ This example changes the organization mailbox that's responsible for generating 
 The Identity parameter specifies the OAB that you want to modify. You can use any value that uniquely identifies the OAB. For example:
 
 - Name or \\Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -99,12 +96,10 @@ Accept wildcard characters: False
 The AddressLists parameter specifies the address lists or global address lists that are included in the OAB. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can find the identify values of address lists and global address lists by using the Get-AddressList and Get-GlobalAddressList cmdlets.
 
@@ -140,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredAttributes
-The ConfiguredAttributes parameter specifies the recipient MAPI properties that are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
+The ConfiguredAttributes parameter specifies the recipient MAPI properties that are available in the OAB. This parameter uses the syntax: `"Name1,Type1","Name2,Type2",..."NameN,TypeN"` where Name is the name of the MAPI property (for example, MobileTelephoneNumber), and Type is the value ANR (ambiguous name resolution), Value, or Indicator.
 
 To reset this parameter back to the default values, use the UseDefaultAttributes switch.
 
@@ -160,8 +155,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -233,23 +227,14 @@ This parameter is available only in on-premises Exchange.
 The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 The default value for this parameter is the organization mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}.
@@ -275,7 +260,6 @@ This parameter is available only in on-premises Exchange.
 The GlobalWebDistributionEnabled parameter specifies whether all OAB virtual directories in the organization can accept requests to download the OAB. These locations are advertised by the Autodiscover service. Valid values are:
 
 - $true: Any OAB virtual directory in the organization can accept requests to download the OAB. You can't use this setting with the VirtualDirectories parameter.
-
 - $false: Only the OAB virtual directories that are specified by the VirtualDirectories parameter accept requests to download the OAB. This is the default value.
 
 In Exchange 2013 CU7 or later, we recommend that you use the value $true for this parameter. The Client Access services on any Mailbox server can proxy incoming OAB download requests to the correct location.
@@ -297,7 +281,6 @@ Accept wildcard characters: False
 The IsDefault parameter specifies whether the OAB is used by all mailboxes and mailbox databases that don't have an OAB specified. Valid values are:
 
 - $true: The OAB is the default OAB.
-
 - $false: The OAB is isn't the default OAB.
 
 ```yaml
@@ -402,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDistributionEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is to be distributed via public folders. Setting the PublicFolderDistributionEnabled parameter to a value of $true sets the OAB to be distributed via public folders. The default value is $true.
 
@@ -420,20 +403,18 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in Exchange 2010.
 
-Note: In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
+In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -445,18 +426,16 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
 
-Note: In Exchange Online, the read only value of this property is displayed in Coordinated Universal Time (UTC).
+**Note**: In Exchange Online, the read only value of this property is displayed in Coordinated Universal Time (UTC).
 
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -471,7 +450,6 @@ This parameter is available only in on-premises Exchange.
 The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
 
 - $true: The OAB is distributed to all other organization mailboxes.
-
 - $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
 
 The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
@@ -546,13 +524,11 @@ The VirtualDirectories parameter specifies the OAB virtual directories that acce
 
 You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
-
+- Name or Server\\Name
 - Distinguished name (DN)
-
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 The default value of this parameter is the Client Access services (frontend) and backend OAB virtual directories on the Mailbox server that holds the OAB generation mailbox (the GeneratingMailbox parameter or SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}) when you created the OAB (for example, Mailbox01\\OAB (Default Web Site),Mailbox01\\OAB (Exchange Back End).
 
@@ -593,7 +569,6 @@ Accept wildcard characters: False
 The ZipOabFilesBeforeUploading specifies whether to use ZIP file compression on the OAB files before uploading them to the server. Valid values are:
 
 - $true: ZIP the OAB files.
-
 - $false: Don't ZIP the OAB files. This is the default value.
 
 ```yaml

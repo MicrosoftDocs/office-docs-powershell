@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/New-ComplianceRetentionEvent
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-ComplianceRetentionEvent
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-ComplianceRetentionEvent
@@ -26,12 +25,15 @@ New-ComplianceRetentionEvent -Name <String>
  [-AssetId <String>]
  [-Comment <String>]
  [-Confirm]
+ [-DomainController <Fqdn>]
  [-EventDateTime <DateTime>]
  [-EventTags <MultiValuedProperty>]
  [-EventType <ComplianceRuleIdParameter>]
  [-ExchangeAssetIdQuery <String>]
+ [-PreviewOnly]
  [-SharePointAssetIdQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,9 +49,7 @@ New-ComplianceRetentionEvent -Name "Research Project Employees" -EventTag 80e0d6
 This example creates a compliance retention event named Research Project Employees with the following settings:
 
 - EventTag: 80e0d620-13ea-4ed9-b6a6-aa883278bcca
-
 - EventTpe: e823b782-9a07-4e30-8091-034fc01f9347
-
 - SharePointAssetIDQuery: EmployeeNumber:123456 EmployeeNumber:456789
 
 ## PARAMETERS
@@ -61,7 +61,7 @@ The Name parameter specifies a unique name for the compliance retention event. T
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -74,16 +74,14 @@ Accept wildcard characters: False
 The AssetId parameter specifies the Property:Value pair found in the properties of SharePoint or OneDrive for Business documents that's used for retention. For example:
 
 - Product codes that you can use to retain content for only a specific product.
-
 - Project codes that you can use to retain content for only a specific project.
-
 - Employee IDs that you can use to retain content for only a specific person.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -99,7 +97,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -111,15 +109,30 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -137,7 +150,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -155,7 +168,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -171,7 +184,7 @@ The EventType parameter specifies the GUID value of the event that will start th
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -187,7 +200,23 @@ The ExchangeAssetIdQuery parameter specifies the keywords that are used to scope
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewOnly
+{{ Fill PreviewOnly Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -203,7 +232,7 @@ The SharePointAssetIdQuery parameter specifies one or more the Property:Value pa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -219,7 +248,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-umcallroutersettings
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-UMCallRouterSettings
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-UMCallRouterSettings
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallRouterSettings [[-Server] <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMCallRouterSettings [[-Server] <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,11 +53,8 @@ This example displays detailed information for the Microsoft Exchange Unified Me
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
@@ -65,7 +63,7 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: 1
@@ -81,7 +79,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

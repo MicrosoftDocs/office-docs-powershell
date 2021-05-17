@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AdvancedThreatProtectionTrafficReport
@@ -17,36 +16,40 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-AdvancedThreatProtectionTrafficReport cmdlet to view the results of Safe Attachments and Safe Links actions in your cloud-based organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-AdvancedThreatProtectionTrafficReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-DisplayBy <String>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-MalwareName <MultiValuedProperty>]
- [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-AdvancedThreatProtectionTrafficReport [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-DisplayBy <String>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-MalwareName <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity.
 
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 For the reporting period you specify, the cmdlet returns the following information:
 
 - Domain
-
 - Date
-
 - Event Type
-
 - MalwareName
-
 - Action
-
 - Message Count
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -66,21 +69,13 @@ This example returns the results of Safe Attachments and Safe Links actions duri
 The Action parameter filters the results by the action taken on the attachment or link. Valid values are:
 
 - Allow
-
 - AllowRedirect
-
 - BlockAccess
-
 - BlockRedirect
-
 - BypassMessage
-
 - BypassMessageSystem
-
 - ContentReplaced
-
 - InfectedAllowed
-
 - ReplaceRedirect
 
 ```yaml
@@ -113,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -132,7 +127,6 @@ Accept wildcard characters: False
 The DisplayBy parameter specifies how the information in the report is organized. Valid values are:
 
 - Action (This is the default value)
-
 - MalwareName
 
 ```yaml
@@ -183,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget EventTypes. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -200,37 +194,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MalwareName
 The MalwareName parameter filters the results by malware payload. Valid values are:
 
 - Excel
-
 - EXE
-
 - Flash
-
 - Others
-
 - PDF
-
 - PowerPoint
-
 - URL
 
 You can specify multiple values separated by commas.

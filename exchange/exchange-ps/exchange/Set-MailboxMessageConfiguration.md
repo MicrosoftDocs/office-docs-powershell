@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MailboxMessageConfiguration
@@ -24,26 +23,49 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-AfterMoveOrDeleteBehavior <AfterMoveOrDeleteBehavior>]
- [-AlwaysShowBcc <Boolean>] [-AlwaysShowFrom <Boolean>] [-AutoAddSignature <Boolean>]
+ [-AlwaysShowBcc <Boolean>]
+ [-AlwaysShowFrom <Boolean>]
+ [-AutoAddSignature <Boolean>]
+ [-AutoAddSignatureOnMobile <Boolean>]
+ [-AutoAddSignatureOnReply <Boolean>]
+ [-CheckForForgottenAttachments <Boolean>]
  [-Confirm]
  [-ConversationSortOrder <ConversationSortOrder>]
- [-DefaultFontColor <String>] [-DefaultFontFlags <FontFlags>]
- [-DefaultFontName <String>] [-DefaultFontSize <Int32>] [-DefaultFormat <MailFormat>]
- [-DomainController <Fqdn>] [-EmptyDeletedItemsOnLogoff <Boolean>] [-HideDeletedItems <Boolean>]
- [-IgnoreDefaultScope] [-NewItemNotification <NewItemNotification>]
- [-PreviewMarkAsReadBehavior <PreviewMarkAsReadBehavior>] [-PreviewMarkAsReadDelaytime <Int32>]
- [-ReadReceiptResponse <ReadReceiptResponse>] [-SendAddressDefault <String>]
- [-ShowConversationAsTree <Boolean>] [-SignatureHtml <String>] [-SignatureText <String>] [-WhatIf]
- [-AutoAddSignatureOnMobile <Boolean>] [-CheckForForgottenAttachments <Boolean>]
- [-EmailComposeMode <EmailComposeMode>] [-SignatureTextOnMobile <String>]
- [-UseDefaultSignatureOnMobile <Boolean>] [-AutoAddSignatureOnReply <Boolean>]
- [-GlobalReadingPanePosition <MailReadingPanePosition>] [-IsFavoritesFolderTreeCollapsed <Boolean>]
- [-IsMailRootFolderTreeCollapsed <Boolean>] [-IsReplyAllTheDefaultResponse <Boolean>]
- [-LinkPreviewEnabled <Boolean>] [-MailFolderPaneExpanded <Boolean>]
+ [-DefaultFontColor <String>]
+ [-DefaultFontFlags <FontFlags>]
+ [-DefaultFontName <String>]
+ [-DefaultFontSize <Int32>]
+ [-DefaultFormat <MailFormat>]
+ [-DomainController <Fqdn>]
+ [-EchoGroupMessageBackToSubscribedSender <Boolean>]
+ [-EmailComposeMode <EmailComposeMode>]
+ [-EmptyDeletedItemsOnLogoff <Boolean>]
+ [-GlobalReadingPanePosition <MailReadingPanePosition>]
+ [-HideDeletedItems <Boolean>]
+ [-IgnoreDefaultScope]
+ [-IsFavoritesFolderTreeCollapsed <Boolean>]
+ [-IsMailRootFolderTreeCollapsed <Boolean>]
+ [-IsReplyAllTheDefaultResponse <Boolean>]
+ [-LinkPreviewEnabled <Boolean>]
+ [-MailFolderPaneExpanded <Boolean>]
  [-NavigationPaneViewOption <NavigationPaneView>]
- [-PreferAccessibleContent <Boolean>] [-ShowPreviewTextInListView <Boolean>]
- [-ShowReadingPaneOnFirstLoad <Boolean>] [-ShowSenderOnTopInListView <Boolean>]
- [-ShowUpNext <Boolean>] [<CommonParameters>]
+ [-NewItemNotification <NewItemNotification>]
+ [-PreferAccessibleContent <Boolean>]
+ [-PreviewMarkAsReadBehavior <PreviewMarkAsReadBehavior>]
+ [-PreviewMarkAsReadDelaytime <Int32>]
+ [-ReadReceiptResponse <ReadReceiptResponse>]
+ [-SendAddressDefault <String>]
+ [-ShowConversationAsTree <Boolean>]
+ [-ShowPreviewTextInListView <Boolean>]
+ [-ShowReadingPaneOnFirstLoad <Boolean>]
+ [-ShowSenderOnTopInListView <Boolean>]
+ [-ShowUpNext <Boolean>]
+ [-SignatureHtml <String>]
+ [-SignatureText <String>]
+ [-SignatureTextOnMobile <String>]
+ [-UseDefaultSignatureOnMobile <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,23 +95,14 @@ This example sets the compose email message form to always show the Bcc field in
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -109,9 +122,7 @@ Accept wildcard characters: False
 The AfterMoveOrDeleteBehavior parameter specifies the behavior after moving or deleting an email item in Outlook on the web. You can use the following values:
 
 - OpenPreviousItem
-
 - OpenNextItem
-
 - ReturnToView
 
 The default value is OpenNextItem.
@@ -169,7 +180,6 @@ Accept wildcard characters: False
 The AutoAddSignature parameter specifies whether to automatically add signatures to new email messages created in Outlook on the web. Valid values are:
 
 - $true: Email signatures are automatically added to new messages.
-
 - $false: Email signatures aren't automatically added to new messages.
 
 The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
@@ -187,11 +197,69 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoAddSignatureOnMobile
+The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
+
+Valid input for this parameter is $true or $false. The default value is $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoAddSignatureOnReply
+The AutoAddSignature parameter specifies whether to automatically add signatures to reply email messages created in Outlook on the web. Valid values are:
+
+- $true: Email signatures are automatically added to reply messages.
+- $false: Email signatures aren't automatically added to reply messages.
+
+The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckForForgottenAttachments
+The CheckForForgottenAttachments parameter shows or hides the attachment warning prompt when the user creates messages in Outlook on the web.
+
+Valid input for this parameter is $true or $false. The default value is $true.
+
+For example, the user creates a message that includes the text "Please see the attached Word document", but the user doesn't attach a file, and clicks Send. If this value is set to $true, the user gets a warning prompt so they can go back to the message and attach a file. If this value is set to $false, the user doesn't get the warning prompt.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -211,17 +279,11 @@ Accept wildcard characters: False
 The ConversationSortOrder parameter specifies the sorting of messages in the reading pane in Conversation view for the user in Outlook on the web. You can use the following values:
 
 - Chronological
-
 - Tree
-
 - NewestOnTop
-
 - NewestOnBottom
-
 - ChronologicalNewestOnTop
-
 - ChronologicalNewestOnBottom
-
 - TreeNewestOnBottom
 
 The default value is ChronologicalNewestOnTop.
@@ -261,13 +323,9 @@ Accept wildcard characters: False
 The DefaultFontFlags parameter specifies the default text effect when the user creates messages in Outlook on the web. You can use the following values:
 
 - Normal
-
 - Bold
-
 - Italic
-
 - Underline
-
 - All
 
 The default value is Normal.
@@ -355,6 +413,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EchoGroupMessageBackToSubscribedSender
+This parameter is available only in the cloud-based service.
+
+{{ Fill EchoGroupMessageBackToSubscribedSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailComposeMode
+This parameter is available or functional only in on-premises Exchange.
+
+The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
+
+- Inline: New messages and replies are created in the preview pane. This is the default value.
+- SeparateForm: New messages and replies are created in a new browser window.
+
+```yaml
+Type: EmailComposeMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EmptyDeletedItemsOnLogoff
 The EmptyDeletedItemsOnLogoff parameter specifies whether to delete items from the Deleted Items folder when the user logs out of Outlook on the web.
 
@@ -365,6 +462,26 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GlobalReadingPanePosition
+The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
+
+- Off
+- Bottom
+- Right (This is the default value)
+
+```yaml
+Type: MailReadingPanePosition
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -397,7 +514,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -413,19 +529,133 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsFavoritesFolderTreeCollapsed
+The IsFavoritesFolderTreeCollapsed parameter specifies whether to collapse the Favorites folder tree by default in Outlook on the web. Valid values are:
+
+- $true: The Favorites folder tree is collapsed by default.
+- $false: The Favorites folder tree isn't collapsed by default. This is the default value
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsMailRootFolderTreeCollapsed
+The IsMailRootFolderTreeCollapsed parameter specifies whether to collapse the Mail root folder tree by default in Outlook on the web. Valid values are:
+
+- $true: The Mail root folder tree is collapsed by default.
+- $false: The Mail root folder tree isn't collapsed by default. This is the default value
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsReplyAllTheDefaultResponse
+The IsReplyAllTheDefaultResponse parameter specifies whether Reply All is the default response for messages in Outlook on the web. Valid values are:
+
+- $true: Reply All is the default response option for messages in the reading pane. This is the default value.
+- $false: Reply All isn't the default response option for messages in the reading pane.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LinkPreviewEnabled
+The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is enabled for the user in Outlook on the web. Valid values are:
+
+- $true: Link preview of URLs in email messages is enabled for the user. This is the default value.
+- $false: Link preview of URLs in email messages is disabled for the user.
+
+This parameter depends on the value of the LinkPreviewEnabled parameter on the Set-OrganizationConfig cmdlet, which controls the link preview behavior in Outlook on the web for the entire organization. If link preview is disabled for the organization, users can't enable it for themselves.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailFolderPaneExpanded
+The MailFolderPaneExpanded parameter specifies whether the Mail folder pane is expanded by default in Outlook on the web. Valid values are:
+
+- $true: The Mail folder pane is expanded by default. This is the default value.
+- $false: The Mail folder pane isn't expanded by default.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NavigationPaneViewOption
+The NavigationPaneViewOption parameter specifies the default navigation pane view in Outlook on the web. Valid values are:
+
+- Default: This is the default value
+- MailFolders
+- PeopleFolders
+- Groups
+- PinnedMailFolders
+
+```yaml
+Type: NavigationPaneView
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NewItemNotification
 The NewItemNotification parameter specifies how to provide notification for the arrival of new items for the user in Outlook on the web. You can use the following values:
 
 - Sound
-
 - EMailToast
-
 - VoiceMailToast
-
 - FaxToast
-
 - None
-
 - All
 
 The default value is All.
@@ -443,13 +673,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreferAccessibleContent
+The PreferAccessibleContent parameter specifies whether to prefer accessible content in Outlook on the web. Valid values are:
+
+- $true: Prefer accessible content.
+- $false: Don't prefer accessible content. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreviewMarkAsReadBehavior
 The PreviewMarkAsReadBehavior parameter specifies the options for marking an item as Read in the reading pane for the user in Outlook on the web. You can use the following values:
 
 - Delayed: This value uses the delay interval specified by the PreviewMarkAsReadDelaytime parameter.
-
 - OnSelectionChange
-
 - Never
 
 The default value is OnSelectionChange.
@@ -491,9 +738,7 @@ Accept wildcard characters: False
 The ReadReceiptResponse parameter specifies how to respond to requests for read receipts for the user in Outlook on the web. You can use the following values:
 
 - DoNotAutomaticallySend
-
 - AlwaysSend
-
 - NeverSend
 
 The default value is DoNotAutomaticallySend.
@@ -519,18 +764,15 @@ The SendAddressDefault parameter specifies the default From email address when t
 You can use one of the following values:
 
 - Blank, which is represented by the value $null. This indicates no default From address is specified.
-
 - The user's primary email address. For example, bob@contoso.com.
-
 - The GUID of a POP, IMAP, or Hotmail subscription that's configured on the user's mailbox.
 
 By default, no default From address is specified on the mailbox. When no default From address is specified, the default behavior is:
 
 - The primary email address on the mailbox is used for all new messages.
-
 - The To address of the incoming message is used as the From address for all replies or forwarded messages.
 
-You can find the available values for SendAddressDefault on a mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
+You can find the available values for SendAddressDefault on a mailbox by running the command `Get-SendAddress -Mailbox <MailboxIdentity>`.
 
 ```yaml
 Type: String
@@ -555,6 +797,82 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowPreviewTextInListView
+The ShowPreviewTextInListView parameter specifies whether to show preview text for messages in list view in Outlook on the web. Valid values are:
+
+- $true: Show preview text for messages in list view. This is the default value.
+- $false: Don't show preview text for messages in list view.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowReadingPaneOnFirstLoad
+The ShowReadingPaneOnFirstLoad parameter specifies whether to show the reading pane when the user opens in Outlook on the web for the first time. Valid values are:
+
+- $true: Show the reading pane when the user opens Outlook on the web for the first time.
+- $false: Don't show the reading pane when the user opens Outlook on the web for the first time. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowSenderOnTopInListView
+The ShowSenderOnTopInListView parameter specifies whether to show the message sender on top in list view in Outlook on the web. Valid values are:
+
+- $true: Show the message sender on top in list view. This is the default value.
+- $false: Don't show the message sender on top in list view.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowUpNext
+The ShowUpNext parameter specifies whether the next upcoming event should be shown above the mail list view in Outlook on the web. Valid values are:
+
+- $true: Show the next upcoming event above the mail list view. This is the default value.
+- $false: Don't show the next upcoming event above the mail list view.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -599,80 +917,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoAddSignatureOnMobile
-The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CheckForForgottenAttachments
-The CheckForForgottenAttachments parameter shows or hides the attachment warning prompt when the user creates messages in Outlook on the web.
-
-Valid input for this parameter is $true or $false. The default value is $true.
-
-For example, the user creates a message that includes the text "Please see the attached Word document", but the user doesn't attach a file, and clicks Send. If this value is set to $true, the user gets a warning prompt so they can go back to the message and attach a file. If this value is set to $false, the user doesn't get the warning prompt.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmailComposeMode
-The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
-
-- Inline: New messages and replies are created in the preview pane. This is the default value.
-
-- SeparateForm: New messages and replies are created in a new browser window.
-
-```yaml
-Type: EmailComposeMode
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SignatureTextOnMobile
 The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
 
@@ -709,270 +953,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoAddSignatureOnReply
-The AutoAddSignature parameter specifies whether to automatically add signatures to reply email messages created in Outlook on the web. Valid values are:
-
-- $true: Email signatures are automatically added to reply messages.
-
-- $false: Email signatures aren't automatically added to reply messages.
-
-The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalReadingPanePosition
-The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
-
-- Off
-
-- Bottom
-
-- Right (This is the default value)
-
-```yaml
-Type: MailReadingPanePosition
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsFavoritesFolderTreeCollapsed
-The IsFavoritesFolderTreeCollapsed parameter specifies whether to collapse the Favorites folder tree by default in Outlook on the web. Valid values are:
-
-- $true: The Favorites folder tree is collapsed by default.
-
-- $false: The Favorites folder tree isn't collapsed by default. This is the default value
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsMailRootFolderTreeCollapsed
-The IsMailRootFolderTreeCollapsed parameter specifies whether to collapse the Mail root folder tree by default in Outlook on the web. Valid values are:
-
-- $true: The Mail root folder tree is collapsed by default.
-
-- $false: The Mail root folder tree isn't collapsed by default. This is the default value
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsReplyAllTheDefaultResponse
-The IsReplyAllTheDefaultResponse parameter specifies whether Reply All is the default response for messages in Outlook on the web. Valid values are:
-
-- $true: Reply All is the default response option for messages in the reading pane. This is the default value.
-
-- $false: Reply All isn't the default response option for messages in the reading pane.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LinkPreviewEnabled
-The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is enabled for the user in Outlook on the web. Valid values are:
-
-- $true: Link preview of URLs in email messages is enabled for the user. This is the default value.
-
-- $false: Link preview of URLs in email messages is disabled for the user.
-
-This parameter depends on the value of the LinkPreviewEnabled parameter on the Set-OrganizationConfig cmdlet, which controls the link preview behavior in Outlook on the web for the entire organization. If link preview is disabled for the organization, users can't enable it for themselves.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailFolderPaneExpanded
-The MailFolderPaneExpanded parameter specifies whether the Mail folder pane is expanded by default in Outlook on the web. Valid values are:
-
-- $true: The Mail folder pane is expanded by default. This is the default value.
-
-- $false: The Mail folder pane isn't expanded by default.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NavigationPaneViewOption
-The NavigationPaneViewOption parameter specifies the default navigation pane view in Outlook on the web. Valid values are:
-
-- Default: This is the default value
-
-- MailFolders
-
-- PeopleFolders
-
-- Groups
-
-- PinnedMailFolders
-
-```yaml
-Type: NavigationPaneView
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreferAccessibleContent
-The PreferAccessibleContent parameter specifies whether to prefer accessible content in Outlook on the web. Valid values are:
-
-- $true: Prefer accessible content.
-
-- $false: Don't prefer accessible content. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowPreviewTextInListView
-The ShowPreviewTextInListView parameter specifies whether to show preview text for messages in list view in Outlook on the web. Valid values are:
-
-- $true: Show preview text for messages in list view. This is the default value.
-
-- $false: Don't show preview text for messages in list view.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowReadingPaneOnFirstLoad
-The ShowReadingPaneOnFirstLoad parameter specifies whether to show the reading pane when the user opens in Outlook on the web for the first time. Valid values are:
-
-- $true: Show the reading pane when the user opens Outlook on the web for the first time.
-
-- $false: Don't show the reading pane when the user opens Outlook on the web for the first time. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowSenderOnTopInListView
-The ShowSenderOnTopInListView parameter specifies whether to show the message sender on top in list view in Outlook on the web. Valid values are:
-
-- $true: Show the message sender on top in list view. This is the default value.
-
-- $false: Don't show the message sender on top in list view.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowUpNext
-The ShowUpNext parameter specifies whether the next upcoming event should be shown above the mail list view in Outlook on the web. Valid values are:
-
-- $true: Show the next upcoming event above the mail list view. This is the default value.
-
-- $false: Don't show the next upcoming event above the mail list view.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

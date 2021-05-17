@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-HybridMailflowDatacenterIPs
@@ -15,11 +14,9 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: This cmdlet has been deprecated and is no longer used.
+This cmdlet has been deprecated and is no longer used.
 
-Use the Get-HybridMailflowDatacenterIPs cmdlet to retrieve the IP addresses of the Microsoft Exchange Online Protection (EOP) service data centers.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,9 +27,7 @@ Get-HybridMailflowDatacenterIPs [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-HybridMailflowDatacenterIPs cmdlet supports hybrid deployments and lists the IP addresses of EOP service data centers that support hybrid deployments. The list isn't specific to any on-premises Exchange organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+This cmdlet has been deprecated and is no longer used.
 
 ## EXAMPLES
 
@@ -41,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-HybridMailflowDatacenterIPs
 ```
 
-This example returns IP address information for EOP service data centers that support hybrid deployments.
+This cmdlet has been deprecated and is no longer used.
 
 ## PARAMETERS
 

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-ManagedFolderMailboxPolicy
@@ -22,8 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,24 +73,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see [Multi-Tenant Support](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff923272(v=exchg.141)).
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

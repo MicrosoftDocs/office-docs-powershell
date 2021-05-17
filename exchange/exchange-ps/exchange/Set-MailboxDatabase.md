@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MailboxDatabase
@@ -58,7 +57,8 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
  [-RecoverableItemsWarningQuota <Unlimited>]
  [-RetainDeletedItemsUntilBackup <Boolean>]
  [-RpcClientAccessServer <ClientAccessServerOrArrayIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,9 +88,7 @@ For more information about RPC access through Client Access servers, see [Set-Rp
 The Identity parameter specifies the mailbox database that you want to modify. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -110,7 +108,6 @@ Accept wildcard characters: False
 The AllowFileRestore parameter specifies whether to allow a database to be restored from a backup. Valid values are:
 
 - $true: You can replace an existing database with a newly-created database. You can mount a database that doesn't match the database entry in Active Directory.
-
 - $false: You can't replace an existing database with a newly-created database. You can't mount a database that doesn't match the database entry in Active Directory. This is the default value.
 
 ```yaml
@@ -130,7 +127,6 @@ Accept wildcard characters: False
 The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
 
 - $true: No alert is issued when there's only one healthy copy of the replicated database.
-
 - $false: An alert is issued when there's only one healthy copy of the replicated database. This is the default value.
 
 ```yaml
@@ -166,7 +162,6 @@ Accept wildcard characters: False
 The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Storage Engine (ESE) performs database maintenance. Valid values are:
 
 - $true: The mailbox database reads the object during database mount and initializes the database to perform background maintenance. This is the default value.
-
 - $false: The mailbox database reads the object during database mount and initializes the database without the option to perform background maintenance.
 
 ```yaml
@@ -190,13 +185,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -222,7 +213,6 @@ Accept wildcard characters: False
 The CircularLoggingEnabled parameter specifies whether circular logging is enabled for the database. Valid values are:
 
 - $true: Circular logging is enabled.
-
 - $false: Circular logging is disabled. This is the default value.
 
 For more information about circular logging, see [Exchange Native Data Protection](https://docs.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
@@ -243,8 +233,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -280,19 +269,12 @@ Accept wildcard characters: False
 The DataMoveReplicationConstraint parameter specifies the throttling behavior for high availability mailbox moves. Valid values are:
 
 - None: Moves shouldn't be throttled to ensure high availability. Use this setting if the database isn't part of a database availability group (DAG).
-
 - AllCopies (Exchange 2013 or earlier): If the database is replicated, all passive mailbox database copies must have the most recent changes synchronized.
-
 - AllDatacenters (Exchange 2013 or earlier): If the database is replicated to multiple Active Directory sites, at least one passive mailbox database copy in each site must have the most recent changes replicated.
-
 - CINoReplication (Exchange 2013 or later): Moves shouldn't be throttled to ensure high availability, but the content indexing service must be up to date.
-
 - CISecondCopy (Exchange 2013 or later): At least one passive mailbox database copy must have the most recent changes synchronized, and the content indexing service must be up to date. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
-
 - CISecondDatacenter (Exchange 2013 or later): At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated, and the content indexing service must be up to date. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
-
 - SecondCopy: At least one passive mailbox database copy must have the most recent changes synchronized. This is the default value. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
-
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
 
 Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see [Active Manager](https://docs.microsoft.com/Exchange/high-availability/database-availability-groups/active-manager).
@@ -371,19 +353,18 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
-This parameter isn't available in Exchange Server 2019.
+This parameter is available or functional only in Exchange 2016 or earlier.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 
 - $true: Exchange Search indexes the mailbox database. This is the default value.
-
 - $false: Exchange Search doesn't index the mailbox database.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -412,7 +393,6 @@ Accept wildcard characters: False
 The IsExcludedFromProvisioning parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases. Valid values are:
 
 - $true: The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-
 - $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
 
 The value is automatically set to $true when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter to $true, and isn't changed back to $false when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter back to $false. In the case of database corruption, you should set the IsExcludedFromProvisioning parameter back to $false only after you fix the corruption issue or recreate the database.
@@ -436,13 +416,11 @@ The IIsExcludedFromProvisioningByOperator parameter specifies whether to exclude
 Valid values are:
 
 - $true: Indicates that you manually excluded the database. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-
 - $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
 
 Note that setting this parameter to the value $true has these additional effects on the database:
 
 - The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
-
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
 
 ```yaml
@@ -464,15 +442,12 @@ The IsExcludedFromProvisioningDueToLogicalCorruption parameter specifies whether
 Valid values are:
 
 - $true: Indicates that you excluded the database due to database corruption. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-
 - $false: This is the default value. The database can be used in new or move mailbox operations when you don't specify the target mailbox database. You should manually configure this value only after the database corruption is fixed, or after the database is recreated.
 
 Note that setting this parameter to the value $true has these additional effects on the database:
 
 - The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
-
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
-
 - The IsExcludedFromProvisioning property is automatically set to $true.
 
 ```yaml
@@ -494,9 +469,7 @@ The IsExcludedFromProvisioningReason parameter specifies the reason why you excl
 This parameter requires a value when you set any of the following parameters to $true:
 
 - IsExcludedFromProvisioning
-
 - IsExcludedFromProvisioningByOperator
-
 - IsSuspendedFromProvisioning
 
 ```yaml
@@ -518,13 +491,9 @@ The IssueWarningQuota parameter specifies the warning threshold for the size of 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -550,13 +519,11 @@ Accept wildcard characters: False
 The IsSuspendedFromProvisioning parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases. Valid values are:
 
 - $true: Indicates that you don't want the exclusion to be permanent. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-
 - $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
 
 Note that setting this parameter to the value $true has these additional effects on the database:
 
 - The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
-
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
 
 ```yaml
@@ -576,15 +543,10 @@ Accept wildcard characters: False
 The JournalRecipient parameter specifies the journal recipient to use for per-database journaling for all mailboxes on the database. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -625,14 +587,12 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The MaintenanceSchedule parameter specifies when maintenance will be performed on the mailbox database. Maintenance includes online defragmentation, removing items that have passed their retention period, removing unused indexes and other cleanup tasks.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -644,16 +604,14 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -684,7 +642,6 @@ Accept wildcard characters: False
 The MountAtStartup parameter specifies whether to mount the mailbox database when the Microsoft Exchange Information Store service starts. Valid values are:
 
 - $true: The database is mounted when the service starts. This is the default value.
-
 - $false: The database isn't mounted when the service starts.
 
 ```yaml
@@ -720,9 +677,7 @@ Accept wildcard characters: False
 The OfflineAddressBook parameter specifies the offline address book that's associated with the mailbox database. You can use any value that uniquely identifies the offline address book. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 By default, this setting is blank ($null).
@@ -746,13 +701,9 @@ The ProhibitSendQuota parameter specifies a size limit for the mailbox. If the m
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -780,13 +731,9 @@ The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. I
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -814,16 +761,14 @@ This parameter is available or functional only in Exchange Server 2010.
 The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use any value that uniquely identifies the public folder database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -837,14 +782,12 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The QuotaNotificationSchedule parameter specifies when quota messages are sent to mailboxes that have reached one of the quota values.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -856,16 +799,14 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -882,13 +823,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -918,13 +855,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -949,13 +882,17 @@ Accept wildcard characters: False
 ### -RetainDeletedItemsUntilBackup
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
-- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
+- $true: Deleted items in mailboxes are kept until the next mailbox database backup. This value could effectively override the deleted DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameters.
 
-- $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
+This settings applies to all mailboxes in the database that don't have their own RetainDeletedItemsUntilBackup value configured.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
-This settings applies to all mailboxes in the database that don't have this value specifically configured.
+**Note**: If you set the value of this parameter to $true when the value of the UseDatabaseRetentionDefaults parameter on a specific mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+
+- Run the following command: `Import-Module ActiveDirectory`.
+- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
 
 ```yaml
 Type: Boolean

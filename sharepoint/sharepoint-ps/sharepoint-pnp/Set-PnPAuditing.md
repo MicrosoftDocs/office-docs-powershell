@@ -1,77 +1,74 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpauditing
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPAuditing
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPAuditing.html
 ---
-
+ 
 # Set-PnPAuditing
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPAuditing.md to change this file.
+
 Set Auditing setting for a site
 
-## SYNTAX 
-
-### Specific flags
-```powershell
-Set-PnPAuditing [-RetentionTime <Int>]
-                [-TrimAuditLog [<SwitchParameter>]]
-                [-EditItems [<SwitchParameter>]]
-                [-CheckOutCheckInItems [<SwitchParameter>]]
-                [-MoveCopyItems [<SwitchParameter>]]
-                [-DeleteRestoreItems [<SwitchParameter>]]
-                [-EditContentTypesColumns [<SwitchParameter>]]
-                [-SearchContent [<SwitchParameter>]]
-                [-EditUsersPermissions [<SwitchParameter>]]
-                [-Connection <SPOnlineConnection>]
-```
+## SYNTAX
 
 ### Enable all
 ```powershell
-Set-PnPAuditing -EnableAll [<SwitchParameter>]
-                [-RetentionTime <Int>]
-                [-TrimAuditLog [<SwitchParameter>]]
-                [-Connection <SPOnlineConnection>]
+Set-PnPAuditing [-EnableAll] [-RetentionTime <Int32>] [-TrimAuditLog] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Disable All
 ```powershell
-Set-PnPAuditing -DisableAll [<SwitchParameter>]
-                [-Connection <SPOnlineConnection>]
+Set-PnPAuditing [-DisableAll] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+### Specific flags
+```powershell
+Set-PnPAuditing [-RetentionTime <Int32>] [-TrimAuditLog] [-EditItems] [-CheckOutCheckInItems] [-MoveCopyItems]
+ [-DeleteRestoreItems] [-EditContentTypesColumns] [-SearchContent] [-EditUsersPermissions]
+ [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPAuditing -EnableAll
 ```
 
 Enables all auditing settings for the current site
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPAuditing -DisableAll
 ```
 
 Disables all auditing settings for the current site
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPAuditing -RetentionTime 7
 ```
 
 Sets the audit log trimming to 7 days, this also enables the automatic trimming of the audit log
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPAuditing -TrimAuditLog
 ```
 
 Enables the automatic trimming of the audit log
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Set-PnPAuditing -RetentionTime 7 -CheckOutCheckInItems -MoveCopyItems -SearchContent
 ```
@@ -94,7 +91,23 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DeleteRestoreItems
@@ -106,7 +119,9 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableAll
@@ -118,7 +133,9 @@ Parameter Sets: Disable All
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EditContentTypesColumns
@@ -130,7 +147,9 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EditItems
@@ -142,7 +161,9 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EditUsersPermissions
@@ -154,7 +175,9 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableAll
@@ -166,7 +189,9 @@ Parameter Sets: Enable all
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MoveCopyItems
@@ -178,19 +203,23 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RetentionTime
 Set the retention time
 
 ```yaml
-Type: Int
-Parameter Sets: Specific flags, Enable all
+Type: Int32
+Parameter Sets: Enable all, Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SearchContent
@@ -202,7 +231,9 @@ Parameter Sets: Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TrimAuditLog
@@ -210,25 +241,16 @@ Trim the audit log
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Specific flags, Enable all
+Parameter Sets: Enable all, Specific flags
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

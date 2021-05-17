@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # New-ManagedFolder
@@ -32,34 +31,32 @@ New-ManagedFolder [-Name] <String> -DefaultFolderType <DefaultManagedFolderType>
  [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>]
  [-MustDisplayCommentEnabled <Boolean>]
- [-Organization <OrganizationIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ManagedCustomFolder
 ```
-New-ManagedFolder [-Name] <String> -FolderName <String> [-LocalizedFolderName <MultiValuedProperty>] [-StorageQuota <Unlimited>]
+New-ManagedFolder [-Name] <String> -FolderName <String>
+ [-LocalizedFolderName <MultiValuedProperty>]
+ [-StorageQuota <Unlimited>]
  [-BaseFolderOnly <Boolean>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>]
  [-MustDisplayCommentEnabled <Boolean>]
- [-Organization <OrganizationIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-ManagedFolder cmdlet creates a new managed folder in Active Directory. After a new managed folder object is created, the following steps need to be taken to use it for MRM:
 
 - Create managed content settings for the folder. For information, see [Create Managed Content Settings](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/aa997968(v=exchg.141)).
-
 - Link the managed folder to an existing managed folder mailbox policy or create a managed folder mailbox policy and link the managed folder to it.
-
 - Apply a managed folder mailbox policy to a user's mailbox. For information, seeApply a Managed Folder Mailbox Policy to Users.
-
 - Ensure the managed folder assistant is scheduled or run the managed folder assistant manually. For information about scheduling the managed folder assistant, see [Configure the Managed Folder Assistant](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123958(v=exchg.141)). When the managed folder assistant runs, it configures default folders as managed and creates any managed custom folders in the user's mailbox with the settings specified.
-
 - For more information about the steps to implement MRM in Microsoft Exchange Server 2010, see [Deploying Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123548(v=exchg.141)).
 
 By default, managed custom folders are created with this cmdlet. However, you can also create additional copies of managed default folders using the DefaultFolderType parameter to specify which type of default folder to create (for example, an additional Inbox folder). When you create multiple copies of a managed default folder, you can assign different content settings to each one. For example, you could have two Inbox folders, one named InboxSixMonths and another named InboxOneYear. Then, you could assign a retention time of six months to the first folder and one year to the second folder with the New-ManagedContentSettings cmdlet (or using the New Managed Content Settings wizard in the Exchange Management Console). You must assign a unique name (using the Name parameter) to each of the managed default folders that you create. Users, however, always see the unaltered default folder name. In the example, whether users are assigned an InboxSixMonths folder or an InboxOneYear folder, the Inbox that they see in their mailbox is labeled Inbox. Although the folder names that users see in their mailboxes can be reassigned for managed custom folders (using the Set-ManagedFolder command FolderName parameter), the folder names seen by users for managed default folders can't be changed.
@@ -103,35 +100,20 @@ If a value isn't entered for the DefaultFolderType parameter, it's treated as a 
 The default folder types that you can specify are:
 
 - Calendar
-
 - Contacts
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - JunkEmail
-
 - Journal
-
 - Notes
-
 - Outbox
-
 - SentItems
-
 - Tasks
-
 - All
-
 - ManagedCustomFolder
-
 - RssSubscriptions
-
 - SyncIssues
-
 - ConversationHistory
 
 ```yaml
@@ -218,8 +200,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -288,24 +269,6 @@ The MustDisplayCommentEnabled parameter specifies whether to set a flag used by 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see [Multi-Tenant Support](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff923272(v=exchg.141)).
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

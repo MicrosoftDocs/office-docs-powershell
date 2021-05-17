@@ -7,12 +7,13 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-OutlookProtectionRule
 
 ## SYNOPSIS
+**Note**: This cmdlet is no longer supported in the cloud-based service.
+
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-OutlookProtectionRule cmdlet to retrieve Microsoft Outlook protection rules configured in an organization.
@@ -22,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OutlookProtectionRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OutlookProtectionRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

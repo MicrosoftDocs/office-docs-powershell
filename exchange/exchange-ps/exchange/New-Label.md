@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-Label
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-Label cmdlet to create sensitivity labels in your organization.
 
@@ -43,10 +42,12 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-ApplyWaterMarkingFontName <String>]
  [-ApplyWaterMarkingFontSize <System.Int32>]
  [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
+ [-ColumnAssetCondition <String>]
  [-ApplyWaterMarkingText <String>]
  [-Comment <String>]
  [-Conditions <MultiValuedProperty>]
  [-Confirm]
+ [-ContentType <MipLabelContentType>]
  [-EncryptionAipTemplateScopes <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
@@ -62,7 +63,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-EncryptionTemplateId <String>]
  [-Identity <MasterIdParameter>]
  [-LabelActions <MultiValuedProperty>]
- [-LocaleSettings <<MultiValuedProperty>]
+ [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-Setting <PswsHashtable>]
@@ -74,6 +75,8 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
+ [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
+ [-SqlAssetCondition <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -99,7 +102,7 @@ The Name parameter specifies the unique name for the sensitivity label. The maxi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -115,7 +118,7 @@ The DisplayName parameter specifies the display name for the sensitivity label. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -131,7 +134,7 @@ The ToolTip parameter specifies the default tooltip and sensitivity label descri
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -141,13 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables client-specific features and capabilities for a sensitivity label. The settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For more information how to configure these advanced settings, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
 
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -159,9 +162,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterAlignment
 The ApplyContentMarkingFooterAlignment parameter specifies the footer alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
@@ -169,7 +172,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -182,14 +185,13 @@ Accept wildcard characters: False
 The ApplyContentMarkingFooterEnabled parameter enables or disables the Apply Content Marking Footer action for the label. Valid values are:
 
 - $true: The Apply Content Marking Footer action is enabled.
-
 - $false: The Apply Content Marking Footer action is disabled.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -207,7 +209,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -225,7 +227,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -243,7 +245,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -261,7 +263,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -279,7 +281,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -291,9 +293,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderAlignment
 The ApplyContentMarkingHeaderAlignment parameter specifies the header alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
@@ -301,7 +303,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -314,14 +316,13 @@ Accept wildcard characters: False
 The ApplyContentMarkingHeaderEnabled parameter enables or disables the Apply Content Marking Header action for the label. Valid values are:
 
 - $true: The Apply Content Marking Header action is enabled.
-
 - $false: The Apply Content Marking Header action is disabled.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -339,7 +340,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -357,7 +358,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -375,7 +376,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -393,7 +394,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -411,7 +412,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -424,14 +425,13 @@ Accept wildcard characters: False
 The ApplyWaterMarkingEnabled parameter enables or disables the Apply Watermarking Header action for the label. Valid values are:
 
 - $true: The Apply Watermarking Header action is enabled.
-
 - $false: The Apply Watermarking Header action is disabled.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -449,7 +449,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -467,7 +467,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -485,7 +485,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -497,8 +497,8 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingLayout
 The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Valid values are:
 
--Horizontal
--Diagonal
+- Horizontal
+- Diagonal
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
@@ -506,7 +506,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -519,11 +519,28 @@ Accept wildcard characters: False
 The ApplyWaterMarkingText parameter specifies the watermark text. If the value contains spaces, enclose the value in quotation marks (").
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ColumnAssetCondition
+{{ Fill ColumnAssetCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -539,7 +556,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -552,10 +569,10 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MulitValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -567,15 +584,36 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentType
+The ContentType parameter specifies where the sensivity label can be applied. Valid values are:
+
+- File, Email
+- Site, UnifiedGroup
+- PurviewAssets
+
+Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
+
+```yaml
+Type: MipLabelContentType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -593,7 +631,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -614,7 +652,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -627,7 +665,6 @@ Accept wildcard characters: False
 The EncryptionDoNotForward parameter specifies whether the Do Not Forward template is applied. Valid values are:
 
 - $true: The Do Not Forward template is applied.
-
 - $false: The Do Not Forward template is not applied.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
@@ -636,7 +673,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -646,13 +683,19 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoubleKeyEncryptionUrl
-This parameter is reserved for internal Microsoft use.
+The feature for this parameter is currently in Public Preview, and is not available to everyone.
+
+The EncryptionDoubleKeyEncryptionUrl parameter specifies the Double Key Encryption endpoint URL.
+
+You can't remove the URL after the label has been created; you can only modify it.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -665,14 +708,13 @@ Accept wildcard characters: False
 The EncryptionEnabled parameter specifies whether encryption in enabled. Value values are:
 
 - $true: Encryption is enabled.
-
 - $false: Encryption is disabled.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -682,13 +724,18 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEncryptOnly
-This parameter is reserved for internal Microsoft use.
+The EncryptionEncryptOnly parameter specifies whether the encrypt-only template is applied. Valid values are:
+
+- $true: The encrypt-only template is applied.
+- $false: The encrypt-only template is not applied.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -704,7 +751,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -722,7 +769,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -735,7 +782,6 @@ Accept wildcard characters: False
 The EncryptionPromptUser parameter specifies whether to set the label with user defined permission in Word, Excel, and PowerPoint. Valid values are:
 
 - $true: The label is set with user defined permissions in Word, Excel and PowerPoint.
-
 - $false: The label is not set with user defined permissions in Word, Excel and PowerPoint.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false, and when the EncryptionProtectionType parameter value is UserDefined.
@@ -744,7 +790,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -766,7 +812,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -784,7 +830,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -802,7 +848,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -820,7 +866,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -836,7 +882,7 @@ The Identity parameter is used to migrate an existing Azure Information Protecti
 Type: MasterIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -852,7 +898,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -862,17 +908,16 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleSettings
-The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax:
+The LocaleSettings parameter specifies one or more localized label names or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax:
 
 - Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en español"}]}`
-
 - Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -888,7 +933,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -901,16 +946,14 @@ Accept wildcard characters: False
 The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -926,7 +969,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -942,7 +985,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -955,7 +998,6 @@ Accept wildcard characters: False
 The SiteAndGroupProtectionAllowAccessToGuestUsers parameter enables or disables access to guest users. Valid values are:
 
 - $true: Guest access is enabled.
-
 - $false: Guest access is disabled.
 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
@@ -964,7 +1006,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -977,7 +1019,6 @@ Accept wildcard characters: False
 The SiteAndGroupProtectionAllowEmailFromGuestUsers parameter enables or disables email from guest users. Valid values are:
 
 - $true: Email from guest users is enabled.
-
 - $false: Email from guest users is disabled.
 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
@@ -986,7 +1027,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -999,7 +1040,6 @@ Accept wildcard characters: False
 The SiteAndGroupProtectionAllowFullAccess parameter enables or disables full access. Valid values are:
 
 - $true: Full access is enabled.
-
 - $false: Full access is disabled.
 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
@@ -1008,7 +1048,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1021,7 +1061,6 @@ Accept wildcard characters: False
 The SiteAndGroupProtectionAllowLimitedAccess parameter enables or disables limited access. Valid values are:
 
 - $true: Limited access is enabled.
-
 - $false: Limited access is disabled.
 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
@@ -1030,7 +1069,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1043,7 +1082,6 @@ Accept wildcard characters: False
 The SiteAndGroupProtectionBlockAccess parameter blocks access. Valid values are:
 
 - $true: Access is blocked.
-
 - $false: Access is allowed.
 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
@@ -1052,7 +1090,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1065,14 +1103,13 @@ Accept wildcard characters: False
 The SiteAndGroupProtectionEnabled parameter enables or disables the Site and Group Protection action for the label. Valid values are:
 
 - $true: The Site and Group Protection action is enabled.
-
 - $false: The Site and Group Protection action is disabled.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1093,7 +1130,39 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteExternalSharingControlType
+{{ Fill SiteExternalSharingControlType Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SqlAssetCondition
+{{ Fill SqlAssetCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1103,13 +1172,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

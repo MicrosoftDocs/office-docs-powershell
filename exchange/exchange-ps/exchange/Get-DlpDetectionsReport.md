@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-DlpDetectionsReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-DlpDetectionsReport
@@ -17,17 +16,25 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-DlpDetectionsReport cmdlet to list a summary of Data Loss Prevention (DLP) rule matches for Exchange Online, SharePoint Online and OneDrive for Business in your cloud-based organization for the last 30 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-DlpDetectionsReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-DlpCompliancePolicy <MultiValuedProperty>] [-DlpComplianceRule <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-Source <MultiValuedProperty>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>]
+Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-DlpCompliancePolicy <MultiValuedProperty>]
+ [-DlpComplianceRule <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-Expression <Expression>]
+ [-EventType <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-Source <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -35,22 +42,13 @@ Get-DlpDetectionsReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
 The Get-DlpDetectionsReport cmdlet returns general DLP detection data that's aggregated per day. The properties returned include:
 
 - Date
-
-- DlpPolicy
-
-- TransportRule
-
-- Action
-
-- EventType
-
-- MessageCount
-
+- DLP Policy
+- DLP Compliance Rule
+- Event Type
 - Source
+- Message Count
 
-- StartDate
-
-- EndDate
+To see all of these columns (width issues), write the output to a file. For example, `Get-DlpDetectionsReport | Out-String -Width 4096 | Out-File "C:\Users\admin\Desktop\DLP Detections Report.txt"`.
 
 To see detailed information about each DLP rule match, use the Get-DlpDetailReport cmdlet.
 
@@ -71,9 +69,7 @@ This example lists the DLP activities for November, 2018.
 The Action parameter filters the report by the action taken by DLP policies. Valid values are:
 
 - BlockAccess
-
 - GenerateIncidentReport
-
 - NotifyUser
 
 You can specify multiple values separated by commas.
@@ -82,7 +78,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -98,7 +94,7 @@ The AggregateBy parameter specifies the reporting period. Valid values are Hour,
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -110,13 +106,13 @@ Accept wildcard characters: False
 ### -DlpCompliancePolicy
 The DlpCompliancePolicy parameter filters the report by the name of the DLP compliance policy. You can specify multiple policies separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -128,13 +124,13 @@ Accept wildcard characters: False
 ### -DlpComplianceRule
 The DlpComplianceRule parameter filters the report by the name of the DLP compliance rule. You can specify multiple rules separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -152,7 +148,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -165,13 +161,9 @@ Accept wildcard characters: False
 The EventType parameter filters the report by the event type. Valid values are:
 
 - DLPActionHits
-
 - DLPPolicyFalsePositive
-
 - DLPPolicyHits
-
 - DLPPolicyOverride
-
 - DLPRuleHits
 
 You can specify multiple values separated by commas.
@@ -180,7 +172,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -190,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
+This parameter is available only in Security & Compliance Center PowerShell
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Expression
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -212,7 +206,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -228,7 +222,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -241,9 +235,7 @@ Accept wildcard characters: False
 The Source parameter filters the report by workload. Valid values are:
 
 - EXCH: Exchange Online
-
 - ODB: OneDrive for Business
-
 - SPO: SharePoint Online
 
 You can specify multiple values separated by commas.
@@ -252,7 +244,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -270,7 +262,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -282,23 +274,19 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-DLPDetectionsReport cmdlet, the SummarizeBy parameter accepts the following values:
-
-- Action
+Valid values are:
 
 - DLPPolicy
-
 - Domain
-
 - EventType
 
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The values that you specify for this parameter are not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

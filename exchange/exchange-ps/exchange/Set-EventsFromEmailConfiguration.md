@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-EventsFromEmailConfiguration
@@ -91,7 +90,6 @@ Accept wildcard characters: False
 The CreateEventsFromEmailAsPrivate parameter specifies whether to create the events discovered from messages as normal or private events. Valid values are:
 
 - $true: The events are crated as private events. This is the default value.
-
 - $false: The events are created as normal events.
 
 ```yaml
@@ -108,13 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventReservationProcessingLevel
-The EventReservationProcessingLevel parameter specifies whether event reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover event reservations from messages.
-
-- Email: Discover event reservations from messages, but don't automatically add them to the user's calendar.
-
-- Calendar: Discover event reservations from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -133,9 +125,7 @@ Accept wildcard characters: False
 The FlightReservationProcessingLevel parameter specifies whether flight reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
 
 - Disabled: Do not discover flight reservations from messages.
-
 - Email: Discover flight reservations from messages, but don't automatically add them to the user's calendar.
-
 - Calendar: Discover flight reservations from messages and automatically add them to the user's calendar. This is the default value.
 
 ```yaml
@@ -152,13 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -FoodEstablishmentReservationProcessingLevel
-The FoodEstablishmentProcessingLevel parameter specifies whether dining reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover restaurant reservations from messages.
-
-- Email: Discover restaurant reservations from messages however do not automatically add these to the user's calendar.
-
-- Calendar: Discover restaurant reservations from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -174,13 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvoiceProcessingLevel
-The InvoiceProcessingLevel parameter specifies whether invoices are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover invoices from messages.
-
-- Email: Discover invoices from messages however do not automatically add these to the user's calendar.
-
-- Calendar: Discover invoices from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -199,9 +177,7 @@ Accept wildcard characters: False
 The LodgingReservationProcessingLevel parameter specifies whether lodging reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
 
 - Disabled: Do not discover lodging reservations from messages.
-
 - Email: Discover lodging reservations from messages however do not automatically add these to the user's calendar.
-
 - Calendar: Discover lodging reservations from messages and automatically add them to the user's calendar. This is the default value.
 
 ```yaml
@@ -221,9 +197,7 @@ Accept wildcard characters: False
 The ParcelDeliveryProcessingLevel parameter specifies whether parcel deliveries are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
 
 - Disabled: Do not discover parcel deliveries from messages.
-
 - Email: Discover parcel deliveries from messages however do not automatically add these to the user's calendar.
-
 - Calendar: Discover parcel deliveries from messages and automatically add them to the user's calendar. This is the default value.
 
 ```yaml
@@ -243,9 +217,7 @@ Accept wildcard characters: False
 The RentalCarReservationProcessingLevel parameter specifies whether rental car reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
 
 - Disabled: Do not discover rental car reservations from messages.
-
 - Email: Discover rental car reservations from messages, but don't automatically add them to the user's calendar.
-
 - Calendar: Discover rental car reservations from messages and automatically add them to the user's calendar. This is the default value.
 
 ```yaml
@@ -278,18 +250,13 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceReservationProcessingLevel
-The ServiceReservationProcessingLevel parameter specifies whether service reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover service reservations from messages.
-
-- Email: Discover service reservations from messages, but don't automatically add them to the user's calendar.
-
-- Calendar: Discover service reservations from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
 Parameter Sets: Identity
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

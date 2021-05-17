@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplicationproxy
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 

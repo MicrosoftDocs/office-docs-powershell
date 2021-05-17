@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Moves one or more user accounts enabled for Skype for Business Server to a new Registrar pool, or to Office 365 (either to Teams or Skype for Business Online).
+Moves one or more user accounts enabled for Skype for Business Server to a new Registrar pool in Skype for Business Online (until its retirement), or to Teams Only.
 
 ## SYNTAX
 
@@ -48,12 +48,17 @@ When moving a user to or from Office 365 (either Skype for Business Online or Te
 - Moving a user to Teams is achieved by specifying the MoveToTeams switch. This performs the same operations as a move to Skype for Business Online (without the specifying -MoveToTeams) and also performs the following actions:
 
     - TeamsUpgradePolicy with Mode=TeamsOnly is assigned to the online user account.
-    - Meeting migration is triggered to move meetings to Teams instead of Skype for Business Online. This functionality is currently available to TAP customers only. For customers not in TAP, meetings are always migrated to Skype for Business Online.
+    - Meeting migration is triggered to move meetings to Teams instead of Skype for Business Online.
 
 - Contacts are moved in all cases, unless -force is specified.
 
 > [!NOTE]
 > <ul><li>The MoveToTeams switch is only available on Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.</li><li>If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.</li></ul>
+
+
+> [!IMPORTANT]
+> It will soon no longer be required to specify the `-MoveToTeams` switch in `Move-CsUser` to move users directly from on-premises to TeamsOnly. Currently if this switch is not specified, users transition from being homed in Skype for Business Server on-premises to Skype for Business Online, and their mode remains unchanged. After retirement, when moving a user from on-premises to the cloud with `Move-CsUser`, users will automatically be assigned TeamsOnly mode and their meetings from on-premises will be automtically converted to Teams meetings, just as if the `-MoveToTeams switch had been specified`, *regardless of whether the switch is actually specified*. We expect to release this functionality before the actual retirement of July 31, 2021.
+
 
 ## EXAMPLES
 

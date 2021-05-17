@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxExportRequestStatistics
@@ -25,20 +24,33 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-ReportOnly] [<CommonParameters>]
+Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MRSInstance
 ```
-Get-MailboxExportRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-RequestGuid <Guid>]
+Get-MailboxExportRequestStatistics -MRSInstance <Fqdn>
+ [-DomainController <Fqdn>]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-RequestGuid <Guid>] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly]
+Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-RequestGuid <Guid>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-ReportOnly]
  [<CommonParameters>]
 ```
 
@@ -94,7 +106,7 @@ This example returns additional information for all the export requests that hav
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: `Alias\Name`.
 
 This parameter can't be used with the RequestGuid or RequestQueue parameters.
 
@@ -112,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSInstance
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
@@ -137,9 +149,7 @@ This parameter is for debugging purposes only.
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

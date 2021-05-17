@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxJunkEmailConfiguration
@@ -22,15 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The junk email settings on the mailbox are:
 
 - Enable or disable the junk email rule: The junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox. Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
-
 - Configure the safelist collection: The safelist collection is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. Users can configure the safelist collection on their own mailbox by using Microsoft Outlook or Outlook on the web.
 
 Administrators can enable or disable the junk email rule, and configure the safelist collection on a mailbox by using the Set-MailboxJunkEmailConfiguration cmdlet. For more information, see [Configure Exchange antispam settings on mailboxes](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).
@@ -48,7 +50,8 @@ This example returns the junk email configuration for the user named David Pelto
 
 ### Example 2
 ```powershell
-$AllUsers = Get-Mailbox -ResultSize unlimited -RecipientTypeDetails UserMailbox; $AllUsers | foreach {Get-MailboxJunkEmailConfiguration -Identity $_.UserPrincipalName} | Where {$_.Enabled -eq $false} | Format-Table -Auto Identity,Enabled
+$AllUsers = Get-Mailbox -ResultSize unlimited -RecipientTypeDetails UserMailbox
+$AllUsers | foreach {Get-MailboxJunkEmailConfiguration -Identity $_.UserPrincipalName} | Where {$_.Enabled -eq $false} | Format-Table -Auto Identity,Enabled
 ```
 
 This example returns a summary list of all mailboxes in your organization where the junk email rule is disabled. The first command stores all user mailboxes in a variable. The second command parses through the mailboxes and returns the FQDN of the mailboxes where the junk email rule is disabled.
@@ -61,23 +64,14 @@ To return all mailboxes where the junk email rule is enabled, change the value $
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can use the wildcard character (\*) to identify multiple mailboxes.

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-MailboxFolderPermission
@@ -21,9 +20,33 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
 Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ResetDelegateUserCollection
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDelegateUserCollection]
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,32 +63,30 @@ Remove-MailboxFolderPermission -Identity kim@contoso.com:\Training -User john@co
 
 This example removes John's permissions to the Training folder in Kim's mailbox.
 
+### Example 2
+```powershell
+Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
+```
+
+This example will clear any corrupted delegate information from Kim's mailbox.
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the target mailbox and folder. The syntax is `Mailbox:\Folder`. For the value of Mailbox, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
-Example values for the Identity parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for the Identity parameter are `john@contoso.com:\Calendar` or `John:\Marketing\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -84,20 +105,15 @@ Accept wildcard characters: False
 The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
 Type: MailboxFolderUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -111,8 +127,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -135,9 +150,68 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetDelegateUserCollection
+This parameter is available only in the cloud-based service.
+
+The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when trying to add, change, or remove delegate permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendNotificationToUser
+This parameter is available only in the cloud-based service.
+
+The SendNotificationToUser parameter specifies whether to send a notification to the user when you remove their calendar permissions. Valid values are:
+
+- $true: A notification is sent.
+- $false: No notification is sent. This is the default value.
+
+This parameter only applies to calendar folders.
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -162,30 +236,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SendNotificationToUser
-This parameter is available only in the cloud-based service.
-
-The SendNotificationToUser parameter specifies whether to send a notification to the user when you remove their calendar permissions. Valid values are:
-
-- $true: A notification is sent.
-
-- $false: No notification is sent. This is the default value.
-
-This parameter only applies to calendar folders.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
@@ -202,3 +252,11 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+
+[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+
+[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)

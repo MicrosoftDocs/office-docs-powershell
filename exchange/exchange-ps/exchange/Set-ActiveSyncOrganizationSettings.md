@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-ActiveSyncOrganizationSettings
@@ -22,7 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <Boolean>] [-AllowRMSSupportForUnenlightenedApps <Boolean>] [-Confirm] [-DefaultAccessLevel <DeviceAccessLevel>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
+ [-AdminMailRecipients <MultiValuedProperty>]
+ [-AllowAccessForUnSupportedPlatform <Boolean>]
+ [-AllowRMSSupportForUnenlightenedApps <Boolean>]
+ [-Confirm]
+ [-DefaultAccessLevel <DeviceAccessLevel>]
+ [-DomainController <Fqdn>]
+ [-EnableMobileMailboxPolicyWhenCAInplace <Boolean>]
+ [-OtaNotificationMailInsert <String>]
+ [-TenantAdminPreference <TenantAdminPreference>]
+ [-UserMailInsert <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,12 +50,28 @@ This example sets the default access level to quarantine and sets two administra
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the ActiveSync organization settings object that you want to modify. The default name of this object is Mobile Mailbox Settings.
+
+```yaml
+Type: ActiveSyncOrganizationSettingsIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AdminMailRecipients
 The AdminMailRecipients parameter specifies the email addresses of the administrators for reporting purposes.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -76,10 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRMSSupportForUnenlightenedApps
+This parameter is available or functional only in the cloud-based service.
+
 The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
 
 - $true
-
 - $false (This is the default value)
 
 ```yaml
@@ -98,8 +126,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -119,9 +146,7 @@ Accept wildcard characters: False
 The DefaultAccessLevel parameter specifies the access level for new and existing device partnerships. Valid values are:
 
 - Allow (This is the default value)
-
 - Block
-
 - Quarantine
 
 If you change this value from Allow to Block or Quarantine, all existing connected devices are immediately affected, unless the devices are subject to device access rules or individual allow or block list entries.
@@ -157,19 +182,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the ActiveSync organization settings object that you want to modify. The default name of this object is Mobile Mailbox Settings.
+### -EnableMobileMailboxPolicyWhenCAInplace
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnableMobileMailboxPolicyWhenCAInplace Description }}
 
 ```yaml
-Type: ActiveSyncOrganizationSettingsIdParameter
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -183,6 +210,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantAdminPreference
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantAdminPreference Description }}
+
+```yaml
+Type: TenantAdminPreference
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

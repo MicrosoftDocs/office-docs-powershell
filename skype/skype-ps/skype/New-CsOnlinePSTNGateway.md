@@ -22,10 +22,10 @@ New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Fqdn <String>] [-SipSignalingP
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
  [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
- [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>] [-GenerateRingingWhileLocatingUser <Boolean>] 
+ [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>]  
  [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
  [-OutboundTeamsNumberTranslationRules <String>] [-OutboundPSTNNumberTranslationRules <String>] [-PidfloSupported <Boolean>]  
- [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MediaRelayRoutingLocationOverride <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -243,6 +243,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MediaRelayRoutingLocationOverride
+This parameter is reserved for use with managed carriers.
+
+Allows selecting path for media manually. Direct Routing assigns a datacenter for media path based on the public IP of the SBC. We always select closest to the SBC datacenter. However, in some cases a public IP from for example a US range can be assigned to an SBC located in Europe. In this case we will be using not optimal media path. This parameter allows manually set the preferred region for media traffic. We only recommend setting this parameter if the call logs clearly indicate that automatic assignment of the datacenter for media path does not assign the closest to the SBC datacenter
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FailoverResponseCodes
 If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone System Direct Routing" documentation.
 
@@ -329,20 +346,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GenerateRingingWhileLocatingUser
-This parameter is applicableis only for Direct Routing in non-media bypass mode. Sometimes inbound calls from the public switched telephone network (PSTN) to Teams clients can take longer than expected to be established. This can occur for various reasons. When this happens, the caller might not hear anything, the Teams client doesn't ring, and the call might be canceled by some telecommunications providers. This parameter helps to avoid unexpected silences that can occur in this scenario. When enabled for inbound calls from the PSTN to Teams clients, a distinctive audio signal is played to the caller to indicate that Teams is in the process of establishing the call.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

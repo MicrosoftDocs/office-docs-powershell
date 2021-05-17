@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-SystemMessage
@@ -26,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Quota
@@ -34,7 +34,8 @@ New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <C
 New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +66,7 @@ The DsnCode parameter specifies the enhanced status code for the custom system m
 
 Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. You can specify a default code that's included with Exchange, or you can specify a custom code.
 
-To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\Default DSNs.html".
+To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
 
 You need to use this parameter with the Language and Internal parameters.
 
@@ -88,7 +89,6 @@ Accept wildcard characters: False
 The Internal parameter specifies whether the system message is displayed to internal or external users. Valid values are:
 
 - $true: The NDR is displayed to internal senders.
-
 - $false: The NDR is displayed to external senders.
 
 You need to use this parameter with the DsnCode and Language parameters.
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-The Language parameter specifies the language of the message \(for example, en for English or ja for Japanese). For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+The Language parameter specifies the language of the message (for example, en for English or ja for Japanese). For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
 You need to use this parameter with the DsnCode or QuotaMessageType parameters.
 
@@ -132,49 +132,35 @@ The QuotaMessageType parameter specifies the quota for the custom system message
 Mailbox size quotas:
 
 - ProhibitSendReceiveMailBox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
-
 - ProhibitSendMailbox: A mailbox exceeds its ProhibitSendQuota limit.
-
 - WarningMailbox: A mailbox exceeds its IssueWarningQuota limit when it has a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
-
 - WarningMailboxUnlimitedSize: A mailbox exceeds its IssueWarningQuota limit when it doesn't have a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
 
 Public folder size quotas:
 
 - ProhibitPostPublicFolder: A public folder exceeds its ProhibitPostQuota limit.
-
 - WarningPublicFolder: A public folder exceeds its IssueWarningQuota limit when it has a ProhibitPostQuota limit configured.
-
 - WarningPublicFolderUnlimitedSize: A public folder exceeds its IssueWarningQuota limit when it doesn't have a ProhibitPostQuota limit configured.
 
 Maximum number of messages in a mailbox folder:
 
 - ProhibitReceiveMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountReceiveQuota limit.
-
 - WarningMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it has a MailboxMessagesPerFolderCountReceiveQuota limit configured.
-
 - WarningMailboxMessagesPerFolderUnlimitedCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it doesn't have a MailboxMessagesPerFolderCountReceiveQuota limit configured.
 
 Maximum number of subfolders in a mailbox folder:
 
 - ProhibitReceiveFolderHierarchyChildrenCountCount: A mailbox exceeds its FolderHierarchyChildrenCountReceiveQuota limit.
-
 - WarningFolderHierarchyChildrenCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it has a FolderHierarchyChildrenCountReceiveQuota limit configured.
-
 - WarningFolderHierarchyChildrenUnlimitedCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it doesn't have a FolderHierarchyChildrenCountReceiveQuota limit configured.
-
 - ProhibitReceiveFoldersCount: A mailbox exceeds its FoldersCountReceiveQuota limit.
-
 - WarningFoldersCount: A mailbox exceeds its FoldersCountWarningQuota limit when it has a FoldersCountReceiveQuota limit configured.
-
 - WarningFoldersCountUnlimited A mailbox exceeds its FoldersCountWarningQuota limit when it doesn't have a FoldersCountReceiveQuota limit configured.
 
 Maximum number of levels (depth) in a mailbox folder:
 
 - ProhibitReceiveFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit.
-
 - WarningFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it has a FolderHierarchyDepthReceiveQuota limit configured.
-
 - WarningFolderHierarchyDepthUnlimited: : A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it doesn't have a FolderHierarchyDepthReceiveQuota limit configured.
 
 You need to use this parameter with the Language parameter.
@@ -203,29 +189,22 @@ This parameter can contain text and HTML tags. The maximum length is 512 charact
 
 The following HTML tags are available:
 
-- \<B\> and \</B\> (bold)
-
-- \<EM\> and \</EM\> (italic)
-
-- \<BR\> (line break)
-
-- \<P\> and \</P\> (paragraph)
-
-- \<A HREF="url"\> and \</A\> (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
+- `<B>` and `</B>` (bold)
+- `<EM>` and `</EM>` (italic)
+- `<BR>` (line break)
+- `<P>` and `</P>` (paragraph)
+- `<A HREF="url">` and `</A>` (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
 
 Use the following escape codes for these special characters:
 
-- &lt; for \<.
-
-- &gt; for \>.
-
-- &quot; for ".
-
-- &amp; for &.
+- `&lt;` for \<
+- `&gt;` for \>
+- `&quot;` for "
+- `&amp;` for &
 
 Here's an example value for this parameter that uses HTML tags and special characters:
 
-'You tried to send a message to a \<B\>disabled\</B\> mailbox. Please visit \<A HREF="https://it.contoso.com"\>Internal Support\</A\> or contact &quot;InfoSec&quot; for more information.'
+`'You tried to send a message to a <B>disabled</B> mailbox. Please visit <A HREF="https://it.contoso.com">Internal Support</A> or contact &quot;InfoSec&quot; for more information.'`
 
 ```yaml
 Type: String
@@ -243,8 +222,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

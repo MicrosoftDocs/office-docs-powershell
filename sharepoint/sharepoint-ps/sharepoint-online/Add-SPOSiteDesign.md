@@ -24,6 +24,7 @@ Add-SPOSiteDesign
   -WebTemplate <string>
   -SiteScripts <SPOSiteScriptPipeBind[]>
   [-Description <string>]
+  [-ThumbnailUrl <string>]
   [-PreviewImageUrl <string>]
   [-PreviewImageAltText <string>]
   [-IsDefault]
@@ -46,8 +47,9 @@ Add-SPOSiteDesign `
   -WebTemplate "64" `
   -SiteScripts "<ID>" `
   -Description "Tracks key customer data in a list" `
+  -ThumbnailUrl "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png" `
   -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
-  -PreviewImageAltText "site preview"
+  -PreviewImageAltText "site preview" 
 ```
 
 ## PARAMETERS
@@ -71,6 +73,7 @@ Accept wildcard characters: False
 ### -WebTemplate
 
 Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template.
+For more information, visit [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview).
 
 ```yaml
 Type: String
@@ -116,9 +119,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ThumbnailUrl
+
+The URL of a thumbnail image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 300 pixels.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreviewImageUrl
 
-The URL of a preview image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 421 pixels.
+The URL of a preview image. If none is specified, SharePoint uses a generic image.
 
 ```yaml
 Type: String

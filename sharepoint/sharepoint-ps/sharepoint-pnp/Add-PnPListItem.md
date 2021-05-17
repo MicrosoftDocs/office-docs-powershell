@@ -1,66 +1,114 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnplistitem
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPListItem.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPListItem
 ---
-
+  
 # Add-PnPListItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPListItem.md to change this file.
+
 Adds an item to the list and sets the creation time to the current date and time. The author is set to the current authenticated user executing the cmdlet. In order to set the author to a different user, please refer to Set-PnPListItem.
 
-## SYNTAX 
+## SYNTAX
 
+### Single
 ```powershell
-Add-PnPListItem -List <ListPipeBind>
-                [-ContentType <ContentTypePipeBind>]
-                [-Values <Hashtable>]
-                [-Folder <String>]
-                [-Label <String>]
-                [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+Add-PnPListItem [-List] <ListPipeBind> [-ContentType <ContentTypePipeBind>] [-Values <Hashtable>]
+ [-Folder <String>] [-Label <String>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+### Batched
+```powershell
+Add-PnPListItem [-List] <ListPipeBind> -Batch <PnPBatch> [-ContentType <ContentTypePipeBind>] [-Values <Hashtable>]
+ [-Folder <String>] [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPListItem -List "Demo List" -Values @{"Title" = "Test Title"; "Category"="Test Category"}
 ```
 
 Adds a new list item to the "Demo List", and sets both the Title and Category fields with the specified values. Notice, use the internal names of fields.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPListItem -List "Demo List" -ContentType "Company" -Values @{"Title" = "Test Title"; "Category"="Test Category"}
 ```
 
 Adds a new list item to the "Demo List", sets the content type to "Company" and sets both the Title and Category fields with the specified values. Notice, use the internal names of fields.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Add-PnPListItem -List "Demo List" -Values @{"MultiUserField"="user1@domain.com","user2@domain.com"}
 ```
 
 Adds a new list item to the "Demo List" and sets the user field called MultiUserField to 2 users. Separate multiple users with a comma.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Add-PnPListItem -List "Demo List" -Values @{"Title"="Sales Report"} -Folder "projects/europe"
 ```
 
 Adds a new list item to the "Demo List". It will add the list item to the europe folder which is located in the projects folder. Folders will be created if needed.
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Add-PnPListItem -List "Demo List" -Values @{"Title"="Sales Report"} -Label "Public"
 ```
 
 Adds a new list item to the "Demo List". Sets the retention label to "Public" if it exists on the site.
 
+### EXAMPLE 6
+```powershell
+$batch = New-PnPBatch
+for($i=0;$i -lt 10;$i++)
+{
+    Add-PnPListItem -List "Demo List" -Values @{"Title"="Report $i"} -Batch $batch
+}
+Invoke-PnPBatch -Batch $batch
+```
+
+This creates 10 list items by using a batched approach.
+
 ## PARAMETERS
+
+### -Batch
+Optional batch object used to add items in a batched manner. See examples on how to use this.
+
+```yaml
+Type: PnPBatch
+Parameter Sets: Batched
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ContentType
 Specify either the name, ID or an actual content type.
@@ -71,7 +119,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Folder
@@ -83,21 +133,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Label
 The name of the retention label.
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Single
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -109,7 +161,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -Values
@@ -159,37 +213,15 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.ListItem
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

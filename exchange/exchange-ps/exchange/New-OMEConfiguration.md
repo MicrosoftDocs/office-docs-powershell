@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # New-OMEConfiguration
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-OMEConfiguration cmdlet to create a Microsoft 365 Message Encryption (OME) configuration.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-BackgroundColor <String>]
+ [-Confirm]
  [-DisclaimerText <String>]
  [-EmailText <String>]
  [-ExternalMailExpiryInDays <Int32>]
@@ -33,8 +33,10 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-IntroductionText <String>]
  [-OTPEnabled <Boolean>]
  [-PortalText <String>]
+ [-PrivacyStatementUrl <String>]
  [-ReadButtonText <String>]
  [-SocialIdSignIn <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -71,11 +73,9 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0x000000 is white\).
-
-- An available text value \(for example, yellow is 0x00FFFF00\).
-
-- $null \(blank\). This is the default value.
+- An available HTML hexadecimal (hex triplet) color code value (for example, `0x000000` is white).
+- An available text value (for example, `yellow` is 0x00FFFF00).
+- $null (blank). This is the default value.
 
 For more information, see [Add your organization's brand to your encrypted messages](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
 
@@ -83,6 +83,22 @@ For more information, see [Add your organization's brand to your encrypted messa
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Exchange Online
 
 Required: False
@@ -150,9 +166,7 @@ The Image parameter identifies and uploads an image that will be displayed in th
 You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
-
 - Optimal size of logo file: less than 40 KB
-
 - Optimal dimensions of logo image: 170x70 pixels
 
 ```yaml
@@ -188,7 +202,6 @@ Accept wildcard characters: False
 The OTPEnabled parameter specifies whether to allow recipients to use a one-time passcode to view encrypted messages. Valid values are:
 
 - $true: Recipients can use a one-time passcode to view encrypted messages. This is the default value.
-
 - $false: Recipients can't use a one-time passcode to view encrypted messages. The recipient is required to sign in using a Microsoft 365 work or school account.
 
 ```yaml
@@ -206,6 +219,22 @@ Accept wildcard characters: False
 
 ### -PortalText
 The PortalText parameter specifies the text that appears at the top of the encrypted email viewing portal. The maximum length is 128 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivacyStatementUrl
+{{ Fill PrivacyStatementUrl Description }}
 
 ```yaml
 Type: String
@@ -240,13 +269,28 @@ Accept wildcard characters: False
 The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, etc). Valid values are:
 
 - $true: Social network ID sign in is allowed. This is the default value.
-
 - $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Microsoft 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Online
 
 Required: False

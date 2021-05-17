@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-inboxrule
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-InboxRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-InboxRule
@@ -63,7 +62,7 @@ The BypassScopeCheck switch specifies whether to bypass the scope check for the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -134,12 +133,9 @@ Accept wildcard characters: False
 The Identity parameter specifies the Inbox rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - RuleIdentity property (for example, 16752869479666417665).
-
-- Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
-
-- On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
+- Exchange Online: `MailboxAlias\RuleIdentity` (for example, `rzaher\16752869479666417665`).
+- On-premises Exchange: `MailboxCanonicalName\RuleIdentity` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
 Type: InboxRuleIdParameter
@@ -176,23 +172,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

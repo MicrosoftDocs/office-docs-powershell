@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-applicationaccesspolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-ApplicationAccessPolicy
@@ -17,15 +16,15 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-ApplicationAccessPolicy cmdlet to view the list of application access policies.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
 ```
-Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>] [<CommonParameters>]
+Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +57,7 @@ The Identity parameter specifies the application access policy that you want to 
 Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1

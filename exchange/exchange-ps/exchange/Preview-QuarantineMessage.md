@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/preview-quarantinemessage
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Preview-QuarantineMessage
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Preview-QuarantineMessage
@@ -15,18 +14,17 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Preview-QuarantineMessage cmdlet to preview the contents of quarantined messages in your cloud-based organization.
+Use the Preview-QuarantineMessage cmdlet to preview the contents of quarantined messages in your cloud-based organization. This cmdlet doesn't work on files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
-**Note**: This cmdlet isn't available for files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Preview-QuarantineMessage -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Preview-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +57,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named

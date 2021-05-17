@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-informationbarrierpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-InformationBarrierPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-InformationBarrierPolicy
@@ -23,25 +22,34 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### OrganizationSegmentsAllowed
 ```
-Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsAllowed <MultiValuedProperty>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-SegmentsAllowed <MultiValuedProperty>]
  [-Comment <String>]
+ [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### OrganizationSegmentAllowedFilter
 ```
-Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentAllowedFilter <String>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-SegmentAllowedFilter <String>]
  [-Comment <String>]
+ [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### OrganizationSegmentsBlocked
 ```
-Set-InformationBarrierPolicy -Identity <PolicyIdParameter> [-SegmentsBlocked <MultiValuedProperty>]
+Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
+ [-SegmentsBlocked <MultiValuedProperty>]
  [-Comment <String>]
+ [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -70,16 +78,14 @@ This example activates the specified inactive information barrier policy.
 The Identity parameter specifies the information barrier policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -95,7 +101,23 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -115,7 +137,7 @@ You can't use this parameter with the SegmentsBlocked parameter.
 Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -131,7 +153,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -151,7 +173,7 @@ You can't use this parameter with the SegmentsAllowed parameter.
 Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -164,7 +186,6 @@ Accept wildcard characters: False
 The State parameter specifies whether the information barrier policy is active or inactive. Valid values are:
 
 - Active
-
 - Inactive
 
 ```yaml
@@ -172,7 +193,23 @@ Type: EopInformationBarrierPolicyState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Inactive, Active
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

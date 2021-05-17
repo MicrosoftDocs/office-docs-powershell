@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-ManagedFolder
@@ -25,23 +24,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
 Get-ManagedFolder [-Mailbox <MailboxIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Get-ManagedFolder cmdlet retrieves the specified managed folder attributes:
 
 - If only an Identity parameter value is present, the command retrieves the specified folder and all associated attributes.
-
 - If a Mailbox parameter value is present, the command retrieves all managed folders that apply to that user by means of a managed folder mailbox policy applied by an administrator. Managed folders that users add by means of an organization's managed folder opt-in Web site aren't displayed by this command.
-
 - If no parameter values are specified, the command retrieves all the folder objects and their associated attributes.
 
 The Get-ManagedFolder cmdlet accepts a ManagedFolder object or an identity string as pipelined input.
@@ -95,23 +92,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 This cmdlet retrieves all the folders that apply to the specified mailbox.
@@ -119,24 +107,6 @@ This cmdlet retrieves all the folders that apply to the specified mailbox.
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: Mailbox
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see [Multi-Tenant Support](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ff923272(v=exchg.141)).
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 

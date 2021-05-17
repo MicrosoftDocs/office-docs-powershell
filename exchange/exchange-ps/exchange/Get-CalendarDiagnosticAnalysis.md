@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-CalendarDiagnosticAnalysis
@@ -43,37 +42,21 @@ Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
 The following properties of the calendar item are returned in the default output of the cmdlet (when the DetailLevel parameter is set to Basic):
 
 - Local Log Time
-
 - ItemId
-
 - NormalizedSubject
-
 - StartTime
-
 - EndTime
-
 - CalendarLogTriggerAction
-
 - ClientInfoString
-
 - OriginalLastModifiedTime
-
 - ClientIntent
-
 - CleanGlobalObjectId
-
 - ItemClass
-
 - ParentDisplay
-
 - Duration
-
 - AppointmentRecurring
-
 - SentRepresentingEmailAddress
-
 - SenderEmailAddress
-
 - SentRepresentingDisplayName
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -82,7 +65,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
+$logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F
+Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
 ```
 
 This example gets the specified calendar item from Oscar Evans' mailbox, stores the item as a variable and writes the advanced analysis of the item to a CSV file.
@@ -123,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
-The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (`\\<Server>\<Share>\<User>`). If the value contains spaces, enclose the value in quotation marks (").
+The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (`\\Server\Share\User`). If the value contains spaces, enclose the value in quotation marks (").
 
 You export the calendar items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
 
@@ -146,7 +130,6 @@ Accept wildcard characters: False
 The DetailLevel parameter specifies the level of detail you want to see in the analysis output. Valid values are:
 
 - Basic: This is the default value. The calendar item properties that are returned are listed in the Detailed Description.
-
 - Advanced: 37 additional calendar item properties are returned. You should use this value only for detailed debugging information.
 
 ```yaml
@@ -184,9 +167,7 @@ Accept wildcard characters: False
 The OutputAs parameter specifies the output format of the command. Valid values are:
 
 - CSV (This is the default value)
-
 - HTML
-
 - XML
 
 ```yaml

@@ -1,48 +1,54 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpstorageentity
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPStorageEntity
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPStorageEntity.html
 ---
-
+ 
 # Get-PnPStorageEntity
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPStorageEntity.md to change this file.
+
 Retrieve Storage Entities / Farm Properties from either the Tenant App Catalog or from the current site if it has a site scope app catalog.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPStorageEntity [-Key <String>]
-                     [-Scope <StorageEntityScope>]
-                     [-Connection <SPOnlineConnection>]
+Get-PnPStorageEntity [-Key <String>] [-Scope <StorageEntityScope>] [-Connection <PnPConnection>] 
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPStorageEntity
 ```
 
 Returns all site storage entities/farm properties
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPStorageEntity -Key MyKey
 ```
 
 Returns the storage entity/farm property with the given key.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPStorageEntity -Scope Site
 ```
 
 Returns all site collection scoped storage entities
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPStorageEntity -Key MyKey -Scope Site
 ```
@@ -50,6 +56,35 @@ Get-PnPStorageEntity -Key MyKey -Scope Site
 Returns the storage entity from the site collection with the given key
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Key
 The key of the value to retrieve.
@@ -60,7 +95,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Scope
@@ -69,24 +106,31 @@ Defines the scope of the storage entity. Defaults to Tenant.
 ```yaml
 Type: StorageEntityScope
 Parameter Sets: (All)
+Accepted values: Site, Tenant
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SPOnlineConnection
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

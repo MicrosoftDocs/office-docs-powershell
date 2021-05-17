@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-MailboxImportRequest
@@ -29,10 +28,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-Force]
+Remove-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
+ [-Force]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
@@ -40,7 +41,8 @@ Remove-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-Forc
 Remove-MailboxImportRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +78,7 @@ This example removes all completed import requests.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you created the request using the Name parameter, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you created the request using the Name parameter, use the following syntax: `Alias\Name`.
 
 You can't use this parameter with the RequestGuid parameter.
 
@@ -119,9 +121,7 @@ This parameter is available only in on-premises Exchange.
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -142,8 +142,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -168,7 +167,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 201
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

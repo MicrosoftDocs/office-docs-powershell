@@ -1,14 +1,18 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/invoke-pnpsprestmethod
-applicable: SharePoint Online
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Invoke-PnPSPRestMethod.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Invoke-PnPSPRestMethod
 ---
-
+ 
 # Invoke-PnPSPRestMethod
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Invoke-PnPSPRestMethod.md to change this file.
+
 Invokes a REST request towards a SharePoint site
 
 ## SYNTAX 
@@ -18,7 +22,8 @@ Invoke-PnPSPRestMethod -Url <String>
                        [-Method <HttpRequestMethod>]
                        [-Content <Object>]
                        [-ContentType <String>]
-                       [-Connection <SPOnlineConnection>]
+                       [-Raw]
+                       [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +85,7 @@ Accept pipeline input: False
 ```
 
 ### -ContentType
-The content type of the object to send. Defaults to 'application/json'
+The content type of the object to send. Defaults to 'application/json'.
 
 ```yaml
 Type: String
@@ -104,10 +109,22 @@ Accept pipeline input: False
 ```
 
 ### -Url
-The url to execute.
+The url to execute
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: 0
+Accept pipeline input: False
+```
+
+### -Raw
+If specified the returned data will not be converted to an object but returned as a JSON string.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: True
@@ -119,7 +136,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
@@ -129,4 +146,5 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

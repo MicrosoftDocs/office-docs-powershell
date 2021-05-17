@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-ManagementRole
@@ -23,22 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### NewDerivedRole
 ```
-New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-EnabledCmdlets <String[]>]
+New-ManagementRole [-Name] <String> -Parent <RoleIdParameter>
+ [-EnabledCmdlets <String[]>]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UnScopedTopLevelRole
 ```
-New-ManagementRole [-Name] <String> [-UnScopedTopLevel]
+New-ManagementRole [-Name] <String>
+ [-UnScopedTopLevel]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,19 +61,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
+New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling
+Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
 This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
 
-After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
-After confirmation that the command removes the correct role entries, the second command is run again without the WhatIf switch.
+After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling.
 
 For more information about pipelining and the Where cmdlet, see the following topics:
 
 - [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
-
 - [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
 
 ### Example 2
@@ -141,8 +142,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

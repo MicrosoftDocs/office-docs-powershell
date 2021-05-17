@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MoveRequestStatistics
@@ -38,6 +37,7 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 ```
 Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
  [-DiagnosticInfo <String>]
+ [-DiagnosticOnly]
  [-IncludeReport]
  [-ProxyToMailbox <MailboxIdParameter>]
  [-ReportOnly]
@@ -46,7 +46,8 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 
 ### MigrationMoveRequestQueue
 ```
-Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-MailboxGuid <Guid>]
+Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter>
+ [-MailboxGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
@@ -57,7 +58,8 @@ Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-MailboxGuid 
 
 ### MigrationMRSInstance
 ```
-Get-MoveRequestStatistics -MRSInstance <Fqdn> [-MailboxGuid <Guid>]
+Get-MoveRequestStatistics -MRSInstance <Fqdn>
+ [-MailboxGuid <Guid>]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
@@ -108,17 +110,11 @@ In Exchange Server 2010, this example returns default statistics for a mailbox t
 The Identity parameter specifies the identity of the mailbox or mail user. You can use one of the following values:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SMTP address
-
 - Alias
 
 You can use this parameter with the MoveRequestQueue or MailboxGuid parameters.
@@ -144,9 +140,7 @@ This parameter is for debugging purposes only.
 The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity or MRSInstance parameters.
@@ -165,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSInstance
-This parameter is available or functional only in on-premises Exchange Server 2010.
+This parameter is available only in on-premises Exchange Server 2010.
 
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
@@ -227,10 +221,32 @@ Accept wildcard characters: False
 ### -DiagnosticInfo
 This parameter is available only in the cloud-based service.
 
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems. Valid values are:
+
+- ShowTimeline
+- ShowTimeslot
+- Verbose
 
 ```yaml
 Type: String
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticOnly
+This parameter is available only in the cloud-based service.
+
+{{ Fill DiagnosticOnly Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
@@ -302,23 +318,14 @@ This parameter is available only in the cloud-based service.
 The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

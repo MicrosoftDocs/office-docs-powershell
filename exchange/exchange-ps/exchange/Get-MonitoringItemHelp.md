@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MonitoringItemHelp
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MonitoringItemHelp [-Identity] <String> -Server <ServerIdParameter> [<CommonParameters>]
+Get-MonitoringItemHelp [-Identity] <String> -Server <ServerIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,12 +35,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MonitoringItemHelp -Server Exch01 -Identity OutlookMapiHttp.Proxy\CrashEvent.msexchangemapifrontendapppoolEscalate\msexchangemapifrontendapppool | Format-List
 ```
 
-This example retrieves health set information for a monitoring item on the server named Exch01 and displays the output without truncating the results..
+This example retrieves health set information for a monitoring item on the server named Exch01 and displays the output without truncating the results.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
+The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax: `<HealthSet>\<MonitoringItemName>[\<TargetResource>]`. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
 
 ```yaml
 Type: String
@@ -59,11 +59,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that contains the monitoring item. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

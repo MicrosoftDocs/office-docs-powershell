@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/r
 applicable: SharePoint Online
 title: Register-SPODataEncryptionPolicy
 schema: 2.0.0
-author:
-ms.author:
+author: techwriter40
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -20,7 +20,7 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 ## SYNTAX
 
 ```powershell
-Register-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -PrimaryKeyVaultName <string> -PrimaryKeyName <string> -PrimaryKeyVersion <guid> -SecondaryKeyVaultName <string>  -SecondaryKeyName <string> -SecondaryKeyVersion <guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+Register-SPODataEncryptionPolicy -PrimaryKeyVaultName <string> -PrimaryKeyName <string> -PrimaryKeyVersion <guid> -SecondaryKeyVaultName <string>  -SecondaryKeyName <string> -SecondaryKeyVersion <guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,28 +33,11 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 ### Example 1
 
 ```powershell
-Register-SPODataEncryptionPolicy -Identity https://contoso.sharepoint.com -PrimaryKeyVaultName <string> -PrimaryKeyName <string> -PrimaryKeyVersion <KeyVersion>
+Register-SPODataEncryptionPolicy -PrimaryKeyVaultName 'PKVaultName1' -PrimaryKeyName 'PrimaryKey1' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'SKVaultName1' -SecondaryKeyName 'SecondaryKey2' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a’
 ```
-
-This example registers the DEP used with SharePoint Online and OneDrive for Business to start using the given primary key
+This example registers the DEP used with SharePoint Online and OneDrive for Business to start using the given primary key.
 
 ## PARAMETERS
-
-### -Identity
-
-Specifies the URL of the admin site collection.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PrimaryKeyVaultName
 

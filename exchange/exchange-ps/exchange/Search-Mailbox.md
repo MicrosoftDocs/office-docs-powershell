@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Search-Mailbox
@@ -17,8 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
 
-> [!NOTE]
-> In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/new-compliancesearch) and related eDiscovery cmdlets. <br/><br/> By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+**Note**: In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/new-compliancesearch) and related eDiscovery cmdlets.
+
+By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,12 +36,14 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EstimateResult
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
+ [-EstimateResultOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DoNotIncludeArchive]
@@ -50,7 +52,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -67,18 +70,16 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Search-Mailbox cmdlet to search messages in a specified mailbox and perform any of the following tasks:
 
 - Copy messages to a specified target mailbox.
-
 - Delete messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to delete messages.
-
 - Perform single item recovery to recover items from a user's Recoverable Items folder.
-
 - Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota.
 
 ## EXAMPLES
@@ -113,6 +114,33 @@ This example searches all mailboxes in your organization for messages that conta
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxOrMailUserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -EstimateResultOnly
 The EstimateResultOnly switch specifies that only an estimate of the total number and size of messages returned by the search be provided. Messages aren't copied to the target mailbox. You can't use this switch with the TargetMailbox parameter.
 
@@ -126,42 +154,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxOrMailUserIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -185,23 +177,14 @@ Accept wildcard characters: False
 The TargetMailbox parameter specifies the destination mailbox where search results are copied. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You must use this parameter with the TargetFolder parameter. You can't use this parameter with the EstimateResultOnly switch.
@@ -222,8 +205,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -333,9 +315,7 @@ Accept wildcard characters: False
 The LogLevel parameter specifies the logging level for the search. It can have one of the following values:
 
 - Suppress: No logs are kept.
-
 - Basic: Basic information about the query and who ran it is kept.
-
 - Full: In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
 
 The default log level is Basic.

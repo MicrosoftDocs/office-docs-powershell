@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-dlpkeyworddictionary
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-DlpKeywordDictionary
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-DlpKeywordDictionary
@@ -22,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter> [-Confirm] [-Description <String>]
- [-FileData <Byte[]>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
+ [-Confirm]
+ [-Description <String>]
+ [-FileData <Byte[]>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,28 +37,47 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-$Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
+$Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($keywords)
+Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example replaces the existing terms in the DLP keyword dictionary named Diseases with the specified values.
 
 ### Example 2
 ```powershell
-$Dictionary = Get-DlpKeywordDictionary -Name "Diseases"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"; $Keywords = $Terms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
+$Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
+$Terms = $Dictionary.KeywordDictionary.split(',').trim()
+$Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"
+$Keywords = $Terms -Join ", "
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
+Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example adds the specified terms to the DLP keyword dictionary named Diseases without affecting other existing terms.
 
 ### Example 3
 ```powershell
-$Dictionary = Get-DlpKeywordDictionary -Name "Diseases"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); $TermsToRemove = @('abandonment', 'ablatio'); $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
+$Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
+$Terms = $Dictionary.KeywordDictionary.split(',').trim()
+$TermsToRemove = @('abandonment', 'ablatio')
+$UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}
+$Keywords = $UpdatedTerms -Join ", "
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
+Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example removes the specified terms from the DLP keyword dictionary named Diseases without affecting other existing terms.
 
 ### Example 4
 ```powershell
-$Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"; $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
+$Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"
+$Terms = $Dictionary.KeywordDictionary.split(',').trim()
+Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"
+$UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"
+$Keywords = $UpdatedTerms -Join ", "
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
+Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 
 The first three commands export the terms from the existing keyword dictionary named Inappropriate Language to the file C:\\My Documents\\InappropriateTerms.txt, where each term is on a separate line.
@@ -70,7 +93,7 @@ The Identity parameter specifies the name of the DLP keyword dictionary that you
 Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -82,15 +105,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -106,7 +128,7 @@ The Description parameter specifies descriptive text for the DLP keyword diction
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -116,13 +138,14 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF8. For more information, see the examples in this topic. The maximum file size limit is 100 KB.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic. The maximum file size is up to 1 MB of terms after compression. The organization limit for all dictionaries is also 1 MB after compression.
+
 
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -138,7 +161,7 @@ The Name parameter specifies a unique name for the DLP keyword dictionary. If th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -154,7 +177,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

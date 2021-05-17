@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ThrottlingPolicyAssociation
@@ -22,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
+Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -47,7 +49,7 @@ This example associates a user with a username of tonysmith to the throttling po
 
 ### Example 2
 ```powershell
-$b = Get-ThrottlingPolicy ITStaffPolicy;
+$b = Get-ThrottlingPolicy ITStaffPolicy
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
@@ -74,8 +76,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -101,28 +102,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreDefaultScope
-This parameter is available or functional only in Exchange Server 2010.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the distinguished name (DN) for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxlocation
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-MailboxLocation
@@ -17,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxLocation cmdlet to view mailbox location information in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +28,8 @@ Get-MailboxLocation -Database <DatabaseIdParameter>
  [-Confirm]
  [-MailboxLocationType <MailboxLocationType>]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -38,16 +38,19 @@ Get-MailboxLocation -Identity <MailboxLocationIdParameter>
  [-Confirm]
  [-MailboxLocationType <MailboxLocationType>]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
 ```
-Get-MailboxLocation -User <UserIdParameter> [-IncludePreviousPrimary]
+Get-MailboxLocation -User <UserIdParameter>
+ [-IncludePreviousPrimary]
  [-Confirm]
  [-MailboxLocationType <MailboxLocationType>]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +70,7 @@ In Exchange Online, this example returns the mailbox location information for th
 Get-MailboxLocation -Identity e15664af-82ed-4635-b02a-df7c2e03d950
 ```
 
-In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of Get-Mailbox -Identity \<MailboxIdentity\> | Format-List ExchangeGuid).
+In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of `Get-Mailbox -Identity <MailboxIdentity> | Format-List ExchangeGuid`).
 
 ## PARAMETERS
 
@@ -77,9 +80,7 @@ This parameter is available only in on-premises Exchange.
 The Database parameter returns the mailbox location information for all mailboxes on the specified mailbox database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -100,13 +101,12 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the either of the following formats:
 
-- \<TenantGUID\>\\\<MailboxGUID\>
+- TenantGUID\\MailboxGUID
+- MailboxGUID
 
-- \<MailboxGUID\>
+In Exchange Server or Exchange Online, you can run the following command to find and compare the MailboxGUID values for the user: `Get-Mailbox -Identity <MailboxIdentity> | Format-List *GUID,MailboxLocations`.
 
-In Exchange Server or Exchange Online, you can run the following command to find and compare the \<MailboxGUID\> values for the user: Get-Mailbox -Identity \<MailboxIdentity\> \| Format-List *GUID,MailboxLocations.
-
-In Exchange Online, you can find the \<TenantGUID\> and \<MailboxGUID\> values after you run Get-MailboxLocation with the User parameter.
+In Exchange Online, you can find the TenantGUID and MailboxGUID values after you run Get-MailboxLocation with the User parameter.
 
 You can't use this parameter with the User parameter.
 
@@ -129,11 +129,8 @@ This parameter is available only in the cloud-based service.
 The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -154,8 +151,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -195,17 +191,11 @@ Accept wildcard characters: False
 The MailboxLocationType filters the results by the type of mailbox. Valid values are:
 
 - Aggregated
-
 - AuxArchive
-
 - AuxPrimary
-
 - ComponentShared
-
 - MainArchive
-
 - PreviousPrimary (Exchange Online only)
-
 - Primary
 
 ```yaml

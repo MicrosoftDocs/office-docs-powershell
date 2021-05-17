@@ -1,99 +1,84 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpfile
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPFile.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPFile
 ---
-
+  
 # Add-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPFile.md to change this file.
+
 Uploads a file to Web
 
-## SYNTAX 
+## SYNTAX
 
 ### Upload file
 ```powershell
-Add-PnPFile -Path <String>
-            -Folder <String>
-            [-NewFileName <String>]
-            [-Checkout [<SwitchParameter>]]
-            [-CheckInComment <String>]
-            [-Approve [<SwitchParameter>]]
-            [-ApproveComment <String>]
-            [-Publish [<SwitchParameter>]]
-            [-PublishComment <String>]
-            [-UseWebDav [<SwitchParameter>]]
-            [-Values <Hashtable>]
-            [-ContentType <ContentTypePipeBind>]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Add-PnPFile -Path <String> -Folder <FolderPipeBind> [-NewFileName <String>] [-Checkout] [-CheckInComment <String>]
+ [-Approve] [-ApproveComment <String>] [-Publish] [-PublishComment <String>] [-UseWebDav] [-Values <Hashtable>]
+ [-ContentType <ContentTypePipeBind>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### Upload file from stream
 ```powershell
-Add-PnPFile -FileName <String>
-            -Stream <Stream>
-            -Folder <String>
-            [-Checkout [<SwitchParameter>]]
-            [-CheckInComment <String>]
-            [-Approve [<SwitchParameter>]]
-            [-ApproveComment <String>]
-            [-Publish [<SwitchParameter>]]
-            [-PublishComment <String>]
-            [-UseWebDav [<SwitchParameter>]]
-            [-Values <Hashtable>]
-            [-ContentType <ContentTypePipeBind>]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Add-PnPFile -Folder <FolderPipeBind> -FileName <String> -Stream <Stream> [-Checkout] [-CheckInComment <String>]
+ [-Approve] [-ApproveComment <String>] [-Publish] [-PublishComment <String>] [-UseWebDav] [-Values <Hashtable>]
+ [-ContentType <ContentTypePipeBind>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPFile -Path c:\temp\company.master -Folder "_catalogs/masterpage"
 ```
 
 This will upload the file company.master to the masterpage catalog
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPFile -Path .\displaytemplate.html -Folder "_catalogs/masterpage/display templates/test"
 ```
 
 This will upload the file displaytemplate.html to the test folder in the display templates folder. If the test folder does not exist it will create it.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Add-PnPFile -Path .\sample.doc -Folder "Shared Documents" -Values @{Modified="1/1/2016"}
 ```
 
 This will upload the file sample.doc to the Shared Documents folder. After uploading it will set the Modified date to 1/1/2016.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Add-PnPFile -FileName sample.doc -Folder "Shared Documents" -Stream $fileStream -Values @{Modified="1/1/2016"}
 ```
 
 This will add a file sample.doc with the contents of the stream into the Shared Documents folder. After adding it will set the Modified date to 1/1/2016.
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Add-PnPFile -Path sample.doc -Folder "Shared Documents" -ContentType "Document" -Values @{Modified="1/1/2016"}
 ```
 
 This will add a file sample.doc to the Shared Documents folder, with a ContentType of 'Documents'. After adding it will set the Modified date to 1/1/2016.
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
 Add-PnPFile -Path sample.docx -Folder "Documents" -Values @{Modified="1/1/2016"; Created="1/1/2017"; Editor=23}
 ```
 
 This will add a file sample.docx to the Documents folder and will set the Modified date to 1/1/2016, Created date to 1/1/2017 and the Modified By field to the user with ID 23. To find out about the proper user ID to relate to a specific user, use Get-PnPUser.
 
-### ------------------EXAMPLE 7------------------
+### EXAMPLE 7
 ```powershell
 Add-PnPFile -Path sample.docx -Folder "Documents" -NewFileName "differentname.docx"
 ```
@@ -103,7 +88,7 @@ This will upload a local file sample.docx to the Documents folder giving it the 
 ## PARAMETERS
 
 ### -Approve
-Will auto approve the uploaded file.
+Will auto approve the uploaded file
 
 ```yaml
 Type: SwitchParameter
@@ -111,11 +96,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ApproveComment
-The comment added to the approval.
+The comment added to the approval
 
 ```yaml
 Type: String
@@ -123,11 +110,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -CheckInComment
-The comment added to the checkin.
+The comment added to the checkin
 
 ```yaml
 Type: String
@@ -135,11 +124,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Checkout
-If versioning is enabled, this will check out the file first if it exists, upload the file, then check it in again.
+If versioning is enabled, this will check out the file first if it exists, upload the file, then check it in again
 
 ```yaml
 Type: SwitchParameter
@@ -147,11 +138,27 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ContentType
-Use to assign a ContentType to the file.
+Use to assign a ContentType to the file
 
 ```yaml
 Type: ContentTypePipeBind
@@ -159,7 +166,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -FileName
@@ -171,19 +180,23 @@ Parameter Sets: Upload file from stream
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Folder
 The destination folder in the site
 
 ```yaml
-Type: String
+Type: FolderPipeBind
 Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NewFileName
@@ -195,11 +208,13 @@ Parameter Sets: Upload file
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Path
-The local file path.
+The local file path
 
 ```yaml
 Type: String
@@ -207,11 +222,13 @@ Parameter Sets: Upload file
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Publish
-Will auto publish the file.
+Will auto publish the file
 
 ```yaml
 Type: SwitchParameter
@@ -219,11 +236,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PublishComment
-The comment added to the publish action.
+The comment added to the publish action
 
 ```yaml
 Type: String
@@ -231,7 +250,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Stream
@@ -243,11 +264,12 @@ Parameter Sets: Upload file from stream
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -UseWebDav
-
 
 ```yaml
 Type: SwitchParameter
@@ -255,7 +277,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Values
@@ -305,37 +329,15 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

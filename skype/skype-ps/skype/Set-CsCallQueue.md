@@ -18,7 +18,7 @@ Updates a Call Queue in your Skype for Business Online or Teams organization.
 ## SYNTAX
 
 ```
-Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-Users <List>] [-LanguageId <String>] [-LineUri <String>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [<CommonParameters>]
+Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>] [-LineUri <String>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -311,7 +311,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceMode
-The ConferenceMode parameter indicates whether or not Conference mode will be applied on calls for this Call queue. Conference mode significantly reduces the amount of time it takes for a caller to be connected to an agent, after the agent accepts the call.
+The ConferenceMode parameter indicates whether or not Conference mode will be applied on calls for this Call queue. Conference mode significantly reduces the amount of time it takes for a caller to be connected to an agent, after the agent accepts the call. The following bullet points detail the difference between both modes:
+
+- Conference Mode Disabled: CQ call is presented to agent. Agent answers and media streams are setup. Based on geographic location of the CQ call and agent, there may be a slight delay in setting up the media streams which may result in some dead air and the first part of the conversation being cut off.
+
+- Conference Mode Enabled: CQ call is put into conference. Agent answers and is brought into conference. Media streams are already setup when agent is brought into conference thus no dead air, and first bit of conversation will not be cut off.
 
 ```yaml
 Type: Boolean
@@ -326,8 +330,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Users
-The Users parameter lets you add agents to the Call Queue. This parameter expects a list of user unique identifiers (GUID).
+### -User
+The User parameter lets you add agents to the Call Queue. This parameter expects a list of user unique identifiers (GUID).
 
 ```yaml
 Type: List

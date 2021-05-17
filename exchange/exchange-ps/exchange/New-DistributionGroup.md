@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-DistributionGroup
@@ -25,11 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DistributionGroup [-Name] <String>
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
+ [-BccBlocked <Boolean>]
  [-BypassNestedModerationEnabled <Boolean>]
  [-Confirm]
  [-CopyOwnerToMember]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
+ [-HiddenGroupMembershipEnabled]
  [-IgnoreNamingPolicy]
  [-ManagedBy <MultiValuedProperty>]
  [-MemberDepartRestriction <MemberUpdateType>]
@@ -39,21 +40,20 @@ New-DistributionGroup [-Name] <String>
  [-ModerationEnabled <Boolean>]
  [-Notes <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-RoomList]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-Type <GroupType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the New-DistributionGroup cmdlet to create the following types of groups:
 
 - Mail-enabled universal security groups (USGs)
-
 - Universal distribution groups
 
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Distribution groups aren't security principals, and therefore can't be assigned permissions. However, you can assign permissions to mail-enabled security groups.
@@ -101,14 +101,13 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -134,23 +133,14 @@ This parameter is available only in on-premises Exchange.
 The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -166,11 +156,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BccBlocked
+This parameter is available only in the cloud-based service.
+
+{{ Fill BccBlocked Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BypassNestedModerationEnabled
 The ByPassNestedModerationEnabled parameter specifies how to handle message approval when a moderated group contains other moderated groups as members. Valid values are:
 
 - $true: After a moderator approves a message sent to the group, the message is automatically approved for all other moderated groups that are members of the group.
-
 - $false: After a moderator approves a message sent to the group, separate approval is required for each moderated group that's a member of the group. This is the default value.
 
 This parameter can be used only by top-level organization and tenant administrators.
@@ -191,8 +198,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -262,6 +268,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HiddenGroupMembershipEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill HiddenGroupMembershipEnabled Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreNamingPolicy
 The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's group naming policy. You don't need to specify a value with this switch.
 
@@ -284,38 +308,25 @@ Accept wildcard characters: False
 The ManagedBy parameter specifies an owner for the group. A group must have at least one owner. If you don't use this parameter to specify the owner when you create the group, the user account that created the group is the owner. The group owner is able to:
 
 - Modify the properties of the group
-
 - Add or remove group members
-
 - Delete the group
-
 - Approve member depart or join requests (if available)
-
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
 The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
 
@@ -338,7 +349,6 @@ Accept wildcard characters: False
 The MemberDepartRestriction parameter specifies the restrictions that you put on requests to leave the group. Valid values are:
 
 - Open: Members can leave the group without approval from one of the group owners. This is the default value for universal distribution groups. You can't use this value on universal security groups.
-
 - Closed: Members can't remove themselves from the group, and requests to leave the group are rejected automatically. Group membership is controlled by the group owners. This is the default value for universal security groups.
 
 ```yaml
@@ -358,9 +368,7 @@ Accept wildcard characters: False
 The MemberJoinRestriction parameter specifies the restrictions that you put on requests to join the group. Valid values are:
 
 - Open: Users can add themselves to the group without approval from a group owner. You can't use this value on universal security groups.
-
 - Closed: Users can't add themselves to the group, and requests to join the group are rejected automatically. Group membership is controlled by the group owners. This is the default value on universal security groups and universal distribution groups.
-
 - ApprovalRequired: Users can request to join the group. The user is added to the group after the request is approved by one of the group owners. Although you can use this value on universal security groups, user requests to join the group aren't sent to the group owners, so this setting is only effective on universal distribution groups.
 
 ```yaml
@@ -380,18 +388,13 @@ Accept wildcard characters: False
 The Members parameter specifies the recipients (mail-enabled objects) that are members of the group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 After you create the group, you use the Get-DistributionGroupMember cmdlet to view the group members, and the Add-DistributionGroupMember, Remove-DistributionGroupMember, and Update-DistributionGroupMember cmdlets to manage group membership.
 
@@ -414,18 +417,13 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this group. A moderator approves messages sent to the group before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 For mail-enabled security groups, you need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -448,7 +446,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -488,31 +485,12 @@ The OrganizationalUnit parameter specifies the location in Active Directory wher
 Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideRecipientQuotas
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
@@ -544,7 +522,6 @@ Accept wildcard characters: False
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 The default value is $true.
@@ -583,7 +560,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -602,9 +579,7 @@ Accept wildcard characters: False
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
-
 - Internal: Notify senders in the organization when their messages aren't approved.
-
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
@@ -626,7 +601,6 @@ Accept wildcard characters: False
 The Type parameter specifies the type of group that you want to create. Valid values are:
 
 - Distribution: A distribution group. These groups can't have permissions assigned. This is the default value.
-
 - Security: A mail-enabled security group. These groups can have permissions assigned.
 
 The group's scope is always Universal.

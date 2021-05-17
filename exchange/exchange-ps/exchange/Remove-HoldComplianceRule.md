@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-holdcompliancerule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Remove-HoldComplianceRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Remove-HoldComplianceRule
@@ -17,14 +16,17 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Remove-HoldComplianceRule cmdlet to remove preservation rules from the Security & Compliance Center.
 
-Note: The Remove-HoldComplianceRule cmdlet has been replaced by the Remove-RetentionComplianceRule cmdlet. If you have scripts that use Remove-HoldComplianceRule, update them to use Remove-RetentionComplianceRule.
+**Note**: The Remove-HoldComplianceRule cmdlet has been replaced by the Remove-RetentionComplianceRule cmdlet. If you have scripts that use Remove-HoldComplianceRule, update them to use Remove-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-HoldComplianceRule [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
+Remove-HoldComplianceRule [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-ForceDeletion]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -48,16 +50,14 @@ This example removes the preservation rule named "One Year Standard".
 The Identity parameter specifies the preservation rule to remove. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -69,15 +69,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -93,7 +92,7 @@ The ForceDeletion switch forces the removal of the rule. You don't need to speci
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -109,7 +108,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

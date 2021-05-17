@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spusagedefinition
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPUsageDefinition
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -153,6 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTotalSizeInBytes
+This parameter stores the maximum SQL storage size for the data of this provider.
+
 ```yaml
 Type: Int64
 Parameter Sets: (All)
@@ -184,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsageDatabaseEnabled
-{{Fill UsageDatabaseEnabled Description}}
+Set to export usage data from the local server to the Usage database.
 
 ```yaml
 Type: SwitchParameter

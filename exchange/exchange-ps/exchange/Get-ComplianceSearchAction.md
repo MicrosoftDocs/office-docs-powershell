@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesearchaction
-applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Get-ComplianceSearchAction
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Get-ComplianceSearchAction
@@ -28,7 +27,8 @@ Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Preview
@@ -38,7 +38,8 @@ Get-ComplianceSearchAction [-Preview]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Purge
@@ -48,7 +49,8 @@ Get-ComplianceSearchAction [-Purge]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Export
@@ -58,7 +60,8 @@ Get-ComplianceSearchAction [-Export]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,21 +84,52 @@ This example shows a summary list of all compliance search actions.
 
 ### Example 2
 ```powershell
-Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
+Get-ComplianceSearchAction -Identity "Case 1234\_Preview" | Format-List
 ```
 
 This example shows details about the compliance search action named "Case 1234\_Preview"
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
+
+- Name: The compliance search action name uses the syntax `"Compliance Search Name\_Action"`. For example, `"Case 1234\_Preview"`.
+- JobRunId (GUID)
+
+You can't use this parameter with the Export, Preview, or Purge parameters.
+
+When you use the Identity parameter, more details are returned in the results. For example:
+
+- In the Results line, the values of the Item count, Total size, and Details properties are populated.
+- Location lines are added to the results.
+- The NumBinding property value is populated.
+- The affected location properties (for example, ExchangeLocation) are populated.
+- The CaseName property value is populated.
+
+```yaml
+Type: ComplianceSearchActionIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Case
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in the cloud-based service.
+
+The Case parameter filters the results by the name of the specified case. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -111,7 +145,7 @@ The Details switch specifies whether to include detailed information in the resu
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -141,36 +175,18 @@ Accept wildcard characters: False
 ### -Export
 The Export switch filters the results by Export compliance search actions. You don't need to specify a value with this switch.
 
+You can't use this switch with the Identity, Preview, or Purge parameters.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
-
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> . For example, Case 1234\_Preview.
-
-- JobRunId (GUID)
-
-```yaml
-Type: ComplianceSearchActionIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -181,7 +197,7 @@ The IncludeCredential switch specifies whether to include the credential in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -193,11 +209,13 @@ Accept wildcard characters: False
 ### -Preview
 The Preview switch filters the results by Preview compliance search actions.
 
+You can't use this switch with the Export, Identity, or Purge parameters.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Preview
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -209,11 +227,13 @@ Accept wildcard characters: False
 ### -Purge
 The Purge switch filters the results by Purge compliance search actions.
 
+You can't use this switch with the Export, Identity, or Preview parameters.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -229,7 +249,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

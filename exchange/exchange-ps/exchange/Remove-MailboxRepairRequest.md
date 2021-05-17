@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Remove-MailboxRepairRequest
@@ -22,12 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can run the Remove-MailboxRepairRequest cmdlet to remove all mailbox repair requests for a specific database, for a group of related mailbox repair requests, or for a specific mailbox repair request. Mailbox repair requests are identified by a complex GUID with the following format: \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>. The DatabaseGuid identifies the mailbox database where the mailbox being repaired is located. The RequestGuid identifies related requests that may contain more than one job if the request runs more than one task or targets more than one mailbox. The JobGuid identifies a unique job. See the examples to remove all requests on a mailbox database, remove a group of related requests that share the same RequestGuid, or remove a specific request by specifying the complete \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\> value.
+You can run the Remove-MailboxRepairRequest cmdlet to remove all mailbox repair requests for a specific database, for a group of related mailbox repair requests, or for a specific mailbox repair request. Mailbox repair requests are identified by a complex GUID with the following format: `DatabaseGuid\RequestGuid\JobGuid`. The DatabaseGuid identifies the mailbox database where the mailbox being repaired is located. The RequestGuid identifies related requests that may contain more than one job if the request runs more than one task or targets more than one mailbox. The JobGuid identifies a unique job. See the examples to remove all requests on a mailbox database, remove a group of related requests that share the same RequestGuid, or remove a specific request by specifying the complete `DatabaseGuid\RequestGuid\JobGuid` value.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -42,22 +44,24 @@ This example removes all mailbox repair requests for the mailbox database EXCH-M
 
 ### Example 2
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity; Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5
+Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity
+Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5
 ```
 
-This example removes all related mailbox repair requests that have the same \<DatabaseGuid\>\\\<RequestGuid\>. The example uses the Get-MailboxRepairRequest cmdlet to display the value of the Identity parameter for all mailbox repair request for EXCH-MBX-02 mailbox database.
+This example removes all related mailbox repair requests that have the same DatabaseGuid\\RequestGuid. The example uses the Get-MailboxRepairRequest cmdlet to display the value of the Identity parameter for all mailbox repair request for EXCH-MBX-02 mailbox database.
 
 ### Example 3
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity; Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\189c7852-49bd-4737-a53e-6e6caa5a183c\1d8ca58a-186f-4dc6-b481-f835b548a929
+Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity
+Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\189c7852-49bd-4737-a53e-6e6caa5a183c\1d8ca58a-186f-4dc6-b481-f835b548a929
 ```
 
-This example deletes a specific mailbox repair request by specifying the unique \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\> identity value. The example also uses the Get-MailboxRepairRequest cmdlet to display the identities of all mailbox repair request for the EXCH-MBX-02 mailbox database.
+This example deletes a specific mailbox repair request by specifying the unique `DatabaseGuid\RequestGuid\JobGuid` identity value. The example also uses the Get-MailboxRepairRequest cmdlet to display the identities of all mailbox repair request for the EXCH-MBX-02 mailbox database.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox repair request to remove. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>. Use the Get-MailboxRepairRequest cmdlet to find the identity of a mailbox repair request.
+The Identity parameter specifies the mailbox repair request to remove. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is `DatabaseGuid\RequestGuid\JobGuid`. Use the Get-MailboxRepairRequest cmdlet to find the identity of a mailbox repair request.
 
 ```yaml
 Type: StoreIntegrityCheckJobIdParameter
@@ -75,8 +79,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-MessageTraceDetail
@@ -17,30 +16,30 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MessageTraceDetail
+Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
  [-Action <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-Event <MultiValuedProperty>]
- [-Expression <Expression>]
  [-MessageId <String>]
- [-MessageTraceId <Guid>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
- [-RecipientAddress <String>]
  [-SenderAddress <String>]
- [-StartDate <DateTime>] [<CommonParameters>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 30 days. If you enter a time period that's older than 30 days, you won't receive an error, but the command will return no results.
+You can use this cmdlet to search message data for the last 10 days. If you enter a time period that's older than 10 days, you will receive an error and the command will return no results.
+
+To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -48,15 +47,63 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
+Get-MessageTraceDetail -MessageTraceId ae5c1219-4c90-41bf-fef5-08d837917e7c -RecipientAddress robert@contoso.com
+```
+
+This example uses the Get-MessageTraceDetail cmdlet to retrieve detailed message trace information for messages with the Exchange Network Message ID value ae5c1219-4c90-41bf-fef5-08d837917e7c received by robert@contoso.com.
+
+### Example 2
+```powershell
 Get-MessageTrace -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress john@contoso.com -StartDate 06/13/2018 -EndDate 06/15/2018 | Get-MessageTraceDetail
 ```
 
-This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f send by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
+This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
 
 ## PARAMETERS
 
+### -MessageTraceId
+The MessageTraceId parameter is used with the recipient address to uniquely identify a message trace and obtain more details. A MessageTraceId is generated for every message that's processed by the system.
+
+The MessageTraceId value is available in the output of the following cmdlets:
+
+- Get-MessageTrace
+- Get-MailDetailATPReport
+- Get-MailDetailDlpPolicyReport
+- Get-MailDetailMalwareReport
+- Get-MailDetailSpamReport
+- Get-MailDetailTransportRuleReport
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Action
-The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering, or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
+The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -95,17 +142,11 @@ Accept wildcard characters: False
 The Event parameter filters the report by the message event. The following are examples of common events:
 
 - RECEIVE: The message was received by the service.
-
 - SEND: The message was sent by the service.
-
 - FAIL: The message failed to be delivered.
-
 - DELIVER: The message was delivered to a mailbox.
-
 - EXPAND: The message was sent to a distribution group that was expanded.
-
 - TRANSFER: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
-
 - DEFER: The message delivery was postponed and may be re-attempted later.
 
 You can specify multiple values separated by commas.
@@ -123,43 +164,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MessageId
 The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
-
-```yaml
-Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -216,22 +225,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

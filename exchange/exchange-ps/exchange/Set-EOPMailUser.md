@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "eop-ps"
 ---
 
 # Set-EOPMailUser
@@ -52,23 +51,14 @@ This example changes the display name for the mail user Edward Meadows to "Ed Me
 The Identity parameter specifies the mail user that you want to modify. You can use any value that uniquely identifies the mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -87,7 +77,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the alias of the mail user.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 ```yaml
 Type: String
@@ -119,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies the primary email address and other proxy addresses for the mail user. This parameter uses the syntax SMTP:\<PrimaryEmailAddress\>,\<ProxyAddress\>.
+The EmailAddresses parameter specifies the primary email address and other proxy addresses for the mail user. This parameter uses the syntax `SMTP:<PrimaryEmailAddress>,<ProxyAddress>`.
 
 The values that you specify for this parameter overwrite any existing values.
 

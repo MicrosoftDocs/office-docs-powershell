@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exchangediagnosticinfo
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ExchangeDiagnosticInfo
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ExchangeDiagnosticInfo
@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ExchangeDiagnosticInfo [-Argument <String>] [-Component <String>] [-Process <String>]
- [-Server <ServerIdParameter>] [-Unlimited] [<CommonParameters>]
+Get-ExchangeDiagnosticInfo [-Argument <String>]
+ [-Component <String>]
+ [-Process <String>]
+ [-Server <ServerIdParameter>]
+ [-Unlimited]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +43,8 @@ This example returns a summary list of all Exchange processes that are running o
 
 ### Example 2
 ```powershell
-[xml]$edi = Get-ExchangeDiagnosticInfo; $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
+[xml]$edi = Get-ExchangeDiagnosticInfo
+$edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
 ```
 
 This example display the XML output of the command in format that's easier to read.
@@ -51,7 +56,7 @@ The Argument parameter specifies a valid argument to use with the specified Comp
 
 Common Argument values that you can use with virtually Component value are Help and Verbose.
 
-To see the Argument values that are available for a given Component value, run the command Get-ExchangeDiagnosticInfo -Process \<ProcessName\> -Component \<ComponentName\> -Argument Help
+To see the Argument values that are available for a given Component value, run the command `Get-ExchangeDiagnosticInfo -Process ProcessName -Component ComponentName -Argument Help`.
 
 ```yaml
 Type: String
@@ -69,7 +74,7 @@ Accept wildcard characters: False
 ### -Component
 The Component parameter returns detailed information for the specified Component of the given Process value.
 
-To see the Component values that are available for a given Process value, run the command Get-ExchangeDiagnosticInfo -Process \<ProcessName\> -Argument Help.
+To see the Component values that are available for a given Process value, run the command `Get-ExchangeDiagnosticInfo -Process ProcessName -Argument Help`.
 
 ```yaml
 Type: String
@@ -106,11 +111,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

@@ -1,36 +1,40 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpfield
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPField
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPField.html
 ---
-
+ 
 # Remove-PnPField
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPField.md to change this file.
+
 Removes a field from a list or a site
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPField -Identity <FieldPipeBind>
-                [-Force [<SwitchParameter>]]
-                [-List <ListPipeBind>]
-                [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+Remove-PnPField [-Identity] <FieldPipeBind> [[-List] <ListPipeBind>] [-Force] 
+ [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPField -Identity "Speakers"
 ```
 
 Removes the speakers field from the site columns
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Remove-PnPField -List "Demo list" -Identity "Speakers"
 ```
@@ -38,6 +42,35 @@ Remove-PnPField -List "Demo list" -Identity "Speakers"
 Removes the speakers field from the list Demo list
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 Specifying the Force parameter will skip the confirmation question.
@@ -48,7 +81,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -60,7 +95,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -72,33 +109,29 @@ Parameter Sets: (All)
 
 Required: False
 Position: 1
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SPOnlineConnection
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

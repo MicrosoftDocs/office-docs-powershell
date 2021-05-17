@@ -1,19 +1,19 @@
 ---
 external help file: microsoft.office.access.server.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spaccessservicesdatabasecredentials
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPAccessServicesDatabaseCredentials
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
 # Copy-SPAccessServicesDatabaseCredentials
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet copies Access Services database credentials from one server to another.
 
 ## SYNTAX
 
@@ -24,21 +24,22 @@ Copy-SPAccessServicesDatabaseCredentials [-AppUrl] <String> [-AssignmentCollecti
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet copies Access Services database credentials from one server to another.
 
 ## EXAMPLES
 
-### Example 1 
-```
- {{ Add example code here }}
+### Example 1
+
+```powershell
+Copy-SPAccessServicesDatabaseCredentials -AppUrl https://app-11fb86bdec407b.apps.contoso.com/sites/team/MyDatabase -ServerCredential (Get-Credential) -ServiceContext https://team.contoso.com -SourceServer SQL01 -TargetServer SQL02
 ```
 
-{{ Add example description here }}
+Copies the database credentials for the Access Services database "MyDatabase" from SQL01 to SQL02.
 
 ## PARAMETERS
 
 ### -AppUrl
-{{Fill AppUrl Description}}
+The URL of the Access app. This URL is the URL of the Access app when you open it on a SharePoint site.
 
 ```yaml
 Type: String
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerCredential
-{{Fill ServerCredential Description}}
+Credential used to connect to the source server.
 
 ```yaml
 Type: NetworkCredential
@@ -88,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context for which the realm needs to be displayed. For example, a SharePoint site URL.
 
 ```yaml
 Type: SPServiceContextPipeBind
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceServer
-{{Fill SourceServer Description}}
+Source SQL Server name.
 
 ```yaml
 Type: String
@@ -120,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetServer
-{{Fill TargetServer Description}}
+Destination SQL Server name.
 
 ```yaml
 Type: String

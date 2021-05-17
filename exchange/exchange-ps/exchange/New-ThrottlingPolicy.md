@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-ThrottlingPolicy
@@ -169,11 +168,12 @@ New-ThrottlingPolicy [-Name] <String>
  [-SuiteMaxConcurrency <Unlimited>]
  [-SuiteRechargeRate <Unlimited>]
  [-ThrottlingPolicyScope <ThrottlingPolicyScopeType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-By default, there is one default throttling policy named GlobalThrottlingPolicy\_\<GUID\> with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
+By default, there is one default throttling policy named `GlobalThrottlingPolicy_<GUID>` with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
 
 For more information about how to control how resources are consumed by individual users, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
 
@@ -193,7 +193,7 @@ In Exchange Server 2010, this example creates a non-default throttling policy. A
 New-ThrottlingPolicy -Name ITUserPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
 ```
 
-This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>. After you create this policy, you must associate it with specific users.
+This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy `GlobalThrottlingPolicy_<GUID>`. After you create this policy, you must associate it with specific users.
 
 ### Example 3
 ```powershell
@@ -207,7 +207,7 @@ In Exchange Server 2010, this example creates a policy for a tenant that sets th
 New-ThrottlingPolicy -Name AllUsersEWSPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
 ```
 
-This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>.
+This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy `GlobalThrottlingPolicy_<GUID>`.
 
 ### Example 5
 ```powershell
@@ -233,7 +233,7 @@ This example creates a throttling policy that restricts a user to be able to onl
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name of the object in Active Directory. The default policy is named DefaultThrottlingPolicy\<GUID\>.
+The Name parameter specifies the name of the object in Active Directory. The default policy is named `DefaultThrottlingPolicy<GUID>`.
 
 ```yaml
 Type: String
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The AnonymousPercentTimeInAD parameter specifies the percentage of a minute that anonymous users can spend executing LDAP requests (PercentTimeInAD) to a user's calendar data. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The AnonymousPercentTimeInCAS parameter specifies the percentage of a minute that anonymous users can spend executing CAS code (PercentTimeInCAS) to a user's calendar data. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The AnonymousPercentTimeInMailboxRPC parameter specifies the percentage of a minute that anonymous users can spend executing mailbox RPC requests (PercentTimeInMailboxRPC) to a user's calendar data. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -465,8 +465,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -611,7 +610,7 @@ Accept wildcard characters: False
 ```
 
 ### -CPAPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CPAPercentTimeInMailboxRPC parameter specifies the percentage of a minute that a cross-premises user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -645,7 +644,7 @@ Accept wildcard characters: False
 ```
 
 ### -CPUStartPercent
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CPUStartPercent parameter specifies the per-process CPU percentage at which users governed by this policy begin to be backed off. Valid values are from 0 through 100. Use $null to turn off CPU percentage-based throttling for this policy.
 
@@ -663,7 +662,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxConcurrency
-The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time. To modify the discovery throttling parameters, create a new policy and name it "DiscoveryThrottlingPolicy". 
+The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time. To modify the discovery throttling parameters, create a new policy and name it "DiscoveryThrottlingPolicy".
 
 ```yaml
 Type: Unlimited
@@ -937,7 +936,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EASPercentTimeInAD parameter specifies the percentage of a minute that an Exchange ActiveSync user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -955,7 +954,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EASPercentTimeInCAS parameter specifies the percentage of a minute that an Exchange ActiveSync user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -973,7 +972,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EASPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an Exchange ActiveSync user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1183,7 +1182,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSFastSearchTimeoutInSeconds
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EWSFastSearchTimeoutInSeconds parameter specifies the amount of time that searches made using Exchange Web Services continue before they time out. If the search takes more than the time indicated by the policy value, the search stops and an error is returned. The default value of this setting is 60 seconds.
 
@@ -1201,7 +1200,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSFindCountLimit
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EWSFindCountLimit parameter specifies the maximum result size of FindItem or FindFolder calls that can exist in memory on the Client Access server at the same time for this user in this current process. If an attempt is made to find more items or folders than your policy limit allows, an error is returned. However, the limit isn't strictly enforced if the call is made within the context of an indexed page view. Specifically, in this scenario, the search results are truncated to include the number of items and folders that fit within the policy limit. You can then continue paging into your results set via further FindItem or FindFolder calls.
 
@@ -1251,7 +1250,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EWSPercentTimeInAD parameter specifies the percentage of a minute that an Exchange Web Services user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1269,7 +1268,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EWSPercentTimeInCAS parameter specifies the percentage of a minute that an Exchange Web Services user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1287,7 +1286,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The EWSPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an Exchange Web Services user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1403,7 +1402,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IMAPPercentTimeInAD parameter specifies the percentage of a minute that an IMAP user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1421,7 +1420,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IMAPPercentTimeInCAS parameter specifies the percentage of a minute that an IMAP user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1439,7 +1438,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IMAPPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an IMAP user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1655,7 +1654,11 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMaxConcurrency
-The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
+The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
+
+A valid value for this parameter is an integer from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), use the value $null.
+
+**Note**: We don't recommend setting this parameter to a large number or the value $null, because server performance might be negatively affected.
 
 ```yaml
 Type: UInt32
@@ -1671,7 +1674,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAPercentTimeInAD parameter specifies the percentage of a minute that an Outlook Web App user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1689,7 +1692,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAPercentTimeInCAS parameter specifies the percentage of a minute that an Outlook Web App user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1707,7 +1710,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an Outlook Web App user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1853,7 +1856,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The POPPercentTimeInAD parameter specifies the percentage of a minute a POP user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1871,7 +1874,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The POPPercentTimeInCAS parameter specifies the percentage of a minute a POP user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -1889,7 +1892,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The POPPercentTimeInMailboxRPC parameter specifies the percentage of a minute a POP user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -2006,7 +2009,6 @@ Accept wildcard characters: False
 The PowerShellMaxConcurrency parameter specifies different information depending on context:
 
 - In the context of remote PowerShell, the PowerShellMaxConcurrency parameter specifies the maximum number of remote PowerShell sessions that a remote PowerShell user can have open at the same time.
-
 - In the context of Exchange Web Services, the PowerShellMaxConcurrency parameter specifies the number of concurrent cmdlet executions that a user can have at the same time.
 
 This parameter value doesn't necessarily correlate to the number of browsers opened by the user.
@@ -2028,21 +2030,13 @@ Accept wildcard characters: False
 The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructive cmdlets that can be executed within a specific time period before their execution is stopped. Destructive cmdlets are cmdlets that can make significant changes to user data and configuration settings in your Exchange organization. Throttling these cmdlets may help prevent accidental data loss. The following cmdlets are designated as destructive:
 
 - Disable-Mailbox
-
 - Move-ActiveMailboxDatabase
-
 - Remove-AcceptedDomain
-
 - Remove-Mailbox
-
 - Remove-MailUser
-
 - Remove-Organization
-
 - Set-Mailbox
-
 - Set-MailUser
-
 - Update-MailboxDatabaseCopy
 
 The time period used for this limit is specified by the PowerShellMaxDestructiveCmdletsTimePeriod parameter. Both values should be set at the same time. This feature isn't on by default. For more information, see the "Examples" section.
@@ -2389,7 +2383,7 @@ Accept wildcard characters: False
 ```
 
 ### -RCAPercentTimeInAD
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RCAPercentTimeInAD parameter specifies the percentage of a minute that an Outlook user can spend executing directory requests. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -2407,7 +2401,7 @@ Accept wildcard characters: False
 ```
 
 ### -RCAPercentTimeInCAS
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RCAPercentTimeInCAS parameter specifies the percentage of a minute that an Outlook user can spend executing CAS mailbox requests. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -2425,7 +2419,7 @@ Accept wildcard characters: False
 ```
 
 ### -RCAPercentTimeInMailboxRPC
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RCAPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an RPC Client Access user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -2672,9 +2666,7 @@ Accept wildcard characters: False
 The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values.
 
 - Regular: Specifies a custom policy that applies to specific users.
-
 - Organization: Specifies a custom policy that applies to all users in your organization.
-
 - Global: Reserved for the default throttling policy.
 
 For more information about throttling policy scopes, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).

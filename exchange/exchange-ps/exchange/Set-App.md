@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-app
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-App
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-App
@@ -22,9 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <DefaultStateForUser>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-OrganizationApp]
- [-ProvidedTo <ClientExtensionProvidedTo>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
+Set-App [-Identity] <AppIdParameter>
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -41,7 +47,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$a= Get-DistributionGroupMember -Identity "Finance Team"; Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
+$a= Get-DistributionGroupMember -Identity "Finance Team"
+Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
 ```
 
 This example changes the organization app named FinanceTestApp, which was installed to everyone in the organization, to be provided to members of the Finance Team group and to be enabled by default.
@@ -62,7 +69,7 @@ The Identity parameter specifies the AppID (GUID value) of the app that you want
 Type: AppIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -74,15 +81,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -95,9 +101,7 @@ Accept wildcard characters: False
 The DefaultStateForUser parameter specifies the default initial state of the organization app for the specified users. Valid values are:
 
 - Enabled: The organization app is enabled.
-
 - Disabled: The organization app is disabled. This is the default value.
-
 - AlwaysEnabled: The organization app is enabled, and users can't disable it.
 
 You use this parameter with the OrganizationApp switch.
@@ -137,7 +141,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the app is available to users in the organization. Valid values are:
 
 - $true: The app is enabled for the specified users. This is the default value.
-
 - $false: The app isn't enabled for any users in the organization. This hides the app from user view for all users.
 
 This setting overrides the ProvidedTo, UserList, and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
@@ -171,11 +174,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrivateCatalog
+The PrivateCatalog switch specifies that the app you want to modify is located in a private catalog. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProvidedTo
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid value are:
 
 - Everyone: The app is provided to every user in the organization. This is the default value. Every user sees this app listed in the installed apps list in Outlook on the web Options. When an app in the installed apps list is enabled, users can use the features of this app in their email. All users are blocked from installing their own instances of this app, including but not limited to users with install apps permissions.
-
 - SpecificUsers: This app is provided to only the users specified by the UserList parameter. All other users don't see this organizational app in their management view, nor will it activate in their mail or calendar items. The specified users are also blocked from installing their own instance of this app. Unlisted users aren't blocked from installing their own instance of this app.
 
 You use this parameter with the OrganizationApp switch.
@@ -194,31 +212,22 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can use an organizational app. This parameter is currently limited to 1000 users. This will not change in the future as we are planning on moving to [Centralized Deployment](https://docs.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
+The UserList parameter specifies who can use an organizational app. This parameter is limited to 1000 users. In the cloud-based service, this value is less relevant as Office Add-in management is moving to [Centralized Deployment](https://docs.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
 
 Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>". Maximum size of the list is 1000 recipients.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`. Maximum size of the list is 1000 recipients.
 
 You use this parameter with the OrganizationApp switch.
 
@@ -242,23 +251,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateCatalog
-The PrivateCatalog switch specifies that the app you want to modify is located in a private catalog. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

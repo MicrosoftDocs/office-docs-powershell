@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-AuthRedirect
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AuthRedirect [-Identity] <AuthRedirectIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-TargetUrl <String>] [-WhatIf] [<CommonParameters>]
+Set-AuthRedirect [-Identity] <AuthRedirectIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-TargetUrl <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl https://mbx01.contoso.com
 ```
 
-This example sets the TargetURL value to https://mbx01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
+This example sets the TargetURL value to `https://mbx01.contoso.com` for the existing OAuth redirection object named `AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE`.
 
 ### Example 2
 ```powershell
@@ -48,7 +51,7 @@ This example sets the TargetURL value for all existing OAuth redirection objects
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the existing OAuth redirection object that you want to modify. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
+The Identity parameter specifies the existing OAuth redirection object that you want to modify. The object name uses the syntax `AuthRedirect-Bearer-GUID`. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
 
 ```yaml
 Type: AuthRedirectIdParameter
@@ -66,8 +69,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -1,12 +1,12 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spprojectwebinstance
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Test-SPProjectWebInstance
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Mount-SPProjectWebInstance](Mount-SPProjectWebInstance.md)

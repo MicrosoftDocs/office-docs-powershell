@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-CsUserActivitiesReport
@@ -19,77 +18,52 @@ This cmdlet was deprecated in January, 2018. For information about the available
 
 Use the Get-CsUserActivitiesReport cmdlet to view number and type of activities that a use participated in while connected to Skype for Business Online in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-CsUserActivitiesReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-UserName <String>] [<CommonParameters>]
+Get-CsUserActivitiesReport [-EndDate <DateTime>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-UserName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Get-CsUserActivitiesReport to query information about activities in Skype for Business Online by all users or a specified user for the last 3 months. For the reporting period you specify, the cmdlet returns the following information:
 
 - UserName
-
 - LastLogonTime
-
 - LastActivityTime
-
 - TotalP2PSessions
-
 - TotalP2PIMSessions
-
 - TotalP2PAudioSessions
-
 - TotalP2PVideoSessions
-
 - TotalP2PApplicationSharingSessions
-
 - TotalP2PAudioSessionMinutes
-
 - TotalP2PVideoSessionMinutes
-
 - TotalOrganizedConferences
-
 - TotalOrganizedIMConferences
-
 - TotalOrganizedAVConferences
-
 - TotalOrganizedApplicationSharingConferences
-
 - TotalOrganizedWebConferences
-
 - TotalOrganizedDialInConferences
-
 - TotalOrganizedAVConferenceMinutes
-
 - TotalParticipatedConferences
-
 - TotalParticipatedIMConferences
-
 - TotalParticipatedAVConferences
-
 - TotalParticipatedApplicationSharingConferences
-
 - TotalParticipatedWebConferences
-
 - TotalParticipatedDialInConferences
-
 - TotalParticipatedAVConferenceMinutes
-
 - TotalPlacedPSTNCalls
-
 - TotalReceivedPSTNCalls
-
 - TotalPlacedPSTNCallMinutes
-
 - TotalReceivedPSTNCallMinutes
-
 - TotalMessages
-
 - TotalTransferredFiles
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

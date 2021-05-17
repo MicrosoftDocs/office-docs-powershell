@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Start-ManagedFolderAssistant
@@ -28,7 +27,30 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
  [-DomainController <Fqdn>]
  [-Confirm]
  [-HoldCleanup]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ComplianceJobAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### DataGovernanceAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### HoldCleanup
@@ -38,7 +60,8 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCle
  [-Confirm]
  [-FullCrawl]
  [-InactiveMailbox]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### StopHoldCleanup
@@ -48,7 +71,8 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHo
  [-Confirm]
  [-FullCrawl]
  [-InactiveMailbox]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,23 +108,14 @@ This example uses the Get-Mailbox command to retrieve all the mailboxes that res
 The Identity parameter specifies the mailbox to be processed. In cross-premises deployments, you can also specify a mail user who has a mailbox in the cloud. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -163,11 +178,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ComplianceJob
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ComplianceJobAssistant
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -175,6 +207,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataGovernance
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DataGovernanceAssistant
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -208,7 +258,7 @@ The FullCrawl switch recalculates the application of tags across the whole mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
@@ -230,7 +280,7 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 

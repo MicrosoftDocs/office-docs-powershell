@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-DatabaseAvailabilityGroup
@@ -22,21 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DatabaseAvailabilityGroup [[-Identity] <DatabaseAvailabilityGroupIdParameter>] [-DomainController <Fqdn>]
- [-Status] [<CommonParameters>]
+Get-DatabaseAvailabilityGroup [[-Identity] <DatabaseAvailabilityGroupIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 In addition to obtaining a list of DAG members, the Get-DatabaseAvailabilityGroup cmdlet can also be used to view real-time status information about a DAG, such as:
 
 - OperationalServers
-
 - PrimaryActiveManager
-
 - ReplicationPort
-
 - NetworkNames
-
 - WitnessShareInUse
 
 Use the Status parameter with the command to include the values for these listed properties. Without the Status parameter, the values returned for these properties are blank.

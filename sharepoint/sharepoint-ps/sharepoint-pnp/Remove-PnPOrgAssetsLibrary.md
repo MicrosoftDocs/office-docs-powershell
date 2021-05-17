@@ -1,23 +1,31 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnporgassetslibrary
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Remove-PnPOrgAssetsLibrary
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPOrgAssetsLibrary.html
 ---
-
+ 
 # Remove-PnPOrgAssetsLibrary
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPOrgAssetsLibrary.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a given document library as a organizational asset source
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Remove-PnPOrgAssetsLibrary -LibraryUrl <String>
-                           [-ShouldRemoveFromCdn <Boolean>]
-                           [-CdnType <SPOTenantCdnType>]
-                           [-Connection <SPOnlineConnection>]
+Remove-PnPOrgAssetsLibrary -LibraryUrl <String> [-ShouldRemoveFromCdn <Boolean>] [-CdnType <SPOTenantCdnType>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,21 +33,21 @@ Removes a given document library as a organizational asset source based on its s
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-PnPOrgAssetsLibrary -LibraryUrl "sites/branding/logos"
 ```
 
 This example removes the document library with the url "logos" residing in the sitecollection with the url "sites/branding/logos" from the list with organizational assets keeping it as an Office 365 CDN source
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Remove-PnPOrgAssetsLibrary -LibraryUrl "sites/branding/logos" -ShouldRemoveFromCdn $true
 ```
 
 This example removes the document library with the url "logos" residing in the sitecollection with the url "sites/branding/logos" from the list with organizational assets also removing it as a Public Office 365 CDN source
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Remove-PnPOrgAssetsLibrary -LibraryUrl "sites/branding/logos" -ShouldRemoveFromCdn $true -CdnType Private
 ```
@@ -54,10 +62,27 @@ Indicates what type of Office 365 CDN source the document library that will no l
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
+Accepted values: Public, Private
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LibraryUrl
@@ -69,7 +94,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ShouldRemoveFromCdn
@@ -81,21 +108,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

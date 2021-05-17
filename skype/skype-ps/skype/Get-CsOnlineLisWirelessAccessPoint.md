@@ -24,6 +24,10 @@ Get-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [[-BSSID] <String>] [-Is
 ## DESCRIPTION
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet retrieves information on associations between physical locations and the WAP through which the client is connected.
 
+The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID parameter in this command also supports the wildcard format to cover all BSSIDs in the range which are sharing the same description and Location ID. The wildcard '*' can be on either the last one or two character(s).
+
+If a BSSID with a wildcard format is already exists, a location request with a WAP which is within this wildcard range will return the access point that is configured with the wildcard format.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -41,10 +45,24 @@ Get-CsOnlineLisWirelessAccessPoint -BSSID 0B-23-CD-16-BB-CC
 
 Example 2 retrieves Location Information Server (LIS) wireless access point "0B-23-CD-16-BB-CC" and associated location.
 
+### -------------------------- Example 3 --------------------------
+```
+Get-CsOnlineLisWirelessAccessPoint -BSSID CB-FF-8D-44-3C-4*
+```
+
+Example 3 retrieves Location Information Server (LIS) wireless access point "CB-FF-8D-44-3C-4*" and associated location.
+
+### -------------------------- Example 4 --------------------------
+```
+Get-CsOnlineLisWirelessAccessPoint -BSSID CB-FF-8D-44-3C-44
+```
+
+Example 4 retrieves Location Information Server (LIS) wireless access point "CB-FF-8D-44-3C-4*" and associated location, when "CB-FF-8D-44-3C-4*" is already exists.
+
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID does exist, that entry will be replaced.
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
 
 ```yaml
 Type: String

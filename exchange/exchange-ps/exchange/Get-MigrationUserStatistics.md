@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MigrationUserStatistics
@@ -22,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MigrationUserStatistics [-Identity] <MigrationUserIdParameter> [-Diagnostic] [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport] [-LimitSkippedItemsTo <Int32>]
- [-IncludeSkippedItems] [-Partition <MailboxIdParameter>] [-SkipSubscription] [<CommonParameters>]
+Get-MigrationUserStatistics [-Identity] <MigrationUserIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-LimitSkippedItemsTo <Int32>]
+ [-IncludeSkippedItems]
+ [-Partition <MailboxIdParameter>]
+ [-SkipSubscription]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,10 +55,10 @@ This example displays the number of mailbox items that failed to migrate, which 
 
 ### Example 3
 ```powershell
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | Format-List SkippedItemCount,SkippedItems
+Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeSkippedItems | Select-Object -ExpandProperty SkippedItems | Format-List DateReceived, Subject
 ```
 
-This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
+This example displays results information in the SkippedItems property.
 
 ### Example 4
 ```powershell

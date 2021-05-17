@@ -1,55 +1,55 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/export-pnptaxonomy
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Export-PnPTaxonomy.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Export-PnPTaxonomy
 ---
-
+  
 # Export-PnPTaxonomy
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPTaxonomy.md to change this file.
+
 Exports a taxonomy to either the output or to a file.
 
-## SYNTAX 
+## SYNTAX
 
-### TermSet
 ```powershell
-Export-PnPTaxonomy [-TermSetId <GuidPipeBind>]
-                   [-TermStoreName <String>]
-                   [-Lcid <Int>]
-                   [-IncludeID [<SwitchParameter>]]
-                   [-Path <String>]
-                   [-Force [<SwitchParameter>]]
-                   [-Delimiter <String>]
-                   [-Encoding <Encoding>]
-                   [-Connection <SPOnlineConnection>]
+Export-PnPTaxonomy [-TermSetId <Guid>] [-IncludeID] [-Path <String>] [-TermStoreName <String>] [-Force]
+ [-Delimiter <String>] [-Lcid <Int32>] [-Encoding <Encoding>] [-Connection <PnPConnection>] 
+  [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Export-PnPTaxonomy
 ```
 
 Exports the full taxonomy to the standard output
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Export-PnPTaxonomy -Path c:\output.txt
 ```
 
 Exports the full taxonomy the file output.txt
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32847254
 ```
 
 Exports the term set with the specified id
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32847254 -Lcid 1044
 ```
@@ -57,6 +57,35 @@ Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32
 Exports the term set with the specified id using Norwegian labels
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Delimiter
 The path delimiter to be used, by default this is '|'
@@ -67,7 +96,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Encoding
@@ -76,10 +107,13 @@ Defaults to Unicode
 ```yaml
 Type: Encoding
 Parameter Sets: (All)
+Accepted values: Unicode, ASCII, BigEndianUnicode, UTF32, UTF7, UTF8
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
@@ -91,7 +125,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IncludeID
@@ -103,19 +139,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Lcid
 Specify the language code for the exported terms
 
 ```yaml
-Type: Int
-Parameter Sets: TermSet
+Type: Int32
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Path
@@ -127,19 +167,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermSetId
 If specified, will export the specified termset only
 
 ```yaml
-Type: GuidPipeBind
-Parameter Sets: TermSet
+Type: Guid
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermStoreName
@@ -147,25 +191,32 @@ Term store to export; if not specified the default term store is used.
 
 ```yaml
 Type: String
-Parameter Sets: TermSet
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

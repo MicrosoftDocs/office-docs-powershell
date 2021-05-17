@@ -1,92 +1,86 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfile
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFile.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPFile
 ---
-
+  
 # Get-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFile.md to change this file.
+
 Downloads a file.
 
-## SYNTAX 
+## SYNTAX
 
-### Return as file object
+### Return as file object (Default)
 ```powershell
-Get-PnPFile -Url <String>
-            [-AsFileObject [<SwitchParameter>]]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Get-PnPFile [-Url] <String> -AsFileObject [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Return as list item
 ```powershell
-Get-PnPFile -Url <String>
-            [-AsListItem [<SwitchParameter>]]
-            [-ThrowExceptionIfFileNotFound [<SwitchParameter>]]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
-```
-
-### Return as string
-```powershell
-Get-PnPFile -Url <String>
-            [-AsString [<SwitchParameter>]]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Get-PnPFile [-Url] <String> -AsListItem [-ThrowExceptionIfFileNotFound] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### Save to local path
 ```powershell
-Get-PnPFile -Url <String>
-            -AsFile [<SwitchParameter>]
-            [-Path <String>]
-            [-Filename <String>]
-            [-Force [<SwitchParameter>]]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Get-PnPFile [-Url] <String> -AsFile [-Path <String>] [-Filename <String>] [-Force] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+### Return as string
+```powershell
+Get-PnPFile [-Url] <String> -AsString [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor
 ```
 
 Retrieves the file and downloads it to the current folder
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
 ```
 
 Retrieves the file and downloads it to c:\temp\company.spcolor
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsString
 ```
 
 Retrieves the file and outputs its contents to the console
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsFile
 ```
 
 Retrieves the file and returns it as a File object
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsListItem
 ```
 
 Retrieves the file and returns it as a ListItem object
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
 Get-PnPFile -Url _catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
 ```
@@ -97,14 +91,15 @@ Retrieves the file by site relative URL and downloads it to c:\temp\company.spco
 
 ### -AsFile
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Save to local path
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AsFileObject
@@ -116,7 +111,9 @@ Parameter Sets: Return as file object
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AsListItem
@@ -128,7 +125,9 @@ Parameter Sets: Return as list item
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AsString
@@ -140,7 +139,23 @@ Parameter Sets: Return as string
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Filename
@@ -152,7 +167,9 @@ Parameter Sets: Save to local path
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Force
@@ -164,7 +181,9 @@ Parameter Sets: Save to local path
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Path
@@ -176,7 +195,9 @@ Parameter Sets: Save to local path
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ThrowExceptionIfFileNotFound
@@ -188,7 +209,9 @@ Parameter Sets: Return as list item
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Url
@@ -196,42 +219,20 @@ The URL (server or site relative) to the file
 
 ```yaml
 Type: String
-Parameter Sets: Return as file object, Return as list item, Save to local path, Return as string
-Aliases: ServerRelativeUrl,SiteRelativeUrl
+Parameter Sets: (All)
+Aliases: ServerRelativeUrl, SiteRelativeUrl
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

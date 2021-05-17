@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailTrafficATPReport
@@ -15,39 +14,51 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization for the last 90 days.
+Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Microsoft Defender for Office 365 detections in your cloud-based organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailTrafficATPReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>] [<CommonParameters>]
+Get-MailTrafficATPReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-NumberOfRows <Int32>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-PivotBy <MultiValuedProperty>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity.
 
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 For the reporting period you specify, the cmdlet returns the following information:
 
 - Domain
-
 - Date
-
 - Event Type
-
 - Direction
-
 - Action
-
+- SubType
+- Policy Source
+- Verdict Source
+- Delivery Status
 - Message Count
+
+To see all of these columns (width issues), write the output to a file. For example, `Get-MailTrafficATPReport | Out-String -Width 4096 | Out-File "C:\Users\admin\Desktop\Mail Traffic ATP Report.txt"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -77,7 +88,7 @@ This example is similar to the previous example, but now the results are summari
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering, or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
+The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -111,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -165,49 +176,36 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 - Message passed (Indicates a good message.)
 
-Email phish EventTypes:
+Email phishing EventTypes:
 
 - Advanced phish filter (Indicates a message caught by the machine learning model.)
-
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
-
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
-
+- Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
-
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
-
 - Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
-
 - General phish filter (Indicates a message caught by basic phish protection.)
-
 - Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
-
 - Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
 Email malware EventTypes:
 
 - Anti-malware engine (Indicates a message caught by the anti-malware engine.)
-
-- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
-
-- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
-
+- ATP Safe Attachments\* (Indicates a message with a malicious attachment blocked by Defender for Office 365.)
+- ATP Safe Links\* (Indicates when a malicious link is blocked by Defender for Office 365.)
 - ZAP (Indicates a message with malware detected and auto-purged after delivery.)
-
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
-
 - Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
 
 Content malware EventTypes:
 
-- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
+- AtpDocumentMalware\* (Indicates malicious content detected by Safe Attachments.)
+- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires Defender for Office 365 or E5.)
 
-- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
+\* Requires Defender for Office 365 (included in Microsoft 365 E5 or in an add-in subscription).
 
-\* These features require a standalone Office 365 ATP or E5 subscription.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -222,11 +220,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Expression
-This parameter is reserved for internal Microsoft use.
+### -NumberOfRows
+The NumberOfRows parameter specifies the number of rows to return in the report. The maximum value is 10000.
 
 ```yaml
-Type: Expression
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -259,6 +257,22 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PivotBy
+{{ Fill PivotBy Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -307,7 +321,14 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-MailTrafficATPReport cmdlet, valid values are Action, Direction, Domain, and EventType. You can specify multiple values separated by commas.
+Valid values are:
+
+- Action
+- Direction
+- Domain
+- EventType
+
+You can specify multiple values separated by commas. When you specify the values Action or Domain, the value is not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty

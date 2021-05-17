@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-TransportRule
@@ -22,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>]
- [-State <RuleState>] [-DlpPolicy <String>]
- [-Filter <String>] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-TransportRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-State <RuleState>]
+ [-DlpPolicy <String>]
+ [-ExcludeConditionActionDetails <Boolean>]
+ [-Filter <String>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +94,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -112,7 +114,6 @@ Accept wildcard characters: False
 The State parameter specifies filters the results by enabled or disabled rules. Valid values are:
 
 - Enabled: Only enabled rules are returned in the results.
-
 - Disabled: Only disabled rules are returned in the results.
 
 If you don't use this parameter, the command returns all rules, both enabled and disabled.
@@ -139,7 +140,28 @@ DLP policies in your organization allow you to prevent unintentional disclosure 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeConditionActionDetails
+This parameter is available only in the cloud-based service.
+
+The ExcludeConditionActionDetails parameter specifies whether to hide specific details from the results. Valid values are:
+
+- $true: The Description, Conditions, and Actions properties, as well as any configured condition, exception and action property values are blank.
+- $false: No properties or property values are hidden. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -151,7 +173,7 @@ Accept wildcard characters: False
 ### -Filter
 The Filter parameter filters the results by using an OPath. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
 
-This parameter uses the syntax `"Description -like '*Text*'"`. For example, `"Description -like *192.168.1.1*'"`.
+This parameter uses the syntax `"Description -like 'Text*'"`. For example, `"Description -like '192.168.1.1*'"`.
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 

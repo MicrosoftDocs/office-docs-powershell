@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MessageTrackingLog
@@ -22,10 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageTrackingLog [-DomainController <Fqdn>] [-End <DateTime>] [-EventId <String>]
- [-InternalMessageId <String>] [-MessageId <String>] [-MessageSubject <String>] [-Recipients <String[]>]
- [-Reference <String>] [-ResultSize <Unlimited>] [-Sender <String>] [-Server <ServerIdParameter>]
- [-Start <DateTime>] [-NetworkMessageId <String>] [-Source <String>] [-TransportTrafficType <String>]
+Get-MessageTrackingLog [-DomainController <Fqdn>]
+ [-End <DateTime>]
+ [-EventId <String>]
+ [-InternalMessageId <String>]
+ [-MessageId <String>]
+ [-MessageSubject <String>]
+ [-Recipients <String[]>]
+ [-Reference <String>]
+ [-ResultSize <Unlimited>]
+ [-Sender <String>]
+ [-Server <ServerIdParameter>]
+ [-Start <DateTime>]
+ [-NetworkMessageId <String>]
+ [-Source <String>]
+ [-TransportTrafficType <String>]
  [<CommonParameters>]
 ```
 
@@ -35,16 +45,13 @@ A unique message tracking log exists for the Transport service on a Mailbox serv
 The field names displayed in the results from the Get-MessageTrackingLog cmdlet are similar to the actual field names used in the message tracking logs. The differences are:
 
 - The dashes are removed from the field names. For example internal-message-id is displayed as InternalMessageId.
-
 - The date-time field is displayed as Timestamp.
-
 - The recipient-address field is displayed as Recipients.
-
 - The sender-address field is displayed as Sender.
 
 For more information about the message tracking log files, see [Message tracking](https://docs.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking).
 
-The Get-MessageTrackingLog results are displayed on-screen. You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding "\> \<filename\>" to the command. For example:
+You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding ` > <filename>` to the command. For example: `Get-MessageTrackingLog -Start "03/13/2020 09:00:00" -End "03/13/2020 09:10:00" | ConvertTo-Html > "C:\My Documents\message track.html"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -229,11 +236,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

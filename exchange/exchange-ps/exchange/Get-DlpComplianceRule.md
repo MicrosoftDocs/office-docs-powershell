@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpcompliancerule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-DlpComplianceRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpComplianceRule
@@ -23,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
- [-IncludeExecutionRuleGuids Boolean]
+ [-IncludeExecutionRuleGuids <Boolean>]
  [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
@@ -60,18 +59,15 @@ This example lists all the rules included in the DLP compliance policy named "PI
 The Identity parameter specifies the DLP rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Id
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -84,10 +80,10 @@ Accept wildcard characters: False
 {{ Fill IncludeExecutionRuleGuids Description }}
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -100,18 +96,15 @@ Accept wildcard characters: False
 The Policy parameter specifies the DLP policy that contains the rules. Using this parameter returns all rules that are assigned to the specified policy. Valid input for this parameter is any value that uniquely identifies the policy. For example
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Id
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

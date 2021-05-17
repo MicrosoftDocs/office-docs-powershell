@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Start-HistoricalSearch
@@ -17,29 +16,36 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Start-HistoricalSearch cmdlet to start a new historical search.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
- -StartDate <DateTime> [-DeliveryStatus <String>]
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
+ [-CompressFile <Boolean>]
+ [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
+ [-EncryptionTemplate <String>]
+ [-EncryptionType <String>]
  [-Locale <CultureInfo>]
  [-MessageID <MultiValuedProperty>]
+ [-NetworkMessageID <MultiValuedProperty>]
  [-NotifyAddress <MultiValuedProperty>]
  [-OriginalClientIP <String>]
  [-RecipientAddress <MultiValuedProperty>]
  [-SenderAddress <MultiValuedProperty>]
  [-TransportRule <MultiValuedProperty>]
+ [-Url <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 50000 results or lines.
+
+If you specify a distribution group, all messages might not be returned in the results. To ensure that all messages are returned, specify the individual recipient.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -53,11 +59,8 @@ Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDa
 This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
 - Date range: January 1, 2018 to January 7, 2018
-
 - Report type: Message trace
-
 - Sender address: michelle@fabrikam.com
-
 - Internal notification email address: chris@contoso.com
 
 ## PARAMETERS
@@ -103,28 +106,17 @@ Accept wildcard characters: False
 ### -ReportType
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
-- ATPReport: Advanced Threat Protection File Types Report and Advanced Threat Protection Message Disposition Report
-
-- ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
-
-- ATPDocument: Advanced Threat Protection Content Malware Report for files in SharePoint, OneDrive and Microsoft Teams.
-
+- ATPReport: Defender for Office 365 File types report and Defender for Office 365 Message disposition report
+- ATPV2: Exchange Online Protection and Defender for Office 365 Malware detection in email report.
+- ATPDocument: Defender for Office 365 Content Malware Report for Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 - DLP: Data Loss Prevention Report.
-
 - Malware: Malware Detections Report.
-
 - MessageTrace: Message Trace Report.
-
 - MessageTraceDetail: Message Trace Details Report.
-
-- Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
-
+- Phish: Exchange Online Protection and Defender for Office 365 E-mail Phish Report.
 - SPAM: SPAM Detections Report.
-
 - Spoof: Spoof Mail Report.
-
-- TransportRule: Transport or Mail FLow Rules Report.
-
+- TransportRule: Transport or Mail Flow Rules Report.
 - UnifiedDLP: Unified Data Loss Prevention Report.
 
 You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
@@ -160,13 +152,27 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -CompressFile
+{{ Fill CompressFile Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeliveryStatus
 The DeliveryStatus parameter filters the results by the delivery status of the message. You can use one of the following values:
 
 - Delivered
-
 - Expanded
-
 - Failed
 
 ```yaml
@@ -186,9 +192,7 @@ Accept wildcard characters: False
 The Direction parameter filters the results by the direction of the message. Valid values are:
 
 - All: Incoming and outgoing messages.
-
 - Received: Ingoing messages only.
-
 - Sent: Outgoing messages only.
 
 ```yaml
@@ -209,6 +213,38 @@ The DLPPolicy parameter filters the results by the name of the DLP policy that a
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionTemplate
+{{ Fill EncryptionTemplate Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionType
+{{ Fill EncryptionType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -254,10 +290,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NetworkMessageID
+{{ Fill NetworkMessageID Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyAddress
 The NotifyAddress parameter specifies the email addresses of internal recipients to notify when the historical search is complete. The email address must be in an accepted domain that's configured for your organization. You can enter multiple email addresses separated by commas.
 
-To view the results of the historical search, you need to specify at least one email address for the NotifyAddress parameter. Otherwise, you need to click on the completed message trace in the Exchange admin center at Mail flow \> Message trace.
+To view the results of the historical search, you need to specify at least one email address for the NotifyAddress parameter. Otherwise, you need to click on the completed message trace in the Exchange admin center at **Mail flow** \> **Message trace**.
 
 ```yaml
 Type: MultiValuedProperty
@@ -325,6 +377,22 @@ The TransportRule parameter filters the results by the name of the transport rul
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Url
+{{ Fill Url Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

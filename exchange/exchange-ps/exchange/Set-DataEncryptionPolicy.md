@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-dataencryptionpolicy
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Set-DataEncryptionPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-DataEncryptionPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-DataEncryptionPolicy cmdlet to modify data encryption policies in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -25,37 +24,42 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### DCAdminPurgeKeyRequest
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-PermanentDataPurgeContact <String>] -PermanentDataPurgeReason <String>
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeReason <String> [-PermanentDataPurgeContact <String>]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TenantAdminPurgeKeyRequest
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeContact <String> -PermanentDataPurgeReason <String> [-PermanentDataPurgeRequested]
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeContact <String> -PermanentDataPurgeReason <String>
+ [-PermanentDataPurgeRequested]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshKey
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Refresh]
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
+ [-Refresh]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,16 +87,14 @@ This example updates the data encryption policy named Europe Mailboxes after one
 The Identity parameter specifies the data encryption policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 1
@@ -110,7 +112,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -123,7 +125,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -141,7 +143,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -161,7 +163,7 @@ After you use this switch, you can't assign the data encryption policy to other 
 Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -177,7 +179,7 @@ Use the Refresh switch to update the data encryption policy in Exchange Online a
 Type: SwitchParameter
 Parameter Sets: RefreshKey
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -189,15 +191,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -213,7 +214,7 @@ The Description parameter specifies an optional description for the data encrypt
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -229,7 +230,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -242,14 +243,13 @@ Accept wildcard characters: False
 The Enabled parameter enables or disable the data encryption policy. Valid values are:
 
 - $true: The policy is enabled.
-
 - $false: The policy is disabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ Use the Force switch when you're trying to initiate the deletion of all data tha
 Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ The Name parameter specifies the unique name for the data encryption policy. If 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

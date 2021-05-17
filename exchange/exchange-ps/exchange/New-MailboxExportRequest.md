@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-MailboxExportRequest
@@ -118,14 +117,13 @@ New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -ComplianceStor
 ```
 
 ## DESCRIPTION
-You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you need to specify a unique name when creating the export request. You can remove existing export requests with the Remove-MailboxExportRequest cmdlet before starting a new request with the default request name \<alias\>\\MailboxExportX (where X = 0-9).
+You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you need to specify a unique name when creating the export request. You can remove existing export requests with the Remove-MailboxExportRequest cmdlet before starting a new request with the default request name `<alias>\MailboxExportX` (where X = 0-9).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 
 - To import PST files from the share: Read permission
-
 - To save exported PST files to the share: Read/Write permission.
 
 If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
@@ -184,7 +182,6 @@ The FilePath parameter specifies the network share path of the .pst file to whic
 You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 
 - To import PST files from the share: Read permission
-
 - To save exported PST files to the share: Read/Write permission.
 
 If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
@@ -210,23 +207,14 @@ In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParam
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -308,9 +296,7 @@ Accept wildcard characters: False
 The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
 
 - DoNotCopy: The associated messages aren't copied.
-
 - MapByMessageClass: This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
-
 - Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default option.
 
 Content filtering doesn't apply to associated messages.
@@ -383,8 +369,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -404,15 +389,10 @@ Accept wildcard characters: False
 The ConflictResolutionOption parameter specifies what to do if there are multiple matching messages in the target. Valid values are:
 
 - ForceCopy
-
 - KeepAll
-
 - KeepLatestItem
-
 - KeepSourceItem (This is the default value.)
-
 - KeepTargetItem
-
 - UpdateFromSource
 
 ```yaml
@@ -432,11 +412,8 @@ Accept wildcard characters: False
 The ContentFilter parameter uses OPath filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://docs.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -494,9 +471,7 @@ Accept wildcard characters: False
 The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items folder. You don't have to include a value with this parameter. If you don't specify this parameter, the Recoverable Items folder is copied with the following subfolders:
 
 - Deletions
-
 - Versions
-
 - Purges
 
 ```yaml
@@ -517,47 +492,33 @@ The ExcludeFolders parameter specifies the list of folders to exclude during the
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
-\<FolderName\>/\*: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
 
-\#\<FolderName\>\#/\*: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
 - Inbox
-
 - SentItems
-
 - DeletedItems
-
 - Calendar
-
 - Contacts
-
 - Drafts
-
 - Journal
-
 - Tasks
-
 - Notes
-
 - JunkEmail
-
 - CommunicatorHistory
-
 - Voicemail
-
 - Fax
-
 - Conflicts
-
 - SyncIssues
-
 - LocalFailures
-
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
+If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a backslash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
+
+To exclude the Recoverable Items folder, you must use the ExcludeDumpster parameter.
 
 ```yaml
 Type: String[]
@@ -577,47 +538,33 @@ The IncludeFolders parameter specifies the list of folders to include during the
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
-\<FolderName\>/\*: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
 
-\#\<FolderName\>\#/\*: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
 - Inbox
-
 - SentItems
-
 - DeletedItems
-
 - Calendar
-
 - Contacts
-
 - Drafts
-
 - Journal
-
 - Tasks
-
 - Notes
-
 - JunkEmail
-
 - CommunicatorHistory
-
 - Voicemail
-
 - Fax
-
 - Conflicts
-
 - SyncIssues
-
 - LocalFailures
-
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
+If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a backslash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
+
+The Recoverable Items folder is always included if you don't use the ExcludeDumpster parameter, regardless of the list of folders you provide.
 
 ```yaml
 Type: String[]
@@ -670,7 +617,6 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 For more information about maximum message size values, see the following topics:
 
 - Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-
 - Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
@@ -681,7 +627,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -691,7 +637,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
 
@@ -711,7 +657,7 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the name of the specific request for tracking and display purposes. Because you can have multiple export requests per mailbox, Exchange precedes the name with the mailbox's alias. For example, if you create an export request for a user's mailbox that has the alias Kweku and specify the value of this parameter as PC1toArchive, the identity of this export request is Kweku\\PC1toArchive.
 
-If you don't specify a name using this parameter, Exchange generates up to 10 request names per mailbox, which is MailboxExportX (where X = 0-9). The identity of the request is displayed and searchable as \<alias\>\\MailboxExportX.
+If you don't specify a name using this parameter, Exchange generates up to 10 request names per mailbox, which is MailboxExportX (where X = 0-9). The identity of the request is displayed and searchable as `<alias>\MailboxExportX`.
 
 ```yaml
 Type: String
@@ -746,17 +692,11 @@ Accept wildcard characters: False
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
 - Lower
-
 - Low
-
 - Normal (This is the default value.)
-
 - High
-
 - Higher
-
 - Highest
-
 - Emergency
 
 ```yaml
@@ -792,7 +732,6 @@ Accept wildcard characters: False
 The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
 
 - The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
 - If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.

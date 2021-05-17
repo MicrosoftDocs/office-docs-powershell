@@ -1,21 +1,30 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantcdnorigin
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenantCdnOrigin
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantCdnOrigin.html
 ---
-
+ 
 # Get-PnPTenantCdnOrigin
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantCdnOrigin.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the current registered origins from the public or private content delivery network (CDN).
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTenantCdnOrigin -CdnType <SPOTenantCdnType>
-                       [-Connection <SPOnlineConnection>]
+Get-PnPTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +32,7 @@ Returns the current registered origins from the public or private content delive
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPTenantCdnOrigin -CdnType Public
 ```
@@ -38,24 +47,30 @@ The type of cdn to retrieve the origins from
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
+Accepted values: Public, Private
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -57,7 +57,11 @@ You need to be a SharePoint Online administrator or Global Administrator and be 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 > [!NOTE]
-> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
+
+> [!NOTE]
+> If the Limit parameter is provided then the following site collection properties will not be populated and may contain a default value:
+> AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
 
 ## EXAMPLES
 
@@ -109,6 +113,14 @@ Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select Inf
 
 This example returns the InformationSegments associated to the site.
 
+### -----------------------EXAMPLE 7-----------------------------
+
+```powershell
+Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
+```
+
+This example uses server side filtering to return sites matching 18.
+
 ## PARAMETERS
 
 ### -Detailed
@@ -117,23 +129,27 @@ Use this parameter to get additional property information on a site collection. 
 
 The following properties are returned:
 
---ResourceUsageCurrent
+- ResourceUsageCurrent
 
---ResourceUsageAverage
+- ResourceUsageAverage
 
---StorageUsageCurrent
+- StorageUsageCurrent
 
---LockIssue
+- LockIssue
 
---WebsCount
+- WebsCount
 
---CompatibilityLevel
+- CompatibilityLevel
 
---AllowSelfServiceUpgrade
+- AllowSelfServiceUpgrade
 
---SiteDefinedSharingCapability-returns the stored value of the site policy.
+- SiteDefinedSharingCapability
 
---SharingCapability --returns the effective access level (the site policy and the tenant policy combined.
+Returns the stored value of the site policy.
+
+- SharingCapability
+
+Returns the effective access level, which is the site policy and the tenant policy combined.
 
 ```yaml
 Type: SwitchParameter
@@ -170,11 +186,11 @@ Accept wildcard characters: False
 
 ### -Filter
 
-Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{$_PropertyName <operator> "filterValue"}`. Valid operators are as follows: eq, ne, like, notlike.
- Currently, you can filter by these properties: Owner, Template, LockState, Url.
+Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
+ Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
+ Using the -or operator to include an additional filter is not supported.
 
-> [!NOTE]
-> The operator values are case-sensitive.  
+Note: The operator values are case-sensitive.  
 
 ```yaml
 Type: String
@@ -227,7 +243,7 @@ Accept wildcard characters: False
 
 ### -Limit
 
-Specifies the maximum number of site collections to return. It can be any number. To retrieve all site collections, use ALL. The default value is 200.
+Specifies the maximum number of site collections to return. It can be any number. To retrieve all site collections, use ALL. The default value is 200. If this parameter is provided, then some site collection properties will not be populated and may contain a default value.
 
 ```yaml
 Type: String
@@ -244,7 +260,7 @@ Accept wildcard characters: False
 
 ### -Template
 
-Displays sites of a specific template. For example, STS, STS#0 or STS#1.
+Displays sites of a specific template. For example, STS, STS#0, STS#1, STS#3, GROUP#0, SRCHCEN#0 or SITEPAGEPUBLISHING#0.
 
 ```yaml
 Type: String

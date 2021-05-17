@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dataclassification
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-DataClassification
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-DataClassification
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available or functional only in on-premises Exchange.
 
 In Exchange Online, this cmdlet has been replaced by the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
 
@@ -26,13 +25,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### RuleCollectionIdentity
 ```
 Get-DataClassification [[-ClassificationRuleCollectionIdentity] <ClassificationRuleCollectionIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-DataClassification [[-Identity] <DataClassificationIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +73,7 @@ The ClassificationRuleCollectionIdentity parameter filters the results by the na
 Type: ClassificationRuleCollectionIdParameter
 Parameter Sets: RuleCollectionIdentity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1
@@ -101,16 +102,14 @@ Accept wildcard characters: False
 The Identity parameter specifies the data classification rule that you want to view. You can use any value that uniquely identifies the data classification rule. For example:
 
 - Name
-
 - LocalizedName
-
 - Identity GUID value
 
 ```yaml
 Type: DataClassificationIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1

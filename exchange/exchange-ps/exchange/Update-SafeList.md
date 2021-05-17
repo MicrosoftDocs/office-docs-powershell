@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Update-SafeList
@@ -22,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-SafeList [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-EnsureJunkEmailRule]
- [-IncludeDomains] [-Type <UpdateType>] [-WhatIf]
+Update-SafeList [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EnsureJunkEmailRule]
+ [-IncludeDomains]
+ [-Type <UpdateType>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -45,7 +49,8 @@ This example updates Safe Senders List data for the single user kim@contoso.com.
 
 ### Example 2
 ```powershell
-Set-AdServerSettings -ViewEntireForest $true; Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Update-Safelist
+Set-AdServerSettings -ViewEntireForest $true
+Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Update-Safelist
 ```
 
 This example updates safelist data for all user mailboxes in your Exchange organization. By default, the Exchange Management Shell is configured to retrieve or modify objects that reside in the domain in which the Exchange server resides. Therefore, to retrieve all the mailboxes in your Exchange organization, you must first set the scope of the Exchange Management Shell to the entire forest using the Set-AdServerSettings cmdlet.
@@ -56,23 +61,14 @@ This example updates safelist data for all user mailboxes in your Exchange organ
 The Identity parameter specifies the mailbox from which you want to collect safelist aggregation data. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -91,8 +87,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

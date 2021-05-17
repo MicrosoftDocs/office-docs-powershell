@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-activityalert
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-ActivityAlert
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-ActivityAlert
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ActivityAlert [[-Identity] <ComplianceRuleIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-ActivityAlert [[-Identity] <ComplianceRuleIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,16 +50,14 @@ This example returns detailed information about the activity alert named All Mai
 The Identity parameter specifies the activity alert that you want to view. You can use any value that uniquely identifies the activity alert. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1

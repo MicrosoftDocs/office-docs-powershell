@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-WebServicesConnectivity
@@ -23,9 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### ClientAccessServer2010
+### Default
 ```
-Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess]
+Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-AllowUnsecureAccess]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LightMode]
@@ -35,18 +35,19 @@ Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Allow
  [-Timeout <UInt32>]
  [-TrustAnySSLCertificate]
  [-UseAutodiscoverForClientAccessServer]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AutoDiscoverServer
 ```
-Test-WebServicesConnectivity -AutoDiscoverServer <ClientAccessServerIdParameter>
+Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] -AutoDiscoverServer <ClientAccessServerIdParameter>
  [-Confirm]
- [[-Identity] <MailboxIdParameter>]
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MonitoringContext
@@ -56,7 +57,8 @@ Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-MonitoringCont
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClientAccessServer
@@ -66,7 +68,8 @@ Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-ClientAccessSe
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,18 +82,12 @@ The first time you use this cmdlet, you might be required to create a test user.
 The test results are displayed on-screen. The cmdlet returns the following information.
 
 - Source: Source server.
-
 - ServiceEndpoint: Destination server.
-
 - Scenario: The operations that are tested. Values are Autodiscover: SOAP Provider and EWS: GetFolder (full mode) or EWS: ConvertID (light mode).
-
 - Result: The values returned are typically Success or \*FAILURE\*.
-
 - Latency(MS): The time required to complete the test in milliseconds
 
-You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
-
-Test-WebServicesConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\EWS Test.html"
+You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding `> <filename>` to the command. For example: `Test-WebServicesConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\My Documents\EWS Test.html"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -111,96 +108,18 @@ This example tests the client connection to Exchange Web Services on the server 
 
 ## PARAMETERS
 
-### -AutoDiscoverServer
-The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
-
-You can use any value that uniquely identifies the server. For example:
-
-- Name (for example, Exchange01)
-
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
-
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
-
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
-
-You can't use this parameter with the ClientAccessServer parameter.
-
-```yaml
-Type: ClientAccessServerIdParameter
-Parameter Sets: AutoDiscoverServer
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClientAccessServer
-The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
-
-You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- ExchangeLegacyDN
-
-- GUID
-
-You can't use this parameter with the AutoDiscoverServer parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: ClientAccessServer2010
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: ClientAccessServer
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox to use for the test. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 When you use this parameter, you also need to use the MailboxCredential parameter.
@@ -218,8 +137,71 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ClientAccessServer
+The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- GUID
+
+You can't use this parameter with the AutoDiscoverServer parameter.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Default, ClientAccessServer
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AutoDiscoverServer
+The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name (for example, Exchange01)
+- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+
+You can't use this parameter with the ClientAccessServer parameter.
+
+```yaml
+Type: ClientAccessServerIdParameter
+Parameter Sets: AutoDiscoverServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: ClientAccessServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AllowUnsecureAccess
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
 
@@ -239,8 +221,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -257,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -395,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAutodiscoverForClientAccessServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The UseAutodiscoverForClientAccessServer parameter specifies whether the test should use the Autodiscover service to locate the Client Access server.
 

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-TransportServer
@@ -17,14 +16,16 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-TransportServer cmdlet to view settings that are associated with the Hub Transport server role or the Edge Transport server role.
 
-Note: In Exchange 2013 or later, use the Get-TransportService cmdlet instead. If you have scripts that use Get-TransportServer, update them to use Get-TransportService.
+**Note**: In Exchange 2013 or later, use the Get-TransportService cmdlet instead. If you have scripts that use Get-TransportServer, update them to use Get-TransportService.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-TransportServer [[-Identity] <TransportServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-TransportServer [[-Identity] <TransportServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,11 +71,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Transport server that you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml

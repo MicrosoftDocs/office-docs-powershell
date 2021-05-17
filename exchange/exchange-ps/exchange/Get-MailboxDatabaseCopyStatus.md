@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxDatabaseCopyStatus
@@ -28,17 +27,20 @@ Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter>
  [-ConnectionStatus]
  [-DomainController <Fqdn>]
  [-ExtendedErrorInfo]
- [-UseServerCache] [<CommonParameters>]
+ [-UseServerCache]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Local]
+Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>]
+ [-Local]
  [-Active]
  [-ConnectionStatus]
  [-DomainController <Fqdn>]
  [-ExtendedErrorInfo]
- [-UseServerCache] [<CommonParameters>]
+ [-UseServerCache]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -136,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of \<database\>\\\<server\>. Specifying just \<database\> returns information for all copies of the database. This parameter can't be combined with the Server parameter.
+The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of `<Database>\<Server>`. Specifying just `<Database>` returns information for all copies of the database. This parameter can't be combined with the Server parameter.
 
 ```yaml
 Type: DatabaseCopyIdParameter

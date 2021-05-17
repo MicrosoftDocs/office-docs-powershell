@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-HostedOutboundSpamFilterPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-HostedOutboundSpamFilterPolicy cmdlet to modify outbound spam filter policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyIdParameter>
  [-ActionWhenThresholdReached <OutboundRecipientLimitsExceededAction>]
  [-AdminDisplayName <String>]
+ [-AutoForwardingMode <AutoForwardingMode>]
  [-BccSuspiciousOutboundAdditionalRecipients <MultiValuedProperty>]
  [-BccSuspiciousOutboundMail <Boolean>]
  [-Confirm]
@@ -35,7 +35,8 @@ Set-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyId
  [-RecipientLimitExternalPerHour <UInt32>]
  [-RecipientLimitInternalPerHour <UInt32>]
  [-RecipientLimitPerDay <UInt32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,6 @@ Set-HostedOutboundSpamFilterPolicy -Identity Default -RecipientLimitExternalPerH
 This example configures the following settings in the outbound spam filter policy named Default:
 
 - The recipient rate limits are restricted to smaller values that the service defaults.
-
 - After one of the limits is reached, the user is prevented from sending messages (added to the Restricted Users portal).
 
 ## PARAMETERS
@@ -60,9 +60,7 @@ This example configures the following settings in the outbound spam filter polic
 The Identity parameter specifies the outbound spam filter policy you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -82,9 +80,7 @@ Accept wildcard characters: False
 The ActionWhenThresholdReach parameter specifies the action to take when any of the limits specified in the policy are reached. Valid values are:
 
 - Alert: No action, alert only.
-
 - BlockUser: Prevent the user from sending email messages.
-
 - BlockUserForToday: Prevent the user from sending email messages until the following day. This is the default value.
 
 ```yaml
@@ -117,6 +113,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoForwardingMode
+**Note**: Before September 2020, this setting is available but not enforced.
+
+The AutoForwardingMode specifies how the policy controls automatic email forwarding to outbound recipients. Valid values are:
+
+- Automatic: Automatic external email forwarding is blocked by the system. This is the default value.
+- On: Automatic external email forwarding is not restricted.
+- Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
+
+This setting applies only to cloud-based mailboxes, and automatic forwarding to internal recipients is not affected by this setting.
+
+```yaml
+Type: AutoForwardingMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: Automatic, Off, On
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BccSuspiciousOutboundAdditionalRecipients
 The BccSuspiciousOutboundAdditionalRecipients parameter specifies an email address to add to the Bcc field of outgoing spam messages. You can specify multiple email addresses separated by commas.
 
@@ -139,7 +160,6 @@ Accept wildcard characters: False
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
 - $true: The recipients specified by the BccSuspiciousOutboundAdditionalRecipients parameter are added to outgoing spam messages.
-
 - $false: No additional messages are added to outgoing spam messages. This is the default value.
 
 ```yaml
@@ -158,8 +178,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -181,7 +200,6 @@ Accept wildcard characters: False
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
 - $true: Notify the admins specified by the NotifyOutboundSpamRecipients parameter.
-
 - $false: Don't send notifications. This is the default value.
 
 ```yaml

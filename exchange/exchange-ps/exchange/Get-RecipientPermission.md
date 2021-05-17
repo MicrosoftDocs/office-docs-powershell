@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-RecipientPermission
@@ -17,16 +16,18 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-RecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXORecipientPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXORecipientPermission cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-RecipientPermission [[-Identity] <RecipientIdParameter>] [-AccessRights <MultiValuedProperty>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-Trustee <SecurityPrincipalIdParameter>]
+Get-RecipientPermission [[-Identity] <RecipientIdParameter>]
+ [-AccessRights <MultiValuedProperty>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-Trustee <SecurityPrincipalIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -53,51 +54,22 @@ This example lists the users who have SendAs permission on the mailbox Help Desk
 
 ## PARAMETERS
 
-### -AccessRights
-The AccessRights parameter filters the results by permission.
-
-Valid input for this parameter is SendAs.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-The Identity parameter filters the results by the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
-
-You can specify any type of recipient, for example:
+The Identity parameter identifies the recipient that you want to view. The user or group specified by the Trustee parameter has Send As permissions on this recipient. You can specify any type of recipient, for example:
 
 - Mailboxes
-
 - Mail users
-
 - External contacts
-
 - Distribution groups
-
 - Dynamic distribution groups
 
 You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -110,6 +82,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccessRights
+The AccessRights parameter filters the results by permission. The only valid value for this parameter is SendAs.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -146,36 +134,23 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity parameter.
-
-You can specify the following types of users or groups:
+The Trustee parameter filters the results by who has Send As permissions on the specified recipient. You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-
-- Mail users with a Microsoft account (formerly known as a Windows Live ID)
-
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

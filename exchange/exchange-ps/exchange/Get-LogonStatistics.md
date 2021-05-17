@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-logonstatistics
-applicable: Exchange Server 2010, Exchange Server 2013
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-LogonStatistics
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013"
 ---
 
 # Get-LogonStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange and is only functional in Exchange Server 2010.
+This cmdlet is available or functional only in Exchange Server 2010.
 
 The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
 
@@ -24,19 +23,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Database
 ```
 Get-LogonStatistics -Database <DatabaseIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-LogonStatistics [-Identity] <LogonableObjectIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
 Get-LogonStatistics -Server <ServerIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,9 +63,7 @@ This example returns logon statistics for all users connected to the server Serv
 The Database parameter specifies the mailbox database to get logon statistics from (all mailboxes in the specified database). You can use any value that uniquely identifies the mailbox database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 This parameter accepts pipeline input from the Get-MailboxDatabase command.
@@ -74,7 +74,7 @@ You can't use this parameter with the Identity or Server parameters.
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -87,17 +87,11 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox to get logon statistics from. You can use one of the following values to identify the mailbox:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SmtpAddress
-
 - Alias
 
 This parameter accepts pipeline input from the Get-Mailbox command.
@@ -108,7 +102,7 @@ You can't use this parameter with the Database or Server parameters.
 Type: LogonableObjectIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
@@ -121,7 +115,6 @@ Accept wildcard characters: False
 The Server parameter specifies the Mailbox server to get logon statistics from (all mailboxes on all databases, including recovery databases, on the specified server). You can use one of the following values to identify the server:
 
 - Fully qualified domain name (FQDN)
-
 - NetBIOS name
 
 This parameter accepts pipeline input from the Get-ExchangeServer and Get-MailboxServer commands.
@@ -132,7 +125,7 @@ You can't use this parameter with the Database or Identity parameters.
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -148,7 +141,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

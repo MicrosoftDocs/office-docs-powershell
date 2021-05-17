@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Suspend-PublicFolderMailboxMigrationRequest
@@ -23,7 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Suspend-PublicFolderMailboxMigrationRequest [-Identity] <PublicFolderMailboxMigrationRequestIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-SuspendComment <String>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SuspendComment <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +44,7 @@ This example suspends the specified public folder mailbox migration request.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request that you want to suspend. This value uses the syntax \\PublicFolderMailboxMigration\<GUID\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request that you want to suspend. This value uses the syntax `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
 
 ```yaml
 Type: PublicFolderMailboxMigrationRequestIdParameter
@@ -59,8 +62,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

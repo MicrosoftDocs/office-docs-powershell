@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-umservice
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-UMService
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-UMService
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMService [[-Identity] <UMServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMService [[-Identity] <UMServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -70,18 +71,15 @@ Accept wildcard characters: False
 The Identity parameter specifies the Mailbox server that hosts the Unified Messaging service configuration you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 ```yaml
 Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: 1

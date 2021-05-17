@@ -1,12 +1,12 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsitemapdatabase
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteMapDatabase
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 

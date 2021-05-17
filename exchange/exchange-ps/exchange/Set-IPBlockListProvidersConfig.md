@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-IPBlockListProvidersConfig
@@ -22,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IPBlockListProvidersConfig [-BypassedRecipients <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExternalMailEnabled <Boolean>]
- [-InternalMailEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+Set-IPBlockListProvidersConfig [-BypassedRecipients <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +53,6 @@ Set-IPBlockListProvidersConfig -BypassedRecipients @{Add="chris@contoso.com","mi
 This example makes the following changes to the list of bypassed recipients:
 
 - Adds the values chris@contoso.com and michelle@contoso.com
-
 - Removes the values laura@contoso.com and julia@contoso.com
 
 ## PARAMETERS
@@ -57,9 +60,9 @@ This example makes the following changes to the list of bypassed recipients:
 ### -BypassedRecipients
 The BypassedRecipients parameter specifies the email addresses of internal recipients that are exempted from filtering by IP Block list providers.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -77,8 +80,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

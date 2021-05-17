@@ -1,65 +1,68 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsearchconfiguration
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSearchConfiguration
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSearchConfiguration.html
 ---
-
+ 
 # Get-PnPSearchConfiguration
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSearchConfiguration.md to change this file.
+
 Returns the search configuration
 
-## SYNTAX 
+## SYNTAX
 
-### Xml
+### Xml (Default)
 ```powershell
-Get-PnPSearchConfiguration [-Path <String>]
-                           [-Scope <SearchConfigurationScope>]
-                           [-Web <WebPipeBind>]
-                           [-Connection <SPOnlineConnection>]
+Get-PnPSearchConfiguration [-Scope <SearchConfigurationScope>] [-Path <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### OutputFormat
 ```powershell
-Get-PnPSearchConfiguration [-OutputFormat <OutputFormat>]
-                           [-Scope <SearchConfigurationScope>]
-                           [-Web <WebPipeBind>]
-                           [-Connection <SPOnlineConnection>]
+Get-PnPSearchConfiguration [-Scope <SearchConfigurationScope>] [-OutputFormat <OutputFormat>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPSearchConfiguration
 ```
 
 Returns the search configuration for the current web
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPSearchConfiguration -Scope Site
 ```
 
 Returns the search configuration for the current site collection
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPSearchConfiguration -Scope Subscription
 ```
 
 Returns the search configuration for the current tenant
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-PnPSearchConfiguration -Path searchconfig.xml -Scope Subscription
 ```
 
 Returns the search configuration for the current tenant and saves it to the specified file
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Get-PnPSearchConfiguration -Scope Site -OutputFormat ManagedPropertyMappings
 ```
@@ -68,16 +71,33 @@ Returns all custom managed properties and crawled property mapping at the curren
 
 ## PARAMETERS
 
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OutputFormat
 Output format for of the configuration. Defaults to complete XML
 
 ```yaml
 Type: OutputFormat
 Parameter Sets: OutputFormat
+Accepted values: CompleteXml, ManagedPropertyMappings
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Path
@@ -89,7 +109,9 @@ Parameter Sets: Xml
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Scope
@@ -97,43 +119,19 @@ Scope to use. Either Web, Site, or Subscription. Defaults to Web
 
 ```yaml
 Type: SearchConfigurationScope
-Parameter Sets: __AllParameterSets
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
 Parameter Sets: (All)
+Accepted values: Web, Site, Subscription
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### System.String
-
-Does not return a string when the -Path parameter has been specified.
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

@@ -7,15 +7,14 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-PartnerApplication
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available or functional only in on-premises Exchange.
 
-Use the New-PartnerApplication cmdlet to create a partner application configuration.
+Use the New-PartnerApplication cmdlet to create partner application configurations in on-premises Exchange organizations.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -23,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ACSTrustApplication
 ```
-New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm <String>]
+New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String>
+ [-Realm <String>]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -33,12 +33,14 @@ New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm 
  [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuthMetadataUrl
 ```
-New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String>
+ [-TrustAnySSLCertificate]
  [-AcceptSecurityIdentifierInformation <Boolean>]
  [-AccountType <SupportedAccountType>]
  [-ActAsPermissions <String[]>]
@@ -48,7 +50,8 @@ New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLC
  [-Enabled <Boolean>]
  [-IssuerIdentifier <String>]
  [-LinkedAccount <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -139,7 +142,6 @@ Accept wildcard characters: False
 The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
 
 - OrganizationalAccount (This is the default value)
-
 - ConsumerAccount
 
 ```yaml
@@ -156,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActAsPermissions
-This parameter is available only in Exchange 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -174,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppOnlyPermissions
-This parameter is available only in Exchange 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -194,8 +196,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -246,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -IssuerIdentifier
-This parameter is available only in Exchange 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 

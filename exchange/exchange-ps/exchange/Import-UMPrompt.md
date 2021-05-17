@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/import-umprompt
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Import-UMPrompt
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Import-UMPrompt
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the Import-UMPrompt cmdlet to copy or upload a custom audio file to be used by Unified Messaging (UM) dial plans and auto attendants.
 
@@ -26,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadAutoAttendantPrompts
@@ -34,7 +34,8 @@ Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMDialPlan <U
 Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadAutoAttendantPromptsStream
@@ -42,7 +43,8 @@ Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMAutoAttenda
 Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMAutoAttendant <UMAutoAttendantIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadDialPlanPromptsStream
@@ -50,7 +52,8 @@ Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMAutoAtten
 Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,21 +67,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0; Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
+Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
 ```
 
 This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM dial plan MyUMDialPlan.
 
 ### Example 2
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0; Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
 ```
 
 This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
 
 ### Example 3
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\AfterHoursWelcomeGreeting.wav" -Encoding Byte -ReadCount 0; Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData $c
+[byte[]]$c = Get-content -Path "d:\UMPrompts\AfterHoursWelcomeGreeting.wav" -Encoding Byte -ReadCount 0
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData $c
 ```
 
 This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
@@ -92,7 +98,7 @@ The PromptFileData parameter specifies the byte array of the custom prompt.
 Type: Byte[]
 Parameter Sets: UploadDialPlanPrompts, UploadAutoAttendantPrompts
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -108,7 +114,7 @@ The PromptFileName parameter specifies the name of the custom prompt.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -124,7 +130,7 @@ The PromptFileStream parameter specifies whether the audio file will be uploaded
 Type: Stream
 Parameter Sets: UploadAutoAttendantPromptsStream, UploadDialPlanPromptsStream
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -140,7 +146,7 @@ The UMAutoAttendant parameter specifies the UM auto attendant ID. This parameter
 Type: UMAutoAttendantIdParameter
 Parameter Sets: UploadAutoAttendantPrompts, UploadAutoAttendantPromptsStream
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -156,7 +162,7 @@ The UMDialPlan parameter specifies the UM dial plan ID. This parameter specifies
 Type: UMDialPlanIdParameter
 Parameter Sets: UploadDialPlanPrompts, UploadDialPlanPromptsStream
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -168,15 +174,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -186,15 +191,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -210,7 +213,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

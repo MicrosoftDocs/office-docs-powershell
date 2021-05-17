@@ -21,61 +21,57 @@ Start a job to move a particular user or group of users to be moved across geo l
 ### UrlAndDestinationDataLocation
 
 ```powershell
-Start-SPOSiteContentMove [-Url] <String> [-DestinationDataLocation] <String>
+Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
- [-ValidationOnly] [<CommonParameters>]
-```
-
-### GroupNameAndDestinationDataLocation
-
-```powershell
-Start-SPOSiteContentMove [-GroupName] <String> [-DestinationDataLocation] <String>
- [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
- [-ValidationOnly] [<CommonParameters>]
+ [-ValidationOnly] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] [-SuppressAllWarnings]
+ [-SuppressBcsCheck][<CommonParameters>]
 ```
 
 ### UrlAndDestinationUrl
 
 ```powershell
-Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
- [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
+Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
+ [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] 
+ [-SuppressAllWarnings] [-SuppressBcsCheck] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This command starts the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+UrlAndDestinationDataLocation: These parameters allow a SharePoint administrator to validate a geo move before scheduling it.
+
+UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destrination URL.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
+Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR 
 ```
 
-Starts the movement of the content on <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination preferred to start 1 hour ahead from now, until 12 hours to that relative time.
+Starts the movement of the content on <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination.
 
 ### EXAMPLE 2
 
 ```powershell
-Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation JPN
+Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
 ```
 
-Starts the movement of a group of users called group@contoso.com to the JPN location
+Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination with a preffered start time window of 1 to 12 hours from the move schedule operation.
 
 ### EXAMPLE 3
 
 ```powershell
-Start-SPOSiteContentMove -Url https://contosoenergy.sharepoint.com/sites/hr -DestinationUrl https://contosoenergyEUR.sharepoint.com/sites/hr
+Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationUrl https://contosoenergyEUR.sharepoint.com/sites/hrEU
 ```
 
-Starts the movement from <https://contosoenergy.sharepoint.com/sites/hr> and set it to the location <https://contosoenergyEUR.sharepoint.com/sites/hr>
+Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> and allows site rename to <https://contosoenergyEUR.sharepoint.com/sites/hrEU> as part of the geo move operation.
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
 
-Defines the new destination of the content that you want to move.
+Defines the new destination of the content that you want to move. This is the 3 letter data location value. 
 
 ```yaml
 Type: String
@@ -91,39 +87,24 @@ Accept wildcard characters: False
 
 ### -DestinationUrl
 
-Destination URL where the move will take place.
+Destination URL is optional in cases where the administrator wants to perform a site rename as part of the move.
 
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationUrl
 Aliases:
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GroupName
-
-Name of the group to be moved.
-
-```yaml
-Type: String
-Parameter Sets: GroupNameAndDestinationDataLocation
-Aliases:
-Applicable: SharePoint Online
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PreferredMoveBeginDate
 
-Specifies what is the preferred Date and time to start the job.
+Specifies what is the preferred Date and time to start the move job. This is a preference and will be honored based on system resource availability. 
 
 ```yaml
 Type: DateTime
@@ -139,7 +120,7 @@ Accept wildcard characters: False
 
 ### -PreferredMoveEndDate
 
-Specifies what is the preferred Date and time to stop the job.
+Specifies what is the preferred Date and time to stop the move job from starting. This is a preference and will be honored based on system resource availability. If a the move is already in progress, we will complete the move. 
 
 ```yaml
 Type: DateTime
@@ -155,7 +136,7 @@ Accept wildcard characters: False
 
 ### -Reserved
 
-PARAMVALUE: String
+Reserved for Microsoft Internal use.
 
 ```yaml
 Type: String
@@ -169,9 +150,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Url
+### -SourceSiteUrl
 
-Specifies the source URL of the site collection.
+Specifies the source URL of the site collection you want to move. 
 
 ```yaml
 Type: String
@@ -187,7 +168,7 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
-This parameter will force the cmdlet to execute only validation.
+This parameter will perform a validation check on whether the site can be moved and will not execute the move. 
 
 ```yaml
 Type: SwitchParameter
@@ -196,6 +177,66 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressAllWarnings
+Suppress all warning messages.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressBcsCheck
+Suppress checking for Business Connectivity Services used with the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 10
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressMarketplaceAppCheck
+Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuppressWorkflow2013Check
+Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-DatabaseAvailabilityGroup
@@ -65,11 +64,8 @@ The Set-DatabaseAvailabilityGroup cmdlet enables you to manage DAG properties th
 DAG property values are stored in both Active Directory and the cluster database. Because some properties are stored in the cluster database, the underlying cluster for the DAG must have quorum to set the properties for:
 
 - ReplicationPort
-
 - NetworkCompression
-
 - NetworkEncryption
-
 - DiscoverNetworks
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -395,8 +391,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -448,7 +443,6 @@ Accept wildcard characters: False
 The DatacenterActivationMode parameter specifies the datacenter activation mode for the DAG. Valid values are:
 
 - Off: Datacenter activation mode is disabled.
-
 - DagOnly: Datacenter activation mode is enabled.
 
 ```yaml
@@ -502,7 +496,6 @@ Accept wildcard characters: False
 The FileSystem parameter specifies the file system that's used for the DAG. Valid values are:
 
 - NTFS
-
 - ReFS
 
 ```yaml
@@ -541,7 +534,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -554,11 +547,8 @@ Accept wildcard characters: False
 The NetworkCompression parameter specifies the network compression option for the DAG. Valid values are:
 
 - Disabled: Network compression is disabled on all networks.
-
 - Enabled: Network compression is enabled on all networks.
-
 - InterSubnetOnly: Network compression is enabled only for inter-subnet communication.
-
 - SeedOnly: Network compression is enabled only for seeding.
 
 ```yaml
@@ -578,11 +568,8 @@ Accept wildcard characters: False
 The NetworkEncryption parameter specifies the network encryption option for the DAG. Valid values are:
 
 - Disabled: Network encryption is disabled on all networks.
-
 - Enabled: Network encryption is enabled on all networks.
-
 - InterSubnetOnly: Network encryption is enabled only for inter-subnet communication.
-
 - SeedOnly: Network encryption is enabled only for seeding.
 
 ```yaml
@@ -603,7 +590,9 @@ The PreferenceMoveFrequency parameter specifies how frequently the Microsoft Exc
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
-The default value is 01:00:00 (1 hour). To disable this feature, specify the value ([System.Threading.Timeout]::InfiniteTimeSpan).
+The default value is 01:00:00 (1 hour). To disable this feature, specify the value `([System.Threading.Timeout]::InfiniteTimeSpan)`.
+
+**Important**: Don't specify a value larger than 49.7 days. A larger value will crash MSExchangeRepl.exe with an ArgumentOutOfRangeException error on all DAG members.
 
 ```yaml
 Type: TimeSpan

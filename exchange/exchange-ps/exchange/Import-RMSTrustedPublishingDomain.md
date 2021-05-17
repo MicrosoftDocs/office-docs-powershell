@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Import-RMSTrustedPublishingDomain
@@ -15,9 +14,11 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet has been deprecated and is no longer used.
+
 Use the Import-RMSTrustedPublishingDomain cmdlet to import a trusted publishing domain (TPD) from an on-premises server running Active Directory Rights Management Services (AD RMS) or from RMS Online into your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,31 +29,40 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ImportFromFile
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString> [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
+ [-ExtranetCertificationUrl <Uri>]
+ [-IntranetCertificationUrl <Uri>]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshTemplates
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-RefreshTemplates]
+Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString>
+ [-RefreshTemplates]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RMSOnline
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-RefreshTemplates]
+Import-RMSTrustedPublishingDomain [-Name] <String>
+ [-RMSOnline]
+ [-RefreshTemplates]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,13 +82,9 @@ Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-C
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
 
 - Path to exported XML file: C:\\My Documents\\Contoso.xml
-
 - Password of exported XML file: Pa$$word1
-
-- External licensing URL: https://rms.contoso.com/\_wmcs/licensing
-
-- Internal licensing URL: https://RMS01/\_wmcs/licensing
-
+- External licensing URL: `https://rms.contoso.com/_wmcs/licensing`
+- Internal licensing URL: `https://RMS01/_wmcs/licensing`
 - TPD name: Contoso TPD
 
 ## PARAMETERS
@@ -86,7 +92,7 @@ This example imports a TPD from an AD RMS server into a cloud-based organization
 ### -ExtranetLicensingUrl
 The ExtranetLicensingUrl parameter specifies the external licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the ExtranetLicensingUrl parameter is https://\<FQDN\>/\_wmcs/licensing.
+By default, the value of the ExtranetLicensingUrl parameter is `https://<FQDN>/_wmcs/licensing`.
 
 ```yaml
 Type: Uri
@@ -104,7 +110,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the XML file you want to import. The XML file contains the TPD you exported from the on-premises AD RMS server.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 ```yaml
 Type: Byte[]
@@ -122,7 +128,7 @@ Accept wildcard characters: False
 ### -IntranetLicensingUrl
 The IntranetLicensingUrl parameter specifies the internal licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the IntranetLicensingUrl parameter is https://\<server name\>/\_wmcs/licensing.
+By default, the value of the IntranetLicensingUrl parameter is `https://<server name>/_wmcs/licensing`.
 
 ```yaml
 Type: Uri
@@ -190,8 +196,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -230,7 +235,7 @@ Accept wildcard characters: False
 ### -ExtranetCertificationUrl
 The ExtranetCertificationUrl parameter specifies the external certification URL of the on-premises AD RMS server that's stamped into the Rights Account Certificate (RAC). The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the ExtranetCertificationUrl parameter is https://\<FQDN\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the ExtranetCertificationUrl parameter is `https://<FQDN>/_wmcs/certification/servercertification.asmx`.
 
 ```yaml
 Type: Uri
@@ -248,7 +253,7 @@ Accept wildcard characters: False
 ### -IntranetCertificationUrl
 The IntranetCertificationUrl parameter specifies the internal certification URL of the on-premises AD RMS server that's stamped into the RAC. The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the IntranetCertificationUrl parameter is https://\<server name\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the IntranetCertificationUrl parameter is `https://<server name>/_wmcs/certification/servercertification.asmx`.
 
 ```yaml
 Type: Uri
@@ -269,11 +274,8 @@ The RefreshTemplates switch specifies whether to update the RMS templates in a p
 When you add, modify, or remove RMS templates in a TPD on the AD RMS server, you export the updated TPD to a new XML file, and import the new XML file in your cloud-based organization. The RefreshTemplates switch uses the following rules:
 
 - Only the FileData, Password, and Name parameters are required. The value of the Name parameter must match the name of the previously imported TPD.
-
 - If the new XML file doesn't contain an RMS template that was defined in the previously imported TPD, the RMS template is removed from the cloud-based organization.
-
 - If the new XML file contains an updated RMS template that was defined in the previously imported TPD, the RMS template settings are updated in the cloud-based organization. However, the RMS template isn't changed from Archived to Distributed or vice versa.
-
 - If the new XML file contains an RMS template that wasn't imported in the original TPD, the RMS template is added to the cloud-based organization in the Archived state. To make the new RMS template usable, you must change its state from Archived to Distributed using the Set-RMSTemplate cmdlet.
 
 ```yaml

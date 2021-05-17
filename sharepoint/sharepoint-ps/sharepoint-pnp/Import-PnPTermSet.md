@@ -1,28 +1,27 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/import-pnptermset
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Import-PnPTermSet
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Import-PnPTermSet.html
 ---
-
+ 
 # Import-PnPTermSet
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Import-PnPTermSet.md to change this file.
+
 Imports a taxonomy term set from a file in the standard format.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Import-PnPTermSet -GroupName <String>
-                  -Path <String>
-                  [-TermSetId <Guid>]
-                  [-SynchronizeDeletions [<SwitchParameter>]]
-                  [-IsOpen <Boolean>]
-                  [-Contact <String>]
-                  [-Owner <String>]
-                  [-TermStoreName <String>]
-                  [-Connection <SPOnlineConnection>]
+Import-PnPTermSet -GroupName <String> -Path <String> [-TermSetId <Guid>] [-SynchronizeDeletions]
+ [-IsOpen <Boolean>] [-Contact <String>] [-Owner <String>] [-TermStoreName <String>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,21 +41,21 @@ The import file also supports an expanded syntax for the Term Set Name and term 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -SynchronizeDeletions
 ```
 
 Creates (or updates) the term set specified in the import file, in the group specified, removing any existing terms not in the file.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}' 
+Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}'
 ```
 
 Creates (or updates) the term set specified in the import file, in the term store and group specified, using the specified ID.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -IsOpen $true -Contact 'user@example.org' -Owner 'user@example.org'
 ```
@@ -64,6 +63,20 @@ Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv
 Creates (or updates) the term set specified in the import file, setting the IsOpen, Contact, and Owner properties as specified.
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Contact
 Contact for the term set; if not specified, the existing setting is retained.
@@ -74,7 +87,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -GroupName
@@ -86,7 +101,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IsOpen
@@ -98,7 +115,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Owner
@@ -110,7 +129,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Path
@@ -122,7 +143,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SynchronizeDeletions
@@ -134,7 +157,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermSetId
@@ -146,7 +171,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -TermStoreName
@@ -158,21 +185,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

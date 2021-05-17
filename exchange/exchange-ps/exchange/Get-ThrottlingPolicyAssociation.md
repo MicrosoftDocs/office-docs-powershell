@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ThrottlingPolicyAssociation
@@ -27,7 +26,8 @@ Get-ThrottlingPolicyAssociation [-Anr <String>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -36,7 +36,8 @@ Get-ThrottlingPolicyAssociation [[-Identity] <ThrottlingPolicyAssociationIdParam
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,31 +49,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-ThrottlingPolicyAssociation -OrganizationalUnit Users
-```
-
-In Exchange Server 2010 and 2013, this example returns a list of all the mailboxes in your organization in the Users OU.
-
-### Example 2
-```powershell
 Get-ThrottlingPolicyAssociation -ResultSize unlimited
 ```
 
 This example retrieves a summary list of all throttling policy associations in your organization.
 
-### Example 3
+### Example 2
 ```powershell
 Get-ThrottlingPolicyAssociation -Anr Chr -DomainController DC01
 ```
 
 In Exchange Server 2010 and 2013, this example returns all the mailboxes that resolve from the ambiguous name resolution search on the string "Chr" that are in the domain DC01. This example returns mailboxes for users such as Chris Ashton, Christian Hess, and Christa Geller.
 
-### Example 4
+### Example 3
 ```powershell
-Get-Group -Identity "Courtney Sweet" | Format-List
+Get-ThrottlingPolicyAssociation -Identity "Courtney Sweet" | Format-List
 ```
 
-This example returns detailed information for the throttling policy association named Courtney Sweet that's associated with the user's mailbox.
+This example returns detailed information for the throttling policy association named Courtney Sweet.
 
 ## PARAMETERS
 
@@ -80,13 +74,9 @@ This example returns detailed information for the throttling policy association 
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
 - CommonName (CN)
-
 - DisplayName
-
 - FirstName
-
 - LastName
-
 - Alias
 
 ```yaml
@@ -124,29 +114,17 @@ Accept wildcard characters: False
 The Identity parameter specifies the throttling policy association that you want to view. You can use any value that uniquely identifies the throttling policy association. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID For example:
-
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -198,9 +176,7 @@ Accept wildcard characters: False
 The ThrottlingPolicy parameter filters the results by throttling policy. You can use any value that uniquely identifies the throttling policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

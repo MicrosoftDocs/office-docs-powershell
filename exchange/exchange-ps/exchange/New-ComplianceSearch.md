@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-compliancesearch
-applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: New-ComplianceSearch
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # New-ComplianceSearch
@@ -32,19 +31,17 @@ New-ComplianceSearch [-Name] <String>
  [-ExchangeLocationExclusion <String[]>]
  [-Force]
  [-HoldNames <String[]>]
+ [-IncludeOrgContent <Boolean>]
  [-IncludeUserAppContent <Boolean>]
  [-Language <CultureInfo>]
  [-LogLevel <ComplianceJobLogLevel>]
- [-OneDriveLocation <String[]>]
- [-OneDriveLocationExclusion <String[]>]
  [-PublicFolderLocation <String[]>]
- [-PublicFolderLocationExclusion <String[]>]
  [-RefinerNames <String[]>]
- [-SearchNames <String[]>]
  [-SharePointLocation <String[]>]
  [-SharePointLocationExclusion <String[]>]
  [-StatusMailRecipients <String[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,7 +89,7 @@ Don't use spaces in the value of this parameter if you plan on using the Case pa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: True
 Position: 1
@@ -105,24 +102,20 @@ Accept wildcard characters: False
 The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
 - $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to search mailboxes that don't resolve as regular mailboxes.
-
 - $false: The search tries to validate the existence of the mailbox before proceeding. If you specify a mailbox that isn't a regular user mailbox, the search will fail. This is the default value.
 
 The mailbox types that are affected by the value of this parameter include:
 
 - Inactive mailboxes
-
 - Users without an Exchange Online license who use Office applications
-
 - Microsoft 365 guest users
-
 - On-premises users whose identity is synchronized with your Microsoft 365 organization
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -132,6 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -Case
+This parameter is available only in the cloud-based service.
+
 The Case parameter specifies the name of a Core eDiscovery case to associate the new compliance search with. If the value contains spaces, enclose the value in quotation marks.
 
 You can't use this parameter to create compliance searches associated with Advanced eDiscovery cases.
@@ -142,7 +137,7 @@ If the Name parameter contains spaces, the value of the ExchangeLocation paramet
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -154,15 +149,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -180,7 +174,7 @@ This parameter uses a text search string or a query that's formatted by using th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -196,7 +190,7 @@ The Description parameter specifies an optional description for the compliance s
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -209,9 +203,7 @@ Accept wildcard characters: False
 The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-
 - The value All for all mailboxes. You can only use this value by itself.
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -220,7 +212,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -230,10 +222,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -242,7 +235,7 @@ To specify a mailbox or distribution group, use the email address. You can speci
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -258,7 +251,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -268,6 +261,8 @@ Accept wildcard characters: False
 ```
 
 ### -HoldNames
+This parameter is available only in the cloud-based service.
+
 The HoldNames parameter specifies that the content locations that have been placed on hold in the specified eDiscovery case will be searched. You use the value All for this parameter. You also need to specify the name of an eDiscovery case by using the Case parameter.
 
 Also, if a content location was placed on a query-based case hold, only items that are on hold will be searched when you run this compliance search. For example, if a user was placed on a query-based case hold that preserves items that were sent or created before a specific date, only those items would be searched by using the search criteria specified by this compliance search.
@@ -276,7 +271,23 @@ Also, if a content location was placed on a query-based case hold, only items th
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeOrgContent
+{{ Fill IncludeOrgContent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -291,14 +302,13 @@ This parameter is available only in the cloud-based service.
 The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Microsoft 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Microsoft 365 guest users, and on-premises users whose identity is synchronized with your Microsoft 365 organization. Valid values are:
 
 - $true: The cloud-based storage location for the users specified in the ExchangeLocation parameter will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
-
 - $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -316,7 +326,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -326,45 +336,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceJobLogLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -374,29 +354,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderLocation
+This parameter is available only in the cloud-based service.
+
 The PublicFolderLocation parameter specifies that you want to include all public folders in the search. You use the value All for this parameter.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderLocationExclusion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -406,29 +372,15 @@ Accept wildcard characters: False
 ```
 
 ### -RefinerNames
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchNames
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -438,15 +390,17 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
+This parameter is available only in the cloud-based service.
+
 The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -456,15 +410,15 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationExclusion
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter is available only in the cloud-based service.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -474,13 +428,15 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -496,7 +452,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

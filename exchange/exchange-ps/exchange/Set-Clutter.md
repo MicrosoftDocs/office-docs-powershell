@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-clutter
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-Clutter
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-Clutter
@@ -17,14 +16,16 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-Clutter cmdlet to configure Clutter settings for mailboxes in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter> [-Enable <Boolean>] [<CommonParameters>]
+Set-Clutter -Identity <MailboxIdParameter>
+ [-Enable <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,30 +46,21 @@ This example disables Clutter for the user Alexander Martinez.
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\\\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -81,14 +73,13 @@ Accept wildcard characters: False
 The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
 
 - $true: Clutter is enabled for the mailbox. This is the default value.
-
 - $false: Clutter is disabled for the mailbox.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-OMEConfiguration
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-OMEConfiguration cmdlet to configure Microsoft 365 Message Encryption (OME).
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-BackgroundColor <String>]
+ [-Confirm]
  [-DisclaimerText <String>]
  [-EmailText <String>]
  [-ExternalMailExpiryInDays <Int32>]
@@ -36,7 +36,7 @@ Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-PrivacyStatementUrl <String>]
  [-ReadButtonText <String>]
  [-SocialIdSignIn <Boolean>]
- [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -74,15 +74,32 @@ Accept wildcard characters: False
 The BackgroundColor parameter specifies the background color. Valid values are:
 
 - An HTML hexadecimal color code value (#RRGGBB) enclosed in quotation marks. For example, `"#FFFFFF"` is white.
-
 - A valid color name value. For example, `yellow` is #ffff00. For a list of the valid color names, see [Background color reference](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages#background-color-reference).
-
 - $null (blank). This is the default value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Exchange Online
 
 Required: False
@@ -156,9 +173,7 @@ The Image parameter identifies and uploads an image that will be displayed in th
 You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
-
 - Optimal size of logo file: less than 40 KB
-
 - Optimal dimensions of logo image: 170x70 pixels
 
 To remove an existing image and use the default image, use the value $null for this parameter.
@@ -198,7 +213,6 @@ Accept wildcard characters: False
 The OTPEnabled parameter specifies whether to allow recipients to use a one-time passcode to view encrypted messages. Valid values are:
 
 - $true: Recipients can use a one-time passcode to view encrypted messages. This is the default value.
-
 - $false: Recipients can't use a one-time passcode to view encrypted messages. The recipient is required to sign in using a Microsoft 365 work or school account.
 
 ```yaml
@@ -272,7 +286,6 @@ Accept wildcard characters: False
 The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, etc). Valid values are:
 
 - $true: Social network ID sign in is allowed. This is the default value.
-
 - $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Microsoft 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml
@@ -288,17 +301,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+### -WhatIf
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 Applicable: Exchange Online
 
 Required: False

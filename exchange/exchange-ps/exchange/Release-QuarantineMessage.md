@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/release-quarantinemessage
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Release-QuarantineMessage
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Release-QuarantineMessage
@@ -17,9 +16,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Release-QuarantineMessage cmdlet to release messages from quarantine in your cloud-based organization. You can release messages to all original recipients, or to specific recipients.
 
-For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
+For files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,33 +26,38 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### OrgReleaseToUser
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] -User <String[]>
+Release-QuarantineMessage -User <String[]> [-Identities <QuarantineMessageIdentity[]>]
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrgReleaseToAll
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] [-ReleaseToAll]
+Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>]
+ [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
- [-Delete]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identities
 ```
-Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
+Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
@@ -63,10 +67,13 @@ Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+Consider the following scenario: john@gmail.com sends a message to faith@contoso.com and john@subsidiary.contoso.com. Gmail bifurcates this message into two copies that are both routed to quarantine as phishing in Microsoft. An admin releases both of these messages to admin@contoso.com. The first released message that reaches the admin mailbox is delivered. The second released message is identified as duplicate delivery and is skipped. Message are identified as duplicates if they have the same message ID and received time.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -94,10 +101,11 @@ This example releases all messages to all original recipients.
 
 ### Example 4
 ```powershell
-$q = Get-QuarantineMessage -QuarantineTypes SPOMalware; $q[-1] | Release-QuarantineMessage -ReleaseToAll
+$q = Get-QuarantineMessage -QuarantineTypes SPOMalware
+$q[-1] | Release-QuarantineMessage -ReleaseToAll
 ```
 
-This example releases a file that was quarantined as part of Office 365 Advanced Threat Protection. The first command stores all SharePoint Online, OneDrive for Business and Microsoft Teams quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
+This example releases a file that was quarantined as part of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. The first command stores all quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
 
 ## PARAMETERS
 
@@ -112,7 +120,7 @@ When you use this parameter, the Identity parameter is required, but the value i
 Type: QuarantineMessageIdentity[]
 Parameter Sets: Identities
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -143,7 +151,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: Identities, OrgReleaseToAll, OrgReleaseToUser
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -156,7 +164,7 @@ Accept wildcard characters: False
 Type: QuarantineMessageIdentity
 Parameter Sets: IdentityOnly
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -178,7 +186,7 @@ You can't use the ReleaseToAll switch and the User parameter in the same command
 Type: SwitchParameter
 Parameter Sets: OrgReleaseToAll
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -198,7 +206,7 @@ If you previously used the ReleaseToAll switch to release the quarantined messag
 Type: String[]
 Parameter Sets: OrgReleaseToUser
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -216,7 +224,7 @@ If the message was quarantined because of a transport rule or blocked sender, me
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -228,33 +236,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Delete
-This parameter has been deprecated and is no longer used.
-
-To delete quarantined messages, use the Delete-QuarantineMessage cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: OrgReleaseToAll
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -272,7 +261,7 @@ You need to use this switch whenever you attempt to re-release previously releas
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -290,7 +279,7 @@ This switch is only available for quarantined spam messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -302,11 +291,13 @@ Accept wildcard characters: False
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

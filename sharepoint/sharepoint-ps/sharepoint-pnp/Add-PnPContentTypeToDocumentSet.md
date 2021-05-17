@@ -1,35 +1,40 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpcontenttypetodocumentset
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPContentTypeToDocumentSet.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPContentTypeToDocumentSet
 ---
-
+  
 # Add-PnPContentTypeToDocumentSet
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPContentTypeToDocumentSet.md to change this file.
+
 Adds a content type to a document set
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPContentTypeToDocumentSet -ContentType <ContentTypePipeBind[]>
-                                -DocumentSet <DocumentSetPipeBind>
-                                [-Web <WebPipeBind>]
-                                [-Connection <SPOnlineConnection>]
+Add-PnPContentTypeToDocumentSet -ContentType <ContentTypePipeBind[]> -DocumentSet <DocumentSetPipeBind>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPContentTypeToDocumentSet -ContentType "Test CT" -DocumentSet "Test Document Set"
 ```
 
 This will add the content type called 'Test CT' to the document set called ''Test Document Set'
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 $docset = Get-PnPDocumentSetTemplate -Identity "Test Document Set"
 $ct = Get-PnPContentType -Identity "Test CT"
@@ -38,7 +43,7 @@ Add-PnPContentTypeToDocumentSet -ContentType $ct -DocumentSet $docset
 
 This will add the content type called 'Test CT' to the document set called ''Test Document Set'
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Add-PnPContentTypeToDocumentSet -ContentType 0x0101001F1CEFF1D4126E4CAD10F00B6137E969 -DocumentSet 0x0120D520005DB65D094035A241BAC9AF083F825F3B
 ```
@@ -46,6 +51,20 @@ Add-PnPContentTypeToDocumentSet -ContentType 0x0101001F1CEFF1D4126E4CAD10F00B613
 This will add the content type called 'Test CT' to the document set called ''Test Document Set'
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ContentType
 The content type object, name or id to add. Either specify name, an id, or a content type object.
@@ -56,7 +75,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DocumentSet
@@ -68,33 +89,15 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -1,39 +1,40 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnppublishingpage
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPPublishingPage.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPPublishingPage
 ---
-
+  
 # Add-PnPPublishingPage
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPublishingPage.md to change this file.
+
 Adds a publishing page
 
-## SYNTAX 
+## SYNTAX
 
-### WithTitle
 ```powershell
-Add-PnPPublishingPage -PageName <String>
-                      -PageTemplateName <String>
-                      [-Title <String>]
-                      [-FolderPath <String>]
-                      [-Publish [<SwitchParameter>]]
-                      [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+Add-PnPPublishingPage -PageName <String> [-FolderPath <String>] -PageTemplateName <String> [-Title <String>]
+ [-Publish] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Add-PnPPublishingPage -PageName 'OurNewPage' -Title 'Our new page' -PageTemplateName 'ArticleLeft'
 ```
 
 Creates a new page based on the pagelayout 'ArticleLeft'
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Add-PnPPublishingPage -PageName 'OurNewPage' -Title 'Our new page' -PageTemplateName 'ArticleLeft' -Folder '/Pages/folder'
 ```
@@ -41,6 +42,20 @@ Add-PnPPublishingPage -PageName 'OurNewPage' -Title 'Our new page' -PageTemplate
 Creates a new page based on the pagelayout 'ArticleLeft' with a site relative folder path
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FolderPath
 The site relative folder path of the page to be added
@@ -52,7 +67,9 @@ Aliases: Folder
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PageName
@@ -65,7 +82,9 @@ Aliases: Name
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PageTemplateName
@@ -77,7 +96,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Publish
@@ -89,7 +110,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Title
@@ -97,37 +120,19 @@ The title of the page
 
 ```yaml
 Type: String
-Parameter Sets: WithTitle
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

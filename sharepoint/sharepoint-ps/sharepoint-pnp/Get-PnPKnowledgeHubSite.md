@@ -1,25 +1,37 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpknowledgehubsite
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPKnowledgeHubSite.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPKnowledgeHubSite
 ---
-
+  
 # Get-PnPKnowledgeHubSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPKnowledgeHubSite.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Gets the Knowledge Hub Site URL for your tenant
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPKnowledgeHubSite [-Connection <SPOnlineConnection>]
+Get-PnPKnowledgeHubSite [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPKnowledgeHubSite
 ```
@@ -32,14 +44,18 @@ Returns the Knowledge Hub Site Url for your tenant
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

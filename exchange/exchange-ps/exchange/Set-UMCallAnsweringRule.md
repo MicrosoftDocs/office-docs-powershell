@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-umcallansweringrule
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016
 title: Set-UMCallAnsweringRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-UMCallAnsweringRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the Set-UMCallAnsweringRule cmdlet to change properties of an existing UM call answering rule.
 
@@ -22,30 +21,35 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter> [-CallerIds <MultiValuedProperty>]
- [-CallersCanInterruptGreeting <Boolean>] [-CheckAutomaticReplies <Boolean>] [-Confirm]
- [-DomainController <Fqdn>] [-ExtensionsDialed <MultiValuedProperty>] [-KeyMappings <MultiValuedProperty>]
- [-Mailbox <MailboxIdParameter>] [-Name <String>] [-Priority <Int32>] [-ScheduleStatus <Int32>]
- [-TimeOfDay <TimeOfDay>] [-WhatIf] [<CommonParameters>]
+Set-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter>
+ [-CallerIds <MultiValuedProperty>]
+ [-CallersCanInterruptGreeting <Boolean>]
+ [-CheckAutomaticReplies <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtensionsDialed <MultiValuedProperty>]
+ [-KeyMappings <MultiValuedProperty>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-ScheduleStatus <Int32>]
+ [-TimeOfDay <TimeOfDay>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Set-UMCallAnsweringRule cmdlet changes the properties of an existing UM call answering rule stored in a UM enabled user's mailbox. You can use the Set-UMCallAnsweringRule cmdlet to specify the following conditions:
 
 - Who the incoming call is from
-
 - Time of day
-
 - Calendar free/busy status
-
 - Whether automatic replies are turned on for email
 
 You can also specify the following actions:
 
 - Find me
-
 - Transfer the caller to someone else
-
 - Leave a voice message
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
@@ -69,9 +73,7 @@ Set-UMCallAnsweringRule -Name MyCallAnsweringRule -CallerIds "1,4255550100,,","1
 This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
 
 - Sets the call answering rule to two caller IDs.
-
 - Sets the priority of the call answering rule to 2.
-
 - Sets the call answering rule to allow callers to interrupt the greeting.
 
 ### Example 3
@@ -89,13 +91,11 @@ Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith
 This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox tonysmith:
 
 - Sets the priority of the call answering rule to 2.
-
 - Creates key mappings for the call answering rule.
 
 If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
 
 - Press the 1 key and be transferred to a receptionist at extension 45678.
-
 - Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first and then 45671.
 
 ### Example 5
@@ -106,7 +106,6 @@ Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith
 This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
 
 - Sets the priority of the call answering rule to 2.
-
 - If the caller reaches voice mail during working hours, the caller is asked to call back later.
 
 ### Example 6
@@ -117,7 +116,6 @@ Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith
 This example sets a custom period for the time of day on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and performs the following actions:
 
 - Sets the priority of the call answering rule to 2.
-
 - If the caller reaches voice mail and the time is between 8:00 A.M. and 12:00 P.M. on Tuesday, ask the caller to call back later.
 
 ## PARAMETERS
@@ -129,7 +127,7 @@ The Identity parameter specifies the identifier for a call answering rule being 
 Type: UMCallAnsweringRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
@@ -145,7 +143,7 @@ The CallerIds parameter specifies an entry for the "If the Caller is" condition.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -161,7 +159,7 @@ The CallersCanInterruptGreeting parameter specifies whether a caller can interru
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -177,7 +175,7 @@ The CheckAutomaticReplies parameter specifies an entry for the "If My Automatic 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -189,15 +187,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -207,15 +204,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -231,7 +226,7 @@ The ExtensionsDialed parameter specifies an entry for the "If the Caller Dials" 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -247,7 +242,7 @@ The KeyMappings parameter specifies a key mapping entry for a call answering rul
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -260,23 +255,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule will be changed. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 If you don't use this parameter, the mailbox of the user who is running the command is used.
@@ -285,7 +271,7 @@ If you don't use this parameter, the mailbox of the user who is running the comm
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -301,7 +287,7 @@ The Name parameter specifies the name of the UM call answering rule or Call Answ
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -317,7 +303,7 @@ The Priority parameter specified the order that the call answering rule will be 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -330,13 +316,9 @@ Accept wildcard characters: False
 The ScheduleStatus parameter specifies an entry for the "If my Schedule show that I am" condition. Users can specify their free/busy status to be checked. This parameter can be set from 0 through 15 and is interpreted as a 4-bit mask that represents the calendar status including Free, Tentative, Busy and Out of Office. The following settings can be used to set the schedule status:
 
 - None = 0x0
-
 - Free = 0x1
-
 - Tentative = 0x2
-
 - Busy = 0x4
-
 - OutOfOffice = 0x8
 
 The default setting is $null.
@@ -345,7 +327,7 @@ The default setting is $null.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -361,7 +343,7 @@ The TimeOfDay parameter specifies an entry for the "If the Call Arrives During" 
 Type: TimeOfDay
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -377,7 +359,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

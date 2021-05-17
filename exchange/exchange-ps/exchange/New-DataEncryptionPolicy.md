@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # New-DataEncryptionPolicy
@@ -17,15 +16,20 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-DataEncryptionPolicy cmdlet to create data encryption policies in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-DataEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedProperty> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-WhatIf] [<CommonParameters>]
+New-DataEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedProperty>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,9 +51,9 @@ This example creates a data encryption policy named US Mailboxes with the specif
 ## PARAMETERS
 
 ### -AzureKeyIDs
-The AzureKeyIDs parameter specifies the URI values of the Azure Key Vault keys to associate with the data encryption policy. You need to specify at least two Azure Key Vault keys separated by commas. For example, "https://contosoWestUSvault01.vault.azure.net/keys/USA\_Key\_01","https://contosoEastUSvault01.vault.azure.net/keys/USA\_Key\_02"
+The AzureKeyIDs parameter specifies the URI values of the Azure Key Vault keys to associate with the data encryption policy. You need to specify at least two Azure Key Vault keys separated by commas. For example, `"https://contosoWestUSvault01.vault.azure.net/keys/USA_Key_01","https://contosoEastUSvault01.vault.azure.net/keys/USA_Key_02"`.
 
-To find the URI value for an Azure Key Vault, replace \<VaultName\> with the name of the vault, and run this command in Azure Rights Management PowerShell: Get-AzureKeyVaultKey -VaultName \<VaultName\>).id. For more information, see [About Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview).
+To find the URI value for an Azure Key Vault, replace `<VaultName>` with the name of the vault, and run this command in Azure Rights Management PowerShell: `Get-AzureKeyVaultKey -VaultName <VaultName>).id`. For more information, see [About Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview).
 
 ```yaml
 Type: MultiValuedProperty
@@ -83,8 +87,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -136,7 +139,6 @@ Accept wildcard characters: False
 The Enabled parameter enables or disable the data encryption policy. Valid values are:
 
 - $true: The policy is enabled. This is the default value.
-
 - $false: The policy is disabled.
 
 ```yaml

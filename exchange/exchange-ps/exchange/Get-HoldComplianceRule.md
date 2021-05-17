@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-holdcompliancerule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-HoldComplianceRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-HoldComplianceRule
@@ -17,14 +16,15 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Get-HoldComplianceRule to view preservation rules in the Security & Compliance Center.
 
-Note: The Get-HoldComplianceRule cmdlet has been replaced by the Get-RetentionComplianceRule cmdlet. If you have scripts that use Get-HoldComplianceRule, update them to use Get-RetentionComplianceRule.
+**Note**: The Get-HoldComplianceRule cmdlet has been replaced by the Get-RetentionComplianceRule cmdlet. If you have scripts that use Get-HoldComplianceRule, update them to use Get-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-HoldComplianceRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>]
+Get-HoldComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -32,11 +32,8 @@ Get-HoldComplianceRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <Polic
 This list describes the properties that are displayed by default in the summary information.
 
 - Name: The unique name of the rule.
-
 - Disabled: The enabled or disabled status of the rule.
-
 - Mode: The current operating mode of the rule (for example, Enforce).
-
 - Comment: An administrative comment.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
@@ -63,16 +60,14 @@ This example displays detailed information for the preservation rule named "30 D
 The Identity parameter specifies the preservation rule you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -85,9 +80,7 @@ Accept wildcard characters: False
 The Policy parameter filters the preservation rule results by the associated preservation policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter with the Identity parameter in the same command.
@@ -96,7 +89,7 @@ You can use this parameter with the Identity parameter in the same command.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-ActiveSyncMailboxPolicy
@@ -17,14 +16,16 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ActiveSyncMailboxPolicy cmdlet to retrieve the Mobile Device mailbox policy settings for a specific Mobile Device mailbox policy.
 
-Note: In Exchange 2013 or later, use the Get-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Get-ActiveSyncMailboxPolicy, update them to use Get-MobileDeviceMailboxPolicy.
+**Note**: In Exchange 2013 or later, use the Get-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Get-ActiveSyncMailboxPolicy, update them to use Get-MobileDeviceMailboxPolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ActiveSyncMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-ActiveSyncMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,6 +58,22 @@ This example returns the policy settings for the Mobile Device mailbox policy na
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the policy name.
+
+```yaml
+Type: MailboxPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -72,22 +89,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the policy name.
-
-```yaml
-Type: MailboxPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

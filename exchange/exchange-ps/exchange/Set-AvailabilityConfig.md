@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-AvailabilityConfig
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AvailabilityConfig [-Confirm] [-DomainController <Fqdn>] [-OrgWideAccount <SecurityPrincipalIdParameter>]
- [-PerUserAccount <SecurityPrincipalIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-AvailabilityConfig [-Confirm]
+ [-DomainController <Fqdn>]
+ [-OrgWideAccount <SecurityPrincipalIdParameter>]
+ [-PerUserAccount <SecurityPrincipalIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,8 +57,7 @@ This example is useful if the remote forest isn't trusted. Because this account 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -90,7 +92,24 @@ Accept wildcard characters: False
 ```
 
 ### -OrgWideAccount
-The OrgWideAccount parameter specifies an account or security group that has permission to issue proxy Availability service requests on an organization-wide basis.
+The OrgWideAccount parameter specifies who has permission to issue proxy Availability service requests on an organization-wide basis. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter

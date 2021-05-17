@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpcompliancepolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-DlpCompliancePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpCompliancePolicy
@@ -22,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [<CommonParameters>]
+Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-IncludeExtendedProperties <Boolean>]
+ [-DistributionDetail]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +46,42 @@ Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 
 This example displays detailed information for the DLP policy named "PII Limited".
 
+### Example 3
+```powershell
+Get-DlpCompliancePolicy -Identity "PII Limited" -DistributionDetail | Format-List DistributionStatus
+```
+
+This example displays distribution details for a DLP policy.
+
+### Example 4
+```powershell
+$dlp = Get-DlpCompliancePolicy; ForEach ($d in $dlp){Get-DlpCompliancePolicy -DistributionDetail $d.name | Format-List Name,DistributionStatus}
+```
+
+This example gets all of the DLP policies in a environment and displays the distribution status for each.
+
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+- Id
+
+```yaml
+Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
@@ -53,7 +90,7 @@ The DistributionDetail switch returns detailed policy distribution information i
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -62,27 +99,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-- Id
+### -IncludeExtendedProperties
+{{ Fill IncludeExtendedProperties Description }}
 
 ```yaml
-Type: PolicyIdParameter
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

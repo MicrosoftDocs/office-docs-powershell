@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxFolderStatistics
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderStatistics cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderStatistics cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,17 +24,39 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive] [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>] [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-FolderScope <ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [-AuditLog] [-DomainController <Fqdn>]
- [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-IncludeAnalysis]
- [-IncludeOldestAndNewestItems] [-DiagnosticInfo <String>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>]
+ [-AuditLog]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-FolderScope <ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
+```
+
+### Database
+```
+Get-MailboxFolderStatistics -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
+ [-DiagnosticInfo <String>]
+ [-FolderScope <ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,29 +96,28 @@ Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -Incl
 
 This example uses the IncludeAnalysis switch to view the statistics of Tony's Recoverable Items folder.
 
+### Example 5
+```powershell
+$All = Get-Mailbox -ResultSize Unlimited
+$All | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize}
+```
+
+This example uses the FolderScope parameter to view inbox folders statistics for all mailboxes.
+
 ## PARAMETERS
 
 ### -Identity
 The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -124,6 +143,42 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Database
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -186,7 +241,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Identity, AuditLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -201,51 +256,29 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
 
 - All
-
-- Archive
-
+- Archive: Exchange 2016 or later.
 - Calendar
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - JunkEmail
-
 - Journal
-
-- LegacyArchiveJournals
-
-- ManagedCustomFolder
-
-- NonIpmRoot
-
+- LegacyArchiveJournals: Exchange 2013 or later.
+- ManagedCustomFolder: Returns output for all managed custom folders.
+- NonIpmRoot: Exchange 2013 or later.
 - Notes
-
 - Outbox
-
 - Personal
-
-- RecoverableItems
-
+- RecoverableItems: Returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
 
-The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
-
 ```yaml
-Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
+Type: ElcFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online

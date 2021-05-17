@@ -1,53 +1,54 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnppropertybagvalue
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPPropertyBagValue
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPPropertyBagValue.html
 ---
-
+ 
 # Set-PnPPropertyBagValue
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPPropertyBagValue.md to change this file.
+
 Sets a property bag value
 
-## SYNTAX 
-
-### Folder
-```powershell
-Set-PnPPropertyBagValue -Key <String>
-                        -Value <String>
-                        [-Folder <String>]
-                        [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
-```
+## SYNTAX
 
 ### Web
 ```powershell
-Set-PnPPropertyBagValue -Key <String>
-                        -Value <String>
-                        -Indexed [<SwitchParameter>]
-                        [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
+Set-PnPPropertyBagValue -Key <String> -Value <String> [-Indexed] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+### Folder
+```powershell
+Set-PnPPropertyBagValue -Key <String> -Value <String> [-Folder <String>] 
+ [-Connection <PnPConnection>] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPPropertyBagValue -Key MyKey -Value MyValue
 ```
 
 This sets or adds a value to the current web property bag
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPPropertyBagValue -Key MyKey -Value MyValue -Folder /
 ```
 
 This sets or adds a value to the root folder of the current web
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPPropertyBagValue -Key MyKey -Value MyValue -Folder /MyFolder
 ```
@@ -55,6 +56,20 @@ Set-PnPPropertyBagValue -Key MyKey -Value MyValue -Folder /MyFolder
 This sets or adds a value to the folder MyFolder which is located in the root folder of the current web
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Folder
 Site relative url of the folder. See examples for use.
@@ -65,11 +80,12 @@ Parameter Sets: Folder
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Indexed
-
 
 ```yaml
 Type: SwitchParameter
@@ -77,57 +93,40 @@ Parameter Sets: Web
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Key
 
-
 ```yaml
 Type: String
-Parameter Sets: Web, Folder
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Value
 
-
 ```yaml
 Type: String
-Parameter Sets: Web, Folder, 
+Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

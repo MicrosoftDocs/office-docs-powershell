@@ -1,193 +1,137 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpwebpermission
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: 
 title: Set-PnPWebPermission
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPWebPermission.html
 ---
-
-# Set-PnPWebPermission
+ 
+# Set-PnPWebPartProperty
 
 ## SYNOPSIS
-Set permissions
 
-## SYNTAX 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPWebPermission.md to change this file.
 
-### Group
+Sets a web permissions
+
+## SYNTAX
+
 ```powershell
-Set-PnPWebPermission -Group <GroupPipeBind>
-                     [-AddRole <String[]>]
-                     [-RemoveRole <String[]>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+ Set-PnPWebPermission -Group <GroupPipeBind> [-Identity <WebPipeBind>] [-AddRole <String[]>] [-RemoveRole <String[]>]
 ```
 
-### User
 ```powershell
-Set-PnPWebPermission -User <String>
-                     [-AddRole <String[]>]
-                     [-RemoveRole <String[]>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+Set-PnPWebPermission -User <String> [-Identity <WebPipeBind>]  [-AddRole <String[]>] [-RemoveRole <String[]>]
 ```
 
-### GroupByWebIdentity
-```powershell
-Set-PnPWebPermission -Identity <WebPipeBind>
-                     -Group <GroupPipeBind>
-                     [-AddRole <String[]>]
-                     [-RemoveRole <String[]>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
-```
-
-### UserByWebIdentity
-```powershell
-Set-PnPWebPermission -Identity <WebPipeBind>
-                     -User <String>
-                     [-AddRole <String[]>]
-                     [-RemoveRole <String[]>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
-```
-
-### GroupByWebUrl
-```powershell
-Set-PnPWebPermission -Url <String>
-                     -Group <GroupPipeBind>
-                     [-AddRole <String[]>]
-                     [-RemoveRole <String[]>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
-```
-
-### UserByWebUrl
-```powershell
-Set-PnPWebPermission -Url <String>
-                     -User <String>
-                     [-AddRole <String[]>]
-                     [-RemoveRole <String[]>]
-                     [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
-```
 
 ## DESCRIPTION
-Sets web permissions
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Set-PnPWebPermission -Url projectA -User 'user@contoso.com' -AddRole 'Contribute'
+Set-PnPWebPermission -User "user@contoso.com" -AddRole "Contribute"
 ```
 
-Adds the 'Contribute' permission to the user 'user@contoso.com' for a web, specified by its site relative url
+Adds the "Contribute" permission role to the specified user in the current web.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Set-PnPWebPermission -Identity 5fecaf67-6b9e-4691-a0ff-518fc9839aa0 -User 'user@contoso.com' -RemoveRole 'Contribute'
+Set-PnPWebPermission -Group "Project Managers" -AddRole "Contribute"
 ```
 
-Removes the 'Contribute' permission to the user 'user@contoso.com' for a web, specified by its ID
+Adds the "Contribute" permission role to the "Project Managers" group in the current web.
+
+### EXAMPLE 3
+```powershell
+Set-PnPWebPermission -Identity projectA -User "user@contoso.com" -AddRole "Contribute"
+```
+
+Adds the "Contribute" permission role to the user "user@contoso.com" in the subweb of the current web with site relative url "projectA"
+
+### EXAMPLE 4
+```powershell
+Set-PnPWebPermission -User "user@contoso.com" -AddRole "Custom Role 1","Custom Role 2"
+```
+
+Adds the specified permission roles to the user "user@contoso.com" in the current web
 
 ## PARAMETERS
 
-### -AddRole
-The role that must be assigned to the group or user
+### -User
+The name of the user to modify
 
 ```yaml
-Type: String[]
-Parameter Sets: __AllParameterSets
+Type: String
+Parameter Sets: Set user permissions
 
-Required: False
+Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Group
-
+The name of the group to modify
 
 ```yaml
-Type: GroupPipeBind
-Parameter Sets: Group, GroupByWebIdentity, GroupByWebUrl
+Type: String
+Parameter Sets: Set group permissions
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Identity
-Identity/Id/Web object
+### -AddRole
+The name of the role to add to the specified user or group
 
 ```yaml
-Type: WebPipeBind
-Parameter Sets: GroupByWebIdentity, UserByWebIdentity
+Type: String
+Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RemoveRole
-The role that must be removed from the group or user
-
-```yaml
-Type: String[]
-Parameter Sets: __AllParameterSets
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Url
-The site relative url of the web, e.g. 'Subweb1'
 
 ```yaml
 Type: String
-Parameter Sets: GroupByWebUrl, UserByWebUrl
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -User
-
-
-```yaml
-Type: String
-Parameter Sets: User, UserByWebIdentity, UserByWebUrl
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+### -Identity
+The guid or site relative url of the web to use
 
 ```yaml
-Type: WebPipeBind
+Type: Guid
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

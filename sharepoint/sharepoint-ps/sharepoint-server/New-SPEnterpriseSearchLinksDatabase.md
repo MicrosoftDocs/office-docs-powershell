@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchlinksdatabase
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 
@@ -215,5 +215,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)
 
 [Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)
-
-[Repartition-SPEnterpriseSearchLinksDatabases](Repartition-SPEnterpriseSearchLinksDatabases.md)

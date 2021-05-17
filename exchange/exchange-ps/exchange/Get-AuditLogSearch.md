@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-auditlogsearch
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-AuditLogSearch
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-AuditLogSearch
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuditLogSearch [[-Identity] <AuditLogSearchIdParameter>] [-CreatedAfter <ExDateTime>]
- [-CreatedBefore <ExDateTime>] [-ResultSize <Int32>] [-Type <String>] [<CommonParameters>]
+Get-AuditLogSearch [[-Identity] <AuditLogSearchIdParameter>]
+ [-CreatedAfter <ExDateTime>]
+ [-CreatedBefore <ExDateTime>]
+ [-ResultSize <Int32>]
+ [-Type <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-AuditLogSearch | FL
+Get-AuditLogSearch | Format-List
 ```
 
 This example displays detailed information for all current audit log searches.
@@ -49,6 +52,22 @@ This example returns a list of current administrator audit log searches.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the GUID for an audit log search. You can run the command Get-AuditLogSearch | Format-List Identity to display the GUIDs for all current audit log searches.
+
+```yaml
+Type: AuditLogSearchIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -CreatedAfter
 The CreatedAfter parameter filters the results to audit log searches that were created after the specified date.
 
@@ -58,7 +77,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -76,28 +95,12 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID for an audit log search. You can run the command Get-AuditLogSearch | Format-List Identity to display the GUIDs for all current audit log searches.
-
-```yaml
-Type: AuditLogSearchIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -108,7 +111,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -124,7 +127,7 @@ The Type parameter specifies the type of audit log searches to return. Use the v
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxPermission
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxPermission cmdlet to retrieve permissions on a mailbox.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxPermission cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,15 +27,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### AccessRights
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipalIdParameter>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipalIdParameter>] [-SoftDeletedMailbox]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -47,25 +48,17 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
 The output of this cmdlet shows the following information:
 
 - Identity: The mailbox in question.
-
 - User: The security principal (user, security group, Exchange management role group, etc.) that has permission to the mailbox.
-
 - AccessRights: The permission that the security principal has on the mailbox. The available values are ChangeOwner (change the owner of the mailbox), ChangePermission (change the permissions on the mailbox), DeleteItem (delete the mailbox), ExternalAccount (indicates the account isn't in the same domain), FullAccess (open the mailbox, access its contents, but can't send mail) and ReadPermission (read the permissions on the mailbox). Whether the permissions are allowed or denied is indicated in the Deny column.
-
 - IsInherited: Whether the permission is inherited (True) or directly assigned to the mailbox (False). Permissions are inherited from the mailbox database and/or Active Directory. Typically, directly assigned permissions override inherited permissions.
-
 - Deny: Whether the permission is allowed (False) or denied (True). Typically, deny permissions override allow permissions.
 
 By default, the following permissions are assigned to user mailboxes:
 
 - FullAccess and ReadPermission are directly assigned to NT AUTHORITY\\SELF. This entry gives a user permission to their own mailbox.
-
 - FullAccess is denied to Administrator, Domain Admins, Enterprise Admins and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
-
 - ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
-
 - FullAccess is inherited by NT AUTHORITY\\SYSTEM and ReadPermission is inherited by NT AUTHORITY\\NETWORK.
-
 - FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
 
 By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Microsoft 365).
@@ -101,23 +94,14 @@ This example returns the owner information for the resource mailbox Room222.
 The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -161,6 +145,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to return Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -225,20 +227,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -User
-The User parameter returns information about the user who has permissions to the mailbox specified by the Identity parameter.
+### -SoftDeletedMailbox
+This parameter is available only in the cloud-based service.
 
-The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
+The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -User
+The User parameter filters the results by who has permissions to the mailbox that's specified by the Identity parameter. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
+- Alias
 - Distinguished name (DN)
-
 - Canonical DN
-
+- Domain\\Username
+- Email address
 - GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
-You can't use this parameter with the Owner parameter.
+You can't use this parameter with the Owner switch.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

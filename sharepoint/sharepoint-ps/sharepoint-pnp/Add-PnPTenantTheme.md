@@ -1,23 +1,31 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPTenantTheme.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPTenantTheme
 ---
-
+  
 # Add-PnPTenantTheme
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTenantTheme.md to change this file.
+
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Adds or updates a theme to the tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Add-PnPTenantTheme -Identity <ThemePipeBind>
-                   -Palette <ThemePalettePipeBind>
-                   -IsInverted <Boolean>
-                   [-Connection <SPOnlineConnection>]
+Add-PnPTenantTheme [-Overwrite] -Identity <ThemePipeBind> -Palette <ThemePalettePipeBind> -IsInverted <Boolean>
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +33,7 @@ Adds or updates a theme to the tenant.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $themepalette = @{
   "themePrimary" = "#00ffff";
@@ -54,12 +62,26 @@ $themepalette = @{
   "primaryBackground" = "#fff";
   "primaryText" = "#333"
  }
-PS:>Add-PnPTenantTheme -Identity "MyCompanyTheme" -Palette $themepalette -IsInverted $false
+Add-PnPTenantTheme -Identity "MyCompanyTheme" -Palette $themepalette -IsInverted $false
 ```
 
 This example adds a theme to the current tenant.
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 The name of the theme to add or update
@@ -70,7 +92,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -IsInverted
@@ -82,7 +106,23 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Overwrite
+{{ Fill Overwrite Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Palette
@@ -94,21 +134,13 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

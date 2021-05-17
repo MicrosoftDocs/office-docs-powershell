@@ -1,32 +1,35 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-administrativeunit
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-AdministrativeUnit
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-AdministrativeUnit
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available or functional only in the cloud-based service.
 
 Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Azure Active Directory containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
 
-Note: Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Azure AD PowerShell.
+**Note**: Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Azure AD PowerShell.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-AdministrativeUnit [[-Identity] <AdministrativeUnitIdParameter>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Get-AdministrativeUnit [[-Identity] <AdministrativeUnitIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,20 +57,16 @@ This example returns detailed information about the administrative unit with the
 The Identity parameter specifies the administrative unit that you want to view. You can use any value that uniquely identifies the administrative unit. For example:
 
 - Display name (this value is the same in Azure AD PowerShell)
-
 - ExternalDirectoryObjectId (this GUID value is the same as the ObjectId property in Azure AD PowerShell)
-
 - Name (GUID value)
-
 - Distinguished name (DN)
-
 - GUID (different value than Name)
 
 ```yaml
 Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -79,15 +78,32 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -103,7 +119,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

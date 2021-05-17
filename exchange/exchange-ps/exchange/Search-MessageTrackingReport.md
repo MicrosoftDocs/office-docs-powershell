@@ -7,13 +7,12 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Search-MessageTrackingReport
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available or functional only in on-premises Exchange.
 
 Use the Search-MessageTrackingReport cmdlet to find the unique message tracking report based on the search criteria provided. You can then pass this message tracking report ID to the Get-MessageTrackingReport cmdlet to get full message tracking information. For more information, see [Get-MessageTrackingReport](https://docs.microsoft.com/powershell/module/exchange/get-messagetrackingreport). The message tracking report cmdlets are used by the delivery reports feature.
 
@@ -25,21 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### SearchAsSender
 ```
-Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddress> [-BypassDelegateChecking]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-DoNotResolve]
- [-MessageEntryId <String>]
- [-MessageId <String>]
- [-ResultSize <Unlimited>]
- [-Subject <String>]
- [-TraceLevel <TraceLevel>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### SearchAsRecipient
-```
-Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <SmtpAddress[]>]
+Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddress>
  [-BypassDelegateChecking]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -49,7 +34,25 @@ Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <Smtp
  [-ResultSize <Unlimited>]
  [-Subject <String>]
  [-TraceLevel <TraceLevel>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### SearchAsRecipient
+```
+Search-MessageTrackingReport [-Identity] <MailboxIdParameter>
+ [-Recipients <SmtpAddress[]>]
+ [-BypassDelegateChecking]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-MessageEntryId <String>]
+ [-MessageId <String>]
+ [-ResultSize <Unlimited>]
+ [-Subject <String>]
+ [-TraceLevel <TraceLevel>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,23 +82,14 @@ This example returns the message tracking reports that the Help desk can analyze
 The Identity parameter scopes the search to the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 When you use this parameter without the Sender parameter, the specified mailbox is the message sender that's used in the search. You can specify the recipients by using the Recipients parameter.
@@ -154,8 +148,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -293,9 +286,7 @@ Accept wildcard characters: False
 The TraceLevel parameter specifies the details to include in the results. Valid values are:
 
 - Low: Minimal additional data is returned, including servers that were accessed, timing, message tracking search result counts, and any error information.
-
 - Medium: In addition to all the data returned for the Low setting, the actual message tracking search results are also returned.
-
 - High: Full diagnostic data is returned.
 
 You only need to use this parameter for troubleshooting message tracking issues.
@@ -304,7 +295,7 @@ You only need to use this parameter for troubleshooting message tracking issues.
 Type: TraceLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

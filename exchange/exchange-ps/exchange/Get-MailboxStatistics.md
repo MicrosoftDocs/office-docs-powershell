@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxStatistics
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxStatistics cmdlet to return information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed. In addition, you can get the move history or a move report of a completed move request.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxStatistics cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxStatistics cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -33,12 +31,14 @@ Get-MailboxStatistics -Database <DatabaseIdParameter> [[-StoreMailboxIdentity] <
  [-IncludeMoveHistory]
  [-IncludeMoveReport]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive]
+Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
  [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeMoveHistory]
@@ -58,7 +58,8 @@ Get-MailboxStatistics -Server <ServerIdParameter>
  [-IncludeMoveReport]
  [-IncludePassive]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,14 +126,16 @@ This example returns the summary move history for the completed move request for
 
 ### Example 8
 ```powershell
-$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory; $temp.MoveHistory[0]
+$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory
+$temp.MoveHistory[0]
 ```
 
 This example returns the detailed move history for the completed move request for Ayla Kol's mailbox. This example uses a temporary variable to store the mailbox statistics object. If the mailbox has been moved multiple times, there are multiple move reports. The last move report is always MoveReport[0].
 
 ### Example 9
 ```powershell
-$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport; $temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
+$temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport
+$temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
 ```
 
 This example returns the detailed move history and a verbose detailed move report for Ayla Kol's mailbox. This example uses a temporary variable to store the move request statistics object and outputs the move report to a CSV file.
@@ -143,23 +146,14 @@ This example returns the detailed move history and a verbose detailed move repor
 The Identity parameter specifies the mailbox that you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -169,6 +163,29 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+This parameter is available only in on-premises Exchange.
+
+The StoreMailboxIdentity parameter specifies the mailbox identity when used with the Database parameter to return statistics for a single mailbox on the specified database. You can use one of the following values:
+
+- MailboxGuid
+- LegacyDN
+
+Use this syntax to retrieve information about disconnected mailboxes, which don't have a corresponding Active Directory object or that has a corresponding Active Directory object that doesn't point to the disconnected mailbox in the mailbox database.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
@@ -199,15 +216,11 @@ The CopyOnServer parameter is used to retrieve statistics from a specific databa
 You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
 
 ```yaml
 Type: ServerIdParameter
@@ -228,9 +241,7 @@ This parameter is available only in on-premises Exchange.
 The Database parameter returns statistics for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
@@ -272,11 +283,8 @@ This parameter is available only in on-premises Exchange.
 The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property.
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -375,7 +383,7 @@ This parameter is available only in on-premises Exchange.
 
 The IncludeQuarantineDetails switch specifies whether to return additional quarantine details about the mailbox that aren't otherwise included in the results. You can use these details to determine when and why the mailbox was quarantined.
 
-Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, Get-MailboxStatistics \<MailboxIdentity\> -IncludeQuarantineDetails | Format-List Quarantine\*.
+Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, `Get-MailboxStatistics <MailboxIdentity> -IncludeQuarantineDetails | Format-List Quarantine*`.
 
 ```yaml
 Type: SwitchParameter
@@ -414,7 +422,6 @@ This parameter is available only in on-premises Exchange.
 The Server parameter specifies the server from which you want to obtain mailbox statistics. You can use one of the following values:
 
 - Fully qualified domain name (FQDN)
-
 - NetBIOS name
 
 When you specify a value for the Server parameter, the command returns statistics for all the mailboxes on all the databases, including recovery databases, on the specified server. If you don't specify this parameter, the command returns logon statistics for the local server.
@@ -427,30 +434,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -StoreMailboxIdentity
-This parameter is available only in on-premises Exchange.
-
-The StoreMailboxIdentity parameter specifies the mailbox identity when used with the Database parameter to return statistics for a single mailbox on the specified database. You can use one of the following values:
-
-- MailboxGuid
-
-- LegacyDN
-
-Use this syntax to retrieve information about disconnected mailboxes, which don't have a corresponding Active Directory object or that has a corresponding Active Directory object that doesn't point to the disconnected mailbox in the mailbox database.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

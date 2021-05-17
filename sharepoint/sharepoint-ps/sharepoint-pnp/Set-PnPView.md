@@ -1,26 +1,26 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpview
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPView
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPView.html
 ---
-
+ 
 # Set-PnPView
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPView.md to change this file.
+
 Change view properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPView -Identity <ViewPipeBind>
-            [-List <ListPipeBind>]
-            [-Values <Hashtable>]
-            [-Fields <String[]>]
-            [-Aggregations <String>]
-            [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+Set-PnPView [[-List] <ListPipeBind>] -Identity <ViewPipeBind> [-Values <Hashtable>] [-Fields <String[]>]
+ [-Aggregations <String>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,28 +28,28 @@ Sets one or more properties of an existing view, see here https://docs.microsoft
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPView -List "Tasks" -Identity "All Tasks" -Values @{JSLink="hierarchytaskslist.js|customrendering.js";Title="My view"}
 ```
 
 Updates the "All Tasks" view on list "Tasks" to use hierarchytaskslist.js and customrendering.js for the JSLink and changes the title of the view to "My view"
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPList -Identity "Tasks" | Get-PnPView | Set-PnPView -Values @{JSLink="hierarchytaskslist.js|customrendering.js"}
 ```
 
 Updates all views on list "Tasks" to use hierarchytaskslist.js and customrendering.js for the JSLink
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","Created"
 ```
 
 Updates the Corporate Documents view on the Documents library to have two fields
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","Created" -Aggregations "<FieldRef Name='Title' Type='COUNT'/>"
 ```
@@ -67,7 +67,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Fields
@@ -79,7 +95,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -91,7 +109,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -103,7 +123,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: 0
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Values
@@ -115,37 +137,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.Field
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

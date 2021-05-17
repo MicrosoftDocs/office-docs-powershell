@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/search-adminauditlog
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Search-AdminAuditLog
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Search-AdminAuditLog
@@ -40,7 +39,7 @@ Search-AdminAuditLog
 ## DESCRIPTION
 If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
 
-Note: In Exchange Online PowerShell, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
+**Note**: In Exchange Online PowerShell, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
 
 For more information about the structure and properties of the audit log, [Administrator audit log structure](https://docs.microsoft.com/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
 
@@ -63,18 +62,16 @@ Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults,P
 This example finds all the administrator audit log entries that match the following criteria:
 
 - Cmdlets: Set-Mailbox
-
 - Parameters: UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
-
 - StartDate: 01/24/2018
-
 - EndDate: 02/12/2018
 
 The command completed successfully
 
 ### Example 3
 ```powershell
-$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
+$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog
+$LogEntries | ForEach { $_.CmdletParameters }
 ```
 
 This example displays all the comments written to the administrator audit log by the Write-AdminAuditLog cmdlet.
@@ -99,7 +96,7 @@ In the results of this cmdlet, this property is named **CmdletName**.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -133,9 +130,8 @@ Use the short date format that's defined in the Regional Options settings on the
 
 In the cloud-based service, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 In the results of this cmdlet, the date/time when the change was made (the cmdlet was run) is returned in the property named **RunDate**.
 
@@ -143,7 +139,7 @@ In the results of this cmdlet, the date/time when the change was made (the cmdle
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -156,14 +152,13 @@ Accept wildcard characters: False
 The ExternalAccess parameter filters the results by changes that were made (cmdlets that were run) by users outside of your organization. Valid values are:
 
 - $true: Only return audit log entries where the change was made by an external user. In Exchange Online, use value to return audit log entries for changes that were made by Microsoft datacenter administrators.
-
 - $false: Only return audit log entries where the change was made by an internal user.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -176,7 +171,6 @@ Accept wildcard characters: False
 The IsSuccess parameter filters the results by whether the changes were successful. Valid values are:
 
 - $true: Only return audit log entries where the change was successful (in other words, the cmdlet ran successfully).
-
 - $false: Only return audit log entries where the change was not successful (in other words, the cmdlet did not run successfully and resulted in an error).
 
 In the results of this cmdlet, this property is named **Succeeded**.
@@ -185,7 +179,7 @@ In the results of this cmdlet, this property is named **Succeeded**.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -198,20 +192,18 @@ Accept wildcard characters: False
 The ObjectIds parameter filters the results by the object that was modified (the mailbox, public folder, Send connector, transport rule, accepted domain, etc. that the cmdlet operated on). A valid value depends on how the object is represented in the audit log. For example:
 
 - Name
-
 - Canonical distinguished name (for example, contoso.com/Users/Akia Al-Zuhairi)
-
 - Public folder identity (for example, \\Engineering\\Customer Discussion)
 
 You'll likely need to use other filtering parameters on this cmdlet to narrow down the results and identify the types of objects that you're interested in. In the results of this cmdlet, this property is named **ObjectModified**.
 
-To enter multiple values, use the following syntax: Value1,Value2,...ValueN. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "Value 1","Value 2",..."Value N".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -229,7 +221,7 @@ In the results of this cmdlet, this property is named **CmdletParameters**
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -247,7 +239,7 @@ The maximum results to return is 250,000.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -263,9 +255,8 @@ Use the short date format that's defined in the Regional Options settings on the
 
 In the cloud-based service, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 In the results of this cmdlet, the date/time when the change was made (the cmdlet was run) is returned in the property named **RunDate**.
 
@@ -273,7 +264,7 @@ In the results of this cmdlet, the date/time when the change was made (the cmdle
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -289,7 +280,7 @@ The StartIndex parameter specifies the position in the result set where the disp
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -301,9 +292,9 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter filters the results by the user who made the change (who ran the cmdlet).
 
-A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
+A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
 
-To enter multiple values, use the following syntax: User1,User2,...UserN. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "User 1","User 2",..."User N".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"User1","User2",..."UserN"`.
 
 In the results of this cmdlet, this property is named **Caller**
 
@@ -311,7 +302,7 @@ In the results of this cmdlet, this property is named **Caller**
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

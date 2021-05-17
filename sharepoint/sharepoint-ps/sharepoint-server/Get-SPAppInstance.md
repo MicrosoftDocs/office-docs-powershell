@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spappinstance
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppInstance
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -180,8 +180,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Restart-SPAppInstanceJobs](Restart-SPAppInstanceJobs.md)
 
 [Uninstall-SPAppInstance](Uninstall-SPAppInstance.md)
 

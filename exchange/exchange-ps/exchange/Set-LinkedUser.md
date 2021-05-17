@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-linkeduser
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-LinkedUser
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-LinkedUser
@@ -17,14 +16,17 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-LinkedUser cmdlet to modify the properties of an existing linked user account. The Outlook Live Directory Sync (OLSync) service account is a linked user.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-LinkedUser [-Identity] <UserIdParameter> [-CertificateSubject <MultiValuedProperty>] [-Confirm] [-WhatIf]
+Set-LinkedUser [-Identity] <UserIdParameter>
+ [-CertificateSubject <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -48,14 +50,13 @@ This example modifies the certificate subject for the linked user "GALSync-Servi
 The Identity parameter specifies the linked user. You can use any value that uniquely identifies the linked user, for example:
 
 - Name
-
 - Distinguished name (DN)
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateSubject
-The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate. The syntax of the CertificateSubject value is X509:\<I\>Issuer\<S\>Subject. The values of Issuer and Subject are required and must be in X.500 format. To remove the value of CertificateSubject, specify the value $null.
+The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate. The syntax of the CertificateSubject value is `X509:<I>Issuer<S>Subject`. The values of Issuer and Subject are required and must be in X.500 format. To remove the value of CertificateSubject, specify the value $null.
 
 ```yaml
 Type: MultiValuedProperty
@@ -83,15 +84,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

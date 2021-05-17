@@ -1,11 +1,11 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchspelltuning
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 title: Remove-FASTSearchSpelltuning
 ---
@@ -51,8 +51,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-FASTSearchSpelltuningStatus](Get-FASTSearchSpelltuningStatus.md)
-
-[Reset-FASTSearchSpelltuning](Reset-FASTSearchSpelltuning.md)
 
 [Add-FASTSearchSpelltuning](Add-FASTSearchSpelltuning.md)
 

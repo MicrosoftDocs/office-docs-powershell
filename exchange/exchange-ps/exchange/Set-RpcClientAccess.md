@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-RpcClientAccess
@@ -29,7 +28,8 @@ Set-RpcClientAccess -Server <ServerIdParameter>
  [-EncryptionRequired <Boolean>]
  [-MaximumConnections <Int32>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +55,7 @@ Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 15.0.0-15.4737.999
 
 This example prevents Outlook Anywhere connections by Outlook 2013 clients that don't have KB3054940 installed (version 15.0.4737.1000) on the server named MBX01.
 
-Note: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
+**Note**: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
 
 ## PARAMETERS
 
@@ -63,11 +63,8 @@ Note: You can determine specific client software versions by parsing the RPC Cli
 The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml
@@ -89,9 +86,7 @@ The BlockedClientVersions parameter specifies the RPC client versions that aren'
 Valid version values are in the format X.Y.Z. RPC client versions are typically reported in format X.0.Y.Z format, but for this parameter, you need to specify the value as X.Y.Z.
 
 - X is the major version number. For example, Outlook 2016 is 16, Outlook 2013 is 15, and Outlook 2010 is 14.
-
 - Y is the minor revision number, and must be less than or equal to 32767.
-
 - Z is the build number, and must be less than or equal to 65535.
 
 You can specify ranges. For example, -13.32767.65535, 14.0.0-14.32767.65535, or 15.0.0-.
@@ -116,8 +111,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -153,7 +147,6 @@ Accept wildcard characters: False
 The EncryptionRequired parameter specifies whether encryption is required for RPC client connections. Valid values are:
 
 - $true: Unencrypted RPC client connections are rejected. This is the default value.
-
 - $false: Unencrypted RPC client connections are allowed.
 
 ```yaml
@@ -172,7 +165,7 @@ Accept wildcard characters: False
 ### -MaximumConnections
 The MaximumConnections parameter specifies the maximum number of concurrent client connections that are allowed by the Microsoft Exchange RPC Client Access service. The default value is 65536.
 
-Note: Although you can configure a non-default value for this parameter, changes to this setting aren't enforced.
+**Note**: Although you can configure a non-default value for this parameter, changes to this setting aren't enforced.
 
 ```yaml
 Type: Int32

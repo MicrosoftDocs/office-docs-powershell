@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ActiveSyncDeviceAutoblockThreshold
@@ -15,7 +14,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ActiveSyncDeviceAutoblockThreshold cmdlet to obtain the Autoblock settings for Microsoft Exchange ActiveSync mobile devices..
+Use the Get-ActiveSyncDeviceAutoblockThreshold cmdlet to obtain the Autoblock settings for Microsoft Exchange ActiveSync mobile devices.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -23,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ActiveSyncDeviceAutoblockThreshold [[-Identity] <ActiveSyncDeviceAutoblockThresholdIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,22 +42,6 @@ This example retrieves the threshold settings for the Autoblock threshold rule f
 
 ## PARAMETERS
 
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the name of the Autoblock threshold rule.
 
@@ -71,6 +55,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxServer
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxServer [[-Identity] <MailboxServerIdParameter>] [-DomainController <Fqdn>] [-Status]
+Get-MailboxServer [[-Identity] <MailboxServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Status]
  [<CommonParameters>]
 ```
 
@@ -69,9 +70,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the Mailbox server that you want to view. You can use any value that uniquely identifies the Mailbox server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
 
 ```yaml

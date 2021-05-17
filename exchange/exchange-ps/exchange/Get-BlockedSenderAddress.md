@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-BlockedSenderAddress
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-BlockedSenderAddress [-SenderAddress <SmtpAddress>] [<CommonParameters>]
+Get-BlockedSenderAddress [-SenderAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ The SenderAddress parameter filters the results by the email address of the bloc
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

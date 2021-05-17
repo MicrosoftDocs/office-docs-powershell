@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-managementrole
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-ManagementRole
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-ManagementRole
@@ -23,28 +22,37 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-ManagementRole [-Identity] <RoleIdParameter> [-GetChildren]
+Get-ManagementRole [-Identity] <RoleIdParameter>
+ [-GetChildren]
  [-DomainController <Fqdn>]
- [-RoleType <RoleType>] [<CommonParameters>]
+ [-RoleType <RoleType>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-ManagementRole [-Identity] <RoleIdParameter> [-Recurse]
+Get-ManagementRole [-Identity] <RoleIdParameter>
+ [-Recurse]
  [-DomainController <Fqdn>]
- [-RoleType <RoleType>] [<CommonParameters>]
+ [-RoleType <RoleType>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-ManagementRole [[-Identity] <RoleIdParameter>] [-Cmdlet <String>] [-CmdletParameters <String[]>]
+Get-ManagementRole [[-Identity] <RoleIdParameter>]
+ [-Cmdlet <String>]
+ [-CmdletParameters <String[]>]
  [-DomainController <Fqdn>]
- [-RoleType <RoleType>] [<CommonParameters>]
+ [-RoleType <RoleType>]
+ [<CommonParameters>]
 ```
 
 ### Script
 ```
-Get-ManagementRole [[-Identity] <RoleIdParameter>] [-Script <String>] [-ScriptParameters <String[]>]
+Get-ManagementRole [[-Identity] <RoleIdParameter>]
+ [-Script <String>]
+ [-ScriptParameters <String[]>]
  [-DomainController <Fqdn>]
  [-RoleType <RoleType>]
  [<CommonParameters>]
@@ -110,7 +118,7 @@ The Identity parameter specifies the role you want to view. If the role you want
 Type: RoleIdParameter
 Parameter Sets: GetChildren, Recurse
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -123,7 +131,7 @@ Accept wildcard characters: False
 Type: RoleIdParameter
 Parameter Sets: Identity, Script
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -139,7 +147,7 @@ The GetChildren parameter retrieves a list of all the roles that were created ba
 Type: SwitchParameter
 Parameter Sets: GetChildren
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -155,7 +163,7 @@ The Recurse parameter retrieves a list of all the roles that were created based 
 Type: SwitchParameter
 Parameter Sets: Recurse
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -171,7 +179,7 @@ The Cmdlet parameter returns a list of all roles that include the specified cmdl
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -187,7 +195,7 @@ The CmdletParameters parameter returns a list of all roles that include the spec
 Type: String[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -221,7 +229,7 @@ The RoleType parameter returns a list of roles that match the specified role typ
 Type: RoleType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +245,7 @@ The Script parameter returns a list of all roles that include the specified scri
 Type: String
 Parameter Sets: Script
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -253,7 +261,7 @@ The ScriptParameters parameter returns a list of all roles that include the spec
 Type: String[]
 Parameter Sets: Script
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

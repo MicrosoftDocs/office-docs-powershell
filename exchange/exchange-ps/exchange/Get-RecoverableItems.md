@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 # Get-RecoverableItems
 
@@ -58,7 +57,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-RecoverableItems -Identity laura@contoso.com -Subject -SubjectContains "FY17 Accounting" -FilterItemType IPM.Note -FilterStartTime "2/1/2018 12:00:00 AM" -FilterEndTime "2/5/2018 11:59:59 PM"
+Get-RecoverableItems -Identity laura@contoso.com -SubjectContains "FY17 Accounting" -FilterItemType IPM.Note -FilterStartTime "2/1/2018 12:00:00 AM" -FilterEndTime "2/5/2018 11:59:59 PM"
 ```
 
 This example returns all of the available recoverable deleted messages with the specified subject in the mailbox laura@contoso.com for the specified date/time range.
@@ -70,33 +69,23 @@ Get-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -Filte
 
 This example returns all of the available recoverable deleted messages with the specified subject in the mailboxes of both malik@contoso.com and lillian@contoso.com for the specified date/time range.
 
-
 ## PARAMETERS
 
 ### -Identity
 The Identity parameter specifies the mailbox that contains the deleted items that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
-In tExchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
@@ -143,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterEndTime
-The FilterEndTime specifies the end date/time of the date range.
+The FilterEndTime specifies the end date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -164,13 +153,9 @@ Accept wildcard characters: False
 The FilterItemType parameter filters the results by the specified MessageClass (ItemClass) property value of the deleted item. For example:
 
 - IPM.Appointment (Meetings and appointments)
-
 - IPM.Contact
-
 - IPM.File
-
 - IPM.Note
-
 - IPM.Task
 
 ```yaml
@@ -187,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterStartTime
-The FilterStartTime specifies the start date/time of the date range.
+The FilterStartTime specifies the start date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -260,33 +245,17 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
-
-- PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
+- PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
 If you don't use this parameter, the command will search all of these folders.
 
 ```yaml
 Type: RecoverableItemsFolderType
-Parameter Sets: OnPremises
-Aliases:
-Accepted values: DeletedItems | RecoverableItems
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RecoverableItemsFolderType
-Parameter Sets: Cloud
+Parameter Sets: (All)
 Aliases:
 Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

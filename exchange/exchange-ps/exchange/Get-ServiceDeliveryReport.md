@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-ServiceDeliveryReport
@@ -17,14 +16,15 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-ServiceDeliveryReport cmdlet to view information about the message delivery path for a specified recipient.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ServiceDeliveryReport [-Expression <Expression>] [-ProbeTag <String>] [-Recipient <SmtpAddress>]
+Get-ServiceDeliveryReport [-ProbeTag <String>]
+ [-Recipient <SmtpAddress>]
  [<CommonParameters>]
 ```
 
@@ -41,22 +41,6 @@ Get-ServiceDeliveryReport -Recipient chris@contoso.com
 This example shows the delivery path information for the recipient chris@contoso.com.
 
 ## PARAMETERS
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ProbeTag
 This parameter is reserved for internal Microsoft use.

@@ -1,62 +1,90 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/rename-pnpfile
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Rename-PnPFile
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Rename-PnPFile.html
 ---
-
+ 
 # Rename-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Rename-PnPFile.md to change this file.
+
 Renames a file in its current location
 
-## SYNTAX 
+## SYNTAX
 
 ### SERVER
 ```powershell
-Rename-PnPFile -ServerRelativeUrl <String>
-               -TargetFileName <String>
-               [-OverwriteIfAlreadyExists [<SwitchParameter>]]
-               [-Force [<SwitchParameter>]]
-               [-Web <WebPipeBind>]
-               [-Connection <SPOnlineConnection>]
+Rename-PnPFile [-ServerRelativeUrl] <String> [-TargetFileName] <String> [-OverwriteIfAlreadyExists] [-Force]
+ [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
 
 ### SITE
 ```powershell
-Rename-PnPFile -SiteRelativeUrl <String>
-               -TargetFileName <String>
-               [-OverwriteIfAlreadyExists [<SwitchParameter>]]
-               [-Force [<SwitchParameter>]]
-               [-Web <WebPipeBind>]
-               [-Connection <SPOnlineConnection>]
+Rename-PnPFile [-SiteRelativeUrl] <String> [-TargetFileName] <String> [-OverwriteIfAlreadyExists] [-Force]
+ [-Connection <PnPConnection>]   [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-PS:>Rename-PnPFile -ServerRelativeUrl /sites/project/Documents/company.docx -TargetFileName mycompany.docx
+Rename-PnPFile -ServerRelativeUrl /sites/project/Documents/company.docx -TargetFileName mycompany.docx
 ```
 
 Renames a file named company.docx located in the document library called Documents located in the projects sitecollection under the managed path sites to mycompany.docx. If a file named mycompany.aspx already exists, it won't perform the rename.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-PS:>Rename-PnPFile -SiteRelativeUrl Documents/company.aspx -TargetFileName mycompany.docx
+Rename-PnPFile -SiteRelativeUrl Documents/company.aspx -TargetFileName mycompany.docx
 ```
 
 Renames a file named company.docx located in the document library called Documents located in the current site to mycompany.aspx. If a file named mycompany.aspx already exists, it won't perform the rename.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
-PS:>Rename-PnPFile -ServerRelativeUrl /sites/project/Documents/company.docx -TargetFileName mycompany.docx -OverwriteIfAlreadyExists
+Rename-PnPFile -ServerRelativeUrl /sites/project/Documents/company.docx -TargetFileName mycompany.docx -OverwriteIfAlreadyExists
 ```
 
 Renames a file named company.docx located in the document library called Documents located in the projects sitecollection under the managed path sites to mycompany.aspx. If a file named mycompany.aspx already exists, it will still perform the rename and replace the original mycompany.aspx file.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 If provided, no confirmation will be requested and the action will be performed
@@ -67,7 +95,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OverwriteIfAlreadyExists
@@ -79,7 +109,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ServerRelativeUrl
@@ -91,7 +123,9 @@ Parameter Sets: SERVER
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -SiteRelativeUrl
@@ -103,7 +137,9 @@ Parameter Sets: SITE
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -TargetFileName
@@ -115,33 +151,29 @@ Parameter Sets: (All)
 
 Required: True
 Position: 1
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SPOnlineConnection
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

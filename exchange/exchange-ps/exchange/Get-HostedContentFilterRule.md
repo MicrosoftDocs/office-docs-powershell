@@ -1,30 +1,32 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-hostedcontentfilterrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-HostedContentFilterRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-HostedContentFilterRule
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available or functional only in the cloud-based service.
 
 Use the Get-HostedContentFilterRule cmdlet to view spam filter rules (content filter rules) in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,16 +54,14 @@ This example retrieves details about the spam filter rule named Contoso Recipien
 The Identity parameter specifies the spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -70,18 +70,33 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -State
 The State parameter filters the results by the state of the rule. Valid values are:
 
 - Enabled: The command returns only enabled rules.
-
 - Disabled: The command returns only disabled rules.
 
 ```yaml
 Type: RuleState
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicyv2
-applicable: Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-SupervisoryReviewPolicyV2
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-SupervisoryReviewPolicyV2
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-SupervisoryReviewPolicyV2 cmdlet to view supervisory review policies in the Security & Compliance Center. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
 
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewPolicyV2 [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-SupervisoryReviewPolicyV2 [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,16 +50,14 @@ This example returns detailed information for the supervisory review policy name
 The Identity parameter specifies the supervisory review policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1

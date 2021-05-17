@@ -1,25 +1,34 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitecollectiontermstore
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPSiteCollectionTermStore
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPSiteCollectionTermStore.html
 ---
-
+ 
 # Get-PnPSiteCollectionTermStore
 
 ## SYNOPSIS
-Returns the site collection term store
 
-## SYNTAX 
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPSiteCollectionTermStore.md to change this file.
+
+Returns the site collection term store if it exists or else it will not return anything
+
+## SYNTAX
 
 ```powershell
-Get-PnPSiteCollectionTermStore [-Connection <SPOnlineConnection>]
+Get-PnPSiteCollectionTermStore [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
+
+Returns the site collection scoped term store for the currently connected to site collection. If it does not exist yet, it will return a null value.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPSiteCollectionTermStore
 ```
@@ -32,18 +41,32 @@ Returns the site collection term store.
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
-### Microsoft.SharePoint.Client.Taxonomy.TermStore
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

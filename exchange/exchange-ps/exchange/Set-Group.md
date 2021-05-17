@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Set-Group
@@ -22,11 +21,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Group [-Identity] <GroupIdParameter> [-BypassSecurityGroupManagerCheck] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IsHierarchicalGroup <Boolean>]
- [-ManagedBy <GeneralRecipientIdParameter[]>] [-Name <String>] [-Notes <String>]
- [-PhoneticDisplayName <String>] [-SeniorityIndex <Int32>] [-SimpleDisplayName <String>] [-Universal] [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+Set-Group [-Identity] <GroupIdParameter>
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IsHierarchicalGroup <Boolean>]
+ [-ManagedBy <GeneralRecipientIdParameter[]>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-PhoneticDisplayName <String>]
+ [-SeniorityIndex <Int32>]
+ [-SimpleDisplayName <String>]
+ [-Universal]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,11 +71,8 @@ This example specifies that the group Human Resources is a hierarchical group an
 The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 ```yaml
@@ -84,7 +92,6 @@ Accept wildcard characters: False
 The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
 
 - Distribution groups or mail-enabled security groups: You need to be a member of the Organization Management role group or have the Security Group Creation and Membership role assigned.
-
 - Role groups: You need to be a member of the Organization Management role group or have the Role Management role assigned.
 
 You don't need to specify a value with this switch.
@@ -105,8 +112,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -168,7 +174,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -204,40 +209,27 @@ Accept wildcard characters: False
 The ManagedBy parameter specifies an owner for the group. A group must have at least one owner. If you don't use this parameter to specify the owner when you create the group, the user account that created the group is the owner. The group owner is able to:
 
 - Modify the properties of the group
-
 - Add or remove group members
-
 - Delete the group
-
 - Approve member depart or join requests (if available)
-
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
 The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
-To enter multiple owners and overwrite all existing entries, use the following syntax: \<owner1\>,\<owner2\>,...\<ownerN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<owner1\>","\<owner2\>",..."\<ownerN\>".
+To enter multiple owners and overwrite all existing entries, use the following syntax: `Owner1,Owner2,...OwnerN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Owner1","Owner2",..."OwnerN"`.
 
-To add or remove owners without affecting other existing entries, use the following syntax: @{Add="\<owner1\>","\<owner2\>"...; Remove="\<owner3\>","\<owner4\>"...}.
+To add or remove owners without affecting other existing entries, use the following syntax: `@{Add="Owner1","Owner2",...; Remove="Owner3","Owner4"...}`.
 
 An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
 
@@ -322,12 +314,10 @@ Accept wildcard characters: False
 The SimpleDisplayName parameter is used to display an alternative description of the object when only a limited set of characters is permitted. Valid characters are:
 
 - a - z
-
 - A - Z
-
 - 0 - 9
-
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":" and "?".
+- space
+- `" ' ( ) + , - . / : ?`
 
 This parameter is meaningful only if the group is mail-enabled.
 
@@ -380,7 +370,6 @@ Accept wildcard characters: False
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
-
 - In environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.

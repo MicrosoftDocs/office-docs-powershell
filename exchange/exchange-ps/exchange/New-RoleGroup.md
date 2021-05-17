@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-rolegroup
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: New-RoleGroup
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # New-RoleGroup
@@ -23,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CrossForest
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-LinkedCredential <PSCredential>]
+New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter>
+ [-LinkedCredential <PSCredential>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
@@ -36,7 +36,9 @@ New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGr
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WellKnownObject <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
@@ -49,12 +51,14 @@ New-RoleGroup [-Name] <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Force]
+ [-Id <Guid>]
  [-ManagedBy <MultiValuedProperty>]
  [-Members <MultiValuedProperty>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +95,8 @@ This example creates a role group and enables Isabel to add or remove members to
 
 ### Example 4
 ```powershell
-$Credentials = Get-Credential; New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
+$Credentials = Get-Credential
+New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
 ```
 
 This example creates a linked role group that enables the members of the Toronto Administrators USG in the Contoso user forest to manage recipients located in the Toronto office. The custom recipient scope, Toronto Recipients, limits the scope of the roles assigned to the role group to recipients who have their City property set to Toronto. The Mail Recipients role is assigned to the role group.
@@ -100,7 +105,8 @@ The first command retrieves the credentials using the Get-Credential cmdlet and 
 
 ### Example 5
 ```powershell
-$RoleGroup = Get-RoleGroup "Recipient Management"; New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
+$RoleGroup = Get-RoleGroup "Recipient Management"
+New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
 ```
 
 This example takes an existing role group and copies the roles from that role group into a new custom role group. This can be useful if you want to create a role group similar to an existing role group but don't want to manually create all the role assignments. For example, you might want to create a role group that has most, but not all, of the management roles assigned to the Recipient Management role group.
@@ -161,13 +167,13 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the name of the new role group. The name can have a maximum of 64 characters. If the name contains spaces, enclose the name in quotation marks (").
 
-Note: If you create a linked role group, we recommend that you include the name of the foreign forest in the name of the role group so that you can more easily associate the linked role group and the associated foreign forest. This is especially important if you have multiple forests.
+**Note**: If you create a linked role group, we recommend that you include the name of the foreign forest in the name of the role group so that you can more easily associate the linked role group and the associated foreign forest. This is especially important if you have multiple forests.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -179,15 +185,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -225,7 +230,7 @@ If you use the CustomRecipientWriteScope parameter, you can't use the RecipientO
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -241,7 +246,7 @@ The Description parameter specifies the description that's displayed when the ro
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -257,7 +262,7 @@ The DisplayName parameter specifies the friendly name of the role group. If the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -285,13 +290,33 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+This parameter is available only in the cloud-based service.
+
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+This parameter is available only in Security & Compliance Center PowerShell.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -331,7 +356,7 @@ If you want to add more than one user or USG, separate them using commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -349,7 +374,7 @@ If you use the Members parameter, you can't use the LinkedForeignGroup, LinkedDo
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -385,7 +410,7 @@ For a list of built-in management roles that you can assign to a role group, see
 Type: RoleIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -397,13 +422,31 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, } and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WellKnownObject
+This parameter is available only in the cloud-based service.
+
+{{ Fill WellKnownObject Description }}
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -421,7 +464,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

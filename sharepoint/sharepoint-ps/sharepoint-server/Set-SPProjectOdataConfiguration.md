@@ -1,12 +1,12 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectodataconfiguration
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectOdataConfiguration
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 

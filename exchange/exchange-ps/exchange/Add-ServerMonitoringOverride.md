@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Add-ServerMonitoringOverride
@@ -25,14 +24,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Add-ServerMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Duration
 ```
-Add-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter> [-Duration <EnhancedTimeSpan>]
+Add-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
+ [-Duration <EnhancedTimeSpan>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +50,24 @@ Add-ServerMonitoringOverride -Identity "AD\ActiveDirectoryConnectivityConfigDCSe
 This example adds a server monitoring override that disables the responder ActiveDirectoryConnectivityConfigDCServerReboot on the server named EXCH03 for 20 days. Note that the value of Identity is case-sensitive.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax `HealthSet\MonitoringItemName[\TargetResource]`. Note that the values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityConfigDCServerReboot`, not `ad\activedirectoryconnectivityconfigdcserverreboot`.
+
+You can use Get-ServerHealth to find the correct object for the monitoring item you want to override.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApplyVersion
 The ApplyVersion parameter specifies the version of Exchange that gets the override. If you update Exchange to a newer version (for example, you apply a Cumulative Update or Service Pack), the override is no longer applied to the server.
@@ -69,31 +89,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityConfigDCServerReboot", not "ad\\activedirectoryconnectivityconfigdcserverreboot".
-
-You can use Get-ServerHealth to find the correct object for the monitoring item you want to override.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ItemType
 The ItemType parameter specifies the server item type for the property that you want to override. Valid value are:
 
 - Probe
-
 - Monitor
-
 - Responder
 
 ```yaml
@@ -145,11 +145,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to add the monitoring override. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use this parameter to configure other Edge Transport servers remotely.
@@ -170,8 +167,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

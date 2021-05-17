@@ -1,81 +1,75 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsite
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPSite
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html
 ---
-
+ 
 # Set-PnPSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPSite.md to change this file.
+
 Sets Site Collection properties.
 
-## SYNTAX 
+## SYNTAX
 
 ### Set Properties
 ```powershell
-Set-PnPSite [-Classification <String>]
-            [-DisableFlows [<SwitchParameter>]]
-            [-LogoFilePath <String>]
-            [-Sharing <SharingCapabilities>]
-            [-StorageMaximumLevel <Int>]
-            [-StorageWarningLevel <Int>]
-            [-AllowSelfServiceUpgrade [<SwitchParameter>]]
-            [-NoScriptSite [<SwitchParameter>]]
-            [-Owners <String>]
-            [-CommentsOnSitePagesDisabled [<SwitchParameter>]]
-            [-DefaultLinkPermission <SharingPermissionType>]
-            [-DefaultSharingLinkType <SharingLinkType>]
-            [-DisableAppViews <AppViewsPolicy>]
-            [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
-            [-DisableSharingForNonOwners [<SwitchParameter>]]
-            [-LocaleId <UInt32>]
-            [-RestrictedToGeo <RestrictedToRegion>]
-            [-SocialBarOnSitePagesDisabled [<SwitchParameter>]]
-            [-Identity <String>]
-            [-Connection <SPOnlineConnection>]
+Set-PnPSite [-Identity <String>] [-Classification <String>] [-DisableFlows] [-LogoFilePath <String>]
+ [-Sharing <SharingCapabilities>] [-StorageMaximumLevel <Int64>] [-StorageWarningLevel <Int64>]
+ [-AllowSelfServiceUpgrade] [-NoScriptSite] [-Owners <System.Collections.Generic.List`1[System.String]>]
+ [-CommentsOnSitePagesDisabled] [-DefaultLinkPermission <SharingPermissionType>]
+ [-DefaultSharingLinkType <SharingLinkType>] [-DefaultLinkToExistingAccess <Boolean>] [-DefaultLinkToExistingAccessReset] [-DisableAppViews <AppViewsPolicy>]
+ [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableSharingForNonOwners]
+ [-LocaleId <UInt32>] [-RestrictedToGeo <RestrictedToRegion>] [-SocialBarOnSitePagesDisabled]
+ [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### Set Lock State
 ```powershell
-Set-PnPSite [-LockState <SiteLockState>]
-            [-Wait [<SwitchParameter>]]
-            [-Identity <String>]
-            [-Connection <SPOnlineConnection>]
+Set-PnPSite [-Identity <String>] [-Classification <String>] [-DisableFlows] [-LockState <SiteLockState>]
+ [-Wait] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-PnPSite -Classification "HBI"
 ```
 
 Sets the current site classification to HBI
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPSite -Classification $null
 ```
 
 Unsets the current site classification
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPSite -DisableFlows
 ```
 
 Disables Microsoft Flow for this site, and also hides the Flow button from the ribbon
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPSite -DisableFlows:$false
 ```
 
 Enables Microsoft Flow for this site
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 Set-PnPSite -LogoFilePath c:\images\mylogo.png
 ```
@@ -93,123 +87,167 @@ Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnonymousLinkExpirationInDays
+{{ Fill AnonymousLinkExpirationInDays Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Classification
 The classification to set
 
-Only applicable to: SharePoint Online, SharePoint Server 2019
-
 ```yaml
 Type: String
-Parameter Sets: Set Properties
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -CommentsOnSitePagesDisabled
 Specifies if comments on site pages are enabled or disabled
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DefaultLinkPermission
 Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to "view" permissions. Edit - Sets the default link permission for the site to "edit" permissions
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: Set Properties
+Accepted values: None, View, Edit
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DefaultSharingLinkType
 Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the "organization" link or company shareable link. Direct - Sets the default sharing link for this site to the "Specific people" link
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SharingLinkType
 Parameter Sets: Set Properties
+Accepted values: None, Direct, Internal, AnonymousAccess
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultLinkToExistingAccess
+When set to $true, the DefaultSharingLinkType will be overriden and the default sharing link will be All People with Existing Access link (which does not modify permissions). When set to $false (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+
+```yaml
+Type: Boolean
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableAppViews
 
-
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: AppViewsPolicy
 Parameter Sets: Set Properties
+Accepted values: Unknown, Disabled, NotDisabled
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
 
-
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: CompanyWideSharingLinksPolicy
 Parameter Sets: Set Properties
+Accepted values: Unknown, Disabled, NotDisabled
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableFlows
 Disables Microsoft Flow for this site
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set Properties
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableSharingForNonOwners
 Specifies to prevent non-owners from inviting new users to the site
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
-
 
 ```yaml
 Type: String
@@ -218,7 +256,9 @@ Aliases: Url
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LocaleId
@@ -230,27 +270,28 @@ Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LockState
 Sets the lockstate of a site
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SiteLockState
 Parameter Sets: Set Lock State
+Accepted values: Unlock, NoAccess, ReadOnly
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LogoFilePath
 Sets the logo of the site if it concerns a modern team site. Provide a full path to a local image file on your disk which you want to use as the site logo. The logo will be uploaded automatically to SharePoint. If you want to set the logo for a classic site, use Set-PnPWeb -SiteLogoUrl.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -258,7 +299,9 @@ Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NoScriptSite
@@ -271,53 +314,13 @@ Aliases: DenyAndAddCustomizePages
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Owners
-Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
-
-```yaml
-Type: String
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -RestrictedToGeo
-Specifies the Geo/Region restrictions of this site.
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: RestrictedToRegion
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Sharing
-Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: SharingCapabilities
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -SocialBarOnSitePagesDisabled
-Disables or enables the Social Bar for Site Collection.
-
-Only applicable to: SharePoint Online
+### -OverrideTenantAnonymousLinkExpirationPolicy
+{{ Fill OverrideTenantAnonymousLinkExpirationPolicy Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -325,41 +328,99 @@ Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Owners
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedToGeo
+Specifies the Geo/Region restrictions of this site.
+
+```yaml
+Type: RestrictedToRegion
+Parameter Sets: Set Properties
+Accepted values: NoRestriction, BlockMoveOnly, BlockFull, Unknown
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sharing
+Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: Set Properties
+Accepted values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SocialBarOnSitePagesDisabled
+Disables or enables the Social Bar for Site Collection.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -StorageMaximumLevel
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
 
-Only applicable to: SharePoint Online
-
 ```yaml
-Type: Int
+Type: Int64
 Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -StorageWarningLevel
 Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter
 
-Only applicable to: SharePoint Online
-
 ```yaml
-Type: Int
+Type: Int64
 Parameter Sets: Set Properties
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Wait
 Wait for the operation to complete
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -367,21 +428,12 @@ Parameter Sets: Set Lock State
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: SPOnlineConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

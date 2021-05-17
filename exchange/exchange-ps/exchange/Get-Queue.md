@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-Queue
@@ -32,12 +31,14 @@ Get-Queue [[-Identity] <QueueIdentity>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Get-Queue [-Server <ServerIdParameter>] [-Filter <String>]
+Get-Queue [-Server <ServerIdParameter>]
+ [-Filter <String>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleQueueInfo>]
  [-Exclude <QueueViewerIncludesAndExcludes>]
@@ -46,7 +47,8 @@ Get-Queue [-Server <ServerIdParameter>] [-Filter <String>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -136,9 +138,7 @@ Accept wildcard characters: False
 The Exclude parameter specifies the types of queues you want to exclude from the results. Valid values for this parameter are:
 
 - Internal
-
 - External
-
 - A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
 
 ```yaml
@@ -176,9 +176,7 @@ Accept wildcard characters: False
 The Include parameter specifies the types of queues you want to include the results. Valid values for this parameter are:
 
 - Internal
-
 - External
-
 - A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
 
 ```yaml
@@ -262,11 +260,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

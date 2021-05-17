@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-OabVirtualDirectory
@@ -71,11 +70,8 @@ This example returns detailed information for the OAB virtual directory named "O
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 You can't use the Server and Identity parameters in the same command.
@@ -128,13 +124,11 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the OAB virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
-
+- Name or Server\\Name
 - Distinguished name (DN)
-
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 You can't use the Identity and Server parameters in the same command.
 

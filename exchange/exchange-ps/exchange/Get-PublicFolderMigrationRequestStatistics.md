@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-PublicFolderMigrationRequestStatistics
@@ -27,8 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter>
  [-Diagnostic]
+ [-Diagnostic <String>]
  [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
  [-ReportOnly]
@@ -37,7 +36,8 @@ Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationReq
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
+Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-RequestGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
@@ -71,7 +71,6 @@ This example returns additional information about the migration request and expo
 The Identity parameter specifies the migration request that you want to view. You can use the following values:
 
 - Name
-
 - RequestGUID
 
 You can't use this parameter with the RequestQueue or RequestGuid parameter.
@@ -95,9 +94,7 @@ This parameter is for debugging purposes only.
 The RequestQueue parameter filters the results by the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

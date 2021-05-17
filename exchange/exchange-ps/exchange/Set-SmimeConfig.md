@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-SmimeConfig
@@ -49,7 +48,8 @@ Set-SmimeConfig [[-Identity] <OrganizationIdParameter>]
  [-OWAUseKeyIdentifier <Boolean>]
  [-OWAUseSecondaryProxiesWhenFindingCertificates <Boolean>]
  [-SMIMECertificateIssuingCA <Byte[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -158,9 +158,7 @@ Accept wildcard characters: False
 The OWABCCEncryptedEmailForking parameter specifies how Bcc messages are encrypted in Outlook on the web. Valid values are:
 
 - 0: One encrypted message per Bcc recipient. This is the default value.
-
 - 1: One single encrypted message for all Bcc recipients.
-
 - 2: One encrypted message without Bcc forking.
 
 This setting affects the security and privacy of Outlook on the web. Consult your organization's security policy before you change this setting.
@@ -182,7 +180,6 @@ Accept wildcard characters: False
 The OWACheckCRLOnSend parameter specifies how the certificate revocation list (CRL) check is enforced when an email message is sent in Outlook on the web. Valid values are:
 
 - $true: When the CRL distribution point is inaccessible, Outlook on the web displays a warning dialog box and prevents signed or encrypted messages from being sent.
-
 - $false: When the CRL distribution point is inaccessible, Outlook on the web allows signed or encrypted messages to be sent. This is the default value.
 
 ```yaml
@@ -202,7 +199,6 @@ Accept wildcard characters: False
 The OWAClearSign parameter specifies how email messages are signed in Outlook on the web. Valid values are:
 
 - $true: Digitally signed messages are clear-signed. This is the default value.
-
 - $false: digitally signed messages are opaque-signed.
 
 Clear-signed messages are larger than opaque-signed messages, but clear-signed messages can be read in most email clients, including clients that don't support S/MIME.
@@ -280,7 +276,6 @@ Accept wildcard characters: False
 The OWADisableCRLCheck parameter enables or disables CRL checking in Outlook on the web. Valid values are:
 
 - $true: CRL checks are disabled when validating certificates.
-
 - $false: CRL checks are enabled when validating certificates.This is the default value.
 
 Disabling CRL checking can decrease the time that's required to validate the signatures of signed email messages, but it also validates email messages that are signed with revoked certificates.
@@ -321,23 +316,18 @@ Accept wildcard characters: False
 ```
 
 ### -OWAEncryptionAlgorithms
-The OWAEncryptionAlgorithms parameter specifies a list of symmetric encryption algorithms that are used by Outlook on the web to encrypt messages. Valid values are::
+The OWAEncryptionAlgorithms parameter specifies a list of symmetric encryption algorithms that are used by Outlook on the web to encrypt messages. Valid values are:
 
 - 6601: DES (56-bit)
-
 - 6602: RC2. Supported key lengths are 40, 56, 64, and 128. RC2 is the only supported algorithm that offers multiple key lengths.
-
 - 6603: 3DES (168-bit)
-
 - 660E: AES128
-
 - 660F: AES192
-
 - 6610: AES256 (This is the default value)
 
-If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value 6603,\<CustomOID\>.
+If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value `6603,<CustomOID>`.
 
-This parameter uses the syntax \<AlgorithmID\> or RC2:\<KeyLength\> or \<AlgorithmID\>,\<CustomOID\>. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: 6603;6602:128;6602:64;6601;6602:56.
+This parameter uses the syntax `<AlgorithmID>` or `RC2:<KeyLength>` or `<AlgorithmID>,<CustomOID>`. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: `6603;6602:128;6602:64;6601;6602:56`.
 
 If the parameter is not specified or is not formatted correctly, Outlook on the web uses 6610 (AES256). If the encryption algorithm or minimum key length is not available on a client, Outlook on the web does not allow encryption.
 
@@ -358,7 +348,6 @@ Accept wildcard characters: False
 The OWAEncryptTemporaryBuffers parameter specifies whether the Outlook on the web client-side temporary message storage buffers are encrypted. Valid values are:
 
 - $true: All client-side temporary buffers that store message data are encrypted using an ephemeral key and the 3DES algorithm. This is the default value.
-
 - $false: Temporary buffer encryption is disabled.
 
 Disabling encryption of the buffers can increase performance of the Outlook on the web client but also leaves information unencrypted in the client's buffer. Consult your organization's security policy before you disable this feature.
@@ -380,7 +369,6 @@ Accept wildcard characters: False
 The OWAForceSMIMEClientUpgrade parameter specifies whether or not users are forced to upgrade an S/MIME control that's older than their current version in Outlook on the web.
 
 - $true: Users need to download and install the new control before they can use S/MIME. This is the default value.
-
 - $false: Users receive a warning if the S/MIME control on their computer is not current, but they can still use S/MIME without updating the control.
 
 ```yaml
@@ -418,7 +406,6 @@ Accept wildcard characters: False
 The OWAIncludeCertificateChainWithoutRootCertificate parameter specifies whether the certificate chains of the signing or encryption certificates are included in messages in Outlook on the web. Valid values are:
 
 - $true: Signed or encrypted messages include the full certificate chain, but not the root certificate.
-
 - $false: Signed or encrypted messages include only the signing and encrypting certificates, not their corresponding certificate chains. This is the default value.
 
 ```yaml
@@ -496,7 +483,6 @@ Accept wildcard characters: False
 The OWASignedEmailCertificateInclusion parameter specifies whether the sender's encryption certificate is excluded from a signed email message in Outlook on the web. Valid values are:
 
 - $true: Outlook on the web and the S/MIME control include both signing and encrypting certificates with signed email messages. This is the default value.
-
 - $false: Outlook on the web and the S/MIME control do not include signing and encrypting certificates with signed email messages.
 
 When you don't include the certificates with signed email messages, the size of encrypted messages is reduced. However, recipients don't have access to the sender's encryption certificate in the message. Recipients need to retrieve the certificate from a directory, or from the sender.
@@ -518,20 +504,16 @@ Accept wildcard characters: False
 The OWASigningAlgorithms parameter specifies the list of symmetric encryption signing algorithms that are used by Outlook on the web to sign messages with the S/MIME control. Valid values are:
 
 - 8003: CALG\_MD5 or 128-bit MD5
-
 - 800E: CALG\_SHA\_512 or 512-bit Secure Hash Algorithm (SHA)
-
 - 800D: CALG\_SHA\_384 or 384-bit SHA
-
 - 800C: CALG\_SHA\_256 or 256-bit SHA
-
 - 8004: SHA1 or 160-bit SHA-1 (This is the default value)
 
-If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value 8804,\<CustomOID\>.
+If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value `8804,<CustomOID>`.
 
-This parameter uses the syntax \<AlgorithmID\> or \<AlgorithmID\>:\<KeyLength\> or \<AlgorithmID\>,\<CustomOID\>. You can specify multiple values separated by semicolons (;).
+This parameter uses the syntax `<AlgorithmID>` or `<AlgorithmID>:<KeyLength>` or `<AlgorithmID>,<CustomOID>`. You can specify multiple values separated by semicolons (;).
 
-For example, to set the signing algorithms to CALG\_SHA\_512, SHA1, and CALG\_MD5, use the value 800E;8004;8003.
+For example, to set the signing algorithms to CALG\_SHA\_512, SHA1, and CALG\_MD5, use the value `800E;8004;8003`.
 
 If this parameter is not specified or is not formatted correctly, Outlook on the web defaults to 8004 (SHA1).
 
@@ -552,7 +534,6 @@ Accept wildcard characters: False
 The OWATripleWrapSignedEncryptedMail parameter specifies whether signed and encrypted email messages in Outlook on the web are triple-wrapped. Valid values are:
 
 - $true: A signed message is encrypted, and then the encrypted message is signed (signed-encrypted-signed).
-
 - $false: A signed message is encrypted only (there is no additional signing of the encrypted message). This is the default value.
 
 Triple-wrapped messages offer the highest level of security for messages under the S/MIME standard, but are larger in size.
@@ -615,7 +596,7 @@ Accept wildcard characters: False
 ### -SMIMECertificateIssuingCA
 The SMIMECertificateIssuingCA parameter specifies the serialized certificate store (SST) that contains the Certificate Authority (CA) signing and intermediate certificate information.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: -SMIMECertificateIssuingCA $\(\[byte\[\]\]\(Get-Content -Encoding byte -Path "C:\\Temp\\CACertificateSerializedStore.sst" -ReadCount 0\)
+You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: `-SMIMECertificateIssuingCA $([byte[]](Get-Content -Encoding byte -Path "C:\Temp\CACertificateSerializedStore.sst" -ReadCount 0)`.
 
 Each certificate is checked, and if any certificates are expired, the operation will fail.
 

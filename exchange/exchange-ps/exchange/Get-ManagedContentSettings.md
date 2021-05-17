@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-ManagedContentSettings
@@ -25,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ManagedContentSettings [-FolderName <ELCFolderIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -33,7 +31,6 @@ Get-ManagedContentSettings [-FolderName <ELCFolderIdParameter>]
 ```
 Get-ManagedContentSettings [[-Identity] <ELCContentSettingsIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -118,22 +115,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

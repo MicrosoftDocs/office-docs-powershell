@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchmetadatamapping
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchMetadataMapping
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 
@@ -46,9 +46,7 @@ New-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $
 
 This example maps the created crawled property MyCrawlProp to the managed property UserName for the default search service application.
 
->![NOTE]
->The VarientType parameter is marked as obsolete but is still required when executing the `New-SPEnterpriseSearchMetadataCrawledProperty` cmdlet.
-
+The VarientType parameter is marked as obsolete but is still required when executing the `New-SPEnterpriseSearchMetadataCrawledProperty` cmdlet.
 
 ## PARAMETERS
 

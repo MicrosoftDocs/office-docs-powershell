@@ -18,7 +18,7 @@ ms.reviewer:
 
 ```
 New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
@@ -26,8 +26,14 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
  [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-AllowEngagementReport <String>]
- [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
- [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] 
+ [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
+[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+[-AllowBreakoutRooms <String] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] [-MeetingChatEnabledType <String>]
+[-AllowMeetingRegistration <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>] [-AllowScreenContentDigitization <Boolean>]
+[-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>]
+[-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -150,8 +156,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IPAudioMode
+Determines whether audio can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming audio in the meeting. Set this to DISABLED to prohibit outgoing and incoming audio in the meeting. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPVideoMode
+Determines whether video can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming video in the meeting. Set this to DISABLED to prohibit outgoing and incoming video in the meeting. Invalid value combination IPVideoMode: EnabledOutgoingIncoming and IPAudioMode: Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowMeetNow
-Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc meetings. Set this to FALSE to prohibit the user from starting ad-hoc meetings. 
+Determines whether a user can start ad-hoc meetings in a channel. Set this to TRUE to allow a user to start ad-hoc meetings in a channel. Set this to FALSE to prohibit the user from starting ad-hoc meetings in a channel. 
 
 ```yaml
 Type: Boolean
@@ -160,7 +196,22 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPrivateMeetNow
+Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc private meetings. Set this to FALSE to prohibit the user from starting ad-hoc private meetings. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -531,6 +582,299 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowIPAudio
+Determines whether audio is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their audio. Set this to FALSE to prohibit the user from sharing their audio.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOrganizersToOverrideLobbySettings
+Set this parameter to true to enable Organizers to override lobby settings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserToJoinExternalMeeting
+Possible values are:
+- Enabled 
+- FederatedOnly
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnrollUserOverride
+Possible values are: 
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StreamingAttendeeMode
+Possible values are: 
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowBreakoutRooms
+Set to true to enable Breakout Rooms, set to false to disable the Breakout Rooms functionality.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsCameraFarEndPTZMode
+Possible values are: 
+- Disabled
+- AutoAcceptInTenant 
+- AutoAcceptAll
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingReactions
+Set to false to disable Meeting Reactions.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingChatEnabledType
+Specify if users will be able to chat in meetings. Possible values are: Disabled, Enabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingRegistration
+
+Possible values:
+- true
+- false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowRecordingStorageOutsideRegion
+Allow storing recording outside of region. All meeting recordings will be permanently stored in another region, and can't be migrated. For more info, see https://aka.ms/in-region.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowScreenContentDigitization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTrackingInReport
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveCaptionsEnabledType
+Determines whether real-time captions are available for the user in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingStorageMode
+This parameter can take two possible values:
+
+- Stream
+- OneDriveForBusiness
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomAttributeUserOverride
+Possible values:
+
+- Off
+- Distinguish
+- Attribute
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpeakerAttributionMode
+Possible values:
+
+- EnabledUserOverride
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanRegister
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### None
@@ -543,4 +887,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

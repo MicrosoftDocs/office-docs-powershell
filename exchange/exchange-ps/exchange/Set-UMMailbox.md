@@ -1,19 +1,18 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-ummailbox
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Set-UMMailbox
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-UMMailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the Set-UMMailbox cmdlet to set the Unified Messaging (UM) properties for a user who is currently UM-enabled.
 
@@ -22,17 +21,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMMailbox [-Identity] <MailboxIdParameter> [-AirSyncNumbers <MultiValuedProperty>]
- [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>] [-AnonymousCallersCanLeaveMessages <Boolean>]
- [-AutomaticSpeechRecognitionEnabled <Boolean>] [-CallAnsweringAudioCodec <AudioCodecEnum>]
- [-CallAnsweringRulesEnabled <Boolean>] [-Confirm] [-DomainController <Fqdn>]
- [-FaxEnabled <Boolean>] [-IgnoreDefaultScope] [-MissedCallNotificationEnabled <Boolean>]
- [-Name <String>] [-OperatorNumber <String>] [-PhoneNumber <String>] [-PhoneProviderId <String>]
- [-PinlessAccessToVoiceMailEnabled <Boolean>] [-PlayOnPhoneEnabled <Boolean>]
- [-SubscriberAccessEnabled <Boolean>] [-TUIAccessToCalendarEnabled <Boolean>]
- [-TUIAccessToEmailEnabled <Boolean>] [-UMMailboxPolicy <MailboxPolicyIdParameter>]
- [-UMSMSNotificationOption <UMSMSNotificationOptions>] [-VerifyGlobalRoutingEntry] [-WhatIf]
- [-ImListMigrationCompleted <Boolean>] [-VoiceMailAnalysisEnabled <Boolean>] [<CommonParameters>]
+Set-UMMailbox [-Identity] <MailboxIdParameter>
+ [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
+ [-AnonymousCallersCanLeaveMessages <Boolean>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
+ [-CallAnsweringAudioCodec <AudioCodecEnum>]
+ [-CallAnsweringRulesEnabled <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FaxEnabled <Boolean>]
+ [-IgnoreDefaultScope]
+ [-ImListMigrationCompleted <Boolean>]
+ [-MissedCallNotificationEnabled <Boolean>]
+ [-Name <String>]
+ [-OperatorNumber <String>]
+ [-PinlessAccessToVoiceMailEnabled <Boolean>]
+ [-PlayOnPhoneEnabled <Boolean>]
+ [-SubscriberAccessEnabled <Boolean>]
+ [-TUIAccessToCalendarEnabled <Boolean>]
+ [-TUIAccessToEmailEnabled <Boolean>]
+ [-UMMailboxPolicy <MailboxPolicyIdParameter>]
+ [-UMSMSNotificationOption <UMSMSNotificationOptions>]
+ [-VoiceMailAnalysisEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,30 +84,21 @@ This example prevents the user tony@contoso.com from accessing his calendar and 
 The Identity parameter specifies the mailbox tht you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
@@ -104,32 +107,14 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -AirSyncNumbers
-This parameter is available or functional only in Exchange Server 2010.
-
-The AirSyncNumbers parameter specifies whether to register a mobile phone number with a hosted voice mail service. Each UM mailbox can have up to three numbers defined and numbers must be in E.164 format.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowUMCallsFromNonUsers
-The AllowUMCallsFromNonUsers parameter specifies whether to exclude the mailbox from directory searches.
+The AllowUMCallsFromNonUsers parameter specifies whether to exclude the mailbox from Unified Messaging directory searches.
 
 ```yaml
 Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -145,7 +130,7 @@ The AnonymousCallersCanLeaveMessages parameter specifies whether diverted calls 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -161,7 +146,7 @@ The AutomaticSpeechRecognitionEnabled parameter specifies whether users can use 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -177,7 +162,7 @@ The CallAnsweringAudioCodec parameter specifies the audio codec used to encode v
 Type: AudioCodecEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -193,7 +178,7 @@ The CallAnsweringRulesEnabled parameter specifies whether users can configure or
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -205,15 +190,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -223,15 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -247,7 +229,7 @@ The FaxEnabled parameter specifies whether a user is allowed to receive incoming
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -257,21 +239,43 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-This parameter is available only in on-premises Exchange.
-
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImListMigrationCompleted
+The ImListMigrationCompleted parameter specifies whether the UM-enabled user's Lync or Skype for Business contact list is stored in their mailbox.
+
+Valid values are:
+
+- $true: The user's Lync or Skype for Business contact list is stored in their Exchange 2016 mailbox. This prevents you from migrating the mailbox back to an Exchange 2010 server.
+- $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This is the default value.
+
+Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see [Configuring Microsoft Lync Server 2013 to use the unified contact store](https://docs.microsoft.com/lyncserver/lync-server-2013-configuring-lync-server-to-use-the-unified-contact-store).
+
+If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -289,7 +293,7 @@ When you're integrating Unified Messaging and Lync Server or Skype for Business 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -305,7 +309,7 @@ The Name parameter specifies the display name for the user. The display name is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -321,43 +325,7 @@ The OperatorNumber parameter specifies the string of digits for the personal ope
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhoneNumber
-This parameter is available only in the cloud-based service.
-
-The PhoneNumber parameter specifies whether to assign a phone number to a UM-enabled user. This is only used for E.164 consumer dial plans.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhoneProviderId
-This parameter is available only in the cloud-based service.
-
-The PhoneProviderId parameter specifies the user's phone number and mobile service provider. This information is used to provide custom call forwarding and cancelling voice mail setup instructions based on the mobile phone provider.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -373,7 +341,7 @@ The PinlessAccessToVoiceMailEnabled parameter specifies whether UM-enabled users
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -389,7 +357,7 @@ The PlayOnPhoneEnabled parameter specifies whether a user can use the Play on Ph
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -405,7 +373,7 @@ The SubscriberAccessEnabled parameter specifies whether the users are allowed su
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -421,7 +389,7 @@ The TUIAccessToCalendarEnabled parameter specifies whether UM-enabled users can 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -437,7 +405,7 @@ The TUIAccessToEmailEnabled parameter specifies whether users can access their i
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -453,7 +421,7 @@ The UMMailboxPolicy parameter specifies the UM mailbox policy associated with th
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -469,67 +437,7 @@ The UMSMSNotificationOption parameter specifies whether a UM-enabled user gets S
 Type: UMSMSNotificationOptions
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VerifyGlobalRoutingEntry
-This parameter is available only in the cloud-based service.
-
-The VerifyGlobalRoutingEntry parameter specifies the phone number has been successfully registered in the global routing database.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImListMigrationCompleted
-The ImListMigrationCompleted parameter specifies whether the UM-enabled user's Lync or Skype for Business contact list is stored in their mailbox.
-
-Valid values are:
-
-- $true: The user's Lync or Skype for Business contact list is stored in their Exchange 2016 mailbox. This prevents you from migrating the mailbox back to an Exchange 2010 server.
-
-- $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This is the default value.
-
-Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see [Configuring Microsoft Lync Server 2013 to use the unified contact store](https://docs.microsoft.com/lyncserver/lync-server-2013-configuring-lync-server-to-use-the-unified-contact-store).
-
-If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -545,7 +453,23 @@ The VoiceMailAnalysisEnabled parameter specifies whether a copy of each voice ma
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

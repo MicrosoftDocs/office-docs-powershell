@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-MailContact
@@ -32,7 +31,8 @@ Get-MailContact [-ANR <String>]
  [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -46,7 +46,8 @@ Get-MailContact [[-Identity] <MailContactIdParameter>]
  [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,13 +77,9 @@ This example retrieves detailed information for the mail contact named Arlene.
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
 - CommonName (CN)
-
 - DisplayName
-
 - FirstName
-
 - LastName
-
 - Alias
 
 ```yaml
@@ -140,11 +137,8 @@ Accept wildcard characters: False
 The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/filter-properties).
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -168,15 +162,10 @@ Accept wildcard characters: False
 The Identity parameter specifies the mail contact that you want to view. You can use any value that uniquely identifies the mail contact. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -200,7 +189,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -220,11 +208,8 @@ Accept wildcard characters: False
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -264,7 +249,6 @@ Accept wildcard characters: False
 The RecipientTypeDetails parameter filters the results by the specified mail contact subtype. Valid values are:
 
 - MailContact
-
 - MailForestContact
 
 You can specify multiple values separated by commas.
@@ -301,14 +285,12 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following properties:
 
 - Name
-
 - DisplayName
-
 - Alias
 
 ```yaml

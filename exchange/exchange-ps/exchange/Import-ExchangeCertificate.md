@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Import-ExchangeCertificate
@@ -30,7 +29,8 @@ Import-ExchangeCertificate -FileData <Byte[]>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FileName
@@ -42,7 +42,8 @@ Import-ExchangeCertificate -Instance <String[]>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -54,14 +55,14 @@ Import-ExchangeCertificate -FileName <String>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Import-ExchangeCertificate cmdlet to import the following types of certificate files on an Exchange server:
 
 - APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see [PKCS #7 Cryptographic Messaging Syntax Concepts](https://docs.microsoft.com/windows/win32/seccrypto/pkcs--7-concepts).
-
 - A PKCS #12 certificate file (.cer, .crt, .der, .p12, or .pfx) that contains the private key. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys that are protected by a password. For more information, see [PKCS #12: Personal Information Exchange Syntax v1.1](https://tools.ietf.org/html/rfc7292).
 
 After you import a certificate on an Exchange server, you need to assign the certificate to one or more Exchange services by using the Enable-ExchangeCertificate cmdlet.
@@ -76,7 +77,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-ExchangeCertificate -Server Mailbox01 -FileName" \\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
+Import-ExchangeCertificate -Server Mailbox01 -FileName "\\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
 This example imports the certificate from the PKCS #12 file from \\\\FileServer01\\Data\\Exported Fabrikam Cert.pfx to the Exchange server named Mailbox01. This file requires the password P@ssw0rd1. This certificate could have been exported from another server, or issued by a certification authority.
@@ -93,9 +94,9 @@ This example imports a chain of certificates from the PKCS #7 file C:\\Certifica
 ### -FileData
 The FileData parameter specifies the contents of the certificate file that you want to import. Typically, you use this parameter for PKCS #7 text certificate files that have .p7b or .p7c filename extensions. These text files contain the text: -----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- or -----BEGIN PKCS7----- and -----END PKCS7-----.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
-You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\<Server>\<Share>`).
+You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\Server\Share`).
 
 If the value contains spaces, enclose the value in quotation marks (").
 
@@ -131,8 +132,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -206,7 +206,6 @@ Accept wildcard characters: False
 The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key and controls whether you can export the certificate from this server. Valid values are:
 
 - $true: The private key is exportable, so you can export the certificate from this server.
-
 - $false: The private key isn't exportable, so you can't export the certificate from this server. This is the default value.
 
 ```yaml
@@ -226,11 +225,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
@@ -267,7 +263,7 @@ Accept wildcard characters: False
 ### -FileName
 The FileName parameter specifies the certificate file that you want to import. Typically, you use this parameter for PKCS #12 binary certificate files that have .cer, .crt, .der, .p12, or .pfx filename extensions. This type of binary certificate file is protected by a password when the file contains the private key or chain of trust.
 
-You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\<Server>\<Share>`).
+You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\Server\Share`).
 
 If the value contains spaces, enclose the value in quotation marks (").
 

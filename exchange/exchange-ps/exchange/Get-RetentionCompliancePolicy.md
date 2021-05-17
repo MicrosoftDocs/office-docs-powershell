@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-RetentionCompliancePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-RetentionCompliancePolicy
@@ -22,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [-ExcludeTeamsPolicy] [-RetentionRuleTypes] [-TeamsPolicyOnly]
+Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DistributionDetail]
+ [-ExcludeTeamsPolicy]
+ [-RetentionRuleTypes]
+ [-TeamsPolicyOnly]
  [<CommonParameters>]
 ```
 
@@ -30,11 +33,8 @@ Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDe
 This list describes the properties that are displayed by default.
 
 - Name: The unique name of the policy.
-
 - Workload: At the moment, it will show all workloads (Exchange, SharePoint, OneDriveForBusiness, Skype, ModernGroup) and it will not show the actual workload on which the policy is applied.
-
 - Enabled: The value True means the policy is enabled.
-
 - Mode: The current operating mode of the policy. The possible values are Test (the content is tested, but no rules are enforced), AuditAndNotify (when content matches the conditions specified by the policy, the rule is not enforced, but notification emails are sent) or Enforce (all aspects of the policy are enabled and enforced).
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
@@ -61,16 +61,14 @@ This example displays detailed information for the policy named "Regulation 123 
 The Identity parameter specifies the retention policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -88,7 +86,7 @@ If you don't use this switch, the values of the DistributionStatus and \*Locatio
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -104,7 +102,7 @@ The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies from t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -122,7 +120,7 @@ To see the RetentionRuleTypes property, you need to pipe the command to a format
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -138,7 +136,7 @@ The TeamsPolicyOnly switch specifies whether to show only Teams policies in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

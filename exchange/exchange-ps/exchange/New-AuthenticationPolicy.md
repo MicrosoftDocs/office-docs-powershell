@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-authenticationpolicy
-applicable: Exchange Online
+applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-AuthenticationPolicy
@@ -17,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-AuthenticationPolicy cmdlet to create authentication policies in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -46,7 +45,8 @@ New-AuthenticationPolicy [[-Name] <String>]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +77,7 @@ The Name parameter specifies the unique name for the authentication policy. The 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -97,7 +97,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -329,17 +329,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthActiveSync
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthActiveSync switch specifies whether to allow only Modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthActiveSync switch specifies whether to allow only modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with Exchange ActiveSync:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -357,17 +355,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthAutodiscover
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthAutodiscover switch specifies whether to allow only Modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthAutodiscover switch specifies whether to allow only modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with Autodiscover:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -385,17 +381,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthImap
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthImap switch specifies whether to allow only Modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthImap switch specifies whether to allow only modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with IMAP:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -413,17 +407,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthMapi
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthMapi switch specifies whether to allow only Modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthMapi switch specifies whether to allow only modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with MAPI:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -441,17 +433,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthOfflineAddressBook
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only Modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with Offline Address Books:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -469,17 +459,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthPop
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthPop switch specifies whether to allow only Modern authentication with POP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthPop switch specifies whether to allow only modern authentication with POP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with POP:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -497,17 +485,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthRpc
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthRpc switch specifies whether to allow only Modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthRpc switch specifies whether to allow only modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with RPC:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -525,17 +511,15 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthWebServices
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthWebServices switch specifies whether to allow only Modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthWebServices switch specifies whether to allow only modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with EWS:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -553,15 +537,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Applicable: Exchange Server 2019, Exchange Online
+Applicable: Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -577,7 +560,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Applicable: Exchange Server 2019, Exchange Online
+Applicable: Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Update-HybridConfiguration
@@ -22,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-HybridConfiguration -OnPremisesCredentials <PSCredential> -TenantCredentials <PSCredential> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-ForceUpgrade] [-SuppressOAuthWarning] [<CommonParameters>]
+Update-HybridConfiguration -OnPremisesCredentials <PSCredential> -TenantCredentials <PSCredential>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ForceUpgrade]
+ [-SuppressOAuthWarning]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,14 +37,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$OnPremisesCreds = Get-Credential; $TenantCreds = Get-Credential; Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
+$OnPremisesCreds = Get-Credential
+$TenantCreds = Get-Credential
+Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
 ```
 
 This example defines the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 for enterprises organization.
 
-Use the first command to specify your on-premises organization credentials. For example, run this command and enter \<domain\>\\admin@contoso.com and the associated password in the resulting Windows PowerShell Credential Request dialog box.
+Use the first command to specify your on-premises organization credentials. For example, run this command and enter `<domain>\admin@contoso.com` and the associated password in the resulting Windows PowerShell Credential Request dialog box.
 
-Use the second command to specify your Microsoft 365 organization credentials. For example, run this command and then enter admin@contoso.onmicrosoft.com and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
+Use the second command to specify your Microsoft 365 organization credentials. For example, run this command and then enter `admin@contoso.onmicrosoft.com` and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
 
 Use the last command to define the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 organization.
 
@@ -85,8 +91,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -112,22 +117,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -162,6 +151,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessageheader
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-QuarantineMessageHeader
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-QuarantineMessageHeader
@@ -17,14 +16,15 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-QuarantineMessageHeader cmdlet to view the message header of a quarantined message. The command will fail if the specified message is not in quarantine.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,8 @@ This example displays the message header of the quarantined message that has the
 
 ### Example 2
 ```powershell
-$qMessages = Get-QuarantineMessage; Get-QuarantineMessageHeader $qMessages[0].Identity
+$qMessages = Get-QuarantineMessage
+Get-QuarantineMessageHeader $qMessages[0].Identity
 ```
 
 This example displays the message header of the first message that's returned by Get-QuarantineMessage cmdlet.
@@ -59,7 +60,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named

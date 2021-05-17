@@ -7,13 +7,12 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-FailedContentIndexDocuments
 
 ## SYNOPSIS
-Although this cmdlet is available in on-premises Exchange and in the cloud-based service, it only works in Exchange Server 2016 or earlier.
+This cmdlet is available or functional only in Exchange Server 2016 or earlier.
 
 Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
 
@@ -32,7 +31,8 @@ Get-FailedContentIndexDocuments [-Identity] <MailboxIdParameter>
  [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Database
@@ -45,7 +45,8 @@ Get-FailedContentIndexDocuments -MailboxDatabase <DatabaseIdParameter>
  [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -58,7 +59,8 @@ Get-FailedContentIndexDocuments -Server <ServerIdParameter>
  [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,23 +94,14 @@ This example retrieves a list of items that couldn't be indexed by Exchange Sear
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -128,16 +121,14 @@ Accept wildcard characters: False
 The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -150,16 +141,14 @@ Accept wildcard characters: False
 The Server parameter specifies a Mailbox server. You can use the following values:
 
 - Name
-
 - GUID
-
 - DN
 
 ```yaml
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -171,8 +160,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -195,7 +183,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -258,9 +246,7 @@ Accept wildcard characters: False
 The FailureMode parameter specifies the type of error. Use the following values.
 
 - Transient: Returns items that couldn't be indexed due to transient errors. Exchange Search attempts to index these items again.
-
 - Permanent: Returns items that couldn't be indexed due to a permanent error. Exchange Search does not attempt to index these items again.
-
 - All: Returns items that couldn't be indexed regardless of nature of failure.
 
 ```yaml

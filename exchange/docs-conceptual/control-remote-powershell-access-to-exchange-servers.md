@@ -5,8 +5,9 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: ITPro
+audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: 064e3bb0-38bf-495e-9994-784f823b88dd
 description: "Administrators can learn how to block or allow users' remote PowerShell access to Exchange servers."
@@ -24,11 +25,11 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 - You can only use PowerShell to perform this procedure. To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 
-- By default, all user accounts have access to remote PowerShell. However, to actually use remote PowerShell to connect to an Exchange server, the user needs to be a member of a management role group, or be directly assigned a management role that enables the user to run Exchange cmdlets. For more information about role groups and management roles, see [Exchange Server permissions](https://docs.microsoft.com/Exchange/permissions/permissions).
+- By default, all user accounts have access to remote PowerShell. However, to actually use remote PowerShell to connect to an Exchange server, the user needs to be a member of a management role group, or be directly assigned a management role that enables the user to run Exchange cmdlets. For more information about role groups and management roles, see [Exchange Server permissions](/Exchange/permissions/permissions).
 
 - For detailed information about OPath filter syntax in Exchange, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
-- You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Remote PowerShell" entry in the [Exchange infrastructure and PowerShell permissions](https://docs.microsoft.com/Exchange/permissions/feature-permissions/infrastructure-permissions) topic.
+- You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Remote PowerShell" entry in the [Exchange infrastructure and PowerShell permissions](/Exchange/permissions/feature-permissions/infrastructure-permissions) article.
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forums.
@@ -37,13 +38,13 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 This example disables remote PowerShell access for the user named Therese Lindqvist.
 
-```PowerShell
+```powershell
 Set-User "Therese Lindqvist" -RemotePowerShellEnabled $false
 ```
 
 This example enables remote PowerShell access for the user named Sirirat Kitjakarn.
 
-```PowerShell
+```powershell
 Set-User "Sirirat Kitjakarn" -RemotePowerShellEnabled $true
 ```
 
@@ -59,21 +60,21 @@ To prevent remote PowerShell access for a specific group of existing users, you 
 
 To disable access to remote PowerShell for any number of users based on an existing attribute, use the following syntax:
 
-```PowerShell
+```powershell
 $<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter>
 ```
 
-```PowerShell
+```powershell
 $<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to remote PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
-```PowerShell
+```powershell
 $DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 ```
 
-```PowerShell
+```powershell
 $DSA | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
@@ -81,25 +82,25 @@ $DSA | foreach {Set-User -RemotePowerShellEnabled $false}
 
 To disable access to remote PowerShell for a list of specific users, use the following syntax:
 
-```PowerShell
+```powershell
 $<VariableName> = Get-Content <text file>
 ```
 
-```PowerShell
+```powershell
 $<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false
 ```
 
 This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their user principal name (UPN). The text file must contain one UPN on each line like this:
 
-> akol@contoso.com <br/> tjohnston@contoso.com <br/> kakers@contoso.com
+> akol@contoso.com <br> tjohnston@contoso.com <br> kakers@contoso.com
 
 After you populate the text file with the user accounts you want to update, run the following commands:
 
-```PowerShell
+```powershell
 $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
-```PowerShell
+```powershell
 $NPS | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
@@ -107,30 +108,30 @@ $NPS | foreach {Set-User -RemotePowerShellEnabled $false}
 
 To view the remote PowerShell access status for a specific user, use the following syntax:
 
-```PowerShell
+```powershell
 Get-User -Identity <UserIdentity> | Format-List RemotePowerShellEnabled
 ```
 
 This example displays the remote PowerShell access status of the user named Sarah Jones.
 
-```PowerShell
+```powershell
 Get-User -Identity "Sarah Jones" | Format-List RemotePowerShellEnabled
 ```
 
 To display the remote PowerShell access status for all users, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePowerShellEnabled
 ```
 
 To display only those users who don't have access to remote PowerShell, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to remote PowerShell, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```
