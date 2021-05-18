@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordsManagementSecurityGroupEmail
-{{ Fill RecordsManagementSecurityGroupEmail Description }}
+This RecordsManagementSecurityGroupEmail parameter specifies the email address of the mail-enabled security group that contains the records managers in the organization.
 
 ```yaml
 Type: String
