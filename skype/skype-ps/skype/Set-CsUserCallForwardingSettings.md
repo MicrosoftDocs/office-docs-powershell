@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateRingWaitTime
-Specifies the time, in seconds, to wait before ringing delegates. Acceptable inputs: 0, 5, 10. The parameter DelegateWaitRingTime needs to be explicitly set to a positive value  to allow call forwarding to delegates.
+Specifies the time, in seconds, to wait before ringing delegates. Acceptable inputs: 0, 5, 10, 15. The parameter DelegateWaitRingTime needs to be explicitly set to a positive value  to allow call forwarding to delegates.
 
 
 ```yaml
