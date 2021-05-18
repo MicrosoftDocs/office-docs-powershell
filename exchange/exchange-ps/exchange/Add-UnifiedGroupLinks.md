@@ -104,6 +104,7 @@ The LinkType parameter specifies the Microsoft 365 Group property that you want 
 - Members
 - Owners
 - Subscribers
+- EventSubscribers
 
 ```yaml
 Type: LinkType
