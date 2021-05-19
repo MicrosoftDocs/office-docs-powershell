@@ -1994,6 +1994,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ManagedFolderMailboxPolicy](Get-ManagedFolderMailboxPolicy.md)
 
+### [Get-RecordReviewNotificationTemplateConfig](Get-RecordReviewNotificationTemplateConfig.md)
+
 ### [Get-RegulatoryComplianceUI](Get-RegulatoryComplianceUI.md)
 
 ### [Get-RetentionCompliancePolicy](Get-RetentionCompliancePolicy.md)
@@ -2103,6 +2105,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ManagedFolder](Set-ManagedFolder.md)
 
 ### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
+
+### [Set-RecordReviewNotificationTemplateConfig](Set-RecordReviewNotificationTemplateConfig.md)
 
 ### [Set-RegulatoryComplianceUI](Set-RegulatoryComplianceUI.md)
 
