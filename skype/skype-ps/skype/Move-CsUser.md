@@ -62,7 +62,7 @@ When moving a user to or from Office 365 (either Skype for Business Online or Te
 
 ## EXAMPLES
 
-### ------- EXAMPLE 1: Move a user to Teams-----------------------
+### EXAMPLE 1: Move a user to Teams
 
 ```powershell
 $cred=get-credential
@@ -71,7 +71,7 @@ Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Mov
 
 In Example 1, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Teams.  This user will now be a Teams only user. If -Credential parameter is not specified, the admin will be prompted for credentials.
 
-### ------- EXAMPLE 2: Move a user to Skype for Business Online ----
+### EXAMPLE 2: Move a user to Skype for Business Online
 
 ```powershell
 $cred=get-credential
@@ -80,7 +80,7 @@ Move-CsUser -Identity PilarA@contoso.com -Target "sipfed.online.lync.com"  -Cred
 
 In Example 2, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Skype for Business Online. This is the same cmdlet usage as example 1, except the MoveToTeams switch is not specified.
 
-### -------- EXAMPLE 3: Move a user to another on-premises pool-------
+### EXAMPLE 3: Move a user to another on-premises pool
 
 ```powershell
 Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
@@ -88,7 +88,7 @@ Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
 
 In Example 3, the Move-CsUser cmdlet is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 
-### --------- EXAMPLE 4: Move multiple users ---------------------------
+### EXAMPLE 4: Move multiple users
 
 ```powershell
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
@@ -97,7 +97,7 @@ Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-0
 In Example 4, all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
 To carry out this task, the command first uses the Get-CsUser cmdlet and the OU parameter to retrieve a collection of all the user accounts in the Finance OU. After the data has been retrieved, the information is piped to the Move-CsUser cmdlet, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
-### --------- EXAMPLE 5: Move multiple users listed in a file ---------------------------
+### EXAMPLE 5: Move multiple users listed in a file
 
 ```powershell
 Move-CsUser -UserList C:\Folder1\Folder2\file1.txt -Target "atl-cs-001.litwareinc.com" -Report C:\Folder1\Folder2\out.csv
