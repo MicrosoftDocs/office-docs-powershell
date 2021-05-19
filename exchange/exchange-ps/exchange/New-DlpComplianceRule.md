@@ -2492,7 +2492,7 @@ Accept wildcard characters: False
 {{ Fill UnscannableDocumentExtensionIs Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
