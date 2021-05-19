@@ -24,12 +24,12 @@ Get-FileSensitivityLabelInfo -FileUrl <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Get-FileSensitivityLabelInfo` cmdlet runs on a single office online file. If the file has a sensitivity label attached then it returns the id, displayname, isProtectionEnabled flag and id of the parent label(if applicable). You must be a SharePoint Online administrator or Global Administrator to run the `GetFileSensitivityLabelInfo` cmdlet. Note, this cmdlet does not work on files that have labels with custom permission or user defined permission or double key encryption.
+The `Get-FileSensitivityLabelInfo` cmdlet runs on a single office online file. If the file has a sensitivity label attached then it returns the id, displayname, isProtectionEnabled flag and id of the parent label (if applicable). You must be a SharePoint Online administrator or Global Administrator to run the `GetFileSensitivityLabelInfo` cmdlet. Note, this cmdlet does not work on files that have labels with custom permission or user defined permission or double key encryption.
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 
 ```powershell
  Get-FileSensitivityLabelInfo -FileUrl "https://contoso.com/sites/Marketing/Shared Documents/Doc1.docx"
