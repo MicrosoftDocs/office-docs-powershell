@@ -3,8 +3,8 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantblockednumberexceptionpattern
 applicable: Skype for Business Online 
 title: New-CsTenantBlockedNumberExceptionPattern
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 manager: bulenteg
 schema: 2.0.0
@@ -13,6 +13,8 @@ schema: 2.0.0
 # New-CsTenantBlockedNumberExceptionPattern
 
 ## SYNOPSIS
+
+This cmdlet has been deprecated. Please use New-CsInboundExemptNumberPattern
 
 ## SYNTAX
 
@@ -207,3 +209,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
