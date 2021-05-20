@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ### -PromptLanguage
 The PromptLanguage parameter represents the language that is used to play voicemail prompts. 
 
-Now the following languages are supported:
+The following languages are supported:
 
 - "ar-EG" (Arabic - Egypt)
 - "ar-SA" (Arabic - Saudi Arabia)
