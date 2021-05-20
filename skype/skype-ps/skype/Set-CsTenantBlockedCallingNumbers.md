@@ -4,8 +4,8 @@ applicable: Skype for Business Online
 title: Set-CsTenantBlockedCallingNumbers
 schema: 2.0.0
 manager: roykuntz
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ---
 
 # Set-CsTenantBlockedCallingNumbers
@@ -22,11 +22,15 @@ Set-CsTenantBlockedCallingNumbers [-Force] [-Name <Object>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Skype for Business Online Calling Plans now supports blocking of inbound calls from the public switched telephone network (PSTN). This feature allows a tenant-global list of number patterns to be defined so that the caller ID of every incoming PSTN call to the tenant can be checked against the list for a match. If a match is made, an incoming call is rejected.
+Microsoft Direct Routing, Operator Connect and Calling Plans supports blocking of inbound calls from the public switched telephone network (PSTN). This feature allows a tenant-global list of number patterns to be defined so that the caller ID of every incoming PSTN call to the tenant can be checked against the list for a match. If a match is made, an incoming call is rejected.
 
 The tenant blocked calling numbers includes a list of inbound blocked number patterns. Number patterns are managed through the CsInboundBlockedNumberPattern commands New, Get, Set, and Remove. You can manage a given pattern by using these cmdlets, including the ability to toggle the activation of a given pattern. 
 
-The scope of tenant blocked calling numbers is global across the given tenant. This command-let can also turn on/off the blocked calling numbers setting in tenant level.
+The tenant blocked calling numbers also includes a list of number patterns exempt from call blocking. Exempt number patterns are managed through the CsInboundExemptNumberPattern commands New, Get, Set, and Remove. You can manage a given pattern by using these cmdlets, including the ability to toggle the activation of a given pattern. 
+
+You can test your number blocking by using the Test-CsInboundBlockedNumberPattern command.
+
+The scope of tenant blocked calling numbers is global across the given tenant. This command-let can also turn on/off the blocked calling numbers setting at the tenant level.
 
 To get the current tenant blocked calling numbers setting, use Get-CsTenantBlockedCallingNumbers
 
@@ -110,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope, and for per-user scope a name, which identifies the TenantBlockedCallingNumbers to set.
+The Identity parameter is a unique identifier which identifies the TenantBlockedCallingNumbers to set.
 
 ```yaml
 Type: Object
@@ -185,9 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -228,3 +230,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+
+[Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
