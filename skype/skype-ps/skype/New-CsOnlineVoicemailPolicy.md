@@ -13,7 +13,7 @@ ms.reviewer:
 # New-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Creates a new Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify voicemail maximum recording length for a user.
+Creates a new Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ New-CsOnlineVoicemailPolicy -Identity <XdsIdentity> [-Tenant <Guid>] [-EnableTra
 ## DESCRIPTION
 Online Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
 
-By default, users enabled for Phone System will be enabled for Online Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policy also specifies the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages. 
+By default, users enabled for Phone System will be enabled for Online Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages. 
 
 - Online Voicemail transcription is enabled by default
 - Transcription profanity masking is disabled by default
