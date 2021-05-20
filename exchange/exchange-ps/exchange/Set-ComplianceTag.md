@@ -27,6 +27,7 @@ Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
  [-Force]
+ [-MultiStageReviewProperty <String>]
  [-Notes <String>]
  [-RetentionDuration <Unlimited>]
  [-ReviewerEmail <SmtpAddress[]>]
@@ -128,30 +129,30 @@ Accept wildcard characters: False
 ### -FilePlanProperty
 The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
 
-- Get-FilePlanPropertyAuthority | Format-List Name
-- Get-FilePlanPropertyCategory | Format-List Name
-- Get-FilePlanPropertyCitation | Format-List Name
-- Get-FilePlanPropertyDepartment | Format-List Name
-- Get-FilePlanPropertyReferenceId | Format-List Name
-- Get-FilePlanPropertySubCategory | Format-List Name
+- `Get-FilePlanPropertyAuthority | Format-List Name`
+- `Get-FilePlanPropertyCategory | Format-List Name`
+- `Get-FilePlanPropertyCitation | Format-List Name`
+- `Get-FilePlanPropertyDepartment | Format-List Name`
+- `Get-FilePlanPropertyReferenceId | Format-List Name`
+- `Get-FilePlanPropertySubCategory | Format-List Name`
 
 A valid value for this parameter involves two steps:
 
 - A variable to store the file plan properties as a PSCustomObject using the following syntax:
 
-  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+  `$Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}`
 
   For example:
 
-  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+  `$retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="Referen`ceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
 
 - A second variable to convert the PSCustomObject to a JSON object using the following syntax:
 
-  $Variable2 = ConvertTo-Json $Variable1
+  `$Variable2 = ConvertTo-Json $Variable1`
 
   For example:
 
-  $fpStr = ConvertTo-Json $retentionLabelAction
+  `$fpStr = ConvertTo-Json $retentionLabelAction`
 
 You use the second variable as the value for this parameter.
 
@@ -173,6 +174,30 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiStageReviewProperty
+The MultiStageReviewProperty parameter specifies the multi-stage review properties to include in the label. This parameter uses the following syntax:
+
+`'{"MultiStageReviewSettings":[{"StageName":"Stage1","Reviewers":[reviewer1,reviewer2,...reviewerN]},{"StageName":"Stage2","Reviewers":[reviewer1,reviewer2,...reviewerN]},]}'`
+
+For example:
+
+`'{"MultiStageReviewSettings":[{"StageName":"Stage1","Reviewers":[jie@contoso.onmicrosoft.com]},{"StageName":"Stage2","Reviewers":[bharath@contoso.onmicrosoft.com,helen@contoso.onmicrosoft.com]},]}'`
+
+This syntax is a JSON object that defines each review stage id, review stage name, and list of reviewers.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
