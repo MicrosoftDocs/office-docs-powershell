@@ -33,7 +33,7 @@ By default, users enabled for Phone System will be enabled for Online Voicemail.
 - Transcription translation is enabled by default
 - Editing call answer rule settings is enabled by default
 - Voicemail maximum recording length is set to 5 minutes by default
-- Primary and secondary system prmopt languages are set to null by default and the users voicemail language setting is used
+- Primary and secondary system prompt languages are set to null by default and the users voicemail language setting is used
  
 Tenant admin would be able to create customized online voicemail policy to match the organization's requirements.
 
