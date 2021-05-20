@@ -105,7 +105,7 @@ Now the following languages are supported:
 
 - "ar-EG" (Arabic - Egypt)
 - "ar-SA" (Arabic - Saudi Arabia)
-- "bg=BG" (Bulgarian - Bulgaria)
+- "bg-BG" (Bulgarian - Bulgaria)
 - "ca-ES" (Catalan - Catalan)
 - "cy-GB" (Welsh - United Kingdom)
 - "cs-CZ" (Czech - Czech Republic)
