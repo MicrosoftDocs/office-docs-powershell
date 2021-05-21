@@ -771,7 +771,7 @@ Possible values are:
 - Disabled
 - Enabled
 
-Set this to Enabled to allow up to 20,000 extra view-only attendees to join
+Set this to Enabled to allow up to 20,000 extra view-only attendees to join.
 
 ```yaml
 Type: String
