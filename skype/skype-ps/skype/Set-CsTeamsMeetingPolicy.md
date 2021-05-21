@@ -923,7 +923,7 @@ Possible values:
 - Everyone
 - EveryoneInCompany
 
-If you want to organize public webinars, set the value to Everyone
+If you want to organize public webinars, set the value to Everyone.
 
 ```yaml
 Type: String
