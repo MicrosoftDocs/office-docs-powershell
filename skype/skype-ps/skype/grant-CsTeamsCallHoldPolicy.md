@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the Identity of the user account to be assigned the per-user Teams compliance recording policy.
+Indicates the Identity of the user account to be assigned the per-user Teams call hold policy.
 User Identities can be specified using one of the following formats:
 1) the user's SIP address;
 2) the user's user principal name (UPN);
