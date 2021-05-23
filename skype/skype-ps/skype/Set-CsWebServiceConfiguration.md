@@ -34,6 +34,7 @@ Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccess
  [-UseWsFedPassiveAuth <Boolean>] [-WsFedPassiveMetadataUri <String>]
  [-CrossDomainAuthorizationList <PSListModifier>] [-EnableMediaBasicAuth <Boolean>]
  [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
+ [-PendingGetWaitTimeOutInMinutes <Int64>] [-PendingGetWaitSupportingApps <String>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
  [-OverrideAuthTypeForInternalClients <String>] [-OverrideAuthTypeForExternalClients <String>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
@@ -54,6 +55,7 @@ Set-CsWebServiceConfiguration [-Instance <PSObject>] [-AllowAnonymousAccessToLWA
  [-UseWsFedPassiveAuth <Boolean>] [-WsFedPassiveMetadataUri <String>]
  [-CrossDomainAuthorizationList <PSListModifier>] [-EnableMediaBasicAuth <Boolean>]
  [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
+ [-PendingGetWaitTimeOutInMinutes <Int64>] [-PendingGetWaitSupportingApps <String>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
  [-OverrideAuthTypeForInternalClients <String>] [-OverrideAuthTypeForExternalClients <String>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
@@ -796,6 +798,44 @@ A negative value means Strict-Transport-Security header will not appear in HTTPS
 Type: Int64
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PendingGetWaitTimeOutInMinutes
+Specifies the time in minutes to send event at particular interval to Keep Alive EventChannel. 
+The values can be specified in between 5 to 15 minutes (both inclusive). 
+The default value is 15 minutes
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PendingGetWaitSupportingApps
+Specifies semicolon separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
+Supported applications are Android, iPhone, iPad, Macintosh, Windows. 
+To support all applications you can give All as input. 
+For example -  a) To support Android and Macintosh - Android;Macintosh; b) To support all devices - All; 
+The default value is None
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
