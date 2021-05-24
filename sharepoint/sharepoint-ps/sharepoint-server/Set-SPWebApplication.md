@@ -58,7 +58,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-Get-SPWebApplication http://somesite | Set-SPWebApplication -Zone "Extranet" -HostHeader "http://www.contoso.com" - AllowAnonymousAccess
+$ap = New-SPAuthenticationProvider -AllowAnonymous
+Set-SPWebApplication http://somesite -Zone "Extranet" -HostHeader "http://www.contoso.com" -AuthenticationProvider $ap
 ```
 
 This example sets the HostHeader URL for the Extranet zone of the given Web application as http://www.contoso.com and enables anonymous access.
