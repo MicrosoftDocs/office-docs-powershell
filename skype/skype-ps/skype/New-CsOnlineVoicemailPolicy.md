@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySystemPromptLanguage
-The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. Please see [Set-CsOnlineVoicemailUserSettings](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailusersettings?view=skype-ps) -PromptLanguage for supported languages.
+The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. Please see [Set-CsOnlineVoicemailUserSettings](/powershell/module/skype/set-csonlinevoicemailusersettings?view=skype-ps) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
