@@ -43,7 +43,7 @@ By default, users enabled for Phone System will be enabled for Online Voicemail.
 - Voicemail maximum recording length is set to 5 minutes by default
 - Primary and secondary system prompt languages are set to null by default and the user's voicemail language setting is used
  
-Tenant admin would be able to create customized online voicemail policy to match the organization's requirements.
+Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
 
 ## EXAMPLES
 
