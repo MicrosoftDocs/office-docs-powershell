@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -DenyAddAndCustomizePages
-Determines whether the Add And Customize Pages right is denied on the site collection. For more information about permission levels, see User permissions and permission levels in SharePoint.
+Determines whether the Add And Customize Pages right is denied in the site collection. For more information about permission levels, see User permissions and permission levels in SharePoint.
 
 ```yaml
 Type: SwitchParameter
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAppViews
--
+Determines whether the App Views feature is disabled in the site collection
 
 ```yaml
 Type: AppViewsPolicy
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
--
+Determines whether company-wide sharing links are disabled in collection
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
--
+Determines whether flows are disabled in the site collection.
 
 ```yaml
 Type: FlowsPolicy
@@ -315,6 +315,19 @@ Determines whether site can include Project Web App. For more information about 
 
 ```yaml
 Type: Boolean
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalUserExpirationInDays
+Specifies number of days the external users remain active on site
+
+```yaml
+Type: Int32
 Parameter Sets: Set Properties
 Required: False
 Position: Named
@@ -372,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideTenantAnonymousLinkExpirationPolicy
-{{ Fill OverrideTenantAnonymousLinkExpirationPolicy Description }}
+Specifies whether to use company-wide or a site collection level anonymous links expiration policy. Set it to true to get advantage of AnonymousLinkExpirationInDays  
 
 ```yaml
 Type: SwitchParameter
@@ -428,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingAllowedDomainList
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com". Effective when SharingDomainRestrictionMode is set to AllowList
 
 ```yaml
 Type: String
@@ -442,7 +455,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharingBlockedDomainList
-Specifies a list of email domains that is blocked for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that is blocked for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com". Effective when SharingDomainRestrictionMode is set to BlockList
 
 ```yaml
 Type: String
