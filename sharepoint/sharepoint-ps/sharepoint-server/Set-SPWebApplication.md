@@ -56,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 $ap = New-SPAuthenticationProvider -AllowAnonymous
 Set-SPWebApplication http://somesite -Zone "Extranet" -HostHeader "http://www.contoso.com" -AuthenticationProvider $ap
