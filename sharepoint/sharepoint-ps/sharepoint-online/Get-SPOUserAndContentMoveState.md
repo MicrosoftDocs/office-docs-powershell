@@ -45,6 +45,7 @@ The following are the available move states:
 
 |Status|Description|
 | --- | --- |
+|ReadyToTrigger| The move is ready to be initiated by an administrator. |
 |NotStarted| The move has not started. |
 |InProgress| The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
 |Success| The move has completed successfully.|

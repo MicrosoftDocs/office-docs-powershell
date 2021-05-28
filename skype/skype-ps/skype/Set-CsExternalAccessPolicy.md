@@ -64,7 +64,7 @@ If you would like to grant this capability to all of your users you can call the
 4.
 Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
 
-The following parameters are not applicable to Microsoft Teams or Skype for Business Online: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
+The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
@@ -187,6 +187,7 @@ Accept wildcard characters: False
 
 ### -EnableFederationAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 
@@ -224,6 +225,7 @@ Accept wildcard characters: False
 
 ### -EnablePublicCloudAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 
