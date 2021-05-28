@@ -32,7 +32,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
-[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
-[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -764,9 +764,14 @@ Accept wildcard characters: False
 ```
 
 ### -StreamingAttendeeMode
+
+Controls if Teams uses overflow capability once a meeting reaches its capacity (1,000 users with full functionality). 
+
 Possible values are: 
 - Disabled
 - Enabled
+
+Set this to Enabled to allow up to 20,000 extra view-only attendees to join.
 
 ```yaml
 Type: String
@@ -829,6 +834,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingRegistration
+Controls if a user can create a webinar meeting. The default value is True.
 
 Possible values:
 - True
@@ -909,10 +915,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
+
+Controls the attendees who can attend a webinar meeting. The default is EveryoneInCompany, meaning that internal accounts and guest accounts can attend. 
+
 Possible values:
 
 - Everyone
 - EveryoneInCompany
+
+If you want to organize public webinars, set the value to Everyone.
 
 ```yaml
 Type: String
