@@ -15,7 +15,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-**Note**: This cmdlet is available only in version 2.0.5-Preview1 or later of the EXO V2 module, and is currently in Private Preview.
+**Note**: This cmdlet is available only in version 2.0.5-Preview1 or later of the EXO V2 module, and is currently in Private Preview (available only to a select few organizations).
 
 Use the Set-OwnerlessGroupPolicy cmdlet to modify the ownerless group policy in Exchange Online.
 
