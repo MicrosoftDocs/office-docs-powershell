@@ -66,26 +66,28 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResource
 
 ### -EnableAcsUsers
 
-Set to True (default) to enable federation between Teams and ACS. When set to false, all other parameters are ignored.
+Set to True to enable federation between Teams and ACS. When set to False, all other parameters are ignored.
+
+During public preview, federation between Teams and ACS is disabled by default. When federation between Teams and ACS is generally available, it will be enabled by default.
 
 ```yaml
 Type: Boolean
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AllowAllAcsResources
 
-When set to True (default), federation is enabled with all ACS resources except for the resources listed in BlockedAcsResources (which can be null/empty), and the parameter AllowedAcsResources is ignored and should be null/empty.
+When set to True, federation is enabled with all ACS resources except for the resources listed in BlockedAcsResources (which can be null/empty), and the parameter AllowedAcsResources is ignored and should be null/empty.
 
 When set to False, federation is disabled with all ACS resources, except for the resources listed in AllowedAcsResources (of which there must be at least one), and the parameter BlockedAcsResources is ignored and must be null/empty.
 
 ```yaml
 Type: Boolean
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
