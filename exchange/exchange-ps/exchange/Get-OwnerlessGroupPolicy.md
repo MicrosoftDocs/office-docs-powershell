@@ -7,6 +7,7 @@ title: Get-OwnerlessGroupPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
+ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Get-OwnerlessGroupPolicy
@@ -14,7 +15,7 @@ ms.author: chrisda
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-**Note**: This cmdlet is available only in version 2.0.5-Preview1 or later of the EXO V2 module.
+**Note**: This cmdlet is available only in version 2.0.5-Preview1 or later of the EXO V2 module, and is currently in Private Preview.
 
 Use the Get-OwnerlessGroupPolicy cmdlet to view the ownerless group policy in Exchange Online.
 
