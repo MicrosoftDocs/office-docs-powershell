@@ -13,7 +13,7 @@ ms.author: trgreen
 
 ## SYNOPSIS
 
-Marks a site as one of multiple possible tenant's organizational news sites. Requires Global administrator or SharePoint administrator permissions.
+Marks a site collection as one of multiple possible tenant's organizational news sites. Requires Global administrator or SharePoint administrator permissions.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Set-SPOOrgNewsSite -OrgNewsSiteUrl <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to mark a site as an organizational authoritative news site. Such sites get primary treatment in the SharePoint user interface.
+Use this cmdlet to mark a site collection as an organizational authoritative news site. Such sites get primary treatment in the SharePoint user interface.
 
 If a site with specified URL doesn't exist, this cmdlet returns a "File not found" error.
 
@@ -41,7 +41,7 @@ This example marks <https://contoso.sharepoint.com/sites/Marketing> as an organi
 
 ### -OrgNewsSiteUrl
 
-The URL of a site to be marked as an organizational news site.
+The URL of a site collection to be marked as an organizational news site.
 
 ```yaml
 Type: String
