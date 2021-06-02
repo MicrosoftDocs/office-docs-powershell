@@ -63,10 +63,10 @@ This example adds and removes the specified email addresses from the exception l
 The Identity parameter specifies the GUID of the external sender identification object that you want to modify. Although this parameter is available, you don't need to use it.
 
 ```yaml
-Type: OrganizationIdParameter, Exchange Online Protection
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
