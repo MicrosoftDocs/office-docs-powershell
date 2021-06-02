@@ -287,6 +287,18 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applies to: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+```
 
 ### -EnableGroupExpansion
 
