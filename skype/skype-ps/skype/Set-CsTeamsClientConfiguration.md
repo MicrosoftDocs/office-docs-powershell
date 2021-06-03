@@ -21,23 +21,23 @@ The TeamsClientConfiguration allows IT admins to control the settings that can b
 ### Identity (Default)
 ```
 Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <Boolean>]
- [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
+ [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>] [-AllowRoleBasedChatPermissions <Boolean>]
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] 
+ [<CommonParameters>] 
 ```
 
 ### Instance
 ```
 Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <Boolean>]
- [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
+ [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>] [-AllowRoleBasedChatPermissions <Boolean>]
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] 
+ [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
@@ -180,6 +180,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowRoleBasedChatPermissions
+When set to True, Supervised Chat is enabled for the tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowScopedPeopleSearchandAccess
 If set to $true, the Exchange address book policy (ABP) will be used to provide customized view of the global address book for each user.  This is only a virtual separation and not a legal separation.
 
@@ -193,7 +207,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
+
 
 ### -AllowShareFile
 Designates whether users are able to leverage Citrix ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add Citrix ShareFile in the client and interact with the files stored there.
@@ -382,6 +396,7 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 
