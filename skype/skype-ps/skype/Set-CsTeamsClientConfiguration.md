@@ -207,7 +207,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+```
 
 ### -AllowShareFile
 Designates whether users are able to leverage Citrix ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add Citrix ShareFile in the client and interact with the files stored there.
@@ -303,6 +303,7 @@ Accept wildcard characters: False
 
 ### -Identity
 The only valid input is Global - the tenant wide configuration.
+
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
