@@ -24,7 +24,7 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
  [-Tenant <Guid>] [-AllowImmersiveReader <Boolean>] [-AllowUserTranslation <Boolean>]
  [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-AllowRemoveUser <Boolean>]
  [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Boolean>]
- [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>]
+ [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>]
  ```
 
 ## DESCRIPTION
@@ -379,6 +379,16 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -ChatPermissionRole
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the enviornment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+
+```yaml
+Type: String
+Position: Named
+Default value: Restricted
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
