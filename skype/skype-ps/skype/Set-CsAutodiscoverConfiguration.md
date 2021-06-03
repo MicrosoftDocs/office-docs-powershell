@@ -138,11 +138,15 @@ If set to True, Cross-Origin Resource Sharing is enabled.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 ```
 
 ### -ExternalSipClientAccessFqdn
@@ -302,4 +306,3 @@ The `Set-CsAutoDiscoverConfiguration` cmdlet modifies instances of the Microsoft
 ## NOTES
 
 ## RELATED LINKS
-
