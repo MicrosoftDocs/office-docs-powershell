@@ -5,6 +5,7 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 ms.reviewer: navgupta
@@ -20,11 +21,11 @@ description: "Learn about how to use filtering for cmdlets in the Exchange Onlin
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) contains a few exclusive cmdlets that are optimized for high speed, high volume operations, and (after you connect to your organization) gives you access to the hundreds of existing cmdlets in the service. For more information, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
 
-In order to get the most out of the EXO V2 module, you need to follow the guidance in this topic.
+In order to get the most out of the EXO V2 module, you need to follow the guidance in this article.
 
 ## Use client-side filtering for the best performance
 
-Server-side filtering uses the available _Filter_ or _RecipientFilter_ parameters on a cmdlet. Client-side filtering uses the [Where-Object](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/where-object) cmdlet (also known as **where** or **?**).
+Server-side filtering uses the available _Filter_ or _RecipientFilter_ parameters on a cmdlet. Client-side filtering uses the [Where-Object](/powershell/module/microsoft.powershell.core/where-object) cmdlet (also known as **where** or **?**).
 
 Generally, you get much better performance in PowerShell cmdlets with server-side filtering. However, for the EXO V2 module, you actually get better performance when you use client-side filtering. We're working on improving the performance of server-side filtering in the module.
 
@@ -32,25 +33,27 @@ Generally, you get much better performance in PowerShell cmdlets with server-sid
 
 Although the EXO V2 module supports the majority of filterable attributes, the following attributes are currently not supported for filtering:
 
+<br>
+
 ****
 
 |Cmdlet|Attribute|LDAP Display Name|
 |---|---|---|
-|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)|MemberOfGroup <p> ExternalDirectoryObjectId|memberOf <p> msExchExternalDirectoryObjectId|
-|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)|DeletedItemFlags <p> ExternalDirectoryObjectId <p> LanguagesRaw <p> MasterAccountSid <p> MemberOfGroup <p> RequireAllSendersAreAuthenticated <p> SCLDeleteThresholdInt <p> SCLJunkThresholdInt <p> SCLQuarantineThresholdInt <p> SCLRejectThresholdInt|deletedItemFlags <p> msExchExternalDirectoryObjectId <p> msExchUserCulture <p> msExchMasterAccountSid <p> memberOf <p> msExchRequireAuthToSendTo <p> msExchMessageHygieneSCLDeleteThreshold <p> msExchMessageHygieneSCLJunkThreshold <p> msExchMessageHygieneSCLQuarantineThreshold <p> msExchMessageHygieneSCLRejectThreshold|
-|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)|CountryCode <p> ExternalDirectoryObjectId <p> MasterAccountSid <p> MemberOfGroup <p> Members|countryCode <p> msExchExternalDirectoryObjectId <p> msExchMasterAccountSid <p> memberOf <p> member|
+|[Get-CASMailbox](/powershell/module/exchange/get-casmailbox)|MemberOfGroup <p> ExternalDirectoryObjectId|memberOf <p> msExchExternalDirectoryObjectId|
+|[Get-Mailbox](/powershell/module/exchange/get-mailbox)|DeletedItemFlags <p> ExternalDirectoryObjectId <p> LanguagesRaw <p> MasterAccountSid <p> MemberOfGroup <p> RequireAllSendersAreAuthenticated <p> SCLDeleteThresholdInt <p> SCLJunkThresholdInt <p> SCLQuarantineThresholdInt <p> SCLRejectThresholdInt|deletedItemFlags <p> msExchExternalDirectoryObjectId <p> msExchUserCulture <p> msExchMasterAccountSid <p> memberOf <p> msExchRequireAuthToSendTo <p> msExchMessageHygieneSCLDeleteThreshold <p> msExchMessageHygieneSCLJunkThreshold <p> msExchMessageHygieneSCLQuarantineThreshold <p> msExchMessageHygieneSCLRejectThreshold|
+|[Get-Recipient](/powershell/module/exchange/get-recipient)|CountryCode <p> ExternalDirectoryObjectId <p> MasterAccountSid <p> MemberOfGroup <p> Members|countryCode <p> msExchExternalDirectoryObjectId <p> msExchMasterAccountSid <p> memberOf <p> member|
 |
 
 ## Supported and unsupported operators
 
 The following operators are fully supported for all string formats in the EXO V2 module:
 
-- [Logical operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logical_operators):
+- [Logical operators](/powershell/module/microsoft.powershell.core/about/about_logical_operators):
   - `-and`
   - `-not`
   - `-or`
 
-- [Comparison operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
+- [Comparison operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
   - `-eq`
   - `-ne`
   - `-lt`

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-applicationaccesspolicy
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Set1
 ```
 Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>]
  [<CommonParameters>]
@@ -58,7 +57,7 @@ The Identity parameter specifies the application access policy that you want to 
 Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1

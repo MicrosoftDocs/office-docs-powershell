@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -MissedCallForwardTarget
-Specifies the sip address of a user account or a telephone number to forward the call when you select `Forward` in the `MissedCallOption` parameter. The target could be a user in your organization or a phone number following next sintax:
+Specifies the sip address of a user account or a telephone number to forward the call when you select `Forward` in the `MissedCallOption` parameter. The target could be a user in your organization or a phone number following next syntax:
 * tel:\<PhoneNumber\>
 * sip:\<NameofDelegate@domain\>
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-Specifies the sip address of a user account or a telephone number to forward the call when you select `Forward` in the `BusyOption` parameter. The target could be a user in your organization or a phone number following next sintax:
+Specifies the sip address of a user account or a telephone number to forward the call when you select `Forward` in the `BusyOption` parameter. The target could be a user in your organization or a phone number following next syntax:
 * tel:\<PhoneNumber\>
 * sip:\<NameofDelegate@domain\>
 

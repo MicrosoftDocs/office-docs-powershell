@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActAsPermissions
-This parameter is available only in Exchange 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppOnlyPermissions
-This parameter is available only in Exchange 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -IssuerIdentifier
-This parameter is available only in Exchange 2013.
+This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 

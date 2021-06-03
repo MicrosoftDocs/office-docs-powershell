@@ -1,26 +1,27 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpcustomaction
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPCustomAction.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPCustomAction
 ---
-
+  
 # Get-PnPCustomAction
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPCustomAction.md to change this file.
+
 Return user custom actions
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
-Get-PnPCustomAction [-Includes <String[]>]
-                    [-Identity <GuidPipeBind>]
-                    [-Scope <CustomActionScope>]
-                    [-ThrowExceptionIfCustomActionNotFound [<SwitchParameter>]]
-                    [-Web <WebPipeBind>]
-                    [-Connection <PnPConnection>]
+Get-PnPCustomAction [-Identity <Guid>] [-Scope <CustomActionScope>]
+ [-ThrowExceptionIfCustomActionNotFound] [-Connection <PnPConnection>]
+ [-Includes <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,21 +29,21 @@ Returns all or a specific user custom action
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPCustomAction
 ```
 
 Returns all custom actions of the current site.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
 ```
 
 Returns the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2'.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPCustomAction -Scope web
 ```
@@ -51,28 +52,32 @@ Returns all custom actions for the current web object.
 
 ## PARAMETERS
 
-### -Identity
-Identity of the CustomAction to return. Omit to return all CustomActions.
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: GuidPipeBind
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Includes
-Specify properties to include when retrieving objects from the server.
+### -Identity
+Identity of the CustomAction to return. Omit to return all CustomActions.
 
 ```yaml
-Type: String[]
+Type: Guid
 Parameter Sets: (All)
 
 Required: False
-Position: 0
+Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Scope
@@ -81,10 +86,13 @@ Scope of the CustomAction, either Web, Site or All to return both
 ```yaml
 Type: CustomActionScope
 Parameter Sets: (All)
+Accepted values: Web, Site, All
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ThrowExceptionIfCustomActionNotFound
@@ -96,37 +104,15 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Web
-The web to apply the command to. Omit this parameter to use the current web.
 
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### List<Microsoft.SharePoint.Client.UserCustomAction>
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

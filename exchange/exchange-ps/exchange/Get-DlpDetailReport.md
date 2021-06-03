@@ -29,7 +29,6 @@ Get-DlpDetailReport [-Action <MultiValuedProperty>]
  [-DlpComplianceRule <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-Source <MultiValuedProperty>]
@@ -56,6 +55,8 @@ The Get-DlpDetailReport cmdlet returns detailed information about specific DLP r
 - EventType
 - Action
 - ObjectId
+- Recipients
+- AttachmentNames
 
 To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://docs.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport) cmdlet.
 
@@ -179,22 +180,6 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

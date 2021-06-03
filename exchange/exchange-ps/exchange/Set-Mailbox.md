@@ -254,6 +254,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -284,12 +285,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -300,6 +304,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -321,6 +326,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -377,6 +383,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -407,12 +414,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -423,6 +433,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -444,6 +455,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -500,6 +512,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -530,12 +543,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -546,6 +562,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -567,6 +584,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -623,6 +641,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -653,12 +672,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -669,6 +691,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -690,6 +713,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -744,6 +768,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <System.DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -774,11 +799,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -789,6 +817,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -810,6 +839,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <System.DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -866,6 +896,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -896,11 +927,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -911,6 +945,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -933,6 +968,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -988,6 +1024,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -1018,11 +1055,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -1033,6 +1073,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -1055,6 +1096,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
@@ -1259,7 +1301,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-This parameter is available only in the cloud-based service.
+This parameter is available o functional only in the cloud-based service.
 
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
@@ -1270,7 +1312,7 @@ The AccountDisabled parameter specifies whether to disable the account that's as
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1286,7 +1328,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 - Distinguished name (DN)
 - GUID
 
-For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies) or [Address book policies in Exchange Online](/exchange/address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -1509,13 +1551,15 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveStatus
+This cmdlet is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ArchiveStatusFlags
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1564,6 +1608,8 @@ Type: SetMailbox+ClearableADAttributes[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1687,7 +1733,7 @@ To modify other types of arbitration mailboxes, don't use this switch. Instead, 
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1829,7 +1875,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the CalendarLoggingQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the CalendarLoggingQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -1922,6 +1968,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
+This parameter is available only in on-premises Exchange.
+
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
@@ -1931,7 +1979,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2438,7 +2486,7 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
@@ -2528,6 +2576,24 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforcedTimestamps
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnforcedTimestamps Description }}
+
+```yaml
+Type: String
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -2976,26 +3042,13 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
-
-You can use any value that uniquely identifies the Group Mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
+The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -3047,6 +3100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImListMigrationCompleted
+This parameter is available only in on-premises Exchange.
+
 The ImListMigrationCompleted parameter specifies whether a user's Lync or Skype for Business contact list is stored in their mailbox.
 
 Valid values are:
@@ -3062,7 +3117,7 @@ If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's L
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3186,7 +3241,7 @@ The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiv
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to $true, the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to $true (the default value), the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -3390,7 +3445,7 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3412,7 +3467,7 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3700,6 +3755,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageCopyForSMTPClientSubmissionEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageCopyForSMTPClientSubmissionEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallProcessingEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallProcessingEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageTracking
 This parameter is available only in on-premises Exchange.
 
@@ -3853,6 +3944,24 @@ Type: SecureString
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NonCompliantDevices
+This parameter is available only in the cloud-based service.
+
+{{ Fill NonCompliantDevices Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -4037,7 +4146,7 @@ The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiv
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4069,7 +4178,7 @@ The value must be greater than or equal to the ProhibitSendQuota or IssueWarning
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4217,7 +4326,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4251,7 +4360,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsWarningQuota value must be less than or equal to the RecoverableItemsQuota value.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4450,6 +4559,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveMailboxProvisioningConstraint
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveMailboxProvisioningConstraint Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
@@ -4565,7 +4692,7 @@ In Exchange Online, administrators can require users to reset their password the
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4621,7 +4748,7 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 - Selecting the Empty Deleted Items Folder action.
 - Deleting items using Shift + Delete.
 
-These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
+These actions move the items into the Recoverable Items\\Deletions folder.
 
 Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
@@ -4629,9 +4756,9 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 
 The default value is 14 days (14.00:00:00). In Exchange Online, you can increase the value to a maximum of 30 days.
 
-In Exchange Online, you use this parameter to configure the RetainDeletedItemsFor value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
+In Exchange Online, you use this parameter to configure the deleted item retention on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, the default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
+In on-premises Exchange, when the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -4651,12 +4778,12 @@ This parameter is available only in on-premises Exchange.
 
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
-- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
-- $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
+- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameter values.
+
+When the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RetainDeletedItemsUntilBackup parameter value from the mailbox database. To use the RetainDeletedItemsUntilBackup parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
-
-The default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
 
 ```yaml
 Type: Boolean
@@ -5032,13 +5159,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryDialPlan
+This parameter is available only in on-premises Exchange.
+
 The SecondaryDialPlan parameter specifies a secondary UM dial plan to use. This parameter is provided to create a secondary proxy address.
 
 ```yaml
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5249,10 +5378,11 @@ Accept wildcard characters: False
 ### -Type
 The Type parameter specifies the mailbox type for the mailbox. Valid values are:
 
+- Equipment
 - Regular
 - Room
-- Equipment
 - Shared
+- Workspace (cloud-only)
 
 ```yaml
 Type: ConvertibleMailboxSubType
@@ -5288,6 +5418,8 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
+This parameter is available only in on-premises Exchange.
+
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
 - `emailAddress:<integers>`
@@ -5306,7 +5438,7 @@ If you use this syntax, you don't need to specify all of the DTMF map values, an
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5335,15 +5467,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateEnforcedTimestamp
+This parameter is available only in the cloud-based service.
+
+{{ Fill UpdateEnforcedTimestamp Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseDatabaseQuotaDefaults
-The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values that are configured on the mailbox or on the mailbox database. Valid values are:
+The UseDatabaseQuotaDefaults parameter specifies whether applicable quotas for the mailbox are determined by the quota values on the mailbox or the corresponding quota values on the mailbox database (not all mailbox quotas are configurable on the mailbox database). Valid values are:
 
-- $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any of those quota values configured directly on the mailbox are ignored.
-- $false: The mailbox uses its own values for the applicable quota values. Any of those quota values on the mailbox database are ignored.
+- $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any corresponding quotas that are configured on the mailbox are ignored. In on-premises Exchange, this is the default value.
+- $false: The mailbox uses its own values for the applicable quotas. Any corresponding quotas that are configured on the mailbox database are ignored. In Exchange Online, this is the default value.
 
-In Exchange Online, the default value is $false. In on-premises Exchange, the default value is $true.
-
-The applicable quota values are:
+The following quotas are affected by this parameter:
 
 - CalendarLoggingQuota
 - IssueWarningQuota
@@ -5356,7 +5504,7 @@ The applicable quota values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -5366,18 +5514,28 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
-The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses the MailboxRetention attribute value that's configured on the mailbox database. This value controls how long deleted mailboxes are kept in the database before they are permanently removed (purged). The default value is 30 days. Valid values are:
+The UseDatabaseRetentionDefaults parameter specifies whether the retention settings for items in the Recoverable Items folder in the mailbox are determined by the settings on the mailbox or the corresponding settings on the mailbox database. Valid values are:
 
-- $true: The mailbox uses the MailboxRetention value that's configured on the mailbox database. This is the default value.
-- $false: When the mailbox is deleted, it's retained indefinitely.
+- $true: The mailbox uses the applicable retention settings that are configured on the mailbox database. Any corresponding settings that are configured on the mailbox are ignored. This is the default value.
+- $false: The mailbox uses its own values for the applicable retention settings. Any corresponding settings that are configured on the mailbox database are ignored.
+
+The following retention settings are affected by this parameter:
+
+- DeletedItemRetention
+- RetainDeletedItemsUntilBackup
+
+**Note**: If you set the RetainDeletedItemsUntilBackup parameter on the mailbox database to the value $true when the value of the UseDatabaseRetentionDefaults parameter on a mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+
+- Run the following command: `Import-Module ActiveDirectory`.
+- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

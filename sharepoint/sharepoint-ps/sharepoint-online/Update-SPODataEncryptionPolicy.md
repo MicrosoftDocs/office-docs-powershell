@@ -19,7 +19,7 @@ Updates customer encryption status for a geo tenant.
 ## SYNTAX
 
 ```powershell
-Update-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> [-KeyVaultName] <String> [-KeyName] <String> [-KeyVersion] <Guid> [-KeyType] <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-SPODataEncryptionPolicy [-KeyVaultName] <String> [-KeyName] <String> [-KeyVersion] <Guid> [-KeyType] <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,7 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 ### Example 1
 
 ```powershell
-Update-SPODataEncryptionPolicy -Identity https://contoso-admin.sharepoint.com -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType Primary
+Update-SPODataEncryptionPolicy -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType Primary
 ```
 
 This example updates the DEP used with SharePoint Online and OneDrive for Business to start using the new key
@@ -52,22 +52,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Specifies the URL of the admin site collection.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

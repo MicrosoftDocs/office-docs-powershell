@@ -31,6 +31,7 @@ Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter>
  [-ResetUrl]
  [-SearchableUrlEnabled <Boolean>]
  [-SetAsSharingSource]
+ [-SharedCalendarSyncStartDate <DateTime>]
  [-UseHttps]
  [-WhatIf]
  [<CommonParameters>]
@@ -271,6 +272,36 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharedCalendarSyncStartDate
+This parameter is available only in the cloud-based service.
+
+**Note**: This parameter is supported only for shared calendars that have been upgraded as described in [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/365-b576ecc3-0945-4d75-85f1-5efafb8a37b4), and is not applicable to any other type of calendar or mailbox folder.
+
+The SharedCalendarSyncStartDate parameter specifies the limit for past events that are visible to users who have access to the specified shared calendar. A copy of the shared calendar with events that go back as far as the value specified by this parameter is stored in the user's mailbox.
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+
+**Notes**:
+
+- Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
+- Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

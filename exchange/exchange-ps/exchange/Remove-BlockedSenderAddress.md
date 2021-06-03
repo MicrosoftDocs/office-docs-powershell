@@ -49,7 +49,7 @@ The SenderAddress parameter specifies the email address of the user that you wan
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -65,7 +65,7 @@ The Reason parameter specifies the reason the user was blocked (the Reason prope
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

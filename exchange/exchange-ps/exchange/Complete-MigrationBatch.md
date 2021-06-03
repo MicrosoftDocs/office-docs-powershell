@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Complete-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-CompletePublicFolderMigrationWithDataLoss]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-NotificationEmails <MultiValuedProperty>]
@@ -70,6 +71,24 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CompletePublicFolderMigrationWithDataLoss
+This parameter is available only in the cloud-based service.
+
+{{ Fill CompletePublicFolderMigrationWithDataLoss Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

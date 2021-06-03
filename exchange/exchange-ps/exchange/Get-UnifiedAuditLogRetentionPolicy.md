@@ -77,6 +77,7 @@ The RecordType parameter filters the results by the record types that are define
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -92,12 +93,13 @@ The RetentionDuration parameter filters the policy results by the retention dura
 - SixMonths
 - NineMonths
 - TwelveMonths
+- TenYears
 
 ```yaml
 Type: UnifiedAuditLogRetentionDuration
 Parameter Sets: (All)
 Aliases:
-Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths
+Accepted values: ThreeMonths, SixMonths, NineMonths, TwelveMonths, TenYears
 Applicable: Security & Compliance Center
 
 Required: False

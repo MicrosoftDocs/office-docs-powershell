@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-emailaddresspolicy
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-EmailAddressPolicy
 schema: 2.0.0
 author: chrisda
@@ -88,10 +88,10 @@ In on-premises Exchange, this example clears the disabled email address template
 
 ### Example 3
 ```powershell
-Set-EmailAddressPolicy -Identity 'Office 365 Groups' -EnabledEmailAddressTemplates "SMTP:@contoso.com","@contoso.onmicrosoft.com","smtp:@contoso.microsoftonline.com"
+Set-EmailAddressPolicy -Identity "Office 365 Groups" -EnabledEmailAddressTemplates "SMTP:@contoso.com","smtp:@contoso.onmicrosoft.com","smtp:@contoso.microsoftonline.com"
 ```
 
-In Exchange Online, this example modifies the existing email adress policy named Office 365 Groups by setting the enabled email address templates to "SMTP:@contoso.com", and "@contoso.onmicrosoft.com", and "smtp:@contoso.microsoftonline.com". This will also set the enabled primary SMTP address template to "@contoso.com".
+In Exchange Online, this example modifies the existing email adress policy named "Office 365 Groups" and sets the enabled email address templates to use "@contoso.com" as the primary SMTP address and "@contoso.onmicrosoft.com" and "@contoso.microsoftonline.com" as proxy addresses.
 
 ## PARAMETERS
 
@@ -106,7 +106,7 @@ The Identity parameter specifies the email address policy that you want to modif
 Type: EmailAddressPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -557,7 +557,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -631,7 +631,7 @@ In Exchange Online PowerShell, if you use this parameter with the IncludeUnified
 Type: ProxyAddressTemplateCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -653,7 +653,7 @@ In Exchange Online PowerShell, if you use this parameter with the IncludeUnified
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -669,7 +669,7 @@ The ForceUpgrade switch specifies whether to suppress the confirmation message t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -712,7 +712,7 @@ The Name parameter specifies the unique name for the email address policy. The m
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -732,7 +732,7 @@ If you set this parameter to a value that's the same as another email address po
 Type: EmailAddressPolicyPriority
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -799,7 +799,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

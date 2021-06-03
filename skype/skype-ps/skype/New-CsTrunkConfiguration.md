@@ -27,7 +27,7 @@ New-CsTrunkConfiguration [-Identity] <XdsIdentity> [-ConcentratedTopology <Boole
  [-RTCPActiveCalls <Boolean>] [-RTCPCallsOnHold <Boolean>]
  [-SipResponseCodeTranslationRulesList <PSListModifier>] [-SRTPMode <SRTPMode>] [-Force] [-InMemory] [-WhatIf]
  [-Confirm] [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
- [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>]
+ [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-EnablePAIPassThrough <Boolean>] 
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
  [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [<CommonParameters>]
 ```
@@ -590,6 +590,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePAIPassThrough
+Indicates whether the P-Asserted-Identity (PAI) header will be allowed to pass through Gateway. Gateway would not update PAI.
+This helps to capture anonymous call users identity in Call Data Records
+The default value is False ($False).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
