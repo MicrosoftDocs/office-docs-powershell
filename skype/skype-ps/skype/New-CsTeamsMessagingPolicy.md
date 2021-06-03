@@ -387,6 +387,10 @@ Determines the Supervised Chat role of the user.  Set this to Full to allow the 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: Restricted
 Accept pipeline input: False
@@ -405,4 +409,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
