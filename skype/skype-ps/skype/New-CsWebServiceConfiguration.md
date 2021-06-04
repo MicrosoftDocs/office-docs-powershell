@@ -735,9 +735,9 @@ Accept wildcard characters: False
 ```
 
 ### -PendingGetWaitTimeOutInMinutes
-Specifies the time in minutes to send event at particular interval to Keep Alive EventChannel. 
-The values can be specified in between 5 to 15 minutes (both inclusive). 
-The default value is 15 minutes
+Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel. 
+The value can be specified in between 5 to 15 minutes (both inclusive). 
+The default value is 15 minutes.
 
 ```yaml
 Type: Int64
@@ -867,4 +867,3 @@ The `New-CsWebServiceConfiguration` cmdlet creates new instances of the Microsof
 [Remove-CsWebServiceConfiguration](Remove-CsWebServiceConfiguration.md)
 
 [Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)
-
