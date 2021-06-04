@@ -753,11 +753,13 @@ Accept wildcard characters: False
 ```
 
 ### -PendingGetWaitSupportingApps
-Specifies semicolon separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
+Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
 Supported applications are Android, iPhone, iPad, Macintosh, Windows. 
 To support all applications you can give All as input. 
-For example -  a) To support Android and Macintosh - Android;Macintosh; b) To support all devices - All; 
-The default value is None
+For example: 
+- To support Android and Macintosh - Android;Macintosh; 
+- To support all devices - All; 
+The default value is None.
 
 ```yaml
 Type: String
