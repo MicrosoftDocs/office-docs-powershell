@@ -64,64 +64,7 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowAllAcsResource
 
 ## PARAMETERS
 
-### -EnableAcsUsers
-
-Set to True to enable federation between Teams and ACS. When set to False, all other parameters are ignored.
-
-During public preview, federation between Teams and ACS is disabled by default. When federation between Teams and ACS is generally available, it will be enabled by default.
-
-```yaml
-Type: Boolean
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowAllAcsResources
-
-When set to True, federation is enabled with all ACS resources except for the resources listed in BlockedAcsResources (which can be null/empty), and the parameter AllowedAcsResources is ignored and should be null/empty.
-
-When set to False, federation is disabled with all ACS resources, except for the resources listed in AllowedAcsResources (of which there must be at least one), and the parameter BlockedAcsResources is ignored and must be null/empty.
-
-```yaml
-Type: Boolean
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowedAcsResources
-
-The list of the ACS resources (at least one) for which federation is enabled, when AllowAllAcsResources is set to false. If AllowAllAcsResources is set to true, then this list is ignored and should be null/empty.
-
-The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal. A resource cannot be listed in both AllowedAcsResources and BlockedAcsResource.
-
-```yaml
-Type: String[]
-Position: Named
-Default value: Empty/Null
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockedAcsResources
-
-The list of the ACS resources (if any) for which federation is disabled, when AllowAllAcsResources is set to true. If AllowAllAcsResources is set to false, then this list is ignored and must be null/empty.
-
-The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal. A resource cannot be listed in both AllowedAcsResources and BlockedAcsResource.
-
-```yaml
-Type: String[]
-Position: Named
-Default value: Empty/Null
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+None
 
 ## INPUTS
 
