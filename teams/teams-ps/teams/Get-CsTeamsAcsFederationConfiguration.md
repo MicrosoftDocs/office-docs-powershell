@@ -16,7 +16,6 @@ schema: 2.0.0
 
 This cmdlet is used to retrieve the federation configuration between Teams and Azure Communication Services (ACS).
 
-
 ## SYNTAX
 
 ```powershell
