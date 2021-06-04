@@ -31,9 +31,9 @@ Remove-AddressBookPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You can't delete an address book policy if it's assigned to a user. To determine if an address book policy is assigned to a user, run the following command:
+You can't delete an address book policy if it's assigned to a user. To determine if an address book policy is assigned to a user, replace the example value Murchison's Class with the name of the ABP and run the following command:
 
-Get-Mailbox | where $._AddressBookPolicy -eq "Murchison's Class"}
+`Get-Mailbox -ResultSize unlimited -Filter "AddressBookPolicy -eq '$((Get-AddressBookPolicy "Murchison's Class").DistinguishedName)'"`
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

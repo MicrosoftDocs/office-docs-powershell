@@ -53,7 +53,7 @@ This example allows the users donh and suzanf to search only the mailboxes that 
 
 ### Example 3
 ```powershell
-New-ComplianceSecurityFilter -FilterName USDiscoveryManagers -Users "US Discovery Managers" -Filters "Mailbox_CountryCode -eq 'US'" -Action All
+New-ComplianceSecurityFilter -FilterName USDiscoveryManagers -Users "US Discovery Managers" -Filters "Mailbox_CountryCode -eq '840'" -Action All
 ```
 
 This example allows members of the US Discovery Managers role group to perform all compliance search actions only on mailboxes in the United States.
