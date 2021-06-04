@@ -45,19 +45,6 @@ EnableAcsUsers       : True
 AllowAllAcsResources : False
 ```
 
-### Example 2
-In this example, federation is enabled for all ACS resources except for two.
-
-```powershell
-Get-CsTeamsAcsFederationConfiguration
-
-Identity             : Global
-AllowedAcsResources  : {}
-BlockedAcsResources  : {'bf19b7db-6960-41e5-a139-2aa373474354','dac4607d-d2d0-40e5-84df-6f32ebd1251b'}
-EnableAcsUsers       : True
-AllowAllAcsResources : True
-```
-
 ## PARAMETERS
 
 None
