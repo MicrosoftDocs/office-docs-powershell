@@ -79,7 +79,7 @@ Alternatively, you can modify the property values for an existing collection by 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------
+### Example 1
 
 ```powershell
 Set-CsWebServiceConfiguration -Identity site:Redmond -EnableGroupExpansion $True
@@ -88,7 +88,7 @@ Set-CsWebServiceConfiguration -Identity site:Redmond -EnableGroupExpansion $True
 Example 1 enables group expansion for the Web Services configuration settings applied to the Redmond site (-Identity site:Redmond).
 This is done by including the EnableGroupExpansion property and setting the parameter value to True.
 
-### -------------------------- Example 2 ------------------------
+### Example 2
 
 ```powershell
 Get-CsWebServiceConfiguration -Filter "site:*" | Set-CsWebServiceConfiguration -MaxValidityPeriodHours 16
@@ -98,7 +98,7 @@ In Example 2, the maximum validity period for all the Web Services configuration
 To carry out this task, the `Get-CsWebServiceConfiguration` cmdlet is called along with the Filter parameter; the filter value "site:*" limits the returned data to settings where the Identity begins with the characters "site:".
 This collection is then piped to the `Set-CsWebServiceConfiguration` cmdlet, which takes each item in the collection and changes the MaxValidityPeriodHours property to 16.
 
-### -------------------------- Example 3 ------------------------
+### Example 3
 
 ```powershell
 Get-CsWebServiceConfiguration | Where-Object {$_.EnableGroupExpansion -eq $True} | Set-CsWebServiceConfiguration -MaxGroupSizeToExpand 400
@@ -109,7 +109,7 @@ To do this, the `Get-CsWebServiceConfiguration` cmdlet is called without any par
 This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the EnableGroupExpansion property is equal to True.
 In turn, this filtered collection is piped to the `Set-CsWebServiceConfiguration` cmdlet, which takes each item in the collection and sets the value of the MaxGroupSizeToExpand property to 400.
 
-### -------------------------- Example 4 ------------------------
+### Example 4
 
 ```powershell
 Set-CsWebServiceConfiguration -Identity global -ShowDownloadCommunicatorAttendeeLink $True
@@ -118,7 +118,7 @@ Set-CsWebServiceConfiguration -Identity global -ShowDownloadCommunicatorAttendee
 The command shown in Example 4 shows how the global Web Services settings can be configured so that any person joining a meeting using a client application other than Skype for Business Server will first be shown a link to a site where he or she can download Skype for Business Web App.
 This is done by including the ShowDownloadCommunicatorAttendeeLink parameter and setting the parameter value to $True.
 
-### -------------------------- Example 5 --------------------------
+### Example 5
 
 ```powershell
 $x = New-CsWebOrigin -Url "https://fabrikam.com"
@@ -134,7 +134,7 @@ The second command in the example uses the `Set-CsWebServiceConfiguration` cmdle
 The syntax @{Add=$x} adds the domain to any domains already in the collection of domains authorized for cross-domain scripting.
 To replace the existing collection with just https://fabrikam.com use the syntax @{Replace=$x}.
 
-### -------------------------- Example 6 --------------------------
+### Example 6
 
 ```powershell
 $x = Get-CsWebServiceConfiguration -Identity "site:Redmond"
@@ -157,7 +157,7 @@ To remove the second domain (index number 1) from the CrossDomainAuthorizationLi
 Note that command 2 removes the domain from the copy of the Redmond site stored in the variable $x and not from the site itself.
 To actually remove the domain from the Redmond site, the third command in the example uses the `Set-CsWebServiceConfiguration` cmdlet and the Instance parameter to overwrite settings for the Redmond site with the settings stored in $x.
 
-### -------------------------- Example 7 --------------------------
+### Example 7
 
 ```powershell
 Set-CsWebServiceConfiguration -Identity "site:Redmond" - CrossDomainAuthorizationList $Null
