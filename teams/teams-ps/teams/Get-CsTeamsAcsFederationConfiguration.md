@@ -30,20 +30,6 @@ This cmdlet is used retrieve the Teams and ACS federation configuration for a Te
 
 You must be a Teams service admin, a Teams communication admin, or Global Administrator for your organization to run the cmdlet.
 
-## EXAMPLES
-
-### Example 1
-In this example, federation has been enabled for just one ACS resource.
-
-```powershell
-Get-CsTeamsAcsFederationConfiguration
-
-Identity             : Global
-AllowedAcsResources  : {'faced04c-2ced-433d-90db-063e424b87b1'}
-BlockedAcsResources  : {}
-EnableAcsUsers       : True
-AllowAllAcsResources : False
-```
 
 ## PARAMETERS
 
