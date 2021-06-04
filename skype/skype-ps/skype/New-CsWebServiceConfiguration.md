@@ -53,7 +53,7 @@ Likewise, your command will fail if you try to create a new collection at, for i
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------
+### Example 1
 ```
 New-CsWebServiceConfiguration -Identity site:Redmond -EnableGroupExpansion $False -UseCertificateAuth $True
 ```
@@ -66,7 +66,7 @@ Note that this command will fail if a collection of Web Services configuration s
 That's because sites are limited to a single collection of Web Services configuration settings.
 
 
-### -------------------------- Example 2 ------------------------
+### Example 2
 ```
 $x = New-CsWebServiceConfiguration -Identity site:Redmond -InMemory
 
@@ -88,7 +88,7 @@ If you do not call the `Set-CsWebServiceConfiguration` cmdlet, no new settings w
 Instead, your virtual Web Services configuration settings will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 $x = New-CsWebOrigin -Url "http://fabrikam.com"
 
@@ -103,7 +103,7 @@ The second command in the example uses the `New-CsWebServiceConfiguration` cmdle
 The syntax `- CrossDomainAuthorizationList $x` adds http://fabrikam.com to the collection of domains authorized for cross-domain scripting.
 
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 $x = New-CsWebOrigin -Url "http://fabrikam.com"
 
