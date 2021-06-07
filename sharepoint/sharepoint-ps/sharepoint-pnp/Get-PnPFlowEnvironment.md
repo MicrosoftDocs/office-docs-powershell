@@ -12,6 +12,10 @@ schema: 2.0.0
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFlowEnvironment.md to change this file.
 
+**Required Permissions**
+
+* Azure: management.azure.com
+
 Retrieves the Microsoft Flow environments for the current tenant.
 
 ## SYNTAX

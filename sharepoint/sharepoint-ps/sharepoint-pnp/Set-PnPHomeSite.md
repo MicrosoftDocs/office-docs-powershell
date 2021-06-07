@@ -19,12 +19,12 @@ online version: https://pnp.github.io/powershell/cmdlets/Set-PnPHomeSite.html
 
 * SharePoint: Access to the SharePoint Tenant Administration site
 
-Sets the home site for your tenant
+Sets the home site for your tenant. The home site needs to be a communication site.
 
 ## SYNTAX
 
 ```powershell
-Set-PnPHomeSite -Url <String> [-Connection <PnPConnection>] [<CommonParameters>]
+Set-PnPHomeSite -HomeSiteUrl <String> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ Set-PnPHomeSite -Url <String> [-Connection <PnPConnection>] [<CommonParameters>]
 
 ### EXAMPLE 1
 ```powershell
-Set-PnPHomeSite -Url "https://yourtenant.sharepoint.com/sites/myhome"
+Set-PnPHomeSite -HomeSiteUrl "https://yourtenant.sharepoint.com/sites/myhome"
 ```
 
 Sets the home site to the provided site collection url
@@ -54,7 +54,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Url
+### -HomeSiteUrl
 The url of the site to set as the home site
 
 ```yaml
@@ -71,4 +71,4 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
+[Set up a home site for your organization](https://docs.microsoft.com/sharepoint/home-site)
