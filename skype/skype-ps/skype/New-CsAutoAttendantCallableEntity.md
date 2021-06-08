@@ -18,7 +18,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,21 +37,21 @@ In order to setup a shared voicemail, an Office 365 Group that can receive exter
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity "9bad1a25-3203-5207-b34d-1bd933b867a5" -Type User
 ```
 
 This example creates a user callable entity.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type ExternalPSTN
 ```
 
 This example creates an ExternalPSTN callable entity.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```powershell
 $operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
@@ -59,7 +59,7 @@ $callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId 
 
 This example gets a user object using Get-CsOnlineUser cmdlet. We then use the AAD ObjectId of that user object to create a user callable entity.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```powershell
 $callableEntityId = (Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant") -MaxResults 1 | Select-Object -Property Id
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type ApplicationEndpoint
@@ -67,7 +67,7 @@ $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId 
 
 This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the AAD ObjectId of that application instance to create an application endpoint callable entity.
 
-### -------------------------- Example 5 --------------------------
+### Example 5
 ```powershell
 $callableEntityGroup = Find-CsGroup -SearchQuery "Main Auto Attendant" -ExactMatchOnly $true -MailEnabledOnly $true
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityGroup -Type SharedVoicemail -EnableTranscription
@@ -136,6 +136,22 @@ Accept wildcard characters: False
 
 ### -EnableTranscription
 Enables the email transcription of voicemail, this is only supported with shared voicemail callable entities.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSharedVoicemailSystemPromptSuppression
+Suppresses the "Please leave a message after the tone" system prompt when transferring to shared voicemail.
 
 ```yaml
 Type: SwitchParameter
