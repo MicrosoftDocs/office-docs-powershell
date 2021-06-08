@@ -412,6 +412,7 @@ Determines if Spam filtering is enabled.
 Possible values:
 - Enabled
 - Disabled
+- EnabledWithoutIVR
 
 ```yaml
 Type: String
