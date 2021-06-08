@@ -294,10 +294,15 @@ If set to True, Cross-Origin Resource Sharing is enabled.
 ```yaml
 Type: Boolean
 Position: Named
-Default value: None
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 ```
 
 ### -EnableGroupExpansion
