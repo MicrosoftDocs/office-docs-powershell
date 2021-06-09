@@ -3303,7 +3303,17 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
 
+### [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
+
+### [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
+
+### [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
+
+### [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
+
 ### [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+
+### [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers.md)
 
 ### [Get-CSTeamsIPPhonePolicy](Get-CSTeamsIPPhonePolicy.md)
 

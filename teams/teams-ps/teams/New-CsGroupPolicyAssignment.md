@@ -12,6 +12,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
+**Note:** Group policy assignment is currently not available in Microsoft 365 Government GCC High or DoD deployments.
+
 This cmdlet is used to assign a policy to a security group or distribution list.
 
 ## SYNTAX

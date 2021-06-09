@@ -211,12 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDedupe
-This parameter is available only in the cloud-based service.
-
-The EnableDedupe parameter eliminates duplication of messages when you export content search results. Valid values are:
-
-- $true: Export a single copy of a message if the same message exists in multiple folders or mailboxes.
-- $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Export-RecipientDataProperty cmdlet to download a user's picture or spoken name sound file. The picture and audio files display in the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook and Outlook on the web.
+Use the Export-RecipientDataProperty cmdlet to download a user's picture or spoken name sound file. The picture and audio files display in the Global Address List property dialog box, contact card, reading pane, and meeting requests in Outlook.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
