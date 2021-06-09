@@ -23,7 +23,7 @@ Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Mai
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
