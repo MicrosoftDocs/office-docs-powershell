@@ -21,6 +21,7 @@ Remove-TeamTargetingHierarchy
 ```
 
 ## DESCRIPTION
+Removes the tenant's hierarchy.
 
 ## EXAMPLES
 
@@ -32,6 +33,12 @@ PS C:\> Remove-TeamTargetingHierarchy
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
