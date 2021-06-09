@@ -24,13 +24,7 @@ Set-TeamTargetingHierarchyStatus [-FilePath <String>]
 
 A sample CSV file uses the following format:
 
-```text
-TargetName,ParentName,TeamId,Location:Clothing,Location:Jewelry,#Bucket1,#Bucket2`
-Apogee,,A8A6626F-87B3-4B8A-9469-47BCD1174673,0,0
-New Jersey,Apogee,06763207-4F56-4DFE-96AE-4C7F9ADCFB43,0,0
-Basking Ridge,NewJersey,5F44CC65-9521-4F7F-9099-64320153CA07,1,0
-Mountain Lakes,NewJersey,58A21379-8E4D-4DA5-AA35-9CC188D8A998,0,1
-```
+`TargetName,ParentName,TeamId,Location:Clothing,Location:Jewelry,#Bucket1,#Bucket2`<br>`Apogee,,A8A6626F-87B3-4B8A-9469-47BCD1174673,0,0`<br>`New Jersey,Apogee,06763207-4F56-4DFE-96AE-4C7F9ADCFB43,0,0`<br>`Basking Ridge,NewJersey,5F44CC65-9521-4F7F-9099-64320153CA07,1,0`<br>`Mountain Lakes,NewJersey,58A21379-8E4D-4DA5-AA35-9CC188D8A998,0,1`
 
 Based on the CSV file, the following hierarchy is created:
 
