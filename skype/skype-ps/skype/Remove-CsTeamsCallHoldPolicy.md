@@ -32,7 +32,7 @@ Assinging a teams call hold policy to a user sets an audio file to be played dur
 ## EXAMPLES
 
 ### Example 1
-### Example 1
+
 ```powershell
 PS C:\> Remove-CsTeamsCallHoldPolicy -Identity 'ContosoPartnerTeamsCallHoldPolicy'
 ```
