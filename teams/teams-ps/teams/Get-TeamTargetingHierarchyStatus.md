@@ -32,7 +32,7 @@ requestId c67e86109d88479e9708c3b7e8ff7217
 
 PS C:\> Get-TeamTargetingHierarchyStatus -RequestId c67e86109d88479e9708c3b7e8ff7217
 
-When an error occurs, you will see the details in the ErrorMessage field.
+# When an error occurs, you will see the details in the ErrorMessage field.
 
 Id              : c67e86109d88479e9708c3b7e8ff7217
 Status          : Failed
@@ -51,7 +51,7 @@ LastUpdatedAt   : 2021-02-17T22:28:08.7832795+00:00
 LastModifiedBy  : a145d7eb-b70d-4591-9455-6c87382a22b7
 FileName        : hier1.csv
 
-When the hierarchy uploads and parses successfully, you will see this status.
+# When the hierarchy uploads and parses successfully, you will see this status.
 
 Id              : c67e86109d88479e9708c3b7e8ff7217
 Status          : Successful
