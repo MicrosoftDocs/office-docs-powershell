@@ -23,6 +23,12 @@ The following cmdlet references are for PnP PowerShell
 ### [Add-PnPApplicationCustomizer](Add-PnPApplicationCustomizer.md)
 {{Manually Enter Add-PnPApplicationCustomizer Description Here}}
 
+### [Add-PnPAzureADGroupMember](Add-PnPAzureADGroupMember.md)
+{{Manually Enter Add-PnPAzureADGroupMember Description Here}}
+
+### [Add-PnPAzureADGroupOwner](Add-PnPAzureADGroupOwner.md)
+{{Manually Enter Add-PnPAzureADGroupOwner Description Here}}
+
 ### [Add-PnPContentType](Add-PnPContentType.md)
 {{Manually Enter Add-PnPContentType Description Here}}
 
@@ -158,6 +164,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Add-PnPSiteScript](Add-PnPSiteScript.md)
 {{Manually Enter Add-PnPSiteScript Description Here}}
 
+### [Add-PnPSiteScriptPackage](Add-PnPSiteScriptPackage.md)
+{{Manually Enter Add-PnPSiteScriptPackage Description Here}}
+
 ### [Add-PnPSiteTemplate](Add-PnPSiteTemplate.md)
 {{Manually Enter Add-PnPSiteTemplate Description Here}}
 
@@ -214,6 +223,12 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Approve-PnPTenantServicePrincipalPermissionRequest](Approve-PnPTenantServicePrincipalPermissionRequest.md)
 {{Manually Enter Approve-PnPTenantServicePrincipalPermissionRequest Description Here}}
+
+### [Clear-PnPAzureADGroupMember](Clear-PnPAzureADGroupMember.md)
+{{Manually Enter Clear-PnPAzureADGroupMember Description Here}}
+
+### [Clear-PnPAzureADGroupOwner](Clear-PnPAzureADGroupOwner.md)
+{{Manually Enter Clear-PnPAzureADGroupOwner Description Here}}
 
 ### [Clear-PnPDefaultColumnValues](Clear-PnPDefaultColumnValues.md)
 {{Manually Enter Clear-PnPDefaultColumnValues Description Here}}
@@ -365,6 +380,24 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPAvailableLanguage](Get-PnPAvailableLanguage.md)
 {{Manually Enter Get-PnPAvailableLanguage Description Here}}
 
+### [Get-PnPAzureADApp](Get-PnPAzureADApp.md)
+{{Manually Enter Get-PnPAzureADApp Description Here}}
+
+### [Get-PnPAzureADAppPermission](Get-PnPAzureADAppPermission.md)
+{{Manually Enter Get-PnPAzureADAppPermission Description Here}}
+
+### [Get-PnPAzureADAppSitePermission](Get-PnPAzureADAppSitePermission.md)
+{{Manually Enter Get-PnPAzureADAppSitePermission Description Here}}
+
+### [Get-PnPAzureADGroup](Get-PnPAzureADGroup.md)
+{{Manually Enter Get-PnPAzureADGroup Description Here}}
+
+### [Get-PnPAzureADGroupMember](Get-PnPAzureADGroupMember.md)
+{{Manually Enter Get-PnPAzureADGroupMember Description Here}}
+
+### [Get-PnPAzureADGroupOwner](Get-PnPAzureADGroupOwner.md)
+{{Manually Enter Get-PnPAzureADGroupOwner Description Here}}
+
 ### [Get-PnPAzureCertificate](Get-PnPAzureCertificate.md)
 {{Manually Enter Get-PnPAzureCertificate Description Here}}
 
@@ -512,11 +545,11 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPMicrosoft365Group](Get-PnPMicrosoft365Group.md)
 {{Manually Enter Get-PnPMicrosoft365Group Description Here}}
 
-### [Get-PnPMicrosoft365GroupMembers](Get-PnPMicrosoft365GroupMembers.md)
-{{Manually Enter Get-PnPMicrosoft365GroupMembers Description Here}}
+### [Get-PnPMicrosoft365GroupMember](Get-PnPMicrosoft365GroupMember.md)
+{{Manually Enter Get-PnPMicrosoft365GroupMember Description Here}}
 
-### [Get-PnPMicrosoft365GroupOwners](Get-PnPMicrosoft365GroupOwners.md)
-{{Manually Enter Get-PnPMicrosoft365GroupOwners Description Here}}
+### [Get-PnPMicrosoft365GroupOwner](Get-PnPMicrosoft365GroupOwner.md)
+{{Manually Enter Get-PnPMicrosoft365GroupOwner Description Here}}
 
 ### [Get-PnPNavigationNode](Get-PnPNavigationNode.md)
 {{Manually Enter Get-PnPNavigationNode Description Here}}
@@ -656,6 +689,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPStructuralNavigationCacheWebState](Get-PnPStructuralNavigationCacheWebState.md)
 {{Manually Enter Get-PnPStructuralNavigationCacheWebState Description Here}}
 
+### [Get-PnPSubscribeSharePointNewsDigest](Get-PnPSubscribeSharePointNewsDigest.md)
+{{Manually Enter Get-PnPSubscribeSharePointNewsDigest Description Here}}
+
 ### [Get-PnPSubWeb](Get-PnPSubWeb.md)
 {{Manually Enter Get-PnPSubWeb Description Here}}
 
@@ -682,6 +718,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Get-PnPTeamsUser](Get-PnPTeamsUser.md)
 {{Manually Enter Get-PnPTeamsUser Description Here}}
+
+### [Get-PnPTemporarilyDisableAppBar](Get-PnPTemporarilyDisableAppBar.md)
+{{Manually Enter Get-PnPTemporarilyDisableAppBar Description Here}}
 
 ### [Get-PnPTenant](Get-PnPTenant.md)
 {{Manually Enter Get-PnPTenant Description Here}}
@@ -788,6 +827,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPWikiPageContent](Get-PnPWikiPageContent.md)
 {{Manually Enter Get-PnPWikiPageContent Description Here}}
 
+### [Grant-PnPAzureADAppSitePermission](Grant-PnPAzureADAppSitePermission.md)
+{{Manually Enter Grant-PnPAzureADAppSitePermission Description Here}}
+
 ### [Grant-PnPHubSiteRights](Grant-PnPHubSiteRights.md)
 {{Manually Enter Grant-PnPHubSiteRights Description Here}}
 
@@ -856,6 +898,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Move-PnpRecycleBinItem](Move-PnpRecycleBinItem.md)
 {{Manually Enter Move-PnpRecycleBinItem Description Here}}
+
+### [New-PnPAzureADGroup](New-PnPAzureADGroup.md)
+{{Manually Enter New-PnPAzureADGroup Description Here}}
 
 ### [New-PnPAzureCertificate](New-PnPAzureCertificate.md)
 {{Manually Enter New-PnPAzureCertificate Description Here}}
@@ -974,6 +1019,15 @@ The following cmdlet references are for PnP PowerShell
 ### [Register-PnPManagementShellAccess](Register-PnPManagementShellAccess.md)
 {{Manually Enter Register-PnPManagementShellAccess Description Here}}
 
+### [Remove-PnPAadGroup](Remove-PnPAadGroup.md)
+{{Manually Enter Remove-PnPAadGroup Description Here}}
+
+### [Remove-PnPAadGroupMember](Remove-PnPAadGroupMember.md)
+{{Manually Enter Remove-PnPAadGroupMember Description Here}}
+
+### [Remove-PnPAadGroupOwner](Remove-PnPAadGroupOwner.md)
+{{Manually Enter Remove-PnPAadGroupOwner Description Here}}
+
 ### [Remove-PnPAlert](Remove-PnPAlert.md)
 {{Manually Enter Remove-PnPAlert Description Here}}
 
@@ -982,6 +1036,12 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Remove-PnPApplicationCustomizer](Remove-PnPApplicationCustomizer.md)
 {{Manually Enter Remove-PnPApplicationCustomizer Description Here}}
+
+### [Remove-PnPAzureADApp](Remove-PnPAzureADApp.md)
+{{Manually Enter Remove-PnPAzureADApp Description Here}}
+
+### [Remove-PnPAzureADAppSitePermission](Remove-PnPAzureADAppSitePermission.md)
+{{Manually Enter Remove-PnPAzureADAppSitePermission Description Here}}
 
 ### [Remove-PnPContentType](Remove-PnPContentType.md)
 {{Manually Enter Remove-PnPContentType Description Here}}
@@ -1274,6 +1334,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Send-PnPMail](Send-PnPMail.md)
 {{Manually Enter Send-PnPMail Description Here}}
 
+### [Set-PnPAadGroup](Set-PnPAadGroup.md)
+{{Manually Enter Set-PnPAadGroup Description Here}}
+
 ### [Set-PnPApplicationCustomizer](Set-PnPApplicationCustomizer.md)
 {{Manually Enter Set-PnPApplicationCustomizer Description Here}}
 
@@ -1285,6 +1348,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Set-PnPAvailablePageLayouts](Set-PnPAvailablePageLayouts.md)
 {{Manually Enter Set-PnPAvailablePageLayouts Description Here}}
+
+### [Set-PnPAzureADAppSitePermission](Set-PnPAzureADAppSitePermission.md)
+{{Manually Enter Set-PnPAzureADAppSitePermission Description Here}}
 
 ### [Set-PnPBrowserIdleSignout](Set-PnPBrowserIdleSignout.md)
 {{Manually Enter Set-PnPBrowserIdleSignout Description Here}}
@@ -1436,6 +1502,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Set-PnPSiteScript](Set-PnPSiteScript.md)
 {{Manually Enter Set-PnPSiteScript Description Here}}
 
+### [Set-PnPSiteScriptPackage](Set-PnPSiteScriptPackage.md)
+{{Manually Enter Set-PnPSiteScriptPackage Description Here}}
+
 ### [Set-PnPSiteTemplateMetadata](Set-PnPSiteTemplateMetadata.md)
 {{Manually Enter Set-PnPSiteTemplateMetadata Description Here}}
 
@@ -1447,6 +1516,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Set-PnPStructuralNavigationCacheWebState](Set-PnPStructuralNavigationCacheWebState.md)
 {{Manually Enter Set-PnPStructuralNavigationCacheWebState Description Here}}
+
+### [Set-PnPSubscribeSharePointNewsDigest](Set-PnPSubscribeSharePointNewsDigest.md)
+{{Manually Enter Set-PnPSubscribeSharePointNewsDigest Description Here}}
 
 ### [Set-PnPTaxonomyFieldValue](Set-PnPTaxonomyFieldValue.md)
 {{Manually Enter Set-PnPTaxonomyFieldValue Description Here}}
@@ -1468,6 +1540,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Set-PnPTeamsTeamPicture](Set-PnPTeamsTeamPicture.md)
 {{Manually Enter Set-PnPTeamsTeamPicture Description Here}}
+
+### [Set-PnPTemporarilyDisableAppBar](Set-PnPTemporarilyDisableAppBar.md)
+{{Manually Enter Set-PnPTemporarilyDisableAppBar Description Here}}
 
 ### [Set-PnPTenant](Set-PnPTenant.md)
 {{Manually Enter Set-PnPTenant Description Here}}

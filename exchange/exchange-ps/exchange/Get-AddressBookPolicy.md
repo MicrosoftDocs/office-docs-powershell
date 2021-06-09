@@ -49,7 +49,7 @@ This example returns default information about the address book policy All Fabri
 
 ### Example 3
 ```powershell
-Get-AddressBookPolicy | where {$_.OfflineAddressBook eq "\Fabrikam All OAB"}
+Get-AddressBookPolicy | where {$_.OfflineAddressBook -eq "\Fabrikam All OAB"}
 ```
 
 This example returns information about all address book policies for which the offline address book (OAB) that the address book policy uses is named Fabrikam All OAB.

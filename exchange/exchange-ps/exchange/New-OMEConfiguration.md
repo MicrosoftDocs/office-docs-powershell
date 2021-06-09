@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-BackgroundColor <String>]
+ [-Confirm]
  [-DisclaimerText <String>]
  [-EmailText <String>]
  [-ExternalMailExpiryInDays <Int32>]
@@ -32,8 +33,10 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-IntroductionText <String>]
  [-OTPEnabled <Boolean>]
  [-PortalText <String>]
+ [-PrivacyStatementUrl <String>]
  [-ReadButtonText <String>]
  [-SocialIdSignIn <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -80,6 +83,22 @@ For more information, see [Add your organization's brand to your encrypted messa
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Exchange Online
 
 Required: False
@@ -214,6 +233,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrivacyStatementUrl
+{{ Fill PrivacyStatementUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReadButtonText
 The ReadButtonText parameter specifies the text that appears on the "Read Message" button. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -240,6 +275,22 @@ The SocialIdSignIn parameter specifies whether a user is allowed to view an encr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Online
 
 Required: False

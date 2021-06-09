@@ -23,11 +23,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AccessRights
 ```
 Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+ [-BypassMasterAccountSid]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
+ [-SoftDeletedMailbox]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -39,6 +42,7 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
@@ -50,8 +54,10 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
 ### Owner
 ```
 Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
+ [-BypassMasterAccountSid]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-WhatIf]
  [<CommonParameters>]
@@ -60,6 +66,7 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
 ### ClearAutoMapping
 ```
 Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-BypassMasterAccountSid]
  [-ClearAutoMapping]
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
@@ -127,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the rights required to perform the operation. You can use the following values:
+The AccessRights parameter specifies the permission that you want to remove from the user on the mailbox. Valid values are:
 
 - FullAccess
 - SendAs
@@ -136,6 +143,8 @@ The AccessRights parameter specifies the rights required to perform the operatio
 - ReadPermission
 - ChangePermission
 - ChangeOwner
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MailboxRights[]
@@ -195,7 +204,24 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user mailbox that will get permissions removed.
+The User parameter specifies whose permissions are being removed from the specified mailbox. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -237,6 +263,26 @@ Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassMasterAccountSid
+This parameter is available only in the cloud-based service.
+
+The BypassMasterAccountSid parameter is required when you receive the following error when you try to use this cmdlet: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.`
+
+Typically, you only need to use this parameter in Microsoft Office 365 Dedicated/ITAR legacy environments.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, ClearAutoMapping
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -288,6 +334,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+This parameter is available only in the cloud-based service.
+
+The GroupMailbox switch is required to remove permissions from a Microsoft 365 Group mailbox. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights, Owner, Instance
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -351,6 +415,26 @@ Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeletedMailbox
+This parameter is available only in the cloud-based service.
+
+The SoftDeletedMailbox switch is required to remove permissions from a soft-deleted mailbox. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

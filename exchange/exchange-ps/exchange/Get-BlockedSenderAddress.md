@@ -53,7 +53,7 @@ The SenderAddress parameter filters the results by the email address of the bloc
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
