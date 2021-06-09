@@ -1,69 +1,32 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpsite
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: New-PnPSite
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/New-PnPSite.html
 ---
-
+ 
 # New-PnPSite
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/New-PnPSite.md to change this file.
+
 Creates either a communication site or a Microsoft 365 group-connected team site
 
-## SYNTAX 
+## SYNTAX
 
-### Communication Site with Built-In Site Design
+### TeamSite
 ```powershell
-New-PnPSite -Title <String>
-            -Url <String>
-            -Type <SiteType>
-            [-Description <String>]
-            [-Classification <String>]
-            [-SensitivityLabel <String>]
-            [-Owner <String>]
-            [-PreferredDataLocation <Office365Geography>]
-            [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
-            [-SiteDesign <CommunicationSiteDesign>]
-            [-Lcid <UInt32>]
-            [-HubSiteId <GuidPipeBind>]
-            [-Wait [<SwitchParameter>]]
-            [-Connection <PnPConnection>]
+New-PnPSite -Type TeamSite -Title <String> -Alias <String> [-Description <String>] [-Classification <String>] [-IsPublic] [-Lcid <UInt>] [-Owners <String[][]>] [-PreferredDataLocation <Office365Geography>] [-SensitivityLabel <String>] [-HubSiteId <Guid>] [-Wait] [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
-### Team Site
+### CommunicationSite
 ```powershell
-New-PnPSite -Title <String>
-            -Alias <String>
-            -Type <SiteType>
-            [-Lcid <UInt32>]
-            [-Description <String>]
-            [-Classification <String>]
-            [-SensitivityLabel <String>]
-            [-IsPublic [<SwitchParameter>]]
-            [-Owners <String[]>]
-            [-PreferredDataLocation <Office365Geography>]
-            [-HubSiteId <GuidPipeBind>]
-            [-Wait [<SwitchParameter>]]
-            [-Connection <PnPConnection>]
-```
-
-### Communication Site with Custom Design
-```powershell
-New-PnPSite -Title <String>
-            -Url <String>
-            -SiteDesignId <GuidPipeBind>
-            -Type <SiteType>
-            [-Description <String>]
-            [-Classification <String>]
-            [-SensitivityLabel <String>]
-            [-Owner <String>]
-            [-PreferredDataLocation <Office365Geography>]
-            [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
-            [-Lcid <UInt32>]
-            [-HubSiteId <GuidPipeBind>]
-            [-Wait [<SwitchParameter>]]
-            [-Connection <PnPConnection>]
+New-PnPSite -Type CommunicationSite -Title <String> -Url <String> [-HubSiteId <Guid>] [-Classification <String>] [-SiteDesign <SiteDesign>] [-SiteDesignId <Guid>] [-Lcid <UInt>] [-Owner <String>] [-PreferredDataLocation <Office365Geography>] [-SensitivityLabel <String>]
 ```
 
 ## DESCRIPTION
@@ -71,63 +34,63 @@ The New-PnPSite cmdlet creates a new site collection for the current tenant. Cur
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -SiteDesign Showcase
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'. It will use the 'Showcase' design for the site.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -SiteDesignId ae2349d5-97d6-4440-94d1-6516b72449ac
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'. It will use the specified custom site design for the site.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Classification "HBI"
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'. The classification for the site will be set to "HBI"
 
-### ------------------EXAMPLE 5------------------
+### EXAMPLE 5
 ```powershell
 New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -ShareByEmailEnabled
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'. Allows owners to invite users outside of the organization.
 
-### ------------------EXAMPLE 6------------------
+### EXAMPLE 6
 ```powershell
 New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1040
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' and sets the default language to Italian.
 
-### ------------------EXAMPLE 7------------------
+### EXAMPLE 7
 ```powershell
 New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso
 ```
 
 This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal.
 
-### ------------------EXAMPLE 8------------------
+### EXAMPLE 8
 ```powershell
 New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso -IsPublic
 ```
 
 This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal and sets the site to public.
 
-### ------------------EXAMPLE 9------------------
+### EXAMPLE 9
 ```powershell
 New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso -Lcid 1040
 ```
@@ -137,207 +100,45 @@ This will create a new Modern Team Site collection with the title 'Team Contoso'
 ## PARAMETERS
 
 ### -Alias
-Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal, this parameter only applies to Modern Team Sites
+The alias to use for the team site.
 
 ```yaml
 Type: String
-Parameter Sets: Team Site
+Parameter Sets: TeamSite
 
 Required: True
-Position: 0
+Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -AllowFileSharingForGuestUsers
-Specifies if guest users can share files in the new site collection
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Classification
-Specifies the classification of the new site collection
+The classification to use for the new site.
 
 ```yaml
 Type: String
-Parameter Sets: Communication Site with Built-In Site Design
+Parameter Sets: CommunicationSite, TeamSite
 
 Required: False
-Position: 0
+Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies the description of the new site collection
+The description of the site to create
 
 ```yaml
 Type: String
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -HubSiteId
-If specified the site will be associated to the hubsite as identified by this id
-
-```yaml
-Type: GuidPipeBind
-Parameter Sets: (All)
+Parameter Sets: CommunicationSite, TeamSite
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -IsPublic
-Specifies if the Office 365 Group should be public. Defaults to private.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Team Site
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Lcid
-Specifies the language of the new site collection. Defaults to the current language of the web connected to. For more information, see Locale IDs supported by SharePoint at https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint. To get the list of supported languages on a SharePoint environment use: Get-PnPAvailableLanguage.
-
-```yaml
-Type: UInt32
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Owner
-Specifies the owner of the site. Specify the value as a string array: "user@domain.com"
-
-```yaml
-Type: String
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Owners
-Specifies the owners of the site. Specify the value as a string array: "user@domain.com","anotheruser@domain.com"
-
-```yaml
-Type: String[]
-Parameter Sets: Team Site
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -PreferredDataLocation
-Allows specifying in which geography the SharePoint site collection should be created. I.e. NAM, EUR, APC. For a full list of available regions, see https://docs.microsoft.com/office365/enterprise/multi-geo-add-group-with-pdl#geo-location-codes. Only supported on multi-geo enabled tenants.
-
-```yaml
-Type: Office365Geography
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -SensitivityLabel
-Specifies the sensitivity label of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -SiteDesign
-Specifies the site design of the new site collection. Defaults to 'Topic'
-
-```yaml
-Type: CommunicationSiteDesign
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -SiteDesignId
-Specifies the site design id to use for the new site collection. If specified will override SiteDesign
-
-```yaml
-Type: GuidPipeBind
-Parameter Sets: Communication Site with Custom Design
-
-Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -Title
-Specifies the title of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -Type
-Specifies with type of site to create.
-
-```yaml
-Type: SiteType
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Url
-Specifies the full url of the new site collection, this parameter only applies to Communications Sites
-
-```yaml
-Type: String
-Parameter Sets: Communication Site with Built-In Site Design
-
-Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -Wait
-If specified the cmdlet will wait until the site has been fully created and all site artifacts have been provisioned by SharePoint. Notice that this can take a while.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Connection
@@ -349,15 +150,210 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Description
+The description of the site to create
+```yaml
+Type: String
+Parameter Sets: CommunicationSite, TeamSite
 
-### System.String
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-Returns the url of the newly created site collection
+### -HubSiteId
+If specified the site will be associated to the hubsite as identified by this id
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsPublic
+Specifies if the site is public.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: TeamSite
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Lcid
+The language to use for the site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CommunicationSite, TeamSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Owners
+One or more owners to specify for the site. Defaults to the current user. Required if you use an app-only connection.
+
+```yaml
+Type: String[]
+Parameter Sets: TeamSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Owner
+The owner to specify for the site. Defaults to the current user. Required if you use an app-only connection.
+
+```yaml
+Type: String
+Parameter Sets: CommunicationSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferredDataLocation
+In case of a multi-geo environment you can specify the preferred data location
+
+```yaml
+Type: String
+Parameter Sets: CommunicationSite, TeamSite
+Accepted values: APC, ARE, AUS, CAN, CHE, DEU, EUR, FRA, GBR, IND, JPN, KOR, NAM, NOR, ZAF
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SensitivityLabel
+The sensitivity label to specify for the new site.
+
+```yaml
+Type: String
+Parameter Sets: CommunicationSite, TeamSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShareByEmailEnabled
+If specified sharing content by email will be enabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CommunicationSite
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteDesign
+Allows to specify an OOTB site design
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CommunicationSite
+Accepted values: Blank, Topic, Showcase
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteDesignId
+Allows to specify a custom site design
+
+```yaml
+Type: Guid
+Parameter Sets: CommunicationSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+Specifies the title of the site to create
+
+```yaml
+Type: String
+Parameter Sets: CommunicationSite, TeamSite
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+Specifies with type of site to create.
+
+```yaml
+Type: SiteType
+Parameter Sets: (All)
+Accepted values: CommunicationSite, TeamSite
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Wait
+If specified the cmdlet will wait until the site has been fully created and all site artifacts have been provisioned by SharePoint. Notice that this can take a while.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

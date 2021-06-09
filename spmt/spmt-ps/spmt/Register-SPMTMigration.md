@@ -19,7 +19,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```powershell
-Register-SPMTMigration [-SPOCredentials<PSCredential>] [-EnableMultiRound <bool>] [-ScanOnly <bool>] [-MigrateFilesAndFoldersWithInvalidChars <bool>] [-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-IgnoreUpdate <SwitchParameter>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtension <string>] [-IncludeHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>] [-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>] [-DuplicatePageBehavior <string>] [-MigrateNavigation <string>] [-MigrateTermGroups <string>] -Force
+Register-SPMTMigration [-SPOCredentials<PSCredential>] [-EnableMultiRound <bool>] [-ScanOnly <bool>] [-MigrateFilesAndFoldersWithInvalidChars <bool>] [-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-IgnoreUpdate <SwitchParameter>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtension <string>] [-IncludeHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>] [-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>] [-DuplicatePageBehavior <string>] [-MigrateNavigation <string>] [-MigrateTermGroups <string>] [-MigrateWithoutRootFolder] -Force
 ```
 
 ## DESCRIPTION
@@ -591,6 +591,21 @@ We will migrate the term groups when doing the migration.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrateWithoutRootFolder
+In file share migrations, use this parameter to migrate only the root folder's contents to the target.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

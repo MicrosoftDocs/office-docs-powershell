@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-clutter
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-Clutter
 schema: 2.0.0
 author: chrisda
@@ -60,7 +60,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -79,7 +79,7 @@ The Enable parameter specifies whether to enable or disable Clutter for the mail
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -46,6 +46,7 @@ New-ComplianceSearchAction [-SearchName] <String[]>
  [-Scope <ComplianceExportScope>]
  [-SearchNames <String[]>]
  [-SharePointArchiveFormat <ComplianceExportArchiveFormat>]
+ [-ShareRootPath <String>]
  [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -173,10 +174,6 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveFormat
-This parameter is available only in the cloud-based service.
-
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
-
 This parameter has been deprecated and is no longer used.
 
 To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter. To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
@@ -185,7 +182,7 @@ To specify the format for Exchange search results, use the ExchangeArchiveFormat
 Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -214,12 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDedupe
-This parameter is available only in the cloud-based service.
-
-The EnableDedupe parameter eliminates duplication of messages when you export content search results. Valid values are:
-
-- $true: Export a single copy of a message if the same message exists in multiple folders or mailboxes.
-- $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -235,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchiveFormat
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
@@ -254,7 +246,7 @@ To specify the format for SharePoint and OneDrive search results, use the ShareP
 Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -264,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -Export
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
@@ -276,7 +268,7 @@ To only return the information about each detected item in a report, use the Rep
 Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -493,15 +485,13 @@ Accept wildcard characters: False
 ```
 
 ### -ReferenceActionName
-This parameter is available only in the cloud-based service.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -511,15 +501,13 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-This parameter is available only in the cloud-based service.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -529,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The Report switch specifies the action for the content search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
 
@@ -537,7 +525,7 @@ The Report switch specifies the action for the content search is to export a rep
 Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -625,26 +613,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScopeDetails
-This parameter is available only in the cloud-based service.
-
-This parameter requires the Export or Compliance Search roles in the Security & Compliance Center. By default, these roles are assigned only to the eDiscovery Manager role group.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ComplianceScopeDetail[]
-Parameter Sets: Export
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SearchNames
 This parameter is available only in the cloud-based service.
 
@@ -666,7 +634,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointArchiveFormat
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
@@ -682,7 +650,23 @@ To specify the format for Exchange search results, use the ExchangeArchiveFormat
 Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShareRootPath
+{{ Fill ShareRootPath Description }}
+
+```yaml
+Type: String
+Parameter Sets: Export
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-ComplianceTagStorage [-Confirm]
+Enable-ComplianceTagStorage
+ [-Confirm]
+ [-RecordsManagementSecurityGroupEmail <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -52,6 +54,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordsManagementSecurityGroupEmail
+This RecordsManagementSecurityGroupEmail parameter specifies the email address of the mail-enabled security group that contains the records managers in the organization.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

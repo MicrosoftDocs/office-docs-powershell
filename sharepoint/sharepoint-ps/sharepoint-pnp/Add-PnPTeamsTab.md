@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpteamstab
-applicable: SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Add-PnPTeamsTab.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Add-PnPTeamsTab
 ---
-
+  
 # Add-PnPTeamsTab
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTeamsTab.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,47 +21,28 @@ title: Add-PnPTeamsTab
 
 Adds a tab to an existing Channel
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
-Add-PnPTeamsTab -TeamsAppId <String>
-                -EntityId <String>
-                -ContentUrl <String>
-                -RemoveUrl <String>
-                -WebSiteUrl <String>
-                -Team <TeamsTeamPipeBind>
-                -Channel <TeamsChannelPipeBind>
-                -DisplayName <String>
-                -Type <TeamTabType>
-                [-ByPassPermissionCheck [<SwitchParameter>]]
+Add-PnPTeamsTab -Team <TeamsTeamPipeBind> -Channel <TeamsChannelPipeBind> -DisplayName <String>
+ -Type <TeamTabType> -ContentUrl <String> [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Add-PnPTeamsTab -Team "My Team" -Channel "My Channel" -DisplayName "My Channel" -Type WebSite -ContentUrl "https://aka.ms/sppnp
+Add-PnPTeamsTab -Team "My Team" -Channel "My Channel" -DisplayName "My Channel" -Type WebSite -ContentUrl "https://aka.ms/m365pnp
 ```
 
 Adds a web site tab to the specified channel.
 
 ## PARAMETERS
 
-### -ByPassPermissionCheck
-Allows the check for required permissions in the access token to be bypassed when set to $true
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Channel
-Specify the channel id of the team to retrieve.
+Specify the channel id or name of the team to retrieve.
 
 ```yaml
 Type: TeamsChannelPipeBind
@@ -64,7 +50,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -ContentUrl
@@ -75,8 +63,10 @@ Type: String
 Parameter Sets: (All)
 
 Required: True
-Position: 0
+Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayName
@@ -88,31 +78,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -EntityId
-Specifies the title of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -RemoveUrl
-Specifies the title of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Team
@@ -124,19 +92,9 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: True
-```
-
-### -TeamsAppId
-Specifies the title of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
 ### -Type
@@ -145,24 +103,17 @@ Specify the tab type
 ```yaml
 Type: TeamTabType
 Parameter Sets: (All)
+Accepted values: WebSite, DocumentLibrary, Wiki, Planner, MicrosoftStream, MicrosoftForms, Word, Excel, PowerPoint, PDF, OneNote, PowerBI, SharePointPageAndList, Custom
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
-```
-
-### -WebSiteUrl
-Specifies the title of the new site collection
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

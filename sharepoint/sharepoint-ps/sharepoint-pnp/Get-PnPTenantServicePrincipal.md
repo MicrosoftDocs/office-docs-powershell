@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantserviceprincipal
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Get-PnPTenantServicePrincipal
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTenantServicePrincipal.html
 ---
-
+ 
 # Get-PnPTenantServicePrincipal
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPTenantServicePrincipal.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,14 +21,16 @@ title: Get-PnPTenantServicePrincipal
 
 Returns the current tenant's "SharePoint Online Client" service principal.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPTenantServicePrincipal [-Connection <PnPConnection>]
+Get-PnPTenantServicePrincipal [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Returns the current tenant's "SharePoint Online Client" service principal.
+
+## EXAMPLES
 
 ## PARAMETERS
 
@@ -36,9 +43,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

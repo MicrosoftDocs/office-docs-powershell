@@ -16,6 +16,8 @@ This cmdlet is available only in the Exchange Online PowerShell V2 module. For m
 
 Use the Set-MyAnalyticsFeatureConfig cmdlet to configure the availability and features of MyAnalytics for the specified user.
 
+**Note**: This cmdlet replaces the Set-UserAnalyticsConfig and Set-UserBriefingConfig cmdlets.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -30,7 +32,13 @@ Set-MyAnalyticsFeatureConfig -Identity <String>
 ```
 
 ## DESCRIPTION
-You need to be a member of the Organization Management role group (Global admins) in the destination organization to run this cmdlet.
+This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
+
+- Global Administrator
+- Exchange Administrator
+- Insights Administrator
+
+To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 

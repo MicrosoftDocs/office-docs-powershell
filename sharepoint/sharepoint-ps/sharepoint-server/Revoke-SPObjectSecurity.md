@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/revoke-spobjectsecurity
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Revoke-SPObjectSecurity

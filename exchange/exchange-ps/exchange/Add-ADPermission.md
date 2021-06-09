@@ -133,9 +133,26 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies the owner of the Active Directory object. If the name of the owner contains spaces, enclose the name in quotation marks (").
+The Owner parameter specifies the owner of the Active Directory object. You can specify the following types of users or groups (security principals) for this parameter:
 
-The Owner parameter can only be used with the Identity parameter and no other parameters.
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the AccessRights or User parameters.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -151,7 +168,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user that the permissions are being granted to on the object. If the name contains spaces, enclose the name in quotation marks (").
+The User parameter specifies who gets the permissions on the Active Directory object. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -180,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the rights needed to perform the operation. Valid values include:
+The AccessRights parameter specifies the rights that you want to add for the user on the Active Directory object. Valid values include:
 
 - AccessSystemSecurity
 - CreateChild
@@ -201,6 +237,10 @@ The AccessRights parameter specifies the rights needed to perform the operation.
 - WriteOwner
 - GenericAll
 - Synchronize
+
+You can specify multiple values separated by commas.
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: ActiveDirectoryRights[]

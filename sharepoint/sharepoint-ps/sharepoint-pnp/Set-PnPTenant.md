@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenant
-applicable: SharePoint Online
-schema: 2.0.0
+Module Name: PnP.PowerShell
 title: Set-PnPTenant
+schema: 2.0.0
+applicable: SharePoint Online
+external help file: PnP.PowerShell.dll-Help.xml
+online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTenant.html
 ---
-
+ 
 # Set-PnPTenant
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTenant.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,70 +21,38 @@ title: Set-PnPTenant
 
 Sets organization-level site collection properties
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Set-PnPTenant [-MinCompatibilityLevel <Int>]
-              [-MaxCompatibilityLevel <Int>]
-              [-ExternalServicesEnabled <Boolean>]
-              [-NoAccessRedirectUrl <String>]
-              [-SharingCapability <SharingCapabilities>]
-              [-DisplayStartASiteOption <Boolean>]
-              [-StartASiteFormUrl <String>]
-              [-ShowEveryoneClaim <Boolean>]
-              [-ShowAllUsersClaim <Boolean>]
-              [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
-              [-SearchResolveExactEmailOrUPN <Boolean>]
-              [-OfficeClientADALDisabled <Boolean>]
-              [-LegacyAuthProtocolsEnabled <Boolean>]
-              [-RequireAcceptingAccountMatchInvitedAccount <Boolean>]
-              [-ProvisionSharedWithEveryoneFolder <Boolean>]
-              [-SignInAccelerationDomain <String>]
-              [-EnableGuestSignInAcceleration <Boolean>]
-              [-UsePersistentCookiesForExplorerView <Boolean>]
-              [-BccExternalSharingInvitations <Boolean>]
-              [-BccExternalSharingInvitationsList <String>]
-              [-UserVoiceForFeedbackEnabled <Boolean>]
-              [-PublicCdnEnabled <Boolean>]
-              [-PublicCdnAllowedFileTypes <String>]
-              [-RequireAnonymousLinksExpireInDays <Int>]
-              [-SharingAllowedDomainList <String>]
-              [-SharingBlockedDomainList <String>]
-              [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
-              [-OneDriveStorageQuota <Int>]
-              [-OneDriveForGuestsEnabled <Boolean>]
-              [-IPAddressEnforcement <Boolean>]
-              [-IPAddressAllowList <String>]
-              [-IPAddressWACTokenLifetime <Int>]
-              [-UseFindPeopleInPeoplePicker <Boolean>]
-              [-DefaultSharingLinkType <SharingLinkType>]
-              [-ODBMembersCanShare <SharingState>]
-              [-ODBAccessRequests <SharingState>]
-              [-PreventExternalUsersFromResharing <Boolean>]
-              [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
-              [-FileAnonymousLinkType <AnonymousLinkType>]
-              [-FolderAnonymousLinkType <AnonymousLinkType>]
-              [-NotifyOwnersWhenItemsReshared <Boolean>]
-              [-NotifyOwnersWhenInvitationsAccepted <Boolean>]
-              [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
-              [-NotificationsInSharePointEnabled <Boolean>]
-              [-OwnerAnonymousNotification <Boolean>]
-              [-CommentsOnSitePagesDisabled <Boolean>]
-              [-SocialBarOnSitePagesDisabled <Boolean>]
-              [-OrphanedPersonalSitesRetentionPeriod <Int>]
-              [-DisallowInfectedFileDownload <Boolean>]
-              [-DefaultLinkPermission <SharingPermissionType>]
-              [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
-              [-AllowDownloadingNonWebViewableFiles <Boolean>]
-              [-AllowEditing <Boolean>]
-              [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
-              [-FilePickerExternalImageSearchEnabled <Boolean>]
-              [-EmailAttestationRequired <Boolean>]
-              [-EmailAttestationReAuthDays <Int>]
-              [-HideDefaultThemes <Boolean>]
-              [-DisabledWebPartIds <Guid[]>]
-              [-EnableAIPIntegration <Boolean>]
-              [-Connection <PnPConnection>]
+Set-PnPTenant [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>]
+ [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>] [-ExternalServicesEnabled <Boolean>]
+ [-NoAccessRedirectUrl <String>] [-SharingCapability <SharingCapabilities>]
+ [-DisplayStartASiteOption <Boolean>] [-StartASiteFormUrl <String>] [-ShowEveryoneClaim <Boolean>]
+ [-ShowAllUsersClaim <Boolean>] [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
+ [-SearchResolveExactEmailOrUPN <Boolean>] [-OfficeClientADALDisabled <Boolean>]
+ [-LegacyAuthProtocolsEnabled <Boolean>] [-RequireAcceptingAccountMatchInvitedAccount <Boolean>]
+ [-ProvisionSharedWithEveryoneFolder <Boolean>] [-SignInAccelerationDomain <String>]
+ [-EnableGuestSignInAcceleration <Boolean>] [-UsePersistentCookiesForExplorerView <Boolean>]
+ [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
+ [-UserVoiceForFeedbackEnabled <Boolean>] [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
+ [-RequireAnonymousLinksExpireInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
+ [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
+ [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>] [-UseFindPeopleInPeoplePicker <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] [-ODBMembersCanShare <SharingState>]
+ [-ODBAccessRequests <SharingState>] [-PreventExternalUsersFromResharing <Boolean>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-FileAnonymousLinkType <AnonymousLinkType>]
+ [-FolderAnonymousLinkType <AnonymousLinkType>] [-NotifyOwnersWhenItemsReshared <Boolean>]
+ [-NotifyOwnersWhenInvitationsAccepted <Boolean>] [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
+ [-NotificationsInSharePointEnabled <Boolean>] [-OwnerAnonymousNotification <Boolean>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-OrphanedPersonalSitesRetentionPeriod <Int32>] [-DisallowInfectedFileDownload <Boolean>]
+ [-DefaultLinkPermission <SharingPermissionType>] [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-AllowDownloadingNonWebViewableFiles <Boolean>] [-AllowEditing <Boolean>]
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
+ [-EmailAttestationRequired <Boolean>] [-EmailAttestationReAuthDays <Int32>] [-HideDefaultThemes <Boolean>]
+ [-DisabledWebPartIds <Guid[]>] [-EnableAIPIntegration <Boolean>] [-DisableCustomAppAuthentication <Boolean>] [-EnableAutoNewsDigest <Boolean>][-CommentsOnListItemsDisabled <Boolean>][-CommentsOnFilesDisabled <Boolean>]
+ [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,29 +63,29 @@ You must have the SharePoint Online admin or Global admin role to run the cmdlet
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Set-PnPTenantSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-PnPTenant -NoAccessRedirectUrl 'http://www.contoso.com'
+Set-PnPTenantSite -Identity "https://contoso.sharepoint.com/sites/team1" -LockState NoAccess
+Set-PnPTenant -NoAccessRedirectUrl "http://www.contoso.com"
 ```
 
 This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-PnPTenant -ShowEveryoneExceptExternalUsersClaim $false
 ```
 
 This example hides the "Everyone Except External Users" claim in People Picker.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Set-PnPTenant -ShowAllUsersClaim $false
 ```
 
 This example hides the "All Users" claim group in People Picker.
 
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Set-PnPTenant -UsePersistentCookiesForExplorerView $true
 ```
@@ -123,38 +96,41 @@ This example enables the use of special persisted cookie for Open with Explorer.
 
 ### -AllowDownloadingNonWebViewableFiles
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AllowEditing
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BccExternalSharingInvitations
@@ -170,7 +146,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BccExternalSharingInvitationsList
@@ -187,11 +165,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -CommentsOnSitePagesDisabled
-
 
 ```yaml
 Type: Boolean
@@ -199,50 +178,87 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ConditionalAccessPolicy
 
-
 ```yaml
 Type: SPOConditionalAccessPolicyType
+Parameter Sets: (All)
+Accepted values: AllowFullAccess, AllowLimitedAccess, BlockAccess, ProtectionLevel
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DefaultLinkPermission
 
-
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: (All)
+Accepted values: None, View, Edit
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DefaultSharingLinkType
-Lets administrators choose what type of link appears is selected in the “Get a link” sharing dialog box in OneDrive for Business and SharePoint Online.
+Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
 Note:
-Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.
+Setting this value to "none" will default "get a link" to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.
 
 The values are: None Direct Internal AnonymousAccess
 
 ```yaml
 Type: SharingLinkType
 Parameter Sets: (All)
+Accepted values: None, Direct, Internal, AnonymousAccess
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCustomAppAuthentication
+Configure if ACS-based app-only authentication should be disabled or not.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisabledWebPartIds
@@ -254,7 +270,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisallowInfectedFileDownload
@@ -262,15 +280,15 @@ Prevents the Download button from being displayed on the Virus Found warning pag
 
 Accepts a value of true (enabled) to hide the Download button or false (disabled) to display the Download button. By default this feature is set to false.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisplayStartASiteOption
@@ -286,23 +304,25 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EmailAttestationReAuthDays
 
-
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EmailAttestationRequired
-
 
 ```yaml
 Type: Boolean
@@ -310,7 +330,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableAIPIntegration
@@ -322,7 +344,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EnableGuestSignInAcceleration
@@ -337,7 +361,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ExternalServicesEnabled
@@ -354,23 +380,26 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -FileAnonymousLinkType
 
-
 ```yaml
 Type: AnonymousLinkType
 Parameter Sets: (All)
+Accepted values: None, View, Edit
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -FilePickerExternalImageSearchEnabled
-
 
 ```yaml
 Type: Boolean
@@ -378,19 +407,23 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -FolderAnonymousLinkType
 
-
 ```yaml
 Type: AnonymousLinkType
 Parameter Sets: (All)
+Accepted values: None, View, Edit
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -HideDefaultThemes
@@ -402,7 +435,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IPAddressAllowList
@@ -419,7 +454,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IPAddressEnforcement
@@ -435,19 +472,22 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -IPAddressWACTokenLifetime
 
-
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
@@ -468,31 +508,37 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MaxCompatibilityLevel
 Specifies the upper bound on the compatibility level for new sites.
 
 ```yaml
-Type: Int
-Parameter Sets: __AllParameterSets
+Type: Int32
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MinCompatibilityLevel
 Specifies the lower bound on the compatibility level for new sites.
 
 ```yaml
-Type: Int
-Parameter Sets: __AllParameterSets
+Type: Int32
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NoAccessRedirectUrl
@@ -508,35 +554,39 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NotificationsInOneDriveForBusinessEnabled
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NotificationsInSharePointEnabled
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NotifyOwnersWhenInvitationsAccepted
-When this parameter is set to $true and when an external user accepts an invitation to a resource in a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
 
@@ -548,11 +598,13 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NotifyOwnersWhenItemsReshared
-When this parameter is set to $true and another user re-shares a document from a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+When this parameter is set to $true and another user re-shares a document from a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
 
@@ -564,7 +616,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ODBAccessRequests
@@ -581,10 +635,13 @@ Unspecified- Let each OneDrive for Business owner enable or disable access reque
 ```yaml
 Type: SharingState
 Parameter Sets: (All)
+Accepted values: Unspecified, On, Off
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ODBMembersCanShare
@@ -601,10 +658,13 @@ Unspecified- Let each OneDrive for Business owner enable or disable re-sharing b
 ```yaml
 Type: SharingState
 Parameter Sets: (All)
+Accepted values: Unspecified, On, Off
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OfficeClientADALDisabled
@@ -620,7 +680,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OneDriveForGuestsEnabled
@@ -638,7 +700,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OneDriveStorageQuota
@@ -651,12 +715,14 @@ If value is set to 0, the parameter will have no effect.
 If the value is set larger than the Maximum allowed OneDrive for Business quota, it will have no effect.
 
 ```yaml
-Type: Int
+Type: Int64
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OrphanedPersonalSitesRetentionPeriod
@@ -665,36 +731,40 @@ Specifies the number of days after a user's Active Directory account is deleted 
 The value range is in days, between 30 and 3650. The default value is 30.
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OwnerAnonymousNotification
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PreventExternalUsersFromResharing
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ProvisionSharedWithEveryoneFolder
@@ -713,11 +783,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PublicCdnAllowedFileTypes
-
 
 ```yaml
 Type: String
@@ -725,11 +796,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -PublicCdnEnabled
-
 
 ```yaml
 Type: Boolean
@@ -737,7 +809,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RequireAcceptingAccountMatchInvitedAccount
@@ -757,7 +831,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RequireAnonymousLinksExpireInDays
@@ -766,12 +842,14 @@ Specifies all anonymous links that have been created (or will be created) will e
 To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
-Type: Int
+Type: Int32
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SearchResolveExactEmailOrUPN
@@ -789,7 +867,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SharingAllowedDomainList
@@ -803,7 +883,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SharingBlockedDomainList
@@ -817,7 +899,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SharingCapability
@@ -832,10 +916,13 @@ For more information about sharing, see Manage external sharing for your SharePo
 ```yaml
 Type: SharingCapabilities
 Parameter Sets: (All)
+Accepted values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SharingDomainRestrictionMode
@@ -848,10 +935,13 @@ For additional information about how to restrict a domain sharing, see Restricte
 ```yaml
 Type: SharingDomainRestrictionModes
 Parameter Sets: (All)
+Accepted values: None, AllowList, BlockList
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ShowAllUsersClaim
@@ -871,7 +961,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ShowEveryoneClaim
@@ -890,7 +982,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ShowEveryoneExceptExternalUsersClaim
@@ -907,11 +1001,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-
 
 ```yaml
 Type: Boolean
@@ -919,7 +1014,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SignInAccelerationDomain
@@ -944,11 +1041,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -SocialBarOnSitePagesDisabled
-
 
 ```yaml
 Type: Boolean
@@ -956,7 +1054,24 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecialCharactersStateInFileFolderNames
+{{ Fill SpecialCharactersStateInFileFolderNames Description }}
+
+```yaml
+Type: SpecialCharactersState
+Parameter Sets: (All)
+Accepted values: NoPreference, Allowed, Disallowed
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -StartASiteFormUrl
@@ -972,7 +1087,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
@@ -985,7 +1102,9 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -UsePersistentCookiesForExplorerView
@@ -1006,11 +1125,12 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -UserVoiceForFeedbackEnabled
-
 
 ```yaml
 Type: Boolean
@@ -1018,21 +1138,53 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+### -EnableAutoNewsDigest
+Boolean indicating if a news digest should automatically be sent to end users to inform them about news that they may have missed. On by default. For more information see https://aka.ms/autonewsdigest
 
 ```yaml
-Type: PnPConnection
+Type: Boolean
 Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
+### -CommentsOnListItemsDisabled
+Disables or enables commenting functionality on list items.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommentsOnFilesDisabled
+Disables or enables commenting functionality on files.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+

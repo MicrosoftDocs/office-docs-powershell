@@ -35,7 +35,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-ProtectionLevelName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
  [-RemoveLabel] [<CommonParameters>]
 ```
 
@@ -827,9 +827,13 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicy
 
-Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
-PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
+Possible values:
+- AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
+- AllowLimitedAccess: Allows limited, web-only access.
+- BlockAccess: Blocks Access.
+
 
 ```yaml
 Type: SPOConditionalAccessPolicyType
@@ -839,6 +843,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ProtectionLevelName
+
+The conditional access protection level name. For example "urn:microsoft:req1"
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

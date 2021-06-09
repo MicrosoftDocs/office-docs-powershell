@@ -392,7 +392,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -426,7 +426,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named

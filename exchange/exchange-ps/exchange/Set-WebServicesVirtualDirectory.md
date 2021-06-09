@@ -38,7 +38,6 @@ Set-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-MRSProxyEnabled <Boolean>]
  [-MRSProxyMaxConnections <Unlimited>]
  [-OAuthAuthentication <Boolean>]
- [-UpdateManagementVirtualDirectory]
  [-WhatIf]
  [-WindowsAuthentication <Boolean>]
  [-WSSecurityAuthentication <Boolean>]
@@ -303,6 +302,8 @@ Accept wildcard characters: False
 ```
 
 ### -InternalNLBBypassUrl
+**Note:** This parameter applies only to Exchange 2010. By default, Exchange 2013 or later already has the InternalNLBBypassUrl value configured on the backend Exchange Web Services (EWS) virtual directory on Mailbox servers.
+
 The InternalNLBBypassUrl parameter specifies the URL of the Exchange server that has the Client Access server role installed, regardless of whether it's behind a Network Load Balancing (NLB) array or not.
 
 When you set the InternalUrl parameter to the URL of the NLB array, you should set the InternalNLBBypassUrl parameter to the URL of the Client Access server itself.
@@ -355,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyMaxConnections
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
@@ -383,24 +384,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UpdateManagementVirtualDirectory
-This parameter is available or functional only in Exchange Server 2010.
-
-The UpdateManagementVirtualDirectory parameter makes sure that the Exchange Web Services objects in Active Directory and the respective objects in Internet Information Services (IIS) are up to date and consistent.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

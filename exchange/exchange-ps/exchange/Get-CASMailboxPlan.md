@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-casmailboxplan
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CASMailboxPlan
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-CASMailboxPlan
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available or functional only in the cloud-based service.
 
 Use the Get-CASMailboxPlan cmdlet to view Client Access services (CAS) mailbox plans in cloud-based organizations.
 
@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>]
  [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-ResultSize <Unlimited>]
@@ -68,7 +69,7 @@ The display name and name of the CAS mailbox plan is the same as the correspondi
 Type: MailboxPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1
@@ -95,6 +96,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
 The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
@@ -111,7 +128,7 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -121,6 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -143,7 +162,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -168,7 +187,7 @@ The results are sorted in ascending order.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
