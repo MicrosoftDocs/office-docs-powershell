@@ -60,7 +60,7 @@ After an external access policy has been created, you can use the `Set-CsExterna
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.
 If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True.
 
-The following parameters are not applicable to Skype for Business Online: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
+The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
@@ -167,6 +167,7 @@ Accept wildcard characters: False
 
 ### -EnableFederationAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 
@@ -185,6 +186,7 @@ Accept wildcard characters: False
 
 ### -EnablePublicCloudAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 
