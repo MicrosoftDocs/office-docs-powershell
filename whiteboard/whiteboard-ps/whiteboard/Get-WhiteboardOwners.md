@@ -48,17 +48,21 @@ Items:                     List of user ids
 ContinuationToken:         continuation token
 ```
 
-
 ## PARAMETERS
 
 ### -Geography
 Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or Worldwide (all boards not in australia or europe).
 
 ```yaml
-Type:                        string
-Required:                    true
-Position:                    named
-Default value:               None
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Acept wildcard charaters: False
 Applicable: Microsoft Whiteboard
 ```
 
@@ -67,10 +71,15 @@ Applicable: Microsoft Whiteboard
 Optional. The continuation token returned in a previous call.
 
 ```yaml
-Type:                        string
-Required:                    false
-Position:                    named
-Default value:               $null
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: $null
+Accept pipeline input: False
+Acept wildcard charaters: False
 Applicable: Microsoft Whiteboard
 ```
 
@@ -79,14 +88,21 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               false
-Accept pipeline input:       false
-Accept wildcard characters:  false
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Acept wildcard charaters: False
 Applicable: Microsoft Whiteboard
 ```
+
+## INPUTS
+
+## OUTPUTS
 
 ## NOTES
 
