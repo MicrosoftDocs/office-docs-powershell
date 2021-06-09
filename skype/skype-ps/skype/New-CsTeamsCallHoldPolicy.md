@@ -33,7 +33,8 @@ Assinging a teams call hold policy to a user sets an audio file to be played dur
 
 ### Example 1
 ```powershell
-PS C:\> New-TeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music" -AudioFileID "c65233-ac2a27-98701b-123ccc" 
+PS C:\> New-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music" -AudioFileID "c65233-ac2a27-98701b-123ccc" 
+
 ```
 
 The command shown in Example 1 creates a new, per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
