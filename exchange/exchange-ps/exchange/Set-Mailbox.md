@@ -1328,7 +1328,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 - Distinguished name (DN)
 - GUID
 
-For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies) or [Address book policies in Exchange Online](/exchange/address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -1875,7 +1875,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the CalendarLoggingQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the CalendarLoggingQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -2486,7 +2486,7 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
@@ -3042,7 +3042,7 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to modify Microsoft 365 Groups in Exchange Online. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: MailboxIdParameter
@@ -3241,7 +3241,7 @@ The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiv
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to $true, the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to $true (the default value), the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4146,7 +4146,7 @@ The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiv
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4178,7 +4178,7 @@ The value must be greater than or equal to the ProhibitSendQuota or IssueWarning
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4326,7 +4326,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4360,7 +4360,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsWarningQuota value must be less than or equal to the RecoverableItemsQuota value.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4748,7 +4748,7 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 - Selecting the Empty Deleted Items Folder action.
 - Deleting items using Shift + Delete.
 
-These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
+These actions move the items into the Recoverable Items\\Deletions folder.
 
 Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
@@ -4756,9 +4756,9 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 
 The default value is 14 days (14.00:00:00). In Exchange Online, you can increase the value to a maximum of 30 days.
 
-In Exchange Online, you use this parameter to configure the RetainDeletedItemsFor value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
+In Exchange Online, you use this parameter to configure the deleted item retention on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, the default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
+In on-premises Exchange, when the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -4778,12 +4778,12 @@ This parameter is available only in on-premises Exchange.
 
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
-- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
-- $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
+- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameter values.
+
+When the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RetainDeletedItemsUntilBackup parameter value from the mailbox database. To use the RetainDeletedItemsUntilBackup parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
-
-The default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
 
 ```yaml
 Type: Boolean
@@ -5486,14 +5486,12 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseQuotaDefaults
-The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values that are configured on the mailbox or on the mailbox database. Valid values are:
+The UseDatabaseQuotaDefaults parameter specifies whether applicable quotas for the mailbox are determined by the quota values on the mailbox or the corresponding quota values on the mailbox database (not all mailbox quotas are configurable on the mailbox database). Valid values are:
 
-- $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any of those quota values configured directly on the mailbox are ignored.
-- $false: The mailbox uses its own values for the applicable quota values. Any of those quota values on the mailbox database are ignored.
+- $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any corresponding quotas that are configured on the mailbox are ignored. In on-premises Exchange, this is the default value.
+- $false: The mailbox uses its own values for the applicable quotas. Any corresponding quotas that are configured on the mailbox database are ignored. In Exchange Online, this is the default value.
 
-In Exchange Online, the default value is $false. In on-premises Exchange, the default value is $true.
-
-The applicable quota values are:
+The following quotas are affected by this parameter:
 
 - CalendarLoggingQuota
 - IssueWarningQuota
@@ -5518,10 +5516,20 @@ Accept wildcard characters: False
 ### -UseDatabaseRetentionDefaults
 This parameter is available or functional only in on-premises Exchange.
 
-The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses the MailboxRetention attribute value that's configured on the mailbox database. This value controls how long deleted mailboxes are kept in the database before they are permanently removed (purged). The default value is 30 days. Valid values are:
+The UseDatabaseRetentionDefaults parameter specifies whether the retention settings for items in the Recoverable Items folder in the mailbox are determined by the settings on the mailbox or the corresponding settings on the mailbox database. Valid values are:
 
-- $true: The mailbox uses the MailboxRetention value that's configured on the mailbox database. This is the default value.
-- $false: When the mailbox is deleted, it's retained indefinitely.
+- $true: The mailbox uses the applicable retention settings that are configured on the mailbox database. Any corresponding settings that are configured on the mailbox are ignored. This is the default value.
+- $false: The mailbox uses its own values for the applicable retention settings. Any corresponding settings that are configured on the mailbox database are ignored.
+
+The following retention settings are affected by this parameter:
+
+- DeletedItemRetention
+- RetainDeletedItemsUntilBackup
+
+**Note**: If you set the RetainDeletedItemsUntilBackup parameter on the mailbox database to the value $true when the value of the UseDatabaseRetentionDefaults parameter on a mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+
+- Run the following command: `Import-Module ActiveDirectory`.
+- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
 
 ```yaml
 Type: Boolean

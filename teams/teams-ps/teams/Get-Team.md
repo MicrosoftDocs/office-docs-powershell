@@ -31,8 +31,8 @@ Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-Display
 ## DESCRIPTION
 This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
->[!NOTE]
->Depending on the number of teams and O365 Groups in your organization and which filters you are using, this cmdlet can take upwards of ten minutes to run.  Some of the input parameters are guaranteed unique (e.g. GroupId), and others serve as filters (e.g. -Archived).
+> [!NOTE]
+> Get-Team may return multiple results matching the input and not just the exact match for attributes like DisplayName/MailNickName. This is known behavior.
 
 ## EXAMPLES
 
@@ -59,7 +59,7 @@ Returns the team that matches the specified MailNickName
 ```
 PS> Get-Team -DisplayName "Sales and Marketing"
 ```
-Returns the team that matches the specified DisplayName
+Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
 
 ## PARAMETERS
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfThreads
-Specifies the number of threads to use. The accepted values range from 1 to 20.
+Specifies the number of threads to use. If you have sufficient network bandwidth and want to decrease the time required to retrieve the list of teams, use the -NumberOfThreads parameter, which supports a value from 1 through 20.
 
 ```yaml
 Type: Int32
@@ -224,7 +224,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 20
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -248,4 +248,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 [New-Team](new-team.md)
 
 [Set-Team](set-team.md)
-

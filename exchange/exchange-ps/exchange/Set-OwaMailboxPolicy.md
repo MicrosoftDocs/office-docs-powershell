@@ -52,6 +52,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
+ [-FeedbackEnabled <Boolean>]
  [-ForceSaveAttachmentFilteringEnabled <Boolean>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
  [-ForceSaveMimeTypes <MultiValuedProperty>]
@@ -839,6 +840,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FeedbackEnabled
+This cmdlet is available only in the cloud-based service.
+
+The FeedbackEnabled parameter specifies whether to enable or disable inline feedback surveys in Outlook on the web. Valid values are:
+
+- $true: Inline feedback surveys are enabled. This is the default value.
+- $false: Inline feedback surveys are disabled.
+
+ Surveys allow users to provide feedback on specific features. For example, for the text predictions feature, the inline feedback "Are the above autocomplete suggestions helpful (yes/no)?" is shown. If a user chooses "no" they can provide specific feedback.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceSaveAttachmentFilteringEnabled
 The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are filtered before they can be saved from Outlook on the web. Valid values are:
 
@@ -1351,7 +1375,7 @@ Accept wildcard characters: False
 ### -NpsSurveysEnabled
 This parameter is available only in the cloud-based service.
 
-The NpsSurveysEnabled parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvements in free text. Valid values are:
+The NpsSurveysEnabled parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows users to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvements in free text. Valid values are:
 
 - $true: The NPS survey is available in Outlook on the web. This is the default value.
 - $false: The NPS survey isn't available in Outlook on the web.

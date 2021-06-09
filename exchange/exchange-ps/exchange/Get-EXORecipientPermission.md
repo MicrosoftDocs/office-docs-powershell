@@ -166,7 +166,7 @@ Accept wildcard characters: False
 The Trustee parameter filters the results by the user or group who has Send As permissions. You can specify the following types of users or groups:
 
 - Mailbox users
-- Mail users with a Microsoft account (formerly known as a Windows Live ID)
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:

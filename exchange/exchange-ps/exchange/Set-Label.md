@@ -83,7 +83,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)..
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -549,7 +549,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -581,7 +581,13 @@ Accept wildcard characters: False
 ```
 
 ### -ContentType
-{{ Fill ContentType Description }}
+The ContentType parameter specifies where the sensivity label can be applied. Valid values are:
+
+- File, Email
+- Site, UnifiedGroup
+- PurviewAssets
+
+Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
 
 ```yaml
 Type: MipLabelContentType
@@ -690,7 +696,12 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEncryptOnly
-This parameter is reserved for internal Microsoft use.
+The EncryptionEncryptOnly parameter specifies whether the encrypt-only template is applied. Valid values are:
+
+- $true: The encrypt-only template is applied.
+- $false: The encrypt-only template is not applied.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: Boolean
@@ -819,12 +830,12 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleSettings
-The LocaleSettings parameter specifies one or more localized label name and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
+The LocaleSettings parameter specifies one or more localized label names and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
 
 - Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}`
 - Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
 
-To remove a language, you will have to give an empty value for that corresponding language.
+To remove a language, you need to enter an empty value for that language.
 
 ```yaml
 Type: MultiValuedProperty

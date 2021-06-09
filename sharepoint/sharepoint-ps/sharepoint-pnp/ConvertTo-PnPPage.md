@@ -61,7 +61,8 @@ ConvertTo-PnPPage -Identity <PagePipeBind>
                             [-TermMappingFile <String>]
                             [-SkipTermStoreMapping [<SwitchParameter>]]
                             [-LDAPConnectionString <String>]
-                            
+                            [-SkipHiddenWebParts [<SwitchParameter>]]
+
                             [-Connection <PnPConnection>]
 ```
 
@@ -481,6 +482,18 @@ Accept pipeline input: False
 
 ### -SkipDefaultUrlRewriting
 Set this flag to prevent the default URL rewriting while you still want to do URL rewriting using a custom URL mapping file
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SkipHiddenWebParts
+Set this flag to skip hidden webparts during transformation
 
 ```yaml
 Type: SwitchParameter

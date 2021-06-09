@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Use this cmdlet to retrieve the current Teams Feedback policies in the organization.
+Use this cmdlet to retrieve the current Teams Feedback policies (the ability to send feedback about Teams to Microsoft and whether they receive the survey) in the organization.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-CsTeamsFeedbackPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>
 ```
 
 ## DESCRIPTION
-Retrieves the current Teams Feedback policies in the organization.
+Retrieves the current Teams Feedback policies (the ability to send feedback about Teams to Microsoft and whether they receive the survey) in the organization.
 
 ## EXAMPLES
 

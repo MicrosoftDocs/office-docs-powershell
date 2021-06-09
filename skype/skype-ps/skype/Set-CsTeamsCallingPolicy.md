@@ -276,6 +276,8 @@ Accept wildcard characters: False
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
+**Note**: Do not set this parameter to True for Calling Plan users as it will prevent successful call routing. This setting only works with Direct Routing that is configured to handle location based routing restrictions. 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -289,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -BusyOnBusyEnabledType
-Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. New or incoming calls will be rejected with a busy signal. Valid options are: Enabled, Disabled.
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting value to Disabled.
 
 ```yaml
 Type: String
@@ -410,6 +412,7 @@ Determines if Spam filtering is enabled.
 Possible values:
 - Enabled
 - Disabled
+- EnabledWithoutIVR
 
 ```yaml
 Type: String

@@ -201,7 +201,7 @@ You create authentication policies with the New-AuthenticationPolicy cmdlet to b
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ This parameter is available only in the cloud-based service.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ This parameter is available only in the cloud-based service.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -447,7 +447,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -638,6 +638,8 @@ Accept wildcard characters: False
 ### -MobilePhone
 The MobilePhone parameter specifies the user's primary mobile phone number.
 
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the Mobile parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -774,7 +776,7 @@ Clearing these attributes might be required in mailbox move and re-licensing sce
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -785,6 +787,8 @@ Accept wildcard characters: False
 
 ### -Phone
 The Phone parameter specifies the user's office telephone number.
+
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the TelephoneNumber parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
 
 ```yaml
 Type: String
@@ -895,7 +899,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1040,7 +1044,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1163,7 +1167,7 @@ For more information about priority accounts, see [Manage and monitor priority a
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
