@@ -52,14 +52,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-MailboxAutoReplyConfiguration -Identity tony -AutoReplyState Scheduled -StartTime "7/10/2018 08:00:00" -EndTime "7/15/2018 17:00:00" -InternalMessage "Internal auto-reply message"
+Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Scheduled -StartTime "7/10/2018 08:00:00" -EndTime "7/15/2018 17:00:00" -InternalMessage "Internal auto-reply message"
 ```
 
 This example configures Automatic Replies for Tony's mailbox to be sent between the specified start and end dates and includes an internal message.
 
 ### Example 2
 ```powershell
-Set-MailboxAutoReplyConfiguration -Identity tony -AutoReplyState Enabled -InternalMessage "Internal auto-reply message." -ExternalMessage "External auto-reply message."
+Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Enabled -InternalMessage "Internal auto-reply message." -ExternalMessage "External auto-reply message."
 ```
 
 This example configures Automatic Replies for Tony's mailbox to be sent and includes an internal and an external message.
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDeclineFutureRequestsWhenOOF
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -107,7 +107,7 @@ You can use this parameter only when the AutoReplyState parameter is set to Sche
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -CreateOOFEvent
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The CreateOOFEvent parameter specifies whether to create a calendar event that corresponds to the scheduled time period when Automatic Replies are being sent for the mailbox. Valid values are:
 
@@ -172,7 +172,7 @@ The CreateOOFEvent parameter specifies whether to create a calendar event that c
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineAllEventsForScheduledOOF
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The DeclineAllEventsForScheduledOOF parameter specifies whether to decline all existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -197,7 +197,7 @@ You can't use this parameter with the EventsToDeleteIDs parameter.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineEventsForScheduledOOF
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The DeclineEventsForScheduledOOF parameter specifies whether it's possible to decline existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -220,7 +220,7 @@ You can use this parameter only when the AutoReplyState parameter is set to Sche
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -230,14 +230,14 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineMeetingMessage
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The DeclineMeetingMessage parameter specifies the text in the message when meetings requests that are sent to the mailbox are automatically declined. For example:
 
 - The AutoDeclineFutureRequestsWhenOOF parameter is set to $true.
 - The DeclineEventsForScheduledOOF parameter is set to $true, and the DeclineAllEventsForScheduledOOF parameter is set to $true, or individual events are specified by using the EventsToDeleteIDs parameter.
 
-If the value contains spaces, enclose the value in quotation marks ("). HTML tags aren't automatically added to the text, but you can use values that contain HTML tags. For example, "\<html\>\<body\>I'm on vacation.\<br\>I can't attend the meeting.\</body\>\</html\>".
+If the value contains spaces, enclose the value in quotation marks ("). HTML tags aren't automatically added to the text, but you can use values that contain HTML tags. For example, `"<html><body>I'm on vacation. <b>I can't attend the meeting.</b></body></html>"`.
 
 To clear the value of this parameter, use the value $null.
 
@@ -245,7 +245,7 @@ To clear the value of this parameter, use the value $null.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventsToDeleteIDs
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The EventsToDeleteIDs parameter specifies the calendar events to delete from the mailbox when the DeclineEventsForScheduledOOF parameter is set to $true.
 
@@ -303,7 +303,7 @@ You can't use this parameter with the DeclineAllEventsForScheduledOOF parameter.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ### -ExternalMessage
 The ExternalMessage parameter specifies the Automatic Replies message that's sent to external senders or senders outside the organization. If the value contains spaces, enclose the value in quotation marks (").
 
-HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>I'll respond when I return.\</body\>\</html\>".
+HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: `<html><body>I'm on vacation</body></html>`. Additional HTML tags are supported if you enclose the value in quotation marks. For example, `"<html><body><b>I'm on vacation</b>. I'll respond when I return.</body></html>"`.
 
 The value of this parameter is meaningful only when both of the following conditions are true:
 
@@ -383,7 +383,7 @@ Accept wildcard characters: False
 ### -InternalMessage
 The InternalMessage parameter specifies the Automatic Replies message that's sent to internal senders or senders within the organization. If the value contains spaces, enclose the value in quotation marks (").
 
-HTML tags are automatically added to the text. For example, if you enter the text: "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>Please contact my manager.\</body\>\</html\>".
+HTML tags are automatically added to the text. For example, if you enter the text: "I'm on vacation", the value automatically becomes: `<html><body>I'm on vacation</body></html>`. Additional HTML tags are supported if you enclose the value in quotation marks. For example, `"<html><body>I'm on vacation. <b>Please contact my manager.</b></body></html>"`.
 
 The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
 
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -OOFEventSubject
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The OOFEventSubject parameter specifies the subject for the calendar event that's automatically created when the CreateOOFEvent parameter is set to $true.
 
@@ -413,7 +413,7 @@ If the value contains spaces, enclose the value in quotation marks ("). To clear
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

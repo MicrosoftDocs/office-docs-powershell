@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-PhishFilterPolicy cmdlet to view the spoof intelligence policy and detected spoofed sending activities in your cloud-based organization.
+Use the Get-PhishFilterPolicy cmdlet to view the spoof intelligence policy and detected spoofed sending activities in your cloud-based organization over the last 30 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -61,7 +61,8 @@ This example returns the list of senders that appear to be sending spoofed email
 
 ### Example 2
 ```powershell
-$file = "C:\My Documents\Summary Spoofed Internal Domains and Senders.csv"; Get-PhishFilterPolicy -Detailed -SpoofType Internal | Export-CSV $file
+$file = "C:\My Documents\Summary Spoofed Internal Domains and Senders.csv"
+Get-PhishFilterPolicy -Detailed -SpoofType Internal | Export-CSV $file
 ```
 
 This example exports the same list of spoofed senders to a CSV file.

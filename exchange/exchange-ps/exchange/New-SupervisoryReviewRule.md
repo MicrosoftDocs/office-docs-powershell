@@ -22,8 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-CcsiDataModelOperator <String>]
  [-Condition <String>]
  [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentMatchesDataModel <String>]
+ [-ContentSources <String[]>]
+ [-Ocr <Boolean>]
  [-SamplingRate <Int32>]
  [-WhatIf]
  [<CommonParameters>]
@@ -84,18 +89,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CcsiDataModelOperator
+{{ Fill CcsiDataModelOperator Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Condition
 The Condition parameter specifies the conditions and exceptions for the rule. This parameter uses the following syntax:
 
-- User or group communications to supervise: "((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...)". Exceptions use the syntax "(NOT((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...))".
-- Direction: "((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal))".
-- Message contains words: "((\<Word1orPhrase1\>) -OR (\<Word2orPhrase2\>)...)". Exceptions use the syntax "(NOT((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...))".
-- Any attachment contains words: "((Attachment:\<word1\>) -OR (Attachment:\<word2\>)...)". Exceptions use the syntax "(NOT((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...))".
-- Any attachment has the extension: "((AttachmentName:.\<extension1\>) -OR (AttachmentName:.\<extension2\>)...)". Exceptions use the syntax "(NOT((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...))".
-- Message size is larger than: "(MessageSize:\<size in B, KB, MB or GB\>)". For example "(MessageSize:300KB)". Exceptions use the syntax "(NOT(MessageSize:\<size in B, KB, MB or GB\>))".
-- Any attachment is larger than: "(AttachmentSize:\<size in B, KB, MB or GB\>)". For example "(AttachmentSize:3MB)". Exceptions use the syntax "(NOT(AttachmentSize:\<size in B, KB, MB or GB\>))".
+- User or group communications to supervise: `"((Reviewee:<emailaddress1>) -OR (Reviewee:<emailaddress2>)...)"`. Exceptions use the syntax `"(NOT((Reviewee:<emailaddress1>) -OR (Reviewee:<emailaddress2>)...))"`.
+- Direction: `"((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal))"`.
+- Message contains words: `"((<Word1orPhrase1>) -OR (<Word2orPhrase2>)...)"`. Exceptions use the syntax `"(NOT((<Word1orPhrase1>) -OR (<Word2orPhrase2>)...))"`.
+- Any attachment contains words: `"((Attachment:<word1>) -OR (Attachment:<word2>)...)"`. Exceptions use the syntax `"(NOT((Attachment:<word1>) -OR (Attachment:<word2>)...))"`.
+- Any attachment has the extension: `"((AttachmentName:.<extension1>) -OR (AttachmentName:.<extension2>)...)"`. Exceptions use the syntax `"(NOT((AttachmentName:.<extension1>) -OR (AttachmentName:.<extension2>)...))"`.
+- Message size is larger than: `"(MessageSize:<size in B, KB, MB or GB>)"`. For example `"(MessageSize:300KB)"`. Exceptions use the syntax `"(NOT(MessageSize:<size in B, KB, MB or GB>))"`.
+- Any attachment is larger than: `"(AttachmentSize:<size in B, KB, MB or GB>)"`. For example `"(AttachmentSize:3MB)"`. Exceptions use the syntax `"(NOT(AttachmentSize:<size in B, KB, MB or GB>))"`.
 - Parentheses ( ) are required around the whole filter.
-- Separate multiple conditions or exception types with the -AND operator. For example, "((Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB))".
+- Separate multiple conditions or exception types with the AND operator. For example, `"((Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB))"`.
 
 ```yaml
 Type: String
@@ -120,6 +141,70 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentContainsSensitiveInformation
+{{ Fill ContentContainsSensitiveInformation Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentMatchesDataModel
+{{ Fill ContentMatchesDataModel Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentSources
+{{ Fill ContentSources Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ocr
+{{ Fill Ocr Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

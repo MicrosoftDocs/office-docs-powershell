@@ -113,7 +113,8 @@ This example assigns the Mail Recipients role to the Tier 2 Help Desk role group
 
 ### Example 2
 ```powershell
-Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
+Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole
+New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
 ```
 
 This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role.
@@ -413,7 +414,7 @@ Administrative units are Azure Active Directory containers of resources. You can
 Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -457,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnScopedTopLevel
-This parameter is available on in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
@@ -469,7 +470,7 @@ Unscoped top-level management roles can only contain custom scripts or non-Excha
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

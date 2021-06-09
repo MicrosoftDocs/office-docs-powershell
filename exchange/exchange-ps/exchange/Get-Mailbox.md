@@ -46,6 +46,7 @@ Get-Mailbox [-Anr <String>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
+ [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -70,6 +71,7 @@ Get-Mailbox [-Database <DatabaseIdParameter>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
+ [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -97,6 +99,7 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
+ [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -121,30 +124,13 @@ Get-Mailbox [-Server <ServerIdParameter>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
+ [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
 ### MailboxPlanSet
 ```
 Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
- [-Archive]
- [-Filter <String>]
- [-GroupMailbox]
- [-InactiveMailboxOnly]
- [-IncludeInactiveMailbox]
- [-Migration]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PublicFolder]
- [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <Unlimited>]
- [-SoftDeletedMailbox]
- [-SortBy <String>]
- [<CommonParameters>]
-```
-
-### AsyncParameterSet
-```
-Get-Mailbox -Async -Properties <String[]>
  [-Archive]
  [-Filter <String>]
  [-GroupMailbox]
@@ -258,24 +244,6 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Async
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AsyncParameterSet
-Aliases:
-Applicable: Exchange Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -492,7 +460,7 @@ To include active and inactive mailboxes in the results, don't use this switch. 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Parameter Sets: AnrSet, Identity, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 
@@ -514,7 +482,7 @@ To return only inactive mailboxes in the results, don't use this switch. Instead
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Parameter Sets: AnrSet, Identity, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 
@@ -728,7 +696,7 @@ You can use any value that uniquely identifies the server. For example:
 
 You can't use this parameter with the Anr, Database, or Identity parameters.
 
-The ServerName and ServerLegacyDN properties for a mailbox may not be updated immediately after a mailbox move within a database availability group (DAG). To get the most up-to-date values for these mailbox properties, run the command Get-Mailbox \<Identity\> | Get-MailboxStatistics | Format-List Name,ServerName,ServerLegacyDN.
+The ServerName and ServerLegacyDN properties for a mailbox may not be updated immediately after a mailbox move within a database availability group (DAG). To get the most up-to-date values for these mailbox properties, run the command `Get-Mailbox <Identity> | Get-MailboxStatistics | Format-List Name,ServerName,ServerLegacyDN`.
 
 ```yaml
 Type: ServerIdParameter
@@ -752,7 +720,7 @@ Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Parameter Sets: AnrSet, Identity, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 
@@ -766,7 +734,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following properties:
 
@@ -781,6 +749,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SupervisoryReviewPolicy
+This parameter is available on in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

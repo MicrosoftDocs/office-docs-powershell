@@ -26,6 +26,7 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EformsLocaleId <CultureInfo>]
+ [-Force]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-IssueWarningQuota <Unlimited>]
  [-LocalReplicaAgeLimit <EnhancedTimeSpan>]
@@ -78,7 +79,7 @@ In Exchange 2010, this example sets the folder to replicate only on weekends.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
+The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -181,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The HiddenFromAddressListsEnabled parameter specifies whether to hide the public folder from address lists.
 
@@ -229,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalReplicaAgeLimit
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The LocalReplicaAgeLimit parameter specifies the age limit of the replica on the connected server, if there is a replica on it.
 
@@ -416,7 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### -Replicas
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
 
@@ -424,7 +425,7 @@ The Replicas parameter specifies a list of public folder databases with which to
 - Distinguished name (DN)
 - GUID
 
-You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: DatabaseIdParameter[]
@@ -440,11 +441,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationSchedule
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -496,7 +497,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -521,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseAgeDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseAgeDefaults parameter specifies whether to use the database age limit.
 
@@ -539,7 +540,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseQuotaDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseQuotaDefaults parameter specifies whether to use the public store quota limits.
 
@@ -557,7 +558,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseReplicationSchedule
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseReplicationSchedule parameter specifies whether to use the public folder replication schedule.
 
@@ -575,7 +576,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseRetentionDefaults parameter specifies whether to use the database retention defaults.
 

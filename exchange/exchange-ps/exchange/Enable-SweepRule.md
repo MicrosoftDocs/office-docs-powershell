@@ -54,8 +54,8 @@ This example enables all Sweep rules in the specified mailbox.
 The Identity parameter specifies the Sweep rule that you want to enable. You can use any value that uniquely identifies the rule. For example:
 
 - RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
-- Exchange Online: \<mailbox alias\>\\\<RuleId\> (for example, rzaher\\x2hlsdpGmUifjFgxxGIOJw==.
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleId\> (for example, contoso.com/Users/Rick Zaher\\x2hlsdpGmUifjFgxxGIOJw==.
+- Exchange Online: `MailboxAlias\RuleID` (for example, `rzaher\2hlsdpGmUifjFgxxGIOJw==`).
+- On-premises Exchange: `MailboxCanonicalName\RuleID` (for example, `contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==`).
 
 ```yaml
 Type: SweepRuleIdParameter

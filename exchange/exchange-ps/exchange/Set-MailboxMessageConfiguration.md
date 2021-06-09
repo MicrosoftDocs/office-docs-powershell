@@ -37,6 +37,7 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultFontSize <Int32>]
  [-DefaultFormat <MailFormat>]
  [-DomainController <Fqdn>]
+ [-EchoGroupMessageBackToSubscribedSender <Boolean>]
  [-EmailComposeMode <EmailComposeMode>]
  [-EmptyDeletedItemsOnLogoff <Boolean>]
  [-GlobalReadingPanePosition <MailReadingPanePosition>]
@@ -412,7 +413,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EchoGroupMessageBackToSubscribedSender
+This parameter is available only in the cloud-based service.
+
+{{ Fill EchoGroupMessageBackToSubscribedSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EmailComposeMode
+This parameter is available or functional only in on-premises Exchange.
+
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
 - Inline: New messages and replies are created in the preview pane. This is the default value.
@@ -751,7 +772,7 @@ By default, no default From address is specified on the mailbox. When no default
 - The primary email address on the mailbox is used for all new messages.
 - The To address of the incoming message is used as the From address for all replies or forwarded messages.
 
-You can find the available values for SendAddressDefault on a mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
+You can find the available values for SendAddressDefault on a mailbox by running the command `Get-SendAddress -Mailbox <MailboxIdentity>`.
 
 ```yaml
 Type: String

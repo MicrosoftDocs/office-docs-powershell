@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-syncmailpublicfolder
-applicable: Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-SyncMailPublicFolder
 schema: 2.0.0
 author: chrisda
@@ -50,13 +50,13 @@ The Identity parameter specifies the mail-enabled public folder object that you 
 - Name
 - Distinguished name (DN)
 - GUID
-- Path: (\\\<TopLevelPublicFolderName\>\\\<PublicFolderName\>
+- Path (`\<TopLevelPublicFolderName>\<PublicFolderName>`)
 
 ```yaml
 Type: MailPublicFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
@@ -75,7 +75,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

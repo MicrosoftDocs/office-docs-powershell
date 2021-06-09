@@ -28,8 +28,8 @@ Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
  [-DlpCompliancePolicy <MultiValuedProperty>]
  [-DlpComplianceRule <MultiValuedProperty>]
  [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>]
  [-Expression <Expression>]
+ [-EventType <MultiValuedProperty>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-Source <MultiValuedProperty>]
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ### -DlpCompliancePolicy
 The DlpCompliancePolicy parameter filters the report by the name of the DLP compliance policy. You can specify multiple policies separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ### -DlpComplianceRule
 The DlpComplianceRule parameter filters the report by the name of the DLP compliance rule. You can specify multiple rules separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -182,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
+This parameter is available only in Security & Compliance Center PowerShell
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Expression
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

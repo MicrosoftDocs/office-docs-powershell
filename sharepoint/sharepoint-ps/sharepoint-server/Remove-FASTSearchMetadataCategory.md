@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatacategory
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
@@ -40,10 +40,10 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-Remove-FASTSearchMetadataCategory -name Sharepoint
+Remove-FASTSearchMetadataCategory -name SharePoint
 ```
 
-This example deletes the category named "Sharepoint".
+This example deletes the category named "SharePoint".
 Confirmation of the operation is requested.
 All crawled properties mapped to the "SharePoint" category are also removed.
 

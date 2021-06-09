@@ -27,23 +27,27 @@ New-SafeLinksPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-AllowClickThrough <Boolean>]
  [-Confirm]
+ [-CustomNotificationText <String>]
  [-DeliverMessageAfterScan <Boolean>]
  [-DoNotAllowClickThrough <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-DoNotTrackUserClicks <Boolean>]
  [-EnableForInternalSenders <Boolean>]
+ [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
  [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
+ [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
  [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Office 365 Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeLinksPolicy parameter on the New-SafeLinksRule or Set-SafeLinksRule cmdlets to associate the policy with a rule.
 
@@ -131,10 +135,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomNotificationText
+{{ Fill CustomNotificationText Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeliverMessageAfterScan
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
-- $true: Wait until Safe Links scanning is complete before delivering the message.
+- $true: Wait until Safe Links scanning is complete before delivering the message. Messages that contain malicious links are not delivered.
 - $false: If Safe Links scanning can't complete, deliver the message anyway. This is the default value.
 
 ```yaml
@@ -172,11 +192,11 @@ Accept wildcard characters: False
 ### -DoNotRewriteUrls
 The DoNotRewriteUrls parameter specifies the URLs that are not rewritten by Safe Links scanning. The list of entries allows users who are included in the policy to access the specified URLs that would otherwise be blocked by Safe Links.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -215,6 +235,22 @@ The EnableForInternalSenders parameter specifies whether the Safe Links policy i
 
 - $true: The policy is applied to internal and external senders.
 - $false: The policy is applied only to external senders. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOrganizationBranding
+{{ Fill EnableOrganizationBranding Description }}
 
 ```yaml
 Type: Boolean
@@ -285,6 +321,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecommendedPolicyType
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+
+```yaml
+Type: RecommendedPolicyType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ScanUrls
 The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
@@ -306,6 +358,22 @@ Accept wildcard characters: False
 
 ### -TrackClicks
 This parameter has been deprecated. Use the DoNotTrackUserClicks parameter instead.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseTranslatedNotificationText
+{{ Fill UseTranslatedNotificationText Description }}
 
 ```yaml
 Type: Boolean

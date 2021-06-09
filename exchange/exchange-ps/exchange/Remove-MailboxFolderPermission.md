@@ -20,10 +20,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
 Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ResetDelegateUserCollection
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDelegateUserCollection]
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -42,10 +63,17 @@ Remove-MailboxFolderPermission -Identity kim@contoso.com:\Training -User john@co
 
 This example removes John's permissions to the Training folder in Kim's mailbox.
 
+### Example 2
+```powershell
+Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
+```
+
+This example will clear any corrupted delegate information from Kim's mailbox.
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the target mailbox and folder. The syntax is `Mailbox:\Folder`. For the value of Mailbox, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -58,7 +86,7 @@ The Identity parameter specifies the target mailbox and folder. The syntax is \<
 - SamAccountName
 - User ID or user principal name (UPN)
 
-Example values for the Identity parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for the Identity parameter are `john@contoso.com:\Calendar` or `John:\Marketing\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -85,7 +113,7 @@ The User parameter specifies the mailbox, mail user, or mail-enabled security gr
 
 ```yaml
 Type: MailboxFolderUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -122,7 +150,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -133,14 +161,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Parameter Sets: Identity, ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetDelegateUserCollection
+This parameter is available only in the cloud-based service.
+
+The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when trying to add, change, or remove delegate permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -161,9 +209,25 @@ This parameter only applies to calendar folders.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, ResetDelegateUserCollection
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

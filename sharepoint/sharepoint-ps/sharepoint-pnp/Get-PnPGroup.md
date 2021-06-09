@@ -1,70 +1,71 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpgroup
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPGroup.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPGroup
 ---
-
+  
 # Get-PnPGroup
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPGroup.md to change this file.
+
 Returns a specific SharePoint group or all SharePoint groups in site.
 
-## SYNTAX 
+## SYNTAX
+
+### All (Default)
+```powershell
+Get-PnPGroup [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
+```
 
 ### ByName
 ```powershell
-Get-PnPGroup [-Identity <GroupPipeBind>]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Get-PnPGroup [[-Identity] <GroupPipeBind>] [-Connection <PnPConnection>]
+ [-Includes <String[]>] [<CommonParameters>]
 ```
 
 ### Members
 ```powershell
-Get-PnPGroup [-AssociatedMemberGroup [<SwitchParameter>]]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Get-PnPGroup [-AssociatedMemberGroup] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
 ### Visitors
 ```powershell
-Get-PnPGroup [-AssociatedVisitorGroup [<SwitchParameter>]]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Get-PnPGroup [-AssociatedVisitorGroup] [-Connection <PnPConnection>]
+ [-Includes <String[]>] [<CommonParameters>]
 ```
 
 ### Owners
 ```powershell
-Get-PnPGroup [-AssociatedOwnerGroup [<SwitchParameter>]]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Get-PnPGroup [-AssociatedOwnerGroup] [-Connection <PnPConnection>] [-Includes <String[]>]
+ [<CommonParameters>]
 ```
 
-### 
-```powershell
-Get-PnPGroup [-Includes <String[]>]
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
-```
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPGroup
 ```
 
 Returns all SharePoint groups in a site
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-PnPGroup -Identity 'My Site Users'
 ```
 
 This will return the group called 'My Site Users' in if available in the current site
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-PnPGroup -AssociatedMemberGroup
 ```
@@ -82,7 +83,9 @@ Parameter Sets: Members
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AssociatedOwnerGroup
@@ -94,7 +97,9 @@ Parameter Sets: Owners
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -AssociatedVisitorGroup
@@ -106,7 +111,23 @@ Parameter Sets: Visitors
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Identity
@@ -119,49 +140,15 @@ Aliases: Name
 
 Required: False
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
-### -Includes
-Specify properties to include when retrieving objects from the server.
 
-```yaml
-Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: False
-```
-
-### -Web
-The web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### List<Microsoft.SharePoint.Client.Group>
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

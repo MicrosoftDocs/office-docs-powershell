@@ -22,18 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Rehome
-```
-Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
- [-RehomeRequest]
- [-AzureSharedAccessSignatureToken <String>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-RequestExpiryInterval <Unlimited>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### Identity
 ```
 Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
@@ -47,10 +35,21 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Priority <RequestPriority>]
- [-RemoteCredential <PSCredential>]
- [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
+ [-SkipInitialConnectionValidation]
  [-SkipMerging <SkippableMergeComponent[]>]
+ [-SkippedItemApprovalTime <System.DateTime>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Rehome
+```
+Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RehomeRequest]
+ [-RequestExpiryInterval <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -79,7 +78,7 @@ This example finds all import requests that have a status of Suspended, and then
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you specified a name for the import request with the New-MailboxImportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you specified a name for the import request with the New-MailboxImportRequest cmdlet, use the following syntax: `Alias\Name`.
 
 ```yaml
 Type: MailboxImportRequestIdParameter
@@ -91,6 +90,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AzureSharedAccessSignatureToken
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -106,24 +123,6 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureSharedAccessSignatureToken
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -313,44 +312,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoteCredential
-This parameter is available only in on-premises Exchange.
-
-The RemoteCredential parameter specifies the username and password an administrator who has permission to perform the mailbox import request.
-
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
-
-```yaml
-Type: PSCredential
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteHostName
-This parameter is available only in on-premises Exchange.
-
-The RemoteHostName parameter specifies the FQDN of the cross-forest organization from which you're configuring the import request.
-
-```yaml
-Type: Fqdn
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RequestExpiryInterval
 The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
 
@@ -374,6 +335,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipInitialConnectionValidation
+This parameter is available only in the cloud-based service
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipMerging
 The SkipMerging parameter specifies the steps in the import that should be skipped. This parameter is used primarily for debugging purposes.
 
@@ -382,6 +361,24 @@ Type: SkippableMergeComponent[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkippedItemApprovalTime
+This parameter is available only in the cloud-based service
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: System.DateTime
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

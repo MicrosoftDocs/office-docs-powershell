@@ -34,6 +34,7 @@ New-InboundConnector [-Name] <String> -SenderDomains <MultiValuedProperty>
  [-EFSkipLastIP <Boolean>]
  [-EFSkipMailGateway <MultiValuedProperty>]
  [-EFTestMode <Boolean>]
+ [-EFUsers <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-RequireTls <Boolean>]
  [-RestrictDomainsToCertificate <Boolean>]
@@ -121,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServicesMailEnabled
-Note: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
+**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
 
 The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
@@ -438,6 +439,11 @@ The TreatMessagesAsInternal parameter specifies an alternative method to identif
 - $false: Messages aren't considered internal. This is the default value.
 
 In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Microsoft 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
+
+**Note**: You can't set this parameter to the value $true if either of the following conditions is true:
+
+- The CloudServicesMailEnabled parameter is set to the value $true.
+- The ConnectorType parameter value is not OnPremises.
 
 ```yaml
 Type: Boolean

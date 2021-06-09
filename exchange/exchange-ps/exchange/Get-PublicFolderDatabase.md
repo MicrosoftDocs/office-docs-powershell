@@ -135,10 +135,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
 ### -IncludePreExchange2010
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IncludePreExchange2010 switch specifies whether to include information about Exchange 2003 or Exchange 2007 public folders in the results. You don't need to specify a value with this switch.
 

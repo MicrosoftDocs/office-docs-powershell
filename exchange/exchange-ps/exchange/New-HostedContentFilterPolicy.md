@@ -67,6 +67,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-PhishSpamAction <SpamFilteringAction>]
  [-PhishZapEnabled <Boolean>
  [-QuarantineRetentionPeriod <Int32>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [-RedirectToRecipients <MultiValuedProperty>]
  [-RegionBlockList <MultiValuedProperty>]
  [-SpamAction <SpamFilteringAction>]
@@ -74,7 +75,6 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-TestModeAction <SpamFilteringTestModeAction>]
  [-TestModeBccToRecipients <MultiValuedProperty>]
  [-WhatIf]
- [-ZapEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -100,7 +100,7 @@ This example creates a spam filter policy named Contoso Executives with the foll
 ### -Name
 The Name parameter specifies a unique name for the spam filter policy. If the value contains spaces, enclose the value in quotation marks (").
 
-Don't use the following characters in the name value: \\, %, &, \*, +, /, =, ?, {, }, \|, \<, \>, (, ), ;, :, [, ], comma (,), or double quotation mark (").
+Don't use the following characters in the name value: `\ % & * + / = ? { } | < > ( ) ; : [ ] , "`.
 
 ```yaml
 Type: String
@@ -165,9 +165,9 @@ The AllowedSenderDomains parameter specifies trusted domains that aren't process
 
 **Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -187,9 +187,9 @@ The AllowedSenders parameter specifies a list of trusted senders that skip spam 
 
 **Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -209,9 +209,9 @@ The BlockedSenderDomains parameter specifies domains that are always marked as s
 
 **Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -231,9 +231,9 @@ The BlockedSenders parameter specifies senders that are always marked as spam so
 
 **Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -254,7 +254,7 @@ The BulkSpamAction parameter specifies the action to take on messages that are m
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - NoAction
 - Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
@@ -273,7 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -BulkThreshold
-The BulkThreshold parameter specifies the BCL that triggers the BulkSpamAction on the message (greater than the specified value, not greater than or equal to). A valid value is an integer from 1 to 9, and the default value is 7. A higher value indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk compliant level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
+The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than the specified BCL value, not greater than or equal to). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 8 or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
+
+A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
 
 ```yaml
 Type: Int32
@@ -494,7 +496,7 @@ Accept wildcard characters: False
 ### -HighConfidencePhishAction
 The HighConfidencePhishAction parameter specifies the action to take on messages that are marked as high confidence phishing (not phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is only available to admins.
 
@@ -502,7 +504,7 @@ The HighConfidencePhishAction parameter specifies the action to take on messages
 Type: PhishFilteringAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -517,7 +519,7 @@ The HighConfidenceSpamAction parameter specifies the action to take on messages 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients and admins.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
@@ -648,9 +650,9 @@ af, ar, az, be, bg, bn, br, bs, ca, cs, cy, da, de, el, en, eo, es, et, eu, fa, 
 
 A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Note that not all possible language codes are available as input for this parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list, use the value $null.
 
@@ -955,7 +957,7 @@ The PhishSpamAction parameter specifies the action to take on messages that are 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients (as of April, 2020) and admins.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
@@ -973,12 +975,12 @@ Accept wildcard characters: False
 ```
 
 ### -PhishZapEnabled
-The PhishZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect phishing messages in delivered messages in Exchange Online mailboxes. Valid values are:
+The PhishZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect phishing in already delivered messages in Exchange Online mailboxes. Valid values are:
 
-- $true: Phish ZAP is enabled. This is the default value. The result depends on the spam filtering verdict action: MoveToJmf = Read and unread phish messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine: Read and unread phish messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
-- $false: Phish ZAP is disabled.
+- $true: ZAP for phishing messages is enabled. This is the default value. The result depends on the spam filtering verdict action for phishing messages: MoveToJmf = Read and unread phishing messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine = Read and unread phishing messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
+- $false: ZAP for phishing messages is disabled.
 
-**Note**: Use this parameter instead of the ZapEnabled parameter. The ZapEnabled parameter will be deprecated in a future release. During the transition, the value of this parameter is inherited from the ZapEnabled parameter. After you use the PhishZapEnabled parameter or the corresponding phish ZAP setting in the admin center on an existing spam filter policy, the ZapEnabled parameter value is ignored for phish ZAP.
+You configure ZAP for spam with the SpamZapEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -1002,7 +1004,7 @@ The QuarantineRetentionPeriod parameter specifies the number of days that spam m
 - PhishSpamAction
 - SpamAction
 
-A valid value is an integer between 1 and 30. The default value is 30.
+A valid value is an integer between 1 and 30. The default value is 15.
 
 After the time period expires, the message is deleted.
 
@@ -1010,6 +1012,23 @@ After the time period expires, the message is deleted.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecommendedPolicyType
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+
+```yaml
+Type: RecommendedPolicyType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Custom, Standard, Strict
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -1049,9 +1068,9 @@ AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, 
 
 A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list, use the value $null.
 
@@ -1074,7 +1093,7 @@ The SpamAction parameter specifies the action to take on messages that are marke
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete : Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
@@ -1092,12 +1111,12 @@ Accept wildcard characters: False
 ```
 
 ### -SpamZapEnabled
-The SpamZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect spam in delivered messages in Exchange Online mailboxes. Valid values are:
+The SpamZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect spam in already delivered messages in Exchange Online mailboxes. Valid values are:
 
-- $true: Spam ZAP is enabled. This is the default value. The result depends on the spam filtering verdict action: MoveToJmf = Unread spam messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine: Unread spam messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
-- $false: Spam ZAP is disabled.
+- $true: ZAP for spam is enabled. This is the default value. The result depends on the spam filtering verdict action for spam messages: MoveToJmf = Unread spam messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine = Unread spam messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
+- $false: ZAP for spam is disabled.
 
-**Note**: Use this parameter instead of the ZapEnabled parameter. The ZapEnabled parameter will be deprecated in a future release. During the transition, the value of this parameter is inherited from the ZapEnabled parameter. After you use the SpamZapEnabled parameter or the corresponding spam ZAP setting in the admin center on an existing spam filter policy, the ZapEnabled parameter value is ignored for spam ZAP.
+You configure ZAP for phishing messages with the PhishZapEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -1163,27 +1182,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ZapEnabled
-**Note**: This parameter will be deprecated in a future release. Use the PhishZapEnabled and SpamZapEnabled parameters instead. After you use these parameters or configure the phish ZAP or spam ZAP settings in the admin center, the value of this parameter is ignored.
-
-The ZapEnabled parameter specifies whether to enable ZAP for phish and spam in Exchange Online mailboxes. Valid values are:
-
-- $true: ZAP for phish and spam is enabled. This is the default value.
-- $false: ZAP for phish and spam is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

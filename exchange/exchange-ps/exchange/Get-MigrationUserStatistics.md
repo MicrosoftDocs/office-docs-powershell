@@ -55,10 +55,10 @@ This example displays the number of mailbox items that failed to migrate, which 
 
 ### Example 3
 ```powershell
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | Format-List SkippedItemCount,SkippedItems
+Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeSkippedItems | Select-Object -ExpandProperty SkippedItems | Format-List DateReceived, Subject
 ```
 
-This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
+This example displays results information in the SkippedItems property.
 
 ### Example 4
 ```powershell

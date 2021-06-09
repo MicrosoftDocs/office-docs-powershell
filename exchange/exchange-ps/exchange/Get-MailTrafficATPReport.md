@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization for the last 90 days.
+Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Microsoft Defender for Office 365 detections in your cloud-based organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -30,9 +30,10 @@ Get-MailTrafficATPReport
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
+ [-NumberOfRows <Int32>]
  [-Page <Int32>]
  [-PageSize <Int32>]
+ [-PivotBy <MultiValuedProperty>]
  [-ProbeTag <String>]
  [-StartDate <DateTime>]
  [-SummarizeBy <MultiValuedProperty>]
@@ -40,9 +41,9 @@ Get-MailTrafficATPReport
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity.
 
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 For the reporting period you specify, the cmdlet returns the following information:
 
@@ -175,7 +176,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 - Message passed (Indicates a good message.)
 
-Email phish EventTypes:
+Email phishing EventTypes:
 
 - Advanced phish filter (Indicates a message caught by the machine learning model.)
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
@@ -191,20 +192,20 @@ Email phish EventTypes:
 Email malware EventTypes:
 
 - Anti-malware engine (Indicates a message caught by the anti-malware engine.)
-- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
-- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
+- ATP Safe Attachments\* (Indicates a message with a malicious attachment blocked by Defender for Office 365.)
+- ATP Safe Links\* (Indicates when a malicious link is blocked by Defender for Office 365.)
 - ZAP (Indicates a message with malware detected and auto-purged after delivery.)
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
 - Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
 
 Content malware EventTypes:
 
-- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
-- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
+- AtpDocumentMalware\* (Indicates malicious content detected by Safe Attachments.)
+- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires Defender for Office 365 or E5.)
 
-\* These features require an E5 subscription or an Office 365 ATP add-on.
+\* Requires Defender for Office 365 (included in Microsoft 365 E5 or in an add-in subscription).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -219,11 +220,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Expression
-This parameter is reserved for internal Microsoft use.
+### -NumberOfRows
+The NumberOfRows parameter specifies the number of rows to return in the report. The maximum value is 10000.
 
 ```yaml
-Type: Expression
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -256,6 +257,22 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PivotBy
+{{ Fill PivotBy Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

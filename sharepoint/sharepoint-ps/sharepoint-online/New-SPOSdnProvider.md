@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-PARAMVALUE: String
+Identity of the provider.
 
 ```yaml
 Type: String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -License
 
-PARAMVALUE: String
+License key provided by the provider.
 
 ```yaml
 Type: String

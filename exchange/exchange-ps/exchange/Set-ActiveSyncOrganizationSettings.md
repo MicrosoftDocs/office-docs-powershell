@@ -28,7 +28,9 @@ Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsI
  [-Confirm]
  [-DefaultAccessLevel <DeviceAccessLevel>]
  [-DomainController <Fqdn>]
+ [-EnableMobileMailboxPolicyWhenCAInplace <Boolean>]
  [-OtaNotificationMailInsert <String>]
+ [-TenantAdminPreference <TenantAdminPreference>]
  [-UserMailInsert <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -67,9 +69,9 @@ Accept wildcard characters: False
 ### -AdminMailRecipients
 The AdminMailRecipients parameter specifies the email addresses of the administrators for reporting purposes.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -101,6 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRMSSupportForUnenlightenedApps
+This parameter is available or functional only in the cloud-based service.
+
 The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
 
 - $true
@@ -178,6 +182,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableMobileMailboxPolicyWhenCAInplace
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnableMobileMailboxPolicyWhenCAInplace Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OtaNotificationMailInsert
 The OtaNotificationMailInsert parameter specifies the text to include in an email message that's sent to users who need to update their older devices to use the new Exchange ActiveSync features in Microsoft Exchange.
 
@@ -188,6 +210,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantAdminPreference
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantAdminPreference Description }}
+
+```yaml
+Type: TenantAdminPreference
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

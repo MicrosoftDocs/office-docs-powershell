@@ -25,6 +25,7 @@ Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter>
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
+ [-IncludeSoftDeletedObjects]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -46,7 +47,8 @@ This example returns the existing distribution group members for the distributio
 
 ### Example 2
 ```powershell
-Set-ADServerSettings -ViewEntireForest $true; Get-DistributionGroupMember -Identity "Marketing Worldwide"
+Set-ADServerSettings -ViewEntireForest $true
+Get-DistributionGroupMember -Identity "Marketing Worldwide"
 ```
 
 This example sets the scope of the search to the entire forest by running the Set-ADServerSettings cmdlet, then the Get-DistributionGroupMember cmdlet searches the entire forest for the distribution group members in the Marketing Worldwide distribution group.
@@ -127,6 +129,26 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSoftDeletedObjects
+This parameter is available only in the cloud-based service.
+
+The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted group members in the results. You don't need to specify a value with this switch.
+
+Soft-deleted group members are deleted Microsoft 365 Groups or mailboxes that are still recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

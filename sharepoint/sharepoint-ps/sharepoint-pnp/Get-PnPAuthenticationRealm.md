@@ -1,21 +1,25 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpauthenticationrealm
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAuthenticationRealm.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Get-PnPAuthenticationRealm
 ---
-
+  
 # Get-PnPAuthenticationRealm
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAuthenticationRealm.md to change this file.
+
 Returns the authentication realm
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Get-PnPAuthenticationRealm [-Url <String>]
-                           [-Connection <PnPConnection>]
+Get-PnPAuthenticationRealm [[-Url] <String>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,33 +27,21 @@ Gets the authentication realm for the current web
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Get-PnPAuthenticationRealm
 ```
 
 This will get the authentication realm for the current connected site
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Get-PnPAuthenticationRealm -Url https://contoso.sharepoint.com
+Get-PnPAuthenticationRealm -Url "https://contoso.sharepoint.com"
 ```
 
 This will get the authentication realm for https://contoso.sharepoint.com
 
 ## PARAMETERS
-
-### -Url
-Specifies the URL of the site
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: 0
-Accept pipeline input: True
-```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
@@ -60,13 +52,27 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-## OUTPUTS
+### -Url
+Specifies the URL of the site
 
-### System.String
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

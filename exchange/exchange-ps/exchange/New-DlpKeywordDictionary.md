@@ -38,8 +38,8 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-$Keywords = @("Aarskog's syndrome","Abandonment","Abasia","Abderhalden-Kaufmann-Lignac","Abdominalgia","Abduction contracture","Abetalipo proteinemia","Abiotrophy","Ablatio","ablation","Ablepharia","Abocclusion","Abolition","Aborter","Abortion","Abortus","Aboulomania","Abrami's disease","Abramo");
-$EncodedKeywords = $Keywords | ForEach-Object{[System.Text.Encoding]::UTF8.GetBytes($_+"`r`n")};
+$Keywords = @("Aarskog's syndrome","Abandonment","Abasia","Abderhalden-Kaufmann-Lignac","Abdominalgia","Abduction contracture","Abetalipo proteinemia","Abiotrophy","Ablatio","ablation","Ablepharia","Abocclusion","Abolition","Aborter","Abortion","Abortus","Aboulomania","Abrami's disease","Abramo")
+$EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
 New-DlpKeywordDictionary -Name "Diseases" -Description "Names of diseases and injuries from ICD-10-CM lexicon" -FileData $EncodedKeywords
 ```
 
@@ -47,8 +47,8 @@ This example creates a DLP keyword dictionary named Diseases by using the specif
 
 ### Example 2
 ```powershell
-$Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt";
-$EncodedKeywords = $Keywords | ForEach-Object{[System.Text.Encoding]::UTF8.GetBytes($_+"`r`n")};
+$Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt"
+$EncodedKeywords = $Keywords | ForEach-Object{[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
 New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
 ```
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF8. For more information, see the examples in this topic.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic.
 
 ```yaml
 Type: Byte[]

@@ -48,6 +48,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-InternalDsnReportingAuthority <SmtpDomain>]
  [-InternalDsnSendHtml <Boolean>]
  [-InternalSMTPServers <MultiValuedProperty>]
+ [-JournalMessageExpirationDays <Int32>]
  [-JournalingReportNdrTo <SmtpAddress>]
  [-LegacyJournalingMigrationEnabled <Boolean>]
  [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
@@ -59,7 +60,6 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxRetriesForLocalSiteShadow <Int32>]
  [-MaxRetriesForRemoteSiteShadow <Int32>]
  [-MaxSendSize <Unlimited>]
- [-OrganizationFederatedMailbox <SmtpAddress>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
  [-RejectMessageOnShadowFailure <Boolean>]
  [-Rfc2231EncodingEnabled <Boolean>]
@@ -107,13 +107,15 @@ To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a
 ## PARAMETERS
 
 ### -Identity
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -398,8 +400,8 @@ Accept wildcard characters: False
 ### -ExternalDsnSendHtml
 The ExternalDsnSendHtml parameter specifies whether external DSN messages should be HTML or plain text. Valid values are:
 
-- $true: DSNs are HTML. This is the default value.
-- $false: DSNs are plain text.
+- $true: External DSNs are HTML. This is the default value.
+- $false: External DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -417,13 +419,13 @@ Accept wildcard characters: False
 ### -ExternalPostmasterAddress
 The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is blank ($null).
 
-The default value means the external postmaster address is postmaster@\<DefaultAcceptedDomain\> in the following locations:
+The default value means the external postmaster address is `postmaster@<DefaultAcceptedDomain>` in the following locations:
 
 - On Hub Transport servers or the Transport service on Mailbox servers.
 - On Edge Transport servers that are subscribed to the Exchange organization.
 - In Exchange Online.
 
-On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is postmaster@\<EdgeTransportServerFQDN\>.
+On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is `postmaster@<EdgeTransportServerFQDN>`.
 
 To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
 
@@ -472,13 +474,13 @@ DSN codes are entered as x.y.z and are separated by commas. By default, the foll
 - 5.2.0
 - 5.1.4
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although these DSN codes are monitored by default, the associated NDRs aren't copied to the Exchange recipient or to the external postmaster address if no mailbox is assigned to the Exchange recipient or to the external postmaster address. By default, no mailbox is assigned to the Exchange recipient or to the external postmaster address.
 
-To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of postmaster@\<Authoritative domain\> to the mailbox.
+To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of `postmaster@<AuthoritativeDomain>` to the mailbox.
 
 ```yaml
 Type: MultiValuedProperty
@@ -494,7 +496,7 @@ Accept wildcard characters: False
 ```
 
 ### -HeaderPromotionModeSetting
-The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. Valid values are:
+The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received. Valid values are:
 
 - MustCreate: Exchange creates a named property for each new custom X-header.
 - MayCreate: Exchange creates a named property for each new custom X-header on messages received from authenticated senders. No named properties are created for custom X-headers on messages received from unauthenticated senders.
@@ -609,8 +611,8 @@ Accept wildcard characters: False
 ### -InternalDsnSendHtml
 The InternalDsnSendHtml parameter specifies whether internal DSN messages should be HTML or plain text. Valid values are:
 
-- $true: DSNs are HTML. This is the default value.
-- $false: DSNs are plain text.
+- $true: Internal DSNs are HTML. This is the default value.
+- $false: Internal DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -630,9 +632,9 @@ This parameter is available only in on-premises Exchange.
 
 The InternalSMTPServers parameter specifies a list of internal SMTP server IP addresses or IP address ranges that should be ignored by Sender ID and connection filtering.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -647,8 +649,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JournalMessageExpirationDays
+This parameter is available only in the cloud-based service.
+
+The JournalMessageExpirationDays parameter extends the number of days that undeliverable journal reports are queued before they expire. A valid value is an integer from 0 to 7. The default value is 0, which means undeliverable journal reports are treated like regular undeliverable messages.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JournalingReportNdrTo
-The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the argument to JournalingReportNdrTo.
+The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter.
 
 ```yaml
 Type: SmtpAddress
@@ -664,7 +684,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyJournalingMigrationEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 will be reformatted by Exchange 2010.
 
@@ -909,24 +929,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OrganizationFederatedMailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The OrganizationFederatedMailbox parameter specifies the SMTP address of the federated mailbox used for federated delivery with other organizations.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -1235,9 +1237,9 @@ The TLSReceiveDomainSecureList parameter specifies the domains from which you wa
 - Specify the domains to which you want to send domain secured email by using the TLSSendDomainSecureList parameter.
 - Enable Domain Security (Mutual Auth TLS) on the Send connectors that send messages to the domains that you specified in the TLSSendDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The wildcard character (\*) isn't supported in the domains listed in the TLSReceiveDomainSecureList parameter or in the TLSSendDomainSecureList parameter. The default value for both parameters is an empty list ({}).
 
@@ -1263,9 +1265,9 @@ The TLSSendDomainSecureList parameter specifies the domains from which you want 
 - Specify the domains from which you want to receive domain secured email by using the TLSReceiveDomainSecureList parameter.
 - Enable Domain Security (Mutual Auth TLS) and the TLS authentication method on the Receive connectors that receive messages from the domains that you specified in the TLSReceiveDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Multiple domains may be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
 

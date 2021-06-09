@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-clientaccessrule
-applicable: Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ClientAccessRule
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # New-ClientAccessRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available or functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-ClientAccessRule cmdlet to create client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
@@ -25,15 +25,19 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
  [-AnyOfAuthenticationTypes <MultiValuedProperty>]
  [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-AnyOfProtocols <MultiValuedProperty>]
+ [-AnyOfSourceTcpPortNumbers <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-ExceptAnyOfAuthenticationTypes <MultiValuedProperty>]
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
+ [-ExceptAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
+ [-ExceptUserIsMemberOf <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Priority <Int32>]
  [-Scope <ClientAccessRulesScope>]
+ [-UserIsMemberOf <MultiValuedProperty>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-UserRecipientFilter <String>]
  [-WhatIf]
@@ -43,7 +47,7 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
 ## DESCRIPTION
 Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
-Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
+**Note**: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 - ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
@@ -79,7 +83,7 @@ The Action parameter specifies the action for the client access rule. Valid valu
 Type: ClientAccessRulesAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -95,7 +99,7 @@ The Name parameter specifies a unique name for the client access rule.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -105,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfAuthenticationTypes
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AnyOfAuthenticationTypes parameter specifies a condition for the client access rule that's based on the client's authentication type.
 
@@ -123,7 +127,7 @@ You can enter multiple values separated by commas. Don't use quotation marks.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -133,19 +137,21 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfClientIPAddressesOrRanges
-The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IP address. Valid values for this parameter are:
+The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
 
-- A single IP address: For example, 192.168.1.1.
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
+- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
 You can enter multiple values separated by commas.
+
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -180,7 +186,23 @@ You can enter multiple values separated by commas. Don't use quotation marks.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyOfSourceTcpPortNumbers
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -199,7 +221,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -217,7 +239,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +255,7 @@ The Enabled parameter specifies whether the client access rule is enabled or dis
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -243,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfAuthenticationTypes
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the client access rule that's based on the client's authentication type.
 
@@ -261,7 +283,7 @@ You can enter multiple values separated by commas. Don't use quotation marks.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -271,19 +293,21 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfClientIPAddressesOrRanges
-The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IP address. Valid values for this parameter are:
+The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
 
-- A single IP address: For example, 192.168.1.1.
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
+- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
 You can enter multiple values separated by commas.
+
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -293,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfProtocols
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The ExceptAnyOfProtocols parameter specifies an exception for the client access rule that's based on the client's protocol.
 
@@ -318,7 +342,39 @@ You can enter multiple values separated by commas. Don't use quotation marks.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptAnyOfSourceTcpPortNumbers
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptUserIsMemberOf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -328,9 +384,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptUsernameMatchesAnyOfPatterns
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
-The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character.
+The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
 You can enter multiple values separated by commas.
 
@@ -338,7 +394,7 @@ You can enter multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -362,7 +418,7 @@ If you modify the priority value of a rule, the position of the rule in the list
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -381,7 +437,23 @@ The Scope parameter specifies the scope of the client access rule. Valid values 
 Type: ClientAccessRulesScope
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserIsMemberOf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -391,9 +463,9 @@ Accept wildcard characters: False
 ```
 
 ### -UsernameMatchesAnyOfPatterns
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
-The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character. This parameter does not work with the -AnyOfProtocols UniversalOutlook parameter.
+The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character. This parameter does not work with the -AnyOfProtocols UniversalOutlook parameter.
 
 You can enter multiple values separated by commas.
 
@@ -401,7 +473,7 @@ You can enter multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -411,7 +483,7 @@ Accept wildcard characters: True
 ```
 
 ### -UserRecipientFilter
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"City -eq 'Redmond'"`).
 
@@ -440,7 +512,7 @@ The filterable properties that you can use with this parameter are:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -456,7 +528,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

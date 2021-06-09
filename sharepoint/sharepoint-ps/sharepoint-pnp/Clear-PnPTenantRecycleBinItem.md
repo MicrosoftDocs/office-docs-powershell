@@ -1,14 +1,19 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/clear-pnptenantrecyclebinitem
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Clear-PnPTenantRecycleBinItem.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Clear-PnPTenantRecycleBinItem
 ---
-
+  
 # Clear-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnPTenantRecycleBinItem.md to change this file.
+
 
 **Required Permissions**
 
@@ -16,13 +21,10 @@ title: Clear-PnPTenantRecycleBinItem
 
 Permanently deletes a site collection from the tenant scoped recycle bin
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
-Clear-PnPTenantRecycleBinItem -Url <String>
-                              [-Wait [<SwitchParameter>]]
-                              [-Force [<SwitchParameter>]]
-                              [-Connection <PnPConnection>]
+Clear-PnPTenantRecycleBinItem -Url <String> [-Wait] [-Force] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,68 +32,24 @@ The Clear-PnPTenantRecycleBinItem cmdlet allows a site collection that has been 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
-Clear-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso
+Clear-PnPTenantRecycleBinItem -Url "https://tenant.sharepoint.com/sites/contoso"
 ```
 
 This will permanently delete site collection with the url 'https://tenant.sharepoint.com/sites/contoso' from the tenant recycle bin
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
-Clear-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso -Wait
+Clear-PnPTenantRecycleBinItem -Url "https://tenant.sharepoint.com/sites/contoso" -Wait
 ```
 
 This will permanently delete site collection with the url 'https://tenant.sharepoint.com/sites/contoso' from the tenant recycle bin and will wait with executing further PowerShell commands until the operation has completed
 
 ## PARAMETERS
 
-### -Force
-If provided, no confirmation will be asked to permanently delete the site collection from the tenant recycle bin
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Url
-Url of the site collection to permanently delete from the tenant recycle bin
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
-### -Wait
-If provided, the PowerShell execution will halt until the operation has completed
-
-Only applicable to: SharePoint Online
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: PnPConnection
@@ -99,9 +57,55 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+If provided, no confirmation will be asked to permanently delete the site collection from the tenant recycle bin
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Url
+Url of the site collection to permanently delete from the tenant recycle bin
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Wait
+If provided, the PowerShell execution will halt until the operation has completed
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

@@ -68,9 +68,7 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 - Latency(MS): The time required to complete the test in milliseconds.
 - Error: Any error messages that were encountered.
 
-You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
-
-Test-PowerShellConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\\My Documents\\PowerShell Test.html"
+You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding `> <filename>` to the command. For example: `Test-PowerShellConnectivity -ClientAccessServer MBX01 | ConvertTo-Html | Set-Content -Path "C:\My Documents\PowerShell Test.html"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -85,7 +83,8 @@ This example tests the PowerShell (Default Web Site) virtual directory on the MB
 
 ### Example 2
 ```powershell
-$UserCredentials = Get-Credential; Test-PowerShellConnectivity -ConnectionUri https://contoso.com/powershell -TestCredential $UserCredentials -Authentication Basic
+$UserCredentials = Get-Credential
+Test-PowerShellConnectivity -ConnectionUri https://contoso.com/powershell -TestCredential $UserCredentials -Authentication Basic
 ```
 
 This example tests the remote PowerShell virtual directory that's available at `https://contoso.com/powershell`. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directory is configured to use Basic authentication.

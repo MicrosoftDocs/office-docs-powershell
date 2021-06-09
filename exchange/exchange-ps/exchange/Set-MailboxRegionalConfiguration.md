@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
+ [-Archive]
  [-Confirm]
  [-DateFormat <String>]
  [-DomainController <Fqdn>]
@@ -56,11 +57,10 @@ This example sets the date format for Ella Lack's mailbox.
 
 ### Example 3
 ```powershell
-Set-MailboxRegionalConfiguration -Identity "Alice Jakobsen" -Language da-dk -DateFormat "dd-mm-yyyy" -LocalizeDefaultFolderName
+Set-MailboxRegionalConfiguration -Identity "Alice Jakobsen" -Language da-dk -DateFormat "dd-MM-yyyy" -LocalizeDefaultFolderName
 ```
 
 This example sets Alice Jakobsen's mailbox language to Danish Denmark, sets the date in the day/month/year format and localizes the default folder names in Danish.
-
 
 ### Example 4
 ```powershell
@@ -102,6 +102,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Archive
+This parameter is available only in the cloud-based service.
+
+{{ Fill Archive Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

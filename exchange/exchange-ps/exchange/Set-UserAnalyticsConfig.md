@@ -14,26 +14,16 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-UserAnalyticsConfig cmdlet to modify the MyAnalytics privacy settings for cloud-based users.
+**Note**: This cmdlet has been replaced by the **Set-MyAnalyticsFeatureConfig** cmdlet in the Exchange Online PowerShell V2 module version 2.0.4 or later. For connection instructions using the module, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+Use the Set-UserAnalyticsConfig cmdlet to modify the MyAnalytics privacy settings for cloud-based users.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### MyAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String>
- [<CommonParameters>]
-```
-
-### TeamAnalytics
-```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -TeamAnalyticsEnabled <Boolean>
- [-PrivacyMode <String>]
- [-TeamAnalyticsManagerViewEnabled <Boolean>]
- [<CommonParameters>]
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,10 +33,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode OptIn
+Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode Opt-In
 ```
 
-This example sets the MyAnalytics privacy setting to OptIn for the user named Kathleen Reiter.
+This example sets the MyAnalytics privacy setting to Opt-In for the user named Kathleen Reiter.
 
 ## PARAMETERS
 
@@ -82,7 +72,7 @@ The PrivacyMode parameter specifies the MyAnalytics privacy setting for the user
 
 ```yaml
 Type: String
-Parameter Sets: MyAnalytics
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -90,51 +80,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: TeamAnalytics
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -TeamAnalyticsEnabled
-PARAMVALUE: Boolean
-
-```yaml
-Type: Boolean
-Parameter Sets: TeamAnalytics
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TeamAnalyticsManagerViewEnabled
-PARAMVALUE: Boolean
-
-```yaml
-Type: Boolean
-Parameter Sets: TeamAnalytics
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

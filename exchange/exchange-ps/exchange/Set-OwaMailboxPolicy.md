@@ -33,6 +33,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
  [-BookingsMailboxCreationEnabled <Boolean>]
+ [-BoxAttachmentsEnabled <Boolean>]
  [-CalendarEnabled <Boolean>]
  [-ChangePasswordEnabled <Boolean>]
  [-ClassicAttachmentsEnabled <Boolean>]
@@ -47,9 +48,11 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DisableFacebook]
  [-DisplayPhotosEnabled <Boolean>]
  [-DomainController <Fqdn>]
+ [-DropboxAttachmentsEnabled <Boolean>]
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
+ [-FeedbackEnabled <Boolean>]
  [-ForceSaveAttachmentFilteringEnabled <Boolean>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
  [-ForceSaveMimeTypes <MultiValuedProperty>]
@@ -59,6 +62,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ForceWebReadyDocumentViewingFirstOnPublicComputers <Boolean>]
  [-FreCardsEnabled <Boolean>]
  [-GlobalAddressListEnabled <Boolean>]
+ [-GoogleDriveAttachmentsEnabled <Boolean>]
  [-GroupCreationEnabled <Boolean>]
  [-InstantMessagingEnabled <Boolean>]
  [-InstantMessagingType <InstantMessagingTypeOptions>]
@@ -71,6 +75,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-LinkedInEnabled <Boolean>]
  [-LocalEventsEnabled <Boolean>]
  [-LogonAndErrorLanguage <Int32>]
+ [-MessagePreviewsDisabled <Boolean>]
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
@@ -99,6 +104,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-SearchFoldersEnabled <Boolean>]
  [-SetPhotoEnabled <Boolean>]
  [-SetPhotoURL <String>]
+ [-ShowOnlineArchiveEnabled <Boolean>]
  [-SignaturesEnabled <Boolean>]
  [-SilverlightEnabled <Boolean>]
  [-SkipCreateUnifiedGroupCustomSharepointClassification <Boolean>]
@@ -109,7 +115,6 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-TextMessagingEnabled <Boolean>]
  [-ThemeSelectionEnabled <Boolean>]
  [-ThirdPartyAttachmentsEnabled <Boolean>]
- [-ThirdPartyFileProvidersEnabled <Boolean>]
  [-UMIntegrationEnabled <Boolean>]
  [-UNCAccessOnPrivateComputersEnabled <Boolean>]
  [-UNCAccessOnPublicComputersEnabled <Boolean>]
@@ -298,9 +303,9 @@ The AllowedFileTypes parameter specifies the attachment file types (file extensi
 
 .avi, .bmp, .doc, .docm, .docx, .gif, .jpg, .mp3, .one, .pdf, .png, .ppsm, .ppsx, .ppt, .pptm, .pptx, .pub, .rpmsg, .rtf, .tif, .tiff, .txt, .vsd, .wav, .wma, .wmv, .xls, .xlsb, .xlsm, .xlsx, .zip
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same file types are specified in multiple lists:
 
@@ -328,9 +333,9 @@ The AllowedMimeTypes parameter specifies the MIME extensions of attachments that
 - image/jpeg
 - image/png
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same MIME types are specified in multiple lists:
 
@@ -351,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The AllowOfflineOn parameter specifies when Outlook Web App in offline mode is available for supported web browsers. Valid values are:
 
@@ -379,9 +384,9 @@ The BlockedFileTypes parameter specifies a list of attachment file types (file e
 
 .ade, .adp, .apk, .app, .appx, .appcontent-ms, .appref-ms, .asp, .aspx, .asx, .bas, .bat, .cdxml, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pssc, .pst, .py, .pyc, .pyo, .pyw, .pyz, .pyzw, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .udl, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsb, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same file types are specified in multiple lists:
 
@@ -413,9 +418,9 @@ The BlockedMimeTypes parameter specifies MIME extensions in attachments that pre
 - text/scriplet
 - x-internet-signup
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same MIME types are specified in multiple lists:
 
@@ -453,8 +458,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BoxAttachmentsEnabled
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CalendarEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
@@ -465,7 +488,7 @@ The CalendarEnabled parameter specifies whether to enable or disable the calenda
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -475,7 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
@@ -486,7 +509,7 @@ The ChangePasswordEnabled parameter specifies whether users can change their pas
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -519,7 +542,7 @@ This parameter is available only in the cloud-based service.
 
 The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Azure Active Directory Portal.
 
-Note: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
+**Note**: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
 
 Valid values are:
 
@@ -560,7 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContactsEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook Web App. Valid values are:
 
@@ -571,7 +594,7 @@ The ContactsEnabled parameter specifies whether to enable or disable Contacts in
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -615,18 +638,18 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available or functional only in on-premises Exchange.
 
-The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
+The DelegateAccessEnabled parameter specifies whether delegates can use Outlook on the web or Outlook Web App to open folders that they have delegate access to. Valid values are:
 
-- $true: Delegates can open the mailbox in Outlook Web App. This is the default value.
-- $false: Delegates can't open the mailbox in Outlook Web App.
+- $true: Delegates can open the mailbox in Outlook on the web. This is the default value.
+- $false: Delegates can't open the mailbox in Outlook on the web.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -739,8 +762,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExplicitLogonEnabled
+### -DropboxAttachmentsEnabled
 This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExplicitLogonEnabled
+This parameter is available or functional only in on-premises Exchange.
 
 The ExplicitLogonEnabled parameter specifies whether to allow a user to open someone else's mailbox in Outlook on the web (provided that user has permissions to the mailbox). Valid values are:
 
@@ -751,7 +792,7 @@ The ExplicitLogonEnabled parameter specifies whether to allow a user to open som
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -799,6 +840,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FeedbackEnabled
+This cmdlet is available only in the cloud-based service.
+
+The FeedbackEnabled parameter specifies whether to enable or disable inline feedback surveys in Outlook on the web. Valid values are:
+
+- $true: Inline feedback surveys are enabled. This is the default value.
+- $false: Inline feedback surveys are disabled.
+
+ Surveys allow users to provide feedback on specific features. For example, for the text predictions feature, the inline feedback "Are the above autocomplete suggestions helpful (yes/no)?" is shown. If a user chooses "no" they can provide specific feedback.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceSaveAttachmentFilteringEnabled
 The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are filtered before they can be saved from Outlook on the web. Valid values are:
 
@@ -823,9 +887,9 @@ The ForceSaveFileTypes parameter specifies the attachment file types (file exten
 
 .ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .dcr, .dir, .exe, .fxp, .gadget, .hlp, .hta, .htm, .html, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .msc, .msh, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .spl, .swf, .tmp, .url, .vb, .vbe, .vbs, .vsmacro, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same file types are specified in multiple lists:
 
@@ -854,9 +918,9 @@ The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments th
 - Application/x-shockwave-flash
 - text/html
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same MIME types are specified in multiple lists:
 
@@ -965,7 +1029,7 @@ Accept wildcard characters: False
 ```
 
 ### -FreCardsEnabled
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -973,7 +1037,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1001,6 +1065,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GoogleDriveAttachmentsEnabled
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
@@ -1013,7 +1095,7 @@ The GroupCreationEnabled parameter specifies whether Microsoft 365 Group creatio
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1023,7 +1105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstantMessagingEnabled
-The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. Valid values are:
+The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 - $false: Instant messaging isn't available in Outlook on the web.
@@ -1124,7 +1206,6 @@ The IsDefault switch specifies whether the Outlook on the web policy is the defa
 If another policy is currently set as the default, this switch replaces the old default policy with this policy.
 
 **Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
-
 
 ```yaml
 Type: SwitchParameter
@@ -1238,6 +1319,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessagePreviewsDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessagePreviewsDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The Name parameter specifies the unique name for the policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
@@ -1273,24 +1372,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NpsSurveysEnabled	
-This parameter is avaialble only in the cloud-based service.
+### -NpsSurveysEnabled
+This parameter is available only in the cloud-based service.
 
-The NpsSurveysEnabled parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvements in free text. Valid values are:
+The NpsSurveysEnabled parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows users to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvements in free text. Valid values are:
 
 - $true: The NPS survey is available in Outlook on the web. This is the default value.
 - $false: The NPS survey isn't available in Outlook on the web.
 
-```yaml	
-Type: Boolean	
-Parameter Sets: (All)	
-Aliases:	
-Applicable: Exchange Online	
-Required: False	
-Position: Named	
-Default value: None	
-Accept pipeline input: False	
-Accept wildcard characters: False	
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OneDriveAttachmentsEnabled
@@ -1350,7 +1450,7 @@ Accept wildcard characters: False
 The OutboundCharset parameter specifies the character set that's used for outgoing messages in Outlook on the web. Valid values are:
 
 - AutoDetect: Examine the first 2 kilobytes (KB) of text in the message to determine the character set that's used in outgoing messages. This is the default value.
-- AlwaysUTF8: Always use UTF-8 encoded UNICODE characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
+- AlwaysUTF8: Always use UTF-8 encoded Unicode characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
 - UserLanguageChoice: Use the user's language choice in Outlook on the web to encode outgoing messages.
 
 ```yaml
@@ -1407,7 +1507,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
@@ -1633,8 +1733,8 @@ Accept wildcard characters: False
 ### -ReportJunkEmailEnabled
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
-- $true: This is the default value. Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk folder moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
-- $false: Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
+- $true: This is the default value. Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk folder** moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
+- $false: Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk** moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
@@ -1762,6 +1862,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowOnlineArchiveEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ShowOnlineArchiveEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SignaturesEnabled
 The SignaturesEnabled parameter specifies whether to enable or disable the use of signatures in Outlook on the web. Valid values are:
 
@@ -1793,7 +1911,7 @@ The SilverlightEnabled parameter specifies whether a user can use Microsoft Silv
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1803,7 +1921,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook on the web. Valid values are:
 
@@ -1814,7 +1932,7 @@ The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whe
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1837,7 +1955,7 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1860,7 +1978,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1870,7 +1988,7 @@ Accept wildcard characters: False
 ```
 
 ### -TasksEnabled
-This parameter is functional only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The TasksEnabled parameter specifies whether Tasks folder is available in Outlook Web App. Valid values are:
 
@@ -1883,7 +2001,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1954,37 +2072,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAttachmentsEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available only in on-premises Exchange.
 
-This parameter has been deprecated and is no longer used.
-
-To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyFileProvidersEnabled
-This parameter is available only in the cloud-based service.
-
-This parameter has been deprecated and is no longer used.
-
-To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2091,7 +2187,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserVoiceEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The UserVoiceEnabled parameter specifies whether to enable or disable Outlook UserVoice in Outlook on the web. Outlook UserVoice is a customer feedback area that's available in Microsoft 365. Valid values are:
 
@@ -2102,7 +2198,7 @@ The UserVoiceEnabled parameter specifies whether to enable or disable Outlook Us
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2372,9 +2468,9 @@ The WebReadyFileTypes parameter specifies the attachment file types (file extens
 
 You can only remove or add values from within the list of supported file types (you can't add additional values).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This list is used only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to $false. Otherwise, all supported file types are available in WebReady Document Viewing.
 
@@ -2408,9 +2504,9 @@ The WebReadyMimeTypes parameter specifies the MIME extensions of attachments tha
 
 You can only remove or add values from within the list of supported file types (you can't add additional values).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This list is used only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to $false. Otherwise, all supported MIME types are available in WebReady Document Viewing.
 

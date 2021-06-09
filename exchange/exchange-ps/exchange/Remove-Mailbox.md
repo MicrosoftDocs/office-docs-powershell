@@ -36,6 +36,7 @@ Remove-Mailbox [-Identity] <MailboxIdParameter>
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
+ [-SupervisoryReviewPolicy]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -55,6 +56,7 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
+ [-SupervisoryReviewPolicy]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -99,7 +101,8 @@ This example removes the mailbox and the user account for the user named John Ro
 
 ### Example 3
 ```powershell
-$Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
+$Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}
+Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
 This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
@@ -321,7 +324,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -392,7 +395,7 @@ This parameter is available only in the cloud-based service.
 
 The PermanentlyDelete switch specifies whether to immediately and permanently delete (purge) the mailbox, which prevents you from recovering or restoring the mailbox. You don't need to specify a value with this switch.
 
-Notes:
+**Notes**:
 
 - This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes). Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet as shown in Example 3 in this topic.
 - This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).
@@ -456,6 +459,24 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SupervisoryReviewPolicy
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, StoreMailboxIdentity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

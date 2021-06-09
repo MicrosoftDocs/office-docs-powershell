@@ -108,7 +108,8 @@ This example creates the Executive Mailboxes scope. Only mailboxes located withi
 
 ### Example 4
 ```powershell
-New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like 'VP*'" -Exclusive; New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
+New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like 'VP*'" -Exclusive
+New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
 ```
 
 This example creates the Protected Exec Users exclusive scope. Users that contain the string "VP" in their title match the recipient filter for the scope. When the exclusive scope is created, all users are immediately blocked from modifying the recipients that match the exclusive scope until the scope is associated with a management role assignment. If other role assignments are associated with other exclusive scopes that match the same recipients, those assignments can still modify the recipients.
@@ -149,7 +150,7 @@ The DatabaseList parameter specifies a list of databases to which the scope shou
 - Distinguished name (DN)
 - GUID
 
-You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the DatabaseRestrictionFilter, ServerList, RecipientRestrictionFilter, RecipientRoot, or ServerRestrictionFilter parameters.
 
@@ -232,7 +233,7 @@ The ServerList parameter specifies a list of servers to which the scope should b
 - Distinguished name (DN)
 - Exchange Legacy DN
 
-You can specify multiple values separated by commas. If the values contains spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>,"..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contains spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerRestrictionFilter parameters.
 

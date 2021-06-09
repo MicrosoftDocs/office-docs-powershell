@@ -14,35 +14,19 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes user from user information list of specific site collection.
-
-## SYNTAX
-
-```powershell
-Remove-SPOUserInfo -LoginName <String> -Site <SpoSitePipeBind> [<CommonParameters>]
-```
+Do not use.
 
 ## DESCRIPTION
 
-Can be used to remove user from user information lists of the specific site collections.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+Do not use.
 
 ## EXAMPLES
-
-### ------------ Example 1 --------------------
-
-```powershell
-Remove-SPOUserInfo -LoginName joe.healy@contoso.com -Site https://contoso.sharepoint.com/sites/sc1
-```
-
-Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the user information list of <https://contoso.sharepoint.com/sites/sc1> site collection.
 
 ## PARAMETERS
 
 ### -LoginName
 
-Specifies the login name of the user to removed from user information list.
+Do not use.
 
 ```yaml
 Type: String
@@ -59,7 +43,7 @@ Accept wildcard characters: False
 
 ### -Site
 
-Specifies the URL of the site collection.
+Do not use.
 
 ```yaml
 Type: SpoSitePipeBind

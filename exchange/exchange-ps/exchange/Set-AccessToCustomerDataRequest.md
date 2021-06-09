@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-AccessToCustomerDataRequest cmdlet to approve, deny, or cancel Microsoft 365 customer lockbox requests that control access to your data by Microsoft support engineers.
 
-Note: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
+**Note**: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AccessToCustomerDataRequest -ApprovalDecision <Approve | Deny | Cancel> -RequestId <String>
+Set-AccessToCustomerDataRequest -ApprovalDecision <AccessToCustomerDataApproverDecision> -RequestId <String>
  [-Comment <String>]
  [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ The ApprovalDecision parameter specifies the approval decision for the customer 
 - Cancel
 
 ```yaml
-Type: Approve | Deny | Cancel
+Type: AccessToCustomerDataApproverDecision
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

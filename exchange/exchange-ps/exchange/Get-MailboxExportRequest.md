@@ -98,7 +98,7 @@ This example returns all export requests that have the name DB01toPST where the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when the request was created using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>. Exchange automatically precedes the request with the mailbox's alias.
+The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specified a name for the export request when the request was created using the New-MailboxExportRequest cmdlet, use the following syntax: `Alias\Name`. Exchange automatically precedes the request with the mailbox's alias.
 
 This parameter can't be with the following parameters:
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 

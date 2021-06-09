@@ -35,12 +35,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MonitoringItemHelp -Server Exch01 -Identity OutlookMapiHttp.Proxy\CrashEvent.msexchangemapifrontendapppoolEscalate\msexchangemapifrontendapppool | Format-List
 ```
 
-This example retrieves health set information for a monitoring item on the server named Exch01 and displays the output without truncating the results..
+This example retrieves health set information for a monitoring item on the server named Exch01 and displays the output without truncating the results.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
+The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax: `<HealthSet>\<MonitoringItemName>[\<TargetResource>]`. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
 
 ```yaml
 Type: String

@@ -28,7 +28,6 @@ Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>]
  [-Credential <PSCredential>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [<CommonParameters>]
@@ -156,22 +155,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OrganizationalUnit
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -191,7 +174,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with ` | Format-Table -Auto Property1,Property2,...PropertyX`. to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the following attributes:
 

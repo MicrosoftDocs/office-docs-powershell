@@ -12,7 +12,9 @@ ms.reviewer:
 # Get-AdvancedThreatProtectionDocumentDetail
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service. Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the results of Office 365 Advanced Threat Protection (ATP) actions for files in SharePoint Online, OneDrive for Business and Microsoft Teams in your cloud-based organization.
+This cmdlet is available only in the cloud-based service.
+
+Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the detailed results of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams in your Microsoft Defender for Office 365 organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -25,7 +27,6 @@ Get-AdvancedThreatProtectionDocumentDetail [-Action <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Organization <OrganizationIdParameter>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
@@ -47,7 +48,7 @@ For the reporting period and organization you specify, the cmdlet returns the fo
 - Timestamp
 - Workload
 
-For more information about this feature, see [ATP for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+For more information about this feature, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -58,7 +59,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AdvancedThreatProtectionDocumentDetail -Organization contoso.com -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
 ```
 
-This example returns the detailed report of ATP detections during the specified date range.
+This example returns the detailed report of detections during the specified date range.
 
 ## PARAMETERS
 
@@ -127,22 +128,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter specifies the organization for which the report is being presented.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

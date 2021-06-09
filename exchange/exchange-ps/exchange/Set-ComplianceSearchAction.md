@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-compliancesearchaction
-applicable: Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Set-ComplianceSearchAction
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-ComplianceSearchAction
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available or functional only in on-premises Exchange.
 
 Use the Set-ComplianceSearchAction cmdlet to change the export key on export compliance search actions in on-premises Exchange.
 
@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ComplianceSearchAction [-Identity] <ComplianceSearchActionIdParameter>
  [-ChangeExportKey]
+ [-DomainController <Fqdn>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -47,14 +48,14 @@ This example changes the export key on the export compliance search action named
 ### -Identity
 The Identity parameter specifies the compliance search action that you want to modify. You can use any value that uniquely identifies the compliance search action. For example:
 
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> (for example, Case 1234\_Preview).
+- Name: The compliance search action name uses the syntax `"Compliance Search Name_Action"` (for example, `"Case 1234_Preview`).
 - JobRunId (GUID)
 
 ```yaml
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: True
 Position: 1
@@ -72,7 +73,7 @@ This parameter is only meaningful on export compliance search actions.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -91,6 +92,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
@@ -101,13 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

@@ -59,7 +59,7 @@ This example creates the hybrid configuration Hybrid Configuration with the defa
 ## PARAMETERS
 
 ### -ClientAccessServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The ClientAccessServers parameter specifies the Exchange Server 2010 SP2 servers with the Client Access server role installed that will be configured to support the hybrid deployment features. At least one Client Access server must be defined and be externally accessible from the Internet on ports 80 and 443. The servers will be configured to enable the following:
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureMailCertificateThumbprint
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The SecureMailCertificateThumbprint parameter specifies the thumbprint of the X.509 certificate to be used as the certificate for hybrid deployment secure message transport. This certificate cannot be self-signed, must be obtained from a trusted certificate authority (CA) and must be installed on all Hub Transport servers defined in the TransportServers parameter.
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is `"<I>X.500Issuer<S>X.500Subject"`. The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"`, and then use the value $TLSCertName for this parameter.
 
 ```yaml
 Type: SmtpX509Identifier
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -TransportServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The TransportServers parameter specifies the Exchange Server 2010 SP2 servers with the Hub Transport server role installed that are configured to support the hybrid deployment features. At least one Hub Transport server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises and cloud-based organizations.
 

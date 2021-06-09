@@ -70,7 +70,7 @@ The sample script [Remove Duplicate public folder MRS Requests](https://gallery.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request that you want to remove. This value uses the syntax \\PublicFolderMailboxMigration\<GUID\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request that you want to remove. This value uses the syntax `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
 
 You can't use this parameter with the RequestGuid or RequestQueue parameters.
 
@@ -88,6 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
+This parameter is available only in on-premises Exchange.
+
 The RequestGuid parameter specifies the unique RequestGuid identifier of the request. To find the RequestGuid value, use the Get-PublicFolderMailboxMigrationRequest cmdlet.
 
 If you use this parameter, you also need to use the RequestQueue parameter. You can't use either of these parameters with the Identity parameter.
@@ -96,7 +98,7 @@ If you use this parameter, you also need to use the RequestQueue parameter. You 
 Type: Guid
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -106,6 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
+This parameter is available only in on-premises Exchange.
+
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
@@ -118,7 +122,7 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named

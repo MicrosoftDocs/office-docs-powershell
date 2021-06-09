@@ -42,25 +42,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
+[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0
+Import-TransportRuleCollection -FileData $Data
 ```
 
-This example imports a transport rule collection from the XML file named ExportedRules.xml in the  C:\\TransportRules folder.
+This example imports a transport rule collection from the XML file named ExportedRules.xml in the C:\\TransportRules folder.
 
 **Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ## PARAMETERS
 
 ### -Identity
-This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
-The Identity parameter specifies the transport rule to be imported. Use either the GUID or the name of the rule. You can omit the parameter label.
+The Identity parameter specifies the transport rule that you want to import. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -70,7 +75,11 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet.
+The FileData parameter specifies the variable name that contains the content of the XML file.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
+
+**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ```yaml
 Type: Byte[]

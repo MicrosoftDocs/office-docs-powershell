@@ -27,23 +27,26 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-AllowClickThrough <Boolean>]
  [-Confirm]
+ [-CustomNotificationText <String>]
  [-DeliverMessageAfterScan <Boolean>
  [-DoNotAllowClickThrough <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-DoNotTrackUserClicks <Boolean>]
  [-EnableForInternalSenders <Boolean>]
+ [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
  [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
+ [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
  [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -131,10 +134,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomNotificationText
+{{ Fill CustomNotificationText Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeliverMessageAfterScan
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
-- $true: Wait until Safe Links scanning is complete before delivering the message.
+- $true: Wait until Safe Links scanning is complete before delivering the message. Messages that contain malicious links are not delivered.
 - $false: If Safe Links scanning can't complete, deliver the message anyway. This is the default value.
 
 ```yaml
@@ -172,9 +191,9 @@ Accept wildcard characters: False
 ### -DoNotRewriteUrls
 The DoNotRewriteUrls parameter specifies the URLs that are not rewritten by Safe Links scanning. The list of entries allows users who are included in the policy to access the specified URLs that would otherwise be blocked by Safe Links.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -213,6 +232,22 @@ The EnableForInternalSenders parameter specifies whether the Safe Links policy i
 
 - $true: The policy is applied to internal and external senders.
 - $false: The policy is applied only to external senders. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOrganizationBranding
+{{ Fill EnableOrganizationBranding Description }}
 
 ```yaml
 Type: Boolean
@@ -304,6 +339,22 @@ Accept wildcard characters: False
 
 ### -TrackClicks
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseTranslatedNotificationText
+{{ Fill UseTranslatedNotificationText Description }}
 
 ```yaml
 Type: Boolean

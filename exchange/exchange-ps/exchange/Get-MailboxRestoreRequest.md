@@ -51,10 +51,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxRestoreRequest -Identity "ayla\MailboxRestore"
+Get-MailboxRestoreRequest -Identity "Ayla\MailboxRestore"
 ```
 
-This example returns the status of the in-progress and queued restore request with the identity ayla\\MailboxRestore.
+This example returns the status of the in-progress and queued restore request with the identity ayla\\MailboxRestore, where Ayla is the first name of the user.
 
 ### Example 2
 ```powershell
@@ -80,7 +80,7 @@ This example returns all restore requests that have the name RestoreToMBD01 wher
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: `Alias\Name`.
 
 If you didn't specify a name for the restore request when it was created, Exchange automatically generated the default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The TargetDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that reside on the target database. You can use any value that uniquely identifies the database. For example:
 

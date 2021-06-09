@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-umactivecalls
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Get-UMActiveCalls
 schema: 2.0.0
 author: chrisda
@@ -98,7 +98,7 @@ You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in t
 Type: UMDialPlanIdParameter
 Parameter Sets: DialPlan
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in t
 Type: UMServer
 Parameter Sets: ServerInstance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -128,14 +128,13 @@ Accept wildcard characters: False
 ### -IPGateway
 The IPGateway parameter specifies the UM IP gateway for which you want to retrieve active calls.
 
-
 You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.
 
 ```yaml
 Type: UMIPGatewayIdParameter
 Parameter Sets: UMIPGateway
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: Named
@@ -151,7 +150,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -174,7 +173,7 @@ You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in t
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

@@ -35,7 +35,7 @@ New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>]
 ```
 
 ## DESCRIPTION
-The Edge Transport server doesn't have access to Active Directory. All configuration and recipient information is stored in the Active Directory Lightweight Directory Services (AD LDS) instance. The New-EdgeSubscription cmdlet creates the Edge Subscription file that will be imported on a Mailbox server in the Active Directory site to which you want to subscribe this Edge Transport server..
+The Edge Transport server doesn't have access to Active Directory. All configuration and recipient information is stored in the Active Directory Lightweight Directory Services (AD LDS) instance. The New-EdgeSubscription cmdlet creates the Edge Subscription file that will be imported on a Mailbox server in the Active Directory site to which you want to subscribe this Edge Transport server.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -50,7 +50,8 @@ This example creates the Edge Subscription file. It should be run on your Edge T
 
 ### Example 2
 ```powershell
-[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
+[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0
+New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
 This example imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name. Importing the Edge Subscription file completes the Edge Subscription process. You must run this command on the Mailbox server.
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the byte-encoded data object that contains the Edge Subscription file information.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 You can only use this parameter when you're running this command on a Mailbox server.
 

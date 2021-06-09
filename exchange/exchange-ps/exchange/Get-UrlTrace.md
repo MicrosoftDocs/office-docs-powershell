@@ -26,7 +26,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-UrlTrace
  [-ClickId <Guid>]
  [-EndDate <DateTime>]
- [-Expression <Expression>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-RecipientAddress <MultiValuedProperty>]
@@ -37,7 +36,7 @@ Get-UrlTrace
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site. For more information about Advanced Threat Protection Safe Links, see [Office 365 ATP Safe Links](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links).
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site. For more information about Safe Links protection, see [Safe Links in Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links).
 
 For the reporting period you specify, the cmdlet returns the following information:
 
@@ -109,22 +108,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

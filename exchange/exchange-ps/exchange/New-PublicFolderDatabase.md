@@ -26,7 +26,6 @@ New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -122,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -EdbFilePath
-The EdbFilePath parameter specifies the full path of the public folder database files.
+The EdbFilePath parameter specifies the full path of the public folder database files. The default location is `%ExchangeInstallPath%Mailbox\<Public Folder DB Name>\<Public Folder DB Name>.edb`
 
 ```yaml
 Type: EdbFilePath
@@ -138,26 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -LogFolderPath
-The LogFolderPath parameter specifies the folder location for log files. The default path is \<ExchangeInstallPath\>V14\\Mailbox.
+The LogFolderPath parameter specifies the folder location for log files. The default location is `%ExchangeInstallPath%Mailbox\<Public Folder DB Name>`.
 
 ```yaml
 Type: NonRootLocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

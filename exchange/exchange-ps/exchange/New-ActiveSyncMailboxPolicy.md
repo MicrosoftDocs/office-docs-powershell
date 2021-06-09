@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ActiveSyncMailboxPolicy cmdlet to create a Microsoft Mobile Device mailbox policy object.
 
-Note: In Exchange 2013 or later, use the New-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use New-ActiveSyncMailboxPolicy, update them to use New-MobileDeviceMailboxPolicy.
+**Note**: In Exchange 2013 or later, use the New-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use New-ActiveSyncMailboxPolicy, update them to use New-MobileDeviceMailboxPolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -68,7 +68,6 @@ New-ActiveSyncMailboxPolicy [-Name] <String>
  [-MaxInactivityTimeDeviceLock <Unlimited>]
  [-MinDevicePasswordComplexCharacters <Int32>]
  [-MinDevicePasswordLength <Int32>]
- [-MobileOTAUpdateMode <MobileOTAUpdateModeType>]
  [-PasswordRecoveryEnabled <Boolean>]
  [-RequireDeviceEncryption <Boolean>]
  [-RequireEncryptedSMIMEMessages <Boolean>]
@@ -852,30 +851,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MobileOTAUpdateMode
-This parameter is available or functional only in Exchange Server 2010.
-
-The MobileOTAUpdateMode parameter specifies which updates can be seen by the devices that implemented support for this restricting functionality. Valid values are:
-
-- MajorVersionUpdates
-- MinorVersionUpdates
-- BetaVersionUpdates
-
-You need to use this parameter with the AllowMobileOTAUpdate parametery.
-
-```yaml
-Type: MobileOTAUpdateModeType
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

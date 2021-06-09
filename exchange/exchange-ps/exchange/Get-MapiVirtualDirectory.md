@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-MapiVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
+ [-ShowMailboxVirtualDirectories]
  [<CommonParameters>]
 ```
 
@@ -33,6 +34,7 @@ Get-MapiVirtualDirectory -Server <ServerIdParameter>
 Get-MapiVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
+ [-ShowMailboxVirtualDirectories]
  [<CommonParameters>]
 ```
 
@@ -50,7 +52,9 @@ This example returns a summary list of the MAPI virtual directories on the serve
 
 ### Example 2
 ```powershell
-Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
+Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List
+Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List
+Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
 ```
 
 These examples return detailed information for the MAPI virtual directory named "mapi (Default Web Site)" on the server named ContosoMail. All three commands do the same thing.
@@ -67,11 +71,11 @@ This example returns a summary list of all MAPI virtual directories in the clien
 ### -Identity
 The Identity parameter specifies the MAPI virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 You can't use the Identity and Server parameters in the same command.
 
@@ -135,6 +139,28 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowMailboxVirtualDirectories
+This parameter is available only in Exchange Server 2013.
+
+The ShowMailboxVirtualDirectories switch shows information about backend virtual directories on Mailbox servers. You don't need to specify a value with this switch.
+
+By default, this cmdlet shows information about virtual directories in the Client Access services on Mailbox servers. Client connections are proxied from the Client Access services on Mailbox servers to the backend services on Mailbox servers. Clients don't connect directly to the backend services.
+
+We recommend that you use this parameter only under the direction of Microsoft Customer Service and Support.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named

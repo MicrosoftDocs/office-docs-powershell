@@ -24,9 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter>
  [-Confirm]
  [-Description <String>]
- [-DomainController <Fqdn>]
  [-Fingerprints <MultiValuedProperty>]
- [-IsDefault]
  [-Locale <CultureInfo>]
  [-Name <String>]
  [-WhatIf]
@@ -56,14 +54,23 @@ This example removes the existing Spanish translation from the sensitive informa
 
 ### Example 3
 ```powershell
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte -ReadCount 0; $Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint[0]); Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
+$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte -ReadCount 0
+$Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
+$Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"
+$Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
+$Array.Add($Benefits_FingerPrint[0])
+Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
 This example modifies the existing sensitive information type rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
 
 ### Example 4
 ```powershell
-$cc = Get-DlpSensitiveInformationType "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
+$cc = Get-DlpSensitiveInformationType "Contoso Confidential"
+$a = [System.Collections.ArrayList]($cc.Fingerprints)
+$a
+$a.RemoveAt(0)
+Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
 ```
 
 This example modifies the sensitive information type rule named "Contoso Confidential" by removing an existing document fingerprint without affecting other document fingerprints that are already defined.
@@ -132,24 +139,6 @@ The Fingerprints parameter specifies the byte-encoded document files that are us
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-The IsDefault switch is used with the Locale parameter to specify the default language for the sensitive information type rule. The default Locale value is stored in the DefaultCulture property.
-
-When you change the default Locale value, the Name value of the sensitive information type rule changes to match the Name value that's associated with the new default locale. The original Name value when the rule was created is permanently stored the LocalizedName property.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

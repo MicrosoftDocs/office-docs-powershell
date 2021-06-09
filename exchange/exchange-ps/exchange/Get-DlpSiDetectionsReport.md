@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Security & Compliance Center.
+Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Security & Compliance Center for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -33,10 +33,10 @@ For the reporting period you specify, the cmdlet returns the following informati
 
 - Organization
 - Date
-- SensitiveType: The GUID value of the DLP sensitive information type. To match the GUID value to the name of the sensitive information type, replace \<GUID\> with the GUID value and run this command: Get-DlpSensitiveInformationType -Identity \<GUID\>.
+- SensitiveType: The GUID value of the DLP sensitive information type. To match the GUID value to the name of the sensitive information type, replace `<GUID>` with the GUID value and run this command: `Get-DlpSensitiveInformationType -Identity <GUID>`.
 - DocumentCount: The number of documents that contain the detected sensitive information type.
 - ProtectionStatus: Values are Unprotected (the sensitive information type is not defined in any DLP policy) or Protected (the sensitive information type is defined in a DLP policy).
-- DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace \<GUID\> with the GUID value and run this command: Get-DlpComplianceRule -Identity \<GUID\>.
+- DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace `<GUID>` with the GUID value and run this command: `Get-DlpComplianceRule -Identity <GUID>`.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
@@ -51,7 +51,7 @@ This example returns all DLP sensitive information type detections.
 
 ### Example 2
 ```powershell
-Get-DLPSiDetectionsReport -SensitiveType 0e9b3178-9678-47dd-a509-37222ca96b42 -StartDate 4/1/2019 -EndDate 4/8/2019
+Get-DLPSiDetectionsReport -SensitiveType 0e9b3178-9678-47dd-a509-37222ca96b42 -EndDate 4/8/2019
 ```
 
 This example returns detections for the sensitive information type 0e9b3178-9678-47dd-a509-37222ca96b42 (EU Debit Card Number) during the specified date range.
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ### -SensitiveType
 The SensitiveType parameter filters the results by the specified sensitive information type. A valid value is the GUID of the sensitive information type (for example, 0e9b3178-9678-47dd-a509-37222ca96b42). To find the GUID value of a sensitive information type, run this command: Get-DlpSensitiveInformationType.
 
-You can enter multiple values separated by commas: "\<Value1\>","\<Value2\>"..."\<ValueN\>".
+You can enter multiple values separated by commas: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

@@ -30,7 +30,6 @@ New-ManagedContentSettings [-Name] <String> -FolderName <ELCFolderIdParameter> -
  [-LabelForJournaling <String>]
  [-MessageFormatForJournaling <JournalingFormat>]
  [-MoveToDestinationFolder <ELCFolderIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [-RetentionAction <RetentionAction>]
  [-RetentionEnabled <Boolean>]
  [-TriggerForRetention <RetentionDateType>]
@@ -106,7 +105,7 @@ Valid parameter values for custom message classes include:
 - The asterisk (\*) wildcard character, which indicates that the content settings apply to all message classes.
 - A specific message class that has the asterisk wildcard character. The asterisk wildcard character must appear as the last character in the message class. For example, IPM.NOTE\* (includes IPM.NOTE and all subclasses) or IPM.NOTE.\* (includes the subclasses for IPM.NOTE but not IPM.NOTE itself). \*.NOTE and IPM.\*.NOTE aren't valid values.
 
-Notes:
+**Notes**:
 
 - When wildcard characters are used, these policies apply only to message classes that don't have a specific content setting. Therefore, IPM.NOTE.SMIME overrides IPM.NOTE.\*.
 - Specific settings supersede general settings, for example, Voicemail supersedes AllMailboxContent.
@@ -274,22 +273,6 @@ The destination folder must be an existing managed custom folder. If it isn't, a
 
 ```yaml
 Type: ELCFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

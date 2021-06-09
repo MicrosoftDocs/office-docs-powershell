@@ -54,28 +54,8 @@ This example lists the users who have SendAs permission on the mailbox Help Desk
 
 ## PARAMETERS
 
-### -AccessRights
-The AccessRights parameter filters the results by permission.
-
-Valid input for this parameter is SendAs.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-The Identity parameter filters the results by the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
-
-You can specify any type of recipient, for example:
+The Identity parameter identifies the recipient that you want to view. The user or group specified by the Trustee parameter has Send As permissions on this recipient. You can specify any type of recipient, for example:
 
 - Mailboxes
 - Mail users
@@ -102,6 +82,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccessRights
+The AccessRights parameter filters the results by permission. The only valid value for this parameter is SendAs.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -138,12 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity parameter.
-
-You can specify the following types of users or groups:
+The Trustee parameter filters the results by who has Send As permissions on the specified recipient. You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-- Mail users with a Microsoft account (formerly known as a Windows Live ID)
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:

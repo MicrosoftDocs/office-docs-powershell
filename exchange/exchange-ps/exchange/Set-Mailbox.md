@@ -254,6 +254,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -284,12 +285,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -300,6 +304,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -321,6 +326,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -377,6 +383,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -407,12 +414,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -423,6 +433,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -444,6 +455,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -500,6 +512,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -530,12 +543,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -546,6 +562,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -567,6 +584,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -623,6 +641,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -653,12 +672,15 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -669,6 +691,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -690,6 +713,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -744,6 +768,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <System.DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -774,11 +799,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -789,6 +817,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -810,6 +839,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <System.DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -866,6 +896,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -896,11 +927,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -911,6 +945,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -933,6 +968,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -988,6 +1024,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -1018,11 +1055,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MaxSendSize <Unlimited>]
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
  [-ProhibitSendQuota <Unlimited>]
@@ -1033,6 +1073,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResourceCapacity <System.Int32>]
  [-ResourceCustom <MultiValuedProperty>]
@@ -1055,6 +1096,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
@@ -1100,14 +1142,16 @@ This example sets the MailTip translation in French and Chinese.
 
 ### Example 5
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; Set-Mailbox florencef -Password $password -ResetPasswordOnNextLogon $true
+$password = Read-Host "Enter password" -AsSecureString
+Set-Mailbox florencef -Password $password -ResetPasswordOnNextLogon $true
 ```
 
 In on-premises Exchange, this example resets the password for Florence Flipo's mailbox. The next time she signs in to her mailbox, she'll have to change her password.
 
 ### Example 6
 ```powershell
-Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -MessageTracking $false; Set-Mailbox -Arbitration -Identity "SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}" -MessageTracking $true
+Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -MessageTracking $false
+Set-Mailbox -Arbitration -Identity "SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}" -MessageTracking $true
 ```
 
 This example removes the message tracking organization capability from the arbitration mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c} and assigns it to an arbitration mailbox named SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}.
@@ -1167,9 +1211,9 @@ Valid values for this parameter are individual senders in your organization (mai
 - Email address
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `Sender1,Sender2,...SenderN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
-To add or remove senders without affecting other existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender1\>","\<sender2\>"...}.
+To add or remove senders without affecting other existing entries, use the following syntax: `@{Add="Sender1","Sender2"...; Remove="Sender3","Sender4"...}`.
 
 The senders you specify for this parameter are automatically copied to the AcceptMessagesOnlyFromSendersOrMembers property. Therefore, you can't use the AcceptMessagesOnlyFrom and AcceptMessagesOnlyFromSendersOrMembers parameters in the same command.
 
@@ -1200,9 +1244,9 @@ Valid values for this parameter are groups in your organization (distribution gr
 - Email address
 - GUID
 
-You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
+You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: `Group1,Group2,...GroupN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Group1","Group2",..."GroupN"`.
 
-To add or remove groups without affecting other existing entries, use the following syntax: @{Add="\<group1\>","\<group2\>"...; Remove="\<group1\>","\<group2\>"...}.
+To add or remove groups without affecting other existing entries, use the following syntax: `@{Add="Group1","Group2"...; Remove="Group3","Group4"...}`.
 
 The groups you specify for this parameter are automatically copied to the AcceptMessagesOnlyFromSendersOrMembers property. Therefore, you can't use the AcceptMessagesOnlyFromDLMembers and AcceptMessagesOnlyFromSendersOrMembers parameters in the same command.
 
@@ -1235,7 +1279,7 @@ To specify senders for this parameter, you can use any value that uniquely ident
 - Email address
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `Sender1,Sender2,...SenderN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
 To add or remove individual senders or groups without affecting other existing entries, use the AcceptMessagesOnlyFrom and AcceptMessageOnlyFromDLMembers parameters.
 
@@ -1257,7 +1301,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-This parameter is available only in the cloud-based service.
+This parameter is available o functional only in the cloud-based service.
 
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
@@ -1268,7 +1312,7 @@ The AccountDisabled parameter specifies whether to disable the account that's as
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1284,7 +1328,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 - Distinguished name (DN)
 - GUID
 
-For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies) or [Address book policies in Exchange Online](/exchange/address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -1302,9 +1346,9 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
@@ -1461,7 +1505,7 @@ Accept wildcard characters: False
 ### -ArchiveName
 The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App.
 
-If you don't use this parameter, the default value is In-Place Archive - \<Mailbox User's Display Name\>.
+If you don't use this parameter, the default value is `In-Place Archive - <Mailbox User's Display Name>`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1507,13 +1551,15 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveStatus
+This cmdlet is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ArchiveStatusFlags
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1562,6 +1608,8 @@ Type: SetMailbox+ClearableADAttributes[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1592,9 +1640,9 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 - UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 - UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The AuditEnabled parameter must be set to $true to enable mailbox audit logging.
 
@@ -1632,9 +1680,9 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 - UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 - UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The AuditEnabled parameter must be set to $true to enable mailbox audit logging.
 
@@ -1685,7 +1733,7 @@ To modify other types of arbitration mailboxes, don't use this switch. Instead, 
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1736,9 +1784,9 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 - UpdateCalendarDelegation (Available only in the cloud-based service; enabled by default.)
 - UpdateInboxRules (Available only in the cloud-based service; enabled by default.)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The AuditEnabled parameter must be set to $true to enable mailbox audit logging.
 
@@ -1789,9 +1837,9 @@ To specify senders for this parameter, you can use any value that uniquely ident
 - Email address
 - GUID
 
-To enter multiple senders and overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+To enter multiple senders and overwrite any existing entries, use the following syntax: `Sender1,Sender2,...SenderN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
-To add or remove one or more senders without affecting any existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender3\>","\<sender4\>"...}.
+To add or remove one or more senders without affecting any existing entries, use the following syntax: `@{Add="Sender1","Sender2"...; Remove="Sender3","Sender4"...}`.
 
 This parameter is meaningful only when moderation is enabled for the recipient. By default, this parameter is blank ($null), which means messages from all senders other than the designated moderators are moderated. When a moderator sends a message to this recipient, the message is isn't moderated. In other words, you don't need to use this parameter to include the moderators.
 
@@ -1827,7 +1875,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the CalendarLoggingQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the CalendarLoggingQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -1920,6 +1968,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
+This parameter is available only in on-premises Exchange.
+
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
@@ -1929,7 +1979,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2377,7 +2427,7 @@ This parameter is available only in on-premises Exchange.
 
 The DumpsterMessagesPerFolderCountReceiveQuota parameter specifies the maximum number of messages that can be contained in each folder in the Recoverable Items folder (called the dumpster in previous versions of Exchange). When a folder exceeds this limit, it can't store new messages. For example, if the Deletions folder in the Recoverable Items folder has exceeded the message count limit and the mailbox owner attempts to permanently delete items from their mailbox, the deletion will fail.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List DumpsterMessagesPerFolderCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List DumpsterMessagesPerFolderCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -2397,7 +2447,7 @@ This parameter is available only in on-premises Exchange.
 
 The DumpsterMessagesPerFolderCountWarningQuota parameters specifies the number of messages that each folder in the Recoverable Items folder (called the dumpster in previous versions of Exchange) can hold before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List DumpsterMessagesPerFolderCountWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List DumpsterMessagesPerFolderCountWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -2436,26 +2486,26 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
-- Use the \<Type\> value SMTP on the address.
-- The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
+- Use the Type value SMTP on the address.
+- The first email address when you don't use any Type values, or when you use multiple lowercase smtp Type values.
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 
-To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
+To replace all existing proxy email addresses with the values you specify, use the following syntax: `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`.
 
-To add or remove specify proxy addresses without affecting other existing values, use the following syntax: @{Add="\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",...; Remove="\<Type\>:\<emailaddress2\>","\<Type\>:\<emailaddress2\>",...}.
+To add or remove specify proxy addresses without affecting other existing values, use the following syntax: `@{Add="Type:EmailAddress1","Type:EmailAddress2",...; Remove="Type:EmailAddress3","Type:EmailAddress4",...}`.
 
 ```yaml
 Type: ProxyAddressCollection
@@ -2534,6 +2584,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnforcedTimestamps
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnforcedTimestamps Description }}
+
+```yaml
+Type: String
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExcludeFromAllOrgHolds
 This parameter is available only in Exchange Online.
 
@@ -2597,9 +2665,9 @@ Accept wildcard characters: False
 ### -ExtensionCustomAttribute1
 This parameter specifies a value for the ExtensionCustomAttribute1 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values that overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although this is a multivalued property, the filter `"ExtensionCustomAttribute1 -eq 'Value'"` will return a match if the property _contains_ the specified value.
 
@@ -2619,9 +2687,9 @@ Accept wildcard characters: False
 ### -ExtensionCustomAttribute2
 This parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values that overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although this is a multivalued property, the filter `"ExtensionCustomAttribute2 -eq 'Value'"` will return a match if the property _contains_ the specified value.
 
@@ -2641,9 +2709,9 @@ Accept wildcard characters: False
 ### -ExtensionCustomAttribute3
 This parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values that overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although this is a multivalued property, the filter `"ExtensionCustomAttribute3 -eq 'Value'"` will return a match if the property _contains_ the specified value.
 
@@ -2663,9 +2731,9 @@ Accept wildcard characters: False
 ### -ExtensionCustomAttribute4
 This parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values that overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although this is a multivalued property, the filter `"ExtensionCustomAttribute4 -eq 'Value'"` will return a match if the property _contains_ the specified value.
 
@@ -2685,9 +2753,9 @@ Accept wildcard characters: False
 ### -ExtensionCustomAttribute5
 This parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values that overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although this is a multivalued property, the filter `"ExtensionCustomAttribute5 -eq 'Value'"` will return a match if the property _contains_ the specified value.
 
@@ -2728,7 +2796,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyChildrenCountReceiveQuota parameter specifies the maximum number of subfolders that can be created in a mailbox folder. The mailbox owner won't be able to create a new subfolder when this limit is reached.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyChildrenCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyChildrenCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -2748,7 +2816,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyChildrenCountWarningQuota parameter specifies the number of subfolders that can be created in a mailbox folder before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyChildrenCountWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyChildrenCountWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -2768,7 +2836,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyDepthReceiveQuota parameter specifies the maximum number of levels in the folder hierarchy of a mailbox folder. The mailbox owner won't be able to create another level in the folder hierarchy of the mailbox folder when this limit is reached.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyDepthReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyDepthReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -2788,7 +2856,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyDepthWarningQuota parameter specifies the number of levels in the folder hierarchy of a mailbox folder that can be created before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyDepthWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyDepthWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -2808,7 +2876,7 @@ This parameter is available only in on-premises Exchange.
 
 The FoldersCountReceiveQuota parameter is used to specify a maximum number of folders within a mailbox, typically a public folder mailbox. If this value is configured and the limit is reached, no new folders will be able to be created.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FoldersCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FoldersCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -2828,7 +2896,7 @@ This parameter is available only in on-premises Exchange.
 
 The FoldersCountWarningQuota parameter is used to display a warning message that the folder hierarchy is full when the value specified for this parameter is reached. This parameter is typically used for public folder mailboxes.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FoldersCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FoldersCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -2937,7 +3005,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mailbox. Although messages send on behalf of the mailbox clearly show the sender in the From field (\<Sender\> on behalf of \<Mailbox\>), replies to these messages are delivered to the mailbox, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mailbox. Although messages send on behalf of the mailbox clearly show the sender in the From field (`<Sender> on behalf of <Mailbox>`), replies to these messages are delivered to the mailbox, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
@@ -2952,9 +3020,9 @@ The sender you specify for this parameter must a mailbox, mail user or mail-enab
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 By default, this parameter is blank, which means no one else has permission to send on behalf of this mailbox.
 
@@ -2974,26 +3042,13 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
-
-You can use any value that uniquely identifies the Group Mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
+The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -3045,6 +3100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImListMigrationCompleted
+This parameter is available only in on-premises Exchange.
+
 The ImListMigrationCompleted parameter specifies whether a user's Lync or Skype for Business contact list is stored in their mailbox.
 
 Valid values are:
@@ -3060,7 +3117,7 @@ If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's L
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3184,7 +3241,7 @@ The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiv
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to $true, the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to $true (the default value), the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -3222,9 +3279,9 @@ The Languages parameter specifies the language preferences for this mailbox, in 
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -3382,13 +3439,13 @@ The MailboxMessagesPerFolderCountReceiveQuota parameter specifies the maximum nu
 
 The MailboxMessagesPerFolderCountReceiveQuota value must be greater than or equal to the MailboxMessagesPerFolderCountWarningQuota value.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List MailboxMessagesPerFolderCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List MailboxMessagesPerFolderCountReceiveQuota`.
 
 ```yaml
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3404,13 +3461,13 @@ The MailboxMessagesPerFolderCountWarningQuota parameter specifies the number of 
 
 The MailboxMessagesPerFolderCountReceiveQuota value must be greater than or equal to the MailboxMessagesPerFolderCountWarningQuota value.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List MailboxMessagesPerFolderCountWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List MailboxMessagesPerFolderCountWarningQuota`.
 
 ```yaml
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3422,7 +3479,11 @@ Accept wildcard characters: False
 ### -MailboxRegion
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The MailboxRegion parameter specifies the geo location for the mailbox in multi-geo environments.
+
+To see the list of configured geo locations in Microsoft 365 Multi-Geo, run the following command: `Get-OrganizationConfig | Select -ExpandProperty AllowedMailboxRegions | Format-Table`. To view your central geo location, run the following command: `Get-OrganizationConfig | Select DefaultMailboxRegion`.
+
+ For more information, see [Administering Exchange Online mailboxes in a multi-geo environment](https://docs.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo).
 
 ```yaml
 Type: String
@@ -3442,8 +3503,8 @@ The MailTip parameter specifies the custom MailTip text for this recipient. The 
 
 When you add a MailTip to a recipient, two things happen:
 
-- HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
-- The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
+- HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: `<html><body>This mailbox is not monitored</body></html>`. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
+- The text is automatically added to the MailTipTranslations property of the recipient as the default value: `default:<MailTip text>`. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
 
 ```yaml
 Type: String
@@ -3463,11 +3524,11 @@ The MailTipTranslations parameter specifies additional languages for the custom 
 
 To add or remove MailTip translations without affecting the default MailTip or other MailTip translations, use the following syntax:
 
-@{Add="\<culture 1\>:\<localized text 1\>","\<culture 2\>:\<localized text 2\>"...; Remove="\<culture 3\>:\<localized text 3\>","\<culture 4\>:\<localized text 4\>"...}
+`@{Add="Culture1:Localized text 1","\Culture2:Localized text 2"...; Remove="Culture3:Localized text 3","Culture4:Localized text 4"...}`.
 
-\<culture\> is a valid ISO 639 two-letter culture code that's associated with the language.
+CultureN is a valid ISO 639 two-letter culture code that's associated with the language.
 
-For example, suppose this recipient currently has the MailTip text: "This mailbox is not monitored." To add the Spanish translation, use the following value for this parameter: @{Add="ES:Esta caja no se supervisa."}.
+For example, suppose this recipient currently has the MailTip text: "This mailbox is not monitored." To add the Spanish translation, use the following value for this parameter: `@{Add="ES:Esta caja no se supervisa."}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -3694,6 +3755,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageCopyForSMTPClientSubmissionEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageCopyForSMTPClientSubmissionEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallProcessingEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallProcessingEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageTracking
 This parameter is available only in on-premises Exchange.
 
@@ -3779,9 +3876,9 @@ The ModeratedBy parameter specifies one or more moderators for this recipient. A
 - Email address
 - GUID
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -3847,6 +3944,24 @@ Type: SecureString
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NonCompliantDevices
+This parameter is available only in the cloud-based service.
+
+{{ Fill NonCompliantDevices Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -4031,7 +4146,7 @@ The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiv
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4063,7 +4178,7 @@ The value must be greater than or equal to the ProhibitSendQuota or IssueWarning
 
 In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
-In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4211,7 +4326,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4245,7 +4360,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsWarningQuota value must be less than or equal to the RecoverableItemsQuota value.
 
-When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+When the UseDatabaseQuotaDefaults parameter is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RecoverableItemsWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: Unlimited
@@ -4272,9 +4387,9 @@ Valid values for this parameter are individual senders in your organization (mai
 - Email address
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `Sender1,Sender2,...SenderN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
-To add or remove senders without affecting other existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender1\>","\<sender2\>"...}.
+To add or remove senders without affecting other existing entries, use the following syntax: `@{Add="Sender1","Sender2"...; Remove="Sender3","Sender4"...}`.
 
 The senders you specify for this parameter are automatically copied to the RejectMessagesFromSendersOrMembers property. Therefore, you can't use the RejectMessagesFrom and RejectMessagesFromSendersOrMembers parameters in the same command.
 
@@ -4305,9 +4420,9 @@ Valid values for this parameter are groups in your organization (distribution gr
 - Email address
 - GUID
 
-You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
+You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: `Group1,Group2,...GroupN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Group1","Group2",..."GroupN"`.
 
-To add or remove groups without affecting other existing entries, use the following syntax: @{Add="\<group1\>","\<group2\>"...; Remove="\<group1\>","\<group2\>"...}.
+To add or remove groups without affecting other existing entries, use the following syntax: `@{Add="Group1","Group2"...; Remove="Group3","Group4"...}`.
 
 The groups you specify for this parameter are automatically copied to the RejectMessagesFromSendersOrMembers property. Therefore, you can't use the RejectMessagesFromDLMembers and RejectMessagesFromSendersOrMembers parameters in the same command.
 
@@ -4340,7 +4455,7 @@ To specify senders for this parameter, you can use any value that uniquely ident
 - Email address
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `Sender1,Sender2,...SenderN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Sender1","Sender2",..."SenderN"`.
 
 To add or remove individual senders or groups without affecting other existing entries, use the RejectMessagesFrom and RejectMessagesFromDLMembers parameters.
 
@@ -4384,7 +4499,7 @@ This parameter is available only in the cloud-based service.
 
 The RemoveDelayHoldApplied switch specifies whether to remove delay holds on email-related data (generated by Outlook or Outlook on the web) from the mailbox. You don't need to specify a value with this switch.
 
-The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace \<MailboxIdentity\> with the name, email address, or alias of the mailbox, and run this command: Export-MailboxDiagnosticLogs -Identity \<MailboxIdentity\> -ComponentName HoldTracking.
+The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace `<MailboxIdentity>` with the name, email address, or alias of the mailbox, and run this command: `Export-MailboxDiagnosticLogs -Identity <MailboxIdentity> -ComponentName HoldTracking`.
 
 You can use this switch with the GroupMailbox or InactiveMailbox switch to remove delay holds from group mailboxes or inactive mailboxes.
 For more information, see [Managing mailboxes on delay hold](https://docs.microsoft.com/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
@@ -4407,7 +4522,7 @@ This parameter is available only in the cloud-based service.
 
 The RemoveDelayReleaseHoldApplied switch specifies whether to remove delay holds on cloud data generated by non-Exchange apps (such as Teams, Forms, and Yammer) from the mailbox. Data generated by a non-Exchange cloud-based app is typically stored in a hidden folder in the mailbox. You don't need to specify a value with this switch.
 
-The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace \<MailboxIdentity\> with the name, email address, or alias of the mailbox, and run this command: Export-MailboxDiagnosticLogs -Identity \<MailboxIdentity\> -ComponentName SubstrateHoldTracking.
+The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace `<MailboxIdentity>` with the name, email address, or alias of the mailbox, and run this command: `Export-MailboxDiagnosticLogs -Identity <MailboxIdentity> -ComponentName SubstrateHoldTracking`.
 
 You can use this switch with the GroupMailbox or InactiveMailbox switch to remove delay holds from group mailboxes or inactive mailboxes.
 
@@ -4438,6 +4553,24 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveMailboxProvisioningConstraint
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveMailboxProvisioningConstraint Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -4559,7 +4692,7 @@ In Exchange Online, administrators can require users to reset their password the
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4591,9 +4724,9 @@ You use the Set-ResourceConfig and Get-ResourceConfig cmdlets to create and view
 
 After you create custom resource properties, you use this parameter to assign one or more of those properties to a resource mailbox. Properties that begin with the prefix Room/ are available only on room mailboxes, and properties that begin with the prefix Equipment/ are available only on equipment mailboxes. When you specify a property value for this parameter, don't include the prefix.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4615,7 +4748,7 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 - Selecting the Empty Deleted Items Folder action.
 - Deleting items using Shift + Delete.
 
-These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
+These actions move the items into the Recoverable Items\\Deletions folder.
 
 Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
@@ -4623,9 +4756,9 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 
 The default value is 14 days (14.00:00:00). In Exchange Online, you can increase the value to a maximum of 30 days.
 
-In Exchange Online, you use this parameter to configure the RetainDeletedItemsFor value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
+In Exchange Online, you use this parameter to configure the deleted item retention on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, the default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
+In on-premises Exchange, when the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -4645,12 +4778,12 @@ This parameter is available only in on-premises Exchange.
 
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
-- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
-- $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
+- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameter values.
+
+When the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RetainDeletedItemsUntilBackup parameter value from the mailbox database. To use the RetainDeletedItemsUntilBackup parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
-
-The default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
 
 ```yaml
 Type: Boolean
@@ -4824,7 +4957,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -5026,13 +5159,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryDialPlan
+This parameter is available only in on-premises Exchange.
+
 The SecondaryDialPlan parameter specifies a secondary UM dial plan to use. This parameter is provided to create a secondary proxy address.
 
 ```yaml
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5091,7 +5226,8 @@ The SimpleDisplayName parameter is used to display an alternative description of
 - a - z
 - A - Z
 - 0 - 9
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":", and "?".
+- space
+- `" ' ( ) + , - . / : ?`
 
 ```yaml
 Type: String
@@ -5242,10 +5378,11 @@ Accept wildcard characters: False
 ### -Type
 The Type parameter specifies the mailbox type for the mailbox. Valid values are:
 
+- Equipment
 - Regular
 - Room
-- Equipment
 - Shared
+- Workspace (cloud-only)
 
 ```yaml
 Type: ConvertibleMailboxSubType
@@ -5281,25 +5418,27 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
+This parameter is available only in on-premises Exchange.
+
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
-- emailAddress:\<integers\>
-- lastNameFirstName:\<integers\>
-- firstNameLastName:\<integers\>
+- `emailAddress:<integers>`
+- `lastNameFirstName:<integers>`
+- `firstNameLastName:<integers>`
 
-To enter values that overwrite all existing entries, use the following syntax: emailAddress:\<integers\>,lastNameFirstName:\<integers\>,firstNameLastName:\<integers\>.
+To enter values that overwrite all existing entries, use the following syntax: `emailAddress:<integers>,lastNameFirstName:<integers>,firstNameLastName:<integers>`.
 
-If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only emailAddress:\<integers\>, all existing lastNameFirstName and firstNameLastName values are removed.
+If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only `emailAddress:<integers>`, all existing lastNameFirstName and firstNameLastName values are removed.
 
-To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
+To add or remove values without affecting other existing entries, use the following syntax: `@{Add="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"; Remove="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"}`.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use `@{Add="emailAddress:<integers1>","emailAddress:<integers2>}` to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5328,15 +5467,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateEnforcedTimestamp
+This parameter is available only in the cloud-based service.
+
+{{ Fill UpdateEnforcedTimestamp Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseDatabaseQuotaDefaults
-The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values that are configured on the mailbox or on the mailbox database. Valid values are:
+The UseDatabaseQuotaDefaults parameter specifies whether applicable quotas for the mailbox are determined by the quota values on the mailbox or the corresponding quota values on the mailbox database (not all mailbox quotas are configurable on the mailbox database). Valid values are:
 
-- $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any of those quota values configured directly on the mailbox are ignored.
-- $false: The mailbox uses its own values for the applicable quota values. Any of those quota values on the mailbox database are ignored.
+- $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any corresponding quotas that are configured on the mailbox are ignored. In on-premises Exchange, this is the default value.
+- $false: The mailbox uses its own values for the applicable quotas. Any corresponding quotas that are configured on the mailbox database are ignored. In Exchange Online, this is the default value.
 
-In Exchange Online, the default value is $false. In on-premises Exchange, the default value is $true.
-
-The applicable quota values are:
+The following quotas are affected by this parameter:
 
 - CalendarLoggingQuota
 - IssueWarningQuota
@@ -5349,7 +5504,7 @@ The applicable quota values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -5359,18 +5514,28 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
-The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses the MailboxRetention attribute value that's configured on the mailbox database. This value controls how long deleted mailboxes are kept in the database before they are permanently removed (purged). The default value is 30 days. Valid values are:
+The UseDatabaseRetentionDefaults parameter specifies whether the retention settings for items in the Recoverable Items folder in the mailbox are determined by the settings on the mailbox or the corresponding settings on the mailbox database. Valid values are:
 
-- $true: The mailbox uses the MailboxRetention value that's configured on the mailbox database. This is the default value.
-- $false: When the mailbox is deleted, it's retained indefinitely.
+- $true: The mailbox uses the applicable retention settings that are configured on the mailbox database. Any corresponding settings that are configured on the mailbox are ignored. This is the default value.
+- $false: The mailbox uses its own values for the applicable retention settings. Any corresponding settings that are configured on the mailbox database are ignored.
+
+The following retention settings are affected by this parameter:
+
+- DeletedItemRetention
+- RetainDeletedItemsUntilBackup
+
+**Note**: If you set the RetainDeletedItemsUntilBackup parameter on the mailbox database to the value $true when the value of the UseDatabaseRetentionDefaults parameter on a mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+
+- Run the following command: `Import-Module ActiveDirectory`.
+- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -5398,7 +5563,7 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
 
 ```yaml
 Type: String

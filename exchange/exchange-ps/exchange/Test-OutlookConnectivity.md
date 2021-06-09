@@ -150,7 +150,7 @@ In Exchange 2010, this example validates Outlook connectivity through RpcProxy o
 ## PARAMETERS
 
 ### -Identity
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Identity parameter specifies a target user mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetDefaultsFromAutodiscover
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The GetDefaultsFromAutodiscover parameter specifies whether to get default values for all of the other parameters for the command from the Autodiscover service settings. If you run the command specifying values for other parameters, those values override the default values from the Autodiscover service. The default value for this parameter is $true.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Protocol parameter specifies whether to test for Outlook Anywhere connectivity or directly test for RPC or TCP/IP connectivity. The value is either HTTP or TCP.
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcTestType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RpcTestType parameter specifies which type of RPC endpoint the command should test. Valid values are:
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -WSTestType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The WSTestType parameter specifies type of servers that you want to include in your Outlook connectivity test. You can use the following values:
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Archive parameter specifies whether tests should be performed to connect to the user's on-premises archive mailbox. Valid values are:
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxCredential
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MailboxCredential parameter specifies certain credentials to allow logon access to a user's mailbox. Use the parameter along with the Identity parameter to access a user's mailbox when you don't have access permissions.
 
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The MonitoringContext switch specifies whether the command returns additional information that can be used with Microsoft System Center Operations Manager. You don't need to specify a value with this switch.
 
@@ -410,15 +410,15 @@ The ProbeIdentity parameter specifies the probe to use. Valid values are:
 
 Outlook Anywhere (RPC over HTTP) probes:
 
-- Outlook.Protocol\OutlookRpcSelfTestProbe: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- Outlook.Protocol\OutlookRpcDeepTestProbe: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530").
+- `Outlook.Protocol\OutlookRpcSelfTestProbe`: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe`: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
 
 MAPI over HTTP probes:
 
-- OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, "Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530").
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe`: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe`: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
 
 ```yaml
 Type: String
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcAuthenticationType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RpcAuthenticationType parameter specifies the authentication setting to test for the RPC layer. Using this parameter is helpful if a different authentication type is set at the RPC proxy virtual directory. You can use the following values:
 
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcClientAccessServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the target server with the Client Access server role installed that you want to test. This can be a server fully qualified domain name (FQDN) or a GUID.
 
@@ -476,7 +476,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcProxyAuthenticationType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RpcProxyAuthenticationType parameter specifies the authentication setting for the RPC Proxy endpoint. The value can be specified as Basic, NTLM, or Negotiate. There is no default value unless used with the GetDefaultsFromAutodiscover parameter.
 
@@ -494,7 +494,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcProxyServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RpcProxyServer parameter specifies whether to set the target RpcProxy server for testing. This parameter can be used when the RpcProxy server is different from the Client Access server.
 
@@ -512,12 +512,12 @@ Accept wildcard characters: False
 ```
 
 ### -RpcProxyTestType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. Valid values are:
 
-- Internal: Refers to the local computer name (https://\<localcomputername\>, for example, https://CAS01).
-- External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, https://mail.contoso.com).
+- Internal: Refers to the local computer name (`https://<localcomputername>`, for example, `https://CAS01`).
+- External: Refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, `https://mail.contoso.com`).
 
 ```yaml
 Type: RpcProxyTestType
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 ```
 
 ### -TotalTimeoutInMinutes
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The TotalTimeoutInMinutes parameter specifies the time limit, in minutes, for the command to wait for test results before ending the request. The default value is two minutes.
 
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySslCert
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The TrustAnySslCert switch specifies whether to ignore any Secure Sockets Layer (SSL) certificate warnings. You don't need to specify a value with this switch.
 
@@ -601,7 +601,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

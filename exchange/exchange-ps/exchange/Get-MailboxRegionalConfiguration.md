@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
+ [-Archive]
  [-DomainController <Fqdn>]
  [-VerifyDefaultFolderNameLanguage]
  [<CommonParameters>]
@@ -84,6 +85,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Archive
+This parameter is available only in the cloud-based service.
+
+{{ Fill Archive Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -107,11 +126,11 @@ The VerifyDefaultFolderNameLanguage switch verifies that the default folder name
 
 The results are displayed in the DefaultFolderNameMatchingUserLanguage property. To see this property, you need to pipeline the results of the command to the Format-List or Format-Table cmdlets. For example:
 
-- Get-MailboxRegionalConfiguration -Identity \<MailboxIdentity\> -VerifyDefaultFolderNameLanguage | Format-List
+- `Get-MailboxRegionalConfiguration -Identity <MailboxIdentity> -VerifyDefaultFolderNameLanguage | Format-List`
 
 Or
 
-- Get-MailboxRegionalConfiguration -Identity \<MailboxIdentity\> -VerifyDefaultFolderNameLanguage | Format-Table Language,DefaultFolderNameMatchingUserLanguage
+- `Get-MailboxRegionalConfiguration -Identity <MailboxIdentity> -VerifyDefaultFolderNameLanguage | Format-Table Language,DefaultFolderNameMatchingUserLanguage`
 
 If you view the DefaultFolderNameMatchingUserLanguage property without using the VerifyDefaultFolderNameLanguage switch, the value is always $false, even if the default folder names are localized in the language that's specified for the mailbox.
 

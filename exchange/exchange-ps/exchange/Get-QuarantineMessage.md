@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessage
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-QuarantineMessage
 schema: 2.0.0
 author: chrisda
@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization.
-
-**Note**: Quarantined files are files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
+Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization. Files are quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -27,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Details
 ```
 Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-RecipientAddress <String[]>]
  [-SenderAddress <String[]>]
  [<CommonParameters>]
 ```
@@ -41,6 +40,8 @@ Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
  [-MyItems]
  [-Page <Int32>]
  [-PageSize <Int32>]
+ [-PolicyName <String>]
+ [-PolicyTypes <QuarantinePolicyTypeEnum[]>]
  [-QuarantineTypes <QuarantineMessageTypeEnum[]>]
  [-RecipientAddress <String[]>]
  [-Reported <Boolean>]
@@ -90,7 +91,7 @@ This example returns detailed information for the quarantined message with the s
 Get-QuarantineMessage -QuarantineTypes SPOMalware | Format-List
 ```
 
-This example returns detailed information for the files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
+This example returns detailed information for the files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
 ## PARAMETERS
 
@@ -103,7 +104,7 @@ When you identify the quarantine message by using this parameter, the RecipientA
 Type: QuarantineMessageIdentity
 Parameter Sets: Details
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -119,7 +120,7 @@ The Direction parameter filters the results by incoming or outgoing messages. Va
 Type: QuarantineMessageDirectionEnum
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -135,7 +136,7 @@ The Domain parameter filters the results by sender or recipient domain. You can 
 Type: String[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ For example, if you specify the StartExpiresDate value of today's date and the E
 Type: DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -173,7 +174,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -189,7 +190,7 @@ The MessageId parameter filters the results by the Message-ID header field of th
 Type: String
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -205,7 +206,7 @@ The MyItems switch filters the results by messages where you (the user that's ru
 Type: SwitchParameter
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -221,7 +222,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +238,39 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyName
+{{ Fill PolicyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTypes
+{{ Fill PolicyTypes Description }}
+
+```yaml
+Type: QuarantinePolicyTypeEnum[]
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -254,20 +287,20 @@ The QuarantineTypes parameter filters the results by what caused the message to 
 - Malware
 - Phish
 - Spam
-- SPOMalware (ATP only)
+- SPOMalware (Microsoft Defender for Office 365 only)
 - TransportRule
 
 You can specify multiple values separated by commas.
 
 You don't need to use this parameter with the Type parameter.
 
-For files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -281,9 +314,9 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 
 ```yaml
 Type: String[]
-Parameter Sets: Summary
+Parameter Sets: All
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -302,7 +335,7 @@ The Reported parameter filters the results by messages that have already been re
 Type: Boolean
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -318,7 +351,7 @@ The SenderAddress parameter filters the results by the sender's email address. Y
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -338,7 +371,7 @@ For example, if you specify the StartExpiresDate value of today's date and the E
 Type: DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -356,7 +389,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -372,7 +405,7 @@ The Subject parameter filters the results by the subject field of the message. I
 Type: String
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -388,18 +421,18 @@ The Type parameter filters the results by what caused the message to be quaranti
 - HighConfPhish
 - Phish
 - Spam
-- SPOMalware (ATP only)
+- SPOMalware (Microsoft Defender for Office 365 only)
 - TransportRule
 
 You don't need to use this parameter with the QuarantineTypes parameter.
 
-For files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

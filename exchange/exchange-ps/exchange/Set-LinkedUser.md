@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-linkeduser
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-LinkedUser
 schema: 2.0.0
 author: chrisda
@@ -56,7 +56,7 @@ The Identity parameter specifies the linked user. You can use any value that uni
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateSubject
-The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate. The syntax of the CertificateSubject value is X509:\<I\>Issuer\<S\>Subject. The values of Issuer and Subject are required and must be in X.500 format. To remove the value of CertificateSubject, specify the value $null.
+The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate. The syntax of the CertificateSubject value is `X509:<I>Issuer<S>Subject`. The values of Issuer and Subject are required and must be in X.500 format. To remove the value of CertificateSubject, specify the value $null.
 
 ```yaml
 Type: MultiValuedProperty
@@ -91,7 +91,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

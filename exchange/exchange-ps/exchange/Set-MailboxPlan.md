@@ -32,6 +32,7 @@ Set-MailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-MaxSendSize <Unlimited>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
+ [-RecipientLimits <Unlimited>]
  [-RetainDeletedItemsFor <EnhancedTimeSpan>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
@@ -274,6 +275,22 @@ Unqualified values are typically treated as bytes, but small values may be round
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
 The maximum value is determined by the mailbox plan. You can lower the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientLimits
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited

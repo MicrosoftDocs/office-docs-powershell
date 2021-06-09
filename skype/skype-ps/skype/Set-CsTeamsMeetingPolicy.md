@@ -18,7 +18,8 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ## SYNTAX
 
 ### Identity (Default)
-```
+
+```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
@@ -27,14 +28,18 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
- [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+[-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
-```
+
+```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
@@ -43,21 +48,25 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
- [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+[-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
 
 The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing meeting policies that can be assigned to particular users to control Teams features related to meetings.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
-```
+### EXAMPLE 1
+```powershell
 Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
@@ -65,8 +74,9 @@ The command shown in Example 1 uses the Set-CsTeamsMeetingPolicy cmdlet to updat
 This policy will use all the existing values except one: AllowTranscription; in this example, meetings for users with this policy can include real time or post meeting captions and transcriptions.
 
 
-### -------------------------- EXAMPLE 2 -------------------------- 
-```
+### EXAMPLE 2
+
+```powershell
 Set-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone" -AllowMeetNow $False
 ```
 
@@ -92,7 +102,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowChannelMeetingScheduling
-Determines whether a user can schedule channel meetings. Set this to TRUE to allow a user to schedule channel meetings. Set this to FALSE to prohibit the user from scheduling channel meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user.
+Determines whether a user can schedule channel meetings. Set this to TRUE to allow a user to schedule channel meetings. Set this to FALSE to prohibit the user from scheduling channel meetings. 
+
+> [!NOTE]
+> This only restricts from scheduling and not from joining a meeting scheduled by another user.
 
 ```yaml
 Type: Boolean
@@ -257,7 +270,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPrivateMeetingScheduling
-Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. Note this only restricts from scheduling and not from joining a meeting scheduled by another user.
+Determines whether a user can schedule private meetings. Set this to TRUE to allow a user to schedule private meetings. Set this to FALSE to prohibit the user from scheduling private meetings. 
+
+> [!NOTE]
+> This only restricts from scheduling and not from joining a meeting scheduled by another user.
 
 ```yaml
 Type: Boolean
@@ -530,9 +546,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousUsersToDialOut
+
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
 
-[!NOTE] This parameter is temporarily disabled.
+> [!NOTE]
+> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean
@@ -613,7 +631,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether meeting organizers are allowed to download the attendee engagement report. Possible values are:
+
+- Enabled: allow the meeting organizer to download the report.
+- Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+
+If set to enabled, only meeting organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
 
 ```yaml
 Type: String
@@ -673,6 +696,244 @@ Position: Named
 Default value: AllFilters
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -AllowIPAudio
+Determines whether audio is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their audio. Set this to FALSE to prohibit the user from sharing their audio.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOrganizersToOverrideLobbySettings
+This parameter has been deprecated and currently has no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserToJoinExternalMeeting
+Possible values are:
+- Enabled 
+- FederatedOnly
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnrollUserOverride
+Possible values are: 
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StreamingAttendeeMode
+
+Controls if Teams uses overflow capability once a meeting reaches its capacity (1,000 users with full functionality). 
+
+Possible values are: 
+- Disabled
+- Enabled
+
+Set this to Enabled to allow up to 20,000 extra view-only attendees to join.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowBreakoutRooms
+Set to true to enable Breakout Rooms, set to false to disable the Breakout Rooms functionality.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsCameraFarEndPTZMode
+Possible values are: 
+- Disabled
+- AutoAcceptInTenant 
+- AutoAcceptAll
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingReactions
+Set to false to disable Meeting Reactions.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingRegistration
+Controls if a user can create a webinar meeting. The default value is True.
+
+Possible values:
+- True
+- False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowScreenContentDigitization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTrackingInReport
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomAttributeUserOverride
+Possible values:
+
+- Off
+- Distinguish
+- Attribute
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpeakerAttributionMode
+Possible values:
+
+- EnabledUserOverride
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanRegister
+
+Controls the attendees who can attend a webinar meeting. The default is Everyone, meaning that everyone can register. If you want to restrict registration  to internal accounts set the value  to 'EveryoneInCompany'. 
+
+Possible values:
+
+- Everyone
+- EveryoneInCompany
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## INPUTS
 
