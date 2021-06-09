@@ -56,7 +56,6 @@ PS C:\> Set-TeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -D
 The command shown in Example 2 modifies an existing per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
 This policy is re-assigned the description from its existing value to "country music".
 
-Any Microsoft Teams users who are assigned this policy will have their call holds customized such that the user being held will hear the audio file specified by AudioFileId.
 
 ## PARAMETERS
 
