@@ -67,7 +67,9 @@ From an on-premises Skype for Business Server or Lync Server 2013 management she
 $cred=get-credential
 Move-CsUser -Identity PilarA@contoso.com -Target "sipfed.online.lync.com"  -Credential $cred
 ```
+
 And then from a TeamsPowerShell window, remove TeamsOnly mode by running:
+
 ```powershell
 Grant-CsTeamsUpgradePolicy -Identity PilarA@contoso.com -PolicyName $null
 ```
