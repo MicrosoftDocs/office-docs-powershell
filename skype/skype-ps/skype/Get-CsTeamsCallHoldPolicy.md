@@ -32,7 +32,8 @@ Get-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ## DESCRIPTION
 Teams call hold policies are used to customize the call hold experience for teams clients.
 When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
-Assinging a teams call hold policy to a user sets an audio file to be played during the duration of the hold. 
+Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold. 
+
 
 ## EXAMPLES
 
