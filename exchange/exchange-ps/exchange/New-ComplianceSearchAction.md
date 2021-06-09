@@ -211,12 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDedupe
-This parameter is available only in the cloud-based service.
-
-The EnableDedupe parameter eliminates duplication of messages when you export content search results. Valid values are:
-
-- $true: Export a single copy of a message if the same message exists in multiple folders or mailboxes.
-- $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -610,26 +605,6 @@ Type: ComplianceExportScope
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ScopeDetails
-This parameter is available only in the cloud-based service.
-
-This parameter requires the Export or Compliance Search roles in the Security & Compliance Center. By default, these roles are assigned only to the eDiscovery Manager role group.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ComplianceScopeDetail[]
-Parameter Sets: Export
-Aliases:
-Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

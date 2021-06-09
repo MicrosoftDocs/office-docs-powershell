@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ActivityAlert [[-Identity] <ComplianceRuleIdParameter>]
- [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

@@ -38,7 +38,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-Get-UnifiedAuditLogRetentionPolicy | Sort-Object -Property Priority -Descending | Format-List Priority,Name,Description,RecordTypes,Operations,UserIds,RetentionDuration
+Get-UnifiedAuditLogRetentionPolicy | Sort-Object -Property Priority | Format-List Priority,Name,Description,RecordTypes,Operations,UserIds,RetentionDuration
 ```
 
 This example lists the configurable properties for all audit log retention policies in your organization. The command also lists the policies in order of highest to lowest priority.
@@ -77,6 +77,7 @@ The RecordType parameter filters the results by the record types that are define
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

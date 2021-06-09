@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet allows a SharePoint administrators to check the status of a user or site move across geo locations.
+This cmdlet allows SharePoint administrators to check the status of a user or site move across geo locations.
 
 ## SYNTAX
 
@@ -45,6 +45,7 @@ The following are the available move states:
 
 |Status|Description|
 | --- | --- |
+|ReadyToTrigger| The move is ready to be initiated by an administrator. |
 |NotStarted| The move has not started. |
 |InProgress| The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
 |Success| The move has completed successfully.|

@@ -27,6 +27,7 @@ New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParame
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-MachineLearningModelIDs <MultiValuedProperty>]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -272,6 +273,22 @@ You can't use this parameter for Teams retention rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MachineLearningModelIDs
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Security & Compliance Center
 

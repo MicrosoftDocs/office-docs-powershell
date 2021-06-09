@@ -56,11 +56,11 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamsShiftsPolicy](Get-TeamsShiftsPolicy.md)
 {{Manually Enter Get-TeamsShiftsPolicy Description Here}}
 
+### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
+{{Manually Enter Get-TeamTargetingHierarchyStatus Description Here}}
+
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
-
-### [New-CsOnlineSession](https://docs.microsoft.com/powershell/module/skype/new-csonlinesession?view=skype-ps)
-{{Manually Enter New-Team Description Here}}
 
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
@@ -92,6 +92,9 @@ The following cmdlet references are for Microsoft Teams.
 ### [Remove-TeamsShiftsPolicy](Remove-TeamsShiftsPolicy.md)
 {{Manually Enter Remove-TeamsShiftsPolicy Description Here}}
 
+### [Remove-TeamTargetingHierarchy](Remove-TeamTargetingHierarchy.md)
+{{Manually Enter Remove-TeamTargetingHierarchy Description Here}}
+
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
 
@@ -115,6 +118,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Set-TeamPicture](Set-TeamPicture.md)
 {{Manually Enter Set-TeamPicture Description Here}}
+
+### [Set-TeamTargetingHierarchy](Set-TeamTargetingHierarchy.md)
+{{Manually Enter Set-TeamTargetingHierarchy Description Here}}
 
 ### [Set-TeamsApp](Set-TeamsApp.md)
 {{Manually Enter Set-TeamsApp Description Here}}

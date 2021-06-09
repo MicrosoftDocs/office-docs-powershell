@@ -184,6 +184,7 @@ You can specify multiple values separated by commas. The values you specify will
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
