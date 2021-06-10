@@ -11,7 +11,7 @@ ms.author: jomarque
 ms.reviewer:
 ---
 
-# grant-CsTeamsCallHoldPolicy
+# Grant-CsTeamsCallHoldPolicy
 
 ## SYNOPSIS
 Assigns a per-user Teams call hold policy to one or more users.
