@@ -58,7 +58,14 @@ PS C:\> Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName $null
 ```
 
 In Example 3, any per-user Teams call hold policy previously assigned to the user "Ken Myer" is revoked.
-As a result, the user will be managed by the global Teams compliance recording policy.
+As a result, the user will be managed by the global Teams call hold policy.
+
+### Example 4
+```powershell
+PS C:\> Grant-CsTeamsCallHoldPolicy -Global -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+```
+
+The command shown in Example 4 sets the Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, as the Global policy which will apply to all users in your tenant.
 
 ## PARAMETERS
 
