@@ -21,7 +21,7 @@ If your operating system is using PowerShell 5 or newer, you can also install th
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 ```
 
-If you don't have administrative privileges on the system, you can install the SharePoint Online Management Shell only for the current user by running the following command: 
+If you don't have administrative privileges on the system, you can install the SharePoint Online Management Shell only for the current user by running the following command:
 
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Scope CurrentUser
@@ -47,7 +47,7 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 2. When prompted with the Windows PowerShell credential request dialog box, type the password for the SharePoint admin account.
 
-To assign a user the SharePoint admin role, see [Assign admin roles](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
+To assign a user the SharePoint admin role, see [Assign admin roles](/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
 
 ## To connect with multifactor authentication (MFA)
 
@@ -65,8 +65,8 @@ You are now ready to use SharePoint Online commands.
 
 > [!NOTE]
 >
-> - If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication).
+> - If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](/sharepoint/troubleshoot/security/cannot-force-modern-authentication).
 >
 > - There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
-> 
-> - If you need to specify the region of your SharePoint Online environment, use the -Region parameter, for more information refer to [Connect-SPOService](https://docs.microsoft.com/powershell/module/sharepoint-online/connect-sposervice) documentation.
+>
+> - If you need to specify the region of your SharePoint Online environment, use the -Region parameter, for more information refer to [Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice) documentation.
