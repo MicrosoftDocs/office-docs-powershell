@@ -195,12 +195,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[get-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamscallholdpolicy?view=skype-ps)
+[Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
 
-[Set-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/set-csteamscallholdpolicy?view=skype-ps)
+[Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
 
-[Grant-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csteamscallholdpolicy?view=skype-ps)
+[Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
 
-[Remove-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csteamscallholdpolicy?view=skype-ps)
+[Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
 
-[Import-CsOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile?view=skype-ps)
+[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile)
