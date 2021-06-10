@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose Teams compliance recording policies are being queried.
+Globally unique identifier (GUID) of the tenant account whose Teams call hold policies are being queried.
 For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
