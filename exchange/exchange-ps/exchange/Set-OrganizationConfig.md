@@ -398,7 +398,7 @@ In Exchange Online, this example results in meeting updates being auto-processed
 ## PARAMETERS
 
 ### -ShortenEventScopeDefault
-This parameter is available only in the cloud-based service
+This parameter is available only in the cloud-based service.
 
 The ShortenEventScopeDefault parameter specifies whether calendar events start late or end early in the organization. Valid values are:
 

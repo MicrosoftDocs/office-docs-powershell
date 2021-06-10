@@ -71,14 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A higher integer value indicates a higher priority, the value 10000 is the highest priority, and policies can't have the same priority value.
-
-Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 8 existing policies:
-
-- Valid priority values for the existing 8 policies are from 7 through 0.
-- Valid priority values for a new policy (the 9th policy) are from 8 through 0.
-
-You must use a unique priority value when creating new audit log retention policies. Any custom audit log retention policy that you create will take precedence over the default audit log retention policy. For more information, see [Advanced audit in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/advanced-audit).
+The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 1 is the highest priority, and policies can't have the same priority value. Any custom audit log retention policy that you create will take precedence over the default audit log retention policy. For more information, see [Manage audit log retention policies](/microsoft-365/compliance/audit-log-retention-policies).
 
 ```yaml
 Type: Int32
