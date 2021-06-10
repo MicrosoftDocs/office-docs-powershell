@@ -211,7 +211,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
 
-[New-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
+[New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
 
 [Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
 
