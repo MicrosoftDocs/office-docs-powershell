@@ -60,7 +60,7 @@ This policy is re-assigned the description from its existing value to "country m
 ## PARAMETERS
 
 ### -AudioFileId
-The GUID referencing an audio file uploaded via the Import-CsTeamsOnlineAudio cmdlet. 
+A string representing the id referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
 
 ```yaml
 Type: String
@@ -153,18 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose Teams call hold policies are being queried.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a tenant remote session of Windows PowerShell you do not have to include the Tenant parameter.
-Instead, the tenant ID will automatically be filled in for you based on your connection information.
-The Tenant parameter is primarily for use in a hybrid deployment.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Guid
