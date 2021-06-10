@@ -70,8 +70,8 @@ AllowAllAcsResources : True
 
 [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)
 
-[New-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csexternalaccesspolicy?view=skype-ps)
+[New-CsExternalAccessPolicy](/powershell/module/skype/new-csexternalaccesspolicy?view=skype-ps)
 
-[Set-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csexternalaccesspolicy?view=skype-ps)
+[Set-CsExternalAccessPolicy](/powershell/module/skype/set-csexternalaccesspolicy?view=skype-ps)
 
-[Grant-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csexternalaccesspolicy?view=skype-ps)
+[Grant-CsExternalAccessPolicy](/powershell/module/skype/grant-csexternalaccesspolicy?view=skype-ps)
