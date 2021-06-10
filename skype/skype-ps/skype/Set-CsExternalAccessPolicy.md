@@ -51,7 +51,7 @@ Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
 2.
-(Microsoft Teams only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsTeamsFederationConfiguration.
+(Microsoft Teams only) Organize Teams meetings that can be joined by users of custom applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsFederationConfiguration.
 
 3.
 Access Skype for Business Server over the Internet, without having to first log on to your internal network.
