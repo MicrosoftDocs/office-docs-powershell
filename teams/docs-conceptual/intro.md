@@ -1,6 +1,7 @@
 ---
 localization_priority: Normal
 title: Microsoft Teams cmdlet reference
+description: "Learn about Microsoft Teams cmdlets."
 ---
 
 # Microsoft Teams cmdlet reference
