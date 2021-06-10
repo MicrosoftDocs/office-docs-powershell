@@ -226,10 +226,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/new-csteamscallholdpolicy?view=skype-ps)
+[New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
 
-[get-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamscallholdpolicy?view=skype-ps)
+[Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
 
-[Set-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/set-csteamscallholdpolicy?view=skype-ps)
+[Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
 
-[Remove-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csteamscallholdpolicy?view=skype-ps)
+[Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
