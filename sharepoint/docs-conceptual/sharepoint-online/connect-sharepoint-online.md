@@ -1,6 +1,7 @@
 ---
 title: Get started with the SharePoint Online Management Shell
 ms.service: sharepoint-powershell
+description: "Learn how to connect to SharePoint Online PowerShell."
 ---
 
 # Get started with SharePoint Online Management Shell #

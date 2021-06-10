@@ -28,12 +28,9 @@ Approve-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>
 
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
 
-The return value of a successful call is a permission grant object. See [the "Permission grant object" section of the
-Get-SPOTenantServicePrincipalPermissionGrants help documentation](Get-SPOTenantServicePrincipalPermissionGrant.md)
-for more information about a permission grant object.
+The return value of a successful call is a permission grant object. See the [Description section of Get-SPOTenantServicePrincipalPermissionGrants](https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissiongrants#description) for more information about a permission grant object.
 
-To get the collection of permission grants for the "SharePoint Online Client" service principal, use the
-[Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrant.md) command.
+To get the collection of permission grants for the "SharePoint Online Client" service principal, use the [Get-SPOTenantServicePrincipalPermissionGrants](https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissiongrants) command.
 
 Approving a permission request also removes that request from the list of permission requests.
 

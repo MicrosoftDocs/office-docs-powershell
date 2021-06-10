@@ -1,6 +1,7 @@
 ---
 title: Intro to SharePoint Online Management Shell
 ms.service: sharepoint-powershell
+description: "Learn about the SharePoint Online Management Shell."
 ---
 
 # Intro to SharePoint Online Management Shell

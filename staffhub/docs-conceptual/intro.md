@@ -1,5 +1,6 @@
 ---
 title: Microsoft StaffHub cmdlet reference
+description: "Learn about Microsoft StaffHub cmdlets."
 ---
 
 # Microsoft StaffHub cmdlet reference
