@@ -78,7 +78,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
 
-**Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>, and might not be enabled by default.
+**Note**: ClickOnce support is available in the Chromium-based version of Edge at `edge://flags/#edge-click-once`, and might not be enabled by default.
 
 1. Open the Exchange admin center (EAC). For instructions, see [Exchange admin center in Exchange Online](/exchange/exchange-admin-center).
 
