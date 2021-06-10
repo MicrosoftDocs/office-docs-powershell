@@ -186,7 +186,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
+- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
 
   ```powershell
   # Create certificate
