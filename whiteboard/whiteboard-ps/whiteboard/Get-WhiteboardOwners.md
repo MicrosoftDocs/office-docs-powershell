@@ -39,6 +39,8 @@ PS C:\>Get-WhiteboardOwners -Geography Europe
 
 Get the owners in the European geography.
 
+### Output
+
 ```output
 TenantId:                  tenantId
 Geography:                 The geography queried for
