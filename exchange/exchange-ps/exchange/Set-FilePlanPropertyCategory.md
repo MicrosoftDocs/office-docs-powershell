@@ -9,7 +9,7 @@ schema: 2.0.0
 # Set-FilePlanPropertyCategory
 
 ## SYNOPSIS
-This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-FilePlanPropertyCategory cmdlet to modify file plan property categories.
 
