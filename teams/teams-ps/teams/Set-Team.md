@@ -23,7 +23,7 @@ Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Mai
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -374,7 +374,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowInTeamsSearchAndSuggestions
+The parameter has been deprecated.
 
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
