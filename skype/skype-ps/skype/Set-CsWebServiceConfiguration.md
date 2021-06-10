@@ -23,7 +23,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccessToLWAConference <Boolean>]
- [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>]
+ [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>] [-EnableCORS <Boolean>]
  [-EnableGroupExpansion <Boolean>] [-InferCertChainFromSSL <Boolean>] [-MACResolverUrl <String>]
  [-MaxCSRKeySize <UInt64>] [-MaxGroupSizeToExpand <UInt32>] [-MaxValidityPeriodHours <UInt64>]
  [-MinCSRKeySize <UInt64>] [-MinValidityPeriodHours <UInt64>] [-SecondaryLocationSourceUrl <String>]
