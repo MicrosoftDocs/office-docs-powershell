@@ -133,10 +133,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsAcsFederationConfiguration](Get-CsTeamsAcsFederationConfiguration.md)
 
-[New-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csexternalaccesspolicy?view=skype-ps)
+[/powershell/module/skype/new-csexternalaccesspolicy?view=skype-ps)
 
-[Set-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csexternalaccesspolicy?view=skype-ps)
+[Set-CsExternalAccessPolicy](/powershell/module/skype/set-csexternalaccesspolicy?view=skype-ps)
 
-[Grant-CsExternalAccessPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csexternalaccesspolicy?view=skype-ps)
-
+[Grant-CsExternalAccessPolicy](/powershell/module/skype/grant-csexternalaccesspolicy?view=skype-ps)
 
