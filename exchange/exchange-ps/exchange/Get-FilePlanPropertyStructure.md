@@ -9,7 +9,7 @@ schema: 2.0.0
 # Get-FilePlanPropertyStructure
 
 ## SYNOPSIS
-This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-FilePlanPropertyStructure cmdlet to the view file plan property structure in your organization.
 

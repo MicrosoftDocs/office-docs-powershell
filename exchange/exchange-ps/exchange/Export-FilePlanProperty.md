@@ -9,7 +9,7 @@ schema: 2.0.0
 # Export-FilePlanProperty
 
 ## SYNOPSIS
-This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Export-FilePlanProperty cmdlet to export file plan properties.
 
