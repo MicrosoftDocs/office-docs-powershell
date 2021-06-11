@@ -42,7 +42,7 @@ Lists all the content understanding models in the connected SharePoint Syntex Co
 Get-PnPSyntexModel -Identity 1
 ```
 
-Gets the content understanding model with id 1.
+Gets the content understanding model with Identity 1.
 
 ### EXAMPLE 3
 ```powershell
