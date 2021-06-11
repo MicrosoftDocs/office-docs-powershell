@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentTypes
-The list of content type ids present in content type hub site that are required to be added/synced to the current site.
+The list of content type IDs present in the content type hub site that are required to be added/synced to the current site.
 
 ```yaml
 Type: List<String>
@@ -74,5 +74,4 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
 
