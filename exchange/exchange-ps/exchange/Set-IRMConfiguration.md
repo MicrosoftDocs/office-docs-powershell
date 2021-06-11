@@ -220,10 +220,10 @@ Accept wildcard characters: False
 ```
 
 ### -EDiscoverySuperUserEnabled
-The EDiscoverySuperUserEnabled parameter specifies whether members of the Discovery Management role group can access IRM-protected messages in a discovery mailbox that were returned by a discovery search. Valid values are:
+The EDiscoverySuperUserEnabled parameter specifies whether members of the eDiscovery Manager role group can access IRM-protected messages in a discovery mailbox that were returned by a discovery search. Valid values are:
 
-- $true: Members of the Discovery Management role group can access IRM-protected messages in discovery mailboxes.
-- $false: Members of the Discovery Management role group can't access IRM-protected messages in discovery mailboxes.
+- $true: Members of the eDiscovery Manager role group can access IRM-protected messages in discovery mailboxes.
+- $false: Members of the eDiscovery Manager role group can't access IRM-protected messages in discovery mailboxes.
 
 For more information about In-Place eDiscovery and IRM-protected messages, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
