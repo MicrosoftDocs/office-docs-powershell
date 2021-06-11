@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -TermsAndUsagePolicyUrl
-The Terms of Use link for the app. If not specified the default Terms of Use from Microsoft link will be used.
+The Terms of Use link for the app. If not specified the default Terms of Use from the Microsoft link will be used.
 
 ```yaml
 Type: String
