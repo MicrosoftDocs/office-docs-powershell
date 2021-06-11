@@ -26,7 +26,7 @@ Get-PnPSyntexModel [-Identity] <SyntexModelPipeBind> [-Connection <PnPConnection
 ```
 
 ## DESCRIPTION
-This command allows the retrieval of a SharePoint Syntex content understanding models defined in the connected SharePoint Syntex Content Center site.
+This command allows the retrieval of SharePoint Syntex content understanding models defined in the connected SharePoint Syntex Content Center site.
 
 ## EXAMPLES
 
@@ -86,4 +86,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
