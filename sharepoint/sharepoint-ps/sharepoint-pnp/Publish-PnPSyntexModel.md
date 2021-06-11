@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListWebUrl
-Url of the web hosting the list to publish the model to.
+URL of the web hosting the list to publish the model to.
 
 ```yaml
 Type: String
