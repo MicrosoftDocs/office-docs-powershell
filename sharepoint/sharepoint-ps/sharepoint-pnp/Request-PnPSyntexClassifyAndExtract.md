@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -List
-The name or list holding the files to classify and extract
+The name or list holding the files to classify and extract.
 
 ```yaml
 Type: ListPipeBind
