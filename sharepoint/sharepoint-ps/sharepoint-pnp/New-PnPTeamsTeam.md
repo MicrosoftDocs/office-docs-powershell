@@ -66,7 +66,7 @@ This will create a new Microsoft Teams team called "myPnPDemo1" and sets the pri
 New-PnPTeamsTeam -GroupId $groupId
 ```
 
-This will create a new Microsoft Teams team from an existing Microsoft 365 Group using the Group ID (teamify)
+This will create a new Microsoft Teams team from an existing Microsoft 365 Group using the Group ID (teamify).
 
 ## PARAMETERS
 
@@ -410,4 +410,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
