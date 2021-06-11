@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutlineIconPath
-The path to the outline icon (32x32 px)
+The path to the outline icon (32x32 px).
 
 ```yaml
 Type: String
