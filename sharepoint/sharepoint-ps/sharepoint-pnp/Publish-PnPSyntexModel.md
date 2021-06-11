@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -List
-The name or id of the list to publish the model to.
+The name or ID of the list to publish the model to.
 
 ```yaml
 Type: ListPipeBind
