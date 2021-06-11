@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebServerRelativeUrl
-The server relative url of the web hosting the library to unpublish the model from.
+The server relative URL of the web hosting the library to unpublish the model from.
 
 ```yaml
 Type: String
