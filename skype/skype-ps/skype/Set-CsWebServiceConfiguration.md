@@ -23,7 +23,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccessToLWAConference <Boolean>]
- [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>]
+ [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>] [-EnableCORS <Boolean>]
  [-EnableGroupExpansion <Boolean>] [-InferCertChainFromSSL <Boolean>] [-MACResolverUrl <String>]
  [-MaxCSRKeySize <UInt64>] [-MaxGroupSizeToExpand <UInt32>] [-MaxValidityPeriodHours <UInt64>]
  [-MinCSRKeySize <UInt64>] [-MinValidityPeriodHours <UInt64>] [-SecondaryLocationSourceUrl <String>]
@@ -286,6 +286,23 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Position: Named
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
