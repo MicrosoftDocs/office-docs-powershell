@@ -50,7 +50,7 @@ Removes the tab with the display name 'Wiki' from the channel using id.
 Remove-PnPTeamsTab -Team 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel 19:796d063b63e34497aeaf092c8fb9b44e@thread.skype -Identity fcef815d-2e8e-47a5-b06b-9bebba5c7852
 ```
 
-Removes a tab with the specified id from the channel
+Removes a tab with the specified ID from the channel.
 
 ## PARAMETERS
 
@@ -113,4 +113,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
