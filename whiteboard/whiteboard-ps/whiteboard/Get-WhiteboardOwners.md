@@ -1,6 +1,6 @@
 ---
-external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
-Module Name: MicrosoftWhiteboard
+external help file: WhiteboardAdmin-help.xml
+Module Name: WhiteboardAdmin
 online version: https://docs.microsoft.com/powershell/module/whiteboard/get-whiteboardowners
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardOwners
@@ -18,11 +18,8 @@ Gets all the users in a tenant who own whiteboards in a specified geography.
 
 ## SYNTAX
 
-### Get the whiteboard owners in a geography
-
 ```powershell
-Get-WhiteboardOwners [-Geography] <String> [[-ContinuationToken] <String>] [-ForceAuthPrompt]
- [<CommonParameters>]
+Get-WhiteboardOwners [-Geography] <String> [[-ContinuationToken] <String>] [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +28,7 @@ Gets all the users in a tenant who own whiteboards in a specified geography. Ret
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 
 ```powershell
 PS C:\>Get-WhiteboardOwners -Geography Europe
@@ -41,7 +38,7 @@ Get the owners in the European geography.
 
 ### Output
 
-```output
+```yaml
 TenantId:                  tenantId
 Geography:                 The geography queried for
 Items:                     List of user ids
@@ -51,13 +48,19 @@ ContinuationToken:         continuation token
 ## PARAMETERS
 
 ### -Geography
+
 Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or Worldwide (all boards not in australia or europe).
 
 ```yaml
-Type:                        string
-Required:                    true
-Position:                    1
-Default value:               None
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
@@ -66,10 +69,15 @@ Applicable: Microsoft Whiteboard
 Optional. The continuation token returned in a previous call.
 
 ```yaml
-Type:                        string
-Required:                    false
-Position:                    named
-Default value:               $null
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
@@ -78,16 +86,28 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               false
-Accept pipeline input:       false
-Accept wildcard characters:  false
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
 
 ## NOTES
 
 For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
 
+## RELATED LINKS
