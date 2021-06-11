@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyWebSiteUrl
-The link to the public website of your company / organization.
+The link to the public website of your company/organization.
 
 ```yaml
 Type: String
