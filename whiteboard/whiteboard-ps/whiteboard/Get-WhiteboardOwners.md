@@ -18,8 +18,6 @@ Gets all the users in a tenant who own whiteboards in a specified geography.
 
 ## SYNTAX
 
-### Get the whiteboard owners in a geography
-
 ```powershell
 Get-WhiteboardOwners [-Geography] <String> [[-ContinuationToken] <String>] [-ForceAuthPrompt]
  [<CommonParameters>]
