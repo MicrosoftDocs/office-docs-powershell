@@ -14,7 +14,7 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPPage.html
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Publish-PnPSyntexModel.md to change this file.
 
-Publishes a SharePoint Syntex models to a list.
+Publishes a SharePoint Syntex model to a list.
 
 This cmdlet only works when you've connected to a SharePoint Syntex Content Center site.
 
