@@ -96,7 +96,7 @@ New-ComplianceSearchAction [-SearchName] <String[]>
 ## DESCRIPTION
 After you create a content search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
 
-In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the eDiscovery Manager role group, and not to the Organization Management role group.
+In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ### -ExchangeArchiveFormat
 This parameter is available or functional only in the cloud-based service.
 
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+This parameter requires the Export role in Security & Compliance Center PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The ExchangeArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ### -Export
 This parameter is available or functional only in the cloud-based service.
 
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+This parameter requires the Export role in Security & Compliance Center PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The Export switch specifies the action for the content search is to export the full set of results that match the search criteria. You don't need to specify a value with this switch.
 
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The Format parameter specifies the format of the search results when you use the Export switch. Valid values are:
 
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmail
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Export role. By default, this is assigned only to the eDiscovery Manager role group.
 
 The NotifyEmail parameter specifies the email address target for the search results when you use the Export switch.
 
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmailCC
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The NotifyEmailCC parameter specifies the email address target for the search results when you use the Export switch.
 
@@ -425,9 +425,9 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
+In Security & Compliance Center PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
-In the Security & Compliance Center, this parameter requires the Preview role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scenario
-In the Security & Compliance Center, this parameter requires the Preview role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
 
@@ -636,7 +636,7 @@ Accept wildcard characters: False
 ### -SharePointArchiveFormat
 This parameter is available or functional only in the cloud-based service.
 
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+This parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The SharePointArchiveFormat parameter specifies how to export SharePoint and OneDrive search results. Valid values are:
 
