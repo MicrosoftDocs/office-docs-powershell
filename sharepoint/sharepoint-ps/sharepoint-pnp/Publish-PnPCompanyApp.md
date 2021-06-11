@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ColoredIconPath
-The path to the color icon (192x192px)
+The path to the color icon (192x192px).
 
 ```yaml
 Type: String
