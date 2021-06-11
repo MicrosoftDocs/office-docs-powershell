@@ -25,7 +25,7 @@ Publish-PnPCompanyApp -PortalUrl <String> -AppName <String> [-Description <Strin
 ```
 
 ## DESCRIPTION
-This cmdlet publishes a new company app (Microsoft Viva Connections) to Microsoft Teams. It will create a new package (zip file) in the current folder named after the CompanyApp value specified. E.g. if the name is 'Contoso Portal', the package will be called "Contoso Portal.zip". This package will be uploaded to the Teams App Catalog. If you do not want to upload the package automatically, e.g. prepare a package ahead of time, specify '-NoUpload'.
+This cmdlet publishes a new company app (Microsoft Viva Connections) to Microsoft Teams. It will create a new package (zip file) in the current folder named after the CompanyApp value specified. For example, if the name is 'Contoso Portal', the package will be called "Contoso Portal.zip". This package will be uploaded to the Teams App Catalog. If you do not want to upload the package automatically, for example, prepare a package ahead of time, specify '-NoUpload'.
 
 ## EXAMPLES
 
