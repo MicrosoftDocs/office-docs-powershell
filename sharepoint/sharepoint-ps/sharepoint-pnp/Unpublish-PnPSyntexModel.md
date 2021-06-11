@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -List
-The name or id of the list to unpublish the model from.
+The name or ID of the list to unpublish the model from.
 
 ```yaml
 Type: ListPipeBind
