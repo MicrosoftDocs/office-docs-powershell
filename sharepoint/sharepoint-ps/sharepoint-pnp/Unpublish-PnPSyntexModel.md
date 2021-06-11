@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetLibraryServerRelativeUrl
-The server relative url of the library to unpublish the model from.
+The server relative URL of the library to unpublish the model from.
 
 ```yaml
 Type: String
