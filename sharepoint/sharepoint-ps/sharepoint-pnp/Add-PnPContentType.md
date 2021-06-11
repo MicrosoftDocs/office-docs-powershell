@@ -38,7 +38,7 @@ This will add a new content type based on the parent content type stored in the 
 Add-PnPContentType -Name "Project Document" -Description "Use for Contoso projects" -Group "Contoso Content Types" -ParentContentType (Get-PnPContentType -Identity 0x0101) -DocumentTemplate "/_cts/Project Document/template.docx"
 ```
 
-This will add a new content type based on the standard document content type and assigns the document template template.docx to it
+This will add a new content type based on the standard document content type and assigns the document template template.docx to it.
 
 ## PARAMETERS
 
@@ -131,5 +131,4 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
 
