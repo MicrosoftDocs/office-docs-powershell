@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-The name or id of the SharePoint Syntex model.
+The name or ID of the SharePoint Syntex model.
 
 ```yaml
 Type: SyntexModelPipeBind
