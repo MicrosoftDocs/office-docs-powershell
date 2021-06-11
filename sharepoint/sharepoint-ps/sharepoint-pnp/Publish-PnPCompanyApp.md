@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A short description for the app (less than 80 characters)
+A short description for the app (less than 80 characters).
 
 ```yaml
 Type: String
