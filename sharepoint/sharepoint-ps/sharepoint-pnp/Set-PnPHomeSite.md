@@ -36,7 +36,7 @@ Set-PnPHomeSite -HomeSiteUrl <String> [-Connection <PnPConnection>] [<CommonPara
 Set-PnPHomeSite -HomeSiteUrl "https://yourtenant.sharepoint.com/sites/myhome"
 ```
 
-Sets the home site to the provided site collection url
+Sets the home site to the provided site collection URL.
 
 ## PARAMETERS
 
