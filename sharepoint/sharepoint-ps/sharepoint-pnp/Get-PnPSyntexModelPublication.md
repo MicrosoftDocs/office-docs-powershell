@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-The name or id of the SharePoint Syntex model.
+The name or ID of the SharePoint Syntex model.
 
 ```yaml
 Type: SyntexModelPipeBind
@@ -72,4 +72,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
