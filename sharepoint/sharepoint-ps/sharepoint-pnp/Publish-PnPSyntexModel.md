@@ -33,7 +33,7 @@ Publish-PnPSyntexModel -Model <SyntexModelPipeBind> -TargetSiteUrl <string> -Tar
 ```
 
 ## DESCRIPTION
-This command publishes a SharePoint Syntex content understanding models to a list.
+This command publishes a SharePoint Syntex content understanding model to a list.
 
 ## EXAMPLES
 
@@ -188,4 +188,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
