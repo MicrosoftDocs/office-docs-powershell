@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetLibraryServerRelativeUrl
-The server relative url of the library to publish the model to.
+The server relative URL of the library to publish the model to.
 
 ```yaml
 Type: String
