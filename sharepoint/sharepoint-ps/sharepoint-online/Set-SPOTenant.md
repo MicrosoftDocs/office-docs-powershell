@@ -101,6 +101,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-IncludeAtAGlanceInShareEmails]
  [-SyncAadB2BManagementPolicy <Boolean>]
  [-StopNew2010Workflows <Boolean>]
+ [-BlockSendLabelMismatchEmail <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1809,6 +1810,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -BlockSendLabelMismatchEmail
+
+When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record, and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparision happens between the priority of these two labels. 
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 
 ### CommonParameters
 
