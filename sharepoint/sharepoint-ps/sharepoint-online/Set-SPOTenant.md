@@ -1817,7 +1817,6 @@ When a sensitivity label mismatch occurs between the label on the document uploa
 
 ```yaml
 Type: Boolean
-
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
