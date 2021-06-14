@@ -81,7 +81,7 @@ Sets the logo if the site is a modern team site
 Set-PnPSite -NoScriptSite $false
 ```
 
-Allows custom script on a specific site. See [Allow or prevent custom script](https://docs.microsoft.com/en-us/sharepoint/allow-or-prevent-custom-script) for more information.
+Allows custom script on a specific site. See [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script) for more information.
 
 ## PARAMETERS
 
