@@ -121,7 +121,6 @@ Accept wildcard characters: False
 ### -ListType
 The ListType parameter specifies the type of entry. Valid values are:
 
-- BulkSender
 - FileHash
 - Url
 

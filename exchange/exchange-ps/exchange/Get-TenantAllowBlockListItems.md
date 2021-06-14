@@ -67,7 +67,6 @@ This example returns information for the specified file hash value.
 ### -ListType
 The ListType parameter specifies the list to view. Valid values are:
 
-- BulkSender
 - FileHash
 - Url
 
@@ -87,7 +86,6 @@ Accept wildcard characters: False
 ### -Entry
 The Entry parameter filters the results based on the ListType parameter value. Valid values are:
 
-- BulkSender: The exact domain value.
 - Url: The exact URL entry value.
 - File: The exact SHA256 file hash value.
 
