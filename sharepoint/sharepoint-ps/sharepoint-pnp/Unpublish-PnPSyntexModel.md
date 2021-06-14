@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListWebUrl
-Url of the web hosting the list to unpublish the model from.
+URL of the web hosting the list to unpublish the model from.
 
 ```yaml
 Type: String
