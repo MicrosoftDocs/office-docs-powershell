@@ -17,7 +17,7 @@ ROBOTS: NOINDEX
 
 This cmdlet is available only in the cloud-based service.
 
-Use the New-TenantAllowBlockListItems cmdlet to add entries to the Tenant Allow/Block List in the Security & Compliance Center.
+Use the New-TenantAllowBlockListItems cmdlet to add entries to the Tenant Allow/Block List in the Microsoft 365 Defender portal.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -27,8 +27,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Expiration
 ```
-New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-ExpirationDate <DateTime>]
- [-Block]
+New-TenantAllowBlockListItems -Action <ItemAction> -Entries <String[]> -ListType <ListType>
+ [-ExpirationDate <DateTime>]
  [-Notes <String>]
  [-OutputJson]
  [<CommonParameters>]
@@ -36,8 +36,8 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
 
 ### NoExpiration
 ```
-New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpiration]
- [-Block]
+New-TenantAllowBlockListItems -Action <ItemAction> -Entries <String[]> -ListType <ListType>
+ [-NoExpiration]
  [-Notes <String>]
  [-OutputJson]
  [<CommonParameters>]
@@ -50,30 +50,48 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListItem -ListType Url -Entries ~contoso.com~ -Block
+New-TenantAllowBlockListItems -ListType Url -Action Block -Entries ~contoso.com~
 ```
 
 This example adds a URL block entry for contoso.com and all subdomains (for example, contoso.com, www.contoso.com, xyz.abc.contoso.com, and www.contoso.com/b). Because we didn't use the ExpirationDate or NoExpiration parameters, the entry expires after 30 days.
 
 ### Example 2
 ```powershell
-New-TenantAllowBlockListItem -ListType FileHash -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -Block -NoExpiration
+New-TenantAllowBlockListItems -ListType FileHash -Action Allow -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -NoExpiration
 ```
 
-This example adds a file block entry for the specified files that never expires.
+This example adds a file allow entry for the specified files that never expires.
 
 ## PARAMETERS
+
+### -Action
+The Action parameter specifies the action type for the entry. Valid values are:
+
+- Allow
+- Block
+
+```yaml
+Type: ItemAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Entries
 The Entries parameter specifies the URL or files that you want to add to the Tenant Allow/Block List based on the value of the ListType parameter:
 
-- BulkSender: The email domain of approved bulk mail senders.
-- File: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
-- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list#url-syntax-for-the-tenant-allowedblocked-list).
+- URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list#url-syntax-for-the-tenant-allowedblocked-list).
+- Files: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-You can't modify the entry values after you create the entry (there's no Entries parameter on the Set-TenantAllowBlockListItems cmdlet).
+You can't mix URL and file values or allow and block actions in the same command. You can't modify existing URL or file values after you create the entry (there's no Entries parameter on the Set-TenantAllowBlockListItems cmdlet).
 
 ```yaml
 Type: String[]
@@ -88,10 +106,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExpirationDate
+The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+
+You can't use this parameter with the NoExpiration switch.
+
+```yaml
+Type: DateTime
+Parameter Sets: Expiration
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ListType
 The ListType parameter specifies the type of entry to add. Valid values are:
 
-- BulkSender
 - FileHash
 - Url
 
@@ -120,45 +160,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Block
-The Block switch specifies that this is a block entry for the values you specified by the ListType and Entries parameters. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExpirationDate
-The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
-
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, `"2016-05-06 14:30:00z"`.
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
-
-You can't use this parameter with the NoExpiration switch.
-
-```yaml
-Type: DateTime
-Parameter Sets: Expiration
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

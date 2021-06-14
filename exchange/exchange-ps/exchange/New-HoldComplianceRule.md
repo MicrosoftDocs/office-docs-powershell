@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-HoldComplianceRule cmdlet to create new preservation rules in the Security & Compliance Center.
+Use the New-HoldComplianceRule cmdlet to create new preservation rules in the Microsoft 365 compliance center.
 
 **Note**: The New-HoldComplianceRule cmdlet has been replaced by the New-RetentionComplianceRule cmdlet. If you have scripts that use New-HoldComplianceRule, update them to use New-RetentionComplianceRule.
 
@@ -39,7 +39,7 @@ New-HoldComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
 ## DESCRIPTION
 The preservation rule must be added to an existing preservation policy using the Policy parameter. Only one rule can be added to each preservation policy.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -209,13 +209,13 @@ Accept wildcard characters: False
 ```
 
 ### -HoldDurationDisplayHint
-The HoldDurationDisplayHint parameter specifies the units that are used to display the preservation duration in the Security & Compliance Center. Valid values are:
+The HoldDurationDisplayHint parameter specifies the units that are used to display the preservation duration in the Microsoft 365 compliance center. Valid values are:
 
 - Days
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Microsoft 365 compliance center will display 1 year as the content hold duration.
 
 ```yaml
 Type: HoldDurationHint
