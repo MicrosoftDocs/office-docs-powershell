@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Security & Compliance Center.
+Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -96,13 +96,13 @@ New-ComplianceSearchAction [-SearchName] <String[]>
 ## DESCRIPTION
 After you create a content search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
 
-In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
+In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 In Microsoft 365, the account that you use to run this cmdlet must have a valid Microsoft 365 license assigned.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ### -ExchangeArchiveFormat
 This parameter is available or functional only in the cloud-based service.
 
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+This parameter requires the Export role in Security & Compliance Center PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The ExchangeArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
 
@@ -237,7 +237,7 @@ The ExchangeArchiveFormat parameter specifies how to export Exchange search resu
 - SinglePst: One PST file that contains all exported messages.
 - SingleFolderPst: One PST file with a single root folder for the entire export.
 - IndividualMessage: Export each message as an .msg message file. This is the default value.
-- PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
+- PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox.
 - SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes. This output setting is only available in PowerShell.
 
 To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ### -Export
 This parameter is available or functional only in the cloud-based service.
 
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+This parameter requires the Export role in Security & Compliance Center PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The Export switch specifies the action for the content search is to export the full set of results that match the search criteria. You don't need to specify a value with this switch.
 
@@ -310,11 +310,11 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The Format parameter specifies the format of the search results when you use the Export switch. Valid values are:
 
-- FxStream: Export to PST files. This is the only option that's available when you export search results from the Security & Compliance Center.
+- FxStream: Export to PST files. This is the only option that's available when you export search results from the Microsoft 365 compliance center.
 - Mime: Export to .eml message files. This the default value when you use cmdlets to export the search results.
 - Msg: Export to .msg message files.
 
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmail
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Export role. By default, this is assigned only to the eDiscovery Manager role group.
 
 The NotifyEmail parameter specifies the email address target for the search results when you use the Export switch.
 
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmailCC
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The NotifyEmailCC parameter specifies the email address target for the search results when you use the Export switch.
 
@@ -425,9 +425,9 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
+In Security & Compliance Center PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
-In the Security & Compliance Center, this parameter requires the Preview role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scenario
-In the Security & Compliance Center, this parameter requires the Preview role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+In Security & Compliance Center PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
 
@@ -636,12 +636,12 @@ Accept wildcard characters: False
 ### -SharePointArchiveFormat
 This parameter is available or functional only in the cloud-based service.
 
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+This parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The SharePointArchiveFormat parameter specifies how to export SharePoint and OneDrive search results. Valid values are:
 
 - IndividualMessage: Export the files uncompressed. This is the default value.
-- PerUserZip: One ZIP file for each user. Each ZIP file contains the exported files for the user. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
+- PerUserZip: One ZIP file for each user. Each ZIP file contains the exported files for the user.
 - SingleZip: One ZIP file for all users. The ZIP file contains all exported files from all users. This output setting is only available in PowerShell.
 
 To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
@@ -692,7 +692,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter doesn't work in the Security & Compliance Center.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
