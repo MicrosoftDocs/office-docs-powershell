@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomeSiteUrl
-The url of the site to set as the home site
+The URL of the site to set as the home site.
 
 ```yaml
 Type: String
