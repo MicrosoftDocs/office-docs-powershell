@@ -33,7 +33,7 @@ Unpublish-PnPSyntexModel -Model <SyntexModelPipeBind> -TargetSiteUrl <string> -T
 ```
 
 ## DESCRIPTION
-This command unpublishes a SharePoint Syntex content understanding models from a list.
+This command unpublishes a SharePoint Syntex content understanding model from a list.
 
 ## EXAMPLES
 
