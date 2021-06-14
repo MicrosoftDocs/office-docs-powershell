@@ -30,21 +30,31 @@ Set-TenantAllowBlockListSpoofItems [-Identity] <HostedConnectionFilterPolicyIdPa
 ```
 
 ## DESCRIPTION
+This cmdlet allows or blocks spoof pairs (the combination of the spoofed user and the sending infrastructure) in the Tenant Allow/Block List.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastructure,SpoofType,Action,Identity
+Set-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
-{{ Add example description here }}
+This example blocks two domains with the specified Identity values from spoofing your organization. You get the Identity values from the output of the Get-TenantAllowBlockListSpoofItems command.
+
+### Example 2
+```powershell
+(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity domain.com\Default
+```
+
+This example removes all external spoof pairs from the Tenant Allow/Block List.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the accepted domain.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter

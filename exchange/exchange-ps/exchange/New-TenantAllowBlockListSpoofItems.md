@@ -31,21 +31,23 @@ New-TenantAllowBlockListSpoofItems [-Identity] <HostedConnectionFilterPolicyIdPa
 ```
 
 ## DESCRIPTION
+This cmdlet adds a spoof pair (the combination of the spoofed user and the sending infrastructure) to the Tenant Allow/Block List.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListSpoofItems
+New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity domain.com\Default
 ```
 
-{{ Add example description here }}
+This example creates a new spoof pair and generates an Identity for the pair (a random GUID) which can be used as an Id parameter while updating or deleting the spoof pair through Set-TenantAllowBlockListSpoofItems and Remove-TenantAllowBlockListSpoofItems.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter is available but isn't used.
+The Identity parameter specifies the accepted domain.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
