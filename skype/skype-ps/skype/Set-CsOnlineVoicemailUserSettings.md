@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 ### -TransferTarget
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
-Value of this parameter should be a SIP URI of another user, an auto attendant, or a hunt group (call queue) in your organization.
+Value of this parameter should be a SIP URI of another user in your organization.
 For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
 
 

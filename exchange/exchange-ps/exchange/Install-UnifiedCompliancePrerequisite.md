@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configure the Compliance Policy Center in Microsoft SharePoint Online. The Compliance Policy Center is a site collection that's used by the Security & Compliance Center to store preservation policies that act on content in SharePoint Online sites.
+Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configure the Compliance Policy Center in Microsoft SharePoint Online. The Compliance Policy Center is a site collection that's used by the Microsoft 365 compliance center to store preservation policies that act on content in SharePoint Online sites.
 
 Typically, you don't need to run this cmdlet. You use this cmdlet for troubleshooting and diagnostics.
 
@@ -43,7 +43,7 @@ This cmdlet returns the following information about the Compliance Policy Center
 - SharepointSuccessInitializedUtc: The time that the Compliance Policy Center was last initialized in coordinated universal time (UTC).
 - SharepointPolicyCenterSiteUrl: This value is typically `https://<domain>.sharepoint.com/sites/compliancepolicycenter`.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

@@ -1328,7 +1328,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 - Distinguished name (DN)
 - GUID
 
-For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies) or [Address book policies in Exchange Online](/exchange/address-books/address-book-policies/address-book-policies).
+For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies) or [Address book policies in Exchange Online](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
