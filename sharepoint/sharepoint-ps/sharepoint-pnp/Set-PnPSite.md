@@ -312,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoScriptSite
-Specifies if a site allows custom script or not. See [Allow or prevent custom script](https://docs.microsoft.com/en-us/sharepoint/allow-or-prevent-custom-script) for more information.
+Specifies if a site allows custom script or not. See [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script) for more information.
 
 ```yaml
 Type: SwitchParameter
@@ -443,4 +443,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
