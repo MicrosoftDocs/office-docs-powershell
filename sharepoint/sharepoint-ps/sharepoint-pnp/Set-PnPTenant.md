@@ -927,7 +927,7 @@ The valid values are:
 ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled. Disabled - External user sharing (share by email) and guest link sharing are both disabled.
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (https://docs.microsoft.com/en-us/sharepoint/turn-external-sharing-on-or-off).
+For more information about sharing, see Manage external sharing for your SharePoint Online environment (/sharepoint/turn-external-sharing-on-or-off).
 
 ```yaml
 Type: SharingCapabilities
@@ -1203,4 +1203,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
