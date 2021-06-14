@@ -27,18 +27,18 @@ Enhanced 9-1-1 allows an emergency operator to identify the location of a caller
 
 The location ID which is associating with the subnet is not required to be the existing location.
 
-LIS subnets must be defined by the Network ID matching the subnet IP range assigned to clients. For example, the network ID for a client IP/mask of 10.10.10.150/25 is 10.10.10.128. For more information, see [Understand TCP/IP addressing and subnetting basics](/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting)
+LIS subnets must be defined by the Network ID matching the subnet IP range assigned to clients. For example, the network ID for a client IP/mask of 10.10.10.150/25 is 10.10.10.128. For more information, see [Understand TCP/IP addressing and subnetting basics](/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-CsOnlineLisSubnet -Subnet 10.10.10.128 -LocationId f037a9ad-4334-455a-a1c5-3838ec0f5d02 -Description "Subnet 10.10.10.128"
 ```
 
 Example 1 creates the Location Information Service subnet "10.10.10.128" associated to Location ID "f037a9ad-4334-455a-a1c5-3838ec0f5d02".
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Set-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e -LocationId f037a9ad-4334-455a-a1c5-3838ec0f5d02 -Description "Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e"
 ```
