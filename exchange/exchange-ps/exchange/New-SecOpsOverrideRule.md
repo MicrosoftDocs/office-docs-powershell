@@ -21,9 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SecOpsOverrideRule [-Name] <String> -Policy <PolicyIdParameter> -SentTo <MultiValuedProperty>
+New-SecOpsOverrideRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
+ [-SentTo <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,7 +36,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-New-SecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy -SentTo secops@contoso.com
+New-SecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy
 ```
 
 This example creates the SecOps mailbox override rule with the specified settings.
@@ -79,24 +80,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SentTo
-The SentTo parameter specifies the email address of the SecOps mailbox. Groups are not allowed.
-
-You can specify multiple email addresses separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Default
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -123,6 +106,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentTo
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
