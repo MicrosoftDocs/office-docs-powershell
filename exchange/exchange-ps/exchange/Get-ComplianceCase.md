@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Security & Compliance Center and Microsoft 365 compliance center. See the CaseType parameter for a list of these case types.
+Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft 365 compliance center and Microsoft 365 compliance center. See the CaseType parameter for a list of these case types.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,7 +30,7 @@ Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -86,11 +86,11 @@ Accept wildcard characters: False
 ### -CaseType
 The CaseType parameter specifies the type of compliance case that you want to view. Valid values are:
 
-- AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under **eDiscovery** \> **Advanced eDiscovery**.
+- AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Microsoft 365 compliance center, Advanced eDiscovery cases are displayed under **eDiscovery** \> **Advanced eDiscovery**.
 - ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft 365 compliance center, trainable classifiers are displayed under **Data classification** \> **Trainable classifiers**.
-- ComplianceWorkspace: This value is reserved for internal Microsoft use.- DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Security & Compliance Center, Data investigation cases are displayed on the Data investigations page.
-- DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
-- eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Security & Compliance Center, core eDiscovery cases are displayed under **eDiscovery** \> **eDiscovery**. This is the default value.
+- ComplianceWorkspace: This value is reserved for internal Microsoft use.- DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Microsoft 365 compliance center, Data investigation cases are displayed on the Data investigations page.
+- DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Microsoft 365 compliance center, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
+- eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Microsoft 365 compliance center, core eDiscovery cases are displayed under **eDiscovery** \> **eDiscovery**. This is the default value.
 - InsiderRisk: Insider risk cases are use to manage insider risk management cases. In the Microsoft 365 compliance center, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on an risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
 - SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft 365 Compliance center, communication compliance policies are displayed under **Communication compliance** \> **Policies**.

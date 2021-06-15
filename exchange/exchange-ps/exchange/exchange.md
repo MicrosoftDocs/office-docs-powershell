@@ -2026,6 +2026,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ManagedFolderMailboxPolicy](Get-ManagedFolderMailboxPolicy.md)
 
+### [Get-RecordReviewNotificationTemplateConfig](Get-RecordReviewNotificationTemplateConfig.md)
+
 ### [Get-RegulatoryComplianceUI](Get-RegulatoryComplianceUI.md)
 
 ### [Get-RetentionCompliancePolicy](Get-RetentionCompliancePolicy.md)
@@ -2136,6 +2138,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
 
+### [Set-RecordReviewNotificationTemplateConfig](Set-RecordReviewNotificationTemplateConfig.md)
+
 ### [Set-RegulatoryComplianceUI](Set-RegulatoryComplianceUI.md)
 
 ### [Set-RetentionCompliancePolicy](Set-RetentionCompliancePolicy.md)
@@ -2181,15 +2185,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
 
-### [Get-OwnerlessGroupPolicy](Get-OwnerlessGroupPolicy.md)
-
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
-
-### [Set-OwnerlessGroupPolicy](Set-OwnerlessGroupPolicy.md)
 
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
