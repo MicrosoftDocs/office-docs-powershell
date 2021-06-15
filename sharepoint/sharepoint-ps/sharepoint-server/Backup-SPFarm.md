@@ -200,6 +200,7 @@ Accept wildcard characters: False
 
 ### -ConfigurationOnly
 If set, the backup will contain configuration settings only (no data) for each of the objects to be backed up.
+In some cases that SharePoint estimates that it does not have sufficient space available, `-Force` parameter needs to be used in conjuntion to this parameter.
 
 ```yaml
 Type: SwitchParameter
