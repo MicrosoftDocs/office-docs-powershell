@@ -80,22 +80,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SentTo
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Default
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -122,6 +106,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentTo
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
