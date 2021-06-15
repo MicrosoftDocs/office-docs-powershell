@@ -21,9 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SecOpsOverrideRule [-Name] <String> -Policy <PolicyIdParameter> -SentTo <MultiValuedProperty>
+New-SecOpsOverrideRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
+ [-SentTo <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,7 +36,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-New-SecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy -SentTo secops@contoso.com
+New-SecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy
 ```
 
 This example creates the SecOps mailbox override rule with the specified settings.
@@ -80,9 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies the email address of the SecOps mailbox. Groups are not allowed.
-
-You can specify multiple email addresses separated by commas.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -90,7 +89,7 @@ Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
