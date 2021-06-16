@@ -61,11 +61,11 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Action
-The Action parameter specifies whether is is an allow or block spoof entry. Valid values are:
+### -SpoofedUser
+The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry. 
 
-- Allow
-- Block
+- For domains outside your organization(Cross-org), use the domain of the email address that appears in the From field of the email.
+- For domains inside your organization (Intro-org), use the full email address that appears in the From field of the email.
 
 ```yaml
 Type: String
@@ -76,26 +76,9 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: Yes
 ```
 
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -SendingInfrastructure
 The SendingInfrastructure parameter specifies the source of the messages sent by the spoofed sender that's defined in the SpoofedUser parameter. Valid values are:
@@ -112,7 +95,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: Yes
 ```
 
 ### -SpoofType
@@ -133,8 +116,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SpoofedUser
-The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry. This is the email address that appears in the From field in email clients.
+### -Action
+The Action parameter specifies whether is is an allowed or blocked spoof entry. Valid values are:
+
+- Allow
+- Block
 
 ```yaml
 Type: String
@@ -155,6 +141,23 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
