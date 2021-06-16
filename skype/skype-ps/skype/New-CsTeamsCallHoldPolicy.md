@@ -46,7 +46,8 @@ Any Microsoft Teams users who are assigned this policy will have their call hold
 ## PARAMETERS
 
 ### -AudioFileId
-A string representing the id referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
+A string representing the ID referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
+
 
 ```yaml
 Type: String
