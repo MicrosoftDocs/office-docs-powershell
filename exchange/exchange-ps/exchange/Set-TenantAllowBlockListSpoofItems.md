@@ -39,10 +39,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastructure,SpoofType,Action,Identity
-Set-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
+Set-TenantAllowBlockListSpoofItems -Identity contoso.com\Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
-This example blocks two Spoof pairs which are represented by the two Ids. You can get the Id of the Spoof pair by running Get-TenantAllowBlockListSpoofItems cmdlet. The Id is the value of "Identity" in the output of Get-TenantAllowBlockListSpoofItems command.
+This example blocks the two specified spoof pairs that were revealed from the output of the Identity property in the Get-TenantAllowBlockListSpoofItems command.
 
 ### Example 2
 ```powershell
@@ -69,22 +69,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Ids
-Id is the unique identifier of a Spoof pair. You can get the Id of the Spoof pair by running Get-TenantAllowBlockListSpoofItems cmdlet. The Id is the value of "Identity" in the output of Get-TenantAllowBlockListSpoofItems command.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -Action
 The Action parameter specifies whether is is an allow or block spoof entry. Valid values are:
 
@@ -101,6 +85,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ids
+The Ids parameter specifies the spoof pair that you want to allow or block. A valid value is the Identity property value from the output of the Get-TenantAllowBlockListSpoofItems cmdlet. You can specify multiple values separated by commas.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
