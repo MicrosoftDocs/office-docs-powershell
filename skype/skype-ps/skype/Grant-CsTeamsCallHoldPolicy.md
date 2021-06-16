@@ -152,7 +152,8 @@ Accept wildcard characters: False
 
 ### -PolicyName
 Name of the policy to be assigned.
-The PolicyName is simply the policy Identity without the policy scope i.e. the "Tag:" prefix.
+The PolicyName is simply the policy Identity without the policy scope, i.e. the "Tag:" prefix.
+
 For example, a policy with the Identity Tag:ContosoPartnerCallHoldPolicy has a PolicyName equal to ContosoPartnerCallHoldPolicy.
 
 To revoke a per-user policy previously assigned to a user, set the PolicyName to a null value ($null).
