@@ -60,7 +60,8 @@ This policy is re-assigned the description from its existing value to "country m
 ## PARAMETERS
 
 ### -AudioFileId
-A string representing the id referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
+A string representing the ID referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
+
 
 ```yaml
 Type: String
