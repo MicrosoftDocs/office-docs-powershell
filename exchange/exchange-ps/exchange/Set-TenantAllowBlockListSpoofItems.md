@@ -42,7 +42,7 @@ Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastruct
 Set-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
-This example blocks two domains with the specified Identity values from spoofing your organization. You get the Identity values from the output of the Get-TenantAllowBlockListSpoofItems command.
+This example blocks two Spoof pairs which are represented by the two Ids. You can get the Id of the Spoof pair by running Get-TenantAllowBlockListSpoofItems cmdlet. The Id is the value of "Identity" in the output of Get-TenantAllowBlockListSpoofItems command.
 
 ### Example 2
 ```powershell
@@ -69,6 +69,22 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -Ids
+Id is the unique identifier of a Spoof pair. You can get the Id of the Spoof pair by running Get-TenantAllowBlockListSpoofItems cmdlet. The Id is the value of "Identity" in the output of Get-TenantAllowBlockListSpoofItems command.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -Action
 The Action parameter specifies whether is is an allow or block spoof entry. Valid values are:
 
@@ -85,22 +101,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Ids
-{{ Fill Ids Description }}
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
