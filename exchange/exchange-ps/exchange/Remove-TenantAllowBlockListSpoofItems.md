@@ -42,7 +42,7 @@ Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastruct
 Remove-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
-This example removes two domains with the specified Identity values from the Tenant Allow/Block List. You get the Identity values from the output of the Get-TenantAllowBlockListSpoofItems command.
+This example removes two Spoof pairs which are represented by the two Ids. You can get the Id of the Spoof pair by running Get-TenantAllowBlockListSpoofItems cmdlet. The Id is the value of "Identity" in the output of Get-TenantAllowBlockListSpoofItems command.
 
 ## PARAMETERS
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-{{ Fill Ids Description }}
+Id is the unique identifier of a Spoof pair. You can get the Id of the Spoof pair by running Get-TenantAllowBlockListSpoofItems cmdlet. The Id is the value of "Identity" in the output of Get-TenantAllowBlockListSpoofItems command.
 
 ```yaml
 Type: String[]
