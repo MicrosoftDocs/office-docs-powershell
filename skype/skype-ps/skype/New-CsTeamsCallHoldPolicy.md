@@ -38,7 +38,8 @@ PS C:\> New-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" 
 ```
 
 The command shown in Example 1 creates a new, per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
-This policy is assigned the audio file id: c65233-ac2a27-98701b-123ccc, which is the id referencing an audio file that was uploaded using the Import-CsOnlineAudioFile cmdlet.
+This policy is assigned the audio file ID: c65233-ac2a27-98701b-123ccc, which is the ID referencing an audio file that was uploaded using the Import-CsOnlineAudioFile cmdlet.
+
 
 Any Microsoft Teams users who are assigned this policy will have their call holds customized such that the user being held will hear the audio file specified by AudioFileId.
 
