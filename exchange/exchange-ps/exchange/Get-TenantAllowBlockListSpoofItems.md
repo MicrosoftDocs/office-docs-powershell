@@ -32,12 +32,17 @@ Get-TenantAllowBlockListSpoofItems [[-Identity] <HostedConnectionFilterPolicyIdP
 ## DESCRIPTION
 The Get-TenantAllowBlockListSpoofItems cmdlet returns the following information:
 
-- Identity: A random Guid assigned to the spoof pair. This will be used as an Id parameter while updating or deleting the spoof pair using Set-TenantAllowBlockListSpoofItems and Remove-TenantAllowBlockListSpoofItems.
-- SpoofedUser: The sending email address if the domain is one of your organization's domains, or the sending domain if the domain is external.
-- SendingInfrastructure: The true sending domain that's found in the DNS record of the source email server. If no domain is found, the source email server's IP address is shown.
+- Identity: A random Guid assigned to the spoof pair. This will be used as an **Id parameter** while updating or deleting the spoof pair using [Set-TenantAllowBlockListSpoofItems](https://docs.microsoft.com/en-us/powershell/module/exchange/set-tenantallowblocklistspoofitems?view=exchange-ps) and [Remove-TenantAllowBlockListSpoofItems](https://docs.microsoft.com/en-us/powershell/module/exchange/remove-tenantallowblocklistspoofitems?view=exchange-ps).
+- SpoofedUser: 
+  - The sending email address if the domain is one of your organization's domains.
+  - Or the sending domain if the domain is external.
+- SendingInfrastructure: 
+  - The true sending domain that's found in the DNS record of the source email server. 
+  - If no domain is found, the source email server's IP address is shown.
 - SpoofType: Indicates whether the domain is internal to your organization or external.
-- Action: The two possible values are Allow (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), and
-- Block (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server).
+- Action: The two possible values are 
+  - Allow (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server).
+  - Block (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -45,18 +50,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
+Get-TenantAllowBlockListSpoofItems -SpoofType Internal
+```
+This example returns the list of internal spoof pairs.
+
+### Example 2
+```powershell
+Get-TenantAllowBlockListSpoofItems -Action Block
+```
+This example returns the list of blocked spoof pairs.
+
+### Example 3
+```powershell
 Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastructure,SpoofType,Action
 ```
 
-This example returns the list of spoof domain pairs that appear to be sending spoofed email to your organization.
+This example returns the list of spoof pairs that appear to be sending spoofed email to your organization.
 
-### Example 2
+### Example 4
 ```powershell
 $file = "C:\My Documents\Spoof Tenant Allow Block List.csv"
 Get-TenantAllowBlockListSpoofItems | Export-Csv $file
 ```
 
-This example exports the same list of spoofed senders to a CSV file.
+This example exports the same list of spoofed pairs to a CSV file.
 
 ## PARAMETERS
 
