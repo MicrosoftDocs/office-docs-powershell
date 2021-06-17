@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs, Microsoft Graph APIs or the EWS APIs to a specific set of mailboxes. These policies are complementary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a specific set of mailboxes by an application that uses APIs (Outlook REST, Microsoft Graph, or Exchange Web Services (EWS)). These policies are complementary to the permission scopes that are declared by the application.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -33,9 +33,9 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-A limited number of policies can be created per Microsoft 365 tenant. Each tenant has a fixed amount of space for these policies. An error message stating "The total size of App Access Policies exceeded the limit." will be displayed if the amount of space is consumed. To maximize the number of policies you can create, set a blank one charachter description to avoid an auto-generated description consuming additional space. By doing this, tenants should expect to be able to create aproximately 300 policies (versus a previous limit of 100 policies). 
+You can create a limited number of policies in your organization based on a fixed amount of space. If your oganization runs out of space for these policies, you'll see the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space charachter description for the policy. This method will allow aproximately 300 policies (versus a previous limit of 100 policies). 
 
-While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn't have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
+While scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read email or events within a mailbox and not do anything else, application access policies allow admins to enforce limits that are based on a list of mailboxes. For example, apps developed for one country shouldn't have access to data from other countries. Or, or a CRM integration application should only access calendars in the Sales organization and no other departments.
 
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
@@ -61,7 +61,7 @@ This example creates a new application access policy with the following settings
 
 ### Example 2
 ```powershell
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
+New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app's access to members of security group EvenUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -69,7 +69,7 @@ This example creates a new application access policy with the following settings
 - AccessRight: RestrictAccess
 - AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
 - PolicyScopeGroupId: EvenUsers@AppPolicyTest2.com
-- Description: Restrict this app to only access members of security group EvenUsers.
+- Description: Restrict this app's access to members of security group EvenUsers.
 
 ### Example 3
 ```powershell
@@ -86,10 +86,10 @@ This example creates a new application access policy with the following settings
 ## PARAMETERS
 
 ### -AccessRight
-The AccessRight parameter specifies the restriction type that you want to assign in the application access policy. RestrictAccess allows the associated app to only access data associated with mailboxes in the PolicyScopeGroupID. DenyAccess allows the associated app to only access data not associated with mailboxes in the PolicyScopeGroupID. Valid values are:
+The AccessRight parameter specifies the restriction type that you want to assign in the application access policy. Valid values are:
 
-- RestrictAccess
-- DenyAccess
+- RestrictAccess: Allows the associated app to only access data that's associated with mailboxes specified by the PolicyScopeGroupID parameter.
+- DenyAccess: Allows the associated app to only access data that's not associated with mailboxes specified by the PolicyScopeGroupID parameter.
 
 ```yaml
 Type: ApplicationAccessPolicyIdParameter
