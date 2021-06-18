@@ -729,6 +729,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToJoinExternalMeeting
+Currently, this parameter has no effect.
+
 Possible values are:
 - Enabled 
 - FederatedOnly

@@ -28,7 +28,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Expiration
 ```
 Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
- [-Action <TenantAllowBlockList.ItemAction>]
+ [-Block]
  [-ExpirationDate <DateTime>]
  [-Notes <String>]
  [-OutputJson]
@@ -38,7 +38,7 @@ Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
 ### NoExpiration
 ```
 Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
- [-Action <TenantAllowBlockList.ItemAction>]
+ [-Block]
  [-NoExpiration]
  [-Notes <String>]
  [-OutputJson]
@@ -59,14 +59,11 @@ This example changes the expiration date of the specified entry.
 
 ## PARAMETERS
 
-### -Action
-The Action parameter specifies the action type for the entry. Valid values are:
-
-- Allow
-- Block
+### -Block
+The Block switch specifies that this is a block entry for the values you specified by the ListType and Entries parameters. You don't need to specify a value with this switch.
 
 ```yaml
-Type: TenantAllowBlockList.ItemAction
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
