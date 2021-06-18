@@ -14,7 +14,9 @@ title: Add-PnPJavaScriptBlock
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPJavaScriptBlock.md to change this file.
 
-Adds a link to a JavaScript snippet/block to a web or site collection
+Adds a link to a JavaScript snippet/block to a web or site collection, valid only for SharePoint classic site experience.
+
+
 
 ## SYNTAX
 
