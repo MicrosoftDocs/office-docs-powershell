@@ -82,6 +82,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md)
 
-[Set-CsTeamsShiftsConnectionTeamMap](Set-CsTeamsShiftsConnectionTeamMap.md)
-
 [New-CsTeamsShiftsConnectionTeamMap](New-CsTeamsShiftsConnectionTeamMap.md)
