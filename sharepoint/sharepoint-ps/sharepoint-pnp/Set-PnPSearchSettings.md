@@ -54,7 +54,7 @@ Redirect the suite bar search box in the site to a custom URL
 Set-PnPSearchSettings -SearchPageUrl ""
 ```
 
-Clear the suite bar search box URL and revert to the default behavior
+Clear the suite bar search box redirect URL and revert to the default behavior
 
 ### EXAMPLE 5
 ```powershell
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Scope to apply the setting to. Possible values: Web (default), Site\r\n\r\nFor a root site, the scope does not matter.
+Scope to apply the setting to. Possible values: Web (default), Site. For a root site, the scope does not matter.
 
 ```yaml
 Type: SearchSettingsScope
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchBoxInNavBar
-Set the scope of which the suite bar search box shows. Possible values: Inherit, AllPages, ModernOnly, Hidden
+Set the scope of which the suite bar search box shows. Possible values: Inherit, AllPages, ModernOnly, Hidden.
 
 ```yaml
 Type: SearchBoxInNavBarType
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchBoxPlaceholderText
-{{ Fill SearchBoxPlaceholderText Description }}
+Set the placeholder text displayed in the search box.
 
 ```yaml
 Type: String
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchScope
-Set the search scope of the suite bar search box. Possible values: DefaultScope, Tenant, Hub, Site
+Set the search scope of the suite bar search box. Possible values: DefaultScope, Tenant, Hub, Site.
 
 ```yaml
 Type: SearchScopeType
@@ -179,8 +179,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 
 ## RELATED LINKS
 
