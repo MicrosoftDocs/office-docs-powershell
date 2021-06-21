@@ -200,7 +200,8 @@ Accept wildcard characters: False
 
 ### -ConfigurationOnly
 If set, the backup will contain configuration settings only (no data) for each of the objects to be backed up.
-In some cases that SharePoint estimates that it does not have sufficient space available, `-Force` parameter needs to be used in conjunction with this parameter.
+
+SharePoint may overestimate the amount of space required for a configuration-only backup, which may result in SharePoint estimating that it doesn't have sufficient space to store the backup at the specified path. Use the `-Force` parameter in this situation to proceed with the backup if you have sufficient space to store the configuration-only backup.
 
 ```yaml
 Type: SwitchParameter
