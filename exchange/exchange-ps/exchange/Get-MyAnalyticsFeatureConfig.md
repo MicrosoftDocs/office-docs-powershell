@@ -16,6 +16,8 @@ This cmdlet is available only in the Exchange Online PowerShell V2 module. For m
 
 Use the Get-MyAnalyticsFeatureConfig cmdlet to view the availability and feature status of MyAnalytics for the specified user.
 
+**Note**: This cmdlet replaces the Get-UserAnalyticsConfig cmdlet.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

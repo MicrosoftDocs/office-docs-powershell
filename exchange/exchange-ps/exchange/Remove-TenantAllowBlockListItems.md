@@ -17,7 +17,7 @@ ROBOTS: NOINDEX
 
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Tenant Allow/Block List in the Security & Compliance Center.
+Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Tenant Allow/Block List in the Microsoft 365 Defender portal.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 

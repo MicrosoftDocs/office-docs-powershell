@@ -398,7 +398,7 @@ In Exchange Online, this example results in meeting updates being auto-processed
 ## PARAMETERS
 
 ### -ShortenEventScopeDefault
-This parameter is available only in the cloud-based service
+This parameter is available only in the cloud-based service.
 
 The ShortenEventScopeDefault parameter specifies whether calendar events start late or end early in the organization. Valid values are:
 
@@ -598,7 +598,8 @@ This parameter is available only in the cloud-based service.
 
 The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
 
-- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exampletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value.- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exampletag@contoso.com is delivered only if jane+exampletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
+- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to `jane+exampletag@contoso.com` is delivered to `jane@contoso.com`. If your Exchange Online organization was created after September 2020, this is the default value.
+- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to `jane+exampletag@contoso.com` is delivered only if `jane+exampletag@contoso.com` is configured as the primary address or a proxy address on an existing recipient. If your Exchange Online organization was created before before September 2020, this is the default value.
 
 ```yaml
 Type: Boolean
@@ -2935,7 +2936,14 @@ Accept wildcard characters: False
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill SendFromAliasEnabled Description }}
+The SendFromAliasEnabled parameter allows mailbox users to send messages and reply to messages in Outlook on the web using any of the proxy addresses (secondary email addresses) that are configured on the mailbox. Valid values are:
+
+- $true: Users in Outlook on the web get an option to send messages and reply to messages with a proxy addresses.
+- $false: Users can only send messages and reply to messages using their primary email address. This is the default value.
+
+For more information about the availability of this feature, see the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437).
+
+**Note**: This feature doesn't work in Outlook for Windows or Mac.
 
 ```yaml
 Type: Boolean

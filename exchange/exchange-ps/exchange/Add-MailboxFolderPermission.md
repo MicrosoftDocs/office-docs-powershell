@@ -244,6 +244,8 @@ The SharingPermissionFlags parameter assigns calendar delegate permissions. This
 
 You can specify multiple values separated by commas.
 
+**Note**: You can't configure the **Deliver meeting requests addressed to me and responses to meeting requests where I am the organizer to** Outlook setting in PowerShell. But, you can configure the setting using Exchange Web Services (EWS). For more information, see [MeetingRequestsDeliveryScope Enum](https://docs.microsoft.com/dotnet/api/microsoft.exchange.webservices.data.meetingrequestsdeliveryscope).
+
 ```yaml
 Type: MailboxFolderPermissionFlags
 Parameter Sets: (All)
