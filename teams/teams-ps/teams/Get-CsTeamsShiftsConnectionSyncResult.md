@@ -55,7 +55,7 @@ Accept wildcard characters: False
 
 ### -TeamId
 
-The Teams team ID. It can be retrieved by visiting [AzureAAD](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups)
+The Teams team ID. It can be retrieved by visiting [AzureAAD](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups).
 
 ```yaml
 Type: String
