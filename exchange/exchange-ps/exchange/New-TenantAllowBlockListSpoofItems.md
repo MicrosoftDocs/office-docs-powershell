@@ -61,8 +61,62 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -SendingInfrastructure
+The SendingInfrastructure parameter specifies the source of the messages sent by the spoofed sender that's defined in the SpoofedUser parameter. Valid values are:
+
+- An email domain (for example contoso.com). The domain is found in the reverse DNS lookup (PTR record) of the source email server's IP address.
+- An IP address using the syntax: \<source IP\>/24 (for example, 192.168.100.100/24). Use the IP address if the source IP address has no PTR record.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -SpoofedUser
+The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry. 
+
+- For domains outside your organization (cross-org), use the domain of the email address that appears in the From field of the message.
+- For domains inside your organization (intra-org), use the full email address that appears in the From field of the message.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -SpoofType
+The SpoofType parameter specifies whether this is an internal or external spoof entry. Valid values are:
+
+- External
+- Internal
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Action
-The Action parameter specifies whether is is an allow or block spoof entry. Valid values are:
+The Action parameter specifies whether is is an allowed or blocked spoof entry. Valid values are:
 
 - Allow
 - Block
@@ -91,57 +145,6 @@ Parameter Sets: (All)
 Aliases: cf
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SendingInfrastructure
-The SendingInfrastructure parameter specifies the source of the messages sent by the spoofed sender that's defined in the SpoofedUser parameter. Valid values are:
-
-- An email domain (for example contoso.com). The domain is found in the reverse DNS lookup (PTR record) of the source email server's IP address.
-- An IP address using the syntax: \<source IP\>/24 (for example, 192.168.100.100/24). Use the IP address if the source IP address has no PTR record.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SpoofType
-The SpoofType parameter specifies whether this is an internal or external spoof entry. Valid values are:
-
-- External
-- Internal
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SpoofedUser
-The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry. This is the email address that appears in the From field in email clients.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
