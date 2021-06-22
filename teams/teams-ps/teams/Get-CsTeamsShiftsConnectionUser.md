@@ -39,7 +39,7 @@ Returns the users in the WFM team with ID 1000107 in the connection instances wi
 
 ### -ConnectorInstanceId
 
-The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
 
 ```yaml
 Type: String
