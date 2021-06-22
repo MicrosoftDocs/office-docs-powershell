@@ -118,6 +118,8 @@ The Identity parameter specifies the mailbox to be processed. In cross-premises 
 - SamAccountName
 - User ID or user principal name (UPN)
 
+**Note**: In the cloud-based service, if you receive an error, try using the mailbox GUID for the value of this parameter. You can get the mailbox GUID value by replacing <UserIdentity> with the email address of the user and running the following command: `Get-Mailbox -User <UserIdentity> | Format-List *GUID,MailboxLocations`.
+
 ```yaml
 Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
