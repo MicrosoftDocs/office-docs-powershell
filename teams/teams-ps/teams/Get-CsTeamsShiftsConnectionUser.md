@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -WfmTeamId
 
-The Teams team ID. It can be retrieved by running [Get-CsTeamsShiftsConnectionWfmTeam](Get-CsTeamsShiftsConnectionWfmTeam.md)
+The Teams team ID. It can be retrieved by running [Get-CsTeamsShiftsConnectionWfmTeam](Get-CsTeamsShiftsConnectionWfmTeam.md).
 
 ```yaml
 Type: String
