@@ -841,7 +841,7 @@ Possible values:
 - AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
 - AllowLimitedAccess: Allows limited, web-only access.
 - BlockAccess: Blocks Access.
-- AuthenticationContext: Assign an Azure AD authentication context. Must add the AuthenticationContextName. Please read /azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts.
+- AuthenticationContext: Assign an Azure AD authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
 
 
 ```yaml
