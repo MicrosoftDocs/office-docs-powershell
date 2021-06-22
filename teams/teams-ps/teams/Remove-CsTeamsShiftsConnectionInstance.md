@@ -3,16 +3,17 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Remove-CsTeamsShiftsConnectionInstance
 author: gucsun
+ms.author: gucsun
 manager: navinth
 online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance
-schema: 2.4.0
+schema: 2.0.0
 ---
 
 # Remove-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet deletes a Shifts connection instance.
 
