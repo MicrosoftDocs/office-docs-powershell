@@ -3,16 +3,17 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsShiftsConnectionTeamMap
 author: gucsun
+ms.author: gucsun
 manager: navinth
 online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap
-schema: 2.4.0
+schema: 2.0.0
 ---
 
 # Get-CsTeamsShiftsConnectionTeamMap
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet supports retrieving the list of team mappings.
 
