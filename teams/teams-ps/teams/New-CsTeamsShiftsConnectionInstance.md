@@ -3,16 +3,17 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: New-CsTeamsShiftsConnectionInstance
 author: gucsun
+ma.author: gucsun
 manager: navinth
 online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance
-schema: 2.4.0
+schema: 2.0.0
 ---
 
 # New-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet creates a Shifts connection instance.
 
