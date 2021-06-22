@@ -3,9 +3,10 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsShiftsConnectionConnector
 author: gucsun
+ms.author: gucsun
 manager: navinth
 online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector
-schema: 2.4.0
+schema: 2.0.0
 ---
 
 # Get-CsTeamsShiftsConnectionConnector
