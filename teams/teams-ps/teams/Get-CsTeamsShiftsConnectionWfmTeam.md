@@ -40,7 +40,7 @@ Returns the WFM teams in the connection instance with ID WCI-4c231dd2-4451-45bd-
 
 ### -ConnectorInstanceId
 
-The ID of the connection instance. You can retrive it by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+The ID of the connection instance. You can retrive it by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
 
 ```yaml
 Type: String
