@@ -24,7 +24,7 @@ Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> [<CommonParamet
 
 ## DESCRIPTION
 
-This cmdlet shows the list of mapped teams inside the connection instance. Intance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+This cmdlet shows the list of mapped teams inside the connection instance. Intance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
 
 ## EXAMPLES
 
