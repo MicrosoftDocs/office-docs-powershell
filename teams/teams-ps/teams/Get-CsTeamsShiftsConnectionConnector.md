@@ -32,7 +32,7 @@ This cmdlet shows the available list of Shifts Connectors that can be used to sy
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionConnector
 ```
-
+TBD: GUCHUAN, LET'S SHOW THE OUTPUT WITH THE CURRENT BLUE YONDER CONNECTOR.
 Get the list of Shifts Connectors available on the tenant.
 
 ## PARAMETERS
