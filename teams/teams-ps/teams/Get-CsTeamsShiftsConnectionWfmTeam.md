@@ -32,9 +32,28 @@ This cmdlet shows the available WFM teams that can be mapped in the connection i
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionWfmTeam -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b"
+
+Id      Name
+--      ----
+1000105 0002 - Bucktown
+1000106 0003 - West Town
+1000107 0005 - Old Town
+1000108 0004 - River North
+1000109 0001 - Wicker Park
+1000111 2055
+1000112 2056
+1000114 1004
+1000115 1003
+1000116 1002
+1000122 0010
+1000124 0300
+1000125 1000
+1000126 4500
+1000128 0006 - Microsoft 1
+1000129 SBJ_Test
 ```
 
-Returns the WFM teams in the connection instance with ID WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b.
+Returns the WFM teams in the connection instance with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
 
 ## PARAMETERS
 
