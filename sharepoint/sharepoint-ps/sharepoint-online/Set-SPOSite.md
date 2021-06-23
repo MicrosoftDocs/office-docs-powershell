@@ -35,7 +35,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-ProtectionLevelName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
  [-RemoveLabel] [<CommonParameters>]
 ```
 
@@ -152,6 +152,14 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInfor
 ```
 
 In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
+
+### -----------------------EXAMPLE 10-----------------------------
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -ConditionalAccessPolicy AuthenticationContext -AuthenticationContextName "MFA"
+```
+
+In this example, an authentication context called MFA is attached to the site.
 
 ## PARAMETERS
 
@@ -833,6 +841,7 @@ Possible values:
 - AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
 - AllowLimitedAccess: Allows limited, web-only access.
 - BlockAccess: Blocks Access.
+- AuthenticationContext: Assign an Azure AD authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
 
 
 ```yaml
@@ -848,9 +857,9 @@ Accept wildcard characters: False
 ```
 
 
-### -ProtectionLevelName
+### -AuthenticationContextName 
 
-The conditional access protection level name. For example "urn:microsoft:req1"
+The conditional access authentication context name.
 
 ```yaml
 Type: String
