@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Security & Compliance Center.
+Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -63,7 +63,7 @@ New-RetentionCompliancePolicy [-Name] <String>
 ## DESCRIPTION
 New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](New-RetentionComplianceRule.md). In addition, at least one location parameter must be defined to create a retention policy.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
