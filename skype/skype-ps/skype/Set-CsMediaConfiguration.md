@@ -424,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRtx
-{{ Fill EnableRtx Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAVBundling
-{{ Fill EnableAVBundling Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReceiveAgc
-{{ Fill EnableReceiveAgc Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
