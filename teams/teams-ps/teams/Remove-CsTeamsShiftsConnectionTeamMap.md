@@ -20,7 +20,7 @@ This cmdlet removes the mapping between the Teams team and WFM team.
 ## SYNTAX
 
 ```
-Remove-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -TeamId <string> [<CommonParameters>]
+Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
