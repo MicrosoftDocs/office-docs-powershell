@@ -31,7 +31,26 @@ This cmdlet creates a Shifts connection instance. It allows the admin to set up 
 
 ### Example 1
 ```powershell
-New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.replgroup.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.replgroup.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -Name "MyInstance" -SyncFrequencyInMin 10
+New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.replgroup.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.replgroup.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "swapRequest", "openShiftRequest", "timeOffRequest" -Name "MyInstance" -SyncFrequencyInMin 10
+
+{
+   "connectorId": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
+   "name": "MyInstance",
+   "connectorSpecificSettings":{
+      "adminApiUrl":"https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2",
+      "siteManagerUrl":"https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2",
+      "essApiUrl":"https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1",
+      "retailWebApiUrl":"https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1",
+      "cookieAuthUrl":"https://nehstdevwfm02.replgroup.com/retail/data/login",
+      "federatedAuthUrl":"https://nehstdevfas01.replgroup.com/retail/data/login",
+      "loginUserName":"MyUserName",
+      "loginPwd":"MyPassword"
+   },
+   "enabledConnectorScenarios":["shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "UserShiftPreferences"],
+   "enabledWfiScenarios":["swapRequest", "openShiftRequest", "timeOffRequest"],
+   "syncFrequencyInMin":10,
+   "designatedActorId": "0c1141fa-1b17-43cc-a417-34c156b99779"
+}
 ```
 
 Returns the object of created connector instance.
