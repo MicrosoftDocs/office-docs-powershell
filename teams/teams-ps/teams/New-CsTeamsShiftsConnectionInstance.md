@@ -34,22 +34,39 @@ This cmdlet creates a Shifts connection instance. It allows the admin to set up 
 New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.replgroup.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.replgroup.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "swapRequest", "openShiftRequest", "timeOffRequest" -Name "MyInstance" -SyncFrequencyInMin 10
 
 {
-   "connectorId": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
-   "name": "MyInstance",
-   "connectorSpecificSettings":{
-      "adminApiUrl":"https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2",
-      "siteManagerUrl":"https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2",
-      "essApiUrl":"https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1",
-      "retailWebApiUrl":"https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1",
-      "cookieAuthUrl":"https://nehstdevwfm02.replgroup.com/retail/data/login",
-      "federatedAuthUrl":"https://nehstdevfas01.replgroup.com/retail/data/login",
-      "loginUserName":"MyUserName",
-      "loginPwd":"MyPassword"
-   },
-   "enabledConnectorScenarios":["shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "UserShiftPreferences"],
-   "enabledWfiScenarios":["swapRequest", "openShiftRequest", "timeOffRequest"],
-   "syncFrequencyInMin":10,
-   "designatedActorId": "0c1141fa-1b17-43cc-a417-34c156b99779"
+    "id": "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09",
+    "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+    "name": "MyInstance",
+    "connector": {
+        "id": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
+        "name": "Blue Yonder V1"
+    },
+    "connectorSpecificSettings": {
+        "adminApiUrl": "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2",
+        "siteManagerUrl": "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2",
+        "essApiUrl": "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1",
+        "retailWebApiUrl": "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1",
+        "cookieAuthUrl": "https://nehstdevwfm02.replgroup.com/retail/data/login",
+        "federatedAuthUrl": "https://nehstdevfas01.replgroup.com/retail/data/login"
+    },
+    "enabledConnectorScenarios": [
+        "Shift",
+        "SwapRequest",
+        "UserShiftPreferences",
+        "OpenShift",
+        "OpenShiftRequest",
+        "TimeOff",
+        "TimeOffRequest"
+    ],
+    "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
+    "enabledWfiScenarios": [
+        "SwapRequest",
+        "OpenShiftRequest",
+        "TimeOffRequest"
+    ],
+    "syncFrequencyInMin": 10,
+    "designatedActorId": "5d5eaa2d-422c-4d4b-a2db-4cea80f98255",
+    "etag": "\"28007861-0000-0400-0000-60d3579b0000\""
 }
 ```
 
