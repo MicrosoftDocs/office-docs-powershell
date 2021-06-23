@@ -32,9 +32,13 @@ This cmdlet supports retrieving the list of successful and failed users in the m
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionSyncResult -ConnectorInstanceId "WCI-d1addd70-2684-4723-b8f2-7fa2230648c9" -TeamId "70f49d29-7ee1-4259-8999-946953feb79e"
+
+FailedAadUser FailedWfmUser                 SuccessfulUser
+------------- -------------                 --------------
+{}            {FRPET, WAROS, LABRO, JOREE…} {maosha.shi@flwr0.ms, xiaoxue.chen@flwr0.ms, guchuan.sun@flwr0.ms}
 ```
 
-Returns the successful and failed users in the team mapping in the instance with ID WCI-d1addd70-2684-4723-b8f2-7fa2230648c9.
+Returns the successful and failed users in the team mapping in the instance with ID `WCI-d1addd70-2684-4723-b8f2-7fa2230648c9`.
 
 ## PARAMETERS
 
