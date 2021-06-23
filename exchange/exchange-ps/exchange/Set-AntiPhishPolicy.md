@@ -28,6 +28,7 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnableFirstContactSafetyTips <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
  [-EnableMailboxIntelligenceProtection <Boolean>]
  [-EnableOrganizationDomainsProtection <Boolean>]
@@ -175,6 +176,25 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: false
+Accept wildcard characters: False
+```
+
+### -EnableFirstContactSafetyTips
+The EnableFirstContactSafetyTips parameter specifies whether to enable or disable the safety tip that's shown when recipients first receive an email from a sender or do not often receive email from a sender. Valid values are:
+
+- $true: First contact safety tips are enabled.
+- $false: First contact safety tips are disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
