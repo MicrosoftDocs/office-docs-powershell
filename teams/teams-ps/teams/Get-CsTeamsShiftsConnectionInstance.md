@@ -13,9 +13,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
-This cmdlet supports retrieving the list of connector instances.
+This cmdlet returns the list of existing connections. It can also return the configuration details for a given connection instance.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionInstance [[-ConnectorInstanceId] <String>] [<CommonPa
 
 ## DESCRIPTION
 
-This cmdlet shows the list of connection instances that can be used to link teams.
+This cmdlet returns the list of existing connections. It can also return the configuration details for a given connection instance.
 
 ## EXAMPLES
 
@@ -47,7 +47,7 @@ Returns the list of connection instances.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId "WCI-01c84e58-9a03-4e56-82f1-6b224132cad8"
+PS C:\> Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId "WCI-01c84e59-9a03-4e56-82f1-6b224132cad8"
 ```
 ```output
 DesignatedActorId                    EnabledConnectorScenario                               EnabledWfiScenario      Etag                                   Id                                       Name                      SyncFrequencyInMin TenantId                             WorkforceIntegrationId
@@ -55,7 +55,7 @@ DesignatedActorId                    EnabledConnectorScenario                   
 b75bbfa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} {Shift, TimeOffRequest} "1d004f54-0000-0400-0000-60ce37120000" WCI-01c84e58-9a03-4e56-82f1-6b224132cad8 Vijay Connector Instance3 10                 dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a WFI_3fd79702-15e4-4c97-9b0e-dd725e92c…
 ```
 
-Returns the connection instances with ID `WCI-01c84e58-9a03-4e56-82f1-6b224132cad8`.
+Returns the connection instance with ID `WCI-01c84e59-9a03-4e56-82f1-6b224132cad8`.
 
 ## PARAMETERS
 
