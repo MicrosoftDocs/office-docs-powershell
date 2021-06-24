@@ -46,7 +46,8 @@ These actions relate to audio and video calls between client endpoints.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
+
 ```
 Set-CsMediaConfiguration -Identity site:Redmond1 -MaxVideoRateAllowed hd720p15m
 ```
@@ -56,7 +57,8 @@ Note that the value passed to the MaxVideoRateAllowed parameter must be one of t
 Also note that the values are not case sensitive; the value entered here as hd720p15m will be automatically converted to the appropriate casing (in this instance, to Hd720p15M).
 
 
-### -------------------------- Example 2 --------------------------
+### Example 2
+
 ```
 Set-CsMediaConfiguration site:Redmond1 -EncryptionLevel donotsupportencryption
 ```
