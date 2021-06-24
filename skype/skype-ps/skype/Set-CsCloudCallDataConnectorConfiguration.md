@@ -68,21 +68,6 @@ The filtered collection is then piped to the `Set-CsCloudCallDataConnectorConfig
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableCallDataConnector
 Enables upload of call data.
 
