@@ -32,7 +32,8 @@ This cmdlet connects a Teams team and a WFM team. Users in the Teams team and WF
 ### Example 1
 ```powershell
 PS C:\> New-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b" -TeamId 30b625bd-f0f7-4d5c-8793-9ccef5a63119 -TimeZone "America/Los_Angeles" -WfmTeamId "1000107"
-
+```
+```
 TeamId                               TeamName WfmTeamId WfmTeamName
 ------                               -------- --------- -----------
 30b625bd-f0f7-4d5c-8793-9ccef5a6311          1000107
