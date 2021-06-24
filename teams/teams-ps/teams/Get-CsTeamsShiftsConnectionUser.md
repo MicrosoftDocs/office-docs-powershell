@@ -33,7 +33,7 @@ This cmdlet shows the list of WFM users in the connection instance.
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionUser -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b" -WfmTeamId "1000107"
 ```
-```
+```output
 Id      Name
 --      ----
 1000111 FRPET
