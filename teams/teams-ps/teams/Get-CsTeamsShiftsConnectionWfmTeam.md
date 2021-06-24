@@ -33,7 +33,7 @@ This cmdlet shows the available WFM teams that can be mapped in the connection i
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionWfmTeam -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b"
 ```
-```
+```output
 Id      Name
 --      ----
 1000105 0002 - Bucktown
