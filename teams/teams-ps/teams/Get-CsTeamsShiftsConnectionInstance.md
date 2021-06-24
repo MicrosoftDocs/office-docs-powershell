@@ -15,7 +15,7 @@ schema: 2.0.0
 
 **Note:** This cmdlet is currently in private preview.
 
-This cmdlet returns the list of existing connections. It can also return the configuration details for a given connection instance.
+This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
 
 ## SYNTAX
 
