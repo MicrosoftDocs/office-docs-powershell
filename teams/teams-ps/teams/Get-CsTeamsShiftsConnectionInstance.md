@@ -32,7 +32,8 @@ This cmdlet shows the list of connection instances that can be used to link team
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionInstance
-
+```
+```
 DesignatedActorId                    EnabledConnectorScenario                               EnabledWfiScenario                                             Etag                                   Id                                       Name                                   SyncFrequencyInMin TenantId
 -----------------                    ------------------------                               ------------------                                             ----                                   --                                       ----                                   ------------------ --------
 b75bbfa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} {Shift, TimeOffRequest}                                        "1d004f54-0000-0400-0000-60ce37120000" WCI-01c84e58-9a03-4e56-82f1-6b224132cad8 Vijay Connector Instance3              10                 dfd24b34-ccb0-47e1-bdb…
