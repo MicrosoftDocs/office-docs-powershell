@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
 This cmdlet supports retrieving the available Shifts Connectors.
 
@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionConnector [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet shows the available list of Shifts Connectors that can be used to synchronize a 3rd party workforce management system with Teams.
+This cmdlet shows the available list of Shifts Connectors that can be used to synchronize a 3rd party workforce management system with Teams and the types of data that can be synchronized.
 
 ## EXAMPLES
 
