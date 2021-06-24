@@ -32,7 +32,8 @@ This cmdlet shows the available list of Shifts Connectors that can be used to sy
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsShiftsConnectionConnector
-
+```
+```
 Id                                   Name           SupportedScenario                                      Version         WfiSupportedScenario
 --                                   ----           -----------------                                      -------         --------------------
 6A51B888-FF44-4FEA-82E1-839401E9CD74 Blue Yonder V1 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
