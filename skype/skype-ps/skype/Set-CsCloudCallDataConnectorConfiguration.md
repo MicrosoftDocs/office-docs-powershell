@@ -20,13 +20,13 @@ Modifies an existing collection of Cloud Call Data Connector configuration setti
 ### Identity (Default)
 ```
 Set-CsCloudCallDataConnectorConfiguration [-EnableCallDataConnector <Boolean>] [[-Identity] <XdsIdentity>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsCloudCallDataConnectorConfiguration [-EnableCallDataConnector <Boolean>] [-Instance <PSObject>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
