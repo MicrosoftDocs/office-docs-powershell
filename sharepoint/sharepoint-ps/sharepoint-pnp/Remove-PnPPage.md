@@ -24,6 +24,7 @@ Remove-PnPPage [-Identity] <PagePipeBind> [-Force]
 ```
 
 ## DESCRIPTION
+This command helps to delete a modern page , to delete any classic page use [Rename-pnpPage](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/remove-pnpfile?view=sharepoint-ps)
 
 ## EXAMPLES
 
