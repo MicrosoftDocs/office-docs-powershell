@@ -26,6 +26,7 @@ This cmdlet was introduced in Lync Server 2010.
 New-CsDiagnosticsFilter [-Enabled <Boolean>] [-ExcludeConferenceMessages <Boolean>]
  [-ExcludePresenceNotifications <Boolean>] [-ExcludeRegisterMessages <Boolean>] [-Fqdn <PSListModifier>]
  [-Uri <PSListModifier>] [-ExcludeSubscribeMessages <Boolean>] [-ExcludeSuccessfulRequests <Boolean>]
+ [-ExcludeMidDialogRequests <Boolean>] [-ExcludeTypingNotifications <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -227,6 +228,37 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeMidDialogRequests
+If set to True, information about mid-dialog SIP requests will not be recorded in the log files.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeTypingNotifications
+If set to True.
+Information about typing notifications SIP messages will not be recorded in the log files.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
