@@ -252,8 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeTypingNotifications
-If set to True.
-Information about typing notifications SIP messages will not be recorded in the log files.
+If set to True, information about typing notifications SIP messages will not be recorded in the log files.
 
 ```yaml
 Type: Boolean
