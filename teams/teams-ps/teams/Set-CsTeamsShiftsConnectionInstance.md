@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
 This cmdlet updates a Shifts connection instance.
 
@@ -25,7 +25,7 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorSpecificSett
 
 ## DESCRIPTION
 
-This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enables scenarios, and sync frequency.
+This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettingLoginPwd and ConnectorSpecificSettingLoginUserNameusername to be included.
 
 ## EXAMPLES
 
