@@ -13,9 +13,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
-This cmdlet supports retrieving the list of users in the connection instance.
+This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionUser -ConnectorInstanceId <string> -WfmTeamId <string
 
 ## DESCRIPTION
 
-This cmdlet shows the list of Workforce management (WFM) users in the connection instance.
+This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
 
 ## EXAMPLES
 
