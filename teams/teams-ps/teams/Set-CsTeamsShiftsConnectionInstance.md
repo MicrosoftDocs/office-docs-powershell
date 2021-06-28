@@ -171,7 +171,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledWfiScenarios
+### -EnabledWfiScenario
 
 The WFI enabled scenarios that are synced from Shifts in Microsoft Teams to the WFM system. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
 
