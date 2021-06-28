@@ -15,7 +15,7 @@ schema: 2.0.0
 
 **Note:** This cmdlet is currently in public preview.
 
-This cmdlet supports retrieving the list of available WFM teams in the connection instance.
+This cmdlet supports retrieving the list of available Workforce management (WFM) teams in the connection instance.
 
 ## SYNTAX
 
