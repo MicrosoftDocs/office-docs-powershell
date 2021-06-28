@@ -45,7 +45,7 @@ Returns the successful and failed users in the team mapping in the instance with
 
 ### -ConnectorInstanceId
 
-The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
 
 ```yaml
 Type: String
