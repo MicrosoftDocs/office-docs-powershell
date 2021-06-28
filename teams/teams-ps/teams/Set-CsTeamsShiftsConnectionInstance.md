@@ -237,7 +237,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSpecificSettingAdminApiUrl
 
-The admin api URL.
+The admin API URL.
 
 ```yaml
 Type: String
