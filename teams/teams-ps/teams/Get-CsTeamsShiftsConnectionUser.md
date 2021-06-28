@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionUser -ConnectorInstanceId <string> -WfmTeamId <string
 
 ## DESCRIPTION
 
-This cmdlet shows the list of WFM users in the connection instance.
+This cmdlet shows the list of Workforce management (WFM) users in the connection instance.
 
 ## EXAMPLES
 
