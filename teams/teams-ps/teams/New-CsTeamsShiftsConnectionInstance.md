@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -EnabledConnectorScenario
 
-The connector enabled scenarios that are synced from WFM system to Shifts in MS Teams. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
+The connector enabled scenarios that are synced from the Workforce management (WFM) system to Shifts in Microsoft Teams. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
 
 ```yaml
 Type: String[]
