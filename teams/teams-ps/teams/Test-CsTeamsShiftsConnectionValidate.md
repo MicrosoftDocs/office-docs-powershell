@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSpecificSettingLoginPwd
 
-The login password to WFM team.
+The login password to the WFM team.
 
 ```yaml
 Type: String
