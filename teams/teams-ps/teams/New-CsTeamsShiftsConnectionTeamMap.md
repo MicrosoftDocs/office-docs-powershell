@@ -13,9 +13,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
-This cmdlet connects a Teams team and a Workforce management (WFM) team.
+This cmdlet connects a Microsoft Teams team and a Workforce management (WFM) team.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ New-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <string> -TeamId <string
 
 ## DESCRIPTION
 
-This cmdlet connects a Teams team and a WFM team. Users in the Teams team and WFM team with the same email address will be synced.
+This cmdlet connects a Microsoft Teams team and a WFM team to allow for synchronization of shifts related data.
 
 ## EXAMPLES
 
