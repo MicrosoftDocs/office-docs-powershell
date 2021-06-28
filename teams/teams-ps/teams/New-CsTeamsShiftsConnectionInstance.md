@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
 This cmdlet creates a Shifts connection instance.
 
@@ -25,7 +25,7 @@ New-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorSpecificSett
 
 ## DESCRIPTION
 
-This cmdlet creates a Shifts connection instance. It allows the admin to set up the environment for further shift team mapping.
+This cmdlet creates a Shifts connection instance. It allows the admin to set up the environment for further connection settings.
 
 ## EXAMPLES
 
