@@ -13,9 +13,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
-This cmdlet removes the mapping between the Teams team and WFM team.
+This cmdlet removes the mapping between the Microsoft Teams team and workforce management (WFM) team.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <str
 
 ## DESCRIPTION
 
-This cmdlet removes the mapping between the Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md).
+This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md).
 
 ## EXAMPLES
 
