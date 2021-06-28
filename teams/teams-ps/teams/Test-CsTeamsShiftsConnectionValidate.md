@@ -13,9 +13,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
-This cmdlet validates Workforce management (WFM) settings from a given configuration.
+This cmdlet validates workforce management (WFM) connection settings.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Test-CsTeamsShiftsConnectionValidate -ConnectorId <string> -ConnectorSpecificSet
 
 ## DESCRIPTION
 
-This cmdlet allows the admin to test if there are conflicts to create an instance with the input settings.
+This cmdlet validates Workforce management (WFM) connection settings. It validates that the provided WFM account/password and required endpoints are set correctly. 
 
 ## EXAMPLES
 
