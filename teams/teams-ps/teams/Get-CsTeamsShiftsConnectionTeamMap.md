@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
 This cmdlet supports retrieving the list of team mappings.
 
@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> [<CommonParamet
 
 ## DESCRIPTION
 
-This cmdlet shows the list of mapped teams inside the connection instance. Intance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+Workforce management (WFM) systems have locations / sites that are mapped to a Microsoft Teams team for synchronization of shifts data.  This cmdlet shows the list of mapped teams inside the connection instance. Intance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
 
 ## EXAMPLES
 
