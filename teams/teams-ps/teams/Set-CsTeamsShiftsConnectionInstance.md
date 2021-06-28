@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -EnabledWfiScenarios
 
-The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios
+The WFI enabled scenarios that are synced from Shifts in Microsoft Teams to the WFM system. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
 
 ```yaml
 Type: String[]
