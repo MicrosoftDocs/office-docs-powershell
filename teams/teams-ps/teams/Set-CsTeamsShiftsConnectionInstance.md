@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ConnectorId
 
-The ID of the shifts connector.
+The ID of the Shifts Connector.
 
 ```yaml
 Type: String
