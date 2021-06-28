@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSpecificSettingLoginUserName
 
-The login user name to WFM team.
+The login user name to the WFM team.
 
 ```yaml
 Type: String
