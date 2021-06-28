@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in private preview.
 
 This cmdlet supports retrieving the list of available Workforce management (WFM) teams in the connection instance.
 
@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionWfmTeam -ConnectorInstanceId <string> [<CommonParamet
 
 ## DESCRIPTION
 
-This cmdlet shows the available WFM teams that can be mapped in the connection instance.
+This cmdlet shows the WFM teams that are not currently mapped to a Microsoft Teams team, and thus can be mapped to a Microsoft Teams team in the connection instance.
 
 ## EXAMPLES
 
