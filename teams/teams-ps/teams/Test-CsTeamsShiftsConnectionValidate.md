@@ -15,7 +15,7 @@ schema: 2.0.0
 
 **Note:** This cmdlet is currently in public preview.
 
-This cmdlet validates WFM settings from given configuration.
+This cmdlet validates Workforce management (WFM) settings from a given configuration.
 
 ## SYNTAX
 
