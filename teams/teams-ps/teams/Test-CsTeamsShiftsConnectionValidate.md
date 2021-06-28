@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSpecificSettingEssApiUrl
 
-The essential api URL.
+The essential API URL.
 
 ```yaml
 Type: String
