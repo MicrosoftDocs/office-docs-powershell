@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -IfMatch
 
-The Etag of connection instance. Note: this will be changed after each update of the connection instance. You can get it from instance details using [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+The Etag of connection instance. Note: this will be changed after each update of the connection instance. You can get it from instance details using [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
 
 ```yaml
 Type: String
