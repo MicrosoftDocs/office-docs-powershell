@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSpecificSettingRetailWebApiUrl
 
-The retail web api URL.
+The retail web API URL.
 
 ```yaml
 Type: String
