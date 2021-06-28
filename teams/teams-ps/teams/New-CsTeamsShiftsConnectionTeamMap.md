@@ -15,7 +15,7 @@ schema: 2.0.0
 
 **Note:** This cmdlet is currently in public preview.
 
-This cmdlet connects a Teams team and a WFM team.
+This cmdlet connects a Teams team and a Workforce management (WFM) team.
 
 ## SYNTAX
 
