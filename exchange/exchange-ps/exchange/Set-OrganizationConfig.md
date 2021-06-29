@@ -83,6 +83,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
+ [-FindTimeLockPollForAttendeesEnabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
@@ -1860,6 +1861,29 @@ The FindTimeAutoScheduleDisabled parameter controls automatically scheduling the
 
 - $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
 - $false: By default, reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to turn on this setting.
+
+For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FindTimeLockPollForAttendeesEnabled
+This parameter is available only in the cloud-based service.
+
+The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is on. Valid values are:
+
+- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees.
+- $false: **Lock poll for attendees** is off. Attendees can suggest new times.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
