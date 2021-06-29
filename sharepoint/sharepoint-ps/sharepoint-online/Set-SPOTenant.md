@@ -102,6 +102,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SyncAadB2BManagementPolicy <Boolean>]
  [-StopNew2010Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
+ [-DisableOutlookPSTVersionTrimming <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1823,6 +1824,24 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableOutlookPSTVersionTrimming
+
+Starting August 16th 2021, the service will start retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change will prevent cases of previous versions of PST files quickly consuming available storage. This change only impacts previous versions stored in your document library storage. As best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth. If you wish to opt out of this policy change, you can use the parameter provided below. You will have until August 13th to opt out. This is a one time opt-out operation. If you don’t opt out by then, all PST files will have 30 days of version retention. You can’t change it on-demand post the deadline, and this parameter will have no effect.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
