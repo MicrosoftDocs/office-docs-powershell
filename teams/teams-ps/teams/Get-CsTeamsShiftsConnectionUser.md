@@ -45,7 +45,7 @@ Id      Name
 1006095 guchuan.sun
 ```
 
-Returns the users in the WFM team with ID 1000107 in the connection instances with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
+Returns the users in the WFM team with ID `1000107` in the connection instances with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
 
 ## PARAMETERS
 
