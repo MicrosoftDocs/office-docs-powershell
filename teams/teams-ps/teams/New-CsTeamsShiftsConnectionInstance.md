@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The connector's instance name.
+The connector instance's name.
 
 ```yaml
 Type: String
