@@ -20,7 +20,7 @@ This cmdlet updates a Shifts connection instance.
 ## SYNTAX
 
 ```
-Set-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorSpecificSettingAdminApiUrl <string> -ConnectorSpecificSettingCookieAuthUrl <string> -ConnectorSpecificSettingEssApiUrl <string> -ConnectorSpecificSettingFederatedAuthUrl <string> -ConnectorSpecificSettingLoginPwd <string> -ConnectorSpecificSettingLoginUserName <string> -ConnectorSpecificSettingRetailWebApiUrl <string> -ConnectorSpecificSettingSiteManagerUrl <string> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> -IfMatch <string> [<CommonParameters>]
+Set-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorInstanceId <string> -ConnectorSpecificSettingAdminApiUrl <string> -ConnectorSpecificSettingCookieAuthUrl <string> -ConnectorSpecificSettingEssApiUrl <string> -ConnectorSpecificSettingFederatedAuthUrl <string> -ConnectorSpecificSettingLoginPwd <string> -ConnectorSpecificSettingLoginUserName <string> -ConnectorSpecificSettingRetailWebApiUrl <string> -ConnectorSpecificSettingSiteManagerUrl <string> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> -IfMatch <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +77,7 @@ Updates the instance with ID `WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09` with nam
 
 ### -ConnectorInstanceId
 
-The ID of the connection instance.
+The ID of the connection instance that you want to update.
 
 ```yaml
 Type: String
