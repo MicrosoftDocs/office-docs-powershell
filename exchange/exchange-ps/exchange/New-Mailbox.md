@@ -1068,7 +1068,7 @@ Accept wildcard characters: False
 ### -MicrosoftOnlineServicesID
 This parameter is available only in the cloud-based service.
 
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service and it's used as a replacement of UserPrincipalName in the cloud. It isn't available for on-premises deployments.
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter applies only to objects in the cloud-based service and is used instead of the  UserPrincipalName parameter. The MicrosoftOnlineServicesID parameter isn't available in on-premises deployments.
 
 ```yaml
 Type: WindowsLiveId
@@ -1222,7 +1222,9 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 This parameter is available only in on-premises Exchange.
 
-The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides. Please use the MicrosoftOnlineServicesID swtich if you're running the CmdLet from the cloud instead.
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format: `username@domain`. Typically, the domain value is the domain where the user account resides.
+
+In the cloud-based service, use the MicrosoftOnlineServicesID parameter instead.
 
 ```yaml
 Type: String
