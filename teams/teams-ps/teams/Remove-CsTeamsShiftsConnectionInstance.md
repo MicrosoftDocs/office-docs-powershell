@@ -34,7 +34,7 @@ This cmdlet deletes a connection instance. All available instances can be found 
 PS C:\> Remove-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b
 ```
 
-Deletes the connection instance with ID "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b".
+Deletes the connection instance with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
 
 ## PARAMETERS
 
