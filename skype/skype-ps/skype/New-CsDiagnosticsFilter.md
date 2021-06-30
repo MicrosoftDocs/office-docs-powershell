@@ -54,7 +54,7 @@ After creating one of these virtual filters, you will then need to use either th
 ## EXAMPLES
 
 
-### -------------------------- EXAMPLE 1 -------------------------- 
+### EXAMPLE 1
 ```
 $x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com" -Enabled $False
 
@@ -72,7 +72,7 @@ In this case, any existing values in the Filter property will be replaced by the
 
 
 
-### -------------------------- EXAMPLE 2 -------------------------- 
+### EXAMPLE 2
 ```
 $x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com","contoso.com" -Enabled $False
 
@@ -288,5 +288,3 @@ The New-CsDiagnosticsFilter cmdlet creates new instances of the Microsoft.Rtc.Ma
 [New-CsDiagnosticConfiguration](New-CsDiagnosticConfiguration.md)
 
 [Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)
-
-
