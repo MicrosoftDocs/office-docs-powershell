@@ -1880,9 +1880,9 @@ Accept wildcard characters: False
 ### -FindTimeLockPollForAttendeesEnabled
 This parameter is available only in the cloud-based service.
 
-The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is on. Valid values are:
+The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is managed by the organization. Valid values are:
 
-- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees.
+- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
 - $false: **Lock poll for attendees** is off. Attendees can suggest new times.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
