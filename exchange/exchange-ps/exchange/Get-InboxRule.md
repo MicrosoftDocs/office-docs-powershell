@@ -151,8 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHidden
-This parameter works only in on-premises Exchange.
-
 The IncludeHidden switch specifies whether to include hidden Inbox rules in the results. You don't need to specify a value with this switch.
 
 ```yaml
