@@ -1832,7 +1832,7 @@ Accept wildcard characters: False
 
 As communicated in MC256835 (May ’21), starting August 16th 2021 the service will start retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change will prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
 
-If you wish to opt out of this policy change, you can use the parameter provided below. You will have until August 13th 2021 to opt out. This is a one time opt-out operation. If you don’t opt out by the deadline, the new behavior will automatically be enabled. The opt-out option for the cmdlet will have no effect after the deadline. Opt out only applies to existing document libraries and does not apply to new doclibs created after August 13th 2021.
+If you wish to opt-out of this policy change, you can use the parameter provided below. You will have until August 13th 2021, to opt-out. This is a one time opt-out operation. If you don’t opt-out by the deadline, the new behavior will automatically be enabled. The opt-out option for the cmdlet will have no effect after the deadline. Opt-out only applies to existing document libraries and does not apply to new doclibs created after August 13th 2021.
 
 PARAMVALUE: $true | $false
 
