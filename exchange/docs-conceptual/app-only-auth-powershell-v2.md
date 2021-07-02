@@ -97,6 +97,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    - Exchange administrator
    - Global Reader
 
+   > [!NOTE]
+   > The Global administrator and Exchange administrator roles provide the necessary permissions for any Exchange-related tasks, including recipient management and protection features (anti-spam, anti-malware, etc). The Security administrator role doesn't not have the necessary permissions for these same Exchange-related tasks.
+
 ## Appendix
 
 ## Step 1: Register the application in Azure AD
