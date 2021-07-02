@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Use this cmdlet to modify a Teams feedback policy.
+Use this cmdlet to modify a Teams feedback policy (the ability to send feedback about Teams to Microsoft and whether they receive the survey).
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Set-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <
 ```
 
 ## DESCRIPTION
-Modifies a Teams feedback policy.
+Modifies a Teams feedback policy (the ability to send feedback about Teams to Microsoft and whether they receive the survey).
 
 ## EXAMPLES
 

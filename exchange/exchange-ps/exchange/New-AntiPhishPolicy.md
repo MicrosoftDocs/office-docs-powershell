@@ -28,6 +28,7 @@ New-AntiPhishPolicy [-Name] <String>
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnableFirstContactSafetyTips <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
  [-EnableMailboxIntelligenceProtection <Boolean>]
  [-EnableOrganizationDomainsProtection <Boolean>]
@@ -160,6 +161,25 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 - $true: The policy is enabled. This is the default value.
 - $false: The policy is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFirstContactSafetyTips
+The EnableFirstContactSafetyTips parameter specifies whether to enable or disable the safety tip that's shown when recipients first receive an email from a sender or do not often receive email from a sender. Valid values are:
+
+- $true: First contact safety tips are enabled.
+- $false: First contact safety tips are disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -351,12 +371,12 @@ This setting is part of spoof protection.
 
 The EnableUnauthenticatedSender parameter enables or disables unauthenticated sender identification in Outlook. Valid values are:
 
-- $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication. The via tag (chris@contoso.com <u>via</u> fabrikam.com) is added if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the MAIL FROM address.
-- $false: A question mark is never applied to the sender's photo. The via tag is still added if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address.
+- $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication.
+- $false: A question mark is never applied to the sender's photo.
 
 To prevent these identifiers from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof in the spoof intelligence policy. This action will prevent the via tag from appearing in messages from the sender when unauthenticated sender identification is disabled. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
 - If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
 
 ```yaml
@@ -394,7 +414,17 @@ Accept wildcard characters: False
 ```
 
 ### -EnableViaTag
-{{ Fill EnableViaTag Description }}
+This setting is part of spoof protection.
+
+The EnableViaTag parameter enables or disables adding the via tag to the From address in Outlook (chris@contso.com via fabrikam.com). Valid values are:
+
+- $true: The via tag is added to the From address (the message sender that's displayed in email clients) if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address. This is the default value.
+- $false: The via tag is not added to the From address.
+
+To prevent the via tag from being added to messages from specific senders, you have the following options:
+
+- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
 
 ```yaml
 Type: Boolean

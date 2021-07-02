@@ -22,12 +22,11 @@ New-CsOnlineTimeRange -Start <TimeSpan> -End <TimeSpan> [-Tenant <Guid>] [<Commo
 ```
 
 ## DESCRIPTION
-The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Organizational Auto Attendant (OAA) service. Time ranges are used to form schedules.
+The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Auto Attendant (AA) service. Time ranges are used to form schedules.
 
 **NOTE**
 - The start bound of the range must be less than its end bound.
-- A time range must be aligned with 30/60-minutes boundaries.
-- A time range can span from one minute to 24 hours.
+- Time ranges within a weekly recurrent schedule must align with 15-minute boundaries.
  
 
 ## EXAMPLES

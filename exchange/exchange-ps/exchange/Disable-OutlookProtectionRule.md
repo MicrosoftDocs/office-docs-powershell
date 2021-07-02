@@ -12,6 +12,8 @@ ms.reviewer:
 # Disable-OutlookProtectionRule
 
 ## SYNOPSIS
+**Note**: This cmdlet is no longer supported in the cloud-based service.
+
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-OutlookProtectionRule cmdlet to disable an existing Microsoft Outlook protection rule.

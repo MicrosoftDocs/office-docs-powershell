@@ -879,8 +879,10 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 `#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
+- Root
 - Inbox
 - SentItems
+- Outbox
 - DeletedItems
 - Calendar
 - Contacts
@@ -888,14 +890,9 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - Journal
 - Tasks
 - Notes
+- AllItems
 - JunkEmail
-- CommunicatorHistory
-- Voicemail
-- Fax
-- Conflicts
-- SyncIssues
-- LocalFailures
-- ServerFailures
+- Archive
 
 If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
@@ -945,8 +942,10 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 `#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
+- Root
 - Inbox
 - SentItems
+- Outbox
 - DeletedItems
 - Calendar
 - Contacts
@@ -954,14 +953,9 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - Journal
 - Tasks
 - Notes
+- AllItems
 - JunkEmail
-- CommunicatorHistory
-- Voicemail
-- Fax
-- Conflicts
-- SyncIssues
-- LocalFailures
-- ServerFailures
+- Archive
 
 If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 

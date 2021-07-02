@@ -302,6 +302,8 @@ Accept wildcard characters: False
 ```
 
 ### -InternalNLBBypassUrl
+**Note:** This parameter applies only to Exchange 2010. By default, Exchange 2013 or later already has the InternalNLBBypassUrl value configured on the backend Exchange Web Services (EWS) virtual directory on Mailbox servers.
+
 The InternalNLBBypassUrl parameter specifies the URL of the Exchange server that has the Client Access server role installed, regardless of whether it's behind a Network Load Balancing (NLB) array or not.
 
 When you set the InternalUrl parameter to the URL of the NLB array, you should set the InternalNLBBypassUrl parameter to the URL of the Client Access server itself.

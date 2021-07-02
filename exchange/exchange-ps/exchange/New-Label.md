@@ -82,7 +82,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -601,7 +601,13 @@ Accept wildcard characters: False
 ```
 
 ### -ContentType
-{{ Fill ContentType Description }}
+The ContentType parameter specifies where the sensivity label can be applied. Valid values are:
+
+- File, Email
+- Site, UnifiedGroup
+- PurviewAssets
+
+Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
 
 ```yaml
 Type: MipLabelContentType
