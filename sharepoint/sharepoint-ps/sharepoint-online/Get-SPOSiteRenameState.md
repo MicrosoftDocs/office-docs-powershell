@@ -62,7 +62,7 @@ This example returns rename jobs that are in InProgress state.
 
 ```powershell
 $tenantRenameJobId = (Get-SPOTenantRenameStatus).RenameJobId
-Get-SPOSiteRenameState -ParentOperationId $tenantRenameJob
+Get-SPOSiteRenameState -ParentOperationId $tenantRenameJobId
 ```
 
 This example returns rename jobs that were initiated by a tenant rename.
