@@ -24,6 +24,8 @@ Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup | TenantGl
 ## DESCRIPTION
 The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA), Call Queue (CQ) service or Music on Hold for Microsoft Teams.
 
+Please note that you can't export the audio file after import, you can only remove it.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
