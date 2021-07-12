@@ -37,6 +37,9 @@ When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`,
 Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
 ```
 
+> [!NOTE]
+> The latest version of EXO V2 module and frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
+
 ## How the EXO V2 module works
 
 The module contains a small set of exclusive Exchange Online PowerShell cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). When you first open the module, you'll only see these exclusive cmdlets. After you [connect to your Exchange Online organization](connect-to-exchange-online-powershell.md), you'll see all of the familiar cmdlets that are available in Exchange Online PowerShell.
