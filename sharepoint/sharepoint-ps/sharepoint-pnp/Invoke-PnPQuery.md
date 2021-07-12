@@ -19,7 +19,7 @@ Executes the currently queued actions
 ## SYNTAX
 
 ```powershell
-Invoke-PnPQuery [-RetryCount <Int32>] [-RetryWait <Int32>] [-Connection <PnPConnection>] [<CommonParameters>]
+Invoke-PnPQuery [-RetryCount <Int32>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,13 +33,6 @@ Invoke-PnPQuery -RetryCount 5
 ```
 
 This will execute any queued actions / changes on the SharePoint Client Side Object Model Context and will retry 5 times in case of throttling.
-
-### EXAMPLE 2
-```powershell
-Invoke-PnPQuery -RetryWait 10
-```
-
-This will execute any queued actions / changes on the SharePoint Client Side Object Model Context and delay the execution for 10 seconds before it retries the execution.
 
 ## PARAMETERS
 
@@ -71,19 +64,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RetryWait
-Delay in seconds. Defaults to 1.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ## RELATED LINKS
 

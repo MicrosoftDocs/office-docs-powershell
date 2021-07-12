@@ -34,23 +34,23 @@ Remove-PnPTeamsTab -Team <TeamsTeamPipeBind> -Channel <TeamsChannelPipeBind> -Id
 
 ### EXAMPLE 1
 ```powershell
-Remove-PnPTeamsTab -GroupId 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel "General" -Identity Wiki
+Remove-PnPTeamsTab -Team 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel "General" -Identity Wiki
 ```
 Removes the tab with the display name 'Wiki' from the General channel using diaply name.
 
 ### EXAMPLE 2
 ```powershell
-Remove-PnPTeamsTab -GroupId 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel 19:796d063b63e34497aeaf092c8fb9b44e@thread.skype -Identity Wiki
+Remove-PnPTeamsTab -Team 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel 19:796d063b63e34497aeaf092c8fb9b44e@thread.skype -Identity Wiki
 ```
 
-Removes the tab with the display name 'Wiki' from the channel using id.
+Removes the tab with the display name 'Wiki' from the channel using ID.
 
 ### EXAMPLE 3
 ```powershell
-Remove-PnPTeamsTab -GroupId 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel 19:796d063b63e34497aeaf092c8fb9b44e@thread.skype -Identity fcef815d-2e8e-47a5-b06b-9bebba5c7852
+Remove-PnPTeamsTab -Team 5beb63c5-0571-499e-94d5-3279fdd9b6b5 -Channel 19:796d063b63e34497aeaf092c8fb9b44e@thread.skype -Identity fcef815d-2e8e-47a5-b06b-9bebba5c7852
 ```
 
-Removes a tab with the specified id from the channel
+Removes a tab with the specified ID from the channel.
 
 ## PARAMETERS
 
@@ -113,4 +113,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-

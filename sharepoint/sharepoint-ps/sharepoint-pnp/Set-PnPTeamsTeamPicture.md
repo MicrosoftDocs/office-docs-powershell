@@ -36,8 +36,7 @@ Notice that this cmdlet will immediately return but it can take a few hours befo
 ```powershell
 Set-PnPTeamsTeamPicture -Team "MyTeam" -Path "c:\myimage.jpg"
 ```
-
-Updates the channel called 'MyChannel' to have the display name set to 'My Channel'
+Updates a picture for the team called 'MyTeam' with the available image at "c:\myimage.jpg"
 
 ## PARAMETERS
 
@@ -72,4 +71,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
