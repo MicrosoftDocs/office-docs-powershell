@@ -386,7 +386,18 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 Unless otherwise noted, the current release of the EXO V2 module contains all features of previous releases.
 
-### Current release: Version 2.0.4
+### Current release: Version 2.0.5
+
+- New **Get-OwnerlessGroupPolicy** and **Set-OwnerlessGroupPolicy** cmdlet to manage ownerless Microsoft 365 groups.
+
+  > [!NOTE]
+  > Although the _cmdlets_ are available in the module, the _feature_ is only available to members of a Private Preview.
+
+- New **Get-VivaInsightsSettings** and **Set-VivaInsightsSettings** cmdlets to control user access to Headspace features in Viva Insights.
+
+### Previous releases
+
+#### Version 2.0.4
 
 - PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the EXO V2 module](#prerequisites-for-the-exo-v2-module) section in this article.
 
@@ -399,8 +410,6 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
 
 - The interactive sign-in process now uses a more secure method to fetch access tokens using safe reply URLs.
-
-### Previous releases
 
 #### Version 2.0.3
 
