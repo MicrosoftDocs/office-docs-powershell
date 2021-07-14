@@ -24,14 +24,14 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 ```
 Set-CsAutodiscoverConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-ExternalSipClientAccessFqdn <String>]
  [-ExternalSipClientAccessPort <UInt32>] [-Force] [-WebLinks <PSListModifier>] [-WhatIf]
- [-EnableCertificateProvisioningServiceUrl <Boolean>] [<CommonParameters>]
+ [-EnableCertificateProvisioningServiceUrl <Boolean>] [-EnableCORS <Boolean>] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsAutodiscoverConfiguration [-Confirm] [-ExternalSipClientAccessFqdn <String>]
  [-ExternalSipClientAccessPort <UInt32>] [-Force] [-Instance <PSObject>] [-WebLinks <PSListModifier>] [-WhatIf]
- [-EnableCertificateProvisioningServiceUrl <Boolean>] [<CommonParameters>]
+ [-EnableCertificateProvisioningServiceUrl <Boolean>] [-EnableCORS <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -285,6 +285,23 @@ Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Position: Named
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
