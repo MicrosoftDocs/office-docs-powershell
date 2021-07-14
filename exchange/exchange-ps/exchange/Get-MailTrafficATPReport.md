@@ -174,30 +174,28 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced filter (Phishing signals based on machine learning.)
+- Advanced filter
 - Anti-malware Engine
-- Campaign\*\*
-- File detonation\* (Safe Attachments)
-- File detonation reputation\* (File detonation reputation learned from Safe Attachments detonations in other organizations.)
-- File reputation (File reputation learned from Safe Attachments in other organizations.)
+- Campaign
+- File detonation
+- File detonation reputation
+- File reputation
 - Fingerprint matching
-- General filter (Phishing signals based on analyst rules.)
-- Impersonation brand (Impersonation of well-known brands based on senders.)
-- Impersonation domain\* (Impersonation of domains specified in domain impersonation protection in anti-phishing policies.)
-- Impersonation user\* (Impersonation of users specified in user impersonation protection in anti-phishing policies.)
-- Mailbox intelligence impersonation`\* (Impersonation of users learned through mailbox intelligence.)
-- Message passed (Indicates a good message.)
+- General filter
+- Impersonation brand
+- Impersonation domain
+- Impersonation user
+- Mailbox intelligence impersonation
+- Message passed
 - Mixed analysis detection
-- Spoof DMARC (DMARC authentication failure on messages.)
-- Spoof external domain (Sender is spoofing a domain that's not defined in the organization)
-- Spoof intra-org (Spoof intelligence protection for messages sent between users in the same organization.)
-- URL detonation\* (Safe Links)
-- URL detonation reputation\* (URL detonation reputation learned from Safe Links detonations in other organizations.)
-- URL malicious reputation`\* (Malicious URL reputation learned from Safe Links detonations in other organizations.)
+- Spoof DMARC
+- Spoof external domain
+- Spoof intra-org
+- URL detonation
+- URL detonation reputation
+- URL malicious reputation
 
-\* Requires Defender for Office 365 plan 1 or plan 2
-
-\*\* Requires Defender for Office 365 plan 2 (included in Microsoft 365 E5 or as an add-in subscription).
+**Note**: Some values values correspond to features that are only available in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

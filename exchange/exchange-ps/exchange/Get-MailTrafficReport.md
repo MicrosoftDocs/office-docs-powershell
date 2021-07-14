@@ -240,23 +240,21 @@ The EventType parameter filters the report by the event type. Valid values are:
 - NonSpam_IPAllowed
 - NonSpam_SafeSender
 - Receive
+- SpamContentFiltered
+- SpamDBEBFilter
+- SpamEnvelopeBlock
+- SpamIPBlock
 - Spam_AdditionalSpamFiltered
 - Spam_BlockList
 - Spam_BulkFiltered
 - Spam_ContentScanFiltered
 - Spam_ETRFiltered
-- Spam_ETRFiltered
 - Spam_SenderBlocked
-- SpamContentFiltered
-- SpamDBEBFilter
-- SpamEnvelopeBlock
-- SpamIPBlock
 - SpoofMail
 - SpoofMailCompAuthResult
-- Submission_FN_EndUserSetting
 - TransportRuleMessages
 
-To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type must correspond to the report.
 
 You can specify multiple values separated by commas.
 

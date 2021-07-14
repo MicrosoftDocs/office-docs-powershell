@@ -182,7 +182,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 - AdvancedProtectionMalware
 - AtpGoodMail
 
-To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify Microsoft Defender for Office 365 (formerly known as Advanced Threat Protection or ATP) event types for Defender for Office 365 reports.
 
 You can specify multiple values separated by commas.
 
