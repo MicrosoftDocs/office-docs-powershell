@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineaudiofile
-applicable: Skype for Business Online and Teams
+applicable: Microsoft Teams
 author: jenstrier
 ms.author: jenstr
 ms.reviewer: 
@@ -12,7 +12,7 @@ schema: 2.0.0
 # Get-CsOnlineAudioFile
 
 ## SYNOPSIS
-Returns information about a specific or for all uploaded audio files of a given application type.
+Returns information about a specific or all uploaded audio files of a given application type.
 
 > [!NOTE]
 > **Preview** The use of this cmdlet is in Preview.
