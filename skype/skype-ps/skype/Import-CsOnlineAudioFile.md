@@ -68,7 +68,7 @@ Supported values:
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ The FileName parameter is the name of the audio file. For example, the file name
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ The Content parameter represents the content of the audio file. Supported format
 Type: System.Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
