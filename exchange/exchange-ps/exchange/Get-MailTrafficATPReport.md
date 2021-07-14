@@ -174,36 +174,30 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
+- Advanced filter (Phishing signals based on machine learning.)
+- Anti-malware Engine
+- Campaign\*\*
+- File detonation\* (Safe Attachments)
+- File detonation reputation\* (File detonation reputation learned from Safe Attachments detonations in other organizations.)
+- File reputation (File reputation learned from Safe Attachments in other organizations.)
+- Fingerprint matching
+- General filter (Phishing signals based on analyst rules.)
+- Impersonation brand (Impersonation of well-known brands based on senders.)
+- Impersonation domain\* (Impersonation of domains specified in domain impersonation protection in anti-phishing policies.)
+- Impersonation user\* (Impersonation of users specified in user impersonation protection in anti-phishing policies.)
+- Mailbox intelligence impersonation`\* (Impersonation of users learned through mailbox intelligence.)
 - Message passed (Indicates a good message.)
+- Mixed analysis detection
+- Spoof DMARC (DMARC authentication failure on messages.)
+- Spoof external domain (Sender is spoofing a domain that's not defined in the organization)
+- Spoof intra-org (Spoof intelligence protection for messages sent between users in the same organization.)
+- URL detonation\* (Safe Links)
+- URL detonation reputation\* (URL detonation reputation learned from Safe Links detonations in other organizations.)
+- URL malicious reputation`\* (Malicious URL reputation learned from Safe Links detonations in other organizations.)
 
-Email phishing EventTypes:
+\* Requires Defender for Office 365 plan 1 or plan 2
 
-- Advanced phish filter (Indicates a message caught by the machine learning model.)
-- Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
-- Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
-- Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
-- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
-- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
-- Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
-- General phish filter (Indicates a message caught by basic phish protection.)
-- Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
-- Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
-
-Email malware EventTypes:
-
-- Anti-malware engine (Indicates a message caught by the anti-malware engine.)
-- ATP Safe Attachments\* (Indicates a message with a malicious attachment blocked by Defender for Office 365.)
-- ATP Safe Links\* (Indicates when a malicious link is blocked by Defender for Office 365.)
-- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
-- Office 365 file reputation (Indicates a message with a known malicious file blocked.)
-- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
-
-Content malware EventTypes:
-
-- AtpDocumentMalware\* (Indicates malicious content detected by Safe Attachments.)
-- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires Defender for Office 365 or E5.)
-
-\* Requires Defender for Office 365 (included in Microsoft 365 E5 or in an add-in subscription).
+\*\* Requires Defender for Office 365 plan 2 (included in Microsoft 365 E5 or as an add-in subscription).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

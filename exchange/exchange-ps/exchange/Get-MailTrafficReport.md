@@ -220,7 +220,43 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- AdvancedProtectionMalware
+- AtpGoodMail
+- BCL0 to BCL9
+- DLPMessages
+- EncryptionManual
+- EncryptionPolicy
+- Expire
+- GoodMail
+- Malware
+- NonSpam_AdditionalSpamFilterPassed
+- NonSpam_AllowList
+- NonSpam_BulkPassed
+- NonSpam_ContentScanPassed
+- NonSpam_ETRPassed
+- NonSpam_IntraOrg
+- NonSpam_IPAllowed
+- NonSpam_SafeSender
+- Receive
+- Spam_AdditionalSpamFiltered
+- Spam_BlockList
+- Spam_BulkFiltered
+- Spam_ContentScanFiltered
+- Spam_ETRFiltered
+- Spam_ETRFiltered
+- Spam_SenderBlocked
+- SpamContentFiltered
+- SpamDBEBFilter
+- SpamEnvelopeBlock
+- SpamIPBlock
+- SpoofMail
+- SpoofMailCompAuthResult
+- Submission_FN_EndUserSetting
+- TransportRuleMessages
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
 
 You can specify multiple values separated by commas.
 
