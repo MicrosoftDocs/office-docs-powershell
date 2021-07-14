@@ -147,16 +147,17 @@ Accept wildcard characters: False
 The EventType parameter filters the report by the event type. Valid values are:
 
 - Advanced filter
-- Anti-malware engine
+- Anti-malware Engine
 - Campaign
-- File Detonation
-- File Reputation
+- File detonation
 - File detonation reputation
+- File reputation
 - Fingerprint matching
 - General filter
 - Impersonation brand
 - Impersonation domain
 - Impersonation user
+- Mailbox intelligence impersonation
 - Message passed
 - Mixed analysis detection
 - Spoof DMARC
