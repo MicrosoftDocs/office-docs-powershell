@@ -85,6 +85,7 @@ This example creates a team, adds three members to it, and creates three channel
 The MailNickName parameter specifies the alias for the associated Office 365 Group.
 This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
 The value of the MailNickName parameter has to be unique across your tenant.
+Note: If Microsoft 365 groups naming policies are enabled in your tenant, this parameter is required and must also comply with the naming policy.
 
 For more details about the naming conventions see here: [New-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
 
