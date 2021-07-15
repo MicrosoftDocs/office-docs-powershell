@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-This parameter isn't used. To enable or disable a safe attachment policy, use the Enabled parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets.
+This parameter isn't used. To enable or disable an existing Safe Attachments policy (the combination of the safe attachment policy and safe attachment rule in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
 
 ```yaml
 Type: Boolean
