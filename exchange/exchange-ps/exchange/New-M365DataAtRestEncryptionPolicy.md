@@ -33,7 +33,7 @@ New-M365DataAtRestEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedPro
 ```
 
 ## DESCRIPTION
-Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy. For more information, see [Overview of M365 Customer Key  at the tenant level](https://docs.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details).
+Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy for multi-workload usage. For more information, see [Overview of M365 Customer Key  at the tenant level](https://docs.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details) and [Create a DEP for use with multiple workloads for all tenant users](https://docs.microsoft.com/microsoft-365/compliance/customer-key-manage?view=o365-worldwide#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-M365DataAtRestEncryptionPolicy -Name "Default_Policy" -AzureKeyIDs "https://contosoWestUSvault01.vault.azure.net/keys/Key_01","https://contosoEastUSvault01.vault.azure.net/keys/Key_02" -Description "Tenant default policy"
 ```
 
-This example creates a Microsoft 365 data-at-rest encryption policy named Default_Policy with the specified Azure Key Vault keys and description.
+This example creates a Microsoft 365 data-at-rest multi-workload encryption policy named Default_Policy with the specified Azure Key Vault keys and description for all users in your tenant.
 
 ## PARAMETERS
 
