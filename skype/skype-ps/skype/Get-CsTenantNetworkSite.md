@@ -39,19 +39,23 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> Get-CsTenantNetworkSite
 ```
-
 The command shown in Example 1 returns the list of network sites for the current tenant.
 
-###-------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 PS C:\> Get-CsTenantNetworkSite -Identity siteA
 ```
-
 The command shown in Example 2 returns the network site within the scope of siteA.
+
+### Example 3
+```powershell
+PS C:\> Get-CsTenantNetworkSite -Filter "Los Angeles"
+```
+The command shown in Example 3 returns the network site that matches the specified filter.
 
 ## PARAMETERS
 
