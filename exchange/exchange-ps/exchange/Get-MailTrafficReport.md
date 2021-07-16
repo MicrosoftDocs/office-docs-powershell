@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+This cmdlet will be deprecated. Use the **Get-MailFlowStatusReport** and **Get-MailTrafficATPReport** cmdlets instead.
+
 Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
