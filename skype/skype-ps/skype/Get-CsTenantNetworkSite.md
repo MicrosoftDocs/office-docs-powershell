@@ -55,7 +55,7 @@ The command shown in Example 2 returns the network site within the scope of site
 ```powershell
 PS C:\> Get-CsTenantNetworkSite -Filter "Los Angeles"
 ```
-The command shown in Example 3 returns the network that matches the specified filter.
+The command shown in Example 3 returns the network site that matches the specified filter.
 
 ## PARAMETERS
 
