@@ -397,7 +397,7 @@ Accept wildcard characters: False
 The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
-- CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25.
+- CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
 You can specify multiple IP addresses separated by commas.
 
