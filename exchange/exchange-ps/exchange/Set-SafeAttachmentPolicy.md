@@ -38,6 +38,8 @@ Set-SafeAttachmentPolicy [-Identity] <SafeAttachmentPolicyIdParameter>
 ## DESCRIPTION
 Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
+A safe attachment policy can be assigned to only one safe attachment rule by using the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -76,10 +78,14 @@ Accept wildcard characters: False
 ### -Action
 The Action parameter specifies the action for the safe attachment policy. Valid values are:
 
-- Allow: Attachments aren't scanned by safe attachment policies.
+- Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the admin center.
 - Block: Block the email message that contains the malware attachment. This is the default value.
 - Replace: Deliver the email message, but remove the malware attachment and replace it with warning text.
 - DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://docs.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
+
+The value of this parameter is meaningful only if the value of the Enable parameter is also $true (the default value is $false).
+
+To specify no action for the safe attachment policy (corresponds to **Off** for the **Safe Attachments unknown malware response** property of the policy in admin center), use the Enable parameter with the value $false.
 
 The results of all actions are available in message trace.
 
@@ -97,9 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -ActionOnError
-The ActionOnError parameter specifies the error handling option for safe attachment scanning (what to do if attachment scanning times out or an error occurs). Valid values are:
+The ActionOnError parameter specifies the error handling option for Safe Attachments scanning (what to do if attachment scanning times out or an error occurs). Valid values are:
 
-- $true: The action specified by the Action parameter is applied to messages even when the attachments aren't successfully scanned. This is the default value.
+- $true: This is the default value. The action specified by the Action parameter is applied to messages even when the attachments aren't successfully scanned. This value is required when the Redirect parameter value is $true. Otherwise, messages might be lost.
 - $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned.
 
 ```yaml
@@ -151,7 +157,12 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-This parameter isn't used. To enable or disable an existing Safe Attachments policy (the combination of the safe attachment policy and safe attachment rule in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
+The Enable parameter works with the Action parameter to specify the action for the safe attachment policy. Valid values are:
+
+- $true: The Action parameter specifies the action for the safe attachment policy.
+- $false: This is the default value. Attachments are not scanned by Safe Attachments, regardless of the value of the Action parameter. This value corresponds to **Off** for **Safe Attachments unknown malware response** property of the policy in the admin center.
+
+To enable or disable a complete Safe Attachments policy in the admin center (the combination of the rule and the corresponding associated policy in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
 
 ```yaml
 Type: Boolean
@@ -167,10 +178,10 @@ Accept wildcard characters: False
 ```
 
 ### -Redirect
-The Redirect parameter specifies whether to send detected malware attachments to another email address. Valid values are:
+The Redirect parameter specifies whether to deliver messages that were identified by Safe Attachments as containing malware attachments to another email address. Valid values are:
 
-- $true: Malware attachments are sent to the email address specified by the RedirectAddress parameter.
-- $false: Malware attachments aren't sent to another email address. This is the default value.
+- $true: Messages that contain malware attachments are delivered to the email address specified by the RedirectAddress parameter. This value is required when the ActionOnError parameter value is $true. Otherwise, messages might be lost.
+- $false: Messages that contain malware attachments aren't delivered to another email address. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -186,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectAddress
-The RedirectAddress parameter specifies the email address where detected malware attachments are sent when the Redirect parameter is set to the value $true.
+The RedirectAddress parameter specifies the email address to deliver messages that were identified by Safe Attachments as containing malware attachments when the Redirect parameter is set to the value $true.
 
 ```yaml
 Type: SmtpAddress
