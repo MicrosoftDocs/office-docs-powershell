@@ -444,6 +444,8 @@ This setting is part of impersonation protection and is only available in Micros
 
 The ExcludedDomains parameter specifies an exception for impersonation protection that looks for the specified domains in the message sender. You can specify multiple domains separated by commas.
 
+The maximum number of entries is approximately 1000.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -461,6 +463,8 @@ Accept wildcard characters: False
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
 The ExcludedSenders parameter specifies an exception for impersonation protection that looks for the specified message sender. You can specify multiple email addresses separated by commas.
+
+The maximum number of entries is approximately 1000.
 
 ```yaml
 Type: MultiValuedProperty
