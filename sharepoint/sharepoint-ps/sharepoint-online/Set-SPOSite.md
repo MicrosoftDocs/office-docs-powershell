@@ -837,7 +837,7 @@ Accept wildcard characters: False
 
 Choose whether to override the external user expiration policy on this site
 
-PARAMVALUE: None | False | True
+Possible values:
 
 - None - Respect the organization-level policy for external user expiration
 - False - Respect the organization-level policy for external user expiration
