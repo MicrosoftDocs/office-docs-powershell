@@ -100,9 +100,9 @@ Accept wildcard characters: False
 ### -SenderIpRanges
 The SenderIpRanges parameter specifies the source IP address that's used by the third-party phishing simulation. Valid values are:
 
-- Single IP: For example, 192.168.1.1.
-- IP range: For example, 192.168.0.1-192.168.0.254.
-- CIDR IP: For example, 192.168.0.1/25.
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify up to 10 entries separated by commas.
 
