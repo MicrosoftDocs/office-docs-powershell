@@ -49,12 +49,13 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Redirect $true -RedirectAddress admin@contoso.com
+New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Enable $true -Redirect $true -RedirectAddress admin@contoso.com
 ```
 
 This example creates a new safe attachment policy named Marketing Block Attachments with the following options:
 
 - The action is Block. This is the default value of the Action parameter, so you don't need to specify it.
+- The value $true for the Enable parameter is required so the policy will actually use the default Action parameter value of Block (or any other Action parameter value).
 - Enable redirection for detected malware attachments and send the messages to admin@contoso.com.
 - If Safe Attachments scanning isn't available or encounters errors, don't deliver the message as normal. The default value of the ActionOnError parameter is $true, so you don't need to specify it.
 
@@ -86,7 +87,7 @@ The Action parameter specifies the action for the safe attachment policy. Valid 
 
 The value of this parameter is meaningful only if the value of the Enable parameter is also $true (the default value is $false).
 
-To specify no action for the safe attachment policy (corresponds to **Off** for the **Safe Attachments unknown malware response** property of the policy in the admin center), use the Enable parameter with the value $false.
+To specify no action for the safe attachment policy (corresponds to **Off** for the **Safe Attachments unknown malware response** property of the policy in the admin center), don't use the Enable parameter (the default value is $false).
 
 The results of all actions are available in message trace.
 

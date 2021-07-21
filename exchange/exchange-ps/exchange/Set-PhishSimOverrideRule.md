@@ -88,11 +88,13 @@ Accept wildcard characters: False
 ### -AddSenderIpRanges
 The AddSenderIpRanges parameter specifies an existing entry to add to the list of source IP addresses that are used by the third-party phishing simulation. Valid values are:
 
-- Single IP: For example, 192.168.1.1.
-- IP range: For example, 192.168.0.1-192.168.0.254.
-- CIDR IP: For example, 192.168.0.1/25.
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple values separated by commas. A maximum of 10 entries are allowed in the list.
+You can specify multiple values separated by commas.
+
+A maximum of 10 entries are allowed in the list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -163,9 +165,9 @@ Accept wildcard characters: False
 ### -RemoveSenderIpRanges
 The RemoveSenderIpRanges parameter specifies an existing entry to remove from the list of source IP addresses that are used by the third-party phishing simulation. Valid values are:
 
-- Single IP: For example, 192.168.1.1.
-- IP range: For example, 192.168.0.1-192.168.0.254.
-- CIDR IP: For example, 192.168.0.1/25.
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple values separated by commas.
 
