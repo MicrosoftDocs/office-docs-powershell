@@ -28,7 +28,7 @@ Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Detailed] [-Limit <String>] [<Comm
 
 ```powershell
 Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
- [-Template <String>] [<CommonParameters>]
+ [-Template <String>] [--GroupIdDefined] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -288,6 +288,25 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+```
+
+### -GroupIdDefined
+
+Filters the list of sites returned to sites with a Group ID (ie: Sites connected to an Office 365 Group) when the value is set to $true.  Filters the list of sites to only sites without a Group ID when the value is $false.
+
+The values are $true, $false, and not defined. By default, the value is not defined which means that the filter does not apply.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet2
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters
