@@ -121,6 +121,13 @@ Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
 
 This example uses server side filtering to return sites matching 18.
 
+### -----------------------EXAMPLE 10-----------------------------
+
+```powershell
+Get-SPOSite -Limit ALL -GroupIdDefined $true
+```
+This example uses server-side filtering to return all sites that have an associated Office 365 Group.
+
 ## PARAMETERS
 
 ### -Detailed
