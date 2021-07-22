@@ -1482,7 +1482,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfUnscannableDocumentExtensionIs
-{{ Fill ExceptIfUnscannableDocumentExtensionIs Description }}
+The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the true file extension when the files are unscannable.
 
 ```yaml
 Type: MultiValuedProperty
