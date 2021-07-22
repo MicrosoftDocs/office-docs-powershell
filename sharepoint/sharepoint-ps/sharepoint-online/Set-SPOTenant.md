@@ -101,6 +101,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-IncludeAtAGlanceInShareEmails]
  [-SyncAadB2BManagementPolicy <Boolean>]
  [-StopNew2010Workflows <Boolean>]
+ [-StopNew2013Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [<CommonParameters>]
@@ -1799,6 +1800,21 @@ Accept wildcard characters: False
 
 ### -StopNew2010Workflows
 Prevents creation of new SharePoint 2010 classic workflows.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopNew2013Workflows
+Prevents creation of new SharePoint 2013 classic workflows.
 
 ```yaml
 Type: Boolean
