@@ -28,7 +28,7 @@ Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Detailed] [-Limit <String>] [<Comm
 
 ```powershell
 Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
- [-Template <String>] [--GroupIdDefined] [<CommonParameters>]
+ [-Template <String>] [-GroupIdDefined] [<CommonParameters>]
 ```
 
 ### ParamSet3
