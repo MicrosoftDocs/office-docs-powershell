@@ -43,12 +43,21 @@ $menuOption = New-CsAutoAttendantMenuOption -Action TransferCallToTarget -DtmfRe
 
 This example creates a menu option to transfer the call to an application endpoint when the caller speaks the word "Sales" or presses the 1 key.
 
+### -------------------------- Example 3 --------------------------
+```
+$Prompt = New-CsAutoAttendantPrompt -ActiveType -TextToSpeechPrompt "Our Office is open from Monday to Friday from 9 AM to 5 PM"
+$menuOption = New-CsAutoAttendantMenuOption -Action Announcement -DtmfResponse Tone2 -VoiceResponses "Hours" -Prompt $Prompt
+```
+
+This example creates a menu option to play an Announcement for the defined Prompt. After playing the Announcement, the Menu Prompt is repeated.
+
 
 ## PARAMETERS
 
 ### -Action
 The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
 
+- Announcement - plays a defined prompt then returns to the menu
 - DisconnectCall - The call is disconnected.
 - TransferCallToOperator - the call is transferred to the operator.
 - TransferCallToTarget - The call is transferred to the menu option's call target.
@@ -115,6 +124,26 @@ Use the New-CsAutoAttendantCallableEntity cmdlet to create new callable entities
 
 ```yaml
 Type: Object
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Prompt
+The Prompt parameter reflects the prompts to play when the menu option is activated.
+
+You can create new prompts by using the New-CsAutoAttendantPrompt cmdlet.
+
+This parameter is required if the Action has been set to Announcement.
+
+```yaml
+Type: Microsoft.Rtc.Management.Hosted.OAA.Models.Prompt
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
