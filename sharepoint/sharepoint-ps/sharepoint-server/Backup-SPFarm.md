@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spfarm
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPFarm
@@ -201,6 +201,8 @@ Accept wildcard characters: False
 ### -ConfigurationOnly
 If set, the backup will contain configuration settings only (no data) for each of the objects to be backed up.
 
+SharePoint may overestimate the amount of space required for a configuration-only backup, which may result in SharePoint estimating that it doesn't have sufficient space to store the backup at the specified path. Use the `-Force` parameter in this situation to proceed with the backup if you have sufficient space to store the configuration-only backup.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -325,4 +327,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

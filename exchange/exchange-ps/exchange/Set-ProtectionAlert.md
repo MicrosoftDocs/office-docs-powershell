@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Compliance Center.
+Use the Set-ProtectionAlert cmdlet to modify alert policies in the Microsoft 365 compliance center.
 
 **Note**: You can't use this cmdlet to edit default alert policies. You can only modify alerts that you created using the New-ProtectionAlert cmdlet.
 
@@ -33,8 +33,8 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Description <String>]
  [-Disabled <Boolean>]
  [-Filter <String>]
- [-Name <String>]
  [-NotificationCulture <CultureInfo>]
+ [-NotificationEnabled <Boolean>]
  [-NotifyUser <MultiValuedProperty>]
  [-NotifyUserOnFilterMatch <Boolean>]
  [-NotifyUserSuppressionExpiryDate <DateTime>]
@@ -44,12 +44,13 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
+ [-VolumeThreshold <System.UInt64>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -310,11 +311,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies the unique name for the alert policy. If the value contains spaces, enclose the value in quotation marks (").
+### -NotificationCulture
+The NotificationCulture parameter specifies the language or locale that's used for notifications.
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
-Type: String
+Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -326,13 +329,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NotificationCulture
-The NotificationCulture parameter specifies the language or locale that's used for notifications.
-
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+### -NotificationEnabled
+{{ Fill NotificationEnabled Description }}
 
 ```yaml
-Type: CultureInfo
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -440,7 +441,7 @@ Accept wildcard characters: False
 ### -Operation
 The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-You can specify multiple values separated by commas.
+Although this parameter is technically capable of accepting multiple values separated by commas, multiple values don't work.
 
 You can only use this parameter when the ThreatType parameter has the value Activity.
 
@@ -502,6 +503,22 @@ You can only use this parameter when the AggregationType parameter value is Simp
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VolumeThreshold
+{{ Fill VolumeThreshold Description }}
+
+```yaml
+Type: System.UInt64
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

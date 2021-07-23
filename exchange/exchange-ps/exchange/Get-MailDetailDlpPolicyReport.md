@@ -29,7 +29,6 @@ Get-MailDetailDlpPolicyReport [-Action <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
  [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>]
  [-Page <Int32>]
@@ -141,28 +140,20 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- DLPActionHits
+- DLPPolicyFalsePositive
+- DLPPolicyHits
+- DLPPolicyOverride
+- DLPRuleHits
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify DLP event types for DLP reports.
 
 You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

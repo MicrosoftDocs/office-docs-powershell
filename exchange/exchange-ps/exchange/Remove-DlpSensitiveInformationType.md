@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-DlpSensitiveInformationType [-Identity] <DataClassificationIdParameter>
  [-Confirm]
- [-DomainController <Fqdn>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -31,9 +30,9 @@ Remove-DlpSensitiveInformationType [-Identity] <DataClassificationIdParameter>
 ## DESCRIPTION
 Sensitive information type rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-**Note**: A "ManagementObjectNotFoundException" error means there was a synchronization problem between the Security & Compliance Center and Exchange Online. This happens when you try to remove data classifications that are being used in mail flow rules (also known as transport rules). You can remove the mail flow rule, wait for synchronization to finish, and then add the rule back.
+**Note**: A "ManagementObjectNotFoundException" error means there was a synchronization problem between the Microsoft 365 compliance center and Exchange Online. This happens when you try to remove data classifications that are being used in mail flow rules (also known as transport rules). You can remove the mail flow rule, wait for synchronization to finish, and then add the rule back.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

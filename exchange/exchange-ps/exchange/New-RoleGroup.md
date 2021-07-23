@@ -36,6 +36,7 @@ New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGr
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
+ [-WellKnownObject <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -50,6 +51,7 @@ New-RoleGroup [-Name] <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Force]
+ [-Id <Guid>]
  [-ManagedBy <MultiValuedProperty>]
  [-Members <MultiValuedProperty>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
@@ -228,7 +230,7 @@ If you use the CustomRecipientWriteScope parameter, you can't use the RecipientO
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -288,13 +290,33 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+This parameter is available only in the cloud-based service.
+
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+This parameter is available only in Security & Compliance Center PowerShell.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -334,7 +356,7 @@ If you want to add more than one user or USG, separate them using commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -415,8 +437,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WellKnownObject
+This parameter is available only in the cloud-based service.
+
+{{ Fill WellKnownObject Description }}
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
-This parameter doesn't work in the Security & Compliance Center.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

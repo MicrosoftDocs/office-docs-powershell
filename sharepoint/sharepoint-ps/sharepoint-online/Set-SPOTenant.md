@@ -83,7 +83,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SyncPrivacyProfileProperties <Boolean>]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
- [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]]
+ [-ContentTypeSyncSiteTemplatesList [String[]]]
+ [-ExcludeSiteTemplate]
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-ConditionalAccessPolicyErrorHelpLink <String>]
@@ -98,6 +99,10 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
  [-IncludeAtAGlanceInShareEmails]
+ [-SyncAadB2BManagementPolicy <Boolean>]
+ [-StopNew2010Workflows <Boolean>]
+ [-BlockSendLabelMismatchEmail <Boolean>]
+ [-DisableOutlookPSTVersionTrimming <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1493,7 +1498,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
+### -ContentTypeSyncSiteTemplatesList [String[]] [-ExcludeSiteTemplate]
 
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites).
 
@@ -1502,6 +1507,32 @@ In case you want the Content Type Hub to push content types to OneDrive for Busi
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using: `Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate`.
+
+```yaml
+Type: String[]
+Parameter Sets: ParameterSetContentTypeSyncSiteTemplatesList
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeSiteTemplate
+Excludes the specified template from Content Type hub content type synchronization. Must be used with `-ContentTypeSyncSiteTemplatesList [String[]]`.
+ 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ParameterSetContentTypeSyncSiteTemplatesList
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ConditionalAccessPolicy
 
@@ -1633,8 +1664,7 @@ Accept wildcard characters: False
 
 Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
 
-> [!NOTE]
-> Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
+Note: Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
 
 The valid values are:
 True - Enables the Policy.
@@ -1751,6 +1781,73 @@ Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -SyncAadB2BManagementPolicy
+Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://docs.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopNew2010Workflows
+Prevents creation of new SharePoint 2010 classic workflows.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockSendLabelMismatchEmail
+
+When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record, and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableOutlookPSTVersionTrimming
+
+As communicated in MC256835 (May ’21), starting August 16th 2021 the service will start retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change will prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
+
+If you wish to opt-out of this policy change, you can use the parameter provided below. You will have until August 13th 2021, to opt-out. This is a one time opt-out operation. If you don’t opt-out by the deadline, the new behavior will automatically be enabled. The opt-out option for the cmdlet will have no effect after the deadline. Opt-out only applies to existing document libraries and does not apply to new doclibs created after August 13th 2021.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 
 ### CommonParameters

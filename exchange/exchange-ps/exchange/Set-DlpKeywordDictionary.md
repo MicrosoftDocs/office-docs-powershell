@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-DlpKeywordDictionary cmdlet to modify data loss prevention (DLP) keyword dictionaries in the Security & Compliance Center.
+Use the Set-DlpKeywordDictionary cmdlet to modify data loss prevention (DLP) keyword dictionaries in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -31,14 +31,14 @@ Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"
-$EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($keywords)
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($keywords)
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -50,7 +50,7 @@ $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
 $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"
 $Keywords = $Terms -Join ", "
-$EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords)
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -63,7 +63,7 @@ $Terms = $Dictionary.KeywordDictionary.split(',').trim()
 $TermsToRemove = @('abandonment', 'ablatio')
 $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}
 $Keywords = $UpdatedTerms -Join ", "
-$EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords)
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -76,7 +76,7 @@ $Terms = $Dictionary.KeywordDictionary.split(',').trim()
 Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"
 $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"
 $Keywords = $UpdatedTerms -Join ", "
-$EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords)
+$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
 Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 
@@ -138,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF8. For more information, see the examples in this topic. The maximum file size limit is 100 KB.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic. The maximum file size is up to 1 MB of terms after compression. The organization limit for all dictionaries is also 1 MB after compression.
+
 
 ```yaml
 Type: Byte[]

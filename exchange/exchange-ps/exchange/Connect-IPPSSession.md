@@ -71,7 +71,7 @@ This example connects to standalone Exchange Online Protection PowerShell in an 
 ### -ConnectionUri
 The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session. The following PowerShell environments and related values are supported:
 
-- Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
+- Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://ps.compliance.protection.outlook.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter.
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://ps.compliance.protection.outlook.de/PowerShell-LiveID`
 - Security & Compliance Center PowerShell in Microsoft GCC High: `https://ps.compliance.protection.office365.us/powershell-liveid/`
 - Security & Compliance Center PowerShell in Microsoft DoD: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ### -AzureADAuthorizationEndpointUri
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint that can issue OAuth2 access tokens. The following PowerShell environments and related values are supported:
 
-- Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
+- Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://login.microsoftonline.de/common`
 - Security & Compliance Center PowerShell in Microsoft GCC High or Microsoft DoD: `https://login.microsoftonline.us/common`
 
@@ -103,6 +103,7 @@ If you use the UserPrincipalName parameter, you don't need to use the AzureADAut
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: 1
@@ -112,9 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter only works if the customer organization has agreed to your delegated management via the CSP program.
-
-After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

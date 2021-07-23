@@ -27,16 +27,19 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-AllowClickThrough <Boolean>]
  [-Confirm]
+ [-CustomNotificationText <String>]
  [-DeliverMessageAfterScan <Boolean>
  [-DoNotAllowClickThrough <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-DoNotTrackUserClicks <Boolean>]
  [-EnableForInternalSenders <Boolean>]
+ [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
  [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
+ [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
  [-WhiteListedUrls <String>]
  [<CommonParameters>]
@@ -122,6 +125,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomNotificationText
+The custom notification text specifies the customized notification text to show to users. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -227,8 +246,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableOrganizationBranding
+The EnableOrganizationBranding parameter specifies whether your organization's logo is displayed on Safe Links warning and notification pages. Valid values are:
+
+- $true: Organization branding is displayed on Safe Links warning and notification pages. Before you configure this value, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.
+- $false: Organization branding is not displayed on Safe Links warning and notification pages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSafeLinksForTeams
-**Note**: As of March 2020, this parameter is in Preview is available only for members of the Microsoft Teams Technology Adoption Program (TAP).
+**Note**: As of March 2020, this parameter is in Preview and is available or functional only for members of the Microsoft Teams Technology Adoption Program (TAP).
 
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
@@ -304,6 +342,25 @@ Accept wildcard characters: False
 
 ### -TrackClicks
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseTranslatedNotificationText
+The UseTranslatedNotificationText specifies whether to use Microsoft Translator to automatically localize the custom notification text that you specified with the CustomNotificationText parameter. Valid values are:
+
+- $true: Translate custom notification text to the user's language.
+- $false: Don't translate custom notification text to the user's language. This is the default value.
 
 ```yaml
 Type: Boolean

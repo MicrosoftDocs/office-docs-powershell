@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.Sharepoint.Powershell
+Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchServiceApplication
@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### ------------------EXAMPLE 1------------------
 ```
 $appPool = New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account 'CONTOSO\ServiceApps'
 New-SPEnterpriseSearchServiceApplication -Name "Search Service Application" -ApplicationPool $appPool
@@ -47,6 +47,15 @@ This example creates a new search service application named NewSSA in a new appl
 
 A search service application that is created in this manner will have active search topology, but no search components.
 
+### ------------------EXAMPLE 2------------------
+```
+$appPool = New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account 'CONTOSO\ServiceApps' 
+New-SPEnterpriseSearchServiceApplication -Name "Search Service Application" -ApplicationPool $appPool -DatabaseName SearchServiceAppDB
+```
+
+This example creates a new search service application named NewSSA in a new application pool and specifies the name of the Database.
+
+A search service application that is created in this manner will have active search topology, but no search components.
 
 ## PARAMETERS
 

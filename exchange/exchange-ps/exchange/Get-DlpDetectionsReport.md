@@ -28,8 +28,8 @@ Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
  [-DlpCompliancePolicy <MultiValuedProperty>]
  [-DlpComplianceRule <MultiValuedProperty>]
  [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>]
  [-Expression <Expression>]
+ [-EventType <MultiValuedProperty>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-Source <MultiValuedProperty>]
@@ -160,11 +160,22 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
+- DataRetentions
 - DLPActionHits
+- DLPActionUndo
+- DLPByIncidentIdActionHits
+- DLPByIncidentIdMessages
+- DLPByIncidentIdPolicyFalsePositive
+- DLPByIncidentIdPolicyHits
+- DLPByIncidentIdPolicyOverride
+- DLPByIncidentIdRuleHits
+- DLPMessages
 - DLPPolicyFalsePositive
 - DLPPolicyHits
 - DLPPolicyOverride
 - DLPRuleHits
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify DLP event types for DLP reports.
 
 You can specify multiple values separated by commas.
 
@@ -182,13 +193,15 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
+This parameter is available only in Security & Compliance Center PowerShell
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Expression
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

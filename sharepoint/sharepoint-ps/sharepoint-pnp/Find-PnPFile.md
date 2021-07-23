@@ -1,58 +1,59 @@
 ---
-external help file:
-online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/find-pnpfile
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+Module Name: PnP.PowerShell
 schema: 2.0.0
+applicable: SharePoint Online
+online version: https://pnp.github.io/powershell/cmdlets/Find-PnPFile.html
+external help file: PnP.PowerShell.dll-Help.xml
 title: Find-PnPFile
 ---
-
+  
 # Find-PnPFile
 
 ## SYNOPSIS
+
+> [!TIP]
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Find-PnPFile.md to change this file.
+
 Finds a file in the virtual file system of the web.
 
-## SYNTAX 
+## SYNTAX
 
-### Web
+### Web (Default)
 ```powershell
-Find-PnPFile -Match <String>
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Find-PnPFile [-Match] <String> [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ### List
 ```powershell
-Find-PnPFile -Match <String>
-             -List <ListPipeBind>
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Find-PnPFile [-Match] <String> -List <ListPipeBind> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
 
 ### Folder
 ```powershell
-Find-PnPFile -Match <String>
-             -Folder <FolderPipeBind>
-             [-Web <WebPipeBind>]
-             [-Connection <PnPConnection>]
+Find-PnPFile [-Match] <String> -Folder <FolderPipeBind> [-Connection <PnPConnection>]
+ [<CommonParameters>]
 ```
+
+## DESCRIPTION
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Find-PnPFile -Match *.master
 ```
 
 Will return all masterpages located in the current web.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Find-PnPFile -List "Documents" -Match *.pdf
 ```
 
 Will return all pdf files located in given list.
 
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Find-PnPFile -Folder "Shared Documents/Sub Folder" -Match *.docx
 ```
@@ -60,6 +61,20 @@ Find-PnPFile -Folder "Shared Documents/Sub Folder" -Match *.docx
 Will return all docx files located in given folder.
 
 ## PARAMETERS
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Folder
 Folder object or relative url of a folder to query
@@ -70,7 +85,9 @@ Parameter Sets: Folder
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -List
@@ -82,7 +99,9 @@ Parameter Sets: List
 
 Required: True
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Match
@@ -90,41 +109,19 @@ Wildcard query
 
 ```yaml
 Type: String
-Parameter Sets: Web, List, Folder
+Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: True
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
 ```
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-```yaml
-Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -Web
-This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-```yaml
-Type: WebPipeBind
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-## OUTPUTS
-
-### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
+
+

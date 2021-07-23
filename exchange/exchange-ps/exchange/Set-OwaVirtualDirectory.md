@@ -515,7 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPublishingEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CalendarPublishingEnabled parameter specifies whether users can publish their calendar from Outlook Web App. Valid values are:
 
@@ -633,7 +633,7 @@ Accept wildcard characters: False
 ```
 
 ### -CrossSiteRedirectType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CrossSiteRedirectType parameter controls how a Client Access server redirects Outlook Web App to the Client Access server infrastructure in another Active Directory site. Valid values are:
 
@@ -717,7 +717,7 @@ The DelegateAccessEnabled parameter specifies whether delegates can use Outlook 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -849,7 +849,7 @@ The Exchange2003Url parameter specifies the Outlook Web App URL for Exchange Ser
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1366,7 +1366,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstantMessagingEnabled
-The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. Valid values are:
+The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 - $false: Instant messaging isn't available in Outlook on the web.
@@ -1567,7 +1567,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyRedirectType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LegacyRedirectType parameter specifies the type of redirect that Outlook Web App uses to a legacy Client Access server or Front End server when forms-based authentication isn't used on the Exchange 2010 Outlook Web App virtual directory. Valid values are:
 
@@ -1764,7 +1764,7 @@ Accept wildcard characters: False
 The OutboundCharset parameter specifies the character set that's used for outgoing messages in Outlook on the web. Valid values are:
 
 - AutoDetect: Examine the first 2 kilobytes (KB) of text in the message to determine the character set that's used in outgoing messages. This is the default value.
-- AlwaysUTF8: Always use UTF-8 encoded UNICODE characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
+- AlwaysUTF8: Always use UTF-8 encoded Unicode characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
 - UserLanguageChoice: Use the user's language choice in Outlook on the web to encode outgoing messages.
 
 ```yaml
@@ -1800,7 +1800,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
@@ -1949,7 +1949,7 @@ This parameter has been deprecated and is no longer used.
 Type: RemoteDocumentsActions
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1985,7 +1985,7 @@ This parameter has been deprecated and is no longer used.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2003,7 +2003,7 @@ This parameter has been deprecated and is no longer used.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2083,7 +2083,7 @@ The SearchFoldersEnabled parameter specifies whether Search Folders are availabl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2158,7 +2158,7 @@ The SilverlightEnabled parameter specifies whether a user can use Microsoft Silv
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2181,7 +2181,7 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2204,7 +2204,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2570,7 +2570,7 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingSupportedMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead..
+This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead.
 
 ```yaml
 Type: MultiValuedProperty

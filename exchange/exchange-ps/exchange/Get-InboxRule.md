@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-inboxrule
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-InboxRule
 schema: 2.0.0
 author: chrisda
@@ -62,7 +62,7 @@ The BypassScopeCheck switch specifies whether to bypass the scope check for the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -151,8 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHidden
-This parameter works only in on-premises Exchange.
-
 The IncludeHidden switch specifies whether to include hidden Inbox rules in the results. You don't need to specify a value with this switch.
 
 ```yaml

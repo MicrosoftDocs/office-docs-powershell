@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ProtectionAlert cmdlet to create alert policies in the Security & Compliance Center. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Security & Compliance Center.
+Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft 365 compliance center. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,7 +30,9 @@ New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <Mu
  [-Description <String>]
  [-Disabled <Boolean>]
  [-Filter <String>]
+ [-LogicalOperationName <String>]
  [-NotificationCulture <CultureInfo>]
+ [-NotificationEnabled <Boolean>]
  [-NotifyUserOnFilterMatch <Boolean>]
  [-NotifyUserSuppressionExpiryDate <DateTime>]
  [-NotifyUserThrottleThreshold <Int32>]
@@ -39,12 +41,13 @@ New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <Mu
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
+ [-VolumeThreshold <System.UInt64>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +56,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 New-ProtectionAlert -Name "Content search deleted" -Category Others -NotifyUser admin@contoso.com -ThreatType Activity -Operation SearchRemoved -Description "Custom alert policy to track when content searches are deleted" -AggregationType None
 ```
 
-This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Security & Compliance Center.
+This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Microsoft 365 compliance center.
 
 ## PARAMETERS
 
@@ -331,6 +334,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LogicalOperationName
+{{ Fill LogicalOperationName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotificationCulture
 The NotificationCulture parameter specifies the language or locale that's used for notifications.
 
@@ -338,6 +357,22 @@ Valid input for this parameter is a supported culture code value from the Micros
 
 ```yaml
 Type: CultureInfo
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationEnabled
+{{ Fill NotificationEnabled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -429,7 +464,7 @@ Accept wildcard characters: False
 ### -Operation
 The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
-You can specify multiple values separated by commas.
+Although this parameter is technically capable of accepting multiple values separated by commas, multiple values don't work.
 
 You can only use this parameter when the ThreatType parameter has the value Activity.
 
@@ -491,6 +526,22 @@ You can only use this parameter when the AggregationType parameter value is Simp
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VolumeThreshold
+{{ Fill VolumeThreshold Description }}
+
+```yaml
+Type: System.UInt64
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

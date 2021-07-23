@@ -27,7 +27,6 @@ Get-AdvancedThreatProtectionDocumentDetail [-Action <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Organization <OrganizationIdParameter>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
@@ -118,7 +117,12 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. The event type you specify must correspond to the report. For example, you can only specify "Anti-malware engine" or "Advanced Threat Protection" events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- Advanced Threat Protection
+- Advanced Threat Protection clean
+- Anti-malware engine
+- Anti-malware engine clean
 
 You can specify multiple values separated by commas.
 
@@ -129,22 +133,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter specifies the organization for which the report is being presented.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

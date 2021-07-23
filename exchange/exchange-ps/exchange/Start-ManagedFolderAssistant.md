@@ -31,6 +31,28 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
  [<CommonParameters>]
 ```
 
+### ComplianceJobAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### DataGovernanceAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### HoldCleanup
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCleanup
@@ -44,8 +66,7 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCle
 
 ### StopHoldCleanup
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
- [-StopHoldCleanup]
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -96,6 +117,8 @@ The Identity parameter specifies the mailbox to be processed. In cross-premises 
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
+
+**Note**: In the cloud-based service, if you receive an error, try using the mailbox GUID for the value of this parameter. You can get the mailbox GUID value by replacing <UserIdentity> with the email address of the user and running the following command: `Get-Mailbox -User <UserIdentity> | Format-List *GUID,MailboxLocations`.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
@@ -157,6 +180,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ComplianceJob
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ComplianceJobAssistant
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -168,6 +209,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataGovernance
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DataGovernanceAssistant
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -201,7 +260,7 @@ The FullCrawl switch recalculates the application of tags across the whole mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
@@ -223,7 +282,7 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 

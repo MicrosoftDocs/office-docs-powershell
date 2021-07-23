@@ -59,7 +59,7 @@ A: The policy is cached for 6 hours. Changes to the policy are updated after the
 ### Example 1: The whole tenant has the same provider
 
 ```powershell
-Grant-CsTeamsVideoInteropServicePolicy -PolicyName <Identity of the Policy | $null>
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName <Identity of the Policy | $null> -Global
 ```
 
 Specify the provider for the whole tenant or use the value $null to remove the tenant-level provider and let the whole tenant fall back to the Global policy.

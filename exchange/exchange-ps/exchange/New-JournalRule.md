@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalEmailAddress
-The JournalEmailAddress parameter specifies a recipient object to which journal reports are sent. You ean use any value that uniquely identifies the recipient. For example:
+The JournalEmailAddress parameter specifies a recipient object to which journal reports are sent. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 - Alias

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-ComplianceRetentionEventType cmdlet to remove retention event types in the Security & Compliance Center.
+Use the Remove-ComplianceRetentionEventType cmdlet to remove retention event types in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-ComplianceRetentionEventType -Identity <PolicyIdParameter>
  [-Confirm]
  [-ForceDeletion]
+ [-PreviewOnly]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -83,6 +84,22 @@ Accept wildcard characters: False
 
 ### -ForceDeletion
 The ForceDeletion switch forces the removal of the retention event type. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewOnly
+{{ Fill PreviewOnly Description }}
 
 ```yaml
 Type: SwitchParameter
