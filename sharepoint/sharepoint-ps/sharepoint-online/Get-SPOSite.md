@@ -144,7 +144,7 @@ This example uses client-side filtering to return a list of sites connected to a
 ```powershell
 Get-SPOSite -Limit ALL -GroupIdDefined $true
 ```
-This example uses server-side filtering to return all sites that have an associated Office 365 Group.
+This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
 
 
 ## PARAMETERS
@@ -318,7 +318,7 @@ Default value: None
 
 ### -GroupIdDefined
 
-Filters the list of sites returned to sites with a Group ID (ie: Sites connected to an Office 365 Group) when the value is set to $true.  Filters the list of sites to only sites without a Group ID when the value is $false.
+Filters the list of sites returned to sites with a Group ID (ie: Sites connected to an Microsoft 365 Group) when the value is set to $true.  Filters the list of sites to only sites without a Group ID when the value is $false.
 
 The values are $true, $false, and not defined. By default, the value is not defined which means that the filter does not apply.
 
