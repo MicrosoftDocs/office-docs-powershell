@@ -121,12 +121,31 @@ Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
 
 This example uses server side filtering to return sites matching 18.
 
+
+### -----------------------EXAMPLE 8-----------------------------
+
+```powershell
+Get-SPOSite -Limit ALL | ?{$_.IsTeamsConnected -eq $true}
+```
+
+This example uses client-side filtering to return a list of sites connected to Microsoft Teams.
+
+### -----------------------EXAMPLE 9-----------------------------
+
+```powershell
+Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
+```
+
+This example uses client-side filtering to return a list of sites connected to a Microsoft Teams Private or Shared channel.
+
+
 ### -----------------------EXAMPLE 10-----------------------------
 
 ```powershell
 Get-SPOSite -Limit ALL -GroupIdDefined $true
 ```
 This example uses server-side filtering to return all sites that have an associated Office 365 Group.
+
 
 ## PARAMETERS
 
