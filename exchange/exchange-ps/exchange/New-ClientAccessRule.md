@@ -137,11 +137,11 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfClientIPAddressesOrRanges
-The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
+The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values are:
 
-- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
-- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
+- Single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
 You can enter multiple values separated by commas.
 
@@ -293,11 +293,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfClientIPAddressesOrRanges
-The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values for this parameter are:
+The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values are:
 
-- A single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
-- An IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
+- Single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
+- IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
+- Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
 You can enter multiple values separated by commas.
 

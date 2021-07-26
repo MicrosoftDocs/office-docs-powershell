@@ -1988,20 +1988,19 @@ Accept wildcard characters: False
 ### -IPListBlocked
 This parameter is available only in the cloud-based service.
 
-The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Note that the new settings might take up to 4 hours to fully propagate across the service.
-
-This parameter accepts IPv4 or IPv6 addresses in the following formats:
+The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Valid values are:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
-- IP address range high-low: For example, 192.168.0.1-192.168.0.254.
-- IP address range with subnet mask: For example, 192.168.8.2(255.255.255.0).
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
+- IP address range: For example, 192.168.0.1-192.168.0.254 or 192.168.8.2(255.255.255.0).
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This parameter has a limit of approximately 1200 entries.
+
+Changes to this parameter might take up to 4 hours to fully propagate across the service.
 
 ```yaml
 Type: MultiValuedProperty
