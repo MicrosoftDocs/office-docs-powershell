@@ -1140,20 +1140,19 @@ Accept wildcard characters: False
 ```
 
 ### -SiteExternalSharingControlType
-The SiteExternalSharingControlType parameter specific the external user sharing setting for the label. Valid values are:
+The SiteExternalSharingControlType parameter specifies the external user sharing setting for the label. Valid values are:
 
 - ExternalUserAndGuestSharing
 - ExternalUserSharingOnly
 - ExistingExternalUserSharingOnly
 - Disabled
 
-These equate to the following settings through the UI:
+These correspond to the following settings through the admin center:
 
--Anyone
--New and Existing Guests
--Existing Guests
--Only people in your organization
-
+- Anyone
+- New and Existing Guests
+- Existing Guests
+- Only people in your organization
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
