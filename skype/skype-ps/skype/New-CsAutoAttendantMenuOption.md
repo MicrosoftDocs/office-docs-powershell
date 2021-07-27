@@ -45,7 +45,7 @@ This example creates a menu option to transfer the call to an application endpoi
 
 ### -------------------------- Example 3 --------------------------
 ```
-$Prompt = New-CsAutoAttendantPrompt -ActiveType -TextToSpeechPrompt "Our Office is open from Monday to Friday from 9 AM to 5 PM"
+$Prompt = New-CsAutoAttendantPrompt -ActiveType TextToSpeech -TextToSpeechPrompt "Our Office is open from Monday to Friday from 9 AM to 5 PM"
 $menuOption = New-CsAutoAttendantMenuOption -Action Announcement -DtmfResponse Tone2 -VoiceResponses "Hours" -Prompt $Prompt
 ```
 
