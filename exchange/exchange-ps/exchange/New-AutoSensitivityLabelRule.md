@@ -445,9 +445,9 @@ The ExceptIfSenderIpRanges parameter specifies an exception for the auto-labelin
 
 - Single IP address: For example, 192.168.1.1.
 - IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+- Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -672,9 +672,9 @@ The SenderIpRanges parameter specifies a condition for the auto-sensitivity poli
 
 - Single IP address: For example, 192.168.1.1.
 - IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+- Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

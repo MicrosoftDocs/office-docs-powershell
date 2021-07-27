@@ -32,14 +32,14 @@ More on the impact of bit rate setting on bandwidth can be found [here](https://
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> New-CsTeamsNetworkRoamingPolicy -Identity "RedmondRoaming" -AllowIPVideo $true -MediaBitRateKb 2000 -Description "Redmond campus roaming policy"
 ```
 
 The command shown in  Example 1 creates a new teams network roaming policy with Identity "RedmondRoaming" with IP Video feature enabled, and the maximum media bit rate is capped at 2000 Kbps.
 
-###-------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 PS C:\> New-CsTeamsNetworkRoamingPolicy -Identity "RemoteRoaming"
 ```
@@ -49,7 +49,7 @@ The command shown in  Example 2 creates a new teams network roaming policy with 
 ## PARAMETERS
 
 ### -Identity
-Unique identifier of the policy to be returned.
+Unique identifier of the policy to be created.
 
 ```yaml
 Type: XdsIdentity

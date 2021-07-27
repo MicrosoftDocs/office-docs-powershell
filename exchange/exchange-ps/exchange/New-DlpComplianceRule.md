@@ -1348,7 +1348,7 @@ The ExceptIfSenderIpRanges parameter specifies an exception for the DLP rule tha
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1482,7 +1482,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfUnscannableDocumentExtensionIs
-{{ Fill ExceptIfUnscannableDocumentExtensionIs Description }}
+The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2300,7 +2302,7 @@ The SenderIpRanges parameter specifies a condition for the DLP rule that looks f
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

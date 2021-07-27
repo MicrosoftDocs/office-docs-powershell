@@ -2769,7 +2769,7 @@ The ExceptIfSenderIpRanges parameter specifies an exception that looks for sende
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4448,7 +4448,7 @@ The SenderIpRanges parameter specifies a condition that looks for senders whose 
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
