@@ -55,11 +55,11 @@ This example returns detailed information about the organization segment named E
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the organization segment that you want to view. You can use any value that uniquely identifies the segment. For example:
+The Identity parameter specifies the organization segment that you want to view. You can use a value that uniquely identifies the segment. For example:
 
 - Name
 - Distinguished name (DN)
-- GUID
+- ExchangeObjectId (not the ExoSegmentId)
 
 ```yaml
 Type: PolicyIdParameter
