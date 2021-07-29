@@ -116,7 +116,7 @@ You must be a SharePoint Online administrator or Global Administrator to run the
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
@@ -125,7 +125,7 @@ Set-SPOTenant -NoAccessRedirectUrl 'https://www.contoso.com'
 
 This example blocks access to <https://contoso.sharepoint.com/sites/team1> and redirects traffic to <https://www.contoso.com.>
 
-### -----------------------EXAMPLE 2-----------------------------
+### EXAMPLE 2
 
 ```powershell
 Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false
@@ -133,7 +133,7 @@ Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false
 
 This example hides the "Everyone Except External Users" claim in People Picker.
 
-### -----------------------EXAMPLE 3-----------------------------
+### EXAMPLE 3
 
 ```powershell
 Set-SPOTenant -ShowAllUsersClaim $false
@@ -141,7 +141,7 @@ Set-SPOTenant -ShowAllUsersClaim $false
 
 This example hides the "All Users" claim group in People Picker.
 
-### -----------------------EXAMPLE 4-----------------------------
+### EXAMPLE 4
 
 ```powershell
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true
@@ -149,7 +149,7 @@ Set-SPOTenant -UsePersistentCookiesForExplorerView $true
 
 This example enables the use of special persisted cookie for Open with Explorer.
 
-### -----------------------EXAMPLE 5-----------------------------
+### EXAMPLE 5
 
 ```powershell
 Set-SPOTenant -LegacyAuthProtocolsEnabled $True
@@ -157,7 +157,7 @@ Set-SPOTenant -LegacyAuthProtocolsEnabled $True
 
 This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site '<https://contoso-admin.sharepoint.com/'> or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
 
-### -----------------------EXAMPLE 6------------------------------
+### EXAMPLE 6
 
 ```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
@@ -165,7 +165,7 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
 
 This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behavior for other sites.
 
-### -----------------------EXAMPLE 7-------------------------------
+### EXAMPLE 7
 
 ```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
@@ -173,7 +173,7 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 
 This example stops publishing content types to OneDrive for Business sites.
 
-### -----------------------EXAMPLE 8-------------------------------
+### EXAMPLE 8
 
 ```powershell
 Set-SPOTenant -SearchResolveExactEmailOrUPN $true
@@ -181,7 +181,7 @@ Set-SPOTenant -SearchResolveExactEmailOrUPN $true
 
 This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
-### -----------------------EXAMPLE 9-------------------------------
+### EXAMPLE 9
 
 ```powershell
 Set-SPOTenant -UseFindPeopleInPeoplePicker $true
@@ -189,7 +189,7 @@ Set-SPOTenant -UseFindPeopleInPeoplePicker $true
 
 This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
-### -----------------------EXAMPLE 10-------------------------------
+### EXAMPLE 10
 
 ```powershell
 Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
