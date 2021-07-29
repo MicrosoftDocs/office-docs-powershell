@@ -2935,14 +2935,12 @@ Accept wildcard characters: False
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
 
-The SendFromAliasEnabled parameter allows mailbox users to send messages and reply to messages in Outlook on the web using any of the proxy addresses (secondary email addresses) that are configured on the mailbox. Valid values are:
+The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
 
-- $true: Users in Outlook on the web get an option to send messages and reply to messages with a proxy addresses.
-- $false: Users can only send messages and reply to messages using their primary email address. This is the default value.
+- $true: Aliases on messages will no longer be rewritten to their Primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases.
+- $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
-For more information about the availability of this feature, see the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437).
-
-**Note**: This feature doesn't work in Outlook for Windows or Mac.
+For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=64123).   
 
 ```yaml
 Type: Boolean
