@@ -49,7 +49,7 @@ $Prompt = New-CsAutoAttendantPrompt -ActiveType TextToSpeech -TextToSpeechPrompt
 $menuOption = New-CsAutoAttendantMenuOption -Action Announcement -DtmfResponse Tone2 -VoiceResponses "Hours" -Prompt $Prompt
 ```
 
-This example creates a menu option to play an Announcement for the defined Prompt. After playing the Announcement, the Menu Prompt is repeated.
+This example creates a menu option to play an announcement for the defined prompt. After playing the announcement, the **Menu Prompt** is repeated.
 
 
 ## PARAMETERS
@@ -136,11 +136,11 @@ Accept wildcard characters: False
 ```
 
 ### -Prompt
-The Prompt parameter reflects the prompts to play when the menu option is activated.
+The **Prompt** parameter reflects the prompts to play when the menu option is activated.
 
-You can create new prompts by using the New-CsAutoAttendantPrompt cmdlet.
+You can create new prompts by using the **New-CsAutoAttendantPrompt** cmdlet.
 
-This parameter is required if the Action has been set to Announcement.
+This parameter is required if the **Action** is set to **Announcement**.
 
 ```yaml
 Type: Microsoft.Rtc.Management.Hosted.OAA.Models.Prompt
