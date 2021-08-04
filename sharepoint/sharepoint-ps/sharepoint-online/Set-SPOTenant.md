@@ -1867,7 +1867,7 @@ Accept wildcard characters: False
 
 ### -DisableAddShortcutsToOneDrive 
 
-When the feature is disabled ($true), the command to [add shortcuts](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) will be removed; any folders that have already been added will remain on the user's computer.
+When the feature is disabled ($true), the option [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) will be removed; any folders that have already been added will remain on the user's computer.
 
 PARAMVALUE: $true | $false
 
