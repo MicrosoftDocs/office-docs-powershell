@@ -438,7 +438,12 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutEnabled
-The ActivityBasedAuthenticationTimeoutEnabled parameter specifies whether the timed logoff feature is enabled. The default value is $true.
+The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the inactivity interval for automatic logoff in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This is the default value.
+- $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled.
+
+If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutInterval parameter.
 
 ```yaml
 Type: Boolean
@@ -454,11 +459,15 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutInterval
-The ActivityBasedAuthenticationTimeoutInterval parameter specifies the time span for logoff.
+The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes an automatic logoff in Outlook on the web.
 
 You enter this value as a time span: hh:mm:ss where hh = hours, mm = minutes and ss = seconds.
 
 Valid values for this parameter are from 00:05:00 to 08:00:00 (5 minutes to 8 hours). The default value is 06:00:00 (6 hours).
+
+The value of this parameter is meaningful only if the ActivityBasedAuthenticationTimeoutEnabled or ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter value is $true.
+
+For more information about the activity-based timeout in Outlook on the web, see [Description of the Activity-Based Authentication Timeout for OWA in Office 365](https://support.microsoft.com/topic/0c101e1b-020e-69c1-a0b0-26532d60c0a4).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -474,7 +483,14 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
-The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter specifies whether to keep single sign-on enabled. The default value is $true.
+This parameter is available or functional only in on-premises Exchange.
+
+The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
+
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
+- $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled for single sign-on.
+
+If you aren't using single sign-on, use the ActivityBasedAuthenticationTimeoutEnabled parameter.
 
 ```yaml
 Type: Boolean
