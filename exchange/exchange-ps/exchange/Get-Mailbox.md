@@ -77,7 +77,7 @@ Get-Mailbox [-Database <DatabaseIdParameter>]
 
 ### Identity
 ```
-Get-Mailbox [[-Identity] <MailboxIdParameter>]
+Get-Mailbox [-Identity] <MailboxIdParameter>]
  [-Arbitration]
  [-Archive]
  [-AuditLog]
