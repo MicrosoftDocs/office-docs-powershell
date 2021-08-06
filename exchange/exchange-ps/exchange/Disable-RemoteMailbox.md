@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Disable-RemoteMailbox cmdlet to remove mailboxes from the cloud-based service but keep the associated user objects in the on-premises Active Directory.
+Use the Disable-RemoteMailbox cmdlet to remove user mailboxes from the cloud-based service but keep the associated user objects in the on-premises Active Directory.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,7 +41,10 @@ If you want to remove both the cloud-based mailbox and the associated on-premise
 
 Directory synchronization must be configured correctly for a mailbox to be removed from the cloud. Removal of the cloud-based mailbox isn't immediate and depends on the directory synchronization schedule.
 
-**Note**: If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with the command `Disable-RemoteMailbox <User> -Archive` and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them may result in an ArchiveGuid mismatch and validation error.
+**Note**:
+- If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with the command `Disable-RemoteMailbox <User> -Archive` and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them may result in an ArchiveGuid mismatch and validation error.
+- Due to the current service architecture, you need to convert shared mailboxes to regular ones prior to running the Disable-RemoteMailbox cmdlet.
+
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
