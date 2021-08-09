@@ -16,6 +16,15 @@ First you can check if you have already installed the SharePoint Online Manageme
 Get-Module -Name Microsoft.Online.SharePoint.PowerShell -ListAvailable | Select Name,Version
 ```
 
+> [!NOTE]
+>
+> - You should always check to see if you have multiple versions of the management shell installed.
+> 
+> - If you find multiple versions installed, please uninstall the lowest version number to ensure you have all the newest commands. 
+> 
+>   Example: `Uninstall-Module -Name Microsoft.Online.SharePoint.PowerShell -RequiredVersion 16.0.21211.12000`
+
+
 If your operating system is using PowerShell 5 or newer, you can also install the SharePoint Online Management Shell by running the following command in administrative mode:
 
 ```powershell

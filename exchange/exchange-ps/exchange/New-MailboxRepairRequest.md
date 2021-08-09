@@ -95,37 +95,37 @@ This example creates a variable that identifies Ann Beebe's mailbox and then use
 ### -CorruptionType
 The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
 
-- AbandonedMoveDestination: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
-- AggregateCounts: Aggregate counts on folders that aren't reflecting correct values.
-- BigFunnelMissingPOIs: Exchange 2016.
+- AbandonedMoveDestination\*: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
+- AggregateCounts\*: Aggregate counts on folders that aren't reflecting correct values.
+- BigFunnelMissingPOIs\*: Exchange 2016.
 - BigFunnelPOI: Exchange 2019.
-- CleanupFilesFolder: Exchange 2016 or later.
-- CleanupGraphNodesWithPropertyError: Exchange 2016 or later.
-- CleanupOfficeGraphFolders: Exchange 2016 or later.
+- CleanupFilesFolder\*: Exchange 2016 or later.
+- CleanupGraphNodesWithPropertyError\*: Exchange 2016 or later.
+- CleanupOfficeGraphFolders\*: Exchange 2016 or later.
 - CleanupOfficeGraphSsc: Exchange 2016 or later.
-- CleanupOrphanedIndexes: Exchange 2016 or later.
-- CleanupTrendingAroundMe: Exchange 2016 or later.
-- CorruptJunkRule: Exchange 2013 or later.
-- CorruptSearchFolderCriteria: Exchange 2016 or later.
-- CorruptedPerUserData: Exchange 2016 or later.
-- DropAllLazyIndexes: Exchange 2013 or later.
-- EmptyFilesFolder: Exchange 2016 or later.
+- CleanupOrphanedIndexes\*: Exchange 2016 or later.
+- CleanupTrendingAroundMe\*: Exchange 2016 or later.
+- CorruptJunkRule\*: Exchange 2013 or later.
+- CorruptSearchFolderCriteria\*: Exchange 2016 or later.
+- CorruptedPerUserData\*: Exchange 2016 or later.
+- DropAllLazyIndexes\*: Exchange 2013 or later.
+- EmptyFilesFolder\*: Exchange 2016 or later.
 - Extension1: Exchange 2013 or later, but reserved for internal Microsoft use.
 - Extension2: Exchange 2013 or later, but reserved for internal Microsoft use.
 - Extension3: Exchange 2013 or later, but reserved for internal Microsoft use.
 - Extension4: Exchange 2013 or later, but reserved for internal Microsoft use.
 - Extension5: Exchange 2013 or later, but reserved for internal Microsoft use.
-- FocusedInboxCleanup: Exchange 2016 or later.
-- FolderACL: Exchange 2013 or later.
-- FolderView: Views on folders that aren't returning correct contents.
-- ImapId: Exchange 2013 or later.
-- LockedMoveTarget: Exchange 2013 or later, but only if the mailbox is locked.
+- FocusedInboxCleanup\*: Exchange 2016 or later.
+- FolderACL\*: Exchange 2013 or later.
+- FolderView\*: Views on folders that aren't returning correct contents.
+- ImapId\*: Exchange 2013 or later.
+- LockedMoveTarget\*: Exchange 2013 or later, but only if the mailbox is locked.
 - MessageId
 - MessagePtagCn
 - MissingSpecialFolders: Exchange 2013 or later.
 - OlcFolderCleanup: Exchange 2016 or later.
 - ProvisionedFolder: Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned.
-- ReduceRedundantAI: Exchange 2016 or later, and only by itself.
+- ReduceRedundantAI\*: Exchange 2016 or later.
 - RemovePICWFolder: Exchange 2016 or later, but reserved for internal Microsoft use.
 - ReplState: Exchange 2013 or later.
 - RestrictionFolder: Exchange 2013 or later.
@@ -136,6 +136,8 @@ The CorruptionType parameter specifies the type of corruption that you want to d
 - UniqueMidIndex: Exchange 2013 or later.
 
 You can specify multiple values separated by commas.
+
+\* You can only use this value by itself.
 
 ```yaml
 Type: MailboxStoreCorruptionType[]

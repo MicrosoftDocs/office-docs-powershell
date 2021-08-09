@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
 For more information about the available properties, see [Get-EXORecipient property sets](https://docs.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exorecipient-property-sets).
 

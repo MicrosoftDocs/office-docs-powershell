@@ -164,6 +164,8 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 
 You can't use this parameter in combination with the IncludedRecipients parameter or any Conditional parameters (which are used to create precanned filters).
 
+The maximum length for the RecipientFilter property is 2048 characters, including internal syntax.
+
 ```yaml
 Type: String
 Parameter Sets: CustomFilter

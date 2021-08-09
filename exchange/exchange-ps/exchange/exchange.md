@@ -2671,6 +2671,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DynamicDistributionGroup](Get-DynamicDistributionGroup.md)
 
+### [Get-DynamicDistributionGroupMember](Get-DynamicDistributionGroupMember.md)
+
 ### [Get-EligibleDistributionGroupForMigration](Get-EligibleDistributionGroupForMigration.md)
 
 ### [Get-Group](Get-Group.md)
