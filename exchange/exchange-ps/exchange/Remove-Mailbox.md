@@ -313,6 +313,8 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
+This parameter is available only in on-premises Exchange.
+
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:

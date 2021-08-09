@@ -80,10 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -IPRange
-The IPRange parameter specifies a range of IP addresses to add to the IP Block list. You can use the following formats:
+The IPRange parameter specifies a range of IP addresses to add to the IP Block list. Valid values are:
 
-- CIDR IP:192.168.0.1/24
-- IP address range:192.168.0.1-192.168.0.254.
+- IP address range: 192.168.0.1-192.168.0.254.
+- Classless Inter-Domain Routing (CIDR) IP address range: 192.168.0.1/24.
 
 ```yaml
 Type: IPRange

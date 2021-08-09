@@ -32,9 +32,9 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
-[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -52,9 +52,10 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
-[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-MeetingRecordingExpirationDays <Int32>] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -729,6 +730,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToJoinExternalMeeting
+Currently, this parameter has no effect.
+
 Possible values are:
 - Enabled 
 - FederatedOnly
@@ -764,9 +767,14 @@ Accept wildcard characters: False
 ```
 
 ### -StreamingAttendeeMode
+
+Controls if Teams uses overflow capability once a meeting reaches its capacity (1,000 users with full functionality). 
+
 Possible values are: 
 - Disabled
 - Enabled
+
+Set this to Enabled to allow up to 20,000 extra view-only attendees to join.
 
 ```yaml
 Type: String
@@ -829,10 +837,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingRegistration
+Controls if a user can create a webinar meeting. The default value is True.
 
 Possible values:
-- true
-- false
+- True
+- False
 
 ```yaml
 Type: Boolean
@@ -840,7 +849,7 @@ Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -909,18 +918,61 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
+
+Controls the attendees who can attend a webinar meeting. The default is Everyone, meaning that everyone can register. If you want to restrict registration  to internal accounts set the value  to 'EveryoneInCompany'. 
+
 Possible values:
 
 - Everyone
 - EveryoneInCompany
 
+
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
 Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingRecordingExpirationDays
+
+Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
+
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ChannelRecordingDownload
+
+Controls how channel meeting recordings are saved, permissioned, and who can download them. 
+
+Possible values:
+
+- Allow - Saves channel meeting recordings to a "Recordings" folder in the channel. The permissions on the recording files will be based on the Channel SharePoint permissions. This is the same as any other file uploaded for the channel.
+- Block - Saves channel meeting recordings to a "Recordings\View only" folder in the channel. Channel owners will have full rights to the recordings in this folder, but channel members will have read access without the ability to download. 
+
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: Allow
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

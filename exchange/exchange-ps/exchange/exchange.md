@@ -230,11 +230,19 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MalwareFilterRule](Get-MalwareFilterRule.md)
 
+### [Get-PhishSimOverridePolicy](Get-PhishSimOverridePolicy.md)
+
+### [Get-PhishSimOverrideRule](Get-PhishSimOverrideRule.md)
+
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
+
+### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
+
+### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
@@ -259,6 +267,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
+
+### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
+
+### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
+
+### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
@@ -293,6 +309,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
+
+### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
+
+### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
+
+### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
 
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
@@ -336,7 +360,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
+### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
+
+### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
+
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
+
+### [Set-SecOpsOverrideRule](Set-SecOpsOverrideRule.md)
 
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 
@@ -1982,6 +2014,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## policy-and-compliance-retention Cmdlets
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
+### [Export-FilePlanProperty](Export-FilePlanProperty.md)
+
 ### [Get-ComplianceRetentionEvent](Get-ComplianceRetentionEvent.md)
 
 ### [Get-ComplianceRetentionEventType](Get-ComplianceRetentionEventType.md)
@@ -1992,6 +2026,20 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DataRetentionReport](Get-DataRetentionReport.md)
 
+### [Get-FilePlanPropertyAuthority](Get-FilePlanPropertyAuthority.md)
+
+### [Get-FilePlanPropertyCategory](Get-FilePlanPropertyCategory.md)
+
+### [Get-FilePlanPropertyCitation](Get-FilePlanPropertyCitation.md)
+
+### [Get-FilePlanPropertyDepartment](Get-FilePlanPropertyDepartment.md)
+
+### [Get-FilePlanPropertyReferenceId](Get-FilePlanPropertyReferenceId.md)
+
+### [Get-FilePlanPropertyStructure](Get-FilePlanPropertyStructur.md)
+
+### [Get-FilePlanPropertySubCategory](Get-FilePlanPropertySubCategory.md)
+
 ### [Get-HoldCompliancePolicy](Get-HoldCompliancePolicy.md)
 
 ### [Get-HoldComplianceRule](Get-HoldComplianceRule.md)
@@ -2001,6 +2049,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ManagedFolder](Get-ManagedFolder.md)
 
 ### [Get-ManagedFolderMailboxPolicy](Get-ManagedFolderMailboxPolicy.md)
+
+### [Get-RecordReviewNotificationTemplateConfig](Get-RecordReviewNotificationTemplateConfig.md)
 
 ### [Get-RegulatoryComplianceUI](Get-RegulatoryComplianceUI.md)
 
@@ -2014,11 +2064,25 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RetentionPolicyTag](Get-RetentionPolicyTag.md)
 
+### [Import-FilePlanProperty](Import-FilePlanProperty.md)
+
 ### [New-ComplianceRetentionEvent](New-ComplianceRetentionEvent.md)
 
 ### [New-ComplianceRetentionEventType](New-ComplianceRetentionEventType.md)
 
 ### [New-ComplianceTag](New-ComplianceTag.md)
+
+### [New-FilePlanPropertyAuthority](New-FilePlanPropertyAuthority.md)
+
+### [New-FilePlanPropertyCategory](New-FilePlanPropertyCategory.md)
+
+### [New-FilePlanPropertyCitation](New-FilePlanPropertyCitation.md)
+
+### [New-FilePlanPropertyDepartment](New-FilePlanPropertyDepartment.md)
+
+### [New-FilePlanPropertyReferenceId](New-FilePlanPropertyReferenceId.md)
+
+### [New-FilePlanPropertySubCategory](New-FilePlanPropertySubCategory.md)
 
 ### [New-HoldCompliancePolicy](New-HoldCompliancePolicy.md)
 
@@ -2042,6 +2106,18 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ComplianceTag](Remove-ComplianceTag.md)
 
+### [Remove-FilePlanPropertyAuthority](Remove-FilePlanPropertyAuthority.md)
+
+### [Remove-FilePlanPropertyCategory](Remove-FilePlanPropertyCategory.md)
+
+### [Remove-FilePlanPropertyCitation](Remove-FilePlanPropertyCitation.md)
+
+### [Remove-FilePlanPropertyDepartment](Remove-FilePlanPropertyDepartment.md)
+
+### [Remove-FilePlanPropertyReferenceId](Remove-FilePlanPropertyReferenceId.md)
+
+### [Remove-FilePlanPropertySubCategory](Remove-FilePlanPropertySubCategor.md)
+
 ### [Remove-HoldCompliancePolicy](Remove-HoldCompliancePolicy.md)
 
 ### [Remove-HoldComplianceRule](Remove-HoldComplianceRule.md)
@@ -2064,6 +2140,18 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ComplianceTag](Set-ComplianceTag.md)
 
+### [Set-FilePlanPropertyAuthority](Set-FilePlanPropertyAuthorit.md)
+
+### [Set-FilePlanPropertyCategory](Set-FilePlanPropertyCategory.md)
+
+### [Set-FilePlanPropertyCitation](Set-FilePlanPropertyCitation.md)
+
+### [Set-FilePlanPropertyDepartment](Set-FilePlanPropertyDepartment.md)
+
+### [Set-FilePlanPropertyReferenceId](Set-FilePlanPropertyReferenceId.md)
+
+### [Set-FilePlanPropertySubCategory](Set-FilePlanPropertySubCategory.md)
+
 ### [Set-HoldCompliancePolicy](Set-HoldCompliancePolicy.md)
 
 ### [Set-HoldComplianceRule](Set-HoldComplianceRule.md)
@@ -2073,6 +2161,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ManagedFolder](Set-ManagedFolder.md)
 
 ### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
+
+### [Set-RecordReviewNotificationTemplateConfig](Set-RecordReviewNotificationTemplateConfig.md)
 
 ### [Set-RegulatoryComplianceUI](Set-RegulatoryComplianceUI.md)
 
@@ -2119,15 +2209,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
 
-### [Get-OwnerlessGroupPolicy](Get-OwnerlessGroupPolicy.md)
-
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
+
+### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 
-### [Set-OwnerlessGroupPolicy](Set-OwnerlessGroupPolicy.md)
-
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+
+### [Set-VivaInsightsSettings](Set-VivaInsightsSettings.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
@@ -2598,6 +2688,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-DistributionGroupMember](Get-DistributionGroupMember.md)
 
 ### [Get-DynamicDistributionGroup](Get-DynamicDistributionGroup.md)
+
+### [Get-DynamicDistributionGroupMember](Get-DynamicDistributionGroupMember.md)
 
 ### [Get-EligibleDistributionGroupForMigration](Get-EligibleDistributionGroupForMigration.md)
 

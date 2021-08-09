@@ -17,7 +17,7 @@ ROBOTS: NOINDEX
 
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Security & Compliance Center.
+Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -28,7 +28,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Expiration
 ```
 Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
- [-Action <TenantAllowBlockList.ItemAction>]
+ [-Block]
  [-ExpirationDate <DateTime>]
  [-Notes <String>]
  [-OutputJson]
@@ -38,7 +38,7 @@ Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
 ### NoExpiration
 ```
 Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
- [-Action <TenantAllowBlockList.ItemAction>]
+ [-Block]
  [-NoExpiration]
  [-Notes <String>]
  [-OutputJson]
@@ -59,14 +59,11 @@ This example changes the expiration date of the specified entry.
 
 ## PARAMETERS
 
-### -Action
-The Action parameter specifies the action type for the entry. Valid values are:
-
-- Allow
-- Block
+### -Block
+The Block switch specifies that this is a block entry for the values you specified by the ListType and Entries parameters. You don't need to specify a value with this switch.
 
 ```yaml
-Type: TenantAllowBlockList.ItemAction
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -83,7 +80,7 @@ The ExpirationDate parameter filters the results by expiration date in Coordinat
 
 To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, `"2016-05-06 14:30:00z"`.
+- Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 You can't use this parameter with the NoExpiration switch.

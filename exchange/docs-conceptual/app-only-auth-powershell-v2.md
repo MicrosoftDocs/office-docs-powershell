@@ -28,6 +28,9 @@ Because storing user credentials locally is not a safe practice, we're releasing
 
 The following examples show how to use the Exchange Online PowerShell V2 module with app-only authentication:
 
+> [!IMPORTANT]
+> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+
 - Connect using a local certificate:
 
   ```powershell
@@ -51,10 +54,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
 > [!TIP]
->
-> - In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
->
-> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
+> App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
 
 ## How does it work?
 
@@ -96,6 +96,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    - Helpdesk administrator
    - Exchange administrator
    - Global Reader
+
+   > [!NOTE]
+   > The Global administrator and Exchange administrator roles provide the necessary permissions for any Exchange-related tasks, including recipient management and protection features (anti-spam, anti-malware, etc). The Security administrator role doesn't not have the necessary permissions for these same Exchange-related tasks.
 
 ## Appendix
 
@@ -186,11 +189,11 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
+- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
 
   ```powershell
   # Create certificate
-  $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
+  $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\CurrentUser\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
   # Export certificate to .pfx file
   $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@ssw0Rd1234" -AsPlainText -Force)

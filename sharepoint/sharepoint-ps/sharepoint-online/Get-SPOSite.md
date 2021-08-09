@@ -28,7 +28,7 @@ Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Detailed] [-Limit <String>] [<Comm
 
 ```powershell
 Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
- [-Template <String>] [<CommonParameters>]
+ [-Template <String>] [-GroupIdDefined] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -60,7 +60,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
 
 > [!NOTE]
-> If the Limit parameter is provided then the following site collection properties will not be populated and may contain a default value:
+> If the Limit or Filter parameters are provided then the following site collection properties will not be populated and may contain a default value:
 > AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
 
 ## EXAMPLES
@@ -120,6 +120,32 @@ Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
 ```
 
 This example uses server side filtering to return sites matching 18.
+
+
+### -----------------------EXAMPLE 8-----------------------------
+
+```powershell
+Get-SPOSite -Limit ALL | ?{$_.IsTeamsConnected -eq $true}
+```
+
+This example uses client-side filtering to return a list of sites connected to Microsoft Teams.
+
+### -----------------------EXAMPLE 9-----------------------------
+
+```powershell
+Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
+```
+
+This example uses client-side filtering to return a list of sites connected to a Microsoft Teams Private or Shared channel.
+
+
+### -----------------------EXAMPLE 10-----------------------------
+
+```powershell
+Get-SPOSite -Limit ALL -GroupIdDefined $true
+```
+This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
+
 
 ## PARAMETERS
 
@@ -288,6 +314,25 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+```
+
+### -GroupIdDefined
+
+Filters the list of sites returned to sites with a Group ID (ie: Sites connected to an Microsoft 365 Group) when the value is set to $true.  Filters the list of sites to only sites without a Group ID when the value is $false.
+
+The values are **$true**, **$false**, and **not defined**. By default, the value is **not defined**, which means that the filter does not apply.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet2
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters

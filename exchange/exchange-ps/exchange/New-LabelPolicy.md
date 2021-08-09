@@ -45,7 +45,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -108,6 +108,10 @@ Supported settings for built-in labeling:
 - **OutlookDefaultLabel**: Outlook apps that support this setting apply a default label, or no label. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
 - **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+
+Additionally, for Power BI:
+
+- **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
 
 ```yaml
 Type: PswsHashtable

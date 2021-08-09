@@ -57,6 +57,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
+ [-SkipRules]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-SourcePFPrimaryMailboxGuid <Guid>]
@@ -306,7 +307,7 @@ This example creates a migration batch for a cross-forest enterprise move, where
 ```powershell
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -353,7 +354,7 @@ This example creates a migration endpoint for the connection settings to the IMA
 ```powershell
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -363,7 +364,7 @@ This example is the same as Example 3, but the CompleteAfter parameter is also u
 ```powershell
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -878,8 +879,10 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 `#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
+- Root
 - Inbox
 - SentItems
+- Outbox
 - DeletedItems
 - Calendar
 - Contacts
@@ -887,14 +890,9 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - Journal
 - Tasks
 - Notes
+- AllItems
 - JunkEmail
-- CommunicatorHistory
-- Voicemail
-- Fax
-- Conflicts
-- SyncIssues
-- LocalFailures
-- ServerFailures
+- Archive
 
 If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
@@ -944,8 +942,10 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 `#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
+- Root
 - Inbox
 - SentItems
+- Outbox
 - DeletedItems
 - Calendar
 - Contacts
@@ -953,18 +953,14 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - Journal
 - Tasks
 - Notes
+- AllItems
 - JunkEmail
-- CommunicatorHistory
-- Voicemail
-- Fax
-- Conflicts
-- SyncIssues
-- LocalFailures
-- ServerFailures
+- Archive
 
 If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a backslash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Onboarding
@@ -1267,6 +1263,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipRules
+This parameter is available only in the cloud-based service.
+
+The SkipRules switch specifies that you want to skip rule migration during GSuite onboarding. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
