@@ -1,20 +1,20 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-eopprotectionpolicyrule
+external help file: Microsoft.Exchange.TransportMailControl-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/get-configanalyzerpolicyrecommendation
 applicable: Exchange Online, Exchange Online Protection
-title: Get-EOPProtectionPolicyRule
+title: Get-ConfigAnalyzerPolicyRecommendation
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-EOPProtectionPolicyRule
+# Get-ConfigAnalyzerPolicyRecommendation
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-EOPProtectionPolicyRule cmdlet to
+Use the Get-ConfigAnalyzerPolicyRecommendation cmdlet to compare the settings in your existing protection policies to the recommended Standard or Strict levels.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-EOPProtectionPolicyRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-ConfigAnalyzerPolicyRecommendation [[-Identity] <ConfigAnalyzerPolicyRecommendationIdParameter>] -RecommendedPolicyType <RecommendedPolicyType>
+ [-IsAppliedToDisabled]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,13 +43,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: RuleIdParameter
+Type: ConfigAnalyzerPolicyRecommendationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
@@ -56,15 +57,33 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -State
-{{ Fill State Description }}
+### -RecommendedPolicyType
+The RecommendedPolicyType parameter specifies the preset security policy that you want to use as a baseline for comparison. Valid values are:
+
+- Standard
+- Strict
+- Custom
 
 ```yaml
-Type: RuleState
+Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
-Accepted values: Enabled, Disabled
-Applicable: Exchange Online, Exchange Online Protection
+Accepted values: Custom, Standard, Strict
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsAppliedToDisabled
+The IsAppliedToDisabled switch
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

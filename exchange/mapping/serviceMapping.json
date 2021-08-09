@@ -83,6 +83,7 @@
   "Get-AttachmentFilterEntry": "antispam-antimalware",
   "Get-AttachmentFilterListConfig": "antispam-antimalware",
   "Get-BlockedSenderAddress": "antispam-antimalware",
+  "Get-ConfigAnalyzerPolicyRecommendation": "antispam-antimalware",
   "Get-ContentFilterConfig": "antispam-antimalware",
   "Get-ContentFilterPhrase": "antispam-antimalware",
   "Get-DkimSigningConfig": "antispam-antimalware",
