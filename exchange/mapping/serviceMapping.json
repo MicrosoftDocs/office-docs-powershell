@@ -1313,6 +1313,7 @@
   "Get-DistributionGroup": "users-and-groups",
   "Get-DistributionGroupMember": "users-and-groups",
   "Get-DynamicDistributionGroup": "users-and-groups",
+  "Get-DynamicDistributionGroupMember": "users-and-groups",
   "Get-EligibleDistributionGroupForMigration": "users-and-groups",
   "Get-Group": "users-and-groups",
   "Get-LinkedUser": "users-and-groups",
