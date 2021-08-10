@@ -839,7 +839,7 @@ Choose whether to override the external user expiration policy on this site
 
 Possible values:
 
-- None - Respect the organization-level policy for external user expiration
+- None: Respect the organization-level policy for external user expiration.
 - False - Respect the organization-level policy for external user expiration
 - True - Override the organization-level policy for external user expiration (can be more or less restrictive)
 
