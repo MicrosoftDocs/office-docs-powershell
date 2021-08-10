@@ -841,7 +841,7 @@ Possible values:
 
 - None: Respect the organization-level policy for external user expiration.
 - False - Respect the organization-level policy for external user expiration
-- True - Override the organization-level policy for external user expiration (can be more or less restrictive)
+- True: Override the organization-level policy for external user expiration (can be more or less restrictive).
 
 ```yaml
 Type: Boolean
