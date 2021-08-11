@@ -52,7 +52,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
 
 ```yaml
 Type: String
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comments
-{{ Fill Comments Description }}
+The Comments parameter specifies informative comments for the rule, such as what the rule is used for or how it has changed over time. The length of the comment can't exceed 1024 characters.
 
 ```yaml
 Type: String
@@ -151,7 +151,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+The Enabled parameter specifies whether the rule is enabled. Valid values are:
+
+- $true: The rule is enabled. This is the default value.
+- $false: The rule is disabled.
 
 ```yaml
 Type: Boolean
@@ -167,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-{{ Fill ExceptIfRecipientDomainIs Description }}
+The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
@@ -183,7 +186,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-{{ Fill ExceptIfSentTo Description }}
+The ExceptIfSentTo parameter specifies an exception that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -199,7 +211,18 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-{{ Fill ExceptIfSentToMemberOf Description }}
+The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+If you remove the group after you create the rule, no exception is made for messages that are sent to members of the group.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -215,7 +238,15 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+
+- Valid priority values for the existing 8 rules are from 0 through 7.
+- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
+- The default value for a new rule (the 9th rule) is 8.
+
+If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
 
 ```yaml
 Type: Int32
@@ -231,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDomainIs
-{{ Fill RecipientDomainIs Description }}
+The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
@@ -247,7 +278,16 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-{{ Fill SentTo Description }}
+The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -263,7 +303,18 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-{{ Fill SentToMemberOf Description }}
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
 
 ```yaml
 Type: RecipientIdParameter[]

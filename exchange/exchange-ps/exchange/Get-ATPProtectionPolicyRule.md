@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ATPProtectionPolicyRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-ATPProtectionPolicyRule [[-Identity] <RuleIdParameter>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -State
-{{ Fill State Description }}
+The State parameter filters the results by the state of the rule. Valid values are Enabled and Disabled.
 
 ```yaml
 Type: RuleState
