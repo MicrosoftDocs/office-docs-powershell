@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$content = Test-TextExtraction -FileData (Get-Content -Path '.\finalcial data.msg' -Encoding byte -ReadCount 0)
+$content = Test-TextExtraction -FileData (Get-Content -Path '.\financial data.msg' -Encoding byte -ReadCount 0)
 $content.ExtractedResults
 ```
 
@@ -46,8 +46,8 @@ This example returns the text that's extracted from the email "financial data.ms
 
 ### Example 2
 ```powershell
-$content = Test-TextExtraction -FileData (Get-Content -Path '.\finalcial data.msg' -Encoding byte -ReadCount 0)
-Test-DataClassification -TestTextExtractionResults $tr.ExtractedResults
+$content = Test-TextExtraction -FileData (Get-Content -Path '.\financial data.msg' -Encoding byte -ReadCount 0)
+Test-DataClassification -TestTextExtractionResults $content.ExtractedResults
 ```
 
 This example extracts the text from the email "financial data.msg" and returns the sensitive information types, their confidence, and count.
