@@ -1197,7 +1197,7 @@ Accept wildcard characters: False
 ```
 ### -IsWBFluidEnabled
 
-Sets weather Whiteboard is enabled or disabled for OneDrive for Business users. Whiteboard on OneDrive for Business is automatically enabled for applicable Microsoft 365 tenants but can be disabled.
+Sets whether Whiteboard is enabled or disabled for OneDrive for Business users. Whiteboard on OneDrive for Business is automatically enabled for applicable Microsoft 365 tenants but can be disabled.
 
 The valid values are:
 
