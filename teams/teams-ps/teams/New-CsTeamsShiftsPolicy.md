@@ -16,11 +16,11 @@ This cmdlet allows you to create a new TeamsShiftPolicy instance and set it's pr
 ```
 New-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [-EnableShiftPresence <Boolean>]
  [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>]
- [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [<CommonParameters>]
+ [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a TeamsShiftPolicy instance. Use this to also set the policy name, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to create a TeamsShiftPolicy instance. Use this to also set the policy name, schedule owner permissions, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
 
 
 ## EXAMPLES
@@ -34,7 +34,7 @@ Creates a new instance of TeamsShiftsPolicy called OffShiftAccessMessage1Always 
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsShiftsPolicy -Identity OffShiftAccessMessage1Always -EnableShiftPresence $true -ShiftNoticeFrequency always -ShiftNoticeMessageType Message1 -AccessType UnrestrictedAccess_TeamsApp -AccessGracePeriodMinutes 5
+PS C:\> New-CsTeamsShiftsPolicy -Identity OffShiftAccessMessage1Always -EnableShiftPresence $true -ShiftNoticeFrequency always -ShiftNoticeMessageType Message1 -AccessType UnrestrictedAccess_TeamsApp -AccessGracePeriodMinutes 5 -EnableScheduleOwnerPermissions $false
 ```
 
 Creates a new instance of TeamsShiftsPolicy called OffShiftAccessMessage1Always and applies the provided values to its settings.
@@ -155,6 +155,21 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableScheduleOwnerPermissions
+Indicates whether a user can manage a Shifts schedule as a team member.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

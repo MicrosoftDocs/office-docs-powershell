@@ -439,7 +439,12 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutEnabled
-The ActivityBasedAuthenticationTimeoutEnabled parameter specifies whether the timed logoff feature is enabled. The default value is $true.
+The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the inactivity interval for automatic logoff in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This is the default value.
+- $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled.
+
+If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutInterval parameter.
 
 ```yaml
 Type: Boolean
@@ -455,11 +460,15 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutInterval
-The ActivityBasedAuthenticationTimeoutInterval parameter specifies the time span for logoff.
+The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes an automatic logoff in Outlook on the web.
 
 You enter this value as a time span: hh:mm:ss where hh = hours, mm = minutes and ss = seconds.
 
 Valid values for this parameter are from 00:05:00 to 08:00:00 (5 minutes to 8 hours). The default value is 06:00:00 (6 hours).
+
+The value of this parameter is meaningful only if the ActivityBasedAuthenticationTimeoutEnabled or ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter value is $true.
+
+For more information about the activity-based timeout in Outlook on the web, see [Description of the Activity-Based Authentication Timeout for OWA in Office 365](https://support.microsoft.com/topic/0c101e1b-020e-69c1-a0b0-26532d60c0a4).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -475,7 +484,14 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
-The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter specifies whether to keep single sign-on enabled. The default value is $true.
+This parameter is available or functional only in on-premises Exchange.
+
+The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
+
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
+- $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled for single sign-on.
+
+If you aren't using single sign-on, use the ActivityBasedAuthenticationTimeoutEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -2012,20 +2028,19 @@ Accept wildcard characters: False
 ### -IPListBlocked
 This parameter is available only in the cloud-based service.
 
-The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Note that the new settings might take up to 4 hours to fully propagate across the service.
-
-This parameter accepts IPv4 or IPv6 addresses in the following formats:
+The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Valid values are:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
-- IP address range high-low: For example, 192.168.0.1-192.168.0.254.
-- IP address range with subnet mask: For example, 192.168.8.2(255.255.255.0).
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
+- IP address range: For example, 192.168.0.1-192.168.0.254 or 192.168.8.2(255.255.255.0).
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This parameter has a limit of approximately 1200 entries.
+
+Changes to this parameter might take up to 4 hours to fully propagate across the service.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2960,14 +2975,12 @@ Accept wildcard characters: False
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
 
-The SendFromAliasEnabled parameter allows mailbox users to send messages and reply to messages in Outlook on the web using any of the proxy addresses (secondary email addresses) that are configured on the mailbox. Valid values are:
+The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
 
-- $true: Users in Outlook on the web get an option to send messages and reply to messages with a proxy addresses.
-- $false: Users can only send messages and reply to messages using their primary email address. This is the default value.
+- $true: Aliases on messages will no longer be rewritten to their primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases.
+- $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
-For more information about the availability of this feature, see the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437).
-
-**Note**: This feature doesn't work in Outlook for Windows or Mac.
+For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=64123).   
 
 ```yaml
 Type: Boolean
