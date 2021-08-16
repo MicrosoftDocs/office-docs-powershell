@@ -286,6 +286,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentContainsSensitivitylabels
+The ContentContainsSensitivitylabel parameter specifies a condition for the DLP rule that looks for Sensitivity labels in content. This parameter uses the following syntax: `"labels = @( @{name ="label1"; type ="Sensitivity";} ) "`. 
+
+```yaml
+Type: Sensitivity labels
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AnyOfRecipientAddressMatchesPatterns
 The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
