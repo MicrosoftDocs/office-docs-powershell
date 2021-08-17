@@ -141,7 +141,17 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Specifies the script block of the server-side filter to apply. See https://technet.microsoft.com/en-us/library/fp161380.aspx
+Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form { PropertyName <operator> 'filterValue'}. Valid operators are as follows: -eq, -ne, -like, -notlike.
+Unlike with regular PowerShell, you don't need to enclouse filter value in asterisk characters when using -like and -notlike operators. In addition, you may want to put filterValue in the single quotes instead of double quotes.
+ 
+ Currently, you can filter by the following properties: 
+ - Owner
+ - Template (can be used to filter if it is the only property present in the filter)
+ - LockState
+ - Url. 
+ 
+ Using the -or operator to include an additional filter is not supported.
+
 
 ```yaml
 Type: String
