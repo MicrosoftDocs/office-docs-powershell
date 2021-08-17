@@ -51,7 +51,7 @@ Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
 
 ### EmailAddress
 ```
-Get-MigrationUser [[-EmailAddress] <SmtpAddress>]
+Get-MigrationUser [-EmailAddress] <SmtpAddress>
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
@@ -160,15 +160,15 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-The EmailAddress parameter specifies the particular user that you want to retrieve information about. The EmailAddress parameter is represented as an email address. 
+The EmailAddress parameter specifies the particular user that you want to retrieve information about. The EmailAddress parameter is represented as an email address. This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: EmailAddress
 Parameter Sets: EmailAddress
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
