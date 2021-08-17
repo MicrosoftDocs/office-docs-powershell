@@ -51,7 +51,7 @@ Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
 
 ### EmailAddress
 ```
-Get-MigrationUser [-EmailAddress] <SmtpAddress>
+Get-MigrationUser -EmailAddress <SmtpAddress>
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
