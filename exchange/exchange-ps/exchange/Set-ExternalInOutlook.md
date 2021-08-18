@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowList
-The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
+The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. Valid values are an individual domain (contoso.com), a domain and all subdomains (*.contoso.com) or email addresses (admin@contoso.com).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
