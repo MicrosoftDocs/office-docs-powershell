@@ -16,7 +16,7 @@ This cmdlet is available only in the Exchange Online PowerShell V2 module. For m
 
 **Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the EXO V2 module.
 
-Use the Set-VivaInsightsSettings cmdlet to control user access to features in Viva Insights.
+Use the Set-VivaInsightsSettings cmdlet to control user access to features in Viva Insights. Only users with provisioned Exchange Online mailboxes can access features within the Viva Insights app in Teams.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -49,7 +49,7 @@ This example disables access to all the Headspace features in Microsoft Viva Ins
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user that you want to modify. You identify the user by their account name (for example, roy@contoso.onmicrosoft.com).
+The Identity parameter specifies the user that you want to modify. You identify the user by their User Principal Name (UPN) (for example, roy@contoso.onmicrosoft.com).
 
 ```yaml
 Type: String
