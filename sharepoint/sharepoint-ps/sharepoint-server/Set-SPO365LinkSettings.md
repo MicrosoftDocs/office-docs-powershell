@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnedriveDefaultToCloudEnabled
-Sets a flag that indicates whether Local Onedrive is redirected to SPO OneDrive.
+Sets a flag that indicates whether Local OneDrive is redirected to SPO OneDrive.
 
 ```yaml
 Type: Boolean
