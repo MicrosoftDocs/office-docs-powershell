@@ -324,12 +324,12 @@ Accept wildcard characters: False
 ### -AutoAdmittedUsers
 Determines what types of participants will automatically be added to meetings organized by this user.
 Possible values are:
-- EveryoneInCompany, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately.
-- EveryoneInSameAndFederatedCompany, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
-- Everyone, if you'd like to admit anonymous users by default. 
-- OrganizerOnly, if you would like that only meeting organizers can bypass the lobby.
-- EveryoneInCompanyExcludingGuests, if you would like meetings to place every external and guest users in the lobby but allow all other users in the company to join the meeting immediately.
-- InvitedUsers, if you would like that only meeting organizers and invited users can bypass the lobby.
+- **EveryoneInCompany**, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately.
+- **EveryoneInSameAndFederatedCompany**, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
+- **Everyone**, if you'd like to admit anonymous users by default. 
+- **OrganizerOnly**, if you would like that only meeting organizers can bypass the lobby.
+- **EveryoneInCompanyExcludingGuests**, if you would like meetings to place every external and guest users in the lobby but allow all other users in the company to join the meeting immediately.
+- **InvitedUsers**, if you would like that only meeting organizers and invited users can bypass the lobby.
 
 This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
 
