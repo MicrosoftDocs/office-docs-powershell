@@ -76,7 +76,7 @@ This example skips initial 5 auto attendants and gets the next 10 AAs configured
 
 ### -Identity
 The identity for the AA to be retrieved. If this parameter is not specified, then all created AAs in the organization are returned.
-If you specify this parameter, you can not specify the other parameters.
+If you specify this parameter, you can't specify the other parameters.
 
 ```yaml
 Type: System.String
