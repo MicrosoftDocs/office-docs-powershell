@@ -83,6 +83,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
+ [-FindTimeLockPollForAttendeesEnabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
@@ -1892,6 +1893,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FindTimeLockPollForAttendeesEnabled
+This parameter is available only in the cloud-based service.
+
+The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is managed by the organization. Valid values are:
+
+- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
+- $false: By default, **Lock poll for attendees** is off (initial default) or on (the user saved settings from last poll), but the meeting organizer is allowed to turn the setting off or on to allow or prevent attendees from suggesting new times or editing attendees.
+
+For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FindTimeOnlineMeetingOptionDisabled
 This parameter is available only in the cloud-based service.
 
@@ -2949,7 +2973,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendFromAliasEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service. 
+
+Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience. 
+An official announcement will be released via the EHLO blog and Message Center in due time.
 
 The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
 
