@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+Use the Get-DynamicDistributionGroupMember cmdlet to view the calculated membership list that's stored on dynamic distribution group objects. The results from this cmdlet are updated every 24 hours.
+
 Use the Get-DistributionGroupMember cmdlet to view the members of distribution groups and mail-enabled security groups.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).

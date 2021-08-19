@@ -858,7 +858,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionTemplateId
-The EncryptionTemplateId parameter links an existing Azure RMS template to a new label.
+The EncryptionTemplateId parameter lets you convert an existing protection template from Azure Information Protection to a new sensitivity label. Specify the template by its ID that you can identify by running the [Get-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/get-aipservicetemplate) cmdlet from the [AIPService PowerShell module](https://docs.microsoft.com/powershell/module/aipservice).
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
