@@ -2973,7 +2973,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendFromAliasEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service. 
+
+Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience. 
+An official announcement will be released via the EHLO blog and Message Center in due time.
 
 The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
 
