@@ -48,7 +48,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
 ```
 
 ## DESCRIPTION
-Creates a new team with user specified settings, and returns a Group object with a GroupID property.
+Creates a new team with user specified settings, and returns a Group object with a GroupID property. Note: Starting from version 2.5.0, this cmdlet has been upgraded to use asynchronous operations due to which the return type of the cmdlet is a resource for the operation. This resource can be polled for the getting status using the Get-Operation cmdlet.
 
 ## EXAMPLES
 
