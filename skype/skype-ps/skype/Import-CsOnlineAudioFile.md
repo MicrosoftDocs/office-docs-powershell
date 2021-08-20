@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ### -Content
 The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
 
-You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
+You are responsible for securing any necessary rights to use the audio file with your Microsoft Teams service.
 
 ```yaml
 Type: System.Byte[]
@@ -123,7 +123,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ### Microsoft.Rtc.Management.Hosted.Online.Models.AudioFile
 
 ## NOTES
-You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
+You are responsible for securing any necessary rights to use the audio file with your Microsoft Teams service.
 
 ## RELATED LINKS
 [Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
