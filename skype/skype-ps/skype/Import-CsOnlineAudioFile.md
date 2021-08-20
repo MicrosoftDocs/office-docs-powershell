@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Import-CsOnlineAudioFile
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
-ms.author: jenstr
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -18,11 +18,11 @@ Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
 ## SYNTAX
 
 ```powershell
-Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup | TenantGlobal> -FileName <string> -Content <byte[]>
+Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup> -FileName <string> -Content <byte[]>
 ```
 
 ## DESCRIPTION
-The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA), Call Queue (CQ) service or Music on Hold for Microsoft Teams.
+The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA) or Call Queue (CQ) service.
 
 ## EXAMPLES
 
@@ -42,25 +42,16 @@ $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.
 
 This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue] (https://docs.microsoft.com/powershell/module/skype/set-cscallqueue) to provide the audio file id. 
 
-### -------------------------- Example 3 --------------------------
-```powershell
-$content = Get-Content "C:\Media\MOH.wav" -Encoding byte -ReadCount 0
-$audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
-```
-
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy] (https://docs.microsoft.com/powershell/module/skype/new-csteamscallholdpolicy) to provide the audio file id. 
-
 
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an organizational auto attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a hunt group (call queue), then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal"
+The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an organizational auto attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a hunt group (call queue), then it needs to be set to "HuntGroup".
 
 Supported values:
 
 - OrgAutoAttendant
 - HuntGroup
-- TenantGlobal
 
 ```yaml
 Type: System.string
@@ -94,8 +85,6 @@ Accept wildcard characters: False
 ### -Content
 The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
 
-You are responsible for securing any necessary rights to use the audio file with your Microsoft Teams service.
-
 ```yaml
 Type: System.Byte[]
 Parameter Sets: (All)
@@ -121,6 +110,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ### Microsoft.Rtc.Management.Hosted.Online.Models.AudioFile
 
 ## NOTES
-You are responsible for securing any necessary rights to use the audio file with your Microsoft Teams service.
 
 ## RELATED LINKS
