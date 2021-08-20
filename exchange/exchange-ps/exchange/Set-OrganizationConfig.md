@@ -2522,6 +2522,7 @@ The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetin
 
 - $true: All meetings are online by default.
 - $false: All meetings are not online by default. This is the default value.
+- $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
 You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
 
