@@ -126,5 +126,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 You are responsible for securing any necessary rights to use the audio file with your Microsoft Teams service.
 
 ## RELATED LINKS
-[Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
-[Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
