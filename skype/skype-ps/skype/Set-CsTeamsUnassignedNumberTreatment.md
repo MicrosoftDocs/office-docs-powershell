@@ -1,0 +1,151 @@
+---
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsunassignednumbertreatment
+applicable: Microsoft Teams
+author: jenstrier
+ms.author: jenstr
+ms.reviewer: 
+manager:
+schema: 2.0.0
+---
+
+# Set-CsTeamsUnassignedNumberTreatment
+
+## SYNOPSIS
+Changes a treatment for how calls to an unassigned number range should be routed. The call can be routed to a user, an application or 
+to an announcement service where a custom message will be played to the caller
+
+> [!NOTE]
+> **Preview** The use of this cmdlet is in Preview.
+  
+## SYNTAX
+
+```powershell
+Set-CsTeamsUnassignedNumberTreatment -Identity <string>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Annonucement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+This cmdlet changes a treatment for how calls to an unassigned number range should be routed.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+$RAObjectId = (Get-CsOnlineApplicationInstance -Identity aa2@contoso.com).ObjectId
+Set-CsTeamsUnassignedNumberTreatment -Identity MainAA -Target $RAObjectId
+```
+This example changes the treatment MainAA to route the calls to the resource account aa2@contoso.com.
+
+### Example 2
+```powershell
+$UserObjectId = (Get-CsOnlineUser -Identity user2@contoso.com).Identity
+New-CsTeamsUnassignedNumberTreatment -Identity MainAA -TargetType User -Target $UserObjectId
+```
+This example changes the treatment MainAA to route the calls to the user user2@contoso.com.
+
+
+## PARAMETERS
+
+### -Description
+Free format description of this treatment.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Id of the specific treatment
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pattern
+A regular expression that the called number must match in order for the treatment to take effect. It is best pratice to start the regular expression with the hat character and end it with the dollar character.
+You can use various regular expression test sites on the Internet to validate the expression.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Target
+The identity of the destination the call should be routed to. Depending on the TargetType it should either be the ObjectId of the user or application instance/resource account or the AudioFileId of the
+uploaded audio file.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetType
+The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TreatmentPriority
+The priority of the treatment. Used to distinguish identical patterns. The lower the priority the higher preference. The priority needs to be unique.
+
+```yaml
+Type: System.Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
+The cmdlet is available in Teams PS module 2.5.0 or later.
+
+## RELATED LINKS
+- [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+- [Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+- [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+- [New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+
