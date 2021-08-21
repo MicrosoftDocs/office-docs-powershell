@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-The Ids parameter specifies the entry that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Entry property value (a URL or a file hash).
+The Ids parameter specifies the entries that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Identity property value (a URL or a file hash).
 
 An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
 
