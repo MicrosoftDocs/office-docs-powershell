@@ -63,10 +63,10 @@ This example removes the URL allow entry for the specified third-party phishing 
 ## PARAMETERS
 
 ### -Entries
-The Entries parameter specifies the URL or files that you want to remove from the Tenant Allow/Block List based on the value of the ListType parameter:
+The Entries parameter specifies the entries that you want to remove based on the ListType parameter value. Valid values are:
 
-- URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list#url-syntax-for-the-tenant-allowedblocked-list).
-- Files: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
+- Url: The exact URL entry value.
+- File: The exact SHA256 file hash value.
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -92,7 +92,7 @@ The Ids parameter specifies the entry that you want to modify. To find this valu
 
 An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the Entries parameter.
 

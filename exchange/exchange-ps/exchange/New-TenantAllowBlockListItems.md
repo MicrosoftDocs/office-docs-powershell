@@ -85,7 +85,9 @@ The Entries parameter specifies the URL or files that you want to add to the Ten
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-You can't mix URL and file values or allow and block actions in the same command. You can't modify existing URL or file values after you create the entry (there's no Entries parameter on the Set-TenantAllowBlockListItems cmdlet).
+You can't mix URL and file values or allow and block actions in the same command.
+
+You can't modify the URL or file values after you create the entry.
 
 ```yaml
 Type: String[]
