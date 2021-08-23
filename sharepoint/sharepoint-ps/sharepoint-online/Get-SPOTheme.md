@@ -76,7 +76,7 @@ Get-SPOTheme
 
 This is an example of the output from this command.
 
-![Get-SPOTheme example](../../images/Get-SPOTheme-example.png)-->
+![Get-SPOTheme example.](../../images/Get-SPOTheme-example.png)-->
 
 ## INPUTS
 

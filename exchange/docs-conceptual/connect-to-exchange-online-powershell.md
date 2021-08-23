@@ -104,13 +104,13 @@ For other sign in methods that are available in PowerShell 7, see the [PowerShel
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
-   ![Enter your password in the Sign in to your account window](media/connect-exo-password-prompt.png)
+   ![Enter your password in the Sign in to your account window.](media/connect-exo-password-prompt.png)
 
 4. **MFA only**: A verification code is generated and delivered based on the response option that's configured for your account (for example, a text message or the Microsoft Authenticator app on your device).
 
    In the verification window that opens, enter the verification code, and then click **Verify**.
 
-   ![Enter your verification code in the Sign in to your account window](media/connect-exo-mfa-verify-prompt.png)
+   ![Enter your verification code in the Sign in to your account window.](media/connect-exo-mfa-verify-prompt.png)
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 
