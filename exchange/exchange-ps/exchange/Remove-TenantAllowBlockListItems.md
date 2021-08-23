@@ -55,7 +55,7 @@ This example removes the specified URL entry from the Tenant Allow/Block List.
 
 ### Example 2
 ```powershell
-Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries phishing.fabrikam.com
+Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com
 ```
 
 This example removes the URL allow entry for the specified third-party phishing simulation URL. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
