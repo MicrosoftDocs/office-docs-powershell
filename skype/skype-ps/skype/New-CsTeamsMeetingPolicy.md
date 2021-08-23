@@ -32,7 +32,8 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <String] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] [-MeetingChatEnabledType <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>] [-AllowScreenContentDigitization <Boolean>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
-[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>]
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-LiveStreamingMode <Boolean>] [-AllowCarbonSummary <Boolean>] [-AllowMeetingCoach <Boolean>]
+[-MeetingInviteLanguages <Object>] [-MeetingRecordingExpirationDays <Int32>] [-RoomPeopleNameUserOverride <Object>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -870,6 +871,98 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCarbonSummary
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingCoach
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveStreamingMode
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingInviteLanguages
+The language or languages supported are: ar-SA,az-Latn-AZ,bg-BG,ca-ES,cs-CZ,cy-GB,da-DK,de-DE,e
+l-GR,en-GB,es-ES,es-MX,et-EE,eu-ES,fi-FI,fil-PH,fr-CA,fr-FR,gl-ES,he-IL,hi-IN,hr-HR,hu-HU,id-ID,is-IS,it-IT,ja-JP,ka-GE
+,kk-KZ,ko-KR,lt-LT,lv-LV,mk-MK,ms-MY,nb-NO,nl-NL,nn-NO,pl-PL,pt-BR,pt-PT,ro-RO,ru-RU,sk-SK,sl-SL,sq-AL,sr-Latn-RS,sv-SE
+,th-TH,tr-TR,uk-UA,vi-VN,zh-CN,zh-TW.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingRecordingExpirationDays
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomPeopleNameUserOverride
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
