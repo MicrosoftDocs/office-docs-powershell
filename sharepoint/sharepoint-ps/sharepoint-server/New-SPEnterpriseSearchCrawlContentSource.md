@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -SharePointCrawlBehavior
 
-Specifies crawl behavior for a sharepoint type content source.
+Specifies crawl behavior for a SharePoint type content source.
 The behavior can be either:
 
 CrawlSites to crawl only particular site collections.
