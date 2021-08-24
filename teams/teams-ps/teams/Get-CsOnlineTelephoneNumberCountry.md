@@ -50,8 +50,6 @@ This example returns the list of supported countries or regions for the cmdlet s
 
 ## PARAMETERS
 
-This cmdlet requires no additional parameters.
-
 ## INPUTS
 
 ## OUTPUTS
