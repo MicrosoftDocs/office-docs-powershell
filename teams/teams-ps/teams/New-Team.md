@@ -51,7 +51,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
 Creates a new team with user specified settings, and returns a Group object with a GroupID property. 
 
 > [!WARNING]
->From version 2.5.0, the return type of this cmdlet has been modified to a resource location for the operation. This resource can be polled for getting the status of the operation using the Get-Operation cmdlet.
+>From version 2.5.0, the return type of this cmdlet has been modified to a resource location for the operation. This resource can be polled to get the status of the operation using the Get-Operation cmdlet. See Example 4 for reference.
 
 ## EXAMPLES
 
@@ -81,6 +81,16 @@ New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
 ```
 
 This example creates a team, adds three members to it, and creates three channels within it.
+
+### Example 4
+```
+$output = New-Team -Displayname 'TestTeam'
+$groupId = $output.TargetResourceLocation.Split("'")[1]
+$operationId = $output.TargetResourceLocation.Split("'")[3]
+Get-Operation -GroupId $groupId -OperationId $operationId
+```
+
+Note: This is applicable for versions 2.5.0 and above. This example creates a team and gets the status of the team creation operation.
 
 ## PARAMETERS
 
