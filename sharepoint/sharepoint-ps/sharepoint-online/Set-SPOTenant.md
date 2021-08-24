@@ -1550,7 +1550,7 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: AllowFullAccess
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

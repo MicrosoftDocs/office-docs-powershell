@@ -202,14 +202,14 @@ When creating your own custom OPath filters, consider the following items:
 
   |Search value|OPath filter <br> enclosed in <br> double quotation marks|OPath filter <br> enclosed in <br> single quotation marks|OPath filter enclosed in <br> braces|
   |---|:---:|:---:|:---:|
-  |`'Text'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`"Text"`|||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`'$Variable'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
-  |`500`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`'500'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'Text'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`"Text"`|||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'$Variable'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
+  |`500`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'500'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |`"500"`|||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`$true`||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`` `$true``|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`$true`||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`` `$true``|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |
 
 - Include the hyphen before all logical or comparison operators. The most common operators include:
