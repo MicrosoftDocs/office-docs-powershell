@@ -27,17 +27,17 @@ Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number s
 
 Telephone numbers can be created with 3 ways:
 
-### Civic Address Search
+**Civic Address Search**
 A telephone number search order can be created base on a given civic address ID. The service will look up the address and fulfill the search order using available telephone numbers local to the given address.
 
 For civic address based search, the parameter ``CivicAddressId`` is required.
 
-### Number Prefix Search
+**Number Prefix Search**
 A telephone number search order can be created base on a given number prefix. The number prefix search allow the tenant to acquire telephone numbers with a fixed number prefix.
 
 For number prefix based search, the parameter ``NumberPrefix`` is required.
 
-### Area Code Selection Search
+**Area Code Selection Search**
 A telephone number search order can be created base on a give area code. Certain service numbers are only offered with a dedicated set of area codes.  With area code selection search, the tenant can acquire the desired telephone numbers by area code.
 
 For area code selection based search, the parameter ``AreaCode`` is required.

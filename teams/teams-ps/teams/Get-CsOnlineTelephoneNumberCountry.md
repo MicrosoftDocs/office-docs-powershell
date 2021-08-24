@@ -54,8 +54,6 @@ This cmdlet requires no additional parameters.
 
 ## INPUTS
 
-This cmdlet requires no additional inputs.
-
 ## OUTPUTS
 
 ## RELATED LINKS
