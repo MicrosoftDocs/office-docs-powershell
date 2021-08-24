@@ -269,8 +269,6 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-This cmdlet returns a telephone number search order ID.
-
 ## RELATED LINKS
 
 [Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)

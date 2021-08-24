@@ -83,8 +83,6 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-This cmdlet does not have a response object.
-
 ## RELATED LINKS
 
 [Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)

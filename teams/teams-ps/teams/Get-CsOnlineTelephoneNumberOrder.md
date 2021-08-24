@@ -108,8 +108,6 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-This cmdlet returns an order report of a specific telephone number search order.
-
 ## RELATED LINKS
 
 [Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)

@@ -96,8 +96,6 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-This cmdlet returns a list of supported telephone number offerings in a given country.
-
 ## RELATED LINKS
 
 [Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)

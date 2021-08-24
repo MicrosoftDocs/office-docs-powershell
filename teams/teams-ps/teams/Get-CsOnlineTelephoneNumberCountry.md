@@ -58,8 +58,6 @@ This cmdlet requires no additional inputs.
 
 ## OUTPUTS
 
-This cmdlet returns a list of supported countries or regions.
-
 ## RELATED LINKS
 [Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
 [Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
