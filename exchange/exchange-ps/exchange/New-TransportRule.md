@@ -3946,7 +3946,10 @@ Accept wildcard characters: False
 ### -RecipientAddressType
 This parameter is available only in the cloud-based service.
 
-{{ Fill RecipientAddressType Description }}
+The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
+
+- Original: The rule checks only the recipient's primary SMTP email address.
+- Resolved: The rule checks the recipient's primary SMTP email address and all proxy addresses. This is the default value
 
 ```yaml
 Type: RecipientAddressType
