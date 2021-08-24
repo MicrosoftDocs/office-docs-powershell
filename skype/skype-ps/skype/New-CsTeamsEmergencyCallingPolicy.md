@@ -31,7 +31,7 @@ New-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <S
 
 ### Example 1
 ```powershell
-PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECRP -Description "Test ECRP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "4253214567" -NotificationMode NotificationOnly -ExternalLocationLookupMode $true
+PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECRP -Description "Test ECRP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "4253214567" -NotificationMode NotificationOnly -ExternalLocationLookupMode $Enable
 ```
 
  This example creates a Teams Emergency Calling policy that has a identity of testECRP, where a notification group and number is being defined and also the type of notification.
