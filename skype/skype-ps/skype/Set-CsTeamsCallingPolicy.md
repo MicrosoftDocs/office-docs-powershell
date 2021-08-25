@@ -412,7 +412,8 @@ Determines if Spam filtering is enabled.
 Possible values:
 - Enabled
 - Disabled
-- EnabledWithoutIVR
+- EnabledWithoutIVR (Choosing this value will disable the default spam checking which involves the Captcha IVR Bot into the flow. The call will not be redirected to the bot for checking against fraudulent calls but will be let go to the original target if the spam score is not high.)
+
 
 ```yaml
 Type: String
