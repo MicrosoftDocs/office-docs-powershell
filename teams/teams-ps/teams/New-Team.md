@@ -51,7 +51,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
 Creates a new team with user specified settings, and returns a Group object with a GroupID property. 
 
 > [!WARNING]
->From version 2.5.0, the return type of this cmdlet has been modified to a resource location for the operation. This resource can be polled to get the status of the operation using the **Get-Operation** cmdlet. For reference, see Example 4 .
+>From version 2.5.0, the return type of this cmdlet has been modified to a resource location for the operation. This resource can be polled to get the status of the operation using the Get-Operation cmdlet. For reference, see Example 4 .
 
 ## EXAMPLES
 
