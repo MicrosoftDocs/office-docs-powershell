@@ -6,8 +6,8 @@ title: New-CsOnlineTelephoneNumberOrder
 schema: 2.0.0
 manager: mreddy
 author: TristanChen-msft
-ms.author: TristanChen-msft
-ms.reviewer: JulienPerbalCastro
+ms.author: jiaych
+ms.reviewer: julienp
 ---
 
 # New-CsOnlineTelephoneNumberOrder
