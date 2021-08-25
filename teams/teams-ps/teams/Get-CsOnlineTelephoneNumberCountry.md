@@ -5,9 +5,9 @@ Module Name: MicrosoftTeams
 title: Get-CsOnlineTelephoneNumberCountry
 schema: 2.0.0
 manager: mreddy
-author: jiaych
-ms.author: jiaych
-ms.reviewer:
+author: TristanChen-msft
+ms.author: TristanChen-msft
+ms.reviewer: JulienPerbalCastro
 ---
 
 # Get-CsOnlineTelephoneNumberCountry
@@ -19,6 +19,16 @@ Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported
 
 ```
 PS C:\> Get-CsOnlineTelephoneNumberCountry [<CommonParameters>]
+```
+## DESCRIPTION
+
+Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+Get-CsOnlineTelephoneNumberCountry
 ```
 
 ```output
@@ -36,16 +46,6 @@ Venezuela              VE
 Vietnam                VN
 ```
 
-## DESCRIPTION
-
-Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
-
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-Get-CsOnlineTelephoneNumberCountry
-```
 This example returns the list of supported countries or regions for the cmdlet search and acquire of new telephone numbers.
 
 ## PARAMETERS

@@ -5,9 +5,9 @@ Module Name: MicrosoftTeams
 title: Clear-CsOnlineTelephoneNumberOrder
 schema: 2.0.0
 manager: mreddy
-author: jiaych
-ms.author: jiaych
-ms.reviewer:
+author: TristanChen-msft
+ms.author: TristanChen-msft
+ms.reviewer: JulienPerbalCastro
 ---
 
 # Clear-CsOnlineTelephoneNumberOrder
