@@ -944,6 +944,9 @@ Accept wildcard characters: False
 
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
 
+> [!NOTE]
+> You may opt to set Meeting Recordings to never expire by entering the value -1
+
 
 ```yaml
 Type: Int32
