@@ -198,8 +198,7 @@ Accept wildcard characters: False
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
 - AdvancedDelivery
-- Submission
-- Tenant
+- Tenant: This is the default value.
 
 ```yaml
 Type: ListSubType
@@ -249,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubmissionID
-{{ Fill SubmissionID Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

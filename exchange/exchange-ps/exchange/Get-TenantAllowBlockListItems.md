@@ -186,8 +186,7 @@ Accept wildcard characters: False
 The ListSubType parameter filters the results by subtype. Valid values are:
 
 - AdvancedDelivery
-- Submission
-- Tenant
+- Tenant: This is the default value.
 
 ```yaml
 Type: ListSubType[]
