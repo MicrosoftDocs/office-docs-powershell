@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+This cmdlet will be deprecated. Use the **Get-MailTrafficATPReport** cmdlet instead.
+
 Use the Get-AdvancedThreatProtectionTrafficReport cmdlet to view the results of Safe Attachments and Safe Links actions in your cloud-based organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
@@ -177,7 +179,12 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- AdvancedProtectionMalware
+- AtpGoodMail
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify Microsoft Defender for Office 365 (formerly known as Advanced Threat Protection or ATP) event types for Defender for Office 365 reports.
 
 You can specify multiple values separated by commas.
 

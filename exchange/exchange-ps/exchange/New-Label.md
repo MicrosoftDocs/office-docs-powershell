@@ -82,7 +82,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -858,7 +858,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionTemplateId
-The EncryptionTemplateId parameter links an existing Azure RMS template to a new label.
+The EncryptionTemplateId parameter lets you convert an existing protection template from Azure Information Protection to a new sensitivity label. Specify the template by its ID that you can identify by running the [Get-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/get-aipservicetemplate) cmdlet from the [AIPService PowerShell module](https://docs.microsoft.com/powershell/module/aipservice).
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
@@ -1140,7 +1140,19 @@ Accept wildcard characters: False
 ```
 
 ### -SiteExternalSharingControlType
-{{ Fill SiteExternalSharingControlType Description }}
+The SiteExternalSharingControlType parameter specifies the external user sharing setting for the label. Valid values are:
+
+- ExternalUserAndGuestSharing
+- ExternalUserSharingOnly
+- ExistingExternalUserSharingOnly
+- Disabled
+
+These correspond to the following settings through the admin center:
+
+- Anyone
+- New and Existing Guests
+- Existing Guests
+- Only people in your organization
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType

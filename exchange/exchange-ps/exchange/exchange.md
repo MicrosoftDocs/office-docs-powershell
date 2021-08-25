@@ -212,11 +212,19 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MalwareFilterRule](Get-MalwareFilterRule.md)
 
+### [Get-PhishSimOverridePolicy](Get-PhishSimOverridePolicy.md)
+
+### [Get-PhishSimOverrideRule](Get-PhishSimOverrideRule.md)
+
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
+
+### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
+
+### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
@@ -239,6 +247,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
+
+### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
+
+### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
+
+### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
@@ -271,6 +287,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
+
+### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
+
+### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
+
+### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
 
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
@@ -312,7 +336,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
+### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
+
+### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
+
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
+
+### [Set-SecOpsOverrideRule](Set-SecOpsOverrideRule.md)
 
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 
@@ -2632,6 +2664,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-DistributionGroupMember](Get-DistributionGroupMember.md)
 
 ### [Get-DynamicDistributionGroup](Get-DynamicDistributionGroup.md)
+
+### [Get-DynamicDistributionGroupMember](Get-DynamicDistributionGroupMember.md)
 
 ### [Get-EligibleDistributionGroupForMigration](Get-EligibleDistributionGroupForMigration.md)
 

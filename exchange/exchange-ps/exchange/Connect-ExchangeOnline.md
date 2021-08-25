@@ -513,7 +513,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in app-only authentication.
+The Organization parameter specifies the organization that's used in app-only authentication. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
 ```yaml
 Type: String

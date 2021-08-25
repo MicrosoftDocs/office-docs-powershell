@@ -93,7 +93,8 @@ The Member parameter specifies who to remove from the role group. You can specif
 
 - Mailbox users
 - Mail users
-- Security groups
+- Mail-enabled security groups (don't use in Security & Compliance Center PowerShell)
+- Security groups (on-premises Exchange only)
 
 You can use any value that uniquely identifies the user or group. For example:
 
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter doesn't work in the Security & Compliance Center.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

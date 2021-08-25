@@ -61,7 +61,7 @@ Accept wildcard characters: False
 
 ### -Limit
 
-Specifies the maximum number of site collections to return. To retrieve all of the site collections, use Limit ALL. The default value is 200.
+Specifies the maximum number of groups to return. The default value is 200.
 
 ```yaml
 Type: Int32

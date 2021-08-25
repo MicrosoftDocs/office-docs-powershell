@@ -87,7 +87,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MembershipType (available in private preview)
+### -MembershipType
 Channel membership type, Standard or Private.
 
 ```yaml
@@ -102,7 +102,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Owner (available in private preview)
+### -Owner
 UPN of owner that can be specified while creating a private channel.
 
 ```yaml

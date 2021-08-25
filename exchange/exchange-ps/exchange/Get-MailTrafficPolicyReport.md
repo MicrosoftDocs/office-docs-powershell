@@ -178,7 +178,17 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- DLPActionHits
+- DLPPolicyFalsePositive
+- DLPPolicyHits
+- DLPPolicyOverride
+- DLPRuleHits
+- TransportRuleActionHits
+- TransportRuleHits
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify policy event types for policy reports.
 
 You can specify multiple values separated by commas.
 
