@@ -69,6 +69,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ODBMembersCanShare <SharingState>]
  [-OneDriveForGuestsEnabled <Boolean>]
  [-OneDriveStorageQuota <Int64>]
+ [-IsWBFluidEnabled <Boolean>]
  [-OrphanedPersonalSitesRetentionPeriod <Int32>]
  [-OwnerAnonymousNotification <Boolean>]
  [-PermissiveBrowserFileHandlingOverride <Boolean>]
@@ -1196,6 +1197,26 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -IsWBFluidEnabled
+
+Sets whether Whiteboard is enabled or disabled for OneDrive for Business users. Whiteboard on OneDrive for Business is automatically enabled for applicable Microsoft 365 tenants but can be disabled.
+
+The valid values are:
+
+- $true - Administrator enabled Whiteboard for user with OneDrive for Business Users.
+- $false - Administrator disable Whiteboard for user with OneDrive for Business Users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OrphanedPersonalSitesRetentionPeriod
 
@@ -1550,7 +1571,7 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: AllowFullAccess
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

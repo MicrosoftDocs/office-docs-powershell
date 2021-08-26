@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceTagStorage cmdlet to confirm that you've created the label policy by using the Enable-ComplianceTagStorage cmdlet. Labels apply retention settings to content.
+Use the Get-ComplianceTagStorage cmdlet to confirm that you've created the retention label policy by using the Enable-ComplianceTagStorage cmdlet. Retention labels apply retention settings to content.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
