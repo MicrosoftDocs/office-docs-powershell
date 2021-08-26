@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
- [-AddOnlineMeetingToAllEvents <Boolean>]
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
@@ -121,24 +120,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -AddOnlineMeetingToAllEvents
-This parameter is available only in the cloud-based service.
-
-{{ Fill AddOnlineMeetingToAllEvents Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
