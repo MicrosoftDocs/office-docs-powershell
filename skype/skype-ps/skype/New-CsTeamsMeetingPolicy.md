@@ -890,7 +890,6 @@ Specifies the number of days before meeting recordings will expire and move to t
 > [!NOTE]
 > You may opt to set Meeting Recordings to never expire by entering the value -1.
 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
