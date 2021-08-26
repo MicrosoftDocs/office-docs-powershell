@@ -32,7 +32,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <String] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] [-MeetingChatEnabledType <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>] [-AllowScreenContentDigitization <Boolean>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
-[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>]
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-MeetingRecordingExpirationDays <Int32>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -874,6 +874,25 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingRecordingExpirationDays
+Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
+
+> [!NOTE]
+> You may opt to set Meeting Recordings to never expire by entering the value -1.
+
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
