@@ -90,8 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-The identity of the destination the call should be routed to. Depending on the TargetType it should either be the ObjectId of the user or application instance/resource account or the AudioFileId of the
-uploaded audio file.
+The identity of the destination the call should be routed to. Depending on the TargetType it should either be the ObjectId of the user or application instance/resource account or the AudioFileId of the uploaded audio file.
 
 ```yaml
 Type: System.Guid
@@ -105,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetType
-The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement.
+The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement. For Annoncement, the audio file will be repeated until the caller hangs up.
 
 ```yaml
 Type: System.String
