@@ -148,15 +148,15 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 
    When you're ready, click the green **Propose file change** button.
 
-   ![Propose file change section](../images/propose-file-change.png)
+   ![Propose file change section.](../images/propose-file-change.png)
 
 5. On the **Comparing changes** page that appears, click the green **Create pull request** button.
 
-   ![Comparing changes page](../images/comparing-changes-page.png)
+   ![Comparing changes page.](../images/comparing-changes-page.png)
 
 6. On the **Open a pull request** page that appears, click the green **Create pull request** button.
 
-   ![Open a pull request page](../images/open-a-pull-request-page.png)
+   ![Open a pull request page.](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
 >

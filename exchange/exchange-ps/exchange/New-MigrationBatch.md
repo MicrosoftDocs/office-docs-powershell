@@ -307,7 +307,7 @@ This example creates a migration batch for a cross-forest enterprise move, where
 ```powershell
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -354,7 +354,7 @@ This example creates a migration endpoint for the connection settings to the IMA
 ```powershell
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -364,7 +364,7 @@ This example is the same as Example 3, but the CompleteAfter parameter is also u
 ```powershell
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -1375,9 +1375,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetArchiveDatabases
-The TargetArchiveDatabases parameter specifies the database where the archive mailboxes specified in the migration batch will be migrated to.
+The TargetArchiveDatabases parameter specifies the database where the archive mailboxes specified in the migration batch will be migrated to. You can use any value that uniquely identifies the database. For example:
 
-You can also specify multiple databases for the value of this parameter. The migration service selects one database as the target database to move the archive mailbox to. For example: -TargetArchiveDatabases @(MBXDB01,MBXDB02,MBXDB03)
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+When you enter multiple values, the migration service selects one database as the target database to move the archive mailbox to.
 
 You can only use this parameter for local moves and remote move migrations.
 
@@ -1395,16 +1401,19 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabases
-The TargetDatabases parameter specifies the identity of the database that you're moving mailboxes to. You can use the following values:
+The TargetDatabases parameter specifies the identity of the database that you're moving mailboxes to. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
-- Database name
+- Name
+- Distinguished name (DN)
+- GUID
 
-If you don't specify the TargetDatabases parameter for a local move, the cmdlet uses the automatic mailbox distribution logic to select the database.
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-You can also specify multiple databases for the value of this parameter. The migration service will select one as the target database to move the mailbox to. For example: -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03)
+When you enter multiple values, the migration service selects one database as the target database to move the mailbox to.
 
 You can only use this parameter for local moves and remote move migrations.
+
+If you don't use this parameter for a local move, the cmdlet uses the automatic mailbox distribution logic to select the database.
 
 ```yaml
 Type: MultiValuedProperty

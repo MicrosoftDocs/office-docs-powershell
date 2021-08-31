@@ -93,7 +93,8 @@ The Member parameter specifies who to remove from the role group. You can specif
 
 - Mailbox users
 - Mail users
-- Security groups
+- Mail-enabled security groups (don't use in Security & Compliance Center PowerShell)
+- Security groups (on-premises Exchange only)
 
 You can use any value that uniquely identifies the user or group. For example:
 
