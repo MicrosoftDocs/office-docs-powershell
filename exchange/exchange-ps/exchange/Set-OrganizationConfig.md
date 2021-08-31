@@ -2521,7 +2521,7 @@ This parameter is available only in the cloud-based service.
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
-- $false: All meetings are not online by default. This is the default value.
+- $false: All meetings are not online by default.
 - $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
 You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
