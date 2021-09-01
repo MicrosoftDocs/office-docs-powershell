@@ -527,7 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelUserObjectId
-Guid should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
+Guid should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). This is the GUID of one of the owners of the team the channels belongs to.
 
 ```yaml
 Type: Guid
