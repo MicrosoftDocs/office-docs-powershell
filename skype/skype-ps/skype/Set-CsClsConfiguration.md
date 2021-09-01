@@ -29,6 +29,7 @@ Set-CsClsConfiguration [[-Identity] <XdsIdentity>] [-CacheFileLocalFolders <Stri
  [-Force] [-MinimumClsAgentServiceVersion <UInt32>] [-Regions <PSListModifier>] [-Scenarios <PSListModifier>]
  [-SearchTerms <PSListModifier>] [-SecurityGroups <PSListModifier>] [-TmfFileSearchPath <String>] [-WhatIf]
  [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>]
+ [-ETLMinFreeSpaceInDiskInBytes<Int64>] [-ETLEnoughFreeSpaceInDiskInBytes<Int64>] [-ETLMinQuotaInBytes <Int64>] [-ETLMaxQuotaInBytes <Int64>] [-ETLEnoughQuotaInBytes <Int64>]  [EtlMaxRetentionInDays <UInt32>]
 ```
 
 ### Instance
@@ -40,6 +41,7 @@ Set-CsClsConfiguration [-CacheFileLocalFolders <String>] [-CacheFileLocalMaxDisk
  [-MinimumClsAgentServiceVersion <UInt32>] [-Regions <PSListModifier>] [-Scenarios <PSListModifier>]
  [-SearchTerms <PSListModifier>] [-SecurityGroups <PSListModifier>] [-TmfFileSearchPath <String>] [-WhatIf]
  [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>]
+ [-ETLMinFreeSpaceInDiskInBytes<Int64>] [-ETLEnoughFreeSpaceInDiskInBytes<Int64>] [-ETLMinQuotaInBytes <Int64>] [-ETLMaxQuotaInBytes <Int64>] [-ETLEnoughQuotaInBytes <Int64>]  [EtlMaxRetentionInDays <UInt32>]
 ```
 
 ## DESCRIPTION
