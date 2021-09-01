@@ -28,7 +28,8 @@ Set-CsClsConfiguration [[-Identity] <XdsIdentity>] [-CacheFileLocalFolders <Stri
  [-Confirm] [-EtlFileFolder <String>] [-EtlFileRolloverMinutes <UInt32>] [-EtlFileRolloverSizeMB <UInt32>]
  [-Force] [-MinimumClsAgentServiceVersion <UInt32>] [-Regions <PSListModifier>] [-Scenarios <PSListModifier>]
  [-SearchTerms <PSListModifier>] [-SecurityGroups <PSListModifier>] [-TmfFileSearchPath <String>] [-WhatIf]
- [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>]
+ [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>] [-ETLMinFreeSpaceInDiskInBytes<Int64>] [-ETLEnoughFreeSpaceInDiskInBytes<Int64>] [-ETLMinQuotaInBytes <Int64>] [-ETLMaxQuotaInBytes <Int64>] [-ETLEnoughQuotaInBytes <Int64>] [EtlMaxRetentionInDays <UInt32>]
+
 ```
 
 ### Instance
@@ -39,7 +40,8 @@ Set-CsClsConfiguration [-CacheFileLocalFolders <String>] [-CacheFileLocalMaxDisk
  [-EtlFileRolloverMinutes <UInt32>] [-EtlFileRolloverSizeMB <UInt32>] [-Force] [-Instance <PSObject>]
  [-MinimumClsAgentServiceVersion <UInt32>] [-Regions <PSListModifier>] [-Scenarios <PSListModifier>]
  [-SearchTerms <PSListModifier>] [-SecurityGroups <PSListModifier>] [-TmfFileSearchPath <String>] [-WhatIf]
- [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>]
+ [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>] [-ETLMinFreeSpaceInDiskInBytes<Int64>] [-ETLEnoughFreeSpaceInDiskInBytes<Int64>] [-ETLMinQuotaInBytes <Int64>] [-ETLMaxQuotaInBytes <Int64>] [-ETLEnoughQuotaInBytes <Int64>] [EtlMaxRetentionInDays <UInt32>]
+
 ```
 
 ## DESCRIPTION
