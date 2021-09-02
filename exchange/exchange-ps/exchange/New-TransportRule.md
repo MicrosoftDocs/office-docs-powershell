@@ -2788,7 +2788,7 @@ The ExceptIfSenderIpRanges parameter specifies an exception that looks for sende
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -3946,7 +3946,10 @@ Accept wildcard characters: False
 ### -RecipientAddressType
 This parameter is available only in the cloud-based service.
 
-{{ Fill RecipientAddressType Description }}
+The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
+
+- Original: The rule checks only the recipient's primary SMTP email address.
+- Resolved: The rule checks the recipient's primary SMTP email address and all proxy addresses. This is the default value
 
 ```yaml
 Type: RecipientAddressType
@@ -4451,7 +4454,7 @@ The SenderIpRanges parameter specifies a condition that looks for senders whose 
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

@@ -30,11 +30,11 @@ Add-RoleGroupMember [-Identity] <RoleGroupIdParameter> -Member <SecurityPrincipa
 ```
 
 ## DESCRIPTION
-When you add a member to a role group, that mailbox, universal security group (USG), or computer is given the effective permissions provided by the management roles assigned to the role group.
+When you add a member to a role group, the member is given the effective permissions provided by the management roles assigned to the role group.
 
 If the ManagedBy property has been populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
 
-If the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign USG that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
+In on-premises Exchange, if the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign universal security group (USG) that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
 
 For more information about role groups, see [Understanding management role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
@@ -93,7 +93,8 @@ The Member parameter specifies who you want to add to the role group. You can sp
 
 - Mailbox users
 - Mail users
-- Security groups
+- Mail-enabled security groups (don't use in Security & Compliance Center PowerShell)
+- Security groups (on-premises Exchange only)
 
 You can use any value that uniquely identifies the user or group. For example:
 

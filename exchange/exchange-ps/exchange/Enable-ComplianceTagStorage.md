@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Enable-ComplianceTagStorage cmdlet to create the label policy in the Microsoft 365 security center. This is a one-time operation. Labels apply retention settings to content.
+Use the Enable-ComplianceTagStorage cmdlet to create the retention label policy in the Microsoft 365 security center. This is a one-time operation. Retention labels apply retention settings to content.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

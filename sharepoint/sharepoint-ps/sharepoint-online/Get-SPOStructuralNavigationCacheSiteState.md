@@ -29,7 +29,7 @@ The Get-SPOStructuralNavigationCacheSiteState cmdlet can be used to determine if
 
 ### Example 1
 ```powershell
-PS C:\> Get-SPOStructuralNavigationCacheSiteState -weburl "https://contoso.sharepoint.com/sites/product/" 
+PS C:\> Get-SPOStructuralNavigationCacheSiteState -SiteUrl "https://contoso.sharepoint.com/sites/product/" 
 ```
 
 This example checks if structural navigation caching is enabled for the entire site collection https://contoso.sharepoint.com/sites/product/. If caching is enabled, then it will return True. If caching is disabled, then it will return False. 

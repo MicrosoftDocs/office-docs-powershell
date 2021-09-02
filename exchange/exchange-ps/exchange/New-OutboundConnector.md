@@ -289,7 +289,15 @@ Accept wildcard characters: False
 ```
 
 ### -SmartHosts
-The SmartHosts parameter specifies the smart hosts the Outbound connector uses to route mail. This parameter is required if you set the UseMxRecord parameter to $false and must be specified on the same command line. The SmartHosts parameter takes one or more FQDNs, such as server.contoso.com, or one or more IP addresses, or a combination of both FQDNs and IP addresses. Separate each value by using a comma. If you enter an IP address, you may enter the IP address as a literal, for example: 10.10.1.1, or using Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. The smart host identity can be the FQDN of a smart host server, a mail exchange (MX) record, or an address (A) record.
+The SmartHosts parameter specifies the smart host that the Outbound connector uses to route mail. Valid values are:
+
+- FQDN of a smart host server, a mail exchange (MX) record, or an address (A) record: For example, mail.contoso.com.
+- Single IP address: For example, 10.10.1.1
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
+
+This parameter is required if you use the value $false for the UseMxRecord parameter.
 
 ```yaml
 Type: MultiValuedProperty

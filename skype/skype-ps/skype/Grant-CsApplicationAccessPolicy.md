@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Global
 
-This parameter is reserved for internal Microsoft use.
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. For example, if the user already have application access policy "A" assigned, and tenant admin assigns "B" globally, then application access policy "A" will take effect for the user.
 
 ```yaml
 Type: SwitchParameter

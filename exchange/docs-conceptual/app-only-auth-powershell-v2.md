@@ -110,15 +110,15 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 2. Under **Manage Azure Active Directory**, click **View**.
 
-   ![Click View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
+   ![Click View in the Azure AD portal under Manage Azure Active Directory.](media/exo-app-only-auth-manage-ad-view.png)
 
 3. On the **Overview** page that opens, under **Manage**, select **App registrations**.
 
-   ![Select App registrations](media/exo-app-only-auth-select-app-registrations.png)
+   ![Select App registrations.](media/exo-app-only-auth-select-app-registrations.png)
 
 4. On the **App registrations** page that opens, click **New registration**.
 
-   ![Select New registration on the App registrations page](media/exo-app-only-auth-new-app-registration.png)
+   ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
 
    On the **Register an application** page that opens, configure the following settings:
 
@@ -130,7 +130,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
      Note that you can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
-     ![Register an application](media/exo-app-only-auth-register-app.png)
+     ![Register an application.](media/exo-app-only-auth-register-app.png)
 
    When you're finished, click **Register**.
 
@@ -143,7 +143,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 1. On the app page under **Management**, select **Manifest**.
 
-   ![Select Manifest on the application properties page](media/exo-app-only-auth-select-manifest.png)
+   ![Select Manifest on the application properties page.](media/exo-app-only-auth-select-manifest.png)
 
 2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 44).
 
@@ -167,7 +167,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 3. Still on the **Manifest** page, under **Management**, select **API permissions**.
 
-   ![Select API permissions on the application properties page](media/exo-app-only-auth-select-api-permissions.png)
+   ![Select API permissions on the application properties page.](media/exo-app-only-auth-select-api-permissions.png)
 
    On the **API permissions** page that opens, do the following steps:
 
@@ -175,13 +175,13 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
 
-     ![Original incorrect API permissions](media/exo-app-only-auth-original-permissions.png)
+     ![Original incorrect API permissions.](media/exo-app-only-auth-original-permissions.png)
 
      Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then click **Yes**.
 
      The **Status** value should now be **Granted for \<Organization\>**.
 
-     ![Admin consent granted](media/exo-app-only-auth-admin-consent-granted.png)
+     ![Admin consent granted.](media/exo-app-only-auth-admin-consent-granted.png)
 
 4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
 
@@ -193,7 +193,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
   ```powershell
   # Create certificate
-  $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
+  $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\CurrentUser\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
   # Export certificate to .pfx file
   $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@ssw0Rd1234" -AsPlainText -Force)
@@ -220,25 +220,25 @@ After you register the certificate with your application, you can use the privat
    2. Under **Manage Azure Active Directory**, click **View**.
    3. Under **Manage**, select **App registrations**.
 
-   ![Apps registration page where you select your app](media/exo-app-only-auth-app-registration-page.png)
+   ![Apps registration page where you select your app.](media/exo-app-only-auth-app-registration-page.png)
 
 2. On the application page that opens, under **Manage**, select **Certificates & secrets**.
 
-   ![Select Certificates & Secrets on the application properties page](media/exo-app-only-auth-select-certificates-and-secrets.png)
+   ![Select Certificates & Secrets on the application properties page.](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
 3. On the **Certificates & secrets** page that opens, click **Upload certificate**.
 
-   ![Select Upload certificate on the Certificates & secrets page](media/exo-app-only-auth-select-upload-certificate.png)
+   ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
    In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
 
-   ![Browse to the certificate and then click Add](media/exo-app-only-auth-upload-certificate-dialog.png)
+   ![Browse to the certificate and then click Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
 
    When you're finished, click **Add**.
 
    The certificate is now shown in the **Certificates** section.
 
-   ![Application page showing that the certificate was added](media/exo-app-only-auth-certificate-successfully-added.png)
+   ![Application page showing that the certificate was added.](media/exo-app-only-auth-certificate-successfully-added.png)
 
 4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
@@ -258,26 +258,26 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
 1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
-   ![View in the Azure AD portal under Manage Azure Active Directory](media/exo-app-only-auth-manage-ad-view.png)
+   ![View in the Azure AD portal under Manage Azure Active Directory.](media/exo-app-only-auth-manage-ad-view.png)
 
 2. On the **Overview** page that opens, under **Manage**, select **Roles and administrators**.
 
-   ![Select Roles and administrators from the overview page](media/exo-app-only-auth-select-roles-and-administrators.png)
+   ![Select Roles and administrators from the overview page.](media/exo-app-only-auth-select-roles-and-administrators.png)
 
 3. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
-   ![Find and select a supported role by clicking on the role name](media/exo-app-only-auth-find-and-select-supported-role.png)
+   ![Find and select a supported role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
 
 4. On the **Assignments** page that opens, click **Add assignments**.
 
-   ![Select Add assignments on the role assignments page](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
+   ![Select Add assignments on the role assignments page.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
 5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
-   ![Find and select your app on the Add assignments flyout](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
+   ![Find and select your app on the Add assignments flyout.](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
    When you're finished, click **Add**.
 
 6. Back on the **Assignments** page, verify that the app has been assigned to the role.
 
-   ![The role assignments page after to added the app to the role](media/exo-app-only-auth-app-assigned-to-role.png)
+   ![The role assignments page after to added the app to the role.](media/exo-app-only-auth-app-assigned-to-role.png)
