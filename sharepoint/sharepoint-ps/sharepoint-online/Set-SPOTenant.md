@@ -1452,6 +1452,8 @@ Accept wildcard characters: False
 
 This parameter enables the synchronization of privacy profile properties.
 
+SyncPrivacyProfileProperties sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
