@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineuser
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
 manager: bulenteg
@@ -13,19 +13,19 @@ ms.reviewer:
 # Get-CsOnlineUser
 
 ## SYNOPSIS
-Returns information about users who have accounts homed on Microsoft Teams or Skype for Business Online.
-This cmdlet can be used with Microsoft Teams or Skype for Business Online.
+Returns information about users who have accounts homed on Skype for Business Online.
+This cmdlet can only be used with Skype for Business Online.
 
 ## SYNTAX
 
 ```
-Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnModernServer]
- [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [[-Identity] <UserIdParameter>]
- [-ResultSize <>] [<CommonParameters>]
+Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicationServer] [-OnModernServer]
+ [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [-DomainController <Fqdn>]
+ [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsOnlineUser cmdlet returns information about users who have accounts homed on Microsoft Teams or Skype for Business Online.
+The Get-CsOnlineUser cmdlet returns information about users who have accounts homed on Skype for Business Online.
 The returned information includes standard Active Directory account information (such as the department the user works in, his or her address and phone number, etc.) as well as Skype for Business Server 2015 specific information: the Get-CsOnlineUser cmdlet returns information about such things as whether or not the user has been enabled for Enterprise Voice and which per-user policies (if any) have been assigned to the user.
 
 Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that means you cannot use a command similar to this in order to limit the returned data to users who have accounts with a specific Skype for Business Online tenant:
@@ -105,8 +105,40 @@ To accomplish the task, the filter string is first constructed and resolved loca
 
 ## PARAMETERS
 
+### -Credential
+This parameter is not used with Skype for Business Online.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is not used with Skype for Business Online.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
-Enables you to limit the returned data by filtering on specific attributes.
+Enables you to limit the returned data by filtering on Skype for Business specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
 The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
@@ -118,7 +150,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -138,7 +170,7 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
 
 Required: False
 Position: 1
@@ -158,7 +190,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -168,14 +200,46 @@ Accept wildcard characters: False
 ```
 
 ### -OnModernServer
-When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business.
+When present, the cmdlet returns a collection of users homed on Skype for Business.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: OnLyncServer
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnOfficeCommunicationServer
+This parameter is not used with Skype for Business Online.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OU
+This parameter is not used with Skype for Business Online.
+
+```yaml
+Type: OUIdParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -197,7 +261,7 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -213,7 +277,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -223,14 +287,14 @@ Accept wildcard characters: False
 ```
 
 ### -UnassignedUser
-Enables you to return a collection of all the users who have been enabled for Microsoft Teams or Skype for Business but are not currently assigned to a Registrar pool.
+Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to unless they are assigned to a Registrar pool.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
