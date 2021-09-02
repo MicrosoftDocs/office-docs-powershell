@@ -35,10 +35,10 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-Remove-AppRetentionCompliancePolicy -Identity "Contoso Exchange"
+Remove-AppRetentionCompliancePolicy -Identity "Contoso Yammer"
 ```
 
-This example removes the app retention compliance policy named Contoso Exchange.
+This example removes the app retention compliance policy named Contoso Yammer.
 
 ## PARAMETERS
 

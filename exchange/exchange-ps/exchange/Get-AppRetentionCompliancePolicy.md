@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-AppRetentionCompliancePolicy to view app retention compliance policies.
+Use the Get-AppRetentionCompliancePolicy to view app retention compliance policies. App retention & labeling policies target new ways to scope and manage policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,6 +28,8 @@ Get-AppRetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
 ```
 
 ## DESCRIPTION
+\*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Yammer chats, and Yammer community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
+
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -41,10 +43,10 @@ This example returns a summary list of all app retention compliance policies.
 
 ### Example 1
 ```powershell
-Get-AppRetentionCompliancePolicy -Identity "Contoso Exchange"
+Get-AppRetentionCompliancePolicy -Identity "Contoso Yammer"
 ```
 
-This example returns detailed information for the app retention compliance policy named Contoso Exchange.
+This example returns detailed information for the app retention compliance policy named Contoso Yammer.
 
 ## PARAMETERS
 
