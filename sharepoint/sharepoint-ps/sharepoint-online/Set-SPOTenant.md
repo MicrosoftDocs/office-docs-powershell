@@ -106,6 +106,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StopNew2013Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
+ [-ViewInFileExplorerEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1900,6 +1901,29 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ViewInFileExplorerEnabled
+Enables or disables the ability to use View in Explorer in Microsoft Edge (93) or above. 
+
+> [!NOTE]
+> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work. 
+
+The valid values are:  
+
+- False (default) - Disables View In Explorer command to become visible in Edge.
+- True - Enables View In Explorer command to become visible in Edge.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
