@@ -15,7 +15,7 @@ schema: 2.0.0
 Returns information about a specific or all uploaded audio files of a given application type.
 
 > [!NOTE]
-> **Preview** The use of this cmdlet is in Preview.
+> **Preview** The use of this cmdlet is in Public Preview.
   
 ## SYNTAX
 
