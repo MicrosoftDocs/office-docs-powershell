@@ -748,7 +748,10 @@ Accept wildcard characters: False
 ### -BookingsAddressEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAddressEntryRestricted Description }}
+The BookingsAddressEntryRestricted parameter specifies whether addresses can be collected from Bookings customers. Valid values are:
+
+- $true: Addresses can't be collected from Bookings customers.
+- $false: Addresses can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -784,7 +787,10 @@ Accept wildcard characters: False
 ### -BookingsCreationOfCustomQuestionsRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsCreationOfCustomQuestionsRestricted Description }}
+The BookingsCreationOfCustomQuestionsRestricted parameter specifies whether Bookings admins can add custom questions. Valid values are:
+
+- $true: Bookings admins can't add custom questions.
+- $false: Bookings admins can add custom questions.
 
 ```yaml
 Type: Boolean
@@ -802,12 +808,12 @@ Accept wildcard characters: False
 ### -BookingsEnabled
 This parameter is available only in the cloud-based service.
 
-The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an Exchange Online organization. Valid values are:
+The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an organization. Valid values are:
 
-- $true: Bookings are enabled.
-- $false: Bookings are disabled. This is the default value.
+- $true: Bookings is enabled.
+- $false: Bookings is disabled. This is the default value.
 
-Microsoft Bookings is an online and mobile app for small businesses who provide services to customers on an appointment basis.
+Microsoft Bookings is an online and mobile app for small businesses who provide appointment services to customers.
 
 ```yaml
 Type: Boolean
@@ -825,7 +831,10 @@ Accept wildcard characters: False
 ### -BookingsExposureOfStaffDetailsRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsExposureOfStaffDetailsRestricted Description }}
+The BookingsExposureOfStaffDetailsRestricted parameter specifies whether the attributes of internal Bookings staff members (for example, email addresses) are visible to external Bookings customers. Valid values are:
+
+- $true: Internal Bookings staff member attributes aren't visible to external Bookings customers.
+- $false: Internal Bookings staff member attributes are visible to external Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -861,7 +870,10 @@ Accept wildcard characters: False
 ### -BookingsNotesEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsNotesEntryRestricted Description }}
+The BookingsNotesEntryRestricted parameter specifies whether appointment notes can be collected from Bookings customers. Valid values are:
+
+- $true: Appointment notes can't be collected from Bookings customers.
+- $false: Appointment notes can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -879,7 +891,7 @@ Accept wildcard characters: False
 ### -BookingsPaymentsEnabled
 This parameter is available only in the cloud-based service.
 
-The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
+The BookingsPaymentsEnabled parameter specifies whether to enable the online payment node inside Bookings. Valid values are:
 
 - $true: Online payments are enabled.
 - $false: Online payments are disabled. This is the default value.
@@ -900,7 +912,10 @@ Accept wildcard characters: False
 ### -BookingsPhoneNumberEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsPhoneNumberEntryRestricted Description }}
+The BookingsPhoneNumberEntryRestricted parameter specifies whether phone numbers can be collected from Bookings customers. Valid values are:
+
+- $true: Appointment notes can't be collected from Bookings customers.
+- $false: Appointment notes can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -918,7 +933,7 @@ Accept wildcard characters: False
 ### -BookingsSocialSharingRestricted
 This parameter is available only in the cloud-based service.
 
-The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
+The BookingsSocialSharingRestricted parameter specifies whether users can see the social sharing options inside Bookings. Valid values are:
 
 - $true: Social sharing options are restricted.
 - $false: Users can see social sharing options inside Bookings. This is the default value.
@@ -2521,7 +2536,7 @@ This parameter is available only in the cloud-based service.
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
-- $false: All meetings are not online by default. This is the default value.
+- $false: All meetings are not online by default.
 - $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
 You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
