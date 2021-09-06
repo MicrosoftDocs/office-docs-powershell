@@ -12,7 +12,7 @@ schema: 2.0.0
 # Remove-CsOnlineAudioFile
 
 ## SYNOPSIS
-Marks an audio file of application type TenantGlobal for deletion and later removal.
+Marks an audio file of application type TenantGlobal for deletion and later removal (within 24 hours).
 
 > [!NOTE]
 > **Preview** The use of this cmdlet is in Preview.
