@@ -21,7 +21,8 @@ Marks an audio file of application type TenantGlobal for deletion and later remo
 ## SYNTAX
 
 ```powershell
-Remove-CsOnlineAudioFile -Identity] <string>  [<CommonParameters>]
+Remove-CsOnlineAudioFile -Identity <string>  [<CommonParameters>]
+
 ```
 
 ## DESCRIPTION
