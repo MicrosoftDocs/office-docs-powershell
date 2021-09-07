@@ -44,10 +44,10 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-AppRetentionComplianceRule -Identity "563 Marketing Rule" -RetentionDuration 180 RetentionDurationDisplayHint Days
 ```
 
-{{ Add example description here }}
+This example updates the length of the retention duration for a rule named 563 Marketing Rule.
 
 ## PARAMETERS
 

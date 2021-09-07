@@ -57,10 +57,12 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-AppRetentionCompliancePolicy -Name "Regulation 567 Compliance" -Applications "User:MicrosoftTeams,Yammer","Group:MicrosoftTeams,Yammer" -ExchangeLocation "Jennifer Petersen","Kitty Nakamura"
 ```
 
-{{ Add example description here }}
+This example creates a static scope retention policy named Regulation 567 Compliance for the Yammer user messages of Jennifer Petersen and Kitty Nakamura.
+
+After you create the retention policy, use the New-AppRetentionComplianceRule cmdlet to create a retention rule and assign it the retention policy to it.
 
 ## PARAMETERS
 

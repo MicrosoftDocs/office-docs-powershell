@@ -75,10 +75,10 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-AppRetentionComplianceRule -Name RetUnlimited -Policy "Regulation 567 Compliance" -RetentionDuration Unlimited
 ```
 
-{{ Add example description here }}
+This example creates a new retention rule named RetUnlimited and adds it to the retention policy named Regulation 567 Compliance.
 
 ## PARAMETERS
 

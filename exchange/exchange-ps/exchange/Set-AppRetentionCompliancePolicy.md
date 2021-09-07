@@ -107,10 +107,10 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-AppRetentionCompliancePolicy Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,Yammer" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
 ```
 
-{{ Add example description here }}
+This example adds a new user to the existing static scope retention policy named Regulation 563 Marketing that's set up for Teams private channels messages.
 
 ## PARAMETERS
 
