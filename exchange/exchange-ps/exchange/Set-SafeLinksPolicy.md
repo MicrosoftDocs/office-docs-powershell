@@ -54,10 +54,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SafeLinksPolicy -Identity "Engineering Block URL" -TrackClicks $true
+Set-SafeLinksPolicy -Identity "Engineering Block URL" -DoNotAllowClickThrough $true
 ```
 
-This example modifies the existing Safe Links policy named Engineering Block URL to track user clicks on URLs in URL trace.
+This example modifies the existing Safe Links policy named Engineering Block URL to prevent click through to the original URLs.
 
 ## PARAMETERS
 

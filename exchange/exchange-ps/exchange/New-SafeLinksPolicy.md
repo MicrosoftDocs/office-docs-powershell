@@ -57,14 +57,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $true
+New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true
 ```
 
 This example creates a new Safe Links policy named Marketing Block URL with the following options:
 
 - The policy is enabled.
 - Users aren't allowed to click through to the original URL. This is the default value of the DoNotAllowClickThrough parameter, so you don't need to specify it.
-- User clicks on URLs are tracked in URL trace.
+- User clicks on URLs are tracked. This is the default value of the DoNotTrackUserClicks parameter, so you don't need to specify it.
 
 ## PARAMETERS
 
