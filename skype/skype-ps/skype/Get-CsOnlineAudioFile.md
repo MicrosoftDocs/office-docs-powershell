@@ -32,6 +32,8 @@ This cmdlet returns information on a specific or all uploaded audio files of a g
 ```powershell
 Get-CsOnlineAudioFile
 
+```
+```Output
 Id                : 85364afb59a143fc9466979e0f34f749
 FileName          : CustomMoH.mp3
 ApplicationId     : TenantGlobal
@@ -43,6 +45,8 @@ This returns information about all uploaded audio files with ApplicationId = Ten
 ```powershell
 Get-CsOnlineAudioFile -ApplicationId HuntGroup -Identity dcfcc31daa9246f29d94d0a715ef877e
 
+```
+```Output
 Id                : dcfcc31daa9246f29d94d0a715ef877e
 FileName          : SupportCQ.mp3
 ApplicationId     : HuntGroup
@@ -54,6 +58,8 @@ This cmdlet returns information about the audio file with Id dcfcc31daa9246f29d9
 ```powershell
 Get-CsOnlineAudioFile -ApplicationId OrgAutoAttendant
 
+```
+```Output
 Id                : 58083ae8bc9e4a66a6b2810b2e1f4e4e
 FileName          : MainAAAnnouncement.mp3
 ApplicationId     : OrgAutoAttendant
