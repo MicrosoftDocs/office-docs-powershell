@@ -54,10 +54,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SafeLinksPolicy -Identity "Engineering Block URL" -TrackClicks $true
+Set-SafeLinksPolicy -Identity "Engineering Block URL" -DoNotAllowClickThrough $true
 ```
 
-This example modifies the existing Safe Links policy named Engineering Block URL to track user clicks on URLs in URL trace.
+This example modifies the existing Safe Links policy named Engineering Block URL to prevent click through to the original URLs.
 
 ## PARAMETERS
 
@@ -266,8 +266,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForTeams
-**Note**: As of March 2020, this parameter is in Preview and is available or functional only for members of the Microsoft Teams Technology Adoption Program (TAP).
-
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
 - $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
