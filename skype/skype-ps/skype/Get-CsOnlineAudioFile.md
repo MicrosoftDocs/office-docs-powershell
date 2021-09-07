@@ -122,6 +122,8 @@ Accept wildcard characters: False
 ## NOTES
 The cmdlet is available in Teams PS module 2.4.0-preview or later.
 
+If you call the cmdlet without having uploaded any audio files, with a non-existing Identity or with an illegal ApplicationId, you will receive a generic error message. In addition, the ApplicationId is case sensitive.
+
 ## RELATED LINKS
 - [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
 - [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
