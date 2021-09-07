@@ -62,7 +62,8 @@ Accept wildcard characters: False
 ### System.Object
 
 ## NOTES
-Please note that using this cmdlet on other application types like OrgAutoAttendant and HuntGroup does not make the audio file for deletion. These kind of audio files will automatically be deleted, when
+Please note that using this cmdlet on other application types like OrgAutoAttendant and HuntGroup does not mark the audio file for deletion. These kinds of audio files will automatically be deleted, when
+
 the corresponding Auto Attendant or Call Queue is deleted.
 
 The cmdlet is available in Teams PS module 2.4.0-preview or later.
