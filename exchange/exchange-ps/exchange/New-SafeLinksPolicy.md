@@ -269,8 +269,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForTeams
-**Note**: As of March 2020, this parameter is in Preview and is available or functional only for members of the Microsoft Teams Technology Adoption Program (TAP).
-
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
 - $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
