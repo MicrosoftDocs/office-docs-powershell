@@ -1909,7 +1909,9 @@ Accept wildcard characters: False
 Enables or disables the ability to use View in Explorer in Microsoft Edge (93) or above. 
 
 > [!NOTE]
-> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work. 
+> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work.
+> 
+> Minimum Module Version Required: 16.0.21610.12000 
 
 The valid values are:  
 
@@ -1926,7 +1928,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Minimum Module Version Required: 16.0.21610.12000 
 ```
 
 ### CommonParameters
