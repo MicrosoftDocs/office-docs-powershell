@@ -88,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity the -ApplicationId it is assumed to be TenantGlobal. 
+The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity, the -ApplicationId it is assumed to be TenantGlobal. 
+
 If you need to see information of a specific audio file with ApplicationId of OrgAutoAttendant or HuntGroup you need to specify -ApplicationId with the corresponding value and -Identity with the Id of the audio file.
 
 ```yaml
