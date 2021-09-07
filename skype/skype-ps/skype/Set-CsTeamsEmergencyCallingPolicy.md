@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
- Enable ExternalLocationLookupMode. This parameter is currently not supported.
+ Enable ExternalLocationLookupMode.
 
 ```yaml
 Type: ExternalLocationLookupMode
