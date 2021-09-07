@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet has been deprecated and is no longer used.
+
 Use the Get-RMSTrustedPublishingDomain cmdlet to view the settings of an existing trusted publishing domain (TPD) in your organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
