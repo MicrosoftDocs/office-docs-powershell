@@ -484,8 +484,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
-This parameter is available or functional only in on-premises Exchange.
-
 The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
 
 - $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
