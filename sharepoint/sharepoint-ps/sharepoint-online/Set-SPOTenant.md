@@ -1726,7 +1726,7 @@ Accept wildcard characters: False
 
 Sets email attestation to required.
 
-If people who use a verification code have selected to "stay signed in" in the browser, they must prove they can still access the account they used to redeem the sharing invitation. You can set the number of days for email attestation with -EmailAttestationReAuthDays. This setting affects only ad-hoc external recipients.
+If people who use a verification code select to "stay signed in" in the browser, they must prove that they can access the same account that they used to redeem the sharing invitation. You can set the number of days for email attestation with **-EmailAttestationReAuthDays**. This setting affects only ad-hoc external recipients.
 
 ```yaml
 Type: Boolean
