@@ -106,6 +106,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StopNew2013Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
+ [-ViewInFileExplorerEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -309,7 +310,7 @@ Accept wildcard characters: False
 
 ### -EnableAIPIntegration
 
-This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. (Currently in public preview). For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ```yaml
 Type: Boolean
@@ -1452,6 +1453,8 @@ Accept wildcard characters: False
 
 This parameter enables the synchronization of privacy profile properties.
 
+SyncPrivacyProfileProperties sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1726,6 +1729,8 @@ Accept wildcard characters: False
 
 Sets email attestation to required.
 
+If people who use a verification code select to "stay signed in" in the browser, they must prove that they can access the same account that they used to redeem the sharing invitation. You can set the number of days for email attestation with **-EmailAttestationReAuthDays**. This setting affects only ad-hoc external recipients.
+
 ```yaml
 Type: Boolean
 
@@ -1900,6 +1905,31 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ViewInFileExplorerEnabled
+Enables or disables the ability to use View in Explorer in Microsoft Edge (93) or above. 
+
+> [!NOTE]
+> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work.
+> 
+> Minimum Module Version Required: 16.0.21610.12000 
+
+The valid values are:  
+
+- False (default) - Disables View In Explorer command to become visible in Edge.
+- True - Enables View In Explorer command to become visible in Edge.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

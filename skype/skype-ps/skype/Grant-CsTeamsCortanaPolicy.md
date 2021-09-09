@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/get-csteamscortanapolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsCortanaPolicy
 schema: 2.0.0
 manager: amehta
