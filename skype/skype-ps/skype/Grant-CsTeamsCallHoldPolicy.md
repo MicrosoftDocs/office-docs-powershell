@@ -16,6 +16,8 @@ ms.reviewer:
 ## SYNOPSIS
 Assigns a per-user Teams call hold policy to one or more users.
 The Teams call hold policy is used to customize the call hold experience for Teams clients.
+> [!NOTE]\
+> **Preview** The use of this cmdlet is in Public Preview.
 
 ## SYNTAX
 
