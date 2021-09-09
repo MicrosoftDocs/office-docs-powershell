@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -44,7 +44,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -60,7 +60,7 @@ A unique identifier(name) of the policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
@@ -76,7 +76,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Enables you to specify the fully qualified domain name (FQDN) of a domain contro
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
+Globally unique identifier (GUID) of the Microsoft Teams or Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
@@ -126,7 +126,7 @@ Globally unique identifier (GUID) of the Skype for Business Online tenant accoun
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
