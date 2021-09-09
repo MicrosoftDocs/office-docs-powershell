@@ -767,7 +767,10 @@ Accept wildcard characters: False
 ### -BookingsAuthEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAuthEnabled Description }}
+The BookingsAuthEnabled parameter specifies whether to enforce authentication to access all published Bookings pages. Valid values are:
+
+- $true: All new and existing Bookings pages are forced to authenticate users before they can book the appointment.
+- $false: All bookings pages are not forced to authenticate users.
 
 ```yaml
 Type: Boolean
@@ -850,7 +853,10 @@ Accept wildcard characters: False
 ### -BookingsMembershipApprovalRequired
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsMembershipApprovalRequired Description }}
+The BookingsMembershipApprovalRequired parameter enables a membership approval requirement when new staff members are added to Bookings calendars. Valid values are:
+
+- $true: Newly added staff members need to accept membership in Bookings calendars before the resources are bookable.
+- $false: Newly added staff members do not need to accept membership in Bookings calendars to make the resources bookable.
 
 ```yaml
 Type: Boolean
