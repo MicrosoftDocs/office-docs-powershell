@@ -203,11 +203,11 @@ Accept wildcard characters: False
 ### -EFSkipIPs
 the EFSkipIPs parameter specifies the source IP addresses to skip in Enhanced Filtering for Connectors when the EFSkipLastIP parameter value is $false. Valid values are:
 
-- A single IP address: For example, 192.168.1.1.
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24.
 
-You can specify multiple IP addresses or address range entries separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -408,12 +408,12 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
+The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. Valid values are:
 
-- Single IP: For example, 192.168.1.1.
-- CIDR IP: You can use Classless InterDomain Routing (CIDR). For example, 192.168.0.1/25.
+- Single IP address: For example, 192.168.1.1.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
-You can specify multiple IP addresses separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

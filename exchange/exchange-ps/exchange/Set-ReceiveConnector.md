@@ -1075,7 +1075,7 @@ The RemoteIPRanges parameter specifies the remote IP addresses that the Receive 
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
 - IP address range: For example, 192.168.1.1-192.168.1.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
 
 You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
 

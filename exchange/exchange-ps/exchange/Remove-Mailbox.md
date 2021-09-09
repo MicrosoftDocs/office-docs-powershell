@@ -97,7 +97,7 @@ This example removes the mailbox and the user account for the user named John Ro
 Remove-Mailbox -Identity "John Rodman" -Permanent $true
 ```
 
-This example removes the mailbox and the user account for the user named John Rodman. The mailbox is immediately and permanently removed from the mailbox database.
+In on-premises Exchange, this example removes the mailbox and the user account for the user named John Rodman. The mailbox is immediately and permanently removed from the mailbox database.
 
 ### Example 3
 ```powershell
@@ -105,7 +105,7 @@ $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}
 Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
-This example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
+In on-premises Exchange, this example removes John Rodman's mailbox from the mailbox database after the mailbox has been disconnected from the user account. The example uses the Get-Mailbox cmdlet to retrieve the mailbox GUID value of the disconnected mailbox, which is required by the StoreMailboxIdentity parameter.
 
 ### Example 4
 ```powershell
@@ -313,6 +313,8 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
+This parameter is available only in on-premises Exchange.
+
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:

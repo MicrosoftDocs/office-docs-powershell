@@ -41,6 +41,13 @@ PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
 
 Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy.
 
+### Example 2
+```
+PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForCalling disabled
+```
+
+Sets the value of the parameter LiveCaptionsEnabledTypeForCalling, which controls whether real-time captions are available for the user in Teams calls, in a custom CallingPolicy called HRPolicy.
+
 ## PARAMETERS
 
 ### -AllowWebPSTNCalling
@@ -62,7 +69,7 @@ Accept wildcard characters: False
 Controls interop calling capabilities.
 Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa.
 
-[!NOTE] This parameter is disabled.
+Note: This parameter is disabled.
 
 ```yaml
 Type: Boolean
@@ -412,7 +419,8 @@ Determines if Spam filtering is enabled.
 Possible values:
 - Enabled
 - Disabled
-- EnabledWithoutIVR
+- EnabledWithoutIVR (Choosing this value will disable the default spam checking which integrates the Captcha IVR Bot into the flow. The call will not be redirected to the bot for checking against fraudulent calls but will be allowed to go to the original target if the spam score is not high.)
+
 
 ```yaml
 Type: String

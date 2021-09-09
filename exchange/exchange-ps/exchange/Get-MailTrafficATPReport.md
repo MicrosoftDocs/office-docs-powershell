@@ -174,36 +174,28 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Message passed (Indicates a good message.)
+- Advanced filter
+- Anti-malware Engine
+- Campaign
+- File detonation
+- File detonation reputation
+- File reputation
+- Fingerprint matching
+- General filter
+- Impersonation brand
+- Impersonation domain
+- Impersonation user
+- Mailbox intelligence impersonation
+- Message passed
+- Mixed analysis detection
+- Spoof DMARC
+- Spoof external domain
+- Spoof intra-org
+- URL detonation
+- URL detonation reputation
+- URL malicious reputation
 
-Email phishing EventTypes:
-
-- Advanced phish filter (Indicates a message caught by the machine learning model.)
-- Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
-- Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
-- Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
-- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
-- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
-- Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
-- General phish filter (Indicates a message caught by basic phish protection.)
-- Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
-- Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
-
-Email malware EventTypes:
-
-- Anti-malware engine (Indicates a message caught by the anti-malware engine.)
-- ATP Safe Attachments\* (Indicates a message with a malicious attachment blocked by Defender for Office 365.)
-- ATP Safe Links\* (Indicates when a malicious link is blocked by Defender for Office 365.)
-- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
-- Office 365 file reputation (Indicates a message with a known malicious file blocked.)
-- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
-
-Content malware EventTypes:
-
-- AtpDocumentMalware\* (Indicates malicious content detected by Safe Attachments.)
-- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires Defender for Office 365 or E5.)
-
-\* Requires Defender for Office 365 (included in Microsoft 365 E5 or in an add-in subscription).
+**Note**: Some values values correspond to features that are only available in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

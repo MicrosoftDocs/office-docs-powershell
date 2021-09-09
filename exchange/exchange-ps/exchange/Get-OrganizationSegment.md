@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-OrganizationSegment cmdlet to view organization segments in the Security & Compliance Center.
+Use the Get-OrganizationSegment cmdlet to view organization segments in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,7 +34,7 @@ Get-OrganizationSegment [[-Identity] <PolicyIdParameter>]
 ## DESCRIPTION
 Segments are defined by using certain [attributes](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-attributes) in Azure Active Directory.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -55,11 +55,11 @@ This example returns detailed information about the organization segment named E
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the organization segment that you want to view. You can use any value that uniquely identifies the segment. For example:
+The Identity parameter specifies the organization segment that you want to view. You can use a value that uniquely identifies the segment. For example:
 
 - Name
 - Distinguished name (DN)
-- GUID
+- ExchangeObjectId (not the ExoSegmentId)
 
 ```yaml
 Type: PolicyIdParameter

@@ -41,7 +41,7 @@ New-SafeAttachmentRule [-Name] <String> -SafeAttachmentPolicy <SafeAttachmentPol
 ## DESCRIPTION
 You need to specify at least one condition for the rule.
 
-You need to add the safe attachment rule to an existing policy by using the SafeAttachmentPolicy parameter. You create safe attachment policies by using the New-SafeAttachmentPolicy cmdlet.
+A safe attachment policy can be assigned only to one safe attachment rule.
 
 Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 

@@ -25,7 +25,8 @@ Set-CsMediaConfiguration [[-Identity] <XdsIdentity>] [-EnableQoS <Boolean>] [-En
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [-EnableRtx <Boolean>] [-EnableAVBundling <Boolean>] [-EnableReceiveAgc <Boolean>] 
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -34,7 +35,8 @@ Set-CsMediaConfiguration [-Instance <PSObject>] [-EnableQoS <Boolean>] [-EnableS
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [-EnableRtx <Boolean>] [-EnableAVBundling <Boolean>] [-EnableReceiveAgc <Boolean>] 
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +46,8 @@ These actions relate to audio and video calls between client endpoints.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
+
 ```
 Set-CsMediaConfiguration -Identity site:Redmond1 -MaxVideoRateAllowed hd720p15m
 ```
@@ -54,7 +57,8 @@ Note that the value passed to the MaxVideoRateAllowed parameter must be one of t
 Also note that the values are not case sensitive; the value entered here as hd720p15m will be automatically converted to the appropriate casing (in this instance, to Hd720p15M).
 
 
-### -------------------------- Example 2 --------------------------
+### Example 2
+
 ```
 Set-CsMediaConfiguration site:Redmond1 -EncryptionLevel donotsupportencryption
 ```
@@ -413,6 +417,51 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRtx
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAVBundling
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableReceiveAgc
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -115,10 +115,10 @@ The roles that are available, along with the permissions that they assign, are d
 - Contributor: CreateItems, FolderVisible
 - Editor: CreateItems, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
 - None: FolderVisible
-- NonEditingAuthor: CreateItems, FolderVisible, ReadItems
+- NonEditingAuthor: CreateItems, DeleteOwnedItems, FolderVisible, ReadItems
 - Owner: CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderContact, FolderOwner, FolderVisible, ReadItems
-- PublishingEditor: CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
 - PublishingAuthor: CreateItems, CreateSubfolders, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
+- PublishingEditor: CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
 - Reviewer: FolderVisible, ReadItems
 
 The following roles apply specifically to calendar folders:
@@ -244,7 +244,7 @@ The SharingPermissionFlags parameter assigns calendar delegate permissions. This
 
 You can specify multiple values separated by commas.
 
-**Note**: You can't configure the **Deliver meeting requests addressed to me and responses to meeting requests where I am the organizer to** Outlook setting in PowerShell. But, you can configure the setting using Exchange Web Services (EWS). For more information, see [MeetingRequestsDeliveryScope Enum](/dotnet/api/microsoft.exchange.webservices.data.meetingrequestsdeliveryscope).
+**Note**: You can't configure the **Deliver meeting requests addressed to me and responses to meeting requests where I am the organizer to** Outlook setting in PowerShell. But, you can configure the setting using Exchange Web Services (EWS). For more information, see [MeetingRequestsDeliveryScope Enum](https://docs.microsoft.com/dotnet/api/microsoft.exchange.webservices.data.meetingrequestsdeliveryscope).
 
 ```yaml
 Type: MailboxFolderPermissionFlags

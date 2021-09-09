@@ -35,7 +35,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-ProtectionLevelName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
  [-RemoveLabel] [<CommonParameters>]
 ```
 
@@ -152,6 +152,14 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInfor
 ```
 
 In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
+
+### -----------------------EXAMPLE 10-----------------------------
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -ConditionalAccessPolicy AuthenticationContext -AuthenticationContextName "MFA"
+```
+
+In this example, an authentication context called MFA is attached to the site.
 
 ## PARAMETERS
 
@@ -825,6 +833,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OverrideTenantExternalUserExpirationPolicy
+
+Choose whether to override the external user expiration policy on this site
+
+Possible values:
+
+- None: Respect the organization-level policy for external user expiration.
+- False: Respect the organization-level policy for external user expiration.
+- True: Override the organization-level policy for external user expiration (can be more or less restrictive).
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalUserExpirationInDays
+
+Specifies all external user expiration which will expire after the set number of days. Only applies if OverrideTenantExternalUserExpirationPolicy is set to true.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConditionalAccessPolicy
 
 Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
@@ -833,6 +881,7 @@ Possible values:
 - AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
 - AllowLimitedAccess: Allows limited, web-only access.
 - BlockAccess: Blocks Access.
+- AuthenticationContext: Assign an Azure AD authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
 
 
 ```yaml
@@ -848,9 +897,9 @@ Accept wildcard characters: False
 ```
 
 
-### -ProtectionLevelName
+### -AuthenticationContextName 
 
-The conditional access protection level name. For example "urn:microsoft:req1"
+The conditional access authentication context name.
 
 ```yaml
 Type: String

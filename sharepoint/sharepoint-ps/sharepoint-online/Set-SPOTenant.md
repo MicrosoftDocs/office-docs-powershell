@@ -52,6 +52,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
  [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>]
+ [-DisableAddShortcutsToOneDrive <Boolean>]
  [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>]
  [-FilePickerExternalImageSearchEnabled <Boolean>]
@@ -68,6 +69,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ODBMembersCanShare <SharingState>]
  [-OneDriveForGuestsEnabled <Boolean>]
  [-OneDriveStorageQuota <Int64>]
+ [-IsWBFluidEnabled <Boolean>]
  [-OrphanedPersonalSitesRetentionPeriod <Int32>]
  [-OwnerAnonymousNotification <Boolean>]
  [-PermissiveBrowserFileHandlingOverride <Boolean>]
@@ -101,6 +103,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-IncludeAtAGlanceInShareEmails]
  [-SyncAadB2BManagementPolicy <Boolean>]
  [-StopNew2010Workflows <Boolean>]
+ [-StopNew2013Workflows <Boolean>]
+ [-BlockSendLabelMismatchEmail <Boolean>]
+ [-DisableOutlookPSTVersionTrimming <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -113,7 +118,7 @@ You must be a SharePoint Online administrator or Global Administrator to run the
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
@@ -122,7 +127,7 @@ Set-SPOTenant -NoAccessRedirectUrl 'https://www.contoso.com'
 
 This example blocks access to <https://contoso.sharepoint.com/sites/team1> and redirects traffic to <https://www.contoso.com.>
 
-### -----------------------EXAMPLE 2-----------------------------
+### EXAMPLE 2
 
 ```powershell
 Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false
@@ -130,7 +135,7 @@ Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false
 
 This example hides the "Everyone Except External Users" claim in People Picker.
 
-### -----------------------EXAMPLE 3-----------------------------
+### EXAMPLE 3
 
 ```powershell
 Set-SPOTenant -ShowAllUsersClaim $false
@@ -138,7 +143,7 @@ Set-SPOTenant -ShowAllUsersClaim $false
 
 This example hides the "All Users" claim group in People Picker.
 
-### -----------------------EXAMPLE 4-----------------------------
+### EXAMPLE 4
 
 ```powershell
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true
@@ -146,7 +151,7 @@ Set-SPOTenant -UsePersistentCookiesForExplorerView $true
 
 This example enables the use of special persisted cookie for Open with Explorer.
 
-### -----------------------EXAMPLE 5-----------------------------
+### EXAMPLE 5
 
 ```powershell
 Set-SPOTenant -LegacyAuthProtocolsEnabled $True
@@ -154,7 +159,7 @@ Set-SPOTenant -LegacyAuthProtocolsEnabled $True
 
 This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site '<https://contoso-admin.sharepoint.com/'> or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
 
-### -----------------------EXAMPLE 6------------------------------
+### EXAMPLE 6
 
 ```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
@@ -162,7 +167,7 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
 
 This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behavior for other sites.
 
-### -----------------------EXAMPLE 7-------------------------------
+### EXAMPLE 7
 
 ```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
@@ -170,7 +175,7 @@ Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate
 
 This example stops publishing content types to OneDrive for Business sites.
 
-### -----------------------EXAMPLE 8-------------------------------
+### EXAMPLE 8
 
 ```powershell
 Set-SPOTenant -SearchResolveExactEmailOrUPN $true
@@ -178,7 +183,7 @@ Set-SPOTenant -SearchResolveExactEmailOrUPN $true
 
 This example disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
-### -----------------------EXAMPLE 9-------------------------------
+### EXAMPLE 9
 
 ```powershell
 Set-SPOTenant -UseFindPeopleInPeoplePicker $true
@@ -186,7 +191,7 @@ Set-SPOTenant -UseFindPeopleInPeoplePicker $true
 
 This example enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
-### -----------------------EXAMPLE 10-------------------------------
+### EXAMPLE 10
 
 ```powershell
 Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
@@ -304,7 +309,7 @@ Accept wildcard characters: False
 
 ### -EnableAIPIntegration
 
-This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. (Currently in public preview). For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ```yaml
 Type: Boolean
@@ -1192,6 +1197,26 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -IsWBFluidEnabled
+
+Sets whether Whiteboard is enabled or disabled for OneDrive for Business users. Whiteboard on OneDrive for Business is automatically enabled for applicable Microsoft 365 tenants but can be disabled.
+
+The valid values are:
+
+- $true - Administrator enabled Whiteboard for user with OneDrive for Business Users.
+- $false - Administrator disable Whiteboard for user with OneDrive for Business Users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OrphanedPersonalSitesRetentionPeriod
 
@@ -1546,7 +1571,7 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: AllowFullAccess
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -1701,6 +1726,8 @@ Accept wildcard characters: False
 
 Sets email attestation to required.
 
+If people who use a verification code select to "stay signed in" in the browser, they must prove that they can access the same account that they used to redeem the sharing invitation. You can set the number of days for email attestation with **-EmailAttestationReAuthDays**. This setting affects only ad-hoc external recipients.
+
 ```yaml
 Type: Boolean
 
@@ -1806,6 +1833,75 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopNew2013Workflows
+Prevents creation of new SharePoint 2013 classic workflows.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockSendLabelMismatchEmail
+
+When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record, and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableOutlookPSTVersionTrimming
+
+As communicated in MC256835 (May ’21), starting August 16th 2021 the service will start retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change will prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
+
+If you wish to opt-out of this policy change, you can use the parameter provided below. You will have until August 13th 2021, to opt-out. This is a one time opt-out operation. If you don’t opt-out by the deadline, the new behavior will automatically be enabled. The opt-out option for the cmdlet will have no effect after the deadline. Opt-out only applies to existing document libraries and does not apply to new doclibs created after August 13th 2021.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableAddShortcutsToOneDrive 
+
+When the feature is disabled ($true), the option [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) will be removed; any folders that have already been added will remain on the user's computer.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

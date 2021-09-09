@@ -49,6 +49,15 @@ Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
  [<CommonParameters>]
 ```
 
+### EmailAddress
+```
+Get-MigrationUser -EmailAddress <SmtpAddress>
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -67,6 +76,20 @@ Get-MigrationUser -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9 | Get-Migrat
 ```
 
 This example retrieves more detailed information about any ongoing migration for the user with the specified mailbox GUID.
+
+### Example 3
+```powershell
+Get-MigrationUser -EmailAddress TonySmith@contoso.com
+```
+
+This example retrieves status information about the recently migrated user, Tony Smith.
+
+### Example 4
+```powershell
+Get-MigrationUser -EmailAddress TonySmith@contoso.com | Get-MigrationUserStatistics
+```
+
+This example retrieves more detailed information about any ongoing migration for the user with the specified email address.
 
 ## PARAMETERS
 
@@ -121,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the particular user that you want to retrieve information about. The Identity parameter is represented as an email address.
+The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address. 
 
 ```yaml
 Type: MigrationUserIdParameter
@@ -133,6 +156,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -EmailAddress
+The EmailAddress parameter specifies the particular user that you want to retrieve information about. The EmailAddress parameter is represented as an email address. This parameter is available only in the cloud-based service.
+
+```yaml
+Type: EmailAddress
+Parameter Sets: EmailAddress
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

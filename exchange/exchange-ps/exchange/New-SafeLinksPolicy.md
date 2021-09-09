@@ -57,14 +57,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $true
+New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true
 ```
 
 This example creates a new Safe Links policy named Marketing Block URL with the following options:
 
 - The policy is enabled.
 - Users aren't allowed to click through to the original URL. This is the default value of the DoNotAllowClickThrough parameter, so you don't need to specify it.
-- User clicks on URLs are tracked in URL trace.
+- User clicks on URLs are tracked. This is the default value of the DoNotTrackUserClicks parameter, so you don't need to specify it.
 
 ## PARAMETERS
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomNotificationText
-{{ Fill CustomNotificationText Description }}
+The custom notification text specifies the customized notification text to show to users. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -250,7 +250,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationBranding
-{{ Fill EnableOrganizationBranding Description }}
+The EnableOrganizationBranding parameter specifies whether your organization's logo is displayed on Safe Links warning and notification pages. Valid values are:
+
+- $true: Organization branding is displayed on Safe Links warning and notification pages. Before you configure this value, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.
+- $false: Organization branding is not displayed on Safe Links warning and notification pages.
 
 ```yaml
 Type: Boolean
@@ -266,11 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForTeams
-**Note**: As of March 2020, this parameter is in Preview and is available only for members of the Microsoft Teams Technology Adoption Program (TAP).
-
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
-- $true: Safe Links is enabled for Teams. If a protected user clicks a malicious link in a Teams conversation, group chat, or from channels, a warning page will appear in the default web browser.
+- $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for Teams. This is the default value.
 
 ```yaml
@@ -373,7 +374,10 @@ Accept wildcard characters: False
 ```
 
 ### -UseTranslatedNotificationText
-{{ Fill UseTranslatedNotificationText Description }}
+The UseTranslatedNotificationText specifies whether to use Microsoft Translator to automatically localize the custom notification text that you specified with the CustomNotificationText parameter. Valid values are:
+
+- $true: Translate custom notification text to the user's language.
+- $false: Don't translate custom notification text to the user's language. This is the default value.
 
 ```yaml
 Type: Boolean
