@@ -1,21 +1,21 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-CsTeamsCallHoldPolicy
-Module Name: MicrosoftTeams
-online version:
-schema: 2.0.0
+online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamscallholdpolicy
+applicable: Skype for Business Online
 title: Remove-CsTeamsCallHoldPolicy
-manager: abnair
-author: joelhmarquez
-ms.author: jomarque
+schema: 2.0.0
 ms.reviewer:
+manager: abnair
+ms.author: jomarque
+author: joelhmarquez
 ---
 
 # Remove-CsTeamsCallHoldPolicy
 
 ## SYNOPSIS
-Deletes an existing Teams call hold policy in your tenant.
-The Teams call hold policy is used to customize the call hold experience for Teams clients.
+
+Deletes an existing Teams call hold policy in your tenant. The Teams call hold policy is used to customize the call hold experience for Teams clients.
+
 > [!NOTE]
 > **Preview** The use of this cmdlet is in Public Preview.
 
@@ -29,7 +29,8 @@ Remove-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [-Identity] <XdsIdentity> [
 ## DESCRIPTION
 Teams call hold policies are used to customize the call hold experience for teams clients.
 When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
-Assinging a teams call hold policy to a user sets an audio file to be played during the duration of the hold.
+
+Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold.
 
 ## EXAMPLES
 
@@ -130,7 +131,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Xds.XdsIdentity
@@ -138,6 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

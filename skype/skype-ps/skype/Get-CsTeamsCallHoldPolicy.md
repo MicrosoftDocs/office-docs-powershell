@@ -1,22 +1,23 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/get-csteamscallholdpolicy
-Module Name: MicrosoftTeams
-schema: 2.0.0
+applicable: Skype for Business Online
 title: Get-CsTeamsCallHoldPolicy
-manager: abnair
-author: joelhmarquez
-ms.author: jomarque
+schema: 2.0.0
 ms.reviewer:
+manager: abnair
+ms.author: jomarque
+author: joelhmarquez
 ---
 
 # Get-CsTeamsCallHoldPolicy
 
 ## SYNOPSIS
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
 
 Returns information about the policies configured to customize the call hold experience for Teams clients.
+
+> [!NOTE]
+> **Preview** The use of this cmdlet is in Public Preview.
 
 ## SYNTAX
 
@@ -34,6 +35,7 @@ Get-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ## DESCRIPTION
 Teams call hold policies are used to customize the call hold experience for teams clients.
 When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
+
 Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold. 
 
 ## EXAMPLES
@@ -82,13 +84,14 @@ Accept wildcard characters: False
 
 ### -Identity
 Unique identifier of the Teams call hold policy to be retrieved.
+
 To return the global policy, use this syntax:
 
--Identity "Global"
+`-Identity "Global"`
 
 To return a policy configured at the per-user scope, use syntax like this:
 
--Identity "ContosoPartnerCallHoldPolicy"
+`-Identity "ContosoPartnerCallHoldPolicy"`
 
 You cannot use wildcard characters when specifying the Identity.
 
