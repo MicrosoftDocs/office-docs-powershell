@@ -15,6 +15,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 Returns information about the policies configured to customize the call hold experience for Teams clients.
+> [!NOTE]\
+> **Preview** The use of this cmdlet is in Public Preview.
 
 ## SYNTAX
 
