@@ -310,7 +310,7 @@ Accept wildcard characters: False
 
 ### -EnableAIPIntegration
 
-This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. (Currently in public preview). For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ```yaml
 Type: Boolean
@@ -1453,6 +1453,8 @@ Accept wildcard characters: False
 
 This parameter enables the synchronization of privacy profile properties.
 
+SyncPrivacyProfileProperties sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1726,6 +1728,8 @@ Accept wildcard characters: False
 ### -EmailAttestationRequired
 
 Sets email attestation to required.
+
+If people who use a verification code select to "stay signed in" in the browser, they must prove that they can access the same account that they used to redeem the sharing invitation. You can set the number of days for email attestation with **-EmailAttestationReAuthDays**. This setting affects only ad-hoc external recipients.
 
 ```yaml
 Type: Boolean
