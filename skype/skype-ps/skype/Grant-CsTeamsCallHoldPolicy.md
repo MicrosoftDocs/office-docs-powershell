@@ -1,21 +1,21 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-CsTeamsCallHoldPolicy
-Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamscallholdpolicy
+applicable: Skype for Business Online
+title: Grant-CsTeamsCallHoldPolicy
 schema: 2.0.0
-title: grant-CsTeamsCallHoldPolicy
-manager: abnair
-author: joelhmarquez
-ms.author: jomarque
 ms.reviewer:
+manager: abnair
+ms.author: jomarque
+author: joelhmarquez
 ---
 
 # Grant-CsTeamsCallHoldPolicy
 
 ## SYNOPSIS
-Assigns a per-user Teams call hold policy to one or more users.
-The Teams call hold policy is used to customize the call hold experience for Teams clients.
+
+Assigns a per-user Teams call hold policy to one or more users. The Teams call hold policy is used to customize the call hold experience for Teams clients.
+
 > [!NOTE]
 > **Preview** The use of this cmdlet is in Public Preview.
 
@@ -36,7 +36,8 @@ grant-CsTeamsCallHoldPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-Dom
 ## DESCRIPTION
 Teams call hold policies are used to customize the call hold experience for teams clients.
 When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
-Assinging a teams call hold policy to a user sets an audio file to be played during the duration of the hold.
+
+Assigning a teams call hold policy to a user sets an audio file to be played during the duration of the hold.
 
 ## EXAMPLES
 
@@ -102,8 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant.
-To skip a warning when you do this operation, specify "-Global".
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
 
 ```yaml
 Type: SwitchParameter
@@ -120,9 +120,10 @@ Accept wildcard characters: False
 ### -Identity
 Indicates the Identity of the user account to be assigned the per-user Teams call hold policy.
 User Identities can be specified using one of the following formats:
-1) the user's SIP address;
-2) the user's user principal name (UPN);
-3) the user's Active Directory display name (for example, Ken Myer).
+
+- The user's SIP address;
+- The user's user principal name (UPN);
+- The user's Active Directory display name (for example, Ken Myer).
 
 ```yaml
 Type: UserIdParameter
@@ -138,6 +139,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams call hold policy.
+
 By default, the Grant-CsTeamsCallHoldPoly cmdlet does not pass objects through the pipeline.
 
 ```yaml
@@ -153,8 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Name of the policy to be assigned.
-The PolicyName is simply the policy Identity without the policy scope, i.e. the "Tag:" prefix.
+Name of the policy to be assigned. The PolicyName is simply the policy Identity without the policy scope, i.e. the "Tag:" prefix.
 
 For example, a policy with the Identity Tag:ContosoPartnerCallHoldPolicy has a PolicyName equal to ContosoPartnerCallHoldPolicy.
 
@@ -206,7 +207,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
@@ -214,6 +214,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
