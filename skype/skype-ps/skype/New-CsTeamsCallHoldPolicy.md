@@ -16,7 +16,7 @@ ms.reviewer:
 ## SYNOPSIS
 Creates a new Teams call hold policy in your tenant.
 The Teams call hold policy is used to customize the call hold experience for Teams clients.
-> [!NOTE]\
+> [!NOTE]
 > **Preview** The use of this cmdlet is in Public Preview.
 
 ## SYNTAX
