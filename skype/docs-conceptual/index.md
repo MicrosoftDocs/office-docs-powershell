@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Skype for Business cmdlet help reference
 description: "Learn about the Skype for Business PowerShell cmdlet help reference."
 ---

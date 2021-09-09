@@ -8,7 +8,7 @@ ms.audience: ITPro
 audience: ITPro
 ms.topic: reference
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e
 description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell and Exchange Online PowerShell."
 ---
