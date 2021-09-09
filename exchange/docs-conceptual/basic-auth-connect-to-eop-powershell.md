@@ -8,7 +8,7 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid:
 ROBOTS: NOINDEX
 description: "Use remote PowerShell to connect to a standalone Exchange Online Protection (EOP) organization without mailboxes in Exchange Online."
