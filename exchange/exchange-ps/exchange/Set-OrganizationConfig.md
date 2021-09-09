@@ -484,8 +484,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
-This parameter is available or functional only in on-premises Exchange.
-
 The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
 
 - $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
@@ -769,7 +767,10 @@ Accept wildcard characters: False
 ### -BookingsAuthEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAuthEnabled Description }}
+The BookingsAuthEnabled parameter specifies whether to enforce authentication to access all published Bookings pages. Valid values are:
+
+- $true: All new and existing Bookings pages are forced to authenticate users before they can book the appointment.
+- $false: All bookings pages are not forced to authenticate users.
 
 ```yaml
 Type: Boolean
@@ -852,7 +853,10 @@ Accept wildcard characters: False
 ### -BookingsMembershipApprovalRequired
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsMembershipApprovalRequired Description }}
+The BookingsMembershipApprovalRequired parameter enables a membership approval requirement when new staff members are added to Bookings calendars. Valid values are:
+
+- $true: Newly added staff members need to accept membership in Bookings calendars before the resources are bookable.
+- $false: Newly added staff members do not need to accept membership in Bookings calendars to make the resources bookable.
 
 ```yaml
 Type: Boolean
@@ -3108,7 +3112,7 @@ If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting prop
 
 The default value is `"Location,AllProperties:15"`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visible meeting update messages.
 
-There are three scenarios where meeting update messages are not auto-processed regardless of the values specified in this parameter (in these scenarios, attendees will always see meeting update messages in their Inbox):
+In the following scenarios, meeting update messages are not auto-processed, regardless of the values specified in this parameter. In these scenarios, attendees will always see meeting update messages in their Inbox:
 
 - The update contains a change to the meeting date, time, or recurrence pattern.
 - The meeting message is received for a delegated shared calendar.
