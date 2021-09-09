@@ -1,8 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-CsTeamsCallHoldPolicy
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamscallholdpolicy
 Module Name: MicrosoftTeams
-online version:
 schema: 2.0.0
 title: Get-CsTeamsCallHoldPolicy
 manager: abnair
@@ -14,9 +13,10 @@ ms.reviewer:
 # Get-CsTeamsCallHoldPolicy
 
 ## SYNOPSIS
-Returns information about the policies configured to customize the call hold experience for Teams clients.
-> [!NOTE]\
+> [!NOTE]
 > **Preview** The use of this cmdlet is in Public Preview.
+
+Returns information about the policies configured to customize the call hold experience for Teams clients.
 
 ## SYNTAX
 
@@ -35,7 +35,6 @@ Get-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 Teams call hold policies are used to customize the call hold experience for teams clients.
 When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
 Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold. 
-
 
 ## EXAMPLES
 
@@ -138,7 +137,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
@@ -146,6 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
