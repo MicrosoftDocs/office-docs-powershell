@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Microsoft Teams cmdlet reference
 description: "Learn about Microsoft Teams cmdlets."
 ---

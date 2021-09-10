@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Microsoft SharePoint Migration Tool cmdlet reference
 description: "Learn about Microsoft SharePoint Migration Tool cmdlets."
 ---

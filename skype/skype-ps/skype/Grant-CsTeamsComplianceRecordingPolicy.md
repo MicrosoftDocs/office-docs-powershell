@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamscompliancerecordingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsComplianceRecordingPolicy
 schema: 2.0.0
 manager: nakumar
@@ -130,7 +130,7 @@ You can return your tenant ID by running this command:
 
 Get-CsTenant | Select-Object DisplayName, TenantID
 
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
+If you are using a remote session of Windows PowerShell and are connected only to Microsoft Teams or Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will automatically be filled in for you based on your connection information.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
