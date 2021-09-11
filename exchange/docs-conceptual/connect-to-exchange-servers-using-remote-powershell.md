@@ -8,7 +8,7 @@ ms.audience: ITPro
 audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid: 0b5987c3-8836-456d-99f7-abc2ffb57300

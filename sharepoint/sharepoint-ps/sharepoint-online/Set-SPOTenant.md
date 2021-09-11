@@ -106,6 +106,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StopNew2013Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
+ [-ViewInFileExplorerEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1452,6 +1453,8 @@ Accept wildcard characters: False
 
 This parameter enables the synchronization of privacy profile properties.
 
+SyncPrivacyProfileProperties sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1902,6 +1905,31 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ViewInFileExplorerEnabled
+Enables or disables the ability to use View in Explorer in Microsoft Edge (93) or above. 
+
+> [!NOTE]
+> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work.
+> 
+> Minimum Module Version Required: 16.0.21610.12000 
+
+The valid values are:  
+
+- False (default) - Disables View In Explorer command to become visible in Edge.
+- True - Enables View In Explorer command to become visible in Edge.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
