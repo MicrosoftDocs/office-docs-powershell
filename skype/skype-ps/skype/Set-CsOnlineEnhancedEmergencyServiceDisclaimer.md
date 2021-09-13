@@ -14,9 +14,9 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the `Set-CsOnlineEnhancedEmergencyServiceDisclaimer` cmdlet to record your organization's acceptance of the enhanced emergency service terms and conditions.
-Any tenant administrator can accept the terms and conditions.
+Any tenant administrator can accept the terms and conditions.It only needs to done if you use Microsoft Calling Plans and it only needs to be done once.
 
-As the output the cmdlet will show the emergency service disclaimer and that it has been accepted.
+As the output the cmdlet will show the emergency service disclaimer and that it has been accepted. You can use Get-CsOnlineEnhancedEmergencyServiceDisclaimer to see the status of the emergency service disclaimer.
 
 ## SYNTAX
 
