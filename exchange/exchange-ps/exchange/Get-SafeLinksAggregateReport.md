@@ -149,12 +149,12 @@ Accept wildcard characters: False
 ```
 
 ### -SummarizeBy
-The SummarizeBy parameter returns totals based on the values you specify. Valid values are:
+The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of Action or AppNameList on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that specific Action or App on one row in the report.
+
+For this cmdlet, valid values are:
 
 - Action: Only the values specified by the Action parameter are returned.
 - App: Only the values specified by the AppNameList parameter are returned.
-
-If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of Action or AppNameList on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that specific Action or App on one row in the report.
 
 ```yaml
 Type: String
