@@ -46,7 +46,7 @@ $Fid=[System.Guid]::Parse($audioFile.Id)
 New-CsTeamsUnassignedNumberTreatment -Identity TR1 -Pattern "^\+1555333\d{4}$" -TargetType Announcement -Target $Fid.Guid -TreatmentPriority 2
 ```
 This example creates a treatment that will route all calls to the number range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
-where the audio file MainAnnouncement.wav will be played to the caller. The audio file will be repeated until the caller hangs up.
+where the audio file MainAnnouncement.wav will be played to the caller.
 
 
 ### Example 3
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetType
-The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement. For Announcement, the audio file will be repeated until the caller hangs up.
+The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement.
 
 ```yaml
 Type: System.String
