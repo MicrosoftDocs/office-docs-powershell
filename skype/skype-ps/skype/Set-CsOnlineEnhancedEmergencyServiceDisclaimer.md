@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineenhancedemergencyservicedisclaimer
-applicable: Skype for Business Online
+applicable: Skype for Business Online and Microsoft Teams
 title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
 manager: bulenteg
@@ -16,6 +16,8 @@ ms.reviewer:
 Use the `Set-CsOnlineEnhancedEmergencyServiceDisclaimer` cmdlet to record your organization's acceptance of the enhanced emergency service terms and conditions.
 Any tenant administrator can accept the terms and conditions.
 
+As the output the cmdlet will show the emergency service disclaimer and that it has been accepted.
+
 ## SYNTAX
 
 ```
@@ -25,7 +27,8 @@ Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion <String> [-Versi
 
 
 ## DESCRIPTION
-You must run this cmdlet prior to assigning phone numbers and locations to voice enabled users in the United States.
+You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers and locations to voice enabled users or accept the similar disclaimer in the Teams admin center. Microsoft Calling Plan phone numbers are available in several countries, see this link https://docs.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans
+
 
 ## EXAMPLES
 
@@ -41,8 +44,7 @@ version of the enhanced emergency service terms and conditions.
 ## PARAMETERS
 
 ### -CountryOrRegion
-Specifies the region or country whose terms and conditions you wish to accept.
-The United States is currently the only country supported, but it must be specified as "US".
+Specifies the region or country whose terms and conditions you wish to accept. You need to use the ISO 31661-1 alpha-2 2 letter code for the Microsoft Calling Plan country. For example for the United States it must be specified as "US" and for Denmark it must be specified as "DK".
 
 ```yaml
 Type: String
@@ -188,4 +190,4 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
+[Get-CsOnlineEnhancedEmergencyServiceDisclaimer](Get-CsOnlineEnhancedEmergencyServiceDisclaimer.md)
