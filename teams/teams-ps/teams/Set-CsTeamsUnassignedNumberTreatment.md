@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetType
-The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement. For Annoncement, the audio file will be repeated until the caller hangs up.
+The type of target used for the treatment. Allowed values are User, ResourceAccount and Announcement.
 
 ```yaml
 Type: System.String
