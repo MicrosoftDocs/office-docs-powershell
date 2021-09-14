@@ -31,9 +31,10 @@ Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion <String> [-Versi
  [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
-You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers and locations to voice enabled users or accept the similar disclaimer in the Teams admin center. Microsoft Calling Plan phone numbers are available in several countries, see this link https://docs.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans
+You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers and locations to voice enabled users or accept the similar disclaimer in the Teams admin center.
+
+Microsoft Calling Plan phone numbers are available in several countries, see this link https://docs.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans
 
 
 ## EXAMPLES
