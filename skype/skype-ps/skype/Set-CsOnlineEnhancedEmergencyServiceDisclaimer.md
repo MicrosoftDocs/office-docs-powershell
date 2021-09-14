@@ -13,8 +13,14 @@ ms.reviewer:
 # Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 
 ## SYNOPSIS
-Use the `Set-CsOnlineEnhancedEmergencyServiceDisclaimer` cmdlet to record your organization's acceptance of the enhanced emergency service terms and conditions.
-Any tenant administrator can accept the terms and conditions.It only needs to done if you use Microsoft Calling Plans and it only needs to be done once.
+When using Microsoft Teams PSTN Calling Services you need to record your organization's acceptance of the enhanced emergency service terms and conditions. This is done per
+country and it needs to be done before you can provide PSTN calling services to Microsoft Teams users in the country.
+
+You can record your organization's acceptance using the Set-CsOnlineEnhancedEmergencyServiceDisclaimer cmdlet at any time. If you haven't accepted it for a given country
+you will be prompted to do so by warning information in the Teams PS Module, when you try to assign phone numbers to Microsoft Teams user or in the Teams admin center,
+when you create an emergency address in a country.
+
+Any tenant administrator can accept the terms and conditions and it only needs to done once per country.
 
 As the output the cmdlet will show the emergency service disclaimer and that it has been accepted. You can use Get-CsOnlineEnhancedEmergencyServiceDisclaimer to see the status of the emergency service disclaimer.
 
