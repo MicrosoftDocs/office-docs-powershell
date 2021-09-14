@@ -414,13 +414,12 @@ Accept wildcard characters: False
 ```
 
 ### -SpamFilteringEnabledType
-Determines if Spam filtering is enabled.
+Determines Spam filtering mode.
 
 Possible values:
-- Enabled
-- Disabled
-- EnabledWithoutIVR (Choosing this value will disable the default spam checking which integrates the Captcha IVR Bot into the flow. The call will not be redirected to the bot for checking against fraudulent calls but will be allowed to go to the original target if the spam score is not high.)
-
+- Enabled - Spam Filtering is fully enabled. Both Basic and Captcha IVR checks are performed. In case the call is considered as spam, user will get "Spam Likely" notification in Teams
+- Disabled - Spam Filtering is completely disabled. No checked are performed. "Spam Likely" notification will not appear.
+- EnabledWithoutIVR - Spam Filtering is enabled partially. Captcha IVR (Interactive Voice Response) checks are disabled. "Spam Likely" notification will not appear. However, a call might get dropped in case it gets a high score from Basic checks.
 
 ```yaml
 Type: String
