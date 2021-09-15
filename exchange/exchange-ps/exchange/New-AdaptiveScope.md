@@ -12,13 +12,13 @@ ms.reviewer:
 # New-AdaptiveScope
 
 ## SYNOPSIS
-
-## SYNTAX
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-AdaptiveScope cmdlet to create adaptive scopes in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+
+## SYNTAX
 
 ### Default
 ```
