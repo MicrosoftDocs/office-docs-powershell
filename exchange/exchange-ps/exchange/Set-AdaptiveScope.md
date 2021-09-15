@@ -80,6 +80,8 @@ The FilterConditions parameter specifies the conditions that are included in the
 - User or Group: Active Directory attributes. For example, `@(@{Name="Country”; Operator="Equals"; Values="USA","Canada"},@{Name="Department"; Operator="NotEquals"; Values="Finance"})`
 - Site: Indexed custom properties. For example, `@(@{Name=" RefinableString00"; Operator="Equals"; Values="Human Resource"})`
 
+You can't use this parameter with the RawQuery parameter.
+
 ```yaml
 Type: PswsHashtable
 Parameter Sets: Default
@@ -94,7 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -RawQuery
-{{ Fill RawQuery Description }}
+The RawQuery parameter switches the scope to advanced query mode.
+
+You can't use this parameter with the FilterConditions parameter.
 
 ```yaml
 Type: String
