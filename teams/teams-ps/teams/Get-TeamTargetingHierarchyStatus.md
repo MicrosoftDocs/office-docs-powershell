@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
+online version: https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus
 schema: 2.0.0
 author: mbergamo
 ms.author: mbergamo
@@ -11,7 +11,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchy))
+Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/set-teamtargetinghierarchy))
 
 ## SYNTAX
 
@@ -86,4 +86,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-- [Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchy)
+[Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/set-teamtargetinghierarchy)
