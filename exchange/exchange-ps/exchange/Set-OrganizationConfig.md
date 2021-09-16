@@ -83,6 +83,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
+ [-FindTimeLockPollForAttendeesEnabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
@@ -483,8 +484,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
-This parameter is available or functional only in on-premises Exchange.
-
 The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
 
 - $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
@@ -747,7 +746,10 @@ Accept wildcard characters: False
 ### -BookingsAddressEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAddressEntryRestricted Description }}
+The BookingsAddressEntryRestricted parameter specifies whether addresses can be collected from Bookings customers. Valid values are:
+
+- $true: Addresses can't be collected from Bookings customers.
+- $false: Addresses can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -765,7 +767,10 @@ Accept wildcard characters: False
 ### -BookingsAuthEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAuthEnabled Description }}
+The BookingsAuthEnabled parameter specifies whether to enforce authentication to access all published Bookings pages. Valid values are:
+
+- $true: All new and existing Bookings pages are forced to authenticate users before they can book the appointment.
+- $false: All bookings pages are not forced to authenticate users.
 
 ```yaml
 Type: Boolean
@@ -783,7 +788,10 @@ Accept wildcard characters: False
 ### -BookingsCreationOfCustomQuestionsRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsCreationOfCustomQuestionsRestricted Description }}
+The BookingsCreationOfCustomQuestionsRestricted parameter specifies whether Bookings admins can add custom questions. Valid values are:
+
+- $true: Bookings admins can't add custom questions.
+- $false: Bookings admins can add custom questions.
 
 ```yaml
 Type: Boolean
@@ -801,12 +809,12 @@ Accept wildcard characters: False
 ### -BookingsEnabled
 This parameter is available only in the cloud-based service.
 
-The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an Exchange Online organization. Valid values are:
+The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an organization. Valid values are:
 
-- $true: Bookings are enabled.
-- $false: Bookings are disabled. This is the default value.
+- $true: Bookings is enabled.
+- $false: Bookings is disabled. This is the default value.
 
-Microsoft Bookings is an online and mobile app for small businesses who provide services to customers on an appointment basis.
+Microsoft Bookings is an online and mobile app for small businesses who provide appointment services to customers.
 
 ```yaml
 Type: Boolean
@@ -824,7 +832,10 @@ Accept wildcard characters: False
 ### -BookingsExposureOfStaffDetailsRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsExposureOfStaffDetailsRestricted Description }}
+The BookingsExposureOfStaffDetailsRestricted parameter specifies whether the attributes of internal Bookings staff members (for example, email addresses) are visible to external Bookings customers. Valid values are:
+
+- $true: Internal Bookings staff member attributes aren't visible to external Bookings customers.
+- $false: Internal Bookings staff member attributes are visible to external Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -842,7 +853,10 @@ Accept wildcard characters: False
 ### -BookingsMembershipApprovalRequired
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsMembershipApprovalRequired Description }}
+The BookingsMembershipApprovalRequired parameter enables a membership approval requirement when new staff members are added to Bookings calendars. Valid values are:
+
+- $true: Newly added staff members need to accept membership in Bookings calendars before the resources are bookable.
+- $false: Newly added staff members do not need to accept membership in Bookings calendars to make the resources bookable.
 
 ```yaml
 Type: Boolean
@@ -860,7 +874,10 @@ Accept wildcard characters: False
 ### -BookingsNotesEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsNotesEntryRestricted Description }}
+The BookingsNotesEntryRestricted parameter specifies whether appointment notes can be collected from Bookings customers. Valid values are:
+
+- $true: Appointment notes can't be collected from Bookings customers.
+- $false: Appointment notes can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -878,7 +895,7 @@ Accept wildcard characters: False
 ### -BookingsPaymentsEnabled
 This parameter is available only in the cloud-based service.
 
-The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
+The BookingsPaymentsEnabled parameter specifies whether to enable the online payment node inside Bookings. Valid values are:
 
 - $true: Online payments are enabled.
 - $false: Online payments are disabled. This is the default value.
@@ -899,7 +916,10 @@ Accept wildcard characters: False
 ### -BookingsPhoneNumberEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsPhoneNumberEntryRestricted Description }}
+The BookingsPhoneNumberEntryRestricted parameter specifies whether phone numbers can be collected from Bookings customers. Valid values are:
+
+- $true: Appointment notes can't be collected from Bookings customers.
+- $false: Appointment notes can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -917,7 +937,7 @@ Accept wildcard characters: False
 ### -BookingsSocialSharingRestricted
 This parameter is available only in the cloud-based service.
 
-The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
+The BookingsSocialSharingRestricted parameter specifies whether users can see the social sharing options inside Bookings. Valid values are:
 
 - $true: Social sharing options are restricted.
 - $false: Users can see social sharing options inside Bookings. This is the default value.
@@ -1892,6 +1912,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FindTimeLockPollForAttendeesEnabled
+This parameter is available only in the cloud-based service.
+
+The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is managed by the organization. Valid values are:
+
+- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
+- $false: By default, **Lock poll for attendees** is off (initial default) or on (the user saved settings from last poll), but the meeting organizer is allowed to turn the setting off or on to allow or prevent attendees from suggesting new times or editing attendees.
+
+For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FindTimeOnlineMeetingOptionDisabled
 This parameter is available only in the cloud-based service.
 
@@ -2497,7 +2540,8 @@ This parameter is available only in the cloud-based service.
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
-- $false: All meetings are not online by default. This is the default value.
+- $false: All meetings are not online by default.
+- $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
 You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
 
@@ -2949,7 +2993,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendFromAliasEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service. 
+
+Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience. 
+An official announcement will be released via the EHLO blog and Message Center in due time.
 
 The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
 
@@ -3065,7 +3112,7 @@ If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting prop
 
 The default value is `"Location,AllProperties:15"`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visible meeting update messages.
 
-There are three scenarios where meeting update messages are not auto-processed regardless of the values specified in this parameter (in these scenarios, attendees will always see meeting update messages in their Inbox):
+In the following scenarios, meeting update messages are not auto-processed, regardless of the values specified in this parameter. In these scenarios, attendees will always see meeting update messages in their Inbox:
 
 - The update contains a change to the meeting date, time, or recurrence pattern.
 - The meeting message is received for a delegated shared calendar.

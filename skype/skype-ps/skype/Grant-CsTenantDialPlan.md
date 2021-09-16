@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/grant-cstenantdialplan
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
@@ -59,7 +59,7 @@ The Identity parameter identifies the user to whom the policy should be assigned
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -75,7 +75,7 @@ The PolicyName parameter is the name of the tenant dial plan to assign to the sp
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
@@ -91,7 +91,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Valid inputs for this parameter are either the fully qualified domain name (FQDN
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+Specifies the globally unique identifier (GUID) of your Microsoft Teams or Skype for Business Online tenant account.
 For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
 You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
@@ -141,7 +141,7 @@ You can find your tenant ID by running this command: `Get-CsTenant | Select-Obje
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named

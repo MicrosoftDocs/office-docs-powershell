@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Microsoft Teams cmdlet help reference
 description: "Learn about the Microsoft Teams PowerShell cmdlet help reference."
 ---

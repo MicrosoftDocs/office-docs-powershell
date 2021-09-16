@@ -45,6 +45,9 @@ Connect-MicrosoftTeams
 ## DESCRIPTION
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
+> [!WARNING]
+>If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is [necessary.](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)
+
 ## EXAMPLES
 
 ### Example 1: Connect to MicrosoftTeams
@@ -123,10 +126,10 @@ Default value: None
 Accept wildcard characters: False
 ```
 
-### -AadAccessToken (Removed in version 2.3.2-preview)
+### -AadAccessToken (Removed from version 2.3.2-preview)
 Specifies a Azure Active Directory Graph access token.
 > [!WARNING]
->This parameter has been removed in version 2.3.2-preview.
+>This parameter has been removed from version 2.3.2-preview.
 
 ```yaml
 Type: String
@@ -180,8 +183,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CertificateThumbprint
+### -CertificateThumbprint (Removed from version 2.4.1-preview)
 Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+> [!WARNING]
+>This parameter has been removed from version 2.4.1-preview.
 
 ```yaml
 Type: String
@@ -262,10 +267,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MsAccessToken (Removed in version 2.3.2-preview)
+### -MsAccessToken (Removed from version 2.3.2-preview)
 Specifies a Microsoft Graph access token.
 > [!WARNING]
->This parameter has been removed in version 2.3.2-preview.
+>This parameter has been removed from version 2.3.2-preview.
 
 ```yaml
 Type: String

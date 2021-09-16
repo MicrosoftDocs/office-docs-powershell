@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailNickName
-Specify the mailnickname of the team that is being returned.  This is a unique identifier and returns exact match.
+Specify the mailnickname of the team that is being returned. This acts as a filter instead of being an exact match.
 
 ```yaml
 Type: String

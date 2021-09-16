@@ -1998,6 +1998,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Export-FilePlanProperty](Export-FilePlanProperty.md)
 
+### [Get-AppRetentionCompliancePolicy](Get-AppRetentionCompliancePolicy.md)
+
+### [Get-AppRetentionComplianceRule](Get-AppRetentionComplianceRule.md)
+
 ### [Get-ComplianceRetentionEvent](Get-ComplianceRetentionEvent.md)
 
 ### [Get-ComplianceRetentionEventType](Get-ComplianceRetentionEventType.md)
@@ -2048,6 +2052,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Import-FilePlanProperty](Import-FilePlanProperty.md)
 
+### [New-AppRetentionCompliancePolicy](New-AppRetentionCompliancePolicy.md)
+
+### [New-AppRetentionComplianceRule](New-AppRetentionComplianceRule.md)
+
 ### [New-ComplianceRetentionEvent](New-ComplianceRetentionEvent.md)
 
 ### [New-ComplianceRetentionEventType](New-ComplianceRetentionEventType.md)
@@ -2084,6 +2092,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-RetentionPolicyTag](New-RetentionPolicyTag.md)
 
+### [Remove-AppRetentionCompliancePolicy](Remove-AppRetentionCompliancePolicy.md)
+
+### [Remove-AppRetentionComplianceRule](Remove-AppRetentionComplianceRule.md)
+
 ### [Remove-ComplianceRetentionEventType](Remove-ComplianceRetentionEventType.md)
 
 ### [Remove-ComplianceTag](Remove-ComplianceTag.md)
@@ -2117,6 +2129,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-RetentionPolicy](Remove-RetentionPolicy.md)
 
 ### [Remove-RetentionPolicyTag](Remove-RetentionPolicyTag.md)
+
+### [Set-AppRetentionCompliancePolicy](Set-AppRetentionCompliancePolicy.md)
+
+### [Set-AppRetentionComplianceRule](Set-AppRetentionComplianceRule.md)
 
 ### [Set-ComplianceRetentionEventType](Set-ComplianceRetentionEventType.md)
 

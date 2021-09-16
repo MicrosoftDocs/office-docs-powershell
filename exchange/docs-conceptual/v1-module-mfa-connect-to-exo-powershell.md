@@ -8,7 +8,7 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX
@@ -75,11 +75,11 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
-     ![Download the Exchange Online PowerShell Module from the Hybrid tab in the EAC](media/24645e56-8b11-4c0f-ace4-09bdb2703562.png)
+     ![Download the Exchange Online PowerShell Module from the Hybrid tab in the EAC.](media/24645e56-8b11-4c0f-ace4-09bdb2703562.png)
 
   3. In the **Application Install** window that opens, click **Install**.
 
-     ![Click Install in the Exchange Online PowerShell Module window](media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
+     ![Click Install in the Exchange Online PowerShell Module window.](media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
 - When you use the Exchange Online Remote PowerShell Module, your session will end after one hour, which can be problematic for long-running scripts or processes. To avoid this issue, use [Trusted IPs](/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) to bypass MFA for connections from your intranet. Trusted IPs allow you to connect to Exchange Online PowerShell from your intranet using the old instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md). Also, if you have servers in a datacenter, be sure to add their public IP addresses to Trusted IPs as described [here](/azure/active-directory/authentication/howto-mfa-mfasettings#enable-the-trusted-ips-feature-by-using-service-settings).
 
@@ -132,13 +132,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
-   ![Enter your password in the Exchange Online Remote PowerShell window](media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
+   ![Enter your password in the Exchange Online Remote PowerShell window.](media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
 
    A verification code is generated and delivered based on the verification response option that's configured for your account (for example, a text message or the Azure Authenticator app on your mobile phone).
 
 4. In the verification window that opens, enter the verification code, and then click **Sign in**.
 
-   ![Enter your verification code in the Exchange Online Remote PowerShell window](media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
+   ![Enter your verification code in the Exchange Online Remote PowerShell window.](media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Exchange Online Remote PowerShell Module window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect all currently open PowerShell sessions in the current window, run the following command:

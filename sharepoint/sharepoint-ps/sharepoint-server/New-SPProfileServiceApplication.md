@@ -244,9 +244,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileDBServer
-Specifies the database where the User Profile database will be created.
+Specifies the database server where the User Profile database will be created.
 
-The type must be a valid name of a SQL Server database; for example, ProfileAppDB1.
+The type must be a valid name of a SQL Server database server.
 
 ```yaml
 Type: String
