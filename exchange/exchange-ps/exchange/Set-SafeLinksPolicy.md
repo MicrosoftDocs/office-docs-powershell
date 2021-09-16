@@ -41,7 +41,7 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-TrackClicks <Boolean>]
  [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
- [-DisableUrlRewrite]
+ [-DisableUrlRewrite <Boolean>]
  [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
@@ -391,9 +391,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableUrlRewrite
-The DisableUrlRewrite parameter will tell SafeLinks not to rewrite any URLs in email and to do time of click checks via the SafeLinks API from clients that support it. If SafeLinks is enabled and wrapping disabled content will still be scanned prior to email delivery. Currently this API check is supported in Outlook for Desktop (Windows, MacOS). If URL rewrites are enabled API checks will still occur for unwrapped URLs in supported clients if the user is in a valid SafeLinks policy. 
+The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in email messages. Valid values are:
 
-Generally there is no reason to disable URL rewrites also known as URL wrapping. 
+- $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac). Typically, we don't recommend using this value.
+- $false: URLs in messages are rewritten. API checks still occur on unwrapped URLs in supported clients if the user is in a valid Safe Links policy. This is the default value.
 
 ```yaml
 Type: Boolean
