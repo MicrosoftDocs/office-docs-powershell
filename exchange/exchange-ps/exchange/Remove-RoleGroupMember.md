@@ -89,7 +89,25 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the mailbox or USG to remove from a role group. You can only specify one member at a time. If the member name contains spaces, enclose the name in quotation marks (").
+The Member parameter specifies who to remove from the role group. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Mail-enabled security groups (don't use in Security & Compliance Center PowerShell)
+- Security groups (on-premises Exchange only)
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -158,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter doesn't work in the Security & Compliance Center.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

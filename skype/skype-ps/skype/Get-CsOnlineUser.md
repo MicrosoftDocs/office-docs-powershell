@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineuser
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
 manager: bulenteg
@@ -13,8 +13,7 @@ ms.reviewer:
 # Get-CsOnlineUser
 
 ## SYNOPSIS
-Returns information about users who have accounts homed on Skype for Business Online.
-This cmdlet can only be used with Skype for Business Online.
+Returns information about users who have accounts homed on Microsoft Teams or Skype for Business Online.
 
 ## SYNTAX
 
@@ -25,10 +24,10 @@ Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicati
 ```
 
 ## DESCRIPTION
-The Get-CsOnlineUser cmdlet returns information about users who have accounts homed on Skype for Business Online.
+The Get-CsOnlineUser cmdlet returns information about users who have accounts homed on Microsoft Teams or Skype for Business Online.
 The returned information includes standard Active Directory account information (such as the department the user works in, his or her address and phone number, etc.) as well as Skype for Business Server 2015 specific information: the Get-CsOnlineUser cmdlet returns information about such things as whether or not the user has been enabled for Enterprise Voice and which per-user policies (if any) have been assigned to the user.
 
-Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that means you cannot use a command similar to this in order to limit the returned data to users who have accounts with a specific Skype for Business Online tenant:
+Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that means you cannot use a command similar to this in order to limit the returned data to users who have accounts with a specific Microsoft Teams or Skype for Business Online tenant:
 
 `Get-CsOnlineUser -TenantId "bf19b7db-6960-41e5-a139-2aa373474354"`
 
@@ -106,13 +105,13 @@ To accomplish the task, the filter string is first constructed and resolved loca
 ## PARAMETERS
 
 ### -Credential
-This parameter is not used with Skype for Business Online.
+This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -122,13 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is not used with Skype for Business Online.
+This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -138,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Enables you to limit the returned data by filtering on Skype for Business specific attributes.
+Enables you to limit the returned data by filtering on specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
 The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
@@ -150,7 +149,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -164,13 +163,15 @@ Indicates the Identity of the user account to be retrieved.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
 You can use the asterisk ( * ) wildcard character when using the Display Name as the user Identity.
-For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith".
+For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith". 
+
+Note that in Microsoft Teams PowerShell Version 2.5.1, using this parameter will cause the Get-CsOnlineUser command to no longer emit deprecated properties as part of the modernization effort.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -180,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business).
+Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
 
 The LdapFilter parameter uses the LDAP query language when creating filters.
@@ -190,7 +191,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -200,14 +201,14 @@ Accept wildcard characters: False
 ```
 
 ### -OnModernServer
-When present, the cmdlet returns a collection of users homed on Skype for Business.
+When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: OnLyncServer
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -217,13 +218,13 @@ Accept wildcard characters: False
 ```
 
 ### -OnOfficeCommunicationServer
-This parameter is not used with Skype for Business Online.
+This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -233,13 +234,13 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-This parameter is not used with Skype for Business Online.
+This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
 ```yaml
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -261,7 +262,7 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -277,7 +278,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -294,7 +295,7 @@ Users are not allowed to log on to unless they are assigned to a Registrar pool.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named

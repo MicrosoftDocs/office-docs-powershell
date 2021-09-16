@@ -117,7 +117,12 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. The event type you specify must correspond to the report. For example, you can only specify "Anti-malware engine" or "Advanced Threat Protection" events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- Advanced Threat Protection
+- Advanced Threat Protection clean
+- Anti-malware engine
+- Anti-malware engine clean
 
 You can specify multiple values separated by commas.
 

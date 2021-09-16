@@ -101,46 +101,63 @@ Accept wildcard characters: False
 ### -PromptLanguage
 The PromptLanguage parameter represents the language that is used to play voicemail prompts. 
 
-Now the following languages are supported:
+The following languages are supported:
 
 - "ar-EG" (Arabic - Egypt)
+- "ar-SA" (Arabic - Saudi Arabia)
+- "bg-BG" (Bulgarian - Bulgaria)
 - "ca-ES" (Catalan - Catalan)
+- "cy-GB" (Welsh - United Kingdom)
+- "cs-CZ" (Czech - Czech Republic)
 - "da-DK" (Danish - Denmark)
+- "de-AT" (German - Austria)
+- "de-CH" (German - Switzerland)
 - "de-DE" (German - Germany)
+- "el-GR" (Greek - Greece)
 - "en-AU" (English - Australia)
 - "en-CA" (English - Canada)
 - "en-GB" (English - United Kingdom)
+- "en-IE" (English - Ireland)
 - "en-IN" (English - India)
+- "en-PH" (English - Philippines)
 - "en-US" (English - United States)
+- "en-ZA" (English - South Africa)
 - "es-ES" (Spanish - Spain)
 - "es-MX" (Spanish - Mexico)
+- "et-EE" (Estonian - Estonia)
 - "fi-FI" (Finnish - Finland)
+- "fr-BE" (French - Belgium)
 - "fr-CA" (French - Canada)
+- "fr-CH" (French - Switzerland)
 - "fr-FR" (French - France)
+- "he-IL" (Hebrew - Israel)
+- "hi-IN" (Hindi - India)
+- "hr-HR" (Croatian - Croatia)
+- "hu-HU" (Hungarian - Hungary)
+- "id-ID" (Indonesian - Indonesia)
 - "it-IT" (Italian - Italy)
 - "ja-JP" (Japanese - Japan)
 - "ko-KR" (Korean - Korea)
+- "lt-LT" (Lithuanian - Lithuania)
+- "lv-LV" (Latvian - Latvia)
+- "nl-BE" (Dutch - Begium)
 - "nl-NL" (Dutch - Netherlands)
 - "nb-NO" (Norwegian, Bokmål - Norway)
 - "pl-PL" (Polish - Poland)
 - "pt-BR" (Portuguese - Brazil)
 - "pt-PT" (Portuguese - Portugal)
+- "ro-RO" (Romanian - Romania)
 - "ru-RU" (Russian - Russia)
+- "sk-SK" (Slovak - Slovakia)
+- "sl-SI" (Slovenian - Slovenia)
 - "sv-SE" (Swedish - Sweden)
+- "th-TH" (Thai - Thailand)
 - "tr-TR" (Turkish - Turkey)
+- "vi-VN" (Vietnamese - Viet Nam)
 - "zh-CN" (Chinese - Simplified, PRC)
 - "zh-TW" (Chinese - Traditional, Taiwan)
 - "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
-- "cs-CZ" (Czech - Czech Republic)
-- "th-TH" (Thai - Thailand)
-- "el-GR" (Greek - Greece)
-- "hu-HU" (Hungarian - Hungary)
-- "sk-SK" (Slovak - Slovakia)
-- "hr-HR" (Croatian - Croatia)
-- "sl-SI" (Slovenian - Slovenia)
-- "id-ID" (Indonesian - Indonesia)
-- "ro-RO" (Romanian - Romania)
-- "vi-VN" (Vietnamese - Viet Nam)
+
 
 ```yaml
 Type: System.String
@@ -227,7 +244,7 @@ Accept wildcard characters: False
 
 ### -TransferTarget
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
-Value of this parameter should be a SIP URI of another user, an auto attendant, or a hunt group (call queue) in your organization.
+Value of this parameter should be a SIP URI of another user in your organization.
 For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
 
 

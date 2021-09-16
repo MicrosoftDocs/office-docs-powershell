@@ -42,7 +42,7 @@ This example sets a CDN to a public type with a policy value of listed extension
 Set-SPOTenantCdnPolicy -CdnType Public -PolicyType ExcludeRestrictedSiteClassifications -PolicyValue "Confidential,Restricted"
 ```
 
-This example sets a CDN to a public type with a policy value of valid site classifications.
+This example sets the ExcludeRestrictedSiteClassifications policy for the selected CdnType to a policy value of listed excluded site classifications.
 
 ## PARAMETERS
 

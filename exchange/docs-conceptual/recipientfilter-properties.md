@@ -8,7 +8,7 @@ ms.audience: ITPro
 audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: cf78aca5-6699-485c-9b15-e0adba252176
 description: "Learn about the recipient properties that you can use with the RecipientFilter parameter in Exchange Server and Exchange Online cmdlets."
 ---
@@ -47,6 +47,8 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
 - For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+
+<br>
 
 ****
 
@@ -227,7 +229,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_PublicFolderContacts_|_pFContacts_|String (wildcards accepted in dynamic distribution groups).||
 |_PurportedSearchUI_|_msExchPurportedSearchUI_|String (wildcards accepted).||
 |_QueryBaseDN_|_msExchQueryBaseDN_|String (wildcards accepted in dynamic distribution groups).||
-|_RawCanonicalName_|_canonicalName_|String (wildcards accepted).||
+|_RawCanonicalName_|_canonicalName_|String (wildcards accepted).|This property is based on a constructed Active Directory attribute, and does not correctly resolve all members when used in `Get-Recipient -RecipientPreviewFilter`.|
 |_RawExternalEmailAddress_|_targetAddress_|String (wildcards accepted).||
 |_RawName_|_name_|String (wildcards accepted).||
 |_RecipientContainer_|_msExchDynamicDLBaseDN_|String (wildcards accepted).|The Active Directory container or organizational unit (OU) that holds the recipient object.|

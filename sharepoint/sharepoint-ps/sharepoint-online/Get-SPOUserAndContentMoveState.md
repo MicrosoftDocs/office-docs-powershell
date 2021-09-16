@@ -45,6 +45,7 @@ The following are the available move states:
 
 |Status|Description|
 | --- | --- |
+|ReadyToTrigger| The move is ready to be initiated by an administrator. |
 |NotStarted| The move has not started. |
 |InProgress| The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
 |Success| The move has completed successfully.|
@@ -190,7 +191,7 @@ Accept wildcard characters: False
 
 ### -OdbMoveId
 
-Onedrive GUID MoveID that you get when you start a job.
+OneDrive GUID MoveID that you get when you start a job.
 
 ```yaml
 Type: Guid

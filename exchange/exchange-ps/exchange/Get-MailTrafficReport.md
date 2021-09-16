@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+This cmdlet will be deprecated. Use the **Get-MailFlowStatusReport** and **Get-MailTrafficATPReport** cmdlets instead.
+
 Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
@@ -220,7 +222,41 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. Valid values are:
+
+- AdvancedProtectionMalware
+- AtpGoodMail
+- BCL0 to BCL9
+- DLPMessages
+- EncryptionManual
+- EncryptionPolicy
+- Expire
+- GoodMail
+- Malware
+- NonSpam_AdditionalSpamFilterPassed
+- NonSpam_AllowList
+- NonSpam_BulkPassed
+- NonSpam_ContentScanPassed
+- NonSpam_ETRPassed
+- NonSpam_IntraOrg
+- NonSpam_IPAllowed
+- NonSpam_SafeSender
+- Receive
+- SpamContentFiltered
+- SpamDBEBFilter
+- SpamEnvelopeBlock
+- SpamIPBlock
+- Spam_AdditionalSpamFiltered
+- Spam_BlockList
+- Spam_BulkFiltered
+- Spam_ContentScanFiltered
+- Spam_ETRFiltered
+- Spam_SenderBlocked
+- SpoofMail
+- SpoofMailCompAuthResult
+- TransportRuleMessages
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type must correspond to the report.
 
 You can specify multiple values separated by commas.
 
@@ -306,7 +342,7 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-Valid values are:
+For this cmdlet, valid values are:
 
 - Action
 - Domain

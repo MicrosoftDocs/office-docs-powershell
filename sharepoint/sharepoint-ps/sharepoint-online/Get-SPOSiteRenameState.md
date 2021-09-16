@@ -24,6 +24,12 @@ Returns the current rename job state of a SharePoint Online Site.
 Get-SPOSiteRenameState -Identity <SpoSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ParentId
+
+```powershell
+Get-SPOSiteRenameState -ParentOperationId <guid> [-State <RenameState>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### RenameReport
 
 ```powershell
@@ -52,6 +58,15 @@ Get-SPOSiteRenameState -State InProgress
 
 This example returns rename jobs that are in InProgress state.
 
+### Example 3
+
+```powershell
+$tenantRenameJobId = (Get-SPOTenantRenameStatus).RenameJobId
+Get-SPOSiteRenameState -ParentOperationId $tenantRenameJobId
+```
+
+This example returns rename jobs that were initiated by a tenant rename.
+
 ## PARAMETERS
 
 ### -Identity
@@ -70,15 +85,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ParentOperationId
+
+The parent operation id that initiated the site to be renamed. For example, the tenant rename job id.
+
+```yaml
+Type: guid
+Parameter Sets: ParentId
+Aliases:
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -State
 
 The state of the rename job, possible values are
 
-- Success
+- Queued
 
 - InProgress
 
-- Fail
+- Success
+
+- Failed
+
+- Suspended
 
 ```yaml
 Type: RenameState

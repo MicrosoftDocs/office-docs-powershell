@@ -318,7 +318,7 @@ When you're done editing the topics, upload them to GitHub. Note that you need t
 
 2. Click **Upload files**
 
-   ![Upload file](../images/upload_files.png)
+   ![Upload file.](../images/upload_files.png)
 
 3. After you're done adding files, go to the **Propose file change** section at the bottom of the page:
 
@@ -327,15 +327,15 @@ When you're done editing the topics, upload them to GitHub. Note that you need t
 
    When you're ready, click the green **Propose file change** button.
 
-   ![Propose file change section](../images/propose-file-change.png)
+   ![Propose file change section.](../images/propose-file-change.png)
 
 4. On the **Comparing changes** page that appears, click the green **Create pull request** button.
 
-   ![Comparing changes page](../images/comparing-changes-page.png)
+   ![Comparing changes page.](../images/comparing-changes-page.png)
 
 5. On the **Open a pull request** page that appears, click the green **Create pull request** button.
 
-   ![Open a pull request page](../images/open-a-pull-request-page.png)
+   ![Open a pull request page.](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
 >
@@ -378,15 +378,15 @@ After you're done editing the TOC files:
 
    When you're ready, click the green **Propose file change** button.
 
-   ![Propose file change section](../images/propose-file-change.png)
+   ![Propose file change section.](../images/propose-file-change.png)
 
 2. On the **Comparing changes** page that appears, click the green **Create pull request** button.
 
-   ![Comparing changes page](../images/comparing-changes-page.png)
+   ![Comparing changes page.](../images/comparing-changes-page.png)
 
 3. On the **Open a pull request** page that appears, click the green **Create pull request** button.
 
-   ![Open a pull request page](../images/open-a-pull-request-page.png)
+   ![Open a pull request page.](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
 >

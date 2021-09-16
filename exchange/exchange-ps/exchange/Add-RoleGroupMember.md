@@ -30,11 +30,11 @@ Add-RoleGroupMember [-Identity] <RoleGroupIdParameter> -Member <SecurityPrincipa
 ```
 
 ## DESCRIPTION
-When you add a member to a role group, that mailbox, universal security group (USG), or computer is given the effective permissions provided by the management roles assigned to the role group.
+When you add a member to a role group, the member is given the effective permissions provided by the management roles assigned to the role group.
 
 If the ManagedBy property has been populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
 
-If the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign USG that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
+In on-premises Exchange, if the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign universal security group (USG) that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
 
 For more information about role groups, see [Understanding management role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
@@ -89,7 +89,25 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the mailbox, USG, or computer to add to a role group. You can only specify one member at a time. If the member name contains spaces, enclose the name in quotation marks (").
+The Member parameter specifies who you want to add to the role group. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Mail-enabled security groups (don't use in Security & Compliance Center PowerShell)
+- Security groups (on-premises Exchange only)
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -158,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter doesn't work in the Security & Compliance Center.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

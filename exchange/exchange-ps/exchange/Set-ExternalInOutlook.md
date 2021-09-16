@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ExternalInOutlook cmdlet to modify the configuration of external sender identification that's available in supported versions of Outlook. Currently, this feature is supported in Outlook on the web and Outlook for iOS and Android.
+Use the Set-ExternalInOutlook cmdlet to modify the configuration of external sender identification that's available in Outlook, Outlook for Mac, Outlook on the web, and Outlook for iOS and Android.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -63,10 +63,10 @@ This example adds and removes the specified email addresses from the exception l
 The Identity parameter specifies the GUID of the external sender identification object that you want to modify. Although this parameter is available, you don't need to use it.
 
 ```yaml
-Type: OrganizationIdParameter, Exchange Online Protection
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
@@ -76,7 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowList
-The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
+The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. The allow list uses the `5322.From` address (also known as the **From** address or P2 sender).
+
+Valid values are an individual domain (contoso.com), a domain and all subdomains (*.contoso.com) or email addresses (admin@contoso.com).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -84,7 +86,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 This parameter is meaningful only when the value of the Enabled parameter is $true.
 
-The maximum number of entries is 30, and the total size of all entries can't exceed one kilobyte.
+The maximum number of entries is 50, and the total size of all entries can't exceed one kilobyte.
 
 ```yaml
 Type: MultiValuedProperty

@@ -8,7 +8,7 @@ ms.audience: ITPro
 audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432
 description: "Learn about the filterable properties for the Filter parameter in Exchange Server and Exchange Online."
 ---
@@ -60,6 +60,8 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
 - For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+
+<br>
 
 ****
 

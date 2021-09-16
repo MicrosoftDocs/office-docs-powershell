@@ -11,73 +11,125 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-The Connect-MicrosoftTeams cmdlet connects an authenticated account to use for Microsoft Teams cmdlet requests.
-You can use this authenticated account only with Microsoft Teams cmdlets.
+The Connect-MicrosoftTeams cmdlet connects an authenticated account for use with cmdlets from the MicrosoftTeams module.
 
 ## SYNTAX
 
 ### UserCredential (Default)
 ```
-Connect-MicrosoftTeams [-TenantId <String>] [-Credential <PSCredential>] [-AccountId <String>]
- [-LogLevel <LogLevel>] [-LogFilePath <String>] [-TeamsEnvironmentName <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Connect-MicrosoftTeams 
+[-TenantId <String>] 
+[-Credential <PSCredential>] 
+[-AccountId <String>]
+[-LogLevel <LogLevel>] 
+[-LogFilePath <String>] 
+[-TeamsEnvironmentName <String>] 
+[-WhatIf] 
+[-Confirm]
+[<CommonParameters>]
 ```
 
-### ServicePrincipalCertificate
+### AccessTokens
 ```
-Connect-MicrosoftTeams -TenantId <String> -CertificateThumbprint <String> -ApplicationId <String>
- [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AccessToken
-```
-Connect-MicrosoftTeams [-TenantId <String>] -AadAccessToken <String> [-MsAccessToken <String>]
- [-ConfigAccessToken <String>] -AccountId <String> [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ManagedServiceLogin
-```
-Connect-MicrosoftTeams [-TenantId <String>] [-AccountId <String>] [-Identity] [-ManagedServicePort <Int32>]
- [-ManagedServiceHostName <String>] [-ManagedServiceSecret <SecureString>] [-LogLevel <LogLevel>]
- [-LogFilePath <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Connect-MicrosoftTeams 
+[-TenantId <String>] 
+-AccessTokens <String[]> 
+-AccountId <String> 
+[-LogLevel <LogLevel>] 
+[-LogFilePath <String>] 
+[-WhatIf] 
+[-Confirm] 
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
+The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
+
+> [!WARNING]
+>If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is [necessary.](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Connect to MicrosoftTeams
+This example connects to an Azure account. You must provide a Microsoft account or organizational ID credentials. If multi-factor authentication is enabled for your credentials, you must log in using the interactive option.
+
 ```powershell
-PS C:\> Connect-MicrosoftTeams
+Connect-MicrosoftTeams
+Account                 Environment 	Tenant                                TenantId                         
+-------                 -----------  ------------------------------------  ------------------------------------
+user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Prompts for user credentials to connect and manage a Microsoft Teams environment.
+### Example 2: Connect to MicrosoftTeams
+The first command prompts for user credentials and stores them in the $Credential variable. The second command connects to an Azure account using the credentials stored in $credential. This account authenticates with Azure using organizational ID credentials.
 
-### Example 2
 ```powershell
-PS C:\> Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
+$credential = Get-Credential
+Connect-MicrosoftTeams -Credential $credential
+Account                 Environment 	Tenant                                TenantId                         
+-------                 -----------  ------------------------------------  ------------------------------------
+user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Specifies that the organization being managed is in the Teams GCC High environment, so connect to that environment.
+### Example 3: Connect to MicrosoftTeams in a specific environment
+This example connects to an Azure account in a specific environment. You must provide a Microsoft account or organizational ID credentials. If multi-factor authentication is enabled for your credentials, you must log in using the interactive option.
 
-### Example 3
 ```powershell
-PS C:\> Connect-MicrosoftTeams -TenantId c3eac90d-eb4b-48ef-ac86-7acac472d3cd -CertificateThumbprint 9b6ac64bfb8b48dbb53cca75fb33ce2d -applicationid daaaf729-aaff-45ba-8055-a39dd618fe24
+Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
+Account                 Environment 	Tenant                                TenantId                         
+-------                 -----------  ------------------------------------  ------------------------------------
+user@contoso.com        TeamsGCCH   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Connects to Microsoft Teams PowerShell using a Certificate and an applicationId.
+### Example 4: Connect to MicrosoftTeams using Accesstokens
+This example demonstrates how to sign in using AccessTokens. Admin can reterive Access Tokens. It requires two tokens, MS Graph Access Token and Teams Resource token. 
 
-### Example 4
 ```powershell
-PS C:\> Connect-MicrosoftTeams -AadAccessToken c3eac90deb4b48efac867acac472d3cd -AccountId user@domain.com
-```
+$graphtoken = #Get MSGraph Token for following for resource  "https://graph.microsoft.com" and scopes "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
+$teamstoken = #Get Teams resource token for resource id "48ac35b8-9aa8-4d74-927d-1f4a14a0b239" and scope "user_impersonation";
 
-Connects to Microsoft Teams PowerShell using an Azure Active Directory Graph access token.
+Connect-MicrosoftTeams -AccessTokens @($graphtoken, $teamstoken) -AccountId $adminaccount
+
+Account                 Environment 	Tenant                                TenantId                         
+-------                 -----------  ------------------------------------  ------------------------------------
+user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
 
 ## PARAMETERS
 
-### -AadAccessToken
+### AccessTokens
+Specifies a access tokens for "MSGraph" and "Skype and Teams Tenant Admin API" resources. This new parameter is added in version 2.3.2-preview. 
+
+Following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
+
+Steps to configure the AAD application. 
+1. Go to Azure portal and go to App Registrations. 
+2. Create or select the existing application.
+3. Add the following permission to this Application. 
+4. Click API permissions. 
+5. Click Add a permission. 
+6. Click on the Microsoft MS Graph, and then select Delegated Permission.
+7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
+8. Next, we need to add "Skype and Teams Tenant Admin API" resource permission. Click Add a permission.
+9. Navigate to "APIs my organization uses" 
+10. Search for "Skype and Teams Tenant Admin API".
+11. Add all the listed permissions. 
+12. Grant admin consent to both MS Graph and "Skype and Teams Tenant Admin API" name.
+
+```yaml
+Type: String[]
+Parameter Sets: AccessTokens
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept wildcard characters: False
+```
+
+### -AadAccessToken (Removed from version 2.3.2-preview)
 Specifies a Azure Active Directory Graph access token.
+> [!WARNING]
+>This parameter has been removed from version 2.3.2-preview.
 
 ```yaml
 Type: String
@@ -99,7 +151,6 @@ You must specify the UPN of the user when authenticating with a user access toke
 Type: String
 Parameter Sets: UserCredential
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +162,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AccessToken
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -126,7 +176,6 @@ Specifies the application ID of the service principal.
 Type: String
 Parameter Sets: ServicePrincipalCertificate
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -134,14 +183,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CertificateThumbprint
+### -CertificateThumbprint (Removed from version 2.4.1-preview)
 Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+> [!WARNING]
+>This parameter has been removed from version 2.4.1-preview.
 
 ```yaml
 Type: String
 Parameter Sets: ServicePrincipalCertificate
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -156,7 +206,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -174,7 +223,6 @@ The PSCredential object provides the user ID and password for organizational ID 
 Type: PSCredential
 Parameter Sets: UserCredential
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +238,6 @@ Provide a value here if you need to deviate from the default PowerShell log file
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +260,6 @@ The default value is Info.
 Type: LogLevel
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -221,14 +267,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MsAccessToken
+### -MsAccessToken (Removed from version 2.3.2-preview)
 Specifies a Microsoft Graph access token.
+> [!WARNING]
+>This parameter has been removed from version 2.3.2-preview.
 
 ```yaml
 Type: String
 Parameter Sets: AccessToken
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +294,6 @@ You must specify the TenantId parameter to authenticate as a service principal o
 Type: String
 Parameter Sets: UserCredential, AccessToken
 Aliases: Domain, TenantDomain
-
 Required: False
 Position: Named
 Default value: None
@@ -259,7 +305,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ServicePrincipalCertificate
 Aliases: Domain, TenantDomain
-
 Required: True
 Position: Named
 Default value: None
@@ -275,7 +320,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -292,22 +336,6 @@ Specify "TeamsGCCH" if your organization is in the GCC High Environment.  Specif
 Type: String
 Parameter Sets: UserCredential
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConfigAccessToken
-{{ Fill ConfigAccessToken Description }}
-
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -322,7 +350,6 @@ Login using managed service identity in the current environment.
 Type: SwitchParameter
 Parameter Sets: ManagedServiceLogin
 Aliases: MSI, ManagedService
-
 Required: True
 Position: Named
 Default value: None
@@ -337,7 +364,6 @@ Host name for managed service login.
 Type: String
 Parameter Sets: ManagedServiceLogin
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -352,7 +378,6 @@ Port number for managed service login.
 Type: Int32
 Parameter Sets: ManagedServiceLogin
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -367,7 +392,6 @@ Secret, used for some kinds of managed service login.
 Type: SecureString
 Parameter Sets: ManagedServiceLogin
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -385,16 +409,5 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ## NOTES
-Tips for troubleshooting:  
-
-**1. Confirm SAML 2.0 is being used.**\
-IDP is outputting invalid SAML information.
-Needs to have SAML 2.0 vs.
-SAML 1.0 for the module to connect.
-You might experience an error if the Identity Provider (IDP) only allows the use of SAML 1.0 when trying to auth via basic authentication. 
-Which in turn, isn't expected to work because the cmdlet expects either OAUTH2 (which is used when doing just connect-microsofteams), or SAML 2.0.  
-
-**2. Confirm you have the latest version of the cmdlet.**\
-You can find the version by running: \`get-module -listavailable\` and then looking for the MicrosoftTeams name and the version to the left of it. For more information and how to download the module, see [Teams PowerShell Overview](https://docs.microsoft.com/microsoftteams/teams-powershell-overview) 
 
 ## RELATED LINKS

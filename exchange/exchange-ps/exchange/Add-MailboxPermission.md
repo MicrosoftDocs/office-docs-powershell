@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter specifies the permission that you want to assign to the user on the mailbox. Valid values are:
+The AccessRights parameter specifies the permission that you want to add for the user on the mailbox. Valid values are:
 
 - ChangeOwner
 - ChangePermission
@@ -149,6 +149,8 @@ The AccessRights parameter specifies the permission that you want to assign to t
 - ReadPermission
 
 You can specify multiple values separated by commas.
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: MailboxRights[]
@@ -195,14 +197,28 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies the owner of the mailbox object. The default mailbox owner is NT AUTHORITY\\SELF.
+The Owner parameter specifies the owner of the mailbox object. You can specify the following types of users or groups (security principals) for this parameter:
 
-The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example: For example:
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
 
 - Name
+- Alias
 - Distinguished name (DN)
 - Canonical DN
+- Domain\\Username
+- Email address
 - GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+The default mailbox owner is NT AUTHORITY\\SELF.
+
+You can't use this parameter with the AccessRights or User parameters.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -218,14 +234,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user that you're assigning the permission to.
+The User parameter specifies who gets the permissions on the mailbox. You can specify the following types of users or groups (security principals) for this parameter:
 
-The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
 
 - Name
+- Alias
 - Distinguished name (DN)
 - Canonical DN
+- Domain\\Username
+- Email address
 - GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -330,7 +358,7 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to add permissions to a Microsoft 365 Group mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

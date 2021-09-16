@@ -19,7 +19,7 @@ If you want these groups to appear in Outlook clients, you can use the [Set-Unif
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
 
-IMPORTANT: Using this cmdlet to create a new team using a template is still in preview. You can install and use the preview module from the PowerShell test gallery. For instructions on installing and using the Teams PowerShell preview module, see [Install the pre-release version of the Teams PowerShell module](https://docs.microsoft.com/microsoftteams/install-prerelease-teams-powershell-module). 
+
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
 ```
 
 ## DESCRIPTION
-Creates a new team with user specified settings, and returns a Group object with a GroupID property. Note that Templates are not yet supported in our 1.0 PowerShell release.
+Creates a new team with user specified settings, and returns a Group object with a GroupID property.
 
 ## EXAMPLES
 
@@ -85,6 +85,7 @@ This example creates a team, adds three members to it, and creates three channel
 The MailNickName parameter specifies the alias for the associated Office 365 Group.
 This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
 The value of the MailNickName parameter has to be unique across your tenant.
+Note: If Microsoft 365 groups naming policies are enabled in your tenant, this parameter is required and must also comply with the naming policy.
 
 For more details about the naming conventions see here: [New-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
 
@@ -146,8 +147,6 @@ Accept wildcard characters: False
 ```
 
 ### -Template
-Note: this parameter is not supported in our 1.0 PowerShell release, only in Preview.
-
 If you have an EDU license, you can use this parameter to specify which template you'd like to use for creating your group.
 Do not use this parameter when converting an existing group.
 

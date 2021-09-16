@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 ms.reviewer: navgupta
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
@@ -32,6 +32,8 @@ Generally, you get much better performance in PowerShell cmdlets with server-sid
 ## Supported and unsupported attributes
 
 Although the EXO V2 module supports the majority of filterable attributes, the following attributes are currently not supported for filtering:
+
+<br>
 
 ****
 

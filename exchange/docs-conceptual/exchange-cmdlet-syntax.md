@@ -8,7 +8,7 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-online
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 85ffe9c8-7f03-4877-8e55-3cbd40228d84
 description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, standalone Exchange Online Protection (EOP) PowerShell, and Security & Compliance Center PowerShell."
 ---
@@ -26,6 +26,10 @@ This article explains these conventions, and also the syntax that's required to 
 ## Command conventions in Exchange PowerShell
 
 Exchange PowerShell help follows conventions that indicate what's required or optional, and how to enter parameters and values when you run a command. These command conventions are listed in the following table.
+
+<br>
+
+****
 
 |Symbol|Description|
 |---|---|
@@ -106,6 +110,10 @@ If you enclose the string in single quotation marks, the only special character 
 ## Command operators in Exchange PowerShell
 
 The following table shows the valid operators that you can use in an Exchange command. Some of these symbols were also described in the earlier [Command conventions in Exchange PowerShell](#command-conventions-in-exchange-powershell) section. However, these symbols have different meanings when they're used on the command line as operators. For example, the minus sign that's used to indicate a parameter can also be used in a command as a mathematical operator.
+
+<br>
+
+****
 
 |Operator|Description|
 |---|---|

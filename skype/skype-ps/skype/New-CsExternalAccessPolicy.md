@@ -18,7 +18,7 @@ Enables you to create a new external access policy.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN; and, 3) access Skype for Business Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
 
-
+For information about external access in Microsoft Teams, see [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) and [Teams and Skype interoperability](/microsoftteams/teams-skype-interop) for specific details.
 
 ## SYNTAX
 
@@ -60,7 +60,7 @@ New external access policies can be created by using the New-CsExternalAccessPol
 Note that these policies can only be created at the site or the per-user scope; you cannot create a new policy at the global scope.
 In addition, you can have only one external access policy per site: if the Redmond site already has been assigned an external access policy you cannot create a second policy for the site.
 
-The following parameters are not applicable to Skype for Business Online: Description, EnableXmppAccess, Force, Identity, InMemory, PipelineVariable, and Tenant
+The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, InMemory, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
@@ -142,6 +142,7 @@ Accept wildcard characters: False
 
 ### -EnableFederationAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 ```yaml
@@ -165,7 +166,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -176,6 +177,7 @@ Accept wildcard characters: False
 
 ### -EnablePublicCloudAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 ```yaml
@@ -340,5 +342,4 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Exte
 [Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
 [Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
-
 

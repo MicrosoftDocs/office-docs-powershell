@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsfeedbackpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsFeedbackPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Use this cmdlet to grant a specific Teams Feedback policy to a user.
+Use this cmdlet to grant a specific Teams Feedback policy to a user (the ability to send feedback about Teams to Microsoft and whether they receive the survey).
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Grant-CsTeamsFeedbackPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-I
 ```
 
 ## DESCRIPTION
-Grants a specific Teams Feedback policy to a user.
+Grants a specific Teams Feedback policy to a user (the ability to send feedback about Teams to Microsoft and whether they receive the survey) or to set a specific Teams feedback policy the new effective global policy.
 
 ## EXAMPLES
 

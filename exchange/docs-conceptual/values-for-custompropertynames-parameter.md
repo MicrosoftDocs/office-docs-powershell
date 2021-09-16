@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
@@ -23,7 +23,7 @@ The _CustomPropertyNames_ parameter on the [Get-CalendarDiagnosticObjects](/powe
 
 The article describes the valid values for the _CustomPropertyNames_ parameter.
 
-<br><br>
+<br>
 
 ****
 
