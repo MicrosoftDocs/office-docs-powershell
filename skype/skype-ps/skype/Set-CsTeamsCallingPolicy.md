@@ -419,7 +419,7 @@ Determines Spam filtering mode.
 Possible values:
 - Enabled - Spam Filtering is fully enabled. Both Basic and Captcha IVR checks are performed. In case the call is considered as spam, user will get "Spam Likely" notification in Teams
 - Disabled - Spam Filtering is completely disabled. No checked are performed. "Spam Likely" notification will not appear.
-- EnabledWithoutIVR - Spam Filtering is enabled partially. Captcha IVR (Interactive Voice Response) checks are disabled. "Spam Likely" notification will not appear. However, a call might get dropped in case it gets a high score from Basic checks.
+- EnabledWithoutIVR - Spam Filtering is enabled partially. Captcha IVR (Interactive Voice Response) checks are disabled. "Spam Likely" notification will appear. A call might get dropped in case it gets a high score from Basic checks.
 
 ```yaml
 Type: String
