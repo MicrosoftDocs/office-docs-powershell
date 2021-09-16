@@ -1,20 +1,20 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-quarantinetag
+online version: https://docs.microsoft.com/powershell/module/exchange/new-quarantinepolicy
 applicable: Exchange Online, Exchange Online Protection
-title: New-QuarantineTag
+title: New-QuarantinePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# New-QuarantineTag
+# New-QuarantinePolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-QuarantineTag cmdlet to create quarantine tags in your cloud-based organization.
+Use the New-QuarantinePolicy cmdlet to create quarantine policies in your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-QuarantineTag [-Name] <String>
+New-QuarantinePolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-AdminNotificationFrequencyInDays <Int32>]
  [-AdminNotificationLanguage <EsnLanguage>]
@@ -41,12 +41,12 @@ New-QuarantineTag [-Name] <String>
  [-MultiLanguageSetting <MultiValuedProperty>]
  [-OrganizationBrandingEnabled <Boolean>]
  [-QuarantineRetentionDays <Int32>]
- [-QuarantineTagType <QuarantineTagTypeEnum>]
+ [-QuarantinePolicyType <QuarantinePolicyTypeEnum>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Quarantine tags allow you to configure the allowed end-user actions on quarantined messages in supported features that quarantine messages.
+Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features). For more information, see [Quarantine policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -54,10 +54,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-QuarantineTag -Name ContosoTag -EndUserQuarantinePermissionsValue 0
+New-QuarantinePolicy -Name ContosoTag -EndUserQuarantinePermissionsValue 0
 ```
 
-This example creates a new quarantine tag named ContosoTag with the same permissions as the No access preset permissions group.
+This example creates a new quarantine policy named ContosoTag with the same permissions as the No access preset permissions group.
 
 To assign Limited access permissions, use the value 106. To assign Full access permissions, use the value 236.
 
@@ -65,17 +65,17 @@ To assign Limited access permissions, use the value 106. To assign Full access p
 ```powershell
 $LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
 
-New-QuarantineTag -Name LimitedAccess -EndUserQuarantinePermissions $LimitedAccess
+New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissions $LimitedAccess
 ```
 
-This example creates a new quarantine tag named LimitedAccess with the same permissions as Limited access preset permissions group.
+This example creates a new quarantine policy named LimitedAccess with the same permissions as Limited access preset permissions group.
 
 The first command uses the New-QuarantinePermissions cmdlet to store the permissions object in a variable. The second command uses the variable for the value of the EndUserQuarantinePermissions parameter.
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the quarantine tag. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the quarantine policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminDisplayName
-The AdminDisplayName parameter specifies a description for the quarantine tag. If the value contains spaces, enclose the value in quotation marks (").
+The AdminDisplayName parameter specifies a description for the quarantine policy. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -203,24 +203,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ESNEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EndUserQuarantinePermissions
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine tag.
+The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy.
 
 A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
 
@@ -240,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissionsValue
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine tag.
+The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy.
 
 This parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
 
@@ -300,6 +284,25 @@ Type: EsnLanguage
 Parameter Sets: (All)
 Aliases:
 Accepted values: Default, English, French, German, Italian, Japanese, Spanish, Korean, Portuguese, Russian, ChineseSimplified, ChineseTraditional, Amharic, Arabic, Bulgarian, BengaliIndia, Catalan, Czech, Cyrillic, Danish, Greek, Estonian, Basque, Persian, Finnish, Filipino, Galician, Gujarati, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Icelandic, Kazakh, Kannada, Lithuanian, Latvian, Malayalam, Marathi, Malay, Dutch, NorwegianNynorsk, Norwegian, Odia, Polish, PortuguesePortugal, Romanian, Slovak, Slovenian, SerbianCyrillic, Serbian, Swedish, Swahili, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, Vietnamese
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ESNEnabled
+The ESNEnabled parameter specifies whether to enable quarantine notifications (formerly known as end-user spam notifications) for the policy. Valid values are:
+
+- $true: Quarantine notifications are enabled.
+- $false: Quarantine notifications are disabled. User can only access quarantined messages in quarantine, not in email notifications. This is the default value.S
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -389,14 +392,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -QuarantineTagType
+### -QuarantinePolicyType
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: QuarantineTagTypeEnum
+Type: QuarantinePolicyTypeEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: PolicyQuarantineTag, GlobalQuarantineTag
+Accepted values: QuarantinePolicy, GlobalQuarantinePolicy
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

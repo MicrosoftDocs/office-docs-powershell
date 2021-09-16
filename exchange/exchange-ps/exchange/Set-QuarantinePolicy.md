@@ -1,20 +1,20 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-quarantinetag
+online version: https://docs.microsoft.com/powershell/module/exchange/set-quarantinepolicy
 applicable: Exchange Online, Exchange Online Protection
-title: Set-QuarantineTag
+title: Set-QuarantinePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-QuarantineTag
+# Set-QuarantinePolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-QuarantineTag cmdlet to modify custom quarantine tags in your cloud-based organization.
+Use the Set-QuarantinePolicy cmdlet to modify custom quarantine policies in your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -31,11 +31,11 @@ Set-QuarantineTag [-Identity] <QuarantineTagIdParameter>
  [-Confirm]
  [-CustomDisclaimer <String>]
  [-DomainController <Fqdn>]
- [-ESNEnabled <Boolean>]
  [-EndUserQuarantinePermissions <QuarantinePermissions>]
  [-EndUserQuarantinePermissionsValue <Int32>]
  [-EndUserSpamNotificationFrequencyInDays <Int32>]
  [-EndUserSpamNotificationLanguage <EsnLanguage>]
+ [-ESNEnabled <Boolean>]
  [-IgnoreDehydratedFlag]
  [-MultiLanguageCustomDisclaimer <MultiValuedProperty>]
  [-MultiLanguageSenderName <MultiValuedProperty>]
@@ -46,7 +46,7 @@ Set-QuarantineTag [-Identity] <QuarantineTagIdParameter>
 ```
 
 ## DESCRIPTION
-You can't modify built-in quarantine tags with names that start with "Default".
+You can't modify built-in quarantine policies with names that start with "Default".
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -54,10 +54,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-QuarantineTag -Identity CustomAccess -EndUserQuarantinePermissionsValue 32
+Set-QuarantinePolicy -Identity CustomAccess -EndUserQuarantinePermissionsValue 32
 ```
 
-This example configures the following permissions in the quarantine tag named CustomAccess:
+This example configures the following permissions in the quarantine policy named CustomAccess:
 
 - PermissionToAllowSender: No
 - PermissionToBlockSender: No
@@ -71,17 +71,17 @@ This example configures the following permissions in the quarantine tag named Cu
 ### Example 2
 ```powershell
 $Perms = New-QuarantinePermissions -PermissionToDelete $true
-Set-QuarantineTag -Identity CustomAccess -EndUserQuarantinePermissions $Perms
+Set-QuarantinePolicy -Identity CustomAccess -EndUserQuarantinePermissions $Perms
 ```
 
 This example has the same result as the previous example, but uses the EndUserQuarantinePermissions parameter instead.
 
 ### Example 3
 ```powershell
-Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag -MultiLanguageSetting ('English','ChineseSimplified','French') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','有关更多信息，请联系服务台','Pour plus d'informations, contactez le service d'assistance.') -MultiLanguageSenderName ('Contoso administrator','Contoso管理员','Administrateur Contoso') -OrganizationBrandingEnabled $true
+Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('English','ChineseSimplified','French') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','有关更多信息，请联系服务台','Pour plus d'informations, contactez le service d'assistance.') -MultiLanguageSenderName ('Contoso administrator','Contoso管理员','Administrateur Contoso') -OrganizationBrandingEnabled $true
 ```
 
-This example modifies the global settings for end-user spam notifications:
+This example modifies the global settings for quarantine notifications (formerly known as end-user spam notification settings):
 
 - The specified custom disclaimer text and email sender's display name are used for English, Chinese, and French.
 - The previously configured custom logo replaces the default Microsoft logo.
@@ -89,7 +89,7 @@ This example modifies the global settings for end-user spam notifications:
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the quarantine tag you want to modify. You can use any value that uniquely identifies the quarantine tag. For example:
+The Identity parameter specifies the quarantine policy you want to modify. You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -222,22 +222,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ESNEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EndUserQuarantinePermissions
 A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
 
@@ -257,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissionsValue
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine tag by using a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
+The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy by using a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
 
 - PermissionToAllowSender
 - PermissionToBlockSender
@@ -323,6 +307,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ESNEnabled
+The ESNEnabled parameter specifies whether to enable quarantine notifications (formerly known as end-user spam notifications) for the policy. Valid values are:
+
+- $true: Quarantine notifications are enabled.
+- $false: Quarantine notifications are disabled. User can only access quarantined messages in quarantine, not in email notifications. This is the default value.S
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDehydratedFlag
 This parameter is reserved for internal Microsoft use.
 
@@ -340,13 +343,13 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageCustomDisclaimer
-The MultiLanguageCustomDisclaimer parameter specifies the custom disclaimer text to use near the bottom of end-user spam quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify for this parameter.
+The MultiLanguageCustomDisclaimer parameter specifies the custom disclaimer text to use near the bottom of quarantine quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify for this parameter.
 
 You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you can specify unique custom disclaimer text. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
 To modify an existing value and preserve other values, you need to specify all existing values and the new value in the existing order.
 
-This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+This setting is available only in the built-in quarantine policy named GlobalDefaultTag that controls global settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -362,13 +365,13 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageSenderName
-The MultiLanguageSenderName parameter specifies the email sender's display name to use in end-user spam quarantine notifications.
+The MultiLanguageSenderName parameter specifies the email sender's display name to use in quarantine quarantine notifications.
 
 You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you can specify a unique sender name. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
 To modify an existing value and preserve other values, you need to specify all existing values and the new value in the existing order.
 
-This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+This setting is available only in the built-in quarantine policy named GlobalDefaultTag that controls global settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -384,15 +387,15 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageSetting
-The MultiLanguageSetting parameter specifies the language of end-user spam quarantine notifications. Valid values are:
+The MultiLanguageSetting parameter specifies the language of quarantine quarantine notifications. Valid values are:
 
 Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
 
-You can specify multiple value separated by commas using the syntax: `('value1',''value2',...'valueN')`. The default value is Default, which means end-user spam quarantine notifications use the default language of the cloud-based organization.
+You can specify multiple value separated by commas using the syntax: `('value1',''value2',...'valueN')`. The default value is Default, which means quarantine quarantine notifications use the default language of the cloud-based organization.
 
 For each language that you specify, you can specify a unique value for the MultiLanguageCustomDisclaimer and MultiLanguageSenderName parameters. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
-This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+This setting is available only in the built-in quarantine policy named GlobalDefaultTag that controls global settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -410,10 +413,10 @@ Accept wildcard characters: False
 ### -OrganizationBrandingEnabled
 The OrganizationBrandingEnabled parameter enables or disables organization branding in the end-user quarantine notification messages. Valid values are:
 
-- $true: Organization branding is enabled. The default Microsoft logo that's used in end-user spam notifications is replaced by your custom logo. Before you do this, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
-- $false: Organization branding is disabled. The default Microsoft logo is used in end-user spam notifications. This is the default value.
+- $true: Organization branding is enabled. The default Microsoft logo that's used in quarantine notifications is replaced by your custom logo. Before you do this, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
+- $false: Organization branding is disabled. The default Microsoft logo is used in quarantine notifications. This is the default value.
 
-This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+This setting is available only in the built-in quarantine policy named GlobalDefaultTag that controls global settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
 Type: Boolean

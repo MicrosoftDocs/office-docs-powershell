@@ -1,20 +1,20 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-quarantinetag
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-quarantinepolicy
 applicable: Exchange Online, Exchange Online Protection
-title: Remove-QuarantineTag
+title: Remove-QuarantinePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Remove-QuarantineTag
+# Remove-QuarantinePolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-QuarantineTag cmdlet to remove custom quarantine tags from your cloud-based organization.
+Use the Remove-QuarantinePolicy cmdlet to remove custom quarantine policies from your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -23,13 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-QuarantineTag [-Identity] <QuarantineTagIdParameter>
+Remove-QuarantinePolicy [-Identity] <QuarantineTagIdParameter>
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can't remove built-in quarantine tags that start with "Default" in the name.
+You can't remove the built-in quarantine policies named AdminOnlyAccessPolicy or DefaultFullAccessPolicy.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -37,15 +37,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-QuarantineTag -Identity "Contoso Engineering"
+Remove-QuarantinePolicy -Identity "Contoso Engineering"
 ```
 
-This example removes the quarantine tag named Contoso Engineering.
+This example removes the quarantine policy named Contoso Engineering.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the quarantine tag you want to remove. You can use any value that uniquely identifies the quarantine tag. For example:
+The Identity parameter specifies the quarantine policy you want to remove. You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)

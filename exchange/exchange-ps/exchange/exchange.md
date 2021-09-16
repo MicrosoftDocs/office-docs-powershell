@@ -220,7 +220,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
-### [Get-QuarantineTag](Get-QuarantineTag.md)
+### [Get-QuarantinePolicy](Get-QuarantinePolicy.md)
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
@@ -253,6 +253,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
 
 ### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
+
+### [New-QuarantinePolicy](New-QuarantinePolicy.md)
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
@@ -290,7 +292,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
 
-### [Remove-QuarantineTag](Remove-QuarantineTag.md)
+### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
 
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
@@ -340,7 +342,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
-### [Set-QuarantineTag](Set-QuarantineTag.md)
+### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
 
