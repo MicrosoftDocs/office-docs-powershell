@@ -398,6 +398,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveExchangeLocation
 
 The RemoveExchangeLocation parameter removes locations on Exchange from the policy.
 
