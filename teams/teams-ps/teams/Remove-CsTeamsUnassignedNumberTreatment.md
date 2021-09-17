@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PS module 2.5.0 or later.
+The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
 - [Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
