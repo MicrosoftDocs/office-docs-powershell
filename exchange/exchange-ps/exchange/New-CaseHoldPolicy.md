@@ -151,7 +151,7 @@ The ExchangeLocation parameter specifies the mailboxes to include in the policy.
 To specify a mailbox or distribution group, you can use the following values:
 
 - Name
-- SMTP address
+- SMTP address. To specify an inactive mailbox, precede the address with a period (.).
 - Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
