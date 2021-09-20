@@ -23,8 +23,7 @@ NOTE: The call park feature currently available in desktop. mobile and web clien
 
 ### Identity (Default)
 ```
-New-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [[-Identity] <XdsIdentity>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [[-Identity] <XdsIdentity>] [-PickupRangeStart <Integer>] [-PickupRangeEnd <Integer>] [-ParkTimeoutSeconds <Integer>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,6 +52,51 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PickupRangeStart
+Specify the minimum value that a rendered pickup code can take
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 10
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PickupRangeEnd
+Specify the maximum value that a rendered pickup code can take
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 99
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParkTimeoutSeconds
+Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 300
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
