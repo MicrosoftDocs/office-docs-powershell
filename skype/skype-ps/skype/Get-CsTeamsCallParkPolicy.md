@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParkTimeoutSeconds
-Specify the unique name of a policy you would like to retrieve
+Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up
 
 ```yaml
 Type: Integer
