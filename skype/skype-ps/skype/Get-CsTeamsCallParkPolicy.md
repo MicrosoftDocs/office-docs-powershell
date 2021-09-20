@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -PickupRangeStart
-Specify the unique name of a policy you would like to retrieve
+Specify the minimum value that a rendered pickup code can take
 
 ```yaml
 Type: Integer
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -PickupRangeEnd
-Specify the unique name of a policy you would like to retrieve
+Specify the maximum value that a rendered pickup code can take
 
 ```yaml
 Type: Integer
