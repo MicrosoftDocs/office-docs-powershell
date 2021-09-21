@@ -17,7 +17,7 @@ Changes a treatment for how calls to an unassigned number range should be routed
 to an announcement service where a custom message will be played to the caller
 
 > [!NOTE]
-> **Preview** The use of this cmdlet is in Preview.
+> **Preview** The use of this cmdlet is in Public Preview.
   
 ## SYNTAX
 
