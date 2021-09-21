@@ -70,6 +70,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
  [-EnableForwardingAddressSyncForMailboxes <Boolean>]
+ [-EnableOutlookEvents <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
@@ -1652,6 +1653,27 @@ Type: SwitchParameter
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOutlookEvents
+This parameter is available only in the cloud-based service.
+
+The EnableOutlookEvents parameter specifies whether Outlook or Outlook on the web (formerly known as Outlook Web App) automatically discovers events from email messages and adds them to user calendars. Valid values are:
+
+- $true: Discovery of events from email messages is enabled.
+- $false: Discovery of events from email messages is disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
