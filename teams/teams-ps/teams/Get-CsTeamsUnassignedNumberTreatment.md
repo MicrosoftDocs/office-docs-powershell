@@ -16,7 +16,7 @@ schema: 2.0.0
 Displays a specific or all treatments for how calls to an unassigned number range should be routed.
 
 > [!NOTE]
-> **Preview** The use of this cmdlet is in Preview.
+> **Preview** The use of this cmdlet is in Public Preview.
   
 ## SYNTAX
 
