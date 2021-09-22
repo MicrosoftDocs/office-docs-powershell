@@ -34,10 +34,24 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -AllowCallPark $false
+PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -AllowCallPark $true
 ```
 
 Create a new custom policy that has call park enabled.  This policy can then be assigned to individual users.
+
+### Example 2
+```powershell
+PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -AllowCallPark $true -PickupRangeStart 500 -PickupRangeEnd 1500
+```
+
+Create a new custom policy that has call park enabled. This policy will generate pickup numbers starting from 500 and up until 1500.
+
+### Example 3
+```powershell
+PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -AllowCallPark $true -ParkTimeoutSeconds 600
+```
+
+Create a new custom call park policy which will ring back the parker after 600 seconds if the parked call is unanswered
 
 ## PARAMETERS
 
