@@ -52,7 +52,7 @@ IsInsightsHeadspaceEnabled : True
 This example shows the configuration of Microsoft Viva Insights in Microsoft Teams for the user roy@contoso.onmicrosoft.com. The output of the command shows that the features of Headspace are available to Roy.
 
 ### Example 2
-**Note**: This output is available only in version 2.0.6-Preview1 or later of the EXO V2 module. This output will not show unless you belong to the Private Preview.
+
 ```powershell
 PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
 
@@ -61,16 +61,20 @@ IsInsightsHeadspaceEnabled : True
 MeetingEffectivenessMode : Enabled
 ```
 
+**Note**: This example is available only in version 2.0.6-Preview1 or later of the EXO V2 module, and only if you belong to the Private Preview for Meeting Effectiveness Survey.
+
 This example shows the configuration of Microsoft Viva Insights in Microsoft Teams for the user roy@contoso.onmicrosoft.com. The output of the command shows that the features of Headspace and Meeting Effectiveness Survey are available to Roy.
 
 ### Example 3
-**Note**: This syntax is available only in version 2.0.6-Preview1 or later of the EXO V2 module. The syntax will not work unless you belong to the Private Preview.
+
 ```powershell
 PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Feature MeetingEffectivenessSurvey
 
 UserId : roy@contoso.onmicrosoft.com
 MeetingEffectivenessMode : Enabled
 ```
+
+**Note**: This example is available only in version 2.0.6-Preview1 or later of the EXO V2 module, and only if you belong to the Private Preview for Meeting Effectiveness Survey.
 
 This example shows the configuration of Microsoft Viva Insights in Microsoft Teams, specifically for the Meeting Effectiveness Survey feature, for the user roy@contoso.onmicrosoft.com. The output of the command shows that the features of Meeting Effectiveness Survey are available to Roy.
 
@@ -93,12 +97,14 @@ Accept wildcard characters: False
 ```
 
 ### -Feature
+**Note**: This parameter is available only in version 2.0.6-Preview1 or later of the EXO V2 module. The parameter will not work unless you belong to the Private Preview for Meeting Effectiveness Survey.
 
-**Note**: This parameter is available only in version 2.0.6-Preview1 or later of the EXO V2 module. The parameter will not work unless you belong to the Private Preview.\
-The optional Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. If this parameter is omitted, the configurations for all Microsoft Viva Insights features will be displayed. Current valid values are:
+The Feature parameter filters the results by the feature of Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
 
-- headspace: Represents all features of Headspace.
-- meetingeffectivenesssurvey: Represents all features of Meeting Effectiveness Survey.
+- headspace: All features of Headspace.
+- meetingeffectivenesssurvey: All features of Meeting Effectiveness Survey.
+
+If you don't use this parameter, the configurations for all Microsoft Viva Insights features are displayed.
 
 ```yaml
 Type: String
