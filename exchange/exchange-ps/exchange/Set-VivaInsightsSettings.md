@@ -34,6 +34,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 - Global Administrator
 - Exchange Administrator
 - Teams Administrator
+- Insights Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -45,6 +46,14 @@ Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -
 ```
 
 This example disables access to all the Headspace features in Microsoft Viva Insights in Microsoft Teams for the specified user.
+
+### Example 2
+**Note**: This output is available only in version 2.0.6-Preview1 or later of the EXO V2 module. This output will not show unless you belong to the Private Preview.
+```powershell
+Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -Feature meetingeffectivenesssurvey
+```
+
+This example disables access to all the Meeting Effectiveness Survey features in Microsoft Viva Insights in Microsoft Teams for the specified user.
 
 ## PARAMETERS
 
@@ -87,12 +96,13 @@ Accept wildcard characters: False
 The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Current valid values are:
 
 - headspace: Represents all features of Headspace.
+- meetingeffectivenesssurvey: Represents all features of Meeting Effectiveness Survey.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: headspace
+Accepted values: headspace, meetingeffectivenesssurvey
 Applicable: Exchange Online
 
 Required: True
