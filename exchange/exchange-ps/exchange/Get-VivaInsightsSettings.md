@@ -104,6 +104,7 @@ The optional Feature parameter specifies feature of Microsoft Viva Insights in M
 Type: String
 Parameter Sets: (All)
 Aliases:
+Accepted values: headspace, meetingeffectivenesssurvey
 Applicable: Exchange Online
 
 Required: False
