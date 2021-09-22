@@ -37,7 +37,7 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -AllowCallPark $true
 ```
 
-Create a new custom policy that has call park enabled.  This policy can then be assigned to individual users.
+Create a new custom policy that has call park enabled. This policy can then be assigned to individual users.
 
 ### Example 2
 ```powershell
