@@ -48,10 +48,10 @@ Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -
 This example disables access to all the Headspace features in Microsoft Viva Insights in Microsoft Teams for the specified user.
 
 ### Example 2
-**Note**: This output is available only in version 2.0.6-Preview1 or later of the EXO V2 module. This output will not show unless you belong to the Private Preview.
 ```powershell
 Set-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com -Enabled $false -Feature meetingeffectivenesssurvey
 ```
+**Note**: This example is available only in version 2.0.6-Preview1 or later of the EXO V2 module, and only if you belong to the Private Preview for Meeting Effectiveness Survey.
 
 This example disables access to all the Meeting Effectiveness Survey features in Microsoft Viva Insights in Microsoft Teams for the specified user.
 
@@ -93,10 +93,10 @@ Accept wildcard characters: False
 ```
 
 ### -Feature
-The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Current valid values are:
+The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
 
-- headspace: Represents all features of Headspace.
-- meetingeffectivenesssurvey: Represents all features of Meeting Effectiveness Survey.
+- headspace: All features of Headspace.
+- meetingeffectivenesssurvey: All features of Meeting Effectiveness Survey. This value is available only in version 2.0.6-Preview1 or later of the EXO V2 module, and is effective only if you belong to the Private Preview for Meeting Effectiveness Survey.
 
 ```yaml
 Type: String
