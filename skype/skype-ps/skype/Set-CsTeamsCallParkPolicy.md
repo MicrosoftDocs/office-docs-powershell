@@ -44,6 +44,20 @@ PS C:\> Set-CsTeamsCallParkPolicy -Identity SalesPolicy -AllowCallPark $true
 
 Update the existing policy "SalesPolicy" to enable the call park feature.
 
+### Example 2
+```powershell
+PS C:\> Set-CsTeamsCallParkPolicy -Identity "SalesPolicy" -PickupRangeStart 500 -PickupRangeEnd 1500
+```
+
+Update the existing policy "SalesPolicy" to generate pickup numbers starting from 500 and up until 1500.
+
+### Example 3
+```powershell
+PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -ParkTimeoutSeconds 600
+```
+
+Update the existing policy "SalesPolicy" to ring back the parker after 600 seconds if the parked call is unanswered
+
 ## PARAMETERS
 
 ### -AllowCallPark
