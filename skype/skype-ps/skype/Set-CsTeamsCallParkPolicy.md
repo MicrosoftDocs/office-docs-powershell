@@ -136,7 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -PickupRangeEnd
-Specify the maximum value that a rendered pickup code can take
+Specify the maximum value that a rendered pickup code can take. Value can be from 10 to 9999.
+
+Note: PickupRangeStart must be smaller than PickupRangeEnd.
 
 ```yaml
 Type: Integer
@@ -151,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParkTimeoutSeconds
-Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up
+Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up. Value can be from 60 to 600 (seconds).
 
 ```yaml
 Type: Integer
@@ -166,7 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -PickupRangeStart
-Specify the minimum value that a rendered pickup code can take
+Specify the minimum value that a rendered pickup code can take. Value can be from 10 to 9999.
+
+Note: PickupRangeStart must be smaller than PickupRangeEnd.
 
 ```yaml
 Type: Integer
