@@ -73,7 +73,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
