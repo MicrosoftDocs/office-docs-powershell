@@ -51,7 +51,7 @@ version of the enhanced emergency service terms and conditions.
 ## PARAMETERS
 
 ### -CountryOrRegion
-Specifies the region or country whose terms and conditions you wish to accept. You need to use the ISO 31661-1 alpha-2 2 letter code for the Microsoft Calling Plan country. For example for the United States it must be specified as "US" and for Denmark it must be specified as "DK".
+Specifies the region or country whose terms and conditions you wish to accept. You need to use the ISO 31661-1 alpha-2 2 letter code for the country. For example for the United States it must be specified as "US" and for Denmark it must be specified as "DK".
 
 ```yaml
 Type: String
