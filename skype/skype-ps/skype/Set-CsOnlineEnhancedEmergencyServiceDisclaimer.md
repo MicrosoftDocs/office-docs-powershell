@@ -57,7 +57,7 @@ Specifies the region or country whose terms and conditions you wish to accept. Y
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online and Microsoft Teams
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
