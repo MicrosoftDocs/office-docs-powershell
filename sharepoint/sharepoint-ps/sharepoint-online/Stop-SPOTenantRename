@@ -1,0 +1,95 @@
+---
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/stop-spotenantrename
+applicable: SharePoint Online
+title: Stop-SPOTenantRename
+schema: 2.0.0
+author: WayneEwington
+ms.author: waynewin
+ms.reviewer:
+---
+
+# Stop-SPOTenantRename
+
+## SYNOPSIS
+
+ [!IMPORTANT]
+> - This feature is available only for customers who have been accepted into the Private Preview program. [Request to join the Private Preview](https://aka.ms/SPOTenantRenameNomination). Note that submitting a nomination does not guarantee acceptance into the program. We review the nominations on a case-by-case basis and will contact you if you're accepted.
+> - This feature is not available for organizations that have set up multi-geo.
+
+Cancels the scheduled job to change the SharePoint domain name for your orgnization in Microsoft 365. 
+
+> [!NOTE]
+> If the job to change the SharePoint domain name is already in progress, then it can not be canceled or stopped.  
+
+## SYNTAX
+
+```Powershell
+Stop-SPOTenantRename -Reason <string> [-Comment <string>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+This command cancels a scheduled rename of the SharePoint domain name for your organization.
+
+## EXAMPLES
+
+### EXAMPLE 1
+
+```powershell
+Stop-SPOTenantRename -Reason "Rescheduling"
+```
+
+Cancels the rename of the SharePoint domain name with the reason "Rescheduling".
+
+## PARAMETERS
+
+### -Reason
+
+Specifies the reason why the job is being canceled.
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: SharePoint Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Comment
+
+Specifies an additional comment why the job is being canceled.
+
+```yaml
+Type: String
+Parameter Sets: Default
+Applicable: SharePoint Online
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Rename your SharePoint domain](https://aka.ms/SPOTenantRename)
+
+[Start-SPOTenantRename](Start-SPOTenantRename.md)
+
+[Get-SPOTenantRenameStatus](Get-TenantRenameStatus.md)
+
+[Get-SPOSiteRenameState](Get-TenantSiteState.md)
