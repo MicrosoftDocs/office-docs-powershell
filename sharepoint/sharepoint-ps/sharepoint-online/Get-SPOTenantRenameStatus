@@ -54,6 +54,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Start-SPOTenantRename](Start-SPOTenantRename.md)
 
-[Get-SPOSiteRenameState](Get-TenantSiteState.md)
+[Get-SPOSiteRenameState](Get-SPOSiteRenameState.md)
 
 [Stop-SPOTenantRename](Stop-SPOTenantRename.md)
