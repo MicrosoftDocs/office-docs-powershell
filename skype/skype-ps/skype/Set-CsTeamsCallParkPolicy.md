@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParkTimeoutSeconds
-Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up. Value can be from 60 to 600 (seconds).
+Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up. Value can be from 60 to 1800 (seconds).
 
 ```yaml
 Type: Integer
