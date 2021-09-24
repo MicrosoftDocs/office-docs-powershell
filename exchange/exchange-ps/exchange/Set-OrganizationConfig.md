@@ -1628,7 +1628,7 @@ Accept wildcard characters: False
 ### -EnableForwardingAddressSyncForMailboxes
 This parameter is available only in the cloud-based service.
 
-{{ Fill EnableForwardingAddressSyncForMailboxes Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
