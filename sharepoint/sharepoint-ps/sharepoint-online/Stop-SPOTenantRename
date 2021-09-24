@@ -18,7 +18,7 @@ ms.reviewer:
 > - This feature is available only for customers who have been accepted into the Private Preview program. [Request to join the Private Preview](https://aka.ms/SPOTenantRenameNomination). Note that submitting a nomination does not guarantee acceptance into the program. We review the nominations on a case-by-case basis and will contact you if you're accepted.
 > - This feature is not available for organizations that have set up multi-geo.
 
-Cancels the scheduled job to change the SharePoint domain name for your orgnization in Microsoft 365. 
+Cancels the scheduled job to change the SharePoint domain name for your organization in Microsoft 365. 
 
 > [!NOTE]
 > If the job to change the SharePoint domain name is already in progress, then it can not be canceled or stopped.  
