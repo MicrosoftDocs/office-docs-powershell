@@ -52,7 +52,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Rename your SharePoint domain](https://aka.ms/SPOTenantRename)
 
-[Start-SPOTenantRename](Start-TenantRename.md)
+[Start-SPOTenantRename](Start-SPOTenantRename.md)
 
 [Get-SPOSiteRenameState](Get-TenantSiteState.md)
 
