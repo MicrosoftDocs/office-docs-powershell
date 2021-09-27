@@ -128,15 +128,22 @@ Accept wildcard characters: False
 ```
 
 ### -DataCollectionEnabled
-The DataCollectionEnabled parameter specifies whether the EM Service will collect and send diagnostic data to Microsoft using OCS.
+The DataCollectionEnabled parameter specifies whether the EM Service will collect and send diagnostic data to Microsoft using OCS. Valid values are:
 
-```yml
+- $true: The EM Service collects and sends diagnostic data to Microsoft using OCS.
+- $false: Data collection is disabled.
+
+```yaml
 Type: Boolean
-Position: Named 
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
-Applies to: Exchange Server 2016, Exchange Server 2019
+Accept wildcard characters: False
 ```
 
 ### -DomainController
@@ -210,30 +217,42 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -MitigationsEnabled
-The MitigationsEnabled parameter specifies whether the EM Service will auto-apply mitigations on the Exchange Server.
 
-```yml
-Type: Boolean 
-Position: Named 
-Default value: None 
+### -MitigationsEnabled
+The MitigationsEnabled parameter specifies whether the EM Service will auto-apply mitigations on the Exchange server. Valid values are:
+
+- $true: The EM Service auto-applies mitigations on the Exchange server.
+- $false: Mitigations are not auto-applied on the Exchange server.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: Exchange Server 2016, Exchange Server 2019 
 ```
 
 ### -MitigationsBlocked
 The MitigationsBlocked parameter specifies a list of mitigations that are blocked. The Mitigation IDs present in this list are not applied by EM service in its hourly run.
 
-To enter multiple values and overwrite any existing Mitigation entries, use the following syntax: @("M1","M2","M3").
+To enter multiple values and overwrite any existing Mitigation entries, use the following syntax: `@("Entry1","Entry2",..."EntryN")`.
 
-```yml
-Type: MultiValuedProperty
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: Named
-Default value: None 
-Accept pipeline input: False 
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: Exchange Server 2016, Exchange Server 2019  
 ```
 
 ### -MonitoringGroup
