@@ -8,7 +8,7 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 2f33bb84-cede-46f6-9d39-d246e8ce3543
 search.appverid: MET150
 description: "Learn about using Security & Compliance Center PowerShell."

@@ -85,6 +85,13 @@ Get-UnifiedGroup | Where-Object {-Not $_.ManagedBy}
 
 This example returns Microsoft 365 Groups that do not have an owner.
 
+### Example 5
+```powershell
+Get-UnifiedGroup -Filter {ResourceProvisioningOptions -eq "Team"}
+```
+
+This example returns Microsoft 365 Groups that are created when a Microsoft Team is created.
+
 ## PARAMETERS
 
 ### -Anr

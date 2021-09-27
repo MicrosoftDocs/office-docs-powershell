@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-cscallinglineidentity
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
@@ -22,7 +22,7 @@ Grant-CsCallingLineIdentity [[-Identity] <UserIdParameter>] [[-PolicyName] <Stri
 ```
 
 ## DESCRIPTION
-You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed; you can then apply the Caller ID policy to a specific user.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed; you can then apply the Caller ID policy to a specific user.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ You can use the asterisk (\*) wildcard character when using the Display Name as 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -68,7 +68,7 @@ The name (Identity) of the Caller ID policy to be assigned to the user. (Note th
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
@@ -84,7 +84,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Returns the results of the command. By default, this cmdlet does not generate an
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ If you are using a remote session of Windows PowerShell and are connected only t
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named

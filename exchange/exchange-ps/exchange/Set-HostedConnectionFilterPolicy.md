@@ -156,13 +156,11 @@ Accept wildcard characters: False
 ```
 
 ### -IPAllowList
-The IPAllowList parameter specifies IP addresses from which messages are always allowed. Messages from the IP addresses you specify won't be identified as spam, despite any other spam characteristics of the messages.
+The IPAllowList parameter specifies IP addresses from which messages are always allowed. Messages from the IP addresses you specify won't be identified as spam, despite any other spam characteristics of the messages. Valid values are:
 
-You enter the IP addresses using the following syntax:
-
-- Single IP: For example, 192.168.1.1.
-- IP range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254.
-- CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid network mask values are /24 through /32.
+- Single IP address: For example, 192.168.1.1.
+- IP address range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254. The maximum number of addresses in the range is 256.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
 You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
 
@@ -180,13 +178,11 @@ Accept wildcard characters: False
 ```
 
 ### -IPBlockList
-The IPBlockList parameter specifies IP addresses from which messages are never allowed. Messages from the IP addresses you specify are blocked without any further spam scanning.
+The IPBlockList parameter specifies IP addresses from which messages are never allowed. Messages from the IP addresses you specify are blocked without any further spam scanning. Valid values are:
 
-You enter the IP addresses using the following syntax:
-
-- Single IP: For example, 192.168.1.1.
-- IP range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254.
-- CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid network mask values are /24 through /32.
+- Single IP address: For example, 192.168.1.1.
+- IP address range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254. The maximum number of addresses in the range is 256.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
 You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
 
