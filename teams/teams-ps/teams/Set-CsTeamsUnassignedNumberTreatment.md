@@ -40,9 +40,9 @@ This example changes the treatment MainAA to route the calls to the resource acc
 ### Example 2
 ```powershell
 $UserObjectId = (Get-CsOnlineUser -Identity user2@contoso.com).Identity
-New-CsTeamsUnassignedNumberTreatment -Identity MainAA -TargetType User -Target $UserObjectId
+Set-CsTeamsUnassignedNumberTreatment -Identity User2PSTN -TargetType User -Target $UserObjectId
 ```
-This example changes the treatment MainAA to route the calls to the user user2@contoso.com.
+This example changes the treatment User2PSTN to route the calls to the user user2@contoso.com.
 
 
 ## PARAMETERS
