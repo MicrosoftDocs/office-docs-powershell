@@ -24,10 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-ExchangeServer [-Identity] <ServerIdParameter>
  [-Confirm]
  [-CustomerFeedbackEnabled <Boolean>]
+ [-DataCollectionEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-ErrorReportingEnabled <Boolean>]
  [-InternetWebProxy <Uri>]
  [-InternetWebProxyBypassList <MultiValuedProperty>]
+ [-MitigationsEnabled <Boolean>]
+ [-MitigationsBlocked <MultiValuedProperty>]
  [-MonitoringGroup <String>]
  [-ProductKey <ProductKey>]
  [-StaticConfigDomainController <String>]
@@ -124,6 +127,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DataCollectionEnabled
+The DataCollectionEnabled parameter specifies whether the EM Service will collect and send diagnostic data to Microsoft using OCS. Valid values are:
+
+- $true: The EM Service collects and sends diagnostic data to Microsoft using OCS.
+- $false: Data collection is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -185,6 +207,43 @@ The maximum number of servers you can enter with this parameter is 100.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MitigationsEnabled
+The MitigationsEnabled parameter specifies whether the EM Service will auto-apply mitigations on the Exchange server. Valid values are:
+
+- $true: The EM Service auto-applies mitigations on the Exchange server.
+- $false: Mitigations are not auto-applied on the Exchange server.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MitigationsBlocked
+The MitigationsBlocked parameter specifies a list of mitigations that are blocked. The Mitigation IDs present in this list are not applied by EM service in its hourly run.
+
+To enter multiple values and overwrite any existing Mitigation entries, use the following syntax: `@("Entry1","Entry2",..."EntryN")`.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
