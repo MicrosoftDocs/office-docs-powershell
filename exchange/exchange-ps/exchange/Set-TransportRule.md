@@ -457,6 +457,8 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressContainsWords
+**Note**: In the cloud-based service, this parameter behaves the same as the RecipientAddressContainsWords parameter (other recipients in the message are not affected).
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
@@ -481,6 +483,8 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressMatchesPatterns
+**Note**: In the cloud-based service, this parameter behaves the same as the RecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
@@ -1450,6 +1454,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressContainsWords
+**Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressContainsWords parameter (other recipients in the message are not affected).
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
@@ -1474,6 +1480,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
+**Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.

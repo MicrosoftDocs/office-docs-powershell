@@ -86,6 +86,8 @@ The Action parameter filters the results by action. Valid values are:
 
 You can specify multiple values separated by commas.
 
+Note that the values for this parameter are case sensitive.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
