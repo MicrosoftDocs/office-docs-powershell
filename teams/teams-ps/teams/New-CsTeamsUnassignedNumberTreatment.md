@@ -13,8 +13,8 @@ schema: 2.0.0
 # New-CsTeamsUnassignedNumberTreatment
 
 ## SYNOPSIS
-Creates a new treatment for how calls to an unassigned number range should be routed. The call can be routed to a user, an application or 
-to an announcement service where a custom message will be played to the caller
+Creates a new treatment for how calls to an unassigned number range should be routed. The call can be routed to a user, an application or to an announcement service where a custom message will be played to the caller.
+
 
 > [!NOTE]
 > **Preview** The use of this cmdlet is in Public Preview.
