@@ -47,7 +47,7 @@ This example displays all configured treatments.
 
 ### -Filter
 Enables you to limit the returned data by filtering on specific attributes.
-For example, you can limit returned data to treatments which have a specific target type. The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
+For example, you can limit returned data to treatments which have a specific target type, i.e. -Filter {TargetType -eq 'User'}. The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Identity
-The Id of the specific treatment to remove.
+The Id of the specific treatment to show.
 
 ```yaml
 Type: System.String
