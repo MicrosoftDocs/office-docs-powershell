@@ -21,7 +21,8 @@ Displays a specific or all treatments for how calls to an unassigned number rang
 ## SYNTAX
 
 ```powershell
-Get-CsTeamsUnassignedNumberTreatment [-Identity <string>]
+Get-CsTeamsUnassignedNumberTreatment [-LocalStore] [[-Identity] <String>] [-Filter <String>] [<CommonParameters>]
+
 ```
 
 ## DESCRIPTION
@@ -44,11 +45,40 @@ This example displays all configured treatments.
 
 ## PARAMETERS
 
+### -Filter
+Enables you to limit the returned data by filtering on specific attributes.
+For example, you can limit returned data to treatments which have a specific target type. The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Identity
 The Id of the specific treatment to remove.
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalStore
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -69,6 +99,8 @@ Accept wildcard characters: False
 
 ## NOTES
 The cmdlet is available in Teams PS module 2.5.1 or later.
+
+Using the Filter parameter does not work as intended.
 
 ## RELATED LINKS
 - [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
