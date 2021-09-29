@@ -146,7 +146,7 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 
-### None
+### System.Object
 
 ## OUTPUTS
 
