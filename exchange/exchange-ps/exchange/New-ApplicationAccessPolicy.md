@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyScopeGroupID
-The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group to restrict/deny access to a large number of user mailboxes.
+The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group to restrict/deny access to more than one user mailbox.
 For example:
 
 - Name
