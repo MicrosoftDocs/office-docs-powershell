@@ -156,7 +156,8 @@ Accept wildcard characters: False
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
-- [https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile]
+- [Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+
 - [Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
 - [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
 - [Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
