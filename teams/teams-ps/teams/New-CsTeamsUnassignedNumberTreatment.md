@@ -22,7 +22,7 @@ Creates a new treatment for how calls to an unassigned number range should be ro
 ## SYNTAX
 
 ```powershell
-New-CsTeamsUnassignedNumberTreatment -Identity <string>] -Pattern <string> -TargetType <User | ResourceAccount | Annonucement> -Target <GUID> -TreatmentPriority <integer> [-Description <string>] [<CommonParameters>]
+New-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Announcement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [-InMemory] [-TreatmentId <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
