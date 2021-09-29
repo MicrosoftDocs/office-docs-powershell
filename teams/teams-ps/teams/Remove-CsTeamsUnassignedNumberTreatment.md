@@ -21,7 +21,7 @@ Removes a treatment for how calls to an unassigned number range should be routed
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsUnassignedNumberTreatment -Identity <string>
+Remove-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
