@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific treatment.
+The Id of the treatment.
 
 
 ```yaml
@@ -131,6 +131,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TreatmentId
+The identity of the treatment.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TreatmentPriority
 The priority of the treatment. Used to distinguish identical patterns. The lower the priority the higher preference. The priority needs to be unique.
 
@@ -155,6 +169,8 @@ Accept wildcard characters: False
 
 ## NOTES
 The cmdlet is available in Teams PS module 2.5.1 or later.
+
+The parameters Identity and TreatmentId are mutually exclusive.
 
 ## RELATED LINKS
 - [Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
