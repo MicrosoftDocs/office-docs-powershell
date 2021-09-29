@@ -22,7 +22,7 @@ to an announcement service where a custom message will be played to the caller
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsUnassignedNumberTreatment -Identity <string>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Annonucement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [<CommonParameters>]
+Set-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Announcement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [-Force] [-Instance <Object>] [-WhatIf]  [-Confirm] <CommonParameters>]
 ```
 
 ## DESCRIPTION
