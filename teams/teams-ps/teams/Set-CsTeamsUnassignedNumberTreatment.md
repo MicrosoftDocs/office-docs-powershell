@@ -132,7 +132,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
+### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
 
 ### None
 
