@@ -975,6 +975,7 @@ Note: All Teams supported languages can be specified using language codes. For m
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
