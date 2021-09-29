@@ -61,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific treatment
+The Id of the specific treatment.
+
 
 ```yaml
 Type: System.String
