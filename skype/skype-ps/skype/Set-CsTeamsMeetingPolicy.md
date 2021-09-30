@@ -971,6 +971,9 @@ Accept wildcard characters: False
 Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
 Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=81521).
 
+The preliminary list of available languages is shown below:
+ar-SA,az-Latn-AZ,bg-BG,ca-ES,cs-CZ,cy-GB,da-DK,de-DE,el- GR,en-GB,es-ES,es-MX,et-EE,eu-ES,fi-FI,fil-PH,fr-CA,fr-FR,gl-ES,he-IL,hi-IN,hr-HR,hu-HU,id-ID,is-IS,it-IT,ja-JP,ka-GE,k k-KZ,ko-KR,lt-LT,lv-LV,mk-MK,ms-MY,nb-NO,nl-NL,nn-NO,pl-PL,pt-BR,pt-PT,ro-RO,ru-RU,sk-SK,sl-SL,sq-AL,sr-Latn-RS,sv-SE,t h-TH,tr-TR,uk-UA,vi-VN,zh-CN,zh-TW.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
