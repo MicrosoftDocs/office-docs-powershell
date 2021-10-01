@@ -13,6 +13,10 @@ ms.reviewer:
 # Get-CsOnlineDialInConferencingUserState
 
 ## SYNOPSIS
+
+> [!NOTE]
+> This cmdlet will be deprecated on December 31, 2021. To view the properties and settings of users that are enabled for Audio Conferencing, you can use the [Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet.
+
 Use the `Get-CsOnlineDialInConferencingUserState` cmdlet to view the current Dial In Conferencing state of users in your Tenant.
 
 ## SYNTAX
