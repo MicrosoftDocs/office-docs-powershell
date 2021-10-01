@@ -951,7 +951,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingRecordingExpirationDays
-Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
+Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days. Value can also be -1 to set TMR to never expire.
 
 Note: This parameter isn't yet available to be set. We'll publish an updated message center post when the setting is available for modification. For more information about its delivery date, see the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?searchterms=82057&filters=&searchterms=84580).
 
