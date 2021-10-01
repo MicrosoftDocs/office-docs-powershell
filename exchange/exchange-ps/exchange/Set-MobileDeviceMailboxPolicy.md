@@ -88,6 +88,8 @@ Mobile device mailbox policies define settings for mobile devices that are used 
 
 Some mobile device mailbox policy settings require the mobile device to have specific built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This applies to devices that can't enforce all policy settings.
 
+Some settings in this cmdlet are supported by Outlook for iOS and Android. For more information, see [Leveraging Exchange Online mobile device policies](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/secure-outlook-for-ios-and-android#leveraging-exchange-online-mobile-device-policies).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -156,7 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBluetooth
-The AllowBluetooth parameter specifies whether the Bluetooth capabilities are allowed on the mobile device. The available options are Disable, HandsfreeOnly, and Allow. The default value is Allow.
+The AllowBluetooth parameter specifies whether the Bluetooth capabilities are allowed on the mobile device. Valid values are:
+
+- Allow (this is the default value).
+- Disable
+- HandsfreeOnly
+
+The values Allow or HandsfreeOnly allow synchronization between Outlook for Android and the Outlook for Android wearable app for the associated Microsoft account.
+
+The value Disable disables synchronization between Outlook for Android and the Outlook for Android wearable app for the associated Microsoft account. Any previously synchronized data is deleted. This value does not disable Bluetooth on the Android device or the wearable device, nor does it affect other Android wearable apps.
 
 ```yaml
 Type: BluetoothType
@@ -605,6 +615,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceEncryptionEnabled
+**Note**: This setting is supported by Outlook for iOS and Android.
+
 The DeviceEncryptionEnabled parameter specifies whether encryption is enabled on the mobile device. Valid input for this parameter is $true or $false. The default value is $false.
 
 When this parameter is set to $true, device encryption is enabled on the mobile device.
@@ -873,6 +885,8 @@ Accept wildcard characters: False
 ```
 
 ### -MinPasswordLength
+**Note**: This setting is supported by Outlook for Android.
+
 The MinPasswordLength parameter specifies the minimum number of characters in the mobile device password.
 
 You can enter any number from 1 through 16 or the value $null. The default value is blank. The maximum password length is 16 characters.
