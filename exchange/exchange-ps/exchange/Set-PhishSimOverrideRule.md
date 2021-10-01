@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-PhishSimOverrideRule [-Identity] <ComplianceRuleIdParameter>
+ [-AddDomains <MultiValuedProperty>]
  [-AddSenderDomainIs <MultiValuedProperty>]
  [-AddSenderIpRanges <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-RemoveDomains <MultiValuedProperty>]
  [-RemoveSenderDomainIs <MultiValuedProperty>]
  [-RemoveSenderIpRanges <MultiValuedProperty>]
  [-WhatIf]
@@ -33,13 +35,15 @@ Set-PhishSimOverrideRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
+A phishing simulation requires at least one domain and at least one IP address.
+
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-PhishSimOverrideRule -Identity PhishSimOverrideRulea0eae53e-d755-4a42-9320-b9c6b55c5011 -AddSenderDomainIs blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
+Set-PhishSimOverrideRule -Identity PhishSimOverrideRulea0eae53e-d755-4a42-9320-b9c6b55c5011 -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
 This example modifies the phishing simulation override rule with the specified settings.
@@ -67,10 +71,26 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -AddSenderDomainIs
-The AddSenderDomainIs parameter specifies an existing entry to add to the list of email domains that are used by the third-party phishing simulation.
+### -AddDomains
+The AddDomains parameter specifies an existing entry to add to the list of email domains that are used by the third-party phishing simulation.
 
 You can specify multiple values separated by commas. A maximum of 10 entries are allowed in the list.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSenderDomainIs
+This parameter has been replaced by the AddDomains parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -144,10 +164,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveSenderDomainIs
-The RemoveSenderDomainIs parameter specifies an existing entry to remove from the list of email domains that are used by the third-party phishing simulation.
+### -RemoveDomains
+The RemoveDomains parameter specifies an existing entry to remove from the list of email domains that are used by the third-party phishing simulation.
 
 You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSenderDomainIs
+This parameter has been replaced by the RemoveDomains parameter.
 
 ```yaml
 Type: MultiValuedProperty
