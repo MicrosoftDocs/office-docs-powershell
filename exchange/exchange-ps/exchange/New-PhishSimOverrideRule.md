@@ -21,9 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PhishSimOverrideRule [-Name] <String> -Policy <PolicyIdParameter> -SenderDomainIs <MultiValuedProperty> -SenderIpRanges <MultiValuedProperty>
+New-PhishSimOverrideRule [-Name] <String> -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
+ [-Domains <MultiValuedProperty>]
+ [-SenderDomainIs <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,7 +37,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-New-PhishSimOverrideRule -Name PhishSimOverrideRule -Policy PhishSimOverridePolicy -SenderDomainIs fabrikam.com,wingtiptoys.com -SenderIpRanges 192.168.1.55
+New-PhishSimOverrideRule -Name PhishSimOverrideRule -Policy PhishSimOverridePolicy -Domains fabrikam.com,wingtiptoys.com -SenderIpRanges 192.168.1.55
 ```
 
 This example creates a new phishing simulation override rule with the specified settings.
@@ -79,24 +81,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SenderDomainIs
-The SenderDomainIs parameter specifies the email domain that's used by the third-party phishing simulation.
-
-You can specify up to 10 values separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SenderIpRanges
 The SenderIpRanges parameter specifies the source IP address that's used by the third-party phishing simulation. Valid values are:
 
@@ -105,6 +89,8 @@ The SenderIpRanges parameter specifies the source IP address that's used by the 
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify up to 10 entries separated by commas.
+
+A phishing simulation entry requires at least one IP address in this parameter and at least one domain in the Domains parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -145,6 +131,45 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Domains
+The Domains parameter specifies the email domain that's used by the third-party phishing simulation. You can use either of the following values:
+
+- The `5321.MailFrom` address (also known as the MAIL FROM address, P1 sender, or envelope sender).
+- The DKIM domain.
+
+You can specify up to 10 values separated by commas.
+
+A phishing simulation requires at least one domain from this parameter and at least one IP address in the SenderIPRanges parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderDomainIs
+This parameter has been replaced by the Domains parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
