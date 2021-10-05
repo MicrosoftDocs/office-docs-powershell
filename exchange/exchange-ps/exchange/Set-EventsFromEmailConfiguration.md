@@ -128,6 +128,8 @@ The FlightReservationProcessingLevel parameter specifies whether flight reservat
 - Email: Discover flight reservations from messages, but don't automatically add them to the user's calendar.
 - Calendar: Discover flight reservations from messages and automatically add them to the user's calendar. This is the default value.
 
+Note that these values are case sensitive.
+
 ```yaml
 Type: String
 Parameter Sets: Identity
