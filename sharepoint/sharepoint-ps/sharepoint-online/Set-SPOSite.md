@@ -29,7 +29,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
  [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
- [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
+ [-DisableAppViews <AppViewsPolicy>]
+ [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
@@ -37,6 +38,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
  [-RemoveLabel] [<CommonParameters>]
 ```
+> [!NOTE]
+> [-DisableAppViews <AppViewsPolicy>] and [-DisableFlows <FlowsPolicy>] have been retired.
 
 ### ParamSet2
 
@@ -560,6 +563,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableAppViews
+> [!NOTE]
+> This paramater has been retired and no longer functions.
+
+Disables the Power Apps button.
+Possible values:
+
+- Disabled
+- NotDisabled
+- Unknown (not settable)
+
+```yaml
+Type: AppViewsPolicy
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableCompanyWideSharingLinks
 Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
 Possible values
@@ -570,6 +596,28 @@ Possible values
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableFlows
+> [!NOTE]
+> This paramater has been retired and no longer functions.
+
+Disables the Power Automate button.
+Possible values
+
+- Disabled
+- NotDisabled
+
+```yaml
+Type: FlowsPolicy
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
