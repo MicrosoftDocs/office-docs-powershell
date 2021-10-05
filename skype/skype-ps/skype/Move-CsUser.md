@@ -49,7 +49,7 @@ When moving a user to or from the Microsoft 365 cloud (TeamsOnly):
 > [!NOTE]
 >
 > - The `-MoveToTeams` switch is no longer required to move a user directly to Teams. Specifying this switch no longer has any impact, since users are always moved to TeamsOnly.
-> - If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
+> - If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2015 CU12, Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
 > - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details. 
 
 ## EXAMPLES
