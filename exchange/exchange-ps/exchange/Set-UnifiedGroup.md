@@ -1136,10 +1136,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionEnabled
-The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Microsoft 365 Group.
+The SubscriptionEnabled switch specifies whether the group owners can enable subscription to conversations and calendar events on the groups they own. This option can be set only from EXO PowerShell. The AutoSubscribeNewMembers must be set to False before setting SubscriptionEnabled to False.
 
 - To change the value to $true, use this switch without a value.
 - To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false.
+
+Note:
+This option should be changed to False only if you intend to disable group owners ability to change Subscription option on the group. Once SubscriptionEnabled is set to False, group owners will not be able to enable Subscription options on the group settings using Outlook on the Web (OWA) or Outlook desktop. The group owners may see "The group update is in progress" error when they try to enable Subscription option, with SubscriptionEnabled set to False. Tenant admn trying to enable Subscription from Microsoft Admin Center may also see error "Can't save "Send copies of group conversations and events to group member's inboxes" Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management"
 
 ```yaml
 Type: SwitchParameter
