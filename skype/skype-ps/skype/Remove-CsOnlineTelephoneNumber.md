@@ -46,7 +46,6 @@ This example removes the specified list of telephone numbers from the tenant.
 
 ### -TelephoneNumber
 Specifies the telephone number(s) to remove.
-For example: -TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567
 
 ```yaml
 Type: String[]
