@@ -28,7 +28,12 @@ This cmdlet removes one or more unassigned telephone numbers from your tenant. I
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-CsOnlineTelephoneNumber -TelephoneNumber +14258884567
+Remove-CsOnlineTelephoneNumber -TelephoneNumber 14258884567
+```
+```Output
+NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
+---------------- --------------------- ------------------------- -----------------------------
+{14258884567}    {}                    {}                        {}
 ```
 
 This example removes the specified telephone number from the tenant.
@@ -38,6 +43,12 @@ This example removes the specified telephone number from the tenant.
 [string[]]$tns="+14255551234","+14255551233"
 Remove-CsOnlineTelephoneNumber -TelephoneNumber $tns
 ```
+```Output
+NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
+---------------- --------------------- ------------------------- -----------------------------
+{14255551234,     {}                    {}                        {}
+ 14255551233}    
+```
 
 This example removes the specified list of telephone numbers from the tenant.
 
@@ -45,7 +56,7 @@ This example removes the specified list of telephone numbers from the tenant.
 ## PARAMETERS
 
 ### -TelephoneNumber
-Specifies the telephone number(s) to remove.
+Specifies the telephone number(s) to remove. The format can be withor without the prefixed +, but needs to include country code etc.
 
 ```yaml
 Type: String[]
@@ -127,4 +138,4 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
+- [Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
