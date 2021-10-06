@@ -35,7 +35,8 @@ New-OutboundConnector [-Name] <String>
  [-LinkForModifiedConnector <Guid>]
  [-RecipientDomains <MultiValuedProperty>]
  [-RouteAllMessagesViaOnPremises <Boolean>]
- [-SmartHosts <MultiValuedProperty>]
+ [-SenderRewritingEnabled <Boolean>]
+ [-SmartHosts <MultiValuedProperty>] 
  [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-TlsSettings <TlsAuthLevel>]
@@ -274,6 +275,25 @@ The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced
 
 - $true: Messages are routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
 - $false: Messages aren't routed through the on-premises messaging system. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderRewritingEnabled
+The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewritting are rewritten for traffic to on-premises. This parameter is only effective for OnPremises connectors as Partner connectors already have SRS rewritting enabled. Valid values are:
+
+- $true: Messages are rewritten by SRS if they need to be before being routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
+- $false: Messages aren't rewritten by SRS before being routed through the on-premises messaging system. This is the default value.
 
 ```yaml
 Type: Boolean
