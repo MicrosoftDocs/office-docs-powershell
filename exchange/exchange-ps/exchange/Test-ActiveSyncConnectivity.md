@@ -45,7 +45,7 @@ The Test-ActiveSyncConnectivity cmdlet tests Exchange ActiveSync connectivity by
 
 The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
 
-& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
+`& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1`
 
 The test results are displayed on-screen. The cmdlet returns the following information.
 

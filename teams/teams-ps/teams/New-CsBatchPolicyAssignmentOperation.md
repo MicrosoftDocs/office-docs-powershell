@@ -77,7 +77,7 @@ An array of users, specified either using object IDs (guid) or SIP addresses.  T
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -92,7 +92,7 @@ The name of the policy to be assigned to the users. To remove the currently assi
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -107,7 +107,7 @@ The name of the policy to be assigned to the users.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -122,7 +122,7 @@ An optional name for the batch assignment operation.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
