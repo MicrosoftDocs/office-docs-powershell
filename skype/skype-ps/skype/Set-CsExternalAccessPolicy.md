@@ -62,7 +62,7 @@ For example, by default the global policy does not allow users to communicate wi
 If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True.
 
 4.
-Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
+Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
 The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
