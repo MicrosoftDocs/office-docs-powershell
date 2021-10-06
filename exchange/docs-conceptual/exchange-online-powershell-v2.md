@@ -133,7 +133,7 @@ For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell
 
 After you install PowerShell 7, do the following steps:
 
-1. Run PowerShell as as superuser: `sudo pwsh`
+1. Run PowerShell as superuser: `sudo pwsh`
 2. In the PowerShell superuser session, run the following commands:
 
    ```powershell
