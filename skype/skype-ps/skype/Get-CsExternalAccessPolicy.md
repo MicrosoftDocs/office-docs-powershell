@@ -53,7 +53,7 @@ Access Skype for Business Server over the Internet, without having to first log 
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
 4.
-Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
+Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
 The Get-CsExternalAccessPolicy cmdlet provides a way for you to return information about all of the external access policies that have been configured for use in your organization.
 
