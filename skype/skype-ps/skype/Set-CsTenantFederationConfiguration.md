@@ -23,7 +23,7 @@ These settings are used to determine which domains (if any) your users are allow
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-AllowTeamsConsumer <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -31,7 +31,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedD
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-AllowTeamsConsumer <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -333,6 +333,21 @@ Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTeamsConsumer
+Allows federation with Teams Consumer users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
