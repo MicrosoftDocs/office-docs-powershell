@@ -124,11 +124,27 @@ For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell
 
 The EXO V2 module is officially supported in the following distributions of Linux:
 
-- Ubuntu 18.04/20.04
+- Ubuntu 18.04 LTS
+- Ubuntu 20.04 LTS
 
 If you have trouble using the EXO V2 module on other distributions of Linux, send email to the following address: `exocmdletpreview[at]service[dot]microsoft[dot]com`. The email address is purposefully obfuscated to avoid spam.
 
 For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true).
+
+After you install PowerShell 7, do the following steps:
+
+1. Run PowerShell as superuser: `sudo pwsh`
+2. In the PowerShell superuser session, run the following commands:
+
+   ```powershell
+   Install-Module -Name PSWSMan
+
+   Install-WSMan
+   ```
+
+   If prompted, accept PSGallery as the source for the cmdlets.
+
+Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exo-v2-module) and [install the EXO V2 module](#install-the-exo-v2-module).
 
 #### Windows
 
