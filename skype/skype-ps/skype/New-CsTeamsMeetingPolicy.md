@@ -821,6 +821,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
+Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
