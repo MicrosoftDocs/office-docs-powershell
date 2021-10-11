@@ -99,8 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are not currently supporting Direct Routing numbers with extensions, but
-you can use the Set-CsUser cmdlet for this.
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are not currently supporting
+Direct Routing numbers with extensions, but you can use the Set-CsUser cmdlet for this.
+
+Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
 Type: System.String
