@@ -38,8 +38,6 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
  [-RemoveLabel] [<CommonParameters>]
 ```
-> [!NOTE]
-> [-DisableAppViews <AppViewsPolicy>] and [-DisableFlows <FlowsPolicy>] have been retired.
 
 ### ParamSet2
 
@@ -564,15 +562,14 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAppViews
-> [!NOTE]
-> This paramater has been retired and no longer functions.
-
 Disables the Power Apps button.
 Possible values:
 
 - Disabled
 - NotDisabled
 - Unknown (not settable)
+
+**Note**: This paramater has been retired and no longer functions.
 
 ```yaml
 Type: AppViewsPolicy
@@ -607,14 +604,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
-> [!NOTE]
-> This paramater has been retired and no longer functions.
-
 Disables the Power Automate button.
 Possible values
 
 - Disabled
 - NotDisabled
+
+**Note**: This paramater has been retired and no longer functions.
 
 ```yaml
 Type: FlowsPolicy
