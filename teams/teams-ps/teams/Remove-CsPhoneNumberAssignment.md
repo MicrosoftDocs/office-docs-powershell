@@ -21,12 +21,14 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ## SYNTAX
 
 ```powershell
-Remove-CsPhoneNumberAssignment [[-Identity] <String> [-PhoneNumber <String>] [-PhoneNumberType <String>] [<CommonParameters>]
+Remove-CsPhoneNumberAssignment [[-Identity] <String> [-PhoneNumber <String>] [-PhoneNumberType <String>] [-RemoveAll] [<CommonParameters>]
 
 ```
 
 ## DESCRIPTION
 This cmdlet removes/unassigns a phone number from a user or resource account. The phone number continues to be available in the tenant.
+
+Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
 
 ## EXAMPLES
 
@@ -35,6 +37,12 @@ This cmdlet removes/unassigns a phone number from a user or resource account. Th
 Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
 ```
 This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com.
+
+### Example 2
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
+```
+This example removes/unassigns the phone number from user2@contoso.com.
 
 
 ## PARAMETERS
@@ -72,6 +80,20 @@ The type of phone number to unassign from the user or resource account. The supp
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAll
+Unassigns the phone number from the user or resource account.
+
+```yaml
+Type: Switch
 Parameter Sets: (All)
 Aliases:
 
