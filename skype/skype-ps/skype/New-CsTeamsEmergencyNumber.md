@@ -32,6 +32,13 @@ PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 711 -EmergencyDialMask 3
 ```
 
  Create a new Teams emergency number
+ 
+### Example 2
+```powershell
+PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897"
+```
+
+Create a new Teams emergency number with multiple emergency dial masks.
 
 ## PARAMETERS
 
@@ -51,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyDialMask
- For each Teams emergency number, you can specify zero or more emergency dial masks. A dial mask is a number that you want to translate into the value of the emergency dial number value when it is dialed.
+ For each Teams emergency number, you can specify zero or more emergency dial masks. A dial mask is a number that you want to translate into the value of the emergency dial number value when it is dialed. Dial mask must be list of numbers separated by semicolon. Each number string must be made of the digits 0 through 9 and can be from 1 to 10 digits in length.
 
 ```yaml
 Type: String
