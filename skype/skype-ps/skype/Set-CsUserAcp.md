@@ -26,6 +26,8 @@ Set-CsUserAcp [-Identity] <UserIdParameter> -Domain <String> -Name <String> -Par
 ```
 
 ## DESCRIPTION
+Deprecation Notice: Integration of Skype for Business with third-party audio conferencing providers has been retired. More details are here - https://docs.microsoft.com/skypeforbusiness/legal-and-regulatory/end-of-integration-with-3rd-party-providers. As a result, cmdlet no longer works.
+
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers offer a way for users located off site and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
 Audio conferencing providers often include high-end services such as live translation, transcription and live per-conference operator assistance.
