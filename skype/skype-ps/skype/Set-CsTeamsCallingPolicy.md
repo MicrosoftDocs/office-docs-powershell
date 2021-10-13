@@ -20,12 +20,12 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -284,6 +284,21 @@ Accept wildcard characters: False
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
 **Note**: Do not set this parameter to True for Calling Plan users as it will prevent successful call routing. This setting only works with Direct Routing that is configured to handle location based routing restrictions. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSIPDevicesCalling
+Determines whether the user is allowed to use SIP device for calling on behalf of teams client.
 
 ```yaml
 Type: Boolean
