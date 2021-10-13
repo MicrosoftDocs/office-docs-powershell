@@ -61,6 +61,17 @@ The preceding command returns a collection of all the meeting policies where the
 To do this, Get-CsTeamsMeetingPolicy is first called without any parameters in order to return a collection of all the policies configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which selects only those policies where the AllowMeetNow property is equal to True.
 
+### -------------------------- Example 4 --------------------------
+```
+Get-CsTeamsMeetingPolicy -Identity Global | fl NewMeetingRecordingExpirationDays
+
+NewMeetingRecordingExpirationDays : 60
+```
+
+The above command returns expiration date setting currently applied on TMR. Additional details:
+https://docs.microsoft.com/en-us/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings
+
+
 ## PARAMETERS
 
 ### -Filter
