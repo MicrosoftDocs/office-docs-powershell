@@ -130,10 +130,10 @@ This example deletes the search results returned by a content search named Remov
 ### Example 4
 
 ```
-New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip
+New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip -ExchangeArchiveFormat PerUserPst
 ```
 
-This example exports the results returned by the content search named "Case 321 All Sites". The search results are compressed and exported to a single ZIP file. If the search included any Exchange locations, the search results are exported as one PST file per mailbox (the default value of the ExchangeArchiveFormat parameter).
+This example exports the results returned by the content search named "Case 321 All Sites". The search results are compressed and exported to a single ZIP file. If the search included any Exchange locations, the search results are exported as one PST file per mailbox.
 
 ## PARAMETERS
 
