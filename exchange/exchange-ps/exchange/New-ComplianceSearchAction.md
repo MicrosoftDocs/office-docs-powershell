@@ -128,8 +128,7 @@ New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeTy
 This example deletes the search results returned by a content search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
 
 ### Example 4
-
-```
+```powershell
 New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip -ExchangeArchiveFormat PerUserPst
 ```
 
