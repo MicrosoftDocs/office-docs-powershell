@@ -53,11 +53,17 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamUser](Get-TeamUser.md)
 {{Manually Enter Get-TeamUser Description Here}}
 
+### [Get-TeamsEnhancedEncryptionPolicy](Get-TeamsEnhancedEncryptionPolicy.md)
+{{Manually Enter Get-TeamsEnhancedEncryptionPolicy Description Here}}
+
 ### [Get-TeamsShiftsPolicy](Get-TeamsShiftsPolicy.md)
 {{Manually Enter Get-TeamsShiftsPolicy Description Here}}
 
 ### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
 {{Manually Enter Get-TeamTargetingHierarchyStatus Description Here}}
+
+### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
+{{Manually Enter Grant-TeamsEnhancedEncryptionPolicy Description Here}}
 
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
@@ -70,6 +76,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [New-TeamsApp](New-TeamsApp.md)
 {{Manually Enter New-TeamsApp Description Here}}
+
+### [New-TeamsEnhancedEncryptionPolicy](New-TeamsEnhancedEncryptionPolicy.md)
+{{Manually Enter New-TeamsEnhancedEncryptionPolicy Description Here}}
 
 ### [New-TeamsShiftsPolicy](New-TeamsShiftsPolicy.md)
 {{Manually Enter New-TeamsShiftsPolicy Description Here}}
@@ -88,6 +97,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Remove-TeamUser](Remove-TeamUser.md)
 {{Manually Enter Remove-TeamUser Description Here}}
+
+### [Remove-TeamsEnhancedEncryptionPolicy](Remove-TeamsEnhancedEncryptionPolicy.md)
+{{Manually Enter Remove-TeamsEnhancedEncryptionPolicy Description Here}}
 
 ### [Remove-TeamsShiftsPolicy](Remove-TeamsShiftsPolicy.md)
 {{Manually Enter Remove-TeamsShiftsPolicy Description Here}}
@@ -124,6 +136,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Set-TeamsApp](Set-TeamsApp.md)
 {{Manually Enter Set-TeamsApp Description Here}}
+
+### [Set-TeamsEnhancedEncryptionPolicy](Set-TeamsEnhancedEncryptionPolicy.md)
+{{Manually Enter Set-TeamsEnhancedEncryptionPolicy Description Here}}
 
 ### [Set-TeamsShiftsPolicy](Set-TeamsShiftsPolicy.md)
 {{Manually Enter Set-TeamsShiftsPolicy Description Here}}
