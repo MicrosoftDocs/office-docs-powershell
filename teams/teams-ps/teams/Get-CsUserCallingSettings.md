@@ -114,9 +114,9 @@ GroupNotificationOverride : Mute
 (Get-CsUserCallingSettings -Identity user4@contoso.com).GroupMembershipDetails
 ```
 ```output
-CallGroupOwnerId                     NotificationSetting
-----------------                     -------------------
-user6@contoso.com					 Ring
+CallGroupOwnerId            NotificationSetting
+----------------            -------------------
+user6@contoso.com           Ring
 ```
 
 This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com (CallGroupTargets).
