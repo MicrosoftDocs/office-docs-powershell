@@ -231,7 +231,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PS module 2.6.2-preview or later.
+The cmdlet is available in Teams PS module 2.x.x-preview or later.
 
 ## RELATED LINKS
 
