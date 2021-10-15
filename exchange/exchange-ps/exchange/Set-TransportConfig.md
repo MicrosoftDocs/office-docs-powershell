@@ -1287,7 +1287,7 @@ Accept wildcard characters: False
 ### -TransportRuleAttachmentTextScanLimit
 This parameter is available only in on-premises Exchange.
 
-The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
+The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -1297,6 +1297,8 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+In Exchange Online, Exchange 2019, and Exchange 2016, the default value is 1 MB (1,048,576 bytes). In Exchange 2013, the default value is 150 KB (153,600 bytes).
 
 If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
 
