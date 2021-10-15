@@ -43,7 +43,8 @@ PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'Ken Myer' -PolicyName $
 
 In Example 2, any per-user Teams enhanced encryption policy previously assigned to the user "Ken Myer" is revoked.
 
-As a result, the user will be managed by the global teams enhanced encryption policy.
+As a result, the user will be managed by the global Teams enhanced encryption policy.
+
 
 ## PARAMETERS
 
