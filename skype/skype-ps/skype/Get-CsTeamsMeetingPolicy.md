@@ -62,7 +62,7 @@ To do this, Get-CsTeamsMeetingPolicy is first called without any parameters in o
 This collection is then piped to the Where-Object cmdlet, which selects only those policies where the AllowMeetNow property is equal to True.
 
 ### -------------------------- Example 4 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy -Identity Global | fl NewMeetingRecordingExpirationDays
 
 NewMeetingRecordingExpirationDays : 60
