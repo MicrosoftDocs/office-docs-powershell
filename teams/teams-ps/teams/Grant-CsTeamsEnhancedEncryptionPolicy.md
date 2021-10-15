@@ -12,7 +12,8 @@ schema: 2.0.0
 # Grant-CsTeamsEnhancedEncryptionPolicy
 
 ## SYNOPSIS
-Cmdlet to assign a specific teams enhanced encryption Policy to a user.
+Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
+
 ## SYNTAX
 
 ```
