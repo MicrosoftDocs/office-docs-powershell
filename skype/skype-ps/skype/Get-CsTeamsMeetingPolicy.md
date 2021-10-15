@@ -69,7 +69,7 @@ NewMeetingRecordingExpirationDays : 60
 ```
 
 The above command returns expiration date setting currently applied on TMR. For more details, see:
-https://docs.microsoft.com/en-us/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings
+[Auto-expiration of Teams meeting recordings](https://docs.microsoft.com/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings).
 
 
 ## PARAMETERS
