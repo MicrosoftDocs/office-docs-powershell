@@ -12,7 +12,8 @@ schema: 2.0.0
 # Set-CsTeamsEnhancedEncryptionPolicy
 
 ## SYNOPSIS
-Use this cmdlet to update values in existing teams enhanced encryption policy.
+Use this cmdlet to update values in existing Teams enhanced encryption policy.
+
 ## SYNTAX
 
 ```
@@ -21,17 +22,19 @@ Set-CsTeamsEnhancedEncryptionPolicy [-Description <Object>] [-CallingEndtoEndEnc
 ```
 
 ## DESCRIPTION
-Use this cmdlet to update values in existing teams enhanced encryption policy.
+Use this cmdlet to update values in existing Teams enhanced encryption policy.
+
 The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```PowerShell
 PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhancedEncryptionPolicy" -CallingEndtoEndEncryptionEnabledType DisabledUserOverride
 ```
 
-The command shown in Example 1 modifies an existing per-user teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
+The command shown in Example 1 modifies an existing per-user Teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
+
 
 This policy is re-assigned CallingEndtoEndEncryptionEnabledType to be DisabledUserOverride.
 

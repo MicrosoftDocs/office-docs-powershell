@@ -29,7 +29,7 @@ The TeamsEnhancedEncryptionPolicy enables administrators to determine which user
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```PowerShell
 PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'KenMyer@contoso.com' -PolicyName 'ContosoPartnerTeamsEnhancedEncryptionPolicy'
 ```
 
@@ -37,7 +37,7 @@ The command shown in Example 1 assigns the per-user Teams enhanced encryption po
 
 
 ### EXAMPLE 2
-```
+```PowerShell
 PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'Ken Myer' -PolicyName $null
 ```
 

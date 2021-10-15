@@ -12,7 +12,8 @@ schema: 2.0.0
 # Remove-CsTeamsEnhancedEncryptionPolicy
 
 ## SYNOPSIS
-Use this cmdlet to remove an existing teams enhanced encryption policy.
+Use this cmdlet to remove an existing Teams enhanced encryption policy.
+
 ## SYNTAX
 
 ```
@@ -21,29 +22,32 @@ Remove-CsTeamsEnhancedEncryptionPolicy [[-Identity] <Object>] [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to remove an existing teams enhanced encryption policy.
+Use this cmdlet to remove an existing Teams enhanced encryption policy.
+
 The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```PowerShell
 PS C:\> Remove-CsTeamsEnhancedEncryptionPolicy -Identity 'ContosoPartnerTeamsEnhancedEncryptionPolicy'
 ```
 
-The command shown in Example 1 deletes the teams enhanced encryption policy ContosoPartnerTeamsEnhancedEncryptionPolicy.
+The command shown in Example 1 deletes the Teams enhanced encryption policy ContosoPartnerTeamsEnhancedEncryptionPolicy.
+
 
 ### EXAMPLE 2
-```
+```PowerShell
 PS C:\> Get-CsTeamsEnhancedEncryptionPolicy -Filter 'Tag:*' | Remove-CsTeamsEnhancedEncryptionPolicy
 ```
 
-In Example 2, all the teams enhanced encryption policies configured at the per-user scope are removed. The Filter value "Tag:*" limits the returned data to teams enhanced encryption policies configured at the per-user scope. Those per-user policies are then removed.
+In Example 2, all the Teams enhanced encryption policies configured at the per-user scope are removed. The Filter value "Tag:*" limits the returned data to Teams enhanced encryption policies configured at the per-user scope. Those per-user policies are then removed.
 
 ## PARAMETERS
 
 ### -Identity
-Unique identifier assigned to the teams enhanced encryption policy.
+Unique identifier assigned to the Teams enhanced encryption policy.
+
 
 ```yaml
 Type: XdsIdentity
@@ -104,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 

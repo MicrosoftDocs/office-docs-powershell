@@ -12,7 +12,8 @@ schema: 2.0.0
 # New-CsTeamsEnhancedEncryptionPolicy
 
 ## SYNOPSIS
-Use this cmdlet to create a new teams enhanced encryption policy.
+Use this cmdlet to create a new Teams enhanced encryption policy.
+
 ## SYNTAX
 
 ```
@@ -21,20 +22,21 @@ New-CsTeamsEnhancedEncryptionPolicy [-Description <Object>] [-CallingEndtoEndEnc
 ```
 
 ## DESCRIPTION
-Use this cmdlet to create a new teams enhanced encryption policy.
+Use this cmdlet to create a new Teams enhanced encryption policy.
+
 The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```PowerShell
 PS C:\> New-CsTeamsEnhancedEncryptionPolicy -Identity ContosoPartnerTeamsEnhancedEncryptionPolicy
 ```
 
 Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTeamsEnhancedEncryptionPolicy and applies the default values to its settings.
 
 ### EXAMPLE 2
-```
+```PowerShell
 PS C:\> New-CsTeamsEnhancedEncryptionPolicy -Identity ContosoPartnerTeamsEnhancedEncryptionPolicy -CallingEndtoEndEncryptionEnabledType DisabledUserOverride
 ```
 
@@ -43,7 +45,8 @@ Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTea
 ## PARAMETERS
 
 ### -Description
-Enables administrators to provide explanatory text to accompany a teams enhanced encryption policy.
+Enables administrators to provide explanatory text to accompany a Teams enhanced encryption policy.
+
 
 For example, the Description might include information about the users the policy should be assigned to.
 
@@ -75,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier assigned to the teams enhanced encryption policy.
+Unique identifier assigned to the Teams enhanced encryption policy.
+
 
 ```yaml
 Type: XdsIdentity
@@ -151,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 
