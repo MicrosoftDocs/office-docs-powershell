@@ -21,8 +21,9 @@ Get-CsTeamsEnhancedEncryptionPolicy [-LocalStore] [[-Identity] <Object>] [-Filte
 ```
 
 ## DESCRIPTION
-Returns information about the teams enhanced encryption policies configured for use in your organization.
+Returns information about the Teams enhanced encryption policies configured for use in your organization.
 The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
+
 
 ## EXAMPLES
 
