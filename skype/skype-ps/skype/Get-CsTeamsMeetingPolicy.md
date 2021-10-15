@@ -68,7 +68,7 @@ Get-CsTeamsMeetingPolicy -Identity Global | fl NewMeetingRecordingExpirationDays
 NewMeetingRecordingExpirationDays : 60
 ```
 
-The above command returns expiration date setting currently applied on TMR. Additional details:
+The above command returns expiration date setting currently applied on TMR. For more details, see:
 https://docs.microsoft.com/en-us/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings
 
 
