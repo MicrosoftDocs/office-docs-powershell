@@ -79,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier assigned to the teams enhanced encryption policy.
+Unique identifier assigned to the Teams enhanced encryption policy.
+
 
 ```yaml
 Type: XdsIdentity
