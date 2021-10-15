@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"). A policy that has an identity of "Tag:ContosoPartnerTeamsEnhancedEncryptionPolicy" has a PolicyName of "ContosoPartnerTeamsEnhancedEncryptionPolicy". If you set PolicyName to a null value, then the command will unassign any individual policy assigned to the user. For example: Grant-CsTeamsEnhancedEncryptionPolicy -Identity "Ken Myer" -PolicyName $Null
+Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"). A policy that has an identity of "Tag:ContosoPartnerTeamsEnhancedEncryptionPolicy" has a PolicyName of "ContosoPartnerTeamsEnhancedEncryptionPolicy". If you set PolicyName to a null value, then the command will unassign any individual policy assigned to the user. For example: Grant-CsTeamsEnhancedEncryptionPolicy -Identity "Ken Myer" -PolicyName $Null.
 
 ```yaml
 Type: String
