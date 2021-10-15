@@ -35,7 +35,7 @@ PS C:\> Get-CsTeamsEnhancedEncryptionPolicy
 The command shown in Example 1 returns information for all the teams enhanced encryption policies configured for use in the tenant.
 
 ### EXAMPLE 2
-```
+```PowerShell
 PS C:\> Get-CsTeamsEnhancedEncryptionPolicy -Identity 'ContosoPartnerEnhancedEncryptionPolicy'
 ```
 
