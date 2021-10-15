@@ -83,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier assigned to the teams enhanced encryption policy.
+Unique identifier assigned to the Teams enhanced encryption policy.
+
 
 Use the "Global" Identity if you wish modify the policy set for the entire tenant.
 
