@@ -28,7 +28,7 @@ The TeamsEnhancedEncryptionPolicy enables administrators to determine which user
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```PowerShell
 PS C:\> Get-CsTeamsEnhancedEncryptionPolicy
 ```
 
