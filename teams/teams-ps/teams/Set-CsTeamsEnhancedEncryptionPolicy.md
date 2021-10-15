@@ -38,7 +38,7 @@ This policy is re-assigned CallingEndtoEndEncryptionEnabledType to be DisabledUs
 Any Microsoft Teams users who are assigned this policy will have their enhanced encryption policy customized such that the user can use the enhanced encryption setting in Teams.
 
 ### EXAMPLE 2
-```
+```PowerShell
 PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhancedEncryptionPolicy" -Description "allow useroverride" 
 ```
 
