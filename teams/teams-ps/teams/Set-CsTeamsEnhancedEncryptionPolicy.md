@@ -42,7 +42,8 @@ Any Microsoft Teams users who are assigned this policy will have their enhanced 
 PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhancedEncryptionPolicy" -Description "allow useroverride" 
 ```
 
-The command shown in Example 2 modifies an existing per-user teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
+The command shown in Example 2 modifies an existing per-user Teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
+
 
 This policy is re-assigned the description from its existing value to "allow useroverride".
 
