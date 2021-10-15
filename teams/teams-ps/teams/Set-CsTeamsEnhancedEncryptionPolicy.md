@@ -50,7 +50,8 @@ This policy is re-assigned the description from its existing value to "allow use
 ## PARAMETERS
 
 ### -Description
-Enables administrators to provide explanatory text to accompany a teams enhanced encryption policy.
+Enables administrators to provide explanatory text to accompany a Teams enhanced encryption policy.
+
 
 For example, the Description might include information about the users the policy should be assigned to.
 
