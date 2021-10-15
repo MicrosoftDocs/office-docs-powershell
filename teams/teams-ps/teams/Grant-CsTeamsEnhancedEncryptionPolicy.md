@@ -33,7 +33,8 @@ The TeamsEnhancedEncryptionPolicy enables administrators to determine which user
 PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'KenMyer@contoso.com' -PolicyName 'ContosoPartnerTeamsEnhancedEncryptionPolicy'
 ```
 
-The command shown in Example 1 assigns the per-user teams enhanced encryption policy, ContosoPartnerTeamsEnhancedEncryptionPolicy, to the user with the user principal name (UPN) "KenMyer@contoso.com".
+The command shown in Example 1 assigns the per-user Teams enhanced encryption policy, ContosoPartnerTeamsEnhancedEncryptionPolicy, to the user with the user principal name (UPN) "KenMyer@contoso.com".
+
 
 ### EXAMPLE 2
 ```
