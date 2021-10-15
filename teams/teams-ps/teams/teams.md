@@ -54,7 +54,7 @@ The following cmdlet references are for Microsoft Teams.
 {{Manually Enter Get-TeamUser Description Here}}
 
 ### [Get-TeamsEnhancedEncryptionPolicy](Get-TeamsEnhancedEncryptionPolicy.md)
-{{Manually Enter Get-TeamsEnhancedEncryptionPolicy Description Here}}
+Returns information about the teams enhanced encryption policies configured for use in your organization.
 
 ### [Get-TeamsShiftsPolicy](Get-TeamsShiftsPolicy.md)
 {{Manually Enter Get-TeamsShiftsPolicy Description Here}}
@@ -63,7 +63,7 @@ The following cmdlet references are for Microsoft Teams.
 {{Manually Enter Get-TeamTargetingHierarchyStatus Description Here}}
 
 ### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
-{{Manually Enter Grant-TeamsEnhancedEncryptionPolicy Description Here}}
+Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
 
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
@@ -78,7 +78,7 @@ The following cmdlet references are for Microsoft Teams.
 {{Manually Enter New-TeamsApp Description Here}}
 
 ### [New-TeamsEnhancedEncryptionPolicy](New-TeamsEnhancedEncryptionPolicy.md)
-{{Manually Enter New-TeamsEnhancedEncryptionPolicy Description Here}}
+Use this cmdlet to create a new Teams enhanced encryption policy.
 
 ### [New-TeamsShiftsPolicy](New-TeamsShiftsPolicy.md)
 {{Manually Enter New-TeamsShiftsPolicy Description Here}}
@@ -99,7 +99,7 @@ The following cmdlet references are for Microsoft Teams.
 {{Manually Enter Remove-TeamUser Description Here}}
 
 ### [Remove-TeamsEnhancedEncryptionPolicy](Remove-TeamsEnhancedEncryptionPolicy.md)
-{{Manually Enter Remove-TeamsEnhancedEncryptionPolicy Description Here}}
+Use this cmdlet to remove an existing Teams enhanced encryption policy.
 
 ### [Remove-TeamsShiftsPolicy](Remove-TeamsShiftsPolicy.md)
 {{Manually Enter Remove-TeamsShiftsPolicy Description Here}}
@@ -138,7 +138,7 @@ The following cmdlet references are for Microsoft Teams.
 {{Manually Enter Set-TeamsApp Description Here}}
 
 ### [Set-TeamsEnhancedEncryptionPolicy](Set-TeamsEnhancedEncryptionPolicy.md)
-{{Manually Enter Set-TeamsEnhancedEncryptionPolicy Description Here}}
+Use this cmdlet to update values in existing Teams enhanced encryption policy.
 
 ### [Set-TeamsShiftsPolicy](Set-TeamsShiftsPolicy.md)
 {{Manually Enter Set-TeamsShiftsPolicy Description Here}}
