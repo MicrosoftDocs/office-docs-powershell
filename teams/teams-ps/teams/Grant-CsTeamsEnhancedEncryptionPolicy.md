@@ -22,7 +22,8 @@ Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <Object>] [[-Id
 ```
 
 ## DESCRIPTION
-Cmdlet to assign a specific teams enhanced encryption Policy to a user.
+Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
+
 The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
 ## EXAMPLES
