@@ -345,8 +345,8 @@ Accept wildcard characters: False
 ### -LogFileRollOverSettings
 The LogFileRollOverSettings parameter defines how frequently POP3 protocol logging creates a new log file. Valid values are:
 
-- 1 or Hourly.
-- 2 or Daily. This is the default value.
+- 1 or Hourly. This is the default value in Exchange 2019 and Exchange 2016.
+- 2 or Daily. This is the default value in Exchange 2013 and Exchange 2010.
 - 3 or Weekly.
 - 4 or Monthly.
 
