@@ -445,7 +445,7 @@ The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the 
 - $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This is the default value.
 - $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled.
 
-If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutInterval parameter.
+If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter.
 
 ```yaml
 Type: Boolean
