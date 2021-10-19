@@ -569,7 +569,7 @@ Possible values:
 - NotDisabled
 - Unknown (not settable)
 
-**Note**: This paramater has been retired and no longer functions.
+**Note**: This parameter has been retired and no longer functions.
 
 ```yaml
 Type: AppViewsPolicy
@@ -610,7 +610,7 @@ Possible values
 - Disabled
 - NotDisabled
 
-**Note**: This paramater has been retired and no longer functions.
+**Note**: This parameter has been retired and no longer functions.
 
 ```yaml
 Type: FlowsPolicy
