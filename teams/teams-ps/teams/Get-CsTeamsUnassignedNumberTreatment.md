@@ -105,6 +105,6 @@ The cmdlet is available in Teams PS module 2.5.1 or later.
 Using the Filter parameter does not work as intended.
 
 ## RELATED LINKS
-- [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
-- [New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
-- [Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
