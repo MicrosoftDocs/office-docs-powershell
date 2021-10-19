@@ -162,8 +162,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
-- [Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
-
-- [Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
-- [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
-- [New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
