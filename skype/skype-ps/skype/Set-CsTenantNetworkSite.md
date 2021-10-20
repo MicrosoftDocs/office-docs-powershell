@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantnetworksite
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsTenantNetworkSite
 schema: 2.0.0
 manager: bulenteg
@@ -49,10 +49,10 @@ The network region 'RegionRedmond' is created beforehand and 'MicrosoftSite1' wi
 
 ###-------------------------- Example 2 --------------------------
 ```powershell
-PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true
+PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -EnableLocationBasedRouting $true
 ```
 
-The command shown in Example 2 sets the network site 'site2' with description 'site 2'. This site is enabled for LBR. The example associates the site with network region 'RedmondRegion' and with location policy 'TestLocationPolicy'.
+The command shown in Example 2 sets the network site 'site2' with description 'site 2'. This site is enabled for LBR. The example associates the site with network region 'RedmondRegion'.
 
 ###-------------------------- Example 3 --------------------------
 ```powershell
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationPolicy
-LocationPolicy is the identifier for the location policy which the current network site is associating to.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
