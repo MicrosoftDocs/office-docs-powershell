@@ -64,7 +64,9 @@ This collection is then piped to the Where-Object cmdlet, which selects only tho
 ### -------------------------- Example 4 --------------------------
 ```powershell
 Get-CsTeamsMeetingPolicy -Identity Global | fl NewMeetingRecordingExpirationDays
+```
 
+```Output
 NewMeetingRecordingExpirationDays : 60
 ```
 
