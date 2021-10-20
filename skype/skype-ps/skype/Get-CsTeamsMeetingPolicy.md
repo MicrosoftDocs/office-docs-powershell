@@ -37,7 +37,7 @@ The Get-CsTeamsMeetingPolicy cmdlet enables you to return information about all 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy
 ```
 
@@ -45,7 +45,7 @@ In Example 1, Get-CsTeamsMeetingPolicy is called without any additional paramete
 
 
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy -Identity SalesPolicy
 ```
 
@@ -53,7 +53,7 @@ In Example 2, Get-CsTeamsMeetingPolicy is used to return the per-user meeting po
 Because identities are unique, this command will never return more than one item.
 
 ### -------------------------- Example 3 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy | Where-Object {$_.AllowMeetNow -eq $True}
 ```
 
