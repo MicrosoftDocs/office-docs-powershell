@@ -118,4 +118,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.6.1-preview or later.
 
 ## RELATED LINKS
-- [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
+[Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
