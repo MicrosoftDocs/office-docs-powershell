@@ -955,7 +955,9 @@ Accept wildcard characters: False
 ### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days. Value can also be -1 to set meeting recordings to never expire.
 
-Note: This parameter isn't yet available to be set. We'll publish an updated message center post when the setting is available for modification. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?searchterms=82057&filters=&searchterms=84580) for more information on its delivery date.
+NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+
+NOTE: This parameter is available to be set, but will not be effective until this feature gets general availability. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=84580) for more information on its delivery date.
 
 ```yaml
 Type: Int32
