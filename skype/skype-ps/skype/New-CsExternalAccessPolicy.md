@@ -78,9 +78,15 @@ New-CsExternalAccessPolicy -Identity site:Redmond -EnableFederationAccess $True 
 The command shown in Example 1 creates a new external access policy that has the Identity site:Redmond; upon creation, this policy will automatically be assigned to the Redmond site.
 Note that this new policy sets both the EnableFederationAccess and the EnableOutsideAccess properties to True.
 
+### -------------------------- Example 2 ------------------------
+```
+Set-CsExternalAccessPolicy -Identity Global  -EnableAcsFederationAccess $true
+New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed  -EnableAcsFederationAccess $false
+```
 
+In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.
 
-### -------------------------- EXAMPLE 2 -------------------------- 
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
 $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
@@ -93,7 +99,7 @@ $x.EnableOutsideAccess = $True
 Set-CsExternalAccessPolicy -Instance $x
 ```
 
-Example 2 demonstrates the use of the InMemory parameter; this parameter enables you to create an in-memory-only instance of an external access policy.
+Example 3 demonstrates the use of the InMemory parameter; this parameter enables you to create an in-memory-only instance of an external access policy.
 After it has been created, you can modify the in-memory-only instance, then use the Set-CsExternalAccessPolicy cmdlet to transform the virtual policy into a real external access policy.
 
 To do this, the first command in the example uses the New-CsExternalAccessPolicy cmdlet and the InMemory parameter to create a virtual policy with the Identity RedmondAccessPolicy; this virtual policy is stored in a variable named $x.
