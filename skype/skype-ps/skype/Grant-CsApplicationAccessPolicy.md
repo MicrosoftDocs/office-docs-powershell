@@ -37,6 +37,7 @@ PS C:\> Grant-CsApplicationAccessPolicy -Identity "dc17674c-81d9-4adb-bfb2-8f6a4
 ```
 
 The command shown above assigns the per-user application access policy "ASimplePolicy" to the user with object ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624".
+**Note:** You can assign only 1 application access policy at a time to a particular user. Assigning a new application access policy to a user will override the existing application access policy if any. 
 
 ### Unassign an application access policy from a user
 
