@@ -172,6 +172,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
+### [Get-ConfigAnalyzerPolicyRecommendation](Get-ConfigAnalyzerPolicyRecommendation.md)
+
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
