@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-RetentionComplianceRule cmdlet to create new retention rules in the Security & Compliance Center.
+Use the New-RetentionComplianceRule cmdlet to create new retention rules in the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -61,7 +61,7 @@ New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <S
 ## DESCRIPTION
 The retention rule must be added to an existing retention policy using the Policy parameter. Only one rule can be added to each retention policy.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ### -ContentContainsSensitiveInformation
 The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -339,13 +339,13 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionDurationDisplayHint
-The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Security & Compliance Center. Valid values are:
+The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Microsoft 365 compliance center. Valid values are:
 
 - Days
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft 365 compliance center will display 1 year as the content hold duration.
 
 You can't use this parameter for Teams retention rules.
 

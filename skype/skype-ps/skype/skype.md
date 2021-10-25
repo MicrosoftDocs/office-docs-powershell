@@ -3210,6 +3210,16 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
 
+### [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
+
+### [Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
+
+### [Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
+
+### [Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
+
+### [Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
+
 ### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
 
 ### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
@@ -3303,7 +3313,17 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
 
+### [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
+
+### [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
+
+### [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
+
+### [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
+
 ### [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+
+### [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers.md)
 
 ### [Get-CSTeamsIPPhonePolicy](Get-CSTeamsIPPhonePolicy.md)
 

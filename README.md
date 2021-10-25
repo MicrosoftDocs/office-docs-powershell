@@ -4,7 +4,7 @@
 
 This repository holds reference content of Office PowerShell cmdlets for help purpose. The expert knowledge around Office PowerShell is distributed among customers, MVPs, partners, product teams, support, and other community members. Consumers have various preferences when consuming knowledge such as a website, PowerShell Get-Help, Windows app, iOS app, Android app, and others. The following diagram illustrates the point.
 
-![Contribution and Consumption model for Office PowerShell reference content](images/contrib-consumption-model.png)
+![Contribution and Consumption model for Office PowerShell reference content.](images/contrib-consumption-model.png)
 
 ## Learn How To Contribute
 
@@ -19,7 +19,7 @@ Contributors who only make infrequent or small updates can edit the file directl
 
 This brief video also covers how to contribute:
 
-[![Image of Quick Start video](images/edit_video_capture.jpg)](https://support.office.com/article/edit-powershell-cmdlet-in-github-dcd20227-3764-48ce-ad6e-763af8b48daf)
+[![Image of Quick Start video.](images/edit_video_capture.jpg)](https://support.office.com/article/edit-powershell-cmdlet-in-github-dcd20227-3764-48ce-ad6e-763af8b48daf)
 
 ### Quickly update an article using GitHub.com
 
@@ -27,11 +27,11 @@ This brief video also covers how to contribute:
 2. Go to the page you want to edit on docs.microsoft.com.
 3. On the right-hand side of the page, click **Edit** (pencil icon).
 
-   ![Edit button on docs.microsoft.com](images/quick-update-edit.png)
+   ![Edit button on docs.microsoft.com.](images/quick-update-edit.png)
 
 4. The corresponding topic file on GitHub opens, where you need to click the **Edit this file** pencil icon.
 
-   ![Edit button on github.com](images/quick-update-github.png)
+   ![Edit button on github.com.](images/quick-update-github.png)
 
 5. The topic opens in a line-numbered editing page where you can make changes to the file.
 
@@ -45,7 +45,7 @@ This brief video also covers how to contribute:
 
    - Since you are likely not a maintainer of the Git repository, GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is a copy of the repository in your git account. By forking, you can freely make edits without affecting the original repository. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in the top right).
 
-     ![Image of Automatic Fork message on Github](images/auto_fork.png)
+     ![Image of Automatic Fork message on Github.](images/auto_fork.png)
 
 6. You can click the **Preview changes** tab to see what the changes will look like.
 
@@ -56,15 +56,15 @@ This brief video also covers how to contribute:
 
    When you're ready, click the green **Propose file change** button.
 
-   ![Propose file change section](images/propose-file-change.png)
+   ![Propose file change section.](images/propose-file-change.png)
 
 8. On the **Comparing changes** page that appears, click the green **Create pull request** button.
 
-   ![Comparing changes page](images/comparing-changes-page.png)
+   ![Comparing changes page.](images/comparing-changes-page.png)
 
 9. On the **Open a pull request** page that appears, click the green **Create pull request** button.
 
-   ![Open a pull request page](images/open-a-pull-request-page.png)
+   ![Open a pull request page.](images/open-a-pull-request-page.png)
 
 > [!NOTE]
 > Your permissions in the repo determine what you see in the last several steps. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.

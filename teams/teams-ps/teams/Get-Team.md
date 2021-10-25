@@ -59,7 +59,7 @@ Returns the team that matches the specified MailNickName
 ```
 PS> Get-Team -DisplayName "Sales and Marketing"
 ```
-Returns the team that matches the specified DisplayName
+Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
 
 ## PARAMETERS
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailNickName
-Specify the mailnickname of the team that is being returned.  This is a unique identifier and returns exact match.
+Specify the mailnickname of the team that is being returned. This acts as a filter instead of being an exact match.
 
 ```yaml
 Type: String

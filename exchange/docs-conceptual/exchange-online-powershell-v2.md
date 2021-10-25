@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 ms.reviewer: navgupta
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
@@ -31,11 +31,14 @@ The rest of this article explains how the module works, how to install and maint
 
 ## Report bugs and issues for the EXO V2 module
 
-When you report an issue, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
 ```powershell
 Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
 ```
+
+> [!NOTE]
+> The latest version of EXO V2 module and frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
 
 ## How the EXO V2 module works
 
@@ -87,10 +90,10 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 |---|---|
 |[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
-|[Get-OwnerlessGroupPolicy](/powershell/module/exchange/get-ownerlessgrouppolicy)|Available in v2.0.5-Preview1 or later.|
-|[Set-OwnerlessGroupPolicy](/powershell/module/exchange/set-ownerlessgrouppolicy)|Available in v2.0.5-Preview1 or later.|
-|[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Being replaced by [Get-UserAnalyticsConfig](/powershell/module/exchange/get-useranalyticsconfig).|
-|[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Being replaced by [Set-UserAnalyticsConfig](/powershell/module/exchange/set-useranalyticsconfig).|
+|[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig).|
+|[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Replaced by [Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig).|
+|[Get-VivaInsightsSettings](/powershell/module/exchange/get-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
+|[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
 |
 
 ## Install and maintain the EXO V2 module
@@ -121,11 +124,27 @@ For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell
 
 The EXO V2 module is officially supported in the following distributions of Linux:
 
-- Ubuntu 18.04/20.04
+- Ubuntu 18.04 LTS
+- Ubuntu 20.04 LTS
 
 If you have trouble using the EXO V2 module on other distributions of Linux, send email to the following address: `exocmdletpreview[at]service[dot]microsoft[dot]com`. The email address is purposefully obfuscated to avoid spam.
 
 For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true).
+
+After you install PowerShell 7, do the following steps:
+
+1. Run PowerShell as superuser: `sudo pwsh`
+2. In the PowerShell superuser session, run the following commands:
+
+   ```powershell
+   Install-Module -Name PSWSMan
+
+   Install-WSMan
+   ```
+
+   If prompted, accept PSGallery as the source for the cmdlets.
+
+Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exo-v2-module) and [install the EXO V2 module](#install-the-exo-v2-module).
 
 #### Windows
 
@@ -310,13 +329,13 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
   - x64:
 
     ```powershell
-    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft.NetFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
     ```
 
   - x86
 
     ```powershell
-    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft.NetFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
     ```
 
   For more information, see [SchUseStrongCrypto](/dotnet/framework/network-programming/tls#schusestrongcrypto).
@@ -383,7 +402,18 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 Unless otherwise noted, the current release of the EXO V2 module contains all features of previous releases.
 
-### Current release: Version 2.0.4
+### Current release: Version 2.0.5
+
+- New **Get-OwnerlessGroupPolicy** and **Set-OwnerlessGroupPolicy** cmdlet to manage ownerless Microsoft 365 groups.
+
+  > [!NOTE]
+  > Although the _cmdlets_ are available in the module, the _feature_ is only available to members of a Private Preview.
+
+- New **Get-VivaInsightsSettings** and **Set-VivaInsightsSettings** cmdlets to control user access to Headspace features in Viva Insights.
+
+### Previous releases
+
+#### Version 2.0.4
 
 - PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the EXO V2 module](#prerequisites-for-the-exo-v2-module) section in this article.
 
@@ -396,8 +426,6 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
 
 - The interactive sign-in process now uses a more secure method to fetch access tokens using safe reply URLs.
-
-### Previous releases
 
 #### Version 2.0.3
 

@@ -638,6 +638,8 @@ Accept wildcard characters: False
 ### -MobilePhone
 The MobilePhone parameter specifies the user's primary mobile phone number.
 
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the Mobile parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -764,7 +766,9 @@ Accept wildcard characters: False
 ```
 
 ### -PermanentlyClearPreviousMailboxInfo
-The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange mailbox attributes on a user. You don't need to specify a value with this switch.
+This parameter is not available or functional in on-premises Exchange. It is only available in Exchange Online.
+
+The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange Online mailbox attributes on a user. You don't need to specify a value with this switch.
 
 Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 
@@ -785,6 +789,8 @@ Accept wildcard characters: False
 
 ### -Phone
 The Phone parameter specifies the user's office telephone number.
+
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the TelephoneNumber parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
 
 ```yaml
 Type: String

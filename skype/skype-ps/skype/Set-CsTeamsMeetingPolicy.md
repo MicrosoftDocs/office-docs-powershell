@@ -32,9 +32,12 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
-[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
+[-MeetingInviteLanguages <String>]
+[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -52,9 +55,13 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
-[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-NewMeetingRecordingExpirationDays <Int32>] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] 
+[-MeetingInviteLanguages <String>]
+[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -336,10 +343,12 @@ Accept wildcard characters: False
 ### -AutoAdmittedUsers
 Determines what types of participants will automatically be added to meetings organized by this user.
 Possible values are:
-- EveryoneInCompany, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. 
-- Everyone, if you'd like to admit anonymous users by default. 
-- EveryoneInSameAndFederatedCompany, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
-- OrganizerOnly, if you would like that only meeting organizers can bypass the lobby.
+- **EveryoneInCompany**, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately.
+- **EveryoneInSameAndFederatedCompany**, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
+- **Everyone**, if you'd like to admit anonymous users by default. 
+- **OrganizerOnly**, if you would like that only meeting organizers can bypass the lobby.
+- **EveryoneInCompanyExcludingGuests**, if you would like meetings to place every external and guest users in the lobby but allow all other users in the company to join the meeting immediately.
+- **InvitedUsers**, if you would like that only meeting organizers and invited users can bypass the lobby.
 
 This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
 
@@ -583,6 +592,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
+Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -729,6 +740,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToJoinExternalMeeting
+Currently, this parameter has no effect.
+
 Possible values are:
 - Enabled 
 - FederatedOnly
@@ -764,9 +777,14 @@ Accept wildcard characters: False
 ```
 
 ### -StreamingAttendeeMode
+
+Controls if Teams uses overflow capability once a meeting reaches its capacity (1,000 users with full functionality). 
+
 Possible values are: 
 - Disabled
 - Enabled
+
+Set this to Enabled to allow up to 20,000 extra view-only attendees to join.
 
 ```yaml
 Type: String
@@ -829,18 +847,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingRegistration
+Controls if a user can create a webinar meeting. The default value is True.
 
 Possible values:
-- true
-- false
+- True
+- False
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -852,6 +872,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -866,6 +887,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -884,6 +906,7 @@ Possible values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -901,6 +924,7 @@ Possible values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -909,18 +933,82 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
+Controls the attendees who can attend a webinar meeting. The default is Everyone, meaning that everyone can register. If you want to restrict registration  to internal accounts set the value  to 'EveryoneInCompany'. 
+
 Possible values:
 
 - Everyone
 - EveryoneInCompany
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewMeetingRecordingExpirationDays
+Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days. Value can also be -1 to set meeting recordings to never expire.
+
+NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+
+NOTE: This parameter is available to be set, but will not be effective until this feature gets general availability. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=84580) for more information on its delivery date.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingInviteLanguages
+Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
+Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=81521).
+
+The preliminary list of available languages is shown below:
+ar-SA,az-Latn-AZ,bg-BG,ca-ES,cs-CZ,cy-GB,da-DK,de-DE,el- GR,en-GB,es-ES,es-MX,et-EE,eu-ES,fi-FI,fil-PH,fr-CA,fr-FR,gl-ES,he-IL,hi-IN,hr-HR,hu-HU,id-ID,is-IS,it-IT,ja-JP,ka-GE,k k-KZ,ko-KR,lt-LT,lv-LV,mk-MK,ms-MY,nb-NO,nl-NL,nn-NO,pl-PL,pt-BR,pt-PT,ro-RO,ru-RU,sk-SK,sl-SL,sq-AL,sr-Latn-RS,sv-SE,t h-TH,tr-TR,uk-UA,vi-VN,zh-CN,zh-TW.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChannelRecordingDownload
+Controls how channel meeting recordings are saved, permissioned, and who can download them. 
+
+Possible values:
+
+- Allow - Saves channel meeting recordings to a "Recordings" folder in the channel. The permissions on the recording files will be based on the Channel SharePoint permissions. This is the same as any other file uploaded for the channel.
+- Block - Saves channel meeting recordings to a "Recordings\View only" folder in the channel. Channel owners will have full rights to the recordings in this folder, but channel members will have read access without the ability to download. 
+
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Allow
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

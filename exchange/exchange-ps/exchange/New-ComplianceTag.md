@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ComplianceTag cmdlet to create labels in the Security & Compliance Center. Labels apply retention settings to content.
+Use the New-ComplianceTag cmdlet to create retention labels in the Microsoft 365 compliance center. Retention labels apply retention settings to content.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,6 +28,7 @@ New-ComplianceTag [-Name] <String>
  [-FilePlanProperty <String>]
  [-Force]
  [-IsRecordLabel <Boolean>]
+
  [-Notes <String>]
  [-Regulatory <Boolean>]
  [-RetentionAction <String>]
@@ -39,7 +40,7 @@ New-ComplianceTag [-Name] <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -132,30 +133,30 @@ Accept wildcard characters: False
 ### -FilePlanProperty
 The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
 
-- Get-FilePlanPropertyAuthority | Format-List Name
-- Get-FilePlanPropertyCategory | Format-List Name
-- Get-FilePlanPropertyCitation | Format-List Name
-- Get-FilePlanPropertyDepartment | Format-List Name
-- Get-FilePlanPropertyReferenceId | Format-List Name
-- Get-FilePlanPropertySubCategory | Format-List Name
+- `Get-FilePlanPropertyAuthority | Format-List Name`
+- `Get-FilePlanPropertyCategory | Format-List Name`
+- `Get-FilePlanPropertyCitation | Format-List Name`
+- `Get-FilePlanPropertyDepartment | Format-List Name`
+- `Get-FilePlanPropertyReferenceId | Format-List Name`
+- `Get-FilePlanPropertySubCategory | Format-List Name`
 
 A valid value for this parameter involves two steps:
 
 - A variable to store the file plan properties as a PSCustomObject using the following syntax:
 
-  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+  `$Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}`
 
   For example:
 
-  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+  `$retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="Referen`ceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
 
 - A second variable to convert the PSCustomObject to a JSON object using the following syntax:
 
-  $Variable2 = ConvertTo-Json $Variable1
+  `$Variable2 = ConvertTo-Json $Variable1`
 
   For example:
 
-  $fpStr = ConvertTo-Json $retentionLabelAction
+  `$fpStr = ConvertTo-Json $retentionLabelAction`
 
 You use the second variable as the value for this parameter.
 
@@ -196,6 +197,30 @@ The IsRecordLabel parameter specifies whether the label is a record label. Valid
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiStageReviewProperty
+The MultiStageReviewProperty parameter specifies the multi-stage review properties to include in the label. This parameter uses the following syntax:
+
+`'{"MultiStageReviewSettings":[{"StageName":"Stage1","Reviewers":[reviewer1,reviewer2,...reviewerN]},{"StageName":"Stage2","Reviewers":[reviewer1,reviewer2,...reviewerN]},]}'`
+
+For example:
+
+`'{"MultiStageReviewSettings":[{"StageName":"Stage1","Reviewers":[jie@contoso.onmicrosoft.com]},{"StageName":"Stage2","Reviewers":[bharath@contoso.onmicrosoft.com,helen@contoso.onmicrosoft.com]},]}'`
+
+This syntax is a JSON object that defines each review stage id, review stage name, and list of reviewers.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
