@@ -42,6 +42,7 @@ New-SafeLinksPolicy [-Name] <String>
  [-TrackClicks <Boolean>]
  [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
+ [-DisableUrlRewrite <Boolean>]
  [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
@@ -57,14 +58,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $true
+New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true
 ```
 
 This example creates a new Safe Links policy named Marketing Block URL with the following options:
 
 - The policy is enabled.
 - Users aren't allowed to click through to the original URL. This is the default value of the DoNotAllowClickThrough parameter, so you don't need to specify it.
-- User clicks on URLs are tracked in URL trace.
+- User clicks on URLs are tracked. This is the default value of the DoNotTrackUserClicks parameter, so you don't need to specify it.
 
 ## PARAMETERS
 
@@ -162,6 +163,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableUrlRewrite
+The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in email messages. Valid values are:
+
+- $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac). Typically, we don't recommend using this value.
+- $false: URLs in messages are rewritten. API checks still occur on unwrapped URLs in supported clients if the user is in a valid Safe Links policy. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -269,8 +288,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForTeams
-**Note**: As of March 2020, this parameter is in Preview and is available or functional only for members of the Microsoft Teams Technology Adoption Program (TAP).
-
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
 - $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.

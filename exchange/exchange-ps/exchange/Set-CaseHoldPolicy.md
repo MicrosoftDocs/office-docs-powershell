@@ -116,7 +116,7 @@ The AddExchangeLocation parameter specifies the mailboxes to add to the list of 
 To specify a mailbox or distribution group, you can use the following values:
 
 - Name
-- SMTP address
+- SMTP address. To specify an inactive mailbox, precede the address with a period (.).
 - Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -249,9 +249,8 @@ The RemoveExchangeLocation parameter specifies the existing mailboxes to remove 
 To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
-- Distinguished name (DN)
-- Email address
-- GUID
+- SMTP address. To specify an inactive mailbox, precede the address with a period (.).
+- Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

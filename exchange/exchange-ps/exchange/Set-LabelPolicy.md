@@ -375,6 +375,8 @@ Additionally, for Power BI:
 
 - **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
 
+- **powerbidefaultlabelid**: Default label for Power BI content. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbidefaultlabelid="General"}`. For more information about this configuration choice, see [Default label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-default-label-policy).
+
 
 ```yaml
 Type: PswsHashtable

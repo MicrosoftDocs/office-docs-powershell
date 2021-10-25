@@ -136,8 +136,12 @@ Eventually UPN and SIP.
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+[Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+
+[Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
+
+[New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
+
+[Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
+
+[Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)

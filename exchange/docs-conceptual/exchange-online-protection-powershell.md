@@ -8,7 +8,7 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: f7918a88-774a-405e-945b-bc2f5ee9f748
 description: "Learn about using PowerShell in Exchange Online Protection"
 ---

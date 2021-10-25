@@ -90,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -SenderDomains
-The SenderDomains parameter specifies the remote domains from which this connector accepts messages, thereby limiting its scope. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com. However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com. You can specify multiple domains separated by commas.
+The SenderDomains parameter specifies the source domains that the connector accepts messages for. A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com is not valid).
+
+You can specify multiple domains separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -106,7 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedAcceptedDomains
-The AssociatedAcceptedDomains parameter specifies the accepted domains that the connector applies to, thereby limiting its scope. For example, you can apply the connector to a specific accepted domain in your organization, such as contoso.com.
+The AssociatedAcceptedDomains parameter restricts the source domains that use the connector to the specified accepted domains. A valid value is an SMTP domain that's configured as an accepted domain in your Microsoft 365 organization.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -182,11 +186,11 @@ Accept wildcard characters: False
 ### -ConnectorSource
 The ConnectorSource parameter specifies how the connector is created. Valid input for this parameter includes the following values:
 
-- Default: The connector is manually created.
+- Default: The connector is manually created. This is the default value.
 - HybridWizard: The connector is automatically created by the Hybrid Configuration Wizard.
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
-The default value for connectors you create yourself is Default. It isn't recommended that you change this value.
+We recommended that you don't change this value.
 
 ```yaml
 Type: TenantConnectorSource
@@ -202,10 +206,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorType
-The ConnectorType parameter specifies a category for the domains that are serviced by the connector. Valid input for this parameter includes the following values:
+The ConnectorType parameter specifies the category for the source domains that the connector accepts messages for. Valid values are:
 
-- Partner: The connector services domains that are external to your organization.
-- OnPremises: The connector services domains that are used by your on-premises organization. Use this value for accepted domains in your cloud-based organization that are also specified by the SenderDomains parameter.
+- Partner: External partners or services.
+- OnPremises: Your on-premises email organization. Use this value for accepted domains in your cloud-based organization that are also specified by the SenderDomains parameter.
 
 ```yaml
 Type: TenantConnectorType
@@ -312,7 +316,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter enables or disables the connector. Valid input for this parameter is $true or $false. The default value is $true.
+The Enabled parameter enables or disables the connector. Valid values are:
+
+- $true: The connector is enabled. This is the default value.
+- $false: The connector is disabled.
 
 ```yaml
 Type: Boolean
@@ -328,7 +335,10 @@ Accept wildcard characters: False
 ```
 
 ### -RequireTls
-The RequireTLS parameter specifies that all messages received by this connector require TLS transmission. Valid values for this parameter are $true or $false. The default value is $false.
+The RequireTLS parameter specifies whether to require TLS transmission for all messages that are received by the connector. Valid values are:
+
+- $true: Reject messages if they aren't sent over TLS. This is the default value
+- $false: Allow messages if they aren't sent over TLS.
 
 ```yaml
 Type: Boolean
@@ -344,7 +354,10 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToCertificate
-The RestrictDomainsToCertificate parameter specifies that Microsoft 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
+The RestrictDomainsToCertificate parameter specifies whether the Subject value of the TLS certificate is checked before messages can use the connector. Valid values are:
+
+- $true: Mail is allowed to use the connector only if the Subject value of the TLS certificate that the source email server uses to authenticate matches the TlsSenderCertificateName parameter value.
+- $false: The Subject value of the TLS certificate that the source email server uses to authenticate doesn't control whether mail from that source uses the connector. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -360,9 +373,10 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToIPAddresses
-The RestrictDomainsToIPAddresses parameter, when set to $true, automatically rejects mail from the domains specified by the SenderDomains parameter if the mail originates from an IP address that isn't specified by the SenderIPAddresses parameter.
+The RestrictDomainsToIPAddresses parameter specifies whether to reject mail that comes from unknown source IP addresses. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Automatically reject mail from domains that are specified by the SenderDomains parameter if the source IP address isn't also specified by the SenderIPAddress parameter.
+- $false: Don't automatically reject mail from domains that are specified by the SenderDomains parameter based on the source IP address. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -394,7 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. Valid values are:
+The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the connector accepts messages from. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
@@ -417,9 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsSenderCertificateName
-The TlsSenderCertificateName parameter specifies the certificate used by the sender's domain when the RequireTls parameter is set to $true. Valid input for the TlsSenderCertificateName parameter is an SMTP domain. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com.
-
-You can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com.
+The TlsSenderCertificateName parameter specifies the TLS certificate that's used when the value of the RequireTls parameter is $true. A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com is not valid).
 
 ```yaml
 Type: TlsCertificate

@@ -32,7 +32,8 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <String] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] [-MeetingChatEnabledType <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>] [-AllowScreenContentDigitization <Boolean>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
-[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>]
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-NewMeetingRecordingExpirationDays <Int32>]
+[-MeetingInviteLanguages <String>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -322,7 +323,16 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to EveryoneInSameAndFederatedCompany if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby.
+Determines what types of participants will automatically be added to meetings organized by this user.
+Possible values are:
+- **EveryoneInCompany**, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately.
+- **EveryoneInSameAndFederatedCompany**, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
+- **Everyone**, if you'd like to admit anonymous users by default. 
+- **OrganizerOnly**, if you would like that only meeting organizers can bypass the lobby.
+- **EveryoneInCompanyExcludingGuests**, if you would like meetings to place every external and guest users in the lobby but allow all other users in the company to join the meeting immediately.
+- **InvitedUsers**, if you would like that only meeting organizers and invited users can bypass the lobby.
+
+This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
 
 ```yaml
 Type: String
@@ -811,6 +821,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
+Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -867,6 +879,45 @@ This parameter is reserved for internal Microsoft use.
 Type: Object
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewMeetingRecordingExpirationDays
+Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
+
+NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+
+NOTE: This parameter is available to be set, but will not be effective until this feature gets general availability. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=84580) for more information on its delivery date.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingInviteLanguages
+Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
+Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=81521).
+
+The preliminary list of available languages is shown below:
+ar-SA,az-Latn-AZ,bg-BG,ca-ES,cs-CZ,cy-GB,da-DK,de-DE,el- GR,en-GB,es-ES,es-MX,et-EE,eu-ES,fi-FI,fil-PH,fr-CA,fr-FR,gl-ES,he-IL,hi-IN,hr-HR,hu-HU,id-ID,is-IS,it-IT,ja-JP,ka-GE,k k-KZ,ko-KR,lt-LT,lv-LV,mk-MK,ms-MY,nb-NO,nl-NL,nn-NO,pl-PL,pt-BR,pt-PT,ro-RO,ru-RU,sk-SK,sl-SL,sq-AL,sr-Latn-RS,sv-SE,t h-TH,tr-TR,uk-UA,vi-VN,zh-CN,zh-TW.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named

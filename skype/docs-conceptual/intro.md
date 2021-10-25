@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Skype for Business cmdlet reference
 description: "Learn about Skype for Business cmdlets."
 ---
