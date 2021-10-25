@@ -206,7 +206,8 @@ This example shows that user9@contoso.com is a delegate of user10@contoso.com (D
 ## PARAMETERS
 
 ### -Identity
-The Id of the specific user. Can be specified using the ObjectId, the SIP address or the e-mail address.
+The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId, the SIP address
+or the e-mail address.
 
 ```yaml
 Type: System.String
