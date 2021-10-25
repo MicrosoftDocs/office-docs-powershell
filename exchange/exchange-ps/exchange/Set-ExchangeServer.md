@@ -29,8 +29,9 @@ Set-ExchangeServer [-Identity] <ServerIdParameter>
  [-ErrorReportingEnabled <Boolean>]
  [-InternetWebProxy <Uri>]
  [-InternetWebProxyBypassList <MultiValuedProperty>]
- [-MitigationsEnabled <Boolean>]
+ [-MitigationsApplied <MultiValuedProperty>]
  [-MitigationsBlocked <MultiValuedProperty>]
+ [-MitigationsEnabled <Boolean>]
  [-MonitoringGroup <String>]
  [-ProductKey <ProductKey>]
  [-StaticConfigDomainController <String>]
@@ -218,14 +219,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MitigationsEnabled
-The MitigationsEnabled parameter specifies whether the EM Service will auto-apply mitigations on the Exchange server. Valid values are:
-
-- $true: The EM Service auto-applies mitigations on the Exchange server.
-- $false: Mitigations are not auto-applied on the Exchange server.
+### -MitigationsApplied
+Do not use this parameter. The EM service uses this parameter to store and track mitigation status.
 
 ```yaml
-Type: Boolean
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
@@ -241,6 +239,27 @@ Accept wildcard characters: False
 The MitigationsBlocked parameter specifies a list of mitigations that are blocked. The Mitigation IDs present in this list are not applied by EM service in its hourly run.
 
 To enter multiple values and overwrite any existing Mitigation entries, use the following syntax: `@("Entry1","Entry2",..."EntryN")`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MitigationsEnabled
+The MitigationsEnabled parameter specifies whether the Exchange Emergency Mitigation service (EM service) automatically applies mitigations on the Exchange server. Valid values are:
+
+- $true: The EM Service automatically applies mitigations on the Exchange server.
+- $false: Mitigations are not automatically applied on the Exchange server.
+
+For more information, see [Exchange Emergency Mitigation (EM) service](https://docs.microsoft.com/exchange/exchange-emergency-mitigation-service).
 
 ```yaml
 Type: Boolean
