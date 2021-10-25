@@ -37,6 +37,7 @@ Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
  [-Name <String>]
  [-RecipientDomains <MultiValuedProperty>]
  [-RouteAllMessagesViaOnPremises <Boolean>]
+ [-SenderRewritingEnabled <Boolean>] 
  [-SmartHosts <MultiValuedProperty>]
  [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
@@ -263,8 +264,8 @@ The LastValidationTimestamp parameter specifies the date/time that the Outbound 
 
 To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime
@@ -332,8 +333,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SenderRewritingEnabled
+The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewritting are rewritten for traffic to on-premises. This parameter is only effective for OnPremises connectors as Partner connectors already have SRS rewritting enabled. Valid values are:
+
+- $true: Messages are rewritten by SRS if they need to be before being routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
+- $false: Messages aren't rewritten by SRS before being routed through the on-premises messaging system. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SmartHosts
-The SmartHosts parameter specifies the smart hosts the Outbound connector uses to route mail. This parameter is required if you set the UseMxRecord parameter to $false and must be specified on the same command line. The SmartHosts parameter takes one or more FQDNs, such as server.contoso.com, or one or more IP addresses, or a combination of both FQDNs and IP addresses. Separate each value by using a comma. If you enter an IP address, you may enter the IP address as a literal, for example: 10.10.1.1, or using Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. The smart host identity can be the FQDN of a smart host server, a mail exchange (MX) record, or an address (A) record.
+The SmartHosts parameter specifies the smart host that the Outbound connector uses to route mail. Valid values are:
+
+- FQDN of a smart host server, a mail exchange (MX) record, or an address (A) record: For example, mail.contoso.com.
+- Single IP address: For example, 10.10.1.1
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
+
+This parameter is required if you use the value $false for the UseMxRecord parameter.
 
 ```yaml
 Type: MultiValuedProperty

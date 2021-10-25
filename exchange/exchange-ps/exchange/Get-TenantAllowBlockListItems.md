@@ -17,7 +17,7 @@ ROBOTS: NOINDEX
 
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Tenant Allow/Block List in the Security & Compliance Center.
+Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -27,20 +27,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### NoExpiration
 ```
-Get-TenantAllowBlockListItems -ListType <ListType>
- [-Action <TenantAllowBlockList.ItemAction>]
+Get-TenantAllowBlockListItems -ListType <ListType> [-NoExpiration]
+ [-Block]
  [-Entry <String>]
- [-NoExpiration]
  [-OutputJson]
  [<CommonParameters>]
 ```
 
 ### Expiration
 ```
-Get-TenantAllowBlockListItems -ListType <ListType>
- [-Action <TenantAllowBlockList.ItemAction>]
+Get-TenantAllowBlockListItems -ListType <ListType>  [-ExpirationDate <DateTime>]
+ [-Block]
  [-Entry <String>]
- [-ExpirationDate <DateTime>]
  [-OutputJson]
  [<CommonParameters>]
 ```
@@ -85,55 +83,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Action
-The Action parameter filters the results by action type. Valid values are:
-
-- Allow
-- Block
-
-```yaml
-Type: TenantAllowBlockList.ItemAction
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Entry
-The Entry parameter filters the results by the specified URL or file hash value:
+The Entry parameter filters the results based on the ListType parameter value. Valid values are:
 
-- The exact URL entry value.
-- The exact SHA256 file hash value.
+- Url: The exact URL entry value.
+- File: The exact SHA256 file hash value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExpirationDate
-The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
-
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, `"2016-05-06 14:30:00z"`.
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
-
-```yaml
-Type: DateTime
-Parameter Sets: Expiration
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -154,6 +112,43 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Block
+The Block switch filters the results for block entries. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpirationDate
+The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+
+```yaml
+Type: DateTime
+Parameter Sets: Expiration
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

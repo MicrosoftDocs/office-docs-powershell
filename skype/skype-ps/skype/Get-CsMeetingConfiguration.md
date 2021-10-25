@@ -10,7 +10,7 @@ ms.reviewer: rogupta
 manager: bulenteg
 audience: ITPro
 ms.topic: reference 
-localization_priority: Normal 
+ms.localizationpriority: medium 
 ---
 
 # Get-CsMeetingConfiguration

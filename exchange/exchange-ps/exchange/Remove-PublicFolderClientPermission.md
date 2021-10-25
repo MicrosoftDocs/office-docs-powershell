@@ -77,28 +77,28 @@ You can specify individual folder permissions or roles, which are combinations o
 
 The following individual permissions are available:
 
-- ReadItems: The user has the right to read items within the specified public folder.
 - CreateItems: The user has the right to create items within the specified public folder.
-- EditOwnedItems: The user has the right to edit the items that the user owns in the specified public folder.
+- CreateSubfolders: The user has the right to create subfolders in the specified public folder.
+- DeleteAllItems: The user has the right to delete all items in the specified public folder.
 - DeleteOwnedItems: The user has the right to delete items that the user owns in the specified public folder.
 - EditAllItems: The user has the right to edit all items in the specified public folder.
-- DeleteAllItems: The user has the right to delete all items in the specified public folder.
-- CreateSubfolders: The user has the right to create subfolders in the specified public folder.
-- FolderOwner: The user is the owner of the specified public folder. The user has the right to view and move the public folder and create subfolders. The user can't read items, edit items, delete items, or create items.
+- EditOwnedItems: The user has the right to edit the items that the user owns in the specified public folder.
 - FolderContact: The user is the contact for the specified public folder.
+- FolderOwner: The user is the owner of the specified public folder. The user has the right to view and move the public folder and create subfolders. The user can't read items, edit items, delete items, or create items.
 - FolderVisible: The user can view the specified public folder, but can't read or edit items within the specified public folder.
+- ReadItems: The user has the right to read items within the specified public folder.
 
 In addition to the access rights, you can create rights based upon roles, which includes multiple access rights. This parameter accepts the following values for roles:
 
-- None: FolderVisible
-- Owner: CreateItems, ReadItems, CreateSubfolders, FolderOwner, FolderContact, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
-- PublishingEditor: CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
-- Editor: CreateItems, ReadItems, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
-- PublishingAuthor: CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, DeleteOwnedItems
-- Author: CreateItems, ReadItems, FolderVisible, EditOwnedItems, DeleteOwnedItems
-- NonEditingAuthor: CreateItems, ReadItems, FolderVisible
-- Reviewer: ReadItems, FolderVisible
+- Author: CreateItems, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
 - Contributor: CreateItems, FolderVisible
+- Editor: CreateItems, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
+- None: FolderVisible
+- NonEditingAuthor: CreateItems, DeleteOwnedItems, FolderVisible, ReadItems
+- Owner: CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderContact, FolderOwner, FolderVisible, ReadItems
+- PublishingAuthor: CreateItems, CreateSubfolders, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
+- PublishingEditor: CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
+- Reviewer: FolderVisible, ReadItems
 
 ```yaml
 Type: MultiValuedProperty
