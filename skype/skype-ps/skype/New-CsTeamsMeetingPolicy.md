@@ -32,7 +32,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <String] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] [-MeetingChatEnabledType <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>] [-AllowScreenContentDigitization <Boolean>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
-[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-MeetingRecordingExpirationDays <Int32>]
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-NewMeetingRecordingExpirationDays <Int32>]
 [-MeetingInviteLanguages <String>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -887,12 +887,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MeetingRecordingExpirationDays
+### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
 
-Note: You may opt to set Meeting Recordings to never expire by entering the value -1.
+NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
 
-Note: This parameter isn't yet available to be set. We'll publish an updated message center post when the setting is available for modification. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?searchterms=82057&filters=&searchterms=84580) for more information on its delivery date.
+NOTE: This parameter is available to be set, but will not be effective until this feature gets general availability. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=84580) for more information on its delivery date.
 
 ```yaml
 Type: Int32
