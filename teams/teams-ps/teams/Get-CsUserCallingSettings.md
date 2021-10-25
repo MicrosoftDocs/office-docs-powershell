@@ -234,5 +234,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 2.6.1-preview or later.
 
+You might see raw identities, i.e. ObjectId's, for identities used in the output. It is a known issue that we are working to fix.
+
 ## RELATED LINKS
 
