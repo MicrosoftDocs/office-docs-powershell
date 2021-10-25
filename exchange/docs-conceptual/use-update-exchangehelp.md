@@ -8,7 +8,7 @@ ms.audience: ITPro
 audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 219f78a3-f0e5-4dc6-9787-9a0b9756ee09
 description: "Administrators can learn how to use Update-ExchangeHelp to update Exchange cmdlet reference articles that are available in Exchange Management Shell in Exchange 2016"
 ---

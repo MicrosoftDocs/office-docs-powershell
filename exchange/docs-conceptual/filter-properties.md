@@ -8,7 +8,7 @@ ms.audience: ITPro
 audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432
 description: "Learn about the filterable properties for the Filter parameter in Exchange Server and Exchange Online."
 ---
