@@ -976,7 +976,9 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill HiddenGroupMembershipEnabled Description }}
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from users who aren't members of the group. You don't need to specify a value with this switch.
+
+You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a distribution group that represents students enrolled in a class).
 
 ```yaml
 Type: SwitchParameter

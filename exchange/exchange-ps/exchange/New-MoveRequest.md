@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MoveRequest cmdlet to begin the process of an asynchronous mailbox or personal archive move. You can also check mailbox readiness to be moved by using the WhatIf parameter.
 
-**Note**: After April 15, 2020, you can't use this cmdlet to manually move mailboxes within an Exchange Online organization. You can only use this cmdlet for migrating to and from Exchange Online.
+**Note**: After April 15, 2020, you shouldn't use this cmdlet to manually move mailboxes within an Exchange Online organization. You can only use this cmdlet for migrating to and from Exchange Online. If you have issues with a mailbox and want to fix it by moving the mailbox within your Exchange Online organization, please open a Microsoft Support request instead.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
