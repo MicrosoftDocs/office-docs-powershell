@@ -33,7 +33,7 @@
   "Get-SafeAttachmentPolicy": "defender-for-office-365",
   "Get-SafeAttachmentRule": "defender-for-office-365",
   "Get-SafeLinksAggregateReport": "defender-for-office-365",
-  "Get-SafeLinksDetailRepor": "defender-for-office-365",
+  "Get-SafeLinksDetailReport": "defender-for-office-365",
   "Get-SafeLinksPolicy": "defender-for-office-365",
   "Get-SafeLinksRule": "defender-for-office-365",
   "Get-SpoofMailReport": "defender-for-office-365",
