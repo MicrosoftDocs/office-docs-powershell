@@ -21,7 +21,7 @@ This cmdlet will show the call forwarding, simultaneous ringing, call group and 
 ## SYNTAX
 
 ```powershell
-Get-CsUserCallingSettings -Identity <String>] [<CommonParameters>]
+Get-CsUserCallingSettings -Identity <String> [<CommonParameters>]
 
 ```
 
