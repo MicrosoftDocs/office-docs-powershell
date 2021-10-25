@@ -1511,6 +1511,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendTextMessageNotificationTo
+This parameter is available only in on-premises Exchange.
+
 The SendTextMessageNotificationTo parameter specifies an action for the Inbox rule that send a text message notification to the specified telephone number.
 
 You can specify multiple values separated by commas.
@@ -1519,7 +1521,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
