@@ -3714,6 +3714,8 @@ For all values except NotifyOnly, you can specify an enhanced status code and a 
 
 If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
 
+This action is applicable to messages sent by internal users only. External senders will not receive notifications.
+
 ```yaml
 Type: NotifySenderType
 Parameter Sets: (All)
