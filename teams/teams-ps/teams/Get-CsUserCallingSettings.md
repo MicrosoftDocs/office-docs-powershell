@@ -200,7 +200,8 @@ ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com has all the permissions you can have as a delegate (Delegators).
+This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the permissions you can have as a delegate (Delegators).
+
 
 
 ## PARAMETERS
