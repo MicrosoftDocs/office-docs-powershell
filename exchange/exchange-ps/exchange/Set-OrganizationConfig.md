@@ -99,6 +99,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
+ [-MessageHighlightsEnabled <Boolean>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -2380,6 +2381,24 @@ Type: Unlimited
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageHighlightsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageHighlightsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

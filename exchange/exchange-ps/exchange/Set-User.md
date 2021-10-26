@@ -30,11 +30,13 @@ Set-User [-Identity] <UserIdParameter>
  [-CanHaveCloudCache <Boolean>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
+ [-ClearDataEncryptionPolicy]
  [-Company <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-CreateDTMFMap <Boolean>]
  [-Department <String>]
+ [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Fax <String>]
@@ -280,6 +282,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClearDataEncryptionPolicy
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearDataEncryptionPolicy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Company
 The Company parameter specifies the user's company.
 
@@ -364,6 +384,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesiredWorkloads
+This parameter is available only in the cloud-based service.
+
+{{ Fill DesiredWorkloads Description }}
+
+```yaml
+Type: Microsoft.Exchange.Data.MailboxWorkloadFlags
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
