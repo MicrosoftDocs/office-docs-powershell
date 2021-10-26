@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-QuarantinePermissions
- [-PermissionToAllowSender <Boolean>]
  [-PermissionToBlockSender <Boolean>]
  [-PermissionToDelete <Boolean>]
  [-PermissionToDownload <Boolean>]
@@ -62,7 +61,7 @@ In the same Windows PowerShell session, you can use `$LimitedAccess` for the _En
 
 ### Example 3
 ```powershell
-$FullAccess = New-QuarantinePermissions -PermissionToAllowSender $true -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
+$FullAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
 ```
 
 This example creates the same permissions that are used by the Full access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$FullAccess`.
@@ -70,27 +69,6 @@ This example creates the same permissions that are used by the Full access permi
 In the same Windows PowerShell session, you can use `$FullAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
 
 ## PARAMETERS
-
-### -PermissionToAllowSender
-The PermissionToAllowSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
-
-- $true: The permission is enabled.
-- $false: The permission is disabled. This is the default value.
-
-Currently, this value has no effect on the buttons that are included in end-user spam notifications or in quarantined message details.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PermissionToBlockSender
 The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Blocked Senders list. Valid values are:

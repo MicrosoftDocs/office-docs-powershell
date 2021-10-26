@@ -1874,24 +1874,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalInOutlookEnabled
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FindTimeAttendeeAuthenticationEnabled
 This parameter is available only in the cloud-based service.
 
