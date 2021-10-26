@@ -86,6 +86,7 @@ New-InboxRule [-Name] <String>
  [-SendTextMessageNotificationTo <MultiValuedProperty>]
  [-SentOnlyToMe <Boolean>]
  [-SentTo <RecipientIdParameter[]>]
+ [-SoftDeleteMessage <Boolean>]
  [-StopProcessingRules <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
@@ -1570,6 +1571,24 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeleteMessage
+This parameter is available only in the cloud-based service.
+
+{{ Fill SoftDeleteMessage Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
