@@ -24,31 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
  [-AggMailboxCleanup]
+ [-Confirm]
  [-DomainController <Fqdn>]
- [-Confirm]
  [-HoldCleanup]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ComplianceJobAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DataGovernanceAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -67,6 +45,40 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCle
 ### StopHoldCleanup
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ComplianceBoundaryAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
+ [-AdaptiveScope]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ComplianceJobAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### DataGovernanceAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -156,6 +168,24 @@ Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdaptiveScope
+This parameter is available only in the cloud-based service.
+
+{{ Fill AdaptiveScope Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ComplianceBoundaryAssistant
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -260,7 +290,7 @@ The FullCrawl switch recalculates the application of tags across the whole mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
@@ -282,7 +312,7 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
