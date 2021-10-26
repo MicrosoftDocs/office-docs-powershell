@@ -3715,7 +3715,7 @@ The NotifySender parameter specifies an action that notifies the sender when mes
 
 For all values except NotifyOnly, you can specify an enhanced status code and a rejection reason by using the RejectMessageEnhancedStatusCode and RejectMessageReasonText parameters. The default enhanced status code is 5.7.1, and the default rejection reason is Delivery not authorized, message refused.
 
-If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
+If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter. This action is applicable to emails sent be internal users only and external senders will not receive any notifications.
 
 ```yaml
 Type: NotifySenderType
