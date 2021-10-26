@@ -30,6 +30,7 @@ Get-MailUser [-Anr <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-SharedWithMailUser]
  [-SoftDeletedMailUser]
  [-SortBy <String>]
  [<CommonParameters>]
@@ -45,6 +46,7 @@ Get-MailUser [[-Identity] <MailUserIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-SharedWithMailUser]
  [-SoftDeletedMailUser]
  [-SortBy <String>]
  [<CommonParameters>]
@@ -256,6 +258,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: false
+Accept wildcard characters: False
+```
+
+### -SharedWithMailUser
+This parameter is available only in the cloud-based service.
+
+{{ Fill SharedWithMailUser Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
