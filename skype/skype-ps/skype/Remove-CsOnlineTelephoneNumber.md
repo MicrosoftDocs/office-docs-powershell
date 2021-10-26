@@ -139,4 +139,4 @@ None
 If one or more of the telephone numbers are assigned to a user or a service, the cmdlet will display an error message and none of the telephone numbers specified will be removed from your tenant.
 
 ## RELATED LINKS
-- [Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
+[Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
