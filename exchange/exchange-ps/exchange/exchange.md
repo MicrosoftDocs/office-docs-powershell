@@ -2332,14 +2332,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
 
-### [Get-TenantAnalyticsConfig](Get-TenantAnalyticsConfig.md)
-
-### [Get-UserAnalyticsConfig](Get-UserAnalyticsConfig.md)
-
-### [Set-TenantAnalyticsConfig](Set-TenantAnalyticsConfig.md)
-
-### [Set-UserAnalyticsConfig](Set-UserAnalyticsConfig.md)
-
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
 
