@@ -26,7 +26,7 @@ Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <Stri
 
 ## DESCRIPTION
 
-This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user. <br/>**Note:** You can assign only 1 application access policy at a time to a particular user. Assigning a new application access policy to a user will override the existing application access policy if any.
+This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.**Note:** You can assign only 1 application access policy at a time to a particular user. Assigning a new application access policy to a user will override the existing application access policy if any.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ This cmdlet assigns a per-user application access policy to one or more users. A
 PS C:\> Grant-CsApplicationAccessPolicy -Identity "dc17674c-81d9-4adb-bfb2-8f6a442e4624" -PolicyName "ASimplePolicy"
 ```
 
-The command shown above assigns the per-user application access policy "ASimplePolicy" to the user with object ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624". 
+The command shown above assigns the per-user application access policy "ASimplePolicy" to the user with object ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624".
 
 ### Unassign an application access policy from a user
 
