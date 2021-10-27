@@ -39,6 +39,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
+ [-IncludeSoftDeletedUserPermissions]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -161,6 +162,24 @@ The GroupMailbox switch is required to return Microsoft 365 Groups in the result
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSoftDeletedUserPermissions
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeSoftDeletedUserPermissions Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Online
 
