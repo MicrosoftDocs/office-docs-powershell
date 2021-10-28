@@ -23,6 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddEndpointDlpLocation <MultiValuedProperty>]
+ [-AddEndpointDlpLocationException <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddOneDriveLocation <MultiValuedProperty>]
  [-AddOneDriveLocationException <MultiValuedProperty>]
@@ -32,6 +34,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
  [-AddTeamsLocationException <MultiValuedProperty>]
+ [-AddThirdPartyAppDlpLocation <MultiValuedProperty>]
+ [-AddThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -43,6 +47,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-Priority <Int32>]
+ [-RemoveEndpointDlpLocation <MultiValuedProperty>]
+ [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
@@ -52,6 +58,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
  [-RemoveTeamsLocationException <MultiValuedProperty>]
+ [-RemoveThirdPartyAppDlpLocation <MultiValuedProperty>]
+ [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -120,6 +128,42 @@ Aliases:
 Applicable: Security & Compliance Center
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocation
+The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocationException
+The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -266,6 +310,38 @@ Accept wildcard characters: False
 The AddTeamsLocationException parameter specifies the Teams accounts to add to the list of excluded accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddThirdPartyAppDlpLocation
+{{ Fill AddThirdPartyAppDlpLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddThirdPartyAppDlpLocationException
+{{ Fill AddThirdPartyAppDlpLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty
@@ -488,6 +564,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveEndpointDlpLocation
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveEndpointDlpLocationException
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveExchangeLocation
 This parameter is reserved for internal Microsoft use.
 
@@ -626,6 +738,38 @@ Accept wildcard characters: False
 The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveThirdPartyAppDlpLocation
+{{ Fill RemoveThirdPartyAppDlpLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveThirdPartyAppDlpLocationException
+{{ Fill RemoveThirdPartyAppDlpLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty
