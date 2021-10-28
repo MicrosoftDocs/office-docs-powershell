@@ -333,7 +333,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutbundTeamsNumberTranslationRulesList
+### -OutboundTeamsNumberTranslationRulesList
 Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
 
 ```yaml
