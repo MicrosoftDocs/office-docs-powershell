@@ -2498,7 +2498,7 @@ Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
-- X500: X.500 addresses in on-premises Exchange.
+- X500: X500 addresses in on-premises Exchange.
 
 If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
 
