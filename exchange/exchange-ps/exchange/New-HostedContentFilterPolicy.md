@@ -254,13 +254,13 @@ Accept wildcard characters: False
 ```
 
 ### -BulkQuarantineTag
-The BulkQuarantineTag parameter specifies the quarantine tag that's used on messages that are quarantined as bulk email (the BulkSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine tag. For example:
+The BulkQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as bulk email (the BulkSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
 
-The quarantine tag defines what end-users are allowed to do on quarantined messages. You manage quarantine tags by using the \*-QuarantineTag cmdlets.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
 
 ```yaml
 Type: String
@@ -541,13 +541,13 @@ Accept wildcard characters: False
 ```
 
 ### -HighConfidencePhishQuarantineTag
-The HighConfidencePhishQuarantineTag parameter specifies the quarantine tag that's used on messages that are quarantined as high confidence phishing  (the HighConfidencePhishAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine tag. For example:
+The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as high confidence phishing (the HighConfidencePhishAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
 
-The quarantine tag defines what end-users are allowed to do on quarantined messages. You manage quarantine tags by using the \*-QuarantineTag cmdlets.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
 
 ```yaml
 Type: String
@@ -586,13 +586,13 @@ Accept wildcard characters: False
 ```
 
 ### -HighConfidenceSpamQuarantineTag
-The HighConfidenceSpamQuarantineTag parameter specifies the quarantine tag that's used on messages that are quarantined as high confidence spam (the HighConfidenceSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine tag. For example:
+The HighConfidenceSpamQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as high confidence spam (the HighConfidenceSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
 
-The quarantine tag defines what end-users are allowed to do on quarantined messages. You manage quarantine tags by using the \*-QuarantineTag cmdlets.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
 
 ```yaml
 Type: String
@@ -1023,13 +1023,13 @@ Accept wildcard characters: False
 ```
 
 ### -PhishQuarantineTag
-The PhishQuarantineTag parameter specifies the quarantine tag that's used on messages that are quarantined as phishing (the PhishSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine tag. For example:
+The PhishQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as phishing (the PhishSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
 
-The quarantine tag defines what end-users are allowed to do on quarantined messages. You manage quarantine tags by using the \*-QuarantineTag cmdlets.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
 
 ```yaml
 Type: String
@@ -1205,13 +1205,13 @@ Accept wildcard characters: False
 ```
 
 ### -SpamQuarantineTag
-The SpamQuarantineTag parameter specifies the quarantine tag that's used on messages that are quarantined as spam (the SpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine tag. For example:
+The SpamQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as spam (the SpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
 
-The quarantine tag defines what end-users are allowed to do on quarantined messages. You manage quarantine tags by using the \*-QuarantineTag cmdlets.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
 
 ```yaml
 Type: String

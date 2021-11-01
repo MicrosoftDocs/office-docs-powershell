@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -MakeBuiltInProtection
-{{ Fill MakeBuiltInProtection Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
