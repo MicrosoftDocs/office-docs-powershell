@@ -46,7 +46,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
- -startsimulation $true
+ [-StartSimulation]
 ```
 
 ### TeamLocation
@@ -525,6 +525,9 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+ 
+### StartSimulation
+Set StartSimulation to $true to restart simulation for updated results. 
 
 ## INPUTS
 
