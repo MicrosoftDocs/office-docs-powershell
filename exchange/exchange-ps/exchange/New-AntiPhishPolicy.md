@@ -556,7 +556,7 @@ Accept wildcard characters: False
 ### -MailboxIntelligenceQuarantineTag
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The MailboxIntelligenceQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by mailbox intelligence. You can use any value that uniquely identifies the quarantine policy. For example:
+The MailboxIntelligenceQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by mailbox intelligence (the MailboxIntelligenceProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -668,7 +668,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpoofQuarantineTag
-The SpoofQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by spoof intelligence. You can use any value that uniquely identifies the quarantine policy. For example:
+The SpoofQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by spoof intelligence (the AuthenticationFailAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -737,7 +737,7 @@ Accept wildcard characters: False
 ### -TargetedDomainQuarantineTag
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The TargetedDomainQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by domain impersonation protection. You can use any value that uniquely identifies the quarantine policy. For example:
+The TargetedDomainQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by domain impersonation protection (the TargetedDomainProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -826,7 +826,7 @@ Accept wildcard characters: False
 ### -TargetedUserQuarantineTag
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The TargetedUserQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by user impersonation protection. You can use any value that uniquely identifies the quarantine policy. For example:
+The TargetedUserQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by user impersonation protection (the TargetedUserProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
