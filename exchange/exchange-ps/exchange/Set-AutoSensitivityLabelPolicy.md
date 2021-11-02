@@ -46,6 +46,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
+ -startsimulation $true
 ```
 
 ### TeamLocation
