@@ -29,6 +29,7 @@ New-SafeLinksPolicy [-Name] <String>
  [-Confirm]
  [-CustomNotificationText <String>]
  [-DeliverMessageAfterScan <Boolean>]
+ [-DisableUrlRewrite <Boolean>]
  [-DoNotAllowClickThrough <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-DoNotTrackUserClicks <Boolean>]
@@ -37,6 +38,7 @@ New-SafeLinksPolicy [-Name] <String>
  [-EnableSafeLinksForTeams <Boolean>]
  [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
+ [-MakeBuiltInProtection]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
@@ -181,6 +183,7 @@ The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in emai
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -330,6 +333,22 @@ The IsEnabled parameter specifies whether to enable Safe Links protection for em
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MakeBuiltInProtection
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
