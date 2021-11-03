@@ -46,7 +46,7 @@ Connect-MicrosoftTeams
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
 > [!WARNING]
->If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is [necessary.](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)
+>If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is necessary.
 
 ## EXAMPLES
 
