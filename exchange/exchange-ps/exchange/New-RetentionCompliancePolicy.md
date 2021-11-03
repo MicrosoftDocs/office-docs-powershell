@@ -20,19 +20,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### AdaptiveScopeLocation
-```
-New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValuedProperty>
- [-Applications <MultiValuedProperty>]
- [-Comment <String>]
- [-Confirm]
- [-Enabled <Boolean>]
- [-Force]
- [-RestrictiveRetention <Boolean>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### Default
 ```
 New-RetentionCompliancePolicy [-Name] <String>
@@ -71,6 +58,19 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
  [-TeamsChatLocationException <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### AdaptiveScopeLocation
+```
+New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValuedProperty>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RestrictiveRetention <Boolean>]
+ [-RetainCloudAttachment <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
