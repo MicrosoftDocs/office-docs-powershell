@@ -44,9 +44,9 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
- [-StartSimulation]
 ```
 
 ### TeamLocation
@@ -507,6 +507,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StartSimulation
+Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
+
+- $true: Restart the simulation for updated results.
+- $false: This is the default value
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
@@ -525,9 +544,6 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
- 
-### StartSimulation
-Set StartSimulation to $true to restart simulation for updated results. 
 
 ## INPUTS
 
