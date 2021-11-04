@@ -63,6 +63,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-HiddenFromExchangeClientsEnabled]
+ [-InformationBarrierMode <GroupInformationBarrierMode>]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -835,6 +836,27 @@ The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarrierMode
+The InformationBarrierMode parameter specifies the information barrier mode for the Microsoft 365 Group. Valid values are:
+
+- Explicit
+- Implicit
+- Open
+- OwnerModerated
+
+```yaml
+Type: GroupInformationBarrierMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

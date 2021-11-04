@@ -99,6 +99,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
+ [-MessageHighlightsEnabled <Boolean>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -1511,7 +1512,7 @@ You can use the following user attributes. The actual values are determined by t
 - `<City>`
 - `<Company>`
 - `<CountryCode>`
-- `<CountryOrRegion>
+- `<CountryOrRegion>`
 - `<CustomAttribute1>` to `<CustomAttribute15>`
 - `<Department>`
 - `<ExtensionCustomAttribute1>` to `<ExtensionCustomAttribute5>`
@@ -1863,24 +1864,6 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalInOutlookEnabled
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
@@ -2398,6 +2381,24 @@ Type: Unlimited
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageHighlightsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageHighlightsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
