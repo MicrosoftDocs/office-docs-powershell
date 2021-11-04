@@ -277,6 +277,7 @@ Type: HoldDurationHint
 Parameter Sets: (All)
 Aliases:
 Accepted values: Days, Months, Years
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
