@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-recordreviewnotificationtemplateconfig
-applicable: Exchange Online
+applicable: Exchange Online, Security & Compliance Center
 title: Set-RecordReviewNotificationTemplateConfig
 schema: 2.0.0
 author: chrisda
@@ -53,7 +53,7 @@ The IsCustomizedNotificationTemplate switch specifies whether to use a customize
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ The IsCustomizedReminderTemplate switch specifies whether to use a customized re
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: True
 Position: Named
@@ -90,7 +90,7 @@ The value of this parameter is meaningful only when the value of the IsCustomize
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The value of this parameter is meaningful only when the value of the IsCustomize
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
