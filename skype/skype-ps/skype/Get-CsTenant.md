@@ -38,6 +38,7 @@ The command shown in Example 1 returns information about your tenant.
 Organizations will have only one tenant.
 
 
+
 ## PARAMETERS
 
 ### -DomainController
@@ -129,6 +130,69 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
+```yaml
+**NOTE**
+
+The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards. Attributes are deprecated because they are no longer relevant to TeamsOnly tenants:
+
+*Deprecated Attributes*
+DisableExoPlanProvisioning
+DistinguishedName
+ExperiencePolicy
+Id
+IsByPassValidation
+IsMNC
+IsReadinessUploaded
+IsUpgradeReady
+LastSubProvisionTimeStamp
+MNCEnableTimeStamp
+Name
+ObjectCategory
+ObjectClass
+ObjectState
+OriginalRegistrarPool
+OriginatingServer
+PendingDeletion
+ProvisioningCounter
+PublicProvider
+PublishingCounter
+RegistrarPool
+RemoteMachine
+SubProvisioningCounter
+SubProvisioningStamp
+SyncingCounter
+TenantPoolExtension
+UpgradeRetryCounter
+UserRoutingGroupIds
+XForestMovePolicy
+Guid
+HostedVoiceMailNotProvisioned 
+IsO365MNC
+IsValid
+NonPrimarySource
+OcoDomainTracked
+Phone
+ProvisionType
+TeamsUpgradeEligible
+TelehealthEnabled
+TenantNotified
+AssignedLicenses
+OnPremisesImmutableId
+OnPremisesUserPrincipalName
+HostedVoiceMail
+OnPremSecurityIdentifier
+OnPremSamAccountName
+DefaultDataLocation
+DefaultPoolFqdn
+AdminDescription
+AllowedDataLocation
+Description
+
+*Attributes renamed/replaced*
+•	DomainUrlMap replaced by SipDomains (now only contains list of all Sip Domains)
+•	Domains renamed to VerifiedDomains (now includes both domain names and status)
+
+```
 
 ## INPUTS
 
