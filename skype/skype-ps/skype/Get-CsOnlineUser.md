@@ -392,7 +392,7 @@ LdapFilter
 
 ### -LdapFilter
 ```yaml
-This parameter is being deprecated from TPM modules 3.0 onwards give its irrelevance for TeamsOnly tenants
+This parameter is being deprecated from TPM modules 3.0 onwards given its irrelevance for TeamsOnly tenants
 ```
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
