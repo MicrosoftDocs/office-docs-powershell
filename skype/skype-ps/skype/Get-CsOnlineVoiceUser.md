@@ -103,6 +103,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```yaml
+The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards. Attributes are deprecated because they are no longer relevant to TeamsOnly tenants:
+- Force
+- NumberOfResultsToSkip
+- CorrelationId
+- Verb
+- ResultSize
+```
+
 ### -First
 Specifies the number of users to return.
 The default is 100.
@@ -191,6 +200,11 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+```yaml
+The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards. 
+LiscenceState has been deprecated because it is no longer relevant to TeamsOnly tenants
 ```
 
 ### -LocationId
