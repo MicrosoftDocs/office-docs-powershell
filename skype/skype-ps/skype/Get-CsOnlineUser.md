@@ -157,7 +157,84 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+```yaml
+****Note****
+The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards
+o	Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats
+•	AssignedPlans eq 'MCOEV' - For exact match
+•	AssignedPlans eq '*MCO*' - for contains checks.
+o	EnterpriseVoiceEnabled filter
+•	EnterpriseVoiceEnabled eq true / false
 
+A limited set of attributes will be supported for TeamsOnly tenants using TPM module 3.0 onwards, the remaining attributes have been removed due to lack of usage and/or are relevant only to SfBO tenants. Below are the updated set of supported filterable attributes:
+Empty
+Enabled
+OnPremLineURI
+SoftDeletionTimestamp
+Alias
+SipAddress
+RegistrarPool
+HostingProvider
+WhenChanged
+DirSyncEnabled
+Department
+WindowsEmailAddress
+CountryAbbreviation
+FirstName
+VoicePolicy
+Title
+WhenCreated
+OnPremEnterpriseVoiceEnabled
+Phone
+OwnerUrn
+MCOValidationError
+AudioVideoDisabled
+SubProvisioningStamp
+ProvisioningStamp
+UsageLocation
+LastName
+ProvisionedPlan
+ExperiencePolicy
+Company
+IPPhone
+OnPremHostingProvider
+Name
+MobilePhone
+OnPremSIPEnabled
+ProxyAddresses
+HostedVoiceMail
+InterpretedUserType
+CountryOrRegionDisplayName
+City
+Office
+Description
+SipProxyAddress
+SamAccountName
+PrivateLine
+TenantId
+DialPlan
+UserAccountControl
+OnPremLineURIManuallySet
+StateOrProvince
+AcpInfo
+StreetAddress
+CallerIdPolicy
+HideFromAddressLists
+PreferredDataLocation
+HomePhone
+Fax
+OptionFlags
+LicenseRemovalTimestamp
+EnabledForRichPresence
+OnPremSipAddress
+Guid
+PendingDeletion
+ExchUserHoldPolicies
+UserRoutingGroupId
+Id
+LastProvisionTimestamp
+```
+```
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
@@ -179,6 +256,130 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+```yaml
+****Note:****
+The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards. Attributes are deprecated because they are no longer relevant to TeamsOnly tenants
+**Deprecated Attributes:**
+AcpInfo
+AdminDescription
+ArchivingPolicy
+AudioVideoDisabled
+BaseSimpleUrl
+BroadcastMeetingPolicy
+CallViaWorkPolicy
+ClientPolicy
+ClientUpdateOverridePolicy
+ClientVersionPolicy
+CloudMeetingOpsPolicy
+CloudMeetingPolicy
+CloudVideoInteropPolicy
+ContactOptionFlags
+CountryOrRegionDisplayName
+Description
+DistinguishedName
+EnabledForRichPresence
+ExchangeArchivingPolicy
+ExchUserHoldPolicies
+ExperiencePolicy
+ExternalUserCommunicationPolicy
+ExUmEnabled
+Guid
+HomeServer
+HostedVoicemailPolicy
+IPPBXSoftPhoneRoutingEnabled
+IPPhone
+IPPhonePolicy
+IsByPassValidation
+IsValid
+LegalInterceptPolicy
+LicenseRemovalTimestamp
+LineServerURI
+Manager
+MNCReady
+Name
+NonPrimaryResource
+ObjectCategory
+ObjectClass
+ObjectState
+OnPremHideFromAddressLists
+OriginalPreferredDataLocation
+OriginatingServer
+OriginatorSid
+OverridePreferredDataLocation
+PendingDeletion
+PrivateLine
+ProvisioningCounter
+ProvisioningStamp
+PublishingCounter
+PublishingStamp
+Puid
+RemoteCallControlTelephonyEnabled
+RemoteMachine
+SamAccountName
+ServiceInfo
+StsRefreshTokensValidFrom
+SubProvisioningCounter
+SubProvisioningStamp
+SubProvisionLineType
+SyncingCounter
+TargetRegistrarPool
+TargetServerIfMoving
+TeamsInteropPolicy
+ThumbnailPhoto
+UpgradeRetryCounter
+UserAccountControl
+UserProvisionType
+UserRoutingGroupId
+VoicePolicy
+XForestMovePolicy
+AddressBookPolicy
+GraphPolicy
+PinPolicy
+PreferredDataLocationOverwritePolicy
+PresencePolicy
+SmsServicePolicy
+TeamsVoiceRoute
+ThirdPartyVideoSystemPolicy
+UserServicesPolicy
+ConferencingPolicy
+Id
+Identity
+MobilityPolicy
+OnlineDialinConferencingPolicy
+Sid
+TeamsWorkLoadPolicy
+VoiceRoutingPolicy
+ClientUpdatePolicy
+HomePhone
+HostedVoiceMail
+MobilePhone
+OtherTelephone
+StreetAddress
+WebPage
+AssignedLicenses
+OnPremisesUserPrincipalName
+HostedVoiceMail
+LicenseAssignmentStates
+OnPremDomainName
+OnPremSecurityIdentifier
+OnPremSamAccountName
+CallerIdPolicy
+Fax
+LastName
+Office
+Phone
+WindowsEmailAddress
+
+*Attributes renamed/replaced:*
+•	FirstName renamed to GivenName
+•	DirSyncEnabled renamed to UserDirSyncEnabled
+•	MCOValidationErrors renamed to UserValidationErrors
+
+*New User Attributes*
+FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed)
+
+*Deprecated parameters*
+LdapFilter
 
 ### -LdapFilter
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
