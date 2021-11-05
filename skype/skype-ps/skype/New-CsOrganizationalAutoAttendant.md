@@ -9,6 +9,10 @@ author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [New-CsAutoAttendant](New-CsAutoAttendant.md) cmdlet instead.
 
 # New-CsOrganizationalAutoAttendant
 
