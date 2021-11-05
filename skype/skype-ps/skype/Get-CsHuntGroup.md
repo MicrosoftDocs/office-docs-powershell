@@ -9,6 +9,11 @@ author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsCallQueue](Get-CsCallQueue.md) cmdlet instead.
+
 
 # Get-CsHuntGroup
 
@@ -27,8 +32,6 @@ The Get-CsHuntGroup cmdlet lets you retrieve information about the Call Queues i
 If called without parameters, Get-CsHuntgroup returns a collection of all Call Queues configured to be used in your organization.
 
 The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
-
-Please Note: This cmdlet is part of the first generation provisioning and is no longer supported. Please use the cmdlets which follow this format "*-CsCallQueue*" instead.
 
 
 ## EXAMPLES
