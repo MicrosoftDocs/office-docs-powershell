@@ -159,18 +159,19 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-**_Note**
+
+**Note**
 
 The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards
-oAssigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats
-  •AssignedPlans eq 'MCOEV' - For exact match
-  •AssignedPlans eq '*MCO*' - for contains checks.
-oEnterpriseVoiceEnabled filter
-  •EnterpriseVoiceEnabled eq true / false
+-Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats
+ -AssignedPlans eq 'MCOEV' - For exact match
+ -AssignedPlans eq '*MCO*' - for contains checks.
+-EnterpriseVoiceEnabled filter
+  -EnterpriseVoiceEnabled eq true / false
 
 A limited set of attributes will be supported for TeamsOnly tenants using TPM module 3.0 onwards, the remaining attributes have been removed due to lack of usage and/or are relevant only to SfBO tenants. Below are the updated set of supported filterable attributes:
 
-*Empty
+Empty
 Enabled
 OnPremLineURI
 SoftDeletionTimestamp
@@ -235,7 +236,7 @@ PendingDeletion
 ExchUserHoldPolicies
 UserRoutingGroupId
 Id
-LastProvisionTimestamp*
+LastProvisionTimestamp
 ```
 ```
 ### -Identity
@@ -261,10 +262,13 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-**_Note**
+
+**Note**
+
 The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards. Attributes are deprecated because they are no longer relevant to TeamsOnly tenants
-**Deprecated Attributes:**
-*AcpInfo
+
+*Deprecated Attributes*
+AcpInfo
 AdminDescription
 ArchivingPolicy
 AudioVideoDisabled
@@ -374,10 +378,10 @@ Office
 Phone
 WindowsEmailAddress*
 
-**Attributes renamed/replaced:**
-•FirstName renamed to GivenName
-•DirSyncEnabled renamed to UserDirSyncEnabled
-•MCOValidationErrors renamed to UserValidationErrors
+*Attributes renamed/replaced:*
+-FirstName renamed to GivenName
+-DirSyncEnabled renamed to UserDirSyncEnabled
+-MCOValidationErrors renamed to UserValidationErrors
 
 *New User Attributes*
 FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed)
