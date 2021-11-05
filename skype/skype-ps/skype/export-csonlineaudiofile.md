@@ -60,6 +60,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Identity
+The Id of the specific audio file that you would like to export.
+
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## INPUTS
 
