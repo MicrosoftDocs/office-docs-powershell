@@ -157,14 +157,16 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ```yaml
 ****Note****
+
 The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards
 o	Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats
-•	AssignedPlans eq 'MCOEV' - For exact match
-•	AssignedPlans eq '*MCO*' - for contains checks.
+  •	AssignedPlans eq 'MCOEV' - For exact match
+  •	AssignedPlans eq '*MCO*' - for contains checks.
 o	EnterpriseVoiceEnabled filter
-•	EnterpriseVoiceEnabled eq true / false
+  •	EnterpriseVoiceEnabled eq true / false
 
 A limited set of attributes will be supported for TeamsOnly tenants using TPM module 3.0 onwards, the remaining attributes have been removed due to lack of usage and/or are relevant only to SfBO tenants. Below are the updated set of supported filterable attributes:
 Empty
@@ -256,6 +258,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ```yaml
 ****Note:****
 The below updates are applicable to TeamsOnly tenants using TPM modules 3.0 onwards. Attributes are deprecated because they are no longer relevant to TeamsOnly tenants
@@ -380,8 +383,12 @@ FeatureTypes – Array of unique strings specifying what features are enabled fo
 
 *Deprecated parameters*
 LdapFilter
+```
 
 ### -LdapFilter
+```yaml
+This parameter is being deprecated from TPM modules 3.0 onwards give its irrelevance for TeamsOnly tenants
+```
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
 
