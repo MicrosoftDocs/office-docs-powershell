@@ -9,6 +9,10 @@ author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Export-CsAutoAttendantHolidays](Export-CsAutoAttedantHolidays.md) cmdlet instead.
 
 # Export-CsOrganizationalAutoAttendantHolidays
 
