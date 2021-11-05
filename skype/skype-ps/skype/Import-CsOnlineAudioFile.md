@@ -126,4 +126,8 @@ You are responsible for independently clearing and securing all necessary rights
 ## RELATED LINKS
 [Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
 
+[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
+
+[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
+
 [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
