@@ -66,6 +66,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
  [-ParentId <ComplianceRuleIdParameter>]
+ [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
  [-SiteAndGroupProtectionAllowAccessToGuestUsers <System.Boolean>]
@@ -74,9 +75,10 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-SiteAndGroupProtectionAllowLimitedAccess <System.Boolean>]
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
+ [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
- [-SqlAssetCondition <String>]
+ [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -972,6 +974,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SchematizedDataCondition
+{{ Fill SchematizedDataCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Setting
 This parameter is reserved for internal Microsoft use.
 
@@ -1128,6 +1146,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteAndGroupProtectionLevel
+{{ Fill SiteAndGroupProtectionLevel Description }}
+
+```yaml
+Type: SiteAndGroupProtectionLevelParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteAndGroupProtectionPrivacy
 The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the labe. Valid values are:
 
@@ -1177,11 +1211,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SqlAssetCondition
-{{ Fill SqlAssetCondition Description }}
+### -TeamsLobbyBypassScope
+{{ Fill TeamsLobbyBypassScope Description }}
 
 ```yaml
-Type: String
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

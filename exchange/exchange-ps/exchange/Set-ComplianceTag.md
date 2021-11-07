@@ -23,9 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-Comment <String>]
+ [-ComplianceTagForNextStage <String>]
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
+ [-FlowId <System.Guid>]
  [-Force]
  [-MultiStageReviewProperty <String>]
  [-Notes <String>]
@@ -71,6 +73,22 @@ Accept wildcard characters: False
 
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ComplianceTagForNextStage
+{{ Fill ComplianceTagForNextStage Description }}
 
 ```yaml
 Type: String
@@ -158,6 +176,22 @@ You use the second variable as the value for this parameter.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FlowId
+{{ Fill FlowId Description }}
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
