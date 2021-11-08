@@ -17,7 +17,6 @@ ms.reviewer:
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
 > Please use [Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md) cmdlet instead.
-
 Use Get-CsOrganizationalAutoAttendantStatus cmdlet to get the status of an Auto Attendant (AA) provisioning.
 
 
