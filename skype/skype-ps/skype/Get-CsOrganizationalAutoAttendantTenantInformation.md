@@ -17,7 +17,6 @@ ms.reviewer:
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
 > Please use [Get-CsAutoAttendantTenantInformation](Get-CsAutoAttendantTenantInformation.md) cmdlet instead.
-
 Gets the default tenant information for Auto Attendant (AA) feature.
 
 ## SYNTAX
