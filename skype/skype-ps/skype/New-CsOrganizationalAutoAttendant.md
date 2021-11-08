@@ -17,6 +17,7 @@ ms.reviewer:
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
 > Please use [New-CsAutoAttendant](New-CsAutoAttendant.md) cmdlet instead.
+
 Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Auto Attendant (AA).
 
 ## SYNTAX
