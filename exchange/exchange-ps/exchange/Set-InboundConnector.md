@@ -484,12 +484,10 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedOrganizations
-This parameter is available only in the cloud-based service.
-
 {{ Fill TrustedOrganizations Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

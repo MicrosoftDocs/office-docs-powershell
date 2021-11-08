@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-
 # Test-TextExtraction
 
 ## SYNOPSIS
