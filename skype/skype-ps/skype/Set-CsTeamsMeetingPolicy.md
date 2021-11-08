@@ -21,7 +21,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
@@ -44,7 +44,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
@@ -215,6 +215,26 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowCartCaptionsScheduling
+Determines whether a user can add a URL for captions from a Communicatons Access Real-Time Translation (CART) captioner for providing real time captions in meetings.
+Possible values are:
+- **EnabledUserOverride**, CART captions is available by default but a user can disable.
+- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
+- **Disabled**, if you'd like to not allow CART captions in meeting.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DisabledUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -AllowMeetNow
 Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc meetings. Set this to FALSE to prohibit the user from starting ad-hoc meetings. 
