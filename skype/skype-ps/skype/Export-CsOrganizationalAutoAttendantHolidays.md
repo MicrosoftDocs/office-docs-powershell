@@ -13,11 +13,12 @@ ms.reviewer:
 # Export-CsOrganizationalAutoAttendantHolidays
 
 ## SYNOPSIS
-Use Export-CsOrganizationalAutoAttendantHolidays cmdlet to export holiday schedules of an existing Auto Attendant (AA). The data is exported as a byte array from the cmdlet, which can be dumped to disk as a CSV file and can later be imported using the Import-CsOrganizationalAutoAttendantHolidays cmdlet.
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsCallQueue](Get-CsCallQueue.md) cmdlet instead.
 
-This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
- 
-Please use XXX cmdlet instead.
+Use Export-CsOrganizationalAutoAttendantHolidays cmdlet to export holiday schedules of an existing Auto Attendant (AA). The data is exported as a byte array from the cmdlet, which can be dumped to disk as a CSV file and can later be imported using the Import-CsOrganizationalAutoAttendantHolidays cmdlet.
 
 
 ## SYNTAX
