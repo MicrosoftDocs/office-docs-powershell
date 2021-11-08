@@ -12,10 +12,9 @@ ms.reviewer:
 
 # Export-CsOrganizationalAutoAttendantHolidays
 
-[!CAUTION]
-> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
-> 
-> Please use XXX cmdlet instead.
+This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+ 
+Please use XXX cmdlet instead.
 
 
 ## SYNOPSIS
