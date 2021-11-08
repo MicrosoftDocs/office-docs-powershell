@@ -17,6 +17,12 @@ ms.reviewer:
 
 # Get-CsHuntGroup
 
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsCallQueue](Get-CsCallQueue.md) cmdlet instead.
+
+
 ## SYNOPSIS
 The Get-CsHuntGroup cmdlet returns the identified Call Queues.
 
