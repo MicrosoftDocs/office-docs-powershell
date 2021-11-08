@@ -15,7 +15,7 @@ ms.reviewer:
 > [!CAUTION]
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
-> Please use [Export-CsAutoAttendantHolidays](Export-CsAutoAttendantHolidays.md) cmdlet instead.
+> Please use XXX cmdlet instead.
 
 
 ## SYNOPSIS
