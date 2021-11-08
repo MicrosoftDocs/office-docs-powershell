@@ -16,7 +16,7 @@ ms.reviewer:
 > [!CAUTION]
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
-> Please use [New-CsAutoAttendantMenuPrompt](New-CsAutoAttendantMenuPrompt.md) cmdlet instead.
+> Please use [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md) cmdlet instead.
 
 
 Use the New-CsOrganizationalAutoAttendantPrompt cmdlet to create a new prompt.
