@@ -16,7 +16,7 @@ ms.reviewer:
 > [!CAUTION]
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
-> Please use [SEt-CsAutoAttendant](Set-CsAutoAttendant.md) cmdlet instead.
+> Please use [Set-CsAutoAttendant](Set-CsAutoAttendant.md) cmdlet instead.
 
 
 Use the Set-CsOrganizationalAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
