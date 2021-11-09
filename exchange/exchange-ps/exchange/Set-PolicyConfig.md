@@ -190,7 +190,6 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpGlobalSettings
-
 The EndpointDlpGlobalSettings parameter specifies the global endpoints. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
 The value of `<Setting>` is one of the supported values.
