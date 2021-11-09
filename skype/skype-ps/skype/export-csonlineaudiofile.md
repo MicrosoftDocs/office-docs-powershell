@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.Online.Models.AudioFile
+### Byte[]
 
 ## NOTES
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
