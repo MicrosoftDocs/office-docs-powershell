@@ -1412,7 +1412,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -ExceptIfSenderDomainIs
 The ExceptIfSenderDomainIs parameter specifies an exception for the DLP rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
 
