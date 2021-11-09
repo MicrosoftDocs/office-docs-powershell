@@ -13,6 +13,11 @@ ms.reviewer:
 # Import-CsOrganizationalAutoAttendantHolidays
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsAutoAttendantHolidays](Get-CsAutoAttendantHolidays.md) cmdlet instead.
+
 Use Import-CsOrganizationalAutoAttendantHolidays cmdlet to import holiday schedules of an existing Auto Attendant (AA) that were previously exported using the Export-CsOrganizationalAutoAttendantHolidays cmdlet.
 
 ## SYNTAX
