@@ -375,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetainCloudAttachment
-{{ Fill RetainCloudAttachment Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
