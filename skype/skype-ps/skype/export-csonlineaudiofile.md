@@ -18,8 +18,9 @@ Use the Export-CsOnlineAudioFile cmdlet to download an existing audio file.
 ## SYNTAX
 
 ```powershell
-Export-CsOnlineAudioFile [[-Identity] <string>][-ApplicationId] <OrgAutoAttendant|HuntGroup|TenantGlobal>][<CommonParameters>]
+Export-CsOnlineAudioFile [[-Identity] <string>] [-ApplicationId] <OrgAutoAttendant|HuntGroup|TenantGlobal>] [<CommonParameters>]
 ```
+
 
 ## DESCRIPTION
 The Export-CsOnlineAudioFile cmdlet downloads an existing Auto Attendant (AA), Call Queue (CQ) service or Music on Hold audio file.
