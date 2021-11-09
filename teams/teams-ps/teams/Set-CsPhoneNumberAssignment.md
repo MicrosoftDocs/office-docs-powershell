@@ -48,7 +48,13 @@ to the user user2@contoso.com.
 ```powershell
 Set-CsPhoneNumberAssignment -Identity user3@contoso.com -EnterpriseVoiceEnabled $true
 ```
-This example sets the EnterpriseVoiceEnabled flag on the user user2@contoso.com.
+This example sets the EnterpriseVoiceEnabled flag on the user user3@contoso.com.
+
+### Example 4
+```powershell
+Set-CsPhoneNumberAssignment -Identity user4@contoso.com -LocationId null
+```
+This example removes the emergency location from the user user4@contoso.com.
 
 
 ## PARAMETERS
@@ -85,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-The Id of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation
+The Id of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. If you want to remove the location, use
+the string value null.
 
 ```yaml
 Type: System.String
@@ -99,8 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are not currently supporting
-Direct Routing numbers with extensions, but you can use the Set-CsUser cmdlet for this.
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are also supporting
+Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
