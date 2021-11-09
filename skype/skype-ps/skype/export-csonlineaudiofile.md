@@ -18,8 +18,10 @@ Use the Export-CsOnlineAudioFile cmdlet to download an existing audio file.
 ## SYNTAX
 
 ```powershell
-$content=Export-CsOnlineAudioFile -ApplicationId "HuntGroup" -Identity 57f800408f8848548dd1fbc18073fe46
-[System.IO.File]::WriteAllBytes('C:\MyWaveFile.wav', $content)
+Export-CsOnlineAudioFile 
+[[-Identity] <string>]
+[-ApplicationId] <OrgAutoAttendant|HuntGroup|TenantGlobal>]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
