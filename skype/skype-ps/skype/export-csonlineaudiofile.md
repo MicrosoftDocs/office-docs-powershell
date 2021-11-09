@@ -18,10 +18,7 @@ Use the Export-CsOnlineAudioFile cmdlet to download an existing audio file.
 ## SYNTAX
 
 ```powershell
-Export-CsOnlineAudioFile 
-[[-Identity] <string>]
-[-ApplicationId] <OrgAutoAttendant|HuntGroup|TenantGlobal>]
-[<CommonParameters>]
+Export-CsOnlineAudioFile [[-Identity] <string>][-ApplicationId] <OrgAutoAttendant|HuntGroup|TenantGlobal>][<CommonParameters>]
 ```
 
 ## DESCRIPTION
