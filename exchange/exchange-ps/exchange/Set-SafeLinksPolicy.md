@@ -43,7 +43,7 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
  [-DisableUrlRewrite <Boolean>]
- [-WhiteListedUrls <String>]
+ [-WhiteListedUrls <String>]A
  [<CommonParameters>]
 ```
 
@@ -420,6 +420,7 @@ The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in emai
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

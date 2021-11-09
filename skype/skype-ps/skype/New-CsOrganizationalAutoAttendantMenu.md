@@ -13,6 +13,11 @@ ms.reviewer:
 # New-CsOrganizationalAutoAttendantMenu
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [New-CsAutoAttendantMenu](New-CsAutoAttendantMenu.md) cmdlet instead.
+
 The New-CsOrganizationalAutoAttendantMenu cmdlet creates a new menu.
 
 ## SYNTAX

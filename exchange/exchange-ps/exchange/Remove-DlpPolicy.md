@@ -49,7 +49,6 @@ The Identity parameter specifies the DLP policy that you want to remove. You can
 - Distinguished name (DN)
 - GUID
 
-
 ```yaml
 Type: DlpPolicyIdParameter
 Parameter Sets: (All)

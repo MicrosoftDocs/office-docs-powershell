@@ -9,8 +9,6 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-
-
 # Get-RecordReviewNotificationTemplateConfig
 
 ## SYNOPSIS

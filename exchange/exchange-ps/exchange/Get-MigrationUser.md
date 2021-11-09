@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address. 
+The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address.
 
 ```yaml
 Type: MigrationUserIdParameter
