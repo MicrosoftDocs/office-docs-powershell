@@ -20,14 +20,15 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
   
 ## SYNTAX
 
-  ### RemoveSome (Default)
-  ```powershell
-  Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [<CommonParameters>]
-  ```
-  ### RemoveAll
-  ```powershell
-  Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll [<CommonParameters>]
-  ```
+### RemoveSome (Default)
+```powershell
+Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [<CommonParameters>]
+```
+
+### RemoveAll
+```powershell
+Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll [<CommonParameters>]
+```
 
 ## DESCRIPTION
 This cmdlet removes/unassigns a phone number from a user or resource account. The phone number continues to be available in the tenant.
