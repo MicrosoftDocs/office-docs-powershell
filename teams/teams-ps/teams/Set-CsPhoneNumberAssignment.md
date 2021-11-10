@@ -66,7 +66,7 @@ This parameter is mutual exclusive with PhoneNumber.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (Atrribute)
+Parameter Sets: (Attribute)
 Aliases: 
 Applicable: Microsoft Teams
 
