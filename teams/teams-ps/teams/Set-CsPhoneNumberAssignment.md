@@ -20,10 +20,15 @@ This cmdlet will assign a phone number to a user or a resource account (online a
   
 ## SYNTAX
 
-```powershell
-Set-CsPhoneNumberAssignment [[-Identity] <String> [-PhoneNumber <String>] [-PhoneNumberType <String>] [-LocationId <String>] [-EnterpriseVoiceEnabled <Boolean>][<CommonParameters>]
-
-```
+  ### Assignment (Default)
+  ```powershell
+  Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -LocationId <String> [<CommonParameters>]
+  ```
+  
+  ### Attribute
+  ```powershell
+  Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoice <Boolean> [<CommonParameters>]
+  ```
 
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account.
