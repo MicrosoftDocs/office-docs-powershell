@@ -52,9 +52,9 @@ This example sets the EnterpriseVoiceEnabled flag on the user user3@contoso.com.
 
 ### Example 4
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user4@contoso.com -LocationId null
+Set-CsPhoneNumberAssignment -Identity user2@contoso.com -LocationId null -PhoneNumber +12065551224 -PhoneNumberType CallingPlan
 ```
-This example removes the emergency location from the user user4@contoso.com.
+This example removes the emergency location from the phone number for user user2@contoso.com.
 
 
 ## PARAMETERS
@@ -66,7 +66,7 @@ This parameter is mutual exclusive with PhoneNumber.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
+Parameter Sets: (Atrribute)
 Aliases: 
 Applicable: Microsoft Teams
 
@@ -96,7 +96,7 @@ the string value null.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False
@@ -113,7 +113,7 @@ Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False
@@ -127,7 +127,7 @@ The type of phone number to assign to the user or resource account. The supporte
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False
