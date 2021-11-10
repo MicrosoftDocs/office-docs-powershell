@@ -66,7 +66,7 @@ The phone number to unnassign from the user or resource account. Supports E.164 
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (RemoveSome)
 Aliases:
 
 Required: False
@@ -80,7 +80,7 @@ The type of phone number to unassign from the user or resource account. The supp
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (RemoveSome)
 Aliases:
 
 Required: False
@@ -94,7 +94,7 @@ Unassigns the phone number from the user or resource account.
 
 ```yaml
 Type: Switch
-Parameter Sets: (All)
+Parameter Sets: (RemoveAll)
 Aliases:
 
 Required: False
