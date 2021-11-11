@@ -34,7 +34,6 @@ Get-ComplianceCaseMember -Case <String>
 Get-ComplianceCaseMember
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
- [-RoleGroupOnly]
  [<CommonParameters>]
 ```
 
@@ -58,22 +57,6 @@ The Case parameter specifies the name of the eDiscovery case that you want to vi
 ```yaml
 Type: String
 Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoleGroupOnly
-{{ Fill RoleGroupOnly Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AllCases
 Aliases:
 Applicable: Security & Compliance Center
 
