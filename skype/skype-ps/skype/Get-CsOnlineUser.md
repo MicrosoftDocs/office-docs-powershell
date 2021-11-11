@@ -100,6 +100,134 @@ PS C:\> Get-CsOnlineUser -Filter $filterString
 The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
 To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
 
+**Note**
+
+Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers 
+
+*Deprecated Attributes* - Theses are no longer relevant to Teams
+
+- AcpInfo
+- AdminDescription
+- ArchivingPolicy
+- AudioVideoDisabled
+- BaseSimpleUrl
+- BroadcastMeetingPolicy
+- CallViaWorkPolicy
+- ClientPolicy
+- ClientUpdateOverridePolicy
+- ClientVersionPolicy
+- CloudMeetingOpsPolicy
+- CloudMeetingPolicy
+- CloudVideoInteropPolicy
+- ContactOptionFlags
+- CountryOrRegionDisplayName
+- Description
+- DistinguishedName
+- EnabledForRichPresence
+- ExchangeArchivingPolicy
+- ExchUserHoldPolicies
+- ExperiencePolicy
+- ExternalUserCommunicationPolicy
+- ExUmEnabled
+- Guid
+- HomeServer
+- HostedVoicemailPolicy
+- IPPBXSoftPhoneRoutingEnabled
+- IPPhone
+- IPPhonePolicy
+- IsByPassValidation
+- IsValid
+- LegalInterceptPolicy
+- LicenseRemovalTimestamp
+- LineServerURI
+- Manager
+- MNCReady
+- Name
+- NonPrimaryResource
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OnPremHideFromAddressLists
+- OriginalPreferredDataLocation
+- OriginatingServer
+- OriginatorSid
+- OverridePreferredDataLocation
+- PendingDeletion
+- PrivateLine
+- ProvisioningCounter
+- ProvisioningStamp
+- PublishingCounter
+- PublishingStamp
+- Puid
+- RemoteCallControlTelephonyEnabled
+- RemoteMachine
+- SamAccountName
+- ServiceInfo
+- StsRefreshTokensValidFrom
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SubProvisionLineType
+- SyncingCounter
+- TargetRegistrarPool
+- TargetServerIfMoving
+- TeamsInteropPolicy
+- ThumbnailPhoto
+- UpgradeRetryCounter
+- UserAccountControl
+- UserProvisionType
+- UserRoutingGroupId
+- VoicePolicy
+- XForestMovePolicy
+- AddressBookPolicy
+- GraphPolicy
+- PinPolicy
+- PreferredDataLocationOverwritePolicy
+- PresencePolicy
+- SmsServicePolicy
+- TeamsVoiceRoute
+- ThirdPartyVideoSystemPolicy
+- UserServicesPolicy
+- ConferencingPolicy
+- Id
+- Identity
+- MobilityPolicy
+- OnlineDialinConferencingPolicy
+- Sid
+- TeamsWorkLoadPolicy
+- VoiceRoutingPolicy
+- ClientUpdatePolicy
+- HomePhone
+- HostedVoiceMail
+- MobilePhone
+- OtherTelephone
+- StreetAddress
+- WebPage
+- AssignedLicenses
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- LicenseAssignmentStates
+- OnPremDomainName
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- CallerIdPolicy
+- Fax
+- LastName
+- Office
+- Phone
+- WindowsEmailAddress*
+
+*Attributes renamed/replaced:*
+- FirstName renamed to GivenName
+- DirSyncEnabled renamed to UserDirSyncEnabled
+- MCOValidationErrors renamed to UserValidationErrors
+
+*New User Attributes*
+
+FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed)
+
+*Deprecated parameters*
+
+LdapFilter has been deprecated due to low usage
 
 
 ## PARAMETERS
