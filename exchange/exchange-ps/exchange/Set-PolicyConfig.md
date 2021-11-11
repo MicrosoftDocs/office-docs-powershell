@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
- [-CaseHoldPolicyLimit <Int32>]
+Set-PolicyConfig
  [-ClassificationScheme <ClassificationScheme>]
  [-ComplianceUrl <String>]
  [-Confirm]
@@ -55,38 +54,6 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -CaseHoldPolicyLimit
-{{ Fill CaseHoldPolicyLimit Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClassificationScheme
 {{ Fill ClassificationScheme Description }}

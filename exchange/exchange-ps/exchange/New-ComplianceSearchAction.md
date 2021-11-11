@@ -44,7 +44,6 @@ New-ComplianceSearchAction [-SearchName] <String[]>
  [-RetryOnError]
  [-Scenario <ComplianceSearchActionScenario>]
  [-Scope <ComplianceExportScope>]
- [-ScopeDetails <ComplianceScopeDetail[]>]
  [-SearchNames <String[]>]
  [-SharePointArchiveFormat <ComplianceExportArchiveFormat>]
  [-ShareRootPath <String>]
@@ -605,22 +604,6 @@ Type: ComplianceExportScope
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ScopeDetails
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ComplianceScopeDetail[]
-Parameter Sets: Export
-Aliases:
-Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
