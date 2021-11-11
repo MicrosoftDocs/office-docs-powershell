@@ -35,6 +35,7 @@ Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParamete
 ```
 Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParameter>
  [-IncludeReport]
+ [-IncludeSkippedItems]
  [-DiagnosticInfo <String>]
  [-ReportOnly]
  [<CommonParameters>]
@@ -266,6 +267,24 @@ Type: Fqdn
 Parameter Sets: IdentityOnPremises, MigrationMRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSkippedItems
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeSkippedItems Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
