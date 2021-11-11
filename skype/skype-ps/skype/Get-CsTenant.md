@@ -37,6 +37,64 @@ Get-CsTenant
 The command shown in Example 1 returns information about your tenant.
 Organizations will have only one tenant.
 
+**NOTE**
+
+Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers 
+
+*Deprecated Attributes*
+
+- DisableExoPlanProvisioning
+- DistinguishedName
+- ExperiencePolicy
+- Id
+- IsByPassValidation
+- IsMNC
+- IsReadinessUploaded
+- IsUpgradeReady
+- LastSubProvisionTimeStamp
+- MNCEnableTimeStamp
+- Name
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OriginalRegistrarPool
+- OriginatingServer
+- PendingDeletion
+- ProvisioningCounter
+- PublicProvider
+- PublishingCounter
+- RegistrarPool
+- RemoteMachine
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SyncingCounter
+- TenantPoolExtension
+- UpgradeRetryCounter
+- UserRoutingGroupIds
+- XForestMovePolicy
+- Guid
+- HostedVoiceMailNotProvisioned
+- IsO365MNC
+- IsValid
+- NonPrimarySource
+- OcoDomainTracked
+- Phone
+- ProvisionType
+- TeamsUpgradeEligible
+- TelehealthEnabled
+- TenantNotified
+- AssignedLicenses
+- OnPremisesImmutableId
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- DefaultDataLocation
+- DefaultPoolFqdn
+- AdminDescription
+- AllowedDataLocation
+- Description
+
 
 ## PARAMETERS
 
