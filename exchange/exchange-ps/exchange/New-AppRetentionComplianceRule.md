@@ -48,26 +48,6 @@ New-AppRetentionComplianceRule -Policy <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
-### PublishComplianceTag
-```
-New-AppRetentionComplianceRule -Policy <PolicyIdParameter>
- [-Confirm]
- [-ExpirationDateOption <String>]
- [-RetentionComplianceAction <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### SetRawXml
-```
-New-AppRetentionComplianceRule -Policy <PolicyIdParameter>
- [-Confirm]
- [-ExpirationDateOption <String>]
- [-RetentionComplianceAction <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -308,6 +288,7 @@ Type: HoldDurationHint
 Parameter Sets: Default
 Aliases:
 Accepted values: Days, Months, Years
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

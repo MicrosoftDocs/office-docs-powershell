@@ -69,6 +69,11 @@ the corresponding Auto Attendant or Call Queue is deleted.
 The cmdlet is available in Teams PS module 2.4.0-preview or later.
 
 ## RELATED LINKS
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+
+[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
 
 [Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
+
+[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+
+[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)

@@ -567,7 +567,7 @@ Accept wildcard characters: False
 The ShowProgress parameter specifies whether to show or hide the progress bar of imported cmdlets when you connect. Valid values are:
 
 - $true: The progress bar is displayed. This is the default value.
-- $false: Currently, this value has no effect. 
+- $false: Currently, this value has no effect.
 
 ```yaml
 Type: Boolean
