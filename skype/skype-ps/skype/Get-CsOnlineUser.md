@@ -49,57 +49,6 @@ If you want to exclude Skype for Business Online users from the data returned by
 By definition, users homed on the on-premises version will always have a TenantId equal to 00000000-0000-0000-0000-000000000000.
 Users homed on Skype for Business Online will a TenantId that is equal to some value other than 00000000-0000-0000-0000-000000000000.
 
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-Get-CsOnlineUser
-```
-
-The command shown in Example 1 returns information for all the users configured as online users.
-
-### -------------------------- Example 2 --------------------------
-```
-Get-CsOnlineUser -Identity "sip:kenmyer@litwareinc.com"
-```
-
-In Example 2 information is returned for a single online user: the user with the SIP address "sip:kenmyer@litwareinc.com".
-
-### -------------------------- Example 3 --------------------------
-```
-Get-CsOnlineUser -Filter {ArchivingPolicy -eq "RedmondArchiving"}
-```
-
-Example 3 uses the Filter parameter to limit the returned data to online users who have been assigned the per-user archiving policy RedmondArchiving.
-To do this, the filter value {ArchivingPolicy -eq "RedmondArchiving"} is employed; that syntax limits returned data to users where the ArchivingPolicy property is equal to (-eq) "RedmondArchiving".
-
-### -------------------------- Example 4 --------------------------
-```
-Get-CsOnlineUser -Filter {HideFromAddressLists -eq $True}
-```
-
-Example 4 returns information only for user accounts that have been configured so that the account does not appear in Microsoft Exchange address lists.
-(That is, the Active Directory attribute msExchHideFromAddressLists is True.) To carry out this task, the Filter parameter is included along with the filter value {HideFromAddressLists -eq $True}.
-
-### -------------------------- Example 5 --------------------------
-```
-Get-CsOnlineUser -Filter {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}
-```
-
-The command shown in Example 5 returns information for all the online users assigned to the tenant with the TenantID "bf19b7db-6960-41e5-a139-2aa373474354".
-To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
-This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
-
-### -------------------------- Example 6 --------------------------
-```
-PS C:\> $MeetingPolicy="Kiosk"
-PS C:\> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
-PS C:\> Get-CsOnlineUser -Filter $filterString
-```
-
-The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
-To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
-
 **Note:**
 
 Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
@@ -237,6 +186,58 @@ LdapFilter has been deprecated due to low usage.
 - EnterpriseVoiceEnabled filter
   - EnterpriseVoiceEnabled eq true / false
 
+
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+Get-CsOnlineUser
+```
+
+The command shown in Example 1 returns information for all the users configured as online users.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOnlineUser -Identity "sip:kenmyer@litwareinc.com"
+```
+
+In Example 2 information is returned for a single online user: the user with the SIP address "sip:kenmyer@litwareinc.com".
+
+### -------------------------- Example 3 --------------------------
+```
+Get-CsOnlineUser -Filter {ArchivingPolicy -eq "RedmondArchiving"}
+```
+
+Example 3 uses the Filter parameter to limit the returned data to online users who have been assigned the per-user archiving policy RedmondArchiving.
+To do this, the filter value {ArchivingPolicy -eq "RedmondArchiving"} is employed; that syntax limits returned data to users where the ArchivingPolicy property is equal to (-eq) "RedmondArchiving".
+
+### -------------------------- Example 4 --------------------------
+```
+Get-CsOnlineUser -Filter {HideFromAddressLists -eq $True}
+```
+
+Example 4 returns information only for user accounts that have been configured so that the account does not appear in Microsoft Exchange address lists.
+(That is, the Active Directory attribute msExchHideFromAddressLists is True.) To carry out this task, the Filter parameter is included along with the filter value {HideFromAddressLists -eq $True}.
+
+### -------------------------- Example 5 --------------------------
+```
+Get-CsOnlineUser -Filter {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}
+```
+
+The command shown in Example 5 returns information for all the online users assigned to the tenant with the TenantID "bf19b7db-6960-41e5-a139-2aa373474354".
+To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
+This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
+
+### -------------------------- Example 6 --------------------------
+```
+PS C:\> $MeetingPolicy="Kiosk"
+PS C:\> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
+PS C:\> Get-CsOnlineUser -Filter $filterString
+```
+
+The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
+To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
 
 ## PARAMETERS
 
