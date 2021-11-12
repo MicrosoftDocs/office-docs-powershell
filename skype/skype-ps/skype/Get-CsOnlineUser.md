@@ -227,7 +227,7 @@ FeatureTypes – Array of unique strings specifying what features are enabled fo
 
 *Deprecated parameters*
 
-LdapFilter has been deprecated due to low usage
+LdapFilter has been deprecated due to low usage.
 
 *Changes in "-Filter" parameter*
 - Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats
