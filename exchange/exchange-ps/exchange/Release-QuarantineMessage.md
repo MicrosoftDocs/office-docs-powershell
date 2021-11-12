@@ -52,6 +52,7 @@ Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity
 ```
 Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-Identity <QuarantineMessageIdentity>]
+ [-ActionType <ReleaseActionType>]
  [-AllowSender]
  [-Confirm]
  [-Force]
@@ -209,6 +210,27 @@ Aliases:
 Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActionType
+The ActionType parameter specifies the release action type. Valid values are:
+
+- Approve
+- Deny
+- Release
+- Request
+
+```yaml
+Type: ReleaseActionType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

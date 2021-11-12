@@ -30,11 +30,13 @@ Set-User [-Identity] <UserIdParameter>
  [-CanHaveCloudCache <Boolean>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
+ [-ClearDataEncryptionPolicy]
  [-Company <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-CreateDTMFMap <Boolean>]
  [-Department <String>]
+ [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Fax <String>]
@@ -280,6 +282,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClearDataEncryptionPolicy
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearDataEncryptionPolicy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Company
 The Company parameter specifies the user's company.
 
@@ -364,6 +384,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesiredWorkloads
+This parameter is available only in the cloud-based service.
+
+{{ Fill DesiredWorkloads Description }}
+
+```yaml
+Type: Microsoft.Exchange.Data.MailboxWorkloadFlags
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -766,9 +804,9 @@ Accept wildcard characters: False
 ```
 
 ### -PermanentlyClearPreviousMailboxInfo
-This parameter is available or functional only in on-premise Exchange.
+This parameter is not available or functional in on-premises Exchange. It is only available in Exchange Online.
 
-The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange mailbox attributes on a user. You don't need to specify a value with this switch.
+The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange Online mailbox attributes on a user. You don't need to specify a value with this switch.
 
 Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 

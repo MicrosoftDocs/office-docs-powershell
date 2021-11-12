@@ -28,7 +28,7 @@ New-ComplianceTag [-Name] <String>
  [-FilePlanProperty <String>]
  [-Force]
  [-IsRecordLabel <Boolean>]
-
+ [-MultiStageReviewProperty <String>]
  [-Notes <String>]
  [-Regulatory <Boolean>]
  [-RetentionAction <String>]

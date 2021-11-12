@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/get-cstenant
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsTenant
 schema: 2.0.0
 manager: bulenteg
@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsTenant
 
 ## SYNOPSIS
-Returns information about the Skype for Business Online tenants that have been configured for use in your organization.
+Returns information about the Microsoft Teams or Skype for Business Online tenants that have been configured for use in your organization.
 Tenants represent groups of online users.
 
 ## SYNTAX
@@ -24,7 +24,7 @@ Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdPar
 ```
 
 ## DESCRIPTION
-In Skype for Business Online, tenants are groups of users who have accounts homed on the service.
+In Microsoft Teams or Skype for Business Online, tenants are groups of users who have accounts homed on the service.
 Organizations will typically have a single tenant in which to house all their user accounts.
 
 ## EXAMPLES
@@ -99,7 +99,7 @@ Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly cust
 ## PARAMETERS
 
 ### -DomainController
-This parameter is not used with Skype for Business Online.
+This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
 ```yaml
 Type: Fqdn
@@ -132,7 +132,7 @@ You cannot use both the Identity parameter and the Filter parameter in the same 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ If you do not include either the Identity or the Filter parameter then the `Get-
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -175,7 +175,7 @@ If you set the tenants to 7 but you have only three contacts in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named

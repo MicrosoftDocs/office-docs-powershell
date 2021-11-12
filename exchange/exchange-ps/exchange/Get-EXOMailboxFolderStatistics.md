@@ -64,7 +64,6 @@ Get-EXOMailbox -ResultSize Unlimited | Get-EXOMailboxFolderStatistics -FolderSco
 
 This example uses the FolderScope parameter to view Inbox folder statistics for all mailboxes.
 
-
 ## PARAMETERS
 
 ### -Archive

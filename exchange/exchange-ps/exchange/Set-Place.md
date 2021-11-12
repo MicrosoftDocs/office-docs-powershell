@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience.
 
-**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
+**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties except GeoCoordinates on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csapplicationaccesspolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsApplicationAccessPolicy
 schema: 2.0.0
 manager: zhengni
@@ -26,7 +26,7 @@ Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <Stri
 
 ## DESCRIPTION
 
-This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.
+This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.**Note:** You can assign only 1 application access policy at a time to a particular user. Assigning a new application access policy to a user will override the existing application access policy if any.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ In the command shown above, any per-user application access policy previously as
 PS C:\> Get-CsOnlineUser | Grant-CsApplicationAccessPolicy -PolicyName "ASimplePolicy"
 ```
 
-The command shown above assigns the per-user application access policy ASimplePolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Skype for Business Online. Those user accounts are then piped to the `Grant-CsApplicationAccessPolicy` cmdlet, which assigns each user the application access policy "ASimplePolicy".
+The command shown above assigns the per-user application access policy ASimplePolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Microsoft Teams or Skype for Business Online. Those user accounts are then piped to the `Grant-CsApplicationAccessPolicy` cmdlet, which assigns each user the application access policy "ASimplePolicy".
 
 ### Assign an application access policy to users who have not been assigned one
 

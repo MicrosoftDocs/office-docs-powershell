@@ -29,6 +29,7 @@ New-SafeAttachmentPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
+ [-QuarantineTag <String>]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-Redirect <Boolean>]
  [-RedirectAddress <SmtpAddress>]
@@ -168,6 +169,28 @@ To enable or disable a complete Safe Attachments policy in the admin center (the
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QuarantineTag
+The QuarantineTag specifies the quarantine policy that's used on messages that are quarantined as malware by Safe Attachments. You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

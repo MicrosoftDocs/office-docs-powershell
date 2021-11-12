@@ -32,7 +32,12 @@ Get-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 The junk email settings on the mailbox are:
 
-- Enable or disable the junk email rule: The junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox. Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
+- Enable or disable the junk email rule: In on-premises Exchange, the junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox.
+
+  In the cloud-based service, the junk email rule has no effect on mail flow. Exchange Online Protection delivers messages to the Junk Email folder based on the actions set in anti-spam policies. The junk email rule on the mailbox still controls what happens to messages after delivery based on the safelist collection of the mailbox.
+
+  Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
+
 - Configure the safelist collection: The safelist collection is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. Users can configure the safelist collection on their own mailbox by using Microsoft Outlook or Outlook on the web.
 
 Administrators can enable or disable the junk email rule, and configure the safelist collection on a mailbox by using the Set-MailboxJunkEmailConfiguration cmdlet. For more information, see [Configure Exchange antispam settings on mailboxes](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).

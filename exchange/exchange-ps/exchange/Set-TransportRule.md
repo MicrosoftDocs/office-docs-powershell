@@ -170,6 +170,7 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-RemoveHeader <HeaderName>]
  [-RemoveOME <Boolean>]
  [-RemoveOMEv2 <Boolean>]
+ [-RemoveRMSAttachmentEncryption <Boolean>]
  [-RouteMessageOutboundConnector <OutboundConnectorIdParameter>]
  [-RouteMessageOutboundRequireTls <Boolean>]
  [-RuleErrorAction <RuleErrorAction>]
@@ -457,6 +458,8 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressContainsWords
+**Note**: In the cloud-based service, this parameter behaves the same as the RecipientAddressContainsWords parameter (other recipients in the message are not affected).
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
@@ -481,6 +484,8 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressMatchesPatterns
+**Note**: In the cloud-based service, this parameter behaves the same as the RecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
@@ -1450,6 +1455,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressContainsWords
+**Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressContainsWords parameter (other recipients in the message are not affected).
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
@@ -1474,6 +1481,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
+**Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
@@ -3706,6 +3715,8 @@ For all values except NotifyOnly, you can specify an enhanced status code and a 
 
 If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
 
+This action is applicable to messages sent by internal users only. External senders will not receive notifications.
+
 ```yaml
 Type: NotifySenderType
 Parameter Sets: (All)
@@ -4134,6 +4145,26 @@ The RemoveOMEv2 parameter specifies an action that removes Office 365 Message En
 
 - $true: The message and attachments are decrypted.
 - $false: The message and attachments aren't decrypted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveRMSAttachmentEncryption
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+{{ Fill RemoveRMSAttachmentEncryption Description }}
 
 ```yaml
 Type: Boolean
