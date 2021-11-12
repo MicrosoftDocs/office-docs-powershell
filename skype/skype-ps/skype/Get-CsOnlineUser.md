@@ -102,7 +102,7 @@ To accomplish the task, the filter string is first constructed and resolved loca
 
 **Note:**
 
-Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers 
+Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
 
 *Deprecated Attributes* - Theses are no longer relevant to Teams
 
