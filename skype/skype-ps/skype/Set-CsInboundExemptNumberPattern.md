@@ -214,8 +214,12 @@ You can use Test-CsInboundBlockedNumberPattern to test your block and exempt pho
 
 ## RELATED LINKS
 
-- [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
-- [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
-- [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
-- [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
-- [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+[Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
+
+[New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
+
+[Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
+
+[Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
+
+[Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)

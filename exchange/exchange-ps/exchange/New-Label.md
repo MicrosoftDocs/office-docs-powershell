@@ -66,6 +66,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
  [-ParentId <ComplianceRuleIdParameter>]
+ [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
  [-SiteAndGroupProtectionAllowAccessToGuestUsers <System.Boolean>]
@@ -74,9 +75,10 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-SiteAndGroupProtectionAllowLimitedAccess <System.Boolean>]
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
+ [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
- [-SqlAssetCondition <String>]
+ [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -144,7 +146,17 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities for a sensitivity label. The settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For more information how to configure these advanced settings, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+The AdvancedSettings parameter enables specific features and capabilities for a sensitivity label.
+
+Specify this parameter with the identity (name or GUID) of the sensitivity label, with key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
+
+Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+
+Supported settings for built-in labeling:
+
+- **DefaultSharingScope**: For a container label, specifies the default sharing link type for a site. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information about this configuration choice, see [Configure settings for the default sharing link for a site by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings).
+
+- **DefaultShareLinkPermission**: For a container label, specifies the permissions for the sharing link for a site. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
 ```yaml
 Type: PswsHashtable
@@ -962,6 +974,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SchematizedDataCondition
+{{ Fill SchematizedDataCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Setting
 This parameter is reserved for internal Microsoft use.
 
@@ -1118,6 +1146,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteAndGroupProtectionLevel
+{{ Fill SiteAndGroupProtectionLevel Description }}
+
+```yaml
+Type: SiteAndGroupProtectionLevelParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteAndGroupProtectionPrivacy
 The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the labe. Valid values are:
 
@@ -1167,11 +1211,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SqlAssetCondition
-{{ Fill SqlAssetCondition Description }}
+### -TeamsLobbyBypassScope
+{{ Fill TeamsLobbyBypassScope Description }}
 
 ```yaml
-Type: String
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

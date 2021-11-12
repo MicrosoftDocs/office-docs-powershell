@@ -30,6 +30,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-AllowedSenders <MultiValuedProperty>]
  [-BlockedSenderDomains <MultiValuedProperty>]
  [-BlockedSenders <MultiValuedProperty>]
+ [-BulkQuarantineTag <String>]
  [-BulkSpamAction <SpamFilteringAction>]
  [-BulkThreshold <Int32>]
  [-Confirm]
@@ -44,7 +45,9 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-EndUserSpamNotificationLanguage <EsnLanguage>]
  [-EndUserSpamNotificationLimit <Int32>]
  [-HighConfidencePhishAction <PhishFilteringAction>]
+ [-HighConfidencePhishQuarantineTag <String>]
  [-HighConfidenceSpamAction <SpamFilteringAction>]
+ [-HighConfidenceSpamQuarantineTag <String>]
  [-IncreaseScoreWithBizOrInfoUrls <SpamFilteringOption>]
  [-IncreaseScoreWithImageLinks <SpamFilteringOption>]
  [-IncreaseScoreWithNumericIps <SpamFilteringOption>]
@@ -64,6 +67,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-MarkAsSpamSpfRecordHardFail <SpamFilteringOption>]
  [-MarkAsSpamWebBugsInHtml <SpamFilteringOption>]
  [-ModifySubjectValue <String>]
+ [-PhishQuarantineTag <String>]
  [-PhishSpamAction <SpamFilteringAction>]
  [-PhishZapEnabled <Boolean>
  [-QuarantineRetentionPeriod <Int32>]
@@ -71,6 +75,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-RedirectToRecipients <MultiValuedProperty>]
  [-RegionBlockList <MultiValuedProperty>]
  [-SpamAction <SpamFilteringAction>]
+ [-SpamQuarantineTag <String>]
  [-SpamZapEnabled <Boolean>]
  [-TestModeAction <SpamFilteringTestModeAction>]
  [-TestModeBccToRecipients <MultiValuedProperty>]
@@ -248,6 +253,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BulkQuarantineTag
+The BulkQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as bulk email (the BulkSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BulkSpamAction
 The BulkSpamAction parameter specifies the action to take on messages that are marked as bulk email (also known as gray mail) based on the bulk complaint level (BCL) of the message, and the BCL threshold you configure in the BulkThreshold parameter. Valid values are:
 
@@ -256,7 +283,7 @@ The BulkSpamAction parameter specifies the action to take on messages that are m
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - NoAction
-- Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as bulk email are available to the intended recipients and admins. Or, you can use the BulkQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -498,10 +525,32 @@ The HighConfidencePhishAction parameter specifies the action to take on messages
 
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
-- Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is only available to admins.
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence phishing are available only to admins. Or, you can use the HighConfidencePhishQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 
 ```yaml
 Type: PhishFilteringAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighConfidencePhishQuarantineTag
+The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as high confidence phishing (the HighConfidencePhishAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -519,12 +568,34 @@ The HighConfidenceSpamAction parameter specifies the action to take on messages 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-- Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients and admins.
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence spam are available to the intended recipients and admins. Or, you can use the HighConfidenceSpamQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
 Type: SpamFilteringAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighConfidenceSpamQuarantineTag
+The HighConfidenceSpamQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as high confidence spam (the HighConfidenceSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -951,6 +1022,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PhishQuarantineTag
+The PhishQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as phishing (the PhishSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhishSpamAction
 The PhishSpamAction parameter specifies the action to take on messages that are marked as phishing (not high confidence phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
@@ -959,6 +1052,7 @@ The PhishSpamAction parameter specifies the action to take on messages that are 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients (as of April, 2020) and admins.
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as phishing are available to admins and (as of April 2020) the intended recipients. Or, you can use the PhishQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -1093,12 +1187,34 @@ The SpamAction parameter specifies the action to take on messages that are marke
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete : Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-- Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as spam are available to the intended recipients and admins. Or, you can use the SpamQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
 Type: SpamFilteringAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpamQuarantineTag
+The SpamQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as spam (the SpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

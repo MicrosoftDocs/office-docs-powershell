@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/move-csuser
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsUser
 schema: 2.0.0
 manager: rogupta
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly.
+Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly (or the reverse). This cmdlet also can be used to move on-premises users from one pool to another.
 
 ## SYNTAX
 
@@ -39,19 +39,19 @@ The Move-CsUser cmdlet enables you to move a user account enabled for Skype for 
 
 The Move-CsUser cmdlet affects only the user's Skype for Business Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
 
-When moving a user to or from the Microsoft 365 cloud (TeamsOnly):
+When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the reverse):
 
 - Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
 - To move a user to Microsoft 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments, there will be variants of this address. For more details, see [Move users between on-premises and cloud](/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
-- When migrating from on-premises to the cloud, users are automatically assigned TeamsOnly mode and their meetings from on-premises are automatically converted to Teams meetings. It is no longer necessary to specify the `-MoveToTeams` switch, and this functionality is available on all versions of Skype for Business Server and Lync Server 2013. Contacts from Skype for Business Server are migrated to the cloud (unless -force switch is used in move-csuser) and become available in Teams after the user logs on to Teams after the move. Teams-only users can still *join* meetings hosted in Skype for Business (which may happen if they are invited to a meeting by a user that is using Skype For Business).
+- When migrating from on-premises to the cloud, users are automatically assigned TeamsOnly mode and their meetings from on-premises are automatically converted to Teams meetings. This happens regardless of which on-premises version of Skype for Business Server or Lync Server is used. It is no longer necessary to specify the `-MoveToTeams` switch, and specifying this switch no longer has any impact. Teams-only users can still *join* meetings hosted in Skype for Business (which may happen if they are invited to a meeting by a user that is using Skype For Business).
+- When migrating from on-premises to the cloud, contacts from Skype for Business Server are migrated to the cloud (unless -force switch is used in move-csuser) and become available in Teams after the user logs on to Teams after the move.
 
 
 > [!NOTE]
 >
-> - The `-MoveToTeams` switch is no longer required to move a user directly to Teams. Specifying this switch no longer has any impact, since users are always moved to TeamsOnly.
-> - If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
-> - Prior to retirement of Skype for Business Online, organizations that still need to move users from on-premises to Skype for Business Online can do so uing a two-step process: First move the user from on-premises to TeamsOnly using `-Move-CsUser`, and after the move change the mode of the user to something other than TeamsOnly using `Grant-CsTeamsUpgradePolicy`. However, the ability to change a cloud user's mode to something other than TeamsOnly will soon be removed as part of Skype for Business Online retirement.
+> - If you are using Skype for Business Server 2015 with CU8 up to CU11, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2015 CU12, Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
 > - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details. 
+> - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential paremeter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
 
 ## EXAMPLES
 
@@ -64,22 +64,8 @@ Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Cre
 
 In Example 1, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Teams. This user will now be a Teams only user. If -Credential parameter is not specified, the admin will be prompted for credentials. It no longer matters whether the `-MoveToTeams` switch is specified.
 
-### EXAMPLE 2: Move a user to Skype for Business Online
 
-```powershell
-# From an on-premises Skype for Business Server or Lync Server 2013 management shell window, run:
-
-$cred=get-credential
-Move-CsUser -Identity PilarA@contoso.com -Target "sipfed.online.lync.com" -Credential $cred
-
-# And then from a TeamsPowerShell window, remove TeamsOnly mode by running:
-
-Grant-CsTeamsUpgradePolicy -Identity PilarA@contoso.com -PolicyName $null
-```
-
-In Example 2, the Move-CsUser cmdlet is first used to move the user account with sip address PilarA@contoso.com to TeamsOnly in Microsoft 365. Then, using Teams PowerShell the mode is updated to remove TeamsOnly mode so the user can use Skype for Business Online. 
-
-### EXAMPLE 3: Move a user to another on-premises pool
+### EXAMPLE 2: Move a user to another on-premises pool
 
 ```powershell
 Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
@@ -87,16 +73,16 @@ Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
 
 In Example 3, the Move-CsUser cmdlet is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 
-### EXAMPLE 4: Move multiple users
+### EXAMPLE 3: Move multiple users
 
 ```powershell
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
 ```
 
-In Example 4, all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
+In Example 4, all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com in on-premises.
 To carry out this task, the command first uses the Get-CsUser cmdlet and the OU parameter to retrieve a collection of all the user accounts in the Finance OU. After the data has been retrieved, the information is piped to the Move-CsUser cmdlet, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
-### EXAMPLE 5: Move multiple users listed in a file
+### EXAMPLE 4: Move multiple users listed in a file
 
 ```powershell
 Move-CsUser -UserList C:\Folder1\Folder2\file1.txt -Target "atl-cs-001.litwareinc.com" -Report C:\Folder1\Folder2\out.csv
@@ -200,7 +186,7 @@ Accept wildcard characters: False
 
 ### -UseOAuth
 
-If specified, authentication between on-premises and the host migration service is based on OAuth protocol. Otherwise, authentication is based on legacy LiveID authentication. This parameter is only available with Skype for Business Server 2015 with CU8 or later. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
+This switch is only relevant for Skype for Business Server 2015 with CU8 up to CU11.  When using those versions, if this switch is specified, authentication between on-premises and the host migration service is based on OAuth protocol. Otherwise, authentication when using those version is based on legacy LiveID authentication. In Skype for Business Server 2019 and later versions as well as Skype for Business Server 2015 CU12 and later, OAuth is always used hence the switch is not relevant on those versions.
 
 ```yaml
 Type: SwitchParameter
@@ -329,7 +315,7 @@ If you would prefer to have the confirmation prompt then use this syntax:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

@@ -661,9 +661,17 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveName
-The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App.
+The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook on the web (formerly known as Outlook Web App). If the value contains spaces, enclose the value in quotation marks (").
 
-If you don't use this parameter, the default value is `In-Place Archive - <Mailbox User's Display Name>`.
+In on-premises Exchange, if you don't use this parameter, the following default values are used based on the version of Exchange:
+
+- Exchange 2016 or later: `In-Place Archive -<Display Name>`
+- Exchange 2013: `In-Place Archive - <Display Name>`
+- Exchange 2010: `Personal Archive - <Display Name>`
+
+In Exchange Online, if you don't use this parameter, the default value is `In-Place Archive -<Display Name>`.
+
+In Outlook in Exchange Online, the value of this parameter is ignored. The name of the archive mailbox that's shown in the folder list is `Online Archive - <PrimarySMTPAddress>`.
 
 ```yaml
 Type: MultiValuedProperty

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-tenantallowblocklistspoofitems
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: New-TenantAllowBlockListSpoofItems
 schema: 2.0.0
 author: chrisda
@@ -53,6 +53,7 @@ The Identity parameter specifies the accepted domain.
 Type: HostedConnectionFilterPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -71,6 +72,7 @@ The SendingInfrastructure parameter specifies the source of the messages sent by
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -89,6 +91,7 @@ The SpoofedUser parameter specifies the spoofed sender's email address or domain
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -107,6 +110,7 @@ The SpoofType parameter specifies whether this is an internal or external spoof 
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -125,6 +129,7 @@ The Action parameter specifies whether is is an allowed or blocked spoof entry. 
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -143,6 +148,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -158,6 +164,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

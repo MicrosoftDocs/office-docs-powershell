@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Microsoft SharePoint Migration Tool cmdlet help reference
 description: "Learn about the Microsoft SharePoint Migration Tool PowerShell cmdlet help reference."
 ---
