@@ -13,6 +13,11 @@ ms.reviewer:
 # New-CsOrganizationalAutoAttendantCallHandlingAssociation
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md) cmdlet instead.
+
 Use the New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet to create a new call handling association.
 
 ## SYNTAX

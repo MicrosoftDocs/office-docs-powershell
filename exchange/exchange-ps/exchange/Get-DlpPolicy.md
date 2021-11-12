@@ -47,6 +47,26 @@ This example returns detailed information about the DLP policy named Employee Nu
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: DlpPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -62,22 +82,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the DLP policy you want to remove. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy.
-
-```yaml
-Type: DlpPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -13,6 +13,11 @@ ms.reviewer:
 # Get-CsOrganizationalAutoAttendantHolidays
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsAutoAttendantHolidays](Get-CsAutoAttendantHolidays.md) cmdlet instead.
+
 Use Get-CsOrganizationalAutoAttendantHolidays cmdlet to get the holiday information for an existing Auto Attendant (AA).
 
 ## SYNTAX
