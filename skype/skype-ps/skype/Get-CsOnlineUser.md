@@ -100,7 +100,7 @@ PS C:\> Get-CsOnlineUser -Filter $filterString
 The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
 To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
 
-**Note**
+**Note:**
 
 Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers 
 
