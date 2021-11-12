@@ -223,7 +223,7 @@ Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly cust
 
 *New User Attributes*
 
-FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed)
+FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed).
 
 *Deprecated parameters*
 
