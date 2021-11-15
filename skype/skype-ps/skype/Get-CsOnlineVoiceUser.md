@@ -25,7 +25,7 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ## DESCRIPTION
 **NOTE:**
 
-Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
 
 *Deprecated Attributes*
 
