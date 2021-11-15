@@ -81,7 +81,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
- [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeLockPollForAttendeesEnabled <Boolean>]
