@@ -39,7 +39,7 @@ Organizations will have only one tenant.
 
 **NOTE:**
 
-Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers 
+Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
 
 *Deprecated Attributes*
 
