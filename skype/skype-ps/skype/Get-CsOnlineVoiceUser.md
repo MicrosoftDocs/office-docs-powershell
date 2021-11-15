@@ -23,16 +23,6 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
-
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
-```
-
-This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
-
 **NOTE:**
 
 Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
@@ -47,6 +37,16 @@ Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly cust
   - ResultSize
 
 - LiscenceState 
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
+```
+
+This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
+
 
 ## PARAMETERS
 
