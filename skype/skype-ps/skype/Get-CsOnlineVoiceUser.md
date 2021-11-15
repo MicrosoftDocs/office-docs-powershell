@@ -33,7 +33,7 @@ PS C:\> Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
 
 This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
 
-**NOTE**
+**NOTE:**
 
 Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
 
