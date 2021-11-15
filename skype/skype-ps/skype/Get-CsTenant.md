@@ -37,7 +37,7 @@ Get-CsTenant
 The command shown in Example 1 returns information about your tenant.
 Organizations will have only one tenant.
 
-**NOTE**
+**NOTE:**
 
 Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers 
 
