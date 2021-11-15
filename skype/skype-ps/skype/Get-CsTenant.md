@@ -29,7 +29,7 @@ Organizations will typically have a single tenant in which to house all their us
 
 **NOTE:**
 
-Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+Beginning Teams PowerShell Module version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
 
 *Deprecated Attributes*
 
