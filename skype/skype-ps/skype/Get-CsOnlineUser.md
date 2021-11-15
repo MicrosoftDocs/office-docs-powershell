@@ -51,7 +51,7 @@ Users homed on Skype for Business Online will a TenantId that is equal to some v
 
 **Note:**
 
-Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
 
 *Deprecated Attributes* - Theses are no longer relevant to Teams
 
