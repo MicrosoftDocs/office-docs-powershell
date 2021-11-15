@@ -27,16 +27,6 @@ Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdPar
 In Microsoft Teams or Skype for Business Online, tenants are groups of users who have accounts homed on the service.
 Organizations will typically have a single tenant in which to house all their user accounts.
 
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-Get-CsTenant
-```
-
-The command shown in Example 1 returns information about your tenant.
-Organizations will have only one tenant.
-
 **NOTE:**
 
 Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
@@ -94,6 +84,16 @@ Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly cust
 - AdminDescription
 - AllowedDataLocation
 - Description
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+Get-CsTenant
+```
+
+The command shown in Example 1 returns information about your tenant.
+Organizations will have only one tenant.
 
 
 ## PARAMETERS
