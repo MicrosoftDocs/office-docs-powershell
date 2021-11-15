@@ -2235,13 +2235,15 @@ Accept wildcard characters: False
 ```
 
 ### -MailTipsExternalRecipientsTipsEnabled
+For Exchange Online, use [Set-ExternalInOutlook](Set-ExternalInOutlook.md) instead.
+
 The MailTipsExternalRecipientsTipsEnabled parameter specifies whether MailTips for external recipients are enabled. The default value is $false.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3319,3 +3321,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-ExternalInOutlook](Set-ExternalInOutlook.md)
