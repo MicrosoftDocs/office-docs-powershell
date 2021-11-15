@@ -39,7 +39,7 @@ Beginning TPM 2.6.2 onwards, the below updates are applicable for TeamsOnly cust
 
 *Deprecated Attributes*
 
-- Below attributes have been deprecated under "-ExpandLocation" parameter 
+- Below attributes have been deprecated under "-ExpandLocation" parameter:
   - Force
   - NumberOfResultsToSkip
   - CorrelationId
