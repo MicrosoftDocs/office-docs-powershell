@@ -193,11 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy.
-
-A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
-
-Don't use this parameter with the EndUserQuarantinePermissionsValue parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: QuarantinePermissions
