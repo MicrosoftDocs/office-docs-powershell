@@ -29,7 +29,6 @@ Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentMatchesDataModel <String>]
  [-ContentSources <String[]>]
  [-Ocr <Boolean>]
- [-RateOfSampling <String>]
  [-SamplingRate <Int32>]
  [-WhatIf]
  [<CommonParameters>]
@@ -186,22 +185,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RateOfSampling
-{{ Fill RateOfSampling Description }}
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

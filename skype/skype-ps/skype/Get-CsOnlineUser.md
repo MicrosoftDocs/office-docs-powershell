@@ -49,6 +49,145 @@ If you want to exclude Skype for Business Online users from the data returned by
 By definition, users homed on the on-premises version will always have a TenantId equal to 00000000-0000-0000-0000-000000000000.
 Users homed on Skype for Business Online will a TenantId that is equal to some value other than 00000000-0000-0000-0000-000000000000.
 
+**Note:**
+
+Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+
+*Deprecated Attributes* - Theses are no longer relevant to Teams
+
+- AcpInfo
+- AdminDescription
+- ArchivingPolicy
+- AudioVideoDisabled
+- BaseSimpleUrl
+- BroadcastMeetingPolicy
+- CallViaWorkPolicy
+- ClientPolicy
+- ClientUpdateOverridePolicy
+- ClientVersionPolicy
+- CloudMeetingOpsPolicy
+- CloudMeetingPolicy
+- CloudVideoInteropPolicy
+- ContactOptionFlags
+- CountryOrRegionDisplayName
+- Description
+- DistinguishedName
+- EnabledForRichPresence
+- ExchangeArchivingPolicy
+- ExchUserHoldPolicies
+- ExperiencePolicy
+- ExternalUserCommunicationPolicy
+- ExUmEnabled
+- Guid
+- HomeServer
+- HostedVoicemailPolicy
+- IPPBXSoftPhoneRoutingEnabled
+- IPPhone
+- IPPhonePolicy
+- IsByPassValidation
+- IsValid
+- LegalInterceptPolicy
+- LicenseRemovalTimestamp
+- LineServerURI
+- Manager
+- MNCReady
+- Name
+- NonPrimaryResource
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OnPremHideFromAddressLists
+- OriginalPreferredDataLocation
+- OriginatingServer
+- OriginatorSid
+- OverridePreferredDataLocation
+- PendingDeletion
+- PrivateLine
+- ProvisioningCounter
+- ProvisioningStamp
+- PublishingCounter
+- PublishingStamp
+- Puid
+- RemoteCallControlTelephonyEnabled
+- RemoteMachine
+- SamAccountName
+- ServiceInfo
+- StsRefreshTokensValidFrom
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SubProvisionLineType
+- SyncingCounter
+- TargetRegistrarPool
+- TargetServerIfMoving
+- TeamsInteropPolicy
+- ThumbnailPhoto
+- UpgradeRetryCounter
+- UserAccountControl
+- UserProvisionType
+- UserRoutingGroupId
+- VoicePolicy
+- XForestMovePolicy
+- AddressBookPolicy
+- GraphPolicy
+- PinPolicy
+- PreferredDataLocationOverwritePolicy
+- PresencePolicy
+- SmsServicePolicy
+- TeamsVoiceRoute
+- ThirdPartyVideoSystemPolicy
+- UserServicesPolicy
+- ConferencingPolicy
+- Id
+- Identity
+- MobilityPolicy
+- OnlineDialinConferencingPolicy
+- Sid
+- TeamsWorkLoadPolicy
+- VoiceRoutingPolicy
+- ClientUpdatePolicy
+- HomePhone
+- HostedVoiceMail
+- MobilePhone
+- OtherTelephone
+- StreetAddress
+- WebPage
+- AssignedLicenses
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- LicenseAssignmentStates
+- OnPremDomainName
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- CallerIdPolicy
+- Fax
+- LastName
+- Office
+- Phone
+- WindowsEmailAddress*
+
+*Attributes renamed/replaced:*
+- FirstName renamed to GivenName
+- DirSyncEnabled renamed to UserDirSyncEnabled
+- MCOValidationErrors renamed to UserValidationErrors
+
+*New User Attributes*
+
+FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed).
+
+*Deprecated parameters*
+
+LdapFilter has been deprecated due to low usage.
+
+*Changes in "-Filter" parameter*
+- Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats:
+  - AssignedPlans eq 'MCOEV' - For exact match
+  - AssignedPlans eq '*MCO*' - for contains checks.
+ 
+- EnterpriseVoiceEnabled filter
+  - EnterpriseVoiceEnabled eq true / false
+
+
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -99,8 +238,6 @@ PS C:\> Get-CsOnlineUser -Filter $filterString
 
 The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
 To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
-
-
 
 ## PARAMETERS
 
