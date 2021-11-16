@@ -15,9 +15,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a treatment for how calls to an unassigned number range should be routed.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
+
 ## SYNTAX
 
 ```powershell
