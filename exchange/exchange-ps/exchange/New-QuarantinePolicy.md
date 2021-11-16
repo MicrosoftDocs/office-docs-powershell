@@ -61,17 +61,6 @@ This example creates a new quarantine policy named ContosoTag with the same perm
 
 To assign Limited access permissions, use the value 106. To assign Full access permissions, use the value 236.
 
-### Example 2
-```powershell
-$LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
-
-New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissions $LimitedAccess
-```
-
-This example creates a new quarantine policy named LimitedAccess with the same permissions as Limited access preset permissions group.
-
-The first command uses the New-QuarantinePermissions cmdlet to store the permissions object in a variable. The second command uses the variable for the value of the EndUserQuarantinePermissions parameter.
-
 ## PARAMETERS
 
 ### -Name
