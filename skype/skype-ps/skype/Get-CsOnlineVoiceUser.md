@@ -36,7 +36,7 @@ Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicabl
   - Verb
   - ResultSize
 
-- LiscenceState 
+- LicenceState 
 
 ## EXAMPLES
 
