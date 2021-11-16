@@ -172,6 +172,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
+### [Get-ConfigAnalyzerPolicyRecommendation](Get-ConfigAnalyzerPolicyRecommendation.md)
+
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
@@ -220,6 +222,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
+### [Get-QuarantinePolicy](Get-QuarantinePolicy.md)
+
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
 ### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
@@ -251,6 +255,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
 
 ### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
+
+### [New-QuarantinePolicy](New-QuarantinePolicy.md)
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
@@ -287,6 +293,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
 
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
@@ -335,6 +343,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-MalwareFilterPolicy](Set-MalwareFilterPolicy.md)
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
+
+### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
 
@@ -2321,14 +2331,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SupervisoryReviewReport](Get-SupervisoryReviewReport.md)
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
-
-### [Get-TenantAnalyticsConfig](Get-TenantAnalyticsConfig.md)
-
-### [Get-UserAnalyticsConfig](Get-UserAnalyticsConfig.md)
-
-### [Set-TenantAnalyticsConfig](Set-TenantAnalyticsConfig.md)
-
-### [Set-UserAnalyticsConfig](Set-UserAnalyticsConfig.md)
 
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)

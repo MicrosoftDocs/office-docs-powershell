@@ -46,7 +46,7 @@ Connect-MicrosoftTeams
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
 > [!WARNING]
->If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is [necessary.](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)
+>If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is necessary.
 
 ## EXAMPLES
 
@@ -88,7 +88,7 @@ This example demonstrates how to sign in using AccessTokens. Admin can reterive 
 $graphtoken = #Get MSGraph Token for following for resource  "https://graph.microsoft.com" and scopes "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
 $teamstoken = #Get Teams resource token for resource id "48ac35b8-9aa8-4d74-927d-1f4a14a0b239" and scope "user_impersonation";
 
-Connect-MicrosoftTeams -AccessTokens @($graphtoken, $teamstoken) -AccountId $adminaccount
+Connect-MicrosoftTeams -AccessTokens @($graphtoken, $teamstoken)
 
 Account                 Environment 	Tenant                                TenantId                         
 -------                 -----------  ------------------------------------  ------------------------------------

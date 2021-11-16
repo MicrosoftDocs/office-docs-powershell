@@ -63,6 +63,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-HiddenFromExchangeClientsEnabled]
+ [-InformationBarrierMode <GroupInformationBarrierMode>]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -846,6 +847,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InformationBarrierMode
+The InformationBarrierMode parameter specifies the information barrier mode for the Microsoft 365 Group. Valid values are:
+
+- Explicit
+- Implicit
+- Open
+- OwnerModerated
+
+```yaml
+Type: GroupInformationBarrierMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Language
 The Language parameter specifies language preference for the Microsoft 365 Group.
 
@@ -1136,10 +1158,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionEnabled
-The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Microsoft 365 Group.
+The SubscriptionEnabled switch specifies whether the group owners can enable subscription to conversations and calendar events on the groups they own. This option can be set only in Exchange Online PowerShell.
 
 - To change the value to $true, use this switch without a value.
-- To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false.
+- To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false. The value of the AutoSubscribeNewMembers parameter must also be $false before you can use the value $false for this switch.
+
+**Note**: You should use the value $false for this parameter only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
 
 ```yaml
 Type: SwitchParameter

@@ -45,6 +45,7 @@ Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
  [-SenderIPAddresses <MultiValuedProperty>]
  [-TlsSenderCertificateName <TlsCertificate>]
  [-TreatMessagesAsInternal <Boolean>]
+ [-TrustedOrganizations <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -471,6 +472,22 @@ In hybrid environments, you don't need to use this parameter, because the Hybrid
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrustedOrganizations
+{{ Fill TrustedOrganizations Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

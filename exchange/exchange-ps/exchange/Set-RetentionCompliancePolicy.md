@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Microsoft 365 compliance center.
 
-**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-RetentionCompliancePolicy](https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy). 
+**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-RetentionCompliancePolicy](https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -475,8 +475,8 @@ The Applications parameter specifies the target when Microsoft 365 Groups are in
 
 - `Group:Exchange` for the mailbox that's connected to the Microsoft 365 Group.
 - `Group:SharePoint` for the SharePoint site that's connected to the Microsoft 365 Group.
-- `"Group:Exchange","Group:SharePoint"` for both the mailbox and the SharePoint site that are connected to the Microsoft 365 Group.
-- blank (`$null`): This is the default value, and is functionally equivalent to the value `"Group:Exchange","Group:SharePoint"`.
+- `"Group:Exchange,SharePoint"` for both the mailbox and the SharePoint site that are connected to the Microsoft 365 Group.
+- blank (`$null`): This is the default value, and is functionally equivalent to the value `"Group:Exchange,SharePoint"`.  To return to the default value of both the mailbox and SharePoint site for the selected Microsoft 365 groups, specify `"Group:Exchange,SharePoint"`.
 
 ```yaml
 Type: MultiValuedProperty

@@ -13,6 +13,12 @@ ms.reviewer:
 # Update-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Update-CsAutoAttendant](Update-CsAutoAttendant.md) cmdlet instead.
+
+
 Use Update-CsOrganizationalAutoAttendant cmdlet to force an update of resources associated with an Auto Attendant (AA) provisioning.
 
 ## SYNTAX

@@ -1088,8 +1088,8 @@ Accept wildcard characters: False
 ### -PopUseProtocolDefaults
 The PopUseProtocolDefaults parameter specifies whether to use the POP3 protocol defaults for the mailbox. Valid values are:
 
-- $true: Use the protocol defaults for IMAP4 access to the mailbox. This is the default value.
-- $false: Use custom protocol settings for IMAP4 access to the mailbox.
+- $true: Use the protocol defaults for POP3 access to the mailbox. This is the default value.
+- $false: Use custom protocol settings for POP3 access to the mailbox.
 
 You need to set this parameter to $false when you use any of following parameters:
 
