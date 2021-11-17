@@ -44,6 +44,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -500,6 +501,24 @@ Aliases:
 Applicable: Security & Compliance Center
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartSimulation
+Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
+
+- $true: Restart the simulation for updated results.
+- $false: This is the default value
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
