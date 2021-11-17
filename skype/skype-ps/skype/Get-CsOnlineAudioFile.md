@@ -14,9 +14,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns information about a specific or all uploaded audio files of a given application type.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
+
 ## SYNTAX
 
 ```powershell
