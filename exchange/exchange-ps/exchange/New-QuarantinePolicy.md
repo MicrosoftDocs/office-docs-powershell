@@ -61,17 +61,6 @@ This example creates a new quarantine policy named ContosoTag with the same perm
 
 To assign Limited access permissions, use the value 106. To assign Full access permissions, use the value 236.
 
-### Example 2
-```powershell
-$LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
-
-New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissions $LimitedAccess
-```
-
-This example creates a new quarantine policy named LimitedAccess with the same permissions as Limited access preset permissions group.
-
-The first command uses the New-QuarantinePermissions cmdlet to store the permissions object in a variable. The second command uses the variable for the value of the EndUserQuarantinePermissions parameter.
-
 ## PARAMETERS
 
 ### -Name
@@ -204,11 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy.
-
-A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
-
-Don't use this parameter with the EndUserQuarantinePermissionsValue parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: QuarantinePermissions
