@@ -1122,6 +1122,7 @@
   "Get-MailDetailTransportRuleReport": "reporting",
   "Get-MailFilterListReport": "reporting",
   "Get-MailflowStatusReport": "reporting",
+  "Get-MailTrafficEncryptionReport": "reporting",
   "Get-MailTrafficPolicyReport": "reporting",
   "Get-MailTrafficReport": "reporting",
   "Get-MailTrafficSummaryReport": "reporting",
