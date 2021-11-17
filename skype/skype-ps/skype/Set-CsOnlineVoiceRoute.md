@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible.
+A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible. The lowest priority will be applied first and then in ascendant order.
 
 ```yaml
 Type: Int32
