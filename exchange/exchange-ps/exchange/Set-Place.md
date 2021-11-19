@@ -250,8 +250,8 @@ Accept wildcard characters: False
 ### -GeoCoordinates
 The GeoCoordinates parameter specifies the room's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
-- Latitude and longitude: For example, "47,644125;-122,122411"
-- Latitude, longitude, and altitude: For example, "47,644125;-122,122411;161,432"
+- Latitude and longitude: For example, "47.644125;-122.122411"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161,432"
 
 ```yaml
 Type: GeoCoordinates
