@@ -68,6 +68,10 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
     ],
     "syncFrequencyInMin": 10,
     "designatedActorId": "5d5eaa2d-422c-4d4b-a2db-4cea80f98255",
+    "connectorAdminEmails": [
+        "test@abc.com",
+        "test2@abc.com"
+    ],
     "etag": "\"28007861-0000-0400-0000-60d3579b0000\""
 }
 ```
