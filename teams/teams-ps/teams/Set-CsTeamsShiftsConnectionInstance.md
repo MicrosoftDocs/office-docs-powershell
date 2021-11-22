@@ -338,7 +338,7 @@ Accept wildcard characters: False
 
 ### -ConnectorAdminsEmail
 
-The list of connector admin email addresses that receive result notification
+The list of connector admin email addresses that receive result notifications.
 
 ```yaml
 Type: String[]
