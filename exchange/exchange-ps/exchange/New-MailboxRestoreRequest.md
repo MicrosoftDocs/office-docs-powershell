@@ -509,6 +509,8 @@ The AllowLegacyDNMismatch switch specifies that the operation should continue if
 
 By default, this cmdlet checks to make sure that the LegacyExchangeDN on the source physical mailbox is present on the target user in the form of the LegacyExchangeDN or an X500 proxy address that corresponds to the LegacyExchangeDN. This check prevents you from accidentally restoring a source mailbox into the incorrect target mailbox.
 
+Note: This parameter is being deprecated in the cloud-based service. To complete a mailbox restore request you will need to obtain the source mailbox "legacyexchangeDN" value and add it to the target mailbox as an X500 proxy address.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
