@@ -34,6 +34,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-DomainController <Fqdn>]
@@ -341,6 +342,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -DefaultOnlineMeetingProvider
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultOnlineMeetingProvider Description }}
+
+```yaml
+Type: OnlineMeetingProviderType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultReminderTime
 The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
