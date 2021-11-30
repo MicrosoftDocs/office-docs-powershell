@@ -87,6 +87,10 @@ The FileData parameter specifies the location and file name of the picture or au
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
+A valid picture file is a JPEG file that's less than 10 kilobytes (KB).
+
+A valid audio file is a WMA 9 file that's less than 32 KB.
+
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
@@ -140,7 +144,7 @@ Accept wildcard characters: False
 ### -Picture
 The Picture switch specifies that the file you're importing is a picture file. You don't need to specify a value with this switch.
 
-The picture must be a JPEG file and shouldn't be larger than 10 kilobytes (KB). You can't use this switch with the SpokenName switch. You can only import one file type at a time.
+You can't use this switch with the SpokenName switch. You can only import one file type at a time.
 
 ```yaml
 Type: SwitchParameter
@@ -157,11 +161,6 @@ Accept wildcard characters: False
 
 ### -SpokenName
 The SpokenName switch specifies that the file you're importing is an audio file. You don't need to specify a value with this switch.
-
-The maximum file size should be less than 32 KB. You can use one of the following formats:
-
-- WMA 9-voice
-- PCM 8-KHz, 16-bits, mono format
 
 You can't use this switch with the Picture switch. You can only import one file type at a time.
 
