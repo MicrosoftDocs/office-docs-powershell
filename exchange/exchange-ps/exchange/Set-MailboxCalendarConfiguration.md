@@ -344,7 +344,24 @@ Accept wildcard characters: False
 ### -DefaultOnlineMeetingProvider
 This parameter is available only in the cloud-based service.
 
-{{ Fill DefaultOnlineMeetingProvider Description }}
+The DefaultOnlineMeetingProvider parameter specifies the default provider for online meetings. Valid values are:
+
+- AlibabaDingTalk
+- AmazonChimePrivate
+- AmazonChimePublic
+- AppleFacetime
+- BlueJeans
+- ClaroVideoconferencia
+- FacebookWorkplace
+- GoogleMeet
+- GoToMeeting
+- JioMeet
+- RingCentral
+- SkypeForBusiness
+- SkypeForConsumer
+- TeamsForBusiness (This is the default value.)
+- Webex
+- Zoom
 
 ```yaml
 Type: OnlineMeetingProviderType
