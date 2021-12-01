@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-maildetailencryptionreport
 applicable: Exchange Online, Security & Compliance Center
-title: Get-MailTrafficEncryptionReport
+title: Get-MailDetailEncryptionReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
