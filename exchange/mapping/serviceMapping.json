@@ -1117,6 +1117,7 @@
   "Get-MailboxUsageDetailReport": "reporting",
   "Get-MailboxUsageReport": "reporting",
   "Get-MailDetailDlpPolicyReport": "reporting",
+  "Get-MailDetailEncryptionReport": "reporting",
   "Get-MailDetailMalwareReport": "reporting",
   "Get-MailDetailSpamReport": "reporting",
   "Get-MailDetailTransportRuleReport": "reporting",

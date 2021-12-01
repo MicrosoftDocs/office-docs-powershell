@@ -2268,6 +2268,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
 
+### [Get-MailDetailEncryptionReport](Get-MailDetailEncryptionReport.md)
+
 ### [Get-MailDetailMalwareReport](Get-MailDetailMalwareReport.md)
 
 ### [Get-MailDetailSpamReport](Get-MailDetailSpamReport.md)
