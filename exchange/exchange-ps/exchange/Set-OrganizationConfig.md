@@ -81,7 +81,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
- [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeLockPollForAttendeesEnabled <Boolean>]
@@ -3058,7 +3057,7 @@ The SendFromAliasEnabled parameter allows mailbox users to send messages using a
 - $true: Aliases on messages will no longer be rewritten to their primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases.
 - $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
-For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=64123).
+For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Outlook&searchterms=64123).
 
 ```yaml
 Type: Boolean
@@ -3320,3 +3319,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/set-organizationconfig)

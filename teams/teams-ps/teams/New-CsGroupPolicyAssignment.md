@@ -28,7 +28,7 @@ The group policy assignment rank is set at the time a policy is assigned to a gr
 
 Once a group policy assignment is created, the policy assignment will be propagated to the members of the group, including users that are added to the group after the assignment was created. Propagation time of the initial policy assignments to members of the group varies based on the number of users in the group. Propagation time for subsequent group membership changes also varies based on the number of users being added or removed from the group. For large groups, propagation to all members may take 24 hours or more. When using group policy assignment, the recommended maximum group membership size is 50,000 users per group.
 
-> [!NOTES]
+> [!NOTE]
 > - Group policy assignment support is available only for the following policy types:
 TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
 > - A given policy type can be assigned to at most 64 groups, across policy instances for that type.
