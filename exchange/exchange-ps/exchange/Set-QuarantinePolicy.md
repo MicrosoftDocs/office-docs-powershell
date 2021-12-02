@@ -70,14 +70,6 @@ This example configures the following permissions in the quarantine policy named
 
 ### Example 2
 ```powershell
-$Perms = New-QuarantinePermissions -PermissionToDelete $true
-Set-QuarantinePolicy -Identity CustomAccess -EndUserQuarantinePermissions $Perms
-```
-
-This example has the same result as the previous example, but uses the EndUserQuarantinePermissions parameter instead.
-
-### Example 3
-```powershell
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('English','ChineseSimplified','French') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','有关更多信息，请联系服务台','Pour plus d'informations, contactez le service d'assistance.') -MultiLanguageSenderName ('Contoso administrator','Contoso管理员','Administrateur Contoso') -OrganizationBrandingEnabled $true
 ```
 
@@ -225,9 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
-
-Don't use this parameter with the EndUserQuarantinePermissionsValue parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: QuarantinePermissions
