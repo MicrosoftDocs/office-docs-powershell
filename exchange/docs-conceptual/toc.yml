@@ -30,9 +30,6 @@
       items:
         - name: About the Exchange Online PowerShell V2 module
           href: exchange-online-powershell-v2.md
-          items:
-            - name: About the 2.0.6 Preview version
-              href: exo-v2-module-2-0-6-preview.md
         - name: Connect to Exchange Online PowerShell - modern auth and MFA
           href: connect-to-exchange-online-powershell.md
         - name: Enable or disable access to Exchange Online PowerShell
