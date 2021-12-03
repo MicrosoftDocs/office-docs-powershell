@@ -61,8 +61,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
 
-### [Get-AdvancedThreatProtectionTrafficReport](Get-AdvancedThreatProtectionTrafficReport.md)
-
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
@@ -90,8 +88,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
 
 ### [Get-SpoofMailReport](Get-SpoofMailReport.md)
-
-### [Get-UrlTrace](Get-UrlTrace.md)
 
 ### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
 
@@ -2267,10 +2263,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailboxUsageReport](Get-MailboxUsageReport.md)
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
-
-### [Get-MailDetailMalwareReport](Get-MailDetailMalwareReport.md)
-
-### [Get-MailDetailSpamReport](Get-MailDetailSpamReport.md)
 
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
