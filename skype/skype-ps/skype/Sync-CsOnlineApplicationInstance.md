@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/sync-csonlineapplicationinstance
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Sync-CsOnlineApplicationInstance
 schema: 2.0.0
 author: xixian73
@@ -56,12 +56,14 @@ The application instance ID.
 
 ```yaml
 Type: System.Guid
-Required: True
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Skype for Business Online
 ```
 
 ### -Force
