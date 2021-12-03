@@ -61,10 +61,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-MailDetailEncryptionReport -StartDate 12/13/2021 -EndDate 12/15/2021
 ```
 
-{{ Add example description here }}
+This example retrieves encryption details for messages between December 13, 2021 and December 15, 2021.
 
 ## PARAMETERS
 
