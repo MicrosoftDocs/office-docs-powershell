@@ -18,7 +18,8 @@ Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance
 ## SYNTAX
 
 ```
-Sync-CsOnlineApplicationInstance [-ObjectId <guid>] [-Tenant <Guid>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Sync-CsOnlineApplicationInstance [-CallbackUri <String>] [-ObjectId <System.Guid>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +36,21 @@ This example sync application instance with object id "00000000-0000-0000-0000-0
 
 ## PARAMETERS
 
+### -CallbackUri
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ObjectId
 The application instance ID.
 
@@ -48,16 +64,50 @@ Accept wildcard characters: False
 Applicable: Skype for Business Online
 ```
 
-### -Tenant
-The Tenant ID.
+### -Force
+This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Skype for Business Online
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters
