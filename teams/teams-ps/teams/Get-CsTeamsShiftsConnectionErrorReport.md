@@ -47,7 +47,7 @@ Returns the list of all the error reports.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionErrorReport -Id 18b3e490-e6ed-4c2e-9925-47e36609dff3
+PS C:\> Get-CsTeamsShiftsConnectionErrorReport -ErrorReportId 18b3e490-e6ed-4c2e-9925-47e36609dff3
 ```
 ```output
 Code             CreatedAt              Culture Id                                   IntermediateIncident Message                                         Operation          Parameter  Procedure ResolvedAt RevisitIntervalInMinute Revisit
@@ -60,7 +60,7 @@ Returns the error report with ID `18b3e490-e6ed-4c2e-9925-47e36609dff3`.
 
 ## PARAMETERS
 
-### -Id
+### -ErrorReportId
 
 The ID of the error report.
 
