@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailEncryptionReport cmdlet to view the details of encryption in your cloud-based organization for the last 92 days.
+Use the Get-MailDetailEncryptionReport cmdlet to view the details of encryption in your cloud-based organization for the last 10 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
