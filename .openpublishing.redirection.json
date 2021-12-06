@@ -282,7 +282,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/advanced-threat-protection/Get-AdvancedThreatProtectionTrafficReport.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#reporting",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport",
       "redirect_document_id": false
     },
     {
@@ -342,7 +342,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/advanced-threat-protection/Get-UrlTrace.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#reporting",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-safelinksaggregatereport",
       "redirect_document_id": false
     },
     {
@@ -5247,12 +5247,12 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-MailDetailMalwareReport.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#reporting",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-MailDetailSpamReport.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#reporting",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport",
       "redirect_document_id": false
     },
     {
