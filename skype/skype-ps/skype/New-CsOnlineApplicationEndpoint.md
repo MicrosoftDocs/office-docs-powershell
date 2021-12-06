@@ -11,12 +11,13 @@ ms.reviewer:
 ---
 
 # New-CsOnlineApplicationEndpoint
+
+## SYNOPSIS
 > [!CAUTION]
 > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
 > 
 > Please use the [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md) cmdlet instead.
 
-## SYNOPSIS
 The `New-CsOnlineApplicationEndpoint` creates a Trusted Application Endpoint for a tenant.
 
 ## SYNTAX
