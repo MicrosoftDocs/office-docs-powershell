@@ -1119,7 +1119,6 @@
   "Get-MailFilterListReport": "reporting",
   "Get-MailflowStatusReport": "reporting",
   "Get-MailTrafficPolicyReport": "reporting",
-  "Get-MailTrafficReport": "reporting",
   "Get-MailTrafficSummaryReport": "reporting",
   "Get-MailTrafficTopReport": "reporting",
   "Get-MxRecordReport": "reporting",
