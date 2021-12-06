@@ -12,9 +12,11 @@ ms.reviewer:
 # Test-Message
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available or functional only in the cloud-based service.
 
-Use the Test-Message cmdlet to simulate and report on the effects of mail flow rules (transport rules) and unified DLP rules on test email messages.
+Use the Test-Message cmdlet to simulate and report on the effects of mail flow rules (transport rules) and unified DLP rules on test email messages. Because this cmdlet introduces email into the DLP evaluation pipeline, actions such as Block, Moderate, etc. can take place on the test message. Related notifications will also be sent to any configured recipients.
+
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -277,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-inappropriate. You don't need to specify a value with this switch.
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
