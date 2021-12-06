@@ -15,7 +15,7 @@ schema: 2.0.0
 
 **Note:** This cmdlet is currently in private preview.
 
-This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
+This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md).
 
 ## SYNTAX
 
