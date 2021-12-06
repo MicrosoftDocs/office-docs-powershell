@@ -18,11 +18,11 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 ## SYNTAX
 
 ```
-New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Fqdn <String>] [-SipSignalingPort <Int32>]
- [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
+New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Description <String>] [-Fqdn <String>] [-SipSignalingPort <Int32>]
+ [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverResponseCodes <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
  [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
- [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>]  
+ [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-GatewayLbrEnabledUserOverride <Boolean>] [-BypassMode <String>]  
  [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
  [-OutboundTeamsNumberTranslationRules <String>] [-OutboundPSTNNumberTranslationRules <String>] [-PidfloSupported <Boolean>]  
  [-MediaRelayRoutingLocationOverride <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -79,6 +79,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+Free-format string to describe the gateway.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Enabled
 Used to enable this SBC for outbound calls. Can be used to temporarily remove the SBC from service while it is being updated or during maintenance. Note if the parameter is not set the SBC will be created as disabled (default value -Enabled $false).
 
@@ -105,6 +120,24 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FailoverResponseCodes
+If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call
+from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing
+on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone
+System Direct Routing" documentation.
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: 408, 503, 504
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -180,6 +213,54 @@ Applicable: Skype for Business Online
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteId
+PSTN Gateway Site Id.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteLbrEnabled
+Used to enable this SBC to report assigned site location. Site location is used for Location Based Routing. When this parameter is enabled ($True), the SBC will report the site
+name as defined by the tenant administrator. On an incoming call to a Teams user the value of the site assigned to the SBC is compared with the value of the site assigned to
+the user to make a routing decision. The parameter is mandatory for enabling Location Based Routing feature. The default value is False ($False).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewayLbrEnabledUserOverride
+Allow an LBR enabled user working from a network site outside the corporate network, i.e. a network site not configured using tenant network site - typically when working from
+home, to make outbound PSTN calls  via an LBR enabled gateway. The default value is False.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -260,50 +341,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FailoverResponseCodes
-If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone System Direct Routing" documentation.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: 408, 503, 504
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GatewaySiteId
-PSTN Gateway Site Id.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GatewaySiteLbrEnabled
-Used to enable this SBC to report assigned site location. Site location is used for Location Based Routing. When this parameter is enabled ($True), the SBC will report the site name as defined by the tenant administrator. On an incoming call to a Teams user the value of the site assigned to the SBC is compared with the value of the site assigned to the user to make a routing decision. The parameter is mandatory for enabling Location Based Routing feature. The default value is False ($False).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: $false
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -SendSipOptions
 Defines if an SBC will or will not send SIP Options messages. If disabled, the SBC will be excluded from the Monitoring and Alerting system. We highly recommend that you enable SIP Options. The default value is True.
