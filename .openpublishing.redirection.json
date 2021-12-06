@@ -6626,42 +6626,42 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Get-TenantAnalyticsConfig.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-TenantAnalyticsConfig.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Set-TenantAnalyticsConfig.md",
+      "source_path": "exchange/virtual-folder/exchange/Set-TenantAnalyticsConfig.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Get-UserAnalyticsConfig.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-UserAnalyticsConfig.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Set-UserAnalyticsConfig.md",
+      "source_path": "exchange/virtual-folder/exchange/Set-UserAnalyticsConfig.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Get-MailDetailMalwareReport.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-MailDetailMalwareReport.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Get-MailDetailSpamReport.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-MailDetailSpamReport.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Get-AdvancedThreatProtectionTrafficReport.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionTrafficReport.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport",
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/exchange-ps/exchange/Get-UrlTrace.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-UrlTrace.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-safelinksaggregatereport",
       "redirect_document_id": false
     }
