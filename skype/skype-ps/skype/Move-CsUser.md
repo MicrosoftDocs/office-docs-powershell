@@ -49,7 +49,7 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 
 > [!NOTE]
 >
-> - If you are using Skype for Business Server 2015 with CU8 up to CU11, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2015 CU12, Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
+> - Moving users between your on-premises deployment and Teams now *requires* the OAuth authentication protocol. Previously OAuth was recommended but not required.  Skype for Business Server 2019 and Skype for Business Server 2015 CU12 (KB 3061064) already require OAuth. If you are using Skype for Business Server 2015 with CU8 up to CU11, you must pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, or preferably upgrade to CU12. If you are using a version of Skype for Business Server 2015 prior to CU8, you must upgrade to CU12 or later.  If you are using Lync Server 2013, you must first upgrade to Lync Server 2013 Cumulative Update 10 Hotfix 5 (KB 2809243) or later.
 > - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details. 
 > - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential paremeter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 ### -UseOAuth
 
-This switch is only relevant for Skype for Business Server 2015 with CU8 up to CU11.  When using those versions, if this switch is specified, authentication between on-premises and the host migration service is based on OAuth protocol. Otherwise, authentication when using those version is based on legacy LiveID authentication. In Skype for Business Server 2019 and later versions as well as Skype for Business Server 2015 CU12 and later, OAuth is always used hence the switch is not relevant on those versions.
+This switch is only relevant for Skype for Business Server 2015 with CU8 up to CU11.  When using those versions, this switch is now *required*. It ensures authentication between on-premises and the host migration service is based on OAuth protocol. In Skype for Business Server 2019 as well as Skype for Business Server 2015 CU12 and later, OAuth is always used hence the switch is not relevant on those versions.
 
 ```yaml
 Type: SwitchParameter
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -BypassAudioConferencingCheck
 
-By default, if the on-premise user is configured for dial in conferencing, moving the user to Office 365 will provision the user for Audio Conferencing, for an additional license is required. If you want to move such a user to Office 365 but do not want to configure them for Audio Conferencing, specify this switch to by-pass the license check. This parameter is only available with Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
+This parameter has been deprecated and should not be used.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -BypassEnterpriseVoiceCheck
 
-By default, if the on-premise user is configured for Enterprise Voice, moving the user to Office 365 will provision the user for Microsoft Phone System, for an additional license is required. If you want to move such a user to Office 365 but do not want to configure them for Phone System, specify this switch to by-pass the license check. This parameter is only available with Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
+This parameter has been deprecated and should not be used.
 
 ```yaml
 Type: SwitchParameter
