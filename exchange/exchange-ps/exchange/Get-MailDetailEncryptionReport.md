@@ -1,22 +1,20 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-maildetailmalwarereport
-applicable: Exchange Online, Exchange Online Protection
-title: Get-MailDetailMalwareReport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-maildetailencryptionreport
+applicable: Exchange Online, Security & Compliance Center
+title: Get-MailDetailEncryptionReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-MailDetailMalwareReport
+# Get-MailDetailEncryptionReport
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-This cmdlet will be deprecated. Use the **Get-MailDetailATPReport** cmdlet instead.
-
-Use the Get-MailDetailMalwareReport cmdlet to view the details of messages that contained malware for the last 10 days.
+Use the Get-MailDetailEncryptionReport cmdlet to view the details of encryption in your cloud-based organization for the last 10 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -25,47 +23,59 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailDetailMalwareReport [-Action <MultiValuedProperty>]
+Get-MailDetailEncryptionReport
+ [-AggregateBy <String>]
  [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
- [-EndDate <DateTime>]
+ [-EndDate <System.DateTime>]
  [-EventType <MultiValuedProperty>]
- [-MalwareName <MultiValuedProperty>]
  [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
- [-RecipientAddress <MultiValuedProperty>]
- [-SenderAddress <MultiValuedProperty>]
- [-StartDate <DateTime>]
+ [-StartDate <System.DateTime>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+For the reporting period you specify, the cmdlet returns the following default information:
+
+- DateTime
+- Message ID
+- Message Trace ID
+
+If you append the command with ` | Format-List`, the following additional information is returned:
+
+- Domain
+- Direction
+- Recipient Address
+- Sender IP
+- Sender Address
+- Message Size
+- Subject
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-MailDetailMalwareReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
+Get-MailDetailEncryptionReport -StartDate 12/13/2021 -EndDate 12/15/2021
 ```
 
-This example retrieves the details of messages sent by john@contoso.com that contained malware between June 13, 2015 and June 15, 2015.
+This example retrieves encryption details for messages between December 13, 2021 and December 15, 2021.
 
 ## PARAMETERS
 
-### -Action
-The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
-
-You can specify multiple values separated by commas.
+### -AggregateBy
+The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day, or Summary. The default value is Day.
 
 ```yaml
-Type: MultiValuedProperty
+Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -81,7 +91,7 @@ The Direction parameter filters the results by incoming or outgoing messages. Va
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -97,12 +107,12 @@ The Domain parameter filters the results by an accepted domain in the cloud-base
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -112,10 +122,10 @@ The EndDate parameter specifies the end date of the date range.
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -127,11 +137,10 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- AdvancedProtectionMalware
-- AtpGoodMail
-- Malware
+- EncryptionManual
+- EncryptionPolicy
 
-To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware events types for malware reports.
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type must correspond to the report.
 
 You can specify multiple values separated by commas.
 
@@ -139,23 +148,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MalwareName
-The MalwareName parameter filters the report by the name of the malware. You can specify multiple values separated by commas. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -167,11 +160,13 @@ Accept wildcard characters: False
 ### -MessageId
 The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
+You can specify multiple values separated by commas.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -181,13 +176,15 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
+
+You can specify ultiple values separate by commas.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -203,7 +200,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -219,7 +216,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -235,39 +232,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SenderAddress
-The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -282,10 +247,10 @@ The StartDate parameter specifies the start date of the date range.
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -300,12 +265,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

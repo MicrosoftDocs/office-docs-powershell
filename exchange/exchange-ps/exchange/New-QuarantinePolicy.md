@@ -59,7 +59,7 @@ New-QuarantinePolicy -Name ContosoTag -EndUserQuarantinePermissionsValue 0
 
 This example creates a new quarantine policy named ContosoTag with the same permissions as the No access preset permissions group.
 
-To assign Limited access permissions, use the value 106. To assign Full access permissions, use the value 236.
+To assign Limited access permissions, use the value 27. To assign Full access permissions, use the value 23.
 
 ## PARAMETERS
 
@@ -211,22 +211,22 @@ Accept wildcard characters: False
 ### -EndUserQuarantinePermissionsValue
 The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy.
 
-This parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
+This parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list from highest (1000000 or 128) to lowest (00000001 or 1):
 
-- PermissionToAllowSender
+- PermissionToViewHeader: The value 0 doesn't hide the **View message header** button in the details of the quarantined message.
+- PermissionToDownload: This setting is not used (the value 0 or 1 does nothing).
+- PermissionToAllowSender: This setting is not used (the value 0 or 1 does nothing).
 - PermissionToBlockSender
-- PermissionToDelete
-- PermissionToDownload: Currently, this value is always 0.
-- PermissionToPreview
-- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
 - PermissionToRequestRelease: Don't set this permission and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
-- PermissionToViewHeader: Currently, this value is always 0, and doesn't hide the **View message header** button in the details of the quarantined message.
+- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
+- PermissionToPreview
+- PermissionToDelete
 
 The values for the preset end-user permission groups are described in the following list:
 
 - No access: Binary = 0000000, so use the decimal value 0.
-- Limited access: Binary = 01101010, so use the decimal value 106.
-- Full access: Binary = 11101100, so use the decimal value 236.
+- Limited access: Binary = 00011011, so use the decimal value 27.
+- Full access: Binary = 00010111, so use the decimal value 23.
 
 For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use.
 
