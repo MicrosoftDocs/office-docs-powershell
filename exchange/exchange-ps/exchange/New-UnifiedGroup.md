@@ -472,7 +472,9 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in the cloud-based service.
+
+The MailboxRegion parameter specifies the preferred data location (PDL) for the Microsoft 365 Group in multi-geo environments.
 
 ```yaml
 Type: String
