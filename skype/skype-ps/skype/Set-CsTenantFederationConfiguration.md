@@ -185,6 +185,7 @@ Accept wildcard characters: False
 ```
 ### -AllowTeamsConsumer
 Allows federation with people using Teams with an account that's not managed by an organization.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
