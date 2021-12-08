@@ -18,7 +18,7 @@ This cmdlet enqueues the clear schedule message.
 
 ## SYNTAX
 ```
-Remove-CsTeamsShiftsScheduleRecord -TeamId <string> -DateRangeStartDate <string> -DateRangeEndDate <string> -ClearSchedulingGroup <bool> -EntityType <string[]> -DesignatedActorId <string> [<CommonParameters>]
+Remove-CsTeamsShiftsScheduleRecord -TeamId <String> [[-DateRangeStartDate] <String>] -DateRangeEndDate <String> -ClearSchedulingGroup <Bool> -EntityType <String[]> [[-DesignatedActorId] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +31,7 @@ This cmdlet sends a request of removing Shifts schedule with specified time rang
 PS C:\> Remove-CsTeamsShiftsScheduleRecord -TeamId "eddc3b94-21d5-4ef0-a76a-2e4d632e50be" -DateRangeStartDate "2021-09-30T00:00:00" -DateRangeEndDate "2021-10-01T00:00:00" -ClearSchedulingGroup:$false -EntityType "swapRequest", "openShiftRequest" -DesignatedActorId "683af6f2-4f72-4770-b8e1-4ec31836156ad"
 ```
 
-Removes the Shifts schedule record of swapReqeust and openShiftRequest scenarios in the team with ID `eddc3b94-21d5-4ef0-a76a-2e4d632e50be` from 09/30/2021 to 10/01/2021.
+Removes the Shifts schedule record of swapRequest and openShiftRequest scenarios in the team with ID `eddc3b94-21d5-4ef0-a76a-2e4d632e50be` from 09/30/2021 to 10/01/2021.
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -103,7 +103,7 @@ Type: String[]
 Parameter Sets: RemoveExpanded
 Aliases:
 Applicable: Microsoft Teams
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -118,7 +118,7 @@ Type: String
 Parameter Sets: RemoveExpanded
 Aliases:
 Applicable: Microsoft Teams
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,6 +133,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+The parameters of start time, end time and designated actor ID are optional only when removing the schedule record of a linked team.
 
 ## RELATED LINKS
 
