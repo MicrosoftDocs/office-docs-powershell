@@ -34,9 +34,9 @@ This cmdlet returns the details of a specific batch team mapping operation.
 PS C:\> Get-CsTeamsShiftsConnectionOperation -OperationId c79131b7-9ecb-484b-a8df-2959c7c1e5f2
 ```
 ```output
-CreatedDateTime      LastActionDateTime   OperationId Status     TenantId                             Type                  WfmConnectorInstanceId
----------------      ------------------   ----------- ------     --------                             ----                  ----------------------
-12/6/2021 7:28:51 PM 12/6/2021 7:28:51 PM             NotStarted dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a TeamsMappingOperation WCI-2afeb8ec-a0f6-4580-8f1e-85fd4a113e01
+CreatedDateTime      LastActionDateTime   OperationId                                     Status     TenantId                             Type                  WfmConnectorInstanceId
+---------------      ------------------   -----------                                     ------     --------                             ----                  ----------------------
+12/6/2021 7:28:51 PM 12/6/2021 7:28:51 PM c79131b7-9ecb-484b-a8df-2959c7c1e5f2            NotStarted dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a TeamsMappingOperation WCI-2afeb8ec-a0f6-4580-8f1e-85fd4a113e01
 ```
 
 Returns the details of batch mapping operation with ID `c79131b7-9ecb-484b-a8df-2959c7c1e5f2`.
