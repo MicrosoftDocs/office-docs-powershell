@@ -61,8 +61,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
 
-### [Get-AdvancedThreatProtectionTrafficReport](Get-AdvancedThreatProtectionTrafficReport.md)
-
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
@@ -90,8 +88,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
 
 ### [Get-SpoofMailReport](Get-SpoofMailReport.md)
-
-### [Get-UrlTrace](Get-UrlTrace.md)
 
 ### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
 
@@ -2268,15 +2264,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
 
-### [Get-MailDetailMalwareReport](Get-MailDetailMalwareReport.md)
-
-### [Get-MailDetailSpamReport](Get-MailDetailSpamReport.md)
+### [Get-MailDetailEncryptionReport](Get-MailDetailEncryptionReport.md)
 
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
 ### [Get-MailFilterListReport](Get-MailFilterListReport.md)
 
 ### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
+
+### [Get-MailTrafficEncryptionReport](Get-MailTrafficEncryptionReport.md)
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 
@@ -2331,6 +2327,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SupervisoryReviewReport](Get-SupervisoryReviewReport.md)
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
+
+### [Test-Message](Test-Message.md]
 
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
