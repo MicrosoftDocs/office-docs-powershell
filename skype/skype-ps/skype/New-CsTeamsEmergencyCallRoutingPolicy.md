@@ -29,7 +29,7 @@ New-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 
 ### Example 1
 ```powershell
-PS C:>  $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local" -CarrierProfile "Local"
+PS C:>  $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local"
 New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
 ```
 
