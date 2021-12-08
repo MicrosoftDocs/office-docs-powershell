@@ -20,7 +20,7 @@ This cmdlet gets the requested batch mapping operation. The batch mapping operat
 ## SYNTAX
 
 ```
-Get-CsTeamsShiftsConnectionOperation -OperationId <String> [<CommonParameters>]
+Get-CsTeamsShiftsConnectionOperation -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,10 +31,10 @@ This cmdlet returns the details of a specific batch team mapping operation.
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionOperation -OperationId c79131b7-9ecb-484b-a8df-2959c7c1e5f2
+PS C:\> Get-CsTeamsShiftsConnectionOperation -Id c79131b7-9ecb-484b-a8df-2959c7c1e5f2
 ```
 ```output
-CreatedDateTime      LastActionDateTime   OperationId                                     Status     TenantId                             Type                  WfmConnectorInstanceId
+CreatedDateTime      LastActionDateTime   Id                                     Status     TenantId                             Type                  WfmConnectorInstanceId
 ---------------      ------------------   -----------                                     ------     --------                             ----                  ----------------------
 12/6/2021 7:28:51 PM 12/6/2021 7:28:51 PM c79131b7-9ecb-484b-a8df-2959c7c1e5f2            NotStarted dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a TeamsMappingOperation WCI-2afeb8ec-a0f6-4580-8f1e-85fd4a113e01
 ```
@@ -43,7 +43,7 @@ Returns the details of batch mapping operation with ID `c79131b7-9ecb-484b-a8df-
 
 ## PARAMETERS
 
-### -OperationId
+### -Id
 
 The ID of the batch mapping operation.
 
