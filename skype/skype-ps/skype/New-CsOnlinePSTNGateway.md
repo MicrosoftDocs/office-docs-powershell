@@ -133,7 +133,7 @@ System Direct Routing" documentation.
 Setting this parameter overwrites the default values, so if you want to include the default values, please add them to string.
 
 ```yaml
-Type: Int
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
