@@ -15,7 +15,7 @@ ms.reviewer: rogupta
 
 Enables you to create a new external access policy.
 
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; and, 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype.
+External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services](/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype; and, 5) communicate with people who are using Teams with an account that's not managed by an organization.
 
 This cmdlet was introduced in Lync Server 2010.
 
@@ -26,8 +26,9 @@ For information about external access in Microsoft Teams, see [Manage external a
 ```powershell
 New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
+ [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+
 ```
 
 ## DESCRIPTION
@@ -53,6 +54,9 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
 4.
 Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
+
+5.
+(Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting. 
 
 When you install Skype for Business Server, a global external access policy is automatically created for you.
 In addition to the global policy, you can also create custom external access policies at either the site or the per-user scope.
@@ -86,7 +90,14 @@ New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed  -EnableAcsFederati
 
 In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.
 
-### -------------------------- EXAMPLE 3 -------------------------- 
+### -------------------------- Example 3 ------------------------
+```
+New-CsExternalAccessPolicy -Identity site:Redmond -EnableTeamsConsumerAccess $True -EnableTeamsConsumerInbound $False
+```
+The command shown in Example 3 creates a new external access policy that has the Identity site:Redmond; upon creation, this policy will automatically be assigned to the Redmond site.
+Note that this new policy enables communication with people using Teams with an account that's not managed by an organization and limits this to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people with this policy assigned.
+
+### -------------------------- EXAMPLE 4 -------------------------- 
 ```
 $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
@@ -99,7 +110,7 @@ $x.EnableOutsideAccess = $True
 Set-CsExternalAccessPolicy -Instance $x
 ```
 
-Example 3 demonstrates the use of the InMemory parameter; this parameter enables you to create an in-memory-only instance of an external access policy.
+Example 4 demonstrates the use of the InMemory parameter; this parameter enables you to create an in-memory-only instance of an external access policy.
 After it has been created, you can modify the in-memory-only instance, then use the Set-CsExternalAccessPolicy cmdlet to transform the virtual policy into a real external access policy.
 
 To do this, the first command in the example uses the New-CsExternalAccessPolicy cmdlet and the InMemory parameter to create a virtual policy with the Identity RedmondAccessPolicy; this virtual policy is stored in a variable named $x.
@@ -154,7 +165,7 @@ Accept wildcard characters: False
 ### -EnableFederationAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
-The default value is False.
+The default value is True.
 
 ```yaml
 Type: Boolean
@@ -164,7 +175,50 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -EnableTeamsConsumerAccess
+(Microsoft Teams Only) Indicates whether the user is allowed to communicate with people who have who are using Teams with an account that's not managed by an organization.
+
+To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
+
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+The default value is True.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTeamsConsumerInbound
+(Microsoft Teams Only) Indicates whether the user is allowed to be discoverable by people who are using Teams with an account that's not managed by an organization. It also controls if people who have who are using Teams with an account that's not managed by an organization can start the communication with the user.
+
+To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
+
+Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+The default value is True.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
