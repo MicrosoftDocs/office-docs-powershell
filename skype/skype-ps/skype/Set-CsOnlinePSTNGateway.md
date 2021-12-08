@@ -100,10 +100,10 @@ Direct Routing -> SBC -> Telephony network) the call is considered completed by 
 Setting the SIP codes in this parameter forces Direct Routing on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user).
 Please find more in "Reference" section of "Phone System Direct Routing" documentation
 
-Setting this parameter overwrites the default values, so if you want to include the default values, please add them to string string.
+Setting this parameter overwrites the default values, so if you want to include the default values, please add them to string.
 
 ```yaml
-Type: Int
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
