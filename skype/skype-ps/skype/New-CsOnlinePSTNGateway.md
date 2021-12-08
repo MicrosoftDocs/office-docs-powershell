@@ -130,7 +130,7 @@ from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routin
 on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone
 System Direct Routing" documentation.
 
-Setting this parameter overwrites the default values, so if you want to include the default values, please add them to string string.
+Setting this parameter overwrites the default values, so if you want to include the default values, please add them to string.
 
 ```yaml
 Type: Int
