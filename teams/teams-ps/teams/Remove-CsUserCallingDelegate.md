@@ -42,8 +42,6 @@ This example shows removing the delegate user2@contoso.com.
 ### -Delegate
 The Identity of the delegate to remove. Can be specified using the ObjectId, the SIP address or the e-mail address.
 
-A user can have up to 25 delegates.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
