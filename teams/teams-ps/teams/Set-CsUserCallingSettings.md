@@ -32,7 +32,7 @@ Set-CsUserCallingSettings -Identity <String> -IsForwardingEnabled <Boolean> [<Co
 
 ### Forwarding
 ```powershell
-Set-CsUserCallingSettings -Identity <String> -IsForwardingEnabled <Boolean> -ForwardingType <String> -ForwardingTarget <String> -ForwardingTargetType <String> [<CommonParameters>]
+Set-CsUserCallingSettings -Identity <String> -IsForwardingEnabled <Boolean> -ForwardingType <String> [-ForwardingTarget <String>] -ForwardingTargetType <String> [<CommonParameters>]
 ```
 
 ### UnansweredOnOff
@@ -42,7 +42,7 @@ Set-CsUserCallingSettings -Identity <String> -IsUnansweredEnabled <Boolean> [<Co
 
 ### Unanswered
 ```powershell
-Set-CsUserCallingSettings -Identity <String> -IsUnansweredEnabled <Boolean> -UnansweredTarget <String> -UnansweredTargetType <String> -UnansweredDelay <String> [<CommonParameters>]
+Set-CsUserCallingSettings -Identity <String> -IsUnansweredEnabled <Boolean> [-UnansweredTarget <String>] -UnansweredTargetType <String> -UnansweredDelay <String> [<CommonParameters>]
 ```
 
 ### CallGroup
