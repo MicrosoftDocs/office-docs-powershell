@@ -41,7 +41,7 @@ Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <Mai
 
 ### ResetDelegateUserCollection
 ```
-Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDelegateUserCollection]
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDefault]
  [-Confirm]
  [-Force]
  [-SendNotificationToUser <Boolean>]
@@ -65,7 +65,7 @@ This example removes John's permissions to the Training folder in Kim's mailbox.
 
 ### Example 2
 ```powershell
-Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
+Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDefault
 ```
 
 This example will clear any corrupted delegate information from Kim's mailbox.
@@ -179,10 +179,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResetDelegateUserCollection
+### -ResetDefault
 This parameter is available only in the cloud-based service.
 
-The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when trying to add, change, or remove delegate permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
+The ResetDefault switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when trying to add, change, or remove delegate permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
 
 ```yaml
 Type: SwitchParameter
