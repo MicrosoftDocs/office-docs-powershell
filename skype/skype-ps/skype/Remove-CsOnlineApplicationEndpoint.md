@@ -13,6 +13,9 @@ ms.reviewer:
 # Remove-CsOnlineApplicationEndpoint
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+
 The `Remove-CsOnlineApplicationEndpoint` is used to remove a Trusted Application Endpoint for a tenant.
 
 ## SYNTAX
