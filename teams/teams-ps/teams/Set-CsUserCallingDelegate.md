@@ -38,7 +38,7 @@ This example shows setting the permissions for user1@contoso.com's delegate user
 
 ### Example 2
 ```powershell
-Set-CsUserCallingSettings -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $true
+Set-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $true
 ```
 This example shows setting the MakeCalls permissions to True for user1@contoso.com's delegate user2@contoso.com.
 
