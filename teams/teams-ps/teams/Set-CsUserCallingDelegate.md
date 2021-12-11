@@ -32,7 +32,7 @@ This cmdlet can change the permissions assigned to a delegate for the specified 
 
 ### Example 1
 ```powershell
-Set-CsUserCallingSettings -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $false -ReceiveCalls $true -ManageSettings $false
+Set-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $false -ReceiveCalls $true -ManageSettings $false
 ```
 This example shows setting the permissions for user1@contoso.com's delegate user2@contoso.com.
 
