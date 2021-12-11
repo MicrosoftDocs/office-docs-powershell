@@ -33,7 +33,7 @@ This cmdlet adds a new delegate with given permissions for the specified user.
 ### Example 1
 ```powershell
 New-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $true -ReceiveCalls $true -ManageSettings $true
-
+```
 
 ## PARAMETERS
 
