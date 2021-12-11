@@ -32,7 +32,7 @@ This cmdlet will remove a delegate for the specified user.
 
 ### Example 1
 ```powershell
-Remove-CsUserCallingSettings -Identity user1@contoso.com -Delegate user2@contoso.com
+Remove-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com
 ```
 This example shows removing the delegate user2@contoso.com.
 
