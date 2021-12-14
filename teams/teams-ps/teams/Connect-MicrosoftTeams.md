@@ -33,8 +33,7 @@ Connect-MicrosoftTeams
 ```
 Connect-MicrosoftTeams 
 [-TenantId <String>] 
--AccessTokens <String[]> 
--AccountId <String> 
+-AccessTokens <String[]>  
 [-LogLevel <LogLevel>] 
 [-LogFilePath <String>] 
 [-WhatIf] 
