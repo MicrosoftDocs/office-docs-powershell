@@ -144,7 +144,6 @@ Accept wildcard characters: False
 
 ### -AccountId
 Specifies the ID of an account.
-You must specify the UPN of the user when authenticating with a user access token.
 
 ```yaml
 Type: String
