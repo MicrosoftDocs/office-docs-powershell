@@ -107,7 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -ADPropertiesOnly
-The ADPropertiesOnly switch specifies whether to return only the properties about the virtual directory stored in Active Directory. The properties stored in the Internet Information Services (IIS) metabase aren't returned.
+The ADPropertiesOnly switch specifies whether to return only the virtual directory properties that are stored in Active Directory. You don't need to specify a value with this switch.
+
+If you don't use this switch, the properties in Active Directory and in the Internet Information Services (IIS) metabase are returned.
 
 ```yaml
 Type: SwitchParameter
