@@ -1308,7 +1308,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-This parameter is available o functional only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
