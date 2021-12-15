@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-The IsDefault switch makes the assignment policy the default assignment policy. You don't have to specify a value with this switch.
+The IsDefault switch makes the assignment policy the default assignment policy. You don't need to specify a value with this switch.
 
 New mailboxes or mailboxes moved from previous versions of Exchange are assigned the default assignment policy when an explicit assignment policy isn't provided.
 

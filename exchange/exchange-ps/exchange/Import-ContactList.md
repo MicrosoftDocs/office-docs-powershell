@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -CSV
-The CSV parameter simply specifies that the contacts will be imported from a .csv file.
+The CSV parameter specifies that the contacts will be imported from a .csv file. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
