@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMigration
-The AllowMigration switch allows a quarantined mailbox to be moved to another mailbox database or to the cloud. You don't have to specify a value with this switch.
+The AllowMigration switch allows a quarantined mailbox to be moved to another mailbox database or to the cloud. You don't need to specify a value with this switch.
 
 Moving a mailbox is one method of correcting data corruption that's required before releasing the mailbox from quarantine.
 

@@ -85,7 +85,11 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticInfo
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems. Valid values are:
+
+- ExternalDirectoryObjectId
+- Identity
+- UserPrincipalName
 
 ```yaml
 Type: String
