@@ -65,12 +65,6 @@ If your account uses multi-factor authentication, use the steps in this section.
    Connect-IPPSSession -UserPrincipalName navin@contoso.com -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
    ```
 
-   **This example connects to Exchange Online Protection PowerShell in an Office 365 Germany organization**:
-
-   ```powershell
-   Connect-IPPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
-   ```
-
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
@@ -116,12 +110,6 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 
    ```powershell
    Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
-   ```
-
-   **This example connects to Exchange Online Protection PowerShell in an Office 365 Germany organization**:
-
-   ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/
    ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-exchangeonline).
