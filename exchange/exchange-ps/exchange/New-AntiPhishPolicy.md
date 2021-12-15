@@ -578,7 +578,7 @@ Accept wildcard characters: False
 ```
 
 ### -MakeDefault
-The MakeDefault switch makes this antiphish policy the default antiphish policy. You don't have to specify a value with this switch.
+The MakeDefault switch makes this antiphish policy the default antiphish policy. You don't need to specify a value with this switch.
 
 The default antiphish policy is applied to everyone (no corresponding antiphish rule), can't be renamed, and has the unmodifiable priority value Lowest (the default policy is always applied last).
 

@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter instructs the command to query Active Directory for additional information and to include real-time status information in the output.
+The Status parameter instructs the command to query Active Directory for additional information and to include real-time status information in the output. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

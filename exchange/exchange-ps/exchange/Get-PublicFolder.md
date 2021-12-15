@@ -253,7 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResidentFolders
-The ResidentFolders specifies whether to return public folders that reside in a specific content public folder mailbox. If this parameter isn't specified, the command will only return public folders whose contents reside in the primary hierarchy public folder mailbox.
+The ResidentFolders switch specifies whether to return public folders that reside in a specific content public folder mailbox. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command will return only public folders whose contents reside in the primary hierarchy public folder mailbox.
 
 ```yaml
 Type: SwitchParameter

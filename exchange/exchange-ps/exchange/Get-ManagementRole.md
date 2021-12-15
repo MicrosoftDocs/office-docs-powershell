@@ -141,7 +141,11 @@ Accept wildcard characters: False
 ```
 
 ### -GetChildren
-The GetChildren parameter retrieves a list of all the roles that were created based on the parent role specified in the Identity parameter. Only the immediate child roles of the parent role are included. The GetChildren parameter can only be used with the Identity and RoleType parameters.
+The GetChildren parameter retrieves a list of all the roles that were created based on the parent role specified in the Identity parameter. You don't need to specify a value with this switch.
+
+Only the immediate child roles of the parent role are included in the results.
+
+You can use this switch only with the Identity and RoleType parameters.
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +161,11 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-The Recurse parameter retrieves a list of all the roles that were created based on the parent role specified in the Identity parameter. The role specified in the Identity parameter, its child roles, and their children are returned. The Recurse parameter can only be used with the Identity and RoleType parameters.
+The Recurse parameter retrieves a list of all the roles that were created based on the parent role specified in the Identity parameter. You don't need to specify a value with this switch.
+
+The role specified in the Identity parameter, its child roles, and their children are returned.
+
+You can use this switch only with the Identity and RoleType parameters.
 
 ```yaml
 Type: SwitchParameter

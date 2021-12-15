@@ -193,7 +193,9 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch restricts the scope of the cmdlet to the user's archive. When using the Archive switch, you must also specify the Identity parameter.
+The Archive switch restricts the scope of the cmdlet to the user's archive. You don't need to specify a value with this switch.
+
+When using the Archive switch, you must also specify the Identity parameter.
 
 ```yaml
 Type: SwitchParameter

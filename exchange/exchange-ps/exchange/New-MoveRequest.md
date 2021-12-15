@@ -1118,7 +1118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

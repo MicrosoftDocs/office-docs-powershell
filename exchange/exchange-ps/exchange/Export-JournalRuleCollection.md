@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ### -ExportLegacyRules
 This parameter is available only in Exchange Server 2010.
 
-The ExportLegacyRules switch specifies whether to export Exchange 2007 journal rules.
+The ExportLegacyRules switch specifies whether to export Exchange 2007 journal rules. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

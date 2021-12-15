@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-The Overwrite parameter causes existing role entries to be overwritten by the role entries being added.
+The Overwrite switch causes existing role entries to be overwritten by the role entries being added. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

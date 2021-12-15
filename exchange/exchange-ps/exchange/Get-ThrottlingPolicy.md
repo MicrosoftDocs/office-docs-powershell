@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostics
-The Diagnostics switch specifies whether you want the output to include the diagnostics string. To return diagnostics information, use the syntax Get-ThrottlingPolicy -Diagnostics. You don't specify a value for this switch.
+The Diagnostics switch specifies whether you want the output to include the diagnostics string. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Explicit
-The Explicit switch specifies whether you only want to return the policy settings that have been directly assigned using this policy. By default, this parameter is set to $false.
+The Explicit switch specifies whether to return only the policy settings that have been directly assigned using this policy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSystemTags
-The IncludeSystemTags switch specifies whether to return any system tags.
+The IncludeSystemTags switch specifies whether to return any system tags. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
