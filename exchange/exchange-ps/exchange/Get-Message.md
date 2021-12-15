@@ -179,7 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeComponentLatencyInfo
-The IncludeComponentLatencyInfo switch specifies whether the information about component latency is included in the message properties. If you include this switch, the message objects returned will include latency measurements for each Transport component that has contributed to the local server latency for each queued message.
+The IncludeComponentLatencyInfo switch specifies whether the information about component latency is included in the message properties. You don't need to specify a value with this switch.
+
+If you include this switch, the message objects returned will include latency measurements for each Transport component that has contributed to the local server latency for each queued message.
 
 ```yaml
 Type: SwitchParameter
@@ -195,9 +197,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeRecipientInfo
-The IncludeRecipientInfo switch specifies whether to display the message recipients in the Recipients field. If you don't include the IncludeRecipientInfo switch, the Recipients field is blank.
+The IncludeRecipientInfo switch specifies whether to display the message recipients in the Recipients field. You don't need to specify a value with this switch.
 
-Storing the results of a Get-Message -IncludeRecipientInfo command in a variable allows you to display additional properties for the message recipients. The following list describes the available recipient properties:
+If you don't include the IncludeRecipientInfo switch, the Recipients field is blank.
+
+Storing the results of a `Get-Message -IncludeRecipientInfo` command in a variable allows you to display additional properties for the message recipients. The following list describes the available recipient properties:
 
 - Address: The email address of the recipient.
 - Type: The recipient type, which may be External, Mailbox or Distribution Group. Distribution Group is used when the destination is an expansion server.
@@ -205,9 +209,9 @@ Storing the results of a Get-Message -IncludeRecipientInfo command in a variable
 - Status: The recipient status may be Complete, Ready or Retry.
 - LastError: The SMTP response after the last delivery attempt or a localized error message if the message is placed in the unreachable queue.
 
-For example, to store the recipient information of a message in the contoso.com remote delivery queue that has the MessageIdentity value of 1234 to a variable named $x, use the following command: $x=Get-Message -Identity "contoso.com\\1234" -IncludeRecipientInfo.
+For example, to store the recipient information of a message in the contoso.com remote delivery queue that has the MessageIdentity value of 1234 to a variable named $x, use the following command: `$x=Get-Message -Identity "contoso.com\\1234" -IncludeRecipientInfo`.
 
-To display the extended recipient properties that are now stored in the $x variable, use the following command : $x.Recipients.
+To display the extended recipient properties that are now stored in the $x variable, use the following command: `$x.Recipients`.
 
 ```yaml
 Type: SwitchParameter

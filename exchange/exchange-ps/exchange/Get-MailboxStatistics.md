@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch parameter specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
+The Archive switch specifies whether to return mailbox statistics for the archive mailbox that's associated with the mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -343,7 +343,9 @@ Accept wildcard characters: False
 ### -IncludePassive
 This parameter is available only in on-premises Exchange.
 
-Without the IncludePassive parameter, the cmdlet retrieves statistics from active database copies only. Using the IncludePassive parameter, you can have the cmdlet return statistics from all active and passive database copies.
+The IncludePassive switch specifies whether to return statistics from all active and passive database copies. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command retrieves statistics from active database copies only.
 
 ```yaml
 Type: SwitchParameter
@@ -381,7 +383,7 @@ Accept wildcard characters: False
 ### -IncludeQuarantineDetails
 This parameter is available only in on-premises Exchange.
 
-The IncludeQuarantineDetails switch specifies whether to return additional quarantine details about the mailbox that aren't otherwise included in the results. You can use these details to determine when and why the mailbox was quarantined.
+The IncludeQuarantineDetails switch specifies whether to return additional quarantine details about the mailbox that aren't otherwise included in the results. You can use these details to determine when and why the mailbox was quarantined. You don't need to specify a value with this switch.
 
 Specifically, this switch returns the values of the QuarantineDescription, QuarantineLastCrash and QuarantineEnd properties on the mailbox. To see these values, you need use a formatting cmdlet. For example, `Get-MailboxStatistics <MailboxIdentity> -IncludeQuarantineDetails | Format-List Quarantine*`.
 
@@ -401,7 +403,9 @@ Accept wildcard characters: False
 ### -NoADLookup
 This parameter is available only in on-premises Exchange.
 
-The NoADLookup switch specifies that information is retrieved from the mailbox database, and not from Active Directory. This helps improve cmdlet performance when querying a mailbox database that contains a large number of mailboxes.
+The NoADLookup switch specifies that information is retrieved from the mailbox database, and not from Active Directory. You don't need to specify a value with this switch.
+
+This switch helps improve cmdlet performance when querying a mailbox database that contains a large number of mailboxes.
 
 ```yaml
 Type: SwitchParameter
