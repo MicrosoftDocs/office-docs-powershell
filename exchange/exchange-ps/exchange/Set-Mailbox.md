@@ -1308,7 +1308,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-This parameter is functional only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
@@ -1319,7 +1319,7 @@ The AccountDisabled parameter specifies whether to disable the account that's as
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
