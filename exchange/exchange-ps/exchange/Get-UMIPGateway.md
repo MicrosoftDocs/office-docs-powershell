@@ -94,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSimulator
-The IncludeSimulator switch retrieves the simulator of the UM IP gateway being viewed. A simulator allows a client to connect to the Mailbox server.
+The IncludeSimulator switch retrieves the simulator of the UM IP gateway being viewed. You don't need to specify a value with this switch.
+
+A simulator allows a client to connect to the Mailbox server.
 
 ```yaml
 Type: SwitchParameter

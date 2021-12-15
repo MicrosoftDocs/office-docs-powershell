@@ -340,7 +340,9 @@ Accept wildcard characters: False
 ```
 
 ### -GetEffectiveUsers
-The GetEffectiveUsers switch specifies that the command should show the list of users in the role groups, assignment policies, or USGs associated with a role assignment. The users are effectively assigned the role assignment through their role group, assignment policy, or USG.
+The GetEffectiveUsers switch specifies that the command should show the list of users in the role groups, role assignment policies, or USGs that are associated with the role assignment. You don't need to specify a value with this switch.
+
+Effectively, users are associated with the role assignment through their role group, role assignment policy, or USG memberships.
 
 ```yaml
 Type: SwitchParameter
