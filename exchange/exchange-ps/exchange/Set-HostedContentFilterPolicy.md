@@ -743,7 +743,7 @@ Accept wildcard characters: False
 ```
 
 ### -MakeDefault
-The MakeDefault switch makes the specified spam filter policy the default spam filter policy. You don't have to specify a value with this switch.
+The MakeDefault switch makes the specified spam filter policy the default spam filter policy. You don't need to specify a value with this switch.
 
 The default spam filter policy is applied to everyone (no corresponding spam filter rule), can't be renamed, and has the unmodifiable priority value Lowest (the default policy is always applied last).
 
