@@ -305,7 +305,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateOnly
-The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. No changes are made when the ValidateOnly switch is used.
+The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. You don't need to specify a value with this switch.
+
+No changes are made when you use this switch.
 
 ```yaml
 Type: SwitchParameter

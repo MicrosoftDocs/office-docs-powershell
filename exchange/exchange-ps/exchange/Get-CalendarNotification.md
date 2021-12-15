@@ -123,7 +123,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-The ReadFromDomainController parameter specifies whether the command should return data from the domain controller.
+The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. You don't need to specify a value with this switch.
+
+The command: `Set-AdServerSettings -ViewEntireForest $true` to include all objects in the forest requires the ReadFromDomainController switch. Otherwise, the command might use a global catalog that contains outdated information. Also, you might need to run multiple iterations of the command with the ReadFromDomainController switch to get the information.
+
+By default, the recipient scope is set to the domain that hosts your Exchange servers.
 
 ```yaml
 Type: SwitchParameter
