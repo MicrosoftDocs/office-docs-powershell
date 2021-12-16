@@ -449,6 +449,8 @@ Accept wildcard characters: False
 ### -Url
 The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
+**Note**: URLs with redirections are not supported in Exchange Server 2016, Exchange Server 2019, and Exchange Online. Use a direct URL to the manifest.
+
 ```yaml
 Type: Uri
 Parameter Sets: ExtensionPrivateURL
