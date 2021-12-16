@@ -18,7 +18,7 @@ schema: 2.0.0
 
 ```
 New-CsTeamsEmergencyNumber -EmergencyDialString <String> [-EmergencyDialMask <String>]
- [-OnlinePSTNUsage <String>] [-CarrierProfile <String>] [<CommonParameters>]
+ [-OnlinePSTNUsage <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +29,7 @@ New-CsTeamsEmergencyNumber -EmergencyDialString <String> [-EmergencyDialMask <St
 
 ### Example 1
 ```powershell
-PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 911 -EmergencyDialMask 321 -OnlinePSTNUsage "US911"
+PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 911 -EmergencyDialMask 933 -OnlinePSTNUsage "US911"
 ```
 
  Create a new Teams emergency number
@@ -42,21 +42,6 @@ PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask
 Create a new Teams emergency number with multiple emergency dial masks.
 
 ## PARAMETERS
-
-### -CarrierProfile
- Microsoft internal usage only
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -EmergencyDialMask
  For each Teams emergency number, you can specify zero or more emergency dial masks. A dial mask is a number that you want to translate into the value of the emergency dial number value when it is dialed. Dial mask must be list of numbers separated by semicolon. Each number string must be made of the digits 0 through 9 and can be from 1 to 10 digits in length.
