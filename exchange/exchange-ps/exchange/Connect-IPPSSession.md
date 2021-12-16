@@ -94,6 +94,7 @@ Accept wildcard characters: False
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint that can issue OAuth2 access tokens. The following PowerShell environments and related values are supported:
 
 - Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
+- Security & Compliance Center PowerShell in Office 365 operated by 21Vianet: `https://login.chinacloudapi.cn/common`
 - Security & Compliance Center PowerShell in Microsoft GCC High or Microsoft DoD: `https://login.microsoftonline.us/common`
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).

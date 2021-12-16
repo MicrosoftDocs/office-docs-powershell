@@ -128,6 +128,12 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-IPPSSession -Credential $UserCredential
    ```
 
+   **This example connects to Security & Compliance Center PowerShell in aOffice 365 operated by 21Vianet organization**.
+
+   ```powershell
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common
+   ```
+
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
 
    ```powershell
