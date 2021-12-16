@@ -36,7 +36,7 @@ PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 911 -EmergencyDialMask 9
  
 ### Example 2
 ```powershell
-PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897"
+PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "EU112"
 ```
 
 Create a new Teams emergency number with multiple emergency dial masks.
