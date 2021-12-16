@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysDeleteOutlookRulesBlob
-The AlwaysDeleteOutlookRulesBlob parameter suppresses a warning that end users or administrators get if they use Outlook Web App or Windows PowerShell to modify Inbox rules.
+The AlwaysDeleteOutlookRulesBlob switch suppresses a warning that end users or administrators get if they use Outlook Web App or Windows PowerShell to modify Inbox rules. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

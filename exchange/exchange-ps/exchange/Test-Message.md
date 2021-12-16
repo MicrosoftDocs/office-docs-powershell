@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available or functional only in the cloud-based service.
 
-Use the Test-Message cmdlet to simulate and report on the effects of mail flow rules (transport rules) and unified DLP rules on test email messages. Because this cmdlet introduces email into the DLP evaluation pipeline, actions such as Block, Moderate, etc. can take place on the test message. Related notifications will also be sent to any configured recipients.
+Use the Test-Message cmdlet to simulate and report on the effects of mail flow rules (transport rules) and unified DLP rules on test email messages. 
+
+**Note**: Because this cmdlet introduces email into the DLP evaluation pipeline, actions such as Block, Moderate, etc. can take place on the test message. Related notifications will also be sent to any configured recipients.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
