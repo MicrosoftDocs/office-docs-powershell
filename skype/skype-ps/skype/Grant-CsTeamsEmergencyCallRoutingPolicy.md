@@ -159,4 +159,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CsTeamsEmergencyCallRoutingPolicy](Set-CsTeamsEmergencyCallRoutingPolicy.md)
 
+[Get-CsTeamsEmergencyCallRoutingPolicy](Get-CsTeamsEmergencyCallRoutingPolicy.md)
+
 [Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)
