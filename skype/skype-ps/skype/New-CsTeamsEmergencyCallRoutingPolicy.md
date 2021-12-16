@@ -29,8 +29,8 @@ New-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 
 ### Example 1
 ```powershell
-PS C:>  $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "Local" -CarrierProfile "Local"
-New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
+PS C:>  $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "911" -EmergencyDialMask "933" -OnlinePSTNUsage "USE911"
+New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
 ```
 
  This example first creates a new Teams emergency number object and then creates a Teams Emergency Call Routing policy with this emergency number object.
