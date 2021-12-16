@@ -36,7 +36,7 @@ Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 
 ### Example 1
 ```powershell
-PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -AllowEnhancedEmergencyServices:$false -Description "test"
+PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -AllowEnhancedEmergencyServices:$false -Description "test"
 ```
 
  This example modifies an existing Teams Emergency Call Routing Policy.
