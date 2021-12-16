@@ -17,7 +17,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CsTeamsEmergencyNumber -EmergencyDialString <String> [-EmergencyDialMask <String>]
+New-CsTeamsEmergencyNumber [-EmergencyDialString <String>] [-EmergencyDialMask <String>]
  [-OnlinePSTNUsage <String>] [<CommonParameters>]
 ```
 
@@ -66,7 +66,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
