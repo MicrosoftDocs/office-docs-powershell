@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamsemergencycallingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsTeamsEmergencyCallingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -31,7 +31,7 @@ Remove-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-Identity] <XdsIde
 PS C:>  Remove-CsTeamsEmergencyCallingPolicy -Identity testECP
 ```
 
- This example removes an existing Teams Emergency Calling policy with identity testECRP
+ This example removes an existing Teams Emergency Calling policy with identity testECP
 
 ## PARAMETERS
 
