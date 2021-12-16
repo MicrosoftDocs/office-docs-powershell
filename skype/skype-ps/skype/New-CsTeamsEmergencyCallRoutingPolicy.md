@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencycallroutingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsTeamsEmergencyCallRoutingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manger: roykuntz
 ms.reviewer: chenc, vaddank, pthota
 schema: 2.0.0
