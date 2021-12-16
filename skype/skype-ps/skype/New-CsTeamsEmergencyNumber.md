@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencynumber
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsTeamsEmergencyNumber
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -22,13 +22,14 @@ New-CsTeamsEmergencyNumber -EmergencyDialString <String> [-EmergencyDialMask <St
 ```
 
 ## DESCRIPTION
- This cmdlet supports to create multiple Teams emergency numbers.
+ This cmdlet supports to create multiple Teams emergency numbers. Used with TeamsEmergencyCallRoutingPolicy and 
+ only relevant for Direct Routing
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 711 -EmergencyDialMask 321 -OnlinePSTNUsage "US911"
+PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 911 -EmergencyDialMask 321 -OnlinePSTNUsage "US911"
 ```
 
  Create a new Teams emergency number
@@ -115,3 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsTeamsEmergencyCallRoutingPolicy](Set-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[New-CsTeamsEmergencyCallRoutingPolicy](New-CsTeamsEmergencyCallRoutingPolicy.md)
