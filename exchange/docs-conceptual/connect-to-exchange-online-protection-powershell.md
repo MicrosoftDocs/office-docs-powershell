@@ -47,7 +47,8 @@ If your account uses multi-factor authentication, use the steps in this section.
    Import-Module ExchangeOnlineManagement
    ```
 
-   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
+   > [!NOTE]
+   > If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
 
 2. The command that you need to run uses the following syntax:
 
@@ -84,7 +85,8 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Import-Module ExchangeOnlineManagement
    ```
 
-   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
+   > [!NOTE]
+   > If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
 
 2. Run the following command:
 
