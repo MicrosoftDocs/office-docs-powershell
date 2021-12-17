@@ -156,17 +156,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationId
 Specifies the application ID of the service principal.
 
