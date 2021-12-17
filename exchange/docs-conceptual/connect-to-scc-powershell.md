@@ -61,22 +61,22 @@ If your account uses multi-factor authentication, use the steps in this section.
    Connect-IPPSSession -UserPrincipalName navin@contoso.com
    ```
 
-   **This example connects to Security & Compliance Center PowerShell in an Office 365 Germany organization**.
+   **This example connects to Security & Compliance Center PowerShell in an Office 365 operated by 21Vianet organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName lukas@fabrikam.de -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID
+   Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -UserPrincipalName chris@govt.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -UserPrincipalName michelle@govt.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
    ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
@@ -128,10 +128,10 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-IPPSSession -Credential $UserCredential
    ```
 
-   **This example connects to Security & Compliance Center PowerShell in an Office 365 Germany organization**.
+   **This example connects to Security & Compliance Center PowerShell in aOffice 365 operated by 21Vianet organization**.
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.outlook.de/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.de/common
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
