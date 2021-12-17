@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ### -AllRequestInPolicy
 The AllRequestInPolicy parameter specifies whether to allow all users to submit in-policy requests to the resource mailbox. Valid values are:
 
-- $true: All users are allowed to submit in-policy requests to the resource mailbox. These requests require approval by a resource mailbox delegate if the AllBookInPolicy parameter is set to $false (the default value is $true).
+- $true: All users are allowed to submit in-policy requests to the resource mailbox. These requests require approval by a resource mailbox delegate if the AllBookInPolicy parameter is set to $false (the default value of AllBookInPolicy is $true).
 - $false: All users can't submit in-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
