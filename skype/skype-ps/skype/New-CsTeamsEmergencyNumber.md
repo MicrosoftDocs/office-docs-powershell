@@ -22,8 +22,7 @@ New-CsTeamsEmergencyNumber [-EmergencyDialString <String>] [-EmergencyDialMask <
 ```
 
 ## DESCRIPTION
- This cmdlet supports to create multiple Teams emergency numbers. Used with TeamsEmergencyCallRoutingPolicy and 
- only relevant for Direct Routing
+ This cmdlet supports creating multiple Teams emergency numbers. Used with TeamsEmergencyCallRoutingPolicy and only relevant for Direct Routing.
 
 ## EXAMPLES
 
