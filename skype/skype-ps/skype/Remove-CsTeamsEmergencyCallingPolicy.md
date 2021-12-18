@@ -31,7 +31,7 @@ Remove-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-Identity] <XdsIde
 PS C:>  Remove-CsTeamsEmergencyCallingPolicy -Identity testECP
 ```
 
- This example removes an existing Teams Emergency Calling policy with identity testECP
+ This example removes an existing Teams Emergency Calling policy with identity testECP.
 
 ## PARAMETERS
 
