@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Active
-The Active switch specifies whether to return mailbox database copy status for the active mailbox database copy only.
+The Active switch specifies whether to return mailbox database copy status for the active mailbox database copy only. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Local
-The Local switch specifies whether to return mailbox database copy status information from only the local Mailbox server.
+The Local switch specifies whether to return mailbox database copy status information from only the local Mailbox server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedErrorInfo
-The ExtendedErrorInfo switch specifies whether to return an output object containing any exception details.
+The ExtendedErrorInfo switch specifies whether to return an output object containing any exception details. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseServerCache
-The UseServerCache switch specifies whether to enable a server-side remote procedure call (RPC) caching of status information for 5 seconds.
+The UseServerCache switch specifies whether to enable a server-side remote procedure call (RPC) caching of status information for 5 seconds. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
