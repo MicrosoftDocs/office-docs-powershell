@@ -227,9 +227,29 @@ Accept wildcard characters: False
 ```
 
 ### -ReconcileFolders
-The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. Folders that exist in the secondary public folder mailbox and not in the primary will be deleted.
+The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. 
 
-This switch should only be used for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
+
+For Exchange On-Premises deployment: Folders that exist in the secondary public folder mailbox and not in the primary will be deleted.
+
+For Exchange Online deployment: Folders that exist in the secondary public folder mailbox and not in the primary will be moved to \NON_IPM_SUBTREE\LOST_AND_FOUND. Please check [this article](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-public-folder-8220-lost-and-found-8221-functionality/ba-p/604043) for more details about LOST_AND_FOUND functionality.
+
+In both the scenarios, the public folders deleted or moved to Lost_And_Found can be restored using Set-PublicFolder command.
+
+Example1:
+
+Following command will restore public folder named "Marketing" from LOST_AND_FOUND to folder named \South
+
+Get-PublicFolder \NON_IPM_SUBTREE\LOST_AND_FOUND\5773ba6a-9926-4d64-97db-63a2bdd94a5b\"Pesky Pole" | Set-PublicFolder -Path "\South"
+
+Example2:
+
+Following command will restore public folder named "Documents" from LOST_AND_FOUND to folder named \Engineering
+
+Set-PublicFolder -Identity \NON_IPM_SUBTREE\DUMPSTER_ROOT\DUMPSTER_EXTEND\RESERVED_1\RESERVED_1\9f32c468-4bc2-42aa-b979-16a057394b2f\Documents -Path \Engineering
+
+> [!NOTE]
+>This switch should only be used for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
 
 ```yaml
 Type: SwitchParameter
