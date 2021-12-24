@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-{{ Fill DomainName Description }}
+The DomainName parameter specifies the tenant domain linked with AuthServer Object. Tenant domain is usually "tenantname.onmicrosoft.com". This parameter is used to link Tenant to the corresponding authserver object in the  Multi-Tenant Exchange Hybrid. For example, if DomainName is contoso.onmicrosoft.com, then the authserver object will be associated with contoso tenant. This parameter is available only in Exchange Server 2016 (CU18 or higher) and Exchange Server 2019 (CU7 or higher)  
 
 ```yaml
 Type: MultiValuedProperty
