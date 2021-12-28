@@ -102,7 +102,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
- [-NonBifurcatingAccessScope <NonBifurcatingAccessScopeOption[]>]
+ [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
@@ -1946,10 +1946,10 @@ The NonBifurcatingAccessScope parameter specifies a condition for the DLP rule t
 - HasExternal: At least one recipient is outside the organization. 
 - None: The condition isn't used. 
 
-You can use this action in DLP policies that are scoped only to Exchange
+You can use this condition in DLP policies that are scoped only to Exchange
 
 ```yaml
-Type: NonBifurcatingAccessScopeOption
+Type: NonBifurcatingAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
