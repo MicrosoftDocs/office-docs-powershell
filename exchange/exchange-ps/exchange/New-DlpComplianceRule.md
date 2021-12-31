@@ -114,6 +114,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-PrependSubject <String>]
  [-Priority <Int32>]
  [-ProcessingLimitExceeded <Boolean>]
+ [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <PswsHashtable>]
  [-RecipientADAttributeMatchesPatterns <PswsHashtable>]
  [-RecipientDomainIs <MultiValuedProperty>]
@@ -2168,6 +2169,24 @@ The ProcessingLimitExceeded parameter specifies a condition for the DLP rule tha
 
 - $true: Look for files where scanning couldn't complete.
 - $false: Don't look for files where scanning couldn't complete.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Quarantine
+This parameter specifies an action or part of an action for the rule.
+
+The Quarantine parameter specifies an action that quarantines messages. In Microsoft 365, messages are delivered to the hosted quarantine.
 
 ```yaml
 Type: Boolean
