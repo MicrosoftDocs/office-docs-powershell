@@ -334,6 +334,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPolicy
+**Note**: Only existing mailboxes respect a custom retention policy that's set by this parameter. New mailboxes are always created using the default policy.
+
 The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name

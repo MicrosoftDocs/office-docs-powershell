@@ -96,6 +96,21 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 |[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
 |
 
+### Updates for version 2.0.6
+
+Version 2.0.6-Preview3 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
+
+- 250 additional remote PowerShell cmdlets that are backed by the REST API. These REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module). These REST API cmdlets also work just like their old remote PowerShell equivalent cmdlets, so you don't need to update any of your scripts.
+- The new _RPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _RPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
+- A small number of existing mailbox remote PowerShell cmdlets have been updated with a new, experimental _UseCustomRoutingSwitch_ parameter. Using this switch routes the command directly to the required Mailbox server, and might improve overall performance.
+  - When you use the _UseCustomRoutingSwitch_, you need to use the following values for identity of the mailbox:
+    - User principal name (UPN)
+    - Email address
+    - Mailbox GUID
+  - Initially, the _UseCustomRoutingSwitch_ is available on the following cmdlets: **Remove-CalendarEvents**, **Get-Clutter**, **Set-Clutter**, **Get-FocusedInbox**, **Set-FocusedInbox**, **Get-InboxRule**, **Get-MailboxAutoReplyConfiguration**, **Get-MailboxCalendarFolder**, **Get-MailboxFolderPermission**, **Get-MailboxFolderStatistics**, **Get-MailboxMessageConfiguration**, **Get-MailboxPermission**, **Get-MailboxRegionalConfiguration**, **Set-MailboxRegionalConfiguration**, **Get-MailboxStatistics**, **Get-MobileDeviceStatistics**, **Get-UserPhoto**, and **Set-UserPhoto**.
+
+    Use this parameter experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
+
 ## Install and maintain the EXO V2 module
 
 You can download the EXO V2 module from the PowerShell gallery at <https://www.powershellgallery.com/packages/ExchangeOnlineManagement/>.

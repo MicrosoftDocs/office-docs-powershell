@@ -52,6 +52,7 @@ Connect-ExchangeOnline
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
+ [-UseRPSSession]
  [<CommonParameters>]
 ```
 
@@ -64,26 +65,17 @@ For details about the current and past public versions of the EXO V2 module, see
 
 ### Example 1
 ```powershell
-$UserCredential = Get-Credential
-Connect-ExchangeOnline -Credential $UserCredential
-```
-
-This example connects to Exchange Online PowerShell using modern authentication for an account that doesn't use multi-factor authentication (MFA).
-
-The first command gets the username and password and stores them in the $UserCredential variable.
-
-The second command connects the current PowerShell session using the credentials in $UserCredential.
-
-After the Connect-ExchangeOnline command is complete, the password key in the $UserCredential variable is emptied, and you can run Exchange Online PowerShell cmdlets.
-
-### Example 2
-```powershell
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication for the account chris@contoso.com, which uses MFA.
+This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession parameter, so the connection uses REST and doesn't require Basic authentication to be enabled in WinROM on the local computer. But, only the subset of frequently used REST API parameters are available.
 
-After the command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
+### Example 2
+```powershell
+Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -UseRPSSession
+```
+
+This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession parameter, so the connection requires Basic authentication to be enabled in WinRM on the local computer. But, all Exchange Online PowerShell cmdlets are available using traditional remote PowerShell access.
 
 ### Example 3
 ```powershell
@@ -636,6 +628,28 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseRPSSession
+This parameter is available in version 2.0.6-Preview3 or later of the Exchange Online V2 module.
+
+The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
+
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exo-v2-module).
+
+If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

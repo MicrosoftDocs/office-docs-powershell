@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-The Preview switch filters the results by Preview compliance search actions.
+The Preview switch filters the results by Preview compliance search actions. You don't need to specify a value with this switch.
 
 You can't use this switch with the Export, Identity, or Purge parameters.
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ### -Purge
 **Note**: In Security & Compliance PowerShell, this parameter is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management role group.
 
-The Purge switch filters the results by Purge compliance search actions.
+The Purge switch filters the results by Purge compliance search actions. You don't need to specify a value with this switch.
 
 You can't use this switch with the Export, Identity, or Preview parameters.
 

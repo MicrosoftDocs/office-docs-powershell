@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDumpsterInfo
-The IncludeDumpsterInfo parameter specifies that diagnostic information for the \\NON\_IPM\_TREE\\DUMPSTER\_ROOT folder, which serves as the dumpster for public folder mailboxes, is included in the returned information.
+The IncludeDumpsterInfo specifies whether to include diagnostic information for the \\NON\_IPM\_TREE\\DUMPSTER\_ROOT folder (the dumpster for public folder mailboxes is included in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -134,7 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHierarchyInfo
-The IncludeHierarchyInfo switch specifies whether to include folder hierarchy information in the results. This includes the following information:
+The IncludeHierarchyInfo switch specifies whether to include folder hierarchy information in the results. You don't need to specify a value with this switch.
+
+Using this switch returns the following information:
 
 - TotalFolderCount: The total number of public folders in the specified public folder mailbox.
 - MaxFolderChildCount: The largest number of child folders in the public folder hierarchy.
