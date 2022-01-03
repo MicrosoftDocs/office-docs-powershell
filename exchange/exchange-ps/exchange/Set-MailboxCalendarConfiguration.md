@@ -34,6 +34,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-DomainController <Fqdn>]
@@ -333,6 +334,40 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DefaultOnlineMeetingProvider
+This parameter is available only in the cloud-based service.
+
+The DefaultOnlineMeetingProvider parameter specifies the default provider for online meetings. Valid values are:
+
+- AlibabaDingTalk
+- AmazonChimePrivate
+- AmazonChimePublic
+- AppleFacetime
+- BlueJeans
+- ClaroVideoconferencia
+- FacebookWorkplace
+- GoogleMeet
+- GoToMeeting
+- JioMeet
+- RingCentral
+- SkypeForBusiness
+- SkypeForConsumer
+- TeamsForBusiness (This is the default value.)
+- Webex
+- Zoom
+
+```yaml
+Type: OnlineMeetingProviderType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
