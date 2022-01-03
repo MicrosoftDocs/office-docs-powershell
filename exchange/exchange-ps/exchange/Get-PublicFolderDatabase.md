@@ -140,7 +140,7 @@ This parameter is available only in Exchange Server 2010.
 
 The IncludePreExchange2010 switch specifies whether to include information about Exchange 2003 or Exchange 2007 public folders in the results. You don't need to specify a value with this switch.
 
-This parameter isn't useful in commands where you use the Server parameter or Identity parameter.
+This switch isn't useful in commands where you use the Server or Identity parameters.
 
 ```yaml
 Type: SwitchParameter
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter specifies whether additional backup and mount status information is included for servers running Exchange 2010. If the Status parameter is included, additional backup and mount status information is included for Exchange 2010 servers.
+The Status switch specifies whether to include additional backup and mount status information for servers running Exchange 2010. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

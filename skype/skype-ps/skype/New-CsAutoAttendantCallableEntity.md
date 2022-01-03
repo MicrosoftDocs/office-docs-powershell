@@ -61,8 +61,8 @@ This example gets a user object using Get-CsOnlineUser cmdlet. We then use the A
 
 ### Example 4
 ```powershell
-$callableEntityId = (Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant") -MaxResults 1 | Select-Object -Property Id
-$callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type ApplicationEndpoint
+$callableEntityId = Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant" -MaxResults 1 | Select-Object -Property Id
+$callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId.Id -Type ApplicationEndpoint
 ```
 
 This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the AAD ObjectId of that application instance to create an application endpoint callable entity.

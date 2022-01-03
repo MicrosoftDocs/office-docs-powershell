@@ -222,14 +222,6 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-Mailbox -SoftDeletedMailbox "User Name" | Format-List ExchangeGUID
-New-MailboxRestoreRequest -SourceMailbox "ExchangeGUID" -TargetMailbox "User Name" -AllowLegacyDNMismatch
-```
-
-In Exchange Online, this example uses the Get-Mailbox cmdlet to find the ExchangeGUID value of the mailbox, which is required to restore the mailbox contents.
-
-### Example 2
-```powershell
 Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyExchangeDN,DisplayName,MailboxGUID, DisconnectReason
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
@@ -238,7 +230,7 @@ In on-premises Exchange, this example uses the Get-MailboxStatistics cmdlet to r
 
 Using this information, the source mailbox with the MailboxGUID value 1d20855f-fd54-4681-98e6-e249f7326ddd is restored to the target mailbox that has the Alias value Ayla.
 
-### Example 3
+### Example 2
 ```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
@@ -508,6 +500,8 @@ Accept wildcard characters: False
 The AllowLegacyDNMismatch switch specifies that the operation should continue if the LegacyExchangeDN of the source physical mailbox and the target mailbox don't match. You don't need to specify a value with this switch.
 
 By default, this cmdlet checks to make sure that the LegacyExchangeDN on the source physical mailbox is present on the target user in the form of the LegacyExchangeDN or an X500 proxy address that corresponds to the LegacyExchangeDN. This check prevents you from accidentally restoring a source mailbox into the incorrect target mailbox.
+
+**Note**: This parameter is being deprecated in the cloud-based service. To complete a mailbox restore request for mailboxes with a LegacyExchangeDN that doesn't match, you need to obtain the LegacyExchangeDN value for the source mailbox and add it to the target mailbox as an X500 proxy address. For detailed instructions, see [Restore an inactive mailbox](https://docs.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox#restore-inactive-mailboxes).
 
 ```yaml
 Type: SwitchParameter
@@ -957,7 +951,7 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

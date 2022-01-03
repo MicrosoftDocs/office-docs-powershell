@@ -100,7 +100,9 @@ Accept wildcard characters: False
 ### -Diagnostic
 This parameter is available only in on-premises Exchange.
 
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +138,27 @@ Accept wildcard characters: False
 ### -DiagnosticInfo
 This parameter is available only in the cloud-based service.
 
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems. Valid values are:
+
+- attachmentid=String
+- batch=String
+- confirm
+- duration=String
+- endpoints
+- endtime=DateTime
+- maxsize=Int32
+- organization=String
+- partition=String
+- reportid=String
+- reports
+- showtimeline
+- showtimeslots=String
+- starttime=DateTime
+- status=String
+- storage
+- type=String
+- user=String
+- verbose
 
 ```yaml
 Type: String

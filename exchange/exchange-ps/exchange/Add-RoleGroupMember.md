@@ -123,7 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassSecurityGroupManagerCheck
-The BypassSecurityGroupManagerCheck switch enables a user who hasn't been added to the ManagedBy property to add a member to a role group. The user must be a member of the Organization Management role group or be assigned, either directly or indirectly, the Role Management role.
+The BypassSecurityGroupManagerCheck switch enables a user who hasn't been added to the ManagedBy property to add a member to a role group. You don't need to specify a value with this switch.
+
+The user must be a member of the Organization Management role group or be assigned, either directly or indirectly, the Role Management role.
 
 ```yaml
 Type: SwitchParameter

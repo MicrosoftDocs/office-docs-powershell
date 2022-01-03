@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeExtendedDomainInfo
-The IncludeExtendedDomainInfo switch specifies that the command query Microsoft Federation Gateway for the status of each accepted domain that's federated. The status is returned with each domain in the Domains property.
+The IncludeExtendedDomainInfo switch specifies that the command query Microsoft Federation Gateway for the status of each accepted domain that's federated. You don't need to specify a value with this switch.
+
+The status is returned with each domain in the Domains property.
 
 ```yaml
 Type: SwitchParameter
