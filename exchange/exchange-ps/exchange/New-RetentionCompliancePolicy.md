@@ -382,20 +382,20 @@ Accept wildcard characters: False
 ```
 
 ### -RetainCloudAttachment
-**NOte**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
+**Note**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
 
-The RetainCloudAttachment parameter specfies that this is a cloud attachment policy. Valid values are:
+The RetainCloudAttachment parameter specifies that this is a cloud attachment policy. Valid values are:
 
 - $true: The policy is a cloud attachment policy.
 - $false: The policy is not a cloud attachment policy. This is the default value.
 
 For the value $true, you can only use the following location parameters:
 
-- SharePointLocation and SharePointLocationExdeption
+- SharePointLocation and SharePointLocationException
 - OneDriveLocation and OneDriveLocationException
 - ModernGroupLocation and ModernGroupLocationException
 
-A tag that uses a cloud attachment policy can be a record label or a regulatory label. You can't use a publishing tag for a cloud attachment policy; only apply tags are supported.
+A tag that uses a cloud attachment policy to create a rule can be a record label or a regulatory label. You can't use a publishing tag for a cloud attachment policy to create a rule; only apply tags are supported.
 
 The RetainCloudAttachment parameter is not available on the Set-RetentionCompliancePolicy cmdlet.
 
