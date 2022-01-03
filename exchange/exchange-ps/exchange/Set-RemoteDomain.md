@@ -439,8 +439,6 @@ Accept wildcard characters: False
 ```
 
 ### -NDREnabled
-This parameter is available or functional only in on-premises Exchange.
-
 The NDREnabled parameter specifies whether to allow non-delivery reports (also known NDRs or bounce messages) from your organization to recipients in the remote domain. Valid values are:
 
 - $true: NDRs from your organization are sent to recipients in the remote domain. This is the default value.

@@ -13,6 +13,12 @@ ms.reviewer:
 # Remove-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Remove-CsAutoAttendant](Remove-CsAutoAttendant.md) cmdlet instead.
+
+
 Use the Remove-CsOrganizationalAutoAttendant cmdlet to delete an Auto Attendant (AA).
 
 ## SYNTAX

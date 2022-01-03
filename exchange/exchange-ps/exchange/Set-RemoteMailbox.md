@@ -300,7 +300,15 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveName
-The ArchiveName parameter specifies the name of the archive mailbox. Use this parameter to change the name of the archive.
+The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook on the web (formerly known as Outlook Web App). If the value contains spaces, enclose the value in quotation marks (").
+
+The following default values are used based on the version of Exchange:
+
+- Exchange 2016 or later: `In-Place Archive -<Display Name>`
+- Exchange 2013: `In-Place Archive - <Display Name>`
+- Exchange 2010: `Personal Archive - <Display Name>`
+
+In Outlook, the value of this parameter is ignored. The name of the archive mailbox that's shown in the folder list is `Online Archive - <PrimarySMTPAddress>`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -857,9 +865,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -1333,6 +1341,7 @@ Notes on the value Shared:
 
 - Shared is available only in Exchange 2013 CU21 or later, Exchange 2016 CU10 or later, and Exchange 2019. In Exchange 2013 and Exchange 2016, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605).
 - If you tried to convert a migrated remote mailbox to a shared remote mailbox, you would receive the following error: `remoteMailbox.RemoteRecipientType must include ProvisionMailbox`. This issue was fixed in Exchange 2016 CU14 and Exchange 2019 CU3, but not in Exchange 2013. For more information, see [KB4515271](https://support.microsoft.com/help/4515271).
+- A Shared mailbox that is migrated cannot be converted to regular mailbox. 
 - If directory synchronization unexpectedly converts shared mailboxes in Exchange Online back into user mailboxes, or if you continue to receive the `remoteMailbox.RemoteRecipientType must include ProvisionMailbox` error when you use the value Shared, take the action described in Step 3 in the Resolution section in [KB2710029](https://support.microsoft.com/help/2710029).
 
 ```yaml

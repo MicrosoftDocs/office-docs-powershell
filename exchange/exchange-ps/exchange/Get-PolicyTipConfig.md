@@ -150,7 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Original
-The Original switch includes built-in Policy Tips in the results. You don't specify a value with the Original switch. You can't use the Original switch with the Identity parameter.
+The Original switch specifies whether to include built-in Policy Tips in the results. You don't need to specify a value with this switch.
+
+You can't use the Original switch with the Identity parameter.
 
 ```yaml
 Type: SwitchParameter

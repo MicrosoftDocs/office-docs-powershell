@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-AutoSensitivityLabelPolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
+ [-IncludeProgressFeedback]
  [-IncludeTestModeResults <Boolean>]
  [<CommonParameters>]
 ```
@@ -63,6 +64,22 @@ Accept wildcard characters: False
 
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeProgressFeedback
+{{ Fill IncludeProgressFeedback Description }}
 
 ```yaml
 Type: SwitchParameter

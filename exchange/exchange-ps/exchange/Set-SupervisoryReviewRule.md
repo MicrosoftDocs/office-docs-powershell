@@ -22,8 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
+ [-CcsiDataModelOperator <String>]
  [-Condition <String>]
  [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentMatchesDataModel <String>]
+ [-ContentSources <String[]>]
+ [-Ocr <Boolean>]
  [-SamplingRate <Int32>]
  [-WhatIf]
  [<CommonParameters>]
@@ -66,6 +71,22 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -CcsiDataModelOperator
+{{ Fill CcsiDataModelOperator Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Condition
 The Condition parameter specifies the conditions and exceptions for the rule. This parameter uses the following syntax:
 
@@ -102,6 +123,70 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentContainsSensitiveInformation
+{{ Fill ContentContainsSensitiveInformation Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentMatchesDataModel
+{{ Fill ContentMatchesDataModel Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentSources
+{{ Fill ContentSources Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ocr
+{{ Fill Ocr Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

@@ -20,12 +20,12 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -297,6 +297,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSIPDevicesCalling
+Determines whether the user is allowed to use SIP device for calling on behalf of teams client.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BusyOnBusyEnabledType
 Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting value to Disabled.
 
@@ -414,13 +429,12 @@ Accept wildcard characters: False
 ```
 
 ### -SpamFilteringEnabledType
-Determines if Spam filtering is enabled.
+Determines Spam filtering mode.
 
 Possible values:
-- Enabled
-- Disabled
-- EnabledWithoutIVR (Choosing this value will disable the default spam checking which integrates the Captcha IVR Bot into the flow. The call will not be redirected to the bot for checking against fraudulent calls but will be allowed to go to the original target if the spam score is not high.)
-
+- Enabled - Spam Filtering is fully enabled. Both Basic and Captcha IVR checks are performed. In case the call is considered as spam, user will get "Spam Likely" notification in Teams
+- Disabled - Spam Filtering is completely disabled. No checked are performed. "Spam Likely" notification will not appear.
+- EnabledWithoutIVR - Spam Filtering is enabled partially. Captcha IVR (Interactive Voice Response) checks are disabled. "Spam Likely" notification will appear. A call might get dropped in case it gets a high score from Basic checks.
 
 ```yaml
 Type: String

@@ -45,14 +45,18 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-ImpersonationProtectionState <ImpersonationProtectionState>]
  [-MailboxIntelligenceProtectionAction <ImpersonationAction>]
  [-MailboxIntelligenceProtectionActionRecipients <MultiValuedProperty>]
+ [-MailboxIntelligenceQuarantineTag <String>]
  [-MakeDefault]
  [-PhishThresholdLevel <Int32>]
  [-PolicyTag <String>]
+ [-SpoofQuarantineTag <String>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
  [-TargetedDomainProtectionAction <ImpersonationAction>]
+ [-TargetedDomainQuarantineTag <String>]
  [-TargetedDomainsToProtect <MultiValuedProperty>]
  [-TargetedUserActionRecipients <MultiValuedProperty>]
  [-TargetedUserProtectionAction <ImpersonationAction>]
+ [-TargetedUserQuarantineTag <String>]
  [-TargetedUsersToProtect <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
@@ -552,8 +556,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailboxIntelligenceQuarantineTag
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+
+The MailboxIntelligenceQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by mailbox intelligence (the MailboxIntelligenceProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MakeDefault
-The MakeDefault switch makes the specified antiphish policy the default antiphish policy. You don't have to specify a value with this switch.
+The MakeDefault switch makes this antiphish policy the default antiphish policy. You don't need to specify a value with this switch.
 
 The default antiphish policy is applied to everyone (no corresponding antiphish rule), can't be renamed, and has the unmodifiable priority value Lowest (the default policy is always applied last).
 
@@ -609,6 +637,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SpoofQuarantineTag
+The SpoofQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by spoof intelligence (the AuthenticationFailAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TargetedDomainActionRecipients
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
@@ -643,6 +693,30 @@ The TargetedDomainProtectionAction parameter specifies the action to take on d
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetedDomainQuarantineTag
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+
+The TargetedDomainQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by domain impersonation protection (the TargetedDomainProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -708,6 +782,30 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetedUserQuarantineTag
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+
+The TargetedUserQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by user impersonation protection (the TargetedUserProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

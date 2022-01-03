@@ -86,6 +86,7 @@ New-InboxRule [-Name] <String>
  [-SendTextMessageNotificationTo <MultiValuedProperty>]
  [-SentOnlyToMe <Boolean>]
  [-SentTo <RecipientIdParameter[]>]
+ [-SoftDeleteMessage <Boolean>]
  [-StopProcessingRules <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
@@ -1511,6 +1512,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendTextMessageNotificationTo
+This parameter is available only in on-premises Exchange.
+
 The SendTextMessageNotificationTo parameter specifies an action for the Inbox rule that send a text message notification to the specified telephone number.
 
 You can specify multiple values separated by commas.
@@ -1519,7 +1522,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1568,6 +1571,24 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeleteMessage
+This parameter is available only in the cloud-based service.
+
+{{ Fill SoftDeleteMessage Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

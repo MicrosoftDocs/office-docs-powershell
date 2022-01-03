@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -HaImpactingOnly
-The HaImpactingOnly switch specifies whether the cmdlet must roll up only the monitors that have HaImpacting set to True.
+The HaImpactingOnly switch specifies whether the cmdlet must roll up only the monitors that have HaImpacting set to True. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

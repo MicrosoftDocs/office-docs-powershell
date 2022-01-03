@@ -30,11 +30,13 @@ Set-User [-Identity] <UserIdParameter>
  [-CanHaveCloudCache <Boolean>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
+ [-ClearDataEncryptionPolicy]
  [-Company <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-CreateDTMFMap <Boolean>]
  [-Department <String>]
+ [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Fax <String>]
@@ -280,6 +282,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClearDataEncryptionPolicy
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearDataEncryptionPolicy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Company
 The Company parameter specifies the user's company.
 
@@ -364,6 +384,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesiredWorkloads
+This parameter is available only in the cloud-based service.
+
+{{ Fill DesiredWorkloads Description }}
+
+```yaml
+Type: Microsoft.Exchange.Data.MailboxWorkloadFlags
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -494,9 +532,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

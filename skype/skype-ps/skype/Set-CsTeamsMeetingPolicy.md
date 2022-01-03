@@ -21,9 +21,10 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
- [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
+ [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousUsersToJoinMeeting <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
@@ -35,7 +36,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
-[-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-MeetingRecordingExpirationDays <Int32>] 
+[-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -44,9 +45,10 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
- [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
+ [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousUsersToJoinMeeting <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
@@ -55,7 +57,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
- [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String]  
+ [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+ [-NewMeetingRecordingExpirationDays <Int32>] 
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] 
@@ -91,6 +94,25 @@ In this example two different property values are configured: AutoAdmittedUsers 
 All other policy properties will use the existing values.
 
 ## PARAMETERS
+
+### -AllowAnonymousUsersToJoinMeeting
+
+> [!NOTE]
+> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check https://docs.microsoft.com/microsoftteams/meeting-settings-in-teams for details.
+
+Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowAnonymousUsersToStartMeeting
 Determines whether anonymous users can initiate a meeting. Set this to TRUE to allow anonymous users to initiate a meeting. Set this to FALSE to prohibit them from initiating a meeting.
@@ -214,6 +236,26 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowCartCaptionsScheduling
+Determines whether a user can add a URL for captions from a Communicatons Access Real-Time Translation (CART) captioner for providing real time captions in meetings.
+Possible values are:
+- **EnabledUserOverride**, CART captions is available by default but a user can disable.
+- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
+- **Disabled**, if you'd like to not allow CART captions in meeting.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DisabledUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -AllowMeetNow
 Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc meetings. Set this to FALSE to prohibit the user from starting ad-hoc meetings. 
@@ -591,6 +633,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
+Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -949,10 +993,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MeetingRecordingExpirationDays
+### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days. Value can also be -1 to set meeting recordings to never expire.
 
-Note: This parameter isn't yet available to be set. We'll publish an updated message center post when the setting is available for modification. For more information about its delivery date, see the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?searchterms=82057&filters=&searchterms=84580).
+NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+
+NOTE: This parameter is available to be set, but will not be effective until this feature gets general availability. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=84580) for more information on its delivery date.
 
 ```yaml
 Type: Int32
@@ -971,7 +1017,7 @@ Controls how the join information in meeting invitations is displayed by enforci
 Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=81521).
 
 The preliminary list of available languages is shown below:
-ar-SA,az-Latn-AZ,bg-BG,ca-ES,cs-CZ,cy-GB,da-DK,de-DE,el- GR,en-GB,es-ES,es-MX,et-EE,eu-ES,fi-FI,fil-PH,fr-CA,fr-FR,gl-ES,he-IL,hi-IN,hr-HR,hu-HU,id-ID,is-IS,it-IT,ja-JP,ka-GE,k k-KZ,ko-KR,lt-LT,lv-LV,mk-MK,ms-MY,nb-NO,nl-NL,nn-NO,pl-PL,pt-BR,pt-PT,ro-RO,ru-RU,sk-SK,sl-SL,sq-AL,sr-Latn-RS,sv-SE,t h-TH,tr-TR,uk-UA,vi-VN,zh-CN,zh-TW.
+ar-SA,az-Latn-AZ,bg-BG,ca-ES,cs-CZ,cy-GB,da-DK,de-DE,el-GR,en-GB,en-US,es-ES,es-MX,et-EE,eu-ES,fi-FI,fil-PH,fr-CA,fr-FR,gl-ES,he-IL,hi-IN,hr-HR,hu-HU,id-ID,is-IS,it-IT,ja-JP,ka-GE,kk-KZ,ko-KR,lt-LT,lv-LV,mk-MK,ms-MY,nb-NO,nl-NL,nn-NO,pl-PL,pt-BR,pt-PT,ro-RO,ru-RU,sk-SK,sl-SL,sq-AL,sr-Latn-RS,sv-SE,th-TH,tr-TR,uk-UA,vi-VN,zh-CN,zh-TW.
 
 ```yaml
 Type: String

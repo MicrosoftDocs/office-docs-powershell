@@ -13,6 +13,11 @@ ms.reviewer:
 # Get-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsAutoAttendant](Get-CsAutoAttendant.md) cmdlet instead.
+
 Use the Get-CsOrganizationalAutoAttendant cmdlet to get information about Auto Attendants (AAs). 
 
 ## SYNTAX

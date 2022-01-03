@@ -13,6 +13,11 @@ ms.reviewer:
 # Get-CsOrganizationalAutoAttendantSupportedTimeZone
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsAutoAttendantSupportedTimeZone](Get-CsAutoAttendantSupportedTimeZone.md) cmdlet instead.
+
 The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Auto Attendant (AA) service.
 
 ## SYNTAX

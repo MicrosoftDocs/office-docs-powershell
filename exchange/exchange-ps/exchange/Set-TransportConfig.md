@@ -25,6 +25,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-AddressBookPolicyRoutingEnabled <Boolean>]
  [-AgentGeneratedMessageLoopDetectionInSmtpEnabled <Boolean>]
  [-AgentGeneratedMessageLoopDetectionInSubmissionEnabled <Boolean>]
+ [-AllowLegacyTLSClients <System.Boolean>]
  [-ClearCategories <Boolean>]
  [-Confirm]
  [-ConvertDisclaimerWrapperToEml <Boolean>]
@@ -62,6 +63,10 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxSendSize <Unlimited>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
  [-RejectMessageOnShadowFailure <Boolean>]
+ [-ReplyAllStormBlockDurationHours <Int32>]
+ [-ReplyAllStormDetectionMinimumRecipients <Int32>]
+ [-ReplyAllStormDetectionMinimumReplies <Int32>]
+ [-ReplyAllStormProtectionEnabled <Boolean>]
  [-Rfc2231EncodingEnabled <Boolean>]
  [-SafetyNetHoldTime <EnhancedTimeSpan>]
  [-ShadowHeartbeatFrequency <EnhancedTimeSpan>]
@@ -178,6 +183,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyTLSClients
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowLegacyTLSClients Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -980,6 +1003,78 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReplyAllStormBlockDurationHours
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormBlockDurationHours Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormDetectionMinimumRecipients
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormDetectionMinimumRecipients Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormDetectionMinimumReplies
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormDetectionMinimumReplies Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormProtectionEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormProtectionEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Rfc2231EncodingEnabled
 The Rfc2231EncodingEnabled parameter specifies whether the RFC 2231 encoding of MIME parameters for outbound messages is enabled in your organization. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1287,7 +1382,7 @@ Accept wildcard characters: False
 ### -TransportRuleAttachmentTextScanLimit
 This parameter is available only in on-premises Exchange.
 
-The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
+The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -1297,6 +1392,8 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+In Exchange Online, Exchange 2019, and Exchange 2016, the default value is 1 MB (1,048,576 bytes). In Exchange 2013, the default value is 150 KB (153,600 bytes).
 
 If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
 

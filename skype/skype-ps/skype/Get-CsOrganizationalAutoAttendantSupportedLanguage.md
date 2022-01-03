@@ -13,6 +13,11 @@ ms.reviewer:
 # Get-CsOrganizationalAutoAttendantSupportedLanguage
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [Get-CsAutoAttendantSupportedLanguage](Get-CsAutoAttendantSupportedLanguage.md) cmdlet instead.
+
 The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets languages that are supported by the Auto Attendant (AA) service.
 
 ## SYNTAX

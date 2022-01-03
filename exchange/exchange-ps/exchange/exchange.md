@@ -61,8 +61,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
 
-### [Get-AdvancedThreatProtectionTrafficReport](Get-AdvancedThreatProtectionTrafficReport.md)
-
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
@@ -90,8 +88,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
 
 ### [Get-SpoofMailReport](Get-SpoofMailReport.md)
-
-### [Get-UrlTrace](Get-UrlTrace.md)
 
 ### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
 
@@ -171,6 +167,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
 
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
+
+### [Get-ConfigAnalyzerPolicyRecommendation](Get-ConfigAnalyzerPolicyRecommendation.md)
 
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
@@ -2266,9 +2264,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
 
-### [Get-MailDetailMalwareReport](Get-MailDetailMalwareReport.md)
-
-### [Get-MailDetailSpamReport](Get-MailDetailSpamReport.md)
+### [Get-MailDetailEncryptionReport](Get-MailDetailEncryptionReport.md)
 
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
@@ -2276,9 +2272,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
 
-### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
+### [Get-MailTrafficEncryptionReport](Get-MailTrafficEncryptionReport.md)
 
-### [Get-MailTrafficReport](Get-MailTrafficReport.md)
+### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 
 ### [Get-MailTrafficSummaryReport](Get-MailTrafficSummaryReport.md)
 
@@ -2330,13 +2326,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
 
-### [Get-TenantAnalyticsConfig](Get-TenantAnalyticsConfig.md)
-
-### [Get-UserAnalyticsConfig](Get-UserAnalyticsConfig.md)
-
-### [Set-TenantAnalyticsConfig](Set-TenantAnalyticsConfig.md)
-
-### [Set-UserAnalyticsConfig](Set-UserAnalyticsConfig.md)
+### [Test-Message](Test-Message.md]
 
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)

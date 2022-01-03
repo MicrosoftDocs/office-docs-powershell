@@ -35,6 +35,7 @@ Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParamete
 ```
 Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParameter>
  [-IncludeReport]
+ [-IncludeSkippedItems]
  [-DiagnosticInfo <String>]
  [-ReportOnly]
  [<CommonParameters>]
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting.
+The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -205,7 +206,9 @@ Accept wildcard characters: False
 ### -Diagnostic
 This parameter is available only in on-premises Exchange.
 
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
@@ -266,6 +269,24 @@ Type: Fqdn
 Parameter Sets: IdentityOnPremises, MigrationMRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSkippedItems
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeSkippedItems Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -187,9 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -205,9 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -621,9 +617,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -639,9 +633,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
 
 ```yaml
 Type: MultiValuedProperty

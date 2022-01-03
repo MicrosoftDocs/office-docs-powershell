@@ -42,8 +42,6 @@ New-DlpCompliancePolicy [-Name] <String>
  [-Priority <Int32>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
- [-SharePointOnPremisesLocationException <MultiValuedProperty>]
- [-SharePointServerLocation <MultiValuedProperty>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
  [-ThirdPartyAppDlpLocation <MultiValuedProperty>]
@@ -165,7 +163,6 @@ The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
 
-
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
@@ -196,7 +193,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -ExchangeLocation
 The ExchangeLocation parameter specifies Exchange Online mailboxes to include in the DLP policy. You can only use the value All for this parameter to include all mailboxes.
@@ -254,7 +250,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Force
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
@@ -293,16 +288,13 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-The OneDriveLocation parameter specifies the OneDrive for Business sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -311,16 +303,13 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocationException
-This parameter specifies the OneDrive for Business sites to exclude when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Don't use this parameter. Use the ExceptIfOneDriveSharedBy and ExceptIfOneDriveSharedByMemberOf parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -332,7 +321,6 @@ Accept wildcard characters: False
 The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
-
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -443,38 +431,6 @@ Accept wildcard characters: False
 This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointOnPremisesLocationException
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointServerLocation
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty

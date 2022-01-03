@@ -81,7 +81,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
- [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeLockPollForAttendeesEnabled <Boolean>]
@@ -99,6 +98,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
+ [-MessageHighlightsEnabled <Boolean>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -191,6 +191,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-MitigationsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -210,6 +211,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-SmtpActionableMessagesEnabled <Boolean>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
+ [-UseIcsSyncStateStreaming]
  [-WACDiscoveryEndpoint <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -273,6 +275,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-MitigationsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -293,6 +296,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-SmtpActionableMessagesEnabled <Boolean>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
+ [-UseIcsSyncStateStreaming]
  [-WACDiscoveryEndpoint <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -445,7 +449,7 @@ The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the 
 - $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This is the default value.
 - $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled.
 
-If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutInterval parameter.
+If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -1507,7 +1511,7 @@ You can use the following user attributes. The actual values are determined by t
 - `<City>`
 - `<Company>`
 - `<CountryCode>`
-- `<CountryOrRegion>
+- `<CountryOrRegion>`
 - `<CustomAttribute1>` to `<CustomAttribute15>`
 - `<Department>`
 - `<ExtensionCustomAttribute1>` to `<ExtensionCustomAttribute5>`
@@ -1610,7 +1614,12 @@ Accept wildcard characters: False
 ### -EnableDownloadDomains
 This parameter is available only in on-premises Exchange.
 
-{{ Fill EnableDownloadDomains Description }}
+The EnableDownloadDomains parameter specifies that Outlook on the web downloads inline images from a different domain than the rest of Outlook on the web. Valid values are:
+
+- $true: Outlook on the web uses a different download domain for inline images (for example, downloads.contoso.com). Before you enable this setting, you need to create a CNAME record and certificate for this domain, and add the domain to the ExternalDownloadHostName and InternalDownloadHostName parameters on the Set-OwaVirtualDirectory cmdlet.
+- $false: The setting is disabled. This is the default value.
+
+For more information about the security vulnerability that's addressed by this parameter, and for detailed configuration instructions, see [CVE 2021 1730](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1730).
 
 ```yaml
 Type: Boolean
@@ -1859,24 +1868,6 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalInOutlookEnabled
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
@@ -2402,6 +2393,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageHighlightsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageHighlightsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageRemindersEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2502,6 +2511,29 @@ Type: RecipientIdParameter
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MitigationsEnabled
+This parameter is available only in on-premises Exchange.
+
+The MitigationsEnabled parameter specifies whether the Exchange Emergency Mitigation service (EM service) is enabled in the organization. Valid values are:
+
+- $true: The EM Service automatically applies mitigations on Exchange servers where the value of the _MitigationsEnabled_ parameter is $true on the **Set-ExchangeServer**.
+- $false: Mitigations are not automatically applied on Exchange servers.
+
+For more information, see [Exchange Emergency Mitigation (EM) service](https://docs.microsoft.com/exchange/exchange-emergency-mitigation-service).
+
+```yaml
+Type: Boolean
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3015,9 +3047,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendFromAliasEnabled
-This parameter is available only in the cloud-based service. 
+This parameter is available only in the cloud-based service.
 
-Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience. 
+Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience.
 An official announcement will be released via the EHLO blog and Message Center in due time.
 
 The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
@@ -3025,7 +3057,7 @@ The SendFromAliasEnabled parameter allows mailbox users to send messages using a
 - $true: Aliases on messages will no longer be rewritten to their primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases.
 - $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
-For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=64123).   
+For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Outlook&searchterms=64123).
 
 ```yaml
 Type: Boolean
@@ -3101,6 +3133,24 @@ Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseIcsSyncStateStreaming
+This parameter is available only in on-premises Exchange.
+
+{{ Fill UseIcsSyncStateStreaming Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3269,3 +3319,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/set-organizationconfig)

@@ -13,6 +13,10 @@ ms.reviewer:
 # Enable-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
+
+> [!NOTE]
+> This cmdlet will be deprecated on December 31, 2021. To enable Audio Conferencing for a given user, assign an Audio Conferencing license to the user or enable the Audio Conferencing component in the user's license. For additional information, see [Assign or remove licenses for Microsoft 365 Apps for business](https://docs.microsoft.com/microsoft-365/admin/add-users/add-users).
+
 Use the `Enable-CsOnlineDialInConferencingUser` cmdlet to enable a Skype for Business user to access audio conferencing through Skype for Business Online.
 
 ## SYNTAX

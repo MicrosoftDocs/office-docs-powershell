@@ -24,6 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
  [-AccessScope <AccessScope>]
  [-ActivationDate <System.DateTime>]
+ [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
+ [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
@@ -32,26 +34,40 @@ Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
  [-DocumentIsPasswordProtected <Boolean>]
  [-DocumentIsUnsupported <Boolean>]
  [-ExceptIfAccessScope <AccessScope>]
+ [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
  [-ExceptIfDocumentIsPasswordProtected <Boolean>]
  [-ExceptIfDocumentIsUnsupported <Boolean>]
  [-ExceptIfFrom <RecipientIdParameter[]>]
+ [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
+ [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfFromMemberOf <SmtpAddress[]>]
+ [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
  [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfSenderDomainIs <MultiValuedProperty>]
  [-ExceptIfSenderIPRanges <MultiValuedProperty>]
  [-ExceptIfSentTo <MultiValuedProperty>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
  [-ExpiryDate <System.DateTime>]
  [-From <RecipientIdParameter[]>]
+ [-FromAddressContainsWords <MultiValuedProperty>]
+ [-FromAddressMatchesPatterns <MultiValuedProperty>]
  [-FromMemberOf <SmtpAddress[]>]
+ [-HeaderMatchesPatterns <PswsHashtable>]
  [-Priority <System.Int32>]
  [-ProcessingLimitExceeded <Boolean>]
  [-RecipientDomainIs <MultiValuedProperty>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
+ [-SenderDomainIs <MultiValuedProperty>]
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
+ [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf]
  [-Workload <Workload>]
  [<CommonParameters>]
@@ -117,6 +133,50 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyOfRecipientAddressContainsWords
+The AnyOfRecipientAddressContainsWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in recipient email addresses. You can specify multiple words or phrases separated by commas.
+
+- Single word: `"no_reply"`
+- Multiple words: `no_reply,urgent,...`
+- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyOfRecipientAddressMatchesPatterns
+The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -275,10 +335,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfAnyOfRecipientAddressContainsWords
+The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception for the auto-labeling policy rule that looks for words or phrases in recipient email addresses. You can specify multiple words separated by commas.
+
+- Single word: `"no_reply"`
+- Multiple words: `no_reply,urgent,...`
+- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAnyOfRecipientAddressMatchesPatterns
+The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfContentContainsSensitiveInformation
 The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the auto-labeling policy rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
 ```yaml
 Type: PswsHashtable[]
@@ -370,6 +474,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfFromAddressContainsWords
+The ExceptIfFromAddressContainsWords parameter specifies an exception for the auto-labeling policy rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
+
+- Single word: `"no_reply"`
+- Multiple words: `no_reply,urgent,...`
+- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+The maximum individual word length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFromAddressMatchesPatterns
+The ExceptIfFromAddressMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfFromMemberOf
 The ExceptIfFromMemberOf parameter specifies an exception for the auto-labeling policy rule that looks for messages sent by group members. You identify the group members by their email addresses.
 
@@ -377,6 +525,24 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 ```yaml
 Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfHeaderMatchesPatterns
+The HeaderMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -409,6 +575,24 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientDomainIs
 The ExceptIfRecipientDomainIs parameter specifies an exception for the auto-labeling policy rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderDomainIs
+The ExceptIfSenderDomainIs parameter specifies an exception for the auto-labeling policy rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -472,6 +656,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfSentToMemberOf
+The ExceptIfSentToMemberOf parameter specifies an exception for the auto-labeling policy rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You identify the groups by email address. You can specify multiple values separated by commas.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSubjectMatchesPatterns
+The ExceptIfSubjectMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExpiryDate
 This parameter is reserved for internal Microsoft use.
 
@@ -504,11 +726,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FromAddressContainsWords
+The FromAddressContainsWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
+
+- Single word: `"no_reply"`
+- Multiple words: `no_reply,urgent,...`
+- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+The maximum individual word length is 128 characters. The maximum number of words or phrases is 50.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FromAddressMatchesPatterns
+The FromAddressMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FromMemberOf
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HeaderMatchesPatterns
+The HeaderMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -614,6 +898,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SenderDomainIs
+The SenderDomainIs parameter specifies a condition for the auto-labeling policy rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SenderIPRanges
 The SenderIpRanges parameter specifies a condition for the auto-sensitivity policy rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
@@ -649,6 +951,44 @@ The SentTo parameter specifies a condition for the auto-sensitivity policy rule 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can use this condition in auto-sensitivity policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentToMemberOf
+The SentToMemberOf parameter specifies a condition for the auto-labeling policy rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You identify the groups by email address. You can specify multiple values separated by commas.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubjectMatchesPatterns
+The SubjectMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can use this condition in auto-labeling policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty

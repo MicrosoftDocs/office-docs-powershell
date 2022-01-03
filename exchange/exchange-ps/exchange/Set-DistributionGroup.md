@@ -976,7 +976,9 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill HiddenGroupMembershipEnabled Description }}
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from members of the group and users who aren't members of the group. You don't need to specify a value with this switch.
+
+You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
 
 ```yaml
 Type: SwitchParameter
@@ -994,9 +996,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

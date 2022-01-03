@@ -316,6 +316,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -445,6 +446,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -574,6 +576,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -703,6 +706,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -829,6 +833,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -957,6 +962,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -1085,6 +1091,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -1301,7 +1308,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-This parameter is available o functional only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
@@ -1503,9 +1510,17 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveName
-The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App.
+The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook on the web (formerly known as Outlook Web App). If the value contains spaces, enclose the value in quotation marks (").
 
-If you don't use this parameter, the default value is `In-Place Archive - <Mailbox User's Display Name>`.
+In on-premises Exchange, the following default values are used based on the version of Exchange:
+
+- Exchange 2016 or later: `In-Place Archive -<Display Name>`
+- Exchange 2013: `In-Place Archive - <Display Name>`
+- Exchange 2010: `Personal Archive - <Display Name>`
+
+In Exchange Online, the default value is `In-Place Archive -<Display Name>`.
+
+In Outlook in Exchange Online, the value of this parameter is ignored. The name of the archive mailbox that's shown in the folder list is `Online Archive - <PrimarySMTPAddress>`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -3079,9 +3094,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -4964,6 +4979,24 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SchedulerAssistant
+This parameter is available only in the cloud-based service.
+
+{{ Fill SchedulerAssistant Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

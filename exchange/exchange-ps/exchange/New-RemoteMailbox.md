@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-The AccountDisabled switch specifies whether to create the mail user in a disabled state. You don't have to specify a value with this switch.
+The AccountDisabled switch specifies whether to create the mail user in a disabled state. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

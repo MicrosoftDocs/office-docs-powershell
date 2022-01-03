@@ -23,6 +23,19 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
+**NOTE:**
+
+Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+
+*Deprecated Attributes*
+
+- Below attributes have been deprecated under "-ExpandLocation" parameter:
+  - Force
+  - NumberOfResultsToSkip
+  - CorrelationId
+  - Verb
+  - ResultSize
+- LicenceState 
 
 ## EXAMPLES
 

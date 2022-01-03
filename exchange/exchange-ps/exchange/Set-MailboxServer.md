@@ -251,7 +251,11 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairIntervalEndWindow
-The CalendarRepairIntervalEndWindow parameter specifies the number of days into the future to repair calendar items in mailboxes on the Mailbox server. The default value is 30. This means the Calendar Repair Assistant repairs meetings in calendars up to 30 days from now. Meetings that are scheduled to occur more than 30 days in the future aren't repaired.
+The CalendarRepairIntervalEndWindow parameter specifies the number of days into the future to repair calendar items in mailboxes on the Mailbox server.
+
+The default value in Exchange 2016 and Exchange 2019 is 7. This value means the Calendar Repair Assistant repairs meetings in calendars up to 7 days from now. Meetings that are scheduled to occur more than 7 days in the future aren't repaired.
+
+The default value in Exchange 2013 and Exchange 2010 is 30. This value means the Calendar Repair Assistant repairs meetings in calendars up to 30 days from now. Meetings that are scheduled to occur more than 30 days in the future aren't repaired.
 
 ```yaml
 Type: Int32

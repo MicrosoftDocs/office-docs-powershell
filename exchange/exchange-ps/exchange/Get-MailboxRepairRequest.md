@@ -148,9 +148,11 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-If the associated archive mailbox was included when the mailbox repair request was created, use the Archive parameter to display information about the archive mailbox. If you don't specify this parameter, only information about the primary mailbox is returned.
+The Archive switch displays information about the associated archive mailbox if the archive mailbox was included when the mailbox repair request was created. You don't need to specify a value with this switch.
 
-You can't use this parameter with the Database parameter.
+If you don't use this switch, only information about the primary mailbox is returned.
+
+You can't use this switch with the Database parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -166,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Detailed
-Use the Detailed parameter to display mailbox-level repair tasks associated with the repair request.
+Use the Detailed parameter to display mailbox-level repair tasks associated with the repair request. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

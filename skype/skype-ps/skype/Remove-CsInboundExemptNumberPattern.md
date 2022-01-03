@@ -77,8 +77,12 @@ Accept wildcard characters: False
 You can use Test-CsInboundBlockedNumberPattern to test your call block and exempt phone number ranges.
 
 ## RELATED LINKS
-- [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
-- [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
-- [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
-- [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
-- [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+[New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
+
+[Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
+
+[Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
+
+[Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
+
+[Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)

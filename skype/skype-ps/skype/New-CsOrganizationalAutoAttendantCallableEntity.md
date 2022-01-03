@@ -13,6 +13,12 @@ ms.reviewer:
 # New-CsOrganizationalAutoAttendantCallableEntity
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use [New-CsAutoAttendantCallableEntity](New-CsAutoAttendantCallableEntity.md) cmdlet instead.
+
+
 The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 
 ## SYNTAX

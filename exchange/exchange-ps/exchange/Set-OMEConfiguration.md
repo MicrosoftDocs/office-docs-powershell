@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, etc). Valid values are:
+The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, and Microsoft account). Valid values are:
 
 - $true: Social network ID sign in is allowed. This is the default value.
 - $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Microsoft 365 work or school account is controlled by the OTPEnabled parameter.
