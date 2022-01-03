@@ -243,7 +243,7 @@ This example restores the public folder named "Documents" from LOST_AND_FOUND to
 
 `Set-PublicFolder -Identity \NON_IPM_SUBTREE\DUMPSTER_ROOT\DUMPSTER_EXTEND\RESERVED_1\RESERVED_1\9f32c468-4bc2-42aa-b979-16a057394b2f\Documents -Path \Engineering`
 
-**Note**: You should use the ReconcileFolders only for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
+**Note**: You should use the ReconcileFolders switch only for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
 
 ```yaml
 Type: SwitchParameter
