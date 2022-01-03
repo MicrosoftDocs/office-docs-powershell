@@ -5,12 +5,17 @@ applicable: Skype for Business Online
 title: Set-CsOnlineVoiceUser
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Set-CsOnlineVoiceUser
+
+> [!NOTE]
+> This cmdlet will be deprecated. Please start using the new cmdlet Set-CsPhoneNumberAssignment use of this cmdlet is in Public Preview.
+
+https://docs.microsoft.com/powershell/module/teams/set-csphonenumberassignment
 
 ## SYNOPSIS
 Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
