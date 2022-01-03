@@ -201,9 +201,7 @@ Accept wildcard characters: False
 ### -DiagnosticArgument
 This parameter is available only in on-premises Exchange.
 
-The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. You don't need to specify a value with this switch.
-
-Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: String

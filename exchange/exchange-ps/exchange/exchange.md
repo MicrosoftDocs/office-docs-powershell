@@ -2264,11 +2264,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
 
+### [Get-MailDetailEncryptionReport](Get-MailDetailEncryptionReport.md)
+
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
 ### [Get-MailFilterListReport](Get-MailFilterListReport.md)
 
 ### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
+
+### [Get-MailTrafficEncryptionReport](Get-MailTrafficEncryptionReport.md)
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 
@@ -2321,6 +2325,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SupervisoryReviewReport](Get-SupervisoryReviewReport.md)
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
+
+### [Test-Message](Test-Message.md]
 
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)

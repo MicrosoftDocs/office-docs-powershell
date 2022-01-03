@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Orphan
-The Orphan parameter returns only the management scopes that aren't associated with role assignments.
+The Orphan switch specifies whether to return only management scopes that aren't associated with role assignments. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
