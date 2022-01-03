@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsOnlineVoiceUser
 
 > [!NOTE]
-> This cmdlet will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](./teams/teams-ps/teams/Set-CsPhoneNumberAssignment.md).
+> This cmdlet will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](https://docs.microsoft.com/powershell/module/teams/set-csphonenumberassignment).
 
 ## SYNOPSIS
 Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
