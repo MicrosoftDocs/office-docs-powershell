@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force parameter forces the command to execute without asking for user confirmation.
+The Force switch forces the command to execute without asking for user confirmation. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
