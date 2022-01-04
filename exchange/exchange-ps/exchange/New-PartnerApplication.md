@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ### -TrustAnySSLCertificate
 This parameter is available only in on-premises Exchange.
 
-The TrustAnySSLCertificate switch specifies whether Exchange should trust certificates issued by a certification authority (CA) not trusted by the server.
+The TrustAnySSLCertificate switch specifies whether Exchange should trust certificates issued by a certification authority (CA) not trusted by the server. You don't need to specify a value with this switch.
 
 We don't recommend using this switch in a production environment.
 

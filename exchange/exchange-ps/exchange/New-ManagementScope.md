@@ -317,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusive
-The Exclusive switch specifies that the role should be an exclusive scope.
+The Exclusive switch specifies that the role should be an exclusive scope. You don't need to specify a value with this switch.
 
 When you create exclusive management scopes, only users or universal security groups (USG) assigned exclusive scopes that contain objects to be modified can access those objects. Users or USGs that aren't assigned an exclusive scope that contains the objects immediately lose access to those objects.
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that an exclusive scope should be created without showing the warning that the exclusive scope takes effect immediately.
+The Force switch specifies that an exclusive scope should be created without showing the warning that the exclusive scope takes effect immediately. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

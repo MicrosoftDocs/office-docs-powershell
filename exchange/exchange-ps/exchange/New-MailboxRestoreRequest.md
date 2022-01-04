@@ -653,7 +653,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeDumpster
-The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items folder. You don't have to include a value with this parameter. If you don't specify this parameter, the Recoverable Items folder is copied with the following subfolders:
+The ExcludeDumpster switch specifies whether to exclude the Recoverable Items folder. You don't need to specify a value with this switch.
+
+If you don't use this switch, the Recoverable Items folder is copied with the following subfolders:
 
 - Deletions
 - Versions
@@ -919,7 +921,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIsArchive
-The SourceIsArchive switch specifies that the source mailbox is an archive mailbox. You can use this switch only with the SourceMailbox parameter.
+The SourceIsArchive switch specifies that the source mailbox is an archive mailbox. You don't need to specify a value with this switch.
+
+You can use this switch only with the SourceMailbox parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -951,7 +955,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't need to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -983,7 +989,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetIsArchive
-The TargetIsArchive parameter specifies that the content is restored into the specified target mailbox's archive.
+The TargetIsArchive switch specifies that the content is restored into the specified target mailbox's archive. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
