@@ -223,7 +223,7 @@ This example tests multiple existing endpoints.
 ## PARAMETERS
 
 ### -Autodiscover
-The Autodiscover parameter specifies that the cmdlet should use the Autodiscover service to obtain the connection settings for the target server. You don't need to specify a value with this switch.
+The Autodiscover switch specifies that the command should use the Autodiscover service to obtain the connection settings for the target server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -333,7 +333,9 @@ Accept wildcard characters: False
 ### -ExchangeOutlookAnywhere
 This parameter is available only in the cloud-based service.
 
-The ExchangeOutlookAnywhere parameter specifies a migration type for migrating on-premises mailboxes to Exchange Online. Use this parameter if you plan to migrate mailboxes to Exchange Online using a staged Exchange migration or a cutover Exchange migration.
+The ExchangeOutlookAnywhere switch specifies a migration type for migrating on-premises mailboxes to Exchange Online. You don't need to specify a value with this switch.
+
+Use this switch if you plan to migrate mailboxes to Exchange Online using a staged Exchange migration or a cutover Exchange migration.
 
 ```yaml
 Type: SwitchParameter
@@ -349,7 +351,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeRemoteMove
-The ExchangeRemoteMove parameter specifies a type of migration where mailboxes are moved with full fidelity between two on-premises forests or between an on-premises forest and Exchange Online. Use this parameter if you plan to perform a cross-forest move or migrate mailboxes between an on-premises Exchange organization and Exchange Online in a hybrid deployment.
+The ExchangeRemoteMove switch specifies a migration type where mailboxes are moved with full fidelity between two on-premises forests or between an on-premises forest and Exchange Online. You don't need to specify a value with this switch.
+
+Use this switch if you plan to perform a cross-forest move or migrate mailboxes between an on-premises Exchange organization and Exchange Online in a hybrid deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -385,7 +389,9 @@ Accept wildcard characters: False
 ### -Imap
 This parameter is available only in the cloud-based service.
 
-The Imap parameter specifies an IMAP migration as the migration type. This parameter is required when you want to migrate data from an IMAP mail server to Exchange Online mailboxes.
+The Imap parameter specifies an IMAP migration type. You don't need to specify a value with this switch.
+
+This switch is required when you want to migrate data from an IMAP mail server to Exchange Online mailboxes.
 
 ```yaml
 Type: SwitchParameter
@@ -403,7 +409,9 @@ Accept wildcard characters: False
 ### -Gmail
 This parameter is available only in the cloud-based service.
 
-The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a Google Workspace (formerly G Suite) tenant to Exchange Online mailboxes.
+The Gmail parameter specifies Gmail as the migration type. You don't need to specify a value with this switch.
+
+This switch is required when you want to migrate data from a Google Workspace (formerly G Suite) tenant to Exchange Online mailboxes.
 
 ```yaml
 Type: SwitchParameter

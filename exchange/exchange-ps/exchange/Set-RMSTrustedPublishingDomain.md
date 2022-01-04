@@ -93,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-The Default parameter specifies this is the default TPD. The default TPD displays RMS templates and provides rights protection to all new content. There can be only one default TPD in an organization.
+The Default switch specifies that this is the default TPD. You don't need to specify a value with this switch.
+
+The default TPD displays RMS templates and provides rights protection to all new content. There can be only one default TPD in an organization.
 
 ```yaml
 Type: SwitchParameter

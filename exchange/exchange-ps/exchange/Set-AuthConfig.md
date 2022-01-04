@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearPreviousCertificate
-The ClearPreviousCertificate switch clears the certificate saved as the previous certificate in the authorization configuration.
+The ClearPreviousCertificate switch clears the certificate that was saved as the previous certificate in the authorization configuration. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
@@ -207,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublishCertificate
-The PublishCertificate switch specifies that the specified certificate be immediately rolled over as the current certificate. The certificate is immediately deployed to all Client Access servers.
+The PublishCertificate switch immediately rolls over the specified certificate as the current certificate. You don't need to specify a value with this switch.
+
+The certificate is immediately deployed to all Client Access servers.
 
 ```yaml
 Type: SwitchParameter
@@ -273,7 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipImmediateCertificateDeployment
-The SkipImmediateCertificateDeployment switch specifies that the certificate shouldn't be used immediately. We recommend that you don't use this parameter in a production environment.
+The SkipImmediateCertificateDeployment switch specifies that the certificate shouldn't be used immediately. You don't need to specify a value with this switch.
+
+We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter

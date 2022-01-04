@@ -158,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDiscoverTargetMailboxServer
-The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
+The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. You don't need to specify a value with this switch.
+
+The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
 
 When you use this switch, you can't use the CrossPremises, TargetDatabase, TargetEmailAddress or TargetMailboxServer parameters.
 
@@ -374,7 +376,10 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
+
+- $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
 
 ```yaml
 Type: Boolean

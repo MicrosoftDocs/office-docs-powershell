@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsePrimaryWitnessServer
-The UsePrimaryWitnessServer switch specifies that the DAG's currently configured witness server should be used if a witness is needed by the DAG members being activated. You don't need to specify a value with this switch.
+The UsePrimaryWitnessServer switch specifies that the DAG's currently configured witness server should be used if a witness is needed by the DAG members that are being activated. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

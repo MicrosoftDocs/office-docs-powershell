@@ -190,7 +190,9 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive parameter specifies whether to test the MAPI connectivity of the personal archive associated with the specified mailbox. If you don't specify this parameter, only the primary mailbox is tested.
+The Archive switch specifies whether to test the MAPI connectivity of the personal archive that's associated with the specified mailbox. You don't need to specify a value with this switch.
+
+If you don't use this switch, only the primary mailbox is tested.
 
 ```yaml
 Type: SwitchParameter
@@ -270,7 +272,9 @@ Accept wildcard characters: False
 ### -IncludePassive
 This parameter is available only in on-premises Exchange.
 
-Without the IncludePassive parameter, the cmdlet tests MAPI connectivity from active database copies only. Using the IncludePassive parameter, you can have the cmdlet test MAPI connectivity from all active and passive database copies.
+The IncludePassive switch tests MAPI connectivity from all active and passive database copies. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command tests MAPI connectivity from active database copies only.
 
 ```yaml
 Type: SwitchParameter
@@ -288,7 +292,10 @@ Accept wildcard characters: False
 ### -MonitoringContext
 This parameter is available only in on-premises Exchange.
 
-The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
+
+- $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
 
 ```yaml
 Type: Boolean
