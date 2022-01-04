@@ -508,7 +508,7 @@ The Disable switch specifies that the Exchange settings group is disabled. You d
 
 You can only use this switch with the CreateSettingsGroup switch.
 
-To use this switch to enable an Exchange settings group, use the syntax -Disable:$false.
+To use this switch to enable an Exchange settings group, use this exact syntax `-Disable:$false`.
 
 ```yaml
 Type: SwitchParameter
@@ -576,7 +576,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 

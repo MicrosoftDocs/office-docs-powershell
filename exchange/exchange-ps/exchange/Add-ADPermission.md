@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny switch specifies whether to deny permissions to the user on the Active Directory object. You don't need to specify a value with this switch.
+The Deny switch specifies that the permissions you're adding are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

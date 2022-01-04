@@ -164,7 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDuplicates
-The AllowDuplicates parameter specifies whether to copy mail items without checking if they're duplicates of existing items and without removing duplicate items. We recommend that you use the AllowDuplicates parameter together with the IncludeFolders parameter.
+The AllowDuplicates switch copies mail items without checking if they're duplicates of existing items and without removing duplicate items. You don't need to specify a value with this switch.
+
+We recommend that you use this switch with the IncludeFolders parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -429,7 +431,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateOnly
-The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. No changes are made when the ValidateOnly switch is used.
+The ValidateOnly switch tells the command to evaluate the conditions and requirements necessary to perform the operation, and then report whether the operation will succeed or fail. You don't need to specify a value with this switch.
+
+No changes are made when you use this switch.
 
 ```yaml
 Type: SwitchParameter

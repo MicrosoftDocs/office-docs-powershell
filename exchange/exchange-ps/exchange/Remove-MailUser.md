@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
@@ -131,7 +131,9 @@ Accept wildcard characters: False
 ### -IgnoreLegalHold
 This parameter is available only in on-premises Exchange.
 
-The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the user. When you disable or remove the user, the user's cloud-based mailbox that's on legal hold is also disabled or removed. You don't need to specify a value with this switch.
+The IgnoreLegalHold switch ignores the legal hold status of the user. You don't need to specify a value with this switch.
+
+When you disable or remove the user, the user's cloud-based mailbox that's on legal hold is also disabled or removed.
 
 After you disable or remove a mailbox, you can't include it in a discovery search. When you disable a mailbox, the mailbox is disconnected from the user account. Disconnected mailboxes and removed mailboxes are permanently deleted from the mailbox database after the deleted mailbox retention period expires. However, you can also remove a mailbox and purge it immediately from the mailbox database. Check with your organization's legal or Human Resources department before you disable or remove a mailbox that's on legal hold.
 
@@ -151,11 +153,12 @@ Accept wildcard characters: False
 ### -PermanentlyDelete
 This parameter is available only in the cloud-based service.
 
-The PermanentlyDelete switch specifies whether to immediately and permanently delete (purge) the mail user, which prevents you from recovering or restoring the mail user. You don't need to specify a value with this switch.
+The PermanentlyDelete switch immediately and permanently deletes (purges) the mail user, which prevents you from recovering or restoring the mail user. You don't need to specify a value with this switch.
 
-This switch works only on mail users that have already been deleted, but are still recoverable (known as soft-deleted mail-users), that also have a blank value for the ExternalObjectId property.
+**Notes**:
 
-Use the Get-MailUser cmdlet to identify the soft-deleted mail user, and then pipe the results to the Remove-MailUser cmdlet with this switch. For example, Get-MailUser -Identity Laura -SoftDeleted | Remove-MailUser -PermanentlyDelete.
+- This switch works only on mail users that have already been deleted, but are still recoverable (known as soft-deleted mail-users), that also have a blank value for the ExternalObjectId property.
+- Use the Get-MailUser cmdlet to identify the soft-deleted mail user, and then pipe the results to the Remove-MailUser cmdlet with this switch. For example, `Get-MailUser -Identity Laura -SoftDeleted | Remove-MailUser -PermanentlyDelete`.
 
 ```yaml
 Type: SwitchParameter

@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysDeleteOutlookRulesBlob
-The AlwaysDeleteOutlookRulesBlob switch suppresses the warning that appears when Outlook Web App or Windows PowerShell is used to modify Inbox rules. You don't need to specify a value with this switch.
+The AlwaysDeleteOutlookRulesBlob switch hides a warning message when you use Outlook on the web (formerly known as Outlook Web App) or Exchange PowerShell to modify Inbox rules. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -987,9 +987,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
-
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 A confirmation prompt warns you if the mailbox contains rules that were created by Outlook, because any client-side rules will be removed by the actions of this cmdlet.
 

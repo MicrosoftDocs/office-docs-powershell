@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ### -ChangeExportKey
 The ChangeExportKey switch creates a new export key for the compliance search action. You don't need to specify a value with this switch.
 
-This parameter is only meaningful on export compliance search actions.
+This switch is meaningful only on export compliance search actions.
 
 ```yaml
 Type: SwitchParameter

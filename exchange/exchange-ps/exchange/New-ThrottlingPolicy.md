@@ -1472,7 +1472,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsServiceAccount
-The IsServiceAccount switch specifies whether you want the user accounts that are associated with this policy to be moderated by the per-user thresholds specified by this policy, and also by additional throttling based on the health of system resources, such as overall CPU usage. You don't need to specify a value with this switch.
+The IsServiceAccount switch specifies that the user accounts associated with this policy are moderated by per-user thresholds and the health of system resources (for example, overall CPU usage). You don't need to specify a value with this switch.
 
 You might want to use this switch if you intend to associate this policy with user accounts that require higher throttling limits (for example, service accounts that perform IMAP mailbox migrations or nightly Windows PowerShell tasks).
 

@@ -111,9 +111,11 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in on-premises Exchange.
 
-The Force switch specifies whether to remove a corrupted migration batch. Corrupted migration batches have a status of Corrupted. If you try to remove a corrupted migration batch without using this switch, you receive an error saying the migrated batch can't be found.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-If you use this parameter to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
+Use this switch to remove a corrupted migration batch. Corrupted migration batches have a status of Corrupted. If you try to remove a corrupted migration batch without using this switch, you receive an error saying the migrated batch can't be found.
+
+If you use this switch to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
 ```yaml
 Type: SwitchParameter

@@ -118,7 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateSecondaryAddressesOnly
-The UpdateSecondaryAddressesOnly switch parameter specifies that only the proxy email addresses are updated for the recipients. The recipient's primary email address isn't updated. You don't need to specify a value with this switch.
+The UpdateSecondaryAddressesOnly switch specifies that only the proxy email addresses are updated for the recipients. You don't need to specify a value with this switch.
+
+The recipient's primary email address isn't updated.
 
 ```yaml
 Type: SwitchParameter

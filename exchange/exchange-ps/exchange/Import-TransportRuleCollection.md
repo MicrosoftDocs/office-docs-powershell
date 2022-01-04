@@ -134,7 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that the command will override any errors or warnings encountered during the import operation. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

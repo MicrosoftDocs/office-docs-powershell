@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
 
 We don't recommend using this switch in a production environment.
 

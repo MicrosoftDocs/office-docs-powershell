@@ -122,7 +122,7 @@ By default, this parameter is only available in the UnScoped Role Management rol
 
 The UnScopedTopLevel switch specifies that the role new role is an unscoped top-level management role (a custom, empty role). You don't need to specify a value with this switch.
 
-You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 You can't use this switch with the Parent parameter.
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
