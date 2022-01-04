@@ -97,7 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch overrides the confirmation prompt displayed by the cmdlet when the managed folder mailbox policy being removed is assigned to a mailbox user.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+This switch hides the confirmation prompt when the managed folder mailbox policy that's being removed is assigned to a mailbox user.
 
 ```yaml
 Type: SwitchParameter

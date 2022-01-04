@@ -77,11 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCrashDump
-The IncludeCrashDump parameter specifies that the command should take an error report prior to taking any recovery actions. This parameter should only be used if running from a local computer. If you use the parameter while connected remotely, the command fails.
+The IncludeCrashDump switch specifies that the command should take an error report prior to taking any recovery actions. You don't need to specify a value with this switch.
 
-The default value for this parameter is $false.
-
-You don't have to specify a value with this parameter.
+You should only use this switch on the local computer. If you use this switch while connected remotely, the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM). You don't need to specify a value with this switch.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -129,12 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResolveProblems
-This ResolveProblems parameter specifies that if the command detects an issue, it attempts to fix it. This command attempts to fix the following issues:
+This ResolveProblems switch specifies that if the command detects an issue, it attempts to fix it. You don't need to specify a value with this switch.
+
+This command attempts to fix the following issues:
 
 - Starts the Mailbox Assistants service if it isn't running.
 - Restarts the Mailbox Assistants service if it detects that the service is hung or deadlocked for more than 15 minutes.
 
-You don't have to specify a value with this parameter.
 
 ```yaml
 Type: SwitchParameter

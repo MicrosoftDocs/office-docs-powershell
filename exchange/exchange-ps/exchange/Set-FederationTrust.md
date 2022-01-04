@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshMetadata
-The RefreshMetadata switch specifies that the metadata document and certificate is retrieved again from the Microsoft Federation Gateway.
+The RefreshMetadata switch specifies that the metadata document and certificate is retrieved again from the Microsoft Federation Gateway. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

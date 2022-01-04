@@ -143,9 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt used to warn the administrator when rules are created without any conditions. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-Rules without any conditions specified apply to all messages.
+Use this switch to hide the confirmation prompt when you create rules without any conditions (rules without conditions apply to all messages).
 
 ```yaml
 Type: SwitchParameter

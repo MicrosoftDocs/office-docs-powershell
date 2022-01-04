@@ -88,7 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -RehomeRequest
-The RehomeRequest parameter specifies to the Microsoft Exchange Mailbox Replication service (MRS) that the request needs to be moved to the same database as the public folder being migrated. This parameter is used primarily for debugging purposes.
+The RehomeRequest switch tells the Microsoft Exchange Mailbox Replication service (MRS) that the request needs to be moved to the same database as the public folder that's being migrated. You don't need to specify a value with this switch.
+
+This switch is used primarily for debugging purposes.
 
 ```yaml
 Type: SwitchParameter

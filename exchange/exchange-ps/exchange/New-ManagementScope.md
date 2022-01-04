@@ -335,7 +335,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that an exclusive scope should be created without showing the warning that the exclusive scope takes effect immediately. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to create an exclusive scope without showing the warning that the exclusive scope takes effect immediately.
 
 ```yaml
 Type: SwitchParameter
