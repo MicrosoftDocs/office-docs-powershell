@@ -33,7 +33,7 @@ Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
 ## DESCRIPTION
 The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions are deleted and any object related to the migration batch is also deleted.
 
-If you use the Force parameter with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
+If you use the Force switch with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

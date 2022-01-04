@@ -236,7 +236,7 @@ Accept wildcard characters: False
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group.
 
 - If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents.
-- If you use this exact syntax: -AlwaysSubscribeMembersToCalendarEvents:$false, all future members that are added to the group will have their subscriptions set to ReplyOnly.
+- If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false`, all future members that are added to the group will have their subscriptions set to ReplyOnly.
 
 Group members can change their own subscription settings, which can override your intended use of this switch.
 

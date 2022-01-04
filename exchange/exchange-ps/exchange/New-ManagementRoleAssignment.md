@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delegating
-The Delegating parameter specifies whether the user or USG assigned to the role can delegate the role to other users or groups. You don't have to specify a value with the Delegating parameter.
+The Delegating switch specifies whether the user or USG assigned to the role can delegate the role to other users or groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -390,7 +390,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
