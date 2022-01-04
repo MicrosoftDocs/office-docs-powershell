@@ -1078,7 +1078,7 @@ The PrimaryOnly switch specifies that only primary mailboxes are migrated for th
 
 You can only use this switch for local moves and remote move migrations.
 
-Note : If the users don't have archive mailboxes, don't use this switch.
+**Note**: If the users don't have archive mailboxes, don't use this switch.
 
 ```yaml
 Type: SwitchParameter

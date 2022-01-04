@@ -44,7 +44,9 @@ This example checks for the latest available version of Help for the Exchange Ma
 ## PARAMETERS
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 By default, the Update-ExchangeHelp cmdlet has a throttling period of 24 hours. If you run this cmdlet within 24 hours of the last time you ran it, it won't check for updates. You can use this switch to force the cmdlet to check for updates more frequently and to display status or error messages.
 
