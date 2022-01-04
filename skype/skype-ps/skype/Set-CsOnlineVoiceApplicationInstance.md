@@ -12,6 +12,9 @@ author: tomkau
 
 # Set-CsOnlineVoiceApplicationInstance
 
+> [!NOTE]
+> This cmdlet will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
+
 ## SYNOPSIS
 The `Set-CsOnlineVoiceApplicationInstance` modifies an application instance in Azure Active Directory.
 
