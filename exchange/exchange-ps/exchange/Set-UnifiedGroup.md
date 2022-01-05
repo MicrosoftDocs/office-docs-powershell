@@ -86,7 +86,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ## DESCRIPTION
 Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group group.
+The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -794,7 +794,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-By default, this parameter is blank, which means no one else has permission to send on behalf of this Microsoft 365 Group group.
+By default, this parameter is blank, which means no one else has permission to send on behalf of this Microsoft 365 Group.
 
 ```yaml
 Type: MultiValuedProperty

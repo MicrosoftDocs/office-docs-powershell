@@ -53,7 +53,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
 ```
 
-This example applies the AD RMS template Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
+This example applies the AD RMS template named Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
 
 ## PARAMETERS
 

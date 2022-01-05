@@ -180,7 +180,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
 
 - $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
-- $false: Authorization tokens that are issued by the authorization server are are not accepted.
+- $false: Authorization tokens that are issued by the authorization server are not accepted.
 
 ```yaml
 Type: Boolean
