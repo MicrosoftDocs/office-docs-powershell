@@ -86,7 +86,7 @@ This example retrieves a list of items that couldn't be indexed by Exchange Sear
 Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
 ```
 
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database Mailbox Database MDB2.
+This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database named Mailbox Database MDB2.
 
 ## PARAMETERS
 

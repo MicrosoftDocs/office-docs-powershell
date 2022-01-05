@@ -112,7 +112,7 @@ In on-premises Exchange, this example removes John Rodman's mailbox from the mai
 Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
 ```
 
-In Exchange Online, this example removes the specified soft-deleted mailbox mailbox.
+In Exchange Online, this example removes the specified soft-deleted mailbox.
 
 ## PARAMETERS
 
