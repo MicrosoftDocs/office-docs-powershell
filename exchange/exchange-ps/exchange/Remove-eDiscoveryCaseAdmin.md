@@ -30,7 +30,7 @@ Remove-eDiscoveryCaseAdmin -User <String>
 ## DESCRIPTION
 An eDiscovery Administrator is member of the eDiscovery Manager role group who can also view and access all eDiscovery cases in your organization.
 
-When you remove an eDiscovery Administrator, the user isn't removed from the eDiscovery Manager role group.
+When you remove an eDiscovery Administrator, the user isn't removed from the eDiscovery Manager role group. That means the user can still view and access the eDiscovery cases they are a member of and the eDiscovery cases they created. To remove all eDiscovery permissions for that user, you can to remove them from the eDiscovery Manager role group by running the Remove-RoleGroupMember cmdlet.
 
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
