@@ -5,7 +5,7 @@ title: Disable-CsTeamsShiftsConnectionErrorReport
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/Disable-csteamsshiftsconnectionerrorreport
+online version: https://docs.microsoft.com/powershell/module/teams/disable-csteamsshiftsconnectionerrorreport
 schema: 2.0.0
 ---
 
@@ -40,7 +40,7 @@ Disables the error report with ID `18b3e490-e6ed-4c2e-9925-47e36609dff3`.
 
 ### -ErrorReportId
 
-The ID of the error report that you want to delete.
+The ID of the error report that you want to disable.
 
 ```yaml
 Type: String

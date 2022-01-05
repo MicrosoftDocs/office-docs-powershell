@@ -5,7 +5,7 @@ title: Get-CsTeamsShiftsConnectionWfmUser
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/Get-CsTeamsShiftsConnectionWfmUser
+online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmuser
 schema: 2.0.0
 ---
 
