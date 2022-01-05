@@ -331,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Login using managed service identity in the current environment.
+Login using managed service identity in the current environment. This is currently not supported for *-Cs cmdlets. 
 
 ```yaml
 Type: SwitchParameter
