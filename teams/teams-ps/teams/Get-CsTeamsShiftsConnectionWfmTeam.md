@@ -87,4 +87,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
 
-[Get-CsTeamsShiftsConnectionUser](Get-CsTeamsShiftsConnectionUser.md)
+[Get-CsTeamsShiftsConnectionWfmUser](Get-CsTeamsShiftsConnectionWfmUser.md)
