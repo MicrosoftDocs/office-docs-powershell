@@ -97,7 +97,7 @@ This example creates a scope that includes only the servers MailboxServer1, Mail
 New-ManagementScope -Name "Redmond Site Scope" -ServerRestrictionFilter "ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com'"
 ```
 
-This example creates the Redmond Site Scope scope and sets a server restriction filter that matches only the servers located in the "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com" Active Directory Domain Services (AD DS) site.
+This example creates the scope named Redmond Site Scope and sets a server restriction filter that matches only the servers located in the "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com" Active Directory Domain Services (AD DS) site.
 
 ### Example 3
 ```powershell

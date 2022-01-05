@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the Microsoft 365 Group from users who aren't members of the group. You don't need to specify a value with this switch.
 
-You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a Microsoft 365 Group group that represents students enrolled in a class).
+You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a Microsoft 365 Group that represents students enrolled in a class).
 
 **Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
 
