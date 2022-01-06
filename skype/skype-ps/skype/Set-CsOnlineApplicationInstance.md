@@ -12,11 +12,11 @@ ms.reviewer:
 
 # Set-CsOnlineApplicationInstance
 
-> [!NOTE]
-> This cmdlet will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
-> 
 ## SYNOPSIS
 Updates an application instance in Azure Active Directory. 
+
+> [!NOTE]
+> This cmdlet will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
 
 ## SYNTAX
 
