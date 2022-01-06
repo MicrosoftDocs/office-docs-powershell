@@ -129,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnsecureAccess
-The AllowUnsecureAccess parameter specifies whether virtual directories that don't require SSL are tested. If the AllowUnsecureAccess parameter is included, it enables virtual directories that don't require SSL to be tested. If this parameter isn't included, the command skips virtual directories that don't require SSL, and an error is generated.
+The AllowUnsecureAccess switch specifies whether virtual directories that don't require SSL are tested. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command skips virtual directories that don't require SSL, and an error is generated.
 
 ```yaml
 Type: SwitchParameter
@@ -234,7 +236,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext parameter shows you what information is returned to System Center Operations Manager 2007. When Operations Manager 2007 executes the Test-OwaConnectivity cmdlet, it requires additional information to be returned. By setting this parameter to $true, you can see exactly what would be returned to Operations Manager 2007. This parameter is informational only and has no effect on Operations Manager 2007.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -250,7 +254,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResetTestAccountCredentials
-The ResetTestAccountCredentials switch resets the password for the test account that's used to run this command. The password for the test account is typically reset every seven days. Use this switch to force a password reset any time it's required for security reasons.
+The ResetTestAccountCredentials switch resets the password for the test account that's used to run this command. You don't need to specify a value with this switch.
+
+The password for the test account is typically reset every seven days. Use this switch to force a password reset any time it's required for security reasons.
 
 ```yaml
 Type: SwitchParameter
@@ -314,7 +320,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate parameter specifies whether to check an internal URL without generating an SSL certificate validation error. The TrustAnySSLCertificate parameter allows SSL certificate validation failures to not be reported. This is useful for testing internal URLs because Internet Information Services (IIS) doesn't support assigning multiple certificates for a single virtual directory. If a directory has different URLs for internal and external access and has a certificate, that certificate is usually for the external URL. This parameter lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
+
+This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
 
 ```yaml
 Type: SwitchParameter

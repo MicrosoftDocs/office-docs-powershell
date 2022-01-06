@@ -119,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeRecipientTest
-The ExcludeRecipientTest switch specifies whether to exclude validation of recipient data synchronization. If you include this switch, only the synchronization of configuration objects is validated. Validating that recipient data is synchronized takes longer than validating only configuration data. You don't have to include a value with this switch.
+The ExcludeRecipientTest switch specifies whether to exclude validation of recipient data synchronization. You don't need to specify a value with this switch.
+
+If you use this switch, only the synchronization of configuration objects is validated. Validating that recipient data is synchronized takes longer than validating only configuration data.
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullCompareMode
-The FullCompareMode switch specifies whether a full comparison of the configuration data between Active Directory and AD LDS instance on the target Edge Transport server is performed. If you don't use this switch, a full comparison of replicated configuration data is skipped and the command only tests the Edge synchronization by verifying the replication cookie.
+The FullCompareMode switch specifies whether a full comparison of the configuration data between Active Directory and AD LDS instance on the target Edge Transport server is performed. You don't need to specify a value with this switch.
+
+If you don't use this switch, a full comparison of replicated configuration data is skipped and the command only tests the Edge synchronization by verifying the replication cookie.
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +171,10 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
+
+- $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
 
 ```yaml
 Type: Boolean

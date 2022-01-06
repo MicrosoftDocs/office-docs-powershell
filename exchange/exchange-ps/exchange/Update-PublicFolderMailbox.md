@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvokeSynchronizer
-The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox.
+The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox. You don't need to specify a value with this switch.
 
 This switch should only be used for troubleshooting purposes.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullSync
-The FullSync switch specifies that you want to perform a full synchronization of the public folder mailbox.
+The FullSync switch specifies that you want to perform a full synchronization of the public folder mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReconcileFolders
-The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. 
+The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. You don't need to specify a value with this switch.
 
 In on-premises Exchange, folders that exist in the secondary public folder mailbox and not in the primary will be deleted.
 

@@ -117,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages when removing a federated domain. This parameter can be used when the removal of the federated domain from Windows Live fails, but the configuration of this domain as a federated domain in Exchange should be removed regardless. The result of running this task with the Force switch is that the Exchange configuration is removed but the domain may not be released in Windows Live. We recommend that you not use the Force switch unless the release of the domain from Windows Live continues to fail.
+The Force switch specifies whether to suppress warning or confirmation messages when removing a federated domain. You don't need to specify a value with this switch.
+
+You can use this switch when the removal of the federated domain from the cloud fails, but the configuration of this domain as a federated domain in Exchange should be removed regardless.
 
 ```yaml
 Type: SwitchParameter

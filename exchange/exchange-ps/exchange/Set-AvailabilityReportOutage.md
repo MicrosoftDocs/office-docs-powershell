@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetToOriginal
-The ResetToOriginal parameter specifies whether to reset the previously selected outage value to the default value.
+The ResetToOriginal switch resets the previously selected outage value to the default value. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -158,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch suppresses the warning or confirmation messages that appear during specific configuration changes. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

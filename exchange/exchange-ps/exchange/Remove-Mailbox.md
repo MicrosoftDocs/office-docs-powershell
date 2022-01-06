@@ -112,7 +112,7 @@ In on-premises Exchange, this example removes John Rodman's mailbox from the mai
 Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
 ```
 
-In Exchange Online, this example removes the specified soft-deleted mailbox mailbox.
+In Exchange Online, this example removes the specified soft-deleted mailbox.
 
 ## PARAMETERS
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
@@ -340,7 +340,9 @@ Accept wildcard characters: False
 ### -IgnoreLegalHold
 This parameter is available only in on-premises Exchange.
 
-The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the user. When you disable or remove the user, the user's cloud-based mailbox that's on legal hold is also disabled or removed. You don't need to specify a value with this switch.
+The IgnoreLegalHold switch ignores the legal hold status of the user. You don't need to specify a value with this switch.
+
+When you disable or remove the user, the user's cloud-based mailbox that's on legal hold is also disabled or removed.
 
 After you disable or remove a mailbox, you can't include it in a discovery search. When you disable a mailbox, the mailbox is disconnected from the user account. Disconnected mailboxes and removed mailboxes are permanently deleted from the mailbox database after the deleted mailbox retention period expires. However, you can also remove a mailbox and purge it immediately from the mailbox database. Check with your organization's legal or Human Resources department before you disable or remove a mailbox that's on legal hold.
 
@@ -397,7 +399,7 @@ Accept wildcard characters: False
 ### -PermanentlyDelete
 This parameter is available only in the cloud-based service.
 
-The PermanentlyDelete switch specifies whether to immediately and permanently delete (purge) the mailbox, which prevents you from recovering or restoring the mailbox. You don't need to specify a value with this switch.
+The PermanentlyDelete switch immediately and permanently deletes (purges) the mailbox, which prevents you from recovering or restoring the mailbox. You don't need to specify a value with this switch.
 
 **Notes**:
 
@@ -438,7 +440,9 @@ Accept wildcard characters: False
 ### -RemoveArbitrationMailboxWithOABsAllowed
 This parameter is available only in on-premises Exchange.
 
-The RemoveArbitrationMailboxWithOABsAllowed switch specifies whether to bypass the checks for offline address books (OABs) within the specified arbitration mailbox that is being removed. When you use this switch, the arbitration mailbox is removed even if OABs are present in the mailbox. You don't need to specify a value with this switch.
+The RemoveArbitrationMailboxWithOABsAllowed switch specifies whether to bypass the checks for offline address books (OABs) within the specified arbitration mailbox that is being removed. You don't need to specify a value with this switch.
+
+When you use this switch, the arbitration mailbox is removed even if OABs are present in the mailbox.
 
 ```yaml
 Type: SwitchParameter
@@ -456,7 +460,9 @@ Accept wildcard characters: False
 ### -RemoveLastArbitrationMailboxAllowed
 This parameter is available only in on-premises Exchange.
 
-The RemoveLastArbitrationMailboxAllowed switch specifies whether to remove the specified mailbox, even if it's the last arbitration mailbox in the organization. If you remove the last arbitration mailbox in the organization, you can't have user-created distribution groups or moderated recipients. You don't need to specify a value with this switch.
+The RemoveLastArbitrationMailboxAllowed switch specifies whether to remove the specified mailbox, even if it's the last arbitration mailbox in the organization. You don't need to specify a value with this switch.
+
+If you remove the last arbitration mailbox in the organization, you can't have user-created distribution groups or moderated recipients.
 
 ```yaml
 Type: SwitchParameter

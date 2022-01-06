@@ -1401,7 +1401,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyMandatoryProperties
-The ApplyMandatoryProperties switch specifies whether to update the msExchVersion attribute of the mailbox. You may need to use this switch to fix inaccessible mailboxes or mailboxes that were created in previous versions of Exchange. You don't need to specify a value with this switch.
+The ApplyMandatoryProperties switch specifies whether to update the msExchVersion attribute of the mailbox. You don't need to specify a value with this switch.
+
+You might need to use this switch to fix inaccessible mailboxes or mailboxes that were created in previous versions of Exchange.
 
 ```yaml
 Type: SwitchParameter
@@ -2927,7 +2929,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
@@ -3096,7 +3098,7 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
@@ -3168,7 +3170,7 @@ The InactiveMailbox switch specifies that the mailbox is an inactive mailbox. Yo
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted.
 
-To find inactive mailboxes, run the command Get-Mailbox -InactiveMailboxOnly | FL Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid and then use the DistinguishedName or ExchangeGuid property values for the Identity parameter (values guaranteed to be unique).
+To find inactive mailboxes, run the command `Get-Mailbox -InactiveMailboxOnly | Format-List Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid` and then use the DistinguishedName or ExchangeGuid property values for the Identity parameter (values guaranteed to be unique).
 
 This switch is required to use the LitigationHoldEnabled and LitigationHoldDuration parameters on inactive mailboxes.
 
@@ -3581,7 +3583,9 @@ Accept wildcard characters: False
 ### -ManagedFolderMailboxPolicyAllowed
 This parameter is available or functional only in Exchange Server 2010.
 
-The ManagedFolderMailboxPolicyAllowed parameter bypasses the warning that MRM features aren't supported for  clients running versions of Outlook earlier than Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
+The ManagedFolderMailboxPolicyAllowed switch bypasses the warning that MRM features aren't supported for clients running versions of Outlook earlier than Outlook 2007. You don't need to specify a value with this switch.
+
+When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless you also use the ManagedFolderMailboxPolicyAllowed switch.
 
 Although Outlook 2003 Service Pack 3 clients are supported, they have limited MRM functionality.
 
@@ -4597,9 +4601,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox.
-
-You don't need to specify a value with this switch.
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
