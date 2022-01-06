@@ -198,7 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 By default, when you enable a certificate for SMTP, the command prompts you to replace the existing certificate that's enabled for SMTP, which is likely the default Exchange self-signed certificate.
 

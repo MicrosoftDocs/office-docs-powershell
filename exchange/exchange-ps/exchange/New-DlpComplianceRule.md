@@ -103,7 +103,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
- [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
+ [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
@@ -1973,10 +1973,16 @@ Accept wildcard characters: False
 ```
 
 ### -NonBifurcatingAccessScope
-{{ Fill NonBifurcatingAccessScope Description }}
+The NonBifurcatingAccessScope parameter specifies a condition for the DLP rule that looks for recipients in the specified access scope. The rule is applied to all copies of the message. Valid values are:  
+
+- HasInternal: At least one recipient is inside the organization. 
+- HasExternal: At least one recipient is outside the organization. 
+- None: The condition isn't used. 
+
+You can use this condition in DLP policies that are scoped only to Exchange. 
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope
+Type: NonBifurcatingAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

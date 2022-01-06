@@ -86,7 +86,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ## DESCRIPTION
 Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group group.
+The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group.
 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
-- If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: -AutoSubscribeNewMembers:$false.
+- If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: `-AutoSubscribeNewMembers:$false`.
 
 ```yaml
 Type: SwitchParameter
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 The CalendarMemberReadOnly switch specifies whether to set read-only Calendar permissions to the Microsoft 365 Group for members of the group.
 
 - To set read-only Calendar permissions, use the CalendarMemberReadOnly switch without a value.
-- To remove read-only Calendar permissions, use this exact syntax: -CalendarMemberReadOnly:$false.
+- To remove read-only Calendar permissions, use this exact syntax: `-CalendarMemberReadOnly:$false`.
 
 To view the current value of the CalendarMemberReadOnly property on a Microsoft 365 Group, replace `<EmailAddress>` with the email address of the group, and run this command: `Get-UnifiedGroup -Identity <EmailAddress> -IncludeAllProperties | Format-List *Calendar*`.
 
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 The ConnectorsEnabled specifies whether to enable the ability to use connectors for the Microsoft 365 Group.
 
 - To enable connectors, use the ConnectorsEnabled switch without a value.
-- To disable connectors, use this exact syntax: -ConnectorsEnabled:$false.
+- To disable connectors, use this exact syntax: `-ConnectorsEnabled:$false`.
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
 
@@ -759,7 +759,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-The ForceUpgrade switch specifies whether to suppress the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
+The ForceUpgrade switch suppresses the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -794,7 +794,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-By default, this parameter is blank, which means no one else has permission to send on behalf of this Microsoft 365 Group group.
+By default, this parameter is blank, which means no one else has permission to send on behalf of this Microsoft 365 Group.
 
 ```yaml
 Type: MultiValuedProperty
@@ -832,7 +832,7 @@ Accept wildcard characters: False
 The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
 - To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
-- To disable this setting, use this exact syntax: -HiddenFromExchangeClientsEnabled:$false. The Microsoft 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
 
 ```yaml
 Type: SwitchParameter
@@ -1163,9 +1163,9 @@ Accept wildcard characters: False
 The SubscriptionEnabled switch specifies whether the group owners can enable subscription to conversations and calendar events on the groups they own. This option can be set only in Exchange Online PowerShell.
 
 - To change the value to $true, use this switch without a value.
-- To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false. The value of the AutoSubscribeNewMembers parameter must also be $false before you can use the value $false for this switch.
+- To change the value to $false, use this exact syntax: `-SubscriptionEnabled:$false`. The value of the AutoSubscribeNewMembers parameter must also be $false before you can use the value $false for this switch.
 
-**Note**: You should use the value $false for this parameter only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
+**Note**: You should use the value $false for this switch only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
 
 ```yaml
 Type: SwitchParameter
@@ -1184,7 +1184,7 @@ Accept wildcard characters: False
 The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disable sending system-generated welcome messages to users who are added as members to the Microsoft 365 Group.
 
 - To enable this setting, you don't need to specify a value with this switch.
-- To disable this setting, use this exact syntax: -UnifiedGroupWelcomeMessageEnabled:$false.
+- To disable this setting, use this exact syntax: `-UnifiedGroupWelcomeMessageEnabled:$false`.
 
 This setting is enabled by default.
 

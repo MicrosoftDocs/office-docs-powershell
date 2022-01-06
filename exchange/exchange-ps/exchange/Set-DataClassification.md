@@ -171,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-The IsDefault switch is used with the Locale parameter to specify the default language for the data classification rule. The default Locale value is stored in the DefaultCulture property.
+The IsDefault switch is used with the Locale parameter to specify the default language for the data classification rule. You don't need to specify a value with this switch.
+
+The default Locale value is stored in the DefaultCulture property.
 
 When you change the default Locale value, the Name value of the data classification rule changes to match the Name value that's associated with the new default locale. The original Name value when the rule was created is permanently stored the LocalizedName property.
 

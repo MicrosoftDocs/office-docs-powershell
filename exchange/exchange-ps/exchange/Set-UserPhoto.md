@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ### -Preview
 The Preview switch uploads a preview photo for the user account. You don't need to specify a value with this switch.
 
-A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command Set-UserPhoto -Save to save it as the user's photo.
+A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command `Set-UserPhoto -Save` to save it as the user's photo.
 
 ```yaml
 Type: SwitchParameter
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 

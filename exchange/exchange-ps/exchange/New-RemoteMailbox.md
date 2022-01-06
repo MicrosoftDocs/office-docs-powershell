@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox.
+The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox. You don't need to specify a value with this switch.
 
 Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-The Room switch specifies that the mailbox in the service should be created as a room resource mailbox.
+The Room switch specifies that the mailbox in the service should be created as a room resource mailbox. You don't need to specify a value with this switch.
 
 You can't use the Room switch if you specified the Equipment switch.
 

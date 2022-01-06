@@ -128,7 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-The OrganizationApp parameter specifies that the scope of the app is organizational. This is set to $false by default. This parameter is required if the targeted app is installed for the organization.
+The OrganizationApp switch specifies that the scope of the app is organizational. You don't need to specify a value with this switch.
+
+This switch is required if the targeted app is installed for the organization.
 
 ```yaml
 Type: SwitchParameter

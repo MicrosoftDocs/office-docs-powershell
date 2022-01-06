@@ -119,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-The ConfigurationOnly parameter updates the Active Directory properties with the stop action, but doesn't perform a stop of the DAG or any members. This parameter must be used when the DAG member servers are offline, but Active Directory is up and accessible in the primary datacenter.
+The ConfigurationOnly switch updates the Active Directory properties with the stop action, but doesn't perform a stop of the DAG or any members. You don't need to specify a value with this switch.
+
+You eed to use this switch when the DAG member servers are offline, but Active Directory is up and accessible in the primary datacenter.
 
 ```yaml
 Type: SwitchParameter

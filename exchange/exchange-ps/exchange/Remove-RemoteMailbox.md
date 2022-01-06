@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
@@ -130,7 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the remote user. This switch removes the instance of the remote object in the on-premises organization, and the request to remove the mailbox is synchronized to the cloud. The Azure AD object is removed, but if the mailbox is on hold, the mailbox is converted into an inactive mailbox and remains on hold.
+The IgnoreLegalHold switch ignores the legal hold status of the remote user. You don't need to specify a value with this switch.
+
+This switch removes the instance of the remote object in the on-premises organization, and the request to remove the mailbox is synchronized to the cloud. The Azure AD object is removed, but if the mailbox is on hold, the mailbox is converted into an inactive mailbox and remains on hold.
 
 ```yaml
 Type: SwitchParameter
