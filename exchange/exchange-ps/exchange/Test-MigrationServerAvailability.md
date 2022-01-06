@@ -227,7 +227,7 @@ The Autodiscover switch specifies that the command should use the Autodiscover s
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscove
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 

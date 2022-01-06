@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageCustomDisclaimer
-The MultiLanguageCustomDisclaimer parameter specifies the custom disclaimer text to use near the bottom of quarantine quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify for this parameter.
+The MultiLanguageCustomDisclaimer parameter specifies the custom disclaimer text to use near the bottom of quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify for this parameter.
 
 You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you can specify unique custom disclaimer text. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
@@ -351,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageSenderName
-The MultiLanguageSenderName parameter specifies the email sender's display name to use in quarantine quarantine notifications.
+The MultiLanguageSenderName parameter specifies the email sender's display name to use in quarantine notifications.
 
 You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you can specify a unique sender name. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
@@ -373,11 +373,11 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageSetting
-The MultiLanguageSetting parameter specifies the language of quarantine quarantine notifications. Valid values are:
+The MultiLanguageSetting parameter specifies the language of quarantine notifications. Valid values are:
 
 Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
 
-You can specify multiple value separated by commas using the syntax: `('value1',''value2',...'valueN')`. The default value is Default, which means quarantine quarantine notifications use the default language of the cloud-based organization.
+You can specify multiple value separated by commas using the syntax: `('value1',''value2',...'valueN')`. The default value is Default, which means quarantine notifications use the default language of the cloud-based organization.
 
 For each language that you specify, you can specify a unique value for the MultiLanguageCustomDisclaimer and MultiLanguageSenderName parameters. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
