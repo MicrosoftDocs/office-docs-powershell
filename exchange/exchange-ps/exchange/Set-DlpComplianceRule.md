@@ -2153,7 +2153,10 @@ Accept wildcard characters: False
 ### -Quarantine
 This parameter specifies an action or part of an action for the rule.
 
-The Quarantine parameter specifies an action that quarantines messages. In Microsoft 365, messages are delivered to the hosted quarantine.
+The Quarantine parameter specifies an action that quarantines messages. Valid values are:
+
+- $true: The message is delivered to the hosted quarantine.
+- $false: The message is not quarantined.
 
 ```yaml
 Type: Boolean
