@@ -15,6 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 Provide the topic introduction here.
 
+> [!NOTE]
+> This cmdlet will be deprecated.
+
 ## SYNTAX
 
 ```
