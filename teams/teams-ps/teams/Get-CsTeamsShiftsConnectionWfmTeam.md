@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
-
 This cmdlet supports retrieving the list of available Workforce management (WFM) teams in the connection instance.
 
 ## SYNTAX
@@ -87,4 +85,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
 
-[Get-CsTeamsShiftsConnectionUser](Get-CsTeamsShiftsConnectionUser.md)
+[Get-CsTeamsShiftsConnectionWfmUser](Get-CsTeamsShiftsConnectionWfmUser.md)
