@@ -100,7 +100,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in on-premises Exchange.
 
-The Force switch specifies that some specific checks and removal steps should be skipped and that the migration user should be forcibly removed. This parameter is used to work around issues where the migration user needs to be removed to fix issues when the user or data is corrupted, or to prevent such issues from occurring.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to work around user or data corruption issues. Specific checks and removal steps are skipped to forcibly remove the migration user.
 
 ```yaml
 Type: SwitchParameter

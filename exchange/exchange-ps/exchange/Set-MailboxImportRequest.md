@@ -297,7 +297,9 @@ Accept wildcard characters: False
 ### -RehomeRequest
 This parameter is available only in on-premises Exchange.
 
-The RehomeRequest parameter specifies to the Microsoft Exchange Mailbox Replication service (MRS) that the request needs to be moved to the same database as the mailbox being imported. This parameter is used primarily for debugging purposes.
+The RehomeRequest parameter tells the Microsoft Exchange Mailbox Replication service (MRS) that the request needs to be moved to the same database as the mailbox being imported. You don't need to specify a value with this switch.
+
+This switch is used primarily for debugging purposes.
 
 ```yaml
 Type: SwitchParameter

@@ -239,7 +239,10 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. To enable this, use this switch without a value. To disable this, use this exact syntax: -ACLableSyncedObjectEnabled:$false.
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser.
+
+- To enable this feature, use this switch without a value.
+- To disable this feature, use this exact syntax: `-ACLableSyncedObjectEnabled:$false`.
 
 ```yaml
 Type: SwitchParameter
@@ -865,7 +868,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
@@ -1214,7 +1217,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePicture
-The RemovePicture switch specifies whether to remove the picture from the mail user. You don't need to specify a value with this switch.
+The RemovePicture switch removes the picture from the mail user. You don't need to specify a value with this switch.
 
 You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
 
@@ -1232,7 +1235,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSpokenName
-The RemoveSpokenName switch specifies whether to remove the spoken name from the mail user. You don't need to specify a value with this switch.
+The RemoveSpokenName switch removes the spoken name from the mail user. You don't need to specify a value with this switch.
 
 You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
 

@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ### -UseHttps
 The UseHttps switch specifies whether to use HTTPS for the published URL of the calendar folder. You don't need to specify a value with this switch.
 
-This parameter is meaningful only when the PublishEnabled parameter value is $true.
+This switch is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: SwitchParameter

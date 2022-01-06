@@ -2276,8 +2276,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 
-### [Get-MailTrafficReport](Get-MailTrafficReport.md)
-
 ### [Get-MailTrafficSummaryReport](Get-MailTrafficSummaryReport.md)
 
 ### [Get-MailTrafficTopReport](Get-MailTrafficTopReport.md)

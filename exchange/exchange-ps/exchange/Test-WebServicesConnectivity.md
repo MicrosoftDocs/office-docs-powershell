@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ### -AllowUnsecureAccess
 This parameter is available only in Exchange Server 2010.
 
-The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
+The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -310,7 +310,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM). You don't need to specify a value with this switch.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -326,7 +328,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResetTestAccountCredentials
-The ResetTestAccountCredentials switch resets the password for the test account that's used to run this command. The password for the test account is typically reset every seven days. Use this switch to force a password reset any time it's required for security reasons.
+The ResetTestAccountCredentials switch resets the password for the test account that's used to run this command. You don't need to specify a value with this switch.
+
+The password for the test account is typically reset every seven days. Use this switch to force a password reset any time it's required for security reasons.
 
 ```yaml
 Type: SwitchParameter
@@ -358,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether to ignore Secure Sockets Layer (SSL) certificate validation failures. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
 
 This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
 
@@ -378,7 +382,7 @@ Accept wildcard characters: False
 ### -UseAutodiscoverForClientAccessServer
 This parameter is available only in Exchange Server 2010.
 
-The UseAutodiscoverForClientAccessServer parameter specifies whether the test should use the Autodiscover service to locate the Client Access server.
+The UseAutodiscoverForClientAccessServer switch specifies whether the test should use the Autodiscover service to locate the Client Access server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

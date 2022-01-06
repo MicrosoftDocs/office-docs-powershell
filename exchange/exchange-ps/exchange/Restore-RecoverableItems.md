@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ### -NoOutput
 This parameter is available only in the cloud-based service.
 
-The NoOutput switch specifies whether to restore the deleted items directly without any command output in the console. You don't need to specify a value with this switch.
+The NoOutput switch restores the deleted items directly without any command output in the console. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
