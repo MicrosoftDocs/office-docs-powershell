@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Start-EdgeSynchronization [-Confirm]
  [-ForceFullSync]
- [-ForceUpdatecookie]
+ [-ForceUpdateCookie]
  [-Server <ServerIdParameter>]
  [-TargetServer <String>]
  [-WhatIf]
@@ -66,7 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceFullSync
-The ForceFullSync switch specifies whether to initiate a full edge synchronization. If you run the command without this switch, only changes since the last replication are synchronized. If you use this switch, the entire configuration information and recipient data are synchronized.
+The ForceFullSync switch specifies whether to initiate a full edge synchronization. You don't need to specify a value with this switch.
+
+If you don't use this switch, only changes since the last replication are synchronized. If you use this switch, the entire configuration information and recipient data are synchronized.
 
 ```yaml
 Type: SwitchParameter
@@ -81,8 +83,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceUpdatecookie
-The ForceUpdateCookie switch specifies whether to force the Microsoft Exchange EdgeSync service to update the replication cookie even if it encounters an error. The cookie maintains the changes in Active Directory since the previous EdgeSync replication. Normally, the Microsoft Exchange EdgeSync service doesn't update the cookie if it encounters any errors during replication.
+### -ForceUpdateCookie
+The ForceUpdateCookie switch specifies whether to force the Microsoft Exchange EdgeSync service to update the replication cookie even if it encounters an error. You don't need to specify a value with this switch.
+
+The cookie maintains the changes in Active Directory since the previous EdgeSync replication. Normally, the Microsoft Exchange EdgeSync service doesn't update the cookie if it encounters any errors during replication.
 
 ```yaml
 Type: SwitchParameter
@@ -145,22 +149,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceUpdatecookie
-The ForceUpdateCookie switch specifies whether to force the Microsoft Exchange EdgeSync service to update the replication cookie even if it encounters an error. The cookie maintains the changes in Active Directory since the previous EdgeSync replication. Normally, the Microsoft Exchange EdgeSync service doesn't update the cookie if it encounters any errors during replication.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False

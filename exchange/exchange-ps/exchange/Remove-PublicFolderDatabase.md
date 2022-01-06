@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLastAllowed
-The RemoveLastAllowed parameter specifies whether to enable removal of the last public folder database in the organization.
+The RemoveLastAllowed switch allows the removal of the last public folder database in the organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

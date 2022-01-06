@@ -168,7 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
@@ -234,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting.
+The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

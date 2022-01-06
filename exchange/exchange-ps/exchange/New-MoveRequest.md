@@ -535,7 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveOnly
-The ArchiveOnly switch specifies that you're moving only the personal archive associated with the mailbox.
+The ArchiveOnly switch specifies that you're moving only the personal archive associated with the mailbox. You don't need to specify a value with this switch.
 
 You can't use this switch with the PrimaryOnly switch.
 
@@ -773,7 +773,7 @@ Accept wildcard characters: False
 ### -IgnoreRuleLimitErrors
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013
 
-The IgnoreRuleLimitErrors parameter specifies that the command doesn't move the user's rules to the target server running Exchange.
+The IgnoreRuleLimitErrors switch specifies that the command doesn't move the user's rules to the target server running Exchange. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -890,7 +890,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreventCompletion
-The PreventCompletion switch specifies whether to run the move request, but not allow it to complete. Instead of this switch, we recommend using the CompleteAfter parameter.
+The PreventCompletion switch specifies whether to run the move request, but not allow it to complete. You don't need to specify a value with this switch.
+
+Instead of this switch, we recommend using the CompleteAfter parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -910,7 +912,7 @@ The PrimaryOnly switch specifies that the command should only move the primary m
 
 You use this switch only if the user has a personal archive that you don't want to move. If the user doesn't have personal archive, don't use this switch.
 
-You can't use this parameter with the ArchiveOnly parameter.
+You can't use this switch with the ArchiveOnly sitch.
 
 ```yaml
 Type: SwitchParameter
@@ -1118,7 +1120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1150,7 +1154,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this switch, we recommend that you use the CompleteAfter parameter.
+The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. You don't need to specify a value with this switch.
+
+Instead of this switch, we recommend that you use the CompleteAfter parameter.
 
 ```yaml
 Type: SwitchParameter

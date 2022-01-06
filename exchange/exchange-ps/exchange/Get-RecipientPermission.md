@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain.
+The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

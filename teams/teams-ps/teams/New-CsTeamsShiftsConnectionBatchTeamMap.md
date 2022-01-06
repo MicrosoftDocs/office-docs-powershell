@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
-
 This cmdlet submits an operation connecting multiple Microsoft Teams teams and Workforce management (WFM) teams.
 
 ## SYNTAX

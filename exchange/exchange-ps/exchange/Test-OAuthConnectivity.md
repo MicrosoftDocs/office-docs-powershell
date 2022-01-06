@@ -165,7 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReloadConfig
-The ReloadConfig switch reloads all the configuration settings from the Exchange configuration objects. You don't need to specify a value with this switch. If you don't use this switch, the cached configuration settings are used.
+The ReloadConfig switch reloads all the configuration settings from the Exchange configuration objects. You don't need to specify a value with this switch.
+
+If you don't use this switch, the cached configuration settings are used.
 
 ```yaml
 Type: SwitchParameter

@@ -282,7 +282,9 @@ Accept wildcard characters: False
 ### -RehomeRequest
 This parameter is available or functional only in on-premises Exchange.
 
-The RehomeRequest switch specifies that the mailbox restore request be moved to a different mailbox database. Use this parameter to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
+The RehomeRequest switch moves the mailbox restore request to a different mailbox database. You don't need to specify a value with this switch.
+
+Use this switch to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
 
 ```yaml
 Type: SwitchParameter

@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCache
-The GlobalCache switch specifies that all cache keys are cleared.
+The GlobalCache switch specifies that all cache keys are cleared. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentOrganization
-The CurrentOrganization switch specifies that the provision cache is reset for this organization.
+The CurrentOrganization switch specifies that the provision cache is reset for this organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
