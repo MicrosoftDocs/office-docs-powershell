@@ -53,7 +53,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
 ```
 
-This example applies the AD RMS template Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
+This example applies the AD RMS template named Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
 
 ## PARAMETERS
 
@@ -143,7 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt used to warn the administrator when rules are created without any conditions. Rules without any conditions specified apply to all messages. The Force switch doesn't require a value.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you create rules without any conditions (rules without conditions apply to all messages).
 
 ```yaml
 Type: SwitchParameter

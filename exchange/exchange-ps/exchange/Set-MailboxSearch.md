@@ -196,7 +196,9 @@ Accept wildcard characters: False
 ### -DoNotIncludeArchive
 This parameter is available only in Exchange Server 2010.
 
-The DoNotIncludeArchive parameter specifies whether items in the user's Archive mailbox are included in mailbox searches. By default, items in the user's Archive mailbox are included in mailbox searches. If set to $true, the DoNotIncludeArchive parameter instructs Multi-Mailbox Search to exclude archive mailboxes from the search.
+The DoNotIncludeArchive switch excludes items in the user's Archive mailbox from mailbox searches. You don't need to specify a value with this switch.
+
+By default, items in the user's Archive mailbox are included in mailbox searches.
 
 ```yaml
 Type: SwitchParameter
@@ -232,10 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -EstimateOnly
-The EstimateOnly parameter specifies whether to provide only an estimate of the number of items that will be returned. Valid values are:
-
-- $true: Messages aren't copied to the target mailbox, and only an estimate of the number of items is returned.
-- $false: Messages are copied to the target mailbox.
+The EstimateOnly switch provides only an estimate of the number of items that will be returned without copying message to the target mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -270,9 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-Use this to switch suppress the confirmation prompt that indicates the previous search results will be removed from the target mailbox, and that the search will be restarted.
+Use this to switch to hide the confirmation prompt that indicates the previous search results will be removed from the target mailbox, and that the search will be restarted.
 
 ```yaml
 Type: SwitchParameter

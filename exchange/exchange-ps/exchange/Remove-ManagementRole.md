@@ -128,7 +128,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -144,9 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-The Recurse parameter removes all child roles of the role specified with the Identity parameter, and then removes the specified role.
+The Recurse switch removes the specified role and all child roles of the specified role. You don't need to specify a value with this switch.
 
-The Recurse parameter removes all child roles of the specified role. We recommend that you first use the command with the WhatIf switch to confirm that the action to be taken is correct.
+We recommend that you test the command with the WhatIf switch to confirm that the results will be correct.
 
 ```yaml
 Type: SwitchParameter
@@ -169,8 +171,6 @@ By default, this parameter is only available in the UnScoped Role Management rol
 The UnScopedTopLevel switch specifies the role that you want to remove is an unscoped top-level role. You don't need to specify a value with this switch.
 
 Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets.
-
-You must use this switch if you want to remove an unscoped top-level role.
 
 ```yaml
 Type: SwitchParameter

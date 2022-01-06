@@ -1472,13 +1472,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsServiceAccount
-The IsServiceAccount switch specifies whether you want the user accounts associated with this policy to be moderated by the per-user thresholds specified by this policy, and also by additional throttling based on the health of system resources, such as overall CPU usage.
+The IsServiceAccount switch specifies that the user accounts associated with this policy are moderated by per-user thresholds and the health of system resources (for example, overall CPU usage). You don't need to specify a value with this switch.
 
-This value is set to $false by default.
+You might want to use this switch if you intend to associate this policy with user accounts that require higher throttling limits (for example, service accounts that perform IMAP mailbox migrations or nightly Windows PowerShell tasks).
 
-You may want to set this value to $true if you intend to associate this policy with user accounts that require higher throttling limits. An account that might require higher throttling limits is a service account that performs a lot of non-interactive work (for example, service accounts that perform IMAP mailbox migrations or nightly Windows PowerShell tasks).
-
-By setting the IsServiceAccount switch to $true, work done by these accounts is moderated by the higher user throttling settings that you configure using the user throttling policy, but is slowed if resources start getting unhealthy.
+By using this switch, work done by these accounts is moderated by the higher user throttling settings that you configure using the user throttling policy, but is slowed if resources start getting unhealthy.
 
 ```yaml
 Type: SwitchParameter

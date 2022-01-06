@@ -133,7 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt produced by the cmdlet when modifying a rule with no conditions, resulting in such rules being applied to all messages.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to suppress the confirmation prompt that appears when you modify a rule with no conditions (the rule applies to all messages).
 
 ```yaml
 Type: SwitchParameter

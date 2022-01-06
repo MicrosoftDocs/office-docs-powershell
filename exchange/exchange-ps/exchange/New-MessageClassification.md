@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderDescription
-The SenderDescription parameter specifies the the detailed text that's shown to Outlook senders when they select a message classification to apply to a message before they send the message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The SenderDescription parameter specifies the detailed text that's shown to Outlook senders when they select a message classification to apply to a message before they send the message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDescription
-The RecipientDescription parameter specifies the the detailed text that's shown to Outlook recipient when they receive a message that has the message classification applied. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The RecipientDescription parameter specifies the detailed text that's shown to Outlook recipient when they receive a message that has the message classification applied. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 If you don't use this parameter, the value of the SenderDescription parameter is used.
 

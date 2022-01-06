@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies that the test be run against the archive mailbox for the mailbox user specified in the Identity parameter. When the Archive switch is used, you must also use the Identity parameter to specify the mailbox.
+The Archive switch specifies that the test is run against the archive mailbox for the mailbox user specified by the Identity parameter. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM). You don't need to specify a value with this switch.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter

@@ -259,7 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Use the Force switch when you're trying to initiate the deletion of all data that's encrypted by the data encryption policy (the PermanentDataPurgeRequested switch), but the associated Azure Key Vault has also been deleted. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to delete all data that's encrypted by the data encryption policy (the PermanentDataPurgeRequested switch), but the associated Azure Key Vault has also been deleted.
 
 ```yaml
 Type: SwitchParameter

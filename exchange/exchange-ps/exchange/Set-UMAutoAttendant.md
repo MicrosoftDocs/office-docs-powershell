@@ -606,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-The ForceUpgrade switch specifies whether you're prompted for confirmation before a UM auto attendant object is upgraded.
+The ForceUpgrade switch suppresses the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

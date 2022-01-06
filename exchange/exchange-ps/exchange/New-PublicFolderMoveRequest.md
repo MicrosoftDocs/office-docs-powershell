@@ -139,7 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLargeItems
-The AllowLargeItems parameter specifies that you can move large items only when large items are encountered. Large items are email messages with a maximum of 1,023 attachments.
+The AllowLargeItems switch specifies that you can move large items only when large items are encountered. You don't need to specify a value with this switch.
+
+Large items are email messages with a maximum of 1,023 attachments.
 
 ```yaml
 Type: SwitchParameter
@@ -304,7 +306,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't need to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -336,7 +340,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToComplete switch specifies whether to suspend the request before it reaches the status of CompletionInProgress. After the move is suspended, it has a status of AutoSuspended. You can then manually complete the move by using the Resume-PublicFolderMoveRequest command.
+The SuspendWhenReadyToComplete switch specifies whether to suspend the request before it reaches the status of CompletionInProgress. You don't need to specify a value with this switch.
+
+After the move is suspended, it has a status of AutoSuspended. You can then manually complete the move by using the Resume-PublicFolderMoveRequest command.
 
 ```yaml
 Type: SwitchParameter

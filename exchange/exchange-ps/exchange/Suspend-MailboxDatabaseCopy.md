@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActivationOnly
-The ActivationOnly switch specifies whether to suspend only activation for the mailbox database copy.
+The ActivationOnly switch specifies whether to suspend only activation for the mailbox database copy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -129,6 +129,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableReplayLag
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnableReplayLag
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SuspendComment
 The SuspendComment parameter specifies the reason that the database copy is being suspended. This parameter is limited to 512 characters.
 
@@ -155,22 +171,6 @@ Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableReplayLag
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: EnableReplayLag
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
