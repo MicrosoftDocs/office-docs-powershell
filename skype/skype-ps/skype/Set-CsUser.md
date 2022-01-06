@@ -12,6 +12,9 @@ ms.reviewer: rogupta
 
 # Set-CsUser
 
+> [!NOTE]
+> Using this cmdlet for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
+
 ## SYNOPSIS
 Modifies Skype for Business properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Skype for Business.
