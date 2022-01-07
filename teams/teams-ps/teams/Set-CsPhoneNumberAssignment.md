@@ -61,6 +61,12 @@ Set-CsPhoneNumberAssignment -Identity user2@contoso.com -LocationId null -PhoneN
 ```
 This example removes the emergency location from the phone number for user user2@contoso.com.
 
+### Example 5
+```powershell
+Set-CsPhoneNumberAssignment -Identity cq1@contoso.com -PhoneNumber +14255551225 -PhoneNumberType DirectRouting
+```
+This example assigns the Direct Routing phone number +1 (425) 555-1225 to the resource account cq1@contoso.com.
+
 
 ## PARAMETERS
 
