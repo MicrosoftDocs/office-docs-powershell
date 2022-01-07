@@ -18,7 +18,8 @@ Properties can be modified only for accounts that have been enabled for use with
 This cmdlet was introduced in Lync Server 2010.
 
 > [!NOTE]
-> Using this cmdlet for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
+> Using this cmdlet for Microsoft Teams users will be deprecated. For details, please see individual parameters below.
+> Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
 
 ## SYNTAX
 
@@ -160,6 +161,8 @@ Accept wildcard characters: False
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
+> [!NOTE]
+> Using this parameter for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment)
 
 ```yaml
 Type: Boolean
@@ -177,6 +180,9 @@ Accept wildcard characters: False
 ### -HostedVoiceMail
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
 In addition, setting this option to True enables Skype for Business users to directly place a call to another user's voice mail.
+
+> [!NOTE]
+> Using this parameter for Microsoft Teams users will be deprecated and it is not required anymore to set it for Microsoft Teams users.
 
 
 ```yaml
@@ -408,6 +414,9 @@ If you assign Ken Myer the line URI TEL:+14255551297 and later try to assign Pil
 Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
+
+> [!NOTE]
+> Using this parameter for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) to use the phone number for Direct Routing users.
 
 ```yaml
 Type: String
