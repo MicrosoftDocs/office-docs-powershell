@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ### -AddOneDriveLocation
 The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -AddOneDriveLocationException
 The AddOneDriveLocationException parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -162,7 +162,7 @@ The AddSharePointLocation parameter specifies the SharePoint Online sites to add
 
 SharePoint Online sites can't be added to the policy until they have been indexed.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ### -AddSharePointLocationException
 The AddSharePointLocationException parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
 
 ```yaml
 Type: MultiValuedProperty
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ### -ExchangeSenderMemberOf
 The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the autolabeling policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ### -ExchangeSenderMemberOfException
 The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the autolabeling policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 ### -RemoveOneDriveLocation
 The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -438,7 +438,7 @@ Accept wildcard characters: False
 ### -RemoveOneDriveLocationException
 This RemoveOneDriveLocationException parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -456,7 +456,7 @@ Accept wildcard characters: False
 ### -RemoveSharePointLocation
 The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -474,7 +474,7 @@ Accept wildcard characters: False
 ### -RemoveSharePointLocationException
 The RemoveSharePointLocationException parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
