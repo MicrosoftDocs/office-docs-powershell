@@ -45,7 +45,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-Set-RetentionComplianceRule -Identity "Internal Company Rule" -RetentionDuration 180 RetentionDurationDisplayHint Days
+Set-RetentionComplianceRule -Identity "Internal Company Rule" -RetentionDuration 180 -RetentionDurationDisplayHint Days
 ```
 
 This example changes the hold duration for the existing retention rule named "Internal Company Rule".
