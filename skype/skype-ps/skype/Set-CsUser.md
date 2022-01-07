@@ -416,7 +416,7 @@ For example, in some organizations dialing 1-425-555-1297 routes your call to an
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
 > [!NOTE]
-> Using this parameter for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) to use the phone number for Direct Routing users.
+> Using this parameter for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
 
 ```yaml
 Type: String
