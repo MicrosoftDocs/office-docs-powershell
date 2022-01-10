@@ -17,8 +17,7 @@ Use the `Grant-CsDialoutPolicy` cmdlet to assign the tenant global or a per-user
 
 ## SYNTAX
 ```
-Grant-CsDialoutPolicy [[-Identity] <UserIdParameter>] [-Global] [[-PolicyName] <string>] [-Confirm] [-DomainController <Fqdn>]
- [-PassThru] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+Grant-CsDialoutPolicy [[-Identity] <UserIdParameter>] [-Global] [[-PolicyName] <string>] [-Confirm] [-PassThru] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,22 +63,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
@@ -151,30 +134,6 @@ Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
