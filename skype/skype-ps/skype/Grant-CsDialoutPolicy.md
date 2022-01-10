@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csdialoutpolicy
-applicable: Skype for Business Online
+applicable: Skype for Business Online, Microsoft Teams
 title: Grant-CsDialoutPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -17,13 +17,13 @@ Use the `Grant-CsDialoutPolicy` cmdlet to assign a per-user outbound calling res
 
 ## SYNTAX
 ```
-Grant-CsDialoutPolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <string>] [-Confirm] [-DomainController <Fqdn>]
+Grant-CsDialoutPolicy [[-Identity] <UserIdParameter>] [-Global] [[-PolicyName] <string>] [-Confirm] [-DomainController <Fqdn>]
  [-PassThru] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-In Skype for Business Online, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization.
-To get all the available policies in your organization run `Get-CSOnlineDialOutPolicy`.
+In Skype for Business Online and Microsoft Teams, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization.
+To get all the available policies in your organization run `Get-CsOnlineDialOutPolicy`.
 
 ## EXAMPLES
 
@@ -48,6 +48,13 @@ PS C:\> Get-CsOnlineUser | Grant-CsDialoutPolicy -PolicyName "DialoutCPCInternat
 
 This example assigns the per-user outbound calling restriction policy DialoutCPCInternationalPSTNDisabled to all the users in your organization.
 
+### -------------------------- Example 4 --------------------------
+```
+PS C:\> Grant-CsDialoutPolicy -Global -PolicyName "InternationalAndDomestic"
+```
+
+This example sets the tenant global policy instance to InternationalAndDomestic.
+
 ## PARAMETERS
 
 ### -Confirm
@@ -57,7 +64,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,7 +80,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -82,6 +89,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Global
+This parameter set the tenant global policy instance. This is the policy that all users in the tenant will get, unless they have a specific policy instance assigned.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online, Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -Identity
 Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
 
@@ -89,7 +113,7 @@ Specifies the Identity of the user account to be to be modified. A user identity
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: 0
@@ -105,7 +129,7 @@ Returns the results of the command. By default, this cmdlet does not generate an
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -123,7 +147,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: 1
@@ -147,7 +171,7 @@ If you are using a remote session of Windows PowerShell and are connected only t
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -164,7 +188,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -187,4 +211,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Get-CSOnlineDialOutPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy?view=skype-ps)
+[Get-CsOnlineDialOutPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy?view=skype-ps)
