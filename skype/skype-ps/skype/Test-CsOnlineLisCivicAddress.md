@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Test-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
