@@ -76,7 +76,7 @@ Accept wildcard characters: False
 This parameter set the tenant global policy instance. This is the policy that all users in the tenant will get, unless they have a specific policy instance assigned.
 
 ```yaml
-Type: Fqdn
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Microsoft Teams
