@@ -531,7 +531,6 @@
   "Get-ResourceConfig": "mailboxes",
   "Get-SweepRule": "mailboxes",
   "Get-UserPhoto": "mailboxes",
-  "Import-ContactList": "mailboxes",
   "Import-RecipientDataProperty": "mailboxes",
   "New-App": "mailboxes",
   "New-InboxRule": "mailboxes",
