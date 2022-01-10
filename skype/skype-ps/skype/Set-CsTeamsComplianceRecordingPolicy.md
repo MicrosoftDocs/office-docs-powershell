@@ -31,7 +31,6 @@ Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIden
 ```
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Instance <PSObject>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
- [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
