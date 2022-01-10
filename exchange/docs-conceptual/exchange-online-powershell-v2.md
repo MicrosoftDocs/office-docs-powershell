@@ -355,6 +355,19 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
   For more information, see [SchUseStrongCrypto](/dotnet/framework/network-programming/tls#schusestrongcrypto).
 
+  
+- If you receive the following error:
+  > “No Match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try Get-PSReporitory to see all available registered module repositories.”
+
+  Here the ExchangeOnlineManagement module could not be found when installing, since the PSRepository on the system was not set to PSGallery. Update this using the command: 
+  
+   ```powershell
+    Register-PSRepository -Default
+   ``` 
+  
+  
+  
+  
 ### Uninstall the EXO V2 module
 
 To uninstall the module, run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
