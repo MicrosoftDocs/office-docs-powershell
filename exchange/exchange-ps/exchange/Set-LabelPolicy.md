@@ -371,6 +371,8 @@ Supported settings for built-in labeling:
 
 - **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
+- **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (minimum version 2201+), macOS (minimum version 16.57+), iOS (minimum version 2.57+), and Android (minimum version 16.0.14827+), and also Outlook on Windows (minimum version 2201+) and macOS (minimum version 16.57+). Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"} `.
+
 Additionally, for Power BI:
 
 - **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
