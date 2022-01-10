@@ -11,6 +11,8 @@ schema: 2.0.0
 
 # New-CsTeamsShiftsConnectionBatchTeamMap
 
+**Note:** This cmdlet is currently in private preview.
+
 ## SYNOPSIS
 
 This cmdlet submits an operation connecting multiple Microsoft Teams teams and Workforce management (WFM) teams.

@@ -13,6 +13,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+**Note:** This cmdlet is currently in private preview.
+
 This cmdlet deletes a Shifts connection instance.
 
 ## SYNTAX
