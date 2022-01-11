@@ -158,7 +158,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddExchangeLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddExchangeLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -189,7 +189,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddExchangeLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddExchangeLocationException $_  }
  
 ```yaml
 Type: MultiValuedProperty
@@ -217,7 +217,7 @@ You can use any value that uniquely identifies the Microsoft 365 Group. For exam
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddModernGroupLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddModernGroupLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -245,7 +245,7 @@ You can use any value that uniquely identifies the Microsoft 365 Group. For exam
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddModernGroupLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddModernGroupLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -266,7 +266,7 @@ The AddOneDriveLocation parameter specifies the OneDrive for Business sites to a
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddOneDriveLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddOneDriveLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -287,7 +287,7 @@ This parameter specifies the OneDrive for Business sites to add to the list of e
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddOneDriveLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddOneDriveLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -324,7 +324,7 @@ The AddSharePointLocation parameter specifies the SharePoint Online sites to add
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddSharePointLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddSharePointLocation $_  }
 
 SharePoint Online sites can't be added to the policy until they have been indexed.
 
@@ -347,7 +347,7 @@ This parameter specifies the SharePoint Online sites to add to the list of exclu
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddSharePointLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddSharePointLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -375,7 +375,7 @@ You can use any value that uniquely identifies the user. For example:
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddSkypeLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddSkypeLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -418,7 +418,7 @@ You can use any value that uniquely identifies the team. For example:
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChannelLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChannelLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -443,7 +443,7 @@ The AddTeamsChannelLocationException parameter specifies the Teams to add to the
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChannelLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChannelLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -471,7 +471,7 @@ You can use any value that uniquely identifies the user. For example:
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChatLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChatLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -496,7 +496,7 @@ The AddTeamsChatLocationException parameter specifies the Teams users to add to 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChatLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -AddTeamsChatLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -620,7 +620,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveExchangeLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveExchangeLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -651,7 +651,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveExchangeLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveExchangeLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -679,7 +679,7 @@ You can use any value that uniquely identifies the Microsoft 365 Group. For exam
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveModernGroupLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveModernGroupLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -707,7 +707,7 @@ You can use any value that uniquely identifies the Microsoft 365 Group. For exam
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveModernGroupLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveModernGroupLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -728,7 +728,7 @@ The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites t
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveOneDriveLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveOneDriveLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -749,7 +749,7 @@ This parameter specifies the OneDrive for Business sites to remove from the list
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveOneDriveLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveOneDriveLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -786,7 +786,7 @@ The RemoveSharePointLocation parameter specifies the SharePoint Online sites to 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveSharePointLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveSharePointLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -807,7 +807,7 @@ This parameter specifies the SharePoint Online sites to remove from the list of 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveSharePointLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveSharePointLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -835,7 +835,7 @@ You can use any value that uniquely identifies the user. For example:
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveSkypeLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveSkypeLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -901,7 +901,7 @@ You can use any value that uniquely identifies the team. For example:
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChannelLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChannelLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -926,7 +926,7 @@ The RemoveTeamsChannelLocationException parameter specifies the Teams to remove 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChannelLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChannelLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -954,7 +954,7 @@ You can use any value that uniquely identifies the user. For example:
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChatLocation $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChatLocation $_  }
 
 ```yaml
 Type: MultiValuedProperty
@@ -979,7 +979,7 @@ The RemoveTeamsChatLocationException parameter specifies the Teams users to remo
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 > [!NOTE]
-> We recommend against using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChatLocationException $_  }
+> Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy <PolicyId> -RemoveTeamsChatLocationException $_  }
 
 ```yaml
 Type: MultiValuedProperty
