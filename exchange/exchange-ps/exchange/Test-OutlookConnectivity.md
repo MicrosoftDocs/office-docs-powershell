@@ -390,7 +390,9 @@ Accept wildcard characters: False
 ### -MonitoringContext
 This parameter is available only in Exchange Server 2010.
 
-The MonitoringContext switch specifies whether the command returns additional information that can be used with Microsoft System Center Operations Manager. You don't need to specify a value with this switch.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -585,7 +587,9 @@ Accept wildcard characters: False
 ### -TrustAnySslCert
 This parameter is available only in Exchange Server 2010.
 
-The TrustAnySslCert switch specifies whether to ignore any Secure Sockets Layer (SSL) certificate warnings. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
+
+This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
 
 ```yaml
 Type: SwitchParameter

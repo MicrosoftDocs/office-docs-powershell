@@ -126,9 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-The ForceUpgrade switch specifies whether to suppress the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
+The ForceUpgrade switch suppresses the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
 
-This confirmation prompt is only displayed when the existing HybridConfiguration Active Directory object version is Exchange 2010.
+This confirmation prompt is displayed only when the existing HybridConfiguration Active Directory object version is Exchange 2010.
 
 ```yaml
 Type: SwitchParameter

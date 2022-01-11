@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowRecoveryPassword
-The ShowRecoveryPassword parameter specifies whether to return the recovery password for the mobile phone as one of the displayed statistics. If this parameter is set to $true, the command returns the recovery password for the mobile phone as one of the displayed statistics.
+The ShowRecoveryPassword switch specifies whether to return the recovery password for the mobile device as one of the displayed statistics. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -89,7 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-The ConfigurationOnly switch should only be used if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed. When used, it removes the Mailbox server from the DAG object in Active Directory. If the Mailbox server is offline but the DAG has quorum, the Mailbox server is evicted from the DAG's cluster and removed from the DAG object in Active Directory.
+The ConfigurationOnly switch remove the Mailbox server from the DAG object in Active Directory. You don't need to specify a value with this switch.
+
+If the Mailbox server is offline but the DAG has quorum, the Mailbox server is evicted from the DAG's cluster and removed from the DAG object in Active Directory.
+
+You should use this switch only if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed.
 
 ```yaml
 Type: SwitchParameter

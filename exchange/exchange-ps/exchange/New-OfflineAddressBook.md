@@ -386,7 +386,9 @@ Accept wildcard characters: False
 ### -SkipPublicFolderInitialization
 This parameter is available only in Exchange Server 2010.
 
-The SkipPublicFolderInitialization parameter specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. The OAB isn't available for download until the next site folder maintenance cycle has completed. You don't have to specify a value with the SkipPublicFolderInitialization parameter. Omitting this parameter may cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
+The SkipPublicFolderInitialization switch specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. You don't need to specify a value with this switch.
+
+The OAB isn't available for download until the next site folder maintenance cycle has completed. Omitting this switch might cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
 
 ```yaml
 Type: SwitchParameter

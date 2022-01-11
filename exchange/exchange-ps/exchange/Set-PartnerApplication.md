@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ### -RefreshAuthMetadata
 This parameter is available only in on-premises Exchange.
 
-The RefreshAuthMetadata switch specifies that the auth metadata should be refreshed from the authorization server.
+The RefreshAuthMetadata switch refreshes the auth metadata from the authorization server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -358,7 +358,9 @@ Accept wildcard characters: False
 ### -TrustAnySSLCertificate
 This parameter is available only in on-premises Exchange.
 
-The TrustAnySSLCertificate switch specifies whether Exchange should trust certificates issued by a certification authority (CA) not trusted by the server. We don't recommend using this switch in a production environment.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
+
+We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter

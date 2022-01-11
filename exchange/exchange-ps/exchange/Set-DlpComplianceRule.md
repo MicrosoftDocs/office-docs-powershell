@@ -102,7 +102,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
- [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
+ [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
@@ -114,6 +114,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-Priority <Int32>]
  [-ProcessingLimitExceeded <Boolean>]
  [-ProcessingLimitExceeded <Boolean>]
+ [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <PswsHashtable>]
  [-RecipientADAttributeMatchesPatterns <PswsHashtable>]
  [-RecipientDomainIs <MultiValuedProperty>]
@@ -1940,10 +1941,16 @@ Accept wildcard characters: False
 ```
 
 ### -NonBifurcatingAccessScope
-{{ Fill NonBifurcatingAccessScope Description }}
+The NonBifurcatingAccessScope parameter specifies a condition for the DLP rule that looks for recipients in the specified access scope. The rule is applied to all copies of the message. Valid values are:  
+
+- HasInternal: At least one recipient is inside the organization. 
+- HasExternal: At least one recipient is outside the organization. 
+- None: The condition isn't used. 
+
+You can use this condition in DLP policies that are scoped only to Exchange
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope
+Type: NonBifurcatingAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -2135,6 +2142,27 @@ The ProcessingLimitExceeded parameter specifies a condition for the DLP rule tha
 
 - $true: Look for files where scanning couldn't complete.
 - $false: Don't look for files where scanning couldn't complete.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Quarantine
+This parameter specifies an action or part of an action for the rule.
+
+The Quarantine parameter specifies an action that quarantines messages. Valid values are:
+
+- $true: The message is delivered to the hosted quarantine.
+- $false: The message is not quarantined.
 
 ```yaml
 Type: Boolean

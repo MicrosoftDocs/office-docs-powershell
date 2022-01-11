@@ -468,7 +468,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeDumpster
-The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items folder. You don't have to include a value with this parameter. If you don't specify this parameter, the Recoverable Items folder is copied with the following subfolders:
+The ExcludeDumpster switch specifies whether to exclude the Recoverable Items folder. You don't need to specify a value with this switch.
+
+If you don't use this switch, the Recoverable Items folder is copied with the following subfolders:
 
 - Deletions
 - Versions
@@ -784,7 +786,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter

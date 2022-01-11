@@ -125,7 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecentOnly
-The RecentOnly switch returns a list of the most recently modified cases of the specified case type. This switch is used to display data in the "Recently cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
+The RecentOnly switch returns a list of the most recently modified cases of the specified case type. You don't need to specify a value with this switch.
+
+This switch is used to display data in the "Recently cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
 
 ```yaml
 Type: SwitchParameter

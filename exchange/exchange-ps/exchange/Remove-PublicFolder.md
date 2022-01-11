@@ -126,7 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-The Recurse switch specifies whether all subfolders of the specified folder should be removed. If the Recurse switch isn't specified and the public folder has subfolders, the command doesn't run and an error message is returned.
+The Recurse switch specifies whether all subfolders of the specified folder should also be removed. You don't need to specify a value with this switch.
+
+If you don't use this switch and the public folder has subfolders, the command doesn't run and an error message is returned.
 
 ```yaml
 Type: SwitchParameter
