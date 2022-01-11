@@ -1979,11 +1979,9 @@ The ModifySubject parameter specifies an action for the DLP rule that modifies t
 
 The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
-You can specify a maximum of 10 regular expressions.
-
 - Replace: Replaces all matches in the subject with the specified text.
-- Append: Remove all matches in the subject and insert the specified text at the end of the subject.
-- Prepend: Remove all matches in the subject and insert the specified text at the beginning of the subject.
+- Append: Removes all matches in the subject and inserts the specified text at the end of the subject.
+- Prepend: Removes all matches in the subject and inserts the specified text at the beginning of the subject.
 
 ```yaml
 Type: PswsHashtable
