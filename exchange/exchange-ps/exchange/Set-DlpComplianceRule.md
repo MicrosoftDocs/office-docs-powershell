@@ -102,6 +102,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
+ [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
@@ -1930,6 +1931,22 @@ You can use this action in DLP policies that are scoped only to Exchange.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModifySubject
+{{ Fill ModifySubject Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
 

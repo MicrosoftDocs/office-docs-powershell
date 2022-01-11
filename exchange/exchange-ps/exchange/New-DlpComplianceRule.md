@@ -103,6 +103,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
+ [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
@@ -1963,6 +1964,30 @@ You can use this action in DLP policies that are scoped only to Exchange.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModifySubject
+The ModifySubject parameter specifies an action for the DLP rule that modifies the subject of the email message by using regular expressions. This parameter uses the syntax: 
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+You can specify a maximum of 10 regular expressions.
+
+- Replace: Replaces all matches in the subject with the specified text.
+- Append: Remove all matches in the subject and insert the specified text at the end of the subject.
+- Prepend: Remove all matches in the subject and insert the specified text at the beginning of the subject.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
 
