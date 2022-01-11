@@ -1975,13 +1975,13 @@ Accept wildcard characters: False
 ```
 
 ### -ModifySubject
-The ModifySubject parameter specifies an action for the DLP rule that modifies the subject of the email message by using regular expressions. This parameter uses the syntax: 
-
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The ModifySubject parameter uses regular expressions to find text patterns in the subject of the email message, and then modifies the subject with the text that you specify. This parameter uses the syntax: 
 
 - Replace: Replaces all matches in the subject with the specified text.
 - Append: Removes all matches in the subject and inserts the specified text at the end of the subject.
 - Prepend: Removes all matches in the subject and inserts the specified text at the beginning of the subject.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
 ```yaml
 Type: PswsHashtable
