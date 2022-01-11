@@ -77,7 +77,6 @@ You can specify individual folder permissions or roles, which are combinations o
 
 The following individual permissions are available:
 
-- None: The user has no access to view or interact with the folder or its contents.
 - CreateItems: The user has the right to create items within the specified public folder.
 - CreateSubfolders: The user has the right to create subfolders in the specified public folder.
 - DeleteAllItems: The user has the right to delete all items in the specified public folder.
@@ -94,6 +93,7 @@ In addition to the access rights, you can create rights based upon roles, which 
 - Author: CreateItems, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
 - Contributor: CreateItems, FolderVisible
 - Editor: CreateItems, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
+- None: FolderVisible
 - NonEditingAuthor: CreateItems, DeleteOwnedItems, FolderVisible, ReadItems
 - Owner: CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderContact, FolderOwner, FolderVisible, ReadItems
 - PublishingAuthor: CreateItems, CreateSubfolders, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
