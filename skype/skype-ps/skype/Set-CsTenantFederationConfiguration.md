@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTeamsConsumerInbound
-Allows people using Teams with an account that's not managed by an organization, to discover and start communication with users in your organization. When -AllowTeamsConsumer and this is disabled, only the users in your organization will be able to discover and start communication with people using Teams with an account that's not managed by an organization, but they will not discover and start communications with users in your organization.
+Allows people using Teams with an account that's not managed by an organization, to discover and start communication with users in your organization. When -AllowTeamsConsumer is enabled and this parameter is disabled, only the users in your organization will be able to discover and start communication with people using Teams with an account that's not managed by an organization, but they will not discover and start communications with users in your organization.
 
 ```yaml
 Type: Boolean
