@@ -18,8 +18,6 @@ Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention polici
 
 **Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-RetentionCompliancePolicy](https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy).
 
-**Note**: Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_  }
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -89,6 +87,8 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+
+**Note**: Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_  }
 
 ## EXAMPLES
 
