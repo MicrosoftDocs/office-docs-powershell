@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
 
