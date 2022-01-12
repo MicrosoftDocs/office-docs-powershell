@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet supports retrieving the list of user details in the mapped teams of last sync.
 
