@@ -51,6 +51,8 @@ Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
+**Note**: Please avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-CaseHoldPolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_  }
+
 ## EXAMPLES
 
 ### Example 1
