@@ -44,7 +44,8 @@ This example displays all configured treatments.
 ```powershell
 Get-CsTeamsUnassignedNumberTreatment -Filter Ann*
 ```
-This example displays all configured treatments with an Identity starting with Ann
+This example displays all configured treatments with an Identity starting with Ann.
+
 
 
 ## PARAMETERS
