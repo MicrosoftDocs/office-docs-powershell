@@ -1975,11 +1975,13 @@ Accept wildcard characters: False
 ```
 
 ### -ModifySubject
-The ModifySubject parameter uses regular expressions to find text patterns in the subject of the email message, and then modifies the subject with the text that you specify. This parameter uses the syntax: 
+The ModifySubject parameter uses regular expressions to find text patterns in the subject of the email message, and then modifies the subject with the text that you specify. This parameter uses the syntax: `@{Patterns="RegEx1","RegEx2",..."RegEx10}"; SubjectText="Replacement Text"; ReplaceStrategy="Value"}`.
 
-- Replace: Replaces all matches in the subject with the specified text.
-- Append: Removes all matches in the subject and inserts the specified text at the end of the subject.
-- Prepend: Removes all matches in the subject and inserts the specified text at the beginning of the subject.
+The `ReplaceStrategy=` property uses one of the following values:
+
+- Replace: Replaces all regular expression matches (the `Patterns=` value) in the subject with the `SubjectText=` value.
+- Append: Removes all regular expression matches (the `Patterns=` value) in the subject and inserts the `SubjectText=` value at the end of the subject.
+- Prepend: Removes all regular expression matches (the `Patterns=` value) and inserts the `SubjectText=` value at the beginning of the subject.
 
 The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
