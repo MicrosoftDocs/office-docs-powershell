@@ -81,9 +81,9 @@ user@contoso.com        TeamsGCCH   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxx
 ```
 
 ### Example 4: Connect to MicrosoftTeams using Accesstokens
-This example demonstrates how to sign in using AccessTokens. Admin can reterive Access Tokens. It requires two tokens, MS Graph Access Token and Teams Resource token. 
+This example demonstrates how to sign in using AccessTokens. Admin can retrieve Access Tokens. It requires two tokens, MS Graph Access Token and Teams Resource token. 
 
-A delegated flow, such as Resouce Owner Password Credentials (ROPC), must be used, with the following delegated app permissions required.
+A delegated flow, such as Resource Owner Password Credentials (ROPC), must be used, with the following delegated app permissions required.
 
 | API | Grant type | Permission |
 |-|-|-|
