@@ -13,6 +13,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+**Note:** This cmdlet is currently in public preview.
+
 This cmdlet validates workforce management (WFM) connection settings.
 
 ## SYNTAX
@@ -32,7 +34,7 @@ This cmdlet validates Workforce management (WFM) connection settings. It validat
 PS C:\> $InstanceName = "test instance name"
 PS C:\> $WfmUserName = "WfmUserName"
 PS C:\> $plainPwd = "plainPwd"
-PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.replgroup.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.replgroup.com/retail/data/login" -ConnectorSpecificSettingLoginPwd $plainPwd -ConnectorSpecificSettingLoginUserName $WfmUserName -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2" -Name $InstanceName
+PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd $plainPwd -ConnectorSpecificSettingLoginUserName $WfmUserName -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2" -Name $InstanceName
 ```
 
 Returns the list of conflicts if there are any. Empty result means there's no conflict.
