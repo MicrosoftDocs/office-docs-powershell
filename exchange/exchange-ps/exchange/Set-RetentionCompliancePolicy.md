@@ -88,7 +88,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
-**Note**: Avoid using a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_  }
+**Note**: Don't use a piped Foreach-Object when adding or removing scope Locations : "Value1","Value2",..."ValueN" | Foreach-Object { Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_  }
 
 ## EXAMPLES
 
@@ -186,7 +186,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 - GUID
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
- 
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
@@ -438,7 +438,6 @@ You can use any value that uniquely identifies the user. For example:
 - GUID
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
 
 ```yaml
 Type: MultiValuedProperty
