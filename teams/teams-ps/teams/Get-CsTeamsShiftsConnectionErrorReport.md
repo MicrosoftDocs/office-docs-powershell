@@ -125,6 +125,9 @@ Accept wildcard characters: False
 ### -Activeness
 
 The flag indicating results should have which activeness.
+Set this to `ActiveOnly` to get Error reports that are not resolved.
+Set this to `InactiveOnly` to get Error reports that are resolved.
+Set this to `Both` to get both active and inactive Error reports.
 
 ```yaml
 Type: String
