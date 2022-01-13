@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
+The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 1000. The default value is 1000.
 
 ```yaml
 Type: UInt32
