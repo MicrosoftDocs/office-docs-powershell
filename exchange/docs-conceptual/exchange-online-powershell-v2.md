@@ -344,8 +344,9 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
   > The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
   
-  >WARNING: Unable to download from URI 'https://go.microsoft.com/fwlink/?LinkID=627338&clcid=0x409' to ''.
-  >WARNING: Unable to download the list of available providers. Check your internet connection.
+  > WARNING: Unable to download from URI 'https://go.microsoft.com/fwlink/?LinkID=627338&clcid=0x409' to ''.
+
+  > WARNING: Unable to download the list of available providers. Check your internet connection.
 
   Update your installation of the PowerShellGet module to the latest version as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget). Be sure to close and re-open the PowerShell window before you attempt to update the ExchangeOnlineManagement module again.
 
