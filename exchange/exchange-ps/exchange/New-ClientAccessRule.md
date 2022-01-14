@@ -33,11 +33,9 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
  [-ExceptAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
- [-ExceptUserIsMemberOf <MultiValuedProperty>]
- [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Priority <Int32>]
  [-Scope <ClientAccessRulesScope>]
- [-UserIsMemberOf <MultiValuedProperty>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-UserRecipientFilter <String>]
  [-WhatIf]
@@ -367,22 +365,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExceptUserIsMemberOf
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExceptUsernameMatchesAnyOfPatterns
 This parameter is available or functional only in the cloud-based service.
 
@@ -438,22 +420,6 @@ Type: ClientAccessRulesScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserIsMemberOf
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
