@@ -33,7 +33,7 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
  [-ExceptAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
-  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
+ [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-Priority <Int32>]
  [-Scope <ClientAccessRulesScope>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
