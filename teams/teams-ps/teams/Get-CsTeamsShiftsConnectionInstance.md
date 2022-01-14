@@ -13,6 +13,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+**Note:** This cmdlet is currently in public preview.
+
 This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
 
 ## SYNTAX

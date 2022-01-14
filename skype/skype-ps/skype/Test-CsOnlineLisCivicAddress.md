@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Test-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -16,6 +16,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the \`Test-CsOnlineLisCivicAddress\` cmdlet to verify that a civic address exists in the master street address guide (MSAG), and is suitable for emergency dispatch.
 
+> [!NOTE]
+> This cmdlet will be deprecated. The validation checks are incorporated into New-CsOnlineLisCivicAddress.
 
 ## SYNTAX
 
