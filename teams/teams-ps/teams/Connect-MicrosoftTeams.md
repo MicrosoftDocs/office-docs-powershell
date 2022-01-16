@@ -176,8 +176,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplicationId (Removed from latest version)
+### -ApplicationId
 Specifies the application ID of the service principal.
+
+> [!WARNING]
+>This parameter has been removed from the latest versions and replaced by the AccessTokens parameter.
 
 ```yaml
 Type: String
