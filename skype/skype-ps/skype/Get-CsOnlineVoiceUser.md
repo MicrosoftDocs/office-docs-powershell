@@ -37,6 +37,19 @@ Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicabl
   - ResultSize
 - LicenceState 
 
+*Deprecated Input Parameters*
+
+- Below input parameters have been deprecated:
+  - [-DomainController <Fqdn>]
+  - [-Force]
+  - [-GetFromAAD]
+  - [-GetPendingUsers]
+  - [-PSTNConnectivity <MultiValuedProperty>]
+  - [-SearchQuery <String>]
+  - [-Skip <Unlimited>]
+  - [-Tenant <Guid>]
+  - [<CommonParameters>]
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
