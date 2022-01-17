@@ -39,16 +39,15 @@ Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicabl
 
 *Deprecated Input Parameters*
 
-- Below input parameters have been deprecated:
-  - [-DomainController <Fqdn>]
+- Below input parameters have been deprecated due to low/zero usage:
+  - [-DomainController]
   - [-Force]
   - [-GetFromAAD]
   - [-GetPendingUsers]
-  - [-PSTNConnectivity <MultiValuedProperty>]
-  - [-SearchQuery <String>]
-  - [-Skip <Unlimited>]
-  - [-Tenant <Guid>]
-  - [<CommonParameters>]
+  - [-PSTNConnectivity]
+  - [-SearchQuery]
+  - [-Skip]
+  - [-Tenant]
 
 ## EXAMPLES
 
