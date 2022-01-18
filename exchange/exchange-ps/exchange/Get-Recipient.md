@@ -369,6 +369,8 @@ The IncludeSoftDeletedRecipients switch specifies whether to include soft delete
 
 Soft-deleted recipients are deleted recipients that are still recoverable.
 
+**Note**: Use this switch with the Identity or RecipientTypeDetails parameters to get the SoftDeletedRecipients.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -381,8 +383,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-Note: IncludeSoftDeletedRecipients parameter should be used along with -Identity or -RecipientTypeDetails to get the SoftDeletedRecipients
 
 ### -OrganizationalUnit
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
