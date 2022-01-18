@@ -36,7 +36,7 @@ Beginning with Teams PowerShell Module 3.0 onwards, the following updates are ap
 
 *Deprecated Input Parameters*
 
-Below input paramters have been removed as they are either no longer relevant in Microsoft Teams or have very low usage
+The following input parameters have been removed as they are either no longer relevant in Microsoft Teams or have very low usage.
 
   - ServiceNumber
   - BridgeId
