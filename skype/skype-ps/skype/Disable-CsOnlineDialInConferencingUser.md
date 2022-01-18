@@ -14,8 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This cmdlet will be deprecated on December 31, 2021. To disable Audio Conferencing for a given user, unassign the Audio Conferencing license from the user or disable the Audio Conferencing component from the user's license. For additional information, see [Assign or remove licenses for Microsoft 365 Apps for business](https://docs.microsoft.com/microsoft-365/admin/add-users/add-users).
+> This cmdlet will be deprecated on December 31, 2021. To disable Audio Conferencing for a user, please unassign the Audio Conferencing license from the user or disable the Audio Conferencing component from the license that is assigned to the user. For additional information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 Use the `Disable-CsOnlineDialInConferencingUser` cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
 
