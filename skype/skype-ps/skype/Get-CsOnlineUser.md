@@ -243,7 +243,7 @@ To accomplish the task, the filter string is first constructed and resolved loca
 
 ### -Credential
 
-  *This parameter has been deprecated from Teams Powershell Modules 3.0 and above as it is no longet relevant to Microsoft Teams*
+  *This parameter has been deprecated from Teams Powershell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
  
 ```yaml
 Type: PSCredential
