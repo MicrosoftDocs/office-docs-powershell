@@ -70,7 +70,7 @@ Accept wildcard characters: False
 
 ### -BridgeName
 
-*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*
+*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
 
 Specifies the name for the audio conferencing bridge.
 
