@@ -39,7 +39,7 @@ Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicabl
 
 *Deprecated Input Parameters*
 
-- Below input parameters have been deprecated due to low/zero usage:
+- The following input parameters have been deprecated due to low or zero usage:
   - [-DomainController]
   - [-Force]
   - [-GetFromAAD]
