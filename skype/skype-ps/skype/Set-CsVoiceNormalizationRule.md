@@ -18,7 +18,7 @@ Voice normalization rules are used to convert a telephone dialing requirement (f
 This cmdlet was introduced in Lync Server 2010.
 
 > [!NOTE]
-> This cmdlet will be deprecated from Teams PowerShell Module
+> This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
