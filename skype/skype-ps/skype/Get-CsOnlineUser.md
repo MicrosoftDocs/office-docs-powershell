@@ -381,7 +381,7 @@ Accept wildcard characters: False
 
 ### -OU
  
- *This parameter has been deprecated from Teams Powershell Modules 3.0 and above as it is no longet relevant to Microsoft Teams*
+ *This parameter has been deprecated from Teams Powershell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
 
 
 ```yaml
