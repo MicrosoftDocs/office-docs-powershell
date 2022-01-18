@@ -352,7 +352,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-*These parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
