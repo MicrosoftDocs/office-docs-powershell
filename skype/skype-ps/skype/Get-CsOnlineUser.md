@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 ### -UnassignedUser
  
- *This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*
+ *This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
 
 Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to unless they are assigned to a Registrar pool.
