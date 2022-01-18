@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -LdapFilter
 
-*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*
+*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
