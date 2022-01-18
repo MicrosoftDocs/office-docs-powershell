@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*
+*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
 
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
