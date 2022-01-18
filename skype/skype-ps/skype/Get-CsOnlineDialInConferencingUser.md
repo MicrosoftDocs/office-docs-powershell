@@ -32,7 +32,7 @@ The see a list of users with conferencing providers other than Microsoft use the
 
 **NOTE:**
 
-Beginning Teams PowerShell Module 3.0 onwards, the below updates are applicable for TeamsOnly customers.
+Beginning with Teams PowerShell Module 3.0 onwards, the following updates are applicable for TeamsOnly customers.
 
 *Deprecated Input Parameters*
 
