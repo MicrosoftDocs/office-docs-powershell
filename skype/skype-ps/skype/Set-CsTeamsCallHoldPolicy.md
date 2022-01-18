@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/set-csteamscallholdpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsTeamsCallHoldPolicy
 schema: 2.0.0
 ms.reviewer:
@@ -16,8 +16,6 @@ author: joelhmarquez
 
 Modifies an existing Teams call hold policy in your tenant. The Teams call hold policy is used to customize the call hold experience for Teams clients.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
 
 ## SYNTAX
 
