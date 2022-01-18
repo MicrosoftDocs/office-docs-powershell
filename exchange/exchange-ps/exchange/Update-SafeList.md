@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnsureJunkEmailRule
-The EnsureJunkEmailRule parameter specifies whether to force the junk email rule to be turned on for the mailbox if the rule isn't turned on already.
+The EnsureJunkEmailRule switch forces the junk email rule to be turned on for the mailbox if the rule isn't turned on already. You don't need to specify a value with this switch.
 
 The junk email rule can only be created after the user logs on to the mailbox. If the user has never logged on to the mailbox, this parameter can't turn on the junk email rule.
 
@@ -138,7 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDomains
-The IncludeDomains switch specifies whether to include the sender domains specified by users in Outlook in the safelist aggregation data. By default, domains specified by the senders aren't included.
+The IncludeDomains switch specifies whether to include the sender domains specified by users in Outlook in the safelist aggregation data. You don't need to specify a value with this switch.
+
+By default, domains specified by the senders aren't included.
 
 In most cases, we don't recommend that you include domains because users may include the domains of large Internet service providers (ISPs), which could unintentionally provide addresses that may be used or spoofed by spammers.
 

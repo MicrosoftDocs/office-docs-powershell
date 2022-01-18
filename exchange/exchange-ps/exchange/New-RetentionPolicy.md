@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ### -IsDefaultArbitrationMailbox
 This parameter is available only in the cloud-based service.
 
-The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
+The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

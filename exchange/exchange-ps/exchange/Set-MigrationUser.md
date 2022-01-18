@@ -80,7 +80,9 @@ Accept wildcard characters: False
 ### -ApproveSkippedItems
 This parameter is available only in the cloud-based service.
 
-The ApproveSkippedItems switch marks all of the skipped items discovered prior to the current time as approved. If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
+The ApproveSkippedItems switch marks all of the skipped items that were discovered prior to the current time as approved. You don't need to specify a value with this switch.
+
+If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
 
 For more information about maximum message size values, see the following topic [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 

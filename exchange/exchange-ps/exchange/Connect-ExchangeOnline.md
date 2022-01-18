@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
+The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 1000. The default value is 1000.
 
 ```yaml
 Type: UInt32
@@ -639,7 +639,7 @@ The UseRPSSession switch allows you to connect to Exchange Online PowerShell usi
 
 This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exo-v2-module).
 
-If you don't use this parameter, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
+If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
 
 ```yaml
 Type: SwitchParameter

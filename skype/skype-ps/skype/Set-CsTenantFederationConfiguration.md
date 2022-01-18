@@ -21,7 +21,7 @@ These settings are used to determine which domains (if any) your users are allow
 ### Identity (Default)
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
- [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
  [-AllowedDomainsAsAList <List>] [-AllowTeamsConsumer <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -40,7 +40,7 @@ With Skype for Business Online, administrators can use the federation configurat
 
 Whether or not users can communicate with people from other domains and if so, which domains they are allowed to communicate with.
 
-Whether or not users can communicate with people who have accounts on public IM and presence providers such as Windows Live, AOL and Yahoo.
+Whether or not users can communicate with people who have accounts on public IM and presence providers such as Windows Live, Skype, or people using Microsoft Teams with an account that's not managed by an organization.
 
 Administrators can use the `Set-CsTenantFederationConfiguration` cmdlet to enable and disable federation with other domains and federation with public providers.
 In addition, this cmdlet can be used to expressly indicate the domains that users can communicate with and/or the domains that users are not allowed to communicate with.
@@ -120,6 +120,13 @@ Example 6 shows how you can add domains to the Allowed Domains using a List coll
 First, a List collection is created and domains are added to it, then, simply include the AllowedDomainsAsAList parameter and set the parameter value to the List object.
 When this command completes, the allowed domain list will be filled with those domains.
 
+### -------------------------- Example 7 --------------------------
+```
+Set-CsTenantFederationConfiguration -AllowTeamsConsumer $True -AllowTeamsConsumerInbound $False
+```
+
+The command shown in Example 7 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
+
 ## PARAMETERS
 
 ### -AllowedDomains
@@ -173,6 +180,35 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -AllowTeamsConsumer
+Allows federation with people using Teams with an account that's not managed by an organization.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTeamsConsumerInbound
+Allows people using Teams with an account that's not managed by an organization, to discover and start communication with users in your organization. When -AllowTeamsConsumer is enabled and this parameter is disabled, only the users in your organization will be able to discover and start communication with people using Teams with an account that's not managed by an organization, but they will not discover and start communications with users in your organization.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -333,21 +369,6 @@ Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowTeamsConsumer
-Allows federation with Teams Consumer users.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
