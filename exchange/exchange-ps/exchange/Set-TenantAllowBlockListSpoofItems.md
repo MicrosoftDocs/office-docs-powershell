@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-The Action parameter specifies whether is is an allow or block spoof entry. Valid values are:
+The Action parameter specifies whether this spoof entry is an allow or block spoof entry. Valid values are:
 
 - Allow
 - Block

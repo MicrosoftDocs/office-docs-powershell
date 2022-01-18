@@ -33,8 +33,7 @@ Connect-MicrosoftTeams
 ```
 Connect-MicrosoftTeams 
 [-TenantId <String>] 
--AccessTokens <String[]> 
--AccountId <String> 
+-AccessTokens <String[]>  
 [-LogLevel <LogLevel>] 
 [-LogFilePath <String>] 
 [-WhatIf] 
@@ -145,24 +144,12 @@ Accept wildcard characters: False
 
 ### -AccountId
 Specifies the ID of an account.
-You must specify the UPN of the user when authenticating with a user access token.
 
 ```yaml
 Type: String
 Parameter Sets: UserCredential
 Aliases:
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -344,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Login using managed service identity in the current environment.
+Login using managed service identity in the current environment. This is currently not supported for *-Cs cmdlets. 
 
 ```yaml
 Type: SwitchParameter

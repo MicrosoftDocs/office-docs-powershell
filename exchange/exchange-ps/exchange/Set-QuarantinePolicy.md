@@ -54,19 +54,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-QuarantinePolicy -Identity CustomAccess -EndUserQuarantinePermissionsValue 32
+Set-QuarantinePolicy -Identity CustomAccess -EndUserQuarantinePermissionsValue 1
 ```
 
-This example configures the following permissions in the quarantine policy named CustomAccess:
-
-- PermissionToAllowSender: No
-- PermissionToBlockSender: No
-- PermissionToDelete: Yes
-- PermissionToDownload: No
-- PermissionToPreview: No
-- PermissionToRelease: No
-- PermissionToRequestRelease: No
-- PermissionToViewHeader: No
+This example configures the permissions in the quarantine policy named CustomAccess that allows users to delete quarantined messages only.
 
 ### Example 2
 ```powershell
@@ -233,22 +224,24 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissionsValue
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy by using a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
+The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine policy.
 
-- PermissionToAllowSender
+This parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list from highest (1000000 or 128) to lowest (00000001 or 1):
+
+- PermissionToViewHeader: The value 0 doesn't hide the **View message header** button in the details of the quarantined message.
+- PermissionToDownload: This setting is not used (the value 0 or 1 does nothing).
+- PermissionToAllowSender: This setting is not used (the value 0 or 1 does nothing).
 - PermissionToBlockSender
-- PermissionToDelete
-- PermissionToDownload: Currently, this value is always 0.
+- PermissionToRequestRelease: Don't set this permission and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
+- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
 - PermissionToPreview
-- PermissionToRelease: Don't set this value and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
-- PermissionToRequestRelease: Don't set this value and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
-- PermissionToViewHeader: Currently, this value is always 0, and doesn't hide the **View message header** button in the details of the quarantined message.
+- PermissionToDelete
 
 The values for the preset end-user permission groups are described in the following list:
 
 - No access: Binary = 0000000, so use the decimal value 0.
-- Limited access: Binary = 01101010, so use the decimal value 106.
-- Full access: Binary = 11101100, so use the decimal value 236.
+- Limited access: Binary = 00011011, so use the decimal value 27.
+- Full access: Binary = 00010111, so use the decimal value 23.
 
 For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use.
 
@@ -336,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageCustomDisclaimer
-The MultiLanguageCustomDisclaimer parameter specifies the custom disclaimer text to use near the bottom of quarantine quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify for this parameter.
+The MultiLanguageCustomDisclaimer parameter specifies the custom disclaimer text to use near the bottom of quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify for this parameter.
 
 You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you can specify unique custom disclaimer text. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
@@ -358,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageSenderName
-The MultiLanguageSenderName parameter specifies the email sender's display name to use in quarantine quarantine notifications.
+The MultiLanguageSenderName parameter specifies the email sender's display name to use in quarantine notifications.
 
 You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you can specify a unique sender name. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 
@@ -380,11 +373,11 @@ Accept wildcard characters: False
 ```
 
 ### -MultiLanguageSetting
-The MultiLanguageSetting parameter specifies the language of quarantine quarantine notifications. Valid values are:
+The MultiLanguageSetting parameter specifies the language of quarantine notifications. Valid values are:
 
 Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
 
-You can specify multiple value separated by commas using the syntax: `('value1',''value2',...'valueN')`. The default value is Default, which means quarantine quarantine notifications use the default language of the cloud-based organization.
+You can specify multiple value separated by commas using the syntax: `('value1',''value2',...'valueN')`. The default value is Default, which means quarantine notifications use the default language of the cloud-based organization.
 
 For each language that you specify, you can specify a unique value for the MultiLanguageCustomDisclaimer and MultiLanguageSenderName parameters. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, and MultiLanguageSenderName parameter values in the same order.
 

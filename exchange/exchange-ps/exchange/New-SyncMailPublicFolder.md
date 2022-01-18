@@ -619,10 +619,7 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
-
-- $true: The recipient isn't visible in address lists.
-- $false: The recipient is visible in address lists. This is the default value.
+The HiddenFromAddressListsEnabled switch specifies that this recipient is not visible in address lists. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

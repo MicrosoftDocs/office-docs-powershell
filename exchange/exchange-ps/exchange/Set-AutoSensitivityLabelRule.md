@@ -382,7 +382,7 @@ Accept wildcard characters: False
 ### -ExceptIfContentContainsSensitiveInformation
 The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the auto-labeling policy rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
 ```yaml
 Type: PswsHashtable[]
@@ -555,7 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfProcessingLimitExceeded
-The ExceptIfProcessingLimitExceeded parameter specifies an exception for the auto-labeling policy rule rule that looks for files where scanning couldn't complete. Valid values are:
+The ExceptIfProcessingLimitExceeded parameter specifies an exception for the auto-labeling policy rule that looks for files where scanning couldn't complete. Valid values are:
 
 - $true: Look for files where scanning couldn't complete.
 - $false: Don't look for files where scanning couldn't complete.
@@ -608,7 +608,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderIPRanges
-The ExceptIfSenderIpRanges parameter specifies an exception for the auto-labeling policy rule rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+The ExceptIfSenderIpRanges parameter specifies an exception for the auto-labeling policy rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - IP address range: For example, 192.168.0.1-192.168.0.254.

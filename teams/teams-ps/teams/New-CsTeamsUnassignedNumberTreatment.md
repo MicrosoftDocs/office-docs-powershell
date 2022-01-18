@@ -42,7 +42,7 @@ $AudioFile = Import-CsOnlineAudioFile -FileName "MainAnnouncement.wav" -Content 
 $Fid=[System.Guid]::Parse($audioFile.Id)
 New-CsTeamsUnassignedNumberTreatment -Identity TR1 -Pattern "^\+1555333\d{4}$" -TargetType Announcement -Target $Fid.Guid -TreatmentPriority 2
 ```
-This example creates a treatment that will route all calls to the number range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
+This example creates a treatment that will route all calls to unassigned numbers in the range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
 where the audio file MainAnnouncement.wav will be played to the caller.
 
 
@@ -171,6 +171,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 The parameters Identity and TreatmentId are mutually exclusive.
+
+If a specified pattern/range contains phone numbers that are assigned, calls to these phone numbers will be routed to the appropriate target and not routed to the specified
+unassigned number treatment.
 
 ## RELATED LINKS
 [Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)

@@ -47,7 +47,7 @@ This example configures customized review notification text and review reminder 
 The IsCustomizedNotificationTemplate switch specifies whether to use a customized review notification instead of the system default notification. Valid values are:
 
 - $true: Use a customized review notification. You specify the notification text using the CustomizedNotificationDataString parameter.
-- $false: Use the the default system notification. This is the default value.
+- $false: Use the default system notification. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 The IsCustomizedReminderTemplate switch specifies whether to use a customized review reminder instead of the system default reminder:
 
 - $true: Use a customized review reminder. You specify the reminder text using the CustomizedReminderDataString parameter.
-- $false: Use the the default system reminder. This is the default value.
+- $false: Use the default system reminder. This is the default value.
 
 ```yaml
 Type: Boolean

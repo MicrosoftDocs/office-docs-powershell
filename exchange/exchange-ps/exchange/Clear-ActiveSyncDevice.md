@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cancel
-The Cancel switch specifies whether the command should be canceled. If you use the Cancel switch, a cancellation request is issued for the remote device wipe.
+The Cancel switch specifies whether to issue a cancellation request for a pending remote device wipe. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

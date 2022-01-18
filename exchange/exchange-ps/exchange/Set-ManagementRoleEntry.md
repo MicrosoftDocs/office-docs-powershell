@@ -93,7 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddParameter
-The AddParameter parameter adds the specified parameters to the specified role entry. Use the Parameters parameter to specify the parameters to add. You can't use the AddParameter parameter in the same command as the RemoveParameter parameter.
+The AddParameter switch specifies that you're adding parameters to the specified role entry. You don't need to specify a value with this switch.
+
+Use the Parameters parameter to specify the parameters to add.
+
+You can't use the AddParameter switch and the RemoveParameter switch together in the same command.
 
 ```yaml
 Type: SwitchParameter
@@ -148,7 +152,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +194,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveParameter
-The RemoveParameter parameter removes the specified parameters from the specified role entry. Use the Parameters parameter to specify the parameters to remove. You can't use the RemoveParameter parameter in the same command as the AddParameter parameter.
+The RemoveParameter switch specifies that you're removing parameters to the specified role entry. You don't need to specify a value with this switch.
+
+Use the Parameters parameter to specify the parameters to remove.
+
+You can't use the AddParameter switch and the RemoveParameter switch together in the same command.
 
 ```yaml
 Type: SwitchParameter
@@ -211,8 +221,6 @@ By default, this parameter is only available in the UnScoped Role Management rol
 The UnScopedTopLevel switch specifies the role entry that you want to modify is on an unscoped top-level role. You don't need to specify a value with this switch.
 
 Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
-
-You must use this switch to modify role entries on unscoped top level roles.
 
 ```yaml
 Type: SwitchParameter

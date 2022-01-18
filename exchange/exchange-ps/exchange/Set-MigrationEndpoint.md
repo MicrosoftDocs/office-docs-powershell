@@ -450,7 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipVerification
-The SkipVerification switch specifies whether to skip verifying that the remote server is reachable when creating a migration endpoint. The default value is $false.
+The SkipVerification switch skips verifying that the remote server is reachable when creating a migration endpoint. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
