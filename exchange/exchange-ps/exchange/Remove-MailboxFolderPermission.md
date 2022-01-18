@@ -188,7 +188,7 @@ The ResetDelegateUserCollection switch forces the removal of the LocalFreeBusy o
 
 Use this switch if you encounter problems trying add, change, or remove delegate permissions. Using this switch deletes those files and downgrades any existing delegates to Editor permissions. You'll need to grant delegate permissions again using `-SharingPermissionFlag Delegate`.
 
-When you use this switch, the value of Identity should be the user's primary calendar folder (for example, `kim@consoto.com:\Calendar`).
+When you use this switch, the value of Identity should be the user's primary calendar folder (for example, `kim@contoso.com:\Calendar`).
 
 ```yaml
 Type: SwitchParameter
