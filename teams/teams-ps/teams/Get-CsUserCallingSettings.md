@@ -41,9 +41,7 @@ IsForwardingEnabled       : True
 ForwardingType            : Immediate
 ForwardingTarget          :
 ForwardingTargetType      : Voicemail
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : False
-IsSafeForward             : False
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -51,7 +49,6 @@ Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride :
 ```
@@ -68,9 +65,7 @@ IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
 ForwardingTarget          : user3@contoso.com
 ForwardingTargetType      : SingleTarget
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : False
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -78,7 +73,6 @@ Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride :
 ```
@@ -96,9 +90,7 @@ IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
 ForwardingTarget          :
 ForwardingTargetType      : Group
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : False
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -106,7 +98,6 @@ Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {user5@contoso.com}
-CallGroupDelay            :
 GroupMembershipDetails    : CallGroupOwnerId:user6@contoso.com
 GroupNotificationOverride : Mute
 ```
@@ -119,8 +110,9 @@ CallGroupOwnerId            NotificationSetting
 user6@contoso.com           Ring
 ```
 
-This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com (CallGroupTargets).
-The call group is defined to ring members in the order listed in the call group (CallGroupOrder).
+This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com 
+(CallGroupTargets). The call group is defined to ring members in the order listed in the call group (CallGroupOrder).
+
 You can also see that user4@contoso.com is a member of user6@contoso.com's call group (GroupMembershipDetails), that user6@contoso.com defined the call group with Ring
 notification for user4@contoso.com (NotificationSetting) and that user4@contoso.com has decided to turn off call notification for call group calls (GroupNotificationOverride).
 
@@ -135,9 +127,7 @@ IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
 ForwardingTarget          :
 ForwardingTargetType      : MyDelegates
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : True
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -145,7 +135,6 @@ Delegates                 : Id:user8@contoso.com
 Delegators                : 
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride : Ring
 ```
@@ -154,15 +143,13 @@ GroupNotificationOverride : Ring
 ```
 ```output
 Id             : user8@contoso.com
-IsActive       : True
-CreatedDate    : 14-10-2021 09:46:00
 MakeCalls      : True
 ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate (Delegates) and that user
-has all the permissions you can have as a delegate (Delegates).
+This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate (Delegates) and 
+that user has all the permissions you can have as a delegate (Delegates).
 
 ### Example 5
 ```powershell
@@ -171,12 +158,10 @@ Get-CsUserCallingSettings -Identity user9@contoso.com
 ```output
 SipUri                    : sip:user9@contoso.com
 IsForwardingEnabled       : False
-ForwardingType            : Simultaneous
+ForwardingType            : Immediate
 ForwardingTarget          :
 ForwardingTargetType      : Voicemail
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : True
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -184,7 +169,6 @@ Delegates                 :
 Delegators                : Id:user10@contoso.com
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride : Ring
 ```
@@ -193,15 +177,13 @@ GroupNotificationOverride : Ring
 ```
 ```output
 Id             : user10@contoso.com
-IsActive       : True
-CreatedDate    : 14-10-2021 09:46:56
 MakeCalls      : True
 ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the permissions you can have as a delegate (Delegators).
-
+This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the permissions you can
+have as a delegate (Delegators).
 
 
 ## PARAMETERS
@@ -233,9 +215,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 2.6.1-preview or later.
-
-You might see raw identities, i.e. ObjectId's, for identities used in the output. It is a known issue that we are working to fix.
+The cmdlet is available in Teams PowerShell module 3.0.1-preview.
 
 ## RELATED LINKS
 
+[Set-CsUserCallingSettings](Set-CsUserCallingSettings.md)
+
+[New-CsUserCallingDelegate](New-CsUserCallingDelegate.md)
+
+[Set-CsUserCallingDelegate](Set-CsUserCallingDelegate.md)
+
+[Remove-CsUserCallingDelegate](Remove-CsUserCallingDelegate.md)

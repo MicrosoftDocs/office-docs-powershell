@@ -252,7 +252,9 @@ Accept wildcard characters: False
 ### -ClearAutoMapping
 This parameter is available or functional only in the cloud-based service.
 
-The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
+The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. You don't need to specify a value with this switch.
+
+The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
 
 To re-add auto-mapping capability on the mailbox for other users, run the command: `Add-MailboxPermission -Identity <MailboxIdentity> -AccessRights FullAccess -AutoMapping $true`.
 
@@ -272,9 +274,9 @@ Accept wildcard characters: False
 ### -BypassMasterAccountSid
 This parameter is available only in the cloud-based service.
 
-The BypassMasterAccountSid parameter is required when you receive the following error when you try to use this cmdlet: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.`
+The BypassMasterAccountSid switch suppresses the following error: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.` You don't need to specify a value with this switch.
 
-Typically, you only need to use this parameter in Microsoft Office 365 Dedicated/ITAR legacy environments.
+Typically, you only need to use this switch in Office 365 Dedicated or ITAR legacy environments.
 
 ```yaml
 Type: SwitchParameter
@@ -309,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny parameter denies permissions to the user on the Active Directory object.
+The Deny switch specifies that the permissions you're removing are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -361,9 +363,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -400,7 +402,9 @@ Accept wildcard characters: False
 ### -ResetDefault
 This parameter is available or functional only in the cloud-based service.
 
-The ResetDefault switch resets the default security descriptor of the mailbox. Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
+The ResetDefault switch resets the default security descriptor of the mailbox. You don't need to specify a value with this switch.
+
+Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
 
 - Recipient permissions (for example, SendAs, SendOnBehalf and delegates).
 - Mailbox folder permissions assigned using the MailboxFolderPermission cmdlets.

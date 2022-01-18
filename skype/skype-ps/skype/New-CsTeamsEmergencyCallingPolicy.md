@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencycallingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsTeamsEmergencyCallingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -31,10 +31,10 @@ New-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <S
 
 ### Example 1
 ```powershell
-PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECRP -Description "Test ECRP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "4253214567" -NotificationMode NotificationOnly -ExternalLocationLookupMode $Enable
+PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "4253214567" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
 ```
 
- This example creates a Teams Emergency Calling policy that has a identity of testECRP, where a notification group and number is being defined and also the type of notification.
+ This example creates a Teams Emergency Calling policy that has a identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
 
 ## PARAMETERS
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
- Enable ExternalLocationLookupMode. 
+ Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
 
 ```yaml
 Type: ExternalLocationLookupMode
@@ -219,3 +219,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsTeamsEmergencyCallingPolicy](Get-CsTeamsEmergencyCallingPolicy.md)
+
+[Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
+
+[Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
+
+[Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)

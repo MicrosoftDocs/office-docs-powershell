@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsemergencycallroutingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsTeamsEmergencyCallRoutingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 ms.reviewer: chenc, pthota
 schema: 2.0.0
 ---
@@ -36,7 +36,7 @@ Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers
 
 ### Example 1
 ```powershell
-PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -AllowEnhancedEmergencyServices:$false -Description "test"
+PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -AllowEnhancedEmergencyServices:$false -Description "test"
 ```
 
  This example modifies an existing Teams Emergency Call Routing Policy.
@@ -192,3 +192,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsTeamsEmergencyCallRoutingPolicy](New-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Grant-CsTeamsEmergencyCallRoutingPolicy](Grant-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[New-CsTeamsEmergencyNumber](New-CsTeamsEmergencyNumber.md)

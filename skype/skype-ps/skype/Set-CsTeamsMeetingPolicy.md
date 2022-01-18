@@ -23,7 +23,8 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
- [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
+ [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousUsersToJoinMeeting <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
@@ -46,7 +47,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
- [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
+ [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousUsersToJoinMeeting <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
@@ -92,6 +94,25 @@ In this example two different property values are configured: AutoAdmittedUsers 
 All other policy properties will use the existing values.
 
 ## PARAMETERS
+
+### -AllowAnonymousUsersToJoinMeeting
+
+> [!NOTE]
+> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check https://docs.microsoft.com/microsoftteams/meeting-settings-in-teams for details.
+
+Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowAnonymousUsersToStartMeeting
 Determines whether anonymous users can initiate a meeting. Set this to TRUE to allow anonymous users to initiate a meeting. Set this to FALSE to prohibit them from initiating a meeting.

@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDagValidation
-The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when adding members to the DAG.
+The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when adding members to the DAG. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -239,7 +239,10 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. To enable this, use this switch without a value. To disable this, use this exact syntax: -ACLableSyncedObjectEnabled:$false.
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser.
+
+- To enable this feature, use this switch without a value.
+- To disable this feature, use this exact syntax: `-ACLableSyncedObjectEnabled:$false`.
 
 ```yaml
 Type: SwitchParameter
@@ -865,9 +868,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -1214,7 +1217,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePicture
-The RemovePicture switch specifies whether to remove the picture from the mail user. You don't need to specify a value with this switch.
+The RemovePicture switch removes the picture from the mail user. You don't need to specify a value with this switch.
 
 You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
 
@@ -1232,7 +1235,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSpokenName
-The RemoveSpokenName switch specifies whether to remove the spoken name from the mail user. You don't need to specify a value with this switch.
+The RemoveSpokenName switch removes the spoken name from the mail user. You don't need to specify a value with this switch.
 
 You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
 
@@ -1341,6 +1344,7 @@ Notes on the value Shared:
 
 - Shared is available only in Exchange 2013 CU21 or later, Exchange 2016 CU10 or later, and Exchange 2019. In Exchange 2013 and Exchange 2016, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605).
 - If you tried to convert a migrated remote mailbox to a shared remote mailbox, you would receive the following error: `remoteMailbox.RemoteRecipientType must include ProvisionMailbox`. This issue was fixed in Exchange 2016 CU14 and Exchange 2019 CU3, but not in Exchange 2013. For more information, see [KB4515271](https://support.microsoft.com/help/4515271).
+- A Shared mailbox that is migrated cannot be converted to regular mailbox. 
 - If directory synchronization unexpectedly converts shared mailboxes in Exchange Online back into user mailboxes, or if you continue to receive the `remoteMailbox.RemoteRecipientType must include ProvisionMailbox` error when you use the value Shared, take the action described in Step 3 in the Resolution section in [KB2710029](https://support.microsoft.com/help/2710029).
 
 ```yaml

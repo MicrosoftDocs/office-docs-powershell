@@ -809,7 +809,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -829,9 +831,9 @@ This parameter is available only in on-premises Exchange.
 
 The HoldForMigration switch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
 
-You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
+You need to use this switch when you create the first public folder, which is called the hierarchy mailbox, in your organization.
 
-Use this parameter only if you plan to migrate legacy Exchange 2010 public folders to Exchange 2016. If you use this switch but don't have legacy public folders to migrate, you won't be able to create any public folders.
+Use this switch only if you plan to migrate legacy Exchange 2010 public folders to Exchange 2016. If you use this switch but don't have legacy public folders to migrate, you won't be able to create any public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -887,7 +889,9 @@ Accept wildcard characters: False
 ### -ManagedFolderMailboxPolicyAllowed
 This parameter is available in Exchange Server 2010.
 
-The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for  clients using versions of Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
+The ManagedFolderMailboxPolicyAllowed switch specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for clients using versions of Outlook earlier than Office Outlook 2007. You don't need to specify a value with this switch.
+
+When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed switch is used.
 
 Outlook 2003 Service Pack 3 clients are supported but are provided limited functionality for MRM.
 

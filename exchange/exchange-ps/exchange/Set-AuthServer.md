@@ -152,7 +152,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-{{ Fill DomainName Description }}
+This parameter is available only in Exchange Server 2016 (CU18 or higher) and Exchange Server 2019 (CU7 or higher).
+
+The DomainName parameter specifies the tenant domain that's linked with the AuthServer object. This parameter usess the syntax: "tenantname.onmicrosoft.com".
+
+This parameter is used to link Tenant to the corresponding authserver object in the  Multi-Tenant Exchange Hybrid. For example, if DomainName is contoso.onmicrosoft.com, then the AuthServer object will be associated with the contoso tenant.
 
 ```yaml
 Type: MultiValuedProperty
@@ -241,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
 
 We don't recommend using this switch in a production environment.
 

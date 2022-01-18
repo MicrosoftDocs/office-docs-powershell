@@ -45,7 +45,9 @@ This example lists all the trusted publishing domains that are configured in you
 ## PARAMETERS
 
 ### -Default
-The Default switch filters the results by the default trusted publishing domain. The default trusted publishing domain displays RMS templates and provides rights protection to all new content. There can be only one default trusted publishing domain in an organization.
+The Default switch filters the results by the default trusted publishing domain. You don't need to specify a value with this switch.
+
+The default trusted publishing domain displays RMS templates and provides rights protection to all new content. There can be only one default trusted publishing domain in an organization.
 
 ```yaml
 Type: SwitchParameter

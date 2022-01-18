@@ -68,7 +68,7 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 
 ### Example 3
 ```powershell
-Get-ActiveSyncDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
+Get-ActiveSyncDeviceStatistics -Mailbox TonySmith -GetMailboxLog -NotificationEmailAddresses "admin@contoso.com"
 ```
 
 This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the Exchange ActiveSync log file and sends it to the System Administrator at admin@contoso.com.
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetMailboxLog
-The GetMailboxLog parameter specifies whether to send the mailbox logs via email to the administrator running the task. If the parameter is set to $true, the command sends the mailbox logs via email to the administrator running the task. The default value of this parameter is $false.
+The GetMailboxLog switch specifies whether to send the mobile device statistics to the email addresses that are specified by the NotificationEmailAddresses parameter. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmailAddresses
-The NotificationEmailAddresses parameter specifies an optional list of comma-separated aliases or email addresses where the mailbox logs are sent. If the GetMailboxLog parameter is set to $false, this parameter is ignored.
+The NotificationEmailAddresses parameter specifies a comma-separated list of email addresses to receive the mobile device statistics when you use the GetMailboxLog switch.
+
+This parameter is meaningful only if you also use the GetMailboxLog switch in the same command.
 
 ```yaml
 Type: MultiValuedProperty
