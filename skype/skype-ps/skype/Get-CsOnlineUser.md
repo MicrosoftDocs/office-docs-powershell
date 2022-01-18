@@ -344,7 +344,7 @@ Accept wildcard characters: False
 
 ### -OnModernServer
  
- *This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*
+ *This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
 
 When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
