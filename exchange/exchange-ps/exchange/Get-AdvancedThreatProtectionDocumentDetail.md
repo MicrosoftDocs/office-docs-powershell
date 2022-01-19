@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet will be deprecated. Use the [Get-ContentMalwareMdoDetailReport](https://docs.microsoft.com/powershell/module/exchange/get-contentmalwaremdodetailreport) cmdlet instead.
+
 Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the detailed results of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams in your Microsoft Defender for Office 365 organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
