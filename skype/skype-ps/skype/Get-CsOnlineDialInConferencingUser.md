@@ -47,6 +47,15 @@ The following input parameters have been removed as they are either no longer re
   - TenantDomain
   - Common Parameters
 
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Get-CsOnlineDailinConferncingUser -Identity Ken.Myer@contoso.com
+```
+
+This example uses the User Principal Name (UPN) to retrieve the BridgeID and ServiceNumber information.
+
 ## PARAMETERS
 
 ### -BridgeId
