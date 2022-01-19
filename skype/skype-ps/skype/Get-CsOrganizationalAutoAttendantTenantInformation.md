@@ -14,60 +14,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 > [!CAUTION]
-> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> This cmdlet has been deprecated and is no longer supported.
 > 
 > Please use [Get-CsAutoAttendantTenantInformation](Get-CsAutoAttendantTenantInformation.md) cmdlet instead.
-
-Gets the default tenant information for Auto Attendant (AA) feature.
-
-## SYNTAX
-
-```
-Get-CsOrganizationalAutoAttendantTenantInformation [-Tenant <Guid>] [<CommonParameters>]
-```
-
-## DESCRIPTION
-The Get-CsOrganizationalAutoAttendantTenantInformation cmdlet gets the default tenant information for Auto Attendant (AA) feature.
-
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-Get-CsOrganizationalAutoAttendantTenantInformation
-```
-
-Gets the default auto attendant information for the logged in tenant.
-
-
-## PARAMETERS
-
-### -Tenant
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### Microsoft.Rtc.Management.Hosted.OAA.Models.TenantInformation
-
-## NOTES
-
-## RELATED LINKS
-
