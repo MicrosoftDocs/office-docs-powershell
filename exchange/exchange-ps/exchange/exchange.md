@@ -69,6 +69,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ATPTotalTrafficReport](Get-ATPTotalTrafficReport.md)
 
+### [Get-ContentMalwareMdoAggregateReport](Get-ContentMalwareMdoAggregateReport.md)
+
+### [Get-ContentMalwareMdoDetailReport](Get-ContentMalwareMdoDetailReport.md)
+
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
