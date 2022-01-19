@@ -62,8 +62,12 @@ The Action parameter filters the results by action. Valid values are:
 
 - Allowed
 - Blocked
-- ClickedEvenBlocked
-- ClickedDuringScan
+- BlockedAndClickedThrough
+- ClickedThroughDuringScan
+- Scanning
+- TenantAllowed
+- TenantBlocked
+- TenantBlockedAndClickedThrough
 
 You can specify multiple values separated by commas.
 
@@ -84,14 +88,8 @@ Accept wildcard characters: False
 The AppNameList parameter filters the results by the app where the link was found. Valid values are:
 
 - Email Client
-- Excel
-- OneNote
-- Others
-- Outlook
-- PowerPoint
+- OfficeDocs
 - Teams
-- Visio
-- Word
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
