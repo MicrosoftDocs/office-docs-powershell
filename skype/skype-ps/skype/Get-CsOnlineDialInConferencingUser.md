@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -ServiceNumber
 
-*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Specifies a service number to serve as a filter for the returned user collection.
 Only users who have been assigned the specified number will be returned.
