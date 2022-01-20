@@ -81,8 +81,8 @@ The Action parameter filters the results by action. Valid values are:
 
 - Allowed
 - Blocked
-- BlockedAndClickedThrough
-- ClickedThroughDuringScan
+- ClickedDuringScan
+- ClickedEvenBlocked
 - Scanning
 - TenantAllowed
 - TenantBlocked

@@ -39,7 +39,7 @@ Safe Links is a feature in Microsoft Defender for Office 365 that checks links i
 
 For the reporting period you specify, the cmdlet returns the following information:
 
-- Action (Allowed, Blocked, ClickedEventBlocked, and ClickedDuringScan)
+- Action
 - App
 - MessageCount
 - RecipientCount
@@ -62,8 +62,8 @@ The Action parameter filters the results by action. Valid values are:
 
 - Allowed
 - Blocked
-- BlockedAndClickedThrough
-- ClickedThroughDuringScan
+- ClickedDuringScan
+- ClickedEvenBlocked
 - Scanning
 - TenantAllowed
 - TenantBlocked
