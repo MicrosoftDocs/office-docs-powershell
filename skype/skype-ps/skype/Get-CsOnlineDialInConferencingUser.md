@@ -60,7 +60,7 @@ This example uses the User Principal Name (UPN) to retrieve the BridgeID and Ser
 
 ### -BridgeId
 
-*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
