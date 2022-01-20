@@ -227,7 +227,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+The MessageTraceId parameter filters the results by the message trace ID value of the message. This GUID value is generated for every message that's processed by the system (for example, c20e0f7a-f06b-41df-fe33-08d9da155ac1).
+
+You can specify multiple values separated by commas.
+
+The MessageTraceId value is also available in the output of the following cmdlets:
+
+- Get-MailDetailDlpPolicyReport
+- Get-MailDetailEncryptionReport
+- Get-MailDetailTransportRuleReport
+- Get-MessageTrace
+- Get-MessageTraceDetail
 
 ```yaml
 Type: MultiValuedProperty
