@@ -127,6 +127,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
  [-SenderADAttributeMatchesPatterns <PswsHashtable>]
+ [-SenderAddressLocation <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicySenderAddressLocation>]
  [-SenderDomainIs <MultiValuedProperty>]
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
@@ -2483,6 +2484,34 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderAddressLocation
+The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
+
+- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value.
+- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
+- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
+
+Note that message envelope searching is only available for the following conditions and exceptions:
+
+- From and ExceptIfFrom
+- FromAddressContainsWords and ExceptIfFromAddressContainsWords
+- FromAddressMatchesPatterns and ExceptIfFromAddressMatchesPatterns
+- FromMemberOf and ExceptIfFromMemberOf
+- SenderDomainIs and ExceptIfSenderDomainIs
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicySenderAddressLocation
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
 
