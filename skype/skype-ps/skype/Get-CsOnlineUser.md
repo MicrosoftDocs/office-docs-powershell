@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-  *This parameter has been deprecated from Teams Powershell Module 3.0 and above as it is no longer relevant to Microsoft Teams*.
+  *This parameter has been deprecated from Teams PowerShell Module 3.0 and above as it is no longer relevant to Microsoft Teams*.
  
 ```yaml
 Type: Fqdn
