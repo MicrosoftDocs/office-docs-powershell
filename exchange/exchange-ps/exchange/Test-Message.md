@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-message
-applicable: Exchange Server 2013, Exchange Online
+applicable: Exchange Online
 title: Test-Message
 schema: 2.0.0
 author: chrisda
@@ -133,11 +133,11 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$data = Get-Content -Path "C:\Data\test.eml" -Encoding Byte -ReadCount 0
+$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml)
 Test-Message -MessageFileData $data -Sender megan@contoso.com -Recipients adele@contoso.com -SendReportTo admin@contoso.com -TransportRules -UnifiedDlpRules
 ```
 
-This example uses the test.eml message file at C:\Data to test mail flow rules and unified DLP rules for the sender megan@contoso.com to the recipient megan@contoso.com. The results report is sent to admin@contoso.com.
+This example uses the test.eml message file at C:\data to test mail flow rules and unified DLP rules for the sender megan@contoso.com to the recipient adele@contoso.com. The results report is sent to admin@contoso.com.
 
 ## PARAMETERS
 
@@ -223,7 +223,7 @@ The TransportRules switch specifies that you want to test mail flow rules. You d
 Type: SwitchParameter
 Parameter Sets: Default, TransportRules
 Aliases:
-Applicable: Exchange Server 2013, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -271,7 +271,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -301,7 +301,8 @@ Accept wildcard characters: False
 ### -MessageFileData
 The MessageFileData parameter specifies the .eml message file to test.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object. For example:
+`$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml)`
 
 ```yaml
 Type: Byte[]
@@ -323,7 +324,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
