@@ -380,7 +380,6 @@ Accept wildcard characters: False
 
 ### -AllowTranscriptionForCalling
 Determines whether post-call transcriptions are allowed. Set this to TRUE to allow. Set this to FALSE to prohibit.
-Note: This feature is not yet released.
 
 ```yaml
 Type: Boolean
