@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-*This parameter has been deprecated from Teams Powershell Modules 3.0 and above due to limited usage*.
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more details about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
 
