@@ -27,7 +27,7 @@ Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumbe
 
 ### Attribute
 ```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoice <Boolean> [<CommonParameters>]
+Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
