@@ -413,8 +413,7 @@ Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-> [!NOTE]
-> Using this parameter for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment).
+**Note**: Using this parameter for Microsoft Teams users will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
 
 ```yaml
 Type: String
