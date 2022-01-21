@@ -2324,8 +2324,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
 
-### [Test-Message](Test-Message.md]
-
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
 
