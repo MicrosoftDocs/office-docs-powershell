@@ -159,8 +159,7 @@ Accept wildcard characters: False
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
-> [!NOTE]
-> Using this parameter for Microsoft Teams users will be deprecated. Please start using the new cmdlet [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment)
+**Note**: Using this parameter for Microsoft Teams users will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
 
 ```yaml
 Type: Boolean
