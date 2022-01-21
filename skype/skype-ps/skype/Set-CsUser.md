@@ -179,9 +179,7 @@ Accept wildcard characters: False
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
 In addition, setting this option to True enables Skype for Business users to directly place a call to another user's voice mail.
 
-> [!NOTE]
-> Using this parameter for Microsoft Teams users will be deprecated and it is not required anymore to set it for Microsoft Teams users.
-
+**Note**: Using this parameter will be deprecated for Teams users and it is not required anymore to set it for Microsoft Teams users.
 
 ```yaml
 Type: Boolean
