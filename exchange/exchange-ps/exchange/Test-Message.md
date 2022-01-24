@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-message
-applicable: Exchange Online
+applicable: Exchange Server 2013, Exchange Online
 title: Test-Message
 schema: 2.0.0
 author: chrisda
