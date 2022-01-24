@@ -133,7 +133,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml)
+$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml')
 Test-Message -MessageFileData $data -Sender megan@contoso.com -Recipients adele@contoso.com -SendReportTo admin@contoso.com -TransportRules -UnifiedDlpRules
 ```
 
@@ -301,8 +301,7 @@ Accept wildcard characters: False
 ### -MessageFileData
 The MessageFileData parameter specifies the .eml message file to test.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object. For example:
-`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

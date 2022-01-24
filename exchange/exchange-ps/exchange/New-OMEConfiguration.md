@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Microsoft 365 admin center.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
 - Optimal size of logo file: less than 40 KB
