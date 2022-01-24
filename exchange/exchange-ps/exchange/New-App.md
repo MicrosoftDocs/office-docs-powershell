@@ -108,7 +108,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTestApp.xml" -ReadCount 0))
+$data = [System.IO.File]::ReadAllBytes('C:\Apps\FinanceTestApp.xml')
+New-App -FileData $data -ReadCount 0))
 ```
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.
@@ -255,7 +256,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object. For example, `$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`.
 
 ```yaml
 Type: Byte[]

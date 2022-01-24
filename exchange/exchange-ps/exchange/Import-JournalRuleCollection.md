@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the variable name that contains the content of the XML file.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object. For example, `$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`.
 
 ```yaml
 Type: Byte[]

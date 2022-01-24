@@ -133,7 +133,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml)
+$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml')
 Test-Message -MessageFileData $data -Sender megan@contoso.com -Recipients adele@contoso.com -SendReportTo admin@contoso.com -TransportRules -UnifiedDlpRules
 ```
 
