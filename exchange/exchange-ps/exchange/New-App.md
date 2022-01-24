@@ -108,8 +108,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$data = [System.IO.File]::ReadAllBytes('C:\Apps\FinanceTestApp.xml')
-New-App -FileData $data -ReadCount 0))
+New-App -FileData ([System.IO.File]::ReadAllBytes('C:\Apps\FinanceTestApp.xml'))
 ```
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.

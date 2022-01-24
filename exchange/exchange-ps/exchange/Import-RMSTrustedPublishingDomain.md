@@ -76,8 +76,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$data = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso.xml')
-Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $data -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force)-ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
+Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\Contoso.xml')) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force) -ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
 ```
 
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
