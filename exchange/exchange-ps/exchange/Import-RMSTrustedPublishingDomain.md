@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the XML file you want to import. The XML file contains the TPD you exported from the on-premises AD RMS server.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object. For example, `$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

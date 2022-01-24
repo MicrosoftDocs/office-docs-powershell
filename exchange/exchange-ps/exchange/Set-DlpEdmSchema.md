@@ -47,7 +47,7 @@ This example modifies a DLP EDM schema. The first command reads the schema in th
 ### -FileData
 The FileData parameter specifies the DLP EDM schema that you want to import.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object. For example, `$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

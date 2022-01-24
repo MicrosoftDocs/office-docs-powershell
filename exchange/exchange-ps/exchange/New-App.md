@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object. For example, `$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
