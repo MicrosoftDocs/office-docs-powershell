@@ -369,6 +369,8 @@ The IncludeSoftDeletedRecipients switch specifies whether to include soft delete
 
 Soft-deleted recipients are deleted recipients that are still recoverable.
 
+**Note**: Use this switch with the Identity or RecipientTypeDetails parameters to get the SoftDeletedRecipients.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

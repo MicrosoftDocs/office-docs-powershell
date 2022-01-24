@@ -110,7 +110,6 @@ The ReportType parameter specifies the type of historical search that you want t
 - ATPV2: Exchange Online Protection and Defender for Office 365 Malware detection in email report.
 - ATPDocument: Defender for Office 365 Content Malware Report for Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 - DLP: Data Loss Prevention Report.
-- Malware: Malware Detections Report.
 - MessageTrace: Message Trace Report.
 - MessageTraceDetail: Message Trace Details Report.
 - Phish: Exchange Online Protection and Defender for Office 365 E-mail Phish Report.
