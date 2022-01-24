@@ -107,8 +107,6 @@ Accept wildcard characters: False
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
 - ATPReport: Defender for Office 365 File types report and Defender for Office 365 Message disposition report
-- ATPV2: Exchange Online Protection and Defender for Office 365 Malware detection in email report.
-- ATPDocument: Defender for Office 365 Content Malware Report for Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 - DLP: Data Loss Prevention Report.
 - MessageTrace: Message Trace Report.
 - MessageTraceDetail: Message Trace Details Report.
