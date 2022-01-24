@@ -386,8 +386,6 @@ ArchivingToExchange
 
 NoArchiving
 
-**Note**: This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
-
 
 ```yaml
 Type: ExchangeArchivingPolicyOptionsEnum
