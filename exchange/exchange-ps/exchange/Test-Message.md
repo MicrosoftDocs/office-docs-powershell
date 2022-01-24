@@ -223,7 +223,7 @@ The TransportRules switch specifies that you want to test mail flow rules. You d
 Type: SwitchParameter
 Parameter Sets: Default, TransportRules
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named
@@ -271,7 +271,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 The MessageFileData parameter specifies the .eml message file to test.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object. For example:
-`$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml)`
+`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`
 
 ```yaml
 Type: Byte[]
@@ -324,7 +324,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
