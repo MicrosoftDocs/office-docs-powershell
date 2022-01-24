@@ -99,7 +99,7 @@ If set to True, the user will largely be restricted to sending and receiving ins
 
 You cannot disable A/V communications if a user is currently enabled for remote call control, Enterprise Voice, and/or Internet Protocol private branch exchange (IP-PBX) soft phone routing.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -124,7 +124,7 @@ If you later re-enable the account by using the Enabled parameter, the associate
 This differs from using the `Disable-CsUser` cmdlet to disable a user account.
 When you run the `Disable-CsUser` cmdlet, all the Skype for Business Server data associated with that account is deleted.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -227,7 +227,7 @@ The URI of the remote call control telephone gateway assigned to the user.
 The LineServerUri is the gateway URI, prefaced by "sip:".
 For example: sip:rccgateway@litwareinc.com
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -252,7 +252,7 @@ Private lines are often used for personal phone calls or for business calls that
 The private line value should be specified using the E.164 format, and be prefixed by the "TEL:" prefix.
 For example: TEL:+14255551297.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -278,7 +278,7 @@ For details, see the parameter EnterpriseVoiceEnabled.
 
 To be enabled for remote call control, a user must have both a LineUri and a LineServerUri.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 Unique identifier (similar to an email address) that allows the user to communicate using SIP devices such as Skype for Business.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example: `-SipAddress sip:kenmyer@litwareinc.com`.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 Enables you to pass a user object through the pipeline that represents the user whose account is being modified.
 By default, the `Set-CsUser` cmdlet does not pass objects through the pipeline.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 Enables you to assign one or more third-party audio conferencing providers to a user.
 However, it is recommended that you use the `Set-CsUserAcp` cmdlet to assign Audio conferencing providers.
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
@@ -398,7 +398,7 @@ ArchivingToExchange
 
 NoArchiving
 > [!WARNING]
->This parameter will not be available for Teams only tenants from version 3.0.0 onwards.
+> This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
 
 ```yaml
