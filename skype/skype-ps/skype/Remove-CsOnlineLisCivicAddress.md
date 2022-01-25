@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Remove-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

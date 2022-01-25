@@ -3,8 +3,8 @@ external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
 online version: https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist
 title: Get-CsTeamTemplateList
-author: levdavid
-ms.author: legorbun
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer: 
 manager: farahf
 schema: 2.0.0
