@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Get-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+ms.author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

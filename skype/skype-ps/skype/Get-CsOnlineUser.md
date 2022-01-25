@@ -180,7 +180,7 @@ FeatureTypes – Array of unique strings specifying what features are enabled fo
 LdapFilter has been deprecated due to low usage.
 
 *Changes in "-Filter" parameter*
-- Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats:
+- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan eq '<some-xml-string>'` will stop working. This will need to be modified to one of the below formats:
   - AssignedPlans eq 'MCOEV' - For exact match
   - AssignedPlans eq '*MCO*' - for contains checks.
  

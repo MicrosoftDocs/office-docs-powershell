@@ -4,8 +4,8 @@ online version: https://docs.microsoft.com/powershell/module/skype/remove-csonli
 applicable: Skype for Business Online
 title: Remove-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0
-author: junya
-ms.author: junya
+ms.author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
