@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: Set-UnifiedGroup is not supported under the ApplicationID context. Instead of this cmdlet, we recommend using Microsoft Graph to modify Microsoft 365 groups. For more information, see [Overview of Microsoft 365 groups in Microsoft Graph](https://docs.microsoft.com/graph/office365-groups-concept-overview).
+**Note**: Set-UnifiedGroup is not supported under the ApplicationID context. Instead of this cmdlet, we recommend using Microsoft Graph to modify Microsoft 365 groups in that context. For more information, see [Overview of Microsoft 365 groups in Microsoft Graph](https://docs.microsoft.com/graph/office365-groups-concept-overview).
 
 Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Microsoft 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
