@@ -100,6 +100,8 @@ If set to True, the user will largely be restricted to sending and receiving ins
 
 You cannot disable A/V communications if a user is currently enabled for remote call control, Enterprise Voice, and/or Internet Protocol private branch exchange (IP-PBX) soft phone routing.
 
+**Note**: This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
+
 
 ```yaml
 Type: Boolean
@@ -308,6 +310,9 @@ Accept wildcard characters: False
 ### -PassThru
 Enables you to pass a user object through the pipeline that represents the user whose account is being modified.
 By default, the `Set-CsUser` cmdlet does not pass objects through the pipeline.
+
+**Note**: This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
+
 
 ```yaml
 Type: SwitchParameter
