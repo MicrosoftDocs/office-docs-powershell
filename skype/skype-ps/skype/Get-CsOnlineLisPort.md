@@ -4,7 +4,7 @@ online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinel
 applicable: Skype for Business Online
 title: Get-CsOnlineLisPort
 schema: 2.0.0
-ms.author: serdarsoysal
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
