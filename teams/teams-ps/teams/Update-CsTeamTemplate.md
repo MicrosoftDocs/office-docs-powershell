@@ -3,8 +3,8 @@ external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
 online version: https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate
 title: Update-CsTeamTemplate
-author: levdavid
-ms.author: legorbun
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer: 
 manager:
 schema: 2.0.0
@@ -657,11 +657,11 @@ COMPLEX PARAMETER PROPERTIES
 
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-APP <ITeamsAppTemplate[]>: Gets or sets the set of applications that should be installed in teams created based on the template.The app catalog is the main directory for information about each app; this set is intended only as a reference.
+APP \<ITeamsAppTemplate[]\>: Gets or sets the set of applications that should be installed in teams created based on the template.The app catalog is the main directory for information about each app; this set is intended only as a reference.
 
 - `[Id <String>]`: Gets or sets the app's ID in the global apps catalog.
 
-BODY <ITeamTemplate>: The client input for a request to create a template.         Only admins from Config Api can perform this request.
+BODY \<ITeamTemplate\>: The client input for a request to create a template.         Only admins from Config Api can perform this request.
 
 - `DisplayName <String>`: Gets or sets the team's DisplayName.
 - `ShortDescription <String>`: Gets or sets template short description.
@@ -741,23 +741,23 @@ CHANNEL <IChannelTemplate[]>: Gets or sets the set of channel templates included
   - `[TeamsAppId <String>]`: Gets or sets the app's id in the global apps catalog.
   - `[WebUrl <String>]`: Gets or sets the deep link url of the tab instance.
 
-DISCOVERYSETTING <ITeamDiscoverySettings>: Governs discoverability of a team.
+DISCOVERYSETTING \<ITeamDiscoverySettings\>: Governs discoverability of a team.
 
 - `ShowInTeamsSearchAndSuggestion <Boolean>`: Gets or sets value indicating if team is visible within search and suggestions in Teams clients.
 
-FUNSETTING <ITeamFunSettings>: Governs use of fun media like giphy and stickers in the team.
+FUNSETTING \<ITeamFunSettings\>: Governs use of fun media like giphy and stickers in the team.
 
 - `AllowCustomMeme <Boolean>`: Gets or sets a value indicating whether users are allowed to create and post custom meme images in team conversations.
 - `AllowGiphy <Boolean>`: Gets or sets a value indicating whether users can post giphy content in team conversations.
 - `AllowStickersAndMeme <Boolean>`: Gets or sets a value indicating whether users can post stickers and memes in team conversations.
 - `GiphyContentRating <String>`: Gets or sets the rating filter on giphy content.
 
-GUESTSETTING <ITeamGuestSettings>: Guest role settings for the team.
+GUESTSETTING \<ITeamGuestSettings\>: Guest role settings for the team.
 
 - `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether guests can create or edit channels in the team.
 - `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether guests can delete team channels.
 
-INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
+INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
 
 - `[Bssid <String>]`:
 - `[ChassisId <String>]`:
@@ -780,7 +780,7 @@ INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
 - `[TenantId <String>]`:
 - `[UserId <String>]`: UserId. Supports Guid. Eventually UPN and SIP.
 
-MEMBERSETTING <ITeamMemberSettings>: Member role settings for the team.
+MEMBERSETTING \<ITeamMemberSettings\>: Member role settings for the team.
 
 - `AllowAddRemoveApp <Boolean>`: Gets or sets a value indicating whether members can add or remove apps in the team.
 - `AllowCreatePrivateChannel <Boolean>`: Gets or Sets a value indicating whether members can create Private channels.
@@ -790,7 +790,7 @@ MEMBERSETTING <ITeamMemberSettings>: Member role settings for the team.
 - `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether members can delete team channels.
 - `UploadCustomApp <Boolean>`: Gets or sets a value indicating is allowed to upload custom apps.
 
-MESSAGINGSETTING <ITeamMessagingSettings>: Governs use of messaging features within the teamThese are settings the team owner should be able to modify from UI after team creation.
+MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features within the teamThese are settings the team owner should be able to modify from UI after team creation.
 
 - `AllowChannelMention <Boolean>`: Gets or sets a value indicating whether team members can at-mention entire channels in team conversations.
 - `AllowOwnerDeleteMessage <Boolean>`: Gets or sets a value indicating whether team owners can delete anyone's messages in team conversations.

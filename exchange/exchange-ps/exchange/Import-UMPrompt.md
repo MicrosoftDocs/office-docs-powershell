@@ -94,6 +94,8 @@ This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav fro
 ### -PromptFileData
 The PromptFileData parameter specifies the byte array of the custom prompt.
 
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
 ```yaml
 Type: Byte[]
 Parameter Sets: UploadDialPlanPrompts, UploadAutoAttendantPrompts
