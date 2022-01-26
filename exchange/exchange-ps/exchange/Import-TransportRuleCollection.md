@@ -42,13 +42,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0
-Import-TransportRuleCollection -FileData $Data
+Import-TransportRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\TransportRules\ExportedRules.xml'))
 ```
 
 This example imports a transport rule collection from the XML file named ExportedRules.xml in the C:\\TransportRules folder.
-
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ## PARAMETERS
 

@@ -43,13 +43,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0
-Import-JournalRuleCollection -FileData $Data
+Import-JournalRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\JournalRules\ExportedJournalRules.xml'))
 ```
 
-This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.
-
-The first step retrieves journal rules from the previously exported XML file ExportedJournalRules.xml using the Get-Content cmdlet, and then stores the results in the variable $Data. The second step retrieves data from the variable $Data and imports journal rules to your organization, overwriting existing journal rules.
+This example imports journal rules from the XML file named ExportedJournalRules.xml in the C:\\JournalRules folder.
 
 ## PARAMETERS
 

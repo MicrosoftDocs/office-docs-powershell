@@ -38,7 +38,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 ### Example 1
 ```powershell
 
-New-DlpSensitiveInformationTypeRulePackage -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Sensitive Info Type Rule Collection.xml" -Encoding Byte -ReadCount 0))
+New-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External Sensitive Info Type Rule Collection.xml'))
 ```
 
 This example imports the sensitive information type rule package C:\\My Documents\\External Sensitive Info Type Rule Collection.xml.

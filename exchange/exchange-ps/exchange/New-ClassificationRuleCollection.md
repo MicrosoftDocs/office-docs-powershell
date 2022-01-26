@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ClassificationRuleCollection -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Classification Rule Collection.xml" -Encoding Byte -ReadCount 0))
+New-ClassificationRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External Classification Rule Collection.xml'))
 ```
 
 This example imports the classification rule collection file C:\\My Documents\\External Classification Rule Collection.xml.
