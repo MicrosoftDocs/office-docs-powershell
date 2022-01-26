@@ -5,7 +5,7 @@ applicable: Skype for Business Online
 title: Get-CsOnlineLisSubnet
 schema: 2.0.0
 author: kaishuipinggai
-ms.author: junya
+ms.author: serdars
 ms.reviewer:
 ---
 
