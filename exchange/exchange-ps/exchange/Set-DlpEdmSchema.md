@@ -36,11 +36,10 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-$edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0
-Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
+Set-DlpEdmSchema -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\edm.xml')) -Confirm:$true
 ```
 
-This example modifies a DLP EDM schema. The first command reads the schema in the XML file to a variable, and the second command uses that information to modify the DLP EDM schema.
+This example modifies a DLP EDM schema using the edm.xml file in the C:\\My Documents folder.
 
 ## PARAMETERS
 

@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-DlpPolicyCollection -FileData ([Byte[]]$(Get-Content -Path " C:\My Documents\DLP Backup.xml " -Encoding Byte -ReadCount 0))
+Import-DlpPolicyCollection -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\DLP Backup.xml'))
 ```
 
 This example imports the DLP policy collection in the file C:\\My Documents\\DLP Backup.xml.
