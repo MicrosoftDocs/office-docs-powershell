@@ -23,7 +23,7 @@ These settings are used to determine which domains (if any) your users are allow
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [-AllowTeamsConsumer <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -31,7 +31,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedD
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [-AllowTeamsConsumer <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

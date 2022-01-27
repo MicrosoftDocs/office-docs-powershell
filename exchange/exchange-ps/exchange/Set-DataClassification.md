@@ -58,7 +58,7 @@ This example removes the existing Spanish translation from the data classificati
 
 ### Example 3
 ```powershell
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte
+$Benefits_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Benefits Template.docx')
 $Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
 $Contoso_Confidential = Get-DataClassification "Contoso Confidential"
 $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)

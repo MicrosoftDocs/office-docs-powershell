@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$content = Test-TextExtraction -FileData (Get-Content -Path '.\financial data.msg' -Encoding byte -ReadCount 0)
+$content = Test-TextExtraction -FileData ([System.IO.File]::ReadAllBytes('.\financial data.msg'))
 $content.ExtractedResults
 ```
 
@@ -45,7 +45,7 @@ This example returns the text that's extracted from the email "financial data.ms
 
 ### Example 2
 ```powershell
-$content = Test-TextExtraction -FileData (Get-Content -Path '.\financial data.msg' -Encoding byte -ReadCount 0)
+$content = Test-TextExtraction -FileData ([System.IO.File]::ReadAllBytes('.\financial data.msg'))
 Test-DataClassification -TestTextExtractionResults $content.ExtractedResults
 ```
 
@@ -56,7 +56,7 @@ This example extracts the text from the email "financial data.msg" and returns t
 ### -FileData
 The FileData parameter specifies the name and path of the file from which text should be extracted.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

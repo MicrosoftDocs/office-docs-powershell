@@ -169,6 +169,7 @@ Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates ar
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
 - MCOValidationErrors renamed to UserValidationErrors
+- OnPremSIPEnabled renamed to OnPremIsSipEnabled
 
 *New User Attributes*
 
@@ -179,13 +180,12 @@ FeatureTypes – Array of unique strings specifying what features are enabled fo
 LdapFilter has been deprecated due to low usage.
 
 *Changes in "-Filter" parameter*
-- Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats:
+- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan eq '<some-xml-string>'` will stop working. This will need to be modified to one of the below formats:
   - AssignedPlans eq 'MCOEV' - For exact match
   - AssignedPlans eq '*MCO*' - for contains checks.
  
 - EnterpriseVoiceEnabled filter
   - EnterpriseVoiceEnabled eq true / false
-
 
 
 ## EXAMPLES
@@ -242,8 +242,9 @@ To accomplish the task, the filter string is first constructed and resolved loca
 ## PARAMETERS
 
 ### -Credential
-This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
+  *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+ 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -258,8 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
+  *This parameter has been deprecated from Teams PowerShell Module 3.0 and above as it is no longer relevant to Microsoft Teams*.
+ 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
@@ -318,6 +320,9 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
+ 
+  *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+ 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
 
@@ -338,6 +343,9 @@ Accept wildcard characters: False
 ```
 
 ### -OnModernServer
+ 
+ *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
 
@@ -355,7 +363,8 @@ Accept wildcard characters: False
 ```
 
 ### -OnOfficeCommunicationServer
-This parameter is not used with Skype for Business Online and will be deprecated in the near future.
+ 
+ *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
 
 ```yaml
 Type: SwitchParameter
@@ -371,7 +380,9 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-This parameter is not used with Skype for Business Online and will be deprecated in the near future.
+ 
+ *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+
 
 ```yaml
 Type: OUIdParameter
@@ -409,6 +420,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipUserPolicies
+ 
+ *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
@@ -425,6 +439,9 @@ Accept wildcard characters: False
 ```
 
 ### -UnassignedUser
+ 
+ *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to unless they are assigned to a Registrar pool.
 
@@ -442,6 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+ 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
