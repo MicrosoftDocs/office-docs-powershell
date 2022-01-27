@@ -47,14 +47,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Export-RecipientDataProperty -Identity tony@contoso.com -SpokenName | ForEach { $_.FileData | Add-Content C:\tonysmith.wma -Encoding Byte}
+$SN = Export-RecipientDataProperty -Identity tonys@contoso.com -SpokenName
+[System.IO.File]::WriteAllBytes('C:\tonysmith.wma', $SN.FileData)
 ```
 
 This example exports Tony Smith's spoken name audio file and saves it to the local computer.
 
 ### Example 2
 ```powershell
-Export-RecipientDataProperty -Identity "Ayla" -Picture | ForEach { $_.FileData | Add-Content C:\aylakol.jpg -Encoding Byte}
+$Pic = Export-RecipientDataProperty -Identity "Ayla Kol" -Picture
+[System.IO.File]::WriteAllBytes('C:\Data\aylakol.jpg', $Pic.FileData)
 ```
 
 This example exports Ayla Kol's picture file to the local computer.

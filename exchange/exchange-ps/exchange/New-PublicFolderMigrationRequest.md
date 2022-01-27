@@ -55,7 +55,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-PublicFolderMigrationRequest -SourceDatabase PFDB01 -CSVData (Get-Content C:\PFMigration\CSVData.csv -Encoding Byte)
+New-PublicFolderMigrationRequest -SourceDatabase PFDB01 -CSVData ([System.IO.File]::ReadAllBytes('C:\PFMigration\CSVData.csv'))
 ```
 
 This example creates a public folder migration request from the Exchange 2010 source public folder database PFDB01 and uses the CSVData.csv file that was created using the Export-PublicFolderStatistics.ps1 script. For more information, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
