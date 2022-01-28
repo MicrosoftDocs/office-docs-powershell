@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet returns the list of all the team mapping error reports. It also can return the configuration details of one mapping error report with it ID provided or other filter parameters.
 
@@ -125,6 +125,9 @@ Accept wildcard characters: False
 ### -Activeness
 
 The flag indicating results should have which activeness.
+Set this to `ActiveOnly` to get Error reports that are not resolved.
+Set this to `InactiveOnly` to get Error reports that are resolved.
+Set this to `Both` to get both active and inactive Error reports.
 
 ```yaml
 Type: String

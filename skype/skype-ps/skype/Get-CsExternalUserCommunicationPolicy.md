@@ -46,7 +46,7 @@ This example uses the Identity parameter to retrieve the external user communica
 PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag*
 ```
 
-This example uses the Filter parameter to retrieve all the external user communication policies along with the settings for each. All per-user external user communication policies have an Identity in the format tag:<ExternalUserCommunicationPolicy>.
+This example uses the Filter parameter to retrieve all the external user communication policies along with the settings for each. All per-user external user communication policies have an Identity in the format `tag:<ExternalUserCommunicationPolicy>`.
  
 ### -------------------------- Example 4 ------------------------
 ```

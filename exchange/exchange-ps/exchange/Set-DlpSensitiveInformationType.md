@@ -54,7 +54,7 @@ This example removes the existing Spanish translation from the sensitive informa
 
 ### Example 3
 ```powershell
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte -ReadCount 0
+$Benefits_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Benefits Template.docx')
 $Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
 $Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"
 $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
