@@ -84,7 +84,7 @@ This example imports the certificate from the PKCS #12 file from \\\\FileServer0
 
 ### Example 2
 ```powershell
-Import-ExchangeCertificate -FileData ([Byte[]](Get-Content -Path "C:\Certificates\Fabrikam IssuedCert.p7b" -Encoding byte -ReadCount 0))
+Import-ExchangeCertificate -FileData ([System.IO.File]::ReadAllBytes('C:\Certificates\Fabrikam IssuedCert.p7b'))
 ```
 
 This example imports a chain of certificates from the PKCS #7 file C:\\Certificates\\Fabrikam IssuedCert.p7b on the local Exchange server.

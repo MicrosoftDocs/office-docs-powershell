@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-DlpPolicyTemplate -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External DLP Policy Template.xml" -Encoding Byte -ReadCount 0))
+Import-DlpPolicyTemplate -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External DLP Policy Template.xml'))
 ```
 
 This example imports the DLP policy template file C:\\My Documents\\External DLP Policy Template.xml.

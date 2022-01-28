@@ -3,8 +3,8 @@ external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
 online version: https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate
 title: Get-CsTeamTemplate
-author: levdavid
-ms.author: legorbun
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer: 
 manager: farahf
 schema: 2.0.0
@@ -207,9 +207,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 COMPLEX PARAMETER PROPERTIES
 
-To create the parameters described below, construct a hash table containing the appropriate properties.
-For information on hash tables, run Get-Help about_Hash_Tables.
-INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
+To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
   - `[Bssid <String>]`: 
   - `[ChassisId <String>]`: 
   - `[CivicAddressId <String>]`: Civic address id.

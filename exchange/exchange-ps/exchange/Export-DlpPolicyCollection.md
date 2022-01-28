@@ -37,8 +37,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$file = Export-DlpPolicyCollection
-Set-Content -Path "C:\My Documents\Contoso PII.xml" -Value $file.FileData -Encoding Byte
+$DlpPol = Export-DlpPolicyCollection
+[System.IO.File]::WriteAllBytes('C:\My Documents\Contoso PII.xml', $DlpPol.FileData)
 ```
 
 This example exports all the elements of the existing DLP policies to the file C:\\My Documents\\Contoso PII.xml.
