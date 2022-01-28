@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SafeLinksAggregateReport cmdlet to return to return general information about Safe Links results for the last 90 days. Yesterday is the most recent date that you can specify.
+Use the Get-SafeLinksAggregateReport cmdlet to return general information about Safe Links results for the last 90 days. Yesterday is the most recent date that you can specify.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 

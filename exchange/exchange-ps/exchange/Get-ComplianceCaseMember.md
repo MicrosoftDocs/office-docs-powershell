@@ -20,11 +20,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Identity
 ```
 Get-ComplianceCaseMember -Case <String>
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-ShowCaseAdmin]
+ [<CommonParameters>]
+```
+
+### AllCases
+```
+Get-ComplianceCaseMember
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -47,7 +56,7 @@ The Case parameter specifies the name of the eDiscovery case that you want to vi
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -95,7 +104,7 @@ The ShowCaseAdmin switch specifies whether to return the eDiscovery case admin i
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 

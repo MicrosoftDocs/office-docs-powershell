@@ -81,7 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassOwnerCheck
-The BypassOwnerCheck parameter specifies that the user running the command in the Exchange Management Shell isn't a site mailbox owner or member. If you run the command without this parameter and you aren't the site mailbox owner or member, the command doesn't run or return any information.
+The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
+
+If you don't use this switch, and you aren't a member or owner of the site mailbox, the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullSync
-The FullSync parameter specifies full sync is expensive and will have a performance impact on the Exchange system.
+The FullSync switch specifies full sync is expensive and will have a performance impact on the Exchange system. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

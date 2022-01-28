@@ -81,7 +81,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
- [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
  [-FindTimeLockPollForAttendeesEnabled <Boolean>]
@@ -620,7 +619,7 @@ This parameter is available only in the cloud-based service.
 The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
 
 - $true: The plus sign in an email address indicates subaddressing. For example, mail sent to `jane+exampletag@contoso.com` is delivered to `jane@contoso.com`. If your Exchange Online organization was created after September 2020, this is the default value.
-- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to `jane+exampletag@contoso.com` is delivered only if `jane+exampletag@contoso.com` is configured as the primary address or a proxy address on an existing recipient. If your Exchange Online organization was created before before September 2020, this is the default value.
+- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to `jane+exampletag@contoso.com` is delivered only if `jane+exampletag@contoso.com` is configured as the primary address or a proxy address on an existing recipient. If your Exchange Online organization was created before September 2020, this is the default value.
 
 ```yaml
 Type: Boolean
@@ -1615,7 +1614,12 @@ Accept wildcard characters: False
 ### -EnableDownloadDomains
 This parameter is available only in on-premises Exchange.
 
-{{ Fill EnableDownloadDomains Description }}
+The EnableDownloadDomains parameter specifies that Outlook on the web downloads inline images from a different domain than the rest of Outlook on the web. Valid values are:
+
+- $true: Outlook on the web uses a different download domain for inline images (for example, downloads.contoso.com). Before you enable this setting, you need to create a CNAME record and certificate for this domain, and add the domain to the ExternalDownloadHostName and InternalDownloadHostName parameters on the Set-OwaVirtualDirectory cmdlet.
+- $false: The setting is disabled. This is the default value.
+
+For more information about the security vulnerability that's addressed by this parameter, and for detailed configuration instructions, see [CVE 2021 1730](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1730).
 
 ```yaml
 Type: Boolean
@@ -1995,7 +1999,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in Exchange Server 2010.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -3043,9 +3049,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendFromAliasEnabled
-This parameter is available only in the cloud-based service. 
+This parameter is available only in the cloud-based service.
 
-Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience. 
+Note: This feature is in Preview and has not yet been officially released. Do not enable it if you are not willing to lose certain functionality or have a degraded experience.
 An official announcement will be released via the EHLO blog and Message Center in due time.
 
 The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). It does this by disabling the rewriting of aliases to their primary SMTP address. This change is implemented in the Exchange Online service. At the same time, Outlook clients are making changes to natively support aliases for sending and receiving messages. Even without an updated client, changes in behavior may be seen for users using any email client as the setting affects all messages sent and received by a mailbox. Valid values are:
@@ -3053,7 +3059,7 @@ The SendFromAliasEnabled parameter allows mailbox users to send messages using a
 - $true: Aliases on messages will no longer be rewritten to their primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases.
 - $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
-For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=64123).   
+For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Outlook&searchterms=64123).
 
 ```yaml
 Type: Boolean
@@ -3315,3 +3321,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/set-organizationconfig)

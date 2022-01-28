@@ -1,26 +1,26 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-title: Get-CsTeamsShiftsConnectionUser
+title: Get-CsTeamsShiftsConnectionWfmUser
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionuser
+online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmuser
 schema: 2.0.0
 ---
 
-# Get-CsTeamsShiftsConnectionUser
+# Get-CsTeamsShiftsConnectionWfmUser
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
 
 ## SYNTAX
 
 ```
-Get-CsTeamsShiftsConnectionUser -ConnectorInstanceId <string> -WfmTeamId <string> [<CommonParameters>]
+Get-CsTeamsShiftsConnectionWfmUser -ConnectorInstanceId <string> -WfmTeamId <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +31,7 @@ This cmdlet shows the list of Workforce management (WFM) users in a specified WF
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionUser -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b" -WfmTeamId "1000107"
+PS C:\> Get-CsTeamsShiftsConnectionWfmUser -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b" -WfmTeamId "1000107"
 ```
 ```output
 Id      Name

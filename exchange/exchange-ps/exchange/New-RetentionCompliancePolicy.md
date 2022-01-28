@@ -264,7 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -408,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetainCloudAttachment
-{{ Fill RetainCloudAttachment Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean

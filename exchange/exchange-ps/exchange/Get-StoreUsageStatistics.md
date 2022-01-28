@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ### -IncludePassive
 The IncludePassive switch specifies whether to include usage statistics from active and passive copies of mailbox databases on the Mailbox server you specified with the Server parameter. You don't need to specify a value with this switch.
 
-To only include statistics from active copies of mailbox databases on the specified Mailbox server, don't use this switch.
+If you don't use this switch, only statistics from active copies of mailbox databases are included in the results.
 
 ```yaml
 Type: SwitchParameter

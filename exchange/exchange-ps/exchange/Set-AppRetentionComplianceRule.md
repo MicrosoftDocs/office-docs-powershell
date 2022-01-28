@@ -44,7 +44,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-Set-AppRetentionComplianceRule -Identity "563 Marketing Rule" -RetentionDuration 180 RetentionDurationDisplayHint Days
+Set-AppRetentionComplianceRule -Identity "563 Marketing Rule" -RetentionDuration 180 -RetentionDurationDisplayHint Days
 ```
 
 This example updates the length of the retention duration for a rule named 563 Marketing Rule.
@@ -277,6 +277,7 @@ Type: HoldDurationHint
 Parameter Sets: (All)
 Aliases:
 Accepted values: Days, Months, Years
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

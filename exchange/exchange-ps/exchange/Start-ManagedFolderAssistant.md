@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The InactiveMailbox switch runs the command only inactive mailboxes. You don't need to specify a value with this switch.
+The InactiveMailbox switch runs the command only on inactive mailboxes. You don't need to specify a value with this switch.
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
 
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ### -StopHoldCleanup
 This parameter is available only in the cloud-based service.
 
-The StopHoldCleanup parameter stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
+The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
 
 A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
 

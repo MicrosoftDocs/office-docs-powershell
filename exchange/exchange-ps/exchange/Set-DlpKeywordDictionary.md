@@ -38,7 +38,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 ### Example 1
 ```powershell
 $Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"
-$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($keywords)
+$EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($keywords)
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -50,7 +50,7 @@ $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
 $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"
 $Keywords = $Terms -Join ", "
-$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
+$EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -63,7 +63,7 @@ $Terms = $Dictionary.KeywordDictionary.split(',').trim()
 $TermsToRemove = @('abandonment', 'ablatio')
 $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}
 $Keywords = $UpdatedTerms -Join ", "
-$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
+$EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -138,8 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic. The maximum file size is up to 1 MB of terms after compression. The organization limit for all dictionaries is also 1 MB after compression.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic.
 
+The maximum file size is up to 1 MB of terms after compression. The organization limit for all dictionaries is also 1 MB after compression.
 
 ```yaml
 Type: Byte[]

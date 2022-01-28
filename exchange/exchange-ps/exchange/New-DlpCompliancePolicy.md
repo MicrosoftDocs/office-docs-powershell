@@ -42,8 +42,6 @@ New-DlpCompliancePolicy [-Name] <String>
  [-Priority <Int32>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
- [-SharePointOnPremisesLocationException <MultiValuedProperty>]
- [-SharePointServerLocation <MultiValuedProperty>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
  [-ThirdPartyAppDlpLocation <MultiValuedProperty>]
@@ -163,7 +161,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -181,7 +179,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedByMemberOf
 The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -253,7 +251,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedByMemberOf
 The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -433,38 +433,6 @@ Accept wildcard characters: False
 This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointOnPremisesLocationException
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointServerLocation
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty

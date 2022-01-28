@@ -36,7 +36,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte
+$Patent_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Patent Template.docx)'
 $Patent_Fingerprint = New-DlpFingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the file to use as a document fingerprint.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the Examples section in this topic.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

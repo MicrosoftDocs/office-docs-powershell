@@ -14,9 +14,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns information about a specific or all uploaded audio files of a given application type.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
+
 ## SYNTAX
 
 ```powershell
@@ -125,6 +123,10 @@ The cmdlet is available in Teams PS module 2.4.0-preview or later.
 If you call the cmdlet without having uploaded any audio files, with a non-existing Identity or with an illegal ApplicationId, you will receive a generic error message. In addition, the ApplicationId is case sensitive.
 
 ## RELATED LINKS
+[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
+
 [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+
+[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
 
 [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)

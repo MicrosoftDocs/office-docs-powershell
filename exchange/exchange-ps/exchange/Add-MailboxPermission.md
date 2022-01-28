@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny switch specifies whether to deny the specified permissions to the user on the mailbox. You don't need to specify a value with this switch.
+The Deny switch specifies that the permissions you're adding are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -374,9 +374,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-tenantallowblocklistitems
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Remove-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
@@ -78,7 +78,7 @@ You can't use this parameter with the Ids parameter.
 Type: String[]
 Parameter Sets: Entries
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ You can't use this parameter with the Entries parameter.
 Type: String[]
 Parameter Sets: Ids
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ The ListType parameter specifies the type of entry to remove. Valid values are:
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -156,7 +156,7 @@ You use this switch to prevent the command from halting on the first entry that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

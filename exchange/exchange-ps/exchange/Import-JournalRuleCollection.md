@@ -43,13 +43,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0
-Import-JournalRuleCollection -FileData $Data
+Import-JournalRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\JournalRules\ExportedJournalRules.xml'))
 ```
 
-This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.
-
-The first step retrieves journal rules from the previously exported XML file ExportedJournalRules.xml using the Get-Content cmdlet, and then stores the results in the variable $Data. The second step retrieves data from the variable $Data and imports journal rules to your organization, overwriting existing journal rules.
+This example imports journal rules from the XML file named ExportedJournalRules.xml in the C:\\JournalRules folder.
 
 ## PARAMETERS
 
@@ -72,7 +69,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the variable name that contains the content of the XML file.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

@@ -42,20 +42,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $file = Export-TransportRuleCollection
-Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
+[System.IO.File]::WriteAllBytes('C:\My Docs\Rules.xml', $file.FileData)
 ```
 
 This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\My Docs folder.
 
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
-
 ### Example 2
 ```powershell
 $file = Export-TransportRuleCollection -ExportLegacyRules
-Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
+[System.IO.File]::WriteAllBytes('C:\My Docs\LegacyRules.xml', $file.FileData)
 ```
 
-In Exchange Server 2010, this example exports legacy transport rules created in Exchange 2007 using the ExportLegacyRules switch. The cmdlet should be run from an Exchange 2010 Hub Transport server. The exported rules collection can then be imported to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
+In Exchange Server 2010, this example exports legacy transport rules that were created in Exchange 2007 to an XML file. The first command uses the ExportLegacyRules switch to export legacy transport rules to the variable named $file. The second step saves the exported data to the XML file named LegacyRules.xml.
+
+You can import the exported rules collection to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
+
+You need to run these commands in this example on an Exchange 2010 Hub Transport server.
 
 ## PARAMETERS
 

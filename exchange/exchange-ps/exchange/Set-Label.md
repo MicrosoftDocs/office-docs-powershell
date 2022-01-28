@@ -66,6 +66,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
  [-Priority <Int32>]
+ [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
  [-SiteAndGroupProtectionAllowAccessToGuestUsers <System.Boolean>]
@@ -74,9 +75,10 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-SiteAndGroupProtectionAllowLimitedAccess <System.Boolean>]
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
+ [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
- [-SqlAssetCondition <String>]
+ [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -134,7 +136,7 @@ Supported settings for built-in labeling:
 
 - **DefaultSharingScope**: For a container label, specifies the default sharing link type for a site. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information about this configuration choice, see [Configure settings for the default sharing link for a site by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings).
 
-- **DefaultShareLinkPermission**: For a container label, specifies the permissions for the sharing link for a site. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+- **DefaultShareLinkPermission**: For a container label, specifies the permissions for the sharing link for a site. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information about this configuration choice, see [Configure settings for the default sharing link for a site by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings).
 
 ```yaml
 Type: PswsHashtable
@@ -944,6 +946,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SchematizedDataCondition
+{{ Fill SchematizedDataCondition Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Setting
 This parameter is reserved for internal Microsoft use.
 
@@ -1100,6 +1118,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteAndGroupProtectionLevel
+{{ Fill SiteAndGroupProtectionLevel Description }}
+
+```yaml
+Type: SiteAndGroupProtectionLevelParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteAndGroupProtectionPrivacy
 The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the labe. Valid values are:
 
@@ -1149,11 +1183,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SqlAssetCondition
-{{ Fill SqlAssetCondition Description }}
+### -TeamsLobbyBypassScope
+{{ Fill TeamsLobbyBypassScope Description }}
 
 ```yaml
-Type: String
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
