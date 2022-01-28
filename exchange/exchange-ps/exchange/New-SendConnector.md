@@ -303,7 +303,9 @@ Accept wildcard characters: False
 ```
 
 ### -Custom
-The Custom parameter specifies the Custom usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Custom parameter, you can't use any of the following parameters:
+The Custom switch specifies the Custom usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Custom switch, you can't use any of the following parameters:
 
 - Internal
 - Internet
@@ -430,7 +432,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -516,7 +520,9 @@ Accept wildcard characters: False
 ```
 
 ### -Internal
-The Internal parameter specifies the Internal usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internal parameter, you can't use any of the following parameters:
+The Internal switch specifies the Internal usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internal switch, you can't use any of the following parameters:
 
 - Custom
 - Internet
@@ -539,7 +545,9 @@ Accept wildcard characters: False
 ```
 
 ### -Internet
-The Internet parameter specifies the Internet usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internet parameter, you can't use any of the following parameters:
+The Internet switch specifies the Internet usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internet switch, you can't use any of the following parameters:
 
 - Custom
 - Internal
@@ -655,7 +663,9 @@ Accept wildcard characters: False
 ```
 
 ### -Partner
-The Partner parameter specifies the Partner usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Partner parameter, you can't use any of the following parameters:
+The Partner switch specifies the Partner usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Partner switch, you can't use any of the following parameters:
 
 - Custom
 - Internal

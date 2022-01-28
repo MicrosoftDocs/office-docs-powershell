@@ -295,7 +295,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that the command should run immediately and not wait to be dispatched by workload management. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+This switch runs the command immediately without waiting to be dispatched by workload management.
 
 ```yaml
 Type: SwitchParameter

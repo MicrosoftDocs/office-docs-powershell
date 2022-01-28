@@ -114,9 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-The Default switch specifies that this sharing policy is the default sharing policy for all mailboxes. If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you can set the default policy as disabled.
+The Default switch specifies that this sharing policy is the default sharing policy for all mailboxes. You don't need to specify a value with this switch.
 
-You don't need to specify a value with this switch.
+If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you can set the default policy as disabled.
 
 ```yaml
 Type: SwitchParameter

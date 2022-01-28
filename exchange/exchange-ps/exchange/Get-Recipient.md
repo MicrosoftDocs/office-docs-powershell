@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
 This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
@@ -368,6 +368,8 @@ Accept wildcard characters: False
 The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted recipients in the results. You don't need to specify a value with this switch.
 
 Soft-deleted recipients are deleted recipients that are still recoverable.
+
+**Note**: Use this switch with the Identity or RecipientTypeDetails parameters to get the SoftDeletedRecipients.
 
 ```yaml
 Type: SwitchParameter

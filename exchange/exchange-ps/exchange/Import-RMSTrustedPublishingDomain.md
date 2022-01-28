@@ -76,7 +76,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-Content -Encoding byte -Path "C:\My Documents\Contoso.xml" -ReadCount 0)) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force)-ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
+Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\Contoso.xml')) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force) -ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
 ```
 
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the XML file you want to import. The XML file contains the TPD you exported from the on-premises AD RMS server.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

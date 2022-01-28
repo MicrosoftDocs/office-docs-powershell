@@ -60,11 +60,11 @@ This example gathers data about your Exchange system.
 
 ### Example 2
 ```powershell
-$temp=Test-SystemHealth -OutData
-Set-Content -Value $temp.FileData -Path d:\temp\SystemHealthOutData.xml -Encoding Byte
+$SysHealth = Test-SystemHealth -OutData
+[System.IO.File]::WriteAllBytes('D:\temp\SystemHealthOutData.xml', $SysHealth.FileData)
 ```
 
-This example saves the output data as a byte stream to the temporary variable $temp. Then the content is written to the file SystemHealthOutData.xml using the Set-Content cmdlet.
+This example saves the output data as a byte stream to the variable named $SysHealth. The content is then written to the SystemHealthOutData.xml file in the D:\\temp folder.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Analyze
-The Analyze parameter specifies whether to enable analysis on the data gathered. A value of $true enables analysis. The default value is $true.
+The Analyze switch enables analysis on the data gathered. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Collect
-The Collect parameter specifies whether to enable data collection. A value of $true enables data collection. The default value is $true.
+The Collect switch enables data collection. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadConfigurationUpdates
-The DownloadConfigurationUpdates parameter checks for and downloads newer versions of the configuration file. The default value is $true, which checks for and downloads newer versions of the configuration file.
+The DownloadConfigurationUpdates switch checks for and downloads newer versions of the configuration file. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Export
-The Export parameter causes sensitive data to be removed from the output file specified. A value of $true causes data removal. The default value is $false.
+The Export switch causes sensitive data to be removed from the output file specified. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -316,7 +316,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutData
-The OutData switch specifies whether the output data is sent as a byte stream. For example, if you run $temp=Test-SystemHealth -OutData, $temp contains the byte stream of the output data, and you can covert it back to xml by using the Set-Content command. For a code sample, see "Example 2" later in this topic.
+The OutData switch specifies whether the output data is sent as a byte stream. You don't need to specify a value with this switch.
+
+For example, if you run the command: `$temp = Test-SystemHealth -OutData`, `$temp` contains the byte stream of the output data, and you can covert it back to xml by using the Set-Content command. For a code sample, see "Example 2" in this topic.
 
 ```yaml
 Type: SwitchParameter

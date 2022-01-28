@@ -133,11 +133,11 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$data = Get-Content -Path "C:\Data\test.eml" -Encoding Byte -ReadCount 0
+$data = [System.IO.File]::ReadAllBytes('C:\data\test.eml')
 Test-Message -MessageFileData $data -Sender megan@contoso.com -Recipients adele@contoso.com -SendReportTo admin@contoso.com -TransportRules -UnifiedDlpRules
 ```
 
-This example uses the test.eml message file at C:\Data to test mail flow rules and unified DLP rules for the sender megan@contoso.com to the recipient megan@contoso.com. The results report is sent to admin@contoso.com.
+This example uses the test.eml message file at C:\data to test mail flow rules and unified DLP rules for the sender megan@contoso.com to the recipient adele@contoso.com. The results report is sent to admin@contoso.com.
 
 ## PARAMETERS
 
@@ -281,7 +281,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -299,7 +301,7 @@ Accept wildcard characters: False
 ### -MessageFileData
 The MessageFileData parameter specifies the .eml message file to test.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
