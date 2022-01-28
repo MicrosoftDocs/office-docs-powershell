@@ -47,11 +47,11 @@ This example adds members chris@contoso.com and michelle@contoso.com to the Micr
 
 ### Example 2
 ```powershell
-$users= Get-User -ResultSize unlimited | ?{$_.Department -eq "Marketing" -AND $_.RecipientType -eq "UserMailbox"}
+$users= Get-User -ResultSize unlimited | where {$_.Department -eq "Marketing" -AND $_.RecipientType -eq "UserMailbox"}
 Add-UnifiedGroupLinks -Identity Marketing -LinkType members -Links ($users.UserPrincipalName)
 ```
 
-This an example of how to add bulk members to Microsoft Group. In this example, mailboxes that have "Marketing" Department are added to Microsoft 365 Group named Marketing.
+This example shows how to add bulk members to a Microsoft 365 Group. Mailboxes where the Department attribute is "Marketing" are added to Microsoft 365 Group named Marketing.
 
 ## PARAMETERS
 
