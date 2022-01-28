@@ -4,8 +4,8 @@ online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinel
 applicable: Skype for Business Online
 title: Set-CsOnlineLisPort
 schema: 2.0.0
-author: junya
-ms.author: junya
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

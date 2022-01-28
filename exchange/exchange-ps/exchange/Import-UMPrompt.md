@@ -67,32 +67,31 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
-Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\welcomegreeting.wav'))
 ```
 
-This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM dial plan MyUMDialPlan.
+This example imports the welcome greeting file welcomegreeting.wav from D:\\UMPrompts into the UM dial plan MyUMDialPlan.
 
 ### Example 2
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
-Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\welcomegreeting.wav'))
 ```
 
-This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
+This example imports the welcome greeting file welcomegreeting.wav from D:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
 
 ### Example 3
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\AfterHoursWelcomeGreeting.wav" -Encoding Byte -ReadCount 0
-Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData $c
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\AfterHoursWelcomeGreeting.wav'))
 ```
 
-This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
+This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav from D:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
 
 ## PARAMETERS
 
 ### -PromptFileData
 The PromptFileData parameter specifies the byte array of the custom prompt.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

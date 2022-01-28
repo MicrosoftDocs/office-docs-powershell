@@ -1147,7 +1147,6 @@
   "Get-SupervisoryReviewPolicyReport": "reporting",
   "Get-SupervisoryReviewReport": "reporting",
   "Get-SupervisoryReviewTopCasesReport": "reporting",
-  "Test-Message": "reporting",
   "Add-ManagementRoleEntry": "role-based-access-control",
   "Add-RoleGroupMember": "role-based-access-control",
   "Get-ManagementRole": "role-based-access-control",
