@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ### -PictureData
 The PictureData parameter specifies the photo file that will be uploaded to the user's account.
 
-This parameter uses the syntax: `([System.IO.File]::ReadAllBytes("<file name and path>"))`. For example `([System.IO.File]::ReadAllBytes("C:\Documents\Pictures\MyPhoto.jpg"))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
