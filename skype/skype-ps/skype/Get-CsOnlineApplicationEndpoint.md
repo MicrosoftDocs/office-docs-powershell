@@ -13,6 +13,11 @@ ms.reviewer:
 # Get-CsOnlineApplicationEndpoint
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+> 
+> Please use the [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md) cmdlet instead.
+
 It is used to fetch the application endpoints for a tenant.
 
 ## SYNTAX

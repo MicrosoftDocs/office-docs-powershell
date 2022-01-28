@@ -124,7 +124,9 @@ Accept wildcard characters: False
 ### -Validate
 This parameter is available only in on-premises Exchange.
 
-The Validate parameter specifies whether to start the migration batch in the validation stage of the migration process. If you include this parameter, the migration performs a validation check of the mailboxes in the batch.
+The Validate switch starts the migration batch in the validation stage of the migration process. You don't need to specify a value with this switch.
+
+If you use this switch, the migration performs a validation check of the mailboxes in the batch.
 
 ```yaml
 Type: SwitchParameter

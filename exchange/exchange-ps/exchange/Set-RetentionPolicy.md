@@ -104,7 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch overrides the confirmation prompt displayed by the cmdlet when you use the RetentionId parameter.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you use the RetentionId parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +144,7 @@ Accept wildcard characters: False
 ### -IsDefaultArbitrationMailbox
 This parameter is available only in the cloud-based service.
 
-The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
+The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization. You don't need to specify a value with this switch.
 
 This parameter isn't available in on-premises deployments.
 

@@ -55,6 +55,27 @@ This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@cont
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the Inbox rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- RuleIdentity property (for example, 16752869479666417665).
+- Exchange Online: `MailboxAlias\RuleIdentity` (for example, `rzaher\16752869479666417665`).
+- On-premises Exchange: `MailboxCanonicalName\RuleIdentity` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
+
+```yaml
+Type: InboxRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -BypassScopeCheck
 The BypassScopeCheck switch specifies whether to bypass the scope check for the user that's running the command. You don't need to specify a value with this switch.
 
@@ -126,27 +147,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the Inbox rule that you want to view. You can use any value that uniquely identifies the rule. For example:
-
-- Name
-- RuleIdentity property (for example, 16752869479666417665).
-- Exchange Online: `MailboxAlias\RuleIdentity` (for example, `rzaher\16752869479666417665`).
-- On-premises Exchange: `MailboxCanonicalName\RuleIdentity` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
-
-```yaml
-Type: InboxRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

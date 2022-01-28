@@ -47,14 +47,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
+Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([System.IO.File]::ReadAllBytes('M:\AudioFiles\TonySmith.wma'))
 ```
 
 This example imports the audio file for Tony Smith's spoken name.
 
 ### Example 2
 ```powershell
-Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
+Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([System.IO.File]::ReadAllBytes('M:\Employee Photos\AylaKol.jpg'))
 ```
 
 This example imports the picture file for Ayla Kol.
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the location and file name of the picture or audio file.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 A valid picture file is a JPEG file that's less than 10 kilobytes (KB).
 
