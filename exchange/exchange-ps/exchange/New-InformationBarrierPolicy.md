@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentAllowedFilter <String>
  [-Comment <String>]
  [-Confirm]
+ [-Force]
  [-State <EopInformationBarrierPolicyState>]
  [-WhatIf]
  [<CommonParameters>]
@@ -35,6 +36,7 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
+ [-Force]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -44,6 +46,7 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsBlocked <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
+ [-Force]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -194,6 +197,24 @@ The Confirm switch doesn't work on this cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

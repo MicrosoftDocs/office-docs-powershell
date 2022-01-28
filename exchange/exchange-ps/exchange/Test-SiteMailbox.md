@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ### -BypassOwnerCheck
 The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
 
-If you run the command without this parameter and you aren't a member or owner of the site mailbox, then the command will fail.
+If you don't use this switch, and you aren't a member or owner of the site mailbox, the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ### -UseAppTokenOnly
 The UseAppTokenOnly switch specifies that you want to test the site mailbox by using the identity of the Exchange server. You don't need to specify a value with this switch.
 
-You can't use this parameter with the RequestorIdentity parameter.
+You can't use this switch with the RequestorIdentity parameter.
 
 ```yaml
 Type: SwitchParameter

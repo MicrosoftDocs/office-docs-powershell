@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpdetailreport
-applicable: Exchange Online
+applicable: Exchange Online, Security & Compliance Center
 title: Get-DlpDetailReport
 schema: 2.0.0
 author: chrisda
@@ -86,7 +86,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -202,7 +202,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

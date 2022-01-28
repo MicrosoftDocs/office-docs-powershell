@@ -20,9 +20,14 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
   
 ## SYNTAX
 
+### RemoveSome (Default)
 ```powershell
-Remove-CsPhoneNumberAssignment [[-Identity] <String> [-PhoneNumber <String>] [-PhoneNumberType <String>] [-RemoveAll] [<CommonParameters>]
+Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [<CommonParameters>]
+```
 
+### RemoveAll
+```powershell
+Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +71,7 @@ The phone number to unnassign from the user or resource account. Supports E.164 
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (RemoveSome)
 Aliases:
 
 Required: False
@@ -80,7 +85,7 @@ The type of phone number to unassign from the user or resource account. The supp
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (RemoveSome)
 Aliases:
 
 Required: False
@@ -94,7 +99,7 @@ Unassigns the phone number from the user or resource account.
 
 ```yaml
 Type: Switch
-Parameter Sets: (All)
+Parameter Sets: (RemoveAll)
 Aliases:
 
 Required: False

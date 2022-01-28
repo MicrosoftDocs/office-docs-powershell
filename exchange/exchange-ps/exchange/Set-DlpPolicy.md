@@ -47,7 +47,11 @@ This example disables the DLP policy named Employee Numbers.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the DLP policy you want to modify. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy.
+The Identity parameter specifies the DLP policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: DlpPolicyIdParameter

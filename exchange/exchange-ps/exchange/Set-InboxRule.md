@@ -84,6 +84,7 @@ Set-InboxRule [-Identity] <InboxRuleIdParameter>
  [-SendTextMessageNotificationTo <MultiValuedProperty>]
  [-SentOnlyToMe <Boolean>]
  [-SentTo <RecipientIdParameter[]>]
+ [-SoftDeleteMessage <Boolean>]
  [-StopProcessingRules <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
@@ -135,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysDeleteOutlookRulesBlob
-The AlwaysDeleteOutlookRulesBlob switch hides a warning message when end users or administrators use Outlook on the web or PowerShell to modify Inbox rules. You don't need to specify a value with this switch.
+The AlwaysDeleteOutlookRulesBlob switch hides a warning message when you use Outlook on the web (formerly known as Outlook Web App) or Exchange PowerShell to modify Inbox rules. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -949,7 +950,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 A confirmation prompt warns you if the mailbox contains rules that were created by Outlook, because any client-side rules will be removed by the actions of this cmdlet.
 
@@ -1496,6 +1497,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendTextMessageNotificationTo
+This parameter is available only in on-premises Exchange.
+
 The SendTextMessageNotificationTo parameter specifies an action for the Inbox rule that send a text message notification to the specified telephone number.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -1506,7 +1509,7 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1555,6 +1558,24 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeleteMessage
+This parameter is available only in the cloud-based service.
+
+{{ Fill SoftDeleteMessage Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

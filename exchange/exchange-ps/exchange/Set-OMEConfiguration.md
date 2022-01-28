@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
+Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image ([System.IO.File]::ReadAllBytes('C:\Temp\OME Logo.gif'))
 ```
 
 This example configures the specified values for the default OME configuration named "OME Configuration". Note the use of the Get-Content command to provide the input for the Image parameter.
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Microsoft 365 admin center.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
 - Optimal size of logo file: less than 40 KB
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, etc). Valid values are:
+The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, and Microsoft account). Valid values are:
 
 - $true: Social network ID sign in is allowed. This is the default value.
 - $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Microsoft 365 work or school account is controlled by the OTPEnabled parameter.

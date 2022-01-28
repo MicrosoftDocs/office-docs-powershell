@@ -133,9 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSyncDebugLogging
-The ActiveSyncDebugLogging switch shows the actual value of the ActiveSyncDebugLogging property for the mailbox. If you don't use this switch, the value always appears as $false.
+The ActiveSyncDebugLogging switch shows the actual value of the ActiveSyncDebugLogging property for the mailbox. You don't need to specify a value with this switch.
 
-To see this value, you need to use a formatting cmdlet. For example, Get-CasMailbox laura@contoso.com -ActiveSyncDebugLogging | Format-List.
+If you don't use this switch, the value always appears as $false.
+
+To see this value, you need to use a formatting cmdlet. For example, `Get-CasMailbox laura@contoso.com -ActiveSyncDebugLogging | Format-List`.
 
 ```yaml
 Type: SwitchParameter
@@ -250,9 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -321,7 +323,9 @@ The ProtocolSettings switch returns the server names, TCP ports and encryption m
 - ExternalSmtpSettings
 - InternalSmtpSettings
 
-To see these values, you need to use a formatting cmdlet. For example, Get-CasMailbox laura@contoso.com -ProtocolSettings | Format-List.
+You don't need to specify a value with this switch.
+
+To see these values, you need to use a formatting cmdlet. For example, `Get-CasMailbox laura@contoso.com -ProtocolSettings | Format-List`.
 
 ```yaml
 Type: SwitchParameter
@@ -339,7 +343,9 @@ Accept wildcard characters: False
 ### -ReadFromDomainController
 This parameter is available only in on-premises Exchange.
 
-The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. If you run the command Set-AdServerSettings -ViewEntireForest $true to include all objects in the forest and you don't use the ReadFromDomainController switch, it's possible that information will be read from a global catalog that has outdated information. When you use the ReadFromDomainController switch, multiple reads might be necessary to get the information. You don't have to specify a value with this switch.
+The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. You don't need to specify a value with this switch.
+
+The command: `Set-AdServerSettings -ViewEntireForest $true` to include all objects in the forest requires the ReadFromDomainController switch. Otherwise, the command might use a global catalog that contains outdated information. Also, you might need to run multiple iterations of the command with the ReadFromDomainController switch to get the information.
 
 By default, the recipient scope is set to the domain that hosts your Exchange servers.
 
@@ -373,7 +379,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecalculateHasActiveSyncDevicePartnership
-The RecalculateHasActiveSyncDevicePartnership switch recalculates the value of the HasActiveSyncDevicePartnership property on the mailbox. The value is automatically updated if it's found to be incorrect. You don't have to specify a value with this switch.
+The RecalculateHasActiveSyncDevicePartnership switch recalculates the value of the HasActiveSyncDevicePartnership property on the mailbox. You don't need to specify a value with this switch.
+
+The value is automatically updated if it's found to be incorrect.
 
 ```yaml
 Type: SwitchParameter

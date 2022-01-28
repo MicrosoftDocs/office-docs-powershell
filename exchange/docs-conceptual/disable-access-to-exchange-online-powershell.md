@@ -64,7 +64,7 @@ $<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter
 ```
 
 ```powershell
-$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_.WindowsEmailAddress -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
@@ -74,7 +74,7 @@ $DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox')
 ```
 
 ```powershell
-$DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
+$DSA | foreach {Set-User -Identity $_.WindowsEmailAddress -RemotePowerShellEnabled $false}
 ```
 
 ### Use a list of specific users

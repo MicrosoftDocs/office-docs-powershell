@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ClassificationRuleCollection -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Classification Rule Collection.xml" -Encoding Byte -ReadCount 0))
+New-ClassificationRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External Classification Rule Collection.xml'))
 ```
 
 This example imports the classification rule collection file C:\\My Documents\\External Classification Rule Collection.xml.
@@ -47,7 +47,7 @@ This example imports the classification rule collection file C:\\My Documents\\E
 ### -FileData
 The FileData parameter specifies the classification rule collection file you want to import.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

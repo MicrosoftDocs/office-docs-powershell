@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-phishsimoverridepolicy
-applicable: Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-PhishSimOverridePolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-PhishSimOverridePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-PhishSimOverridePolicy cmdlet to view third-party phishing simulation override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
 
@@ -50,12 +50,28 @@ The Identity parameter specifies the phishing simulation override policy that yo
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

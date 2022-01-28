@@ -41,9 +41,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte
+$Employee_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Employee Template.docx')
 $Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"
-$Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte
+$Customer_Template = [System.IO.File]::ReadAllBytes('D:\Data\Contoso Customer Template.docx')
 $Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"
 New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
 ```

@@ -74,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-The ConfigurationOnly switch specifies whether the configuration of the database changes without moving any files. A value of $true changes the configuration. A value of $false changes the configuration and moves the files. The default value is $false.
+The ConfigurationOnly switch specifies whether to change the configuration of the database without moving any files. You don't need to specify a value with this switch.
+
+If you don't use this switch, the configuration of the database changes and the files are moved.
 
 ```yaml
 Type: SwitchParameter
@@ -141,7 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

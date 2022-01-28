@@ -70,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -BypassSecurityGroupManagerCheck
-The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
+The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. You don't need to specify a value with this switch.
+
+If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
 
 - Distribution groups or mail-enabled security groups: You need to be a member of the Organization Management role group or have the Security Group Creation and Membership role assigned.
 - Role groups: You need to be a member of the Organization Management role group or have the Role Management role assigned.
-
-You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

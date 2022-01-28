@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -CrossValidate
-The CrossValidate switch specifies whether items in the specified mailbox are being auto-tagged.
+The CrossValidate switch specifies whether items in the specified mailbox are being auto-tagged. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Clear
-The Clear switch specifies whether to clear auto-tags from the specified mailbox.
+The Clear switch specifies whether to clear auto-tags from the specified mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -189,7 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -Train
-The Train switch specifies whether to start the training algorithm for auto-tagging on the specified mailbox. This switch is especially useful for retraining. No values are required with this switch.
+The Train switch specifies whether to start the training algorithm for auto-tagging on the specified mailbox. You don't need to specify a value with this switch.
+
+This switch is especially useful for retraining.
 
 ```yaml
 Type: SwitchParameter

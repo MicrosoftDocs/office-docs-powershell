@@ -48,26 +48,6 @@ New-AppRetentionComplianceRule -Policy <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
-### PublishComplianceTag
-```
-New-AppRetentionComplianceRule -Policy <PolicyIdParameter>
- [-Confirm]
- [-ExpirationDateOption <String>]
- [-RetentionComplianceAction <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### SetRawXml
-```
-New-AppRetentionComplianceRule -Policy <PolicyIdParameter>
- [-Confirm]
- [-ExpirationDateOption <String>]
- [-RetentionComplianceAction <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -156,7 +136,7 @@ Accept wildcard characters: False
 ### -ContentContainsSensitiveInformation
 The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -308,6 +288,7 @@ Type: HoldDurationHint
 Parameter Sets: Default
 Aliases:
 Accepted values: Days, Months, Years
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

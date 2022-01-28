@@ -51,6 +51,22 @@ This example creates a new DLP policy named Contoso PII with the following value
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a descriptive name for the DLP policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -126,22 +142,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies a descriptive name for the DLP policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Parameters
 The Parameters parameter specifies the parameter values that are required by the DLP policy template that you specify using the Template or TemplateData parameters. DLP policy templates may contain parameters that need to be populated with values from your organization. For example, a DLP policy template may include an exception group that defines users who are exempt from the DLP policy.
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -TemplateData
 The TemplateData parameter specifies an external DLP policy template file from which you can create a new DLP policy. You can't use the TemplateData and Template parameters in the same command.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

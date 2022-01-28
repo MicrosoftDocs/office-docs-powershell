@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxJunkEmailConfiguration cmdlet to configure the junk email settings on mailboxes.
 
-You can only use this cmdlet on a mailbox that's been opened in Outlook (in Cached Exchange mode) or Outlook on the web. If the mailbox hasn't been opened, you'll receive the error: The Junk Email configuration couldn't be set. The user needs to sign in to Outlook Web App before they can modify their Safe Senders and Recipients or Blocked Senders lists. If you want to suppress this error for bulk operations, you can add -ErrorAction SilentlyContinue to the end of the command.
+You can only use this cmdlet on a mailbox that's been opened in Outlook (in Cached Exchange mode) or Outlook on the web. If the mailbox hasn't been opened, you'll receive the error: "The Junk Email configuration couldn't be set. The user needs to sign in to Outlook Web App before they can modify their Safe Senders and Recipients or Blocked Senders lists." If you want to suppress this error for bulk operations, you can add `-ErrorAction SilentlyContinue` to the end of the command.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -40,7 +40,12 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 This cmdlet controls the following junk email settings on the mailbox:
 
-- Enable or disable the junk email rule: The junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox. Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
+- Enable or disable the junk email rule: In on-premises Exchange, the junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox.
+
+  In the cloud-based service, the junk email rule has no effect on mail flow. Exchange Online Protection delivers messages to the Junk Email folder based on the actions set in anti-spam policies. The junk email rule on the mailbox still controls what happens to messages after delivery based on the safelist collection of the mailbox.
+
+  Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
+
 - Configure the safelist collection: The safelist collection is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. Users can configure the safelist collection on their own mailbox by using Microsoft Outlook or Outlook on the web.
 
 For more information, see [Configure Exchange antispam settings on mailboxes](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).
@@ -54,7 +59,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxJunkEmailConfiguration "David Pelton" -Enabled $false
 ```
 
-This example disables the junk email rule configuration for the user named David Pelton.
+This example disables the junk email rule for the user named David Pelton. In on-premises Exchange, messages are no longer moved between the Inbox and the Junk Email folder based on the SCL Junk Email Folder threshold (organization or mailbox) or the safelist collection of the mailbox. In Exchange Online, the safelist collection of the mailbox is unable to move messages between the Inbox and the Junk Email folder. Messages are still delivered to the Junk Email folder based on the verdict and corresponding action of anti-spam policies.
 
 ### Example 2
 ```powershell
@@ -181,8 +186,17 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter enables or disables the junk email rule on the mailbox (a hidden Inbox rule named Junk E-mail Rule). Valid values are:
 
-- $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This is the default value. Exchange use the safelist collection of the mailbox (the Safe Senders list, Safe Recipients list, and Blocked Senders list), and the SCL Junk Email folder threshold (for the organization or the mailbox) to deliver messages to the Inbox or the Junk Email folder.
-- $false: The junk email rule is disabled in the mailbox. This value corresponds to the Outlook on the web setting: Don't move email to my Junk Email folder. Exchange doesn't use the safelist collection of the mailbox or the SCL Junk Email folder threshold to deliver messages to the Inbox or the Junk Email folder.
+- $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This is the default value.
+
+  In on-premises Exchange, the safelist collection of the mailbox (the Safe Senders list, Safe Recipients list, and Blocked Senders list), and the SCL Junk Email folder threshold (for the organization or the mailbox) delivers messages to the Inbox or the Junk Email folder.
+
+  In the cloud-based service, the safelist collection of the mailbox moves delivered messages between the Inbox or the Junk Email folder. Messages are delivered to the Junk Email folder based on the verdict and corresponding action of anti-spam policies only.
+
+- $false: The junk email rule is disabled in the mailbox. This value corresponds to the Outlook on the web setting: Don't move email to my Junk Email folder.
+
+  In on-premises Exchange, the safelist collection of the mailbox or the SCL Junk Email folder threshold are unable to deliver messages to the Inbox or the Junk Email folder.
+
+  In the cloud-based service, the safelist collection of the mailbox is unable to move delivered messages between the Inbox or the Junk Email folder. Messages are still delivered to the Junk Email folder based on the verdict and corresponding action of anti-spam policies.
 
 You can view the status of the junk email rule by running either of the following commands to find the Enabled property value:
 
@@ -205,9 +219,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
-The ForceDeletion switch forces the removal of the retention rule. You don't need to specify a value with this switch.
+The ForceDeletion switch forces the removal of the rule. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

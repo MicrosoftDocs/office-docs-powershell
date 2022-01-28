@@ -16,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Microsoft 365 compliance center.
 
-**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-RetentionCompliancePolicy](https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy). 
+**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-RetentionCompliancePolicy](https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -88,6 +88,8 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
+**Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_}`.
+
 ## EXAMPLES
 
 ### Example 1
@@ -125,7 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. You don't need to specify a value with this switch.
+
+Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -546,7 +550,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

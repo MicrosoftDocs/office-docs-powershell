@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsemergencycallingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTeamsEmergencyCallingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -121,3 +121,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsTeamsEmergencyCallingPolicy](New-CsTeamsEmergencyCallingPolicy.md)
+
+[Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
+
+[Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
+
+[Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)

@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -159,7 +159,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -169,7 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

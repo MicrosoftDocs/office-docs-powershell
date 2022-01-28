@@ -42,13 +42,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0
-Import-TransportRuleCollection -FileData $Data
+Import-TransportRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\TransportRules\ExportedRules.xml'))
 ```
 
 This example imports a transport rule collection from the XML file named ExportedRules.xml in the C:\\TransportRules folder.
-
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ## PARAMETERS
 
@@ -77,9 +74,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the variable name that contains the content of the XML file.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
-
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -134,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that the command will override any errors or warnings encountered during the import operation. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

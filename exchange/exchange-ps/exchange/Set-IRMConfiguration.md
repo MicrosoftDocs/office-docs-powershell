@@ -38,6 +38,7 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
  [-JournalReportDecryptionEnabled <Boolean>]
  [-LicensingLocation <MultiValuedProperty>]
  [-RefreshServerCertificates]
+ [-RejectIfRecipientHasNoRights <Boolean>]
  [-RMSOnlineKeySharingLocation <Uri>]
  [-SearchEnabled <Boolean>]
  [-SimplifiedClientAccessDoNotForwardDisabled <Boolean>]
@@ -285,7 +286,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt that appears when you modify the InternalLicensingEnabled parameter. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you modify the InternalLicensingEnabled parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -370,6 +373,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectIfRecipientHasNoRights
+This parameter is available only in the cloud-based service.
+
+{{ Fill RejectIfRecipientHasNoRights Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

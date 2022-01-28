@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
+ [-AddOnlineMeetingToAllEvents <Boolean>]
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
@@ -33,6 +34,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-DomainController <Fqdn>]
@@ -67,7 +69,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-The Set-MailboxCalendarConfiguration cmdlet primarily allows users to manage their own calendar settings in Outlook on the web Options. However, administrators who have the Organization Management or Recipient Management management roles may configure the calendar settings for users by using this cmdlet.
+The Set-MailboxCalendarConfiguration cmdlet primarily allows users to manage their own calendar settings in Outlook on the web Options. However, administrators who are members of the Organization Management or Recipient Management role groups can configure the calendar settings for users by using this cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -120,6 +122,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AddOnlineMeetingToAllEvents
+This parameter is available only in the cloud-based service.
+
+{{ Fill AddOnlineMeetingToAllEvents Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -314,6 +334,40 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DefaultOnlineMeetingProvider
+This parameter is available only in the cloud-based service.
+
+The DefaultOnlineMeetingProvider parameter specifies the default provider for online meetings. Valid values are:
+
+- AlibabaDingTalk
+- AmazonChimePrivate
+- AmazonChimePublic
+- AppleFacetime
+- BlueJeans
+- ClaroVideoconferencia
+- FacebookWorkplace
+- GoogleMeet
+- GoToMeeting
+- JioMeet
+- RingCentral
+- SkypeForBusiness
+- SkypeForConsumer
+- TeamsForBusiness (This is the default value.)
+- Webex
+- Zoom
+
+```yaml
+Type: OnlineMeetingProviderType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -548,7 +602,9 @@ Accept wildcard characters: False
 ### -OnlineMeetingsByDefaultEnabled
 This parameter is available only in the cloud-based service.
 
-The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Currently, this parameter sets the default value, so if the user has already directly interacted with this setting from an Outlook client, this default value will be ignored. Eventually, this parameter will override the user-configured setting.
+
+Valid values are:
 
 - $true: All meetings are online by default.
 - $false: All meetings are not online by default.

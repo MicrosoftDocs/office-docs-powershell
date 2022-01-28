@@ -316,6 +316,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -445,6 +446,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -574,6 +576,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -703,6 +706,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -829,6 +833,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -957,6 +962,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -1085,6 +1091,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-RoomMailboxPassword <SecureString>]
  [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
  [-SecondaryAddress <String>]
  [-SecondaryDialPlan <UMDialPlanIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
@@ -1301,7 +1308,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountDisabled
-This parameter is available o functional only in the cloud-based service.
+This parameter is available or functional only in the cloud-based service.
 
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
@@ -1394,7 +1401,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyMandatoryProperties
-The ApplyMandatoryProperties switch specifies whether to update the msExchVersion attribute of the mailbox. You may need to use this switch to fix inaccessible mailboxes or mailboxes that were created in previous versions of Exchange. You don't need to specify a value with this switch.
+The ApplyMandatoryProperties switch specifies whether to update the msExchVersion attribute of the mailbox. You don't need to specify a value with this switch.
+
+You might need to use this switch to fix inaccessible mailboxes or mailboxes that were created in previous versions of Exchange.
 
 ```yaml
 Type: SwitchParameter
@@ -1503,9 +1512,17 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveName
-The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App.
+The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook on the web (formerly known as Outlook Web App). If the value contains spaces, enclose the value in quotation marks (").
 
-If you don't use this parameter, the default value is `In-Place Archive - <Mailbox User's Display Name>`.
+In on-premises Exchange, the following default values are used based on the version of Exchange:
+
+- Exchange 2016 or later: `In-Place Archive -<Display Name>`
+- Exchange 2013: `In-Place Archive - <Display Name>`
+- Exchange 2010: `Personal Archive - <Display Name>`
+
+In Exchange Online, the default value is `In-Place Archive -<Display Name>`.
+
+In Outlook in Exchange Online, the value of this parameter is ignored. The name of the archive mailbox that's shown in the folder list is `Online Archive - <PrimarySMTPAddress>`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2912,7 +2929,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -3079,9 +3098,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -3151,7 +3170,7 @@ The InactiveMailbox switch specifies that the mailbox is an inactive mailbox. Yo
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted.
 
-To find inactive mailboxes, run the command Get-Mailbox -InactiveMailboxOnly | FL Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid and then use the DistinguishedName or ExchangeGuid property values for the Identity parameter (values guaranteed to be unique).
+To find inactive mailboxes, run the command `Get-Mailbox -InactiveMailboxOnly | Format-List Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid` and then use the DistinguishedName or ExchangeGuid property values for the Identity parameter (values guaranteed to be unique).
 
 This switch is required to use the LitigationHoldEnabled and LitigationHoldDuration parameters on inactive mailboxes.
 
@@ -3564,7 +3583,9 @@ Accept wildcard characters: False
 ### -ManagedFolderMailboxPolicyAllowed
 This parameter is available or functional only in Exchange Server 2010.
 
-The ManagedFolderMailboxPolicyAllowed parameter bypasses the warning that MRM features aren't supported for  clients running versions of Outlook earlier than Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
+The ManagedFolderMailboxPolicyAllowed switch bypasses the warning that MRM features aren't supported for clients running versions of Outlook earlier than Outlook 2007. You don't need to specify a value with this switch.
+
+When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless you also use the ManagedFolderMailboxPolicyAllowed switch.
 
 Although Outlook 2003 Service Pack 3 clients are supported, they have limited MRM functionality.
 
@@ -4580,9 +4601,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox.
-
-You don't need to specify a value with this switch.
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -4964,6 +4983,24 @@ Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SchedulerAssistant
+This parameter is available only in the cloud-based service.
+
+{{ Fill SchedulerAssistant Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

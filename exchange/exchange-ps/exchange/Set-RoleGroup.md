@@ -146,7 +146,12 @@ Accept wildcard characters: False
 ```
 
 ### -BypassSecurityGroupManagerCheck
-The BypassSecurityGroupManagerCheck switch enables a user who hasn't been added to the ManagedBy property to modify a role group. The user must be a member of the Organization Management role group or be assigned, either directly or indirectly, the Role Management role.
+The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. You don't need to specify a value with this switch.
+
+If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
+
+- Distribution groups or mail-enabled security groups: You need to be a member of the Organization Management role group or have the Security Group Creation and Membership role assigned.
+- Role groups: You need to be a member of the Organization Management role group or have the Role Management role assigned.
 
 ```yaml
 Type: SwitchParameter
@@ -233,7 +238,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

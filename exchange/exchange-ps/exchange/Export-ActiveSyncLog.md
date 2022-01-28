@@ -115,7 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -179,7 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseGMT
-The UseGMT switch specifies that Coordinated Universal Time (Greenwich Mean Time) is used for the time in the report output. By default, if this parameter isn't specified, local time is used.
+The UseGMT switch specifies that Coordinated Universal Time (Greenwich Mean Time) is used for the time in the report output. You don't need to specify a value with this switch.
+
+If you don't use this switch, local time is used.
 
 ```yaml
 Type: SwitchParameter

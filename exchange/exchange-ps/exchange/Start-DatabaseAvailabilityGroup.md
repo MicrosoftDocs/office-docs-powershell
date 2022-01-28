@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members.
+The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

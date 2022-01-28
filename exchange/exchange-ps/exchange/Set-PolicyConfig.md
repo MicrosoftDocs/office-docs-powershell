@@ -32,6 +32,8 @@ Set-PolicyConfig
  [-EndpointDlpGlobalSettingsPsws <PswsHashtable[]>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
+ [-PurviewLabelConsent <Boolean>]
+ [-ReservedForFutureUse <Boolean>]
  [-RetentionForwardCrawl <Boolean>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-SenderAddressLocation <PolicySenderAddressLocation>]
@@ -155,7 +157,6 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpGlobalSettings
-
 The EndpointDlpGlobalSettings parameter specifies the global endpoints. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
 The value of `<Setting>` is one of the supported values.
@@ -228,6 +229,38 @@ Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Accepted values: Low, Medium, High, None, Informational, Information
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PurviewLabelConsent
+{{ Fill PurviewLabelConsent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReservedForFutureUse
+{{ Fill ReservedForFutureUse Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

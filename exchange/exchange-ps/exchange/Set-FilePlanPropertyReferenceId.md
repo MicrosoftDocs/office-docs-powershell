@@ -15,10 +15,6 @@ Use the Set-FilePlanPropertyReferenceId cmdlet to modify file plan property refe
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
-
-Use the Set
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
-
 ## SYNTAX
 
 ```

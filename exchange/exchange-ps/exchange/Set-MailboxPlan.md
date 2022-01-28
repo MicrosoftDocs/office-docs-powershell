@@ -102,7 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -334,6 +336,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPolicy
+**Note**: Only existing mailboxes respect a custom retention policy that's set by this parameter. New mailboxes are always created using the default policy.
+
 The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name

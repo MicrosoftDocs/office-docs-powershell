@@ -15,8 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Displays a specific or all treatments for how calls to an unassigned number range should be routed.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
   
 ## SYNTAX
 
@@ -42,12 +40,18 @@ Get-CsTeamsUnassignedNumberTreatment
 ```
 This example displays all configured treatments.
 
+### Example 3
+```powershell
+Get-CsTeamsUnassignedNumberTreatment -Filter Ann*
+```
+This example displays all configured treatments with an Identity starting with Ann.
+
+
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to limit the returned data by filtering on specific attributes.
-For example, you can limit returned data to treatments which have a specific target type, i.e. -Filter {TargetType -eq 'User'}. The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
+Enables you to limit the returned data by filtering on the Identity attribute.
 
 ```yaml
 Type: String
@@ -102,7 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
-Using the Filter parameter does not work as intended.
 
 ## RELATED LINKS
 [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)

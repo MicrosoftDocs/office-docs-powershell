@@ -27,6 +27,64 @@ Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdPar
 In Microsoft Teams or Skype for Business Online, tenants are groups of users who have accounts homed on the service.
 Organizations will typically have a single tenant in which to house all their user accounts.
 
+**NOTE:**
+
+Beginning Teams PowerShell Module version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+
+*Deprecated Attributes*
+
+- DisableExoPlanProvisioning
+- DistinguishedName
+- ExperiencePolicy
+- Id
+- IsByPassValidation
+- IsMNC
+- IsReadinessUploaded
+- IsUpgradeReady
+- LastSubProvisionTimeStamp
+- MNCEnableTimeStamp
+- Name
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OriginalRegistrarPool
+- OriginatingServer
+- PendingDeletion
+- ProvisioningCounter
+- PublicProvider
+- PublishingCounter
+- RegistrarPool
+- RemoteMachine
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SyncingCounter
+- TenantPoolExtension
+- UpgradeRetryCounter
+- UserRoutingGroupIds
+- XForestMovePolicy
+- Guid
+- HostedVoiceMailNotProvisioned
+- IsO365MNC
+- IsValid
+- NonPrimarySource
+- OcoDomainTracked
+- Phone
+- ProvisionType
+- TeamsUpgradeEligible
+- TelehealthEnabled
+- TenantNotified
+- AssignedLicenses
+- OnPremisesImmutableId
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- DefaultDataLocation
+- DefaultPoolFqdn
+- AdminDescription
+- AllowedDataLocation
+- Description
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------

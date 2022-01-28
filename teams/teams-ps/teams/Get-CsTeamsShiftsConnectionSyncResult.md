@@ -13,9 +13,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
-This cmdlet supports retrieving the list of user details in the mapped teams.
+This cmdlet supports retrieving the list of user details in the mapped teams of last sync.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-CsTeamsShiftsConnectionSyncResult -ConnectorInstanceId <string> -TeamId <str
 
 ## DESCRIPTION
 
-This cmdlet supports retrieving the list of successful and failed users in the mapped teams.
+This cmdlet supports retrieving the list of successful and failed users in the mapped teams of last sync.
 
 ## EXAMPLES
 
@@ -36,10 +36,13 @@ PS C:\> Get-CsTeamsShiftsConnectionSyncResult -ConnectorInstanceId "WCI-d1addd70
 ```output
 FailedAadUser FailedWfmUser                 SuccessfulUser
 ------------- -------------                 --------------
-{}            {FRPET, WAROS, LABRO, JOREE…} {maosha.shi@flwr0.ms, xiaoxue.chen@flwr0.ms, guchuan.sun@flwr0.ms}
+{LABRO}       {FRPET, WAROS, JOREE}        {maosha.shi@flwr0.ms, xiaoxue.chen@flwr0.ms, guchuan.sun@flwr0.ms}
 ```
 
 Returns the successful and failed users in the team mapping of Teams `70f49d29-7ee1-4259-8999-946953feb79e` in the instance with ID `WCI-d1addd70-2684-4723-b8f2-7fa2230648c9`.
+`LABRO` in FailedAadUser column shows the list of users who failed to sync from Teams to Wfm.
+`FRPET, WAROS, JOREE` in FailedWfmUser column shows the list of users who failed to sync from Wfm to Teams.
+`maosha.shi@flwr0.ms, xiaoxue.chen@flwr0.ms, guchuan.sun@flwr0.ms` in SuccessfulUser column shows the list of users who synced in both Wfm and Teams.
 
 ## PARAMETERS
 

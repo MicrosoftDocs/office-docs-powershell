@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
 ```yaml
 Type: SwitchParameter
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible.
+A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible. The lowest priority will be applied first and then in ascendant order.
 
 ```yaml
 Type: Int32

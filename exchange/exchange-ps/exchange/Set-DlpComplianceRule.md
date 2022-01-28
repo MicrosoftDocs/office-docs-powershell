@@ -38,8 +38,10 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
+ [-DocumentContainsWords <MultiValuedProperty>]
  [-DocumentIsPasswordProtected <Boolean>]
  [-DocumentIsUnsupported <Boolean>]
+ [-DocumentMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-DocumentSizeOver <ByteQuantifiedSize>]
@@ -52,8 +54,10 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
+ [-ExceptIfDocumentContainsWords <MultiValuedProperty>]
  [-ExceptIfDocumentIsPasswordProtected <Boolean>]
  [-ExceptIfDocumentIsUnsupported <Boolean>]
+ [-ExceptIfDocumentMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfDocumentNameMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
  [-ExceptIfDocumentSizeOver <ByteQuantifiedSize>]
@@ -65,9 +69,14 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsWords <PswsHashtable>]
  [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
+ [-ExceptIfMessageSizeOver <Microsoft.ByteQuantifiedSize>]
  [-ExceptIfMessageTypeMatches <MessageTypes>]
  [-ExceptIfProcessingLimitExceeded <Boolean>]
+ [-ExceptIfRecipientADAttributeContainsWords <PswsHashtable>]
+ [-ExceptIfRecipientADAttributeMatchesPatterns <PswsHashtable>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfSenderADAttributeContainsWords <PswsHashtable>]
+ [-ExceptIfSenderADAttributeMatchesPatterns <PswsHashtable>]
  [-ExceptIfSenderDomainIs <MultiValuedProperty>]
  [-ExceptIfSenderIPRanges <MultiValuedProperty>]
  [-ExceptIfSentTo <MultiValuedProperty>]
@@ -90,8 +99,10 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-HeaderContainsWords <PswsHashtable>]
  [-HeaderMatchesPatterns <PswsHashtable>]
  [-IncidentReportContent <ReportContentOption[]>]
+ [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
+ [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
@@ -102,11 +113,20 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-PrependSubject <String>]
  [-Priority <Int32>]
  [-ProcessingLimitExceeded <Boolean>]
+ [-ProcessingLimitExceeded <Boolean>]
+ [-Quarantine <Boolean>]
+ [-RecipientADAttributeContainsWords <PswsHashtable>]
+ [-RecipientADAttributeMatchesPatterns <PswsHashtable>]
  [-RecipientDomainIs <MultiValuedProperty>]
  [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RemoveHeader <MultiValuedProperty>]
+ [-RemoveRMSTemplate <Boolean>]
+ [-ReportSeverityLevel <RuleSeverity>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
+ [-RuleErrorAction <PolicyRuleErrorAction>]
+ [-SenderADAttributeContainsWords <PswsHashtable>]
+ [-SenderADAttributeMatchesPatterns <PswsHashtable>]
  [-SenderDomainIs <MultiValuedProperty>]
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
@@ -117,13 +137,10 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
- [-ProcessingLimitExceeded <Boolean>]
- [-ReportSeverityLevel <RuleSeverity>]
- [-RuleErrorAction <PolicyRuleErrorAction>]
  [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
- [-WithImportance <WithImportance>]
+ [-WithImportance <WithImportance>]<MultiValuedProperty>
  [<CommonParameters>]
 ```
 
@@ -396,7 +413,7 @@ Accept wildcard characters: False
 ### -ContentContainsSensitiveInformation
 The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type. In addition to sensitive information type, the parameter can also be applied to files that contain sensitivity labels.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `labels = @(@{name ="Confidential"; type ="Sensitivity";})`
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -414,7 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file name extensions. You can specify multiple words separated by commas.
+The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -466,6 +483,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DocumentContainsWords
+The DocumentContainsWords parameter specifies a condition for the DLP rule that looks for words in message attachments. Only supported attachment types are checked.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DocumentIsPasswordProtected
 The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
 
@@ -504,8 +541,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DocumentMatchesPatterns
+The DocumentMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
+
+You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DocumentNameMatchesPatterns
-The DocumentNameMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+The DocumentNameMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
 The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
@@ -523,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentNameMatchesWords
-The DocumentNameMatchesWords parameter specifies a condition for the DLP rule that looks for words or phrases in the file name of message attachments. You can specify multiple words or phrases separated by commas.
+The DocumentNameMatchesWords parameter specifies a condition for the DLP rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
 
 - Single word: `"no_reply"`
 - Multiple words: `no_reply,urgent,...`
@@ -711,7 +768,7 @@ Accept wildcard characters: False
 ### -ExceptIfContentContainsSensitiveInformation
 The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type. In addition to sensitive information type, the parameter can also be applied to files that contain sensitivity labels.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `labels = @(@{name ="Confidential"; type ="Sensitivity";})`
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -729,7 +786,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file name extensions. You can specify multiple words separated by commas.
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -748,6 +805,26 @@ Accept wildcard characters: False
 The ExceptIfContentPropertyContainsWords parameter specifies an exception for the DLP rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
 
 This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentContainsWords
+The ExceptIfDocumentContainsWords parameter specifies an exception for the DLP rule that looks for words in message attachments. Only supported attachment types are checked.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -800,8 +877,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfDocumentMatchesPatterns
+The ExceptIfDocumentMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
+
+You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfDocumentNameMatchesPatterns
-The ExceptIfDocumentNameMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+The ExceptIfDocumentNameMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
 The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
 
@@ -819,7 +916,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentNameMatchesWords
-The ExceptIfDocumentNameMatchesWords parameter specifies an exception for the DLP rule that looks for words or phrases in the file name of message attachments. You can specify multiple words or phrases separated by commas.
+The ExceptIfDocumentNameMatchesWords parameter specifies an exception for the DLP rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
 
 - Single word: `"no_reply"`
 - Multiple words: `no_reply,urgent,...`
@@ -1026,6 +1123,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfMessageSizeOver
+The ExceptIfMessageSizeOver parameter specifies an exception for the DLP rule that looks for messages larger than the specified size. The size include the message and all attachments.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfMessageTypeMatches
 The ExceptIfMessageTypeMatches parameter specifies an exception for the rule that looks for messages of the specified type. Valid values are:
 
@@ -1072,11 +1197,211 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfRecipientADAttributeContainsWords
+The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception for the DLP rule that looks for words in Active Directory attributes of message recipients. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the OR operator is used.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfRecipientADAttributeMatchesPatterns
+The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in Active Directory attributes of message recipients by using regular expressions. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the OR operator is used.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfRecipientDomainIs
 The ExceptIfRecipientDomainIs parameter specifies an exception for the DLP rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderADAttributeContainsWords
+The ExceptIfSenderADAttributeContainsWords parameter specifies an exception for the DLP rule that looks for words in Active Directory attributes of message senders. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the OR operator is used.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderADAttributeMatchesPatterns
+The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in Active Directory attributes of message senders by using regular expressions. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the OR operator is used.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1542,6 +1867,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageSizeOver
+The MessageSizeOver parameter specifies a condition for the DLP rule that looks for messages larger than the specified size. The size include the message and all attachments.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageTypeMatches
 The MessageTypeMatches parameter specifies a condition for the rule that looks for messages of the specified type. Valid values are:
 
@@ -1576,6 +1929,28 @@ You can use this action in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NonBifurcatingAccessScope
+The NonBifurcatingAccessScope parameter specifies a condition for the DLP rule that looks for recipients in the specified access scope. The rule is applied to all copies of the message. Valid values are:  
+
+- HasInternal: At least one recipient is inside the organization. 
+- HasExternal: At least one recipient is outside the organization. 
+- None: The condition isn't used. 
+
+You can use this condition in DLP policies that are scoped only to Exchange
+
+```yaml
+Type: NonBifurcatingAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1781,6 +2156,127 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Quarantine
+This parameter specifies an action or part of an action for the rule.
+
+The Quarantine parameter specifies an action that quarantines messages. Valid values are:
+
+- $true: The message is delivered to the hosted quarantine.
+- $false: The message is not quarantined.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientADAttributeContainsWords
+The RecipientADAttributeContainsWords parameter specifies a condition for the DLP rule that looks for words in Active Directory attributes of message recipients. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the OR operator is used.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientADAttributeMatchesPatterns
+The RecipientADAttributeMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in Active Directory attributes of message recipients by using regular expressions. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the or operator is used.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecipientDomainIs
 The RecipientDomainIs parameter specifies a condition for the DLP rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
@@ -1835,6 +2331,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveRMSTemplate
+The RemoveRMSTemplate parameter specifies an action for the DLP rule that removes Office 365 Message Encryption from messages and their attachments. Valid values are:
+
+- $true: The message and attachments are decrypted.
+- $False: The messages and attachments are not decrypted.
+
+You can use this action in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReportSeverityLevel
 The ReportSeverityLevel parameter specifies the severity level of the incident report for content detections based on the rule. Valid values are:
 
@@ -1865,6 +2382,106 @@ The RuleErrorAction parameter specifies what to do if an error is encountered du
 
 ```yaml
 Type: PolicyRuleErrorAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderADAttributeContainsWords
+The SenderADAttributeContainsWords parameter specifies a condition for the DLP rule that looks for words in Active Directory attributes of message senders. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the OR operator is used.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderADAttributeMatchesPatterns
+The SenderADAttributeMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in Active Directory attributes of message senders by using regular expressions. You can use any of the following Active Directory attributes:
+
+- City
+- Company
+- Country
+- CustomAttribute1 to CustomAttribute15
+- Department
+- DisplayName
+- Email
+- FaxNumber
+- FirstName
+- HomePhoneNumber
+- Initials
+- LastName
+- Manager
+- MobileNumber
+- Notes
+- Office
+- OtherFaxNumber
+- OtherHomePhoneNumber
+- OtherPhoneNumber
+- PagerNumber
+- PhoneNumber
+- POBox
+- State
+- Street
+- Title
+- UserLogonName
+- ZipCode
+
+This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+
+When you specify multiple attributes, the or operator is used.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

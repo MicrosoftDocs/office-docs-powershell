@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-tenantallowblocklistitems
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: New-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
@@ -27,19 +27,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Expiration
 ```
-New-TenantAllowBlockListItems -Action <ItemAction> -Entries <String[]> -ListType <ListType>
- [-ExpirationDate <DateTime>]
+New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-ExpirationDate <DateTime>]
+ [-Allow]
+ [-Block]
+ [-ListSubType <ListSubType>]
  [-Notes <String>]
  [-OutputJson]
+ [-SubmissionID <String>]
  [<CommonParameters>]
 ```
 
 ### NoExpiration
 ```
-New-TenantAllowBlockListItems -Action <ItemAction> -Entries <String[]> -ListType <ListType>
- [-NoExpiration]
+New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpiration]
+ [-Allow]
+ [-Block]
+ [-ListSubType <ListSubType>]
  [-Notes <String>]
  [-OutputJson]
+ [-SubmissionID <String>]
  [<CommonParameters>]
 ```
 
@@ -50,38 +56,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListItems -ListType Url -Action Block -Entries ~contoso.com~
+New-TenantAllowBlockListItems -ListType Url -Block -Entries ~contoso.com~
 ```
 
 This example adds a URL block entry for contoso.com and all subdomains (for example, contoso.com, www.contoso.com, xyz.abc.contoso.com, and www.contoso.com/b). Because we didn't use the ExpirationDate or NoExpiration parameters, the entry expires after 30 days.
 
 ### Example 2
 ```powershell
-New-TenantAllowBlockListItems -ListType FileHash -Action Allow -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -NoExpiration
+New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -NoExpiration
 ```
 
-This example adds a file allow entry for the specified files that never expires.
+This example adds a file block entry for the specified files that never expires.
+
+### Example 3
+```powershell
+New-TenantAllowBlockListItems -ListType Url -Allow -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
+```
+
+This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
 
 ## PARAMETERS
-
-### -Action
-The Action parameter specifies the action type for the entry. Valid values are:
-
-- Allow
-- Block
-
-```yaml
-Type: ItemAction
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Entries
 The Entries parameter specifies the URL or files that you want to add to the Tenant Allow/Block List based on the value of the ListType parameter:
@@ -91,13 +85,15 @@ The Entries parameter specifies the URL or files that you want to add to the Ten
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-You can't mix URL and file values or allow and block actions in the same command. You can't modify existing URL or file values after you create the entry (there's no Entries parameter on the Set-TenantAllowBlockListItems cmdlet).
+You can't mix URL and file values or allow and block actions in the same command.
+
+You can't modify the URL or file values after you create the entry.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -120,7 +116,7 @@ You can't use this parameter with the NoExpiration switch.
 Type: DateTime
 Parameter Sets: Expiration
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -139,7 +135,7 @@ The ListType parameter specifies the type of entry to add. Valid values are:
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -157,9 +153,60 @@ You can't use this switch with the ExpirationDate parameter.
 Type: SwitchParameter
 Parameter Sets: NoExpiration
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Allow
+The Allow switch specifies that this is an allow entry for advanced delivery (third-party phishing simulation URLs). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Block
+The Block switch specifies that this is a block entry. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListSubType
+The ListSubType parameter specifies the subtype for this entry. Valid values are:
+
+- AdvancedDelivery
+- Tenant: This is the default value.
+
+```yaml
+Type: ListSubType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -173,7 +220,7 @@ The Notes parameters specifies additional information about the object. If the v
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -189,6 +236,22 @@ You use this switch to prevent the command from halting on the first entry that 
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubmissionID
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
