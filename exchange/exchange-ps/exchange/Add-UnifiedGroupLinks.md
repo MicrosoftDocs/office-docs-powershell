@@ -45,6 +45,14 @@ Add-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links chri
 
 This example adds members chris@contoso.com and michelle@contoso.com to the Microsoft 365 Group named Legal Department.
 
+### Example 2
+```powershell
+$users= Get-User -ResultSize unlimited | ?{$_.Department -eq "Marketing" -AND $_.RecipientType -eq "UserMailbox"}
+Add-UnifiedGroupLinks -Identity Marketing -LinkType members -Links ($users.UserPrincipalName)
+```
+
+This an example of how to add bulk members to Microsoft Group. In this example, mailboxes that have "Marketing" Department are added to Microsoft 365 Group named Marketing.
+
 ## PARAMETERS
 
 ### -Identity
