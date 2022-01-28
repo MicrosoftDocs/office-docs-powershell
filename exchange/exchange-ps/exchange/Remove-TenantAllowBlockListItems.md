@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-tenantallowblocklistitems
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Remove-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
@@ -25,8 +25,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Entries
+```
+Remove-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType>
+ [-ListSubType <ListSubType>]
+ [-OutputJson]
+ [<CommonParameters>]
+```
+
+### Ids
 ```
 Remove-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
+ [-ListSubType <ListSubType>]
  [-OutputJson]
  [<CommonParameters>]
 ```
@@ -41,22 +51,56 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0l"
 ```
 
-This example removes the specified URL entry from the Allow/Block List.
+This example removes the specified URL entry from the Tenant Allow/Block List.
+
+### Example 2
+```powershell
+Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com
+```
+
+This example removes the URL allow entry for the specified third-party phishing simulation URL. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
 
 ## PARAMETERS
 
-### -Ids
-The Ids parameter specifies the entry that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Entry property value (a URL or a file hash).
+### -Entries
+The Entries parameter specifies the entries that you want to remove based on the ListType parameter value. Valid values are:
 
-An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
+- Url: The exact URL entry value.
+- File: The exact SHA256 file hash value.
 
-You can specify multiple values separated by commas.
+To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+You can't mix URL and file values or allow and block actions in the same command.
+
+You can't use this parameter with the Ids parameter.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Entries
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ids
+The Ids parameter specifies the entries that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Identity property value (a URL or a file hash).
+
+An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
+
+To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+You can't use this parameter with the Entries parameter.
+
+```yaml
+Type: String[]
+Parameter Sets: Ids
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -75,9 +119,28 @@ The ListType parameter specifies the type of entry to remove. Valid values are:
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListSubType
+The ListSubType specifies the subtype of this entry. Valid values are:
+
+- AdvancedDelivery
+- Tenant: This is the default value.
+
+```yaml
+Type: ListSubType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -93,7 +156,7 @@ You use this switch to prevent the command from halting on the first entry that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

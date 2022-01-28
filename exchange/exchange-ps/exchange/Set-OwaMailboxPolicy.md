@@ -109,6 +109,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-SilverlightEnabled <Boolean>]
  [-SkipCreateUnifiedGroupCustomSharepointClassification <Boolean>]
  [-SMimeEnabled <Boolean>]
+ [-SMimeSuppressNameChecksEnabled <Boolean>]
  [-SpellCheckerEnabled <Boolean>]
  [-TasksEnabled <Boolean>]
  [-TeamSnapCalendarsEnabled <Boolean>]
@@ -703,14 +704,14 @@ Accept wildcard characters: False
 ### -DisableFacebook
 This parameter is available only in the cloud-based service.
 
-Facebook integration is no longer available. For more information, see [Facebook Connect is no longer available](https://support.microsoft.com/office/facebook-connect-is-no-longer-available-f31c8107-7b5a-4e3d-8a22-e506dacb6db6).
+**Note**: Facebook integration is no longer available. For more information, see [Facebook Connect is no longer available](https://support.microsoft.com/office/facebook-connect-is-no-longer-available-f31c8107-7b5a-4e3d-8a22-e506dacb6db6).
 
 The DisableFacebook switch specifies whether users can synchronize their Facebook contacts to their Contacts folder in Outlook on the web. By default, Facebook integration is enabled.
 
 - To disable Facebook integration, use this switch without a value.
-- To enable Facebook integration after it's been disabled, use this exact syntax: -DisableFacebook:$false.
+- To enable Facebook integration after it's been disabled, use this exact syntax: `-DisableFacebook:$false`.
 
-Note that the value of this parameter is stored in the FacebookEnabled property in the output of the Get-OwaMailboxPolicy cmdlet.
+The value of this switch is stored in the FacebookEnabled property in the output of the Get-OwaMailboxPolicy cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1956,6 +1957,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SMimeSuppressNameChecksEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

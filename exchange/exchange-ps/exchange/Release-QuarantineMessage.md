@@ -52,6 +52,7 @@ Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity
 ```
 Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-Identity <QuarantineMessageIdentity>]
+ [-ActionType <ReleaseActionType>]
  [-AllowSender]
  [-Confirm]
  [-Force]
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ### -ReleaseToAll
 The ReleaseToAll switch releases the quarantined message to all original recipients. You don't need to specify a value with this switch.
 
-This parameter is required for the quarantine type SPOMalware.
+This switch is required for the quarantine type SPOMalware.
 
 If you previously used the User parameter or the ReleaseToAll switch to release the quarantined message to some or all of the original recipients, those recipients are skipped when you use the ReleaseToAll switch again.
 
@@ -209,6 +210,27 @@ Aliases:
 Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActionType
+The ActionType parameter specifies the release action type. Valid values are:
+
+- Approve
+- Deny
+- Release
+- Request
+
+```yaml
+Type: ReleaseActionType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -253,9 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to attempt the re-release of previously released messages from quarantine. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-You need to use this switch whenever you attempt to re-release previously released messages from quarantine.
+Use this switch whenever you attempt to re-release previously released messages from quarantine.
 
 ```yaml
 Type: SwitchParameter

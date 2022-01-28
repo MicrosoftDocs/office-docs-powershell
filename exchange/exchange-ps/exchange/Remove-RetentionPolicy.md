@@ -115,7 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to override the confirmation prompt that appears when removing a retention policy that's assigned to users. Removing a policy that's assigned to users results in those users not having any retention policy. You don't have to specify a value with the Force switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you remove a retention policy that's assigned to users. Removing a policy that's assigned to users results in those users not having any retention policy.
 
 ```yaml
 Type: SwitchParameter

@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-DlpPolicyTemplate -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External DLP Policy Template.xml" -Encoding Byte -ReadCount 0))
+Import-DlpPolicyTemplate -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External DLP Policy Template.xml'))
 ```
 
 This example imports the DLP policy template file C:\\My Documents\\External DLP Policy Template.xml.
@@ -44,7 +44,7 @@ This example imports the DLP policy template file C:\\My Documents\\External DLP
 ### -FileData
 The FileData parameter specifies the DLP policy template file you want to import.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

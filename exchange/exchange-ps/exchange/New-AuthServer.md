@@ -180,7 +180,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
 
 - $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
-- $false: Authorization tokens that are issued by the authorization server are are not accepted.
+- $false: Authorization tokens that are issued by the authorization server are not accepted.
 
 ```yaml
 Type: Boolean
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
 
 We don't recommend using this switch in a production environment.
 

@@ -374,12 +374,12 @@ Accept wildcard characters: False
 ```
 
 ### -BypassSecurityGroupManagerCheck
-The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
+The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. You don't need to specify a value with this switch.
+
+If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
 
 - Distribution groups or mail-enabled security groups: You need to be a member of the Organization Management role group or have the Security Group Creation and Membership role assigned.
 - Role groups: You need to be a member of the Organization Management role group or have the Role Management role assigned.
-
-You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -904,7 +904,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-The ForceUpgrade switch specifies whether to suppress the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
+The ForceUpgrade switch suppresses the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -976,9 +976,9 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from users who aren't members of the group. You don't need to specify a value with this switch.
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from members of the group and users who aren't members of the group. You don't need to specify a value with this switch.
 
-You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a distribution group that represents students enrolled in a class).
+You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
 
 ```yaml
 Type: SwitchParameter
@@ -996,9 +996,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

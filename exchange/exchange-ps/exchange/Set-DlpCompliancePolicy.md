@@ -23,6 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddEndpointDlpLocation <MultiValuedProperty>]
+ [-AddEndpointDlpLocationException <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddOneDriveLocation <MultiValuedProperty>]
  [-AddOneDriveLocationException <MultiValuedProperty>]
@@ -32,6 +34,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
  [-AddTeamsLocationException <MultiValuedProperty>]
+ [-AddThirdPartyAppDlpLocation <MultiValuedProperty>]
+ [-AddThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -43,6 +47,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-Priority <Int32>]
+ [-RemoveEndpointDlpLocation <MultiValuedProperty>]
+ [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
@@ -52,6 +58,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
  [-RemoveTeamsLocationException <MultiValuedProperty>]
+ [-RemoveThirdPartyAppDlpLocation <MultiValuedProperty>]
+ [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -66,6 +74,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
 
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+
+**Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-DlpCompliancePolicy -Identity "Main PII" -RemoveExchangeLocation $_}`.
 
 ## EXAMPLES
 
@@ -120,6 +130,42 @@ Aliases:
 Applicable: Security & Compliance Center
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocation
+The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocationException
+The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -280,6 +326,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddThirdPartyAppDlpLocation
+{{ Fill AddThirdPartyAppDlpLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddThirdPartyAppDlpLocationException
+{{ Fill AddThirdPartyAppDlpLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -318,7 +396,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -336,7 +414,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedByMemberOf
 The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -392,7 +470,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -431,7 +511,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -449,7 +529,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedByMemberOf
 The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -477,6 +557,42 @@ If you modify the priority value of a policy, the position of the policy in the 
 
 ```yaml
 Type: Int32
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveEndpointDlpLocation
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveEndpointDlpLocationException
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
@@ -626,6 +742,38 @@ Accept wildcard characters: False
 The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveThirdPartyAppDlpLocation
+{{ Fill RemoveThirdPartyAppDlpLocation Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveThirdPartyAppDlpLocationException
+{{ Fill RemoveThirdPartyAppDlpLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty

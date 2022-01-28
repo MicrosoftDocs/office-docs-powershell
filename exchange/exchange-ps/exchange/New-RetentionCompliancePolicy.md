@@ -36,6 +36,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-OneDriveLocationException <MultiValuedProperty>]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
+ [-RetainCloudAttachment <Boolean>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
  [-SkypeLocation <MultiValuedProperty>]
@@ -52,6 +53,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Enabled <Boolean>]
  [-Force]
  [-RestrictiveRetention <Boolean>]
+ [-RetainCloudAttachment <Boolean>]
  [-TeamsChannelLocation <MultiValuedProperty>]
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
@@ -229,7 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -358,6 +362,22 @@ The RestrictiveRetention parameter specifies whether Preservation Lock is enable
 After a policy has been locked, no one can turn off or disable it, or remove content from the policy. And it's not possible to modify or delete content that's subject to the policy during the retention period. The only ways that you can modify the retention policy are by adding content to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
 
 Therefore, before you lock a retention policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetainCloudAttachment
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean

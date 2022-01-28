@@ -99,9 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
 
 The detailed information is visible in the DiagnosticInfo property.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter

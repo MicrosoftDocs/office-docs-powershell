@@ -24,31 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
  [-AggMailboxCleanup]
+ [-Confirm]
  [-DomainController <Fqdn>]
- [-Confirm]
  [-HoldCleanup]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ComplianceJobAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DataGovernanceAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -67,6 +45,40 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCle
 ### StopHoldCleanup
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ComplianceBoundaryAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
+ [-AdaptiveScope]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ComplianceJobAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### DataGovernanceAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -118,7 +130,7 @@ The Identity parameter specifies the mailbox to be processed. In cross-premises 
 - SamAccountName
 - User ID or user principal name (UPN)
 
-**Note**: In the cloud-based service, if you receive an error, try using the mailbox GUID for the value of this parameter. You can get the mailbox GUID value by replacing <UserIdentity> with the email address of the user and running the following command: `Get-Mailbox -User <UserIdentity> | Format-List *GUID,MailboxLocations`.
+**Note**: In the cloud-based service, if you receive an error, try using the mailbox GUID for the value of this parameter. You can get the mailbox GUID value by replacing \<UserIdentity\> with the email address of the user and running the following command: `Get-Mailbox -User <UserIdentity> | Format-List *GUID,MailboxLocations`.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
@@ -156,6 +168,24 @@ Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdaptiveScope
+This parameter is available only in the cloud-based service.
+
+{{ Fill AdaptiveScope Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ComplianceBoundaryAssistant
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -260,7 +290,7 @@ The FullCrawl switch recalculates the application of tags across the whole mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
@@ -274,7 +304,7 @@ Accept wildcard characters: False
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The InactiveMailbox switch runs the command only inactive mailboxes. You don't need to specify a value with this switch.
+The InactiveMailbox switch runs the command only on inactive mailboxes. You don't need to specify a value with this switch.
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
 
@@ -282,7 +312,7 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
@@ -296,7 +326,7 @@ Accept wildcard characters: False
 ### -StopHoldCleanup
 This parameter is available only in the cloud-based service.
 
-The StopHoldCleanup parameter stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
+The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
 
 A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
 

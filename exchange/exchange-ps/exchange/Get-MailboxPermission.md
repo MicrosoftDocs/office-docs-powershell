@@ -39,6 +39,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
+ [-IncludeSoftDeletedUserPermissions]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -171,6 +172,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeSoftDeletedUserPermissions
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeSoftDeletedUserPermissions Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Owner
 The Owner switch returns the owner information for the mailbox that's specified by the Identity parameter. You don't need to specify a value with this switch.
 
@@ -190,13 +209,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain.
+The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. You don't need to specify a value with this switch.
 
-If you set the recipient scope to include all recipients in the forest, and if you don't use this parameter, it's possible that the user information is read from a global catalog with outdated information.
+The command: `Set-AdServerSettings -ViewEntireForest $true` to include all objects in the forest requires the ReadFromDomainController switch. Otherwise, the command might use a global catalog that contains outdated information. Also, you might need to run multiple iterations of the command with the ReadFromDomainController switch to get the information.
 
-If you use this parameter, multiple reads might be necessary to get the information.
-
-By default, the recipient scope is set to the domain that hosts your servers that run Exchange.
+By default, the recipient scope is set to the domain that hosts your Exchange servers.
 
 ```yaml
 Type: SwitchParameter

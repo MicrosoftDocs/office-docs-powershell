@@ -33,8 +33,7 @@ Connect-MicrosoftTeams
 ```
 Connect-MicrosoftTeams 
 [-TenantId <String>] 
--AccessTokens <String[]> 
--AccountId <String> 
+-AccessTokens <String[]>  
 [-LogLevel <LogLevel>] 
 [-LogFilePath <String>] 
 [-WhatIf] 
@@ -46,7 +45,7 @@ Connect-MicrosoftTeams
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
 > [!WARNING]
->If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is [necessary.](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)
+>If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is necessary.
 
 ## EXAMPLES
 
@@ -82,11 +81,31 @@ user@contoso.com        TeamsGCCH   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxx
 ```
 
 ### Example 4: Connect to MicrosoftTeams using Accesstokens
-This example demonstrates how to sign in using AccessTokens. Admin can reterive Access Tokens. It requires two tokens, MS Graph Access Token and Teams Resource token. 
+This example demonstrates how to sign in using AccessTokens. Admin can retrieve Access Tokens. It requires two tokens, MS Graph Access Token and Teams Resource token. 
+
+A delegated flow, such as Resource Owner Password Credentials (ROPC), must be used, with the following delegated app permissions required.
+
+| API | Grant type | Permission |
+|-|-|-|
+| Microsoft Graph | Delegated | User.Read.All |
+| Microsoft Graph | Delegated | Group.ReadWrite.All |
+| Microsoft Graph | Delegated | AppCatalog.ReadWrite.All |
+| Skype and Teams Tenant Admin API | Delegated | user_impersonation |
 
 ```powershell
-$graphtoken = #Get MSGraph Token for following for resource  "https://graph.microsoft.com" and scopes "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
-$teamstoken = #Get Teams resource token for resource id "48ac35b8-9aa8-4d74-927d-1f4a14a0b239" and scope "user_impersonation";
+$tenantid = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$clientid = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$clientsecret = "..."
+$username = "user@contoso.onmicrosoft.com"
+$password = "..."
+
+$uri = "https://login.microsoftonline.com/{0}/oauth2/v2.0/token" -f $tenantid
+$body = "client_id={0}&scope=https://graph.microsoft.com/.default&username={1}&password={2}&grant_type=password&client_secret={3}" -f $clientid, $username, [System.Net.WebUtility]::UrlEncode($password), [System.Net.WebUtility]::UrlEncode($clientsecret)
+$graphtoken = Invoke-RestMethod $uri -Body $body -Method Post -ContentType "application/x-www-form-urlencoded" -ErrorAction SilentlyContinue | Select-object -ExpandProperty access_token
+
+$uri = "https://login.microsoftonline.com/{0}/oauth2/v2.0/token" -f $tenantid
+$body = "client_id={0}&scope=48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default&username={1}&password={2}&grant_type=password&client_secret={3}" -f $clientid, $username, [System.Net.WebUtility]::UrlEncode($password), [System.Net.WebUtility]::UrlEncode($clientsecret)
+$teamstoken = Invoke-RestMethod $uri -Body $body -Method Post -ContentType "application/x-www-form-urlencoded" -ErrorAction SilentlyContinue | Select-object -ExpandProperty access_token
 
 Connect-MicrosoftTeams -AccessTokens @($graphtoken, $teamstoken)
 
@@ -145,7 +164,6 @@ Accept wildcard characters: False
 
 ### -AccountId
 Specifies the ID of an account.
-You must specify the UPN of the user when authenticating with a user access token.
 
 ```yaml
 Type: String
@@ -158,19 +176,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationId
 Specifies the application ID of the service principal.
+
+> [!WARNING]
+>This parameter has been removed from the latest versions and replaced by the AccessTokens parameter.
 
 ```yaml
 Type: String
@@ -344,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Login using managed service identity in the current environment.
+Login using managed service identity in the current environment. This is currently not supported for *-Cs cmdlets. 
 
 ```yaml
 Type: SwitchParameter

@@ -20,9 +20,14 @@ This cmdlet will assign a phone number to a user or a resource account (online a
   
 ## SYNTAX
 
+### Assignment (Default)
 ```powershell
-Set-CsPhoneNumberAssignment [[-Identity] <String> [-PhoneNumber <String>] [-PhoneNumberType <String>] [-LocationId <String>] [-EnterpriseVoiceEnabled <Boolean>][<CommonParameters>]
+Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -LocationId <String> [<CommonParameters>]
+```
 
+### Attribute
+```powershell
+Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +53,19 @@ to the user user2@contoso.com.
 ```powershell
 Set-CsPhoneNumberAssignment -Identity user3@contoso.com -EnterpriseVoiceEnabled $true
 ```
-This example sets the EnterpriseVoiceEnabled flag on the user user2@contoso.com.
+This example sets the EnterpriseVoiceEnabled flag on the user user3@contoso.com.
+
+### Example 4
+```powershell
+Set-CsPhoneNumberAssignment -Identity user2@contoso.com -LocationId null -PhoneNumber +12065551224 -PhoneNumberType CallingPlan
+```
+This example removes the emergency location from the phone number for user user2@contoso.com.
+
+### Example 5
+```powershell
+Set-CsPhoneNumberAssignment -Identity cq1@contoso.com -PhoneNumber +14255551225 -PhoneNumberType DirectRouting
+```
+This example assigns the Direct Routing phone number +1 (425) 555-1225 to the resource account cq1@contoso.com.
 
 
 ## PARAMETERS
@@ -60,7 +77,7 @@ This parameter is mutual exclusive with PhoneNumber.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
+Parameter Sets: (Attribute)
 Aliases: 
 Applicable: Microsoft Teams
 
@@ -85,11 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-The Id of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation
+The Id of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. If you want to remove the location, use
+the string value null.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False
@@ -99,14 +117,14 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are not currently supporting
-Direct Routing numbers with extensions, but you can use the Set-CsUser cmdlet for this.
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are also supporting
+Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False
@@ -120,7 +138,7 @@ The type of phone number to assign to the user or resource account. The supporte
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False

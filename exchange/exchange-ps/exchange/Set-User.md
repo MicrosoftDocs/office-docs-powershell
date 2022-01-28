@@ -30,11 +30,13 @@ Set-User [-Identity] <UserIdParameter>
  [-CanHaveCloudCache <Boolean>]
  [-CertificateSubject <MultiValuedProperty>]
  [-City <String>]
+ [-ClearDataEncryptionPolicy]
  [-Company <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-CreateDTMFMap <Boolean>]
  [-Department <String>]
+ [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-Fax <String>]
@@ -280,6 +282,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClearDataEncryptionPolicy
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearDataEncryptionPolicy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Company
 The Company parameter specifies the user's company.
 
@@ -372,6 +392,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DesiredWorkloads
+This parameter is available only in the cloud-based service.
+
+{{ Fill DesiredWorkloads Description }}
+
+```yaml
+Type: Microsoft.Exchange.Data.MailboxWorkloadFlags
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the user. The display name is visible in the Exchange admin center and in Active Directory. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -441,7 +479,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -494,9 +534,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

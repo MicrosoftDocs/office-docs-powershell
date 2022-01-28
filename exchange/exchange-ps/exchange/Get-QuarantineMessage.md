@@ -44,6 +44,7 @@ Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
  [-PolicyTypes <QuarantinePolicyTypeEnum[]>]
  [-QuarantineTypes <QuarantineMessageTypeEnum[]>]
  [-RecipientAddress <String[]>]
+ [-ReleaseStatus <ReleaseStatus[]>]
  [-Reported <Boolean>]
  [-SenderAddress <String[]>]
  [-StartExpiresDate <DateTime>]
@@ -248,7 +249,11 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{ Fill PolicyName Description }}
+The PolicyName parameter filters the results by the protection policy that quarantined the message (for example, the anti-malware policy). You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: String
@@ -264,7 +269,15 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyTypes
-{{ Fill PolicyTypes Description }}
+The PolicyTypes parameter filters the results by the type of protection policy that quarantined the message. Valid values are:
+
+- AntiMalwarePolicy
+- AntiPhishPolicy
+- ExchangeTransportRule (mail flow rule)
+- HostedContentFilterPolicy (anti-spam policy)
+- SafeAttachmentPolicy
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: QuarantinePolicyTypeEnum[]
@@ -315,6 +328,30 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 ```yaml
 Type: String[]
 Parameter Sets: All
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReleaseStatus
+The ReleaseStatus parameter filters the results by the release status of the message. Valid values are:
+
+- Approved
+- Denied
+- NotReleased
+- Released
+- Requested
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: ReleaseStatus[]
+Parameter Sets: Summary
 Aliases:
 Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 

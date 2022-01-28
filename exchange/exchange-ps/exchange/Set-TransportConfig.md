@@ -25,6 +25,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-AddressBookPolicyRoutingEnabled <Boolean>]
  [-AgentGeneratedMessageLoopDetectionInSmtpEnabled <Boolean>]
  [-AgentGeneratedMessageLoopDetectionInSubmissionEnabled <Boolean>]
+ [-AllowLegacyTLSClients <System.Boolean>]
  [-ClearCategories <Boolean>]
  [-Confirm]
  [-ConvertDisclaimerWrapperToEml <Boolean>]
@@ -62,6 +63,10 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxSendSize <Unlimited>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
  [-RejectMessageOnShadowFailure <Boolean>]
+ [-ReplyAllStormBlockDurationHours <Int32>]
+ [-ReplyAllStormDetectionMinimumRecipients <Int32>]
+ [-ReplyAllStormDetectionMinimumReplies <Int32>]
+ [-ReplyAllStormProtectionEnabled <Boolean>]
  [-Rfc2231EncodingEnabled <Boolean>]
  [-SafetyNetHoldTime <EnhancedTimeSpan>]
  [-ShadowHeartbeatFrequency <EnhancedTimeSpan>]
@@ -178,6 +183,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyTLSClients
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowLegacyTLSClients Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -443,7 +466,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -972,6 +997,78 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormBlockDurationHours
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormBlockDurationHours Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormDetectionMinimumRecipients
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormDetectionMinimumRecipients Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormDetectionMinimumReplies
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormDetectionMinimumReplies Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormProtectionEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormProtectionEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

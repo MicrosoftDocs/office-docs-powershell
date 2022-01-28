@@ -168,6 +168,7 @@ New-TransportRule [-Name] <String>
  [-RemoveHeader <HeaderName>]
  [-RemoveOME <Boolean>]
  [-RemoveOMEv2 <Boolean>]
+ [-RemoveRMSAttachmentEncryption <Boolean>]
  [-RouteMessageOutboundConnector <OutboundConnectorIdParameter>]
  [-RouteMessageOutboundRequireTls <Boolean>]
  [-RuleErrorAction <RuleErrorAction>]
@@ -3717,6 +3718,8 @@ For all values except NotifyOnly, you can specify an enhanced status code and a 
 
 If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
 
+This action is applicable to messages sent by internal users only. External senders will not receive notifications.
+
 ```yaml
 Type: NotifySenderType
 Parameter Sets: (All)
@@ -4145,6 +4148,26 @@ The RemoveOMEv2 parameter specifies an action that removes Office 365 Message En
 
 - $true: The message and attachments are decrypted.
 - $false: The message and attachments aren't decrypted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveRMSAttachmentEncryption
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+{{ Fill RemoveRMSAttachmentEncryption Description }}
 
 ```yaml
 Type: Boolean

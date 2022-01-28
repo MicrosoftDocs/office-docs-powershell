@@ -45,14 +45,18 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-ImpersonationProtectionState <ImpersonationProtectionState>]
  [-MailboxIntelligenceProtectionAction <ImpersonationAction>]
  [-MailboxIntelligenceProtectionActionRecipients <MultiValuedProperty>]
+ [-MailboxIntelligenceQuarantineTag <String>]
  [-MakeDefault]
  [-PhishThresholdLevel <Int32>]
  [-PolicyTag <String>]
+ [-SpoofQuarantineTag <String>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
  [-TargetedDomainProtectionAction <ImpersonationAction>]
+ [-TargetedDomainQuarantineTag <String>]
  [-TargetedDomainsToProtect <MultiValuedProperty>]
  [-TargetedUserActionRecipients <MultiValuedProperty>]
  [-TargetedUserProtectionAction <ImpersonationAction>]
+ [-TargetedUserQuarantineTag <String>]
  [-TargetedUsersToProtect <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
@@ -247,7 +251,7 @@ Accept wildcard characters: False
 ### -EnableOrganizationDomainsProtection
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Microsoft 365 organization. Valid values are:
+The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Microsoft 365 organization. Valid values are:
 
 - $true: Domain impersonation protection is enabled for all registered domains in the Microsoft 365 organization.
 - $false: Domain impersonation protection isn't enabled for all registered domains in the Microsoft 365 organization. This is the default value. You can enable protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
@@ -268,7 +272,7 @@ Accept wildcard characters: False
 ### -EnableSimilarDomainsSafetyTips
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableSimilarDomainsSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for domain impersonation detections. Valid values are:
+The EnableSimilarDomainsSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for domain impersonation detections. Valid values are:
 
 - $true: Safety tips for similar domains are enabled.
 - $false: Safety tips for similar domains are disabled. This is the default value.
@@ -289,7 +293,7 @@ Accept wildcard characters: False
 ### -EnableSimilarUsersSafetyTips
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableSimilarUsersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for user impersonation detections. Valid values are:
+The EnableSimilarUsersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for user impersonation detections. Valid values are:
 
 - $true: Safety tips for similar users are enabled.
 - $false: Safety tips for similar users are disabled. This is the default value.
@@ -331,7 +335,7 @@ Accept wildcard characters: False
 ### -EnableTargetedDomainsProtection
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableTargetedDomainsProtection parameter specifies whether to enable domain impersonation protection for a list of specified domains. Valid values are:
+The EnableTargetedDomainsProtection parameter specifies whether to enable domain impersonation protection for a list of specified domains. Valid values are:
 
 - $true: Domain impersonation protection is enabled for the domains specified by the TargetedDomainsToProtect parameter.
 - $false: The TargetedDomainsToProtect parameter isn't used. This is the default value.
@@ -352,7 +356,7 @@ Accept wildcard characters: False
 ### -EnableTargetedUserProtection
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableTargetedUserProtection parameter specifies whether to enable user impersonation protection for a list of specified users. Valid values are:
+The EnableTargetedUserProtection parameter specifies whether to enable user impersonation protection for a list of specified users. Valid values are:
 
 - $true: User impersonation protection is enabled for the users specified by the TargetedUsersToProtect parameter.
 - $false: The TargetedUsersToProtect parameter isn't used. This is the default value.
@@ -373,7 +377,7 @@ Accept wildcard characters: False
 ### -EnableUnauthenticatedSender
 This setting is part of spoof protection.
 
-The EnableUnauthenticatedSender parameter enables or disables unauthenticated sender identification in Outlook. Valid values are:
+The EnableUnauthenticatedSender parameter enables or disables unauthenticated sender identification in Outlook. Valid values are:
 
 - $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication.
 - $false: A question mark is never applied to the sender's photo.
@@ -399,7 +403,7 @@ Accept wildcard characters: False
 ### -EnableUnusualCharactersSafetyTips
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The EnableUnusualCharactersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for unusual characters in domain and user impersonation detections. Valid values are:
+The EnableUnusualCharactersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for unusual characters in domain and user impersonation detections. Valid values are:
 
 - $true: Safety tips for unusual characters are enabled.
 - $false: Safety tips for unusual characters are disabled. This is the default value.
@@ -420,7 +424,7 @@ Accept wildcard characters: False
 ### -EnableViaTag
 This setting is part of spoof protection.
 
-The EnableViaTag parameter enables or disables adding the via tag to the From address in Outlook (chris@contso.com via fabrikam.com). Valid values are:
+The EnableViaTag parameter enables or disables adding the via tag to the From address in Outlook (chris@contso.com via fabrikam.com). Valid values are:
 
 - $true: The via tag is added to the From address (the message sender that's displayed in email clients) if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address. This is the default value.
 - $false: The via tag is not added to the From address.
@@ -446,7 +450,7 @@ Accept wildcard characters: False
 ### -ExcludedDomains
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The ExcludedDomains parameter specifies an exception for impersonation protection that looks for the specified domains in the message sender. You can specify multiple domains separated by commas.
+The ExcludedDomains parameter specifies an exception for impersonation protection that looks for the specified domains in the message sender. You can specify multiple domains separated by commas.
 
 The maximum number of entries is approximately 1000.
 
@@ -466,7 +470,7 @@ Accept wildcard characters: False
 ### -ExcludedSenders
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The ExcludedSenders parameter specifies an exception for impersonation protection that looks for the specified message sender. You can specify multiple email addresses separated by commas.
+The ExcludedSenders parameter specifies an exception for impersonation protection that looks for the specified message sender. You can specify multiple email addresses separated by commas.
 
 The maximum number of entries is approximately 1000.
 
@@ -515,7 +519,7 @@ The MailboxIntelligenceProtectionAction parameter specifies what to do with mess
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
-- Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
+- Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
 
 This parameter is meaningful only if the EnableMailboxIntelligence and EnableMailboxIntelligenceProtection parameters are set to the value $true.
 
@@ -535,7 +539,7 @@ Accept wildcard characters: False
 ### -MailboxIntelligenceProtectionActionRecipients
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The MailboxIntelligenceProtectionActionRecipients parameter specifies the recipients to add to detected messages when the MailboxIntelligenceProtectionAction parameter is set to the value Redirect or BccMessage.
+The MailboxIntelligenceProtectionActionRecipients parameter specifies the recipients to add to detected messages when the MailboxIntelligenceProtectionAction parameter is set to the value Redirect or BccMessage.
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
 
@@ -552,8 +556,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailboxIntelligenceQuarantineTag
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+
+The MailboxIntelligenceQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by mailbox intelligence (the MailboxIntelligenceProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MakeDefault
-The MakeDefault switch makes the specified antiphish policy the default antiphish policy. You don't have to specify a value with this switch.
+The MakeDefault switch makes this antiphish policy the default antiphish policy. You don't need to specify a value with this switch.
 
 The default antiphish policy is applied to everyone (no corresponding antiphish rule), can't be renamed, and has the unmodifiable priority value Lowest (the default policy is always applied last).
 
@@ -609,10 +637,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SpoofQuarantineTag
+The SpoofQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by spoof intelligence (the AuthenticationFailAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TargetedDomainActionRecipients
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The TargetedDomainActionRecipients parameter specifies the recipients to add to detected domain impersonation messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
+The TargetedDomainActionRecipients parameter specifies the recipients to add to detected domain impersonation messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
 
@@ -632,17 +682,41 @@ Accept wildcard characters: False
 ### -TargetedDomainProtectionAction
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
+The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
 
 - NoAction: This is the default value.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
-- Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
+- Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetedDomainQuarantineTag
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+
+The TargetedDomainQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by domain impersonation protection (the TargetedDomainProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -677,7 +751,7 @@ Accept wildcard characters: False
 ### -TargetedUserActionRecipients
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected user impersonation messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
+The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected user impersonation messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
 
@@ -697,17 +771,41 @@ Accept wildcard characters: False
 ### -TargetedUserProtectionAction
 This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
 
-The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages. You specify the protected users in the TargetedUsersToProtect parameter. Valid values are:
+The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages. You specify the protected users in the TargetedUsersToProtect parameter. Valid values are:
 
 - NoAction: This is the default value.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
-- Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
+- Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetedUserQuarantineTag
+This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+
+The TargetedUserQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by user impersonation protection (the TargetedUserProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -728,7 +826,7 @@ This parameter uses the syntax: "DisplayName;EmailAddress".
 
 - DisplayName specifies the display name of the user that could be a target of impersonation. This value can contain special characters.
 - EmailAddress specifies the internal or external email address that's associated with the display name.
-- You can specify multiple values by using the syntax: "DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN". The combination of DisplayName and EmailAddress needs to be unique for each value.
+- You can specify multiple values by using the syntax: "DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN". The combination of DisplayName and EmailAddress needs to be unique for each value.
 
 ```yaml
 Type: MultiValuedProperty

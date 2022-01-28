@@ -54,7 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-HybridConfiguration
 ```
 
-This example creates the hybrid configuration Hybrid Configuration with the default hybrid configuration settings.
+This example creates the hybrid configuration named Hybrid Configuration with the default hybrid configuration settings.
 
 ## PARAMETERS
 

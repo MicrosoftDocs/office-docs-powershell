@@ -199,7 +199,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsExcludedFromInitialProvisioning
-The IsExcludedFromInitialProvisioning parameter specifies that this database is temporarily not considered by the mailbox provisioning load balancer. If the IsExcludedFromInitialProvisioning parameter is enabled, new mailboxes aren't added automatically to this database.
+The IsExcludedFromInitialProvisioning switch specifies that this database is temporarily not considered by the mailbox provisioning load balancer. You don't need to specify a value with this switch.
+
+If you use this switch, new mailboxes aren't added automatically to this database.
 
 ```yaml
 Type: SwitchParameter
