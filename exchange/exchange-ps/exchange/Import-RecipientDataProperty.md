@@ -83,9 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the location and file name of the picture or audio file.
+The FileData parameter specifies the location and file name of the picture or spoken name file.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+A valid picture file is JPEG and less than 10 kilobytes (KB).
+
+A valid spoken name file is WMA 9 and less than 32 KB.
 
 ```yaml
 Type: Byte[]
@@ -138,9 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -Picture
-The Picture switch specifies that the file you're importing is a picture file. You don't need to specify a value with this switch.
+The Picture switch specifies that you're importing a picture file. You don't need to specify a value with this switch.
 
-The picture must be a JPEG file and shouldn't be larger than 10 kilobytes (KB). You can't use this switch with the SpokenName switch. You can only import one file type at a time.
+You can't use this switch with the SpokenName switch.
 
 ```yaml
 Type: SwitchParameter
@@ -156,14 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -SpokenName
-The SpokenName switch specifies that the file you're importing is an audio file. You don't need to specify a value with this switch.
+The SpokenName switch specifies that you're importing a spoken name (audio) file. You don't need to specify a value with this switch.
 
-The maximum file size should be less than 32 KB. You can use one of the following formats:
-
-- WMA 9-voice
-- PCM 8-KHz, 16-bits, mono format
-
-You can't use this switch with the Picture switch. You can only import one file type at a time.
+You can't use this switch with the Picture switch.
 
 ```yaml
 Type: SwitchParameter
