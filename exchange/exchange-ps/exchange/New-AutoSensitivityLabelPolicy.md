@@ -317,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverwriteLabel
-The OverwriteLabel parameter parameter specifies whether to overwrite a manual label. Valid values are:
+The OverwriteLabel parameter specifies whether to overwrite a manual label. Valid values are:
 
 - $true: Overwrite the manual label.
 - $false: Don't overwrite the manual label. This is the default value.
