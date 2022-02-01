@@ -241,7 +241,7 @@ The below updates are applicable for TeamsOnly customers using Microsoft Teams P
   - AssignedPlan eq "*MCO" or "MCO*" or "*MCO*" for contains checks
  
 - EnterpriseVoiceEnabled filter
-  - EnterpriseVoiceEnabled eq true / false
+  - New format supported is as follows "EnterpriseVoiceEnabled eq true / false"
 
 *Format changes in filter operators/syntax*
 Below operators have changed in format:
@@ -252,8 +252,9 @@ Below operators have changed in format:
 - "-lt" replaced with "lt"
 - "-gt" replaced with "gt"
 - "-like" and "-contains" no longer supported, now replaced with "startswith" (limited to string attributes)
+- Using asterisk ( * ) wildcard character to fetch results starting/ending with specific characters is now limited to AssignedPlans
 
-Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts
+Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts.
 
 - Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
 - New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
@@ -441,10 +442,6 @@ Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3
 Indicates the Identity of the user account to be retrieved.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
-You can use the asterisk ( * ) wildcard character when using the Display Name as the user Identity.
-For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith". 
-
-Note that in Microsoft Teams PowerShell Version 2.5.1, using this parameter will cause the Get-CsOnlineUser command to no longer emit deprecated properties as part of the modernization effort.
 
 ```yaml
 Type: UserIdParameter
