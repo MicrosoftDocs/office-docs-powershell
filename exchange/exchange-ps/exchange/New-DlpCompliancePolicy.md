@@ -24,6 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
+ [-PowerBIDlpLocation <MultiValuedProperty>]
+ [-PowerBIDlpLocationException <MultiValuedProperty>]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -113,6 +115,41 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -PowerBIDlpLocation
+The PowerBIDlpLocation parameter specifies the Power BI worksapce IDs to include in the DLP policy.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PowerBIDlpLocationException
+The PowerBIDlpLocationException parameter specifies the the Power BI worksapce IDs to exclude when you use the value All for the PowerBIDlpLocation parameter.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
