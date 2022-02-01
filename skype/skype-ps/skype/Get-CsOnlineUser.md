@@ -18,9 +18,19 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 ## SYNTAX
 
 ```
-Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicationServer] [-OnModernServer]
- [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [-DomainController <Fqdn>]
- [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <>] [<CommonParameters>]
+Get-CsOnlineUser 
+[-Filter <String>] 
+[-LdapFilter <String>] 
+[-OnOfficeCommunicationServer] 
+[-OnModernServer]
+[-UnassignedUser] 
+[-SkipUserPolicies] 
+[-OU <OUIdParameter>] 
+[-DomainController <Fqdn>]
+[-Credential <PSCredential>] 
+[[-Identity] <UserIdParameter>] 
+[-ResultSize <>] 
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +43,7 @@ Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that m
 
 However, if you have multiple you can return users from a specified tenant by using the Filter parameter and a command similar to this:
 
-`Get-CsOnlineUser -Filter {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}`
+`Get-CsOnlineUser -Filter "TenantId eq "bf19b7db-6960-41e5-a139-2aa373474354""`
 
 That command will limit the returned data to user accounts belong to the tenant with the TenantId "bf19b7db-6960-41e5-a139-2aa373474354".
 If you do not know your tenant IDs you can return that information by using this command:
@@ -44,16 +54,16 @@ If you have a hybrid or "split domain" deployment (that is, a deployment in whic
 However, the cmdlet will return information for both online users and on-premises users.
 If you want to exclude Skype for Business Online users from the data returned by the Get-CsUser cmdlet, use the following command:
 
-`Get-CsUser -Filter {TenantId -eq "00000000-0000-0000-0000-000000000000"}`
+`Get-CsUser -Filter "TenantId eq "00000000-0000-0000-0000-000000000000""`
 
 By definition, users homed on the on-premises version will always have a TenantId equal to 00000000-0000-0000-0000-000000000000.
 Users homed on Skype for Business Online will a TenantId that is equal to some value other than 00000000-0000-0000-0000-000000000000.
 
 **Note:**
 
-Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+The below updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 onwards
 
-*Deprecated Attributes* - Theses are no longer relevant to Teams
+*Deprecated Attributes* - Theses are no longer relevant to Teams and will not be displayed in this commandlet's output.
 
 - AcpInfo
 - AdminDescription
@@ -165,30 +175,99 @@ Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates ar
 - Phone
 - WindowsEmailAddress*
 
+*Supported filters* - Filtering has been limited to the below attributes
+
+- accountEnabled
+- ownerUrn
+- displayName
+- givenName
+- lineUri
+- userPrincipalName
+- ExternalAccessPolicy
+- OnlineDialOutPolicy
+- OnlineVoiceRoutingPolicy
+- TeamsMeetingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMessagingPolicy
+- TeamsCallParkPolicy
+- TeamsEmergencyCallingPolicy
+- TeamsEmergencyCallRoutingPolicy
+- TeamsChannelsPolicy
+- TeamsUpdateManagementPolicy
+- TeamsCallingPolicy
+- TeamsUpgradePolicy
+- TeamsUpgradeOverridePolicy
+- TeamsAppSetupPolicy
+- TeamsAppPermissionPolicy
+- TeamsVerticalPackagePolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsCallHoldPolicy
+- TenantDialPlan
+- OnlineVoicemailPolicy
+- OnlineAudioConferencingRoutingPolicy
+- TeamsAudioConferencingPolicy
+- TeamsVdiPolicy
+- TeamsFeedbackPolicy
+- TeamsIPPhonePolicy
+- TeamsShiftsAppPolicy
+- TeamsShiftsPolicy
+- TeamsTargetingPolicy
+- TeamsTemplatePermissionPolicy
+- TeamsSyntheticAutomatedCallPolicy
+- TeamsMobilityPolicy
+- TeamsCortanaPolicy
+- TeamsMeetingBrandingPolicy
+- TeamsNotificationAndFeedsPolicy
+- TeamsVideoInteropServicePolicy
+- TeamsEducationAssignmentsAppPolicy
+- TeamsComplianceRecordingPolicy
+- AssignedPlan
+- EnterpriseVoiceEnabled
+- Identity
+- department
+- UserDirSyncEnabled
+- Title
+- CountryAbbreviation
+- UsageLocation
+
 *Attributes renamed/replaced:*
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
 - MCOValidationErrors renamed to UserValidationErrors
 - OnPremSIPEnabled renamed to OnPremIsSipEnabled
 
-*New User Attributes*
-
-FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed).
-
-*Deprecated parameters*
-
-LdapFilter has been deprecated due to low usage.
-
 *Changes in "-Filter" parameter*
-- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan eq '<some-xml-string>'` will stop working. This will need to be modified to one of the below formats:
-  - AssignedPlans eq 'MCOEV' - For exact match
-  - AssignedPlans eq '*MCO*' - for contains checks.
+- Assigned Plan filter: Previous format will no longer be supported. Existing filters like `AssignedPlan eq '<some-xml-string>'` will stop working. This will need to be modified to the below format:
+  - AssignedPlan eq "*MCO" or "MCO*" or "*MCO*" for contains checks
  
 - EnterpriseVoiceEnabled filter
   - EnterpriseVoiceEnabled eq true / false
 
+*Format changes in filter operators/syntax*
+Below operators have changed in format:
+- "-eq" now replaced with "eq", 
+- "-ne" replaced with "ne"
+- "-and" replaced with "and"
+- "-or" replaced with "or"
+- "-lt" replaced with "lt"
+- "-gt" replaced with "gt"
+- "-like" and "-contains" no longer supported, now replaced with "startswith" (limited to string attributes)
 
-## EXAMPLES
+Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts
+
+- Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
+- New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
+
+*Deprecated input parameters*
+
+LdapFilter has been deprecated due to low usage.
+
+*New User Attributes*
+
+FeatureTypes is now available to filter on – Array of unique strings specifying what features are enabled for a user (plan not displayed).
+
+
+## EXAMPLES - Relevant for TPM 3.0.0 and above
 
 ### -------------------------- Example 1 --------------------------
 ```
@@ -206,30 +285,14 @@ In Example 2 information is returned for a single online user: the user with the
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-CsOnlineUser -Filter {ArchivingPolicy -eq "RedmondArchiving"}
+Get-CsOnlineUser -Filter "AccountEnabled eq "Disabled""
 ```
 
-Example 3 uses the Filter parameter to limit the returned data to online users who have been assigned the per-user archiving policy RedmondArchiving.
-To do this, the filter value {ArchivingPolicy -eq "RedmondArchiving"} is employed; that syntax limits returned data to users where the ArchivingPolicy property is equal to (-eq) "RedmondArchiving".
+Example 3 uses the Filter parameter to limit the returned data for users who have their accounts disabled.
+
+
 
 ### -------------------------- Example 4 --------------------------
-```
-Get-CsOnlineUser -Filter {HideFromAddressLists -eq $True}
-```
-
-Example 4 returns information only for user accounts that have been configured so that the account does not appear in Microsoft Exchange address lists.
-(That is, the Active Directory attribute msExchHideFromAddressLists is True.) To carry out this task, the Filter parameter is included along with the filter value {HideFromAddressLists -eq $True}.
-
-### -------------------------- Example 5 --------------------------
-```
-Get-CsOnlineUser -Filter {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}
-```
-
-The command shown in Example 5 returns information for all the online users assigned to the tenant with the TenantID "bf19b7db-6960-41e5-a139-2aa373474354".
-To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
-This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
-
-### -------------------------- Example 6 --------------------------
 ```
 PS C:\> $MeetingPolicy="Kiosk"
 PS C:\> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
@@ -296,6 +359,83 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+*Changes in "-Filter" parameter in Teams PowerShell version 3.0.0 and above*
+- Assigned Plan filter: Previous format will no longer be supported. Existing filters like `AssignedPlan eq '<some-xml-string>'` will stop working. This will need to be modified to the below format:
+  - AssignedPlan eq "*MCO" or "MCO*" or "*MCO*" for contains checks
+ 
+- EnterpriseVoiceEnabled filter
+  - EnterpriseVoiceEnabled eq true / false
+
+*Format changes in filter operators/syntax in Teams PowerShell version 3.0.0 and above*
+Below operators have changed in format:
+- "-eq" now replaced with "eq", 
+- "-ne" replaced with "ne"
+- "-and" replaced with "and"
+- "-or" replaced with "or"
+- "-lt" replaced with "lt"
+- "-gt" replaced with "gt"
+- "-like" and "-contains" no longer supported, now replaced with "startswith" (limited to string attributes)
+
+Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts
+
+- Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
+- New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
+
+*Supported filters in Teams PowerShell version 3.0.0 and above* - Filtering has been limited to the below attributes
+
+- accountEnabled
+- ownerUrn
+- displayName
+- givenName
+- lineUri
+- userPrincipalName
+- ExternalAccessPolicy
+- OnlineDialOutPolicy
+- OnlineVoiceRoutingPolicy
+- TeamsMeetingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMessagingPolicy
+- TeamsCallParkPolicy
+- TeamsEmergencyCallingPolicy
+- TeamsEmergencyCallRoutingPolicy
+- TeamsChannelsPolicy
+- TeamsUpdateManagementPolicy
+- TeamsCallingPolicy
+- TeamsUpgradePolicy
+- TeamsUpgradeOverridePolicy
+- TeamsAppSetupPolicy
+- TeamsAppPermissionPolicy
+- TeamsVerticalPackagePolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsCallHoldPolicy
+- TenantDialPlan
+- OnlineVoicemailPolicy
+- OnlineAudioConferencingRoutingPolicy
+- TeamsAudioConferencingPolicy
+- TeamsVdiPolicy
+- TeamsFeedbackPolicy
+- TeamsIPPhonePolicy
+- TeamsShiftsAppPolicy
+- TeamsShiftsPolicy
+- TeamsTargetingPolicy
+- TeamsTemplatePermissionPolicy
+- TeamsSyntheticAutomatedCallPolicy
+- TeamsMobilityPolicy
+- TeamsCortanaPolicy
+- TeamsMeetingBrandingPolicy
+- TeamsNotificationAndFeedsPolicy
+- TeamsVideoInteropServicePolicy
+- TeamsEducationAssignmentsAppPolicy
+- TeamsComplianceRecordingPolicy
+- AssignedPlan
+- EnterpriseVoiceEnabled
+- Identity
+- department
+- UserDirSyncEnabled
+- Title
+- CountryAbbreviation
+- UsageLocation
 
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
@@ -465,13 +605,126 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.OCSADUser or String
-A String must represent a valid user account Identity (for example, "sip:kenmyer@litwareinc.com").
+Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts
+
+- Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
+- New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
 
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.ADOCOnlineUser
+*Deprecated Attributes* - Theses are no longer relevant to Teams and will not be displayed in this commandlet's output.
+
+- AcpInfo
+- AdminDescription
+- ArchivingPolicy
+- AudioVideoDisabled
+- BaseSimpleUrl
+- BroadcastMeetingPolicy
+- CallViaWorkPolicy
+- ClientPolicy
+- ClientUpdateOverridePolicy
+- ClientVersionPolicy
+- CloudMeetingOpsPolicy
+- CloudMeetingPolicy
+- CloudVideoInteropPolicy
+- ContactOptionFlags
+- CountryOrRegionDisplayName
+- Description
+- DistinguishedName
+- EnabledForRichPresence
+- ExchangeArchivingPolicy
+- ExchUserHoldPolicies
+- ExperiencePolicy
+- ExternalUserCommunicationPolicy
+- ExUmEnabled
+- Guid
+- HomeServer
+- HostedVoicemailPolicy
+- IPPBXSoftPhoneRoutingEnabled
+- IPPhone
+- IPPhonePolicy
+- IsByPassValidation
+- IsValid
+- LegalInterceptPolicy
+- LicenseRemovalTimestamp
+- LineServerURI
+- Manager
+- MNCReady
+- Name
+- NonPrimaryResource
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OnPremHideFromAddressLists
+- OriginalPreferredDataLocation
+- OriginatingServer
+- OriginatorSid
+- OverridePreferredDataLocation
+- PendingDeletion
+- PrivateLine
+- ProvisioningCounter
+- ProvisioningStamp
+- PublishingCounter
+- PublishingStamp
+- Puid
+- RemoteCallControlTelephonyEnabled
+- RemoteMachine
+- SamAccountName
+- ServiceInfo
+- StsRefreshTokensValidFrom
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SubProvisionLineType
+- SyncingCounter
+- TargetRegistrarPool
+- TargetServerIfMoving
+- TeamsInteropPolicy
+- ThumbnailPhoto
+- UpgradeRetryCounter
+- UserAccountControl
+- UserProvisionType
+- UserRoutingGroupId
+- VoicePolicy
+- XForestMovePolicy
+- AddressBookPolicy
+- GraphPolicy
+- PinPolicy
+- PreferredDataLocationOverwritePolicy
+- PresencePolicy
+- SmsServicePolicy
+- TeamsVoiceRoute
+- ThirdPartyVideoSystemPolicy
+- UserServicesPolicy
+- ConferencingPolicy
+- Id
+- Identity
+- MobilityPolicy
+- OnlineDialinConferencingPolicy
+- Sid
+- TeamsWorkLoadPolicy
+- VoiceRoutingPolicy
+- ClientUpdatePolicy
+- HomePhone
+- HostedVoiceMail
+- MobilePhone
+- OtherTelephone
+- StreetAddress
+- WebPage
+- AssignedLicenses
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- LicenseAssignmentStates
+- OnPremDomainName
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- CallerIdPolicy
+- Fax
+- LastName
+- Office
+- Phone
+- WindowsEmailAddress*
+
 
 
 ## NOTES
