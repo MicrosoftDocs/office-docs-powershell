@@ -268,7 +268,8 @@ LdapFilter has been deprecated due to low usage.
 FeatureTypes is now available to filter on – Array of unique strings specifying what features are enabled for a user (plan not displayed).
 
 
-## EXAMPLES - Relevant for TPM 3.0.0 and above
+## EXAMPLES
+*The examples below are relevant exclusively for TPM 3.0.0 and above*
 
 ### -------------------------- Example 1 --------------------------
 ```
