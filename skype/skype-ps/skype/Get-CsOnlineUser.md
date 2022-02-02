@@ -345,9 +345,9 @@ Enables you to limit the returned data by filtering on specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
 The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
-For example, a filter that returns only users who have been enabled for Enterprise Voice would look like this, with EnterpriseVoiceEnabled representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
+For example, a filter that returns only users who have been enabled for Enterprise Voice would look like this, with EnterpriseVoiceEnabled representing the Active Directory attribute, eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
 
-`{EnterpriseVoiceEnabled -eq $True}`
+`{EnterpriseVoiceEnabled eq $True}`
 
 ```yaml
 Type: String
