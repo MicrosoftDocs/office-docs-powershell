@@ -14,7 +14,5 @@ ms.reviewer:
 
 ## SYNOPSIS
 > [!CAUTION]
-> This cmdlet has been deprecated and is no longer supported.
-> 
-> Please use [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md) cmdlet instead.
+> This cmdlet has been deprecated and is no longer supported. Use the [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md) cmdlet instead.
 
