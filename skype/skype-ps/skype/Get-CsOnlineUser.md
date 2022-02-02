@@ -18,19 +18,7 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 ## SYNTAX
 
 ```
-Get-CsOnlineUser 
-[-Filter <String>] 
-[-LdapFilter <String>] 
-[-OnOfficeCommunicationServer] 
-[-OnModernServer]
-[-UnassignedUser] 
-[-SkipUserPolicies] 
-[-OU <OUIdParameter>] 
-[-DomainController <Fqdn>]
-[-Credential <PSCredential>] 
-[[-Identity] <UserIdParameter>] 
-[-ResultSize <>] 
-[<CommonParameters>]
+Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicationServer] [-OnModernServer] [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,9 +49,9 @@ Users homed on Skype for Business Online will a TenantId that is equal to some v
 
 **Note:**
 
-The below updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 onwards
+The below updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 onwards.
 
-*Deprecated Attributes* - Theses are no longer relevant to Teams and will not be displayed in this commandlet's output.
+*Deprecated Attributes* - Theses are no longer relevant to Teams and will not be displayed in this cmdlet's output.
 
 - AcpInfo
 - AdminDescription
@@ -254,7 +242,7 @@ Below operators have changed in format:
 - "-like" and "-contains" no longer supported, now replaced with "startswith" (limited to string attributes)
 - Using asterisk ( * ) wildcard character to fetch results starting/ending with specific characters is now limited to AssignedPlans
 
-Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts.
+Using curly brackets "{" or "}" is not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts.
 
 - Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
 - New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
@@ -370,7 +358,7 @@ Accept wildcard characters: False
 
 *Format changes in filter operators/syntax in Teams PowerShell version 3.0.0 and above*
 Below operators have changed in format:
-- "-eq" now replaced with "eq", 
+- "-eq" now replaced with "eq"
 - "-ne" replaced with "ne"
 - "-and" replaced with "and"
 - "-or" replaced with "or"
@@ -599,17 +587,17 @@ Accept wildcard characters: False
  
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
+###   
 Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts
 
 - Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
 - New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
 
-
 ## OUTPUTS
 
+###   
 *Deprecated Attributes* - Theses are no longer relevant to Teams and will not be displayed in this commandlet's output.
 
 - AcpInfo
@@ -722,12 +710,8 @@ Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3
 - Phone
 - WindowsEmailAddress*
 
-
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Set-CsUser](Set-CsUser.md)
-
