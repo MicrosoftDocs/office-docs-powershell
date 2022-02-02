@@ -51,21 +51,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FQDN
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PhoneNumber
 The phone number to be tested.
 
