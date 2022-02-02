@@ -269,7 +269,7 @@ FeatureTypes is now available to filter on – Array of unique strings specifyin
 
 
 ## EXAMPLES
-*The examples below are relevant exclusively for TPM 3.0.0 and above*
+The examples below are relevant exclusively for TPM 3.0.0 and above
 
 ### -------------------------- Example 1 --------------------------
 ```
