@@ -374,7 +374,8 @@ This example is the same as Example 8, but the TimeZone parameter is also used. 
 ```powershell
 $MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint
 $OnboardingBatch = New-MigrationBatch -SourceEndpoint $MigrationEndpointGmail.Identity -Name GmailBatch1 -CSVData $([System.IO.File]::ReadAll
-Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -IncludeFolders "Payment"
+Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -Inc
+ludeFolders "Payment"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
