@@ -279,7 +279,7 @@ Example 3 uses the Filter parameter to limit the returned data for users who hav
 ### -------------------------- Example 4 --------------------------
 ```
 PS C:\> $MeetingPolicy="Kiosk"
-PS C:\> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
+PS C:\> $filterString = 'TeamsMeetingPolicy eq "{0}"' -f $MeetingPolicy
 PS C:\> Get-CsOnlineUser -Filter $filterString
 ```
 
@@ -584,11 +584,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###   
-Using curly brackets "{" or "}" will not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts
 
-- Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
-- New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
 
 ## OUTPUTS
 
