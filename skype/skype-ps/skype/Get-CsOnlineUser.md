@@ -242,11 +242,6 @@ Below operators have changed in format:
 - "-like" and "-contains" no longer supported, now replaced with "startswith" (limited to string attributes)
 - Using asterisk ( * ) wildcard character to fetch results starting/ending with specific characters is now limited to AssignedPlans
 
-Using curly brackets "{" or "}" is not supported in Teams PowerShell version 3.0.0 and above. Please make appropriate changes to your scripts.
-
-- Old syntax example: Get-csonlineuser -Filter {alias -eq 'name'}
-- New syntax example: Get-csonlineuser -Filter "alias eq 'name'"
-
 *Deprecated input parameters*
 
 LdapFilter has been deprecated due to low usage.
