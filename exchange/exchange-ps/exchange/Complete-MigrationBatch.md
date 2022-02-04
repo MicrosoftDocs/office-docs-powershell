@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ### -CompletePublicFolderMigrationWithDataLoss
 This parameter is available only in the cloud-based service.
 
-{{ Fill CompletePublicFolderMigrationWithDataLoss Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
