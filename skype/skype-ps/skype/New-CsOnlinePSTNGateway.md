@@ -19,7 +19,7 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 
 ```
 New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Description <String>] [-Fqdn <String>] [-SipSignalingPort <Int32>]
- [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverResponseCodes <String>] [-FailoverTimeSeconds <Int32>]
+ [-ExcludedCodecs <String>] [-FailoverResponseCodes <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
  [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
  [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-GatewayLbrEnabledUserOverride <Boolean>] [-BypassMode <String>]  
@@ -48,21 +48,6 @@ PS C:\> New-CsOnlinePSTNGateway -FQDN sbc.contoso.com -SIPSignalingPort 5061 -Fo
 This example creates an SBC with FQDN sbc.contoso.com and signaling port 5061. For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator sets the identity of the caller as "Anonymous" or a general number of the company, but for billing purposes the real identity of the user is required.
 
 ## PARAMETERS
-
-### -CodecPriority
-Allows choice of codec priority when media is negotiated between Media Proxy and SBC. Default priority is ("SILKWB,SILKNB,PCMU,PCMA").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: ("SILKWB,SILKNB,PCMU,PCMA")
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -417,7 +402,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutbundTeamsNumberTranslationRulesList
+### -OutbundTeamsNumberTranslationRules
 Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
 
 ```yaml
@@ -431,7 +416,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutboundPSTNNumberTranslationRulesList
+### -OutboundPSTNNumberTranslationRules
 Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
 
 ```yaml
