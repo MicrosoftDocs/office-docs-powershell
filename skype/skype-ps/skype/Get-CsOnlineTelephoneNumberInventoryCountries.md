@@ -15,6 +15,10 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumberInventoryCountries` cmdlet to retrieve a list of countries with telephone number inventories by specified region and telephone number inventory types.
 
+**Note**:
+
+As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no long be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://docs.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
+
 ## SYNTAX
 
 ```
