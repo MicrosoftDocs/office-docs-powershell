@@ -23,14 +23,14 @@ This cmdlet was introduced in Lync Server 2010.
 
 ### Identity (Default)
 ```
-Set-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+Set-CsVoiceNormalizationRule [-Description <String>] [-Pattern <String>]
  [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+Set-CsVoiceNormalizationRule [-Description <String>] [-Pattern <String>]
  [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -252,22 +252,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{Fill Tenant Description}}
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
