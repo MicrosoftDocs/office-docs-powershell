@@ -76,7 +76,7 @@ $Terms = $Dictionary.KeywordDictionary.split(',').trim()
 Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"
 $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"
 $Keywords = $UpdatedTerms -Join ", "
-$EncodedKeywords = [system.Text.Encoding]::Unicode.GetBytes($Keywords)
+$EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
 Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 
