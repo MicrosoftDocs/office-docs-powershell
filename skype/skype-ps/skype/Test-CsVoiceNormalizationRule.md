@@ -90,8 +90,8 @@ TranslatedNumber
 +12065551234
 ```
 
-For Microsoft Teams, this example gets all the normalization rules in the tenant dial plan DP1, shows the first of these rules and then test that rule on the
-dialed number 1234. The output shows that the rule normalize the dialed number to +12065551234
+For Microsoft Teams, this example gets all the normalization rules in the tenant dial plan DP1, shows the first of these rules, and then test that rule on the
+dialed number 1234. The output shows that the rule normalize the dialed number to +12065551234.
 
 
 ## PARAMETERS
