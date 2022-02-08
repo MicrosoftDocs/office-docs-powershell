@@ -101,7 +101,7 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 Version 2.0.6-Preview3 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
 
 - 250 additional remote PowerShell cmdlets that are backed by the REST API. These REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module). These REST API cmdlets also work just like their old remote PowerShell equivalent cmdlets, so you don't need to update any of your scripts.
-- The new _RPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _RPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
+- The new _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
 - A small number of existing mailbox remote PowerShell cmdlets have been updated with a new, experimental _UseCustomRoutingSwitch_ parameter. Using this switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRoutingSwitch_, you need to use the following values for identity of the mailbox:
     - User principal name (UPN)
