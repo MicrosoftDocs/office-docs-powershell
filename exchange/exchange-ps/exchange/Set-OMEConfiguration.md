@@ -50,7 +50,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image ([System.IO.File]::ReadAllBytes('C:\Temp\OME Logo.gif'))
 ```
 
-This example configures the specified values for the default OME configuration named "OME Configuration". Note the use of the Get-Content command to provide the input for the Image parameter.
+This example configures the specified values for the default OME configuration named "OME Configuration".
 
 ## PARAMETERS
 

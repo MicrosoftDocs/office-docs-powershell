@@ -61,7 +61,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MobileDevice -Mailbox "TonySmith"
+Get-MobileDevice -Mailbox "Tony Smith"
 ```
 
 This example returns all the mobile devices that Tony Smith has used that are associated with his mailbox.
@@ -75,12 +75,32 @@ This example returns a summary list of all mobile devices in the organization.
 
 ### Example 3
 ```powershell
-Get-MobileDevice -Identity lila\ExchangeActiveSyncDevices\Android§android94732903 | Format-List
+Get-MobileDevice -Identity Lila\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac | Format-List
 ```
 
 This example returns detailed information about the specified device on Lila's mailbox.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mobile device that you want to view. You can use the following values that uniquely identifies the mobile device:
+
+- Identity (`<Mailbox Name>\ExchangeActiveSyncDevices\<MobileDeviceObjectName>` for example, `CarlosM\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac`)
+- Distinguished name (DN)
+- GUID (same as ExchangeObjectId)
+
+```yaml
+Type: MobileDeviceIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Mailbox
 The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox. For example:
@@ -95,6 +115,8 @@ The Mailbox parameter filters the results by mailbox. You can use any value that
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxIdParameter
@@ -186,25 +208,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
-
-- GUID
-- DeviceID
-
-```yaml
-Type: MobileDeviceIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
