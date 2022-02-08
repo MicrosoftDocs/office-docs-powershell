@@ -47,7 +47,7 @@ For Lync or Skype for Business Server, rules that are created by using this cmdl
 You cannot create a normalization rule unless a dial plan with an Identity matching the scope specified in the normalization rule Identity already exists.
 For example, you can't create a normalization rule with the Identity site:Redmond/RedmondNormalizationRule unless a dial plan for site:Redmond already exists.
 
-For Microsoft Teams,  rules that are created by using this cmdlet can only be created with the InMemory switch and should be added to a tenant dial plan using 
+For Microsoft Teams, rules that are created by using this cmdlet can only be created with the InMemory switch and should be added to a tenant dial plan using 
 the `New-CsTenantDialPlan` or `Set-CsTenantDialPlan` cmdlets.
 
 
