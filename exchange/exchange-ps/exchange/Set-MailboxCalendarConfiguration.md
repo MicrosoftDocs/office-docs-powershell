@@ -604,7 +604,7 @@ This parameter is available only in the cloud-based service.
 
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Currently, this parameter sets the default value, so if the user has already directly interacted with this setting from an Outlook client, this default value will be ignored. Eventually, this parameter will override the user-configured setting.
 
-Setting this parameter enables the display of 'Add online meeting to all meetings' option in 'Calendar options' in Outlook for Windows for user to enable/disable it, if needed, when Team is being used for online meetings. It does not override the tenant setting configured via SetOrganizationConfig thru -OnlineMeetingsByDefaultEnabled parameter, as mentioned above, that can only be done by the user himself.
+Setting this parameter enables the display of the **Add online meeting to all meetings** option in **Calendar options** in Outlook for Windows. This allows users to enable or disable the option, if needed, when Teams is used for online meetings. It does not override the tenant setting configured via the SetOrganizationConfig thru -OnlineMeetingsByDefaultEnabled parameter, as mentioned previously, which can only be done by users themselves.
 
 Valid values are:
 
