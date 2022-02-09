@@ -18,7 +18,7 @@ This cmdlet tests the given number against the created (by using New-CsInboundBl
 ## SYNTAX
 
 ```
-Test-CsInboundBlockedNumberPattern -PhoneNumber <String> [-TenantId <Guid>] [-FQDN <String>] [-WhatIf]
+Test-CsInboundBlockedNumberPattern -PhoneNumber <String> [-TenantId <Guid>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

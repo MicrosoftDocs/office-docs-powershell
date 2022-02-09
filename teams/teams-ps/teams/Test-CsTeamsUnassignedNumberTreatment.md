@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-Ther phone number to be tested.
+The phone number to be tested.
 
 ```yaml
 Type: String
@@ -76,6 +76,7 @@ Required: False
 Position: Names
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
 ```
 
 ### -WhatIf
@@ -87,7 +88,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
-Required: AFalse
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
