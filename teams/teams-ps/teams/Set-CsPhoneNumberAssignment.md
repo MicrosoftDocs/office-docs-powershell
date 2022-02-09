@@ -31,7 +31,9 @@ Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean>
 ```
 
 ## DESCRIPTION
-This cmdlet assigns a phone number to a user or resource account.
+This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
+
+To remove a phone number from a user or resource account use the cmdlet [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
 
 ## EXAMPLES
 
@@ -66,6 +68,12 @@ This example removes the emergency location from the phone number for user user2
 Set-CsPhoneNumberAssignment -Identity cq1@contoso.com -PhoneNumber +14255551225 -PhoneNumberType DirectRouting
 ```
 This example assigns the Direct Routing phone number +1 (425) 555-1225 to the resource account cq1@contoso.com.
+
+### Example 6
+```powershell
+Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
+```
+This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=100 to the user user4@contoso.com.
 
 
 ## PARAMETERS
@@ -102,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-The Id of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. If you want to remove the location, use
+The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. If you want to remove the location, use
 the string value null.
 
 ```yaml
@@ -117,8 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. We are also supporting
-Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number should not have
+tel: prefixed. We are supporting Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
@@ -134,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumberType
-The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect.
+The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect. When you acquire a phone number
+you will know which type it is.
 
 ```yaml
 Type: System.String
@@ -160,6 +169,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 The cmdlet is available in Teams PS module 2.6.1-preview or later.
+
+If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone
+number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
+
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
