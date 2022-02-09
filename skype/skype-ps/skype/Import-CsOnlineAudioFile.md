@@ -50,6 +50,14 @@ $audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH
 
 This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/new-csteamscallholdpolicy) to provide the audio file id. 
 
+### -------------------------- Example 4 --------------------------
+```powershell
+$content = Get-Content "C:\Media\MOH.wav" -AsByteStream -ReadCount 0
+$audioFile = Import-CsOnlineAudioFile -ApplicationId 'TenantGlobal' -FileName 'MOH.wav' -Content $content
+```
+
+This example uses the `-AsByteStream` parameter instead of the `-Encoding byte` parameter. Requires PowerShell 6 and later versions, where `-Encoding byte` is no longer available. The example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md) to provide the audio file id. 
+
 
 ## PARAMETERS
 
