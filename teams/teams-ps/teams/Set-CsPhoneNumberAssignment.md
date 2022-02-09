@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number should not have
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
 tel: prefixed. We are supporting Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -PhoneNumberType
 The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect. When you acquire a phone number
-you will know which type it is.
+you will typically know which type it is.
 
 ```yaml
 Type: System.String
