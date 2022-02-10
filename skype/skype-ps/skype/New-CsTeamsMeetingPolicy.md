@@ -894,7 +894,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
-Controls the attendees who can attend a webinar meeting. The default is Everyone, meaning that everyone can register. If you want to restrict registration  to internal accounts set the value  to 'EveryoneInCompany'. 
+Controls the attendees who can attend a webinar meeting. The default is Everyone, meaning that everyone can register. If you want to restrict registration to internal accounts, set the value to 'EveryoneInCompany'. 
 
 Possible values:
 
