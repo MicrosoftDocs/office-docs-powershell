@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -PhoneNumber
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
-tel: prefixed. We are supporting Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
+"tel:" prefixed. We are supporting Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
@@ -173,7 +173,7 @@ The cmdlet is available in Teams PS module 2.6.1-preview or later.
 If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone
 number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
 
-The previous command for assigning phone numbers to users Set-CsUser has the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
+The previous command for assigning phone numbers to users Set-CsUser had the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
 necessary and that is why the parameter is not avaiable on Set-CsPhoneNumberAssignment.
 
 ## RELATED LINKS
