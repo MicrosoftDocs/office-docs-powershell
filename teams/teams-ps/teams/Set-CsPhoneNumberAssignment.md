@@ -173,6 +173,8 @@ The cmdlet is available in Teams PS module 2.6.1-preview or later.
 If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone
 number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
 
+The previous command for assigning phone numbers to users Set-CsUser has the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
+necessary and that is why the parameter is not avaiable on Set-CsPhoneNumberAssignment.
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
