@@ -28,7 +28,7 @@ The `New-CsAutoAttendantCallHandlingAssociation` cmdlet creates a new call handl
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-$tr = New-CsOnlineTimeRange -Start 09:00 -End 17:00
+$tr = New-CsOnlineTimeRange -Start 17:00 -End 09:00
 $schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr)
 $scheduleId = $schedule.Id
 
@@ -48,7 +48,7 @@ This example creates the following:
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$tr = New-CsOnlineTimeRange -Start 09:00 -End 17:00
+$tr = New-CsOnlineTimeRange -Start 17:00 -End 09:00
 $schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr)
 $scheduleId = $schedule.Id
 
