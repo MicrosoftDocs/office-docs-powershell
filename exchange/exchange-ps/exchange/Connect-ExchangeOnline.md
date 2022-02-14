@@ -374,6 +374,7 @@ Accept wildcard characters: False
 The CertificateThumbprint parameter specifies the certificate that's used for CBA. A valid value is the thumbprint value of the certificate. For example, `83213AEAC56D61C97AEE5C1528F4AC5EBA7321C1`.
 
 Don't use this parameter with the Certificate or CertificateFilePath parameters.
+**Note**: CertificateThumbprint paramete is only supported on Windows OS.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
 
