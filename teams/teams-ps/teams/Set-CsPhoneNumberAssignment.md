@@ -174,7 +174,8 @@ If a user or resource account has a phone number set in Active Directory on-prem
 number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
 
 The previous command for assigning phone numbers to users Set-CsUser had the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
-necessary and that is why the parameter is not avaiable on Set-CsPhoneNumberAssignment.
+necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
+
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
