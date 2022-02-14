@@ -67,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without prefixed "tel:".
+The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without the prefixed "tel:".
+
 
 ```yaml
 Type: System.String
