@@ -144,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumberType
-The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect. When you acquire a phone number
+The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect. When you acquire a phone number
+
 you will typically know which type it is.
 
 ```yaml
