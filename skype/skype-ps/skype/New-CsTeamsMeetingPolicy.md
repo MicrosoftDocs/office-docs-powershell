@@ -758,6 +758,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingRegistration
+Controls if a user can create a webinar meeting. The default value is True.
 
 Possible values:
 - true
@@ -893,7 +894,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanRegister
-This parameter is reserved for internal Microsoft use.
+Controls the attendees who can attend a webinar meeting. The default is Everyone, meaning that everyone can register. If you want to restrict registration to internal accounts, set the value to 'EveryoneInCompany'. 
+
+Possible values:
+
+- Everyone
+- EveryoneInCompany
 
 ```yaml
 Type: Object
