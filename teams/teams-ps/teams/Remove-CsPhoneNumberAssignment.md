@@ -35,6 +35,9 @@ This cmdlet removes/unassigns a phone number from a user or resource account. Th
 
 Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
 
+If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
+and a Message string parameter with additional details of the failure.
+
 ## EXAMPLES
 
 ### Example 1
