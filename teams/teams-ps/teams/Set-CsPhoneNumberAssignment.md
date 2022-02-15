@@ -35,6 +35,9 @@ This cmdlet assigns a phone number to a user or resource account. When you assig
 
 To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md) cmdlet.
 
+If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
+and a Message string parameter with additional details of the failure.
+
 
 ## EXAMPLES
 
@@ -75,6 +78,16 @@ This example assigns the Direct Routing phone number +1 (425) 555-1225 to the re
 Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
 ```
 This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=100 to the user user4@contoso.com.
+
+### Example 7
+```powershell
+$pn=Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
+$pn
+Code       Message
+----       -------
+BadRequest Telephone Number '+1425551000;ext=100' has already been assigned to another user
+```
+In this example the assignment cmdlet fails, because the phone number "+1425551000;ext=100" has already been assigned to another user.
 
 
 ## PARAMETERS
