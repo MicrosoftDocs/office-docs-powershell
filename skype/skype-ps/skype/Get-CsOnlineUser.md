@@ -60,7 +60,7 @@ Users homed on Skype for Business Online will a TenantId that is equal to some v
 
 **Note:**
 
-The below updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
 
 *Deprecated Attributes* - Theses are no longer relevant to Teams
 
