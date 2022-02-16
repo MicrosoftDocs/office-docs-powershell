@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-The Certificate parameter specifies the certificate that's used for CBA. A valid value is the X509Certificate2 object value of the certificate.
+The Certificate parameter specifies the certificate that's used for certificate-based authentication (CBA). A valid value is the X509Certificate2 object value of the certificate.
 
 Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
 
@@ -374,6 +374,8 @@ Accept wildcard characters: False
 The CertificateThumbprint parameter specifies the certificate that's used for CBA. A valid value is the thumbprint value of the certificate. For example, `83213AEAC56D61C97AEE5C1528F4AC5EBA7321C1`.
 
 Don't use this parameter with the Certificate or CertificateFilePath parameters.
+
+**Note**: The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
 
