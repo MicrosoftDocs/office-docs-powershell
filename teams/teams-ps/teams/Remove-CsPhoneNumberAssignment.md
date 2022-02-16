@@ -35,6 +35,9 @@ This cmdlet removes/unassigns a phone number from a user or resource account. Th
 
 Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
 
+If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
+and a Message string parameter with additional details of the failure.
+
 ## EXAMPLES
 
 ### Example 1
@@ -67,7 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to unnassign from the user or resource account. Supports E.164 format and non-E.164 format.
+The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without the prefixed "tel:".
+
 
 ```yaml
 Type: System.String
