@@ -610,6 +610,8 @@ Valid values are:
 - $false: All meetings are not online by default.
 - $null: The value of the OnlineMeetingsByDefaultEnabled parameter on the Set-OrganizationConfig cmdlet (the organizational setting) is used.
 
+Setting this parameter enables the display of the **Add online meeting to all meetings** option in **Calendar options** in Outlook for Windows. This allows users to enable or disable the option when Teams is used for online meetings. It does not override the tenant setting that's configured by the OnlineMeetingsByDefaultEnabled parameter on the Set-OrganizationConfig cmdlet.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

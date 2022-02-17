@@ -52,7 +52,7 @@ Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 
 This example enables the administrator-installed app FinanceTestApp for user Tony.
 
-### Example 1
+### Example 3
 ```powershell
 Enable-App -Identity 545d8236-721a-468f-85d8-254eca7cb0da -Mailbox Tony
 ```
