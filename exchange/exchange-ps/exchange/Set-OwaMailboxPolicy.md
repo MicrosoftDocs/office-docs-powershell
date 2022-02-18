@@ -681,7 +681,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPublicComputersEnabled
-The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for public computer sessions. Valid values are:
+The DirectFileAccessOnPublicComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for public computer sessions. Valid values are:
 
 - $true: Open is available for attachments in Outlook on the web for public computer sessions. This is the default value.
 - $false: Open isn't available for attachments in Outlook on the web for public computer sessions. Note that Office and .pdf documents can still be previewed in Outlook on the web.
