@@ -282,12 +282,12 @@ Accept wildcard characters: False
 ```
 
 ### -AutoMapping
-The AutoMapping parameter specifies whether to enable or disable the auto-mapping feature in Microsoft Outlook that uses Autodiscover to automatically open other mailboxes for the user. Valid values are:
+The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. Valid values are:
 
-- $true: Outlook automatically opens the mailbox where the user is assigned Full Access permission. This is the default value.
-- $false: Outlook doesn't automatically open the mailbox where the user is assigned Full Access permission.
+- $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This is the default value.
+- $false: The mailbox is not automatically added to the user's Outlook profile if the user has Full Access permission.
 
-If you've already assign the user Full Access to the mailbox, and you want to prevent the mailbox from automatically opening in the user's Outlook, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then assign the permission to the user on the mailbox again, but this time include -AutoMapping $false in the command.
+**Note**: To disable auto-mapping for a mailbox where the user was already assigned Full Access permission, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then reassign the user Full Access permission on the mailbox using the AutoMapping parameter with the value $false.
 
 ```yaml
 Type: Boolean
@@ -397,14 +397,15 @@ Accept wildcard characters: False
 ### -InheritanceType
 The InheritanceType parameter specifies how permissions are inherited by folders in the mailbox. Valid values are:
 
-- All
+- None
+- All (this is the default value)
 - Children
-- Descendents[sic]
+- Descendents [sic]
 - SelfAndChildren
 
 ```yaml
 Type: ActiveDirectorySecurityInheritance
-Parameter Sets: AccessRights, Instance
+Parameter Sets: AccessRights, Instance 
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
