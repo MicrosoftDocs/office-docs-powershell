@@ -118,7 +118,8 @@ Set-CsUserCallingSettings -Identity user5@contoso.com -GroupMembershipDetails $g
 This example shows how to update the call group of user1@contoso.com to add user5@contoso.com and remove user6@contoso.com. In addition the notification setting for
 user5@contoso.com for user1@contoso.com's call group is set to Banner.
 
-The key to note here is the call group membership is defined on the object of the owner of the call group, in the above case this is user1@contoso.com. However the notification
+The key to note here is the call group membership is defined on the object of the owner of the call group, in the above case this is user1@contoso.com. However, the notification
+
 setting for a member for a particular call group is defined on the member. In this case user5@contoso.com.
 
 ### Example 7
