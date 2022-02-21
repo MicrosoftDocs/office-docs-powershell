@@ -214,8 +214,7 @@ as shown here, unanswered calls will be forwarded to voicemail by default.
 ## PARAMETERS
 
 ### -Identity
-The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId, the SIP address
-or the e-mail address.
+The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId or the SIP address.
 
 ```yaml
 Type: System.String
