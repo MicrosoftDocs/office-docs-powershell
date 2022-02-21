@@ -290,8 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to set call forwarding, simultaneous ringing and call group settings for. Can be specified using the ObjectId, the SIP address
-or the e-mail address.
+The Identity of the user to set call forwarding, simultaneous ringing and call group settings for. Can be specified using the ObjectId or the SIP address.
 
 ```yaml
 Type: System.String
