@@ -243,7 +243,7 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - ObjectId renamed to Identity
 - OnPremOptionFlags renamed to OnPremOptionFlag
 - OptionFlags renamed to OptionFlag
-- ProxyAddresses renamed to ProxyAddresse
+- ProxyAddresses renamed to ProxyAddress
 - ShadowProxyAddresses renamed to ShadowProxyAddress
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
