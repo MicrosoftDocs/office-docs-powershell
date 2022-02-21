@@ -235,6 +235,7 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - UsageLocation
 
 *Attributes renamed/replaced:*
+- ObjectId renamed to Identity
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
 - MCOValidationErrors renamed to UserValidationErrors
