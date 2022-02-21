@@ -90,7 +90,10 @@ The user photos feature allows users to associate a picture with their account. 
 
 A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the `Get-UserPhoto -Preview` command to view information about a preview photo.
 
-**Note**: Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+**Notes**:
+
+- Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+- In Microsoft Graph, the [Update-MgUserPhoto](https://docs.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) and [Set-MgUserPhotoContent](https://docs.microsoft.com/powershell/module/microsoft.graph.users/set-mguserphotocontent) cmdlets are also available.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

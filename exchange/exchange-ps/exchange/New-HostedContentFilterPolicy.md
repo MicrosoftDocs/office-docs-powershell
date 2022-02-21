@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -BulkThreshold
-The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than the specified BCL value, not greater than or equal to). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 8 or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
+The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than or equal to the specified BCL value). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 7, 8, or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
 
 A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
 
