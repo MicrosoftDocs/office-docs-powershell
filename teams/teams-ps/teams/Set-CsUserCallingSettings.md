@@ -63,8 +63,9 @@ Set-CsUserCallingSettings -Identity <String> -GroupNotificationOverride <String>
 ## DESCRIPTION
 This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user.
 
-When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead you need to start by 
-getting the current settings, making the necessary changes and then setting/writing all settings within the settings group.
+When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to start by 
+getting the current settings, making the necessary changes, and then setting/writing all settings within the settings group.
+
 
 
 ## EXAMPLES
