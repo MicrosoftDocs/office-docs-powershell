@@ -403,8 +403,9 @@ The cmdlet is available in Teams PowerShell module 3.0.1-preview or 3.2.0-previe
 
 The specified user need to have the Microsoft Phone System license assigned.
 
-When forwarding to MyDelegates, the specified user needs to have 1 or more delegates defined that is allowed to receive calls. When forwarding to Group, the specified user needs
-to have 1 or more members of the user's call group.
+When forwarding to MyDelegates, the specified user needs to have one or more delegates defined that are allowed to receive calls. When forwarding to Group, the specified user needs
+to have one or more members of the user's call group.
+
 
 The cmdlet is validating the different settings and is always writing all the parameters in a settings group. You might see validation errors from the cmdlet due to this behavior.
 As an example, if you have ForwardingTargetType set to Group and you want to remove all members of the call group, you will get a validation error.
