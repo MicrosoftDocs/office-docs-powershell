@@ -164,7 +164,8 @@ This example shows how to set the default call forwarding settings for a user.
 Set-CsUserCallingSettings -Identity user7@contoso.com -IsUnansweredEnabled $false
 ```
 
-This example shows turning off unanswered call forwarding for a user. The Microsoft Teams client will show this as If unanswered Do nothing.
+This example shows turning off unanswered call forwarding for a user. The Microsoft Teams client will show this as _If unanswered Do nothing_.
+
 
 ## PARAMETERS
 
