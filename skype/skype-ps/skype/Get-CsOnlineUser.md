@@ -173,6 +173,11 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - Office
 - Phone
 - WindowsEmailAddress*
+- TeamsEnhancedEncryptionPolicy
+- TeamsNetworkRoamingPolicy
+- TeamsCarrierEmergencyCallRoutingPolicy
+- ApplicationAccessPolicy
+- TeamsFilesPolicy
 
 *Supported filters* - The Filtering functionality has been limited to the following attributes:
 
@@ -234,6 +239,13 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - DirSyncEnabled renamed to UserDirSyncEnabled
 - MCOValidationErrors renamed to UserValidationErrors
 - OnPremSIPEnabled renamed to OnPremIsSipEnabled
+- Enabled renamed to IsSipEnabled
+- ObjectId renamed to Identity
+- OnPremOptionFlags renamed to OnPremOptionFlag
+- OptionFlags renamed to OptionFlag
+- ProxyAddresses renamed to ProxyAddresse
+- ShadowProxyAddresses renamed to ShadowProxyAddress
+- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
 *New User Attributes*
 
