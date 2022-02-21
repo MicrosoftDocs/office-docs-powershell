@@ -139,7 +139,8 @@ This example shows how to remove all members of the call group.
 Set-CsUserCallingSettings -Identity user10@contoso.com -GroupMembershipDetails $gmd
 ```
 
-In this example user10@contoso.com is a member of 2 call groups: user20@contoso.com and user30@contoso.com. User10@contoso.com would like to have Banner notification for the 
+In this example user10@contoso.com is a member of two call groups: user20@contoso.com and user30@contoso.com. User10@contoso.com would like to have Banner notification for the 
+
 first call group and Mute notification for the last one.
 
 ### Example 9
