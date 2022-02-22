@@ -173,11 +173,6 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - Office
 - Phone
 - WindowsEmailAddress*
-- TeamsEnhancedEncryptionPolicy
-- TeamsNetworkRoamingPolicy
-- TeamsCarrierEmergencyCallRoutingPolicy
-- ApplicationAccessPolicy
-- TeamsFilesPolicy
 
 *Supported filters* - The Filtering functionality has been limited to the following attributes:
 
