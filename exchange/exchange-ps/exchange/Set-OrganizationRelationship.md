@@ -290,7 +290,14 @@ Accept wildcard characters: False
 ### -MailboxMoveCapability
 This parameter is available only in the cloud-based service.
 
-{{ Fill MailboxMoveCapability Description }}
+The MailboxMoveCapability parameter is used in cross-tenant mailbox migrations. Valid values are:
+
+- Inbound
+- Outbound
+- RemoteInbound
+- RemoteOutbound
+
+For more information, see [Cross-tenant mailbox migration](https://docs.microsoft.com/microsoft-365/enterprise/cross-tenant-mailbox-migration).
 
 ```yaml
 Type: MailboxMoveCapability
@@ -327,7 +334,18 @@ Accept wildcard characters: False
 ### -MailboxMovePublishedScopes
 This parameter is available only in the cloud-based service.
 
-{{ Fill MailboxMovePublishedScopes Description }}
+The MailboxMovePublishedScopes parameter is used in cross-tenant mailbox migrations to specify the mail-enabled security groups whose members are allowed to migrate. You can use any value that uniquely identifies the group. For example:
+
+- Name
+- Distinguished name (DN)
+- Canonical DN
+- GUID
+
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+For more information, see [Cross-tenant mailbox migration](https://docs.microsoft.com/microsoft-365/enterprise/cross-tenant-mailbox-migration).
 
 ```yaml
 Type: MultiValuedProperty
@@ -437,7 +455,7 @@ Accept wildcard characters: False
 ### -OAuthApplicationId
 This parameter is available only in the cloud-based service.
 
-{{ Fill OAuthApplicationId Description }}
+The OAuthApplicationId is used in cross-tenant mailbox migrations to specify the application ID of the mailbox migration app that you consented to. For more information, see [Cross-tenant mailbox migration](https://docs.microsoft.com/microsoft-365/enterprise/cross-tenant-mailbox-migration).
 
 ```yaml
 Type: String
