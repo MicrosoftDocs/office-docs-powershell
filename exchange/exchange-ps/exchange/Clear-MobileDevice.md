@@ -42,32 +42,33 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Clear-MobileDevice -Identity WM_JeffHay
+Clear-MobileDevice -Identity TonySmith\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac
 ```
 
-This example clears all data from the mobile device with the Identity WM\_JeffHay.
+This example clears all data from the specified mobile device.
 
 ### Example 2
 ```powershell
-Clear-MobileDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
+Clear-MobileDevice -Identity TonySmith\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac -NotificationEmailAddresses "chris@contoso.com"
 ```
 
-This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
+This example clears all data from the specified mobile device and sends a confirmation email message to chris@contoso.com.
 
 ### Example 3
 ```powershell
-Clear-MobileDevice -Identity WM_TonySmith -Cancel
+Clear-MobileDevice -Identity TonySmith\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac -Cancel
 ```
 
-This example cancels a previously sent Clear-MobileDevice command request for Tony Smith's mobile device.
+This example cancels a previously sent Clear-MobileDevice command request for the specified mobile device.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device that you want to reset. You can use any value that uniquely identifies the mobile device. For example:
+The Identity parameter specifies the mobile device that you want to reset. You can use the following values that uniquely identifies the mobile device:
 
-- GUID
-- DeviceID
+- Identity (`<Mailbox Name>\ExchangeActiveSyncDevices\<MobileDeviceObjectName>` for example, `CarlosM\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac`)
+- Distinguished name (DN)
+- GUID (same as ExchangeObjectId)
 
 ```yaml
 Type: MobileDeviceIdParameter
@@ -85,7 +86,7 @@ Accept wildcard characters: False
 ### -AccountOnly
 The AccountOnly switch specifies whether to perform an account-only remote device wipe where only Exchange mailbox data is removed from the device. You don't need to specify a value with this switch.
 
-You don't need to use this switch for the DeviceType value Outlook, because an account-only remote devices wipe is the only type of wipe that's used on Outlook devices.
+You don't need to use this switch for the DeviceType value Outlook, because an account-only remote device wipe is the only type of wipe that's used on Outlook devices.
 
 ```yaml
 Type: SwitchParameter
