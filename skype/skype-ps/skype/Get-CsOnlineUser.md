@@ -485,8 +485,6 @@ Accept wildcard characters: False
 
 ### -SkipUserPolicies
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
 PARAMVALUE: SwitchParameter
 
 ```yaml
