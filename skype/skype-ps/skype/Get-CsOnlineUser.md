@@ -241,7 +241,6 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - MCOValidationErrors renamed to UserValidationErrors
 - OnPremSIPEnabled renamed to OnPremIsSipEnabled
 - Enabled renamed to IsSipEnabled
-- ObjectId renamed to Identity
 - OnPremOptionFlags renamed to OnPremOptionFlag
 - OptionFlags renamed to OptionFlag
 - ProxyAddresses renamed to ProxyAddress
