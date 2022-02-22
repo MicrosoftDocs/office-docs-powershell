@@ -44,7 +44,6 @@ Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicabl
   - [-Force]
   - [-GetFromAAD]
   - [-GetPendingUsers]
-  - [-PSTNConnectivity]
   - [-SearchQuery]
   - [-Skip]
   - [-Tenant]
@@ -275,7 +274,6 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNConnectivity
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Possible values are:
 * All
