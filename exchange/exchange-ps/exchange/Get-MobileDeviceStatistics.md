@@ -59,10 +59,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MobileDeviceStatistics -Identity TonySmith
+Get-MobileDeviceStatistics -Identity TonySmith\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac
 ```
 
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
+This example retrieves the statistics for the specified mobile phone.
 
 ### Example 2
 ```powershell
@@ -76,18 +76,19 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 
 ### Example 3
 ```powershell
-Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
+Get-MobileDeviceStatistics -Mailbox "Tony Smith" -GetMailboxLog -NotificationEmailAddresses "admin@contoso.com"
 ```
 
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
+This example retrieves the statistics for the mobile phone that's configured to synchronize with Tony Smith's mailbox. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
+The Identity parameter specifies the mobile device that you want to view. You can use the following values that uniquely identifies the mobile device:
 
-- GUID
-- DeviceID
+- Identity (`<Mailbox Name>\ExchangeActiveSyncDevices\<MobileDeviceObjectName>` for example, `CarlosM\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac`)
+- Distinguished name (DN)
+- GUID (same as ExchangeObjectId)
 
 You can't use this parameter with the Mailbox parameter.
 
@@ -168,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetMailboxLog
-The GetMailboxLog parameter specifies whether to send the mailbox logs via email to the administrator running the task. If the parameter is set to $true, the command sends the mailbox logs via email to the administrator running the task. The default value of this parameter is $false.
+The GetMailboxLog switch specifies whether to send the mobile device statistics to the email addresses that are specified by the NotificationEmailAddresses parameter. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -184,7 +185,9 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmailAddresses
-The NotificationEmailAddresses parameter specifies an optional list of comma-separated aliases or email addresses where the mailbox logs are sent. If the GetMailboxLog parameter is set to $false, this parameter is ignored.
+The NotificationEmailAddresses parameter specifies a comma-separated list of email addresses to receive the mobile device statistics when you use the GetMailboxLog switch.
+
+This parameter is meaningful only if you also use the GetMailboxLog switch in the same command.
 
 ```yaml
 Type: MultiValuedProperty
@@ -216,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowRecoveryPassword
-The ShowRecoveryPassword parameter specifies whether to return the recovery password for the mobile phone as one of the displayed statistics. If this parameter is set to $true, the command returns the recovery password for the mobile phone as one of the displayed statistics.
+The ShowRecoveryPassword switch specifies whether to return the recovery password for the mobile device as one of the displayed statistics. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

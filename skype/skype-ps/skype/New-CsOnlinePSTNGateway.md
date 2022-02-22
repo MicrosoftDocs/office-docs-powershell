@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinepstngateway
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsOnlinePSTNGateway
 schema: 2.0.0
 manager: bulenteg
@@ -18,11 +18,11 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 ## SYNTAX
 
 ```
-New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Fqdn <String>] [-SipSignalingPort <Int32>]
- [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
+New-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Description <String>] [-Fqdn <String>] [-SipSignalingPort <Int32>]
+ [-ExcludedCodecs <String>] [-FailoverResponseCodes <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
  [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] 
- [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-BypassMode <String>]  
+ [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-GatewayLbrEnabledUserOverride <Boolean>] [-BypassMode <String>]  
  [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
  [-OutboundTeamsNumberTranslationRules <String>] [-OutboundPSTNNumberTranslationRules <String>] [-PidfloSupported <Boolean>]  
  [-MediaRelayRoutingLocationOverride <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -49,21 +49,6 @@ This example creates an SBC with FQDN sbc.contoso.com and signaling port 5061. F
 
 ## PARAMETERS
 
-### -CodecPriority
-Allows choice of codec priority when media is negotiated between Media Proxy and SBC. Default priority is ("SILKWB,SILKNB,PCMU,PCMA").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: ("SILKWB,SILKNB,PCMU,PCMA")
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -71,7 +56,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Free-format string to describe the gateway.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +86,7 @@ Used to enable this SBC for outbound calls. Can be used to temporarily remove th
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $false
@@ -101,10 +101,30 @@ Allows some codecs to be excluded when media is being negotiated between Media P
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FailoverResponseCodes
+If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call
+from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing
+on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone
+System Direct Routing" documentation.
+
+Setting this parameter overwrites the default values, so if you want to include the default values, please add them to string.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: 408, 503, 504
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -116,7 +136,7 @@ When set to 10 (default value), outbound calls that are not answered by the gate
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: 10
@@ -131,7 +151,7 @@ The Force switch specifies whether to suppress warning and confirmation messages
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +166,7 @@ Indicates whether call history information will be forwarded to the SBC. If enab
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $false
@@ -161,7 +181,7 @@ Indicates whether the P-Asserted-Identity (PAI) header will be forwarded along w
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $false
@@ -176,10 +196,58 @@ Limited to 63 characters, the FQDN registered for the SBC. Copied automatically 
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteId
+PSTN Gateway Site Id.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteLbrEnabled
+Used to enable this SBC to report assigned site location. Site location is used for Location Based Routing. When this parameter is enabled ($True), the SBC will report the site
+name as defined by the tenant administrator. On an incoming call to a Teams user the value of the site assigned to the SBC is compared with the value of the site assigned to
+the user to make a routing decision. The parameter is mandatory for enabling Location Based Routing feature. The default value is False ($False).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewayLbrEnabledUserOverride
+Allow an LBR enabled user working from a network site outside the corporate network, i.e. a network site not configured using tenant network site - typically when working from
+home, to make outbound PSTN calls  via an LBR enabled gateway. The default value is False.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -191,7 +259,7 @@ When creating a new SBC, the identity must be identical to the -FQDN parameter, 
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: True
 Position: 1
 Default value: None
@@ -205,7 +273,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -220,7 +288,7 @@ Used by the alerting system. When any value is set, the alerting system will gen
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +303,7 @@ Parameter indicates if the SBC supports Media Bypass and the administrator wants
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $false
@@ -260,50 +328,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FailoverResponseCodes
-If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone System Direct Routing" documentation.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: 408, 503, 504
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GatewaySiteId
-PSTN Gateway Site Id.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GatewaySiteLbrEnabled
-Used to enable this SBC to report assigned site location. Site location is used for Location Based Routing. When this parameter is enabled ($True), the SBC will report the site name as defined by the tenant administrator. On an incoming call to a Teams user the value of the site assigned to the SBC is compared with the value of the site assigned to the user to make a routing decision. The parameter is mandatory for enabling Location Based Routing feature. The default value is False ($False).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: $false
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -SendSipOptions
 Defines if an SBC will or will not send SIP Options messages. If disabled, the SBC will be excluded from the Monitoring and Alerting system. We highly recommend that you enable SIP Options. The default value is True.
@@ -312,7 +336,7 @@ Defines if an SBC will or will not send SIP Options messages. If disabled, the S
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $true
@@ -328,7 +352,7 @@ Please note: Spelling of this parameter changed recently from SipSignallingPort 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -378,7 +402,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutbundTeamsNumberTranslationRulesList
+### -OutbundTeamsNumberTranslationRules
 Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
 
 ```yaml
@@ -392,7 +416,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutboundPSTNNumberTranslationRulesList
+### -OutboundPSTNNumberTranslationRules
 Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
 
 ```yaml
@@ -413,7 +437,7 @@ Enables PIDF-LO support on the PSTN Gateway. If turned on the .xml body payload 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: $false
@@ -427,7 +451,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +467,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None

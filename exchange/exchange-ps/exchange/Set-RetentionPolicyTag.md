@@ -223,7 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch overrides the confirmation prompt displayed by the cmdlet when you use the RetentionId parameter.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you use the RetentionId parameter.
 
 ```yaml
 Type: SwitchParameter

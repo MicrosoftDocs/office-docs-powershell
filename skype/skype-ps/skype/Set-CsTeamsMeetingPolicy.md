@@ -99,9 +99,9 @@ All other policy properties will use the existing values.
 ### -AllowAnonymousUsersToJoinMeeting
 
 > [!NOTE]
-> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check https://docs.microsoft.com/microsoftteams/meeting-settings-in-teams for details.
+> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check <https://docs.microsoft.com/microsoftteams/meeting-settings-in-teams> for details.
 
-Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting. 
+Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting.
 
 ```yaml
 Type: Boolean

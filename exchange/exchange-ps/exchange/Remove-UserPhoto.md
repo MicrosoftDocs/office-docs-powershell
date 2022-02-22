@@ -46,7 +46,10 @@ Remove-UserPhoto [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 Use the Remove-UserPhoto cmdlet to delete the user photo currently associated with a user's account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox, both of which are deleted when you run this cmdlet. Administrators can also use the Exchange admin center (EAC) to delete user photos by accessing the user's Outlook on the web Options page.
 
-**Note**: Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+**Notes**:
+
+- Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+- **Note**: In Microsoft Graph, the [Remove-MgUserPhoto](https://docs.microsoft.com/powershell/module/microsoft.graph.users/remove-mguserphoto) and [Update-MgUserPhoto](https://docs.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) cmdlets are also available.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -89,14 +92,14 @@ Accept wildcard characters: False
 ```
 
 ### -ClearMailboxPhotoRecord
-The ClearMailboxPhoto switch specifies that a deleted mailbox photo is considered blank instead of deleted.
+The ClearMailboxPhoto switch specifies that a deleted mailbox photo is considered blank instead of deleted. You don't need to specify a value with this switch.
 
 By default, when a user deletes their mailbox photo, a flag is set on the mailbox that causes subsequent photo requests to:
 
 - Return a blank photo.
 - Prevent searching Active Directory for a photo.
 
-Using this switch allows photo requests to search Active Directory for a photo. You don't have to specify a value with this switch.
+Using this switch allows photo requests to search Active Directory for a photo.
 
 ```yaml
 Type: SwitchParameter
@@ -165,9 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

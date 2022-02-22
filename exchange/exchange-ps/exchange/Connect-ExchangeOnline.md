@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-The Certificate parameter specifies the certificate that's used for CBA. A valid value is the X509Certificate2 object value of the certificate.
+The Certificate parameter specifies the certificate that's used for certificate-based authentication (CBA). A valid value is the X509Certificate2 object value of the certificate.
 
 Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
 
@@ -374,6 +374,8 @@ Accept wildcard characters: False
 The CertificateThumbprint parameter specifies the certificate that's used for CBA. A valid value is the thumbprint value of the certificate. For example, `83213AEAC56D61C97AEE5C1528F4AC5EBA7321C1`.
 
 Don't use this parameter with the Certificate or CertificateFilePath parameters.
+
+**Note**: The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
 
@@ -521,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
+The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 1000. The default value is 1000.
 
 ```yaml
 Type: UInt32
@@ -639,7 +641,7 @@ The UseRPSSession switch allows you to connect to Exchange Online PowerShell usi
 
 This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exo-v2-module).
 
-If you don't use this parameter, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
+If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
 
 ```yaml
 Type: SwitchParameter

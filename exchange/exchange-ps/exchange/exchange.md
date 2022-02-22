@@ -1087,8 +1087,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-UserPhoto](Get-UserPhoto.md)
 
-### [Import-ContactList](Import-ContactList.md)
-
 ### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
 
 ### [New-App](New-App.md)
@@ -2275,8 +2273,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailTrafficEncryptionReport](Get-MailTrafficEncryptionReport.md)
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
-
-### [Get-MailTrafficReport](Get-MailTrafficReport.md)
 
 ### [Get-MailTrafficSummaryReport](Get-MailTrafficSummaryReport.md)
 

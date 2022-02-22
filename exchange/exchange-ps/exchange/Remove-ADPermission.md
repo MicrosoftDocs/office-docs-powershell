@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny switch specifies whether the permission to remove is a deny permission.
+The Deny switch specifies that the permissions you're removing are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -304,7 +304,13 @@ Accept wildcard characters: False
 ```
 
 ### -InheritanceType
-The InheritanceType parameter specifies whether permissions are inherited.
+The InheritanceType parameter specifies how permissions are inherited. Valid values are:
+
+- None
+- All (this is the default value)
+- Children
+- Descendents [sic]
+- SelfAndChildren
 
 ```yaml
 Type: ActiveDirectorySecurityInheritance

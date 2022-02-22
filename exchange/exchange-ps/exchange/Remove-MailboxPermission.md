@@ -45,7 +45,6 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAc
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -65,24 +64,18 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
 
 ### ClearAutoMapping
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
  [-BypassMasterAccountSid]
- [-ClearAutoMapping]
- [-AccessRights <MailboxRights[]>]
  [-Confirm]
- [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-User <SecurityPrincipalIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ResetDefault
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter>
- [-ResetDefault]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ResetDefault]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
@@ -99,10 +92,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -InheritanceType All
+Remove-MailboxPermission -Identity "Yuuto Sasaki" -User "Pedro Pizarro" -AccessRights FullAccess -InheritanceType All
 ```
 
-This example removes user Test2's full access rights to Test1's mailbox.
+This example removes Pedro Pizarro's full access permission to Yuuto Sasaki's mailbox.
+
+### Example 2
+```powershell
+Remove-MailboxPermission -Identity "HR Project" -ClearAutoMapping
+```
+
+In Exchange Online, this example excludes the HR Project mailbox from auto-mapping in Outlook for all users who have Full Access permission to the mailbox.
 
 ## PARAMETERS
 
@@ -252,9 +252,13 @@ Accept wildcard characters: False
 ### -ClearAutoMapping
 This parameter is available or functional only in the cloud-based service.
 
-The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
+The ClearAutoMapping parameter excludes the mailbox from the auto-mapping feature in Microsoft Outlook. You don't need to specify a value with this switch.
 
-To re-add auto-mapping capability on the mailbox for other users, run the command: `Add-MailboxPermission -Identity <MailboxIdentity> -AccessRights FullAccess -AutoMapping $true`.
+Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. Use this switch to exclude this mailbox from auto-mapping for all users who have Full Access permission to the mailbox.
+
+You can't use this switch with the User or AccessRights parameters.
+
+**Note**: If you use this switch in a Remove-MailboxPermission command, but the mailbox is not excluded from auto-mapping for a user, remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet with the User parameter. Then, reassign the user's Full Access permission on the mailbox using the Add-MailboxPermission cmdlet with the AutoMapping parameter set to the value $false.
 
 ```yaml
 Type: SwitchParameter
@@ -269,12 +273,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResetDefault
+This parameter is available or functional only in the cloud-based service.
+
+The ResetDefault switch resets the default security descriptor of the mailbox. You don't need to specify a value with this switch.
+
+Permissions on the mailbox are reset so only the mailbox owner has Full Access permission to the mailbox. The following types of permissions are not affected:
+
+- Recipient permissions (for example, SendAs, SendOnBehalf and delegates).
+- Mailbox folder permissions assigned using the MailboxFolderPermission cmdlets.
+- Mailbox folder permissions assigned using Outlook or other MAPI clients.
+
+Also, because this switch removes Full Access permission from other users on the mailbox, the mailbox is no longer auto-mapped by Autodiscover into the Outlook profiles of other users.
+
+You can't use this switch with the User for AccessRights parameters.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Instance
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BypassMasterAccountSid
 This parameter is available only in the cloud-based service.
 
-The BypassMasterAccountSid parameter is required when you receive the following error when you try to use this cmdlet: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.`
+The BypassMasterAccountSid switch suppresses the following error: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.` You don't need to specify a value with this switch.
 
-Typically, you only need to use this parameter in Microsoft Office 365 Dedicated/ITAR legacy environments.
+Typically, you only need to use this switch in Office 365 Dedicated or ITAR legacy environments.
 
 ```yaml
 Type: SwitchParameter
@@ -309,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny parameter denies permissions to the user on the Active Directory object.
+The Deny switch specifies that the permissions you're removing are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -361,9 +393,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -382,7 +414,13 @@ Accept wildcard characters: False
 ```
 
 ### -InheritanceType
-The InheritanceType parameter specifies whether permissions are inherited to folders within the mailbox.
+The InheritanceType parameter specifies whether permissions are inherited to folders within the mailbox. Valid values are:
+
+- None
+- All (this is the default value)
+- Children
+- Descendents [sic]
+- SelfAndChildren
 
 ```yaml
 Type: ActiveDirectorySecurityInheritance
@@ -391,30 +429,6 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResetDefault
-This parameter is available or functional only in the cloud-based service.
-
-The ResetDefault switch resets the default security descriptor of the mailbox. Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
-
-- Recipient permissions (for example, SendAs, SendOnBehalf and delegates).
-- Mailbox folder permissions assigned using the MailboxFolderPermission cmdlets.
-- Mailbox folder permissions assigned using Outlook or other MAPI clients.
-
-Also, because this switch removes FullAccess permission from other users on the mailbox, the mailbox is no longer auto-mapped by Autodiscover into the Outlook profiles of other users.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Instance
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -90,7 +90,10 @@ The user photos feature allows users to associate a picture with their account. 
 
 A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the `Get-UserPhoto -Preview` command to view information about a preview photo.
 
-**Note**: Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+**Notes**:
+
+- Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+- In Microsoft Graph, the [Update-MgUserPhoto](https://docs.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) and [Set-MgUserPhotoContent](https://docs.microsoft.com/powershell/module/microsoft.graph.users/set-mguserphotocontent) cmdlets are also available.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -168,7 +171,7 @@ Accept wildcard characters: False
 ### -PictureData
 The PictureData parameter specifies the photo file that will be uploaded to the user's account.
 
-This parameter uses the syntax: `([System.IO.File]::ReadAllBytes("<file name and path>"))`. For example `([System.IO.File]::ReadAllBytes("C:\Documents\Pictures\MyPhoto.jpg"))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -228,7 +231,7 @@ Accept wildcard characters: False
 ### -Preview
 The Preview switch uploads a preview photo for the user account. You don't need to specify a value with this switch.
 
-A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command Set-UserPhoto -Save to save it as the user's photo.
+A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command `Set-UserPhoto -Save` to save it as the user's photo.
 
 ```yaml
 Type: SwitchParameter
@@ -313,9 +316,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.

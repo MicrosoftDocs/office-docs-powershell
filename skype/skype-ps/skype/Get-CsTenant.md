@@ -29,7 +29,7 @@ Organizations will typically have a single tenant in which to house all their us
 
 **NOTE:**
 
-Beginning Teams PowerShell Module version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+Beginning Teams PowerShell Module version 3.0.0 onwards, the following updates are applicable for TeamsOnly customers.
 
 *Deprecated Attributes*
 
@@ -37,6 +37,7 @@ Beginning Teams PowerShell Module version 2.6.2 onwards, the below updates are a
 - DistinguishedName
 - ExperiencePolicy
 - Id
+- Identity
 - IsByPassValidation
 - IsMNC
 - IsReadinessUploaded
@@ -84,6 +85,17 @@ Beginning Teams PowerShell Module version 2.6.2 onwards, the below updates are a
 - AdminDescription
 - AllowedDataLocation
 - Description
+- DomainUrlMap
+- ObjectId
+- ProvisioningStamp
+- PublishingStamp
+
+*Renamed attributes*
+The following attributes have been renamed:
+
+- CountryAbbreviation renamed as CountryLetterCode
+- CountryOrRegionDisplayName renamed as Country
+- StateOrProvince renamed as State
 
 ## EXAMPLES
 

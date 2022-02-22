@@ -22,6 +22,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 ```
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
+ [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -190,6 +191,35 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DisableComplianceRecordingAudioNotificationForCalls
+Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableComplianceRecordingAudioNotificationForCalls
+Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

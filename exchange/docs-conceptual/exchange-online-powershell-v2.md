@@ -101,7 +101,7 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 Version 2.0.6-Preview3 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
 
 - 250 additional remote PowerShell cmdlets that are backed by the REST API. These REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module). These REST API cmdlets also work just like their old remote PowerShell equivalent cmdlets, so you don't need to update any of your scripts.
-- The new _RPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _RPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
+- The new _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
 - A small number of existing mailbox remote PowerShell cmdlets have been updated with a new, experimental _UseCustomRoutingSwitch_ parameter. Using this switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRoutingSwitch_, you need to use the following values for identity of the mailbox:
     - User principal name (UPN)
@@ -134,6 +134,24 @@ The EXO V2 module is supported in the following versions of macOS:
 - macOS 10.14 Mojave
 
 For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7.1&preserve-view=true).
+
+> [!NOTE]
+> As described in the installation article, you need to install OpenSSL, which is required for WSMan.
+
+After you install PowerShell 7 and OpenSSL, do the following steps:
+
+1. Run PowerShell as superuser: `sudo pwsh`
+2. In the PowerShell superuser session, run the following commands:
+
+   ```powershell
+   Install-Module -Name PSWSMan
+
+   Install-WSMan
+   ```
+
+   If prompted, accept PSGallery as the source for the cmdlets.
+
+Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exo-v2-module) and [install the EXO V2 module](#install-the-exo-v2-module).
 
 #### Linux
 
@@ -202,7 +220,10 @@ The EXO V2 module is supported in the following versions of Windows:
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  **Note**: You must temporarily enable WinRM to run the following commands. You can enable WinRM by running the command: `winrm quickconfig`.
+  > [!NOTE]
+  > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for many cmdlets.
+  >
+  > You must temporarily enable WinRM to run the following commands. You can enable WinRM by running the command: `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in PowerShell):
 
@@ -319,9 +340,13 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
 ### Troubleshoot installing the EXO V2 module
 
-- If you receive the following error:
+- You receive one of the following errors:
 
   > The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
+  
+  > WARNING: Unable to download from URI 'https://go.microsoft.com/fwlink/?LinkID=627338&clcid=0x409' to ''.
+
+  > WARNING: Unable to download the list of available providers. Check your internet connection.
 
   Update your installation of the PowerShellGet module to the latest version as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget). Be sure to close and re-open the PowerShell window before you attempt to update the ExchangeOnlineManagement module again.
 
@@ -354,6 +379,17 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
     ```
 
   For more information, see [SchUseStrongCrypto](/dotnet/framework/network-programming/tls#schusestrongcrypto).
+
+  
+- You receive the following error:
+
+  > No match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try running `Get-PSReporitory` to see all available registered module repositories.
+
+  The default repository for PowerShell modules is not set to PSGallery. To fix this error, run the following command: 
+  
+  ```powershell
+  Register-PSRepository -Default
+  ```
 
 ### Uninstall the EXO V2 module
 
