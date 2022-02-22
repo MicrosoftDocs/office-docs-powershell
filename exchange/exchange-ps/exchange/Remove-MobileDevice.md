@@ -37,25 +37,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-MobileDevice -Identity WM_JeffHay
+Remove-MobileDevice -Identity JeffHay\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac
 ```
 
-This example removes the mobile device partnership for the device named WM\_JeffHay.
+This example removes the mobile device partnership for the specified mobile device.
 
 ### Example 2
 ```powershell
-Remove-MobileDevice -Identity iPhone_TonySmith -Confirm:$false
+Remove-MobileDevice -Identity TonySmith\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac -Confirm:$false
 ```
 
-This example removes the mobile device partnership for the device named iPhone\_TonySmith and doesn't display the confirm prompt.
+This example removes the mobile device partnership for the specified device and doesn't display the confirm prompt.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device partnership that you want to remove. You can use any value that uniquely identifies the mobile device. For example:
+The Identity parameter specifies the mobile device partnership that you want to remove. You can use the following values that uniquely identifies the mobile device:
 
-- GUID
-- DeviceID
+- Identity (`<Mailbox Name>\ExchangeActiveSyncDevices\<MobileDeviceObjectName>` for example, `CarlosM\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac`)
+- Distinguished name (DN)
+- GUID (same as ExchangeObjectId)
 
 ```yaml
 Type: MobileDeviceIdParameter

@@ -36,18 +36,17 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-$edmSchemaXml = Get-Content "C:\My Documents\edm.xml" -Encoding Byte -ReadCount 0
-Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
+Set-DlpEdmSchema -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\edm.xml')) -Confirm:$true
 ```
 
-This example modifies a DLP EDM schema. The first command reads the schema in the XML file to a variable, and the second command uses that information to modify the DLP EDM schema.
+This example modifies a DLP EDM schema using the edm.xml file in the C:\\My Documents folder.
 
 ## PARAMETERS
 
 ### -FileData
 The FileData parameter specifies the DLP EDM schema that you want to import.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

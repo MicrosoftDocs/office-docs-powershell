@@ -18,9 +18,18 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 ## SYNTAX
 
 ```
-Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicationServer] [-OnModernServer]
- [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [-DomainController <Fqdn>]
- [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <>] [<CommonParameters>]
+Get-CsOnlineUser 
+[-Filter <String>] 
+[-LdapFilter <String>] 
+[-OnOfficeCommunicationServer] 
+[-OnModernServer]
+[-UnassignedUser] 
+[-SkipUserPolicies] 
+[-OU <OUIdParameter>] 
+[-DomainController <Fqdn>]
+[-Credential <PSCredential>] 
+[[-Identity] <UserIdParameter>] 
+[-ResultSize <>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +60,7 @@ Users homed on Skype for Business Online will a TenantId that is equal to some v
 
 **Note:**
 
-Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
 
 *Deprecated Attributes* - Theses are no longer relevant to Teams
 
@@ -165,6 +174,61 @@ Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates ar
 - Phone
 - WindowsEmailAddress*
 
+*Supported filters* - The Filtering functionality has been limited to the following attributes:
+
+- accountEnabled
+- ownerUrn
+- displayName
+- givenName
+- lineUri
+- userPrincipalName
+- ExternalAccessPolicy
+- OnlineDialOutPolicy
+- OnlineVoiceRoutingPolicy
+- TeamsMeetingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMessagingPolicy
+- TeamsCallParkPolicy
+- TeamsEmergencyCallingPolicy
+- TeamsEmergencyCallRoutingPolicy
+- TeamsChannelsPolicy
+- TeamsUpdateManagementPolicy
+- TeamsCallingPolicy
+- TeamsUpgradePolicy
+- TeamsUpgradeOverridePolicy
+- TeamsAppSetupPolicy
+- TeamsAppPermissionPolicy
+- TeamsVerticalPackagePolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsCallHoldPolicy
+- TenantDialPlan
+- OnlineVoicemailPolicy
+- OnlineAudioConferencingRoutingPolicy
+- TeamsAudioConferencingPolicy
+- TeamsVdiPolicy
+- TeamsFeedbackPolicy
+- TeamsIPPhonePolicy
+- TeamsShiftsAppPolicy
+- TeamsShiftsPolicy
+- TeamsTargetingPolicy
+- TeamsTemplatePermissionPolicy
+- TeamsSyntheticAutomatedCallPolicy
+- TeamsMobilityPolicy
+- TeamsCortanaPolicy
+- TeamsMeetingBrandingPolicy
+- TeamsNotificationAndFeedsPolicy
+- TeamsVideoInteropServicePolicy
+- TeamsEducationAssignmentsAppPolicy
+- TeamsComplianceRecordingPolicy
+- AssignedPlan
+- EnterpriseVoiceEnabled
+- Identity
+- department
+- UserDirSyncEnabled
+- Title
+- CountryAbbreviation
+- UsageLocation
+
 *Attributes renamed/replaced:*
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
@@ -175,17 +239,17 @@ Beginning Microsoft Teams PowerShell version 2.6.2 onwards, the below updates ar
 
 FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed).
 
-*Deprecated parameters*
+*Deprecated input parameters*
 
 LdapFilter has been deprecated due to low usage.
 
 *Changes in "-Filter" parameter*
-- Assigned Plan filter - Previous format will no longer be supported. Existing filters like AssignedPlan eq '<some-xml-string>' will stop working. This will need to be modified to one of the below formats:
-  - AssignedPlans eq 'MCOEV' - For exact match
-  - AssignedPlans eq '*MCO*' - for contains checks.
- 
+- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
+  - AssignedPlans -eq '*MCO' or 'MCO*'or '*MCO*' - for contains checks.
+The output format has also changed, the xml object is now a json object.
+
 - EnterpriseVoiceEnabled filter
-  - EnterpriseVoiceEnabled eq true / false
+  - EnterpriseVoiceEnabled -eq true / false
 
 
 ## EXAMPLES
@@ -421,8 +485,6 @@ Accept wildcard characters: False
 
 ### -SkipUserPolicies
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
 PARAMVALUE: SwitchParameter
 
 ```yaml
