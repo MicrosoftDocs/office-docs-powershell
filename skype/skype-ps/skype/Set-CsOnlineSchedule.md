@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsOnlineSchedule
 
 ## SYNOPSIS
-Use the Set-CsOnlineSchedule cmdlet to remove a schedule.
+Use the Set-CsOnlineSchedule cmdlet to update a schedule.
 
 ## SYNTAX
 ```powershell
