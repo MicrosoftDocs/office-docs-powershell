@@ -230,10 +230,17 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - UsageLocation
 
 *Attributes renamed/replaced:*
+- ObjectId renamed to Identity
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
 - MCOValidationErrors renamed to UserValidationErrors
 - OnPremSIPEnabled renamed to OnPremIsSipEnabled
+- Enabled renamed to IsSipEnabled
+- OnPremOptionFlags renamed to OnPremOptionFlag
+- OptionFlags renamed to OptionFlag
+- ProxyAddresses renamed to ProxyAddress
+- ShadowProxyAddresses renamed to ShadowProxyAddress
+- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
 *New User Attributes*
 
@@ -485,8 +492,6 @@ Accept wildcard characters: False
 
 ### -SkipUserPolicies
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
 PARAMVALUE: SwitchParameter
 
 ```yaml
