@@ -33,8 +33,6 @@ The Import-JournalRuleCollection cmdlet imports a journal rule collection you pr
 
 Importing a journal rule collection from an XML file removes or overwrites all pre-existing journal rules in your organization. Make sure that you have a backup of your current journal rule collection before you import and overwrite your current journal rules.
 
-Importing file data is a two-step process. First you must load the data to a variable using the Get-Content cmdlet, and then use that variable to transmit the data to the cmdlet.
-
 For more information about how to export a journal rule collection to an XML file, see [Export-JournalRuleCollection](https://docs.microsoft.com/powershell/module/exchange/export-journalrulecollection).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -67,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the variable name that contains the content of the XML file.
+The FileData parameter specifies the XML file that contains the exported journal rule collection from the Export-JournalRuleCollection cmdlet.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 

@@ -125,7 +125,7 @@ and -WarningVariable. For more information, see [about_CommonParameters](https:/
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview.
+The cmdlet is available in Teams PowerShell module 3.0.1-preview or 3.2.0-preview (preferred).
 
 The specified user need to have the Microsoft Phone System license assigned.
 
