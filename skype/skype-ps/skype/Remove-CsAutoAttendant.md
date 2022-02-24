@@ -15,6 +15,10 @@ ms.reviewer:
 ## SYNOPSIS
 Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
 
+> [!NOTE]
+> Remove any associated resource accounts with [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md) before attempting to delete the Auto Attendant (AA).
+
+
 ## SYNTAX
 
 ```
