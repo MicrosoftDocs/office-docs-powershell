@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # Get-CustomNudgeSettings
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Get-CustomNudgeSettings cmdlet to view the organization settings for custom nudges. Nudges are shown in the Briefing email.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the Get-CustomNudgeSettings cmdlet to view the organization settings for Custom Nudges. Custom Nudges are shown in the Briefing email.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,7 +45,7 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Get-CustomNudgeSettings
 ```
 
-This example returns the custom nudge settings for the organization.
+This example returns the Custom Nudge settings for the organization.
 
 ### -ResultSize
 This parameter is reserved for internal Microsoft use.

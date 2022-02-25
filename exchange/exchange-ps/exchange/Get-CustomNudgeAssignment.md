@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # Get-CustomNudgeAssignment
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Get-CustomNudgeAssignment to view assignments of custom nudges to users. Nudges are shown in the Briefing email.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the Get-CustomNudgeAssignment to view the assignments of Custom Nudges to users. Custom Nudges are shown in the Briefing email.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,30 +45,30 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Get-CustomNudgeAssignment -NudgeName perfReviewNudge
 ```
 
-This example returns all nudge assignments that contain the nudge named perfReviewNudge.
+This example returns all assignments that contain the Custom Nudge named perfReviewNudge.
 
 ### Example 2
 ```powershell
 Get-CustomNudgeAssignment -AssigneeId roy@contoso.onmicrosoft.com
 ```
 
-This example returns all nudge assignments that contain the user roy@contoso.onmicrosoft.com.
+This example returns all assignments that contain the user roy@contoso.onmicrosoft.com.
 
 ### Example 3
 ```powershell
 Get-CustomNudgeAssignment -NudgeName perfReviewNudge -AssigneeId roy@contoso.onmicrosoft.com
 ```
 
-This example returns the StartTime and EndTime values for the nudge assignment of the nudge named perfReviewNudge to the user roy@contoso.com .
+This example returns the StartTime and EndTime values for the assignment of the Custom Nudge named perfReviewNudge to the user roy@contoso.com .
 
 ## PARAMETERS
 
 ### -AssigneeId
 The AssigneeId parameter specifies the email address of the user that you want to view.
 
-If you use this parameter without the NudgeName parameter, all nudges that are assigned to the user are returned.
+If you use this parameter without the NudgeName parameter, all Custom Nudges that are assigned to the user are returned.
 
-If you use this parameter with the NudgeName parameter, the StartDate and EndDate values of the nudge assignment are returned.
+If you use this parameter with the NudgeName parameter, the StartDate and EndDate values of the assignment are returned.
 
 ```yaml
 Type: String
@@ -82,11 +84,11 @@ Accept wildcard characters: False
 ```
 
 ### -NudgeName
-The NudgeName parameter specifies the name of the nudge that you want to view. If the value contains spaces, enclose the value in quotation marks (").
+The NudgeName parameter filters the assignments by the name of the Custom Nudge. If the value contains spaces, enclose the value in quotation marks (").
 
-If you use this parameter without the AssigneeId parameter, all users who have the nudge assigned to them are returned.
+If you use this parameter without the AssigneeId parameter, all users who have the Custom Nudge assigned to them are returned.
 
-If you use this parameter with the AssigneeId parameter, the StartDate and EndDate values of the nudge assignment are returned.
+If you use this parameter with the AssigneeId parameter, the StartDate and EndDate values of the assignment are returned.
 
 ```yaml
 Type: String

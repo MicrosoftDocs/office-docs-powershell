@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # Remove-CustomNudge
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Remove-CustomNudge cmdlet to remove custom nudges that are displayed in user Briefing email messages.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the Remove-CustomNudge cmdlet to remove Custom Nudges that are displayed in user Briefing email messages.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,12 +45,12 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Remove-CustomNudge -Name perfReviewNudge
 ```
 
-This example removes the existing custom nudge named "perfReviewNudge".
+This example removes the existing Custom Nudge named "perfReviewNudge".
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name of the custom nudge that you want to remove. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the name of the Custom Nudge that you want to remove. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

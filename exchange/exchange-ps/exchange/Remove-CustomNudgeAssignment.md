@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # Remove-CustomNudgeAssignment
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Remove-CustomNudgeAssignment cmdlet to remove assignments of custom nudges from users. Nudges are shown in the Briefing email.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the Remove-CustomNudgeAssignment cmdlet to remove the assignments of Custom Nudges from users. Custom Nudges are shown in the Briefing email.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,14 +45,14 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Remove-CustomNudgeAssignment -NudgeName perfReviewNudge -AssigneeId roy@contoso.onmicrosoft.com
 ```
 
-This example removes the assignment of the custom nudge named perfReviewNudge from the user roy@contoso.onmicrosoft.com.
+This example removes the assignment of the Custom Nudge named perfReviewNudge from the user roy@contoso.onmicrosoft.com.
 
 ## PARAMETERS
 
 ### -AssigneeId
-The AssigneeId parameter specifies the email address of the user that you want to remove.
+The AssigneeId parameter specifies the email address of the user in the Custom Nudge assignment that you want to remove.
 
-Together, this parameter and the AssigneeId parameter uniquely identify the nudge assignment that you want to remove.
+Together, this parameter and the AssigneeId parameter uniquely identify the Custom Nudge assignment that you want to remove.
 
 ```yaml
 Type: String
@@ -66,9 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -NudgeName
-The NudgeName parameter specifies the name of the nudge that you want to remove. If the value contains spaces, enclose the value in quotation marks (").
+The NudgeName parameter specifies the name of the Custom Nudge in the Custom Nudge assignment that you want to remove. If the value contains spaces, enclose the value in quotation marks (").
 
-Together, this parameter and the AssigneeId parameter uniquely identify the nudge assignment that you want to remove.
+Together, this parameter and the AssigneeId parameter uniquely identify the Custom Nudge assignment that you want to remove.
 
 ```yaml
 Type: String

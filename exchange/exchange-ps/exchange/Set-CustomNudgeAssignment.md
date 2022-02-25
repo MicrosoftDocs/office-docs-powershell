@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # Set-CustomNudgeAssignment
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Set-CustomNudgeAssignment cmdlet to modify the date range of custom nudge assignments. Nudges are shown in the Briefing email.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the Set-CustomNudgeAssignment cmdlet to modify the date range of Custom Nudge assignments. Custom Nudges are shown in the Briefing email.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,15 +45,14 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Set-CustomNudgeAssignment -NudgeName perfReviewNudge -AssigneeId roy@contoso.onmicrosoft.com -StartTime 2/9/2022 -EndTime 2/11/2022
 ```
 
-This example updates the assignment to have the new start and end times.
-This means roy@contoso.onmicrosoft.com will only receive the perfReviewNudge if the current time is between 2/9/2022 and 2/11/2022
+This example updates the existing Custom Nudge assignment for the specified Custom Nudge and user so the user will only see the Custom Nudge in the Briefing email between 2/9/2022 and 2/11/2022
 
 ## PARAMETERS
 
 ### -AssigneeId
-The AssigneeId parameter specifies the email address of the user that you want to modify.
+The AssigneeId parameter specifies the email address of the user in the Custom Nudge assignment that you want to modify.
 
-Together, this parameter and the AssigneeId parameter uniquely identify the nudge assignment that you want to modify.
+Together, this parameter and the AssigneeId parameter uniquely identify the Custom Nudge assignment that you want to modify.
 
 ```yaml
 Type: Boolean
@@ -67,9 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -NudgeName
-The NudgeName parameter specifies the name of the nudge that you want to modify.
+The NudgeName parameter specifies the name of the Custom Nudge in the Custom Nudge assignment that you want to modify.
 
-Together, this parameter and the NudgeName parameter uniquely identify the nudge assignment that you want to modify.
+Together, this parameter and the NudgeName parameter uniquely identify the Custom Nudge assignment that you want to modify.
 
 ```yaml
 Type: String
@@ -85,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-The StartTime parameter specifies the date when the nudge is first shown to the user.
+The StartTime parameter specifies the date when the Custom Nudge is first shown to the user.
 
 ```yaml
 Type: String
@@ -101,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-The EndTime parameter specifies the date when the nudge is no longer shown to the user.
+The EndTime parameter specifies the date when the Custom Nudge is no longer shown to the user.
 
 ```yaml
 Type: String

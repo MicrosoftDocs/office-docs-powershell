@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # New-CustomNudge
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the New-CustomNudge cmdlet to create custom nudges that are displayed in user Briefing email messages.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the New-CustomNudge cmdlet to create Custom Nudges that are displayed in user Briefing email messages.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,7 +30,7 @@ New-CustomNudge -Name <String> -From <String> -Title <String> -Content <String>
 ```
 
 ## DESCRIPTION
-Custom nudges that are assigned to users appear their Briefing email messages. Users can mark these nudges as complete after they finish the task.
+Custom Nudges that are assigned to users appear their Briefing email messages. Users can mark these Custom Nudges as complete after they finish the task.
 
 This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following roles in Azure Active Directory:
 
@@ -45,12 +47,12 @@ To learn more about administrator role permissions in Azure Active Directory, se
 New-CustomNudge -Name perfReviewNudge -From "Microsoft HR" -Title "Please complete your performance reviews" -Content "They are very important to help your colleagues grow professionally."
 ```
 
-This example creates a new nudge that can later be assigned to specific users to show in their Briefing email.
+This example creates a new Custom Nudge that can later be assigned to specific users to show in their Briefing email.
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for nudge. The maximum length is 512 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the Custom Nudge. The maximum length is 512 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 This value is not shown to users.
 
@@ -68,9 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -From
-The From parameter specifies the creator of the nudge. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The From parameter specifies the creator of the Custom Nudge. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-Typically, this value is the name of the company or department that's responsible for the nudge.
+Typically, this value is the name of the company or department that's responsible for the Custom Nudge.
 
 ```yaml
 Type: String
@@ -86,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-The Title parameter specifies the bold title of the nudge that's displayed in the Briefing email. The maximum length is 128 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Title parameter specifies the bold title of the Custom Nudge that's displayed in the Briefing email. The maximum length is 128 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -102,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Content
-The Content parameter specifies the text that appears below the nudge title in the Briefing email. The maximum length is 512 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Content parameter specifies the text that appears below the Custom Nudge title in the Briefing email. The maximum length is 512 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 To include hyperlinks, use the markdown format. For example, `[Contoso](https://www.contoso.com)`.
 

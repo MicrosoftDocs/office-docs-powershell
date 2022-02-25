@@ -13,9 +13,11 @@ ms.reviewer: shusun
 # Set-CustomNudgeSettings
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Set-CustomNudgeSettings cmdlet to modify the organization settings for custom nudges. Nudges are shown in the Briefing email.
+**Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
+
+Use the Set-CustomNudgeSettings cmdlet to modify the organization settings for Custom Nudges. Custom Nudges are shown in the Briefing email.
 
 For information about the parameter Sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,22 +45,22 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Set-CustomNudgeSettings -Enabled $true -Title "Contoso HR"
 ```
 
-This example turns on the custom nudge section and custom nudges in all Briefing email messages. The name of the custom nudge section is Contoso HR.
+This example turns on the Custom Nudge section and Custom Nudges in all Briefing email messages. The name of the Custom Nudge section is Contoso HR.
 
 ### Example 2
 ```powershell
 Set-CustomNudgeSettings -Enabled $false
 ```
 
-This example turns off the custom nudge section and custom nudges in all Briefing email messages.
+This example turns off the Custom Nudge section and Custom Nudges in all Briefing email messages.
 
 ## PARAMETERS
 
 ### -Enabled
-The Enabled parameter enables or disables custom nudges in all Briefing email messages. Valid values are:
+The Enabled parameter enables or disables Custom Nudges in all Briefing email messages. Valid values are:
 
-- $true: Custom nudges and the custom nudge section are available. You create custom nudges by using the New-CustomNudge cmdlet. You assign custom nudges to users by using the New-CustomNudgeAssignment cmdlet.
-- $false: Custom nudges and the custom nudge section are not available in Briefing email messages.
+- $true: Custom Nudges and the Custom Nudge section are available. You create Custom Nudges by using the New-CustomNudge cmdlet. You assign Custom Nudges to users by using the New-CustomNudgeAssignment cmdlet.
+- $false: Custom Nudges and the Custom Nudge section are not available in Briefing email messages.
 
 ```yaml
 Type: Boolean
@@ -74,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-The Title parameter specifies the title of the custom nudge section in the Briefing email. If the value contains spaces, enclose the value in quotation marks (").
+The Title parameter specifies the title of the Custom Nudge section in the Briefing email. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -94,22 +96,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Enabled
-The Enabled parameter specifies whether or not custom nudges can be shown to users in the briefing email.
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
