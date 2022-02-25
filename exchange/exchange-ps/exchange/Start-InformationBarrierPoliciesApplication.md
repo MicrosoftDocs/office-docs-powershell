@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -CleanupGroupSegmentLink
-The CleanupGroupSegmentLink switch ???????????????????. You don't need to specify a value with this switch.
+The CleanupGroupSegmentLink switch specifies whether to remove group segment links. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
