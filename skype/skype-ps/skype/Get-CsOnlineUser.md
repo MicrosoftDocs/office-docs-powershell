@@ -62,7 +62,15 @@ Users homed on Skype for Business Online will a TenantId that is equal to some v
 
 The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
 
-*Deprecated Attributes* - Theses are no longer relevant to Teams
+*New User Attributes*
+
+FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed). This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
+Some of the commonly used FeatureTypes include:
+- AudioConferencing
+- PhoneSystem
+- CallingPlan
+
+*Dropped Attributes* - The following attributes are no longer relevant to Teams and have been dropped from the output:
 
 - AcpInfo
 - AdminDescription
@@ -147,7 +155,6 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - UserServicesPolicy
 - ConferencingPolicy
 - Id
-- Identity
 - MobilityPolicy
 - OnlineDialinConferencingPolicy
 - Sid
@@ -229,34 +236,54 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - CountryAbbreviation
 - UsageLocation
 
-*Attributes renamed/replaced:*
-- ObjectId renamed to Identity
+*Attributes renamed:*
+
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
 - MCOValidationErrors renamed to UserValidationErrors
-- OnPremSIPEnabled renamed to OnPremIsSipEnabled
 - Enabled renamed to IsSipEnabled
-- OnPremOptionFlags renamed to OnPremOptionFlag
-- OptionFlags renamed to OptionFlag
-- ProxyAddresses renamed to ProxyAddress
-- ShadowProxyAddresses renamed to ShadowProxyAddress
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
-*New User Attributes*
+*Attributes that have changed in meaning/format*
 
-FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed).
+OnPremLineURI: This attribute used to previously refer to both 
+  - LineURI set via OnPrem AD
+  - Direct Routing numbers assigned to users via Set-CsUser
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to LineURI set via OnPrem AD. Direct Routing numbers can be distinguised from Calling Plan users by looking at the FeatureTypes attribute.
 
-*Deprecated input parameters*
+- The output format of AssignedPlan and ProvisionedPlans have now changed from xml to json
+- The output format of Policies has now changed from String to json
 
-LdapFilter has been deprecated due to low usage.
 
 *Changes in "-Filter" parameter*
-- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
-  - AssignedPlans -eq '*MCO' or 'MCO*'or '*MCO*' - for contains checks.
-The output format has also changed, the xml object is now a json object.
+- Assigned Plan filter: Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
+  - ``AssignedPlan -eq "*MCO" or 'MCO*' or '*MCO*' - for contains checks``
+  - ``The wildcard operator '*' will only work with AssignedPlan when used in conjunction with the '-eq' operator``
 
 - EnterpriseVoiceEnabled filter
-  - EnterpriseVoiceEnabled -eq true / false
+  - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``
+
+*Dropped input parameters*
+
+The following input paramters have beed dropped because they are no longer relevant to Teams:
+
+- [-LdapFilter <String>] 
+- [-OnOfficeCommunicationServer] 
+- [-OnModernServer]
+- [-UnassignedUser] 
+- [-OU <OUIdParameter>] 
+- [-DomainController <Fqdn>]
+
+*Dropped Filter Operators*
+  
+The following filter syntaxs are not supported in TeamsPowerShell Moduled 3.0.0 and above:
+
+``•	-not (<simple/complex PS filter>)``
+``•	<property> -like '*<text>'``
+``•	<property> -like '*<text>*'``
+``•	<property> -lt <value>``
+``•	<property> -gt <value>``
+``•	<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>``
 
 
 ## EXAMPLES
@@ -354,6 +381,15 @@ The Filter parameter uses the same filtering syntax that is used by the Where-Ob
 For example, a filter that returns only users who have been enabled for Enterprise Voice would look like this, with EnterpriseVoiceEnabled representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
 
 `{EnterpriseVoiceEnabled -eq $True}`
+  
+  *Changes in "-Filter" parameter*
+- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
+  - ``AssignedPlan -eq "*MCO" or 'MCO*' or '*MCO*' - for contains checks``
+
+*Note:* The output format has also changed, the xml object is now a json object.
+
+- EnterpriseVoiceEnabled filter
+  - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``
 
 ```yaml
 Type: String
@@ -534,8 +570,82 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.OCSADUser or String
-A String must represent a valid user account Identity (for example, "sip:kenmyer@litwareinc.com").
+*Dropped input parameters*
+
+The following input paramters have beed dropped as they are no longer relevant to Teams:
+
+[-LdapFilter <String>] 
+[-OnOfficeCommunicationServer] 
+[-OnModernServer]
+[-UnassignedUser] 
+[-OU <OUIdParameter>] 
+[-DomainController <Fqdn>]
+   
+*Supported filters* - The Filtering functionality has been limited to the following attributes:
+
+- accountEnabled
+- ownerUrn
+- displayName
+- givenName
+- lineUri
+- userPrincipalName
+- ExternalAccessPolicy
+- OnlineDialOutPolicy
+- OnlineVoiceRoutingPolicy
+- TeamsMeetingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMessagingPolicy
+- TeamsCallParkPolicy
+- TeamsEmergencyCallingPolicy
+- TeamsEmergencyCallRoutingPolicy
+- TeamsChannelsPolicy
+- TeamsUpdateManagementPolicy
+- TeamsCallingPolicy
+- TeamsUpgradePolicy
+- TeamsUpgradeOverridePolicy
+- TeamsAppSetupPolicy
+- TeamsAppPermissionPolicy
+- TeamsVerticalPackagePolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsCallHoldPolicy
+- TenantDialPlan
+- OnlineVoicemailPolicy
+- OnlineAudioConferencingRoutingPolicy
+- TeamsAudioConferencingPolicy
+- TeamsVdiPolicy
+- TeamsFeedbackPolicy
+- TeamsIPPhonePolicy
+- TeamsShiftsAppPolicy
+- TeamsShiftsPolicy
+- TeamsTargetingPolicy
+- TeamsTemplatePermissionPolicy
+- TeamsSyntheticAutomatedCallPolicy
+- TeamsMobilityPolicy
+- TeamsCortanaPolicy
+- TeamsMeetingBrandingPolicy
+- TeamsNotificationAndFeedsPolicy
+- TeamsVideoInteropServicePolicy
+- TeamsEducationAssignmentsAppPolicy
+- TeamsComplianceRecordingPolicy
+- AssignedPlan
+- EnterpriseVoiceEnabled
+- Identity
+- department
+- UserDirSyncEnabled
+- Title
+- CountryAbbreviation
+- UsageLocation
+  
+*Dropped Filter Operators*
+  
+The following filter syntaxs are not supported in TeamsPowerShell Moduled 3.0.0 and above:
+
+``•	-not (<simple/complex PS filter>)``
+``•	<property> -like '*<text>'``
+``•	<property> -like '*<text>*'``
+``•	<property> -lt <value>``
+``•	<property> -gt <value>``
+``•	<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>``
 
 
 ## OUTPUTS
