@@ -263,28 +263,29 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to Lin
 - EnterpriseVoiceEnabled filter
   - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``
 
-*Dropped input parameters*
+*Dropped input parameters:*
 
 The following input paramters have beed dropped because they are no longer relevant to Teams:
-
-- [-LdapFilter <String>] 
-- [-OnOfficeCommunicationServer] 
-- [-OnModernServer]
-- [-UnassignedUser] 
-- [-OU <OUIdParameter>] 
-- [-DomainController <Fqdn>]
-
+```
+[-LdapFilter <String>] 
+[-OnOfficeCommunicationServer] 
+[-OnModernServer]
+[-UnassignedUser] 
+[-OU <OUIdParameter>] 
+[-DomainController <Fqdn>]
+```
 *Dropped Filter Operators*
   
 The following filter syntaxs are not supported in TeamsPowerShell Moduled 3.0.0 and above:
 
-``•	-not (<simple/complex PS filter>)``
-``•	<property> -like '*<text>'``
-``•	<property> -like '*<text>*'``
-``•	<property> -lt <value>``
-``•	<property> -gt <value>``
-``•	<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>``
-
+```
+-not (<simple/complex PS filter>)
+<property> -like '*<text>'
+<property> -like '*<text>*'
+<property> -lt <value>
+<property> -gt <value>
+<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>
+```
 
 ## EXAMPLES
 
@@ -573,14 +574,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 *Dropped input parameters*
 
 The following input paramters have beed dropped as they are no longer relevant to Teams:
-
+```
 [-LdapFilter <String>] 
 [-OnOfficeCommunicationServer] 
 [-OnModernServer]
 [-UnassignedUser] 
 [-OU <OUIdParameter>] 
 [-DomainController <Fqdn>]
-   
+```
 *Supported filters* - The Filtering functionality has been limited to the following attributes:
 
 - accountEnabled
@@ -640,18 +641,34 @@ The following input paramters have beed dropped as they are no longer relevant t
   
 The following filter syntaxs are not supported in TeamsPowerShell Moduled 3.0.0 and above:
 
-``•	-not (<simple/complex PS filter>)``
-``•	<property> -like '*<text>'``
-``•	<property> -like '*<text>*'``
-``•	<property> -lt <value>``
-``•	<property> -gt <value>``
-``•	<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>``
-
+```
+-not (<simple/complex PS filter>)
+<property> -like '*<text>'
+<property> -like '*<text>*'
+<property> -lt <value>
+<property> -gt <value>
+<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>
+```
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.ADOCOnlineUser
+*Attributes renamed:*
 
+- FirstName renamed to GivenName
+- DirSyncEnabled renamed to UserDirSyncEnabled
+- MCOValidationErrors renamed to UserValidationErrors
+- Enabled renamed to IsSipEnabled
+- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
+
+*Attributes that have changed in meaning/format*
+
+OnPremLineURI: This attribute used to previously refer to both 
+  - LineURI set via OnPrem AD
+  - Direct Routing numbers assigned to users via Set-CsUser
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to LineURI set via OnPrem AD. Direct Routing numbers can be distinguised from Calling Plan users by looking at the FeatureTypes attribute.
+
+- The output format of AssignedPlan and ProvisionedPlans have now changed from xml to json
+- The output format of Policies has now changed from String to json
 
 ## NOTES
 
