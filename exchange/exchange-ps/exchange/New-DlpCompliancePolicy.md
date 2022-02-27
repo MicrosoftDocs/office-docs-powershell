@@ -412,7 +412,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-#### Example
+**Example**
+
 ```powershell
 New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
 ```
@@ -442,7 +443,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-#### Example
+**Example**
+
 ```powershell
 New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
 ```
