@@ -29,7 +29,7 @@ The `New-CsAutoAttendantCallHandlingAssociation` cmdlet creates a new call handl
 ### -------------------------- Example 1 --------------------------
 ```powershell
 $tr = New-CsOnlineTimeRange -Start 09:00 -End 17:00
-$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr)
+$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr) -Complement
 $scheduleId = $schedule.Id
 
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
@@ -49,7 +49,7 @@ This example creates the following:
 ### -------------------------- Example 2 --------------------------
 ```powershell
 $tr = New-CsOnlineTimeRange -Start 09:00 -End 17:00
-$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr)
+$schedule = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr) -TuesdayHours @($tr) -WednesdayHours @($tr) -ThursdayHours @($tr) -FridayHours @($tr) -Complement
 $scheduleId = $schedule.Id
 
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
