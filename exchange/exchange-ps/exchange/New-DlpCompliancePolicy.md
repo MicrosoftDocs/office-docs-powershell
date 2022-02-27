@@ -406,7 +406,7 @@ Accept wildcard characters: False
 ### -PowerBIDlpLocation
 The PowerBIDlpLocation parameter specifies the Power BI workspace IDs to include in the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
 
-You can enter multiple workspace IDs separated by commas. Use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
 You can find the workspace ID as follows:
 * Admin portal > Workspaces. Select workspace > More options (...) > Details
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 ### -PowerBIDlpLocationException
 The PowerBIDlpLocationException parameter specifies the Power BI workspace IDs to exclude when you use the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
 
-You can enter multiple workspace IDs separated by commas. Use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
 You can find the workspace ID as follows:
 * Admin portal > Workspaces. Select workspace > More options (...) > Details
