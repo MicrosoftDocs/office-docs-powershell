@@ -71,6 +71,20 @@ New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePoi
 
 This example creates a DLP policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations. The new policy has a descriptive comment and will be enabled on creation.
 
+### Example 3
+```powershell
+New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
+```
+
+This example creates a DLP policy named PowerBIPolicy for the specified Power BI workspaces. The new policy has a descriptive comment and will be enabled on creation.
+
+### Example 4
+```powershell
+New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
+```
+
+This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
+
 ## PARAMETERS
 
 ### -Name
@@ -390,9 +404,14 @@ Accept wildcard characters: False
 ```
 
 ### -PowerBIDlpLocation
-The PowerBIDlpLocation parameter specifies the Power BI worksapce IDs to include in the DLP policy.
+The PowerBIDlpLocation parameter specifies the Power BI workspace IDs to include in the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+You can enter multiple workspace IDs separated by commas. Use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID as follows:
+* Admin portal > Workspaces. Select workspace > More options (...) > Details
+* From the URL of a selected workpace.
+* PowerShell > Get-PowerBIWorkspace
 
 ```yaml
 Type: MultiValuedProperty
@@ -408,9 +427,14 @@ Accept wildcard characters: False
 ```
 
 ### -PowerBIDlpLocationException
-The PowerBIDlpLocationException parameter specifies the Power BI worksapce IDs to exclude when you use the value All for the PowerBIDlpLocation parameter.
+The PowerBIDlpLocationException parameter specifies the Power BI workspace IDs to exclude when you use the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+You can enter multiple workspace IDs separated by commas. Use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID as follows:
+* Admin portal > Workspaces. Select workspace > More options (...) > Details
+* From the URL of a selected workpace.
+* PowerShell > Get-PowerBIWorkspace
 
 ```yaml
 Type: MultiValuedProperty
