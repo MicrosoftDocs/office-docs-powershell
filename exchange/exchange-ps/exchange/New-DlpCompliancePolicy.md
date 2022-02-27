@@ -71,20 +71,6 @@ New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePoi
 
 This example creates a DLP policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations. The new policy has a descriptive comment and will be enabled on creation.
 
-### Example 3
-```powershell
-New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
-```
-
-This example creates a DLP policy named PowerBIPolicy for the specified Power BI workspaces. The new policy has a descriptive comment and will be enabled on creation.
-
-### Example 4
-```powershell
-New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
-```
-
-This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
-
 ## PARAMETERS
 
 ### -Name
@@ -426,6 +412,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+#### Example
+```powershell
+New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
+```
+
+This example creates a DLP policy named PowerBIPolicy for the specified Power BI workspaces. The new policy has a descriptive comment and will be enabled on creation.
+
 ### -PowerBIDlpLocationException
 The PowerBIDlpLocationException parameter specifies the Power BI workspace IDs to exclude when you use the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
 
@@ -448,6 +441,13 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+#### Example
+```powershell
+New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
+```
+
+This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
 
 ### -Priority
 The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
