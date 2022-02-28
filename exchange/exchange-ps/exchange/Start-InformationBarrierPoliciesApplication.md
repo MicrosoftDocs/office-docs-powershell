@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>]
+ [-CleanupGroupSegmentLink]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -54,6 +55,22 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -CleanupGroupSegmentLink
+The CleanupGroupSegmentLink switch specifies whether to remove group segment links. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
