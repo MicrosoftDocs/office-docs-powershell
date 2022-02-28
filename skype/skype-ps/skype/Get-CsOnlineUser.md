@@ -282,7 +282,7 @@ The following input paramters have beed dropped because they are no longer relev
 ```
 *Dropped Filter operators*
   
-The following filter syntaxes are not supported in TeamsPowerShell Moduled 3.0.0 and above:
+The following filter syntaxes are not supported in Teams PowerShell Moduled 3.0.0 and above:
 
 ```
 -not (<simple/complex PS filter>)
