@@ -668,7 +668,7 @@ The Filtering functionality has been limited to the following attributes:
 
 *Attributes that have changed in meaning/format*
 
-OnPremLineURI: This attribute used to previously refer to both 
+OnPremLineURI: This attribute used to previously refer to both:
   - LineURI set via OnPrem AD.
   - Direct Routing numbers assigned to users via Set-CsUser.
 
