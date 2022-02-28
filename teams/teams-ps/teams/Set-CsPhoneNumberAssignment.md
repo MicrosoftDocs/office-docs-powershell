@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific user or resource account. Can be specified using the ObjectId, the SIP address or the e-mail address.
+The Id of the specific user or resource account. Can be specified using the ObjectId, the SIP address or UserPrincipalName.
 
 ```yaml
 Type: System.String
