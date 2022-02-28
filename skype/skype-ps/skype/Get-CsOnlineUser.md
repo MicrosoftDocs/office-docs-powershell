@@ -396,7 +396,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 *Note:* The output format has also changed, the xml object is now a json object.
 
 - EnterpriseVoiceEnabled filter
-  - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``
+  - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``.
 
 ```yaml
 Type: String
