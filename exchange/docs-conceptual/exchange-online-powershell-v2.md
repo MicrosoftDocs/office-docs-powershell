@@ -243,19 +243,22 @@ The EXO V2 module is supported in the following versions of Windows:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
-If you receive the following error:
+  
+- Connecting to Exchange Online using EXO v2 may result in this error:
   > Create Powershell Session is failed using OAuth.
 
   ![image](https://user-images.githubusercontent.com/61047131/156006031-68d37b96-7d95-4b1e-8cf5-c59a121a8bb7.png)
   
-  This indicates that the Basic authentication setting of WinRM is disabled, which block the client from authenticating.
-  Enable the Basic authentication setting of WinRM using this cmdlet:
+  This indicate that the Basic authentication setting of WinRM is disabled, which prevents the client authentication.
+  
+  Enable Basic authentication for WinRM using this cmdlet:
   
   ```powershell
-   Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
+  Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
   ```
- Afterwards the EXO v2 PowerShell should load correctly
- ![image](https://user-images.githubusercontent.com/61047131/156005836-b8cd9fcb-8305-4bf3-b246-9c04b96ad962.png)
+  Now verify that EXO v2 PowerShell load properly.
+  
+  ![image](https://user-images.githubusercontent.com/61047131/156005836-b8cd9fcb-8305-4bf3-b246-9c04b96ad962.png)
   
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
