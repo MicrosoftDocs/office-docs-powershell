@@ -62,7 +62,7 @@ Users homed on Skype for Business Online will a TenantId that is equal to some v
 
 The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
 
-*New User Attributes*
+*New user attributes*
 
 FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed). This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
 Some of the commonly used FeatureTypes include:
