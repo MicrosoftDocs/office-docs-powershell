@@ -645,9 +645,9 @@ The Filtering functionality has been limited to the following attributes:
 - CountryAbbreviation
 - UsageLocation
   
-*Dropped Filter Operators*
+*Dropped filter operators*
   
-The following filter syntaxs are not supported in TeamsPowerShell Moduled 3.0.0 and above:
+The following filter syntaxes are not supported in Teams PowerShell Moduled 3.0.0 and above:
 
 ```
 -not (<simple/complex PS filter>)
