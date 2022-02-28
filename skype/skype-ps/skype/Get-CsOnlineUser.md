@@ -240,7 +240,7 @@ The Filtering functionality has been limited to the following attributes:
 - CountryAbbreviation
 - UsageLocation
 
-*Attributes renamed:*
+*Attributes renamed*
 
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
