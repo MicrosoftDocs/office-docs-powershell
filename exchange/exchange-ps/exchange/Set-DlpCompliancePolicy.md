@@ -30,6 +30,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddOneDriveLocationException <MultiValuedProperty>]
  [-AddOnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-AddOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-AddPowerBIDlpLocation <MultiValuedProperty>]
+ [-AddPowerBIDlpLocationException <MultiValuedProperty>]
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
@@ -53,7 +55,9 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveOnPremisesScannerDlpLocation <MultiValuedProperty>]
- [-RemovePremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-RemoveOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-RemovePowerBIDlpLocation <MultiValuedProperty>]
+ [-RemovePowerBIDlpLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
@@ -92,6 +96,13 @@ Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
 
 This example disables the "MainPII" policy.
+
+### Example 3
+```powershell
+Set-DlpCompliancePolicy -Identity "PowerBIPolicy" -AddPowerBILocation "workspaceID1","workspaceID2","workspaceID3"
+```
+
+This example adds the specified workspace IDs to the Power BI location for the DLP policy named PowerBIPolicy without affecting the existing workspace IDs.
 
 ## PARAMETERS
 
@@ -238,6 +249,52 @@ Accept wildcard characters: False
 
 ### -AddOnPremisesScannerDlpLocationException
 {{ Fill AddOnPremisesScannerDlpLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPowerBIDlpLocation
+The AddPowerBIDlpLocation parameter specifies the Power BI workspace IDs to add to the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID as follows:
+* Admin portal > Workspaces. Select workspace > More options (...) > Details
+* From the URL of a selected workpace.
+* PowerShell > Get-PowerBIWorkspace
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPowerBIDlpLocationException
+The AddPowerBIDlpLocationException parameter specifies Power BI workspace IDs to add to the list of excluded workspace IDs of a DLP policy that applies to all workspaces. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID as follows:
+* Admin portal > Workspaces. Select workspace > More options (...) > Details
+* From the URL of a selected workpace.
+* PowerShell > Get-PowerBIWorkspace
 
 ```yaml
 Type: MultiValuedProperty
@@ -670,6 +727,52 @@ Accept wildcard characters: False
 
 ### -RemoveOnPremisesScannerDlpLocationException
 {{ Fill RemoveOnPremisesScannerDlpLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePowerBIDlpLocation
+The RemovePowerBIDlpLocation parameter specifies the Power BI workspace IDs to remove from the DLP policy.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID as follows:
+* Admin portal > Workspaces. Select workspace > More options (...) > Details
+* From the URL of a selected workpace.
+* PowerShell > Get-PowerBIWorkspace
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePowerBIDlpLocationException
+The RemovePowerBIDlpLocationException parameter specifies Power BI workspace IDs to remove from the list of excluded workspace IDs of a DLP policy that applies to all workspaces.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID as follows:
+* Admin portal > Workspaces. Select workspace > More options (...) > Details
+* From the URL of a selected workpace.
+* PowerShell > Get-PowerBIWorkspace
 
 ```yaml
 Type: MultiValuedProperty
