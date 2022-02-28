@@ -162,7 +162,6 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - WebPage
 - AssignedLicenses
 - OnPremisesUserPrincipalName
-- HostedVoiceMail
 - LicenseAssignmentStates
 - OnPremDomainName
 - OnPremSecurityIdentifier
@@ -172,7 +171,7 @@ The following updates are applicable for TeamsOnly customers using Microsoft Tea
 - LastName
 - Office
 - Phone
-- WindowsEmailAddress*
+- WindowsEmailAddress
 
 *Supported filters* - The Filtering functionality has been limited to the following attributes:
 
