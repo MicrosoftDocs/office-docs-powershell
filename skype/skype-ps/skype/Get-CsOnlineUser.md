@@ -259,6 +259,9 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 - The output format of AssignedPlan and ProvisionedPlans have now changed from XML to JSON.
 - The output format of Policies has now changed from String to JSON.
 
+*Changes in "-identity" parameter*
+
+Using the "-identity" parameter now only allows Guid/SIP address and UPN, Alias and Display Name have been dropped
 
 *Changes in "-Filter" parameter*
 
@@ -418,6 +421,10 @@ You can use the asterisk ( * ) wildcard character when using the Display Name as
 For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith". 
 
 Note that in Microsoft Teams PowerShell Version 2.5.1, using this parameter will cause the Get-CsOnlineUser command to no longer emit deprecated properties as part of the modernization effort.
+
+*Changes in "-identity" parameter*
+
+Using the "-identity" parameter now only allows Guid/SIP address and UPN, Alias and Display Name have been dropped
 
 ```yaml
 Type: UserIdParameter
