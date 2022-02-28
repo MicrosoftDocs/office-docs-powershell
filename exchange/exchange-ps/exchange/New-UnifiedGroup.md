@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: New-UnifiedGroup is not supported under the ApplicationID context. Instead of this cmdlet, we recommend using Microsoft Graph to create Microsoft 365 groups in that context. For more information, see [Overview of Microsoft 365 groups in Microsoft Graph](https://docs.microsoft.com/graph/office365-groups-concept-overview).
-
 Use the New-UnifiedGroup cmdlet to create Microsoft 365 Groups in your cloud-based organization. To add members, owners, and subscribers to Microsoft 365 Groups, use the Add-UnifiedGroupLinks cmdlet.
+
+**Note**: You can't use this cmdlet to create Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Create group](https://docs.microsoft.com/graph/api/group-post-groups).
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
