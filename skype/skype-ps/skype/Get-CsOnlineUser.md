@@ -262,8 +262,8 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 *Changes in "-Filter" parameter*
 
 - Assigned Plan filter: The previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This needs to be modified to one of the following formats:
-  - ``AssignedPlan -eq "*MCO" or 'MCO*' or '*MCO*' - for contains checks``
-  - ``The wildcard operator '*' will only work with AssignedPlan when used in conjunction with the '-eq' operator``
+  - ``AssignedPlan -eq "*MCO" or 'MCO*' or '*MCO*' - for contains checks``.
+  - ``The wildcard operator '*' will only work with AssignedPlan when used in conjunction with the '-eq' operator``.
 
 - EnterpriseVoiceEnabled filter
   - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``
