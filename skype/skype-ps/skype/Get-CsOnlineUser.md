@@ -393,7 +393,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 - Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
   - ``AssignedPlan -eq "*MCO" or 'MCO*' or '*MCO*' - for contains checks``
 
-*Note:* The output format has also changed, the xml object is now a json object.
+*Note:* The output format has also changed, the XML object is now a JSON object.
 
 - EnterpriseVoiceEnabled filter
   - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``.
