@@ -268,10 +268,10 @@ The AddPowerBIDlpLocation parameter specifies the Power BI workspace IDs to add 
 
 You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
-You can find the workspace ID as follows:
-* Admin portal > Workspaces. Select workspace > More options (...) > Details
-* From the URL of a selected workpace.
-* PowerShell > Get-PowerBIWorkspace
+You can find the workspace ID using one of the following procedures:
+
+- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
+- PowerShell: Get-PowerBIWorkspace.
 
 ```yaml
 Type: MultiValuedProperty
@@ -291,10 +291,10 @@ The AddPowerBIDlpLocationException parameter specifies Power BI workspace IDs to
 
 You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
-You can find the workspace ID as follows:
-* Admin portal > Workspaces. Select workspace > More options (...) > Details
-* From the URL of a selected workpace.
-* PowerShell > Get-PowerBIWorkspace
+You can find the workspace ID using one of the following procedures:
+
+- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
+- PowerShell: Get-PowerBIWorkspace.
 
 ```yaml
 Type: MultiValuedProperty
