@@ -24,8 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ExoInformationBarrierRelationship -RecipientId1 <RecipientIdParameter> -RecipientId2 <RecipientIdParameter>
- [-Confirm]
- [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -83,38 +81,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
