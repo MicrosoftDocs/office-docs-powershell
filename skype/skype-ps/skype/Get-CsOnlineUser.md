@@ -266,7 +266,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
   - ``The wildcard operator '*' will only work with AssignedPlan when used in conjunction with the '-eq' operator``.
 
 - EnterpriseVoiceEnabled filter
-  - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``
+  - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``.
 
 *Dropped input parameters:*
 
