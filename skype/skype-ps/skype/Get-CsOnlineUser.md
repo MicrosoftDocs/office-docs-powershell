@@ -268,7 +268,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 - EnterpriseVoiceEnabled filter
   - The new format is as follows: ``EnterpriseVoiceEnabled -eq $true / $false``.
 
-*Dropped input parameters:*
+*Dropped input parameters*
 
 The following input paramters have beed dropped because they are no longer relevant to Teams:
 
