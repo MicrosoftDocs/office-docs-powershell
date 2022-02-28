@@ -70,7 +70,7 @@ Some of the commonly used FeatureTypes include:
 - PhoneSystem
 - CallingPlan
 
-*Dropped Attributes*  
+*Dropped attributes*  
 
 The following attributes are no longer relevant to Teams and have been dropped from the output:
 
