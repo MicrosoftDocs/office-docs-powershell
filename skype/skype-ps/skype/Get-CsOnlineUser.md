@@ -280,7 +280,7 @@ The following input paramters have beed dropped because they are no longer relev
 [-OU <OUIdParameter>] 
 [-DomainController <Fqdn>]
 ```
-*Dropped Filter Operators*
+*Dropped Filter operators*
   
 The following filter syntaxs are not supported in TeamsPowerShell Moduled 3.0.0 and above:
 
