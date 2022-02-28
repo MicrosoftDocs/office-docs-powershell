@@ -673,7 +673,7 @@ The following filter syntaxes are not supported in Teams PowerShell Moduled 3.0.
 OnPremLineURI: This attribute used to previously refer to both 
   - LineURI set via OnPrem AD.
   - Direct Routing numbers assigned to users via Set-CsUser.
-In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to LineURI set via OnPrem AD. Direct Routing numbers can be distinguised from Calling Plan users by looking at the FeatureTypes attribute.
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to LineURI set via OnPrem AD. Direct Routing numbers can be distinguished from Calling Plan users by looking at the FeatureTypes attribute.
 
 - The output format of AssignedPlan and ProvisionedPlans have now changed from xml to json
 - The output format of Policies has now changed from String to json
