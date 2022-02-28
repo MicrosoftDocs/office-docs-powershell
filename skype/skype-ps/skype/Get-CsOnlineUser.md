@@ -250,9 +250,9 @@ The Filtering functionality has been limited to the following attributes:
 
 *Attributes that have changed in meaning/format*
 
-OnPremLineURI: This attribute is used to previously refer to both:
-  - LineURI set via OnPrem AD.
-  - Direct Routing numbers assigned to users via Set-CsUser.
+OnPremLineURI: This attribute is used to refer to both:
+  - Previous LineURI set via OnPrem AD.
+  - Previous Direct Routing numbers assigned to users via Set-CsUser.
 In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers can be distinguished from Calling Plan users by looking at the FeatureTypes attribute.
 
 - The output format of AssignedPlan and ProvisionedPlans have now changed from XML to JSON.
