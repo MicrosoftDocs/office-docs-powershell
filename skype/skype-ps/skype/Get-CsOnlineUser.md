@@ -144,7 +144,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - UserAccountControl
 - UserProvisionType
 - UserRoutingGroupId
-- VoicePolicy
+- VoicePolicy - Alternative is the CallingPlan and PhoneSystem string in FeatureTypes
 - XForestMovePolicy
 - AddressBookPolicy
 - GraphPolicy
@@ -158,7 +158,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - ConferencingPolicy
 - Id
 - MobilityPolicy
-- OnlineDialinConferencingPolicy
+- OnlineDialinConferencingPolicy - Alternative is the AudioConferencing string in FeatureTypes
 - Sid
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
@@ -271,6 +271,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to Lin
 *Dropped input parameters:*
 
 The following input paramters have beed dropped because they are no longer relevant to Teams:
+
 ```
 [-LdapFilter <String>] 
 [-OnOfficeCommunicationServer] 
