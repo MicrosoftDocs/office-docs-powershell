@@ -56,7 +56,7 @@ This example removes/unassigns the phone number from user2@contoso.com.
 ## PARAMETERS
 
 ### -Identity
-The Id of the specific user or resource account. Can be specified using the ObjectId, the SIP address or the e-mail address.
+The Id of the specific user or resource account. Can be specified using the ObjectId, the SIP address or the UserPrincipalName.
 
 ```yaml
 Type: System.String
