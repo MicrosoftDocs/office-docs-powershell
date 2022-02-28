@@ -70,7 +70,9 @@ Some of the commonly used FeatureTypes include:
 - PhoneSystem
 - CallingPlan
 
-*Dropped Attributes* - The following attributes are no longer relevant to Teams and have been dropped from the output:
+*Dropped Attributes*  
+
+The following attributes are no longer relevant to Teams and have been dropped from the output:
 
 - AcpInfo
 - AdminDescription
@@ -181,7 +183,9 @@ Some of the commonly used FeatureTypes include:
 - Phone
 - WindowsEmailAddress*
 
-*Supported filters* - The Filtering functionality has been limited to the following attributes:
+*Supported filters* 
+
+The Filtering functionality has been limited to the following attributes:
 
 - accountEnabled
 - ownerUrn
@@ -256,6 +260,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to Lin
 
 
 *Changes in "-Filter" parameter*
+
 - Assigned Plan filter: Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
   - ``AssignedPlan -eq "*MCO" or 'MCO*' or '*MCO*' - for contains checks``
   - ``The wildcard operator '*' will only work with AssignedPlan when used in conjunction with the '-eq' operator``
@@ -582,7 +587,9 @@ The following input paramters have beed dropped as they are no longer relevant t
 [-OU <OUIdParameter>] 
 [-DomainController <Fqdn>]
 ```
-*Supported filters* - The Filtering functionality has been limited to the following attributes:
+*Supported filters*
+
+The Filtering functionality has been limited to the following attributes:
 
 - accountEnabled
 - ownerUrn
