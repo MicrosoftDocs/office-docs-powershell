@@ -243,9 +243,24 @@ The EXO V2 module is supported in the following versions of Windows:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
+If you receive the following error:
+  > Create Powershell Session is failed using OAuth.
+
+  ![image](https://user-images.githubusercontent.com/61047131/156006031-68d37b96-7d95-4b1e-8cf5-c59a121a8bb7.png)
+  
+  This indicates that the Basic authentication setting of WinRM is disabled, which block the client from authenticating.
+  Enable the Basic authentication setting of WinRM using this cmdlet:
+  
+  ```powershell
+   Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
+  ```
+ Afterwards the EXO v2 PowerShell should load correctly
+ ![image](https://user-images.githubusercontent.com/61047131/156005836-b8cd9fcb-8305-4bf3-b246-9c04b96ad962.png)
+  
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
+  
 ### Install the EXO V2 module
 
 To install the EXO V2 module for the first time, complete the following steps:
