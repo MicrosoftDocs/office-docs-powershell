@@ -590,6 +590,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
 
 **- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
+
 **- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
 
 ## NOTES
