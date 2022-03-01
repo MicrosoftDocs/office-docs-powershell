@@ -24,7 +24,7 @@ To start using the Exchange Management Shell immediately, see the [Exchange Mana
 > [!NOTE]
 > There is no Microsoft-provided module in the PowerShell Gallery for Exchange Server PowerShell. Instead, to use PowerShell in Exchange Server, you have the following options:
 >
-> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](docs-conceptual/open-the-exchange-management-shell.md).
+> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 > - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
 
 ## How the Exchange Management Shell works on all Exchange server roles except Edge Transport
