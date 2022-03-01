@@ -15,7 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 Updates an application instance in Azure Active Directory. 
 
-**Note**: The use of this cmdlet for assigning phone numbers will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: The use of this cmdlet for assigning phone numbers will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) 
+cmdlet instead. The cmdlet Set-CsPhoneNumberAssignment is currently not supported for customers/tenants that are or have been enabled for Regionally Hosted Meetings for
+Skype for Business Online. These customers should continue to use Set-CsOnlineApplicationInstance.
 
 ## SYNTAX
 
