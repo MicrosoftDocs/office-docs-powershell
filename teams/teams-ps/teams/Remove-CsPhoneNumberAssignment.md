@@ -15,6 +15,9 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
 
+**Note*: The cmdlet Remove-CsPhoneNumberAssignment is currently not supported for customers/tenants that are or have been enabled for
+Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance or
+Set-CsOnlineVoiceApplicationInstance cmdlets.
   
 ## SYNTAX
 
@@ -124,10 +127,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 The cmdlet is available in Teams PS module 3.0.0 or later.
-
-The cmdlet Remove-CsPhoneNumberAssignment is currently not supported for customers/tenants that are or have been enabled for
-Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance or
-Set-CsOnlineVoiceApplicationInstance cmdlets.
 
 
 ## RELATED LINKS
