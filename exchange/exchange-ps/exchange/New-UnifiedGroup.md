@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: New-UnifiedGroup is not supported under the ApplicationID context. Instead of this cmdlet, we recommend using Microsoft Graph to create Microsoft 365 groups in that context. For more information, see [Overview of Microsoft 365 groups in Microsoft Graph](https://docs.microsoft.com/graph/office365-groups-concept-overview).
-
 Use the New-UnifiedGroup cmdlet to create Microsoft 365 Groups in your cloud-based organization. To add members, owners, and subscribers to Microsoft 365 Groups, use the Add-UnifiedGroupLinks cmdlet.
+
+**Note**: You can't use this cmdlet to create Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Create group](https://docs.microsoft.com/graph/api/group-post-groups).
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -211,13 +211,18 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
+The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value. The maximum length is 64 characters.
 
-The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The Alias value can contain letters, numbers and the following characters:
+
+- !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
+- Unicode characters U+00A1 to U+00FF.
 
 If you don't use the Alias parameter when you create a Microsoft 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
 
-When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to `oe` in the primary email address.
 
 The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Microsoft 365 Group (`<Alias>_<ExternalDirectoryObjectId>`).
 
