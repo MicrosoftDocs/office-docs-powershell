@@ -14,6 +14,10 @@ schema: 2.0.0
 
 ## SYNOPSIS
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
+
+**Note**: The cmdlet Set-CsPhoneNumberAssignment is currently not supported for customers/tenants that are or have been enabled for
+Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance or
+Set-CsOnlineVoiceApplicationInstance cmdlets.
  
 ## SYNTAX
 
@@ -187,10 +191,6 @@ number. You will have to clear the phone number from the on-premises Active Dire
 
 The previous command for assigning phone numbers to users Set-CsUser had the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
 necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
-
-The cmdlet Set-CsPhoneNumberAssignment is currently not supported for customers/tenants that are or have been enabled for
-Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance or
-Set-CsOnlineVoiceApplicationInstance cmdlets.
 
 
 ## RELATED LINKS
