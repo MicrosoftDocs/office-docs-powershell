@@ -14,10 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
-
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
+ 
 ## SYNTAX
 
 ### Assignment (Default)
@@ -110,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific user or resource account. Can be specified using the ObjectId, the SIP address or UserPrincipalName.
+The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress or the UserPrincipalName attribute of the user or
+resource account.
 
 ```yaml
 Type: System.String
@@ -142,7 +140,6 @@ Accept wildcard characters: False
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
 "tel:" prefixed. We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
 
-
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
@@ -158,7 +155,6 @@ Accept wildcard characters: False
 
 ### -PhoneNumberType
 The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect. When you acquire a phone number
-
 you will typically know which type it is.
 
 ```yaml
@@ -191,6 +187,10 @@ number. You will have to clear the phone number from the on-premises Active Dire
 
 The previous command for assigning phone numbers to users Set-CsUser had the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
 necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
+
+The cmdlet Set-CsPhoneNumberAssignment is currently not supported for customers/tenants that are or have been enabled for
+Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance or
+Set-CsOnlineVoiceApplicationInstance cmdlets.
 
 
 ## RELATED LINKS
