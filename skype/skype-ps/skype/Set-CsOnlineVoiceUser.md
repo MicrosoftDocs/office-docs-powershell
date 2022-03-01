@@ -15,9 +15,10 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
 
-**Note**: This cmdlet will be deprecated and no longer supports the ability to add extensions to telephone numbers (for example, "tel:+61281234567;ext=5110"). Use the new 
-[Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead. The cmdlet Set-CsPhoneNumberAssignment is currently not supported for 
-customers/tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsOnlineVoiceUser.
+**Note**: This cmdlet will be deprecated and no longer supports the ability to add extensions to telephone numbers (for example, "tel:+61281234567;ext=5110"). Use the new
+[Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and
+[Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment)cmdlet instead. The new cmdlets are currently not supported for customers/tenants that
+are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsOnlineVoiceUser.
 
 ## SYNTAX
 
