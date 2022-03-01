@@ -58,205 +58,6 @@ If you want to exclude Skype for Business Online users from the data returned by
 By definition, users homed on the on-premises version will always have a TenantId equal to 00000000-0000-0000-0000-000000000000.
 Users homed on Skype for Business Online will a TenantId that is equal to some value other than 00000000-0000-0000-0000-000000000000.
 
-**Note:**
-
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
-
-*Deprecated Attributes* - Theses are no longer relevant to Teams
-
-- AcpInfo
-- AdminDescription
-- ArchivingPolicy
-- AudioVideoDisabled
-- BaseSimpleUrl
-- BroadcastMeetingPolicy
-- CallViaWorkPolicy
-- ClientPolicy
-- ClientUpdateOverridePolicy
-- ClientVersionPolicy
-- CloudMeetingOpsPolicy
-- CloudMeetingPolicy
-- CloudVideoInteropPolicy
-- ContactOptionFlags
-- CountryOrRegionDisplayName
-- Description
-- DistinguishedName
-- EnabledForRichPresence
-- ExchangeArchivingPolicy
-- ExchUserHoldPolicies
-- ExperiencePolicy
-- ExternalUserCommunicationPolicy
-- ExUmEnabled
-- Guid
-- HomeServer
-- HostedVoicemailPolicy
-- IPPBXSoftPhoneRoutingEnabled
-- IPPhone
-- IPPhonePolicy
-- IsByPassValidation
-- IsValid
-- LegalInterceptPolicy
-- LicenseRemovalTimestamp
-- LineServerURI
-- Manager
-- MNCReady
-- Name
-- NonPrimaryResource
-- ObjectCategory
-- ObjectClass
-- ObjectState
-- OnPremHideFromAddressLists
-- OriginalPreferredDataLocation
-- OriginatingServer
-- OriginatorSid
-- OverridePreferredDataLocation
-- PendingDeletion
-- PrivateLine
-- ProvisioningCounter
-- ProvisioningStamp
-- PublishingCounter
-- PublishingStamp
-- Puid
-- RemoteCallControlTelephonyEnabled
-- RemoteMachine
-- SamAccountName
-- ServiceInfo
-- StsRefreshTokensValidFrom
-- SubProvisioningCounter
-- SubProvisioningStamp
-- SubProvisionLineType
-- SyncingCounter
-- TargetRegistrarPool
-- TargetServerIfMoving
-- TeamsInteropPolicy
-- ThumbnailPhoto
-- UpgradeRetryCounter
-- UserAccountControl
-- UserProvisionType
-- UserRoutingGroupId
-- VoicePolicy
-- XForestMovePolicy
-- AddressBookPolicy
-- GraphPolicy
-- PinPolicy
-- PreferredDataLocationOverwritePolicy
-- PresencePolicy
-- SmsServicePolicy
-- TeamsVoiceRoute
-- ThirdPartyVideoSystemPolicy
-- UserServicesPolicy
-- ConferencingPolicy
-- Id
-- Identity
-- MobilityPolicy
-- OnlineDialinConferencingPolicy
-- Sid
-- TeamsWorkLoadPolicy
-- VoiceRoutingPolicy
-- ClientUpdatePolicy
-- HomePhone
-- HostedVoiceMail
-- MobilePhone
-- OtherTelephone
-- StreetAddress
-- WebPage
-- AssignedLicenses
-- OnPremisesUserPrincipalName
-- LicenseAssignmentStates
-- OnPremDomainName
-- OnPremSecurityIdentifier
-- OnPremSamAccountName
-- CallerIdPolicy
-- Fax
-- LastName
-- Office
-- Phone
-- WindowsEmailAddress
-
-*Supported filters* - The Filtering functionality has been limited to the following attributes:
-
-- accountEnabled
-- ownerUrn
-- displayName
-- givenName
-- lineUri
-- userPrincipalName
-- ExternalAccessPolicy
-- OnlineDialOutPolicy
-- OnlineVoiceRoutingPolicy
-- TeamsMeetingPolicy
-- TeamsMeetingBroadcastPolicy
-- TeamsMessagingPolicy
-- TeamsCallParkPolicy
-- TeamsEmergencyCallingPolicy
-- TeamsEmergencyCallRoutingPolicy
-- TeamsChannelsPolicy
-- TeamsUpdateManagementPolicy
-- TeamsCallingPolicy
-- TeamsUpgradePolicy
-- TeamsUpgradeOverridePolicy
-- TeamsAppSetupPolicy
-- TeamsAppPermissionPolicy
-- TeamsVerticalPackagePolicy
-- TeamsSurvivableBranchAppliancePolicy
-- TeamsCallHoldPolicy
-- TenantDialPlan
-- OnlineVoicemailPolicy
-- OnlineAudioConferencingRoutingPolicy
-- TeamsAudioConferencingPolicy
-- TeamsVdiPolicy
-- TeamsFeedbackPolicy
-- TeamsIPPhonePolicy
-- TeamsShiftsAppPolicy
-- TeamsShiftsPolicy
-- TeamsTargetingPolicy
-- TeamsTemplatePermissionPolicy
-- TeamsSyntheticAutomatedCallPolicy
-- TeamsMobilityPolicy
-- TeamsCortanaPolicy
-- TeamsMeetingBrandingPolicy
-- TeamsNotificationAndFeedsPolicy
-- TeamsVideoInteropServicePolicy
-- TeamsEducationAssignmentsAppPolicy
-- TeamsComplianceRecordingPolicy
-- AssignedPlan
-- EnterpriseVoiceEnabled
-- Identity
-- department
-- UserDirSyncEnabled
-- Title
-- CountryAbbreviation
-- UsageLocation
-
-*Attributes renamed/replaced:*
-- ObjectId renamed to Identity
-- FirstName renamed to GivenName
-- DirSyncEnabled renamed to UserDirSyncEnabled
-- MCOValidationErrors renamed to UserValidationErrors
-- OnPremSIPEnabled renamed to OnPremIsSipEnabled
-- Enabled renamed to IsSipEnabled
-- OnPremOptionFlags renamed to OnPremOptionFlag
-- OptionFlags renamed to OptionFlag
-- ProxyAddresses renamed to ProxyAddress
-- ShadowProxyAddresses renamed to ShadowProxyAddress
-- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
-
-*New User Attributes*
-
-FeatureTypes – Array of unique strings specifying what features are enabled for a user (plan not displayed).
-
-*Deprecated input parameters*
-
-LdapFilter has been deprecated due to low usage.
-
-*Changes in "-Filter" parameter*
-- Assigned Plan filter - Previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This will need to be modified to one of the following formats:
-  - AssignedPlans -eq '*MCO' or 'MCO*'or '*MCO*' - for contains checks.
-The output format has also changed, the xml object is now a json object.
-
-- EnterpriseVoiceEnabled filter
-  - EnterpriseVoiceEnabled -eq true / false
-
 
 ## EXAMPLES
 
@@ -354,6 +155,106 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 `{EnterpriseVoiceEnabled -eq $True}`
 
+**Note:**
+
+The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+  
+*Supported filters* 
+
+The Filtering functionality has been limited to the following attributes:
+
+- accountEnabled
+- ownerUrn
+- displayName
+- givenName
+- lineUri
+- userPrincipalName
+- ExternalAccessPolicy
+- OnlineDialOutPolicy
+- OnlineVoiceRoutingPolicy
+- TeamsMeetingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMessagingPolicy
+- TeamsCallParkPolicy
+- TeamsEmergencyCallingPolicy
+- TeamsEmergencyCallRoutingPolicy
+- TeamsChannelsPolicy
+- TeamsUpdateManagementPolicy
+- TeamsCallingPolicy
+- TeamsUpgradePolicy
+- TeamsUpgradeOverridePolicy
+- TeamsAppSetupPolicy
+- TeamsAppPermissionPolicy
+- TeamsVerticalPackagePolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsCallHoldPolicy
+- TenantDialPlan
+- OnlineVoicemailPolicy
+- OnlineAudioConferencingRoutingPolicy
+- TeamsAudioConferencingPolicy
+- TeamsVdiPolicy
+- TeamsFeedbackPolicy
+- TeamsIPPhonePolicy
+- TeamsShiftsAppPolicy
+- TeamsShiftsPolicy
+- TeamsTargetingPolicy
+- TeamsTemplatePermissionPolicy
+- TeamsSyntheticAutomatedCallPolicy
+- TeamsMobilityPolicy
+- TeamsCortanaPolicy
+- TeamsMeetingBrandingPolicy
+- TeamsNotificationAndFeedsPolicy
+- TeamsVideoInteropServicePolicy
+- TeamsEducationAssignmentsAppPolicy
+- TeamsComplianceRecordingPolicy
+- AssignedPlan
+- EnterpriseVoiceEnabled
+- Identity
+- department
+- UserDirSyncEnabled
+- Title
+- CountryAbbreviation
+- UsageLocation
+
+*Attributes renamed*
+
+- ObjectId renamed to Identity
+- FirstName renamed to GivenName
+- DirSyncEnabled renamed to UserDirSyncEnabled
+- MCOValidationErrors renamed to UserValidationErrors
+- Enabled renamed to IsSipEnabled
+- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
+
+*Attributes that have changed in meaning/format*
+
+**OnPremLineURI**: This attribute previously used to refer to both:
+1. LineURI set via OnPrem AD.
+2. Direct Routing numbers assigned to users via Set-CsUser.
+
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
+
+**- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
+**- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
+
+*Changes in "-Filter" parameter*
+
+- AssignedPlan filter: The previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This needs to be modified to one of the following formats:
+  - ``AssignedPlan -eq "*MCO"`` Returns all users having an AssignedPlan that ends with MCO
+  - ``AssignedPlan -eq "MCO*" ``  Returns all users having an AssignedPlan that starts with MCO
+  - ``AssignedPlan -eq "*MCO*" ``  Returns all users having an AssignedPlan that contains MCO
+
+
+*Dropped Filter operators*
+  
+The following filter syntaxes are not supported in Teams PowerShell Moduled 3.0.0 and above:
+
+- ``-not (<simple/complex PS filter>)``
+- ``<property> -like '*<text>'``
+- ``<property> -like '*<text>*'``
+- ``<property> -lt <value>``
+- ``<property> -gt <value>``
+- ``<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>``
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -376,6 +277,15 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 
 Note that in Microsoft Teams PowerShell Version 2.5.1, using this parameter will cause the Get-CsOnlineUser command to no longer emit deprecated properties as part of the modernization effort.
 
+**Note:**
+
+The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+
+*Changes in "-identity" parameter*
+
+Using the "-identity" parameter now only allows Guid/SIP address/UPN. Alias and Display Name have been dropped.
+
+
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
@@ -391,7 +301,7 @@ Accept wildcard characters: False
 
 ### -LdapFilter
  
-  *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+  *This parameter has been dropped from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
  
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
@@ -414,7 +324,7 @@ Accept wildcard characters: False
 
 ### -OnModernServer
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+ *This parameter has been dropped from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
@@ -434,7 +344,7 @@ Accept wildcard characters: False
 
 ### -OnOfficeCommunicationServer
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+ *This parameter has been dropped from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
 
 ```yaml
 Type: SwitchParameter
@@ -451,7 +361,7 @@ Accept wildcard characters: False
 
 ### -OU
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+ *This parameter has been dropped from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
 
 
 ```yaml
@@ -508,7 +418,7 @@ Accept wildcard characters: False
 
 ### -UnassignedUser
  
- *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+ *This parameter has been dropped from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to unless they are assigned to a Registrar pool.
@@ -533,14 +443,155 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.OCSADUser or String
-A String must represent a valid user account Identity (for example, "sip:kenmyer@litwareinc.com").
 
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.ADOCOnlineUser
+### Note:
+The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
 
+*New user attributes*
+
+FeatureTypes – Array of unique strings specifying what features are enabled for a user. This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
+Some of the commonly used FeatureTypes include:
+- Teams
+- AudioConferencing
+- PhoneSystem
+- CallingPlan
+
+*Dropped attributes*  
+
+The following attributes are no longer relevant to Teams and have been dropped from the output:
+
+- AcpInfo
+- AdminDescription
+- ArchivingPolicy
+- AudioVideoDisabled
+- BaseSimpleUrl
+- BroadcastMeetingPolicy
+- CallViaWorkPolicy
+- ClientPolicy
+- ClientUpdateOverridePolicy
+- ClientVersionPolicy
+- CloudMeetingOpsPolicy
+- CloudMeetingPolicy
+- CloudVideoInteropPolicy
+- ContactOptionFlags
+- CountryOrRegionDisplayName
+- Description
+- DistinguishedName
+- EnabledForRichPresence
+- ExchangeArchivingPolicy
+- ExchUserHoldPolicies
+- ExperiencePolicy
+- ExternalUserCommunicationPolicy
+- ExUmEnabled
+- Guid
+- HomeServer
+- HostedVoicemailPolicy
+- IPPBXSoftPhoneRoutingEnabled
+- IPPhone
+- IPPhonePolicy
+- IsByPassValidation
+- IsValid
+- LegalInterceptPolicy
+- LicenseRemovalTimestamp
+- LineServerURI
+- Manager
+- MNCReady
+- Name
+- NonPrimaryResource
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OnPremHideFromAddressLists
+- OriginalPreferredDataLocation
+- OriginatingServer
+- OriginatorSid
+- OverridePreferredDataLocation
+- PendingDeletion
+- PrivateLine
+- ProvisioningCounter
+- ProvisioningStamp
+- PublishingCounter
+- PublishingStamp
+- Puid
+- RemoteCallControlTelephonyEnabled
+- RemoteMachine
+- SamAccountName
+- ServiceInfo
+- StsRefreshTokensValidFrom
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SubProvisionLineType
+- SyncingCounter
+- TargetRegistrarPool
+- TargetServerIfMoving
+- TeamsInteropPolicy
+- ThumbnailPhoto
+- UpgradeRetryCounter
+- UserAccountControl
+- UserProvisionType
+- UserRoutingGroupId
+- VoicePolicy - Alternative is the CallingPlan and PhoneSystem string in FeatureTypes
+- XForestMovePolicy
+- AddressBookPolicy
+- GraphPolicy
+- PinPolicy
+- PreferredDataLocationOverwritePolicy
+- PresencePolicy
+- SmsServicePolicy
+- TeamsVoiceRoute
+- ThirdPartyVideoSystemPolicy
+- UserServicesPolicy
+- ConferencingPolicy
+- Id
+- MobilityPolicy
+- OnlineDialinConferencingPolicy - Alternative is the AudioConferencing string in FeatureTypes
+- Sid
+- TeamsWorkLoadPolicy
+- VoiceRoutingPolicy
+- ClientUpdatePolicy
+- HomePhone
+- HostedVoiceMail
+- MobilePhone
+- OtherTelephone
+- StreetAddress
+- WebPage
+- AssignedLicenses
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- LicenseAssignmentStates
+- OnPremDomainName
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- CallerIdPolicy
+- Fax
+- LastName
+- Office
+- Phone
+- WindowsEmailAddress
+
+*Attributes renamed*
+
+- ObjectId renamed to Identity
+- FirstName renamed to GivenName
+- DirSyncEnabled renamed to UserDirSyncEnabled
+- MCOValidationErrors renamed to UserValidationErrors
+- Enabled renamed to IsSipEnabled
+- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
+
+*Attributes that have changed in meaning/format*
+
+**OnPremLineURI**: This attribute previously used to refer to both:
+1. LineURI set via OnPrem AD.
+2. Direct Routing numbers assigned to users via Set-CsUser.
+
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
+
+**- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
+
+**- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
 
 ## NOTES
 
