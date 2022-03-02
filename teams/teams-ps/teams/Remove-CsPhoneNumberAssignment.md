@@ -57,7 +57,6 @@ This example removes/unassigns the phone number from user2@contoso.com.
 
 ### -Identity
 The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress, or the UserPrincipalName attribute of the user or
-
 resource account.
 
 ```yaml
