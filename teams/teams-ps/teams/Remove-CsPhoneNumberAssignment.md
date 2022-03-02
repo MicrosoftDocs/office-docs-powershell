@@ -127,7 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PS module 3.0.0 or later.
+The cmdlet is available in Teams PowerShell module 3.0.0 or later.
+
 
 
 ## RELATED LINKS
