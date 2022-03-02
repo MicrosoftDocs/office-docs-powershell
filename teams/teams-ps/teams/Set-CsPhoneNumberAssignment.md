@@ -185,7 +185,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PS module 3.0.0 or later.
+The cmdlet is available in Teams PowerShell module 3.0.0 or later.
+
 
 If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone
 number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
