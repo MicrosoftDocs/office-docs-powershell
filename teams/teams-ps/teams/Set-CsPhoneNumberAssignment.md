@@ -18,7 +18,6 @@ This cmdlet will assign a phone number to a user or a resource account (online a
 **Note**: The cmdlet is currently not supported for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These
 customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance, or Set-CsOnlineVoiceApplicationInstance cmdlets.
 
- 
 ## SYNTAX
 
 ### Assignment (Default)
