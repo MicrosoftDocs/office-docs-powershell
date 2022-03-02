@@ -255,6 +255,8 @@ You can use any value that uniquely identifies the user or group. For example:
 
 You can't use this parameter with the Owner parameter.
 
+**Note**: There is a limit of 500 permission entries (ACEs) you can add to a mailbox with Add-MailboxPermission. If you need to grant more than 500 users access to a mailbox, use security groups instead. Each security group can contain multiple users but only counts as one entry.
+
 ```yaml
 Type: SecurityPrincipalIdParameter
 Parameter Sets: AccessRights
