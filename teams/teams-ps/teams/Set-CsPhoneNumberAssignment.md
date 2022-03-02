@@ -111,7 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress or the UserPrincipalName attribute of the user or
+The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress, or the UserPrincipalName attribute of the user or
+
 resource account.
 
 ```yaml
