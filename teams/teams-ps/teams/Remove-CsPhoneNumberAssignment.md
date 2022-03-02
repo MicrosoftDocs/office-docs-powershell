@@ -15,8 +15,9 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
 
-**Note**: The cmdlet is currently not supported for customers/tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These
-customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance or Set-CsOnlineVoiceApplicationInstance cmdlets.
+**Note**: This cmdlet is currently not supported for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These
+customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance, or Set-CsOnlineVoiceApplicationInstance cmdlets.
+
   
 ## SYNTAX
 
