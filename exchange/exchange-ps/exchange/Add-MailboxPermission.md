@@ -62,7 +62,9 @@ Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePr
 ```
 
 ## DESCRIPTION
-This cmdlet updates the mailbox object that's specified by the Identity parameter.
+
+> [!NOTE]
+> You can use this cmdlet to add a maximum of 500 permission entries (ACEs) to a mailbox. To grant permissions to more than 500 users, use security groups instead of individual users for the User parameter. Security groups contain many members, but only count as one entry.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -254,8 +256,6 @@ You can use any value that uniquely identifies the user or group. For example:
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Owner parameter.
-
-**Note**: There is a limit of 500 permission entries (ACEs) you can add to a mailbox with Add-MailboxPermission. If you need to grant more than 500 users access to a mailbox, use security groups instead. Each security group can contain multiple users but only counts as one entry.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
