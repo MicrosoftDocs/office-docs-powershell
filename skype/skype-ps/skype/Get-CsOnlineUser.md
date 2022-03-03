@@ -221,7 +221,7 @@ The Filtering functionality has been limited to the following attributes:
 - ObjectId renamed to Identity
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
-- MCOValidationErrors renamed to UserValidationErrors
+- MCOValidationError renamed to UserValidationErrors
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
@@ -458,6 +458,8 @@ Some of the commonly used FeatureTypes include:
 - AudioConferencing
 - PhoneSystem
 - CallingPlan
+- CommunicationCredits
+- VoiceApp
 
 *Dropped attributes*  
 
@@ -560,7 +562,6 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - WebPage
 - AssignedLicenses
 - OnPremisesUserPrincipalName
-- HostedVoiceMail
 - LicenseAssignmentStates
 - OnPremDomainName
 - OnPremSecurityIdentifier
@@ -577,7 +578,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - ObjectId renamed to Identity
 - FirstName renamed to GivenName
 - DirSyncEnabled renamed to UserDirSyncEnabled
-- MCOValidationErrors renamed to UserValidationErrors
+- MCOValidationError renamed to UserValidationErrors
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
