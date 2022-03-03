@@ -15,8 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will show the call forwarding, simultaneous ringing, call group and delegation settings for a user.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
   
 ## SYNTAX
 
@@ -239,7 +237,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview and 3.2.0-preview (preferred).
+The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 ## RELATED LINKS
 
