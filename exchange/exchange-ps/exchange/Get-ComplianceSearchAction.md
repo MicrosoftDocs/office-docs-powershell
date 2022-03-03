@@ -84,10 +84,10 @@ This example shows a summary list of all compliance search actions.
 
 ### Example 2
 ```powershell
-Get-ComplianceSearchAction -Identity "Case 1234\_Preview" | Format-List
+Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
 ```
 
-This example shows details about the compliance search action named "Case 1234\_Preview"
+This example shows details about the compliance search action named "Case 1234_Preview"
 
 ## PARAMETERS
 
