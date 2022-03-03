@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-RMSTrustedPublishingDomain cmdlet to remove an existing trusted publishing domain (TPD) from your organization.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: This cmdlet has been deprecated and is no longer used.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -31,27 +29,20 @@ Remove-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParam
 ```
 
 ## DESCRIPTION
-A trusted publishing domain contains the settings needed to use Rights Management Services (RMS) features in your organization. When you delete a trusted publishing domain, all existing content that's protected by the RMS templates in the trusted publishing domain becomes unreadable. Instead of deleting the trusted publishing domain, you can archive the RMS templates using the Set-RMSTemplate cmdlet. Archiving the RMS template prevents future use for encryption, but allows access to existing rights-protected content.
-
-If you delete the only trusted publishing domain, all RMS features are disabled in the organization. If multiple trusted publishing domains exist in your organization, you can't delete the default trusted publishing domain. You must first designate another trusted publishing domain as the default. You can change the default trusted publishing domain using the Set-RMSTrustedPublishingDomain cmdlet.
-
+This cmdlet has been deprecated and is no longer used.
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-RMSTrustedPublishingDomain "Contoso TPD"
+Remove-RMSTrustedPublishingDomain
 ```
 
-This example removes the trusted publishing domain Contoso TPD from your organization.
+This cmdlet has been deprecated and is no longer used.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the trusted publishing domain. You can use any value that uniquely identifies the trusted publishing domain, for example:
-
-- Name
-- Distinguished name (DN)
-- GUID
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: RmsTrustedPublishingDomainIdParameter
@@ -67,10 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
@@ -86,9 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
-
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
