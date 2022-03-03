@@ -15,8 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will set the call forwarding, simultaneous ringing and call group settings for the specified user.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
   
 ## SYNTAX
 
@@ -398,7 +396,7 @@ and -WarningVariable. For more information, see [about_CommonParameters](https:/
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview or 3.2.0-preview (preferred).
+The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 The specified user need to have the Microsoft Phone System license assigned.
 
