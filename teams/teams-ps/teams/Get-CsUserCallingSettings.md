@@ -205,9 +205,8 @@ GroupMembershipDetails    :
 GroupNotificationOverride : 
 ```
 
-This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings
-
-as shown here, unanswered calls will be forwarded to voicemail by default.
+This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
+unanswered calls will by default be forwarded to voicemail after 30 seconds.
 
 ## PARAMETERS
 
