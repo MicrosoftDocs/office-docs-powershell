@@ -54,7 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $true
+Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
 ```
 
 This example enables Safe Documents and Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
