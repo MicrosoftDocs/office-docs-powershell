@@ -15,9 +15,9 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
+**Note**: The cmdlet is currently not supported for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These
+customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance, or Set-CsOnlineVoiceApplicationInstance cmdlets.
+
 ## SYNTAX
 
 ### Assignment (Default)
@@ -110,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific user or resource account. Can be specified using the ObjectId, the SIP address or the e-mail address.
+The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress, or the UserPrincipalName attribute of the user or
+resource account.
 
 ```yaml
 Type: System.String
@@ -142,7 +143,6 @@ Accept wildcard characters: False
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
 "tel:" prefixed. We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
 
-
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
@@ -158,7 +158,6 @@ Accept wildcard characters: False
 
 ### -PhoneNumberType
 The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect. When you acquire a phone number
-
 you will typically know which type it is.
 
 ```yaml
@@ -184,7 +183,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PS module 2.6.1-preview or later.
+The cmdlet is available in Teams PowerShell module 3.0.0 or later.
 
 If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone
 number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
