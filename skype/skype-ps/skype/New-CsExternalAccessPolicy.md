@@ -84,8 +84,8 @@ Note that this new policy sets both the EnableFederationAccess and the EnableOut
 
 ### -------------------------- Example 2 ------------------------
 ```
-Set-CsExternalAccessPolicy -Identity Global  -EnableAcsFederationAccess $true
-New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed  -EnableAcsFederationAccess $false
+Set-CsExternalAccessPolicy -Identity Global -EnableAcsFederationAccess $true
+New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed -EnableAcsFederationAccess $false
 ```
 
 In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.

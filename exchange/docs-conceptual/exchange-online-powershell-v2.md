@@ -223,29 +223,43 @@ The EXO V2 module is supported in the following versions of Windows:
   > [!NOTE]
   > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for many cmdlets.
   >
-  > You must temporarily enable WinRM to run the following commands. You can enable WinRM by running the command: `winrm quickconfig`.
+  > You must temporarily enable WinRM to run the following winrm commands. You can enable WinRM by running the command: `winrm quickconfig`.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in PowerShell):
+  To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
-  ```dos
+  ```DOS
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in PowerShell) to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run **one** of the following commands to enable Basic authentication for WinRM:
 
-  ```dos
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
+  - **In a Command Prompt**:
 
-  **Note**: If you'd rather run the command in PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
+    ```DOS
+    winrm set winrm/config/client/auth @{Basic="true"}
+    ```
 
-  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
+  - **In Windows PowerShell**:
+
+      ```DOS
+    winrm set winrm/config/client/auth '@{Basic="true"}'
+    ```
+
+  - **In Windows PowerShell to modify the registry**:
+  
+    ```PowerShell
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
+    ```
+
+  If Basic authentication for WinRM is disabled, you'll get one of the following errors when you try to connect:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
+  > Create Powershell Session is failed using OAuth.
+  
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
-
+  
 ### Install the EXO V2 module
 
 To install the EXO V2 module for the first time, complete the following steps:
