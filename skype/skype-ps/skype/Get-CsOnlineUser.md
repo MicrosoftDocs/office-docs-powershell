@@ -508,6 +508,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - ObjectClass
 - ObjectState
 - OnPremHideFromAddressLists
+- OnPremLineURIMauallySet
 - OriginalPreferredDataLocation
 - OriginatingServer
 - OriginatorSid
@@ -589,7 +590,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
-In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD and OnPremLineURIManuallySet attribute has been dropped. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
 
 **- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
 
