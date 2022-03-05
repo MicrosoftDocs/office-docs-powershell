@@ -159,7 +159,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
   
-*Supported filters* 
+*Supported filters*:
 
 The Filtering functionality has been limited to the following attributes:
 
@@ -216,7 +216,7 @@ The Filtering functionality has been limited to the following attributes:
 - CountryAbbreviation
 - UsageLocation
 
-*Attributes renamed*
+*Attributes renamed*:
 
 - ObjectId renamed to Identity
 - FirstName renamed to GivenName
@@ -225,28 +225,29 @@ The Filtering functionality has been limited to the following attributes:
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 
-*Attributes that have changed in meaning/format*
+*Attributes that have changed in meaning/format*:
 
 **OnPremLineURI**: This attribute previously used to refer to both:
+
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
 In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
 
-**- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
-**- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
+- **The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
+- **The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
 
-*Changes in "-Filter" parameter*
+*Changes in "-Filter" parameter*:
 
-- AssignedPlan filter: The previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This needs to be modified to one of the following formats:
-  - ``AssignedPlan -eq "*MCO"`` Returns all users having an AssignedPlan that ends with MCO
-  - ``AssignedPlan -eq "MCO*" ``  Returns all users having an AssignedPlan that starts with MCO
-  - ``AssignedPlan -eq "*MCO*" ``  Returns all users having an AssignedPlan that contains MCO
+AssignedPlan filter: The previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This needs to be modified to one of the following formats:
 
+- ``AssignedPlan -eq "*MCO"`` Returns all users having an AssignedPlan that ends with MCO
+- ``AssignedPlan -eq "MCO*" ``  Returns all users having an AssignedPlan that starts with MCO
+- ``AssignedPlan -eq "*MCO*" ``  Returns all users having an AssignedPlan that contains MCO
 
-*Dropped Filter operators*
+*Dropped Filter operators*:
   
-The following filter syntaxes are not supported in Teams PowerShell Moduled 3.0.0 and above:
+The following filter syntaxes are not supported in Teams PowerShell Module 3.0.0 and above:
 
 - ``-not (<simple/complex PS filter>)``
 - ``<property> -like '*<text>'``
@@ -272,8 +273,8 @@ Accept wildcard characters: False
 Indicates the Identity of the user account to be retrieved.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
-You can use the asterisk ( * ) wildcard character when using the Display Name as the user Identity.
-For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith". 
+You can use the asterisk ( \* ) wildcard character when using the Display Name as the user Identity.
+For example, the Identity "\* Smith" returns all the users who have a display name that ends with the string value " Smith".
 
 Note that in Microsoft Teams PowerShell Version 2.5.1, using this parameter will cause the Get-CsOnlineUser command to no longer emit deprecated properties as part of the modernization effort.
 
