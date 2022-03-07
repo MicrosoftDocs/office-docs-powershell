@@ -16,10 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 **Note**: This cmdlet has been deprecated and is no longer used.
 
-Use the Get-RMSTrustedPublishingDomain cmdlet to view the settings of an existing trusted publishing domain (TPD) in your organization.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -31,43 +27,21 @@ Get-RMSTrustedPublishingDomain [[-Identity] <RmsTrustedPublishingDomainIdParamet
 ```
 
 ## DESCRIPTION
-A trusted publishing domain contains the settings needed to use RMS features in your organization. For example, users can apply RMS templates to email messages.
+This cmdlet has been deprecated and is no longer used.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-RMSTrustedPublishingDomain | Format-List
+Get-RMSTrustedPublishingDomain
 ```
 
-This example lists all the trusted publishing domains that are configured in your organization and shows detailed information for each trusted publishing domain.
+This cmdlet has been deprecated and is no longer used.
 
 ## PARAMETERS
 
-### -Default
-The Default switch filters the results by the default trusted publishing domain. You don't need to specify a value with this switch.
-
-The default trusted publishing domain displays RMS templates and provides rights protection to all new content. There can be only one default trusted publishing domain in an organization.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-The Identity parameter specifies the trusted publishing domain. You can use any value that uniquely identifies the trusted publishing domain, for example:
-
-- Name
-- Distinguished name (DN)
-- GUID
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: RmsTrustedPublishingDomainIdParameter
@@ -79,6 +53,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Default
+This cmdlet has been deprecated and is no longer used.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
