@@ -24,7 +24,8 @@ New-CsOnlineDateTimeRange -Start <String> [-End <String>] [-Tenant <Guid>] [<Com
 ## DESCRIPTION
 The New-CsOnlineDateTimeRange cmdlet creates a new date-time range to be used with the Organizational Auto Attendant (OAA) service. Date time ranges are used to form schedules.
 
-**NOTE**
+**NOTE**:
+
 - The start bound of the range must be less than its end bound.
 - The time part of the range must be aligned with 30/60-minutes boundaries.
 - A date time range bound can only be input in the following formats:
