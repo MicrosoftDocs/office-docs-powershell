@@ -508,7 +508,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - ObjectClass
 - ObjectState
 - OnPremHideFromAddressLists
-- OnPremLineURIMauallySet
+- OnPremLineURIManuallySet
 - OriginalPreferredDataLocation
 - OriginatingServer
 - OriginatorSid
