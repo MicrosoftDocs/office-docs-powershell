@@ -157,7 +157,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 **Note:**
 
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and above.
   
 *Supported filters*:
 
@@ -449,7 +449,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Note:
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and above.
 
 *New user attributes*
 
