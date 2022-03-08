@@ -67,7 +67,7 @@ This example sets Alice Jakobsen's mailbox language to Danish Denmark, sets the 
 Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited | Set-MailboxRegionalConfiguration -Language es-es -DateFormat "dd/MM/yyyy" -TimeFormat H:mm -LocalizeDefaultFolderName
 ```
 
-This example sets all User Mailboxes language to Spanish Spain, sets the date in the day/month/year format, sets the time in the H:mm format and localizes the default forder names in Spanish.
+This example sets all User Mailboxes language to Spanish Spain, sets the date in the day/month/year format, sets the time in the H:mm format and localizes the default folder names in Spanish.
 
 ### Example 5
 ```powershell
