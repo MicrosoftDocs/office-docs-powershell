@@ -149,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableComplianceRecordingAudioNotificationForCalls
-Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording
+Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording.
+
 
 ```yaml
 Type: Boolean
