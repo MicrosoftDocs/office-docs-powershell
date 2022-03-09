@@ -15,7 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will remove a delegate for calling in Microsoft Teams.
 
-  
 ## SYNTAX
 
 ### Identity (Default)
