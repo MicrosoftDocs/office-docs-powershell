@@ -15,7 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will show the call forwarding, simultaneous ringing, call group and delegation settings for a user.
 
-  
 ## SYNTAX
 
 ```powershell
