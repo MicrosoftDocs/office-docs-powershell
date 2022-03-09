@@ -15,7 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will set the call forwarding, simultaneous ringing and call group settings for the specified user.
 
-  
 ## SYNTAX
 
 ### Identity (Default)
