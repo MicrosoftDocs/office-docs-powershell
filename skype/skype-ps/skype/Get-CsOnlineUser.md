@@ -147,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+**Note: This immediate section only applies to TPM 2.6 and lower**
+
 Enables you to limit the returned data by filtering on specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
@@ -155,7 +158,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 `{EnterpriseVoiceEnabled -eq $True}`
 
-**Note:**
+
 
 The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and above.
   
@@ -270,6 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+**Note: This immediate section only applies to TPM 2.6 and lower**
+
 Indicates the Identity of the user account to be retrieved.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
