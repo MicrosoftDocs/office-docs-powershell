@@ -160,7 +160,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 
 
-The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and above.
+The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later.
   
 *Supported filters*:
 
