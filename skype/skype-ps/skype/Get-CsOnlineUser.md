@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 ### -Filter
 
-**Note: This immediate section only applies to TPM 2.6 and lower**
+**Note: This immediate section only applies to TPM 2.6 and earlier**
 
 Enables you to limit the returned data by filtering on specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
