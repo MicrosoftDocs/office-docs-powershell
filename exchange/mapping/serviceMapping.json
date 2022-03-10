@@ -26,6 +26,8 @@
   "Get-AntiPhishRule": "defender-for-office-365",
   "Get-AtpPolicyForO365": "defender-for-office-365",
   "Get-ATPTotalTrafficReport": "defender-for-office-365",
+  "Get-ContentMalwareMdoAggregateReport": "defender-for-office-365",
+  "Get-ContentMalwareMdoDetailReport": "defender-for-office-365",
   "Get-MailDetailATPReport": "defender-for-office-365",
   "Get-MailTrafficATPReport": "defender-for-office-365",
   "Get-PhishFilterPolicy": "defender-for-office-365",
