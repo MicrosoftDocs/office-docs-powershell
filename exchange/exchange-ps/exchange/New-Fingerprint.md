@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte
+$Patent_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Patent Template.docx')
 $Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
 
@@ -49,7 +49,7 @@ This example creates a new document fingerprint based on the file C:\\My Documen
 ### -FileData
 The FileData parameter specifies the file to use as a document fingerprint.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the section.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

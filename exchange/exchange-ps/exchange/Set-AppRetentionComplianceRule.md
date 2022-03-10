@@ -44,7 +44,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-Set-AppRetentionComplianceRule -Identity "563 Marketing Rule" -RetentionDuration 180 RetentionDurationDisplayHint Days
+Set-AppRetentionComplianceRule -Identity "563 Marketing Rule" -RetentionDuration 180 -RetentionDurationDisplayHint Days
 ```
 
 This example updates the length of the retention duration for a rule named 563 Marketing Rule.
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
 ```yaml
 Type: String

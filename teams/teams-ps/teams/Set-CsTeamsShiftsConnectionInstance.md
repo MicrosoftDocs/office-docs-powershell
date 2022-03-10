@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in private preview.
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet updates a Shifts connection instance.
 
@@ -26,12 +26,13 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorInstanceId <
 ## DESCRIPTION
 
 This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettingLoginPwd and ConnectorSpecificSettingLoginUserNameusername to be included.
+This cmdlet can update every input fields except -ConnectorId
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorInstanceId "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.replgroup.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.replgroup.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -Name "MyInstance-Updated" -SyncFrequencyInMin 10 -IfMatch '"0a005fd6-0000-0d00-0000-60a76dbf0000"' -ConnectorAdminEmail "test@abc.com", "test2@abc.com"
+Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorInstanceId "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -Name "MyInstance-Updated" -SyncFrequencyInMin 10 -IfMatch '"0a005fd6-0000-0d00-0000-60a76dbf0000"' -ConnectorAdminEmail "test@abc.com", "test2@abc.com"
 
 ```
 ```output
@@ -44,12 +45,12 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
         "name": "Blue Yonder V1"
     },
     "connectorSpecificSettings": {
-        "adminApiUrl": "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2",
-        "siteManagerUrl": "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2",
-        "essApiUrl": "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1",
-        "retailWebApiUrl": "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1",
-        "cookieAuthUrl": "https://nehstdevwfm02.replgroup.com/retail/data/login",
-        "federatedAuthUrl": "https://nehstdevfas01.replgroup.com/retail/data/login"
+        "adminApiUrl": "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2",
+        "siteManagerUrl": "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2",
+        "essApiUrl": "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1",
+        "retailWebApiUrl": "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1",
+        "cookieAuthUrl": "https://nehstdevwfm02.contoso.com/retail/data/login",
+        "federatedAuthUrl": "https://nehstdevfas01.contoso.com/retail/data/login"
     },
     "enabledConnectorScenarios": [
         "Shift",

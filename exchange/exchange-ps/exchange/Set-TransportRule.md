@@ -218,8 +218,6 @@ Set-TransportRule "Sales Team Disclaimer" -FromMemberOf "Sales Department"
 
 This example modifies the existing rule named Sales Team Disclaimer transport rule by adding the condition that the sender of the message is a member of the Sales Department group.
 
-This example sets the FromMemberOf parameter to a value of Sales-Group, which specifies that the rule is applied if the sender of the message is a member of the Sales-Group distribution group.
-
 ## PARAMETERS
 
 ### -Identity
@@ -2374,7 +2372,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfMessageTypeMatches parameter specifies an exception that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
+- AutoForward: Messages automatically forwarded to an alternative recipient.
 - Encrypted: Encrypted messages.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured.
@@ -3584,7 +3582,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The MessageTypeMatches parameter specifies a condition that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
+- AutoForward: Messages automatically forwarded to an alternative recipient.
 - Encrypted: Encrypted messages.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured.

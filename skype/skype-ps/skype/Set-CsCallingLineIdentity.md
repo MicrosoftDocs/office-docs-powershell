@@ -71,7 +71,7 @@ This example modifies the new Anonymous Caller ID policy that blocks the incomin
 ### Example 4
 ```
 $ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
-Set-CsCallingLineIdentity  -Identity DKCQ -CallingIDSubstitute Resource -ResourceAccount $ObjId -CompanyName "Contoso"
+Set-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -ResourceAccount $ObjId -CompanyName "Contoso"
 ```
 
 This example modifies the Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso

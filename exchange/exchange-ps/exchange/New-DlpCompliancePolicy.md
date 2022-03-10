@@ -39,6 +39,8 @@ New-DlpCompliancePolicy [-Name] <String>
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-OnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-PowerBIDlpLocation <MultiValuedProperty>]
+ [-PowerBIDlpLocationException <MultiValuedProperty>]
  [-Priority <Int32>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
@@ -68,6 +70,14 @@ New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePoi
 ```
 
 This example creates a DLP policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations. The new policy has a descriptive comment and will be enabled on creation.
+
+### Example 3
+
+```powershell
+New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
+```
+
+This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
 
 ## PARAMETERS
 
@@ -161,7 +171,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -179,7 +189,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedByMemberOf
 The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -322,7 +332,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -340,7 +350,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedByMemberOf
 The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -373,6 +383,52 @@ Accept wildcard characters: False
 
 ### -OnPremisesScannerDlpLocationException
 {{ Fill OnPremisesScannerDlpLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PowerBIDlpLocation
+The PowerBIDlpLocation parameter specifies the Power BI workspace IDs to include in the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID using one of the following procedures:
+
+- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
+- PowerShell: Get-PowerBIWorkspace.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PowerBIDlpLocationException
+The PowerBIDlpLocationException parameter specifies the Power BI workspace IDs to exclude when you use the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID using one of the following procedures:
+
+- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
+- PowerShell: Get-PowerBIWorkspace.
 
 ```yaml
 Type: MultiValuedProperty

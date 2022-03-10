@@ -59,10 +59,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MobileDeviceStatistics -Identity TonySmith
+Get-MobileDeviceStatistics -Identity TonySmith\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac
 ```
 
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
+This example retrieves the statistics for the specified mobile phone.
 
 ### Example 2
 ```powershell
@@ -76,18 +76,19 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 
 ### Example 3
 ```powershell
-Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog -NotificationEmailAddresses "admin@contoso.com"
+Get-MobileDeviceStatistics -Mailbox "Tony Smith" -GetMailboxLog -NotificationEmailAddresses "admin@contoso.com"
 ```
 
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
+This example retrieves the statistics for the mobile phone that's configured to synchronize with Tony Smith's mailbox. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
+The Identity parameter specifies the mobile device that you want to view. You can use the following values that uniquely identifies the mobile device:
 
-- GUID
-- DeviceID
+- Identity (`<Mailbox Name>\ExchangeActiveSyncDevices\<MobileDeviceObjectName>` for example, `CarlosM\ExchangeActiveSyncDevices\REST§Outlook§5eec4e941e0748a264512fd83770d5ac`)
+- Distinguished name (DN)
+- GUID (same as ExchangeObjectId)
 
 You can't use this parameter with the Mailbox parameter.
 

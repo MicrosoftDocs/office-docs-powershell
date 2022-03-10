@@ -50,7 +50,7 @@ This example creates the Edge Subscription file. It should be run on your Edge T
 
 ### Example 2
 ```powershell
-[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0
+$Temp = [System.IO.File]::ReadAllBytes('C:\EdgeServerSubscription.xml')
 New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
@@ -60,7 +60,7 @@ The first command reads the data from the Edge Subscription file and stores it i
 
 ### Example 3
 ```powershell
-New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site-Name"
+New-EdgeSubscription -FileData ([System.IO.File]::ReadAllBytes('C:\EdgeServerSubscription.xml')) -Site "Default-First-Site-Name"
 ```
 
 This example also imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name; however, the end result is accomplished using one command. You must run this command on the Mailbox server.
@@ -159,9 +159,9 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the byte-encoded data object that contains the Edge Subscription file information.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
-You can only use this parameter when you're running this command on a Mailbox server.
+You can only use this parameter when you're running the command on a Mailbox server.
 
 ```yaml
 Type: Byte[]

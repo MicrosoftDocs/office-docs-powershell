@@ -12,7 +12,8 @@ schema: 2.0.0
 # Remove-CsTeamsShiftsScheduleRecord
 
 ## SYNOPSIS
-Note: This cmdlet is currently in private preview.
+
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet enqueues the clear schedule message.
 

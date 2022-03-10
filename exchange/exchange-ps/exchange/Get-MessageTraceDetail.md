@@ -50,7 +50,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MessageTraceDetail -MessageTraceId ae5c1219-4c90-41bf-fef5-08d837917e7c -RecipientAddress robert@contoso.com
 ```
 
-This example uses the Get-MessageTraceDetail cmdlet to retrieve detailed message trace information for messages with the Exchange Network Message ID value ae5c1219-4c90-41bf-fef5-08d837917e7c received by robert@contoso.com.
+This example retrieves detailed message trace information for messages with the message trace ID value ae5c1219-4c90-41bf-fef5-08d837917e7c that were received by robert@contoso.com.
 
 ### Example 2
 ```powershell
@@ -62,16 +62,15 @@ This example uses the Get-MessageTrace cmdlet to retrieve message trace informat
 ## PARAMETERS
 
 ### -MessageTraceId
-The MessageTraceId parameter is used with the recipient address to uniquely identify a message trace and obtain more details. A MessageTraceId is generated for every message that's processed by the system.
+The MessageTraceId parameter filters the results by the message trace ID value of the message. This GUID value is generated for every message that's processed by the system (for example, c20e0f7a-f06b-41df-fe33-08d9da155ac1).
 
-The MessageTraceId value is available in the output of the following cmdlets:
+The MessageTraceId value is also available in the output of the following cmdlets:
 
-- Get-MessageTrace
 - Get-MailDetailATPReport
 - Get-MailDetailDlpPolicyReport
-- Get-MailDetailMalwareReport
-- Get-MailDetailSpamReport
+- Get-MailDetailEncryptionReport
 - Get-MailDetailTransportRuleReport
+- Get-MessageTrace
 
 ```yaml
 Type: Guid
@@ -87,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+The RecipientAddress parameter filters the results by the recipient's email address.
 
 ```yaml
 Type: String
@@ -124,6 +123,8 @@ Accept wildcard characters: False
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+If don't use the StartDate and EndDate parameters, only data from the last 48 hours is returned.
 
 ```yaml
 Type: DateTime
@@ -248,6 +249,8 @@ Accept wildcard characters: False
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+If don't use the StartDate and EndDate parameters, only data from the last 48 hours is returned.
 
 ```yaml
 Type: DateTime

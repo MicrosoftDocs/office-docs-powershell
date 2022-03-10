@@ -30,6 +30,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddOneDriveLocationException <MultiValuedProperty>]
  [-AddOnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-AddOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-AddPowerBIDlpLocation <MultiValuedProperty>]
+ [-AddPowerBIDlpLocationException <MultiValuedProperty>]
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
@@ -53,7 +55,9 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveOnPremisesScannerDlpLocation <MultiValuedProperty>]
- [-RemovePremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-RemoveOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-RemovePowerBIDlpLocation <MultiValuedProperty>]
+ [-RemovePowerBIDlpLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
@@ -75,6 +79,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
+**Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-DlpCompliancePolicy -Identity "Main PII" -RemoveExchangeLocation $_}`.
+
 ## EXAMPLES
 
 ### Example 1
@@ -90,6 +96,13 @@ Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
 
 This example disables the "MainPII" policy.
+
+### Example 3
+```powershell
+Set-DlpCompliancePolicy -Identity "PowerBIPolicy" -AddPowerBILocation "workspaceID1","workspaceID2","workspaceID3"
+```
+
+This example adds the specified workspace IDs to the Power BI location for the DLP policy named PowerBIPolicy without affecting the existing workspace IDs.
 
 ## PARAMETERS
 
@@ -250,6 +263,52 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddPowerBIDlpLocation
+The AddPowerBIDlpLocation parameter specifies the Power BI workspace IDs to add to the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID using one of the following procedures:
+
+- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
+- PowerShell: Get-PowerBIWorkspace.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPowerBIDlpLocationException
+The AddPowerBIDlpLocationException parameter specifies Power BI workspace IDs to add to the list of excluded workspace IDs of a DLP policy that applies to all workspaces. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+You can find the workspace ID using one of the following procedures:
+
+- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
+- PowerShell: Get-PowerBIWorkspace.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddSharePointLocation
 The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
@@ -394,7 +453,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -412,7 +471,7 @@ Accept wildcard characters: False
 ### -ExceptIfOneDriveSharedByMemberOf
 The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -509,7 +568,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -527,7 +586,7 @@ Accept wildcard characters: False
 ### -OneDriveSharedByMemberOf
 The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -668,6 +727,42 @@ Accept wildcard characters: False
 
 ### -RemoveOnPremisesScannerDlpLocationException
 {{ Fill RemoveOnPremisesScannerDlpLocationException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePowerBIDlpLocation
+The RemovePowerBIDlpLocation parameter specifies the Power BI workspace IDs to remove from the DLP policy.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePowerBIDlpLocationException
+The RemovePowerBIDlpLocationException parameter specifies Power BI workspace IDs to remove from the list of excluded workspace IDs of a DLP policy that applies to all workspaces.
+
+You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
 ```yaml
 Type: MultiValuedProperty

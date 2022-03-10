@@ -18,7 +18,7 @@ This cmdlet tests the given number against the created (by using New-CsInboundBl
 ## SYNTAX
 
 ```
-Test-CsInboundBlockedNumberPattern -PhoneNumber <String> [-TenantId <Guid>] [-FQDN <String>] [-WhatIf]
+Test-CsInboundBlockedNumberPattern -PhoneNumber <String> [-TenantId <Guid>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,21 +43,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FQDN
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named

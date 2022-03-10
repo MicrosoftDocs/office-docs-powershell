@@ -37,6 +37,18 @@ Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicabl
   - ResultSize
 - LicenceState 
 
+*Deprecated Input Parameters*
+
+- The following input parameters have been deprecated due to low or zero usage:
+  - [-DomainController]
+  - [-Force]
+  - [-GetFromAAD]
+  - [-GetPendingUsers]
+  - [-SearchQuery]
+  - [-Skip]
+  - [-Tenant]
+  - Common Parameters
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -134,6 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -152,6 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -GetFromAAD
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Use this switch to get the users from Azure Active Directory.
 
 ```yaml
@@ -168,6 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -GetPendingUsers
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Use this switch to get only the users in pending state.
 
 ```yaml
@@ -256,6 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNConnectivity
+
 Possible values are:
 * All
 * Online
@@ -275,6 +294,8 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more details about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
 
 If this parameter is empty, all users are returned.
@@ -311,6 +332,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -327,6 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 

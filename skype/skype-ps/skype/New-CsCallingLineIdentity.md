@@ -51,7 +51,7 @@ This example creates a new Caller ID policy that sets the Caller ID to a specifi
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-CsCallingLineIdentity  -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
+New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
 This example creates a new Caller ID policy that blocks the incoming Caller ID.
@@ -59,7 +59,7 @@ This example creates a new Caller ID policy that blocks the incoming Caller ID.
 ### Example 4
 ```
 $ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
-New-CsCallingLineIdentity  -Identity DKCQ -CallingIDSubstitute Resource -EnableUserOverride $false -ResourceAccount $ObjId -CompanyName "Contoso"
+New-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -EnableUserOverride $false -ResourceAccount $ObjId -CompanyName "Contoso"
 ```
 
 This example creates a new Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
 ```yaml
 Type: SwitchParameter

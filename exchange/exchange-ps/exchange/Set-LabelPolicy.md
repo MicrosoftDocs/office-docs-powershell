@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy
-applicable: Exchange Online, Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-LabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -88,6 +88,8 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
 
 ## DESCRIPTION
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+
+**Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-LabelPolicy -Identity "Global Policy" -RemoveExchangeLocation $_ }`.
 
 ## EXAMPLES
 
@@ -371,6 +373,8 @@ Supported settings for built-in labeling:
 
 - **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
+- **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+), and also Outlook on Windows (version 2201+). Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
+
 Additionally, for Power BI:
 
 - **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
@@ -460,7 +464,11 @@ Accept wildcard characters: False
 ```
 
 ### -NextLabelPolicy
-This parameter is reserved for internal Microsoft use.
+The NextLabelPolicy parameter updates the policy order so the policy that's specified by this parameter is after the current policy that you're modifying. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
@@ -476,7 +484,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreviousLabelPolicy
-This parameter is reserved for internal Microsoft use.
+The PreviousLabelPolicy parameter updates the policy order so the policy that's specified by this parameter is before the current policy that you're modifying. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter

@@ -3,8 +3,8 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
 schema: 2.0.0
-author: mbergamo
-ms.author: mbergamo
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 # Set-TeamTargetingHierarchy

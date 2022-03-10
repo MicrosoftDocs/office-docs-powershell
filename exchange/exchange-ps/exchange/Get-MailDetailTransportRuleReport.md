@@ -164,7 +164,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+The MessageTraceId parameter filters the results by the message trace ID value of the message. This GUID value is generated for every message that's processed by the system (for example, c20e0f7a-f06b-41df-fe33-08d9da155ac1).
+
+You can specify multiple values separated by commas.
+
+The MessageTraceId value is also available in the output of the following cmdlets:
+
+- Get-MailDetailATPReport
+- Get-MailDetailDlpPolicyReport
+- Get-MailDetailEncryptionReport
+- Get-MessageTrace
+- Get-MessageTraceDetail
 
 ```yaml
 Type: MultiValuedProperty
@@ -264,7 +274,7 @@ The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-This parameter can´t be older than 30 days from the current day.
+Although you can enter a date up to 30 days old, only data from the last 10 days is returned.
 
 ```yaml
 Type: DateTime
