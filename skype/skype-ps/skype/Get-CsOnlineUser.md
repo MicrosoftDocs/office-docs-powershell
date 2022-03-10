@@ -147,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+**Note: This immediate section only applies to TPM 2.6 and earlier**
+
 Enables you to limit the returned data by filtering on specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
@@ -155,9 +158,9 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 `{EnterpriseVoiceEnabled -eq $True}`
 
-**Note:**
 
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+
+The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later.
   
 *Supported filters*:
 
@@ -270,6 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+**Note: This immediate section only applies to TPM 2.6 and earlier**
+
 Indicates the Identity of the user account to be retrieved.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
@@ -449,7 +455,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Note:
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later.
 
 *New user attributes*
 
@@ -508,6 +514,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - ObjectClass
 - ObjectState
 - OnPremHideFromAddressLists
+- OnPremLineURIManuallySet
 - OriginalPreferredDataLocation
 - OriginatingServer
 - OriginatorSid
@@ -589,7 +596,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
-In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via on-premises Active Directory. The OnPremLineURIManuallySet attribute has been deprecated and is no longer used. Direct Routing numbers will be available from the LineURI field. Direct Routing numbers can be distinguished from Calling Plan numbers by looking at the FeatureTypes attribute.
 
 **- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
 
