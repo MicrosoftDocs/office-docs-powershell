@@ -57,6 +57,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-MAPIEnabled <Boolean>]
  [-MapiHttpEnabled <Boolean>]
  [-Name <String>]
+ [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OutlookMobileEnabled <Boolean>]
  [-OWAEnabled <Boolean>]
  [-OWAforDevicesEnabled <Boolean>]
@@ -882,6 +883,28 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneWinNativeOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The OneWinNativeOutlookEnabled parameter enables or disables access to the mailbox using Monarch Mail and Calendar.
+Valid values are:
+
+- $true: Access to the mailbox using Monarch Mail and Calendar is enabled. This is the default value.
+- $false: Access to the mailbox using Monarch Mail and Calendar is disabled.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
