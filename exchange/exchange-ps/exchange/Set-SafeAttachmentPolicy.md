@@ -29,7 +29,6 @@ Set-SafeAttachmentPolicy [-Identity] <SafeAttachmentPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
- [-MakeBuiltInProtection]
  [-QuarantineTag <String>]
  [-Redirect <Boolean>]
  [-RedirectAddress <SmtpAddress>]
@@ -168,22 +167,6 @@ To enable or disable a complete Safe Attachments policy in the admin center (the
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MakeBuiltInProtection
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

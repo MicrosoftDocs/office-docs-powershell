@@ -36,7 +36,6 @@ New-SafeLinksPolicy [-Name] <String>
  [-EnableForInternalSenders <Boolean>]
  [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
- [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
  [-MakeBuiltInProtection]
  [-RecommendedPolicyType <RecommendedPolicyType>]
@@ -45,7 +44,6 @@ New-SafeLinksPolicy [-Name] <String>
  [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
  [-DisableUrlRewrite <Boolean>]
- [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
 
@@ -309,22 +307,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExcludedUrls
-This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IsEnabled
 The IsEnabled parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
@@ -437,22 +419,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhiteListedUrls
-This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
