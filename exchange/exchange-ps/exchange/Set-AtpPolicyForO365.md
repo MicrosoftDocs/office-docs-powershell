@@ -35,7 +35,6 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForO365Clients <Boolean>]
- [-EnableSafeLinksForWebAccessCompanion <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -54,7 +53,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $true
+Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
 ```
 
 This example enables Safe Documents and Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
@@ -203,22 +202,6 @@ The EnableSafeLinksForO365Clients parameter enables or disables Safe Links for O
 - $false: Safe Links scanning is disabled in supported Office 365 apps.
 
 Note that this protection applies to links in Office documents, not links in email messages. Safe Links protection for links in email messages is controlled by Safe Links policies (the [New-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy) or [Set-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/set-safelinkspolicy) cmdlets).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSafeLinksForWebAccessCompanion
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean

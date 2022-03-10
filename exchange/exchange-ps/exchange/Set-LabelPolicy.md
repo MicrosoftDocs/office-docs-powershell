@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy
-applicable: Exchange Online, Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-LabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -464,7 +464,11 @@ Accept wildcard characters: False
 ```
 
 ### -NextLabelPolicy
-This parameter is reserved for internal Microsoft use.
+The NextLabelPolicy parameter updates the policy order so the policy that's specified by this parameter is after the current policy that you're modifying. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
@@ -480,7 +484,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreviousLabelPolicy
-This parameter is reserved for internal Microsoft use.
+The PreviousLabelPolicy parameter updates the policy order so the policy that's specified by this parameter is before the current policy that you're modifying. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter

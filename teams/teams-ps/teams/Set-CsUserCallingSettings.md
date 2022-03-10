@@ -63,8 +63,9 @@ Set-CsUserCallingSettings -Identity <String> -GroupNotificationOverride <String>
 ## DESCRIPTION
 This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user.
 
-When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead you need to start by getting the current
-settings, making the necessary changes and then setting/writing all settings within the settings group.
+When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to start by 
+getting the current settings, making the necessary changes, and then setting/writing all settings within the settings group.
+
 
 
 ## EXAMPLES
@@ -114,11 +115,12 @@ $gmd[[array]::IndexOf($gmd.CallGroupOwnerId,'user1@contoso.com')].NotificationSe
 Set-CsUserCallingSettings -Identity user5@contoso.com -GroupMembershipDetails $gmd
 ```
 
-This example shows how to update the call group of user1@contoso.com to add user5@contoso.com and remove user6@contoso.com. In addition the notification setting for user5@contoso.com for
-user1@contoso.com's call group is set to Banner.
+This example shows how to update the call group of user1@contoso.com to add user5@contoso.com and remove user6@contoso.com. In addition the notification setting for
+user5@contoso.com for user1@contoso.com's call group is set to Banner.
 
-The key to note here is the call group membership is defined on the object of the owner of the call group, in the above case this is user1@contoso.com. However the notification setting
-for a member for a particular call group is defined on the member. In this case user5@contoso.com.
+The key to note here is the call group membership is defined on the object of the owner of the call group, in the above case this is user1@contoso.com. However, the notification
+
+setting for a member for a particular call group is defined on the member. In this case user5@contoso.com.
 
 ### Example 7
 ```powershell
@@ -137,8 +139,9 @@ This example shows how to remove all members of the call group.
 Set-CsUserCallingSettings -Identity user10@contoso.com -GroupMembershipDetails $gmd
 ```
 
-In this example user10@contoso.com is a member of 2 call groups: user20@contoso.com and user30@contoso.com. User10@contoso.com would like to have Banner notification for the first call group
-and Mute notification for the last one.
+In this example user10@contoso.com is a member of two call groups: user20@contoso.com and user30@contoso.com. User10@contoso.com would like to have Banner notification for the 
+
+first call group and Mute notification for the last one.
 
 ### Example 9
 ```powershell
@@ -147,6 +150,22 @@ Set-CsUserCallingSettings -Identity user2@contoso.com -GroupNotificationOverride
 
 This example shows how to set the group notification override for user2@contoso.com. This setting overrides any specific notification setting set for the user
 on any call group the user is a member of.
+
+### Example 10
+```powershell
+Set-CsUserCallingSettings -Identity user6@contoso.com -IsForwardingEnabled $false
+Set-CsUserCallingSettings -Identity user6@contoso.com -IsUnansweredEnabled $true -UnansweredTargetType Voicemail -UnansweredDelay 00:00:20
+```
+
+This example shows how to set the default call forwarding settings for a user.
+
+### Example 11
+```powershell
+Set-CsUserCallingSettings -Identity user7@contoso.com -IsUnansweredEnabled $false
+```
+
+This example shows turning off unanswered call forwarding for a user. The Microsoft Teams client will show this as _If unanswered Do nothing_.
+
 
 ## PARAMETERS
 
@@ -271,8 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to set call forwarding, simultaneous ringing and call group settings for. Can be specified using the ObjectId, the SIP address
-or the e-mail address.
+The Identity of the user to set call forwarding, simultaneous ringing and call group settings for. Can be specified using the ObjectId or the SIP address.
 
 ```yaml
 Type: System.String
@@ -380,16 +398,16 @@ and -WarningVariable. For more information, see [about_CommonParameters](https:/
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview.
+The cmdlet is available in Teams PowerShell module 3.0.1-preview or 3.2.0-preview (preferred).
 
 The specified user need to have the Microsoft Phone System license assigned.
 
-When forwarding to MyDelegates, the specified user needs to have 1 or more delegates defined that is allowed to receive calls. When forwarding to Group, the specified user needs to have 1
-or more members of the user's call group.
+When forwarding to MyDelegates, the specified user needs to have one or more delegates defined that are allowed to receive calls. When forwarding to Group, the specified user needs
+to have one or more members of the user's call group.
 
-The cmdlet is validating the different settings and is always writing all the parameters in a settings group. You might see validation errors from the cmdlet due to this behavior. As an example,
-if you have ForwardingTargetType set to Group and you want to remove all members of the call group, you will get a validation error, even if call forwarding is not enabled. In such a case
-you will have to configure ForwardTargetType to something else than Group and then you can remove all members from the call group.
+
+The cmdlet is validating the different settings and is always writing all the parameters in a settings group. You might see validation errors from the cmdlet due to this behavior.
+As an example, if you have ForwardingTargetType set to Group and you want to remove all members of the call group, you will get a validation error.
 
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
 

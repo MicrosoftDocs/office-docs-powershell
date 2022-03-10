@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-RMSTrustedPublishingDomain cmdlet to configure a trusted publishing domain (TPD) in your organization.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: This cmdlet has been deprecated and is no longer used.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,29 +34,21 @@ Set-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParamete
 ```
 
 ## DESCRIPTION
-A TPD contains the settings needed to use RMS features in your organization. For example, users can apply RMS templates to email messages.
+This cmdlet has been deprecated and is no longer used.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-RMSTrustedPublishingDomain "Contoso TPD" -Default -ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -ExtranetCertificationUrl https://rms.contoso.com/_wmcs/certification/servercertification.asmx
+Set-RMSTrustedPublishingDomain
 ```
 
-This example makes the following changes to the existing TPD Contoso TPD:
-
-- Sets Contoso TPD as the default TPD for the organization.
-- Sets the external licensing URL to `https://rms.contoso.com/_wmcs/licensing`.
-- Sets the external certification URL to `https://rms.contoso.com/_wmcs/certification/servercertification.asmx`.
+This cmdlet has been deprecated and is no longer used.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the TPD. You can use any value that uniquely identifies the TPD, for example:
-
-- Name
-- Distinguished name (DN)
-- GUID
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: RmsTrustedPublishingDomainIdParameter
@@ -74,10 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
@@ -93,9 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-The Default switch specifies that this is the default TPD. You don't need to specify a value with this switch.
-
-The default TPD displays RMS templates and provides rights protection to all new content. There can be only one default TPD in an organization.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
@@ -111,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtranetCertificationUrl
-The ExtranetCertificationUrl parameter specifies the external certification URL of the on-premises AD RMS server that's stamped into the Rights Account Certificate (RAC). The RAC establishes a user's identity in the AD RMS system and is used to decrypt content.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: Uri
@@ -127,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtranetLicensingUrl
-The ExtranetLicensingUrl parameter specifies the external licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: Uri
@@ -143,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntranetCertificationUrl
-The IntranetCertificationUrl parameter specifies the internal certification URL of the on-premises AD RMS server that's stamped into the RAC. The RAC establishes a user's identity in the AD RMS system and is used to decrypt content.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: Uri
@@ -159,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntranetLicensingUrl
-The IntranetLicensingUrl parameter specifies the internal licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: Uri
@@ -175,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the TPD.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -191,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+This cmdlet has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter

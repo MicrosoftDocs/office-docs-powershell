@@ -36,7 +36,7 @@ New-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Bool
 ### EXAMPLE 1
 
 ```powershell
-PS C:> New-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$" -Description "Allow Contoso helpdesk" -Enabled $True
+PS C:> New-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$" -Description "Allow Contoso helpdesk" -Enabled $True
 ```
 
 Creates a new inbound exempt number pattern for the numbers 1 (312) 555-88882 and 1 (312) 555-88883 and enables it

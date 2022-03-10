@@ -185,12 +185,36 @@ ReceiveCalls   : True
 This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the permissions you can
 have as a delegate (Delegators).
 
+### Example 6
+```powershell
+Get-CsUserCallingSettings -Identity user11@contoso.com
+```
+```output
+SipUri                    : sip:user11@contoso.com
+IsForwardingEnabled       : 
+ForwardingType            : 
+ForwardingTarget          :
+ForwardingTargetType      : 
+IsUnansweredEnabled       : 
+UnansweredTarget          :
+UnansweredTargetType      : 
+UnansweredDelay           : 00:00:20
+Delegates                 :
+Delegators                : 
+CallGroupOrder            : Simultaneous
+CallGroupTargets          : {}
+GroupMembershipDetails    :
+GroupNotificationOverride : 
+```
+
+This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings
+
+as shown here, unanswered calls will be forwarded to voicemail by default.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId, the SIP address
-or the e-mail address.
+The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId or the SIP address.
 
 ```yaml
 Type: System.String
@@ -215,7 +239,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview.
+The cmdlet is available in Teams PowerShell module 3.0.1-preview and 3.2.0-preview (preferred).
 
 ## RELATED LINKS
 

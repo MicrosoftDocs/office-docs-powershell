@@ -101,7 +101,7 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 Version 2.0.6-Preview3 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
 
 - 250 additional remote PowerShell cmdlets that are backed by the REST API. These REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module). These REST API cmdlets also work just like their old remote PowerShell equivalent cmdlets, so you don't need to update any of your scripts.
-- The new _RPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _RPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
+- The new _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
 - A small number of existing mailbox remote PowerShell cmdlets have been updated with a new, experimental _UseCustomRoutingSwitch_ parameter. Using this switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRoutingSwitch_, you need to use the following values for identity of the mailbox:
     - User principal name (UPN)
@@ -223,29 +223,43 @@ The EXO V2 module is supported in the following versions of Windows:
   > [!NOTE]
   > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for many cmdlets.
   >
-  > You must temporarily enable WinRM to run the following commands. You can enable WinRM by running the command: `winrm quickconfig`.
+  > You must temporarily enable WinRM to run the following winrm commands. You can enable WinRM by running the command: `winrm quickconfig`.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in PowerShell):
+  To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
-  ```dos
+  ```DOS
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in PowerShell) to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run **one** of the following commands to enable Basic authentication for WinRM:
 
-  ```dos
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
+  - **In a Command Prompt**:
 
-  **Note**: If you'd rather run the command in PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
+    ```DOS
+    winrm set winrm/config/client/auth @{Basic="true"}
+    ```
 
-  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
+  - **In Windows PowerShell**:
+
+      ```DOS
+    winrm set winrm/config/client/auth '@{Basic="true"}'
+    ```
+
+  - **In Windows PowerShell to modify the registry**:
+  
+    ```PowerShell
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
+    ```
+
+  If Basic authentication for WinRM is disabled, you'll get one of the following errors when you try to connect:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
+  > Create Powershell Session is failed using OAuth.
+  
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
-
+  
 ### Install the EXO V2 module
 
 To install the EXO V2 module for the first time, complete the following steps:
