@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-QuarantinePermissions -QuarantinePermissionsObject <QuarantinePermissions>
- [-PermissionToAllowSender <Boolean>]
  [-PermissionToBlockSender <Boolean>]
  [-PermissionToDelete <Boolean>]
  [-PermissionToDownload <Boolean>]
@@ -63,27 +62,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PermissionToAllowSender
-The PermissionToAllowSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
-
-- $true: The permission is enabled.
-- $false: The permission is disabled. This is the default value.
-
-Currently, this value has no effect on the buttons that are included in end-user spam notifications or in quarantined message details.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

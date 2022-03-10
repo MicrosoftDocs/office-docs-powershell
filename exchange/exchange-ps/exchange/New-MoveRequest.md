@@ -187,7 +187,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
 
 ### MigrationOutboundCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-Outbound]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -TargetDeliveryDomain <Fqdn> [-Outbound]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-BadItemLimit <Unlimited>]
@@ -218,7 +218,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDo
 
 ### MigrationRemoteCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-Remote]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -TargetDeliveryDomain <Fqdn> [-Remote]
  [-TargetDatabase <DatabaseIdParameter>]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
@@ -423,24 +423,6 @@ Type: SwitchParameter
 Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteTenant
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: SmtpDomain
-
-```yaml
-Type: SmtpDomain
-Parameter Sets: MigrationOutboundCrossTenant, MigrationRemoteCrossTenant
-Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: Named

@@ -1110,7 +1110,9 @@ To enter multiple owners and overwrite all existing entries, use the following s
 
 To add or remove owners without affecting other existing entries, use the following syntax: `@{Add="Owner1","Owner2",...; Remove="Owner3","Owner4"...}`.
 
-An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
+Owners that you specify with this parameter are not added as group members. You need to manually add the owner as a member.
+
+**Note**: Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
 
 ```yaml
 Type: MultiValuedProperty
