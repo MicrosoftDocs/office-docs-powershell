@@ -22,7 +22,7 @@ customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOn
 
 ### Assignment (Default)
 ```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -LocationId <String> [<CommonParameters>]
+Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [-LocationId <String>] [<CommonParameters>]
 ```
 
 ### Attribute
