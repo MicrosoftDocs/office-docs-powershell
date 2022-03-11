@@ -44,6 +44,7 @@ Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
  [-PolicyTypes <QuarantinePolicyTypeEnum[]>]
  [-QuarantineTypes <QuarantineMessageTypeEnum[]>]
  [-RecipientAddress <String[]>]
+ [-RecipientTag <String[]>]
  [-ReleaseStatus <ReleaseStatus[]>]
  [-Reported <Boolean>]
  [-SenderAddress <String[]>]
@@ -330,6 +331,22 @@ Type: String[]
 Parameter Sets: All
 Aliases:
 Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientTag
+{{ Fill RecipientTag Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
