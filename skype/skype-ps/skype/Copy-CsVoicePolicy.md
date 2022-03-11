@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Online
+applicable: Lync Server 2013
 title: Copy-CsVoicePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -41,7 +41,7 @@ PS C:\> {{ Add example code here }}
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online
+Applicable: Lync Server 2013
 
 Required: True
 Position: Named
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online
+Applicable: Lync Server 2013
 
 Required: True
 Position: Named
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online
+Applicable: Lync Server 2013
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online
+Applicable: Lync Server 2013
 
 Required: False
 Position: 2
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online
+Applicable: Lync Server 2013
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named

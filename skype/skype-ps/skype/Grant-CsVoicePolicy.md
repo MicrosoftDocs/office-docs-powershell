@@ -190,7 +190,7 @@ You can return your tenant ID by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named

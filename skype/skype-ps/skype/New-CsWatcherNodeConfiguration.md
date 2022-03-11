@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAutoDiscovery
-When set to True ($True), Skype for Business Online watcher nodes will use the Autodiscover service to locate the target pool.
+When set to True ($True) watcher nodes will use the Autodiscover service to locate the target pool.
 When set to False (the default value) watcher nodes will use SRV records to locate the pool.
 
 ```yaml

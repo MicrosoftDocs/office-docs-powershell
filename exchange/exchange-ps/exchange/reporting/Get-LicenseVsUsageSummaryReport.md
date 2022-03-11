@@ -33,7 +33,7 @@ This cmdlet produces a report that is intended to enable clients to track and ma
 
 - TenantGuid: The unique identifier for the Exchange Online tenant.
 
-- Workload: The workload whose users are being counted. The current workloads include: Exchange Online, SharePoint Online, Skype for Business Online, and Microsoft Yammer.
+- Workload: The workload whose users are being counted. The current workloads include: Exchange Online, SharePoint Online, and Microsoft Yammer.
 
 - NonTrialEntitlements: The number of entitled users for the workload.
 

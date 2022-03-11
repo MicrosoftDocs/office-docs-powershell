@@ -35,7 +35,7 @@ Import-Module platyPS
 ### Step 4: Verify your PSSession variable name
 This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
 
-To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
+To recap: this step is required in Exchange and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
 
 If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell to connect, you can skip this step.
 
