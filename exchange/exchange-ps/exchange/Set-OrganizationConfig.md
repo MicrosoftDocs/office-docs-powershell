@@ -65,6 +65,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-DefaultPublicFolderMovedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderProhibitPostQuota <Unlimited>]
  [-DirectReportsGroupAutoCreationEnabled <Boolean>]
+ [-DisablePlusAddressInRecipients <Boolean>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
@@ -119,6 +120,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SendFromAliasEnabled <Boolean>]
+ [-SharedDomainEmailAddressFlowEnabled <Boolean>]
  [-SiteMailboxCreationURL <Uri>]
  [-SmtpActionableMessagesEnabled <Boolean>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
@@ -1455,6 +1457,29 @@ The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable 
 
 - $true: The automatic creation of direct report Microsoft 365 Groups is enabled.
 - $false: The automatic creation of direct report Microsoft 365 Groups is disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisablePlusAddressInRecipients
+This parameter is available only in the cloud-based service.
+
+The DisablePlusAddressInRecipients parameter specifies whether to enable or disable plus addressing (also known as subaddressing) for Exchange Online mailboxes. Valid values are:
+
+- $true: Plus addressing is enabled. You can no longer use the plus sign in regular email addresses. The plus sign is only available for plus addressing.
+- $false: Plus addressing is disabled. You can use the plus sign in regular email addresses.
+
+For more information about plus addressing, see [Plus addressing in Exchange Online](https://docs.microsoft.com/eexchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).
 
 ```yaml
 Type: Boolean
@@ -3060,6 +3085,24 @@ The SendFromAliasEnabled parameter allows mailbox users to send messages using a
 - $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
 For more information about the availability of the Outlook for the web changes, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Outlook&searchterms=64123).
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharedDomainEmailAddressFlowEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill SharedDomainEmailAddressFlowEnabled Description }}
 
 ```yaml
 Type: Boolean

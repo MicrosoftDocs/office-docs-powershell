@@ -40,6 +40,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IncludeSoftDeletedUserPermissions]
+ [-IncludeUnresolvedPermissions]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -176,6 +177,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill IncludeSoftDeletedUserPermissions Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeUnresolvedPermissions
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeUnresolvedPermissions Description }}
 
 ```yaml
 Type: SwitchParameter

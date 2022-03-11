@@ -29,6 +29,7 @@ New-SafeAttachmentPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
+ [-MakeBuiltInProtection]
  [-QuarantineTag <String>]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-Redirect <Boolean>]
@@ -172,6 +173,22 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MakeBuiltInProtection
+{{ Fill MakeBuiltInProtection Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

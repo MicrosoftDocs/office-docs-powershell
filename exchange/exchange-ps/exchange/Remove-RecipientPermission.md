@@ -26,6 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
  [-Confirm]
  [-Deny]
+ [-SkipDomainValidationForMailContact]
+ [-SkipDomainValidationForMailUser]
  [-SkipDomainValidationForSharedMailbox]
  [-WhatIf]
  [<CommonParameters>]
@@ -150,6 +152,38 @@ Accept wildcard characters: False
 
 ### -Deny
 {{ Fill Deny Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailContact
+{{ Fill SkipDomainValidationForMailContact Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailUser
+{{ Fill SkipDomainValidationForMailUser Description }}
 
 ```yaml
 Type: SwitchParameter
