@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Group [-Identity] <GroupIdParameter>
  [-BypassSecurityGroupManagerCheck]
  [-Confirm]
+ [-Description <MultiValueProperty>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
@@ -120,6 +121,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+This parameter is available only in the cloud-based service.
+
+{{ Fill Description Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

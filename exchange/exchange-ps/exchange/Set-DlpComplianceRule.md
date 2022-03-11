@@ -138,7 +138,6 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
- [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
  [-WithImportance <WithImportance>]<MultiValuedProperty>
@@ -2708,22 +2707,6 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: <MultiValuedProperty>
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAppDlpRestrictions
-{{ Fill ThirdPartyAppDlpRestrictions Description }}
-
-```yaml
-Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
