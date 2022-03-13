@@ -404,8 +404,9 @@ You can enter multiple workspace IDs separated by commas. If the values contain 
 
 You can find the workspace ID using one of the following procedures:
 
-- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
-- PowerShell: Get-PowerBIWorkspace.
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
 
 ```yaml
 Type: MultiValuedProperty
@@ -427,8 +428,11 @@ You can enter multiple workspace IDs separated by commas. If the values contain 
 
 You can find the workspace ID using one of the following procedures:
 
-- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
-- PowerShell: Get-PowerBIWorkspace.
+You can find the workspace ID using one of the following procedures:
+
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
 
 ```yaml
 Type: MultiValuedProperty
