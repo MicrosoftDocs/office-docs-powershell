@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Preview-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
 
@@ -63,6 +64,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+{{ Fill RecipientAddress Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

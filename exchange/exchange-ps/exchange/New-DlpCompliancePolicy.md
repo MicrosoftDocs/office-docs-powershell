@@ -39,6 +39,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-OnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-PowerBIDlpLocation <MultiValuedProperty>]
  [-PowerBIDlpLocationException <MultiValuedProperty>]
  [-Priority <Int32>]
@@ -386,6 +387,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
