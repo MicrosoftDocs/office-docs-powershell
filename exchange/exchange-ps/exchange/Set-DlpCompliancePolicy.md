@@ -46,6 +46,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Mode <PolicyMode>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <Int32>]
  [-RemoveEndpointDlpLocation <MultiValuedProperty>]
  [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
@@ -557,6 +558,22 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 
