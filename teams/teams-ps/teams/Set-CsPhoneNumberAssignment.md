@@ -127,8 +127,8 @@ Accept wildcard characters: False
 ### -LocationId
 The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. 
 
-Removal of location from a phone number is supported for Direct Routing numbers and OperatorConnect numbers that is not managed by the Service Desk
-(IsManagedByServiceDesk = False in the output from Get-CsOnlineTelephoneNumber). If you want to remove the location, use the string value null for LocationId.
+Removal of location from a phone number is supported for Direct Routing numbers and Operator Connect numbers that are not managed by the Service Desk. 
+If you want to remove the location, use the string value null for LocationId.
 
 ```yaml
 Type: System.String
