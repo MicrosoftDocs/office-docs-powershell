@@ -35,6 +35,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
  [-OverwriteLabel <Boolean>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
@@ -326,6 +327,22 @@ This parameter works only on Exchange locations.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
