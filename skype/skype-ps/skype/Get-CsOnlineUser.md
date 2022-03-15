@@ -219,15 +219,6 @@ The Filtering functionality has been limited to the following attributes:
 - CountryAbbreviation
 - UsageLocation
 
-*Attributes renamed*:
-
-- ObjectId renamed to Identity
-- FirstName renamed to GivenName
-- DirSyncEnabled renamed to UserDirSyncEnabled
-- MCOValidationError renamed to UserValidationErrors
-- Enabled renamed to IsSipEnabled
-- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
-
 *Attributes that have changed in meaning/format*:
 
 **OnPremLineURI**: This attribute previously used to refer to both:
