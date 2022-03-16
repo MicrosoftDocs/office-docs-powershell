@@ -29,9 +29,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 - ExternalPstn
 - SharedVoicemail
 
-**NOTE**
-
-In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
+**NOTE**: In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
 
 ## EXAMPLES
 

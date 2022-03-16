@@ -52,7 +52,7 @@ The first parameter after the cmdlet is assumed to be the User parameter value.
 ### -Orbit
 Specifies the group pickup orbit number to be assigned to the user.
 The number must be within an orbit pickup range that was created with a type of GroupPickup.
-For more information on creating call park orbits, see New-CsCallParkOrbit (https://technet.microsoft.com/en-us/library/gg398936.aspx).
+For more information on creating call park orbits, see [New-CsCallParkOrbit](https://docs.microsoft.com/powershell/module/skype/New-CsCallParkOrbit).
 
 Values for the Orbit parameter must match the regular expression (\[\*|#\]?\[1-9\]\d{0,7})|(\[1-9\]\d{0,8}).
 
