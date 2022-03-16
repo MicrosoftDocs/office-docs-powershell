@@ -27,17 +27,12 @@ This article explains these conventions, and also the syntax that's required to 
 
 Exchange PowerShell help follows conventions that indicate what's required or optional, and how to enter parameters and values when you run a command. These command conventions are listed in the following table.
 
-<br>
-
-****
-
 |Symbol|Description|
 |---|---|
 |`-`|A hyphen indicates a parameter. For example, `-Identity`.|
 |`< >`|Angle brackets indicate the possible values for a parameter. For example, `-Location <ServerName>` or -Enabled \<$true \| $false\>.|
 |`[ ]`|Square brackets indicate optional parameters and their values. For example, `[-WhatIf]` or `[-ResultSize <Unlimited>]`. <p> Parameter-value pairs that aren't enclosed in square brackets are required. For example, `-Password <SecureString>`. <p> If the parameter name itself is enclosed in square brackets, that indicates the parameter is a _positional_ parameter (you can use the parameter value without specifying the parameter), and positional parameters can be required or optional. <p> For example, `Get-Mailbox [[-Identity] <MailboxIdParameter>]` means the _Identity_ parameter is positional (because it's enclosed in square brackets) and optional (because the whole parameter-value pair is enclosed in square brackets), so you can use `Get-Mailbox -Identity <MailboxIdParameter>` or `Get-Mailbox <MailboxIdParameter>`. Similarly, `Set-Mailbox [-Identity] <MailboxIdParameter>` means the _Identity_ parameter is positional (because it's enclosed in square brackets) and required (because the whole parameter-value pair is not enclosed in square brackets), so you can use `Set-Mailbox -Identity <MailboxIdParameter>` or `Set-Mailbox <MailboxIdParameter>`.|
 |`|`|Pipe symbols in parameter values indicate a choice between values. For example, -Enabled \<$true \| $false\> indicates the _Enabled_ parameter can have the value `$true` or `$false`.|
-|
 
 These command conventions help you understand how a command is constructed. With the exception of the hyphen that indicates a parameter, you don't use these symbols as they're described in the table when you run cmdlets in Exchange PowerShell.
 
@@ -111,10 +106,6 @@ If you enclose the string in single quotation marks, the only special character 
 
 The following table shows the valid operators that you can use in an Exchange command. Some of these symbols were also described in the earlier [Command conventions in Exchange PowerShell](#command-conventions-in-exchange-powershell) section. However, these symbols have different meanings when they're used on the command line as operators. For example, the minus sign that's used to indicate a parameter can also be used in a command as a mathematical operator.
 
-<br>
-
-****
-
 |Operator|Description|
 |---|---|
 |`=`|The equal sign is used as an assignment character. The value on the right side of the equal sign is assigned to the variable on the left side of the equal sign. The following characters are also assignment characters: <ul><li>`+=`: Add the value on the right side of the equal sign to the current value that's contained in the variable on the left side of the equal sign.</li><li>`-=`: Subtract the value on the right side of the equal sign from the current value that's contained in the variable on the left side of the equal sign.</li><li>`*=`: Multiply the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li><li>`/=`: Divide the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li><li> `%=`: Modify the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li></ul>|
@@ -136,4 +127,3 @@ The following table shows the valid operators that you can use in an Exchange co
 |`/`|A forward slash divides one value by another. For example, `6 / 6` equals `1`.|
 |`%`|The percent sign has the following uses: <ul><li>In a numerical evaluation, it returns the remainder from a division operator. For example, `6 % 4` equals `2`.</li><li>In a [pipeline](/powershell/module/microsoft.powershell.core/about/about_pipelines), it's shorthand for the **ForEach-Object** cmdlet. For example, `Import-Csv C:\MyFile.csv | ForEach-Object {Set-Mailbox $_.Identity -Name $_.Name}` is the same as `Import-Csv C:\MyFile.csv | % {Set-Mailbox $_.Identity -Name $_.Name}`.</li></ul>|
 |`?`|The question mark character is shorthand for the **Where-Object** cmdlet. For example, `Get-Alias | Where-Object {$_.Definition -eq "Clear-Host"}` is the same as `Get-Alias | ? {$_.Definition -eq "Clear-Host"}`.|
-|
