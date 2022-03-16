@@ -50,8 +50,6 @@ UpgradeScheduledDate : 2018-06-15 00:00:00Z
 UserNotificationDate : 2018-07-05 00:00:00Z
 UpgradeDate          : 2018-07-10 00:00:00Z
 LastStateChangeDate  : 2018-06-06 22:52:21Z
-
-
 ```
 
 For more information on the results from the above example please reference the table below:
@@ -132,6 +130,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### None
+
 ## NOTES 
 
 ## RELATED LINKS
@@ -142,8 +141,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
-[Skype for Business Online retirement on July 31, 2021](https://support.microsoft.com/en-us/help/4511540/retirement-of-skype-for-business-online)
+[Skype for Business Online retirement on July 31, 2021](https://support.microsoft.com/help/4511540/retirement-of-skype-for-business-online)
 
-[Upgrade Basic guidance](https://docs.microsoft.com/en-us/MicrosoftTeams/upgrade-basic)
+[Upgrade Basic guidance](https://docs.microsoft.com/MicrosoftTeams/upgrade-basic)
 
-[Transitioning from Skype for Business to Microsoft Teams via FastTrack](https://www.microsoft.com/en-us/fasttrack/skype-for-business-transition-to-teams?rtc=1)
+[Transitioning from Skype for Business to Microsoft Teams via FastTrack](https://www.microsoft.com/fasttrack/skype-for-business-transition-to-teams?rtc=1)

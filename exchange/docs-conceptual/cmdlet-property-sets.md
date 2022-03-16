@@ -27,10 +27,6 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 The available property sets for the **Get-EXOCasMailbox** cmdlet and the properties they contain are described in the following table:
 
-<br>
-
-****
-
 |PropertySet|Properties|
 |---|---|
 |**Minimum**|ActiveSyncEnabled <br> DisplayName <br> ECPEnabled <br> EmailAddresses <br> EwsEnabled <br> ExchangeVersion <br> Guid <br> Identity <br> ImapEnabled <br> MAPIEnabled <br> Name <br> OWAEnabled <br> OrganizationId <br> PopEnabled <br> PrimarySmtpAddress <br> ServerLegacyDN|
@@ -40,7 +36,6 @@ The available property sets for the **Get-EXOCasMailbox** cmdlet and the propert
 |**Mapi**|ExternalDirectoryObjectId <br> Guid <br> Identity <br> MAPIBlockOutlookExternalConnectivity <br> MAPIBlockOutlookNonCachedMode <br> MAPIBlockOutlookRpcHttp <br> MAPIBlockOutlookVersions <br> MAPIEnabled <br> MapiHttpEnabled <br> Name <br> OrganizationId|
 |**Pop**|ExternalDirectoryObjectId <br> Guid <br> Identity <br> Name <br> OrganizationId <br> PopEnableExactRFC822Size <br> PopEnabled <br> PopMessagesRetrievalMimeFormat <br> PopSuppressReadReceipt <br> PopUseProtocolDefaults|
 |**ProtocolSettings**|ExternalDirectoryObjectId <br> ExternalImapSettings <br> ExternalPopSettings <br> ExternalSmtpSettings <br> Guid <br> Identity <br> InternalImapSettings <br> InternalPopSettings <br> InternalSmtpSettings <br> Name <br> OrganizationId|
-|
 
 **Note**: The following **Get-CasMailbox** parameters aren't available on **Get-EXOCasMailbox**:
 
@@ -57,10 +52,6 @@ For more information, see:
 ## Get-EXOMailbox property sets
 
 The available property sets for the **Get-EXOMailbox** cmdlet and the properties they contain are described in the following table:
-
-<br>
-
-****
 
 |PropertySet|Properties|
 |---|---|
@@ -81,7 +72,6 @@ The available property sets for the **Get-EXOMailbox** cmdlet and the properties
 |**SCL**|AntispamBypassEnabled <br> ExternalDirectoryObjectId <br> SCLDeleteEnabled <br> SCLDeleteThreshold <br> SCLJunkEnabled <br> SCLJunkThreshold <br> SCLQuarantineEnabled <br> SCLQuarantineThreshold <br> SCLRejectEnabled <br> SCLRejectThreshold|
 |**SoftDelete**|ExternalDirectoryObjectId <br> IncludeInGarbageCollection <br> IsInactiveMailbox <br> IsSoftDeletedByDisable <br> IsSoftDeletedByRemove <br> WhenSoftDeleted|
 |**StatisticsSeed**|ArchiveDatabaseGuid <br> DatabaseGuid <br> ExchangeGuid <br> ExternalDirectoryObjectId|
-|
 
 **Note**: The following **Get-Mailbox** parameters aren't available on **Get-EXOMailbox**:
 
@@ -100,15 +90,10 @@ For more information, see:
 
 The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the properties they contain are described in the following table:
 
-<br>
-
-****
-
 |PropertySet|Properties|
 |---|---|
 |**Minimum**|DeletedItemCount <br> DisplayName <br> ItemCount <br> MailboxGuid <br> TotalDeletedItemSize <br> TotalItemSize|
 |**All**|AssociatedItemCount <br> AttachmentTableAvailableSize <br> AttachmentTableTotalSize <br> DatabaseIssueWarningQuota <br> DatabaseName <br> DatabaseProhibitSendQuota <br> DatabaseProhibitSendReceiveQuota <br> DeletedItemCount <br> DisconnectDate <br> DisconnectReason <br> DisplayName <br> DumpsterMessagesPerFolderCountReceiveQuota <br> DumpsterMessagesPerFolderCountWarningQuota <br> ExternalDirectoryOrganizationId <br> FastIsEnabled <br> FolderHierarchyChildrenCountReceiveQuota <br> FolderHierarchyChildrenCountWarningQuota <br> FolderHierarchyDepthReceiveQuota <br> FolderHierarchyDepthWarningQuota <br> FoldersCountReceiveQuota <br> FoldersCountWarningQuota <br> IsAbandonedMoveDestination <br> IsArchiveMailbox <br> IsDatabaseCopyActive <br> IsHighDensityShard <br> IsMoveDestination <br> IsQuarantined <br> ItemCount <br> LastLoggedOnUserAccount <br> LastLogoffTime <br> LastLogonTime <br> LegacyDN <br> MailboxGuid <br> MailboxMessagesPerFolderCountReceiveQuota <br> MailboxMessagesPerFolderCountWarningQuota <br> MailboxType <br> MailboxTypeDetail <br> MessageTableAvailableSize <br> MessageTableTotalSize <br> NamedPropertiesCountQuota <br> NeedsToMove <br> OtherTablesAvailableSize <br> OtherTablesTotalSize <br> OwnerADGuid <br> QuarantineClients <br> QuarantineDescription <br> QuarantineEnd <br> QuarantineFileVersion <br> QuarantineLastCrash <br> ResourceUsageRollingAvgDatabaseReads <br> ResourceUsageRollingAvgRop <br> ResourceUsageRollingClientTypes <br> ServerName <br> StorageLimitStatus <br> SystemMessageCount <br> SystemMessageSize <br> SystemMessageSizeShutoffQuota <br> SystemMessageSizeWarningQuota <br> TotalDeletedItemSize <br> TotalItemSize|
-|
 
 For more information, see:
 
@@ -119,10 +104,6 @@ For more information, see:
 
 The available property sets for the **Get-EXORecipient** cmdlet and the properties they contain are described in the following table:
 
-<br>
-
-****
-
 |PropertySet|Properties|
 |---|---|
 |**Minimum**|ExchangeVersion <br> ExternalDirectoryObjectID <br> Name <br> OrganizationId <br> RecipientType <br> RecipientTypeDetails|
@@ -130,7 +111,6 @@ The available property sets for the **Get-EXORecipient** cmdlet and the properti
 |**Custom**|CustomAttribute1 <br> CustomAttribute2 <br> CustomAttribute3 <br> CustomAttribute4 <br> CustomAttribute5 <br> CustomAttribute6 <br> CustomAttribute7 <br> CustomAttribute8 <br> CustomAttribute9 <br> CustomAttribute10 <br> CustomAttribute11 <br> CustomAttribute12 <br> CustomAttribute13 <br> CustomAttribute14 <br> CustomAttribute15 <br> ExtensionCustomAttribute1 <br> ExtensionCustomAttribute2 <br> ExtensionCustomAttribute3 <br> ExtensionCustomAttribute4 <br> ExtensionCustomAttribute5|
 |**MailboxMove**|MailboxMoveBatchName <br> MailboxMoveFlags <br> MailboxMoveRemoteHostName <br> MailboxMoveSourceMDB <br> MailboxMoveStatus <br> MailboxMoveTargetMDB|
 |**Policy**|ActiveSyncMailboxPolicy <br> ActiveSyncMailboxPolicyIsDefaulted <br> AddressBookPolicy <br> EmailAddressPolicyEnabled <br> ManagedFolderMailboxPolicy <br> OwaMailboxPolicy <br> PoliciesExcluded <br> PoliciesIncluded <br> RetentionPolicy <br> SharingPolicy <br> ShouldUseDefaultRetentionPolicy <br> UMMailboxPolicy|
-|
 
 **Note**: The following **Get-Recipient** parameters aren't available on **Get-EXORecipient**:
 
