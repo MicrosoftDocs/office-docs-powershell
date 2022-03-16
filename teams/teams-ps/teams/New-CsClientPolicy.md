@@ -506,7 +506,6 @@ This setting is equivalent to the Communications Server 2007 R2 Group Policy set
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010
 
 Required: False
 Position: Named

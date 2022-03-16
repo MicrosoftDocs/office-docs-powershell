@@ -972,7 +972,6 @@ If set to false, the deleted conference state is eventual and not instantaneous.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

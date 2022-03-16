@@ -220,7 +220,6 @@ For example: sip:rccgateway@litwareinc.com
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

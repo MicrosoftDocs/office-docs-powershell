@@ -590,7 +590,6 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 Type: Boolean
 Parameter Sets: Identity, Instance
 Aliases: 
-Applicable: Lync Server 2010
 
 Required: False
 Position: Named
