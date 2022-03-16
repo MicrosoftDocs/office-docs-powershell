@@ -36,9 +36,13 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ContentFileTypeMatches <MultiValuedProperty>]
+ [-ContentIsShared <Boolean>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
  [-DocumentContainsWords <MultiValuedProperty>]
+ [-DocumentCreatedBy <MultiValuedProperty>]
+ [-DocumentCreatedByMemberOf <RecipientIdParameter[]>]
  [-DocumentIsPasswordProtected <Boolean>
  [-DocumentIsUnsupported <Boolean>]
  [-DocumentMatchesPatterns <MultiValuedProperty>]
@@ -53,8 +57,12 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ExceptIfContentFileTypeMatches <MultiValuedProperty>]
+ [-ExceptIfContentIsShared <Boolean>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
  [-ExceptIfDocumentContainsWords <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedBy <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedByMemberOf <RecipientIdParameter[]>]
  [-ExceptIfDocumentIsPasswordProtected <Boolean>]
  [-ExceptIfDocumentIsUnsupported <Boolean>]
  [-ExceptIfDocumentMatchesPatterns <MultiValuedProperty>]
@@ -462,6 +470,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentFileTypeMatches
+{{ Fill ContentFileTypeMatches Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentIsShared
+{{ Fill ContentIsShared Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentPropertyContainsWords
 The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
@@ -469,6 +509,25 @@ This parameter accepts values in the format: `"Property1:Value1,Value2","Propert
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Disabled
+The Disabled parameter specifies whether the DLP rule is disabled. Valid values are:
+
+- $true: The rule is disabled.
+- $false: The rule is enabled. This is the default value.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -500,14 +559,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disabled
-The Disabled parameter specifies whether the DLP rule is disabled. Valid values are:
-
-- $true: The rule is disabled.
-- $false: The rule is enabled. This is the default value.
+### -DocumentCreatedBy
+{{ Fill DocumentCreatedBy Description }}
 
 ```yaml
-Type: Boolean
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentCreatedByMemberOf
+{{ Fill DocumentCreatedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -817,6 +889,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfContentFileTypeMatches
+{{ Fill ExceptIfContentFileTypeMatches Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfContentIsShared
+{{ Fill ExceptIfContentIsShared Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfContentPropertyContainsWords
 The ExceptIfContentPropertyContainsWords parameter specifies an exception for the DLP rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
 
@@ -844,6 +948,38 @@ You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedBy
+{{ Fill ExceptIfDocumentCreatedBy Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedByMemberOf
+{{ Fill ExceptIfDocumentCreatedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

@@ -30,6 +30,7 @@ Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
  [-RemoveReviewers <String[]>]
  [-RetentionPeriodInDays <Int32>]
  [-Reviewers <String[]>]
+ [-UserReportingWorkloads <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -189,6 +190,22 @@ Accept wildcard characters: False
 The Reviewers parameter specifies the SMTP addresses of the reviewers for the supervisory review policy. You can specify multiple email addresses separated by commas.
 
 The reviewers that you specify with this parameter replace the existing reviewers. To selectively add or remove reviewers, use the AddReviewers and RemoveReviewers parameters.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserReportingWorkloads
+{{ Fill UserReportingWorkloads Description }}
 
 ```yaml
 Type: String[]

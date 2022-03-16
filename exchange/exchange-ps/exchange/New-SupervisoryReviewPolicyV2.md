@@ -26,6 +26,7 @@ New-SupervisoryReviewPolicyV2 [-Name] <String> -Reviewers <String[]>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-UserReportingWorkloads <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -134,6 +135,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserReportingWorkloads
+{{ Fill UserReportingWorkloads Description }}
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
