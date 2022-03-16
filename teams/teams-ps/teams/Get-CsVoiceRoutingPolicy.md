@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 title: Get-CsVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -91,7 +91,6 @@ For example, to return all the policies configured at the per-user scope, use th
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +117,6 @@ If neither the Identity nor the Filter parameters are specified, then Get-CsVoic
 Type: XdsIdentity
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -134,7 +132,6 @@ Retrieves the voice policy data from the local replica of the Central Management
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

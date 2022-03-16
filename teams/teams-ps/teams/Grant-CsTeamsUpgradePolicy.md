@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: MicrosoftTeams, Skype for Business Server 2019, Skype for Business Server 2015
+Module Name: MicrosoftTeams
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -124,7 +124,7 @@ The user you want to grant policy to. This can be specified as SIP address, User
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019, Skype for Business Server 2015
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 0
@@ -140,7 +140,7 @@ The name of the policy instance.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019, Skype for Business Server 2015
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 1
@@ -190,7 +190,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Module Name: MicrosoftTeams, Skype for Business Server 2019, Skype for Business Server 2015
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named

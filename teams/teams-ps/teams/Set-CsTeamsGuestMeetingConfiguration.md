@@ -1,7 +1,5 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: Skype for Business Online
-online version:
 Module Name: MicrosoftTeams
 title: Set-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0

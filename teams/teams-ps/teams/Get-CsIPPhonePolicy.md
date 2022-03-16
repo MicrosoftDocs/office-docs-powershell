@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 title: Get-CsIPPhonePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -41,7 +41,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -57,7 +57,7 @@ This parameter is reserved for internal Microsoft use.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 1
@@ -73,7 +73,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named

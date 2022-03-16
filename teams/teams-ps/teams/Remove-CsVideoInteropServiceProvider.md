@@ -1,7 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: MicrosoftTeams
-Module Name: Skype for Business Online
 title: Remove-CsVideoInteropServiceProvider
 schema: 2.0.0
 manager: bulenteg

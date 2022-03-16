@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 title: Get-CsTeamsUpgradeConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -61,7 +61,7 @@ The above cmdlet lists the properties of TeamsUpgradeConfiguration.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 1
@@ -77,7 +77,7 @@ Do not use
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 title: Test-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
@@ -79,7 +79,6 @@ Full Data Type: Microsoft.Rtc.Management.Voice.PhoneNumber
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -98,7 +97,6 @@ You can retrieve voice normalization rules by calling the `Get-CsVoiceNormalizat
 Type: NormalizationRule
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named

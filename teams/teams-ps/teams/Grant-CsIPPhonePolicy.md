@@ -67,7 +67,7 @@ For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 2
@@ -83,7 +83,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 1
@@ -139,7 +139,7 @@ By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named

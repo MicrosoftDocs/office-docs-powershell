@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 title: Set-CsIPPhonePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -73,7 +73,7 @@ Manual – The user needs to enter the pairing code manually to pair with the BT
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ Specifies the time format to be used. The acceptable values are "24" for a 24 ho
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Specifies whether the Better Together Over Ethernet (BTOE) feature is enabled fo
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ Specifies whether the IP device will be updated by the Skype for Business servic
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Specifies whether an IP device is enabled to connect to the Exchange Online cale
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies whether the Visual Voicemail feature in Skype for Business Online is e
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ If enabled, phone goes to power saving mode (display turns off) based on values 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ The Force switch specifies whether to suppress warning and confirmation messages
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ This parameter is reserved for internal Microsoft use.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: 1
@@ -233,7 +233,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ Specifies the maximum number of retries allowed for phone unlock. The default is
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ Specifies the address of the provisioning server for your organization.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ Specifies the password for the provisioning server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ Specifies the server type for the phone. The default is FTP.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ Specifies a username for the provisioning server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -329,7 +329,7 @@ Specifies the time in milliseconds to wait during office hours before turning on
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -345,7 +345,7 @@ Specifies the time in milliseconds to wait after office hours before turning on 
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -361,7 +361,7 @@ Specifies the order in which to prioritize codecs. The default is: "G722_8000;PC
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -393,7 +393,7 @@ Specifies the time in milliseconds to wait in On-Hook mode before dialing out au
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
@@ -411,7 +411,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Module Name: MicrosoftTeams, Skype for Business Server 2019
+Module Name: MicrosoftTeams
 
 Required: False
 Position: Named
