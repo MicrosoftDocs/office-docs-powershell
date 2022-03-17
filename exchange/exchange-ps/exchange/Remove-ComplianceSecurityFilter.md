@@ -12,7 +12,7 @@ ms.reviewer:
 # Remove-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-ComplianceSecurityFilter cmdlet to remove compliance security filters from the Microsoft 365 compliance center.
 

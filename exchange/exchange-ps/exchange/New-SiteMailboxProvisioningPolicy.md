@@ -12,7 +12,7 @@ ms.reviewer:
 # New-SiteMailboxProvisioningPolicy
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
 

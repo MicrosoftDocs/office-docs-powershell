@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-AdministrativeUnit
 
 ## SYNOPSIS
-This cmdlet is available or functional only in the cloud-based service.
+This cmdlet is functional only in the cloud-based service.
 
 Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Azure Active Directory containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
 

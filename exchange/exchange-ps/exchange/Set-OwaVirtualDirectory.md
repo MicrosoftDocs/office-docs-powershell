@@ -706,7 +706,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
 
@@ -841,7 +841,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exchange2003Url
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Exchange2003Url parameter specifies the Outlook Web App URL for Exchange Server 2003 mailboxes. The URL must include the Outlook Web App virtual directory name, even if you're using a redirect to simplify the URL specified by the Exchange2003Url parameter.
 
@@ -1691,7 +1691,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationInterval
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The NotificationInterval parameter specifies the polling frequency in seconds that the client polls the server for new item notifications, reminder updates, and session time-out information in Outlook Web App.
 
@@ -1840,7 +1840,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFoldersEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The PublicFoldersEnabled parameter specifies whether a user can browse or read items in public folders in Outlook Web App. Valid values are:
 
@@ -1861,7 +1861,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoverDeletedItemsEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outlook Web App to view, recover, or delete permanently items that have been deleted from the Deleted Items folder. Valid values are:
 
@@ -1941,7 +1941,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsActionForUnknownServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1959,7 +1959,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsAllowedServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1977,7 +1977,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsBlockedServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1995,7 +1995,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsInternalDomainSuffixList
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -2072,7 +2072,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchFoldersEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SearchFoldersEnabled parameter specifies whether Search Folders are available in Outlook on the web. Valid values are:
 
@@ -2147,7 +2147,7 @@ Accept wildcard characters: False
 ```
 
 ### -SilverlightEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SilverlightEnabled parameter specifies whether a user can use Microsoft Silverlight features in Outlook Web App. Valid values are:
 
@@ -2168,7 +2168,7 @@ Accept wildcard characters: False
 ```
 
 ### -SMimeEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SMimeEnabled parameter specifies whether users can download the S/MIME control for Outlook Web App and use it to read and compose signed and encrypted messages. Valid values are:
 
@@ -2191,7 +2191,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpellCheckerEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SpellCheckerEnabled parameter specifies whether to enable or disable the built-in Outlook Web App spell checker in the full version of Outlook Web App. Valid values are:
 

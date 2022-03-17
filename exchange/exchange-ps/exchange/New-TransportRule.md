@@ -1253,7 +1253,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disconnect
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -2608,7 +2608,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -3456,7 +3456,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogEventText
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4268,7 +4268,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4697,7 +4697,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectStatusCode
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4719,7 +4719,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectText
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
