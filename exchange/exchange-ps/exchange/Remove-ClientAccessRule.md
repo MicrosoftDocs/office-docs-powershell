@@ -12,7 +12,7 @@ ms.reviewer:
 # Remove-ClientAccessRule
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ClientAccessRule cmdlet to remove client access rules. Client access rules help you control access to your cloud-based organization based on the properties of the connection.
 

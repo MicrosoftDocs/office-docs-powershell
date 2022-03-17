@@ -1859,7 +1859,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxAge parameter specifies the maximum duration that the server statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1881,7 +1881,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the server statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB. When you enter a value, qualify the value with one of the following:
 
@@ -1909,7 +1909,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxFileSize parameter specifies the maximum file size for the server statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following:
 
@@ -1937,7 +1937,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-This parameter is available or functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
 The ServerStatisticsLogPath parameter specifies the location of the server statistics log. The default location depends on your version of Exchange:
 

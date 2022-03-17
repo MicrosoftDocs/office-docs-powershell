@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPartnerLinked
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 This ShowPartnerLinked switch specifies whether to return built-in role groups that are of type PartnerRoleGroup. You don't need to specify a value with this switch.
 

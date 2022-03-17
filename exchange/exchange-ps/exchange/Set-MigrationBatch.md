@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
