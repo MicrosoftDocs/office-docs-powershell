@@ -1435,7 +1435,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoicemailJournalingEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voice mail messages are journaled by the Journaling agent. Valid input for this parameter is $true or $false. The default value is $true.
 

@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserIds
-The UserIds parameter filters the log entries by the ID of the user who performed the action.
+The UserIds parameter filters the log entries by the account (UserPrincipalName) of the user who performed the action. For example, laura@contoso.onmicrosoft.com.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

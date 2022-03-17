@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-DataClassification
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 In Exchange Online, this cmdlet has been replaced by the [Set-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
 

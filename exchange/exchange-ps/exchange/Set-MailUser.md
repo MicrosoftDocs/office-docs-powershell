@@ -2175,7 +2175,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
@@ -2217,7 +2217,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientLimits
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The RecipientLimits parameter specifies the maximum number of recipients allowed in messages sent by the mail user.
 
