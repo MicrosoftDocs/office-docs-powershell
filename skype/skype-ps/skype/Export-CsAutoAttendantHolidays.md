@@ -26,9 +26,7 @@ The Export-CsAutoAttendantHolidays cmdlet and the Import-CsAutoAttendantHolidays
 
 The Export-CsAutoAttendantHolidays cmdlet returns the holiday schedule information in serialized form (as a byte array). The caller can then write the bytes to the disk to obtain a CSV file. Similarly, the Import-CsAutoAttendantHolidays cmdlet accepts the holiday schedule information as a byte array, which can be read from the aforementioned CSV file. The first line of the CSV file is considered a header record and is always ignored.
 
-**NOTE**
-
-Each line in the CSV file used by Export-CsAutoAttendantHolidays and Import-CsAutoAttendantHolidays cmdlet should be of the following format:
+**NOTE**: Each line in the CSV file used by Export-CsAutoAttendantHolidays and Import-CsAutoAttendantHolidays cmdlet should be of the following format:
 
 `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
 

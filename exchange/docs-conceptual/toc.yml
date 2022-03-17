@@ -32,6 +32,8 @@
           href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online PowerShell - modern auth and MFA
           href: connect-to-exchange-online-powershell.md
+        - name: App-only authentication for unattended scripts
+          href: app-only-auth-powershell-v2.md
         - name: Enable or disable access to Exchange Online PowerShell
           href: disable-access-to-exchange-online-powershell.md
         - name: Exchange cmdlet syntax
@@ -47,8 +49,6 @@
               href: recipientfilter-properties.md
             - name: Filters in EXO V2 module cmdlets
               href: filters-v2.md
-        - name: App-only authentication for unattended scripts
-          href: app-only-auth-powershell-v2.md
         - name: Property sets in EXO V2 module cmdlets
           href: cmdlet-property-sets.md
         - name: V1 module - Connect to Exchange Online PowerShell
@@ -60,6 +60,8 @@
       items:
         - name: Connect to Security & Compliance Center PowerShell - modern auth and MFA
           href: connect-to-scc-powershell.md
+        - name: App-only authentication for unattended scripts
+          href: app-only-auth-powershell-v2.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
         - name: V1 module - Connect to Security & Compliance Center PowerShell
