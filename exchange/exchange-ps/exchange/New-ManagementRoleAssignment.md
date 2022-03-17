@@ -20,6 +20,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### App
+```
+New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -App <ServicePrincipalIdParameter> [-CustomResourceScope <ManagementScopeIdParameter>]
+ [-Confirm]
+ [-Delegating]
+ [-Force]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### Computer
 ```
 New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> -Role <RoleIdParameter>
@@ -29,6 +40,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
@@ -174,6 +186,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -App
+This parameter is available only in the cloud-based service.
+
+{{ Fill App Description }}
+
+```yaml
+Type: ServicePrincipalIdParameter
+Parameter Sets: App
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Computer
 This parameter is available only in on-premises Exchange.
 
@@ -292,7 +322,7 @@ The CustomConfigWriteScope parameter specifies the existing configuration scope 
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -308,9 +338,27 @@ The CustomRecipientWriteScope parameter specifies the existing recipient-based m
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomResourceScope
+This parameter is available only in the cloud-based service.
+
+{{ Fill CustomResourceScope Description }}
+
+```yaml
+Type: ManagementScopeIdParameter
+Parameter Sets: App
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -324,7 +372,7 @@ The Delegating switch specifies whether the user or USG assigned to the role can
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: SecurityGroup, User
+Parameter Sets: SecurityGroup, User, App
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -342,7 +390,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -360,7 +408,7 @@ The ExclusiveConfigWriteScope parameter specifies the exclusive configuration-ba
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -376,7 +424,7 @@ The ExclusiveRecipientWriteScope parameter specifies the exclusive recipient-bas
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -396,7 +444,7 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Policy, SecurityGroup, User
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -430,7 +478,7 @@ The RecipientOrganizationalUnitScope parameter specifies the OU to scope the new
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -448,7 +496,7 @@ Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExec
 
 ```yaml
 Type: RecipientWriteScopeType
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -470,7 +518,7 @@ Unscoped top-level management roles can only contain custom scripts or non-Excha
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 

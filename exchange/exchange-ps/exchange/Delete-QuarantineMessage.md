@@ -27,6 +27,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-Identity <QuarantineMessageIdentity>]
  [-Confirm]
+ [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,6 +36,7 @@ Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
 ```
 Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
+ [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -131,6 +133,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+{{ Fill RecipientAddress Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

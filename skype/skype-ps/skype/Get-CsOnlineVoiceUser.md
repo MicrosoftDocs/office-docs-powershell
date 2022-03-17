@@ -23,32 +23,25 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
-**NOTE:**
+In the Teams PowerShell Module version 2.6.2 or later, the following attributes have been deprecated for TeamsOnly customers using the ExpandLocation parameter:
 
-Beginning Teams PowerShell Module 2.6.2 onwards, the below updates are applicable for TeamsOnly customers.
+- Force
+- NumberOfResultsToSkip
+- CorrelationId
+- Verb
+- ResultSize
+- LicenceState
 
-*Deprecated Attributes*
+In the Teams PowerShell Module version 2.6.2 or later, the following input parameters have been deprecated for TeamsOnly customers due to low or zero usage:
 
-- Below attributes have been deprecated under "-ExpandLocation" parameter:
-  - Force
-  - NumberOfResultsToSkip
-  - CorrelationId
-  - Verb
-  - ResultSize
-- LicenceState 
-
-*Deprecated Input Parameters*
-
-- The following input parameters have been deprecated due to low or zero usage:
-  - [-DomainController]
-  - [-Force]
-  - [-GetFromAAD]
-  - [-GetPendingUsers]
-  - [-PSTNConnectivity]
-  - [-SearchQuery]
-  - [-Skip]
-  - [-Tenant]
-  - Common Parameters
+- DomainController
+- Force
+- GetFromAAD
+- GetPendingUsers
+- SearchQuery
+- Skip
+- Tenant
+- Common Parameters
 
 ## EXAMPLES
 
@@ -275,7 +268,6 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNConnectivity
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Possible values are:
 * All

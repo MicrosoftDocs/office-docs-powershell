@@ -66,6 +66,7 @@ New-MailboxRestoreRequest -SourceEndpoint <MigrationEndpointIdParameter> -Source
  [-IncludeFolders <String[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
+ [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
  [-SuspendComment <String>]
  [-Suspend]
@@ -896,8 +897,6 @@ Accept wildcard characters: False
 ```
 
 ### -SkipMerging
-This parameter is available only in on-premises Exchange.
-
 The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
 
 - FolderACLs
@@ -909,9 +908,9 @@ Use this parameter only if a restore request fails because of folder rules, fold
 
 ```yaml
 Type: SkippableMergeComponent[]
-Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
+Parameter Sets: CrossTenantRestore, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

@@ -37,6 +37,8 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-SkipInitialConnectionValidation]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SkippedItemApprovalTime <DateTime>]
+ [-SourceWlmLevel <WlmLevel>]
+ [-TargetWlmLevel <WlmLevel>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -51,6 +53,8 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-RequestExpiryInterval <Unlimited>]
  [-SkipInitialConnectionValidation]
  [-SkippedItemApprovalTime <DateTime>]
+ [-SourceWlmLevel <WlmLevel>]
+ [-TargetWlmLevel <WlmLevel>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -387,6 +391,42 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: DateTime
 Parameter Sets: Identity, Rehome
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceWlmLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill SourceWlmLevel Description }}
+
+```yaml
+Type: WlmLevel
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetWlmLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill TargetWlmLevel Description }}
+
+```yaml
+Type: WlmLevel
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

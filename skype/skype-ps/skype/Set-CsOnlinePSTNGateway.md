@@ -368,7 +368,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutboundTeamsNumberTranslationRulesList
+### -OutboundTeamsNumberTranslationRules
 Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
 
 ```yaml
@@ -382,7 +382,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutboundPSTNNumberTranslationRulesList
+### -OutboundPSTNNumberTranslationRules
 Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
 
 ```yaml

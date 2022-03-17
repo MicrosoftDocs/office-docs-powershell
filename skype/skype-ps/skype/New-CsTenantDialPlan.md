@@ -29,7 +29,7 @@ Tenant dial plans provide required information to let Enterprise Voice users mak
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can add new normalization rules to a tenant dial plan by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
+You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://docs.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
 
 ## EXAMPLES
 

@@ -46,9 +46,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
  **Notes**:
 
 - The list might include:
-
   - Properties that are only used in one type of environment: Microsoft 365, on-premises Exchange, or hybrid. The property might exist on recipient objects in all environments, but the value is only meaningful (a value other than blank or `None`) in one type of environment.
-
   - Properties that are present, but correspond to features that are no longer used.
 
 - Not all recipient properties have a corresponding Active Directory property. The LDAP display name value in the table is "n/a" for these properties, which indicates that the property is calculated (likely by Exchange).
@@ -60,10 +58,6 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
 - For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
-
-<br>
-
-****
 
 |Property name|LDAP display name|Available on cmdlets|Value|Comments|
 |---|---|---|---|---|
@@ -302,7 +296,6 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|**Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User** <br> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|This filter requires the _SoftDeleted_ switch in the command for mailboxes. <br> For example, `Get-Mailbox -SoftDeleted -Filter "WhenSoftDeleted -gt '8/1/2017 2:00:00 PM'"`.|
 |_WindowsEmailAddress_|_mail_|**Get-Contact** <br> **Get-DistributionGroup** <br> **Get-DynamicDistributionGroup** <br> **Get-Group** <br> **Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailContact** <br> **Get-MailPublicFolder** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User**|String (wildcards accepted) or `$null`|For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '@fabrikam.com*'"`.|
 |_WindowsLiveID_|_msExchWindowsLiveID_|**Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailUser** <br> **Get-Recipient** <br> **Get-User**|String (wildcards accepted) or `$null`|For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '@fabrikam.onmicrosoft.com*'"`.|
-|
 
 ## For more information
 

@@ -25,7 +25,6 @@ Test-OAuthConnectivity -Service <ModServiceType> -TargetUri <Uri>
  [-AppOnly]
  [-Confirm]
  [-Mailbox <MailboxIdParameter>]
- [-OrganizationDomain <String>]
  [-ReloadConfig]
  [-UseCachedToken]
  [-WhatIf]
@@ -138,24 +137,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OrganizationDomain
-This parameter is available only in the cloud-based service.
-
-The OrganizationDomain parameter specifies the domain name of the Microsoft 365 organization. For example, contoso.com.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -36,9 +36,13 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ContentFileTypeMatches <MultiValuedProperty>]
+ [-ContentIsShared <Boolean>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
  [-DocumentContainsWords <MultiValuedProperty>]
+ [-DocumentCreatedBy <MultiValuedProperty>]
+ [-DocumentCreatedByMemberOf <RecipientIdParameter[]>]
  [-DocumentIsPasswordProtected <Boolean>]
  [-DocumentIsUnsupported <Boolean>]
  [-DocumentMatchesPatterns <MultiValuedProperty>]
@@ -53,8 +57,12 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ExceptIfContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ExceptIfContentFileTypeMatches <MultiValuedProperty>]
+ [-ExceptIfContentIsShared <Boolean>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
  [-ExceptIfDocumentContainsWords <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedBy <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedByMemberOf <RecipientIdParameter[]>]
  [-ExceptIfDocumentIsPasswordProtected <Boolean>]
  [-ExceptIfDocumentIsUnsupported <Boolean>]
  [-ExceptIfDocumentMatchesPatterns <MultiValuedProperty>]
@@ -127,6 +135,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
  [-SenderADAttributeMatchesPatterns <PswsHashtable>]
+ [-SenderAddressLocation <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicySenderAddressLocation>]
  [-SenderDomainIs <MultiValuedProperty>]
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
@@ -137,7 +146,6 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
- [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
  [-WithImportance <WithImportance>]<MultiValuedProperty>
@@ -182,8 +190,8 @@ Accept wildcard characters: False
 ### -AccessScope
 The AccessScope parameter specifies a condition for the DLP rule that's based on the access scope of the content. The rule is applied to content that matches the specified access scope. Valid values are:
 
-- InOrganization: The rule is applied to content that's accessible inside the organization.
-- NotInOrganization: The rule is applied to content that's accessible outside the organization.
+- InOrganization: The rule is applied to content that's accessible or delivered to a recipient inside the organization.
+- NotInOrganization: The rule is applied to content that's accessible or delivered to a recipient outside the organization.
 - None: The condition isn't used.
 
 ```yaml
@@ -446,6 +454,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentFileTypeMatches
+{{ Fill ContentFileTypeMatches Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentIsShared
+{{ Fill ContentIsShared Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentPropertyContainsWords
 The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
@@ -492,6 +532,38 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentCreatedBy
+{{ Fill DocumentCreatedBy Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentCreatedByMemberOf
+{{ Fill DocumentCreatedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -684,8 +756,8 @@ Accept wildcard characters: False
 ### -ExceptIfAccessScope
 The ExceptIfAccessScopeAccessScope parameter specifies an exception for the DLP rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
 
-- InOrganization: The rule isn't applied to content that's accessible inside the organization.
-- NotInOrganization: The rule isn't applied to content that's accessible outside the organization.
+- InOrganization: The rule isn't applied to content that's accessible or delivered to a recipient inside the organization.
+- NotInOrganization: The rule isn't applied to content that's accessible or delivered to a recipient outside the organization.
 - None: The exception isn't used.
 
 ```yaml
@@ -801,6 +873,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfContentFileTypeMatches
+{{ Fill ExceptIfContentFileTypeMatches Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfContentIsShared
+{{ Fill ExceptIfContentIsShared Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfContentPropertyContainsWords
 The ExceptIfContentPropertyContainsWords parameter specifies an exception for the DLP rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
 
@@ -828,6 +932,38 @@ You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedBy
+{{ Fill ExceptIfDocumentCreatedBy Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedByMemberOf
+{{ Fill ExceptIfDocumentCreatedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -2493,6 +2629,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SenderAddressLocation
+The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
+
+- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value.
+- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
+- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
+
+Note that message envelope searching is only available for the following conditions and exceptions:
+
+- From and ExceptIfFrom
+- FromAddressContainsWords and ExceptIfFromAddressContainsWords
+- FromAddressMatchesPatterns and ExceptIfFromAddressMatchesPatterns
+- FromMemberOf and ExceptIfFromMemberOf
+- SenderDomainIs and ExceptIfSenderDomainIs
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicySenderAddressLocation
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SenderDomainIs
 The SenderDomainIs parameter specifies a condition for the DLP rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
 
@@ -2679,22 +2843,6 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: <MultiValuedProperty>
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAppDlpRestrictions
-{{ Fill ThirdPartyAppDlpRestrictions Description }}
-
-```yaml
-Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
