@@ -35,6 +35,8 @@ The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific 
 
 More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/microsoftteams/prepare-network).
 
+To enable the network roaming policy for users who are not enterprise voice enabled, you must also enable the AllowNetworkConfigurationSettingsLookup setting in TeamsMeetingPolicy. This setting is off by default. See Set-TeamsMeetingPolicy for more info on how to enable AllowNetworkConfigurationSettingsLookup for non-enterprise voice enabled users. 
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
