@@ -39,6 +39,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>]
+[-AllowNetworkConfigurationSettingsLookup <Boolean>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -64,6 +65,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] 
 [-MeetingInviteLanguages <String>]
+[-AllowNetworkConfigurationSettingsLookup <Boolean>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -93,6 +95,15 @@ Set-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone"
 In Example 2, the Set-CsTeamsMeetingPolicy cmdlet is used to update a meeting policy with the Identity HrMeetingPolicy.
 In this example two different property values are configured: AutoAdmittedUsers is set to Everyone and AllowMeetNow is set to False.
 All other policy properties will use the existing values.
+
+### EXAMPLE 3
+
+```powershell
+Set-CsTeamsMeetingPolicy -Identity NonEVNetworkRoamingPolicy -AllowNetworkConfigurationSettingsLookup $True
+```
+
+In Example 3, the Set-CsTeamsMeetingPolicy cmdlet is used to update an existing meeting policy with the Identity NonEVNetworkRoamingPolicy.
+This policy will use all the existing values except one: AllowNetworkConfigurationSettingsLookup; in this example, we will fetch network roaming policy for the non-ev user with NonEVNetworkRoamingPolicy based on his current network location. 
 
 ## PARAMETERS
 
@@ -1068,6 +1079,20 @@ Aliases:
 Required: False
 Position: Named
 Default value: Allow
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkConfigurationSettingsLookup
+Determines whether network configuration setting lookup can be made for users who are not enterprise voice enabled, it will be used for enabling network roaming policy
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
