@@ -37,6 +37,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-NewMeetingRecordingExpirationDays <Int32>]
 [-MeetingInviteLanguages <String>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-AllowNetworkConfigurationSettingsLookup <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -966,6 +967,21 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkConfigurationSettingsLookup
+Determines whether network configuration setting lookup can be made for users who are not enterprise voice enabled, it will be used for enabling network roaming policy
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
