@@ -19,7 +19,7 @@ When you disable a meeting room object you remove all the Skype for Business Ser
 However, the Active Directory user account itself is not deleted.
 This cmdlet was introduced in Lync Server 2013.
 
-**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms, please use the methods mentioned in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation for the same.
+**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms. We recommend you use the methods described in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation to manage Microsoft Teams Rooms.
 
 
 ## SYNTAX
