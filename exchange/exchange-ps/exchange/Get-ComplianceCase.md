@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft Purview portal and Microsoft 365 compliance center. See the CaseType parameter for a list of these case types.
+Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft Purview portal. See the CaseType parameter for a list of these case types.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ### -RecentOnly
 The RecentOnly switch returns a list of the most recently modified cases of the specified case type. You don't need to specify a value with this switch.
 
-This switch is used to display data in the "Recently cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
+This switch is used to display data in the "Recent cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
 
 ```yaml
 Type: SwitchParameter
