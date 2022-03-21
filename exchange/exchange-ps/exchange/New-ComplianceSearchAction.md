@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Microsoft 365 compliance center.
+Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Microsoft Purview portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -102,7 +102,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 In Microsoft 365, the account that you use to run this cmdlet must have a valid Microsoft 365 license assigned.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -315,7 +315,7 @@ In Security & Compliance Center PowerShell, this parameter requires the Export r
 
 The Format parameter specifies the format of the search results when you use the Export switch. Valid values are:
 
-- FxStream: Export to PST files. This is the only option that's available when you export search results from the Microsoft 365 compliance center.
+- FxStream: Export to PST files. This is the only option that's available when you export search results from the Microsoft Purview portal.
 - Mime: Export to .eml message files. This the default value when you use cmdlets to export the search results.
 - Msg: Export to .msg message files.
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Microsoft 365 compliance center for the last 90 days.
+Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Microsoft Purview portal for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -38,7 +38,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - ProtectionStatus: Values are Unprotected (the sensitive information type is not defined in any DLP policy) or Protected (the sensitive information type is defined in a DLP policy).
 - DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace `<GUID>` with the GUID value and run this command: `Get-DlpComplianceRule -Identity <GUID>`.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

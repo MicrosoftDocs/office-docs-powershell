@@ -132,7 +132,7 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- Verify that your account has permission to access the Microsoft 365 Defender portal or the Microsoft 365 compliance center. For details, see [Give users access to the Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
+- Verify that your account has permission to access the Microsoft 365 Defender portal or the Microsoft Purview portal. For details, see [Give users access to the Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Security & Compliance Center PowerShell.
 

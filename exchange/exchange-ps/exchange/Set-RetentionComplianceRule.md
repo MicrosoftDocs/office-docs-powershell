@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-RetentionComplianceRule cmdlet to modify existing retention rules in the Microsoft 365 compliance center.
+Use the Set-RetentionComplianceRule cmdlet to modify existing retention rules in the Microsoft Purview portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,7 +39,7 @@ Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -299,13 +299,13 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionDurationDisplayHint
-The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Microsoft 365 compliance center. Valid values are Days, Months or Years.
+The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Microsoft Purview portal. Valid values are Days, Months or Years.
 
 - Days
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft 365 compliance center will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft Purview portal will display 1 year as the content hold duration.
 
 You can't use this parameter for Teams retention rules.
 
