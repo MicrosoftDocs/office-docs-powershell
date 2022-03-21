@@ -1084,7 +1084,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkConfigurationSettingsLookup
-Determines whether network configuration setting lookup can be made for users who are not enterprise voice enabled, it will be used for enabling network roaming policy
+Determines whether network configuration setting lookup can be made for users who are not Enterprise Voice enabled. It is used to enable Network Roaming policy.
 
 ```yaml
 Type: Boolean
