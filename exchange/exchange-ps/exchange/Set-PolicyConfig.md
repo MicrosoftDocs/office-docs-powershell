@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PolicyConfig
+Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
+ [-CaseHoldPolicyLimit <Int32>]
  [-ClassificationScheme <ClassificationScheme>]
  [-ComplianceUrl <String>]
  [-Confirm]
@@ -30,6 +31,7 @@ Set-PolicyConfig
  [-EnableSpoAipMigration <Boolean>]
  [-EndpointDlpGlobalSettings <PswsHashtable[]>]
  [-EndpointDlpGlobalSettingsPsws <PswsHashtable[]>]
+ [-ExtendTeamsDlpPoliciesToSharePointOneDrive <Boolean>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
  [-PurviewLabelConsent <Boolean>]
@@ -54,6 +56,38 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 {{ Add example description here }}
 
 ## PARAMETERS
+
+### -Identity
+{{ Fill Identity Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -CaseHoldPolicyLimit
+{{ Fill CaseHoldPolicyLimit Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ClassificationScheme
 {{ Fill ClassificationScheme Description }}
@@ -193,6 +227,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExtendTeamsDlpPoliciesToSharePointOneDrive
+{{ Fill ExtendTeamsDlpPoliciesToSharePointOneDrive Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

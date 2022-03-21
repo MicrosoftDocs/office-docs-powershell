@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-SupervisoryReviewReport
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-SupervisoryReviewReport cmdlet to view supervisory review events in the Microsoft 365 compliance center for the last 90 days.
 

@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. You don't need to specify a value with this switch.
 

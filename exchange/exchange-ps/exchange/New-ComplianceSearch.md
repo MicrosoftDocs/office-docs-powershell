@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
