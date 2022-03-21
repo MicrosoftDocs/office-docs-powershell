@@ -477,14 +477,13 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
 ## OUTPUTS
  
- ### Note:
+### Note:
+
 The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
 
-*New user attributes*
+_New user attributes_
 
 FeatureTypes – Array of unique strings specifying what features are enabled for a user. This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
 Some of the commonly used FeatureTypes include:
@@ -493,7 +492,7 @@ Some of the commonly used FeatureTypes include:
 - PhoneSystem
 - CallingPlan
 
-*Dropped attributes*  
+_Dropped attributes_
 
 The following attributes are no longer relevant to Teams and have been dropped from the output:
 
@@ -626,6 +625,8 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 **- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
 
 **- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
+
+## INPUTS
 
 ## NOTES
 
