@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Grant-CsGroupPolicyPackageAssignment
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: dasosby
 online version: https://docs.microsoft.com/powershell/module/teams/grant-csgrouppolicypackageassignment
 schema: 2.0.0
