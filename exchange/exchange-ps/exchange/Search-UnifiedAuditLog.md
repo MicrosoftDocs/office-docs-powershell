@@ -306,11 +306,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteIds
-The SiteIds parameter filters the log entries by the SharePoint site URL.
+The SiteIds parameter filters the log entries by the SharePoint SiteId (GUID). You can enter multiple values separated by commas: `Value1, Value2,…ValueN`.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-If the site URL contains a dash (-), escape the dash character with another dash. For example, for the site `https://contoso.sharepoint.com/sites/hr-project`, use the value `"https://contoso.sharepoint.com/sites/hr--project"`.
+To obtain the the SiteId for a SharePoint site, append `/_api/site/id` to the URL of the site collection you want to specify. For example, change the URL `https://contoso.sharepoint.com/sites/hr-project` to `https://contoso.sharepoint.com/sites/hr-project/_api/site/id`. An XML payload is returned and the SiteId for the site collection is displayed in the Edm.Guid property; for example: `<d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Edm.Guid">14ab81b6-f23d-476a-8cac-ad5dbd2910f7</d:Id>`.
 
 ```yaml
 Type: String[]
