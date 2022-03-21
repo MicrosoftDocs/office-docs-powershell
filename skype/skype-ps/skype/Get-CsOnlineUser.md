@@ -313,15 +313,6 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
-In the Teams PowerShell Module version 3.0.0 or later, the following attributes have been renamed:
-
-- ObjectId is now Identity.
-- FirstName is now  GivenName.
-- DirSyncEnabled is now UserDirSyncEnabled.
-- MCOValidationError is now UserValidationErrors.
-- Enabled is now IsSipEnabled.
-- TeamsBranchSurvivabilityPolicy is now TeamsSurvivableBranchAppliancePolicy.
-
 In the Teams PowerShell Module version 3.0.0 or later, the **OnPremLineURI** attribute refers only to the LineURI that's set via OnPrem AD. Previously, **OnPremLineURI** also referred to Direct Routing numbers that were assigned to users via the Set-CsUser cmdlet. Now, Direct Routing numbers are available in the **LineURI** attribute. You can distinguish Direct Routing Numbers from Calling Plan Numbers by looking at the **FeatureTypes** attribute.
 
 In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
@@ -330,10 +321,13 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 - All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -eq 'MCO*'"`  
 - All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -eq '*MCO*'"`
 
-In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
+**Policy Attributes:** 
 
-Policy Attributes: PolicyProperty comparison works only when "Authority" is provided in the value. For ex: TeamsMessagingPolicy -eq "<Authority>:<Value>"
+- PolicyProperty comparison works only when "Authority" is provided in the value. For ex: TeamsMessagingPolicy -eq "<Authority>:<Value>"
 "Authority" can contain any of these two values: Host or Tenant for a policy type (PreCanned/Default configurations provided by feature team are refered to as Host configurations while Admin-created configurations are considered Tenant configurations)
+ 
+- In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
+
 
 *Dropped Filter operators*:
   
@@ -486,6 +480,152 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+ 
+ ### Note:
+The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+
+*New user attributes*
+
+FeatureTypes – Array of unique strings specifying what features are enabled for a user. This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
+Some of the commonly used FeatureTypes include:
+- Teams
+- AudioConferencing
+- PhoneSystem
+- CallingPlan
+
+*Dropped attributes*  
+
+The following attributes are no longer relevant to Teams and have been dropped from the output:
+
+- AcpInfo
+- AdminDescription
+- ArchivingPolicy
+- AudioVideoDisabled
+- BaseSimpleUrl
+- BroadcastMeetingPolicy
+- CallViaWorkPolicy
+- ClientPolicy
+- ClientUpdateOverridePolicy
+- ClientVersionPolicy
+- CloudMeetingOpsPolicy
+- CloudMeetingPolicy
+- CloudVideoInteropPolicy
+- ContactOptionFlags
+- CountryOrRegionDisplayName
+- Description
+- DistinguishedName
+- EnabledForRichPresence
+- ExchangeArchivingPolicy
+- ExchUserHoldPolicies
+- ExperiencePolicy
+- ExternalUserCommunicationPolicy
+- ExUmEnabled
+- Guid
+- HomeServer
+- HostedVoicemailPolicy
+- IPPBXSoftPhoneRoutingEnabled
+- IPPhone
+- IPPhonePolicy
+- IsByPassValidation
+- IsValid
+- LegalInterceptPolicy
+- LicenseRemovalTimestamp
+- LineServerURI
+- Manager
+- MNCReady
+- Name
+- NonPrimaryResource
+- ObjectCategory
+- ObjectClass
+- ObjectState
+- OnPremHideFromAddressLists
+- OriginalPreferredDataLocation
+- OriginatingServer
+- OriginatorSid
+- OverridePreferredDataLocation
+- PendingDeletion
+- PrivateLine
+- ProvisioningCounter
+- ProvisioningStamp
+- PublishingCounter
+- PublishingStamp
+- Puid
+- RemoteCallControlTelephonyEnabled
+- RemoteMachine
+- SamAccountName
+- ServiceInfo
+- StsRefreshTokensValidFrom
+- SubProvisioningCounter
+- SubProvisioningStamp
+- SubProvisionLineType
+- SyncingCounter
+- TargetRegistrarPool
+- TargetServerIfMoving
+- TeamsInteropPolicy
+- ThumbnailPhoto
+- UpgradeRetryCounter
+- UserAccountControl
+- UserProvisionType
+- UserRoutingGroupId
+- VoicePolicy - Alternative is the CallingPlan and PhoneSystem string in FeatureTypes
+- XForestMovePolicy
+- AddressBookPolicy
+- GraphPolicy
+- PinPolicy
+- PreferredDataLocationOverwritePolicy
+- PresencePolicy
+- SmsServicePolicy
+- TeamsVoiceRoute
+- ThirdPartyVideoSystemPolicy
+- UserServicesPolicy
+- ConferencingPolicy
+- Id
+- MobilityPolicy
+- OnlineDialinConferencingPolicy - Alternative is the AudioConferencing string in FeatureTypes
+- Sid
+- TeamsWorkLoadPolicy
+- VoiceRoutingPolicy
+- ClientUpdatePolicy
+- HomePhone
+- HostedVoiceMail
+- MobilePhone
+- OtherTelephone
+- StreetAddress
+- WebPage
+- AssignedLicenses
+- OnPremisesUserPrincipalName
+- HostedVoiceMail
+- LicenseAssignmentStates
+- OnPremDomainName
+- OnPremSecurityIdentifier
+- OnPremSamAccountName
+- CallerIdPolicy
+- Fax
+- LastName
+- Office
+- Phone
+- WindowsEmailAddress
+
+*Attributes renamed*
+
+- ObjectId renamed to Identity
+- FirstName renamed to GivenName
+- DirSyncEnabled renamed to UserDirSyncEnabled
+- MCOValidationErrors renamed to UserValidationErrors
+- Enabled renamed to IsSipEnabled
+- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
+
+*Attributes that have changed in meaning/format*
+
+**OnPremLineURI**: This attribute previously used to refer to both:
+1. LineURI set via OnPrem AD.
+2. Direct Routing numbers assigned to users via Set-CsUser.
+
+In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
+
+**- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
+
+**- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
 
 ## NOTES
 
