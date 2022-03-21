@@ -72,8 +72,6 @@ For more information about Edge Transport servers, see [Edge Transport Servers](
 
 The following table provides links to articles that can help you learn about and use the Exchange Management Shell.
 
-****
-
 |Article|Description|
 |---|---|
 |[Open the Exchange Management Shell](open-the-exchange-management-shell.md)|Find and open the Exchange Management Shell on an Exchange server or a computer that has the Exchange management tools installed.|
@@ -83,4 +81,3 @@ The following table provides links to articles that can help you learn about and
 |[Exchange cmdlet syntax](exchange-cmdlet-syntax.md)|Learn about the structure and syntax of cmdlets in Exchange PowerShell.|
 |[Recipient filters in Exchange Management Shell commands](recipient-filters.md)|Learn about recipient filters in the Exchange Management Shell.|
 |[Use Update-ExchangeHelp to update Exchange PowerShell help articles on Exchange servers](use-update-exchangehelp.md)|Learn how to use Update-ExchangeHelp to update help for Exchange cmdlet reference articles on Exchange servers.|
-|

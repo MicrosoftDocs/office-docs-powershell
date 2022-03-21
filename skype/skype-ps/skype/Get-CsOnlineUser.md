@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineuser
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineUser
@@ -18,18 +18,18 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 ## SYNTAX
 
 ```
-Get-CsOnlineUser 
-[-Filter <String>] 
-[-LdapFilter <String>] 
-[-OnOfficeCommunicationServer] 
-[-OnModernServer]
-[-UnassignedUser] 
-[-SkipUserPolicies] 
-[-OU <OUIdParameter>] 
-[-DomainController <Fqdn>]
-[-Credential <PSCredential>] 
-[[-Identity] <UserIdParameter>] 
-[-ResultSize <>] [<CommonParameters>]
+Get-CsOnlineUser [[-Identity] <UserIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-LdapFilter <String>]
+ [-OnModernServer]
+ [-OnOfficeCommunicationServer]
+ [-OU <OUIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SkipUserPolicies]
+ [-UnassignedUser]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that m
 
 However, if you have multiple you can return users from a specified tenant by using the Filter parameter and a command similar to this:
 
-`Get-CsOnlineUser -Filter {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}`
+`Get-CsOnlineUser -Filter "TenantId -eq 'bf19b7db-6960-41e5-a139-2aa373474354'"`
 
 That command will limit the returned data to user accounts belong to the tenant with the TenantId "bf19b7db-6960-41e5-a139-2aa373474354".
 If you do not know your tenant IDs you can return that information by using this command:
@@ -53,11 +53,10 @@ If you have a hybrid or "split domain" deployment (that is, a deployment in whic
 However, the cmdlet will return information for both online users and on-premises users.
 If you want to exclude Skype for Business Online users from the data returned by the Get-CsUser cmdlet, use the following command:
 
-`Get-CsUser -Filter {TenantId -eq "00000000-0000-0000-0000-000000000000"}`
+`Get-CsUser -Filter "TenantId -eq '00000000-0000-0000-0000-000000000000'"`
 
 By definition, users homed on the on-premises version will always have a TenantId equal to 00000000-0000-0000-0000-000000000000.
 Users homed on Skype for Business Online will a TenantId that is equal to some value other than 00000000-0000-0000-0000-000000000000.
-
 
 ## EXAMPLES
 
@@ -77,10 +76,11 @@ In Example 2 information is returned for a single online user: the user with the
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-CsOnlineUser -Filter {ArchivingPolicy -eq "RedmondArchiving"}
+Get-CsOnlineUser -Filter "ArchivingPolicy -eq 'RedmondArchiving'"
 ```
 
 Example 3 uses the Filter parameter to limit the returned data to online users who have been assigned the per-user archiving policy RedmondArchiving.
+
 To do this, the filter value {ArchivingPolicy -eq "RedmondArchiving"} is employed; that syntax limits returned data to users where the ArchivingPolicy property is equal to (-eq) "RedmondArchiving".
 
 ### -------------------------- Example 4 --------------------------
@@ -89,33 +89,68 @@ Get-CsOnlineUser -Filter {HideFromAddressLists -eq $True}
 ```
 
 Example 4 returns information only for user accounts that have been configured so that the account does not appear in Microsoft Exchange address lists.
+
 (That is, the Active Directory attribute msExchHideFromAddressLists is True.) To carry out this task, the Filter parameter is included along with the filter value {HideFromAddressLists -eq $True}.
 
 ### -------------------------- Example 5 --------------------------
 ```
-Get-CsOnlineUser -Filter {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}
+Get-CsOnlineUser -Filter "TenantId -eq 'bf19b7db-6960-41e5-a139-2aa373474354'"
 ```
 
 The command shown in Example 5 returns information for all the online users assigned to the tenant with the TenantID "bf19b7db-6960-41e5-a139-2aa373474354".
+
 To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
+
 This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
 
 ### -------------------------- Example 6 --------------------------
 ```
-PS C:\> $MeetingPolicy="Kiosk"
-PS C:\> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
-PS C:\> Get-CsOnlineUser -Filter $filterString
+$MeetingPolicy = "Kiosk"
+$FilterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
+Get-CsOnlineUser -Filter $FilterString
 ```
 
 The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
+
 To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
 
 ## PARAMETERS
 
-### -Credential
+### -Identity
+Indicates the Identity of the user account to be retrieved.
 
-  *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
- 
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account:
+
+- GUID
+- SIP address
+- UPN
+
+Using the Teams PowerShell Module version 2.6 or earlier only, you can use the following values to identify the account:
+
+- GUID
+- SIP address
+- UPN
+- Alias
+- Display name. Supports the asterisk ( \* ) wildcard character. For example, `-Identity "* Smith"` returns all the users whose display names end with Smith.
+
+Using the the Teams PowerShell Module version version 2.5.1 or later, the the Get-CsOnlineUser command no longer includes deprecated properties in the output.
+
+```yaml
+Type: UserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -130,13 +165,12 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
 
-  *This parameter has been deprecated from Teams PowerShell Module 3.0 and above as it is no longer relevant to Microsoft Teams*.
- 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -147,67 +181,114 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+Enables you to limit the returned data by filtering on specific attributes. For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
-**Note: This immediate section only applies to TPM 2.6 and earlier**
+The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-Enables you to limit the returned data by filtering on specific attributes.
-For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
+The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later:
 
-The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
-For example, a filter that returns only users who have been enabled for Enterprise Voice would look like this, with EnterpriseVoiceEnabled representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
-
-`{EnterpriseVoiceEnabled -eq $True}`
-
-
-
-The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later.
-  
-*Supported filters*:
-
-The Filtering functionality has been limited to the following attributes:
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes:
 
 - accountEnabled
-- ownerUrn
+- AssignedPlan
+- CountryAbbreviation
+- department
 - displayName
+- EnterpriseVoiceEnabled
+- ExternalAccessPolicy
 - givenName
+- Identity
 - lineUri
 - userPrincipalName
 - CallingLineIdentity
 - ExternalAccessPolicy
+- OnlineAudioConferencingRoutingPolicy
 - OnlineDialOutPolicy
+- OnlineVoicemailPolicy
 - OnlineVoiceRoutingPolicy
-- TeamsMeetingPolicy
-- TeamsMeetingBroadcastPolicy
-- TeamsMessagingPolicy
+- ownerUrn
+- TeamsAppPermissionPolicy
+- TeamsAppSetupPolicy
+- TeamsAudioConferencingPolicy
+- TeamsCallHoldPolicy
+- TeamsCallingPolicy
 - TeamsCallParkPolicy
+- TeamsChannelsPolicy
+- TeamsComplianceRecordingPolicy
+- TeamsCortanaPolicy
+- TeamsEducationAssignmentsAppPolicy
 - TeamsEmergencyCallingPolicy
 - TeamsEmergencyCallRoutingPolicy
-- TeamsChannelsPolicy
-- TeamsUpdateManagementPolicy
-- TeamsCallingPolicy
-- TeamsUpgradePolicy
-- TeamsUpgradeOverridePolicy
-- TeamsAppSetupPolicy
-- TeamsAppPermissionPolicy
-- TeamsVerticalPackagePolicy
-- TeamsSurvivableBranchAppliancePolicy
-- TeamsCallHoldPolicy
-- TenantDialPlan
-- OnlineVoicemailPolicy
-- OnlineAudioConferencingRoutingPolicy
-- TeamsAudioConferencingPolicy
-- TeamsVdiPolicy
 - TeamsFeedbackPolicy
 - TeamsIPPhonePolicy
+- TeamsMeetingBrandingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMeetingPolicy
+- TeamsMessagingPolicy
+- TeamsMobilityPolicy
+- TeamsNotificationAndFeedsPolicy
 - TeamsShiftsAppPolicy
 - TeamsShiftsPolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsSyntheticAutomatedCallPolicy
 - TeamsTargetingPolicy
 - TeamsTemplatePermissionPolicy
-- TeamsSyntheticAutomatedCallPolicy
-- TeamsMobilityPolicy
+- TeamsUpdateManagementPolicy
+- TeamsUpgradeOverridePolicy
+- TeamsUpgradePolicy
+- TeamsVdiPolicy
+- TeamsVerticalPackagePolicy
+- TeamsVideoInteropServicePolicy
+- TenantDialPlan
+- Title
+- UsageLocation
+- UserDirSyncEnabled
+- userPrincipalName- accountEnabled
+- AssignedPlan
+- CountryAbbreviation
+- department
+- displayName
+- EnterpriseVoiceEnabled
+- ExternalAccessPolicy
+- givenName
+- Identity
+- lineUri
+- OnlineAudioConferencingRoutingPolicy
+- OnlineDialOutPolicy
+- OnlineVoicemailPolicy
+- OnlineVoiceRoutingPolicy
+- ownerUrn
+- TeamsAppPermissionPolicy
+- TeamsAppSetupPolicy
+- TeamsAudioConferencingPolicy
+- TeamsCallHoldPolicy
+- TeamsCallingPolicy
+- TeamsCallParkPolicy
+- TeamsChannelsPolicy
+- TeamsComplianceRecordingPolicy
 - TeamsCortanaPolicy
+- TeamsEducationAssignmentsAppPolicy
+- TeamsEmergencyCallingPolicy
+- TeamsEmergencyCallRoutingPolicy
+- TeamsFeedbackPolicy
+- TeamsIPPhonePolicy
 - TeamsMeetingBrandingPolicy
+- TeamsMeetingBroadcastPolicy
+- TeamsMeetingPolicy
+- TeamsMessagingPolicy
+- TeamsMobilityPolicy
 - TeamsNotificationAndFeedsPolicy
+- TeamsShiftsAppPolicy
+- TeamsShiftsPolicy
+- TeamsSurvivableBranchAppliancePolicy
+- TeamsSyntheticAutomatedCallPolicy
+- TeamsTargetingPolicy
+- TeamsTemplatePermissionPolicy
+- TeamsUpdateManagementPolicy
+- TeamsUpgradeOverridePolicy
+- TeamsUpgradePolicy
+- TeamsVdiPolicy
+- TeamsVerticalPackagePolicy
 - TeamsVideoInteropServicePolicy
 - TeamsEducationAssignmentsAppPolicy
 - TeamsComplianceRecordingPolicy
@@ -218,9 +299,12 @@ The Filtering functionality has been limited to the following attributes:
 - Identity
 - department
 - UserDirSyncEnabled
+- TenantDialPlan
 - Title
-- CountryAbbreviation
 - UsageLocation
+- UserDirSyncEnabled
+- userPrincipalName
+
 
 *Attributes that have changed in meaning/format*:
 
@@ -229,18 +313,24 @@ The Filtering functionality has been limited to the following attributes:
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
-In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via OnPrem AD. Direct Routing numbers will be available from the LineURI field. Direct Routing Numbers can be distinguished from Calling Plan Numbers by looking at the FeatureTypes attribute.
+In the Teams PowerShell Module version 3.0.0 or later, the following attributes have been renamed:
 
-- **The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
-- **The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
+- ObjectId is now Identity.
+- FirstName is now  GivenName.
+- DirSyncEnabled is now UserDirSyncEnabled.
+- MCOValidationError is now UserValidationErrors.
+- Enabled is now IsSipEnabled.
+- TeamsBranchSurvivabilityPolicy is now TeamsSurvivableBranchAppliancePolicy.
 
-*Changes in "-Filter" parameter*:
+In the Teams PowerShell Module version 3.0.0 or later, the **OnPremLineURI** attribute refers only to the LineURI that's set via OnPrem AD. Previously, **OnPremLineURI** also referred to Direct Routing numbers that were assigned to users via the Set-CsUser cmdlet. Now, Direct Routing numbers are available in the **LineURI** attribute. You can distinguish Direct Routing Numbers from Calling Plan Numbers by looking at the **FeatureTypes** attribute.
 
-AssignedPlan filter: The previous format will no longer be supported. Existing filters like `AssignedPlan -eq '<some-xml-string>'` will stop working. This needs to be modified to one of the following formats:
+In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
 
-- ``AssignedPlan -eq "*MCO"`` Returns all users having an AssignedPlan that ends with MCO
-- ``AssignedPlan -eq "MCO*" ``  Returns all users having an AssignedPlan that starts with MCO
-- ``AssignedPlan -eq "*MCO*" ``  Returns all users having an AssignedPlan that contains MCO
+- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -eq '*MCO'"`
+- All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -eq 'MCO*'"`  
+- All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -eq '*MCO*'"`
+
+In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
 
 Policy Attributes: PolicyProperty comparison works only when "Authority" is provided in the value. For ex: TeamsMessagingPolicy -eq "<Authority>:<Value>"
 "Authority" can contain any of these two values: Host or Tenant for a policy type (PreCanned/Default configurations provided by feature team are refered to as Host configurations while Admin-created configurations are considered Tenant configurations)
@@ -253,10 +343,11 @@ The following filter syntaxes are not supported in Teams PowerShell Module 3.0.0
 - ge, -ne:  These operators are not supported with policy properties
 - like: This operator is supported only with wildcard character in the end (e.g., "like <value>*")
 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -266,54 +357,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-
-**Note: This immediate section only applies to TPM 2.6 and earlier**
-
-Indicates the Identity of the user account to be retrieved.
-User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
-
-You can use the asterisk ( \* ) wildcard character when using the Display Name as the user Identity.
-For example, the Identity "\* Smith" returns all the users who have a display name that ends with the string value " Smith".
-
-Note that in Microsoft Teams PowerShell Version 2.5.1, using this parameter will cause the Get-CsOnlineUser command to no longer emit deprecated properties as part of the modernization effort.
-
-**Note:**
-
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
-
-*Changes in "-identity" parameter*
-
-Using the "-identity" parameter now only allows Guid/SIP address/UPN. Alias and Display Name have been dropped.
-
-
-```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LdapFilter
- 
-  *This parameter has been dropped from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
- 
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business).
-For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
 
-The LdapFilter parameter uses the LDAP query language when creating filters.
-For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
+Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Microsoft Teams or Skype for Business). For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
+
+The LdapFilter parameter uses the LDAP query language when creating filters. The LDAP filter syntax is `<ADattribute><Operator><Value>`. The following example returns only users who work in the city of Redmond (their `locality` attribute value is `Redmond`): `-LdapFilter "l=Redmond"`.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -324,11 +378,9 @@ Accept wildcard characters: False
 ```
 
 ### -OnModernServer
- 
- *This parameter has been dropped from Teams PowerShell Modules 3.0 and above due to limited usage*.
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
 
-When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business.
-Users with accounts on previous versions of the software will not be returned when you use this parameter.
+When present, the cmdlet returns a collection of users homed on Microsoft Teams or Skype for Business. Users with accounts on previous versions of the software will not be returned when you use this parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -344,13 +396,12 @@ Accept wildcard characters: False
 ```
 
 ### -OnOfficeCommunicationServer
- 
- *This parameter has been dropped from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
+TThis parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -361,14 +412,12 @@ Accept wildcard characters: False
 ```
 
 ### -OU
- 
- *This parameter has been dropped from Teams PowerShell Modules 3.0 and above as it is no longer relevant to Microsoft Teams*.
-
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
 
 ```yaml
 Type: OUIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -379,18 +428,14 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-Enables you to limit the number of records returned by the cmdlet.
-For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7.
-Note that there is no way to guarantee which seven users will be returned.
+Enables you to limit the number of records returned by the cmdlet. For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7. Note that there is no way to guarantee which seven users will be returned.
 
-The result size can be set to any whole number between 0 and 2147483647, inclusive.
-If set to 0 the command will run, but no data will be returned.
-If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
+The result size can be set to any whole number between 0 and 2147483647, inclusive. The value 0 returns no data. If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
 
 ```yaml
-Type: Int32
+Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -401,13 +446,12 @@ Accept wildcard characters: False
 ```
 
 ### -SkipUserPolicies
- 
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -418,8 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnassignedUser
- 
- *This parameter has been dropped from Teams PowerShell Modules 3.0 and above due to limited usage*.
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
 
 Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to unless they are assigned to a Registrar pool.
@@ -427,7 +470,7 @@ Users are not allowed to log on to unless they are assigned to a Registrar pool.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -438,168 +481,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
- 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## INPUTS
 
-
-
 ## OUTPUTS
 
-### Note:
-The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later.
-
-*New user attributes*
-
-FeatureTypes – Array of unique strings specifying what features are enabled for a user. This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
-Some of the commonly used FeatureTypes include:
-- Teams
-- AudioConferencing
-- PhoneSystem
-- CallingPlan
-- CommunicationCredits
-- VoiceApp
-
-*Dropped attributes*  
-
-The following attributes are no longer relevant to Teams and have been dropped from the output:
-
-- AcpInfo
-- AdminDescription
-- ArchivingPolicy
-- AudioVideoDisabled
-- BaseSimpleUrl
-- BroadcastMeetingPolicy
-- CallViaWorkPolicy
-- ClientPolicy
-- ClientUpdateOverridePolicy
-- ClientVersionPolicy
-- CloudMeetingOpsPolicy
-- CloudMeetingPolicy
-- CloudVideoInteropPolicy
-- ContactOptionFlags
-- CountryOrRegionDisplayName
-- Description
-- DistinguishedName
-- EnabledForRichPresence
-- ExchangeArchivingPolicy
-- ExchUserHoldPolicies
-- ExperiencePolicy
-- ExternalUserCommunicationPolicy
-- ExUmEnabled
-- Guid
-- HomeServer
-- HostedVoicemailPolicy
-- IPPBXSoftPhoneRoutingEnabled
-- IPPhone
-- IPPhonePolicy
-- IsByPassValidation
-- IsValid
-- LegalInterceptPolicy
-- LicenseRemovalTimestamp
-- LineServerURI
-- Manager
-- MNCReady
-- Name
-- NonPrimaryResource
-- ObjectCategory
-- ObjectClass
-- ObjectState
-- OnPremHideFromAddressLists
-- OnPremLineURIManuallySet
-- OriginalPreferredDataLocation
-- OriginatingServer
-- OriginatorSid
-- OverridePreferredDataLocation
-- PendingDeletion
-- PrivateLine
-- ProvisioningCounter
-- ProvisioningStamp
-- PublishingCounter
-- PublishingStamp
-- Puid
-- RemoteCallControlTelephonyEnabled
-- RemoteMachine
-- SamAccountName
-- ServiceInfo
-- StsRefreshTokensValidFrom
-- SubProvisioningCounter
-- SubProvisioningStamp
-- SubProvisionLineType
-- SyncingCounter
-- TargetRegistrarPool
-- TargetServerIfMoving
-- TeamsInteropPolicy
-- ThumbnailPhoto
-- UpgradeRetryCounter
-- UserAccountControl
-- UserProvisionType
-- UserRoutingGroupId
-- VoicePolicy - Alternative is the CallingPlan and PhoneSystem string in FeatureTypes
-- XForestMovePolicy
-- AddressBookPolicy
-- GraphPolicy
-- PinPolicy
-- PreferredDataLocationOverwritePolicy
-- PresencePolicy
-- SmsServicePolicy
-- TeamsVoiceRoute
-- ThirdPartyVideoSystemPolicy
-- UserServicesPolicy
-- ConferencingPolicy
-- Id
-- MobilityPolicy
-- OnlineDialinConferencingPolicy - Alternative is the AudioConferencing string in FeatureTypes
-- Sid
-- TeamsWorkLoadPolicy
-- VoiceRoutingPolicy
-- ClientUpdatePolicy
-- HomePhone
-- HostedVoiceMail
-- MobilePhone
-- OtherTelephone
-- StreetAddress
-- WebPage
-- AssignedLicenses
-- OnPremisesUserPrincipalName
-- LicenseAssignmentStates
-- OnPremDomainName
-- OnPremSecurityIdentifier
-- OnPremSamAccountName
-- CallerIdPolicy
-- Fax
-- LastName
-- Office
-- Phone
-- WindowsEmailAddress
-
-*Attributes renamed*
-
-- ObjectId renamed to Identity
-- FirstName renamed to GivenName
-- DirSyncEnabled renamed to UserDirSyncEnabled
-- MCOValidationError renamed to UserValidationErrors
-- Enabled renamed to IsSipEnabled
-- TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
-
-*Attributes that have changed in meaning/format*
-
-**OnPremLineURI**: This attribute previously used to refer to both:
-1. LineURI set via OnPrem AD.
-2. Direct Routing numbers assigned to users via Set-CsUser.
-
-In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the LineURI set via on-premises Active Directory. The OnPremLineURIManuallySet attribute has been deprecated and is no longer used. Direct Routing numbers will be available from the LineURI field. Direct Routing numbers can be distinguished from Calling Plan numbers by looking at the FeatureTypes attribute.
-
-**- The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
-
-**- The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Set-CsUser](Set-CsUser.md)
-

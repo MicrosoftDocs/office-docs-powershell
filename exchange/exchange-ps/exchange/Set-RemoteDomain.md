@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -NDRDiagnosticInfoEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information is included in non-delivery reports (also known NDRs or bounce messages) that are sent to recipients the remote domain. Valid values are:
 

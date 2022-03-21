@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-DevicePolicy
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DevicePolicy cmdlet to view all types of Basic Mobility and Security policies in Microsoft 365.
 
