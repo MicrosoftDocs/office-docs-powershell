@@ -172,6 +172,7 @@ The Filtering functionality has been limited to the following attributes:
 - givenName
 - lineUri
 - userPrincipalName
+- CallingLineIdentity
 - ExternalAccessPolicy
 - OnlineDialOutPolicy
 - OnlineVoiceRoutingPolicy
@@ -210,6 +211,8 @@ The Filtering functionality has been limited to the following attributes:
 - TeamsVideoInteropServicePolicy
 - TeamsEducationAssignmentsAppPolicy
 - TeamsComplianceRecordingPolicy
+- TeamsWorkLoadPolicy
+- VoiceRoutingPolicy
 - AssignedPlan
 - EnterpriseVoiceEnabled
 - Identity
@@ -239,16 +242,16 @@ AssignedPlan filter: The previous format will no longer be supported. Existing f
 - ``AssignedPlan -eq "MCO*" ``  Returns all users having an AssignedPlan that starts with MCO
 - ``AssignedPlan -eq "*MCO*" ``  Returns all users having an AssignedPlan that contains MCO
 
+Policy Attributes: PolicyProperty comparison works only when "Authority" is provided in the value. For ex: TeamsMessagingPolicy -eq "<Authority>:<Value>"
+"Authority" can contain any of these two values: Host or Tenant for a policy type (PreCanned/Default configurations provided by feature team are refered to as Host configurations while Admin-created configurations are considered Tenant configurations)
+
 *Dropped Filter operators*:
   
 The following filter syntaxes are not supported in Teams PowerShell Module 3.0.0 and above:
 
-- ``-not (<simple/complex PS filter>)``
-- ``<property> -like '*<text>'``
-- ``<property> -like '*<text>*'``
-- ``<property> -lt <value>``
-- ``<property> -gt <value>``
-- ``<PolicyPropertyName> -ge <value>, <PolicyPropertyName> -le <value>, <PolicyPropertyName> -gt <value>, <PolicyPropertyName> -lt <value>``
+- not, -lt, -gt: These operators have been dropped
+- ge, -ne:  These operators are not supported with policy properties
+- like: This operator is supported only with wildcard character in the end (e.g., "like <value>*")
 
 ```yaml
 Type: String
