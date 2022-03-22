@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-LabelPolicy
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity label policies in your organization.
 

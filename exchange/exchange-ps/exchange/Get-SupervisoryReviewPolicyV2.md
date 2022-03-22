@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-SupervisoryReviewPolicyV2
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-SupervisoryReviewPolicyV2 cmdlet to view supervisory review policies in the Microsoft 365 compliance center. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
 

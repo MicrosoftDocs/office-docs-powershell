@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
-This parameter is available or functional only in Exchange 2016 or earlier.
+This parameter is functional only in Exchange 2016 or earlier.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceSchedule
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The MaintenanceSchedule parameter specifies when maintenance will be performed on the mailbox database. Maintenance includes online defragmentation, removing items that have passed their retention period, removing unused indexes and other cleanup tasks.
 
@@ -756,7 +756,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use any value that uniquely identifies the public folder database. For example:
 
@@ -778,7 +778,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaNotificationSchedule
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The QuotaNotificationSchedule parameter specifies when quota messages are sent to mailboxes that have reached one of the quota values.
 
@@ -908,7 +908,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcClientAccessServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 

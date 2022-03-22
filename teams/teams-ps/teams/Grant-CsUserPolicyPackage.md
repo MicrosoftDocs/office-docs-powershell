@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Grant-CsUserPolicyPackage
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/grant-csuserpolicypackage
 schema: 2.0.0

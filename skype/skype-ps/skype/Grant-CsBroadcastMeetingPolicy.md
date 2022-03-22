@@ -23,6 +23,7 @@ Grant-CsBroadcastMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainC
 
 ## DESCRIPTION
 Administrators can manage Broadcast meeting functionality in Microsoft Teams or Skype for Business Online using the following:
+
 - Broadcast meeting configuration at the tenant level
 - Broadcast meeting policy at the user level
 - Conferencing  policy at the user level.
@@ -31,7 +32,8 @@ Broadcast meeting configuration and broadcast meeting policy govern broadcast-sp
 
 This document describes how to specify which broadcast meeting policy is assigned to a user. Be sure to also review the following docs to manage conferencing policy:[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md), [New-CsConferencingPolicy](New-CsConferencingPolicy.md), and [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md).
 
-**NOTES**
+**NOTES**:
+
 - Broadcast meeting policies are predefined in Microsoft Teams or Skype for Business. The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
 - New broadcast meeting policy instance can't be created, and existing policies can't be modified. They can only be granted, or assigned to users.
 
@@ -39,7 +41,6 @@ This document describes how to specify which broadcast meeting policy is assigne
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Grant-CsBroadcastMeetingPolicy -Identity jphillips@contoso.com -PolicyName BroadcastMeetingPolicyAllEnabled
 ```
 

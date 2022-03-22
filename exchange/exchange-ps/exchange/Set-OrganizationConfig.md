@@ -1479,7 +1479,7 @@ The DisablePlusAddressInRecipients parameter specifies whether to enable or disa
 - $true: Plus addressing is enabled. You can no longer use the plus sign in regular email addresses. The plus sign is only available for plus addressing.
 - $false: Plus addressing is disabled. You can use the plus sign in regular email addresses.
 
-For more information about plus addressing, see [Plus addressing in Exchange Online](https://docs.microsoft.com/eexchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).
+For more information about plus addressing, see [Plus addressing in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).
 
 ```yaml
 Type: Boolean

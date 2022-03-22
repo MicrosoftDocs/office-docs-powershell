@@ -22,7 +22,7 @@ customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOn
 
 ### Assignment (Default)
 ```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -LocationId <String> [<CommonParameters>]
+Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [-LocationId <String>] [<CommonParameters>]
 ```
 
 ### Attribute
@@ -66,9 +66,9 @@ This example sets the EnterpriseVoiceEnabled flag on the user user3@contoso.com.
 
 ### Example 4
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user2@contoso.com -LocationId null -PhoneNumber +12065551224 -PhoneNumberType CallingPlan
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -LocationId 'null' -PhoneNumber +12065551226 -PhoneNumberType OperatorConnect
 ```
-This example removes the emergency location from the phone number for user user2@contoso.com.
+This example removes the emergency location from the phone number for user user3@contoso.com.
 
 ### Example 5
 ```powershell
@@ -128,8 +128,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. If you want to remove the location, use
-the string value null.
+The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. 
+
+Removal of location from a phone number is supported for Direct Routing numbers and Operator Connect numbers that are not managed by the Service Desk. 
+If you want to remove the location, use the string value null for LocationId.
 
 ```yaml
 Type: System.String

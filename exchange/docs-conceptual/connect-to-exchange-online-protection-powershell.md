@@ -20,7 +20,7 @@ description: "Learn how to use the Exchange Online PowerShell V2 module to conne
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
 
-**This article contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.**
+This article contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.
 
 To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
 
