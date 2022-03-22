@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-DlpComplianceRule to create Data Loss Prevention (DLP) rules in the Microsoft Purview portal. DLP rules define sensitive information to be protected and the actions to take on rule matches.
+Use the New-DlpComplianceRule to create data loss prevention (DLP) rules in the Microsoft Purview portal. DLP rules define sensitive information to be protected and the actions to take on rule matches.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
