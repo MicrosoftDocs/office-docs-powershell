@@ -39,21 +39,21 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 Get-ComplianceCase
 ```
 
-This example returns a summary list of all core eDiscovery cases in the organization.
+This example returns a summary list of all eDiscovery Standard cases in the organization.
 
 ### Example 2
 ```powershell
 Get-ComplianceCase -Identity "Contoso Legal" | Format-List
 ```
 
-This example returns detailed information for the core eDiscovery case named Contoso Legal.
+This example returns detailed information for the eDiscovery Standard case named Contoso Legal.
 
 ### Example 3
 ```powershell
 Get-ComplianceCase -CaseType AdvancedEdiscovery
 ```
 
-This example returns a summary list of all Advanced eDiscovery cases in the organization.
+This example returns a summary list of all eDiscovery Premium cases in the organization.
 
 ### Example 4
 ```powershell
@@ -86,12 +86,12 @@ Accept wildcard characters: False
 ### -CaseType
 The CaseType parameter specifies the type of compliance case that you want to view. Valid values are:
 
-- AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Microsoft Purview portal, Advanced eDiscovery cases are displayed under **eDiscovery** \> **Advanced eDiscovery**.
+- AdvancedEdiscovery: eDiscovery Premium cases are used to manage legal or other types of investigations. In the Microsoft Purview portal, eDiscovery Premium cases are displayed under **eDiscovery** \> **Premium**.
 - ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft Purview portal, trainable classifiers are displayed under **Data classification** \> **Trainable classifiers**.
 - ComplianceWorkspace: This value is reserved for internal Microsoft use.
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Microsoft Purview portal, Data investigation cases are displayed on the **Data investigations** page.
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Microsoft Purview portal, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
-- eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Microsoft Purview portal, core eDiscovery cases are displayed under **eDiscovery** \> **eDiscovery**. This is the default value.
+- eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. In the Microsoft Purview portal, eDiscovery Standard cases are displayed under **eDiscovery** \> **Standard**. This is the default value.
 - InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on a risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
 - SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft Purview portal, communication compliance policies are displayed under **Communication compliance** \> **Policies**.
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleGroup
-The RoleGroup parameter returns a list of compliance cases that the specified role group is a member of. If you don't include the CaseType parameter, the cmdlet returns a list of core eDiscovery cases that the role group is a member of.
+The RoleGroup parameter returns a list of compliance cases that the specified role group is a member of. If you don't include the CaseType parameter, the cmdlet returns a list of eDiscovery Standard cases that the role group is a member of.
 
 ```yaml
 Type: String

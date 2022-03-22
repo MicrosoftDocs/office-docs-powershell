@@ -111,7 +111,7 @@ This example prevents the user from performing any compliance search actions on 
 ### -Action
 The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
 
-- Export: The filter is applied when exporting search results, or preparing them for analysis in Microsoft 365 Advanced eDiscovery.
+- Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
 - Preview: The filter is applied when previewing search results.
 - Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
 - Search: The filter is applied when running a search.

@@ -127,9 +127,9 @@ Accept wildcard characters: False
 ### -Case
 This parameter is available only in the cloud-based service.
 
-The Case parameter specifies the name of a Core eDiscovery case to associate the new compliance search with. If the value contains spaces, enclose the value in quotation marks.
+The Case parameter specifies the name of a eDiscovery Standard case to associate the new compliance search with. If the value contains spaces, enclose the value in quotation marks.
 
-You can't use this parameter to create compliance searches associated with Advanced eDiscovery cases.
+You can't use this parameter to create compliance searches associated with eDiscovery Premium cases.
 
 If the Name parameter contains spaces, the value of the ExchangeLocation parameter is cleared when you use the Case parameter.
 

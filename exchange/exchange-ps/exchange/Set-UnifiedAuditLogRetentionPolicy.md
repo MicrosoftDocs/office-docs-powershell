@@ -43,7 +43,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 Set-UnifiedAuditLogRetentionPolicy -Identity "eDiscovery audit retention" -RecordTypes Discovery,AeD -UserIds admin@contoso.onmicrosoft.com -RetentionDuration SixMonths -Priority 100
 ```
 
-This example adds the AeD (for Advanced eDiscovery events) record type to the policy. It also configures that the policy is applied only to the audit logs for activities performed only by the user admin@contoso.onmicrosoft.com.
+This example adds the AeD (for eDiscovery Premium events) record type to the policy. It also configures that the policy is applied only to the audit logs for activities performed only by the user admin@contoso.onmicrosoft.com.
 
 ### Example 2
 ```powershell
