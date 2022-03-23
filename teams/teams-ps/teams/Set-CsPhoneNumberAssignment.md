@@ -38,6 +38,9 @@ To remove a phone number from a user or resource account, use the [Remove-CsPhon
 If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
 and a Message string parameter with additional details of the failure.
 
+**Note**: Macau region is currently not supported for phone number assignment or Enterprise Voice.
+
+
 
 ## EXAMPLES
 
