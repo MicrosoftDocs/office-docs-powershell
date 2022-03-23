@@ -7,7 +7,7 @@ Audio conferencing policies can be used to manage audio conferencing toll- and t
 ## SYNTAX
 
 ```
-New-CsTeamsAudioConferencingPolicy [-Identity <Policy name>] [-Tenant <Guid>] [-MeetingInvitePhoneNumbers <comma separated list of numbers>] [-AllowTollFreeDialin <Boolean>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsAudioConferencingPolicy [[-ErrorAction] <Object>] [[-MeetingInvitePhoneNumbers] <Object>] [[-OutVariable] <Object>] [[-InformationAction] <Object>] [[-WarningVariable] <Object>] [[-PipelineVariable] <Object>] [[-OutBuffer] <Object>] [[-ErrorVariable] <Object>] [[-Identity] <Object>] [[-Tenant] <Object>] [[-WarningAction] <Object>] [[-AllowTollFreeDialin] <Object>] [[-InformationVariable] <Object>] [-WhatIf] [-Confirm] [-InMemory] [-Force] [-AsJob] [<CommonParameters>]
 ```  
   
   
