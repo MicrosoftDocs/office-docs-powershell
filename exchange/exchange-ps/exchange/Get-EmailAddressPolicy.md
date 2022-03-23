@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeMailboxSettingOnlyPolicy
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The IncludeMailboxSettingOnlyPolicy switch retrieves Microsoft Exchange Server 2003 address policies that contain only mailbox management configuration. You don't need to specify a value with this switch.
 

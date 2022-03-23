@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-OnlineMeetingConfiguration
 
 ## SYNOPSIS
-This cmdlet is available or functional only in the cloud-based service.
+This cmdlet is functional only in the cloud-based service.
 
 Use the Get-OnlineMeetingConfiguration cmdlet to view status and usage information about Skype Meetings and Skype for Business Online for mailboxes. Skype Meetings automatically includes Skype for Business Online conference join information in Exchange Online meeting invitations.
 

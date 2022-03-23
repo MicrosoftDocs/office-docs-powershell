@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDeclineFutureRequestsWhenOOF
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -CreateOOFEvent
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The CreateOOFEvent parameter specifies whether to create a calendar event that corresponds to the scheduled time period when Automatic Replies are being sent for the mailbox. Valid values are:
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineAllEventsForScheduledOOF
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The DeclineAllEventsForScheduledOOF parameter specifies whether to decline all existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineEventsForScheduledOOF
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The DeclineEventsForScheduledOOF parameter specifies whether it's possible to decline existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineMeetingMessage
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The DeclineMeetingMessage parameter specifies the text in the message when meetings requests that are sent to the mailbox are automatically declined. For example:
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventsToDeleteIDs
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The EventsToDeleteIDs parameter specifies the calendar events to delete from the mailbox when the DeclineEventsForScheduledOOF parameter is set to $true.
 
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -OOFEventSubject
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The OOFEventSubject parameter specifies the subject for the calendar event that's automatically created when the CreateOOFEvent parameter is set to $true.
 

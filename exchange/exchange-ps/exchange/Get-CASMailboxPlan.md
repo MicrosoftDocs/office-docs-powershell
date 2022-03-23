@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-CASMailboxPlan
 
 ## SYNOPSIS
-This cmdlet is available or functional only in the cloud-based service.
+This cmdlet is functional only in the cloud-based service.
 
 Use the Get-CASMailboxPlan cmdlet to view Client Access services (CAS) mailbox plans in cloud-based organizations.
 

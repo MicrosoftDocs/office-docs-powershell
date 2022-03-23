@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -485,7 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
