@@ -30,8 +30,8 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
 ## DESCRIPTION
  The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet creates a new Teams messaging policy.  Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
 
+**Note**: If the value from allowuserdeletemessage is set to FALSE, the team owner will not be able to delete his own messages.
 
-**NOTE** If the value from allowuserdeletemessage is set to false, the team owner will not be able to delete his own messages
 ## EXAMPLES
 
 ### Example 1
