@@ -329,11 +329,11 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 
 *Dropped Filter operators*:
 
-The following filter syntaxes are not supported in Teams PowerShell Module 3.0.0 and above:
+The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and above:
 
-- not, -lt, -gt: These operators have been dropped.
-- ge, -ne:  These operators are not supported with policy properties.
-- like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
+- -not, -lt, -gt: These operators have been dropped.
+- -ge, -ne:  These operators are not supported with policy properties.
+- -like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
 
 ```yaml
 Type: String
@@ -419,6 +419,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+*Note:* Starting with Teams PowerShell Modules version 4.0 or later "-ResultSize" type has  been changed to uint32 
+
 Enables you to limit the number of records returned by the cmdlet. For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7. Note that there is no way to guarantee which seven users will be returned.
 
 The result size can be set to any whole number between 0 and 2147483647, inclusive. The value 0 returns no data. If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
