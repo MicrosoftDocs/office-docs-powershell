@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -AllowUserDeleteMessage
 Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
-if this value is set to false the teams owner will not be able to delete his own messages
+If this value is set to FALSE, the team owner will not be able to delete his own messages.
 
 ```yaml
 Type: Boolean
