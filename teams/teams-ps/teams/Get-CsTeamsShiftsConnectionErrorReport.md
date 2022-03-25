@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet returns the list of all the team mapping error reports. It also can return the configuration details of one mapping error report with it ID provided or other filter parameters.
 
 ## SYNTAX
