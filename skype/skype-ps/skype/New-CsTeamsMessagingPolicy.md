@@ -78,6 +78,9 @@ Accept wildcard characters: False
 ### -AllowOwnerDeleteMessage
 Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
+If the `-AllowUserDeleteMessage` parameter is set to FALSE, the team owner will not be able to delete their own messages.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -122,8 +125,6 @@ Accept wildcard characters: False
 
 ### -AllowUserDeleteMessage
 Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
-
-**Note**: If the `-AllowUserDeleteMessage` parameter is set to FALSE, the team owner will not be able to delete their own messages.
 
 ```yaml
 Type: Boolean
