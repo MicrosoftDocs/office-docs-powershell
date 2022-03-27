@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-*Note:* Starting with Teams PowerShell Modules version 4.0 or later "-ResultSize" type has  been changed to uint32 
+**Note**: Starting with Teams PowerShell Modules version 4.0 and later, "-ResultSize" type has been changed to uint32.
 
 Enables you to limit the number of records returned by the cmdlet. For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7. Note that there is no way to guarantee which seven users will be returned.
 
