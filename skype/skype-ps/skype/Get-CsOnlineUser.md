@@ -329,7 +329,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 
 *Dropped Filter operators*:
 
-The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and above:
+The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and later:
 
 - -not, -lt, -gt: These operators have been dropped.
 - -ge, -ne:  These operators are not supported with policy properties.
