@@ -328,7 +328,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 In case of error, we can capture the error response as following:
-```
+
+```yaml
 $result=<cmdlet>
 $result.ToJsonString() - To get entire error message in Json.
 $result and $result.Detail - To get error object and detail object.
