@@ -32,6 +32,8 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
   > [!NOTE]
   > The rest of the instructions in the article assume that you've already installed the module.
+  >
+  > If you're using version 2.0.6 of the module, you must use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command for access to all cmdlets. Otherwise, you'll only get the 250 REST API backed cmdlets. For more information, see [Updates for version 2.0.6](exchange-online-powershell-v2.md#updates-for-version-206).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
