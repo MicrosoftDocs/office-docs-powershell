@@ -361,8 +361,8 @@ Accept wildcard characters: False
 ### -TrackClicks
 The TrackClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
 
-- $true: User clicks in email messages are tracked.
-- $false: User clicks in email messages aren't tracked. This is the default value.
+- $true: User clicks in email messages are tracked. This is the default value.
+- $false: User clicks in email messages aren't tracked.
 
 ```yaml
 Type: Boolean
