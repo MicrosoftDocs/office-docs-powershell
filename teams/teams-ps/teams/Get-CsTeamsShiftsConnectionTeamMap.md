@@ -68,14 +68,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-In case of error, we can capture the error response as following:
-
-```output
-$result=<cmdlet>
-$result.ToJsonString() - to get entire error message in Json.
-$result and $result.Detail - to get error object and detail object.
-```
-
 ## RELATED LINKS
 
 [New-CsTeamsShiftsConnectionTeamMap](New-CsTeamsShiftsConnectionTeamMap.md)
