@@ -328,12 +328,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+### Viewing error responses
+
 In case of error, we can capture the error response as following:
 
-```output
-$result=<cmdlet>
-$result.ToJsonString() - To get entire error message in Json.
-$result and $result.Detail - To get error object and detail object.
+* Hold the cmdlet output in a variable
+
+```powershell
+$result = <cmdlet>
+```
+
+* To get the entire error message in Json:
+
+```powershell
+$result.ToJsonString()
+```
+
+* To get the error object and object details:
+
+```powershell
+$result 
+$result.Detail
 ```
 
 ## RELATED LINKS
