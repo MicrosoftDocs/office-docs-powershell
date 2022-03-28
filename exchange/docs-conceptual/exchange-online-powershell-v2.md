@@ -50,10 +50,6 @@ The Exchange Online cmdlets in the EXO V2 module are meant to replace their olde
 
 The improved Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
 
-<br>
-
-****
-
 |EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
 |[Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)|[Get-Mailbox](/powershell/module/exchange/get-mailbox)|
@@ -65,26 +61,16 @@ The improved Exchange Online PowerShell cmdlets that are only available in the E
 |[Get-EXOMailboxFolderStatistics](/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchange/get-mailboxfolderstatistics)|
 |[Get-EXOMailboxFolderPermission](/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics)|
-|
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
-
-<br>
-
-****
 
 |EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
 |[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <p> or <p> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)|
 |[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)|
-|
 
 Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
-
-<br>
-
-****
 
 |EXO V2 module cmdlet|Comments|
 |---|---|
@@ -94,7 +80,6 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 |[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Replaced by [Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig).|
 |[Get-VivaInsightsSettings](/powershell/module/exchange/get-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
 |[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
-|
 
 ### Updates for version 2.0.6
 

@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailDetailEncryptionReport
+Get-MailDetailEncryptionReport [[-Organization] <OrganizationIdParameter>]
  [-AggregateBy <String>]
  [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
@@ -67,6 +67,22 @@ Get-MailDetailEncryptionReport -StartDate 12/13/2021 -EndDate 12/15/2021
 This example retrieves encryption details for messages between December 13, 2021 and December 15, 2021.
 
 ## PARAMETERS
+
+### -Organization
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AggregateBy
 The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day, or Summary. The default value is Day.

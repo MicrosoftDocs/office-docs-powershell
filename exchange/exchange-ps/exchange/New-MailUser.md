@@ -681,7 +681,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 

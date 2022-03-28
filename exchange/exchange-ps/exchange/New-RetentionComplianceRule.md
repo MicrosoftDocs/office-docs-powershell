@@ -67,10 +67,17 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration Unlimited
+New-RetentionComplianceRule -Name InternalCompanyRule -Policy "Internal Company Policy" -RetentionDuration Unlimited
 ```
 
-This example creates a new retention rule named SeptOneYear and adds it to the existing retention policy named "Internal Company Policy". Content will be held indefinitely.
+This example creates a new case hold rule named InternalCompanyRule and adds it to the existing case hold policy named "Internal Company Policy". Content will be held indefinitely.
+
+### Example 2
+```powershell
+New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration 365 -RetentionComplianceAction KeepAndDelete -ExpirationDateOption ModificationAgeInDays
+```
+
+This example creates a new retention rule named SeptOneYear and adds it to the existing retention policy named "Internal Company Policy". Content will be held for one year from the day content was last modified before it is deleted.
 
 ## PARAMETERS
 

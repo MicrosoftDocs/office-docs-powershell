@@ -25,6 +25,7 @@ New-DlpKeywordDictionary -Name <String>
  [-Confirm]
  [-Description <String>]
  [-FileData <Byte[]>]
+ [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -112,6 +113,22 @@ The FileData parameter specifies the terms that are used in the DLP keyword dict
 
 ```yaml
 Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

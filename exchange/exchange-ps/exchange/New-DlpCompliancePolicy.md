@@ -39,6 +39,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-OnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-PowerBIDlpLocation <MultiValuedProperty>]
  [-PowerBIDlpLocationException <MultiValuedProperty>]
  [-Priority <Int32>]
@@ -397,15 +398,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PowerBIDlpLocation
 The PowerBIDlpLocation parameter specifies the Power BI workspace IDs to include in the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
 
 You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
-You can find the workspace ID using one of the following procedures:
+You can find the workspace ID using any of the following procedures:
 
-- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
-- PowerShell: Get-PowerBIWorkspace.
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the **Get-PowerBIWorkspace** cmdlet.
 
 ```yaml
 Type: MultiValuedProperty
@@ -425,10 +443,11 @@ The PowerBIDlpLocationException parameter specifies the Power BI workspace IDs t
 
 You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
 
-You can find the workspace ID using one of the following procedures:
+You can find the workspace ID using any of the following procedures:
 
-- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
-- PowerShell: Get-PowerBIWorkspace.
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the **Get-PowerBIWorkspace** cmdlet.
 
 ```yaml
 Type: MultiValuedProperty
@@ -525,38 +544,6 @@ Accept wildcard characters: False
 The TeamsLocation parameter specifies the Teams accounts to exclude form the DLP policy when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAppDlpLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAppDlpLocationException
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty

@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The Mailbox parameter filters the results by the destination mailbox where the content is being imported to.
 

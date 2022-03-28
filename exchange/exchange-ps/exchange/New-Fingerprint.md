@@ -12,7 +12,7 @@ ms.reviewer:
 # New-Fingerprint
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 **Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://docs.microsoft.com/powershell/module/exchange/new-dlpfingerprint) cmdlet in Security & Compliance Center PowerShell.
 

@@ -22,7 +22,7 @@ customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOn
 
 ### Assignment (Default)
 ```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -LocationId <String> [<CommonParameters>]
+Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [-LocationId <String>] [<CommonParameters>]
 ```
 
 ### Attribute
@@ -37,6 +37,9 @@ To remove a phone number from a user or resource account, use the [Remove-CsPhon
 
 If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
 and a Message string parameter with additional details of the failure.
+
+**Note**: Macau region is currently not supported for phone number assignment or Enterprise Voice.
+
 
 
 ## EXAMPLES
@@ -63,9 +66,9 @@ This example sets the EnterpriseVoiceEnabled flag on the user user3@contoso.com.
 
 ### Example 4
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user2@contoso.com -LocationId null -PhoneNumber +12065551224 -PhoneNumberType CallingPlan
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -LocationId 'null' -PhoneNumber +12065551226 -PhoneNumberType OperatorConnect
 ```
-This example removes the emergency location from the phone number for user user2@contoso.com.
+This example removes the emergency location from the phone number for user user3@contoso.com.
 
 ### Example 5
 ```powershell
@@ -75,19 +78,19 @@ This example assigns the Direct Routing phone number +1 (425) 555-1225 to the re
 
 ### Example 6
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
+Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting
 ```
 This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=100 to the user user4@contoso.com.
 
 ### Example 7
 ```powershell
-$pn=Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
+$pn=Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting
 $pn
 Code       Message
 ----       -------
-BadRequest Telephone Number '+1425551000;ext=100' has already been assigned to another user
+BadRequest Telephone Number '+14255551000;ext=100' has already been assigned to another user
 ```
-In this example the assignment cmdlet fails, because the phone number "+1425551000;ext=100" has already been assigned to another user.
+In this example the assignment cmdlet fails, because the phone number "+14255551000;ext=100" has already been assigned to another user.
 
 
 ## PARAMETERS
@@ -125,8 +128,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. If you want to remove the location, use
-the string value null.
+The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. 
+
+Removal of location from a phone number is supported for Direct Routing numbers and Operator Connect numbers that are not managed by the Service Desk. 
+If you want to remove the location, use the string value null for LocationId.
 
 ```yaml
 Type: System.String
@@ -141,7 +146,10 @@ Accept wildcard characters: False
 
 ### -PhoneNumber
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
-"tel:" prefixed. We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
+"tel:" prefixed.
+
+We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user, but such phone numbers are
+not supported to be assigned to a resource account.
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 

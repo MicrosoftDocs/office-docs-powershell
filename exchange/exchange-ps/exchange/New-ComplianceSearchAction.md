@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchiveFormat
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 This parameter requires the Export role in Security & Compliance Center PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Export
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 This parameter requires the Export role in Security & Compliance Center PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
 
@@ -518,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The Report switch specifies the action for the content search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
 
@@ -635,7 +635,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointArchiveFormat
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 This parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
