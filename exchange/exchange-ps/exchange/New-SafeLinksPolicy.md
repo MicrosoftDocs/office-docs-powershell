@@ -35,13 +35,13 @@ New-SafeLinksPolicy [-Name] <String>
  [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForEmail <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
+ [-IsEnabled <Boolean>]
  [-MakeBuiltInProtection]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
  [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
- [-DisableUrlRewrite <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -100,9 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-The AllowClickThrough parameter specifies whether to allow users to click through to the original URL on warning pages. Valid values are:
+The AllowClickThrough parameter specifies whether users are allowed to click through to the original URL on warning pages. Valid values are:
 
-- $true: The user is allowed to click through to the original URL.
+- $true: The user is allowed to click through to the original URL. This is the default value.
 - $false: The user isn't allowed to click through to the original URL.
 
 ```yaml
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForEmail
-The EnableSafeLinksForEmail parameter specifies whether Safe Links is enabled for email. Valid values are:
+The EnableSafeLinksForEmail parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
 - $true: Safe Links is enabled for email. When a user clicks a link in an email, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for email. This is the default value.
@@ -275,6 +275,24 @@ The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled fo
 
 - $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for Teams. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsEnabled
+This parameter has been deprecated and is no longer used.
+
+Use the EnableSafeLinksForEmail parameter instead.
 
 ```yaml
 Type: Boolean
@@ -344,7 +362,7 @@ Accept wildcard characters: False
 The TrackClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
 
 - $true: User clicks in email messages are tracked.
-- $false: User clicks in email messages aren't tracked.
+- $false: User clicks in email messages aren't tracked. This is the default value.
 
 ```yaml
 Type: Boolean
