@@ -77,8 +77,6 @@ New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
 
 Returns the object of created connector instance.
 
-### Viewing error response
-
 In case of error, we can capture the error response as following:
 
 * Hold the cmdlet output in a variable

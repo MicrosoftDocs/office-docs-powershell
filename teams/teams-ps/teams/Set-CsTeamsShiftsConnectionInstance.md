@@ -79,8 +79,6 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
 
 Updates the instance with ID `WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09` with name `MyInstance-Updated`. Returns the object of created connector instance.
 
-### Viewing error response
-
 In case of error, we can capture the error response as following:
 
 * Hold the cmdlet output in a variable

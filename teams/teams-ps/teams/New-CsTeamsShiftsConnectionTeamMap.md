@@ -41,8 +41,6 @@ TeamId                               TeamName WfmTeamId WfmTeamName
 
 Maps the Teams team with ID `30b625bd-f0f7-4d5c-8793-9ccef5a63119` and WFM team with ID `1000107` in the instance with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
 
-### Viewing error response
-
 In case of error, we can capture the error response as following:
 
 * Hold the cmdlet output in a variable
