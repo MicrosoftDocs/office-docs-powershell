@@ -54,17 +54,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SafeLinksPolicy -Identity "Engineering Block URL" -AllowClickThrough $true
+Set-SafeLinksPolicy -Identity "Engineering Block URL" -AllowClickThrough $false
 ```
 
-This example modifies the existing Safe Links policy named Engineering Block URL to allow click through to the original URLs.
+This example modifies the existing Safe Links policy named Engineering Block URL to not allow click through to the original URLs on warning pages.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Safe Links policy that you want to modify.
-
-You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the Safe Links policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -250,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForEmail
-The IsEnabled parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
+The EnableSafeLinksForEmail parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
 - $true: Safe Links is enabled for email. When a user clicks a link in an email, the link will be checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for email. This is the default value.
