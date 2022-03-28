@@ -41,8 +41,6 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 - If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection (EOP), your EOP PowerShell connection instructions are the same as Exchange Online PowerShell as described in this article.
 
-- If you're using version 2.0.6 of the 
-
 > [!TIP]
 > Having problems? Ask in the [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542) forum.
 
