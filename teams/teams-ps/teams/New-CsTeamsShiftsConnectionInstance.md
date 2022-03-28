@@ -327,6 +327,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
 In case of error, we can capture the error response as following:
 
 ```powershell
