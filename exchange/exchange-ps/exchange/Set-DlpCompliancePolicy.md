@@ -36,8 +36,6 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
  [-AddTeamsLocationException <MultiValuedProperty>]
- [-AddThirdPartyAppDlpLocation <MultiValuedProperty>]
- [-AddThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -48,6 +46,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Mode <PolicyMode>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <Int32>]
  [-RemoveEndpointDlpLocation <MultiValuedProperty>]
  [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
@@ -62,8 +61,6 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
  [-RemoveTeamsLocationException <MultiValuedProperty>]
- [-RemoveThirdPartyAppDlpLocation <MultiValuedProperty>]
- [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -270,8 +267,9 @@ You can enter multiple workspace IDs separated by commas. If the values contain 
 
 You can find the workspace ID using one of the following procedures:
 
-- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
-- PowerShell: Get-PowerBIWorkspace.
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
 
 ```yaml
 Type: MultiValuedProperty
@@ -293,8 +291,9 @@ You can enter multiple workspace IDs separated by commas. If the values contain 
 
 You can find the workspace ID using one of the following procedures:
 
-- Admin portal: Workspaces. Select workspace \> More options (...) \> Details. From the URL of a selected workpace.
-- PowerShell: Get-PowerBIWorkspace.
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
 
 ```yaml
 Type: MultiValuedProperty
@@ -369,38 +368,6 @@ Accept wildcard characters: False
 The AddTeamsLocationException parameter specifies the Teams accounts to add to the list of excluded accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddThirdPartyAppDlpLocation
-{{ Fill AddThirdPartyAppDlpLocation Description }}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddThirdPartyAppDlpLocationException
-{{ Fill AddThirdPartyAppDlpLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty
@@ -591,6 +558,22 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 
@@ -835,38 +818,6 @@ Accept wildcard characters: False
 The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveThirdPartyAppDlpLocation
-{{ Fill RemoveThirdPartyAppDlpLocation Description }}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveThirdPartyAppDlpLocationException
-{{ Fill RemoveThirdPartyAppDlpLocationException Description }}
 
 ```yaml
 Type: MultiValuedProperty

@@ -12,7 +12,7 @@ ms.reviewer:
 # New-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-ComplianceSecurityFilter cmdlet to create compliance security filters in the Microsoft 365 compliance center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Microsoft 365 organization.
 

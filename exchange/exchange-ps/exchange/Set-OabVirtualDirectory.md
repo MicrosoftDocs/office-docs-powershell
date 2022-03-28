@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -PollInterval
-This parameter is available or functional only in Exchange 2010.
+This parameter is functional only in Exchange 2010.
 
 The PollInterval parameter specifies the time interval in minutes that the distribution service should poll the offline address book generation server for updates.
 

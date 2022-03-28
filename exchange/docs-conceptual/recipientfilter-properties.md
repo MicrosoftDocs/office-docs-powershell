@@ -50,10 +50,6 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - In Exchange Online, you can't use a wildcard character (*) as the first character in the search string.
 
-<br>
-
-****
-
 |Property name|LDAP display name|Value|Comments|
 |---|---|---|---|
 |_AcceptMessagesOnlyFrom_|_authOrig_|Dynamic distribution groups: String (wildcards accepted). <br> Others: Blank or non-blank.||
@@ -311,7 +307,6 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br> Others: Blank or non-blank.||
 |_WindowsEmailAddress_|_mail_|String (wildcards accepted).||
 |_WindowsLiveID_|_msExchWindowsLiveID_|String (wildcards accepted).||
-|
 
 ## For more information
 

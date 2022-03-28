@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-HostedContentFilterRule
 
 ## SYNOPSIS
-This cmdlet is available or functional only in the cloud-based service.
+This cmdlet is functional only in the cloud-based service.
 
 Use the Get-HostedContentFilterRule cmdlet to view spam filter rules (content filter rules) in your cloud-based organization.
 
