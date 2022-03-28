@@ -72,8 +72,8 @@ In case of error, we can capture the error response as following:
 
 ```output
 $result=<cmdlet>
-$result.ToJsonString() - To get entire error message in Json.
-$result and $result.Detail - To get error object and detail object.
+$result.ToJsonString() : To get entire error message in Json.
+$result and $result.Detail : To get error object and detail object.
 ```
 
 ## RELATED LINKS
