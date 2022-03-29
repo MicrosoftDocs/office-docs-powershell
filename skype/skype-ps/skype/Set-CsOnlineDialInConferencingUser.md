@@ -436,6 +436,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy]{Get-CsTeamsAudioConferencingPolicy.md}
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
 
-[New-CsTeamsAudioConferencingPolicy]{New-CsTeamsAudioConferencingPolicy.md}
+[New-CsTeamsAudioConferencingPolicy](New-CsTeamsAudioConferencingPolicy.md)

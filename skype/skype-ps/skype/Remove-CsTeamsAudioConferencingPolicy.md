@@ -104,8 +104,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy]{Get-CsTeamsAudioConferencingPolicy.md}
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
 
-[Set-CsTeamsAudioConferencingPolicy]{Set-CsTeamsAudioConferencingPolicy.md}
+[Set-CsTeamsAudioConferencingPolicy](Set-CsTeamsAudioConferencingPolicy.md)
 
-[Grant-CsTeamsAudioConferencingPolicy]{Grant-CsTeamsAudioConferencingPolicy.md}
+[Grant-CsTeamsAudioConferencingPolicy](Grant-CsTeamsAudioConferencingPolicy.md)

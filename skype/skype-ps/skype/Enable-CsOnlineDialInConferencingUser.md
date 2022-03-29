@@ -338,6 +338,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
 
-[Get-CsTeamsAudioConferencingPolicy]{Get-CsTeamsAudioConferencingPolicy.md}
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
 
-[New-CsTeamsAudioConferencingPolicy]{New-CsTeamsAudioConferencingPolicy.md}
+[New-CsTeamsAudioConferencingPolicy](New-CsTeamsAudioConferencingPolicy.md)
