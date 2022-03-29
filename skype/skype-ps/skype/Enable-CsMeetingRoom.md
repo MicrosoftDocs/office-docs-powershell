@@ -21,6 +21,8 @@ This cmdlet was introduced in Lync Server 2013.
 
 The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Online and Skype for Business Server.  Make sure you are following the guidance here to set up your meeting rooms properly: https://docs.microsoft.com/skypeforbusiness/deploy/deploy-clients/with-office-365
 
+**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms. You must use the methods described in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation to manage Microsoft Teams Rooms.
+
 
 ## SYNTAX
 
