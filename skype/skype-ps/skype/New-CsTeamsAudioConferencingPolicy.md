@@ -1,70 +1,161 @@
+---
+external help file: MicrosoftTeams-help.xml
+Module Name: MicrosoftTeams
+online version: https://docs.microsoft.com/en-us/powershell/module/skype/new-csteamsaudioconferencingpolicy
+schema: 2.0.0
+---
+
 # New-CsTeamsAudioConferencingPolicy
 
 ## SYNOPSIS
-Audio conferencing policies can be used to manage audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization.
-
 
 ## SYNTAX
 
 ```
-New-CsTeamsAudioConferencingPolicy [[-ErrorAction] <Object>] [[-MeetingInvitePhoneNumbers] <Object>] [[-OutVariable] <Object>] [[-InformationAction] <Object>] [[-WarningVariable] <Object>] [[-PipelineVariable] <Object>] [[-OutBuffer] <Object>] [[-ErrorVariable] <Object>] [[-Identity] <Object>] [[-Tenant] <Object>] [[-WarningAction] <Object>] [[-AllowTollFreeDialin] <Object>] [[-InformationVariable] <Object>] [-WhatIf] [-Confirm] [-InMemory] [-Force] [-AsJob] [<CommonParameters>]
-```  
-  
-  
+New-CsTeamsAudioConferencingPolicy [-Identity] <String> [-AllowTollFreeDialin <Boolean>] [-Force] [-InMemory]
+ [-MeetingInvitePhoneNumbers <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 The CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. This cmdlet creates a new Teams audio conferencing policy. Custom policies can then be assigned to users using the Grant-CsTeamsAudioConferencingPolicy cmdlet.
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### EXAMPLE 1
 ```
 PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $False
 ```
 
-
 The command shown in Example 1 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity “EMEA users”. This policy will use all the default values for a meeting policy except one: AllowTollFreeDialin; in this example, meetings created by users with this policy cannot include Toll Free phone numbers.
 
-
-### -------------------------- Example 2 --------------------------
+### EXAMPLE 2
 ```
 PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $True -MeetingInvitePhoneNumbers “+49695095XXXXX”,”+353156YYYYY”,”+1800856ZZZZZ”
 ```
 
-
 The command shown in Example 2 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity “EMEA users”. This policy will use all the default values for a meeting policy except one: MeetingInvitePhoneNumbers; in this example, meetings created by users with this policy will include the following toll and toll free phone numbers “+49695095XXXXX”,”+353156YYYYY”,”+1800856ZZZZZ”.
-
 
 ## PARAMETERS
 
-
-### -Identity
-
-Specify the name of the policy that you are creating.
-
-```yaml
-Type:	XdsIdentity
-Position: 1
-Default value:	None
-```
-
-### -AllowTollFreeDialIN
-
+### -AllowTollFreeDialin
 Determines whether users of the Policy can have Toll free numbers
 
 ```yaml
-Type:	Boolean
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
-Default value:	True
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Specify the name of the policy that you are creating
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InMemory
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -MeetingInvitePhoneNumbers
-
 Determines the list of audio-conferencing Toll- and Toll-free telephone numbers that will be included in meetings invites created by users of this policy.
 
 ```yaml
-Type:	Comma separated list of numbers
+Type: System.Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
-Default value:	None
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+### System.Object
+## NOTES
+
+## RELATED LINKS
+
+[Get-CsTeamsAudioConferencingPolicy]{Get-CsTeamsAudioConferencingPolicy.md}
+
+[Set-CsTeamsAudioConferencingPolicy]{Set-CsTeamsAudioConferencingPolicy.md}
+
+[Grant-CsTeamsAudioConferencingPolicy]{Grant-CsTeamsAudioConferencingPolicy.md}
 
