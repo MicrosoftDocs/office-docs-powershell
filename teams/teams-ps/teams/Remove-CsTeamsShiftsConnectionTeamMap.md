@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet removes the mapping between the Microsoft Teams team and workforce management (WFM) team.
 
 ## SYNTAX
