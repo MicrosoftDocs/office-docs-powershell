@@ -56,13 +56,13 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-SafeLinksPolicy -Name "Marketing Block URL" -EnableSafeLinksForEmail $true
+New-SafeLinksPolicy -Name "Marketing Block URL" -EnableSafeLinksForEmail $true -AllowClickThrough $false
 ```
 
 This example creates a new Safe Links policy named Marketing Block URL with the following options:
 
 - The policy is enabled.
-- Users aren't allowed to click through to the original URL. This is the default value of the AllowClickThrough parameter, so you don't need to specify it.
+- Users aren't allowed to click through to the original URL.
 - User clicks on URLs are tracked. This is the default value of the TrackClicks parameter, so you don't need to specify it.
 
 ## PARAMETERS
