@@ -49,7 +49,7 @@ Id      Name
 1000125 1000
 1000126 4500
 1000128 0006 - Microsoft 1
-1000129 SBJ_Test
+1000129 Test
 ```
 
 Returns the WFM teams in the connection instance with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
