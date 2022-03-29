@@ -43,24 +43,11 @@ Maps the Teams team with ID `30b625bd-f0f7-4d5c-8793-9ccef5a63119` and WFM team 
 
 In case of error, we can capture the error response as following:
 
-* Hold the cmdlet output in a variable
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
 
-```powershell
-$result = <cmdlet>
-```
+* To get the entire error message in Json: `$result.ToJsonString()`
 
-* To get the entire error message in Json:
-
-```powershell
-$result.ToJsonString()
-```
-
-* To get the error object and object details:
-
-```powershell
-$result 
-$result.Detail
-```
+* To get the error object and object details: `$result, $result.Detail`
 
 ## PARAMETERS
 

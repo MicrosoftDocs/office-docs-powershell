@@ -79,24 +79,11 @@ Returns the object of created connector instance.
 
 In case of error, we can capture the error response as following:
 
-* Hold the cmdlet output in a variable
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
 
-```powershell
-$result = <cmdlet>
-```
+* To get the entire error message in Json: `$result.ToJsonString()`
 
-* To get the entire error message in Json:
-
-```powershell
-$result.ToJsonString()
-```
-
-* To get the error object and object details:
-
-```powershell
-$result 
-$result.Detail
-```
+* To get the error object and object details: `$result, $result.Detail`
 
 ## PARAMETERS
 
