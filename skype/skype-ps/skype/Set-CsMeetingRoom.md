@@ -17,6 +17,8 @@ Modifies the property values of an existing Skype for Business Server meeting ro
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013.
 
+**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms. You must use the methods described in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation to manage Microsoft Teams Rooms.
+
 
 ## SYNTAX
 

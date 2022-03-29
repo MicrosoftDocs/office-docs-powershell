@@ -78,19 +78,19 @@ This example assigns the Direct Routing phone number +1 (425) 555-1225 to the re
 
 ### Example 6
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
+Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting
 ```
 This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=100 to the user user4@contoso.com.
 
 ### Example 7
 ```powershell
-$pn=Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+1425551000;ext=100" -PhoneNumberType DirectRouting
+$pn=Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting
 $pn
 Code       Message
 ----       -------
-BadRequest Telephone Number '+1425551000;ext=100' has already been assigned to another user
+BadRequest Telephone Number '+14255551000;ext=100' has already been assigned to another user
 ```
-In this example the assignment cmdlet fails, because the phone number "+1425551000;ext=100" has already been assigned to another user.
+In this example the assignment cmdlet fails, because the phone number "+14255551000;ext=100" has already been assigned to another user.
 
 
 ## PARAMETERS
@@ -146,7 +146,10 @@ Accept wildcard characters: False
 
 ### -PhoneNumber
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
-"tel:" prefixed. We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
+"tel:" prefixed.
+
+We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user, but such phone numbers are
+not supported to be assigned to a resource account.
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 

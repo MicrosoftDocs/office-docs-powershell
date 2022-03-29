@@ -185,7 +185,7 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-The following updates are applicable for organizations having TeamsOnly users and/or without any SfBO/On-Premise users using Microsoft Teams PowerShell version 3.0.0 and later:
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes:
 
@@ -201,7 +201,6 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - lineUri
 - userPrincipalName
 - CallingLineIdentity
-- ExternalAccessPolicy
 - OnlineAudioConferencingRoutingPolicy
 - OnlineDialOutPolicy
 - OnlineVoicemailPolicy
@@ -243,67 +242,8 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - Title
 - UsageLocation
 - UserDirSyncEnabled
-- userPrincipalName- accountEnabled
-- AssignedPlan
-- CountryAbbreviation
-- department
-- displayName
-- EnterpriseVoiceEnabled
-- ExternalAccessPolicy
-- givenName
-- Identity
-- lineUri
-- OnlineAudioConferencingRoutingPolicy
-- OnlineDialOutPolicy
-- OnlineVoicemailPolicy
-- OnlineVoiceRoutingPolicy
-- ownerUrn
-- TeamsAppPermissionPolicy
-- TeamsAppSetupPolicy
-- TeamsAudioConferencingPolicy
-- TeamsCallHoldPolicy
-- TeamsCallingPolicy
-- TeamsCallParkPolicy
-- TeamsChannelsPolicy
-- TeamsComplianceRecordingPolicy
-- TeamsCortanaPolicy
-- TeamsEducationAssignmentsAppPolicy
-- TeamsEmergencyCallingPolicy
-- TeamsEmergencyCallRoutingPolicy
-- TeamsFeedbackPolicy
-- TeamsIPPhonePolicy
-- TeamsMeetingBrandingPolicy
-- TeamsMeetingBroadcastPolicy
-- TeamsMeetingPolicy
-- TeamsMessagingPolicy
-- TeamsMobilityPolicy
-- TeamsNotificationAndFeedsPolicy
-- TeamsShiftsAppPolicy
-- TeamsShiftsPolicy
-- TeamsSurvivableBranchAppliancePolicy
-- TeamsSyntheticAutomatedCallPolicy
-- TeamsTargetingPolicy
-- TeamsTemplatePermissionPolicy
-- TeamsUpdateManagementPolicy
-- TeamsUpgradeOverridePolicy
-- TeamsUpgradePolicy
-- TeamsVdiPolicy
-- TeamsVerticalPackagePolicy
-- TeamsVideoInteropServicePolicy
-- TeamsEducationAssignmentsAppPolicy
-- TeamsComplianceRecordingPolicy
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
-- AssignedPlan
-- EnterpriseVoiceEnabled
-- Identity
-- department
-- UserDirSyncEnabled
-- TenantDialPlan
-- Title
-- UsageLocation
-- UserDirSyncEnabled
-- userPrincipalName
 
 *Attributes that have changed in meaning/format*:
 
@@ -329,11 +269,11 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 
 *Dropped Filter operators*:
 
-The following filter syntaxes are not supported in Teams PowerShell Module 3.0.0 and above:
+The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and later:
 
-- not, -lt, -gt: These operators have been dropped.
-- ge, -ne:  These operators are not supported with policy properties.
-- like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
+- -not, -lt, -gt: These operators have been dropped.
+- -ge, -ne:  These operators are not supported with policy properties.
+- -like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
 
 ```yaml
 Type: String
@@ -419,6 +359,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+**Note**: Starting with Teams PowerShell Modules version 4.0 and later, "-ResultSize" type has been changed to uint32.
+
 Enables you to limit the number of records returned by the cmdlet. For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7. Note that there is no way to guarantee which seven users will be returned.
 
 The result size can be set to any whole number between 0 and 2147483647, inclusive. The value 0 returns no data. If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
@@ -478,7 +421,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-The following updates are applicable for TeamsOnly customers using Microsoft Teams PowerShell version 3.0.0 and above.
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
 
 *New user attributes*:
 
