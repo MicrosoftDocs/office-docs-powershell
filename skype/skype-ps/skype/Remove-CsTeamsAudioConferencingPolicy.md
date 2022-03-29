@@ -29,13 +29,6 @@ PS C:\> Remove-CsTeamsAudioCOnferencingPolicy -Identity “Emea Users”
 
 In the example shown above, the command will delete the “Emea Users” audio conferencing policy from the organization's list of policies.
 
-### EXAMPLE 2
-```
-{{ Add code here }}
-```
-
-{{ Add output here }}
-
 ## PARAMETERS
 
 ### -Force
