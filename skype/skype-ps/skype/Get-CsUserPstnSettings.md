@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the Get-CsUserPstnSettings cmdlet to retrieve a voice-enabled user's public switched telephone network (PSTN) settings.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```
