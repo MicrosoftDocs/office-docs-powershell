@@ -136,15 +136,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy]{Get-CsTeamsAudioConferencingPolicy.md}
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
 
-[Set-CsTeamsAudioConferencingPolicy]{Set-CsTeamsAudioConferencingPolicy.md}
+[Set-CsTeamsAudioConferencingPolicy](Set-CsTeamsAudioConferencingPolicy.md)
 
-[Remove-CsTeamsAudioConferencingPolicy]{Remove-CsTeamsAudioConferencingPolicy.md}
+[Remove-CsTeamsAudioConferencingPolicy](Remove-CsTeamsAudioConferencingPolicy.md)
