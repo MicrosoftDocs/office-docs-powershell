@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
 
 ## SYNTAX
@@ -40,9 +38,9 @@ Id      Name
 1000121 WAROS
 1000123 LABRO
 1000125 JOREE
-1006068 maosha.shi
-1006069 xiaoxue.chen
-1006095 guchuan.sun
+1006068 ABC
+1006069 XYZ
+1006095 DEF
 ```
 
 Returns the users in the WFM team with ID `1000107` in the connection instances with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
