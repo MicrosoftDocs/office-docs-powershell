@@ -13,8 +13,7 @@ schema: 2.0.0
 # Get-CsPhoneNumberAssignment
 
 ## SYNOPSIS
-This cmdlet will display information about one or more telephone numbers.
-
+This cmdlet will display information about one or more phone numbers.
 
 ## SYNTAX
 
@@ -26,9 +25,8 @@ Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <
 	[-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
-This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return using different parameters.
+This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters.
 
 Returned results are sorted by TelephoneNumber in ascending order.
 
@@ -57,29 +55,49 @@ This example displays information about the Microsoft Calling Plan subscriber ph
 
 ### Example 2
 ```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumber +12065551000;ext=524
+```
+```output
+TelephoneNumber         : +12065551000;ext=524
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          : 
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+PortInOrderStatus       : 
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           : 
+PstnPartnerName         : 
+```
+This example displays information about the Direct Routing phone number +1 (206) 555-1000;ext=524. You can see that it is assigned to a user.
+
+### Example 3
+```powershell
 Get-CsPhoneNumberAssignment -CapabilitiesContain "VoiceApplicationAssignment,ConferenceAssignment"
 ```
 This example returns all phone numbers that have both the capability VoiceApplicationAssignment and the capability ConferenceAssignment assigned, but phone numbers that have
 only one of these capabilities assigned won't be returned.
 
-### Example 3
+### Example 4
 ```powershell
 Get-CsPhoneNumberAssignment -AssignedPstnTargetId user1@contoso.com
 ```
 This example returns information about the phone number assigned to user1@contoso.com.
 
-### Example 4
+### Example 5
 ```powershell
 Get-CsPhoneNumberAssignment -AssignedPstnTargetId aa1@contoso.com
 ```
 This example returns information about the phone number assigned to resource account aa1@contoso.com.
 
-### Example 5
+### Example 6
 ```powershell
 Get-CsPhoneNumberAssignment -ActivationState Activated -CapabilitiesContain VoiceApplicationAssignment -PstnAssignmentStatus Unassigned
 ```
-This example returns information about all phone numbers with the capability VoiceApplicationAssignment that are not assigned.
-
+This example returns information about all activated phone numbers with the capability VoiceApplicationAssignment that are not assigned.
 
 ## PARAMETERS
 
@@ -114,12 +132,12 @@ Accept wildcard characters: False
 ```
 
 ### -CapabilitiesContain
-Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by comma. Supported capabilities are
-ConferenceAssignment, VoiceApplicationAssignment, UserAssignment and OCMobile.
+Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by comma. Supported capabilities
+are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment and OCMobile.
 
 If you specify only one capability, you will get all phone numbers returned that have that capability assigned. If you specify a comma seperated list for instance like 
-ConferenceAssignment, VoiceApplicationAssignment you will get all phone numbers that have both capabilities assigned, but you won't get phone numbers that have only VoiceApplicationAssignment
-or ConferenceAssignment assigned as capability.
+ConferenceAssignment, VoiceApplicationAssignment you will get all phone numbers that have both capabilities assigned, but you won't get phone numbers that have only
+VoiceApplicationAssignment or ConferenceAssignment assigned as capability.
 
 ```yaml
 Type: System.String
@@ -134,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -CivicAddressId
-Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using Get-CsOnlineLisCivicAddress.
+Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](/powershell/module/skype/get-csonlineliscivicaddress).
 
 ```yaml
 Type: System.String
@@ -164,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using Get-CsOnlineLisLocation.
+Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](/powershell/module/skype/get-csonlinelislocation).
 
 ```yaml
 Type: System.String
@@ -254,8 +272,8 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberGreaterThan
-Filters the returned results based on greater than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberLessThan to specify a range of phone numbers
-to return results for.
+Filters the returned results based on greater than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberLessThan to specify a
+range of phone numbers to return results for.
 
 ```yaml
 Type: System.String
@@ -270,9 +288,8 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberLessThan
-Filters the returned results based on less than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberGreaterThan to specify a range of phone numbers
-to return results for.
-
+Filters the returned results based on less than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberGreaterThan to specify a
+range of phone numbers to return results for.
 
 ```yaml
 Type: System.String
@@ -304,7 +321,6 @@ Accept wildcard characters: False
 ### -Top
 Returns the first X returned results and the default value is 500.
 
-
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -316,7 +332,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -370,7 +385,6 @@ The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNu
 
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
-
 
 
 ## RELATED LINKS
