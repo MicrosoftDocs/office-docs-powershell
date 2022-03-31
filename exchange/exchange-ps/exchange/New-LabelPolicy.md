@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationId
-{{ Fill MigrationId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 ```
 
 ### -Setting
-PARAMVALUE: PswsHashtable
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -Settings
-PARAMVALUE: PswsHashtable
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkypeLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkypeLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
