@@ -170,6 +170,7 @@ All versions of the EXO V2 module are supported in Windows PowerShell 5.1. Power
 
 The EXO V2 module is supported in the following versions of Windows:
 
+- Windows 11
 - Windows 10
 - Windows 8.1<sup>4</sup>
 - Windows Server 2019
