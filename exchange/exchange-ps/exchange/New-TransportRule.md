@@ -42,7 +42,7 @@ New-TransportRule [-Name] <String>
  [-ApplyOME <Boolean>]
  [-ApplyRightsProtectionCustomizationTemplate <OMEConfigurationIdParameter>]
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
- [-AttachmentContainsWords <Word []>]
+ [-AttachmentContainsWords <Word[]>]
  [-AttachmentExtensionMatchesWords <Word []>]
  [-AttachmentHasExecutableContent <Boolean>]
  [-AttachmentIsPasswordProtected <Boolean>]
@@ -2394,7 +2394,7 @@ The ExceptIfMessageTypeMatches parameter specifies an exception that looks for m
 
 - OOF: Auto-reply messages configured by the user.
 - AutoForward: Messages automatically forwarded to an alternative recipient.
-- Encrypted: Encrypted messages.
+- Encrypted: Encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured.
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
@@ -3604,7 +3604,7 @@ The MessageTypeMatches parameter specifies a condition that looks for messages o
 
 - OOF: Auto-reply messages configured by the user.
 - AutoForward: Messages automatically forwarded to an alternative recipient.
-- Encrypted: Encrypted messages.
+- Encrypted: Encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured.
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
