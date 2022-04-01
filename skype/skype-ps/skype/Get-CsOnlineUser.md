@@ -546,6 +546,16 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - Phone
 - WindowsEmailAddress
 
+The following attributes are temporarily unavailable in the output when using the "-Filter" or when using the cmdlet without any input parameter:
+- SoftDeletionTimeStamp
+- WhenChanged
+- OnPremHostingProvider
+- OnPremSipEnabled
+- OnPremSipAddress
+- OnPremOptionFlags
+
+Note: The above attributes will be available in the near future
+
 *Attributes renamed*:
 
 - ObjectId renamed to Identity
