@@ -36,7 +36,7 @@ In Teams PowerShell Module version 2.6.2 and later, the following attributes are
 - ResultSize
 - LicenceState
 
-In the Teams PowerShell Module version 2.6.2 or later, the following input parameters have been deprecated for organizations having Teams users due to low or zero usage:
+In Teams PowerShell Module version 2.6.2 and later, the following input parameters are deprecated for organizations with Teams users due to low or zero usage:
 
 - DomainController
 - Force
