@@ -554,7 +554,7 @@ The following attributes are temporarily unavailable in the output when using th
 - OnPremSipAddress
 - OnPremOptionFlags
 
-Note: The above attributes will be available in the near future
+**Note**: These attributes will be available in the near future.
 
 *Attributes renamed*:
 
