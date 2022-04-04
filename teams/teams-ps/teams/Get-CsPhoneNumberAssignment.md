@@ -380,7 +380,7 @@ The Id of the PSTN partner providing the phone number.
 The name of the PSTN partner
 
 ### TelephoneNumber
-The telephone number
+The phone number. The number is always displayed with prefixed +, even if it was not assigned using prefixed +.
 
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
