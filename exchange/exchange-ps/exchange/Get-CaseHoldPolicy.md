@@ -25,6 +25,7 @@ Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>]
  [-Case <String>]
  [-DistributionDetail]
  [-IncludeBindings]
+ [-IncludeBindingsOnly]
  [<CommonParameters>]
 ```
 
@@ -119,6 +120,22 @@ Accept wildcard characters: False
 
 ### -IncludeBindings
 PARAMVALUE: SwitchParameter
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeBindingsOnly
+{{ Fill IncludeBindingsOnly Description }}
 
 ```yaml
 Type: SwitchParameter

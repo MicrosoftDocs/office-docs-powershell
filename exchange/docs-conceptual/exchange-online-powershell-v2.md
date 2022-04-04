@@ -50,10 +50,6 @@ The Exchange Online cmdlets in the EXO V2 module are meant to replace their olde
 
 The improved Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
 
-<br>
-
-****
-
 |EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
 |[Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)|[Get-Mailbox](/powershell/module/exchange/get-mailbox)|
@@ -65,26 +61,16 @@ The improved Exchange Online PowerShell cmdlets that are only available in the E
 |[Get-EXOMailboxFolderStatistics](/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchange/get-mailboxfolderstatistics)|
 |[Get-EXOMailboxFolderPermission](/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics)|
-|
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
-
-<br>
-
-****
 
 |EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
 |[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <p> or <p> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)|
 |[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)|
-|
 
 Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
-
-<br>
-
-****
 
 |EXO V2 module cmdlet|Comments|
 |---|---|
@@ -94,7 +80,6 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 |[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Replaced by [Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig).|
 |[Get-VivaInsightsSettings](/powershell/module/exchange/get-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
 |[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
-|
 
 ### Updates for version 2.0.6
 
@@ -185,6 +170,7 @@ All versions of the EXO V2 module are supported in Windows PowerShell 5.1. Power
 
 The EXO V2 module is supported in the following versions of Windows:
 
+- Windows 11
 - Windows 10
 - Windows 8.1<sup>4</sup>
 - Windows Server 2019
@@ -223,29 +209,43 @@ The EXO V2 module is supported in the following versions of Windows:
   > [!NOTE]
   > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for many cmdlets.
   >
-  > You must temporarily enable WinRM to run the following commands. You can enable WinRM by running the command: `winrm quickconfig`.
+  > You must temporarily enable WinRM to run the following winrm commands. You can enable WinRM by running the command: `winrm quickconfig`.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in PowerShell):
+  To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
-  ```dos
+  ```DOS
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in PowerShell) to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run **one** of the following commands to enable Basic authentication for WinRM:
 
-  ```dos
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
+  - **In a Command Prompt**:
 
-  **Note**: If you'd rather run the command in PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
+    ```DOS
+    winrm set winrm/config/client/auth @{Basic="true"}
+    ```
 
-  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
+  - **In Windows PowerShell**:
+
+      ```DOS
+    winrm set winrm/config/client/auth '@{Basic="true"}'
+    ```
+
+  - **In Windows PowerShell to modify the registry**:
+  
+    ```PowerShell
+    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
+    ```
+
+  If Basic authentication for WinRM is disabled, you'll get one of the following errors when you try to connect:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
+  > Create Powershell Session is failed using OAuth.
+  
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
-
+  
 ### Install the EXO V2 module
 
 To install the EXO V2 module for the first time, complete the following steps:

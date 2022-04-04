@@ -68,7 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDetailedLabelActions
-{{ Fill IncludeDetailedLabelActions Description }}
+The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. Value values are:
+
+- $true: Include detailed label actions.
+- $false: Don't include detailed label actions.
 
 ```yaml
 Type: System.Boolean

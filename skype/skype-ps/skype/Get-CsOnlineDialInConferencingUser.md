@@ -30,28 +30,22 @@ If there are no users in the organization that have been enabled for audio confe
 
 The see a list of users with conferencing providers other than Microsoft use the Get-CsUserAcp cmdlet.
 
-**NOTE:**
+**NOTE**: In the Teams PowerShell Module version 3.0 or later, the following input parameters have been deprecated for TeamsOnly customers (removed or very low usage):
 
-Beginning with Teams PowerShell Module 3.0 onwards, the following updates are applicable for TeamsOnly customers.
-
-*Deprecated Input Parameters*
-
-The following input parameters have been removed as they are either no longer relevant in Microsoft Teams or have very low usage.
-
-  - ServiceNumber
-  - BridgeId
-  - BridgeName
-  - LdapFilter
-  - DomainController
-  - Force
-  - TenantDomain
-  - Common Parameters
+- BridgeId
+- BridgeName
+- DomainController
+- Force
+- LdapFilter
+- ServiceNumber
+- TenantDomain
+- Common Parameters
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> Get-CsOnlineDailinConferncingUser -Identity Ken.Myer@contoso.com
+PS C:\> Get-CsOnlineDialInConferencingUser -Identity Ken.Myer@contoso.com
 ```
 
 This example uses the User Principal Name (UPN) to retrieve the BridgeID and ServiceNumber information.

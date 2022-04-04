@@ -40,6 +40,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-Mode <PolicyMode>]
  [-OverwriteLabel <Boolean>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
@@ -410,6 +411,22 @@ This parameter works only on Exchange locations.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 

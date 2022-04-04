@@ -50,6 +50,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -92,7 +93,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 
 ```powershell
 Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "https://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
 ```
@@ -557,6 +558,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance Center
 

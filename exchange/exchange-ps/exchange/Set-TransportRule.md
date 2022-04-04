@@ -28,15 +28,15 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ADComparisonAttribute <ADAttribute>]
  [-ADComparisonOperator <Evaluation>]
  [-AddManagerAsRecipientType <AddedRecipientType>]
- [-AddToRecipients <RecipientIdParameter []>]
- [-AnyOfCcHeader <RecipientIdParameter []>]
- [-AnyOfCcHeaderMemberOf <RecipientIdParameter []>]
- [-AnyOfRecipientAddressContainsWords <Word []>]
- [-AnyOfRecipientAddressMatchesPatterns <Pattern []>]
- [-AnyOfToCcHeader <RecipientIdParameter []>]
- [-AnyOfToCcHeaderMemberOf <RecipientIdParameter []>]
- [-AnyOfToHeader <RecipientIdParameter []>]
- [-AnyOfToHeaderMemberOf <RecipientIdParameter []>]
+ [-AddToRecipients <RecipientIdParameter[]>]
+ [-AnyOfCcHeader <RecipientIdParameter[]>]
+ [-AnyOfCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-AnyOfRecipientAddressContainsWords <Word[]>]
+ [-AnyOfRecipientAddressMatchesPatterns <Pattern[]>]
+ [-AnyOfToCcHeader <RecipientIdParameter[]>]
+ [-AnyOfToCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-AnyOfToHeader <RecipientIdParameter[]>]
+ [-AnyOfToHeaderMemberOf <RecipientIdParameter[]>]
  [-ApplyClassification <String>]
  [-ApplyHtmlDisclaimerFallbackAction <DisclaimerFallbackAction>]
  [-ApplyHtmlDisclaimerLocation <DisclaimerLocation>]
@@ -44,93 +44,93 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ApplyOME <Boolean>]
  [-ApplyRightsProtectionCustomizationTemplate <OMEConfigurationIdParameter>]
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
- [-AttachmentContainsWords <Word []>]
- [-AttachmentExtensionMatchesWords <Word []>]
+ [-AttachmentContainsWords <Word[]>]
+ [-AttachmentExtensionMatchesWords <Word[]>]
  [-AttachmentHasExecutableContent <Boolean>]
  [-AttachmentIsPasswordProtected <Boolean>]
  [-AttachmentIsUnsupported <Boolean>]
- [-AttachmentMatchesPatterns <Pattern []>]
- [-AttachmentNameMatchesPatterns <Pattern []>]
+ [-AttachmentMatchesPatterns <Pattern[]>]
+ [-AttachmentNameMatchesPatterns <Pattern[]>]
  [-AttachmentProcessingLimitExceeded <Boolean>]
- [-AttachmentPropertyContainsWords <Word []>]
+ [-AttachmentPropertyContainsWords <Word[]>]
  [-AttachmentSizeOver <ByteQuantifiedSize>]
- [-BetweenMemberOf1 <RecipientIdParameter []>]
- [-BetweenMemberOf2 <RecipientIdParameter []>]
- [-BlindCopyTo <RecipientIdParameter []>]
+ [-BetweenMemberOf1 <RecipientIdParameter[]>]
+ [-BetweenMemberOf2 <RecipientIdParameter[]>]
+ [-BlindCopyTo <RecipientIdParameter[]>]
  [-Comments <String>]
  [-Confirm]
- [-ContentCharacterSetContainsWords <Word []>]
- [-CopyTo <RecipientIdParameter []>]
+ [-ContentCharacterSetContainsWords <Word[]>]
+ [-CopyTo <RecipientIdParameter[]>]
  [-DeleteMessage <Boolean>]
  [-Disconnect <Boolean>]
  [-DlpPolicy <String>]
  [-DomainController <Fqdn>]
  [-ExceptIfADComparisonAttribute <ADAttribute>]
  [-ExceptIfADComparisonOperator <Evaluation>]
- [-ExceptIfAnyOfCcHeader <RecipientIdParameter []>]
- [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter []>]
- [-ExceptIfAnyOfRecipientAddressContainsWords <Word []>]
- [-ExceptIfAnyOfRecipientAddressMatchesPatterns <Pattern []>]
- [-ExceptIfAnyOfToCcHeader <RecipientIdParameter []>]
- [-ExceptIfAnyOfToCcHeaderMemberOf <RecipientIdParameter []>]
- [-ExceptIfAnyOfToHeader <RecipientIdParameter []>]
- [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter []>]
- [-ExceptIfAttachmentContainsWords <Word []>]
- [-ExceptIfAttachmentExtensionMatchesWords <Word []>]
+ [-ExceptIfAnyOfCcHeader <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfRecipientAddressContainsWords <Word[]>]
+ [-ExceptIfAnyOfRecipientAddressMatchesPatterns <Pattern[]>]
+ [-ExceptIfAnyOfToCcHeader <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfToCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfToHeader <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfAttachmentContainsWords <Word[]>]
+ [-ExceptIfAttachmentExtensionMatchesWords <Word[]>]
  [-ExceptIfAttachmentHasExecutableContent <Boolean>]
  [-ExceptIfAttachmentIsPasswordProtected <Boolean>]
  [-ExceptIfAttachmentIsUnsupported <Boolean>]
- [-ExceptIfAttachmentMatchesPatterns <Pattern []>]
- [-ExceptIfAttachmentNameMatchesPatterns <Pattern []>]
+ [-ExceptIfAttachmentMatchesPatterns <Pattern[]>]
+ [-ExceptIfAttachmentNameMatchesPatterns <Pattern[]>]
  [-ExceptIfAttachmentProcessingLimitExceeded <Boolean>]
- [-ExceptIfAttachmentPropertyContainsWords <Word []>]
+ [-ExceptIfAttachmentPropertyContainsWords <Word[]>]
  [-ExceptIfAttachmentSizeOver <ByteQuantifiedSize>]
- [-ExceptIfBetweenMemberOf1 <RecipientIdParameter []>]
- [-ExceptIfBetweenMemberOf2 <RecipientIdParameter []>]
- [-ExceptIfContentCharacterSetContainsWords <Word []>]
- [-ExceptIfFrom <RecipientIdParameter []>]
- [-ExceptIfFromAddressContainsWords <Word []>]
- [-ExceptIfFromAddressMatchesPatterns <Pattern []>]
- [-ExceptIfFromMemberOf <RecipientIdParameter []>]
+ [-ExceptIfBetweenMemberOf1 <RecipientIdParameter[]>]
+ [-ExceptIfBetweenMemberOf2 <RecipientIdParameter[]>]
+ [-ExceptIfContentCharacterSetContainsWords <Word[]>]
+ [-ExceptIfFrom <RecipientIdParameter[]>]
+ [-ExceptIfFromAddressContainsWords <Word[]>]
+ [-ExceptIfFromAddressMatchesPatterns <Pattern[]>]
+ [-ExceptIfFromMemberOf <RecipientIdParameter[]>]
  [-ExceptIfFromScope <FromUserScope>]
  [-ExceptIfHasClassification <String>]
  [-ExceptIfHasNoClassification <Boolean>]
  [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsMessageHeader <HeaderName>]
- [-ExceptIfHeaderContainsWords <Word []>]
+ [-ExceptIfHeaderContainsWords <Word[]>]
  [-ExceptIfHeaderMatchesMessageHeader <HeaderName>]
- [-ExceptIfHeaderMatchesPatterns <Pattern []>]
- [-ExceptIfManagerAddresses <RecipientIdParameter []>]
+ [-ExceptIfHeaderMatchesPatterns <Pattern[]>]
+ [-ExceptIfManagerAddresses <RecipientIdParameter[]>]
  [-ExceptIfManagerForEvaluatedUser <EvaluatedUser>]
- [-ExceptIfMessageContainsDataClassifications <Hashtable []>]
+ [-ExceptIfMessageContainsDataClassifications <Hashtable[]>]
  [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
  [-ExceptIfMessageTypeMatches <MessageType>]
- [-ExceptIfRecipientADAttributeContainsWords <Word []>]
- [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern []>]
- [-ExceptIfRecipientAddressContainsWords <Word []>]
- [-ExceptIfRecipientAddressMatchesPatterns <Pattern []>]
- [-ExceptIfRecipientDomainIs <Word []>]
- [-ExceptIfRecipientInSenderList <Word []>]
+ [-ExceptIfRecipientADAttributeContainsWords <Word[]>]
+ [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern[]>]
+ [-ExceptIfRecipientAddressContainsWords <Word[]>]
+ [-ExceptIfRecipientAddressMatchesPatterns <Pattern[]>]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfRecipientInSenderList <Word[]>]
  [-ExceptIfSCLOver <SclValue>]
- [-ExceptIfSenderADAttributeContainsWords <Word []>]
- [-ExceptIfSenderADAttributeMatchesPatterns <Pattern []>]
- [-ExceptIfSenderDomainIs <Word []>]
- [-ExceptIfSenderInRecipientList <Word []>]
+ [-ExceptIfSenderADAttributeContainsWords <Word[]>]
+ [-ExceptIfSenderADAttributeMatchesPatterns <Pattern[]>]
+ [-ExceptIfSenderDomainIs <Word[]>]
+ [-ExceptIfSenderInRecipientList <Word[]>]
  [-ExceptIfSenderIpRanges <MultiValuedProperty>]
  [-ExceptIfSenderManagementRelationship <ManagementRelationship>]
- [-ExceptIfSentTo <RecipientIdParameter []>]
- [-ExceptIfSentToMemberOf <RecipientIdParameter []>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
  [-ExceptIfSentToScope <ToUserScope>]
- [-ExceptIfSubjectContainsWords <Word []>]
- [-ExceptIfSubjectMatchesPatterns <Pattern []>]
- [-ExceptIfSubjectOrBodyContainsWords <Word []>]
- [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern []>]
+ [-ExceptIfSubjectContainsWords <Word[]>]
+ [-ExceptIfSubjectMatchesPatterns <Pattern[]>]
+ [-ExceptIfSubjectOrBodyContainsWords <Word[]>]
+ [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern[]>]
  [-ExceptIfWithImportance <Importance>]
  [-ExpiryDate <DateTime>]
- [-From <RecipientIdParameter []>]
- [-FromAddressContainsWords <Word []>]
- [-FromAddressMatchesPatterns <Pattern []>]
- [-FromMemberOf <RecipientIdParameter []>]
+ [-From <RecipientIdParameter[]>]
+ [-FromAddressContainsWords <Word[]>]
+ [-FromAddressMatchesPatterns <Pattern[]>]
+ [-FromMemberOf <RecipientIdParameter[]>]
  [-FromScope <FromUserScope>]
  [-GenerateIncidentReport <RecipientIdParameter>]
  [-GenerateNotification <DisclaimerText>]
@@ -138,33 +138,33 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-HasNoClassification <Boolean>]
  [-HasSenderOverride <Boolean>]
  [-HeaderContainsMessageHeader <HeaderName>]
- [-HeaderContainsWords <Word []>]
+ [-HeaderContainsWords <Word[]>]
  [-HeaderMatchesMessageHeader <HeaderName>]
- [-HeaderMatchesPatterns <Pattern []>]
- [-IncidentReportContent <IncidentReportContent []>]
+ [-HeaderMatchesPatterns <Pattern[]>]
+ [-IncidentReportContent <IncidentReportContent[]>]
  [-IncidentReportOriginalMail <IncidentReportOriginalMail>]
  [-LogEventText <EventLogText>]
- [-ManagerAddresses <RecipientIdParameter []>]
+ [-ManagerAddresses <RecipientIdParameter[]>]
  [-ManagerForEvaluatedUser <EvaluatedUser>]
- [-MessageContainsDataClassifications <Hashtable []>]
+ [-MessageContainsDataClassifications <Hashtable[]>]
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <MessageType>]
  [-Mode <RuleMode>]
  [-ModerateMessageByManager <Boolean>]
- [-ModerateMessageByUser <RecipientIdParameter []>]
+ [-ModerateMessageByUser <RecipientIdParameter[]>]
  [-Name <String>]
  [-NotifySender <NotifySenderType>]
  [-PrependSubject <SubjectPrefix>]
  [-Priority <Int32>]
  [-Quarantine <Boolean>]
- [-RecipientADAttributeContainsWords <Word []>]
- [-RecipientADAttributeMatchesPatterns <Pattern []>]
- [-RecipientAddressContainsWords <Word []>]
- [-RecipientAddressMatchesPatterns <Pattern []>]
+ [-RecipientADAttributeContainsWords <Word[]>]
+ [-RecipientADAttributeMatchesPatterns <Pattern[]>]
+ [-RecipientAddressContainsWords <Word[]>]
+ [-RecipientAddressMatchesPatterns <Pattern[]>]
  [-RecipientAddressType <RecipientAddressType>]
- [-RecipientDomainIs <Word []>]
- [-RecipientInSenderList <Word []>]
- [-RedirectMessageTo <RecipientIdParameter []>]
+ [-RecipientDomainIs <Word[]>]
+ [-RecipientInSenderList <Word[]>]
+ [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RejectMessageEnhancedStatusCode <RejectEnhancedStatus>]
  [-RejectMessageReasonText <RejectText>]
  [-RemoveHeader <HeaderName>]
@@ -176,15 +176,15 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-RuleErrorAction <RuleErrorAction>]
  [-RuleSubType <RuleSubType>]
  [-SCLOver <SclValue>]
- [-SenderADAttributeContainsWords <Word []>]
- [-SenderADAttributeMatchesPatterns <Pattern []>]
+ [-SenderADAttributeContainsWords <Word[]>]
+ [-SenderADAttributeMatchesPatterns <Pattern[]>]
  [-SenderAddressLocation <SenderAddressLocation>]
- [-SenderDomainIs <Word []>]
- [-SenderInRecipientList <Word []>]
+ [-SenderDomainIs <Word[]>]
+ [-SenderInRecipientList <Word[]>]
  [-SenderIpRanges <MultiValuedProperty>]
  [-SenderManagementRelationship <ManagementRelationship>]
- [-SentTo <RecipientIdParameter []>]
- [-SentToMemberOf <RecipientIdParameter []>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
  [-SentToScope <ToUserScope>]
  [-SetAuditSeverity <String>]
  [-SetHeaderName <HeaderName>]
@@ -193,10 +193,10 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-SmtpRejectMessageRejectStatusCode <RejectStatusCode>]
  [-SmtpRejectMessageRejectText <RejectText>]
  [-StopRuleProcessing <Boolean>]
- [-SubjectContainsWords <Word []>]
- [-SubjectMatchesPatterns <Pattern []>]
- [-SubjectOrBodyContainsWords <Word []>]
- [-SubjectOrBodyMatchesPatterns <Pattern []>]
+ [-SubjectContainsWords <Word[]>]
+ [-SubjectMatchesPatterns <Pattern[]>]
+ [-SubjectOrBodyContainsWords <Word[]>]
+ [-SubjectOrBodyMatchesPatterns <Pattern[]>]
  [-WhatIf]
  [-WithImportance <Importance>]
  [<CommonParameters>]
@@ -1253,7 +1253,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disconnect
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -2373,7 +2373,7 @@ The ExceptIfMessageTypeMatches parameter specifies an exception that looks for m
 
 - OOF: Auto-reply messages configured by the user.
 - AutoForward: Messages automatically forwarded to an alternative recipient.
-- Encrypted: Encrypted messages.
+- Encrypted: Encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured.
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
@@ -2587,7 +2587,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -3435,7 +3435,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogEventText
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -3583,7 +3583,7 @@ The MessageTypeMatches parameter specifies a condition that looks for messages o
 
 - OOF: Auto-reply messages configured by the user.
 - AutoForward: Messages automatically forwarded to an alternative recipient.
-- Encrypted: Encrypted messages.
+- Encrypted: Encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured.
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
@@ -4263,7 +4263,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4692,7 +4692,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectStatusCode
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4714,7 +4714,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectText
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 

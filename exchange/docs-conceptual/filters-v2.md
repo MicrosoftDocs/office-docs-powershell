@@ -33,16 +33,11 @@ Generally, you get much better performance in PowerShell cmdlets with server-sid
 
 Although the EXO V2 module supports the majority of filterable attributes, the following attributes are currently not supported for filtering:
 
-<br>
-
-****
-
 |Cmdlet|Attribute|LDAP Display Name|
 |---|---|---|
 |[Get-CASMailbox](/powershell/module/exchange/get-casmailbox)|MemberOfGroup <p> ExternalDirectoryObjectId|memberOf <p> msExchExternalDirectoryObjectId|
 |[Get-Mailbox](/powershell/module/exchange/get-mailbox)|DeletedItemFlags <p> LanguagesRaw <p> MasterAccountSid <p> MemberOfGroup <p> RequireAllSendersAreAuthenticated <p> SCLDeleteThresholdInt <p> SCLJunkThresholdInt <p> SCLQuarantineThresholdInt <p> SCLRejectThresholdInt|deletedItemFlags <p> msExchUserCulture <p> msExchMasterAccountSid <p> memberOf <p> msExchRequireAuthToSendTo <p> msExchMessageHygieneSCLDeleteThreshold <p> msExchMessageHygieneSCLJunkThreshold <p> msExchMessageHygieneSCLQuarantineThreshold <p> msExchMessageHygieneSCLRejectThreshold|
 |[Get-Recipient](/powershell/module/exchange/get-recipient)|CountryCode <p> ExternalDirectoryObjectId <p> MasterAccountSid <p> MemberOfGroup <p> Members|countryCode <p> msExchExternalDirectoryObjectId <p> msExchMasterAccountSid <p> memberOf <p> member|
-|
 
 ## Supported and unsupported operators
 

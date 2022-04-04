@@ -48,7 +48,7 @@ This example imports a transport rule collection from the XML file named Exporte
 ## PARAMETERS
 
 ### -Identity
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to import. You can use any value that uniquely identifies the rule. For example:
 

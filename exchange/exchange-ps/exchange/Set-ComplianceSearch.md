@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
 ```yaml
 Type: String
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -485,7 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 

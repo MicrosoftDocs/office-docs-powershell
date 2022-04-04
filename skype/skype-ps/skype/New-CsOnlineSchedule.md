@@ -30,7 +30,8 @@ New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Te
 ## DESCRIPTION
 The New-CsOnlineSchedule cmdlet creates a new schedule for the Auto Attendant (AA) service. The AA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
 
-**NOTE**
+**NOTES**:
+
 - The type of the schedule cannot be altered after the schedule is created.
 - Currently, only two types of schedules can be created: WeeklyRecurrentSchedule or FixedSchedule.
 - The schedule types are mutually exclusive. So a weekly recurrent schedule cannot be a fixed schedule and vice versa.

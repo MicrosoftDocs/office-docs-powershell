@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet supports retrieving the list of team mappings.
 
 ## SYNTAX
@@ -36,10 +34,18 @@ PS C:\> Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId "WCI-d1addd70-26
 ```output
 TeamId                               TeamName WfmTeamId WfmTeamName
 ------                               -------- --------- -----------
-89ef4689-758c-4598-9206-3e23416da8c2          1000107
+12344689-758c-4598-9206-3e23416da8c2          1000107
 ```
 
 Returns the list of team mappings in the instance with ID `WCI-d1addd70-2684-4723-b8f2-7fa2230648c9`.
+
+In case of error, we can capture the error response as following:
+
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+* To get the entire error message in Json: `$result.ToJsonString()`
+
+* To get the error object and object details: `$result, $result.Detail`
 
 ## PARAMETERS
 

@@ -15,9 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will show the call forwarding, simultaneous ringing, call group and delegation settings for a user.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
 ## SYNTAX
 
 ```powershell
@@ -207,9 +204,8 @@ GroupMembershipDetails    :
 GroupNotificationOverride : 
 ```
 
-This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings
-
-as shown here, unanswered calls will be forwarded to voicemail by default.
+This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
+unanswered calls will by default be forwarded to voicemail after 30 seconds.
 
 ## PARAMETERS
 
@@ -239,7 +235,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview and 3.2.0-preview (preferred).
+The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 ## RELATED LINKS
 

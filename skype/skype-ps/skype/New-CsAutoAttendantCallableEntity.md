@@ -18,22 +18,18 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either Object ID or TEL URIs and can refer to any of the following entities:
 
 - User
-- OrganizationalAutoAttendant
-- HuntGroup
 - ApplicationEndpoint
 - ExternalPstn
 - SharedVoicemail
 
-**NOTE**
-
-In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
+**NOTE**: In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
 
 ## EXAMPLES
 
@@ -100,8 +96,6 @@ Accept wildcard characters: False
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
-- OrganizationalAutoAttendant
-- HuntGroup
 - ApplicationEndpoint
 - ExternalPstn
 - SharedVoicemail
