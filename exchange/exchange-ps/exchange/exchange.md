@@ -1633,6 +1633,12 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
 
+### [Get-ExoInformationBarrierPolicy](Get-ExoInformationBarrierPolicy.md)
+
+### [Get-ExoInformationBarrierSegment](Get-ExoInformationBarrierSegment.md)
+
+### [Get-ExoInformationBarrierRelationship](Get-ExoInformationBarrierRelationship.md)
+
 ### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
 ### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
