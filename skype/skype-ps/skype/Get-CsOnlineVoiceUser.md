@@ -23,7 +23,7 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
-In the Teams PowerShell Module version 3 or later, the following improvements have been introduced for organizations having Teams: 
+In Teams PowerShell Module version 3 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users that are voice enabled (older cmdlet in 2.6.0 and below used to return users without MCOEV* plans assigned)
 - Result size is not limited to 100 users anymore (older cmdlet in 2.6.0 and below used to limit result size to 100)
 
