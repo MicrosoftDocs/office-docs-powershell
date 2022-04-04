@@ -263,7 +263,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 **Policy Attributes**:
 
 - PolicyProperty comparison works only when "Authority" is provided in the value. For ex: `-Filter "TeamsMessagingPolicy -eq '<Authority>:<Value>'"`
-"Authority" can contain any of these two values: Host or Tenant for a policy type (Configurations that are provided by Default are referred to as Host configurations while Admin-created configurations are considered Tenant configurations)
+"Authority" can contain any of these two values: Host or Tenant for a policy type (configurations that are provided by default are referred to as Host configurations while admin-created configurations are considered Tenant configurations).
 
 - In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
 
