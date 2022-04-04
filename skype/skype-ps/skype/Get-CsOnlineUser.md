@@ -252,7 +252,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
-In the Teams PowerShell Module version 3.0.0 or later, the **OnPremLineURI** attribute refers only to the LineURI that's set via OnPrem AD. Previously, **OnPremLineURI** also referred to Direct Routing numbers that were assigned to users via the Set-CsUser cmdlet. OnPremLineURIMaluallySet is now deprecated as OnPremLineURI is representative the On-Prem assignment. Also, Direct Routing numbers are available in the **LineURI** attribute. You can distinguish Direct Routing Numbers from Calling Plan Numbers by looking at the **FeatureTypes** attribute.
+In Teams PowerShell Module version 3.0.0 and later, the **OnPremLineURI** attribute refers only to the LineURI that's set via OnPrem AD. Previously, **OnPremLineURI** also referred to Direct Routing numbers that were assigned to users via the Set-CsUser cmdlet. OnPremLineURIMaluallySet is now deprecated as OnPremLineURI is representative of the On-Prem assignment. Also, Direct Routing numbers are available in the **LineURI** attribute. You can distinguish Direct Routing Numbers from Calling Plan Numbers by looking at the **FeatureTypes** attribute.
 
 In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
 
