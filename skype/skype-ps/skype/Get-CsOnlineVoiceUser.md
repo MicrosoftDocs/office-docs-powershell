@@ -27,7 +27,7 @@ In Teams PowerShell Module version 3 and later, the following improvements have 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and later returned users without MCOEV* plans assigned).
 - Result size is not limited to 100 users anymore (older cmdlet in 2.6.0 and below used to limit result size to 100)
 
-In the Teams PowerShell Module version 2.6.2 or later, the following attributes have been deprecated for organizations having Teams users using the ExpandLocation parameter:
+In Teams PowerShell Module version 2.6.2 and later, the following attributes are deprecated for organizations with Teams users using the ExpandLocation parameter:
 
 - Force
 - NumberOfResultsToSkip
