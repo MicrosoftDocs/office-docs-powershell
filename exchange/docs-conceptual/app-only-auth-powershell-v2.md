@@ -27,7 +27,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 >
 > For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 >
-> You can't use the procedures in this article to modify Microsoft 365 Groups ([Set-UnifiedGroup](../exchange-ps/exchange/Set-UnifiedGroup.md)). To use Microsoft Graph instead, see [Update grup](/graph/api/group-update).
+> You can't use the procedures in this article to modify Microsoft 365 Groups ([Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)). To use Microsoft Graph instead, see [Update grup](/graph/api/group-update).
 
 Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance Center PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
