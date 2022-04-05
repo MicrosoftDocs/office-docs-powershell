@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-SupervisoryReviewPolicyReport cmdlet to view supervisory review policy events in the Microsoft Purview portal.
+Use the Get-SupervisoryReviewPolicyReport cmdlet to view supervisory review policy events in the Microsoft Purview compliance portal.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -41,7 +41,7 @@ For the reporting period you specify, the Get-SupervisoryReviewPolicyReport cmdl
 - Tag Type: Messages that are eligible for evaluation by the policy are `InPurview`. Messages that match the conditions of the policy are `HitPolicy`. Classifications that are manually assigned to messages by the designated reviewers using the Supervision add-in for Outlook web app are `Compliant`, `Non-compliant`, `Questionable`, and `Resolved`. Messages that match the conditions of a policy but haven't been reviewed by a designated reviewer are `Not-Reviewed`. Messages that match the conditions of a policy and have been reviewed by a designated reviewer are `New-Reviewed`.
 - Item Count
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

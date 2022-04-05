@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-HoldComplianceRule cmdlet to remove preservation rules from the Microsoft Purview portal.
+Use the Remove-HoldComplianceRule cmdlet to remove preservation rules from the Microsoft Purview compliance portal.
 
 **Note**: The Remove-HoldComplianceRule cmdlet has been replaced by the Remove-RetentionComplianceRule cmdlet. If you have scripts that use Remove-HoldComplianceRule, update them to use Remove-RetentionComplianceRule.
 
@@ -33,7 +33,7 @@ Remove-HoldComplianceRule [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 Removing a preservation rule causes the release of all Exchange mailbox and SharePoint site preservations that are associated with the rule. Removing a preservation rule also causes the corresponding preservation policy to become invalid, so you should remove it by using the Remove-HoldCompliancePolicy cmdlet.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

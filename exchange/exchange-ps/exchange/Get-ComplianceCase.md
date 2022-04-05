@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft Purview portal. See the CaseType parameter for a list of these case types.
+Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft Purview compliance portal. See the CaseType parameter for a list of these case types.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,7 +30,7 @@ Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -86,15 +86,15 @@ Accept wildcard characters: False
 ### -CaseType
 The CaseType parameter specifies the type of compliance case that you want to view. Valid values are:
 
-- AdvancedEdiscovery: eDiscovery Premium cases are used to manage legal or other types of investigations. In the Microsoft Purview portal, eDiscovery Premium cases are displayed under **eDiscovery** \> **Premium**.
-- ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft Purview portal, trainable classifiers are displayed under **Data classification** \> **Trainable classifiers**.
+- AdvancedEdiscovery: eDiscovery Premium cases are used to manage legal or other types of investigations. In the Microsoft Purview compliance portal, eDiscovery Premium cases are displayed under **eDiscovery** \> **Premium**.
+- ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft Purview compliance portal, trainable classifiers are displayed under **Data classification** \> **Trainable classifiers**.
 - ComplianceWorkspace: This value is reserved for internal Microsoft use.
-- DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Microsoft Purview portal, Data investigation cases are displayed on the **Data investigations** page.
-- DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Microsoft Purview portal, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
-- eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. In the Microsoft Purview portal, eDiscovery Standard cases are displayed under **eDiscovery** \> **Standard**. This is the default value.
-- InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on a risk alert.
+- DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Microsoft Purview compliance portal, Data investigation cases are displayed on the **Data investigations** page.
+- DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Microsoft Purview compliance portal, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
+- eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. In the Microsoft Purview compliance portal, eDiscovery Standard cases are displayed under **eDiscovery** \> **Standard**. This is the default value.
+- InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview compliance portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on a risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
-- SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft Purview portal, communication compliance policies are displayed under **Communication compliance** \> **Policies**.
+- SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft Purview compliance portal, communication compliance policies are displayed under **Communication compliance** \> **Policies**.
 
 ```yaml
 Type: ComplianceCaseType
