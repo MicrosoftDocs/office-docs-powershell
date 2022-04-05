@@ -1180,7 +1180,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-The ExceptIfFromMemberOf parameter specifies an exception for the DLP rule that looks for senders' emails in the lists given as values to this parameter. You can give multiple lists to this parameter.
+The FromMemberOf parameter specifies an exception for the DLP rule that looks for messages sent by group members. You identify the group by its email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]
@@ -1842,7 +1844,9 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-The FromMemberOf parameter specifies a condition for the DLP rule that looks for senders' emails in the lists given as values to this parameter. You can give multiple lists to this parameter.
+The FromMemberOf parameter specifies a condition for the DLP rule that looks for messages sent by group members. You identify the group by its email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]
