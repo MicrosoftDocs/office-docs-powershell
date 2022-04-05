@@ -1180,7 +1180,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-
+The ExceptIfFromMemberOf parameter specifies an exception for the DLP rule that looks for senders' email in the lists given as values to this param. You can give multiple lists to this parameter.
 
 ```yaml
 Type: SmtpAddress[]
@@ -1842,7 +1842,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-
+The FromMemberOf parameter specifies an condition for the DLP rule that looks for senders' email in the lists given as values to this param. You can give multiple lists to this parameter.
 
 ```yaml
 Type: SmtpAddress[]
