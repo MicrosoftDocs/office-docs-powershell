@@ -129,7 +129,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 When you are importing an audio file to be used for Auto Attenant or Call Queue, the audio file will automatically be marked for deletion (as seen by running
-[Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)) and it will be deleted after 48 to 72 hours from the time of import, unless the audio file is associated to an
+Get-CsOnlineAudioFile) and it will be deleted after 48 to 72 hours from the time of import, unless the audio file is associated to an
 Auto Attendant and Call Queue before 48 hours after it was imported.
 
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
