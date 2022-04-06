@@ -1164,7 +1164,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-This parameter is reserved for internal Microsoft use.
+The FromMemberOf parameter specifies an exception for the DLP rule that looks for messages sent by group members. You identify the group by its email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]
@@ -1826,7 +1828,9 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-This parameter is reserved for internal Microsoft use.
+The FromMemberOf parameter specifies a condition for the DLP rule that looks for messages sent by group members. You identify the group by its email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]

@@ -1522,7 +1522,9 @@ Accept wildcard characters: False
 ### -EnableLitigationHoldForMigration
 This parameter is available only in the cloud-based service.
 
-{{ Fill EnableLitigationHoldForMigration Description }}
+The EnableLitigationHoldForMigration switch is used in cross-tenant mailbox migrations to increase the quota on the Recoverable Items folder to 100 GB (and also enable Litigation Hold) prior to migration. You don't need to specify a value with this switch.
+
+This feature is not available in hybrid tenants.
 
 ```yaml
 Type: SwitchParameter
