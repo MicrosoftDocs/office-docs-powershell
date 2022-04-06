@@ -56,7 +56,7 @@ This example displays information about the Microsoft Calling Plan subscriber ph
 
 ### Example 2
 ```powershell
-Get-CsPhoneNumberAssignment -TelephoneNumber +12065551000;ext=524
+Get-CsPhoneNumberAssignment -TelephoneNumber "+12065551000;ext=524"
 ```
 ```output
 TelephoneNumber         : +12065551000;ext=524
