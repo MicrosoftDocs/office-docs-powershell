@@ -242,8 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumber
-Filters the returned results to a specific phone number. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. 
-The phone number can not have "tel:" prefixed. We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
+Filters the returned results to a specific phone number. It is optional to specify a prefixed "+". The phone number can not have "tel:" prefixed.
+We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
 
 ```yaml
 Type: System.String
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberContains
-Filters the returned results based on substring match for the specified string on TelephoneNumber.
+Filters the returned results based on substring match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -TelephoneNumberGreaterThan
 Filters the returned results based on greater than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberLessThan to specify a
-range of phone numbers to return results for.
+range of phone numbers to return results for. For supported formats see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 
 ### -TelephoneNumberLessThan
 Filters the returned results based on less than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberGreaterThan to specify a
-range of phone numbers to return results for.
+range of phone numbers to return results for. For supported formats see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberStartsWith
-Filters the returned results based on starts with string match for the specified string on TelephoneNumber.
+Filters the returned results based on starts with string match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -380,7 +380,7 @@ The Id of the PSTN partner providing the phone number.
 The name of the PSTN partner
 
 ### TelephoneNumber
-The phone number. The number is always displayed with prefixed +, even if it was not assigned using prefixed +.
+The phone number. The number is always displayed with prefixed "+", even if it was not assigned using prefixed "+".
 
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
