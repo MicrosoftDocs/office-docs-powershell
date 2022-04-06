@@ -124,6 +124,7 @@ For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later
 - GUID
 - SIP address
 - UPN
+- Alias
 
 Using the Teams PowerShell Module version 2.6 or earlier only, you can use the following values to identify the account:
 
