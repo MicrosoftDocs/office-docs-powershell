@@ -58,6 +58,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Sender Address
 - Recipient Address
 - Event Type
+- Verdict Type
 - Action
 - File Name
 - Malware Name
