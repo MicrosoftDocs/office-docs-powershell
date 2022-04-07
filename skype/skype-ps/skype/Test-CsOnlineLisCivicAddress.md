@@ -13,7 +13,4 @@ ms.reviewer:
 # Test-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-> [!CAUTION]
-> This cmdlet has been deprecated and is no longer supported.
-> 
-> Please use [New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md) cmdlet instead.
+**Note**: This cmdlet has been deprecated and is no longer supported. Use the [New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md) cmdlet instead.
