@@ -342,7 +342,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a PSTN caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled. This setting does not apply to call park and SLA boss delegate features.
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled.
 
 ```yaml
 Type: Enum
