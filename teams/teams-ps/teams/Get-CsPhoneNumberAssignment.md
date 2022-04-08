@@ -367,7 +367,8 @@ The ID of the CivicAddress assigned to the phone number.
 The ISO country code assigned to the phone number.
 
 ### LocationId
-The Id of the Location assigned to the phone number.
+The ID of the Location assigned to the phone number.
+
 
 ### LocationUpdateSupported
 Boolean stating if updating of the location assigned to the phone number is allowed.
