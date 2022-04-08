@@ -386,7 +386,7 @@ The assignment status of the phone number.
 The ID of the PSTN partner providing the phone number.
 
 ### PstnPartnerName
-The name of the PSTN partner
+The name of the PSTN partner.
 
 ### TelephoneNumber
 The phone number. The number is always displayed with prefixed "+", even if it was not assigned using prefixed "+".
