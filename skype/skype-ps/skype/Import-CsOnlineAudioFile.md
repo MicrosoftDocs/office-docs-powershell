@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## NOTES
 
-When you are importing an audio file to be used for Auto Attendant or Call Queue, the audio file will automatically be marked for deletion (as seen by running
+When you import an audio file to be used for Auto Attendant or Call Queue, the audio file will automatically be marked for deletion (as seen by running
 Get-CsOnlineAudioFile) and it will be deleted after 48 to 72 hours from the time of import, unless the audio file is associated to an
 Auto Attendant and Call Queue before 48 hours after it was imported.
 
