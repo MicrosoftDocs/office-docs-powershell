@@ -354,7 +354,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The activation state of the telephone number.
 
 ### AssignedPstnTargetId
-The Id of the object the phone number is assigned to.
+The ID of the object the phone number is assigned to.
 
 ### Capability
 The list of capabilities assigned to the phone number.
