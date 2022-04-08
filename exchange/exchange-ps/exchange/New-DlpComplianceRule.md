@@ -164,6 +164,53 @@ New-DlpComplianceRule -Name "SocialSecurityRule" -Policy "USFinancialChecks" -Co
 
 This example create a new DLP compliance rule named "SocialSecurityRule" that is assigned to the "USFinancialChecks" policy. The rule checks for social security numbers and blocks access if it finds them.
 
+### Example 2
+```powershell
+$contains_complex_types = @{
+    operator = "And"
+    groups = @(
+        @{
+            operator = "Or"
+            name =  "PII Identifiers"
+            sensitivetypes = @(
+                @{
+                    name = "Drug Enforcement Agency (DEA) Number"
+                    maxconfidence = 100
+                    minconfidence = 75
+                    mincount = 1
+                    maxcount = -1
+                }
+            )
+        }
+        @{
+            operator = "Or"
+            name =  "Medical Terms"
+            sensitivetypes = @(
+                @{
+                    name = "International Classification of Diseases (ICD-9-CM)"
+                    maxconfidence = 100
+                    minconfidence = 75
+                    mincount = 1
+                    maxcount = -1
+                }
+                @{
+                    name = "International Classification of Diseases (ICD-10-CM)"
+                    maxconfidence = 100
+                    minconfidence = 75
+                    mincount = 1
+                    maxcount = -1
+                }
+                )
+        }  
+
+    )
+}
+
+New-DLPComplianceRule -Name "Contoso Medical Information" -Policy "Contoso Medical Checks" -ContentContainsSensitiveInformation $contains_complex_types
+```
+
+This example create a new DLP compliance rule named "Contoso Medical Information" that is assigned to the "Contoso Medical Checks" policy. The rule uses advanced syntax to search for the specified content.
+
 ## PARAMETERS
 
 ### -Name
@@ -440,6 +487,8 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
+
+For an example of advanced syntax, see Example 2 in this topic.
 
 ```yaml
 Type: PswsHashtable[]
