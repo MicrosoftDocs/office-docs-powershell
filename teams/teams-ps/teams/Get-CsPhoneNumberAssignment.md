@@ -360,7 +360,8 @@ The ID of the object the phone number is assigned to.
 The list of capabilities assigned to the phone number.
 
 ### CivicAddressId
-The Id of the CivicAddress assigned to the phone number.
+The ID of the CivicAddress assigned to the phone number.
+
 
 ### IsoCountryCode
 The ISO country code assigned to the phone number.
