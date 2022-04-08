@@ -13,7 +13,8 @@ schema: 2.0.0
 # Get-CsPhoneNumberAssignment
 
 ## SYNOPSIS
-This cmdlet will display information about one or more phone numbers.
+This cmdlet displays information about one or more phone numbers.
+
 
 ## SYNTAX
 
