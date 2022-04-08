@@ -118,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedPstnTargetId
-Filters the returned results based on the user or resource account id the phone number is assigned to. Supported values are UserPrincipalName, SIP address and ObjectId.
+Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, and ObjectId.
+
 
 ```yaml
 Type: System.String
