@@ -104,7 +104,7 @@ This example returns information about all activated phone numbers with the capa
 ## PARAMETERS
 
 ### -ActivationState
-Filters the returned results based on the number type. Supported values are Activated, AssignmentPending, AssignmentFailed, UpdatePending and UpdateFailed.
+Filters the returned results based on the number type. Supported values are Activated, AssignmentPending, AssignmentFailed, UpdatePending, and UpdateFailed.
 
 ```yaml
 Type: System.String
