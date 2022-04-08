@@ -1,29 +1,27 @@
 ---
-external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-clutter
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exoinformationbarriersegment
 applicable: Exchange Online, Exchange Online Protection
-title: Set-Clutter
+title: Get-ExoInformationBarrierSegment
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-Clutter
+# Get-ExoInformationBarrierSegment
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-Clutter cmdlet to configure Clutter settings for mailboxes in your organization.
+Use the Get-ExoInformationBarrierSegment to view information barrier segments in your Exchange Online organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter>
- [-Enable <Boolean>]
- [<CommonParameters>]
+Get-ExoInformationBarrierSegment [[-Identity] <InformationBarrierSegmentIdParameter>] [-ShowFriendlyValues] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,48 +31,48 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-Clutter -Identity "Alexander Martinez" -Enable $false
+Get-ExoInformationBarrierSegment -ShowFriendlyValues| Format-List DisplayName,Name,FriendlyRecipientFilter,AssociatedPolicy
 ```
 
-This example disables Clutter for the user Alexander Martinez.
+This example shows a summary list of all Exchange Online information barrier segments in the organization.
+
+### Example 2
+```powershell
+Get-ExoInformationBarrierSegment -Identity "Investment Banking" -ShowFriendlyValues
+```
+
+This example shows detailed information for the specified Exchange Online information barrier segment.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the Exchange Online information barrier segment that you want to view. You can use any value that uniquely identifies the segment. For example:
 
 - Name
-- Alias
+- Display name
 - Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
 - GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
 
 ```yaml
-Type: MailboxIdParameter
+Type: InformationBarrierSegmentIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
-Required: True
-Position: Named
+Required: False
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Enable
-The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
+### -ShowFriendlyValues
+The ShowFriendlyValues switch specifies whether to show friendly values in the output of the command. You don't need to specify a value with this switch.
 
-- $true: Clutter is enabled for the mailbox. This is the default value.
-- $false: Clutter is disabled for the mailbox.
+When you use this switch, the FriendlyMembershipFilter property value is shown.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

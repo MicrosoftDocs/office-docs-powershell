@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -306,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteIds
-The SiteIds parameter filters the log entries by the SharePoint SiteId (GUID). You can enter multiple values separated by commas: `Value1, Value2,…ValueN`.
+The SiteIds parameter filters the log entries by the SharePoint SiteId (GUID). You can enter multiple values separated by commas: `Value1, Value2,...ValueN`.
 
 To obtain the the SiteId for a SharePoint site, append `/_api/site/id` to the URL of the site collection you want to specify. For example, change the URL `https://contoso.sharepoint.com/sites/hr-project` to `https://contoso.sharepoint.com/sites/hr-project/_api/site/id`. An XML payload is returned and the SiteId for the site collection is displayed in the Edm.Guid property; for example: `<d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Edm.Guid">14ab81b6-f23d-476a-8cac-ad5dbd2910f7</d:Id>`.
 

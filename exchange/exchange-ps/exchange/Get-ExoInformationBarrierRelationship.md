@@ -1,28 +1,27 @@
 ---
-external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-clutter
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exoinformationbarrierrelationship
 applicable: Exchange Online, Exchange Online Protection
-title: Set-Clutter
+title: Get-ExoInformationBarrierRelationship
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-Clutter
+# Get-ExoInformationBarrierRelationship
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-Clutter cmdlet to configure Clutter settings for mailboxes in your organization.
+Use the Get-ExoInformationBarrierRelationship cmdlet to view information barrier relationships in your Exchange Online organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter>
- [-Enable <Boolean>]
+Get-ExoInformationBarrierRelationship -RecipientId1 <RecipientIdParameter> -RecipientId2 <RecipientIdParameter>
  [<CommonParameters>]
 ```
 
@@ -33,29 +32,25 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-Clutter -Identity "Alexander Martinez" -Enable $false
+Get-ExoInformationBarrierRelationship -RecipientId1 "Akia Al-Zuhairi" -RecipientId2 "Gabriela Laureano"
 ```
 
-This example disables Clutter for the user Alexander Martinez.
+This example shows the Exchange Online information barrier relationship between the two specified recipients.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
+### -RecipientId1
+The RecipientId1 parameter specifies the first recipient in the Exchange Online barrier relationship. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\\Username
 - Email address
 - GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
 
 ```yaml
-Type: MailboxIdParameter
+Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -67,19 +62,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Enable
-The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
+### -RecipientId2
+The RecipientId2 parameter specifies the second recipient in the Exchange Online barrier relationship. You can use any value that uniquely identifies the recipient. For example:
 
-- $true: Clutter is enabled for the mailbox. This is the default value.
-- $false: Clutter is disabled for the mailbox.
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
 
 ```yaml
-Type: Boolean
+Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

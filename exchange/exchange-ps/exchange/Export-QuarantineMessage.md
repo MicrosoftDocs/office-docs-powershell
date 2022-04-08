@@ -18,8 +18,6 @@ Use the Export-QuarantineMessage cmdlet to export quarantined messages and files
 
 For files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the files are exported in Base64 format.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
