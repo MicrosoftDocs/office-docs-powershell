@@ -134,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -CapabilitiesContain
-Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by comma. Supported capabilities
+Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by a comma. Supported capabilities
+
 are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment and OCMobile.
 
 If you specify only one capability, you will get all phone numbers returned that have that capability assigned. If you specify a comma separated list for instance like 
