@@ -218,7 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -PstnAssignmentStatus
-Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned and ThirdPartyAppAssigned
+Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, and ThirdPartyAppAssigned.
+
 
 ```yaml
 Type: System.String
