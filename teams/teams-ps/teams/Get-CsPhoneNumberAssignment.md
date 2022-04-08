@@ -234,7 +234,8 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Skipping the first X returned results and the default value is 0.
+Skips the first X returned results and the default value is 0.
+
 
 ```yaml
 Type: System.Int32
