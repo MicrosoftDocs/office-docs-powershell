@@ -396,7 +396,6 @@ The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNu
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
-
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
 
