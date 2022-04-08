@@ -383,7 +383,7 @@ The status of any port in order covering the phone number.
 The assignment status of the phone number.
 
 ### PstnPartnerId
-The Id of the PSTN partner providing the phone number.
+The ID of the PSTN partner providing the phone number.
 
 ### PstnPartnerName
 The name of the PSTN partner
