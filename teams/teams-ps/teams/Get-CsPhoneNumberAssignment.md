@@ -202,7 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -NumberType
-Filters the returned results based on the number type. Supported values are DirectRouting, CallingPlan and OperatorConnect.
+Filters the returned results based on the number type. Supported values are DirectRouting, CallingPlan, and OperatorConnect.
+
 
 ```yaml
 Type: System.String
