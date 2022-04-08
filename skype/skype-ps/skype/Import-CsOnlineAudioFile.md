@@ -62,7 +62,7 @@ This example uses the `-AsByteStream` parameter instead of the `-Encoding byte` 
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an Auto Attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a Call Queue, then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal"
+The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an Auto Attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a Call Queue, then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal".
 
 Supported values:
 
