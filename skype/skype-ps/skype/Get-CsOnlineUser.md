@@ -566,7 +566,7 @@ The following attributes are temporarily unavailable in the output when using th
 - MCOValidationErrors renamed to UserValidationErrors
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
-- CountryOrRegionDisplayName inteoduced as Country (in versions 4.2.0 and later)
+- CountryOrRegionDisplayName introduced as Country (in versions 4.2.0 and later)
 
 *Attributes that have changed in meaning/format*:
 
