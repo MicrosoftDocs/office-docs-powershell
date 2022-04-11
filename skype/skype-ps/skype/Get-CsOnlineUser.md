@@ -192,7 +192,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 
 - accountEnabled
 - AssignedPlan
-- CountryAbbreviation
+- Country
 - department
 - displayName
 - EnterpriseVoiceEnabled
@@ -554,6 +554,7 @@ The following attributes are temporarily unavailable in the output when using th
 - OnPremSipEnabled
 - OnPremSipAddress
 - OnPremOptionFlags
+- CountryAbbreviation
 
 **Note**: These attributes will be available in the near future.
 
@@ -565,6 +566,7 @@ The following attributes are temporarily unavailable in the output when using th
 - MCOValidationErrors renamed to UserValidationErrors
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
+- CountryOrRegionDisplayName inteoduced as Country (in versions 4.2.0 and later)
 
 *Attributes that have changed in meaning/format*:
 
