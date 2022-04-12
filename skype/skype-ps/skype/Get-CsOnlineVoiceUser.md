@@ -23,7 +23,11 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
-In the Teams PowerShell Module version 2.6.2 or later, the following attributes have been deprecated for TeamsOnly customers using the ExpandLocation parameter:
+In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
+- This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
+- The result size is not limited to 100 users anymore (the older cmdlet in version 2.6.0 and earlier limited the result size to 100).
+
+In Teams PowerShell Module version 2.6.2 and later, the following attributes are deprecated for organizations with Teams users using the ExpandLocation parameter:
 
 - Force
 - NumberOfResultsToSkip
@@ -32,7 +36,7 @@ In the Teams PowerShell Module version 2.6.2 or later, the following attributes 
 - ResultSize
 - LicenceState
 
-In the Teams PowerShell Module version 2.6.2 or later, the following input parameters have been deprecated for TeamsOnly customers due to low or zero usage:
+In Teams PowerShell Module version 2.6.2 and later, the following input parameters are deprecated for organizations with Teams users due to low or zero usage:
 
 - DomainController
 - Force

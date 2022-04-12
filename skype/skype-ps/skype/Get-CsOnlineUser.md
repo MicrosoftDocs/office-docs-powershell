@@ -124,6 +124,7 @@ For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later
 - GUID
 - SIP address
 - UPN
+- Alias
 
 Using the Teams PowerShell Module version 2.6 or earlier only, you can use the following values to identify the account:
 
@@ -252,7 +253,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 1. LineURI set via OnPrem AD.
 2. Direct Routing numbers assigned to users via Set-CsUser.
 
-In the Teams PowerShell Module version 3.0.0 or later, the **OnPremLineURI** attribute refers only to the LineURI that's set via OnPrem AD. Previously, **OnPremLineURI** also referred to Direct Routing numbers that were assigned to users via the Set-CsUser cmdlet. Now, Direct Routing numbers are available in the **LineURI** attribute. You can distinguish Direct Routing Numbers from Calling Plan Numbers by looking at the **FeatureTypes** attribute.
+In Teams PowerShell Module version 3.0.0 and later, the **OnPremLineURI** attribute refers only to the LineURI that's set via OnPrem AD. Previously, **OnPremLineURI** also referred to Direct Routing numbers that were assigned to users via the Set-CsUser cmdlet. OnPremLineUriManuallySet is now deprecated as OnPremLineURI is representative of the On-Prem assignment. Also, Direct Routing numbers are available in the **LineURI** attribute. You can distinguish Direct Routing Numbers from Calling Plan Numbers by looking at the **FeatureTypes** attribute.
 
 In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
 
@@ -263,7 +264,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 **Policy Attributes**:
 
 - PolicyProperty comparison works only when "Authority" is provided in the value. For ex: `-Filter "TeamsMessagingPolicy -eq '<Authority>:<Value>'"`
-"Authority" can contain any of these two values: Host or Tenant for a policy type (PreCanned/Default configurations provided by feature team are referred to as Host configurations while Admin-created configurations are considered Tenant configurations)
+"Authority" can contain any of these two values: Host or Tenant for a policy type (configurations that are provided by default are referred to as Host configurations while admin-created configurations are considered Tenant configurations).
 
 - In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
 
@@ -545,6 +546,16 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - Office
 - Phone
 - WindowsEmailAddress
+
+The following attributes are temporarily unavailable in the output when using the "-Filter" or when used without the "-Identity" parameter:
+- SoftDeletionTimeStamp
+- WhenChanged
+- OnPremHostingProvider
+- OnPremSipEnabled
+- OnPremSipAddress
+- OnPremOptionFlags
+
+**Note**: These attributes will be available in the near future.
 
 *Attributes renamed*:
 
