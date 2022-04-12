@@ -47,36 +47,36 @@ If your account uses multi-factor authentication, use the steps in this section.
 2. The last command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-PSSessionOption $ProxyOptions]
+   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-PSSessionOption $ProxyOptions]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
-   - When you use the _UserPrincipalName_ parameter, you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in environments that would otherwise require it.
+   - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the following examples or the parameter description in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
+   - The _AzureADAuthorizationEndpointUri_ parameter is required in some environments and not in others. For more information, see the following examples or the parameter description in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
-   **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
+   **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 
    ```powershell
    Connect-IPPSSession -UserPrincipalName navin@contoso.com
    ```
 
-   **This example connects to Security & Compliance Center PowerShell in an Office 365 operated by 21Vianet organization**.
+   **This example connects to Security & Compliance Center PowerShell in an Office 365 operated by 21Vianet organization**:
 
    ```powershell
    Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid
    ```
 
-   **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
+   **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**:
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName chris@govt.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -UserPrincipalName chris@govt.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
    ```
 
-   **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**.
+   **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**:
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName michelle@govt.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -UserPrincipalName michelle@govt.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
    ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
@@ -119,7 +119,8 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-IPPSSession [-Credential $UserCredential] [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-PSSessionOption $ProxyOptions]
    ```
 
-   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
+   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the following examples or the parameter description in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
+   - The _AzureADAuthorizationEndpointUri_ parameter is required in some environments and not in others. For more information, see the following examples or the parameter description in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
    - If you're behind a proxy server, store the output of the [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption) cmdlet in a variable (for example, `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value> [-ProxyAuthentication <Value>] [-ProxyCredential <Value>]`). Then, use the variable (`$ProxyOptions`) as the value for the _PSSessionOption_ parameter.
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
