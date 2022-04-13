@@ -219,7 +219,7 @@ Group members can change their own subscription settings, which can override you
 
 The AutoSubscribeNewMembers switch overrides this switch.
 
-**Note**: This attribute is only evaluated when adding members that are internal to your organization. Guest user accounts are always subscribed when added as a member. Once added, their subscription can be manually removed using the Remove-UnifiedGroupLinks cmdlet.
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -260,7 +260,7 @@ The AutoSubscribeNewMembers switch specifies whether to automatically subscribe 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
 - If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: `-AutoSubscribeNewMembers:$false`.
 
-**Note**: This attribute is only evaluated when adding members that are internal to your organization. Guest user accounts are always subscribed when added as a member. Once added, their subscription can be manually removed using the Remove-UnifiedGroupLinks cmdlet.
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1176,7 +1176,7 @@ The SubscriptionEnabled switch specifies whether the group owners can enable sub
 
 **Note**: You should use the value $false for this switch only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
 
-**Note**: This attribute is only evaluated when adding members that are internal to your organization. Guest user accounts are always subscribed when added as a member. Once added, their subscription can be manually removed using the Remove-UnifiedGroupLinks cmdlet.
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter
