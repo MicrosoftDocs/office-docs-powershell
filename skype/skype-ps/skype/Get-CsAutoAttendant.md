@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 > [!NOTE]
-> Expect slow response times when using this parameter with Teams Powershell module v4.0.0.  Please use the **-Skip** and **-First** parameters to limit the result size instead.  This issue is expected to be resolved within the next few months.
+> Expect slow response times when using this parameter with Teams Powershell module starting with v4.0.0.  Please use the **-Skip** and **-First** parameters to limit the result size instead.  This issue is expected to be resolved within the next few months.
 
 
 
