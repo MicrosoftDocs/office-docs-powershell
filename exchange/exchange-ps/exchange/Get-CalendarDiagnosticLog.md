@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-CalendarDiagnosticLog
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is functional only in on-premises Exchange. In cloud-based service, use the Get-CalendarDiagnosticObjects cmdlet instead.
 
 Use the Get-CalendarDiagnosticLog cmdlet to collect a range of calendar logs. The Calendar Diagnostic logs track all calendar items and meeting requests in mailboxes. You can use this information to troubleshoot calendar issues that occur in mailboxes.
 
