@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
  [-UnassignedUser]
+ [-UsePreferredDC]
  [<CommonParameters>]
 ```
 
@@ -411,6 +412,22 @@ Applicable: Microsoft Teams, Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UsePreferredDC
+
+Reserved for Microsoft internal use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
