@@ -94,25 +94,11 @@ Example 4 returns information only for user accounts that have been configured s
 
 ### -------------------------- Example 5 --------------------------
 ```
-Get-CsOnlineUser -Filter "TenantId -eq 'bf19b7db-6960-41e5-a139-2aa373474354'"
+Get-CsOnlineUser -Filter {LineURI -eq "tel:+1234"}
+Get-CsOnlineUser -Filter {LineURI -eq "tel:+1234,ext:"}
+Get-CsOnlineUser -Filter {LineURI -eq "1234"}
 ```
-
-The command shown in Example 5 returns information for all the online users assigned to the tenant with the TenantID "bf19b7db-6960-41e5-a139-2aa373474354".
-
-To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
-
-This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
-
-### -------------------------- Example 6 --------------------------
-```
-$MeetingPolicy = "Kiosk"
-$FilterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
-Get-CsOnlineUser -Filter $FilterString
-```
-
-The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
-
-To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
+Examples above returns information for user accounts that have been assigned a designated phone number. 
 
 ## PARAMETERS
 
@@ -245,6 +231,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - UserDirSyncEnabled
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
+- LastName (available after TPM 4.2.0)
 
 *Attributes that have changed in meaning/format*:
 
@@ -257,23 +244,27 @@ In Teams PowerShell Module version 3.0.0 and later, the **OnPremLineURI** attrib
 
 In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
 
-- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -eq '*MCO'"`
 - All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -eq 'MCO*'"`
 - All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -eq '*MCO*'"`
+- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -eq '*MCO'"`
+
 
 **Policy Attributes**:
 
 - PolicyProperty comparison works only when "Authority" is provided in the value. For ex: `-Filter "TeamsMessagingPolicy -eq '<Authority>:<Value>'"`
-"Authority" can contain any of these two values: Host or Tenant for a policy type (configurations that are provided by default are referred to as Host configurations while admin-created configurations are considered Tenant configurations).
+"Authority" can contain any of these two values: Host or Tenant for a policy type (configurations that are provided by default are referred to as Host configurations while admin-created configurations are considered Tenant configurations). Below are more examples:
+
+1. Filter "TeamsMessagingPolicy -eq 'Host:EduStudent'"
+2. Filter "TeamsMessagingPolicy -eq 'Tenant:TestDemoPolicy'"
 
 - In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
 
-*Dropped Filter operators*:
+*Change in Filter operators*:
 
 The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and later:
 
 - -not, -lt, -gt: These operators have been dropped.
-- -ge, -ne:  These operators are not supported with policy properties.
+- -ge:  These operators are not supported with policy properties.
 - -like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
 
 ```yaml
@@ -542,7 +533,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - OnPremSamAccountName
 - CallerIdPolicy
 - Fax
-- LastName
+- LastName (available after TPM 4.2.0)
 - Office
 - Phone
 - WindowsEmailAddress
