@@ -12,7 +12,7 @@ ms.reviewer:
 # Import-RecipientDataProperty
 
 ## SYNOPSIS
-Use the Import-RecipientDataProperty cmdlet to add a picture or a spoken name audio file to a mailbox or mail contact. The user's picture and spoken name are available in the global address (recipient properties), contact card, reading pane, and meeting requests in Outlook.
+Use the Import-RecipientDataProperty cmdlet to add a picture or a spoken name audio file to a mailbox or mail contact.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
