@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-OMEConfiguration cmdlet to remove custom Microsoft 365 Message Encryption (OME) configurations. You can't use this cmdlet to remove the default OME configuration.
+Use the Remove-OMEConfiguration cmdlet to remove custom Microsoft Purview Message Encryption configurations. You can't use this cmdlet to remove the default OME configuration.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
