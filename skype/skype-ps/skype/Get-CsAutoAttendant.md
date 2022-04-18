@@ -187,10 +187,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-> [!NOTE]
-> Expect slow response times when using this parameter with Teams Powershell module starting with v4.0.0.  Please use the **-Skip** and **-First** parameters to limit the result size instead.  This issue is expected to be resolved within the next few months.
-
-
+**Note**: Expect slow response times when using this parameter with Teams PowerShell module starting with version 4.0.0.  Use the **-Skip** and **-First** parameters to limit the result size instead.  This issue is expected to be resolved within the next few months.
 
 ### -ExcludeContent
 If specified, only auto attendants' names, identities and associated application instances will be retrieved.
