@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to get an existing number manipulation rule (or list of rules).
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- Get-CsTeamsTranslationRule [-LocalStore] [-Filter <Object>] [-Tenant <string>] [[-Identity] <string>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsTranslationRule
+  description: |-
+    This command will show all translation rules that exist in the tenant. Identity, Description, Pattern and Translation parameters listed for each rule.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsTranslationRule -Identity AddPlus1
+  description: |-
+    This command will show Identity, Description, Pattern and Translation parameters for "AddPlus1" rule
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Identifier of the rule. This parameter is required and later used to assign the rule to Inbound or Outbound Trunk Normalization policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose number manipulation rule is being evoked.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsTeamsTranslationRule
+name: Get-CsTeamsTranslationRule
+description: |-
+  You can use this cmdlet to get an existing number manipulation rule (or list of rules). The rule can be used, for example, in the settings of your SBC (Set-CSOnlinePSTNGateway) to convert a callee or caller number to a desired format before entering or leaving Microsoft Phone System.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csteamstranslationrule
+  applicable: Skype for Business Online
+  title: Get-CsTeamsTranslationRule
+  schema: 2.0.0
+  manager: nmurav
+  author: filippse
+  ms.author: filippse
+  ms.reviewer: ""

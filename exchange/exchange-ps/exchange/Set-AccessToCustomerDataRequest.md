@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-AccessToCustomerDataRequest cmdlet to approve, deny, or cancel Microsoft 365 customer lockbox requests that control access to your data by Microsoft support engineers.
+Use the Set-AccessToCustomerDataRequest cmdlet to approve, deny, or cancel Microsoft 365 Customer Lockbox requests that control access to your data by Microsoft support engineers.
 
-**Note**: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
+**Note**: Customer Lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate Customer Lockbox subscription with any Microsoft 365 Enterprise plan.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,12 +38,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AccessToCustomerDataRequest -ApprovalDecision Approve -RequestId EXSR123456 -Comment "Troubleshoot issues in Rick Hofer mailbox"
 ```
 
-This example approves the customer lockbox request EXSR123456 with a comment.
+This example approves the Customer Lockbox request EXSR123456 with a comment.
 
 ## PARAMETERS
 
 ### -ApprovalDecision
-The ApprovalDecision parameter specifies the approval decision for the customer lockbox request. Valid values are:
+The ApprovalDecision parameter specifies the approval decision for the Customer Lockbox request. Valid values are:
 
 - Approve
 - Deny
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestId
-The RequestId parameter specifies the reference number of the customer lockbox request that you want to approve, deny, or cancel (for example, EXSR123456).
+The RequestId parameter specifies the reference number of the Customer Lockbox request that you want to approve, deny, or cancel (for example, EXSR123456).
 
 ```yaml
 Type: String

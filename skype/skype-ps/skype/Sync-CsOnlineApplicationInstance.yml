@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Azure Active Directory into Agent Provisioning Service.
+module: SkypeForBusiness
+syntaxes:
+- >-
+  Sync-CsOnlineApplicationInstance [-CallbackUri <String>] [-ObjectId <System.Guid>] [-ApplicationId <System.Guid>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Sync-CsOnlineApplicationInstance -ObjectId 00000000-0000-0000-0000-000000000000
+  description: |-
+    This example sync application instance with object id "00000000-0000-0000-0000-000000000000" into Agent Provisioning Service.
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  description: |+
+    The application ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CallbackUri
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  description: |+
+    The application instance ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Sync-CsOnlineApplicationInstance
+name: Sync-CsOnlineApplicationInstance
+description: |-
+  Use the Sync-CsOnlineApplicationInstance cmdlet to sync application instances from Azure Active Directory into Agent Provisioning Service.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/sync-csonlineapplicationinstance
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Sync-CsOnlineApplicationInstance
+  schema: 2.0.0
+  author: xixian73
+  ms.author: xixian
+  manager: naveenv
+  ms.reviewer: ""

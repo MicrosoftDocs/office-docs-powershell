@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the configuration of the previously defined Session Border Controller(s) (SBC(s))  that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlinePSTNGateway
+  href: Set-CsOnlinePSTNGateway.yml
+- text: New-CsOnlinePSTNGateway
+  href: New-CsOnlinePSTNGateway.yml
+- text: Get-CsOnlinePSTNGateway
+  href: Get-CsOnlinePSTNGateway.yml
+syntaxes:
+- Remove-CsOnlinePSTNGateway -Identity <SBCFQDN>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsOnlinePSTNGateway -Identity sbc.contoso.com
+  description: |-
+    This example removes SBC with Identity (and FQDN) sbc.contoso.com.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Remove-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
+  description: |-
+    This example removes the SBCs with identities (and FQDNs) matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc.
+  summary: ""
+parameters:
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The parameter is mandatory for the cmdlet. The Identity is the same as the SBC FQDN.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsOnlinePSTNGateway
+name: Remove-CsOnlinePSTNGateway
+description: |-
+  Use this cmdlet to remove the configuration of the previously created Session Border Controller(s) (SBC(s)) configuration. Note the SBC must be removed from all voice routes before executing this cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinepstngateway
+  applicable: Skype for Business Online
+  title: Remove-CsOnlinePSTNGateway
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

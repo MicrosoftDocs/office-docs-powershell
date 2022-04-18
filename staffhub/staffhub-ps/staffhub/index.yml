@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: MicrosoftStaffHubPowerShell
+  cmdlets:
+  - MicrosoftStaffHubPowerShell.Add-StaffHubMember
+  - MicrosoftStaffHubPowerShell.Add-StaffHubShift
+  - MicrosoftStaffHubPowerShell.Add-StaffHubTeam
+  - MicrosoftStaffHubPowerShell.Connect-StaffHub
+  - MicrosoftStaffHubPowerShell.Get-StaffHubMember
+  - MicrosoftStaffHubPowerShell.Get-StaffHubShifts
+  - MicrosoftStaffHubPowerShell.Get-StaffHubTeamsForTenant
+  - MicrosoftStaffHubPowerShell.Get-StaffHubUsersForTenant
+  - MicrosoftStaffHubPowerShell.Import-StaffHubMember
+  - MicrosoftStaffHubPowerShell.Import-StaffHubShift
+  - MicrosoftStaffHubPowerShell.Import-StaffHubTeam
+  - MicrosoftStaffHubPowerShell.Remove-StaffHubMember
+  - MicrosoftStaffHubPowerShell.Remove-StaffHubUser
+uid: MicrosoftStaffHubPowerShell
+name: MicrosoftStaffHubPowerShell
+description: |-
+  The following cmdlet references are for Microsoft StaffHub.
+metadata:
+  Module Name: Microsoft StaffHub PowerShell
+  Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+  title: staffhub

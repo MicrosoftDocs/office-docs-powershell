@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEmergencyCallRoutingPolicy
+  href: New-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Set-CsTeamsEmergencyCallRoutingPolicy
+  href: Set-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Grant-CsTeamsEmergencyCallRoutingPolicy
+  href: Grant-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Remove-CsTeamsEmergencyCallRoutingPolicy
+  href: Remove-CsTeamsEmergencyCallRoutingPolicy.yml
+syntaxes:
+- >-
+  Get-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- >-
+  Get-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:>  Get-CsTeamsEmergencyCallRoutingPolicy
+  description: |-
+    Retrieves all emergency call routing policies that are available in your scope
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:>  Get-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP
+  description: |-
+    Retrieves one emergency call routing policy specifying the identity
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |2+
+     The Filter parameter allows you to limit the number of results based on filters you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |2+
+     Specify the policy that you would like to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |2+
+     Microsoft internal use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |2+
+     Microsoft internal use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsTeamsEmergencyCallRoutingPolicy
+name: Get-CsTeamsEmergencyCallRoutingPolicy
+description: |-
+  This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsemergencycallroutingpolicy
+  applicable: Microsoft Teams
+  title: Get-CsTeamsEmergencyCallRoutingPolicy
+  author: jenstrier
+  ms.author: jenstr
+  manager: roykuntz
+  ms.reviewer: chenc, pthota
+  schema: 2.0.0

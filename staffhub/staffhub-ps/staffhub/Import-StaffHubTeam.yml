@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a set of teams from a specified file
+
+  Note: This cmdlet is currently in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet is currently in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- Import-StaffHubTeam [-Path] <String> [[-Encoding] <String>]
+examples:
+- title: Example 1
+  code: |-
+    Import-StaffHubTeam -Path "C:\team.txt"
+  description: |-
+    Imports a list of teams from the file in the specified path.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Encoding
+  description: |+
+    Encoding type of the file
+    https://msdn.microsoft.com/en-us/library/system.text.encoding(v=vs.110).aspx - Encoding parameter value list
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Location of the file.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Import-StaffHubTeam
+name: Import-StaffHubTeam
+description: |-
+  Imports a set of teams from a specified file.
+  Format of the File content - Name,TimeZone,ManagerEmail
+  Eg: CmdletTestTeam,Asia/Calcutta,abc@contoso.com
+  Failure in adding one team does not stop the other teams from getting added.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/import-staffhubteam
+  applicable: Microsoft StaffHub
+  title: Import-StaffHubTeam
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

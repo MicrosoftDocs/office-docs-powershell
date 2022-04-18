@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: This cmdlet is currently in Beta.
+  Get all the StaffHub users in the tenant of the logged in user.
+module: MicrosoftStaffHubPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-StaffHubUsersForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>]
+examples:
+- title: Example 1
+  code: |-
+    Get-StaffHubUsersForTenant -Top 10
+  description: |-
+    Get first 10 StaffHub users in the tenant by ascending creation time order.
+    If 'Top' parameter is not specified, then it defaults to 1000.
+    This returns a continuation token stored in $nextToken variable which can be used by the following call.
+    Eg: Get-StaffHubUsersForTenant -Top 10 -ContinuationToken $nextToken
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-StaffHubUsersForTenant
+  description: |-
+    Get all StaffHub users in the tenant with page size restricted to 1000 by default.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContinuationToken
+  description: |+
+    Continuation Token returned by the previous call
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Top
+  description: |+
+    Top 'n' items to be fetched sorted by ascending creation time order.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Get-StaffHubUsersForTenant
+name: Get-StaffHubUsersForTenant
+description: |-
+  Get all the StaffHub users in the tenant of the logged in user.
+  ContinuationToken from the call is stored in $nextToken variable.
+  Here is an example of the next call that can be made: Get-StaffHubUsersForTenant -Top 10 -ContinuationToken $nextToken
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubusersfortenant
+  applicable: Microsoft StaffHub
+  title: Get-StaffHubUsersForTenant
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

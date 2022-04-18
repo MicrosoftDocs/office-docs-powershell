@@ -1,0 +1,686 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Set-DlpCompliancePolicy cmdlet to modify Data Loss Prevention (DLP) policies in the Microsoft 365 compliance center.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+
+   [-AddEndpointDlpLocation <MultiValuedProperty>]
+
+   [-AddEndpointDlpLocationException <MultiValuedProperty>]
+
+   [-AddExchangeLocation <MultiValuedProperty>]
+
+   [-AddOneDriveLocation <MultiValuedProperty>]
+
+   [-AddOneDriveLocationException <MultiValuedProperty>]
+
+   [-AddOnPremisesScannerDlpLocation <MultiValuedProperty>]
+
+   [-AddOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+
+   [-AddPowerBIDlpLocation <MultiValuedProperty>]
+
+   [-AddPowerBIDlpLocationException <MultiValuedProperty>]
+
+   [-AddSharePointLocation <MultiValuedProperty>]
+
+   [-AddSharePointLocationException <MultiValuedProperty>]
+
+   [-AddTeamsLocation <MultiValuedProperty>]
+
+   [-AddTeamsLocationException <MultiValuedProperty>]
+
+   [-Comment <String>]
+
+   [-Confirm]
+
+   [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
+
+   [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+
+   [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
+
+   [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
+
+   [-Force]
+
+   [-Mode <PolicyMode>]
+
+   [-OneDriveSharedBy <RecipientIdParameter[]>]
+
+   [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
+
+   [-PolicyTemplateInfo <PswsHashtable>]
+
+   [-Priority <Int32>]
+
+   [-RemoveEndpointDlpLocation <MultiValuedProperty>]
+
+   [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
+
+   [-RemoveExchangeLocation <MultiValuedProperty>]
+
+   [-RemoveOneDriveLocation <MultiValuedProperty>]
+
+   [-RemoveOneDriveLocationException <MultiValuedProperty>]
+
+   [-RemoveOnPremisesScannerDlpLocation <MultiValuedProperty>]
+
+   [-RemoveOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+
+   [-RemovePowerBIDlpLocation <MultiValuedProperty>]
+
+   [-RemovePowerBIDlpLocationException <MultiValuedProperty>]
+
+   [-RemoveSharePointLocation <MultiValuedProperty>]
+
+   [-RemoveSharePointLocationException <MultiValuedProperty>]
+
+   [-RemoveTeamsLocation <MultiValuedProperty>]
+
+   [-RemoveTeamsLocationException <MultiValuedProperty>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+
+   [-Confirm]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-DlpCompliancePolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4"
+  description: |-
+    This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the DLP policy named Main PII without affecting the existing URL values.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
+  description: |-
+    This example disables the "MainPII" policy.
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-DlpCompliancePolicy -Identity "PowerBIPolicy" -AddPowerBILocation "workspaceID1","workspaceID2","workspaceID3"
+  description: |-
+    This example adds the specified workspace IDs to the Power BI location for the DLP policy named PowerBIPolicy without affecting the existing workspace IDs.
+  summary: ""
+parameters:
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddEndpointDlpLocation
+  description: |+
+    The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddEndpointDlpLocationException
+  description: |+
+    The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddExchangeLocation
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddOneDriveLocation
+  description: |+
+    Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddOneDriveLocationException
+  description: |+
+    Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddOnPremisesScannerDlpLocation
+  description: |+
+    {{ Fill AddOnPremisesScannerDlpLocation Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddOnPremisesScannerDlpLocationException
+  description: |+
+    {{ Fill AddOnPremisesScannerDlpLocationException Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddPowerBIDlpLocation
+  description: |+
+    The AddPowerBIDlpLocation parameter specifies the Power BI workspace IDs to add to the DLP policy. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+    You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+    You can find the workspace ID using one of the following procedures:
+
+    - In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+    - Look in the URL of a selected workspace.
+    - In PowerShell, use the command **Get-PowerBIWorkspace**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddPowerBIDlpLocationException
+  description: |+
+    The AddPowerBIDlpLocationException parameter specifies Power BI workspace IDs to add to the list of excluded workspace IDs of a DLP policy that applies to all workspaces. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+    You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+    You can find the workspace ID using one of the following procedures:
+
+    - In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+    - Look in the URL of a selected workspace.
+    - In PowerShell, use the command **Get-PowerBIWorkspace**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddSharePointLocation
+  description: |+
+    The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+    SharePoint Online sites can't be added to the policy until they have been indexed.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddSharePointLocationException
+  description: |+
+    This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddTeamsLocation
+  description: |+
+    The AddTeamsLocation parameter specifies the Teams accounts to add to the list of included accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AddTeamsLocationException
+  description: |+
+    The AddTeamsLocationException parameter specifies the Teams accounts to add to the list of excluded accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptIfOneDriveSharedBy
+  description: |+
+    The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
+
+    To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptIfOneDriveSharedByMemberOf
+  description: |+
+    The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
+
+    To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExchangeSenderMemberOf
+  description: |+
+    The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the DLP policy. You identify the group by its email address.
+
+    You can enter multiple values separated by commas.
+
+    You can't use this parameter to specify Microsoft 365 Groups.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExchangeSenderMemberOfException
+  description: |+
+    The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the DLP policy. You identify the group by its email address.
+
+    You can enter multiple values separated by commas.
+
+    You can't use this parameter to specify Microsoft 365 Groups.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+    You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="PolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the DLP policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+    - Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="PolicyMode" data-throw-if-not-resolved="False" />
+  name: Mode
+  description: |+
+    The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
+
+    - Enable: The policy is enabled for actions and notifications. This is the default value.
+    - Disable: The policy is disabled.
+    - TestWithNotifications: No actions are taken, but notifications are sent.
+    - TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OneDriveSharedBy
+  description: |+
+    The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
+
+    To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OneDriveSharedByMemberOf
+  description: |+
+    The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
+
+    To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="PswsHashtable" data-throw-if-not-resolved="False" />
+  name: PolicyTemplateInfo
+  description: |+
+    {{ Fill PolicyTemplateInfo Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
+
+    Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 5 existing policies:
+
+    - Valid priority values for the existing 5 policies are from 0 through 4.
+    - Valid priority values for a new 6th policy are from 0 through 5.
+    - The default value for a new 6th policy is 5.
+
+    If you modify the priority value of a policy, the position of the policy in the list changes to match the priority value you specify. In other words, if you set the priority value of a policy to the same value as an existing policy, the priority value of the existing policy and all other lower priority policies after it is increased by 1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveEndpointDlpLocation
+  description: |+
+    The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveEndpointDlpLocationException
+  description: |+
+    The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveExchangeLocation
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveOneDriveLocation
+  description: |+
+    Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveOneDriveLocationException
+  description: |+
+    Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveOnPremisesScannerDlpLocation
+  description: |+
+    {{ Fill RemoveOnPremisesScannerDlpLocation Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveOnPremisesScannerDlpLocationException
+  description: |+
+    {{ Fill RemoveOnPremisesScannerDlpLocationException Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemovePowerBIDlpLocation
+  description: |+
+    The RemovePowerBIDlpLocation parameter specifies the Power BI workspace IDs to remove from the DLP policy.
+
+    You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemovePowerBIDlpLocationException
+  description: |+
+    The RemovePowerBIDlpLocationException parameter specifies Power BI workspace IDs to remove from the list of excluded workspace IDs of a DLP policy that applies to all workspaces.
+
+    You can enter multiple workspace IDs separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"workspaceID1","workspaceID2",..."workspaceIDN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveSharePointLocation
+  description: |+
+    The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveSharePointLocationException
+  description: |+
+    This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveTeamsLocation
+  description: |+
+    The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of included accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoveTeamsLocationException
+  description: |+
+    The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetryDistribution
+  isRequired: true
+  description: |+
+    The RetryDistribution switch redistributes the policy to all OneDrive for Business and SharePoint Online locations. You don't need to specify a value with this switch.
+
+    Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+
+    **Note**: Because the process of retrying distribution is a significant operation, run it only if necessary and for one policy at a time. It is not intended to be run every time you update a policy. If you run a script to update multiple policies, wait until the policy distribution is successful before running the command again for the next policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Security & Compliance Center
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance Center
+uid: ExchangePowerShell.Set-DlpCompliancePolicy
+name: Set-DlpCompliancePolicy
+description: |-
+  To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+
+  **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-DlpCompliancePolicy -Identity "Main PII" -RemoveExchangeLocation $_}`.
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://docs.microsoft.com/powershell/module/exchange/set-dlpcompliancepolicy
+  applicable: Security & Compliance Center
+  title: Set-DlpCompliancePolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

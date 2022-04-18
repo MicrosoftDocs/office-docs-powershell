@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.FindApplicationInstanceResult" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Find-CsOnlineApplicationInstance -SearchQuery <String> [-MaxResults <UInt32?>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Tenant <Guid>] [-CommonParameters]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test"
+  description: |-
+    This example returns up to 10 application instances whose name starts with "Test".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test" -MaxResults 5
+  description: |-
+    This example returns up to 5 application instances whose name starts with "Test".
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test Auto Attendant" -ExactMatchOnly
+  description: |-
+    This example returns up to 10 application instances whose name is "Test Auto Attendant".
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test Auto Attendant" -AssociatedOnly
+  description: |-
+    This example returns up to 10 application instances whose name is "Test Auto Attendant", and who are associated with an application configuration, like auto attendant or call queue.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AssociatedOnly
+  description: |+
+    The AssociatedOnly parameter instructs the cmdlet to return only application instances that are associated to a configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExactMatchOnly
+  description: |+
+    The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. The default value is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxResults
+  description: |+
+    The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default is value is 10. Max allowed value is 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SearchQuery
+  isRequired: true
+  description: |+
+    The SearchQuery parameter defines a query for application instances by display name, telephone number, or GUID of the application instance. This parameter accepts partial queries for display names and telephone numbers. The search is not case sensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UnAssociatedOnly
+  description: |+
+    The UnAssociatedOnly parameter instructs the cmdlet to return only application instances that are not associated to any configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Find-CsOnlineApplicationInstance
+name: Find-CsOnlineApplicationInstance
+description: |-
+  Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
+
+  If MaxResults is not specified, the number of returned applications instances is limited to 10 application instances.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/find-csonlineapplicationinstance
+  applicable: Skype for Business Online
+  title: Find-CsOnlineApplicationInstance
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

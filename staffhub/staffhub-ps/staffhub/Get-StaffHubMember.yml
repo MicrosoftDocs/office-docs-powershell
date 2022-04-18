@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get details for all team members or for a specified team member.
+
+  Note: This cmdlet is currently in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet is currently in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- Get-StaffHubMember [-TeamId] <String> [[-MemberId] <String>]
+examples:
+- title: Example 1
+  code: |-
+    Get-StaffHubMember -TeamId "TEAM_1234" -MemberId MBER_1234
+  description: |-
+    Get the details of MBER_1234 in team TEAM_1234.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-StaffHubMember -TeamId "TEAM_1234"
+  description: |-
+    Get the details of all the members in team TEAM_1234.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MemberId
+  description: |+
+    MemberId for the specified member in the team.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  isRequired: true
+  description: |+
+    TeamId for which all the members are to be fetched.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Get-StaffHubMember
+name: Get-StaffHubMember
+description: |-
+  Get details of team members.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubmember
+  applicable: Microsoft StaffHub
+  title: Get-StaffHubMember
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

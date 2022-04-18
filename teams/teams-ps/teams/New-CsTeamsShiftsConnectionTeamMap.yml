@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet connects a Microsoft Teams team and a Workforce management (WFM) team.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: Get-CsTeamsShiftsConnectionTeamMap
+  href: Get-CsTeamsShiftsConnectionTeamMap.yml
+- text: Remove-CsTeamsShiftsConnectionTeamMap
+  href: Remove-CsTeamsShiftsConnectionTeamMap.yml
+syntaxes:
+- New-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <string> -TeamId <string> -TimeZone <string> -WfmTeamId <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b" -TeamId 30b625bd-f0f7-4d5c-8793-9ccef5a63119 -TimeZone "America/Los_Angeles" -WfmTeamId "1000107"
+
+    TeamId                               TeamName WfmTeamId WfmTeamName
+    ------                               -------- --------- -----------
+    30b625bd-f0f7-4d5c-8793-9ccef5a6311          1000107
+  description: |-
+    Maps the Teams team with ID `30b625bd-f0f7-4d5c-8793-9ccef5a63119` and WFM team with ID `1000107` in the instance with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.
+
+    In case of error, we can capture the error response as following:
+
+    * Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+    * To get the entire error message in Json: `$result.ToJsonString()`
+
+    * To get the error object and object details: `$result, $result.Detail`
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorInstanceId
+  isRequired: true
+  description: |+
+    The connection instance ID used to map teams.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  isRequired: true
+  description: |+
+    The Teams team ID mapped.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TimeZone
+  isRequired: true
+  description: |+
+    The team's time zone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WfmTeamId
+  isRequired: true
+  description: |+
+    The WFM team ID mapped.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsTeamsShiftsConnectionTeamMap
+name: New-CsTeamsShiftsConnectionTeamMap
+description: |-
+  This cmdlet connects a Microsoft Teams team and a WFM team to allow for synchronization of shifts related data.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: New-CsTeamsShiftsConnectionTeamMap
+  author: gucsun
+  ms.author: gucsun
+  manager: navinth
+  online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionteammap
+  schema: 2.0.0

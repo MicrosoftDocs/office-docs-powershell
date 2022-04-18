@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a team.
+
+  Note: This cmdlet is currently in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet is currently in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- Add-StaffHubTeam [-Name] <String> [-TimeZone] <String> [[-ManagerEmail] <String>]
+examples:
+- title: Example 1
+  code: |-
+    Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta" -ManagerEmail "abc@contoso.com"
+  description: |-
+    Creates a team with abc@contoso.com as manager.
+  summary: ""
+- title: Example 2
+  code: |-
+    Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta"
+  description: |-
+    Creates a team with the logged in user as manager.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ManagerEmail
+  description: |+
+    Organizational email of the member who should be the manager of the team. If not specified, the logged in user is assigned as the manager.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the team to be created.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TimeZone
+  isRequired: true
+  description: |+
+    TimeZone of the team. Format - tz database.
+    Reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Add-StaffHubTeam
+name: Add-StaffHubTeam
+description: |-
+  Creates a team.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffhubteam
+  applicable: Microsoft StaffHub
+  title: Add-StaffHubTeam
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

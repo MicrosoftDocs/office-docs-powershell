@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEmergencyCallingPolicy
+  href: New-CsTeamsEmergencyCallingPolicy.yml
+- text: Get-CsTeamsEmergencyCallingPolicy
+  href: Get-CsTeamsEmergencyCallingPolicy.yml
+- text: Remove-CsTeamsEmergencyCallingPolicy
+  href: Remove-CsTeamsEmergencyCallingPolicy.yml
+- text: Grant-CsTeamsEmergencyCallingPolicy
+  href: Grant-CsTeamsEmergencyCallingPolicy.yml
+syntaxes:
+- >-
+  Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <String>]
+
+   [-NotificationDialOutNumber <String>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
+
+   [-NotificationMode <Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode>]
+
+   [-Description <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <String>]
+
+   [-NotificationDialOutNumber <String>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
+
+   [-NotificationMode <Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode>]
+
+   [-Description <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:>  Set-CsTeamsEmergencyCallingPolicy -Identity "testECP" -NotificationGroup "123@gh.com;567@test.com"
+  description: |-
+    This example modifies a existing cmdlet with identity testECP.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |2+
+     Provide a description of the Teams Emergency Calling policy to identify purpose of setting it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ExternalLocationLookupMode" data-throw-if-not-resolved="False" />
+  name: ExternalLocationLookupMode
+  description: |2+
+     Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |2+
+     The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |2+
+     The Identity parameter is a unique identifier that designates the name of the policy
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |2+
+     The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsTeamsEmergencyCallingPolicy cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NotificationDialOutNumber
+  description: |2+
+     This parameter represents PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NotificationGroup
+  description: |2+
+     NotificationGroup is a email list of users and groups to be notified of an emergency call
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode" data-throw-if-not-resolved="False" />
+  name: NotificationMode
+  description: |2+
+     The type of conference experience for security desk notification
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotificationOnly, ConferenceMuted, ConferenceUnMuted
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |2+
+     Specify the tenant id
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Set-CsTeamsEmergencyCallingPolicy
+name: Set-CsTeamsEmergencyCallingPolicy
+description: |-
+  This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsemergencycallingpolicy
+  applicable: Microsoft Teams
+  title: Set-CsTeamsEmergencyCallingPolicy
+  author: jenstrier
+  ms.author: jenstr
+  manager: roykuntz
+  ms.reviewer: chenc, pthota
+  schema: 2.0.0

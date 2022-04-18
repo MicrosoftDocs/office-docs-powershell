@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet returns the list of all the team mapping error reports. It can also return the configuration details of one mapping error report with its ID provided or other filter parameters.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: Disable-CsTeamsShiftsConnectionErrorReport
+  href: Disable-CsTeamsShiftsConnectionErrorReport.yml
+syntaxes:
+- Get-CsTeamsShiftsConnectionErrorReport [[-ErrorReportId] <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionErrorReport
+
+    Code               CreatedAt              Culture Id                                   IntermediateIncident Message                                                                                         Operation                            Parameter   Procedure       ResolvedAt revisitIntervalInMinutes
+    ----               ---------              ------- --                                   -------------------- -------                                                                                         ---------                            ---------   ---------       ---------- --
+    UserMappingError   11/30/2021 11:54:47 PM en-US   ec58cf47-0bb3-4c89-b9a6-e724278b57c9 2215                 Unable to map all users: 10 succeeded, 1 failed for Graph users, and 15 failed for Wfm users.   UserMappingHandler                   {9, 0, 39}  MapUsers                   15
+    UserMappingError   11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users.   UserMappingHandler                   {5, 0, 19}  MapUsers                   15
+    UserMappingError   11/30/2021 11:54:54 PM en-US   52f6e9bf-1258-4c2b-8af2-3aca159e98b3 740                  Unable to map all users: 12 succeeded, 3 failed for Graph users, and 11 failed for Wfm users.   UserMappingHandler                   {1, 2, 24}  MapUsers                   15
+    UserMappingError   11/30/2021 11:55:43 PM en-US   d0b7311f-823d-44e0-9171-f30eb6869335 2219                 Unable to map all users: 9 succeeded, 5 failed for Graph users, and 18 failed for Wfm users.    UserMappingHandler                   {7, 1, 37}  MapUsers                   15
+    UserMappingError   11/30/2021 11:55:46 PM en-US   e980e667-65b3-4b00-b756-fbf974537ee9 2218                 Unable to map all users: 22 succeeded, 4 failed for Graph users, and 19 failed for Wfm users.   UserMappingHandler                   {11, 2, 1}  MapUsers                   15
+  description: |-
+    Returns the list of all the error reports.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionErrorReport -ErrorReportId 18b3e490-e6ed-4c2e-9925-47e36609dff3
+
+    Code             CreatedAt              Culture Id                                   IntermediateIncident Message                                                                                        Operation          Parameter  Procedure ResolvedAt RevisitIntervalInMinute RevisitedAt
+    ----             ---------              ------- --                                   -------------------- -------                                                                                        ---------          ---------  --------- ---------- ----------------------- -------
+    UserMappingError 11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users.  UserMappingHandler {5, 0, 19} MapUsers             15
+  description: |-
+    Returns the error report with ID `18b3e490-e6ed-4c2e-9925-47e36609dff3`.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionErrorReport -Code UserMappingError
+
+    Code             CreatedAt              Culture Id                                   IntermediateIncident Message
+    ----             ---------              ------- --                                   -------------------- -------
+    UserMappingError 11/30/2021 11:54:47 PM en-US   ec58cf47-0bb3-4c89-b9a6-e724278b57c9 2217                 Unable to map all users: 9 succeeded, 5 failed for Graph users, and 8 failed for Wfm users.
+    UserMappingError 11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users.
+    UserMappingError 11/30/2021 11:54:54 PM en-US   52f6e9bf-1258-4c2b-8af2-3aca159e98b3 1776                 Unable to map all users: 6 succeeded, 2 failed for Graph users, and 3 failed for Wfm users.
+    UserMappingError 11/30/2021 11:55:43 PM en-US   d0b7311f-823d-44e0-9171-f30eb6869335 5319                 Unable to map all users: 7 succeeded, 3 failed for Graph users, and 2 failed for Wfm users.
+  description: |-
+    Returns the error report with error code `UserMappingError`.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionErrorReport -Operation UserMappingHandler
+
+    Code             CreatedAt              Culture Id                                   IntermediateIncident Message                                                                                       Operation          Parameter   Procedure ResolvedAt           RevisitIntervalInMinute
+    ----             ---------              ------- --                                   -------------------- -------                                                                                       ---------          ---------   --------- ----------           --------------------
+    UserMappingError 11/30/2021 11:54:47 PM en-US   ec58cf47-0bb3-4c89-b9a6-e724278b57c9 2217                 Unable to map all users: 9 succeeded, 5 failed for Graph users, and 8 failed for Wfm users.   UserMappingHandler {9, 0, 39}  MapUsers  12/3/2021 8:00:20 PM 15
+    UserMappingError 11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users. UserMappingHandler {5, 0, 19}  MapUsers                       15
+    UserMappingError 11/30/2021 11:54:54 PM en-US   52f6e9bf-1258-4c2b-8af2-3aca159e98b3 1776                 Unable to map all users: 6 succeeded, 2 failed for Graph users, and 3 failed for Wfm users.   UserMappingHandler {1, 2, 24}  MapUsers                       15
+  description: |-
+    Returns the error report with operation `UserMappingHandler`.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionErrorReport -After 2021-12-01T19:11:39.073Z
+
+    Code                CreatedAt             Culture Id                                   IntermediateIncident Message                                                                                       Operation                            Parameter   Procedure                ResolvedAt
+    ----                ---------             ------- --                                   -------------------- -------                                                                                       ---------                            ---------   ---------                ----
+    UserMappingError    12/1/2021 3:47:55 PM  en-US   82e59bc0-fb69-49f4-830b-19ac3b1f66d7 4796                 Unable to map all users: 6 succeeded, 2 failed for Graph users, and 3 failed for Wfm users.   UserMappingHandler                   {4, 0, 20}  MapUsers
+    UserMappingError    12/1/2021 11:04:34 PM en-US   f5423691-4fc7-46db-b962-fbcad322c56d 12                   Unable to map all users: 9 succeeded, 3 failed for Graph users, and 5 failed for Wfm users.   UserMappingHandler                   {13, 2, 12} MapUsers
+    UserMappingError    12/2/2021 4:33:06 AM  en-US   595f7789-0254-4a11-841d-d9b062515d2f 4383                 Unable to map all users: 4 succeeded, 5 failed for Graph users, and 8 failed for Wfm users.   UserMappingHandler                   {4, 0, 20}  MapUsers
+  description: |-
+    Returns the error report created after `2021-12-01T19:11:39.073Z`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Activeness
+  description: |+
+    The flag indicating results should have which activeness.
+    Set this to `ActiveOnly` to get Error reports that are not resolved.
+    Set this to `InactiveOnly` to get Error reports that are resolved.
+    Set this to `Both` to get both active and inactive Error reports.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: After
+  description: |+
+    The timestamp indicating results should be after which date and time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Before
+  description: |+
+    The timestamp indicating results should be before which date and time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Code
+  description: |+
+    The enum value of error code, human readable string defined in codebase.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorInstanceId
+  description: |+
+    The UUID of a connector instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorReportId
+  description: |+
+    The ID of the error report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Operation
+  description: |+
+    The name of the action of the controller or the name of the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Procedure
+  description: |+
+    The name of the executing function or procedure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  description: |+
+    The UUID of a team in Graph.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionErrorReport
+name: Get-CsTeamsShiftsConnectionErrorReport
+description: |-
+  This cmdlet returns the list of existing team mapping error reports. It can also return the configuration details for mapping result with given ID or other filters.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsShiftsConnectionErrorReport
+  author: gucsun
+  ms.author: gucsun
+  manager: navinth
+  online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport
+  schema: 2.0.0

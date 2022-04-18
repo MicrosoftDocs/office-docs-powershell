@@ -1,0 +1,356 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the New-CsOnlineLisCivicAddress cmdlet to create a civic address in the Location Information Service (LIS.)
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-CsOnlineLisCivicAddress [-HouseNumber <String>] [-HouseNumberSuffix <String>] [-StreetName <String>]
+
+   [-StreetSuffix <String>] [-PostDirectional <String>] [-PreDirectional <String>] [-City <String>]
+
+   [-CityAlias <String>] [-StateOrProvince <String>] -CountryOrRegion <String> [-PostalCode <String>]
+
+   [-Description <String>] -CompanyName <String> [-CompanyTaxId <String>] [-ValidationStatus <String>]
+
+   [-Latitude <String>] [-Longitude <String>] [-Confidence <String>] [-Elin <String>] [-Tenant <Guid>]
+
+   [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    New-CsOnlineLisCivicAddress -HouseNumber 3910 -StreetName Smith -StreetSuffix Street -PostDirectional NE -City Redmond -StateorProvince Washington -Country US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso
+  description: |-
+    This example creates a new civic address described as "West Coast Headquarters": 3910 Smith Street NE, Redmond WA, 98052.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    New-CsOnlineLisCivicAddress -Latitude 12 -Longitude 34 -HouseNumber 567 -StreetName Main -StreetSuffix St -City Springfield -StateOrProvince WA -CountryOrRegion US -PostalCode 98052 -CompanyName Contoso -Elin MICROSOFT_ELIN -Description "R&D office"
+  description: |-
+    This example creates a new civic address described as "R&D office", with latitude, longitude and ELIN.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: City
+  description: |+
+    Specifies the city of the new civic address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CityAlias
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompanyName
+  isRequired: true
+  description: |+
+    Specifies the name of your organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompanyTaxId
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Confidence
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CountryOrRegion
+  isRequired: true
+  description: |+
+    Specifies the country or region of the new civic address.
+    Needs to be a valid country code as contained in the ISO 3166-1 alpha-2 specification.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies an administrator defined description of the new civic address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Elin
+  description: |+
+    Specifies the Emergency Location Identification Number.
+    This is used in Direct Routing EGW scenarios.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HouseNumber
+  description: |+
+    Specifies the numeric portion of the new civic address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HouseNumberSuffix
+  description: |+
+    Specifies the numeric suffix of the new civic address.
+    For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Latitude
+  description: |+
+    Specifies the angular distance of a place north or south of the earth's equator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Longitude
+  description: |+
+    Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostalCode
+  description: |+
+    Specifies the postal code of the new civic address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostDirectional
+  description: |+
+    Specifies the directional attribute of the new civic address which follows the street name.
+    For example, "425 Smith Avenue NE".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreDirectional
+  description: |+
+    Specifies the directional attribute of the new civic address which precedes the street name.
+    For example, "425 NE Smith Avenue ".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StateOrProvince
+  description: |+
+    Specifies the state or province of the new civic address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StreetName
+  description: |+
+    Specifies the street name of the new civic address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StreetSuffix
+  description: |+
+    Specifies the street type of the new civic address.
+    The street suffix will typically be something like street, avenue, way, or boulevard.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValidationStatus
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.New-CsOnlineLisCivicAddress
+name: New-CsOnlineLisCivicAddress
+description: |-
+  Because each civic address needs at least one location to assign to users, creating a new civic address also creates a default location.
+  This is useful in cases where a civic address has no particular sub-locations.
+  In that scenario you can create the civic address using the New -CsOnlineLisCivicAddress cmdlet and use the default location identifier for assignment to users.
+  The example output from the Get-CsOnlineLisCivicAddress below shows the DefaultLocationId property.
+
+  CivicAddressId : 51a8a6e3-dae4-4653-9a99-a6e71c4c24ac
+
+  HouseNumber :
+
+  HouseNumberSuffix :
+
+  PreDirectional :
+
+  StreetName :
+
+  StreetSuffix :
+
+  PostDirectional :
+
+  City :
+
+  PostalCode :
+
+  StateOrProvince :
+
+  CountryOrRegion : US
+
+  Description :
+
+  CompanyName : MSFT
+
+  DefaultLocationId : 75301b5d-3609-458e-a379-da9a1ab33228
+
+  ValidationStatus : NotValidated
+
+  NumberOfVoiceUsers : 0
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/new-csonlineliscivicaddress
+  applicable: Skype for Business Online
+  title: New-CsOnlineLisCivicAddress
+  schema: 2.0.0
+  manager: bulenteg
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

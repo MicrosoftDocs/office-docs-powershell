@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a number pattern exempt from call blocking.
+module: SkypeForBusiness
+notes: |-
+  You can use Test-CsInboundBlockedNumberPattern to test your call block and exempt phone number ranges.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsInboundExemptNumberPattern
+  href: New-CsInboundExemptNumberPattern.yml
+- text: Set-CsInboundExemptNumberPattern
+  href: Set-CsInboundExemptNumberPattern.yml
+- text: Get-CsInboundExemptNumberPattern
+  href: Get-CsInboundExemptNumberPattern.yml
+- text: Test-CsInboundBlockedNumberPattern
+  href: Test-CsInboundBlockedNumberPattern.yml
+- text: Get-CsTenantBlockedCallingNumbers
+  href: Get-CsTenantBlockedCallingNumbers.yml
+syntaxes:
+- Remove-CsInboundExemptNumberPattern -Identity <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsInboundExemptNumberPattern -Identity "Exempt1"
+  description: |-
+    This removes the exempt number patterns with Identity Exempt1.
+  summary: ""
+parameters:
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the exempt number pattern to be listed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online and Teams
+uid: SkypeForBusiness.Remove-CsInboundExemptNumberPattern
+name: Remove-CsInboundExemptNumberPattern
+description: |-
+  This cmdlet removes a specific exempt number pattern from the tenant list for call blocking
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/remove-csinboundexemptnumberpattern
+  applicable: Skype for Business Online and Teams
+  author: jenstrier
+  ms.author: jenstr
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the specified member from the team.
+
+  Note: This cmdlet is currently in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet is currently in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- Remove-StaffHubMember [-TeamId] <String> [[-MemberId] <String>] [[-MemberObject] <PSObject>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-StaffHubMember -TeamId "TEAM_1234" -MemberId "MBER_1234"
+  description: |-
+    This removes member MBER_1234 from TEAM_1234.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MemberId
+  description: |+
+    MemberId of the member to be removed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: MemberObject
+  description: |+
+    Entire member object returned from `Get-StaffHubMember`.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  isRequired: true
+  description: |+
+    TeamId from which the specified member is to be removed.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Remove-StaffHubMember
+name: Remove-StaffHubMember
+description: |-
+  Removes the specified member from the team.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/remove-staffhubmember
+  applicable: Microsoft StaffHub
+  title: Remove-StaffHubMember
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

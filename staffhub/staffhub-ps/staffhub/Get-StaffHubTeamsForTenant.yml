@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get all the teams in the tenant of the logged in user.
+
+  Note: This cmdlet is currently in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet is currently in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>] [[-ManagedBy] <StaffHub|Teams>]
+examples:
+- title: Example 1
+  code: |-
+    Get-StaffHubTeamsForTenant -Top 10
+  description: |-
+    Get first 10 teams in the tenant by ascending creation time order.
+    If 'Top' parameter is not specified, then it defaults it to 1000.
+    This returns a continuation token stored in $nextToken variable which can be used by the following call.
+    Eg: Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-StaffHubTeamsForTenant
+  description: |-
+    Get all teams in the tenant with page size restricted to 1000 by default.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-StaffHubTeamsForTenant -ManagedBy Teams
+  description: |-
+    Return Teams that have not been created using StaffHub.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContinuationToken
+  description: |+
+    Continuation Token returned by the previous call.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="StaffHub | Teams" data-throw-if-not-resolved="False" />
+  name: ManagedBy
+  description: |+
+    Get Teams of a specific type. Valid values are:
+    - StaffHub
+    - Teams
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Top
+  description: |+
+    Top 'n' items to be fetched sorted by ascending creation time order.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Get-StaffHubTeamsForTenant
+name: Get-StaffHubTeamsForTenant
+description: |-
+  Get all the teams in the tenant of the logged in user.
+  ContinuationToken from the call is stored in $nextToken Variable.
+  So the next call can be made like Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubteamsfortenant
+  applicable: Microsoft StaffHub
+  title: Get-StaffHubTeamsForTenant
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

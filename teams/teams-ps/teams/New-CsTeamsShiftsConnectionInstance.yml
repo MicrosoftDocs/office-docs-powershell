@@ -1,0 +1,264 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet creates a Shifts connection instance.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: Get-CsTeamsShiftsConnectionInstance
+  href: Get-CsTeamsShiftsConnectionInstance.yml
+- text: Set-CsTeamsShiftsConnectionInstance
+  href: Set-CsTeamsShiftsConnectionInstance.yml
+- text: Remove-CsTeamsShiftsConnectionInstance
+  href: Remove-CsTeamsShiftsConnectionInstance.yml
+- text: Get-CsTeamsShiftsConnectionConnector
+  href: Get-CsTeamsShiftsConnectionConnector.yml
+syntaxes:
+- New-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorSpecificSettingAdminApiUrl <string> -ConnectorSpecificSettingCookieAuthUrl <string> -ConnectorSpecificSettingEssApiUrl <string> -ConnectorSpecificSettingFederatedAuthUrl <string> -ConnectorSpecificSettingLoginPwd <string> -ConnectorSpecificSettingLoginUserName <string> -ConnectorSpecificSettingRetailWebApiUrl <string> -ConnectorSpecificSettingSiteManagerUrl <string> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> [-ConnectorAdminEmail <String[]>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://www.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://www.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://www.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://www.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://www.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://www.contoso.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "123451fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "swapRequest", "openShiftRequest", "timeOffRequest" -Name "MyInstance" -SyncFrequencyInMin 10  -ConnectorAdminEmail "test@abc.com", "test2@abc.com"
+
+    {
+        "id": "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09",
+        "tenantId": "12345b34-ccb0-47e1-bdb7-e49db9c7c14a",
+        "name": "MyInstance",
+        "connector": {
+            "id": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
+            "name": "Contoso V1"
+        },
+        "connectorSpecificSettings": {
+            "adminApiUrl": "https://www.contoso.com/retail/data/wfmadmin/api/v1-beta2",
+            "siteManagerUrl": "https://www.contoso.com/retail/data/wfmsm/api/v1-beta2",
+            "essApiUrl": "https://www.contoso.com/retail/data/wfmess/api/v1-beta1",
+            "retailWebApiUrl": "https://www.contoso.com/retail/data/retailwebapi/api/v1",
+            "cookieAuthUrl": "https://www.contoso.com/retail/data/login",
+            "federatedAuthUrl": "https://www.contoso.com/retail/data/login"
+        },
+        "enabledConnectorScenarios": [
+            "Shift",
+            "SwapRequest",
+            "UserShiftPreferences",
+            "OpenShift",
+            "OpenShiftRequest",
+            "TimeOff",
+            "TimeOffRequest"
+        ],
+        "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
+        "enabledWfiScenarios": [
+            "SwapRequest",
+            "OpenShiftRequest",
+            "TimeOffRequest"
+        ],
+        "syncFrequencyInMin": 10,
+        "designatedActorId": "12345a2d-422c-4d4b-a2db-4cea80f98255",
+        "connectorAdminEmails": [
+            "test@abc.com",
+            "test2@abc.com"
+        ],
+        "etag": "\"28007861-0000-0400-0000-60d3579b0000\""
+    }
+  description: |-
+    Returns the object of created connector instance.
+
+    In case of error, we can capture the error response as following:
+
+    * Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+    * To get the entire error message in Json: `$result.ToJsonString()`
+
+    * To get the error object and object details: `$result, $result.Detail`
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ConnectorAdminEmail
+  description: |+
+    The list of connector admin email addresses that receive result notifications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorId
+  isRequired: true
+  description: |+
+    The ID of the Shifts Connector.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingAdminApiUrl
+  isRequired: true
+  description: |+
+    The admin API URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingCookieAuthUrl
+  isRequired: true
+  description: |+
+    The cookie authorization URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingEssApiUrl
+  isRequired: true
+  description: |+
+    The essential API URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingFederatedAuthUrl
+  isRequired: true
+  description: |+
+    The federated authorization URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingLoginPwd
+  isRequired: true
+  description: |+
+    The login password to WFM team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingLoginUserName
+  isRequired: true
+  description: |+
+    The login user name to WFM team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingRetailWebApiUrl
+  isRequired: true
+  description: |+
+    The retail web api URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettingSiteManagerUrl
+  isRequired: true
+  description: |+
+    The site manager URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DesignatedActorId
+  isRequired: true
+  description: |+
+    The ID of the connection instance creator. You can retrieve user ID from Azure portal or Graph Explorer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EnabledConnectorScenario
+  isRequired: true
+  description: |+
+    The connector enabled scenarios that are synced from the Workforce management (WFM) system to Shifts in Microsoft Teams. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.yml) to get supported scenarios.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EnabledWfiScenario
+  isRequired: true
+  description: |+
+    The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.yml) to get supported scenarios.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The connector instance's name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Integer" data-throw-if-not-resolved="False" />
+  name: SyncFrequencyInMin
+  isRequired: true
+  description: |+
+    The sync frequency in minutes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsTeamsShiftsConnectionInstance
+name: New-CsTeamsShiftsConnectionInstance
+description: |-
+  This cmdlet creates a Shifts connection instance. It allows the admin to set up the environment for further connection settings.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: New-CsTeamsShiftsConnectionInstance
+  author: gucsun
+  ma.author: gucsun
+  manager: navinth
+  online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance
+  schema: 2.0.0

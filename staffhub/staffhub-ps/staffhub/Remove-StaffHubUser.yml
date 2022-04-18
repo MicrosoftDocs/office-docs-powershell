@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: This cmdlet is currently in Beta.
+  Removes the specified user from StaffHub (Only for users deleted in AAD already)
+module: MicrosoftStaffHubPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-StaffHubUser [-UserId] <String>
+examples:
+- title: Example 1
+  code: |-
+    Remove-StaffHubUser -UserId "USER_1234"
+  description: |-
+    This removes the user "USER_1234" from StaffHub, if the user has been deleted in AAD already.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserId
+  isRequired: true
+  description: |+
+    UserId of the user to be removed from StaffHub
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Remove-StaffHubUser
+name: Remove-StaffHubUser
+description: |-
+  Removes the specified user from StaffHub.
+  Pre-requisite is to delete the user from AAD.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/remove-staffhubuser
+  applicable: Microsoft StaffHub
+  title: Remove-StaffHubUser
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

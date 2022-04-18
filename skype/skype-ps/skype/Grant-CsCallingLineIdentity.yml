@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Set-CsCallingLineIdentity
+  href: https://docs.microsoft.com/powershell/module/skype/set-cscallinglineidentity?view=skype-ps
+- text: Get-CsCallingLineIdentity
+  href: https://docs.microsoft.com/powershell/module/skype/get-cscallinglineidentity?view=skype-ps
+- text: Remove-CsCallingLineIdentity
+  href: https://docs.microsoft.com/powershell/module/skype/remove-cscallinglineidentity?view=skype-ps
+- text: New-CsCallingLineIdentity
+  href: https://docs.microsoft.com/powershell/module/skype/new-cscallinglineidentity?view=skype-ps
+syntaxes:
+- Grant-CsCallingLineIdentity [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>] [-PassThru] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Grant-CsCallingLineIdentity -Identity "Ken Myer" -PolicyName CallerIDRedmond
+  description: |-
+    This example assigns the Caller ID policy with the Identity CallerIDRedmond to the user with the display name Ken Myer.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Grant-CsCallingLineIdentity -PolicyName Anonymous -Identity "amos.marble@contoso.com"
+  description: |-
+    This example grants the Caller ID policy "Anonymous" to the user Amos Marble.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity (unique identifier) of the user to whom the policy is being assigned. User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
+
+    You can use the asterisk (\*) wildcard character when using the Display Name as the user Identity. For example, the Identity "\*Smith" returns all the users who have a display name that ends with the string value "Smith".
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns the results of the command. By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    The name (Identity) of the Caller ID policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+    You can return your tenant ID by running this command:
+
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes. 
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Grant-CsCallingLineIdentity
+name: Grant-CsCallingLineIdentity
+description: |-
+  You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed; you can then apply the Caller ID policy to a specific user.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/grant-cscallinglineidentity
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Grant-CsCallingLineIdentity
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a member or manager to the specified team
+
+  Note: This cmdlet currently is in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet currently is in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- >-
+  Add-StaffHubMember [-TeamId] <String> [-FirstName] <String> [-LastName] <String> [[-Email] <String>]
+
+   [[-PhoneNumber] <String>] [-IsManager] <Boolean>
+examples:
+- title: Example 1
+  code: |-
+    Add-StaffHubMember -TeamId "TEAM_1234" -FirstName "Abc" -LastName "123" -Email "abc@contoso.com" -IsManager $false
+  description: |-
+    Adds the member with specified email/PhoneNumber to the team. Either PhoneNumber/Email is mandatory.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Email
+  description: |+
+    Office 365 email of the member to be added.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FirstName
+  isRequired: true
+  description: |+
+    First name of the member to be added.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsManager
+  isRequired: true
+  description: |+
+    Should the person be added as a manager.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LastName
+  isRequired: true
+  description: |+
+    Last name of the member to be added.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  description: |+
+    Phone number of the member to be added.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  isRequired: true
+  description: |+
+    ID of the team to which the member is to be added.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Add-StaffHubMember
+name: Add-StaffHubMember
+description: |-
+  Adds a member or manager to the specified team.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffhubmember
+  applicable: Microsoft StaffHub
+  title: Add-StaffHubMember
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

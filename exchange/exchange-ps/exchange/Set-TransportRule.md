@@ -739,7 +739,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-The ApplyOME parameter specifies an action that encrypts messages and their attachments by using Office 365 Message Encryption. Valid values are:
+The ApplyOME parameter specifies an action that encrypts messages and their attachments by using Microsoft Purview Message Encryption. Valid values are:
 
 - $true: The message and attachments are encrypted.
 - $false: The message and attachments aren't encrypted.
@@ -4116,7 +4116,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-The RemoveOME parameter specifies an action that removes the previous version of Office 365 Message Encryption from messages and their attachments. Valid values are:
+The RemoveOME parameter specifies an action that removes the previous version of Microsoft Purview Message Encryption from messages and their attachments. Valid values are:
 
 - $true: The message and attachments are decrypted.
 - $false: The message and attachments aren't decrypted.
@@ -4139,7 +4139,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-The RemoveOMEv2 parameter specifies an action that removes Office 365 Message Encryption from messages and their attachments. Valid values are:
+The RemoveOMEv2 parameter specifies an action that removes Microsoft Purview Message Encryption from messages and their attachments. Valid values are:
 
 - $true: The message and attachments are decrypted.
 - $false: The message and attachments aren't decrypted.

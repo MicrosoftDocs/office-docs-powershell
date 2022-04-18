@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
+
+  **Note**: This cmdlet is currently not supported for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These
+  customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance, or Set-CsOnlineVoiceApplicationInstance cmdlets.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The cmdlet is available in Teams PowerShell module 3.0.0 or later.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsPhoneNumberAssignment
+  href: Set-CsPhoneNumberAssignment.yml
+syntaxes:
+- Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [<CommonParameters>]
+- Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
+  description: |-
+    This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com.
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
+  description: |-
+    This example removes/unassigns the phone number from user2@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress, or the UserPrincipalName attribute of the user or
+    resource account.
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  description: |+
+    The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without the prefixed "tel:".
+
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PhoneNumberType
+  description: |+
+    The type of phone number to unassign from the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect.
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Switch" data-throw-if-not-resolved="False" />
+  name: RemoveAll
+  description: |+
+    Unassigns the phone number from the user or resource account.
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsPhoneNumberAssignment
+name: Remove-CsPhoneNumberAssignment
+description: |-
+  This cmdlet removes/unassigns a phone number from a user or resource account. The phone number continues to be available in the tenant.
+
+  Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
+
+  If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
+  and a Message string parameter with additional details of the failure.
+metadata:
+  external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://docs.microsoft.com/powershell/module/teams/remove-csphonenumberassignment
+  applicable: Microsoft Teams
+  author: jenstrier
+  ms.author: jenstr
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

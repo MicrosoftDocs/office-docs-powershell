@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provide the topic introduction here.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Register-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-BridgeId <Guid>]
+
+   [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>] [-DomainController <Fqdn>] [-Force]
+
+   [<CommonParameters>]
+- >-
+  Register-CsOnlineDialInConferencingServiceNumber [-Instance] <ConferencingServiceNumber>
+
+   [-BridgeId <Guid>] [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Insert example commands for example 1.
+  description: |-
+    Insert descriptive text for example 1.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: BridgeId
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BridgeName
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    PARAMVALUE: Fqdn
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="ConferencingServiceNumber" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    PARAMVALUE: ConferencingServiceNumber
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Register-CsOnlineDialInConferencingServiceNumber
+name: Register-CsOnlineDialInConferencingServiceNumber
+description: |-
+  Provide the detailed description here.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/register-csonlinedialinconferencingservicenumber
+  applicable: Skype for Business Online
+  title: Register-CsOnlineDialInConferencingServiceNumber
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an application instance in Azure Active Directory.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  New-CsOnlineApplicationInstance [-UserPrincipalName] <string> [[-ApplicationId] <guid>] [[-DisplayName] <string>]
+
+      [-Tenant <guid>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    New-CsOnlineApplicationInstance -UserPrincipalName appinstance01@contoso.com -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
+  description: |-
+    This example creates a new application instance for an Auto Attendant with UserPrincipalName "appinstance01@contoso.com", ApplicationId "ce933385-9390-45d1-9512-c8d228074e07", DisplayName "AppInstance01" for the tenant.
+
+    The application ID's that you need to use while creating the application instances are:
+
+    Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
+    Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  description: |+
+    The application ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    The display name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserPrincipalName
+  isRequired: true
+  description: |+
+    The user principal name. It will be used as the SIP URI too. The user principal name should have an online domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.New-CsOnlineApplicationInstance
+name: New-CsOnlineApplicationInstance
+description: |-
+  This cmdlet is used to create an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationinstance
+  applicable: Skype for Business Online
+  title: New-CsOnlineApplicationInstance
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

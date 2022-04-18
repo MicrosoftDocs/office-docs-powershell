@@ -2472,7 +2472,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveRMSTemplate
-The RemoveRMSTemplate parameter specifies an action for the DLP rule that removes Office 365 Message Encryption from messages and their attachments. Valid values are:
+The RemoveRMSTemplate parameter specifies an action for the DLP rule that removes Microsoft Purview Message Encryption from messages and their attachments. Valid values are:
 
 - $true: The message and attachments are decrypted.
 - $False: The messages and attachments are not decrypted.

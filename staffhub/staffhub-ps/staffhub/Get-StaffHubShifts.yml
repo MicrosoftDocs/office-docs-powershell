@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: This cmdlet is currently in Beta.
+  Get details of shifts for all team members or for a specified team member for the given time window.
+module: MicrosoftStaffHubPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-StaffHubShifts [-TeamId] <String> [-StartDateTime] <DateTime> [-EndDateTime] <DateTime>
+
+   [[-MemberId] <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $startTime = Get-Date -Date "2018-01-01T00:10:00"
+    $endTime = Get-Date -Date "2018-01-01T04:10:00"
+    Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $endTime -MemberId MBER_1234
+  description: |-
+    Get the details of the shifts for MBER_1234 in the team TEAM_1234 between start time and end time
+  summary: ""
+- title: Example 2
+  code: |-
+    $startTime = Get-Date -Date "2018-01-01T00:10:00"
+    $endTime = Get-Date -Date "2018-01-01T04:10:00"
+    Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $endTime
+  description: |-
+    Get the details of the shifts for all the members in team TEAM_1234 between start time and end time
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDateTime
+  isRequired: true
+  description: |+
+    EndDateTime for the time window between which shifts are to be fetched
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MemberId
+  description: |+
+    MemberId of the member for which the shifts are to be fetched
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartDateTime
+  isRequired: true
+  description: |+
+    StartDateTime for the time window between which shifts are to be fetched
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  isRequired: true
+  description: |+
+    TeamId of the team for which the shifts are to be fetched
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Get-StaffHubShifts
+name: Get-StaffHubShifts
+description: |-
+  Get details of the shifts for all team members or for a specified team member
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubshifts
+  applicable: Microsoft StaffHub
+  title: Get-StaffHubShifts
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

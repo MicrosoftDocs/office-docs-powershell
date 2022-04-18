@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a specific or the full list of all number patterns exempt from call blocking.
+module: SkypeForBusiness
+notes: |-
+  You can use Test-CsInboundBlockedNumberPattern to test your call block and exempt phone number ranges.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsInboundExemptNumberPattern
+  href: New-CsInboundExemptNumberPattern.yml
+- text: Set-CsInboundExemptNumberPattern
+  href: Set-CsInboundExemptNumberPattern.yml
+- text: Remove-CsInboundExemptNumberPattern
+  href: Remove-CsInboundExemptNumberPattern.yml
+- text: Test-CsInboundBlockedNumberPattern
+  href: Test-CsInboundBlockedNumberPattern.yml
+- text: Get-CsTenantBlockedCallingNumbers
+  href: Get-CsTenantBlockedCallingNumbers.yml
+syntaxes:
+- Get-CsInboundExemptNumberPattern [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Filter <Object>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsInboundExemptNumberPattern
+  description: |-
+    This returns all exempt number patterns.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsInboundExemptNumberPattern -Identity "Exempt1"
+  description: |-
+    This returns the exempt number patterns with Identity Exempt1.
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to limit the returned data by filtering on specific attributes. The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the exempt number pattern to be listed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online and Teams
+uid: SkypeForBusiness.Get-CsInboundExemptNumberPattern
+name: Get-CsInboundExemptNumberPattern
+description: |-
+  This cmdlet returns a specific or all exempt number patterns added to the tenant list for call blocking including Name, Description, Enabled (True/False), and Pattern for each.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csinboundexemptnumberpattern
+  applicable: Skype for Business Online and Teams
+  author: jenstrier
+  ms.author: jenstr
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsTenantDialPlan` cmdlet to remove a tenant dial plan.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Remove-CsTenantDialPlan [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsTenantDialPlan -Identity Vt1TenantDialPlan2
+  description: |-
+    This example removes the Vt1TenantDialPlan2.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm parameter prompts you for confirmation before the command is executed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force parameter suppresses any confirmation prompts that are otherwise displayed before the changes are made.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter is the unique identifier of the tenant dial plan to remove.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+    You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf parameter describes what would happen if you executed the command, without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsTenantDialPlan
+name: Remove-CsTenantDialPlan
+description: |-
+  The `Remove-CsTenantDialPlan` cmdlet removes an existing tenant dial plan (also known as a location profile).
+  Tenant dial plans provide required information to allow Enterprise Voice users to make telephone calls.
+  The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
+  A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
+
+  Removing a tenant dial plan also removes any associated normalization rules.
+  If no tenant dial plan is assigned to an organization, the Global dial plan is used.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/remove-cstenantdialplan
+  applicable: Skype for Business Online
+  title: Remove-CsTenantDialPlan
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

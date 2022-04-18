@@ -1,0 +1,34 @@
+items:
+- name: Reference
+  items:
+  - name: MicrosoftStaffHubPowerShell
+    uid: MicrosoftStaffHubPowerShell
+    items:
+    - name: Add-StaffHubMember
+      uid: MicrosoftStaffHubPowerShell.Add-StaffHubMember
+    - name: Add-StaffHubShift
+      uid: MicrosoftStaffHubPowerShell.Add-StaffHubShift
+    - name: Add-StaffHubTeam
+      uid: MicrosoftStaffHubPowerShell.Add-StaffHubTeam
+    - name: Connect-StaffHub
+      uid: MicrosoftStaffHubPowerShell.Connect-StaffHub
+    - name: Get-StaffHubMember
+      uid: MicrosoftStaffHubPowerShell.Get-StaffHubMember
+    - name: Get-StaffHubShifts
+      uid: MicrosoftStaffHubPowerShell.Get-StaffHubShifts
+    - name: Get-StaffHubTeamsForTenant
+      uid: MicrosoftStaffHubPowerShell.Get-StaffHubTeamsForTenant
+    - name: Get-StaffHubUsersForTenant
+      uid: MicrosoftStaffHubPowerShell.Get-StaffHubUsersForTenant
+    - name: Import-StaffHubMember
+      uid: MicrosoftStaffHubPowerShell.Import-StaffHubMember
+    - name: Import-StaffHubShift
+      uid: MicrosoftStaffHubPowerShell.Import-StaffHubShift
+    - name: Import-StaffHubTeam
+      uid: MicrosoftStaffHubPowerShell.Import-StaffHubTeam
+    - name: Remove-StaffHubMember
+      uid: MicrosoftStaffHubPowerShell.Remove-StaffHubMember
+    - name: Remove-StaffHubUser
+      uid: MicrosoftStaffHubPowerShell.Remove-StaffHubUser
+metadata:
+  universal_conceptual_toc: /powershell/staffhub/staffhub-ps/toc.json

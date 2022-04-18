@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a online voice mail policy at the per-user scope. Online voicemail policies manage usages for Voicemail service.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Get-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps
+- text: Set-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps
+- text: New-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps
+- text: Remove-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps
+syntaxes:
+- >-
+  Grant-CsOnlineVoicemailPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+
+   [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Grant-CsOnlineVoicemailPolicy -Identity "sip:user@contoso.com" -PolicyName TranscriptionDisabled
+  description: |-
+    The command shown in Example 1 assigns the per-user online voicemail policy TranscriptionDisabled to a single user with SIP URI sip:user@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy. If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will contact the first available domain controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsOnlineVoicemailPolicy cmdlet does not pass objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    A unique identifier(name) of the policy.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Microsoft Teams or Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Grant-CsOnlineVoicemailPolicy
+name: Grant-CsOnlineVoicemailPolicy
+description: |-
+  This cmdlet assigns an existing user-specific online voicemail policy to a user. Online voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Grant-CsOnlineVoicemailPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

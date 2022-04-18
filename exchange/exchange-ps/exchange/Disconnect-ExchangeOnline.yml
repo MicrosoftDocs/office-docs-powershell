@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+
+  Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to disconnect from remote PowerShell sessions that you opened using the Connect-ExchangeOnline or Connect-IPPSSession cmdlets.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Disconnect-ExchangeOnline [-Confirm]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Disconnect-ExchangeOnline
+  description: |-
+    This example asks for confirmation before disconnecting the current Exchange Online PowerShell session.
+  summary: ""
+- title: Example 2
+  code: |-
+    Disconnect-ExchangeOnline -Confirm:$false
+  description: |-
+    This example disconnects the current Exchange Online PowerShell session without a confirmation prompt. Note that the following notification text is still displayed: `Removed the PSSession <ConnectionName> connected to outlook.office365.com Disconnected successfully !`.
+  summary: ""
+- title: Example 3
+  code: |-
+    Disconnect-ExchangeOnline -Confirm:$false -InformationAction Ignore -ErrorAction SilentlyContinue
+  description: |-
+    This example silently disconnects the current Exchange Online PowerShell session, without a confirmation prompt or any notification text.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Disconnect-ExchangeOnline
+name: Disconnect-ExchangeOnline
+description: |-
+  The Connect-ExchangeOnline cmdlet establishes a connection to the Exchange Online organization of the logged-in admin user. This cmdlet is the counterpart to Connect-ExchangeOnline.
+
+  Disconnect-ExchangeOnline closes any active session and clears the cache. After a successful disconnect, you can't run any of the V2 cmdlets or older remote PowerShell cmdlets.
+metadata:
+  external help file: ExchangeOnlineManagement-help.xml
+  Module Name: ExchangeOnlineManagement
+  online version: https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline
+  applicable: Exchange Online
+  title: Disconnect-ExchangeOnline
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: navgupta

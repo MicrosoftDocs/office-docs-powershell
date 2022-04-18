@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineVoicemailUserSettings cmdlet to get information about online voicemail user settings of a specific user.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Voicemail.Models.VoicemailUserSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineVoicemailUserSettings
+  href: Set-CsOnlineVoicemailUserSettings.yml
+syntaxes:
+- Get-CsOnlineVoicemailUserSettings -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineVoicemailUserSettings -Identity sip:user@contoso.com
+  description: |-
+    This example gets the online voicemail user settings of user with SIP URI sip:user@contoso.com.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000"
+  description: |-
+    This example gets the online voicemail user settings of user with Object ID "00000000-0000-0000-0000-000000000000".
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineVoicemailUserSettings
+name: Get-CsOnlineVoicemailUserSettings
+description: |-
+  The Get-CsOnlineVoicemailUserSettings cmdlet returns information about online voicemail user settings of a specific user in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailusersettings
+  applicable: Skype for Business Online
+  title: Get-CsOnlineVoicemailUserSettings
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

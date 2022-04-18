@@ -1,0 +1,44 @@
+items:
+- name: Reference
+  items:
+  - name: OfficeOnlineServerPowerShell
+    uid: OfficeOnlineServerPowerShell
+    items:
+    - name: Get-OfficeWebAppsExcelBIServer
+      uid: OfficeOnlineServerPowerShell.Get-OfficeWebAppsExcelBIServer
+    - name: Get-OfficeWebAppsExcelUserDefinedFunction
+      uid: OfficeOnlineServerPowerShell.Get-OfficeWebAppsExcelUserDefinedFunction
+    - name: Get-OfficeWebAppsFarm
+      uid: OfficeOnlineServerPowerShell.Get-OfficeWebAppsFarm
+    - name: Get-OfficeWebAppsHost
+      uid: OfficeOnlineServerPowerShell.Get-OfficeWebAppsHost
+    - name: Get-OfficeWebAppsMachine
+      uid: OfficeOnlineServerPowerShell.Get-OfficeWebAppsMachine
+    - name: New-OfficeWebAppsExcelBIServer
+      uid: OfficeOnlineServerPowerShell.New-OfficeWebAppsExcelBIServer
+    - name: New-OfficeWebAppsExcelUserDefinedFunction
+      uid: OfficeOnlineServerPowerShell.New-OfficeWebAppsExcelUserDefinedFunction
+    - name: New-OfficeWebAppsFarm
+      uid: OfficeOnlineServerPowerShell.New-OfficeWebAppsFarm
+    - name: New-OfficeWebAppsHost
+      uid: OfficeOnlineServerPowerShell.New-OfficeWebAppsHost
+    - name: New-OfficeWebAppsMachine
+      uid: OfficeOnlineServerPowerShell.New-OfficeWebAppsMachine
+    - name: Remove-OfficeWebAppsExcelBIServer
+      uid: OfficeOnlineServerPowerShell.Remove-OfficeWebAppsExcelBIServer
+    - name: Remove-OfficeWebAppsExcelUserDefinedFunction
+      uid: OfficeOnlineServerPowerShell.Remove-OfficeWebAppsExcelUserDefinedFunction
+    - name: Remove-OfficeWebAppsHost
+      uid: OfficeOnlineServerPowerShell.Remove-OfficeWebAppsHost
+    - name: Remove-OfficeWebAppsMachine
+      uid: OfficeOnlineServerPowerShell.Remove-OfficeWebAppsMachine
+    - name: Repair-OfficeWebAppsFarm
+      uid: OfficeOnlineServerPowerShell.Repair-OfficeWebAppsFarm
+    - name: Set-OfficeWebAppsExcelUserDefinedFunction
+      uid: OfficeOnlineServerPowerShell.Set-OfficeWebAppsExcelUserDefinedFunction
+    - name: Set-OfficeWebAppsFarm
+      uid: OfficeOnlineServerPowerShell.Set-OfficeWebAppsFarm
+    - name: Set-OfficeWebAppsMachine
+      uid: OfficeOnlineServerPowerShell.Set-OfficeWebAppsMachine
+metadata:
+  universal_conceptual_toc: /powershell/officewebapps/officewebapps-ps/toc.json

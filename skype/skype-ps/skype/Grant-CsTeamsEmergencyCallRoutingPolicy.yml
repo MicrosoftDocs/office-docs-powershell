@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.AD.UserIdParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEmergencyCallRoutingPolicy
+  href: New-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Set-CsTeamsEmergencyCallRoutingPolicy
+  href: Set-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Get-CsTeamsEmergencyCallRoutingPolicy
+  href: Get-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Remove-CsTeamsEmergencyCallRoutingPolicy
+  href: Remove-CsTeamsEmergencyCallRoutingPolicy.yml
+syntaxes:
+- >-
+  Grant-CsTeamsEmergencyCallRoutingPolicy [-PolicyName] <String> [-Tenant <System.Guid>]
+
+   [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:> Grant-CsTeamsEmergencyCallRoutingPolicy -Identity user1 -PolicyName TestECRP
+  description: |-
+    This example assigns a Teams Emergency Call Routing policy(TestECRP) to a user(user1)
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Allows you to specify a domain controller. If no domain controller is specified, the first available will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Indicates the Identity of the user account the policy should be assigned to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Including this parameter (which does not take a value) displays the user information when the cmdlet completes. Normally there is no output when this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: |+
+    The Identity of the Teams Emergency Call Routing policy to apply to the user.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Microsoft internal usage only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Grant-CsTeamsEmergencyCallRoutingPolicy
+name: Grant-CsTeamsEmergencyCallRoutingPolicy
+description: |-
+  This cmdlet assigns a Teams Emergency Call Routing policy with one user. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsemergencycallroutingpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsEmergencyCallRoutingPolicy
+  author: jenstrier
+  ms.author: jenstr
+  manager: roykuntz
+  ms.reviewer: chenc, pthota
+  schema: 2.0.0

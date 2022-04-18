@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Get-CsOnlineDialOutPolicy` cmdlet to get all the available outbound calling restriction policies in your organization.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-CsDialoutPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/grant-csdialoutpolicy
+syntaxes:
+- Get-CsOnlineDialOutPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsOnlineDialOutPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CSOnlineDialOutPolicy
+  description: |-
+    In Example 1, `Get-CSOnlineDialOutPolicy` is called without any additional parameters; this returns a collection of all the outbound calling restriction policies configured for use in your organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CSOnlineDialOutPolicy -Identity DialoutCPCandPSTNDisabled
+  description: |-
+    In Example 2, `Get-CSOnlineDialOutPolicy` is used to return the per-user outbound calling restriction policy that has an Identity DialoutCPCandPSTNDisabled. Because identities are unique, this command will never return more than one item.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the per-user policies, use this syntax: -Filter "tag:\*".
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier of the outbound calling restriction policy to be returned. To refer to the global policy, use this syntax: "-Identity Global". To refer to a per-user policy, use syntax similar to this: -Identity DialoutCPCandPSTNDisabled.
+
+    If this parameter is omitted, then all the outbound calling restriction policies configured for use in your tenant will be returned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineDialOutPolicy
+name: Get-CsOnlineDialOutPolicy
+description: |-
+  In Skype for Business Online, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization. 
+  To get all the available policies in your organization run `Get-CSOnlineDialOutPolicy`.
+  To assign one of these policies to a user run `Grant-CsDialoutPolicy`.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy
+  applicable: Skype for Business Online
+  title: Get-CsOnlineDialOutPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

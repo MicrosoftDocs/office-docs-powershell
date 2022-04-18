@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a shift to the specified member in a team.
+
+  Note: This cmdlet is currently in Beta.
+module: MicrosoftStaffHubPowerShell
+notes: |-
+  This cmdlet is currently in Beta.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: MicrosoftStaffHub Module in Gallery
+  href: https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha
+syntaxes:
+- >-
+  Add-StaffHubShift [-Title] <String> [[-Notes] <String>] [-StartDateTime] <DateTime> [-EndDateTime] <DateTime>
+
+   [-ShiftType] <String> [-MemberId] <String> [-TeamId] <String>
+examples:
+- title: Example 1
+  code: |-
+    $startTime = Get-Date -Date "2018-01-01T00:10:00"
+    $endTime = Get-Date -Date "2018-01-01T04:10:00"
+    Add-StaffHubShift -Title "Title" -StartDateTime $startTime -EndDateTime $endTime -ShiftType Working -MemberId "MBER_1234" -TeamId "TEAM_1234"
+  description: |-
+    Creates a shift for member MBER_1234 under the team TEAM_1234.
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDateTime
+  isRequired: true
+  description: |+
+    End time of the shift.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MemberId
+  isRequired: true
+  description: |+
+    Member to which the shift is to be added.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Additional notes for the shift.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShiftType
+  isRequired: true
+  description: |+
+    ShiftType - Working/Absence.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: Working, Absence
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartDateTime
+  isRequired: true
+  description: |+
+    Start time of the shift.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamId
+  isRequired: true
+  description: |+
+    ID of the team to which the shift is to be added.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    Title of the shift.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft StaffHub
+  parameterValueGroup: ""
+applicable:
+- Microsoft StaffHub
+uid: MicrosoftStaffHubPowerShell.Add-StaffHubShift
+name: Add-StaffHubShift
+description: |-
+  Adds a shift to the specified member in a team.
+metadata:
+  external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+  Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+  online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffhubshift
+  applicable: Microsoft StaffHub
+  title: Add-StaffHubShift
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

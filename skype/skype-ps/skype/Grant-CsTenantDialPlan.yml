@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Grant-CsTenantDialPlan [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+
+   [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
+  description: |-
+    This example grants the Vt1tenantDialPlan9 dial plan to Vt1_User1.
+  summary: |+
+    (Skype for Business Online)
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Grant-CsTenantDialPlan -Identity "Ken Myer" -PolicyName $Null
+  description: |-
+    In Example 2, any dial plan previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global dial plan.
+    To unassign a custom tenant dial plan, set the PolicyName to a null value ($Null).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Specifies the domain controller that's used by the cmdlet to read or write the specified data.
+    Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter identifies the user to whom the policy should be assigned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    The PolicyName parameter is the name of the tenant dial plan to assign to the specified user.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies the globally unique identifier (GUID) of your Microsoft Teams or Skype for Business Online tenant account.
+    For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
+    You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Grant-CsTenantDialPlan
+name: Grant-CsTenantDialPlan
+description: |-
+  The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
+  Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
+  Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
+  A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
+
+  You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsOnlineUser "<user name>" | Select-Object TenantDialPlan.`
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/grant-cstenantdialplan
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Grant-CsTenantDialPlan
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

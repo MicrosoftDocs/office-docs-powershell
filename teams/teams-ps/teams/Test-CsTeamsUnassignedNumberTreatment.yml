@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet tests the given number against the created (by using New-CsTeamsUnassignedNumberTreatment cmdlet) unassigned number treatment configurations.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The cmdlet is available in Teams PS module 3.2.0-preview or later.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsUnassignedNumberTreatment
+  href: /powershell/module/teams/new-csteamsunassignednumbertreatment?view=teams-ps
+syntaxes:
+- >-
+  Test-CsTeamsUnassignedNumberTreatment -PhoneNumber <String> [-TenantId <Guid>] [-WhatIf]
+
+  [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Test-CsTeamsUnassignedNumberTreatment -PhoneNumber "321321321"
+  description: |-
+    Tests the "321321321" number to check if there is a matching unassigned number treatment.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  isRequired: true
+  description: |+
+    The phone number to be tested.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: TenantId
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Names
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Test-CsTeamsUnassignedNumberTreatment
+name: Test-CsTeamsUnassignedNumberTreatment
+description: |-
+  This cmdlet tests the given number against the created (by using New-CsTeamsUnassignedNumberTreatment cmdlet) unassigned number treatment configurations.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.Powershell.Custom.dll-Help.xml
+  online version: https://docs.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment
+  Module Name: MicrosoftTeams
+  title: Test-CsTeamsUnassignedNumberTreatment
+  author: firatakandere
+  ms.author: osakande
+  schema: 2.0.0

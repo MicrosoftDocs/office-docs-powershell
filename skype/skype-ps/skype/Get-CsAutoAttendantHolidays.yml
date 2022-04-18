@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use Get-CsAutoAttendantHolidays cmdlet to get the holiday information for an existing Auto Attendant (AA).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsAutoAttendantHolidays cmdlet accepts a string as the Identity parameter.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.OAA.Models.HolidayVisRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Import-CsAutoAttendantHolidays
+  href: Import-CsAutoAttendantHolidays.yml
+- text: Export-CsAutoAttendantHolidays
+  href: Export-CsAutoAttendantHolidays.yml
+syntaxes:
+- Get-CsAutoAttendantHolidays -Identity <String> [-Years <List>] [-Names <List>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsAutoAttendantHolidays -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+  description: |-
+    In this example, the Get-CsAutoAttendantHolidays cmdlet is used to get all holidays in an auto attendant with Identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsAutoAttendantHolidays -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" -Years @(2017)
+  description: |-
+    In this example, the Get-CsAutoAttendantHolidays cmdlet is used to get all holidays in year 2017 in an auto attendant with Identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsAutoAttendantHolidays -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" -Years @(2017) -Name @("Christmas")
+  description: |-
+    In this example, the Get-CsAutoAttendantHolidays cmdlet is used to get holiday named Christmas in the year 2017 in an auto attendant with Identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsAutoAttendantHolidays -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" | Format-Table -Wrap -AutoSize
+  description: |-
+    In this example, the Get-CsAutoAttendantHolidays cmdlet is used to retrieve all holidays in an auto attendant with Identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093 and the result is formatted as a table.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Represents the identifier for the auto attendant whose holidays are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: Names
+  description: |+
+    The Names parameter represents the names for the holidays to be retrieved. If this parameter is not specified, then all holidays in the AA are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: Years
+  description: |+
+    The Years parameter represents the years for the holidays to be retrieved. If this parameter is not specified, then holidays for all years in the AA are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsAutoAttendantHolidays
+name: Get-CsAutoAttendantHolidays
+description: |-
+  The Get-CsAutoAttendantHolidays provides a convenient way to visualize the information of all the holidays contained within an auto attendant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csautoattendantholidays
+  applicable: Skype for Business Online
+  title: Get-CsAutoAttendantHolidays
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

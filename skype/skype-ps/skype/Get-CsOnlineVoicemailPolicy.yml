@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Get-CsOnlineVoicemailPolicy` cmdlet to get a list of all pre-configured policy instances for Voicemail service.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.OnlineVoicemail.OnlineVoicemailPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps
+- text: New-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps
+- text: Remove-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps
+- text: Grant-CsOnlineVoicemailPolicy
+  href: https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps
+syntaxes:
+- >-
+  Get-CsOnlineVoicemailPolicy [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <String>]
+
+  [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineVoicemailPolicy
+  description: |-
+    In Example 1, the Get-CsOnlineVoicemailPolicy cmdlet is called without any additional parameters; this returns a collection of all the voicemail policies configured for use in your organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsOnlineVoicemailPolicy -Identity TranscriptionDisabled
+  description: |-
+    In Example 2, the Get-CsOnlineVoicemailPolicy cmdlet is used to return the per-user voicemail policy that has an Identity TranscriptionDisabled. Because identities are unique, this command will never return more than one item.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsOnlineVoicemailPolicy -Filter "tag:*"
+  description: |-
+    Example 3 uses the Filter parameter to return all the voicemail policies that have been configured at the per-user scope. The filter value "tag:*" tells the Get-CsOnlineVoicemailPolicy cmdlet to return only those policies that have an Identity that begins with the string value "tag:".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default "Global") available to use by the tenant admins.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, all voicemail policies available for use are returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineVoicemailPolicy
+name: Get-CsOnlineVoicemailPolicy
+description: |-
+  This cmdlet retrieves information about all the voicemail policies that have been configured for use in your organization. Voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy
+  applicable: Skype for Business Online
+  title: Get-CsOnlineVoicemailPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

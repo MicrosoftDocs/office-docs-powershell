@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an application instance in Azure Active Directory. 
+
+  **Note**: The use of this cmdlet for assigning phone numbers will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) 
+  and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead. The new cmdlets are currently not supported for customers and tenants
+  that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsOnlineApplicationInstance.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <string>] [[-ApplicationId] <guid>]
+
+      [[-DisplayName] <string>] [-Tenant <guid>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber +14250000000 -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
+  description: |-
+    This example shows updating OnpremPhoneNumber, ApplicationId, DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
+
+    The following are the application ID's for each type of application instance types:
+
+    Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
+    Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  description: |+
+    The application ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    The display name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The URI or ID of the application instance to update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OnpremPhoneNumber
+  description: |+
+    **Note**: Using this parameter will be deprecated. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
+
+    Assigns a hybrid (on-premise) telephone number to the application instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsOnlineApplicationInstance
+name: Set-CsOnlineApplicationInstance
+description: |-
+  This cmdlet is used to update an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineapplicationinstance
+  applicable: Skype for Business Online
+  title: Set-CsOnlineApplicationInstance
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: jenstr
+  ms.reviewer: ""
