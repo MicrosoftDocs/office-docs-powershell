@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-OMEMessageRevocation cmdlet to revoke Microsoft 365 Message Encryption (OME) for a message. Revoking encryption prevents the recipient from viewing the message in the Office 365 Message Encryption portal.
+Use the Set-OMEMessageRevocation cmdlet to revoke Microsoft Purview Message Encryption for a message. Revoking encryption prevents the recipient from viewing the message in the OME portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,7 +26,7 @@ Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean>
 ```
 
 ## DESCRIPTION
-When an email has been revoked, the recipient will get the following error when they try to view the encrypted message in the Office 365 Message Encryption portal: "The message has been revoked by the sender".
+When an email has been revoked, the recipient will get the following error when they try to view the encrypted message in the OME portal: "The message has been revoked by the sender".
 
 You can revoke encrypted messages if the recipient received a link-based, branded encrypted email message. If the recipient received a native inline experience in a supported Outlook client, then you can't revoke encryption for the message.
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ### -Revoke
 The Revoke parameter specifies whether to revoke encryption for the message. Valid values are:
 
-- $true: Encryption for the specified message is revoked. The recipient will get an error when they try to view the encrypted message in the Office 365 Message Encryption portal
+- $true: Encryption for the specified message is revoked. The recipient will get an error when they try to view the encrypted message in the OME portal
 - $false: Encryption for the specified message isn't revoked. This is the default value.
 
 ```yaml

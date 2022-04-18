@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-OMEConfiguration cmdlet to create a Microsoft 365 Message Encryption (OME) configuration.
+Use the New-OMEConfiguration cmdlet to create a Microsoft Purview Message Encryption configuration.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

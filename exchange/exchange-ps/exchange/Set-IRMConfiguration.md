@@ -123,7 +123,7 @@ This parameter is available only in the cloud-based service.
 
 The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online organization can to connect directly to Azure Rights Management. Valid values are:
 
-- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Office 365 Message Encryption.
+- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Microsoft Purview Message Encryption.
 - $false: The Exchange Online organization can't connect directly to Azure Rights Management.
 
 ```yaml
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ### -DecryptAttachmentForEncryptOnly
 This parameter is available only in the cloud-based service.
 
-The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients have unrestricted rights on the attachment or not for Encrypt-only mails sent using new Office 365 Message Encryption capabilities. Valid values are:
+The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients have unrestricted rights on the attachment or not for Encrypt-only mails sent using Microsoft Purview Message Encryption. Valid values are:
 
 - $true: The recipients will have unrestricted rights on attachments sent using Encrypt-Only policy.
 - $false: The recipients will not have unrestricted rights on attachments sent using Encrypt-Only policy.
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ### -EnablePdfEncryption
 This parameter is available only in the cloud-based service.
 
-The EnablePdfEncryption parameter specifies whether to enable the encryption of PDF attachments using Office 365 Message Encryption (OME). Valid values are:
+The EnablePdfEncryption parameter specifies whether to enable the encryption of PDF attachments using Microsoft Purview Message Encryption. Valid values are:
 
 - $true: Messages that contain PDF attachments can be encrypted.
 - $false: Messages that contain PDF attachments can't be encrypted.

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-OMEMessageStatus cmdlet to view the Microsoft 365 Message Encryption (OME) revocation status for a specific message.
+Use the Get-OMEMessageStatus cmdlet to view the Microsoft Purview Message Encryption revocation status for a specific message.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
