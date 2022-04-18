@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsUserTeamMembers
 
 ## SYNOPSIS
-Used to modify an user’s team members list.
+Used to modify an user's team members list.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ The feature enables the use of SEFAUtil (Secondary Extension Feature Activation)
 PS C:\> Set-CsUserTeamMembers -User "Ken.Myer@contoso.com" -Team @{add='ChewDavid@contoso.com','dmx@contoso.com'}
 ```
 
-This cmdlet adds two other users to the specified user’s team members list, returns an object that contains the team member list and displays the object on the screen, in case of success. In case of failure, an appropriate error message will be shown.
+This cmdlet adds two other users to the specified user's team members list, returns an object that contains the team member list and displays the object on the screen, in case of success. In case of failure, an appropriate error message will be shown.
 
 ## PARAMETERS
 
