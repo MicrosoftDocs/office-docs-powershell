@@ -73,11 +73,11 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 ### Example 1
 ```powershell
 New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
-New-RetentionComplianceRule -Name RetUnlimited -Policy "Regulation 123 Compliance" -RetentionDuration Unlimited
 ```
 
-The first command in this example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
-The second command creates a new retention rule named "RetUnlimited" and adds it to the retention policy created with the fist command.
+This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+
+The next step is to use the New-RetentionComplianceRule cmdlet to add a retention rule to the retention policy.
 
 ## PARAMETERS
 
