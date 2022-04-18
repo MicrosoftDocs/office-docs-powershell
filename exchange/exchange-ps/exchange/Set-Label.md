@@ -528,7 +528,7 @@ Accept wildcard characters: False
 ```
 
 ### -ColumnAssetCondition
-{{ Fill ColumnAssetCondition Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -949,7 +949,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchematizedDataCondition
-{{ Fill SchematizedDataCondition Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -1121,7 +1121,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionLevel
-{{ Fill SiteAndGroupProtectionLevel Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SiteAndGroupProtectionLevelParameter
@@ -1186,7 +1186,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsLobbyBypassScope
-{{ Fill TeamsLobbyBypassScope Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope

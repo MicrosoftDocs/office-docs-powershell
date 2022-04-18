@@ -37,7 +37,7 @@ Tenant dial plans provide required information to let Enterprise Voice users mak
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-Although normalization rules of a tenant dial plan can be added by using this cmdlet, it is recommended that you use the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet instead.
+Although normalization rules of a tenant dial plan can be added by using this cmdlet, it is recommended that you use the [New-CsVoiceNormalizationRule](https://docs.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet instead.
 
 ## EXAMPLES
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](https://docs.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
 The number of normalization rules cannot exceed 50 per TenantDialPlan.
 

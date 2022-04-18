@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-SafeLinksPolicy cmdlet to modify Safe Links policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -30,20 +28,16 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-CustomNotificationText <String>]
  [-DeliverMessageAfterScan <Boolean>
  [-DisableUrlRewrite <Boolean>]
- [-DoNotAllowClickThrough <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
- [-DoNotTrackUserClicks <Boolean>]
  [-EnableForInternalSenders <Boolean>]
  [-EnableOrganizationBranding <Boolean>]
+ [-EnableSafeLinksForEmail <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
- [-ExcludedUrls <String[]>]
  [-IsEnabled <Boolean>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
  [-UseTranslatedNotificationText <Boolean>]
  [-WhatIf]
- [-DisableUrlRewrite <Boolean>]
- [-WhiteListedUrls <String>]A
  [<CommonParameters>]
 ```
 
@@ -56,17 +50,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SafeLinksPolicy -Identity "Engineering Block URL" -DoNotAllowClickThrough $true
+Set-SafeLinksPolicy -Identity "Engineering Block URL" -AllowClickThrough $false
 ```
 
-This example modifies the existing Safe Links policy named Engineering Block URL to prevent click through to the original URLs.
+This example modifies the existing Safe Links policy named Engineering Block URL to not allow click through to the original URLs on warning pages.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Safe Links policy that you want to modify.
-
-You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the Safe Links policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -102,7 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-This parameter has been deprecated. Use the DoNotAllowClickThrough parameter instead.
+The AllowClickThrough parameter specifies whether to allow users to click through to the original URL on warning pages. Valid values are:
+
+$true: The user is allowed to click through to the original URL. This is the default value.
+$false: The user isn't allowed to click through to the original URL.
 
 ```yaml
 Type: Boolean
@@ -190,25 +185,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DoNotAllowClickThrough
-The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL on warning pages. Valid values are:
-
-- $true: The user isn't allowed to click through to the original URL.
-- $false: The user is allowed to click through to the original URL. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DoNotRewriteUrls
 The DoNotRewriteUrls parameter specifies the URLs that are not rewritten by Safe Links scanning. The list of entries allows users who are included in the policy to access the specified URLs that would otherwise be blocked by Safe Links.
 
@@ -218,25 +194,6 @@ For details about the entry syntax, see [Entry syntax for the "Do not rewrite th
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DoNotTrackUserClicks
-The DoNotTrackUserClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
-
-- $true: User clicks in email messages aren't tracked.
-- $false: User clicks in email messages are tracked. This is the default value.
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -286,6 +243,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSafeLinksForEmail
+The EnableSafeLinksForEmail parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
+
+- $true: Safe Links is enabled for email. When a user clicks a link in an email, the link will be checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $false: Safe Links isn't enabled for email. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSafeLinksForTeams
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
@@ -305,27 +281,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExcludedUrls
-This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IsEnabled
-The IsEnabled parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Enable Safe Links protection for email messages. Rewrite URLs and check against a list of known malicious links whenever a user clicks a link in an email message.
-- $false: Disable Safe Links protection for email messages. Don't rewrite URLs and do not check clicked links in email messages. This is the default value.
+Use the EnableSafeLinksForEmail parameter instead.
 
 ```yaml
 Type: Boolean
@@ -360,7 +319,10 @@ Accept wildcard characters: False
 ```
 
 ### -TrackClicks
-This parameter is reserved for internal Microsoft use.
+The TrackClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
+
+- $true: User clicks in email messages are tracked. This is the default value.
+- $false: User clicks in email messages aren't tracked.
 
 ```yaml
 Type: Boolean
@@ -401,41 +363,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableUrlRewrite
-The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in email messages. Valid values are:
-
-- $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac). Typically, we don't recommend using this value.
-- $false: URLs in messages are rewritten. API checks still occur on unwrapped URLs in supported clients if the user is in a valid Safe Links policy. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhiteListedUrls
-This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-HostedOutboundSpamFilterPolicy cmdlet to modify outbound spam filter policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -114,11 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoForwardingMode
-**Note**: Before September 2020, this setting is available but not enforced.
+The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
-The AutoForwardingMode specifies how the policy controls automatic email forwarding to outbound recipients. Valid values are:
-
-- Automatic: Automatic external email forwarding is blocked by the system. This is the default value.
+- Automatic: This is the default value. This setting is now the same as Off. When this setting was originally introduced, this value was equivalent to On. Over time, thanks to the principles of [secure by default](https://docs.microsoft.com/microsoft-365/security/office-365-security/secure-by-default), this value was gradually changed to the equivalent of Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
 - On: Automatic external email forwarding is not restricted.
 - Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
 

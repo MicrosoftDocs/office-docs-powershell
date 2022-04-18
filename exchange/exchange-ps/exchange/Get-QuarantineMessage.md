@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization. Files are quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -44,6 +42,7 @@ Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
  [-PolicyTypes <QuarantinePolicyTypeEnum[]>]
  [-QuarantineTypes <QuarantineMessageTypeEnum[]>]
  [-RecipientAddress <String[]>]
+ [-RecipientTag <String[]>]
  [-ReleaseStatus <ReleaseStatus[]>]
  [-Reported <Boolean>]
  [-SenderAddress <String[]>]
@@ -338,6 +337,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecipientTag
+{{ Fill RecipientTag Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReleaseStatus
 The ReleaseStatus parameter filters the results by the release status of the message. Valid values are:
 
@@ -421,6 +436,8 @@ Accept wildcard characters: False
 The StartReceivedDate parameter specifies the earliest messages to return in the results. Use this parameter with the EndReceivedDate parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+By default, if you don't use the StartReceivedDate and EndReceivedDate parameters, the command will return data for the last 16 days. The maximum value for this parameter is 30 days. If you use a value that's older than 30 days, the value is ignored and only data for the last 30 days is returned.
 
 ```yaml
 Type: DateTime

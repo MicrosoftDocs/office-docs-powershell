@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsUserPolicyPackageRecommendation
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation
 schema: 2.0.0

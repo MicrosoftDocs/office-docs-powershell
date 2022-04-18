@@ -36,9 +36,13 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ContentFileTypeMatches <MultiValuedProperty>]
+ [-ContentIsShared <Boolean>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
  [-DocumentContainsWords <MultiValuedProperty>]
+ [-DocumentCreatedBy <MultiValuedProperty>]
+ [-DocumentCreatedByMemberOf <RecipientIdParameter[]>]
  [-DocumentIsPasswordProtected <Boolean>
  [-DocumentIsUnsupported <Boolean>]
  [-DocumentMatchesPatterns <MultiValuedProperty>]
@@ -53,8 +57,12 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfContentCharacterSetContainsWords <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ExceptIfContentFileTypeMatches <MultiValuedProperty>]
+ [-ExceptIfContentIsShared <Boolean>]
  [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
  [-ExceptIfDocumentContainsWords <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedBy <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedByMemberOf <RecipientIdParameter[]>]
  [-ExceptIfDocumentIsPasswordProtected <Boolean>]
  [-ExceptIfDocumentIsUnsupported <Boolean>]
  [-ExceptIfDocumentMatchesPatterns <MultiValuedProperty>]
@@ -136,7 +144,6 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
- [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
  [-WithImportance <WithImportance>]
@@ -156,6 +163,53 @@ New-DlpComplianceRule -Name "SocialSecurityRule" -Policy "USFinancialChecks" -Co
 ```
 
 This example create a new DLP compliance rule named "SocialSecurityRule" that is assigned to the "USFinancialChecks" policy. The rule checks for social security numbers and blocks access if it finds them.
+
+### Example 2
+```powershell
+$contains_complex_types = @{
+    operator = "And"
+    groups = @(
+        @{
+            operator = "Or"
+            name =  "PII Identifiers"
+            sensitivetypes = @(
+                @{
+                    name = "Drug Enforcement Agency (DEA) Number"
+                    maxconfidence = 100
+                    minconfidence = 75
+                    mincount = 1
+                    maxcount = -1
+                }
+            )
+        }
+        @{
+            operator = "Or"
+            name =  "Medical Terms"
+            sensitivetypes = @(
+                @{
+                    name = "International Classification of Diseases (ICD-9-CM)"
+                    maxconfidence = 100
+                    minconfidence = 75
+                    mincount = 1
+                    maxcount = -1
+                }
+                @{
+                    name = "International Classification of Diseases (ICD-10-CM)"
+                    maxconfidence = 100
+                    minconfidence = 75
+                    mincount = 1
+                    maxcount = -1
+                }
+                )
+        }  
+
+    )
+}
+
+New-DLPComplianceRule -Name "Contoso Medical Information" -Policy "Contoso Medical Checks" -ContentContainsSensitiveInformation $contains_complex_types
+```
+
+This example create a new DLP compliance rule named "Contoso Medical Information" that is assigned to the "Contoso Medical Checks" policy. The rule uses advanced syntax to search for the specified content.
 
 ## PARAMETERS
 
@@ -434,6 +488,8 @@ This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minC
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
+For an example of advanced syntax, see Example 2 in this topic.
+
 ```yaml
 Type: PswsHashtable[]
 Parameter Sets: (All)
@@ -463,6 +519,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentFileTypeMatches
+{{ Fill ContentFileTypeMatches Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentIsShared
+{{ Fill ContentIsShared Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentPropertyContainsWords
 The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
@@ -470,6 +558,25 @@ This parameter accepts values in the format: `"Property1:Value1,Value2","Propert
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Disabled
+The Disabled parameter specifies whether the DLP rule is disabled. Valid values are:
+
+- $true: The rule is disabled.
+- $false: The rule is enabled. This is the default value.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -501,14 +608,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disabled
-The Disabled parameter specifies whether the DLP rule is disabled. Valid values are:
-
-- $true: The rule is disabled.
-- $false: The rule is enabled. This is the default value.
+### -DocumentCreatedBy
+{{ Fill DocumentCreatedBy Description }}
 
 ```yaml
-Type: Boolean
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentCreatedByMemberOf
+{{ Fill DocumentCreatedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -818,6 +938,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfContentFileTypeMatches
+{{ Fill ExceptIfContentFileTypeMatches Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfContentIsShared
+{{ Fill ExceptIfContentIsShared Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfContentPropertyContainsWords
 The ExceptIfContentPropertyContainsWords parameter specifies an exception for the DLP rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
 
@@ -845,6 +997,38 @@ You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedBy
+{{ Fill ExceptIfDocumentCreatedBy Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedByMemberOf
+{{ Fill ExceptIfDocumentCreatedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -1045,7 +1229,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-This parameter is reserved for internal Microsoft use.
+The FromMemberOf parameter specifies an exception for the DLP rule that looks for messages sent by group members. You identify the group by its email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]
@@ -1707,7 +1893,9 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-This parameter is reserved for internal Microsoft use.
+The FromMemberOf parameter specifies a condition for the DLP rule that looks for messages sent by group members. You identify the group by its email address.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: SmtpAddress[]
@@ -2073,7 +2261,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyPolicyTipCustomTextTranslations
-This parameter is reserved for internal Microsoft use.
+The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met based on the client settings. You can enter multiple values seperated by commas. For example: `"en:PolicyTipInEnglish","zh:警告：这个文件含有非法内容","th:คำแนะนำนโยบายในไทย"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2741,22 +2929,6 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: <MultiValuedProperty>
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAppDlpRestrictions
-{{ Fill ThirdPartyAppDlpRestrictions Description }}
-
-```yaml
-Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

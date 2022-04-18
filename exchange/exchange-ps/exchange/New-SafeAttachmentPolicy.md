@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-SafeAttachmentPolicy cmdlet to create safe attachment policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -29,6 +27,7 @@ New-SafeAttachmentPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
+ [-MakeBuiltInProtection]
  [-QuarantineTag <String>]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-Redirect <Boolean>]
@@ -172,6 +171,22 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MakeBuiltInProtection
+{{ Fill MakeBuiltInProtection Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

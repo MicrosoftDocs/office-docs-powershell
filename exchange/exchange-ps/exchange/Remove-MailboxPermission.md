@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearAutoMapping
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ClearAutoMapping parameter excludes the mailbox from the auto-mapping feature in Microsoft Outlook. You don't need to specify a value with this switch.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetDefault
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ResetDefault switch resets the default security descriptor of the mailbox. You don't need to specify a value with this switch.
 

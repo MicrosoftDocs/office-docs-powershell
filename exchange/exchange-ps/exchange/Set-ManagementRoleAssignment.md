@@ -83,6 +83,16 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> -RecipientA
  [<CommonParameters>]
 ```
 
+### App
+```
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-CustomResourceScope <ManagementScopeIdParameter>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 When you modify a role assignment, you can specify a new predefined or custom management scope or provide an organizational unit (OU) to scope the existing role assignment.
 
@@ -201,6 +211,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomResourceScope
+This parameter is available only in the cloud-based service.
+
+{{ Fill CustomResourceScope Description }}
+
+```yaml
+Type: ManagementScopeIdParameter
+Parameter Sets: App
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -208,7 +236,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: RelativeRecipientWriteScope, CustomRecipientWriteScope, RecipientOrganizationalUnitScope, ExclusiveScope, RecipientAdministrativeUnitScope
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -298,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the role assignment to.
 
