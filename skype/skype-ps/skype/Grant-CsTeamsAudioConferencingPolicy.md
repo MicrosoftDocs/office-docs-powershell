@@ -1,0 +1,152 @@
+---
+external help file: MicrosoftTeams-help.xml
+Module Name: MicrosoftTeams
+online version: https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamsaudioconferencingpolicy
+schema: 2.0.0
+---
+
+# Grant-CsTeamsAudioConferencingPolicy
+
+## SYNOPSIS
+
+Assigns a Teams audio-conferencing policy at the per-user scope. Audio conferencing policies are used to manage audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization.
+
+## SYNTAX
+
+### GrantToTenant (Default)
+```
+Grant-CsTeamsAudioConferencingPolicy [-Global] [-PassThru] [[-PolicyName] <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Grant-CsTeamsAudioConferencingPolicy [-PassThru] [[-PolicyName] <String>] [[-Identity] <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+Granular control over which audio conferencing features your users can or cannot use is an important feature for many organizations. This cmdlet lets you assign a teams audio conferencing policy at the per-user scope. Audio conferencing policies determine the audio-conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization.
+
+## EXAMPLES
+
+### EXAMPLE 1
+```
+PS C:\> Grant-CsTeamsAudioCOnferencingPolicy -identity "Ken Myer" -PolicyName “Emea Users”
+```
+
+In this example, a user with identity "Ken Myer" is being assigned the “Emea Users” policy
+
+
+
+## PARAMETERS
+
+### -Global
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+
+```yaml
+Type: System.String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -PassThru
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyName
+The name of the custom policy that is being assigned to the user. To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### System.String
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
+
+[Set-CsTeamsAudioConferencingPolicy](Set-CsTeamsAudioConferencingPolicy.md)
+
+[Remove-CsTeamsAudioConferencingPolicy](Remove-CsTeamsAudioConferencingPolicy.md)

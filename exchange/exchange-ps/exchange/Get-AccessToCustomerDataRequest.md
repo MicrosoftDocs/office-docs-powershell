@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-AccessToCustomerDataRequest cmdlet to view Microsoft 365 customer lockbox requests that control access to your data by Microsoft support engineers.
+Use the Get-AccessToCustomerDataRequest cmdlet to view Microsoft 365 Customer Lockbox requests that control access to your data by Microsoft support engineers.
 
-**Note**: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
+**Note**: Customer Lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate Customer Lockbox subscription with any Microsoft 365 Enterprise plan.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,21 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AccessToCustomerDataRequest
 ```
 
-This example returns a summary list of all customer lockbox request.
+This example returns a summary list of all Customer Lockbox request.
 
 ### Example 2
 ```powershell
 Get-AccessToCustomerDataRequest -ApprovalStatus Pending
 ```
 
-This example returns a summary list of all customer lockbox requests that have the status value Pending.
+This example returns a summary list of all Customer Lockbox requests that have the status value Pending.
 
 ### Example 3
 ```powershell
 Get-AccessToCustomerDataRequest -RequestId EXSR123456 | Format-List
 ```
 
-This example returns detailed information the customer lockbox request EXSR123456.
+This example returns detailed information the Customer Lockbox request EXSR123456.
 
 ## PARAMETERS
 
