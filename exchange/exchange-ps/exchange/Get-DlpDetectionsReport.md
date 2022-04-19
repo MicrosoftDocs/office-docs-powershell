@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-DlpDetectionsReport cmdlet to list a summary of Data Loss Prevention (DLP) rule matches for Exchange Online, SharePoint Online and OneDrive for Business in your cloud-based organization for the last 30 days.
+Use the Get-DlpDetectionsReport cmdlet to list a summary of data loss prevention (DLP) rule matches for Exchange Online, SharePoint Online and OneDrive for Business in your cloud-based organization for the last 30 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

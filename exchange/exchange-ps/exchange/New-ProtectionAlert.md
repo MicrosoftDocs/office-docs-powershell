@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft 365 compliance center. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Microsoft 365 compliance center.
+Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft Purview compliance portal. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -47,7 +47,7 @@ New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <Mu
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -56,7 +56,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 New-ProtectionAlert -Name "Content search deleted" -Category Others -NotifyUser admin@contoso.com -ThreatType Activity -Operation SearchRemoved -Description "Custom alert policy to track when content searches are deleted" -AggregationType None
 ```
 
-This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Microsoft 365 compliance center.
+This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Microsoft Purview compliance portal.
 
 ## PARAMETERS
 
