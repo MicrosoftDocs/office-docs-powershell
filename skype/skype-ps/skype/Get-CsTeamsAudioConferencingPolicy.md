@@ -24,13 +24,13 @@ Get-CsTeamsAudioConferencingPolicy [-LocalStore] [-Filter <String>] [<CommonPara
 ```
 
 ## DESCRIPTION
-The CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. The Get-CsTeamsAudioConferencingPolicy cmdlet enables you to return information about all the audio-conferencing policies that have been configured for use in your organization.
+The Get-CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. The Get-CsTeamsAudioConferencingPolicy cmdlet enables you to return information about all the audio-conferencing policies that have been configured for use in your organization.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> Get- CsTeamsAudioConferencingPolicy
+PS C:\> Get-CsTeamsAudioConferencingPolicy
 ```
 
 The command shown in Example 1, Get-CsTeamsAudioConferencingPolicy is called without any additional parameters; this returns a collection of all the teams audio conferencing policies configured for use in your organization.
@@ -45,9 +45,10 @@ The command shown in Example 2, Get-CsTeamsAudioConferencingPolicy is used to re
 ## PARAMETERS
 
 ### -Filter
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Filter
 Aliases:
 
@@ -63,7 +64,7 @@ Unique identifier for the policy to be retrieved. To retrieve the global policy,
 If this parameter is not included, the Get-CsTeamsAudioConferencingPolicy cmdlet will return a collection of all the teams audio conferencing policies configured for use in your organization.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -75,9 +76,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
+Internal Microsoft use only.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -89,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

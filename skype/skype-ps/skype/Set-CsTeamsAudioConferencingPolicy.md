@@ -26,7 +26,7 @@ Set-CsTeamsAudioConferencingPolicy [-AllowTollFreeDialin <Boolean>] [-Force]
 ```
 
 ## DESCRIPTION
-The CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. The Set-CsTeamsAudioConferencingPolicy can be used to update an audio-conferencing policy that has been configured for use in your organization.
+The Set-CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. The Set-CsTeamsAudioConferencingPolicy can be used to update an audio-conferencing policy that has been configured for use in your organization.
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ In this example, two different property values are configured: AllowTollFreeDial
 Determines if users of this Policy can have Toll free numbers. If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -62,10 +62,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -81,7 +81,7 @@ Unique identifier for the policy to be Set. To set the global policy, use this s
 If this parameter is not included, the Set-CsTeamsAudioConferencingPolicy cmdlet will modify the Global policy.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ### -Instance
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: PSObject
 Parameter Sets: Instance
 Aliases:
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 Determines the list of audio-conferencing Toll- and Toll-free telephone numbers that will be included in meetings invites created by users of this policy. If no phone numbers are specified, then the phone number that is displayed in meeting invites created by users would be based on the location of the users.
 
 ```yaml
-Type: System.Object
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -141,7 +141,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
