@@ -20,8 +20,6 @@ Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-bas
 
 **Note**: You can't use this cmdlet to modify Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Update group](https://docs.microsoft.com/graph/api/group-update).
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -221,6 +219,8 @@ Group members can change their own subscription settings, which can override you
 
 The AutoSubscribeNewMembers switch overrides this switch.
 
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -259,6 +259,8 @@ The AutoSubscribeNewMembers switch specifies whether to automatically subscribe 
 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
 - If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: `-AutoSubscribeNewMembers:$false`.
+
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1173,6 +1175,8 @@ The SubscriptionEnabled switch specifies whether the group owners can enable sub
 - To change the value to $false, use this exact syntax: `-SubscriptionEnabled:$false`. The value of the AutoSubscribeNewMembers parameter must also be $false before you can use the value $false for this switch.
 
 **Note**: You should use the value $false for this switch only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
+
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter

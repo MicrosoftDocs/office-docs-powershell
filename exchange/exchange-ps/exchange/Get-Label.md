@@ -27,7 +27,7 @@ Get-Label [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -68,7 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDetailedLabelActions
-{{ Fill IncludeDetailedLabelActions Description }}
+The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. Value values are:
+
+- $true: Include detailed label actions.
+- $false: Don't include detailed label actions.
 
 ```yaml
 Type: System.Boolean
