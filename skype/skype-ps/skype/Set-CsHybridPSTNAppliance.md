@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Set-CsHybridPSTNAppliance` cmdlet to modify an existing Skype for Business Cloud Connector Edition appliance's attributes.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ### Identity (Default)
