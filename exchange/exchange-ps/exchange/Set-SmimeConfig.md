@@ -556,7 +556,7 @@ The OWAUseKeyIdentifier parameter specifies whether a certificate's key identifi
 
 Valid input for this parameter is $true or $false. The default is $false.
 
-By default, Outlook on the web encodes the asymmetrically encrypted token (sometimes called a lockbox) that's required to decrypt the rest of the message by indicating the issuer and serial number of each recipient's certificate. The issuer and serial number can then be used to locate the certificate and private key for decrypting the message.
+By default, Outlook on the web encodes the asymmetrically encrypted token (sometimes called a Lockbox) that's required to decrypt the rest of the message by indicating the issuer and serial number of each recipient's certificate. The issuer and serial number can then be used to locate the certificate and private key for decrypting the message.
 
 This parameter causes the use of a certificate's key identifier when encoding the asymmetrically encrypted token. Because a key pair can be reused in new certificates, using the key identifier for encrypted email messages means that users need to keep only the most recent certificate and associated private key, rather than all old certificates. Because some email clients do not support finding certificates with a key identifier, Outlook on the web uses the issuer and serial number of each recipient's certificate by default.
 
