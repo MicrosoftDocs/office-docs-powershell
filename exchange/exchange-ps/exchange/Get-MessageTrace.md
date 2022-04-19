@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromIP
-The FromIP parameter filters the results by the source IP address. For incoming messages, the value of FromIP is the public IP address of the SMTP email server that sent the message. For outgoing messages from Exchange Online, the value is blank.
+The FromIP parameter filters the results by the source IP address. For incoming messages, the value of FromIP is the public IP address of the SMTP email server that sent the message.
 
 ```yaml
 Type: String
