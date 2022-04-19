@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A higher integer value indicates a higher priority, the value 10000 is the highest priority, and policies can't have the same priority value.
+The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A higher integer value indicates a higher priority, the value 1 is the lowest priority, and policies can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 8 existing policies:
 
