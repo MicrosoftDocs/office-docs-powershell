@@ -248,7 +248,6 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 - All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -eq '*MCO*'"`
 - All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -eq '*MCO'"`
 
-
 **Policy Attributes**:
 
 - PolicyProperty comparison works only when "Authority" is provided in the value. For ex: `-Filter "TeamsMessagingPolicy -eq '<Authority>:<Value>'"`
