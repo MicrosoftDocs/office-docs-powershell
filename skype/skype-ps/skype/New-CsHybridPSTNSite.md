@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the New-CsHybridPSTNSite cmdlet to create a new hybrid public switched telephone network (PSTN) site.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```
