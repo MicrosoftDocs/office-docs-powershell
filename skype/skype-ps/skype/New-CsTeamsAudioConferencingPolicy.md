@@ -17,7 +17,7 @@ New-CsTeamsAudioConferencingPolicy [-Identity] <String> [-AllowTollFreeDialin <B
 ```
 
 ## DESCRIPTION
-The CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. This cmdlet creates a new Teams audio conferencing policy. Custom policies can then be assigned to users using the Grant-CsTeamsAudioConferencingPolicy cmdlet.
+The New-CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. This cmdlet creates a new Teams audio conferencing policy. Custom policies can then be assigned to users using the Grant-CsTeamsAudioConferencingPolicy cmdlet.
 
 ## EXAMPLES
 
@@ -53,6 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
 Type: SwitchParameter

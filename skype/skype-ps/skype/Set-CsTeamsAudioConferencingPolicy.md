@@ -93,6 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: PSObject
