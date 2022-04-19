@@ -98,7 +98,7 @@ Get-CsOnlineUser -Filter {LineURI -eq "tel:+1234"}
 Get-CsOnlineUser -Filter {LineURI -eq "tel:+1234,ext:"}
 Get-CsOnlineUser -Filter {LineURI -eq "1234"}
 ```
-Examples above returns information for user accounts that have been assigned a designated phone number. 
+Example 5 returns information for user accounts that have been assigned a designated phone number. 
 
 ## PARAMETERS
 
