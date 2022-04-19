@@ -2261,7 +2261,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyPolicyTipCustomTextTranslations
-This parameter is reserved for internal Microsoft use.
+The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met based on the client settings. You can enter multiple values seperated by commas. For example: `"en:PolicyTipInEnglish","zh:警告：这个文件含有非法内容","th:คำแนะนำนโยบายในไทย"`.
 
 ```yaml
 Type: MultiValuedProperty
