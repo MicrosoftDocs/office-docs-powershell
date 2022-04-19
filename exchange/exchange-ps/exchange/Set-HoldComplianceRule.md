@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-HoldComplianceRule cmdlet to modify existing preservation rules in the Microsoft 365 compliance center.
+Use the Set-HoldComplianceRule cmdlet to modify existing preservation rules in the Microsoft Purview compliance portal.
 
 **Note**: The Set-HoldComplianceRule cmdlet has been replaced by the Set-RetentionComplianceRule cmdlet. If you have scripts that use Set-HoldComplianceRule, update them to use Set-RetentionComplianceRule.
 
@@ -37,7 +37,7 @@ Set-HoldComplianceRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -195,13 +195,13 @@ Accept wildcard characters: False
 ```
 
 ### -HoldDurationDisplayHint
-The HoldDurationDisplayHint parameter specifies the units that are used to display the preservation duration in the Microsoft 365 compliance center. Valid values are Days, Months or Years.
+The HoldDurationDisplayHint parameter specifies the units that are used to display the preservation duration in the Microsoft Purview compliance portal. Valid values are Days, Months or Years.
 
 - Days
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Microsoft 365 compliance center will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Microsoft Purview compliance portal will display 1 year as the content hold duration.
 
 ```yaml
 Type: HoldDurationHint
