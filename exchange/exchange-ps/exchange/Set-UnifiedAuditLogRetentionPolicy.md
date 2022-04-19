@@ -77,9 +77,7 @@ Accept wildcard characters: False
 ### -Priority
 The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A higher integer value indicates a higher priority, the value 1 is the lowest priority, and policies can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing policies.
-
-You must use a unique priority value when modifying audit log retention policies. This parameter is required when modifying an audit log retention policy.
+This parameter is required when you modify an audit log retention policy, and you must use a unique priority value.
 
 ```yaml
 Type: Int32
