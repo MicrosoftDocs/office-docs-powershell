@@ -533,7 +533,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - OnPremSamAccountName
 - CallerIdPolicy
 - Fax
-- LastName (available after TPM 4.2.0)
+- LastName (available in Teams PowerShell Module 4.2.0 and later)
 - Office
 - Phone
 - WindowsEmailAddress
