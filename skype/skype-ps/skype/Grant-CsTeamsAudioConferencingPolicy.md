@@ -71,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+Enables you to pass a user object through the pipeline that represents the user account being assigned the online voice routing policy.
 
 ```yaml
 Type: SwitchParameter
