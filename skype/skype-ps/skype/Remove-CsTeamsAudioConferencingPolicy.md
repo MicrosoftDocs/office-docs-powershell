@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier for the TeamsAudioConferencingPolicy to be removed. To remove global policy, use this syntax: -Identity global. (Note that the global policy cannot be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity <Policyname>.
+Unique identifier for the TeamsAudioConferencingPolicy to be removed. To remove global policy, use this syntax: -Identity global. (Note that the global policy cannot be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity <policy name>.
 
 ```yaml
 Type: String
