@@ -33,6 +33,7 @@ In the example shown above, the command will delete the “Emea Users” audio c
 
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
 Type: SwitchParameter

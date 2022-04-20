@@ -35,13 +35,14 @@ Granular control over which audio conferencing features your users can or cannot
 PS C:\> Grant-CsTeamsAudioCOnferencingPolicy -identity "Ken Myer" -PolicyName “Emea Users”
 ```
 
-In this example, a user with identity "Ken Myer" is being assigned the “Emea Users” policy
+In this example, a user with identity "Ken Myer" is being assigned the “Emea Users” policy.
 
 
 
 ## PARAMETERS
 
 ### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. To skip a warning when you do this operation, specify this parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -71,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+Enables you to pass a user object through the pipeline that represents the user account being assigned the online voice routing policy.
 Enables you to pass a user object through the pipeline that represents the user account being assigned the online voice routing policy.
 
 ```yaml

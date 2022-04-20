@@ -410,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
-If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By Default AllowTollFreeDialin is always set to True. 
+If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By default, AllowTollFreeDialin is always set to True. 
 
 ```yaml
 Type: Boolean
