@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnhancedEmergencyServiceDisclaimer
-Allows the tenant administrator to configure a text string, which is shown at the top of the Calls app. The user can acknowledge the string by clicking on OK. The string will be shown on client restart.
+Allows the tenant administrator to configure a text string, which is shown at the top of the Calls app. The user can acknowledge the string by selecting OK. The string will be shown on client restart.
 
 ```yaml
 Type: String
