@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A higher integer value indicates a higher priority, the value 1 is the lowest priority, and policies can't have the same priority value.
+The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A higher integer value indicates a higher priority. The value 1 is the lowest priority, and the value 1000 is the highest priority. No two policies can have the same priority value.
 
 This parameter is required when you modify an audit log retention policy, and you must use a unique priority value.
 
