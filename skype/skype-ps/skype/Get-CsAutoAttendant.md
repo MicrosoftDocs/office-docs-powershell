@@ -174,6 +174,8 @@ Accept wildcard characters: False
 ### -IncludeStatus
 If specified, the status records for each auto attendant in the result set are also retrieved.
 
+**Note**: Expect slow response times when using this parameter with Teams PowerShell module starting with version 4.0.0. Use the **-Skip** and **-First** parameters to limit the result size instead. This issue is expected to be resolved in a future release.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

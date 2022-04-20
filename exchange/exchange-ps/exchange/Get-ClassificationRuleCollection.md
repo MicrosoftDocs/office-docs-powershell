@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ClassificationRuleCollection cmdlet to view the classification rule collections in your organization.
 
-In the Microsoft 365 compliance center, use the Get-DlpSensitiveInformationTypeRulePackage cmdlet.
+In the Microsoft Purview compliance portal, use the Get-DlpSensitiveInformationTypeRulePackage cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
