@@ -35,9 +35,8 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>] [-AllowScreenContentDigitization <Boolean>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-NewMeetingRecordingExpirationDays <Int32>]
-[-MeetingInviteLanguages <String>]
+[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-[-AllowNetworkConfigurationSettingsLookup <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -982,6 +981,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveStreamingMode
+Determines wheter you provide support for your users to stream their Teams meetings to large audiences through Real Time Messaging Protocol (RTMP).
+
+Possible values are: 
+- Disabled (default)
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
