@@ -307,6 +307,7 @@ Accept wildcard characters: False
 If true, specified toll-free number is used in meeting invitations.
 If false, specified toll-free number is not allowed to be used in meeting invitations.
 The default is true.
+This setting can ONLY be managed using the TeamsAudioConferencingPolicy.
 
 ```yaml
 Type: Boolean
@@ -336,3 +337,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
 
 [Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
+
+[New-CsTeamsAudioConferencingPolicy](New-CsTeamsAudioConferencingPolicy.md)
