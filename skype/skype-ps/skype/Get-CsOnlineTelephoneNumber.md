@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumber
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -14,6 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
+
+**Note**: This cmdlet will be deprecated. Use the new [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment) cmdlet instead.
 
 ## SYNTAX
 
