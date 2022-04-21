@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Gets the external FQDN of an Edge server access proxy that serves as a hosting provider to a user.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```

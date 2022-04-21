@@ -16,6 +16,8 @@ ms.reviewer:
 Used in a hybrid scenario to give users homed on Skype for Business Online access to on-premises Enterprise Voice features such as media bypass, Enhanced 9-1-1, and call parking.
 A hybrid scenario (also known as a split-domain scenario) is a deployment in which some users have accounts homed on-premises while other users have accounts homed on Skype for Business Online.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ### Identity (Default)

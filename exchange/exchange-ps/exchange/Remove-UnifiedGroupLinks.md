@@ -18,8 +18,6 @@ Use the Remove-UnifiedGroupLinks cmdlet to remove members, owners and subscriber
 
 **Note**: You can't use this cmdlet to remove members, owners or subscribers if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Remove owner](https://docs.microsoft.com/graph/api/group-delete-owners) and [Remove member](https://docs.microsoft.com/graph/api/group-delete-members).
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

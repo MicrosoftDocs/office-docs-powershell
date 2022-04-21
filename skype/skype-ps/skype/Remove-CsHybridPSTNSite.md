@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Remove-CsHybridPSTNSite` cmdlet to remove a previously specified hybrid public switched telephone network (PSTN) site.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```
