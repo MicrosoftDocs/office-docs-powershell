@@ -19,8 +19,9 @@ Modifies an online voice route. Online voice routes contain instructions that te
 
 ### Identity
 ```
-Set-CsOnlineVoiceRoute [-Description <String>] [[-Identity] <String>] [-NumberPattern <String>] [-OnlinePstnGatewayList <Object>] 
-[-OnlinePstnUsages <Object>] [-Priority <Int32>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineVoiceRoute [-BridgeSourcePhoneNumber <String>] [-Description <String>] [[-Identity] <String>]
+ [-NumberPattern <String>] [-OnlinePstnGatewayList <Object>] [-OnlinePstnUsages <Object>] [-Priority <Int32>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +55,25 @@ PS C:\> Set-CsOnlineVoiceRoute -Identity Route1 -OnlinePstnUsages @{replace=$x}
 This example modifies the online voice route named Route1 to populate that route's list of online PSTN usages with all the existing usages for the organization. The first command in this example retrieves the list of global online PSTN usages. Notice that the call to the `Get-CsOnlinePstnUsage` cmdlet is in parentheses; this means that we first retrieve an object containing PSTN usage information. (Because there is only one--global--PSTN usage, only one object will be retrieved.) The command then retrieves the Usage property of this object. That property, which contains a list of online PSTN usages, is assigned to the variable $x. In the second line of this example, the Set-CsOnlineVoiceRoute cmdlet is called to modify the online voice route with the identity Route1. Notice the value passed to the OnlinePstnUsages parameter: @{replace=$x}. This value says to replace everything in the OnlinePstnUsages list for this route with the contents of $x, which contain the online PSTN usages list retrieved in line 1.
 
 ## PARAMETERS
+
+### -BridgeSourcePhoneNumber
+BridgeSourcePhoneNumber is an E.164 formatted Operator Connect Conferencing phone number assigned to your Audio Conferencing Bridge. Using BridgeSourcePhoneNumber in an online voice route is mutually exclusive with using OnlinePstnGatewayList in the same online voice route.
+
+When using BridgeSourcePhoneNumber in an online voice route, the OnlinePstnUsages used in the online voice route should only be used in a corresponding OnlineAudioConferencingRoutingPolicy. The same OnlinePstnUsages should not be used in online voice routes that are not using BridgeSourcePhoneNumber.
+
+For more information about Operator Connect Conferencing, please see https://docs.microsoft.com/microsoftteams/operator-connect-conferencing-configure.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
