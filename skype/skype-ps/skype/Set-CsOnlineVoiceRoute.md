@@ -19,9 +19,8 @@ Modifies an online voice route. Online voice routes contain instructions that te
 
 ### Identity
 ```
-Set-CsOnlineVoiceRoute [-BridgeSourcePhoneNumber <String>] [-Description <String>] [[-Identity] <String>]
- [-NumberPattern <String>] [-OnlinePstnGatewayList <Object>] [-OnlinePstnUsages <Object>] [-Priority <Int32>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineVoiceRoute [-Description <String>] [[-Identity] <String>] [-NumberPattern <String>] [-OnlinePstnGatewayList <Object>] 
+[-OnlinePstnUsages <Object>] [-Priority <Int32>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -155,21 +154,6 @@ A number could resolve to multiple online voice routes. The priority determines 
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BridgeSourcePhoneNumber
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 
