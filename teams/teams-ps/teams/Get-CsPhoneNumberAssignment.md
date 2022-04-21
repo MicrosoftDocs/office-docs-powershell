@@ -15,6 +15,8 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet displays information about one or more phone numbers.
 
+> [!NOTE]
+> **Preview** The use of this cmdlet is in Public Preview.
 
 ## SYNTAX
 
