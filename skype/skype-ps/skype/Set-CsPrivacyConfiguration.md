@@ -17,12 +17,13 @@ Modifies an existing set of privacy configuration settings.
 Privacy configuration settings help determine how much information users make available to other users.
 This cmdlet was introduced in Lync Server 2010.
 
+Note: This cmdlet has been deprecated in Microsoft Teams and has no impact.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
+Set-CsPrivacyConfiguration [-EnablePrivacyMode <Boolean>]
  [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
  [-DisplayPublishedPhotoDefault <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -30,7 +31,7 @@ Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
 
 ### Instance
 ```
-Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
+Set-CsPrivacyConfiguration [-EnablePrivacyMode <Boolean>]
  [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
  [-DisplayPublishedPhotoDefault <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -218,34 +219,6 @@ Suppresses the display of any non-fatal error message that might occur when runn
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the Skype for Business Online tenant account for the privacy configuration settings being modified.
-For example:
-
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
-
-You can return the tenant ID for each of your tenants by running this command:
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
-Instead, the tenant ID will automatically be filled in for you based on your connection information.
-The Tenant parameter is primarily for use in a hybrid deployment.
-
-
-```yaml
-Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
