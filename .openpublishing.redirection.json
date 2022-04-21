@@ -6681,11 +6681,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "",
-      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "staffhub/docs-conceptual/intro.md",
       "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
       "redirect_document_id": false
