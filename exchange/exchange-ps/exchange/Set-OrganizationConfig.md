@@ -2624,7 +2624,7 @@ The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetin
 - $false: All meetings are not online by default.
 - $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
-You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
+If a user has already directly interacted with this setting in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA), the value of this parameter is ignored. Eventually, this parameter will override the Outlook-configured setting.
 
 ```yaml
 Type: Boolean
