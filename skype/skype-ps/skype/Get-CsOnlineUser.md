@@ -263,7 +263,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and later:
 
 - -not, -lt, -gt: These operators have been dropped.
-- -ge:  These operators are not supported with policy properties.
+- -ge:  This operator is not supported with policy properties.
 - -like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
 
 ```yaml
