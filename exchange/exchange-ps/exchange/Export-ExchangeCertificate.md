@@ -61,6 +61,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
+> [!NOTE]
+> The FileName parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026). To export the certificate, you must use the Set-Content cmdlet (see Example 2 & 3).
 ```powershell
 Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -FileName "C:\Data\HT cert.pfx" -BinaryEncoded -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
@@ -75,14 +77,27 @@ The password for the certificate file is P@ssw0rd1.
 
 ### Example 2
 ```powershell
-Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01 -FileName "\\FileServer01\Data\Fabrikam.req"
+$cert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01 -Password (Read-Host "Enter Password" -AsSecureString) -BinaryEncoded
+Set-Content -Path "\\FileServer01\Data\Fabrikam.pfx" -Value $cert.FileData -Encoding byte
 ```
 
-This example exports a pending certificate request to a file with the following settings:
+This example exports a certificate to a .pfx file with the following settings:
 
-The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\\\FileServer01\\Data\\Fabrikam.req.
+The certificate that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\\\FileServer01\\Data\\Fabrikam.pfx.
 
-The exported certificate request file is Base64 encoded, so the information that's written to the file is also displayed onscreen.
+The exported certificate file is encoded by DER (not Base64).
+
+### Example 3
+```powershell
+$cert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01
+Set-Content -Path "\\FileServer01\Data\Fabrikam.req" -Value $cert -Encoding UTF8
+```
+
+This example exports a certificate to a file with the following settings:
+
+The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\FileServer01\Data\Fabrikam.req.
+
+The exported certificate request file is Base64 encoded.
 
 ## PARAMETERS
 
@@ -185,6 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
+> [!NOTE]
+> The FileName parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026). To export the certificate that's stored in another UNC path, you must use the Set-Content cmdlet.
+
 The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
