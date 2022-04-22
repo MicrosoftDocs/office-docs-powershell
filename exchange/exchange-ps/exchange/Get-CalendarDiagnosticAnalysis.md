@@ -74,13 +74,13 @@ This example gets the specified calendar item from Oscar Evans' mailbox, stores 
 For basic analysis of the item, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
 ### Example 2
-> [!NOTE]
->  The LogLocation parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. You must provide Calendar Diagnostic logs through the CalendarLogs parameter (see Example 3).
 ```powershell
 Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML | Set-Content -Path "C:\My Documents\Jasen Kozma Analysis.html"
 ```
 
-This example analyzes the calendar items that were exported from Jasen Kozma's mailbox by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter and writes the advanced analysis of the items to an HTML file.
+In **Exchange 2013**, this example analyzes the calendar items that were previously exported from Jasen Kozma's mailbox by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter and writes the advanced analysis of the items to an HTML file.
+
+**Note**: The LogLocation parameter is available only in Exchange 2013. To specify the location of exported calendar items in Exchange 2016 or Exchange 2019, see Example 3.
 
 For basic analysis of the items, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
@@ -101,7 +101,7 @@ The CalendarLogs parameter specifies the calendar item that you want to analyze.
 
 For example, to analyze the meeting with the subject "November Budget Meeting" in Shannon Steele's mailbox, run the command `$Budget = Get-CalendarDiagnosticLog -Identity "Shannon Steele" -Subject "November Budget Meeting" -ExactMatch` and then use the value `$Budget` for this parameter.
 
-Note that you can't use this parameter to analyze multiple calendar items. The value that you use for this parameter must identify a single item.
+The value that you use for this parameter must identify a single item. To identify multiple items, see Example 3.
 
 You can't use this parameter with the LogLocation parameter.
 
@@ -119,8 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
-> [!NOTE]
->  The LogLocation parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. You must provide Calendar Diagnostic logs through the CalendarLogs parameter.
+**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. To specify the calender items to analyze, use the CalendarLogs parameter.
+
+This parameter is functional only in Exchange 2013.
 
 The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (`\\Server\Share\User`). If the value contains spaces, enclose the value in quotation marks (").
 
@@ -132,7 +133,7 @@ You can't use this parameter with the CalendarLogs parameter.
 Type: String[]
 Parameter Sets: LocationSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named
@@ -161,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalObjectId
-The GlobalObjectId parameter specifies the identity of the calendar item you want to analyze. You can use this parameter with the LogLocation parameter to specify the calendar item if the location contains multiple exported .msg files.
+The GlobalObjectId parameter specifies the identity of the calendar item you want to analyze. In Exchange 2013, you can use this parameter with the LogLocation parameter to specify the calendar item if the location contains multiple exported .msg files.
 
 The GlobalObjectId property of the meeting uses the same format as the CleanGlobalObjectId property (for example, 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F) and the value of the two properties is likely the same. However, the value of GlobalObjectId might not stay the same for all instances of the same meeting in multiple calendars (for example, different attendees invited to different instances of the same recurring meeting).
 
