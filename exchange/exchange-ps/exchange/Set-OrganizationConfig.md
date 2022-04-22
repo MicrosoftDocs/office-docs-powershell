@@ -1912,6 +1912,8 @@ The FindTimeAttendeeAuthenticationEnabled parameter controls whether attendees a
 - $true: Attendees are required to validate their identity and the meeting organizer can't turn off this setting (Always On).
 - $false: By default, attendees are required to verify their identity, but the meeting organizer is allowed to turn this setting off.
 
+The FindTimeAttendeeAuthenticationEnabled parameter set at the org level will override individual user settings.
+
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
 ```yaml
@@ -1934,6 +1936,8 @@ The FindTimeAutoScheduleDisabled parameter controls automatically scheduling the
 
 - $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
 - $false: By default, reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to turn on this setting.
+
+The FindTimeAutoScheduleDisabled parameter set at the org level will override user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1958,6 +1962,8 @@ The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for att
 - $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
 - $false: By default, **Lock poll for attendees** is off (initial default) or on (the user saved settings from last poll), but the meeting organizer is allowed to turn the setting off or on to allow or prevent attendees from suggesting new times or editing attendees.
 
+The FindTimeLockPollForAttendeesEnabled parameter set at the org level will override individual user settings.
+
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
 ```yaml
@@ -1980,6 +1986,8 @@ The FindTimeOnlineMeetingOptionDisabled parameter controls the availability of t
 
 - $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
 - $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting.
+
+The FindTimeOnlineMeetingOptionDisabled parameter set at the org level will override individual user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
