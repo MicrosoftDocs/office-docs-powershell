@@ -98,6 +98,8 @@ Get-CalendarDiagnosticLog -Identity jkozma@contoso.com -Subject "Weekly developm
 This example retrieves the Calendar Diagnostic log data only for the most recent calendar item in Jasen Kozma's mailbox with a message subject of "Weekly development meeting".
 
 ### Example 4
+> [!NOTE]
+>  The LogLocation parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. This restricts the usage to the local server on which the cmdlet is run.
 ```powershell
 Get-CalendarDiagnosticLog -Identity "Jasen Kozma" -Subject "Budget Meeting" -ExactMatch $true -LogLocation "C:\My Documents\Calendar Diagnostic Export"
 ```
@@ -139,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
+> [!NOTE]
+>  The LogLocation parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. This restricts the usage to the local server on which the cmdlet is run.
+
 The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
 
 In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\\My Documents\\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\\My Documents\\Calendar Export\\ssteele@contoso.com.
