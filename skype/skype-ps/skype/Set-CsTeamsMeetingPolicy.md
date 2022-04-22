@@ -1054,7 +1054,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveStreamingMode
-Determines wheter you provide support for your users to stream their Teams meetings to large audiences through Real Time Messaging Protocol (RTMP).
+Determines whether you provide support for your users to stream their Teams meetings to large audiences through Real-Time Messaging Protocol (RTMP).
 
 Possible values are: 
 - Disabled
