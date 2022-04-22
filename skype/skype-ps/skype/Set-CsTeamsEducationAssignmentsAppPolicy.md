@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParentDigestEnabledType
-Send digest emails to parents/guardians. Possible values are "Enabled" or "Disabled"
+Send digest emails to parents/guardians. Possible values are "Enabled" or "Disabled"
 
 ```yaml
 Type: String

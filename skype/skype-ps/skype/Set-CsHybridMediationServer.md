@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Sets the external FQDN of an Edge server access proxy as the hosting provider for a user.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```

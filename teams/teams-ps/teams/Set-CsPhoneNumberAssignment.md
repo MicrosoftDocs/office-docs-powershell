@@ -202,3 +202,5 @@ necessary and that is why the parameter is not available on Set-CsPhoneNumberAss
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
+
+[Get-CsPhoneNumberAssignment](Get-CsPhoneNumberAssignment.md)

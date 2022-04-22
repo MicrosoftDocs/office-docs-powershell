@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
  [-UnassignedUser]
+ [-UsePreferredDC]
  [<CommonParameters>]
 ```
 
@@ -405,8 +406,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UsePreferredDC
+
+Reserved for Microsoft internal use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters(https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## OUTPUTS
 

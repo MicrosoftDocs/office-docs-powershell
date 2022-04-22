@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ### Identity (Default)
