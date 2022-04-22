@@ -74,11 +74,23 @@ This example gets the specified calendar item from Oscar Evans' mailbox, stores 
 For basic analysis of the item, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
 ### Example 2
+> [!NOTE]
+>  The LogLocation parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. You must provide Calendar Diagnostic logs through the CalendarLogs parameter (see Example 3).
 ```powershell
 Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML | Set-Content -Path "C:\My Documents\Jasen Kozma Analysis.html"
 ```
 
 This example analyzes the calendar items that were exported from Jasen Kozma's mailbox by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter and writes the advanced analysis of the items to an HTML file.
+
+For basic analysis of the items, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
+
+### Example 3
+```powershell
+$calitems = Get-CalendarDiagnosticLog -Identity jkozma@contoso.com -Subject "Budget Meeting"
+ForEach($item in $calitems){$i++; Get-CalendarDiagnosticAnalysis -CalendarLogs $item -OutputAs HTML | Set-Content -Path ("\\FileServer01\Data\Jasen Kozma Analysis{0}.html" -f $i)}
+```
+
+This example analyzes the calendar items that were exported from Jasen Kozma's mailbox by using the Get-CalendarDiagnosticLog cmdlet and writes the advanced analysis for each item to an HTML file by using an UNC path.
 
 For basic analysis of the items, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
@@ -107,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
+> [!NOTE]
+>  The LogLocation parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. You must provide Calendar Diagnostic logs through the CalendarLogs parameter.
+
 The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (`\\Server\Share\User`). If the value contains spaces, enclose the value in quotation marks (").
 
 You export the calendar items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
