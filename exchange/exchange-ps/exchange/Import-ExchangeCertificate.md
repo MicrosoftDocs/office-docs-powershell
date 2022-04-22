@@ -76,6 +76,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
+> [!NOTE]
+> The FileName parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026). To import the certificate that's stored in another UNC path, you must use the FileData parameter.
 ```powershell
 Import-ExchangeCertificate -Server Mailbox01 -FileName "\\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
@@ -84,7 +86,7 @@ This example imports the certificate from the PKCS #12 file from \\\\FileServer0
 
 ### Example 2
 ```powershell
-Import-ExchangeCertificate -FileData ([System.IO.File]::ReadAllBytes('C:\Certificates\Fabrikam IssuedCert.p7b'))
+Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path 'C:\Certificates\Fabrikam IssuedCert.p7b' -Encoding byte))
 ```
 
 This example imports a chain of certificates from the PKCS #7 file C:\\Certificates\\Fabrikam IssuedCert.p7b on the local Exchange server.
@@ -261,6 +263,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
+> [!NOTE]
+> The FileName parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026). To import the certificate that's stored in another UNC path, you must use the FileData parameter.
+
 The FileName parameter specifies the certificate file that you want to import. Typically, you use this parameter for PKCS #12 binary certificate files that have .cer, .crt, .der, .p12, or .pfx filename extensions. This type of binary certificate file is protected by a password when the file contains the private key or chain of trust.
 
 You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\Server\Share`).

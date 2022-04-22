@@ -97,6 +97,8 @@ The Services value SMTP and the Subject value that contains the server name publ
 If you don't want this certificate to replace the existing self-signed certificate that was created during Exchange setup, be sure to select "No" in the prompt that asks you overwrite the existing default SMTP certificate.
 
 ### Example 2
+> [!NOTE]
+>  The RequestFile parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. To export the request file to a UNC path, you must use the Set-Content cmdlet (see Example 6).
 ```powershell
 New-ExchangeCertificate -GenerateRequest -RequestFile "C:\Cert Requests\woodgrovebank.req" -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
 ```
@@ -147,6 +149,26 @@ This example shows how to renew a self-signed certificate with a specific thumbp
 Select the certificate in the Exchange Administration Center and then select Edit to view properties of the certificate. The thumbprint value is shown in the Exchange Certificate window.
 
 Run the Get-ExchangeCertificate cmdlet to return a list of all certificates installed on the server with their thumbprint values.
+
+### Example 6
+```powershell
+$request = New-ExchangeCertificate -GenerateRequest -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
+Set-Content -Path "\\FileServer01\Data\woodgrovebank.req" -Value $request
+```
+
+This example creates a new certificate request for a certification authority that has the following settings:
+
+The request is Base64 encoded.
+
+The output is written to the text file \\\\FileServer01\\Data\\woodgrovebank.req.
+
+The Subject value is c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com
+
+The Domains (subject alternative names) value contains the additional valuesautodiscover.woodgrovebank.com,mail.fabrikam.com, and autodiscover.fabrikam.com.
+
+After you create the certificate request, you send the output to the CA. After you receive the certificate from the CA, you install the certificate by using the Import-ExchangeCertificate cmdlet, and you assign the certificate to Exchange services by using the Enable-ExchangeCertificate cmdlet.
+
+If the CA requires the certificate request in a file that's encoded by DER, use the BinaryEncoding switch.
 
 ## PARAMETERS
 
@@ -433,6 +455,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestFile
+> [!NOTE]
+>  The RequestFile parameter that takes the UNC path as input was removed with the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) release. To export the request file to a UNC path, you must use the Set-Content cmdlet.
+
 The RequestFile parameter specifies the name and path of the certificate request file. The file contains the same information that's displayed on-screen when you generate a Base64 encoded certificate request (you don't use the BinaryEncoded switch).
 
 You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
