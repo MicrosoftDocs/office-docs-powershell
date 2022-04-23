@@ -26,7 +26,7 @@ Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdPar
 ## DESCRIPTION
 In Microsoft Teams or Skype for Business Online, tenants are groups of users who have accounts homed on the service. Organizations will typically have a single tenant in which to house all their user accounts.
 
-In the Teams PowerShell Module version 3.0.0 or later, the following attributes have been deprecated for TeamsOnly customers:
+In the Teams PowerShell Module version 3.0.0 or later, the following attributes have been deprecated for organizations with Teams users:
 
 - AdminDescription
 - AllowedDataLocation
