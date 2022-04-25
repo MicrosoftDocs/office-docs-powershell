@@ -44,7 +44,7 @@ Remove-UserPhoto [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-Use the Remove-UserPhoto cmdlet to delete the user photo currently associated with a user's account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox, both of which are deleted when you run this cmdlet. Administrators can also use the Exchange admin center (EAC) to delete user photos by accessing the user's Outlook on the web Options page.
+Use the Remove-UserPhoto cmdlet to delete the user photo currently associated with a user's account. This cmdlet removes the photo from user's Exchange mailbox root. If run from on-premises Exchange, it also removes the user's photo from their Active Directory account. Administrators can also use the Exchange admin center (EAC) to delete user photos by accessing the user's Outlook on the web Options page.
 
 **Notes**:
 
