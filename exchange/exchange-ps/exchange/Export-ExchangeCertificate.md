@@ -76,8 +76,8 @@ In **Exchange 2013**, this example exports a certificate from the local Exchange
 
 ### Example 2
 ```powershell
-$cert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01 -Password (Read-Host "Enter Password" -AsSecureString) -BinaryEncoded
-[System.IO.File]::WriteAllBytes('\\FileServer01\Data\Fabrikam.pfx', $cert.FileData)
+$bincert = Export-ExchangeCertificate -BinaryEncoded -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01 -Password (Read-Host "Enter Password" -AsSecureString)
+[System.IO.File]::WriteAllBytes('\\FileServer01\Data\Fabrikam.pfx', $bincert.FileData)
 ```
 
 This example exports a certificate to a .pfx file with the following settings:
@@ -89,8 +89,8 @@ This example exports a certificate to a .pfx file with the following settings:
 
 ### Example 3
 ```powershell
-$cert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01
-Set-Content -Path "\\FileServer01\Data\Fabrikam.req" -Value $cert -Encoding UTF8
+$txtcert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01
+[System.IO.File]::WriteAllBytes('\\FileServer01\Data\Fabrikam.req', [System.Text.Encoding]::Unicode.GetBytes($txtcert))
 ```
 
 This example exports a pending certificate request to a file with the following settings:
