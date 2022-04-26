@@ -2885,8 +2885,7 @@ Accept wildcard characters: False
 ### -SubjectMatchesPatterns
 The SubjectMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 30
-0.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
