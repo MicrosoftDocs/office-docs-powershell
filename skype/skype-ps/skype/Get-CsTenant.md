@@ -26,7 +26,7 @@ Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdPar
 ## DESCRIPTION
 In Microsoft Teams or Skype for Business Online, tenants are groups of users who have accounts homed on the service. Organizations will typically have a single tenant in which to house all their user accounts.
 
-In the Teams PowerShell Module version 3.0.0 or later, the following attributes have been deprecated for TeamsOnly customers:
+In the Teams PowerShell Module version 3.0.0 or later, the following attributes have been deprecated for organizations with Teams users:
 
 - AdminDescription
 - AllowedDataLocation
@@ -120,6 +120,10 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+**Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
+
+
 Enables you to return data by using Active Directory attributes and without having to specify the full Active Directory distinguished name.
 For example, to retrieve a tenant by using the tenant display name, use syntax similar to this:
 
@@ -147,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+**Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
+
 Unique identifier for the tenant.
 For example:
 
@@ -168,6 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+**Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
+
 Enables you to limit the number of records returned by the cmdlet.
 For example, to return seven tenants (regardless of the number of tenants that are in your forest) include the ResultSize parameter and set the parameter value to 7.
 Note that there is no way to guarantee which 7 users will be returned.
