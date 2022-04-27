@@ -560,6 +560,7 @@ The following attributes are temporarily unavailable in the output when using th
 - OnPremSipEnabled
 - OnPremSipAddress
 - OnPremOptionFlags
+- OnPremEnterpriseVoiceEnabled
 - CountryAbbreviation
 
 **Note**: These attributes will be available in the near future.
