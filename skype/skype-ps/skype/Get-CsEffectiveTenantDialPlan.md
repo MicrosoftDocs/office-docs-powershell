@@ -23,8 +23,8 @@ Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-OU <OUIdParameter>
 
 ## DESCRIPTION
 The Get-CsEffectiveTenantDialPlan cmdlet returns information about the effective tenant dial plan in an organization.
-The returned effective Tenant Dial Plan contains the Identity and the Normalization rules that are effective for the user while using the EnterpriseVoice features.
-The effective Tenant Dial Plan name is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
+The returned effective Tenant Dial Plan contains the EffectiveTenantDialPlanName and the Normalization rules that are effective for the user while using 
+the EnterpriseVoice features. The EffectiveTenantDialPlanName is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
 
 ## EXAMPLES
 
