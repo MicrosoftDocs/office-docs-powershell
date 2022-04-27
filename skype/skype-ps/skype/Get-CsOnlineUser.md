@@ -232,7 +232,6 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - UserDirSyncEnabled
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
-- LastName (available in Teams PowerShell Module 4.2.0 and later)
 
 *Attributes that have changed in meaning/format*:
 
@@ -590,6 +589,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
+Note: The the mentioned changes in the above sections including changes under "-Identity" and "-Filter" paramters are not applicable for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. 
 
 ## RELATED LINKS
 
