@@ -159,6 +159,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
+Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
+
+If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
+the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains
+a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
+
 ## RELATED LINKS
 [Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
 
