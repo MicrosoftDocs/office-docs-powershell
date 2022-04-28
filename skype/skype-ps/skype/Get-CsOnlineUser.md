@@ -244,9 +244,10 @@ In Teams PowerShell Module version 3.0.0 and later, the **OnPremLineURI** attrib
 
 In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
 
-- All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -eq 'MCO*'"`
-- All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -eq '*MCO*'"`
-- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -eq '*MCO'"`
+- All users with an AssignedPlan matches MCO: `-Filter "AssignedPlan -eq 'MCO'"`
+- All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -like 'MCO*'"`
+- All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -like '*MCO*'"`
+- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -like '*MCO'"`
 
 **Policy Attributes**:
 
