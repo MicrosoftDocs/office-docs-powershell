@@ -286,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoMapping
-The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. Autodiscover won't enumerate security groups that are given Full Access permission to the mailbox however. Valid values are:
+The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. However, Autodiscover won't enumerate security groups that are given Full Access permission to the mailbox. Valid values are:
 
 - $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This is the default value.
 - $false: The mailbox is not automatically added to the user's Outlook profile if the user has Full Access permission.
