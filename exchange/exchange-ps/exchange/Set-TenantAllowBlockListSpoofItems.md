@@ -44,7 +44,8 @@ This example bocks the specified spoof pairs. You get the Ids parameter values f
 
 ### Example 2
 ```powershell
-(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity contoso.com\Default
+(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity
+Default
 ```
 
 This example removes all external spoof pairs from the Tenant Allow/Block List.
