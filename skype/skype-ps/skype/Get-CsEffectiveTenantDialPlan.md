@@ -39,7 +39,7 @@ This example gets the effective tenant dial plan for the Vt1_User1.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter is the unique identifier of the user to retrieve the effective tenant dial plan for.
+The Identity parameter is the unique identifier of the user for whom to retrieve the effective tenant dial plan.
 
 ```yaml
 Type: UserIdParameter
