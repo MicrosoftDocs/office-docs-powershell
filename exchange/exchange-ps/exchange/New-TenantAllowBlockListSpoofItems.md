@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity domain.com\Default
+New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity Default
 ```
 
 This example creates a new spoof pair and generates an Identity for the pair (a random GUID) which can be used as an Id parameter while updating or deleting the spoof pair through Set-TenantAllowBlockListSpoofItems and Remove-TenantAllowBlockListSpoofItems.
@@ -45,7 +45,7 @@ This example creates a new spoof pair and generates an Identity for the pair (a 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the accepted domain.
+The Identity parameter uses the value Default.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
