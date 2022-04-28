@@ -1296,8 +1296,8 @@ The ExceptIfMessageTypeMatches parameter specifies an exception for the rule tha
 - AutomaticForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
-- Encrypted: Encrypted messages.
-- PermissionControlled: Messages that have specific permissions configured.
+- Encrypted: Encrypted messages. This is meant to detect S/MIME
+- PermissionControlled: Messages that have specific permissions configured. This is meant for RMS protected messages
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
@@ -2042,8 +2042,8 @@ The MessageTypeMatches parameter specifies a condition for the rule that looks f
 - AutomaticForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
-- Encrypted: Encrypted messages.
-- PermissionControlled: Messages that have specific permissions configured.
+- Encrypted: Encrypted messages. This is meant to detect S/MIME
+- PermissionControlled: Messages that have specific permissions configured. This is meant for RMS protected messages
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
