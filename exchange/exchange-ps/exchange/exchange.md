@@ -814,13 +814,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
 
-### [Get-RMSTrustedPublishingDomain](Get-RMSTrustedPublishingDomain.md)
-
 ### [Get-SmimeConfig](Get-SmimeConfig.md)
 
 ### [Import-ExchangeCertificate](Import-ExchangeCertificate.md)
-
-### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
 
 ### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
 
@@ -833,8 +829,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
-
-### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
@@ -849,8 +843,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-OMEMessageRevocation](Set-OMEMessageRevocation.md)
 
 ### [Set-RMSTemplate](Set-RMSTemplate.md)
-
-### [Set-RMSTrustedPublishingDomain](Set-RMSTrustedPublishingDomain.md)
 
 ### [Set-SmimeConfig](Set-SmimeConfig.md)
 

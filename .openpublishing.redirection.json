@@ -6674,6 +6674,26 @@
       "source_path": "exchange/virtual-folder/exchange/Import-ContactList.md",
       "redirect_url": "https://support.microsoft.com/office/import-contacts-to-outlook-bb796340-b58a-46c1-90c7-b549b8f3c5f8",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Import-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
     }
   ]
 }
