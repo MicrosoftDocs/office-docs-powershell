@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ### -AnyOfRecipientAddressMatchesPatterns
 The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -636,7 +636,7 @@ Accept wildcard characters: False
 ### -DocumentNameMatchesPatterns
 The DocumentNameMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 ```yaml
 Type: MultiValuedProperty
@@ -800,7 +800,7 @@ Accept wildcard characters: False
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
 The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1036,7 +1036,7 @@ Accept wildcard characters: False
 ### -ExceptIfDocumentNameMatchesPatterns
 The ExceptIfDocumentNameMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1146,7 +1146,7 @@ Accept wildcard characters: False
 ### -ExceptIfFromAddressMatchesPatterns
 The ExceptIfFromAddressMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1296,8 +1296,8 @@ The ExceptIfMessageTypeMatches parameter specifies an exception for the rule tha
 - AutomaticForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
-- Encrypted: Encrypted messages.
-- PermissionControlled: Messages that have specific permissions configured.
+- Encrypted: S/MIME encrypted messages.
+- PermissionControlled: RMS protected messages.
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
@@ -1654,7 +1654,7 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectMatchesPatterns
 The ExceptIfSubjectMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1810,7 +1810,7 @@ Accept wildcard characters: False
 ### -FromAddressMatchesPatterns
 The FromAddressMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2042,8 +2042,8 @@ The MessageTypeMatches parameter specifies a condition for the rule that looks f
 - AutomaticForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
-- Encrypted: Encrypted messages.
-- PermissionControlled: Messages that have specific permissions configured.
+- Encrypted: S/MIME encrypted messages.
+- PermissionControlled: RMS protected messages.
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
@@ -2807,7 +2807,7 @@ Accept wildcard characters: False
 ### -SubjectMatchesPatterns
 The SubjectMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
 
-The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 300.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
