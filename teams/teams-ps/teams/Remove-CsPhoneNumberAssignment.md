@@ -39,7 +39,6 @@ If the cmdlet executes successfully, no result object will be returned. If the c
 parameter and a Message string parameter with additional details of the failure.
 
 **Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
-
 exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also
 now support the -ErrorAction parameter to control the execution after an error has occured.
 
