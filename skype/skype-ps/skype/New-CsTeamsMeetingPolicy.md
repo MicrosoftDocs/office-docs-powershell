@@ -25,7 +25,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
- [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
+ [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>] [-AllowCartCaptionsScheduling <string>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
  [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-AllowEngagementReport <String>]
  [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] 
@@ -341,6 +341,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -AllowCartCaptionsScheduling
+Determines whether a user can add a URL for captions from a Communicatons Access Real-Time Translation (CART) captioner for providing real time captions in meetings.
+Possible values are:
+- **EnabledUserOverride**, CART captions is available by default but a user can disable.
+- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
+- **Disabled**, if you'd like to not allow CART captions in meeting.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DisabledUserOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
