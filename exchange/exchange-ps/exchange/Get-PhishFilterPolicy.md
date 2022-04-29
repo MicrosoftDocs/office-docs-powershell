@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet is in the process of being deprecated. Use the \*-TenantAllowBlockListSpoofItems, Get-SpoofIntelligenceInsight, and Get-SpoofMailReport cmdlets instead.
+
 Use the Get-PhishFilterPolicy cmdlet to view the spoof intelligence policy and detected spoofed sending activities in your cloud-based organization over the last 30 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
