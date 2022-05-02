@@ -26,6 +26,8 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-ClassificationScheme <ClassificationScheme>]
  [-ComplianceUrl <String>]
  [-Confirm]
+ [-DlpAppGroups <PswsHashtable[]>]
+ [-DlpAppGroupsPsws <PswsHashtable[]>]
  [-DocumentIsUnsupportedSeverity <RuleSeverity>]
  [-EnableLabelCoauth <Boolean>]
  [-EnableSpoAipMigration <Boolean>]
@@ -132,6 +134,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpAppGroups
+{{ Fill DlpAppGroups Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpAppGroupsPsws
+{{ Fill DlpAppGroupsPsws Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
