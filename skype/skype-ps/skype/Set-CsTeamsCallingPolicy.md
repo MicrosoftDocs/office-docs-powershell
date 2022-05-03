@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto answer for incoming meeting invites. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
+Setting this parameter allows you to enable or disable auto answer for incoming meeting invites on Teams Phones. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
 
 ```yaml
 Type: Enum
@@ -372,14 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeTransferEnabled
-Teams users will be able to transfer a call safely, between Teams and Teams or Skype For Business. If the target user does not answer the call, it will ring back to the transferrer. The person transferring the call must be a Teams user. The person the call is being transferred to must be either a Teams or Skype for Business user in the same tenant or in a federated tenant.
-
-Possible values
-- Enabled
-- Disabled
-- UserOverride
-
-**Note**: This parameter is not available for use.
+**Note**: This parameter will be deprecated. The Safe Transfer feature in Microsoft Teams is not controlled by this parameter.
 
 ```yaml
 Type: String
@@ -463,3 +456,11 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+
+[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+
+[Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+
+[New-CsTeamsCallingPolicy](New-CsTeamsCallingPolicy.md)
