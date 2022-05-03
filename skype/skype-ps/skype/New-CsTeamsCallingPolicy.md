@@ -43,7 +43,7 @@ The cmdlet create the policy instance Sales and sets the value of the parameter 
 ## PARAMETERS
 
 ### -Identity
-Name of the policy being modified.
+Name of the policy instance being created.
 
 ```yaml
 Type: String
