@@ -30,7 +30,9 @@ Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bo
 
 ## DESCRIPTION
 The Teams Calling Policy controls which calling and call forwarding features are available to users in Microsoft Teams. This cmdlet allows admins to set values in
-a given calling policy.
+a given calling policy instance.
+
+Only the parameters specified are changed. Other parameters keep their existing values.
 
 ## EXAMPLES
 
@@ -39,7 +41,8 @@ a given calling policy.
 PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
 ```
 
-Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy.
+Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the Global (default)
+Teams Calling policy instance.
 
 ### Example 2
 ```
@@ -51,7 +54,7 @@ Sets the value of the parameter LiveCaptionsEnabledTypeForCalling, which control
 ## PARAMETERS
 
 ### -Identity
-Name of the policy being modified.
+Name of the policy instance being modified.
 
 ```yaml
 Type: String
