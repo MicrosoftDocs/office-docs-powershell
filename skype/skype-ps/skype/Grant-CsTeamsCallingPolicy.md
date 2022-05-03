@@ -41,6 +41,14 @@ PS C:\> Grant-CsTeamsCallingPolicy -identity user1@contoso.com -PolicyName Sales
 
 Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to user1@contoso.com
 
+### Example 2
+```powershell
+PS C:\> Grant-CsTeamsCallingPolicy -Global -PolicyName SalesCallingPolicy
+```
+
+Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the Global policy instance. This sets the parameters in the Global polic instance to the values found
+in the SalesCallingPolicy instance.
+
 ## PARAMETERS
 
 ### -Identity
@@ -74,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-Sets the Global policy instance to the specified policy.
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
 Type: SwitchParameter
