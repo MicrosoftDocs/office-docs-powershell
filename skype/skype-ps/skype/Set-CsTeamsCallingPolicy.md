@@ -20,7 +20,8 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bool>] [-AllowCallForwardingToUser <bool>] [-AllowCallGroups <bool>] [-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <bool>] [-AllowDelegation <bool>] [-AllowNetworkConfigurationSettingsLookup <bool>] [-AllowPrivateCalling <bool>] [-AllowSIPDevicesCalling <bool>] [-AllowTranscriptionForCalling <bool>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <bool>] [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>] [-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PreventTollBypass <bool>] [-SafeTransferEnabled <string>] [-SpamFilteringEnabledType <string>] [-MsftInternalProcessingMode <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bool>] [-AllowCallForwardingToUser <bool>] [-AllowCallGroups <bool>] [-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <bool>]
+[-AllowDelegation <bool>] [-AllowNetworkConfigurationSettingsLookup <bool>] [-AllowPrivateCalling <bool>] [-AllowSIPDevicesCalling <bool>] [-AllowTranscriptionForCalling <bool>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <bool>] [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>] [-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PreventTollBypass <bool>] [-SafeTransferEnabled <string>] [-SpamFilteringEnabledType <string>] [-MsftInternalProcessingMode <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
