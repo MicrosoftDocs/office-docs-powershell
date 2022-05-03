@@ -37,7 +37,7 @@ This example removes the Teams Calling policy with identity Sales
 PS C:>  Remove-CsTeamsCallingPolicy -Identity Global
 ```
 
-This example set the Global policy instance to the default values.
+This example resets the Global policy instance to the default values.
 
 ## PARAMETERS
 
