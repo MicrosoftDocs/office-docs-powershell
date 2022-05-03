@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallForwardingToPhone
-Enables call forwarding or simultaneous ringing of inbound calls to any phone number.
+Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
 
 ```yaml
 Type: Boolean
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallForwardingToUser
-Enables call forwarding or simultaneous ringing of inbound calls to other users in your tenant.
+Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to other users in your tenant.
 
 ```yaml
 Type: Boolean
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallGroups
-Enables inbound calls to be routed to call groups.
+Enables the user to configure call groups in the Microsoft Teams client and that inbound calls should be routed to call groups.
 
 ```yaml
 Type: Boolean
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCloudRecordingForCalls
-Determines whether cloud recording is allowed in a user's 1:1 call. Set this to TRUE to allow the user to be able to record 1:1 calls. Set this to FALSE to prohibit the user from recording 1:1 calls.
+Determines whether cloud recording is allowed in a user's 1:1 Teams or PSTN calls. Set this to True to allow the user to be able to record 1:1 calls. Set this to False to prohibit the user from recording 1:1 calls.
 
 ```yaml
 Type: Boolean
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDelegation
-Enables inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
+Enables the user to configure delegation in the Microsoft Teams client and that inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
 
 ```yaml
 Type: Boolean
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTranscriptionForCalling
-Determines whether post-call transcriptions are allowed. Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether post-call transcriptions are allowed. Set this to True to allow. Set this to False to prohibit.
 
 ```yaml
 Type: Boolean
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallRecordingExpirationDays
-TBD
+Sets the expiration of the recorded 1:1 calls. Default is 60 days.
 
 ```yaml
 Type: Long
