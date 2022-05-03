@@ -38,7 +38,8 @@ The Teams Calling Policy controls which calling and call forwarding features are
 PS C:\> New-CsTeamsCallingPolicy -Identity Sales -AllowPrivateCalling $false
 ```
 
-The cmdlet create the policy instance Sales and sets the value of the parameter AllowPrivateCalling to False.
+The cmdlet create the policy instance Sales and sets the value of the parameter AllowPrivateCalling to False. The rest of the parameters are set to the corresponding
+values in the Global policy instance.
 
 ## PARAMETERS
 
