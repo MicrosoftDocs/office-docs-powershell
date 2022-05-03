@@ -54,8 +54,8 @@ Sets the value of the parameter LiveCaptionsEnabledTypeForCalling, which control
 Name of the policy being modified.
 
 ```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
+Type: String
+Parameter Sets: (All)
 Aliases:
 
 Required: False
