@@ -41,15 +41,14 @@ Only the parameters specified are changed. Other parameters keep their existing 
 PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
 ```
 
-Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the Global (default)
-Teams Calling policy instance.
+Sets the value of the parameter AllowPrivateCalling in the Global (default) Teams Calling policy instance.
 
 ### Example 2
 ```
-PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForCalling disabled
+PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForCalling Disabled
 ```
 
-Sets the value of the parameter LiveCaptionsEnabledTypeForCalling, which controls whether real-time captions are available for the user in Teams calls, in a custom CallingPolicy called HRPolicy.
+Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling policy instance called HRPolicy.
 
 ## PARAMETERS
 
