@@ -45,6 +45,21 @@ Sets the value of the parameter LiveCaptionsEnabledTypeForCalling, which control
 
 ## PARAMETERS
 
+### -Identity
+Name of the policy being modified.
+
+```yaml
+Type: XdsIdentity
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowCallForwardingToPhone
 Enables call forwarding or simultaneous ringing of inbound calls to any phone number.
 
@@ -206,6 +221,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowVoicemail
+Enables inbound calls to be routed to voice mail. Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride. When set to AlwaysDisabled, calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams. When set to AlwaysEnabled, calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user. When set to UserOverride, calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowWebPSTNCalling
 Allows PSTN calling from the Team web client.
@@ -214,190 +244,7 @@ Allows PSTN calling from the Team web client.
 Type: Object
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-
-### -Force
-Suppresses all non-fatal errors.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Name of the policy being modified.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-Use this to pipe a specific calling policy to be set. You can only modify the global policy, so can only pass the global instance of the Calling Policy.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Tenant
-Internal Microsoft use.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-
-### -AllowVoicemail
-Enables inbound calls to be routed to voice mail. Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-### -PreventTollBypass
-Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
-
-**Note**: Do not set this parameter to True for Calling Plan users as it will prevent successful call routing. This setting only works with Direct Routing that is configured to handle location based routing restrictions. 
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-
-### -BusyOnBusyEnabledType
-Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting value to Disabled.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled.
-
-```yaml
-Type: Enum
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: Enabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SafeTransferEnabled
-Teams users will be able to transfer a call safely, between Teams and Skype For Business. If the target user does not answer the call, it will ring back to the transferrer. The person transferring the call must be a Teams user. The person the call is being transferred to must be either a Teams or Skype for Business user in the same tenant or in a federated tenant.
-
-Possible values
-- Enabled
-- Disabled
-- UserOverride
-
-**Note**: This parameter is not available for use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -413,6 +260,7 @@ Setting this parameter allows you to enable or disable auto answer for incoming 
 Type: Enum
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -421,6 +269,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BusyOnBusyEnabledType
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting value to Disabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallRecordingExpirationDays
+TBD
+
+```yaml
+Type: Long
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users the policy should be assigned to.
@@ -429,6 +308,7 @@ Enables administrators to provide explanatory text about the calling policy. For
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -448,6 +328,64 @@ Possible values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MusicOnHoldEnabledType
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreventTollBypass
+Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
+
+**Note**: Do not set this parameter to True for Calling Plan users as it will prevent successful call routing. This setting only works with Direct Routing that is configured to handle location based routing restrictions. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SafeTransferEnabled
+Teams users will be able to transfer a call safely, between Teams and Teams or Skype For Business. If the target user does not answer the call, it will ring back to the transferrer. The person transferring the call must be a Teams user. The person the call is being transferred to must be either a Teams or Skype for Business user in the same tenant or in a federated tenant.
+
+Possible values
+- Enabled
+- Disabled
+- UserOverride
+
+**Note**: This parameter is not available for use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -468,10 +406,44 @@ Possible values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
