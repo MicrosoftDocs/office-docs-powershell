@@ -2,12 +2,12 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/set-csteamscallingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -20,17 +20,12 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-AllowCallRedirect <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-AllowCallRedirect <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bool>] [-AllowCallForwardingToUser <bool>] [-AllowCallGroups <bool>] [-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <bool>] [-AllowDelegation <bool>] [-AllowNetworkConfigurationSettingsLookup <bool>] [-AllowPrivateCalling <bool>] [-AllowSIPDevicesCalling <bool>] [-AllowTranscriptionForCalling <bool>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <bool>] [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>] [-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PreventTollBypass <bool>] [-SafeTransferEnabled <string>] [-SpamFilteringEnabledType <string>] [-MsftInternalProcessingMode <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business. 
-This cmdlet allows admins to set values in a given calling policy.
+The Teams Calling Policy controls which calling and call forwarding features are available to users in Microsoft Teams. This cmdlet allows admins to set values in
+a given calling policy.
 
 ## EXAMPLES
 
@@ -50,6 +45,168 @@ Sets the value of the parameter LiveCaptionsEnabledTypeForCalling, which control
 
 ## PARAMETERS
 
+### -AllowCallForwardingToPhone
+Enables call forwarding or simultaneous ringing of inbound calls to any phone number.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCallForwardingToUser
+Enables call forwarding or simultaneous ringing of inbound calls to other users in your tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCallGroups
+Enables inbound calls to be routed to call groups.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCallRedirect
+Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. The valid options are: Enabled, Disabled and UserOverride. When set to Enabled users will have the ability to redirect received calls. However, when set to Disabled the user will not have such ability. Note: UserOverride option is not available for use. There's no UX implemented for its management.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCloudRecordingForCalls
+Determines whether cloud recording is allowed in a user's 1:1 call. Set this to TRUE to allow the user to be able to record 1:1 calls. Set this to FALSE to prohibit the user from recording 1:1 calls.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowDelegation
+Enables inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkConfigurationSettingsLookup
+This parameter is deprecated. Please use same parameter in the TeamsMeetingPolicy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPrivateCalling
+Controls all calling capabilities in Teams. Turning this off will turn off all calling functionality in Teams.
+If you use Skype for Business for calling, this policy will not affect calling functionality in Skype for Business.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSIPDevicesCalling
+Determines whether the user is allowed to use SIP device for calling on behalf of teams client.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTranscriptionForCalling
+Determines whether post-call transcriptions are allowed. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -AllowWebPSTNCalling
 Allows PSTN calling from the Team web client.
 
@@ -65,40 +222,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowCalling
-Controls interop calling capabilities.
-Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa.
 
-Note: This parameter is disabled.
 
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowPrivateCalling
-Controls all calling capabilities in Teams.
-Turning this off will turn off all calling functionality in Teams.
-If you use Skype for Business for calling, this policy will not affect calling functionality in Skype for Business.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -115,20 +240,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities. The valid options are: Enabled and Disabled. When set to Enabled users will have the ability to redirect received calls. However, when set to Disabled the user will not have such ability. Note: UserOverride option is not available for use. There's no UX implemented for its management.
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 Suppresses all non-fatal errors.
@@ -206,65 +318,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowCallForwardingToPhone
-Enables call forwarding or simultaneous ringing of inbound calls to any phone number.
 
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowCallForwardingToUser
-Enables call forwarding or simultaneous ringing of inbound calls to other users in your tenant.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowCallGroups
-Enables inbound calls to be routed to call groups.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowDelegation
-Enables inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AllowVoicemail
 Enables inbound calls to be routed to voice mail. Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride.
@@ -280,20 +334,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -AllowCloudRecordingForCalls
-Determines whether cloud recording is allowed in a user's 1:1 call. Set this to TRUE to allow the user to be able to record 1:1 calls. Set this to FALSE to prohibit the user from recording 1:1 calls.
 
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
@@ -312,20 +353,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowSIPDevicesCalling
-Determines whether the user is allowed to use SIP device for calling on behalf of teams client.
 
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -BusyOnBusyEnabledType
 Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting value to Disabled.
@@ -393,20 +421,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowTranscriptionForCalling
-Determines whether post-call transcriptions are allowed. Set this to TRUE to allow. Set this to FALSE to prohibit.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users the policy should be assigned to.
