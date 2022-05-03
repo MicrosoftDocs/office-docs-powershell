@@ -21,7 +21,7 @@ Remove-CsTeamsCallingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonPa
 ```
 
 ## DESCRIPTION
- This cmdlet removes an existing Teams Calling policy
+ This cmdlet removes an existing Teams Calling policy or resets the Global instance to the default values.
 
 ## EXAMPLES
 
@@ -32,10 +32,17 @@ PS C:>  Remove-CsTeamsCallingPolicy -Identity Sales
 
 This example removes the Teams Calling policy with identity Sales
 
+### Example 2
+```powershell
+PS C:>  Remove-CsTeamsCallingPolicy -Identity Global
+```
+
+This example set the Global policy instance to the default values.
+
 ## PARAMETERS
 
 ### -Identity
- The Identity parameter is the unique identifier of the Teams Calling policy to remove.
+ The Identity parameter is the unique identifier of the Teams Calling policy to remove or reset.
 
 ```yaml
 Type: String
