@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-Internal Microsoft use
+Sets the Global policy instance to the specified policy.
 
 ```yaml
 Type: SwitchParameter
