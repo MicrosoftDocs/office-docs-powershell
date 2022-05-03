@@ -347,9 +347,9 @@ Accept wildcard characters: False
 ### -AllowCartCaptionsScheduling
 Determines whether a user can add a URL for captions from a Communications Access Real-Time Translation (CART) captioner for providing real-time captions in meetings.
 Possible values are:
-- **EnabledUserOverride**, CART captions is available by default but a user can disable.
-- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
-- **Disabled**, if you'd like to not allow CART captions in meeting.
+- **EnabledUserOverride**: CART captions are available by default but you can disable them.
+- **DisabledUserOverride**: If you would like users to be able to use CART captions in meetings but they are disabled by default. 
+- **Disabled**: If you do not want to allow CART captions in meetings.
 
 ```yaml
 Type: String
