@@ -232,6 +232,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - UserDirSyncEnabled
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
+- LastName (available in Teams PowerShell Module 4.2.1 and later)
 
 *Attributes that have changed in meaning/format*:
 
