@@ -40,9 +40,9 @@ Import-Module platyPS
 
 This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
 
-To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell, and the value is most likely `$Session`.
+To recap: this step is required in Exchange and other products that use remote PowerShell, and the value is most likely `$Session`.
 
-If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step.
+If you're using Microsoft Teams or another product that doesn't use remote PowerShell, you can skip this step.
 
 ### Step 5: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
 
@@ -117,29 +117,18 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 1. Go to the cmdlet topics location in the appropriate GiHub repository:
 
    - Exchange: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange>
-
    - Office Web Apps: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps>
-
-   - SharePoint Online: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online>
-
-   - SharePoint PNP: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp>
-
-   - SharePoint Server: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server>
-
    - Skype: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype>
-
    - StaffHub: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub>
-
    - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams>
-
    - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard>
 
 2. Find the topic and click **Edit**
 
 3. Copy/paste your updates (and only your updates) from your new, local copy of the topic into the existing topic (click the **Preview** tab to see what they'll look like).
 
-   **IMPORTANT**: The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
-    Any deviation will throw errors in the Pull Request. The schema can be found here: <https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md>.
+   > [!IMPORTANT]
+   > The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help. Any deviation will throw errors in the Pull Request. The schema can be found here: <https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md>.
 
 4. After you're done modifying files, go to the **Propose file change** section at the bottom of the page:
 
