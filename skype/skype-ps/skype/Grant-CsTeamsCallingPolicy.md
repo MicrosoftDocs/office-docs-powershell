@@ -30,7 +30,7 @@ Grant-CsTeamsCallingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-What
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interoperability state with Skype for Business.  This cmdlet allows admins to grant user level policies to individual users.
+The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users.
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to user1@contoso.com
 PS C:\> Grant-CsTeamsCallingPolicy -Global -PolicyName SalesCallingPolicy
 ```
 
-Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the Global policy instance. This sets the parameters in the Global polic instance to the values found
+Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the Global policy instance. This sets the parameters in the Global policy instance to the values found
 in the SalesCallingPolicy instance.
 
 ## PARAMETERS
