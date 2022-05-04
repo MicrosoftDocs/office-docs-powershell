@@ -441,6 +441,8 @@ Some of the commonly used FeatureTypes include:
 - PhoneSystem
 - CallingPlan
 
+AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
+
 *Dropped attributes*:
 
 The following attributes are no longer relevant to Teams and have been dropped from the output:
