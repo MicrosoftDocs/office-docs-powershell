@@ -30,7 +30,7 @@ Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bo
 
 ## DESCRIPTION
 The Teams Calling Policy controls which calling and call forwarding features are available to users in Microsoft Teams. This cmdlet allows admins to set values in
-a given calling policy instance.
+a given Calling Policy instance.
 
 Only the parameters specified are changed. Other parameters keep their existing values.
 
