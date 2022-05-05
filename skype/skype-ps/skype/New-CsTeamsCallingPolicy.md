@@ -256,7 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto answer for incoming meeting invites on Teams Phones. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
+Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
+
 
 ```yaml
 Type: Enum
