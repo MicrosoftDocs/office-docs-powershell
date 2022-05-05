@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-OMEConfiguration cmdlet to configure Microsoft 365 Message Encryption (OME).
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+Use the Set-OMEConfiguration cmdlet to configure Microsoft Purview Message Encryption.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -50,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image ([System.IO.File]::ReadAllBytes('C:\Temp\OME Logo.gif'))
 ```
 
-This example configures the specified values for the default OME configuration named "OME Configuration". Note the use of the Get-Content command to provide the input for the Image parameter.
+This example configures the specified values for the default OME configuration named "OME Configuration".
 
 ## PARAMETERS
 

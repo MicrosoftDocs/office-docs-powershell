@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Register-CsHybridPSTNAppliance` cmdlet to create a new Skype for Business Cloud Connector Edition appliance.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```

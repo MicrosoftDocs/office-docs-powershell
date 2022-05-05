@@ -20,12 +20,12 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [[-Identity] <XdsIdentity>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-AllowCallRedirect <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>] [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>] [-AllowCloudRecordingForCalls <Boolean>] [-PreventTollBypass <Boolean>] [-AllowSIPDevicesCalling <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>] [-AutoAnswerEnabledType <Enum>] [-Instance <PSObject>] [-AllowTranscriptionForCalling <Boolean>] [-Description <String>] [-LiveCaptionsEnabledTypeForCalling <String>] [-SpamFilteringEnabledType <String>] [-AllowCallRedirect <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,6 +111,21 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCallRedirect
+Setting this parameter provides the ability to configure call redirection capabilities. The valid options are: Enabled and Disabled. When set to Enabled users will have the ability to redirect received calls. However, when set to Disabled the user will not have such ability. Note: UserOverride option is not available for use. There's no UX implemented for its management.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -327,7 +342,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a PSTN caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled. This setting does not apply to call park and SLA boss delegate features.
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled.
 
 ```yaml
 Type: Enum

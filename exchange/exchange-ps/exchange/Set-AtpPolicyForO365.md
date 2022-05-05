@@ -20,8 +20,6 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the settings for the following fea
 - Safe Documents: Uses Microsoft Defender for Endpoint to scan documents and files that are opened in Protected View in Microsoft 365 apps for enterprise.
 - Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -35,7 +33,6 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForO365Clients <Boolean>]
- [-EnableSafeLinksForWebAccessCompanion <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -54,7 +51,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $true
+Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
 ```
 
 This example enables Safe Documents and Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
@@ -203,22 +200,6 @@ The EnableSafeLinksForO365Clients parameter enables or disables Safe Links for O
 - $false: Safe Links scanning is disabled in supported Office 365 apps.
 
 Note that this protection applies to links in Office documents, not links in email messages. Safe Links protection for links in email messages is controlled by Safe Links policies (the [New-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy) or [Set-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/set-safelinkspolicy) cmdlets).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSafeLinksForWebAccessCompanion
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean

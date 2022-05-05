@@ -72,7 +72,7 @@ This example specifies that the hybrid deployment uses a defined TLS certificate
 ## PARAMETERS
 
 ### -ClientAccessServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The ClientAccessServers parameter specifies the Exchange 2010 SP2 or later servers with the Client Access server role installed that will be configured to support the hybrid deployment features. At least one Client Access server must be defined and be externally accessible from the Internet on ports 80 and 443. The servers will be configured to enable the following:
 

@@ -23,10 +23,6 @@ The _CustomPropertyNames_ parameter on the [Get-CalendarDiagnosticObjects](/powe
 
 The article describes the valid values for the _CustomPropertyNames_ parameter.
 
-<br>
-
-****
-
 |CustomPropertyNames|Description|
 |---|---|
 |AddOnlineMeetingOnFinalize|Add online meeting on finalize flag.|
@@ -215,4 +211,3 @@ The article describes the valid values for the _CustomPropertyNames_ parameter.
 |ViewEndTime|End time of a calendar item.|
 |ViewStartTime|Start time of a calendar item.|
 |When|The text returned by When is localized using the Exchange Server culture or using the culture specified in the PreferredCulture property of the ExchangeService object this appointment is bound to.|
-|

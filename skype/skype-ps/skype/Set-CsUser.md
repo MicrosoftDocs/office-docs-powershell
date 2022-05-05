@@ -17,7 +17,7 @@ Modifies Skype for Business properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
-**Note**: Using this cmdlet for Microsoft Teams users will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this cmdlet for Microsoft Teams users will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead. The new cmdlets are currently not supported for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsUser.
 
 ## SYNTAX
 
@@ -31,8 +31,8 @@ Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] 
 ```
 
 ## DESCRIPTION
-The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Azure Active Directory. 
-For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers. For Skype for Business online enable or disable a user for enterprise voice, hosted voicemail, or modify the user's on premise line uri. 
+The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Azure Active Directory.
+For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers. For Skype for Business online enable or disable a user for enterprise voice, hosted voicemail, or modify the user's on premise line uri.
 The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business.
 
 The only attributes you can modify using the `Set-CsUser` cmdlet are attributes related to Skype for Business.
@@ -40,11 +40,10 @@ Other user account attributes, such as the user's job title or department, canno
 Keep in mind, however, that the Skype for Business attributes should only be modified by using the `Set-CsUser` cmdlet or the Skype for Business Server Control Panel.
 You should not attempt to manually configure these attributes.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 Set-CsUser -Identity "Pilar Ackerman" -EnterpriseVoiceEnabled $True
 ```
 
@@ -54,7 +53,7 @@ This task is carried out by adding the EnterpriseVoiceEnabled parameter, and the
 
 
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 Get-CsUser -LdapFilter "Department=Finance" | Set-CsUser -EnterpriseVoiceEnabled $True
 ```
 
@@ -63,7 +62,7 @@ In this command, the `Get-CsUser` cmdlet and the LdapFilter parameter are first 
 That information is then piped to the `Set-CsUser` cmdlet, which enables Enterprise Voice for each account in the collection.
 
 ### -------------------------- Example 3 --------------------------
-```
+```powershell
 Set-CsUser -Identity "Pilar Ackerman" -LineUri "tel:+123456789"
 ```
 
@@ -80,11 +79,10 @@ User Identities can also be referenced by using the user's Active Directory dist
 You can use the asterisk (*) wildcard character when using the display name as the user Identity.
 For example, the Identity "Smith" returns all the users who have a display name that ends with the string value " Smith".
 
-
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
@@ -102,11 +100,10 @@ You cannot disable A/V communications if a user is currently enabled for remote 
 
 **Note**: This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -125,7 +122,6 @@ If you later re-enable the account by using the Enabled parameter, the associate
 This differs from using the `Disable-CsUser` cmdlet to disable a user account.
 When you run the `Disable-CsUser` cmdlet, all the Skype for Business Server data associated with that account is deleted.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -143,11 +139,10 @@ Accept wildcard characters: False
 Enables you to specify a domain controller to connect to when modifying a user account.
 If this parameter is not included then the cmdlet will use the first available domain controller.
 
-
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -166,7 +161,7 @@ With Enterprise Voice, users can make telephone calls using the Internet rather 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -185,7 +180,7 @@ In addition, setting this option to True enables Skype for Business users to dir
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -207,13 +202,12 @@ This is due to the fact that, depending on your setup, those two numbers could a
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension TEL:+14255551297;ext=51297 
-
+Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension TEL:+14255551297;ext=51297
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -228,11 +222,10 @@ The URI of the remote call control telephone gateway assigned to the user.
 The LineServerUri is the gateway URI, prefaced by "sip:".
 For example: sip:rccgateway@litwareinc.com
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -251,11 +244,10 @@ Private lines are often used for personal phone calls or for business calls that
 The private line value should be specified using the E.164 format, and be prefixed by the "TEL:" prefix.
 For example: TEL:+14255551297.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -275,11 +267,10 @@ For details, see the parameter EnterpriseVoiceEnabled.
 
 To be enabled for remote call control, a user must have both a LineUri and a LineServerUri.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -293,11 +284,10 @@ Accept wildcard characters: False
 Unique identifier (similar to an email address) that allows the user to communicate using SIP devices such as Skype for Business.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example: `-SipAddress sip:kenmyer@litwareinc.com`.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -313,11 +303,10 @@ By default, the `Set-CsUser` cmdlet does not pass objects through the pipeline.
 
 **Note**: This parameter is not available for Teams Only tenants from version 3.0.0 onwards.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -363,11 +352,10 @@ Accept wildcard characters: False
 Enables you to assign one or more third-party audio conferencing providers to a user.
 However, it is recommended that you use the `Set-CsUserAcp` cmdlet to assign Audio conferencing providers.
 
-
 ```yaml
 Type: AcpInfo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -389,11 +377,10 @@ ArchivingToExchange
 
 NoArchiving
 
-
 ```yaml
 Type: ExchangeArchivingPolicyOptionsEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -420,7 +407,7 @@ Conversely, dialing just the extension (51297) or using Skype for Business to di
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -458,4 +445,3 @@ The `Set-CsUser` cmdlet does not return any objects.
 [Move-CsUser](Move-CsUser.md)
 
 [Get-CsOnlineUser](Get-CsOnlineUser.md)
-

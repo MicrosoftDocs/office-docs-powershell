@@ -32,8 +32,6 @@ Import-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte
 ## DESCRIPTION
 Importing a transport rule collection from an XML file removes or overwrites all pre-existing transport rules that were defined in your organization. Make sure that you have a backup of your current transport rule collection before you import and overwrite your current transport rules.
 
-Importing file data is a two-step process. First you must load the data to a variable using the Get-Content cmdlet, and then use that variable to transmit the data to the cmdlet.
-
 For information about how to export a transport rule collection to an XML file, see [Export-TransportRuleCollection](https://docs.microsoft.com/powershell/module/exchange/export-transportrulecollection).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -50,7 +48,7 @@ This example imports a transport rule collection from the XML file named Exporte
 ## PARAMETERS
 
 ### -Identity
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to import. You can use any value that uniquely identifies the rule. For example:
 
@@ -72,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the variable name that contains the content of the XML file.
+The FileData parameter specifies the XML file that contains the exported transport rule collection from the Export-TransportRuleCollection cmdlet.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 

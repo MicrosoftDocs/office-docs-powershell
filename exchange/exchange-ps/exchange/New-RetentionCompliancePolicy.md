@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Microsoft 365 compliance center.
+Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,6 +34,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-ModernGroupLocationException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
@@ -65,18 +66,18 @@ New-RetentionCompliancePolicy [-Name] <String>
 ## DESCRIPTION
 New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](New-RetentionComplianceRule.md). In addition, at least one location parameter must be defined to create a retention policy.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
-New-RetentionComplianceRule -Name RetUnlimited -Policy "Regulation 123 Compliance" -RetentionDuration Unlimited
 ```
 
-The first command in this example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
-The second command creates a new retention rule named "RetUnlimited" and adds it to the retention policy created with the fist command.
+This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+
+The next step is to use the New-RetentionComplianceRule cmdlet to add a retention rule to the retention policy.
 
 ## PARAMETERS
 
@@ -326,6 +327,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
