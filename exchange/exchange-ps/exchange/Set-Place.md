@@ -36,6 +36,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
+ [-MTREnabled <Boolean>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -288,6 +289,29 @@ The Label parameter specifies a descriptive label for the room (for example, a n
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MTREnabled
+**Note**: Currently, this parameter is informational only and results in no additional funcationality.
+
+The MTREnabled parameter identfies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
+
+- $true: The room is has a Teams room system. You can add the Teams room system to Microsoft Teams meetings when selecting to join a meeting with room audio.
+- $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value. 
+
+For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://docs.microsoft.com/microsoftteams/rooms/).
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

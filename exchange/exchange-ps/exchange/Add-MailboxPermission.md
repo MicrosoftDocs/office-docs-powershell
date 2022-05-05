@@ -242,6 +242,8 @@ The User parameter specifies who gets the permissions on the mailbox. You can sp
 - Mail users
 - Security groups
 
+**Note**: When a security group is used to specify Full Access permissions, the auto-mapping feature won't automatically add the mailbox in Outlook for the group member. See the [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) article for more information.
+
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name
@@ -284,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoMapping
-The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. Valid values are:
+The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. However, Autodiscover won't enumerate security groups that are given Full Access permission to the mailbox. Valid values are:
 
 - $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This is the default value.
 - $false: The mailbox is not automatically added to the user's Outlook profile if the user has Full Access permission.

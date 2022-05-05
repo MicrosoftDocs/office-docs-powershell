@@ -69,13 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-{{ Fill RecipientAddress Description }}
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

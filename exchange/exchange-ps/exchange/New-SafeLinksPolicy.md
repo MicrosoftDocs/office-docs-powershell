@@ -33,7 +33,6 @@ New-SafeLinksPolicy [-Name] <String>
  [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForEmail <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
- [-IsEnabled <Boolean>]
  [-MakeBuiltInProtection]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-ScanUrls <Boolean>]
@@ -273,24 +272,6 @@ The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled fo
 
 - $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for Teams. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsEnabled
-This parameter has been deprecated and is no longer used.
-
-Use the EnableSafeLinksForEmail parameter instead.
 
 ```yaml
 Type: Boolean
