@@ -37,14 +37,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastructure,SpoofType,Action,Identity
-Set-TenantAllowBlockListSpoofItems -Identity contoso.com\Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
+Set-TenantAllowBlockListSpoofItems -Identity Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
 This example bocks the specified spoof pairs. You get the Ids parameter values from the output of Get-TenantAllowBlockListSpoofItems command (the Identity property).
 
 ### Example 2
 ```powershell
-(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity contoso.com\Default
+(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity
+Default
 ```
 
 This example removes all external spoof pairs from the Tenant Allow/Block List.
@@ -52,7 +53,7 @@ This example removes all external spoof pairs from the Tenant Allow/Block List.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the accepted domain.
+The Identity parameter uses the value Default.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter

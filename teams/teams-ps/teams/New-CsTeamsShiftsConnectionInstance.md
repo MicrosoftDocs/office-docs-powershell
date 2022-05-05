@@ -55,13 +55,15 @@ New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
         "OpenShift",
         "OpenShiftRequest",
         "TimeOff",
-        "TimeOffRequest"
+        "TimeOffRequest",
+        "TimeCard"
     ],
     "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
     "enabledWfiScenarios": [
         "SwapRequest",
         "OpenShiftRequest",
-        "TimeOffRequest"
+        "TimeOffRequest",
+        "TimeCard"
     ],
     "syncFrequencyInMin": 10,
     "designatedActorId": "12345a2d-422c-4d4b-a2db-4cea80f98255",

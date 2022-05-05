@@ -37,6 +37,7 @@ New-UnifiedGroup [-DisplayName <String>]
  [-ExecutingUser <RecipientIdParameter>]
  [-ExoErrorAsWarning]
  [-HiddenGroupMembershipEnabled]
+ [-IsMemberAllowedToEditContent <System.Boolean>]
  [-Language <CultureInfo>]
  [-ManagedBy <RecipientIdParameter[]>]
  [-Members <RecipientIdParameter[]>]
@@ -448,6 +449,22 @@ You can use this setting to help comply with regulations that require you to hid
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsMemberAllowedToEditContent
+{{ Fill IsMemberAllowedToEditContent Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
