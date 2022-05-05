@@ -190,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSIPDevicesCalling
-Determines whether the user is allowed to use SIP device for calling on behalf of teams client.
+Determines whether the user is allowed to use a SIP device for calling on behalf of a Teams client.
+
 
 ```yaml
 Type: Boolean
