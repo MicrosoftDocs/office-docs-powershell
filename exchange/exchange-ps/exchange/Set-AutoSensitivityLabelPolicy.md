@@ -36,8 +36,11 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-ExchangeSenderException <SmtpAddress[]>]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-ExternalMailRightsManagementOwner <SmtpAddress>]
  [-Force]
  [-Mode <PolicyMode>]
+ [-OverwriteLabel <Boolean>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
@@ -72,7 +75,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -337,6 +340,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalMailRightsManagementOwner
+The ExternalMailRightsManagementOwner parameter specifies the email address of a user mailbox that's used to encrypt incoming email messages from external senders using RMS.
+
+This parameter works only on Exchange locations, and the policy must apply a label that has an encryption action.
+
+To clear an existing email address, use the value $null.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -368,6 +391,43 @@ Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enable, TestWithNotifications, TestWithoutNotifications, Disable, PendingDeletion
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverwriteLabel
+The OverwriteLabel parameter specifies whether to overwrite a manual label. Valid values are:
+
+- $true: Overwrite the manual label.
+- $false: Don't overwrite the manual label. This is the default value.
+
+This parameter works only on Exchange locations.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-TenantAllowBlockListSpoofItems cmdlet to create spoof entries in the Tenant Allow/Block List.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -39,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity domain.com\Default
+New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity Default
 ```
 
 This example creates a new spoof pair and generates an Identity for the pair (a random GUID) which can be used as an Id parameter while updating or deleting the spoof pair through Set-TenantAllowBlockListSpoofItems and Remove-TenantAllowBlockListSpoofItems.
@@ -47,7 +45,7 @@ This example creates a new spoof pair and generates an Identity for the pair (a 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the accepted domain.
+The Identity parameter uses the value Default.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter

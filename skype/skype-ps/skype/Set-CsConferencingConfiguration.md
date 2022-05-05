@@ -646,7 +646,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptArchivedData
-Boolean flag to turn on/off encryption for a conference’s archived attachments.
+Boolean flag to turn on/off encryption for a conference's archived attachments.
 
 ```yaml
 Type: Boolean

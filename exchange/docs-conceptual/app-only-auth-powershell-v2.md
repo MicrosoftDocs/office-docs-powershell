@@ -20,36 +20,67 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> The features and procedures described in this article require version 2.0.3 or later of the EXO V2 module. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> The features and procedures described in this article require the following versions of the EXO V2 module:
+>
+> - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
+> - **Security & Compliance Center PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
+>
+> For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+>
+> You can't use the procedures in this article to modify Microsoft 365 Groups ([Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)). To use Microsoft Graph instead, see [Update group](/graph/api/group-update).
 
-Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance Center PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
-Because storing user credentials locally is not a safe practice, we're releasing this feature to support authentication for unattended scripts (automation) scenarios using AzureAD applications and self-signed certificates.
+Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
 
 The following examples show how to use the Exchange Online PowerShell V2 module with app-only authentication:
 
 > [!IMPORTANT]
-> In the **Connect-ExchangeOnline** commands, be sure to use an `.onmicrosoft.com` domain in the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+> In the **Connect-** commands, be sure to use an `.onmicrosoft.com` domain for the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
 - Connect using a local certificate:
 
-  ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
-  ```
+  - **Exchange Online PowerShell**:
+
+    ```powershell
+    Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
+  - **Security & Compliance Center PowerShell**:
+
+     ```powershell
+    Connect-IPPSSession -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
 
 - Connect using a certificate thumbprint:
 
-  ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
-  ```
+  - **Exchange Online PowerShell**:
+
+    ```powershell
+    Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
+  - **Security & Compliance Center PowerShell**:
+
+    ```powershell
+    Connect-IPPSSession -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
 
 - Connect using a certificate object:
 
-  ```powershell
-  Connect-ExchangeOnline -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
-  ```
+  - **Exchange Online PowerShell**:
+
+    ```powershell
+    Connect-ExchangeOnline -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
+  - **Security & Compliance Center PowerShell**:
+
+    ```powershell
+    Connect-IPPSSession -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
 
   When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
@@ -58,7 +89,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 
 ## How does it work?
 
-The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
+The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
 
 ## Set up app-only authentication
 
@@ -68,9 +99,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 1. [Register the application in Azure AD](#step-1-register-the-application-in-azure-ad).
 
-2. [Assign Exchange Online API permissions to the application](#step-2-assign-api-permissions-to-the-application).
+2. [Assign API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
-   An application object has the default permission `User.Read`. For the application object to access Exchange Online resources, it needs to have the Application permission `Exchange.ManageAsApp`.
+   An application object has the default permission `User.Read`. For the application object to access resources, it needs to have the Application permission `Exchange.ManageAsApp`.
 
 3. [Generate a self-signed certificate](#step-3-generate-a-self-signed-certificate)
 
@@ -87,24 +118,14 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 5. [Assign Azure AD roles to the application](#step-5-assign-azure-ad-roles-to-the-application)
 
-   The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Azure AD, you can use any of the built-in roles. The following roles are supported:
-
-   - Global administrator
-   - Compliance administrator
-   - Security reader
-   - Security administrator
-   - Helpdesk administrator
-   - Exchange administrator
-   - Global Reader
-
-   > [!NOTE]
-   > The Global administrator and Exchange administrator roles provide the necessary permissions for any Exchange-related tasks, including recipient management and protection features (anti-spam, anti-malware, etc). The Security administrator role doesn't not have the necessary permissions for these same Exchange-related tasks.
+   The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Azure AD, you can use any of the supported built-in roles.
 
 ## Appendix
 
 ## Step 1: Register the application in Azure AD
 
-**Note**: If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
+> [!NOTE]
+> If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
 1. Open the Azure AD portal at <https://portal.azure.com/>.
 
@@ -244,17 +265,29 @@ After you register the certificate with your application, you can use the privat
 
 ## Step 5: Assign Azure AD roles to the application
 
-Azure AD has more than 50 admin roles available. For app-only authentication in Exchange Online, we currently support the previously mentioned roles:
+Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
 
-- Global administrator
-- Compliance administrator
-- Security reader
-- Security administrator
-- Helpdesk administrator
-- Exchange administrator
-- Global Reader
+|Role|Exchange Online PowerShell|Security & Compliance Center PowerShell|
+|---|:---:|:---:|
+|Compliance Administrator|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
+|Exchange Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)||
+|Global Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
+|Global Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
+|Helpdesk Administrator|![Check mark.](media/checkmark.png)||
+|Security Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
+|Security Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
+
+<sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
+
+- Recipient management.
+- Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
+
+The Security Administrator role does not have the necessary permissions for those same tasks.
 
 For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](/azure/active-directory/roles/manage-roles-portal).
+
+> [!NOTE]
+> The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance Center PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
 
 1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
@@ -266,11 +299,23 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
 3. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
-   ![Find and select a supported role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
+   - **Exchange Online PowerShell**:
+
+     ![Find and select a supported Exchange Online PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
+
+   - **Security & Compliance Center PowerShell**:
+
+     ![Find and select a supported Security & Compliance Center PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
 4. On the **Assignments** page that opens, click **Add assignments**.
 
-   ![Select Add assignments on the role assignments page.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
+   - **Exchange Online PowerShell**:
+
+     ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
+
+   - **Security & Compliance Center PowerShell**:
+
+     ![Select Add assignments on the role assignments page for Security & Compliance Center PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
 
 5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
@@ -280,4 +325,10 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
 6. Back on the **Assignments** page, verify that the app has been assigned to the role.
 
-   ![The role assignments page after to added the app to the role.](media/exo-app-only-auth-app-assigned-to-role.png)
+   - **Exchange Online PowerShell**:
+
+     ![The role assignments page after to added the app to the role for Exchange Online PowerShell.](media/exo-app-only-auth-app-assigned-to-role.png)
+
+   - **Security & Compliance Center PowerShell**:
+
+     ![The role assignments page after to added the app to the role for Security & Compliance Center PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)

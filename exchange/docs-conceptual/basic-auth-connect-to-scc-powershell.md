@@ -20,7 +20,7 @@ description: "Learn how to connect to Security & Compliance Center PowerShell."
 > [!NOTE]
 > The connection instructions in this article [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
 
-Security & Compliance Center PowerShell allows you to manage your Microsoft 365 Defender portal and Microsoft 365 compliance center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Security & Compliance Center PowerShell. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance Center PowerShell cmdlets into your local Windows PowerShell session so that you can use them.
+Security & Compliance Center PowerShell allows you to manage your Microsoft 365 Defender portal and Microsoft Purview compliance portal settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Security & Compliance Center PowerShell. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance Center PowerShell cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
 > The procedures in this article won't work if:
@@ -33,7 +33,7 @@ Security & Compliance Center PowerShell allows you to manage your Microsoft 365 
 >
 > In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
 >
-> Some features in the Microsoft 365 Defender portal and Microsoft 365 compliance center (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+> Some features in the Microsoft 365 Defender portal and Microsoft Purview compliance portal (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 ## What do you need to know before you begin?
 
@@ -132,7 +132,7 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- Verify that your account has permission to access the Microsoft 365 Defender portal or the Microsoft 365 compliance center. For details, see [Give users access to the Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
+- Verify that your account has permission to access the Microsoft 365 Defender portal or the Microsoft Purview compliance portal. For details, see [Give users access to the Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Security & Compliance Center PowerShell.
 

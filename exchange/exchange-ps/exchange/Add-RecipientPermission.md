@@ -16,17 +16,12 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Add-RecipientPermission cmdlet to add SendAs permission to users in a cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Add-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
- [-SkipDomainValidationForMailContact]
- [-SkipDomainValidationForMailUser]
- [-SkipDomainValidationForSharedMailbox]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -127,54 +122,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -SkipDomainValidationForMailContact
-The SkipDomainValidationForMailContact switch skips the check that confirms the proxy addresses of the external contact specified by the Identity parameter are in the accepted domains of the organization. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipDomainValidationForMailUser
-The SkipDomainValidationForMailUser switch skips the check that confirms the proxy addresses of the mail user specified by the Identity parameter are in the accepted domains of the organization. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipDomainValidationForSharedMailbox
-The SkipDomainValidationForSharedMailbox switch skips the check that confirms the proxy addresses of the shared mailbox specified by the Identity parameter are in the accepted domains of the organization. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

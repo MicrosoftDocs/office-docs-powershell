@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-ClientAccessRule
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ClientAccessRule cmdlet to modify existing client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfAuthenticationTypes
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The AnyOfAuthenticationTypes parameter specifies a condition for the client access rule that's based on the client's authentication type.
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfAuthenticationTypes
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the client access rule that's based on the client's authentication type.
 
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfProtocols
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ExceptAnyOfProtocols parameter specifies an exception for the client access rule that's based on the client's protocol.
 
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptUsernameMatchesAnyOfPatterns
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
@@ -484,7 +484,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsernameMatchesAnyOfPatterns
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
@@ -506,7 +506,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserRecipientFilter
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"City -eq 'Redmond'"`).
 

@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-UnifiedGroupLinks cmdlet to remove members, owners and subscribers from Microsoft 365 Groups in your cloud-based organization. To add members, owners and subscribers, use the Add-UnifiedGroupLinks cmdlet. To modify other properties of Microsoft 365 Groups, use the Set-UnifiedGroup cmdlet.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: You can't use this cmdlet to remove members, owners or subscribers if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Remove owner](https://docs.microsoft.com/graph/api/group-delete-owners) and [Remove member](https://docs.microsoft.com/graph/api/group-delete-members).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -12,7 +12,7 @@ ms.reviewer:
 # Search-MessageTrackingReport
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 Use the Search-MessageTrackingReport cmdlet to find the unique message tracking report based on the search criteria provided. You can then pass this message tracking report ID to the Get-MessageTrackingReport cmdlet to get full message tracking information. For more information, see [Get-MessageTrackingReport](https://docs.microsoft.com/powershell/module/exchange/get-messagetrackingreport). The message tracking report cmdlets are used by the delivery reports feature.
 

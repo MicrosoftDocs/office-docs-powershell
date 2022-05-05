@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-SupervisoryReviewPolicyV2 cmdlet to modify supervisory review policies in the Microsoft 365 compliance center.
+Use the Set-SupervisoryReviewPolicyV2 cmdlet to modify supervisory review policies in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,12 +30,13 @@ Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
  [-RemoveReviewers <String[]>]
  [-RetentionPeriodInDays <Int32>]
  [-Reviewers <String[]>]
+ [-UserReportingWorkloads <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -189,6 +190,22 @@ Accept wildcard characters: False
 The Reviewers parameter specifies the SMTP addresses of the reviewers for the supervisory review policy. You can specify multiple email addresses separated by commas.
 
 The reviewers that you specify with this parameter replace the existing reviewers. To selectively add or remove reviewers, use the AddReviewers and RemoveReviewers parameters.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserReportingWorkloads
+{{ Fill UserReportingWorkloads Description }}
 
 ```yaml
 Type: String[]

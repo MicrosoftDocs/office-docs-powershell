@@ -18,8 +18,6 @@ Use the Set-Place cmdlet to update room mailboxes with additional metadata, whic
 
 **Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties except GeoCoordinates on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -38,6 +36,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
+ [-MTREnabled <Boolean>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -290,6 +289,27 @@ The Label parameter specifies a descriptive label for the room (for example, a n
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MTREnabled
+The MTREnabled parameters enables or disables Microsoft Teams Rooms on the room mailbox. Valid values are:
+
+- $true: Microsoft Teams Rooms is enabled on the room mailbox.
+- $false: Microsoft Teams Rooms is disabled on the room mailbox. This is the default value.
+
+For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://docs.microsoft.com/microsoftteams/rooms/).
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

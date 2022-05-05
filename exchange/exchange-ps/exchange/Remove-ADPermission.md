@@ -304,7 +304,13 @@ Accept wildcard characters: False
 ```
 
 ### -InheritanceType
-The InheritanceType parameter specifies whether permissions are inherited.
+The InheritanceType parameter specifies how permissions are inherited. Valid values are:
+
+- None
+- All (this is the default value)
+- Children
+- Descendents [sic]
+- SelfAndChildren
 
 ```yaml
 Type: ActiveDirectorySecurityInheritance

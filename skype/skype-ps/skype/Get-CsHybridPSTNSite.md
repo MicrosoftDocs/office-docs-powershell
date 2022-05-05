@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the Get-CsHybridPSTNSite cmdlet to retrieve information about your hybrid public switched telephone network (PSTN) sites.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ### Identity (Default)

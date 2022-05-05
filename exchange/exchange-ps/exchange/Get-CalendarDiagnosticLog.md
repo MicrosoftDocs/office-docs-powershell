@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-CalendarDiagnosticLog
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+Although this cmdlet is available in on-premises Exchange and in the cloud-based service, it only works in on-premises Exchange. In cloud-based service, use the Get-CalendarDiagnosticObjects cmdlet instead.
 
 Use the Get-CalendarDiagnosticLog cmdlet to collect a range of calendar logs. The Calendar Diagnostic logs track all calendar items and meeting requests in mailboxes. You can use this information to troubleshoot calendar issues that occur in mailboxes.
 
@@ -102,12 +102,13 @@ This example retrieves the Calendar Diagnostic log data only for the most recent
 Get-CalendarDiagnosticLog -Identity "Jasen Kozma" -Subject "Budget Meeting" -ExactMatch $true -LogLocation "C:\My Documents\Calendar Diagnostic Export"
 ```
 
-This example exports all calendar items in the Calendar Diagnostic log for Jasen Kozma's mailbox that have "Budget Meeting" anywhere in the subject to the specified folder.
+In **Exchange 2013**, this example exports all calendar items in the Calendar Diagnostic log for Jasen Kozma's mailbox that have "Budget Meeting" anywhere in the subject to the specified folder.
 
 **Notes**:
 
 - In this example, the message files are written to C:\\My Documents\\Calendar Diagnostic Export\\jkozma@contoso.com.
-- In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
+- In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet to analyze the exported .msg files.
+- This example doesn't work in Exchange 2016 or Exchange 2019 because the LogLocation parameter is not available.
 
 ## PARAMETERS
 
@@ -139,11 +140,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
+**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. Usage of this cmdlet is now restricted to the local server.
+
+This parameter is functional only in Exchange 2010 and Exchange 2013.
+
 The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
 
 In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\\My Documents\\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\\My Documents\\Calendar Export\\ssteele@contoso.com.
 
-In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
+In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet to analyze the exported .msg files.
 
 **Note**: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (| Set-Content -Path "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
 
@@ -151,7 +156,7 @@ In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAna
 Type: String
 Parameter Sets: ExportToMsg
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named

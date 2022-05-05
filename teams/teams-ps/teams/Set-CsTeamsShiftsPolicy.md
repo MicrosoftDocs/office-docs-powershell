@@ -14,7 +14,7 @@ This cmdlet allows you to set or update properties of a TeamsShiftPolicy instanc
 ## SYNTAX
 
 ```
-Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-EnableShiftPresence <Boolean>] [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [<CommonParameters>]
+Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-EnableShiftPresence <Boolean>] [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -146,6 +146,21 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableScheduleOwnerPermissions
+Indicates whether a user can manage a Shifts schedule as a team member.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
