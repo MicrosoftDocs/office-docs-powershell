@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voice mail. Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride. When set to AlwaysDisabled, calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams. When set to AlwaysEnabled, calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user. When set to UserOverride, calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
+Enables inbound calls to be routed to voicemail. Valid options are: AlwaysEnabled, AlwaysDisabled, and UserOverride. When set to AlwaysDisabled, calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams. When set to AlwaysEnabled, calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user. When set to UserOverride, calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
 
 ```yaml
 Type: String
