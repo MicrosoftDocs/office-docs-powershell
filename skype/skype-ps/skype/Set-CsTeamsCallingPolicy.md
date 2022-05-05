@@ -41,7 +41,7 @@ Only the parameters specified are changed. Other parameters keep their existing 
 PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
 ```
 
-Sets the value of the parameter AllowPrivateCalling in the Global (default) Teams Calling policy instance.
+Sets the value of the parameter AllowPrivateCalling in the Global (default) Teams Calling Policy instance.
 
 ### Example 2
 ```
