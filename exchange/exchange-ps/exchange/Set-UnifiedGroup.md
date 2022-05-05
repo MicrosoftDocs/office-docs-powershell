@@ -64,6 +64,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-HiddenFromExchangeClientsEnabled]
  [-InformationBarrierMode <GroupInformationBarrierMode>]
+ [-IsMemberAllowedToEditContent <System.Boolean>]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -866,6 +867,22 @@ The InformationBarrierMode parameter specifies the information barrier mode for 
 
 ```yaml
 Type: GroupInformationBarrierMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsMemberAllowedToEditContent
+{{ Fill IsMemberAllowedToEditContent Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

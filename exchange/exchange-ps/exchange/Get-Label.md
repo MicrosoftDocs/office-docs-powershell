@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-Label [[-Identity] <ComplianceRuleIdParameter>]
  [-IncludeDetailedLabelActions <System.Boolean>]
+ [-SkipValidations]
  [<CommonParameters>]
 ```
 
@@ -75,6 +76,22 @@ The IncludeDetailedLabelActions parameter specifies whether to expand label acti
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipValidations
+{{ Fill SkipValidations Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

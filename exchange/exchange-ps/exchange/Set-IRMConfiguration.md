@@ -32,6 +32,7 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
  [-DomainController <Fqdn>]
  [-EDiscoverySuperUserEnabled <Boolean>]
  [-EnablePdfEncryption <Boolean>]
+ [-EnablePortalTrackingLogs <Boolean>]
  [-ExternalLicensingEnabled <Boolean>]
  [-Force]
  [-InternalLicensingEnabled <Boolean>]
@@ -248,6 +249,27 @@ The EnablePdfEncryption parameter specifies whether to enable the encryption of 
 
 - $true: Messages that contain PDF attachments can be encrypted.
 - $false: Messages that contain PDF attachments can't be encrypted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePortalTrackingLogs
+This parameter is available only in the cloud-based service.
+
+The EnablePortalTrackingLogs parameter specifies whether to turn on auditing for the Office 365 Message Encryption (OME) portal. Valid values are:
+
+- $true: Turn on auditing for activities in the OME portal. Activities are visible in the audit logs.
+- $false: Turn off auditing for activities in the OME portal.
 
 ```yaml
 Type: Boolean
