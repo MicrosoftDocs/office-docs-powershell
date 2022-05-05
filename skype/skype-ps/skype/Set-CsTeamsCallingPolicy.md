@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkConfigurationSettingsLookup
-This parameter is deprecated. Please use same parameter in the TeamsMeetingPolicy.
+This parameter is deprecated. Use the same parameter in the TeamsMeetingPolicy.
 
 ```yaml
 Type: Boolean
