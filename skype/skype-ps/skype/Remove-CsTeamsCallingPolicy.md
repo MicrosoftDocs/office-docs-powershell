@@ -45,7 +45,8 @@ This example resets the Global Policy instance to the default values.
 ## PARAMETERS
 
 ### -Identity
- The Identity parameter is the unique identifier of the Teams Calling policy instance to remove or reset.
+ The Identity parameter is the unique identifier of the Teams Calling Policy instance to remove or reset.
+
 
 ```yaml
 Type: String
