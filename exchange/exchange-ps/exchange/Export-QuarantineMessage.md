@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identities
 ```
 Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
+ [-CompressOutput]
  [-ForceConversionToMime]
  [-RecipientAddress <String>]
  [<CommonParameters>]
@@ -33,6 +34,7 @@ Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <Q
 ### IdentityOnly
 ```
 Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-CompressOutput]
  [-ForceConversionToMime]
  [-RecipientAddress <String>]
  [<CommonParameters>]
@@ -119,6 +121,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -CompressOutput
+{{ Fill CompressOutput Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceConversionToMime
 {{ Fill ForceConversionToMime Description }}
 
@@ -126,7 +144,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -142,7 +160,7 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

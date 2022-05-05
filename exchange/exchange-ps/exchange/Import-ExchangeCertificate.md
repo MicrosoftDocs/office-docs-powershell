@@ -86,7 +86,14 @@ To export the certificate in Exchange 2016 or Exchange 2019, use the FileData pa
 
 ### Example 2
 ```powershell
-Import-DlpPolicyCollection -FileData ([System.IO.File]::ReadAllBytes('C:\Certificates\Fabrikam IssuedCert.p7b'))
+Import-ExchangeCertificate -Server Mailbox01 -FileData ([System.IO.File]::ReadAllBytes('\\FileServer01\Data\Exported Fabrikam Cert.pfx')) -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
+```
+
+This example imports the same certificate file from Example 1. This method is required in Exchange 2016 and Exchange 2019 because the FileName parameter is not available.
+
+### Example 3
+```powershell
+Import-ExchangeCertificate -FileData ([System.IO.File]::ReadAllBytes('C:\Certificates\Fabrikam IssuedCert.p7b'))
 ```
 
 This example imports a chain of certificates from the PKCS #7 file C:\\Certificates\\Fabrikam IssuedCert.p7b on the local Exchange server.

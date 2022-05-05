@@ -38,34 +38,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
-[-MeetingInviteLanguages <String>]
-[-AllowNetworkConfigurationSettingsLookup <Boolean>]
-[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-
-```powershell
-Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
- [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
- [-AllowAnonymousUsersToDialOut <Boolean>]
- [-AllowAnonymousUsersToJoinMeeting <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
- [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
- [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
- [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
- [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>]
- [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
- [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
- [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
- [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
- [-NewMeetingRecordingExpirationDays <Int32>] 
-[-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
-[-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
-[-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] 
-[-MeetingInviteLanguages <String>]
-[-AllowNetworkConfigurationSettingsLookup <Boolean>]
+[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -490,21 +463,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-Specify the name of the policy being modified.
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -1069,8 +1027,6 @@ Possible values:
 - Allow - Saves channel meeting recordings to a "Recordings" folder in the channel. The permissions on the recording files will be based on the Channel SharePoint permissions. This is the same as any other file uploaded for the channel.
 - Block - Saves channel meeting recordings to a "Recordings\View only" folder in the channel. Channel owners will have full rights to the recordings in this folder, but channel members will have read access without the ability to download. 
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1093,6 +1049,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveStreamingMode
+Determines whether you provide support for your users to stream their Teams meetings to large audiences through Real-Time Messaging Protocol (RTMP).
+
+Possible values are: 
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

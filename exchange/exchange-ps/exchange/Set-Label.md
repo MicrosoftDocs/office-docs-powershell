@@ -78,7 +78,6 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
- [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -1174,22 +1173,6 @@ These correspond to the following settings through the admin center:
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TeamsLobbyBypassScope
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

@@ -28,7 +28,7 @@ The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Au
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-$content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
+$content = Get-Content "C:\Media\Hello.wav" -Encoding byte -ReadCount 0
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 

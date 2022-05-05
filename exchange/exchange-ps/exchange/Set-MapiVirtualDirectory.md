@@ -128,8 +128,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionFlags
-This parameter is available only in Exchange Server 2013.
-
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
@@ -142,7 +140,7 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -152,8 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionSPNList
-This parameter is available only in Exchange Server 2013.
-
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
@@ -163,7 +159,7 @@ The ExtendedProtectionSPNList parameter specifies a list of valid Service Princi
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -173,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionTokenChecking
-This parameter is available only in Exchange Server 2013.
-
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
 - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
@@ -187,7 +181,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
