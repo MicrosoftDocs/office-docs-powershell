@@ -30,7 +30,8 @@ Remove-CsTeamsCallingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonPa
 PS C:>  Remove-CsTeamsCallingPolicy -Identity Sales
 ```
 
-This example removes the Teams Calling policy with identity Sales
+This example removes the Teams Calling Policy with identity Sales
+
 
 ### Example 2
 ```powershell
