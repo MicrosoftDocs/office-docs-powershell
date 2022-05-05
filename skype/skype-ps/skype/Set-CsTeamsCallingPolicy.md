@@ -48,7 +48,7 @@ Sets the value of the parameter AllowPrivateCalling in the Global (default) Team
 PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForCalling Disabled
 ```
 
-Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling policy instance called HRPolicy.
+Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling Policy instance called HRPolicy.
 
 ## PARAMETERS
 
