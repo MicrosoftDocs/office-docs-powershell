@@ -323,7 +323,8 @@ Accept wildcard characters: False
 ```
 
 ### -LiveCaptionsEnabledTypeForCalling
-Determines whether real-time captions are available for the user in Teams calls. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
+Determines whether real-time captions are available for the user in Teams calls. Set this to DisabledUserOverride to allow the user to turn on live captions. Set this to Disabled to prohibit.
+
 
 Possible values:
 - DisabledUserOverride
