@@ -111,6 +111,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
+ [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
@@ -2157,6 +2158,30 @@ You can use this action in DLP policies that are scoped only to Exchange.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModifySubject
+The ModifySubject parameter uses regular expressions to find text patterns in the subject of the email message, and then modifies the subject with the text that you specify. This parameter uses the syntax: `@{Patterns="RegEx1","RegEx2",..."RegEx10}"; SubjectText="Replacement Text"; ReplaceStrategy="Value"}`.
+
+The `ReplaceStrategy=` property uses one of the following values:
+
+- Replace: Replaces all regular expression matches (the `Patterns=` value) in the subject with the `SubjectText=` value.
+- Append: Removes all regular expression matches (the `Patterns=` value) in the subject and inserts the `SubjectText=` value at the end of the subject.
+- Prepend: Removes all regular expression matches (the `Patterns=` value) and inserts the `SubjectText=` value at the beginning of the subject.
+
+The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
 
