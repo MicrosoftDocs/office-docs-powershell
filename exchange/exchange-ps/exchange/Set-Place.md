@@ -301,10 +301,12 @@ Accept wildcard characters: False
 ```
 
 ### -MTREnabled
-The MTREnabled parameters enables or disables Microsoft Teams Rooms on the room mailbox. Valid values are:
+The MTREnabled parameter identfies the room mailbox as being for a Microsoft Teams Room. Currently this value is for informational purpose only.
 
-- $true: Microsoft Teams Rooms is enabled on the room mailbox.
-- $false: Microsoft Teams Rooms is disabled on the room mailbox. This is the default value.
+Valid values are:
+
+- $true: The room mailbox is for a room with a Microsoft Teams room system. The Microsoft Teams room system can be added to a Microsoft Teams meeting when selecting to join meeting with room audio.
+- $false: The room mailbox is for a room which does not have a Microsoft Teams room system. This type of room is not capable of being added to the room as the source of meeting audio (users will to join from their PC or mobile rather than using room audio). This is the default value.
 
 For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://docs.microsoft.com/microsoftteams/rooms/).
 
