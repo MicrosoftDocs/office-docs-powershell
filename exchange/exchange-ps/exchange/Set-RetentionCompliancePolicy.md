@@ -67,6 +67,20 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
+### AdaptiveScopeLocation
+```
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddAdaptiveScopeLocation <MultiValuedProperty>]
+ [-Applications <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### TeamLocation
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
@@ -139,6 +153,28 @@ Aliases:
 Applicable: Security & Compliance Center
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddAdaptiveScopeLocation
+The AddAdaptiveScopeLocation parameter specifies the adaptive scope location to add to the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AdaptiveScopeLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -584,6 +620,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveAdaptiveScopeLocation
+The RemoveAdaptiveScopeLocation parameter specifies the adaptive scope location to remove from the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AdaptiveScopeLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveExchangeLocation
 The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -613,7 +671,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationException
-This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
 - A distribution group or mail-enabled security group
