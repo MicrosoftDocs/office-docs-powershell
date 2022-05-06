@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
-{{ Fill ForceDeletion Description }}
+The ForceDeletion switch forces the removal of the adaptive scope. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

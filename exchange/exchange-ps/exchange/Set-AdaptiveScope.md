@@ -37,7 +37,8 @@ Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter> -RawQuery <String>
 ### Identity
 ```
 Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter>
- [-Comment <String>] [<CommonParameters>]
+ [-Comment <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,10 +48,10 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-AdaptiveScope -Identity "Project X" -FilterConditions @{"Conditions" = @{"Value" = "Redmond"; "Operator" = "Equals"; "Name" = "City"}; "Conjunction" = "And"}
 ```
 
-{{ Add example description here }}
+This example modifies the filter in exiting adaptive scope named Project X. The new filter looks for all users in the city of Redmond.
 
 ## PARAMETERS
 
@@ -77,8 +78,8 @@ Accept wildcard characters: False
 ### -FilterConditions
 The FilterConditions parameter specifies the conditions that are included in the dynamic boundary. Valid syntax and values depend of the value of the LocationType parameter:
 
-- User or Group: Active Directory attributes. For example, `@(@{Name="Country”; Operator="Equals"; Values="USA","Canada"},@{Name="Department"; Operator="NotEquals"; Values="Finance"})`
-- Site: Indexed custom properties. For example, `@(@{Name=" RefinableString00"; Operator="Equals"; Values="Human Resource"})`
+- User or Group: Active Directory attributes. For example, for the condition "('Country or region' equals 'US' or 'Canada') and 'Department' equals 'Finance'", use the following syntax: `@{"Conditions" = @(@{"Conditions" = @(@{"Value" = "US"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}, @{"Value" = "CA"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}); "Conjunction" = "Or"}, @{"Value" = "Finance"; "Operator" = "NotEquals"; "Name" = "Department"}); "Conjunction" = "And"}`
+- Site: Indexed custom properties. For example, for the condition "'Refinable string 0' equals 'Human Resources', use the following syntax: `@{"Conditions" = @{"Value" = "Human Resources"; "Operator" = "Equals"; "Name" = "RefinableString00"}; "Conjunction" = "And"}`
 
 You can't use this parameter with the RawQuery parameter.
 
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawQuery
-The RawQuery parameter switches the scope to advanced query mode.
+The RawQuery parameter switches the scope to advanced query mode. You use OPath filter syntax for advanced query mode.
 
 You can't use this parameter with the FilterConditions parameter.
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-AdaptiveScope cmdlet to create adaptive scopes in your organization.
+Use the New-AdaptiveScope cmdlet to create adaptive scopes in your organization. Adaptive scopes (or static scopes) are used in retention policies and retention label policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -35,16 +35,21 @@ New-AdaptiveScope -Name <String> -LocationType <DynamicBoundaryLocationType> -Ra
 ```
 
 ## DESCRIPTION
+For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://docs.microsoft.com/microsoft-365/compliance/retention-settings#configuration-information-for-adaptive-scopes).
+
 To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-AdaptiveScope -Name "Project X" -LocationType User -FilterConditions @{"Conditions" = @(@{"Conditions" = @(@{"Value" = "US"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}, @{"Value" = "CA"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}); "Conjunction" = "Or"}, @{"Value" = "Finance"; "Operator" = "NotEquals"; "Name" = "Department"}); "Conjunction" = "And"}
 ```
 
-{{ Add example description here }}
+This example create an adaptive query scope named Project X with the following details:
+
+- Scope: Users
+- Query: "('Country or region' equals 'US' or 'Canada') and 'Department' equals 'Finance'".
 
 ## PARAMETERS
 
@@ -67,8 +72,8 @@ Accept wildcard characters: False
 ### -FilterConditions
 The FilterConditions parameter specifies the conditions that are included in the dynamic boundary. Valid syntax and values depend of the value of the LocationType parameter:
 
-- User or Group: Active Directory attributes. For example, `@(@{Name="Country”; Operator="Equals"; Values="USA","Canada"},@{Name="Department"; Operator="NotEquals"; Values="Finance"})`
-- Site: Indexed custom properties. For example, `@(@{Name=" RefinableString00"; Operator="Equals"; Values="Human Resource"})`
+- User or Group: Active Directory attributes. For example, for the condition "('Country or region' equals 'US' or 'Canada') and 'Department' equals 'Finance'", use the following syntax: `@{"Conditions" = @(@{"Conditions" = @(@{"Value" = "US"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}, @{"Value" = "CA"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}); "Conjunction" = "Or"}, @{"Value" = "Finance"; "Operator" = "NotEquals"; "Name" = "Department"}); "Conjunction" = "And"}`
+- Site: Indexed custom properties. For example, for the condition "'Refinable string 0' equals 'Human Resources', use the following syntax: `@{"Conditions" = @{"Value" = "Human Resources"; "Operator" = "Equals"; "Name" = "RefinableString00"}; "Conjunction" = "And"}`
 
 You can't use this parameter with the RawQuery parameter.
 
@@ -107,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawQuery
-The RawQuery parameter switches the scope to advanced query mode.
+The RawQuery parameter switches the scope to advanced query mode. You use OPath filter syntax for advanced query mode.
 
 You can't use this parameter with the FilterConditions parameter.
 

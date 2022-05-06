@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-AdaptiveScope cmdlet to view adaptive scopes in your organization.
+Use the Get-AdaptiveScope cmdlet to view adaptive scopes in your organization. Adaptive scopes (or static scopes) are used in retention policies and retention label policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,7 +37,7 @@ Get-AdaptiveScope | Format-Table Name,Priority
 This example returns a summary list of all adaptive scopes.
 ### Example 2
 ```powershell
-Get-AdaptiveScope -Identity "Projext X"
+Get-AdaptiveScope -Identity "Project X"
 ```
 
 This example returns detailed information about the adaptive scope named Project X.
