@@ -814,13 +814,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
 
-### [Get-RMSTrustedPublishingDomain](Get-RMSTrustedPublishingDomain.md)
-
 ### [Get-SmimeConfig](Get-SmimeConfig.md)
 
 ### [Import-ExchangeCertificate](Import-ExchangeCertificate.md)
-
-### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
 
 ### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
 
@@ -833,8 +829,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
-
-### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
@@ -849,8 +843,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-OMEMessageRevocation](Set-OMEMessageRevocation.md)
 
 ### [Set-RMSTemplate](Set-RMSTemplate.md)
-
-### [Set-RMSTrustedPublishingDomain](Set-RMSTrustedPublishingDomain.md)
 
 ### [Set-SmimeConfig](Set-SmimeConfig.md)
 
@@ -2014,6 +2006,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Export-FilePlanProperty](Export-FilePlanProperty.md)
 
+### [Get-AdaptiveScope](Get-AdaptiveScope.md)
+
 ### [Get-AppRetentionCompliancePolicy](Get-AppRetentionCompliancePolicy.md)
 
 ### [Get-AppRetentionComplianceRule](Get-AppRetentionComplianceRule.md)
@@ -2068,6 +2062,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Import-FilePlanProperty](Import-FilePlanProperty.md)
 
+### [New-AdaptiveScope](New-AdaptiveScope.md)
+
 ### [New-AppRetentionCompliancePolicy](New-AppRetentionCompliancePolicy.md)
 
 ### [New-AppRetentionComplianceRule](New-AppRetentionComplianceRule.md)
@@ -2108,6 +2104,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-RetentionPolicyTag](New-RetentionPolicyTag.md)
 
+### [Remove-AdaptiveScope](Remove-AdaptiveScope.md)
+
 ### [Remove-AppRetentionCompliancePolicy](Remove-AppRetentionCompliancePolicy.md)
 
 ### [Remove-AppRetentionComplianceRule](Remove-AppRetentionComplianceRule.md)
@@ -2145,6 +2143,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-RetentionPolicy](Remove-RetentionPolicy.md)
 
 ### [Remove-RetentionPolicyTag](Remove-RetentionPolicyTag.md)
+
+### [Set-AdaptiveScope](Set-AdaptiveScope.md)
 
 ### [Set-AppRetentionCompliancePolicy](Set-AppRetentionCompliancePolicy.md)
 

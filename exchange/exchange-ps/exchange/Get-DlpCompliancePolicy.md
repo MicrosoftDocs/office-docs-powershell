@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-IncludeExtendedProperties <Boolean>]
  [-DistributionDetail]
+ [-Summary]
  [<CommonParameters>]
 ```
 
@@ -104,6 +105,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Summary
+{{ Fill Summary Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center

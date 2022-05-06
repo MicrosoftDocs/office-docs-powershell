@@ -38,6 +38,7 @@ New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <Mu
  [-NotifyUserThrottleThreshold <Int32>]
  [-NotifyUserThrottleWindow <Int32>]
  [-Operation <MultiValuedProperty>]
+ [-CustomProperties <PswsHashtable>]
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
@@ -222,6 +223,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomProperties
+{{ Fill CustomProperties Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
