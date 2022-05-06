@@ -63,6 +63,19 @@ New-RetentionCompliancePolicy [-Name] <String>
  [<CommonParameters>]
 ```
 
+### AdaptiveScopeLocation
+```
+New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValuedProperty>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RestrictiveRetention <Boolean>]
+ [-RetainCloudAttachment <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](New-RetentionComplianceRule.md). In addition, at least one location parameter must be defined to create a retention policy.
 
@@ -92,6 +105,26 @@ Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdaptiveScopeLocation
+The AdaptiveScopeLocation parameter specifies the adaptive scope location to include in the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AdaptiveScopeLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -173,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocation
-The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
+The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
 
 - A mailbox
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
@@ -204,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationException
-This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The ExchangeLocationException parameter specifies the mailboxes to exclude from the policy when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
 - A distribution group or mail-enabled security group
@@ -278,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude when you're using the value All for the ModernGroupLocation parameter.
+The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude from the policy when you use the value All for the ModernGroupLocation parameter.
 
 You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
