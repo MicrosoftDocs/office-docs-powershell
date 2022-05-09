@@ -187,6 +187,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - ExternalAccessPolicy
 - givenName
 - Identity
+- IsSipEnabled
 - lineUri
 - userPrincipalName
 - CallingLineIdentity
