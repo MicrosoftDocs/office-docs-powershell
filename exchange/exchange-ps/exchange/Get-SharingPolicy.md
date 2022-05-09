@@ -42,7 +42,7 @@ This example retrieves the default information for the sharing policy FourthCoff
 
 ### Example 2
 ```powershell
-Get-SharingPolicy Fabrikam | Format List
+Get-SharingPolicy Fabrikam | Format-List
 ```
 
 This example retrieves the full information for the sharing policy Fabrikam.

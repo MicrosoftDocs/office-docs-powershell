@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+**Note**: This cmdlet is in the process of being deprecated. Use the \*-TenantAllowBlockListSpoofItems cmdlets instead.
+
 Use the Set-PhishFilterPolicy cmdlet to configure the spoof intelligence policy in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).

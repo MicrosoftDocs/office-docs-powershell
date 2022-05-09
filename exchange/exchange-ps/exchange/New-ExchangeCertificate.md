@@ -22,9 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Request
 ```
-New-ExchangeCertificate [-BinaryEncoded]
- [-GenerateRequest]
- [-RequestFile <String>]
+New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DomainName <MultiValuedProperty>]
@@ -94,63 +92,86 @@ If you don't want this certificate to replace the existing self-signed certifica
 
 ### Example 2
 ```powershell
+Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate -PrivateKeyExportable $true
+```
+
+This example shows how to renew a self-signed certificate with a specific thumbprint value. You can find the thumbprint value in one of two ways:
+
+- Select the certificate in the Exchange admin center and then select Edit to view properties of the certificate. The thumbprint value is shown in the Exchange Certificate window.
+- Run the Get-ExchangeCertificate cmdlet to return a list of all certificates installed on the server with their thumbprint values.
+
+Setting the PrivateKeyExportable parameter to the value $true allows the renewed self-signed certificate to be exported from the server (and imported on other servers).
+
+### Example 3
+```powershell
 New-ExchangeCertificate -GenerateRequest -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com -RequestFile "C:\Cert Requests\woodgrovebank.req"
 ```
 
 In **Exchange 2013**, this example creates a new certificate request for a certification authority that has the following settings:
 
 - The request is Base64 encoded.
-
 - The Subject value is `c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com`.
 - The Domains (subject alternative names) value contains the additional valuesautodiscover.woodgrovebank.com, mail.fabrikam.com, and autodiscover.fabrikam.com.
 - The command output is displayed onscreen and is also written to the text file C:\\Cert Requests\\woodgrovebank.req.
 
-**Note**: The RequestFile parameter is available only in Exchange 2013. To export the certificate request file in Exchange 2016 or Exchange 2019, see Example 3.
+**Note**: The RequestFile parameter is available only in Exchange 2013. To create a new certificate request file in Exchange 2016 or Exchange 2019, see Example 4 and Example 5.
 
 After you create the certificate request, you send the output to the CA. After you receive the certificate from the CA, you install the certificate by using the Import-ExchangeCertificate cmdlet, and you assign the certificate to Exchange services by using the Enable-ExchangeCertificate cmdlet.
 
-If the CA requires the certificate request in a file that's encoded by DER, use the BinaryEncoding switch.
-
-### Example 3
-```powershell
-$request = New-ExchangeCertificate -GenerateRequest -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
-Set-Content -Path "\\FileServer01\Data\woodgrovebank.req" -Value $request
-```
-
-This example create a new certificate request for a certification authority using the same certificate settings as Example 2.
-
-This example uses the **Set-Content** cmdlet to export the request to the specified UNC path. This method is required in Exchange 2016 and Exchange 2019, because the RequestFile parameter is not available.
+If the CA requires the certificate request in a file that's encoded by DER, use the BinaryEncoding switch and save the file with the .pfx extension.
 
 ### Example 4
 ```powershell
-Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate -PrivateKeyExportable $true
+$txtrequest = New-ExchangeCertificate -GenerateRequest -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
+[System.IO.File]::WriteAllBytes('\\FileServer01\Data\woodgrovebank.req', [System.Text.Encoding]::Unicode.GetBytes($txtrequest))
 ```
 
-This example renewsthe existing self-signed certificate that has the thumbprint value c4248cd7065c87cb942d60f7293feb7d533a4afc. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet. Setting the PrivateKeyExportable parameter to the value $true allows the renewed self-signed certificate to be exported from the server (and imported on other servers).
+This example creates a new Base64 encoded certificate request for a certification authority using the same certificate settings as Example 3.
+
+This method is required in Exchange 2016 and Exchange 2019 because the RequestFile parameter is not available.
 
 ### Example 5
+```PowerShell
+$binrequest = New-ExchangeCertificate -GenerateRequest -BinaryEncoded -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
+[System.IO.File]::WriteAllBytes('\\FileServer01\Data\woodgrovebank.pfx', $binrequest.FileData)
+```
+
+This example creates a new DER encoded (binary) certificate request for a certification authority using the same certificate settings as Example 4.
+
+This method is required in Exchange 2016 and Exchange 2019 because the RequestFile parameter is not available.
+
+### Example 6
 ```powershell
 Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest -RequestFile "C:\Cert Requests\fabrikam_renewal.req"
 ```
 
-This example creates a request to renew an existing certificate that was issued by a certification authority. The certificate request has the following settings:
+In **Exchange 2013**, this example creates a request to renew an existing certificate that was issued by a certification authority. The certificate request has the following settings:
 
 - The thumbprint value of the existing certificate is 8A141F7F2BBA8041973399723BD2598D2ED2D831. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
 - The request is Base64 encoded.
 - The output is displayed onscreen and is also written to the text file C:\\Cert Requests\\fabrikam\_renewal.req.
 
+**Note**: The RequestFile parameter is available only in Exchange 2013. To create a certificate renewal request for a certification authority in Exchange 2016 or Exchange 2019, see Example 7 and Example 8.
+
 After you create the certificate renewal request, you send the output to the CA. After you receive the renewed certificate from the CA, you install the certificate by using the Import-ExchangeCertificate cmdlet.
 
-### Example 6
+### Example 7
 ```powershell
-Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate
+$txtrequest = Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest
+[System.IO.File]::WriteAllBytes('C:\Cert Requests\fabrikam_renewal.req', [System.Text.Encoding]::Unicode.GetBytes($txtrequest))
 ```
 
-This example shows how to renew a self-signed certificate with a specific thumbprint value. You can obtain the thumbprint value in one of two ways.
+This example create a Base64 encoded certificate renewal request file for a certification authority using the same certificate settings as Example 6.
 
-Select the certificate in the Exchange Administration Center and then select Edit to view properties of the certificate. The thumbprint value is shown in the Exchange Certificate window.
+This method is required in Exchange 2016 and Exchange 2019 because the RequestFile parameter is not available.
 
-Run the Get-ExchangeCertificate cmdlet to return a list of all certificates installed on the server with their thumbprint values.
+### Example 8
+```powershell
+$binrequest = Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest
+[System.IO.File]::WriteAllBytes('C:\Cert Requests\fabrikam_renewal.pfx', $binrequest.FileData)
+```
+
+This example creates a new DER encoded (binary) certificate renewal request file for a certification authority using the same certificate settings as Example 7.
 
 ## PARAMETERS
 
@@ -437,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestFile
-**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. To export the certificate request to a file without using the RequestFile parameter, use the **Set-Content** cmdlet as described in Example 3.
+**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. To export the certificate request to a file without using the RequestFile parameter, see Example 4 and Example 5 (new) or Example 7 and Example 8 (renew).
 
 This parameter is available only in Exchange 2013.
 

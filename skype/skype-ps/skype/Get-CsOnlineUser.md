@@ -179,6 +179,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 
 - accountEnabled
 - AssignedPlan
+- Company
 - Country
 - department
 - displayName
@@ -186,6 +187,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - ExternalAccessPolicy
 - givenName
 - Identity
+- IsSipEnabled
 - lineUri
 - userPrincipalName
 - CallingLineIdentity
@@ -232,7 +234,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - UserDirSyncEnabled
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
-- LastName (available in Teams PowerShell Module 4.2.0 and later)
+- LastName (available in Teams PowerShell Module 4.2.1 and later)
 
 *Attributes that have changed in meaning/format*:
 
@@ -245,9 +247,10 @@ In Teams PowerShell Module version 3.0.0 and later, the **OnPremLineURI** attrib
 
 In the Teams PowerShell Module version 3.0.0 or later, the format of the AssignedPlan and ProvisionedPlan attributes has changed from XML to JSON array. Previous XML filters (For example, `-Filter "AssignedPlan -eq '<some-xml-string>'"`) will no longer work. Instead, you need to update your filters to use one of the following formats:
 
-- All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -eq 'MCO*'"`
-- All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -eq '*MCO*'"`
-- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -eq '*MCO'"`
+- All users with an AssignedPlan that matches MCO: `-Filter "AssignedPlan -eq 'MCO'"`
+- All users with an AssignedPlan that starts with MCO: `-Filter "AssignedPlan -like 'MCO*'"`
+- All users with an AssignedPlan that contains MCO: `-Filter "AssignedPlan -like '*MCO*'"`
+- All users with an AssignedPlan that ends with "MCO": `-Filter "AssignedPlan -like '*MCO'"`
 
 **Policy Attributes**:
 
@@ -441,6 +444,8 @@ Some of the commonly used FeatureTypes include:
 - PhoneSystem
 - CallingPlan
 
+AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
+
 *Dropped attributes*:
 
 The following attributes are no longer relevant to Teams and have been dropped from the output:
@@ -549,7 +554,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - OnPremSamAccountName
 - CallerIdPolicy
 - Fax
-- LastName (available in Teams PowerShell Module 4.2.0 and later)
+- LastName (available in Teams PowerShell Module 4.2.1 and later)
 - Office
 - Phone
 - WindowsEmailAddress
@@ -561,6 +566,7 @@ The following attributes are temporarily unavailable in the output when using th
 - OnPremSipEnabled
 - OnPremSipAddress
 - OnPremOptionFlags
+- OnPremEnterpriseVoiceEnabled
 - CountryAbbreviation
 
 **Note**: These attributes will be available in the near future.
@@ -590,6 +596,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
+The changes mentioned in these sections, including changes under "-Identity" and "-Filter" parameters, are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
 
 ## RELATED LINKS
 
