@@ -179,6 +179,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 
 - accountEnabled
 - AssignedPlan
+- Company
 - Country
 - department
 - displayName
@@ -186,6 +187,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - ExternalAccessPolicy
 - givenName
 - Identity
+- IsSipEnabled
 - lineUri
 - userPrincipalName
 - CallingLineIdentity
@@ -552,7 +554,7 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - OnPremSamAccountName
 - CallerIdPolicy
 - Fax
-- LastName (available in Teams PowerShell Module 4.2.0 and later)
+- LastName (available in Teams PowerShell Module 4.2.1 and later)
 - Office
 - Phone
 - WindowsEmailAddress
