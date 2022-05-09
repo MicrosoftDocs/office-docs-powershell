@@ -18,7 +18,7 @@ Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance
 ## SYNTAX
 
 ```
-Sync-CsOnlineApplicationInstance [-CallbackUri <String>] [-ObjectId <System.Guid>] [-Force] [-WhatIf] [-Confirm]
+Sync-CsOnlineApplicationInstance [-CallbackUri <String>] [-ObjectId <System.Guid>] [-ApplicationId <System.Guid>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -53,6 +53,21 @@ Accept wildcard characters: False
 
 ### -ObjectId
 The application instance ID.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationId
+The application ID.
 
 ```yaml
 Type: System.Guid

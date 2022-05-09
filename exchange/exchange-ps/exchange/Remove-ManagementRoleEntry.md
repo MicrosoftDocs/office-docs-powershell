@@ -47,12 +47,14 @@ This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
 
 ### Example 2
 ```powershell
-Get-ManagementRoleEntry "Tier 1 Help Desk\*" | Where-Object {$_.Name -like 'New-*'} | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
+Get-ManagementRoleEntry "Tier 1 Help Desk\*" | where {$_.Name -like 'New-*'} | foreach {Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Where-Object cmdlet which specifies the verb filter and then, these results are being piped to Remove-ManagementRoleEntry cmdlet.
+This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Where-Object cmdlet which specifies the verb filter, and then these results are piped to the Remove-ManagementRoleEntry cmdlet.
 
-This example forces you to acknowledge the command before proceeding.
+This example forces you to acknowledge the command before proceeding (we didn't use `-Confirm:$false` or `-Force`).
+
+**Note**: Exchange Online PowerShell requires the complex syntax as described, and the same command also works in the Exchange Management Shell in on-premises Exchange servers. The Exchange Management Shell supports much simpler syntax for the same result, but the command doesn't work in Exchange Online PowerShell: `Get-ManagementRoleEntry "Tier 1 Help Desk\New-* | Remove-ManagementRoleEntry`.
 
 ## PARAMETERS
 

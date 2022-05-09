@@ -21,6 +21,7 @@ schema: 2.0.0
 Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <String>]
  [-NotificationDialOutNumber <String>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
  [-NotificationMode <Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode>]
+ [-EnhancedEmergencyServiceDisclaimer <String>]
  [-Description <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -29,6 +30,7 @@ Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <S
 Set-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <String>]
  [-NotificationDialOutNumber <String>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
  [-NotificationMode <Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode>]
+ [-EnhancedEmergencyServiceDisclaimer <String>]
  [-Description <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -175,6 +177,21 @@ Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: NotificationOnly, ConferenceMuted, ConferenceUnMuted
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnhancedEmergencyServiceDisclaimer
+Allows the tenant administrator to configure a text string, which is shown at the top of the Calls app. The user can acknowledge the string by selecting OK. The string will be shown on client restart.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

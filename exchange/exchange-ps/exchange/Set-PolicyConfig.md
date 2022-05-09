@@ -26,6 +26,8 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-ClassificationScheme <ClassificationScheme>]
  [-ComplianceUrl <String>]
  [-Confirm]
+ [-DlpAppGroups <PswsHashtable[]>]
+ [-DlpAppGroupsPsws <PswsHashtable[]>]
  [-DocumentIsUnsupportedSeverity <RuleSeverity>]
  [-EnableLabelCoauth <Boolean>]
  [-EnableSpoAipMigration <Boolean>]
@@ -44,7 +46,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -132,6 +134,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpAppGroups
+{{ Fill DlpAppGroups Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpAppGroupsPsws
+{{ Fill DlpAppGroupsPsws Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False

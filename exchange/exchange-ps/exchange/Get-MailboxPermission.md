@@ -176,7 +176,9 @@ Accept wildcard characters: False
 ### -IncludeSoftDeletedUserPermissions
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeSoftDeletedUserPermissions Description }}
+The IncludeSoftDeletedUserPermissions switch returns permissions from soft-deleted mailbox users in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are mailboxes that have been deleted, but are still recoverable.
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +196,7 @@ Accept wildcard characters: False
 ### -IncludeUnresolvedPermissions
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeUnresolvedPermissions Description }}
+The IncludeUnresolvedPermissions switch returns unresolved permissions in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

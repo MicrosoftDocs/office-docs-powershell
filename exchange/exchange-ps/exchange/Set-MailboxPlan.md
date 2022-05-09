@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-MailboxPlan cmdlet to modify the settings of mailbox plans in the cloud-based service.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -336,17 +334,23 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPolicy
-**Note**: Only existing mailboxes respect a custom retention policy that's set by this parameter. New mailboxes are always created using the default policy.
-
-The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
+The RetentionPolicy parameter specifies the retention policy that's applied to new mailboxes that you create. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished Name (DN)
 - GUID
 
-Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained. The default value is Default MRM Policy.
+Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained. Use the Get-RetentionPolicy cmdlet to see the available retention policies.
 
-Use the Get-RetentionPolicy cmdlet to see the available retention policies.
+By default, the value of this parameter is blank ($null), which means the default retention policy (the retention policy where the IsDefault property value is True) is assigned to new mailboxes. By default, the default retention policy is named Default MRM Policy.
+
+If you don't set a value for this parameter, existing mailboxes are also updated if you change which retention policy is the default by using the IsDefault switch on the New-RetentionPolicy or Set-RetentionPolicy cmdlets.
+
+**Note**: Specifying a value for this parameter has the following potential issues:
+
+- The specified retention policy is applied only to new mailboxes. The retention policy that's applied to existing mailboxes is not changed when you specify a different retention policy in the mailbox plan.
+- Changes to which retention policy is the default are ignored on new and existing mailboxes.
+- If you change the value of this parameter from a specific retention policy back to blank ($null), changes to which retention policy is the default do not affect mailboxes created when the retention policy was specified. Changes to which retention policy is the default only affect new mailboxes and any existing mailboxes that were created when no retention policy was specified. In effect, mailboxes created when the retention policy was specified in the mailbox plan are stuck using that retention policy (the RetentionPolicy parameter on the Set-Mailbox cmdlet is not available in Exchange Online).
 
 ```yaml
 Type: MailboxPolicyIdParameter

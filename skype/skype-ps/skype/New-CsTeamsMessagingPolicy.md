@@ -30,6 +30,7 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
 ## DESCRIPTION
  The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet creates a new Teams messaging policy.  Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
 
+
 ## EXAMPLES
 
 ### Example 1
@@ -76,6 +77,9 @@ Accept wildcard characters: False
 
 ### -AllowOwnerDeleteMessage
 Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+If the `-AllowUserDeleteMessage` parameter is set to FALSE, the team owner will not be able to delete their own messages.
+
 
 ```yaml
 Type: Boolean

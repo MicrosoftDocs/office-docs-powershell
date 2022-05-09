@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsUserDelegates
 
 ## SYNOPSIS
-Used to modify an user’s delegates list.
+Used to modify an user's delegates list.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (S
 PS C:\> Set-CsUserDelegates -Delegates @{add='ChewDavid@contoso.com','dmx@contoso.com'} -User "Ken.Myer@contoso.com"
 ```
 
-This cmdlet modifies the specified user’s delegation settings, returns an object of delegates list and displays the list of delegates, in case of success. In case of failure, an appropriate error message will be shown.
+This cmdlet modifies the specified user's delegation settings, returns an object of delegates list and displays the list of delegates, in case of success. In case of failure, an appropriate error message will be shown.
 
 ## PARAMETERS
 

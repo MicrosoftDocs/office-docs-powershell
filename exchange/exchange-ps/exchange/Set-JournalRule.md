@@ -152,6 +152,8 @@ Accept wildcard characters: False
 ### -Recipient
 The Recipient parameter specifies the SMTP address of a mailbox, contact, or distribution group to journal. If you specify a distribution group, all recipients in that distribution group are journaled. All messages sent to or received from a recipient are journaled.
 
+To journal messages from all recipients, use the value $null for this parameter.
+
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
