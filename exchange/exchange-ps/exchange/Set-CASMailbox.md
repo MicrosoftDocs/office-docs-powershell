@@ -894,11 +894,11 @@ Accept wildcard characters: False
 ### -OneWinNativeOutlookEnabled
 This parameter is available only in the cloud-based service.
 
-The OneWinNativeOutlookEnabled parameter enables or disables access to the mailbox using Monarch Mail and Calendar.
+The OneWinNativeOutlookEnabled parameter enables or disables access to the mailbox using the new Outlook for Windows.
 Valid values are:
 
-- $true: Access to the mailbox using Monarch Mail and Calendar is enabled. This is the default value.
-- $false: Access to the mailbox using Monarch Mail and Calendar is disabled.
+- $true: Access to the mailbox using the new Outlook for Windows is enabled. This is the default value.
+- $false: Access to the mailbox using the new Outlook for Windows is disabled.
 
 ```yaml
 Type: System.Boolean
