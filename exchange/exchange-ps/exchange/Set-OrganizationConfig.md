@@ -733,7 +733,7 @@ Accept wildcard characters: False
 ### -AutoExpandingArchive
 This parameter is available only in the cloud-based service.
 
-The AutoExpandingArchive switch enables the unlimited archiving feature (called auto-expanding archiving) in an Exchange Online organization. You don't need to specify a value with this switch.
+The AutoExpandingArchive switch enables the auto-expanding archiving feature in an Exchange Online organization. You don't need to specify a value with this switch.
 
 After you enable auto-expanding archiving, additional storage space is automatically added to a user's archive mailbox when it approaches the storage limit. Note that a user's archive mailbox has to be enabled before auto-expanding archiving can take effect. Also note that after you enable auto-expanding archiving for your organization, it can't be disabled.
 

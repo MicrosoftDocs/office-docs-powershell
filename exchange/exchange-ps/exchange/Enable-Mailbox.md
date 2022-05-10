@@ -712,7 +712,7 @@ Accept wildcard characters: False
 ### -AutoExpandingArchive
 This parameter is available only in the cloud-based service.
 
-The AutoExpandingArchive switch enables the unlimited archiving feature (called auto-expanding archiving) for the specified mailbox. You don't need to specify a value with this switch.
+The AutoExpandingArchive switch enables the auto-expanding archiving feature for the specified mailbox. You don't need to specify a value with this switch.
 
 After you enable auto-expanding archiving, additional storage space is automatically added to the user's archive mailbox when it approaches the storage limit.
 
