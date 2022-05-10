@@ -103,6 +103,13 @@ Get-CsPhoneNumberAssignment -ActivationState Activated -CapabilitiesContain Voic
 ```
 This example returns information about all activated phone numbers with the capability VoiceApplicationAssignment that are not assigned.
 
+### Example 7
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumberContain "524"
+```
+This example returns information about all phone numbers that contains the digits 524. You can for instance use this to find the telephone number with extension 524
+used in example 2.
+
 ## PARAMETERS
 
 ### -ActivationState
@@ -267,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberContains
-Filters the returned results based on substring match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber.
+Filters the returned results based on substring match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber, except that
 
 ```yaml
 Type: System.String
