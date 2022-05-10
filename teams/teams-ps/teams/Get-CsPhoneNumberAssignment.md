@@ -107,8 +107,7 @@ This example returns information about all activated phone numbers with the capa
 ```powershell
 Get-CsPhoneNumberAssignment -TelephoneNumberContain "524"
 ```
-This example returns information about all phone numbers that contains the digits 524. You can for instance use this to find the telephone number with extension 524
-used in example 2.
+This example returns information about all phone numbers that contains the digits 524, including the phone number with extension 524 used in example 2.
 
 ## PARAMETERS
 
@@ -274,7 +273,8 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberContains
-Filters the returned results based on substring match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber, except that
+Filters the returned results based on substring match for the specified string on TelephoneNumber. To search for a number with an extension, you need to specify
+the digits of the extension. For supported formats see TelephoneNumber.
 
 ```yaml
 Type: System.String
