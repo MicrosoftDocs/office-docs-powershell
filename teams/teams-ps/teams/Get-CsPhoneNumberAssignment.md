@@ -270,7 +270,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TelephoneNumberContains
+### -TelephoneNumberContain
+
 Filters the returned results based on substring match for the specified string on TelephoneNumber. To search for a number with an extension, you need to specify
 the digits of the extension. For supported formats see TelephoneNumber.
 
