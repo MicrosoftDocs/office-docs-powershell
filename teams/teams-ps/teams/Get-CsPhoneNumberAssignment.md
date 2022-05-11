@@ -104,7 +104,8 @@ This example returns information about all activated phone numbers with the capa
 ```powershell
 Get-CsPhoneNumberAssignment -TelephoneNumberContain "524"
 ```
-This example returns information about all phone numbers that contains the digits 524, including the phone number with extension 524 used in example 2.
+This example returns information about all phone numbers that contain the digits 524, including the phone number with extension 524 used in example 2.
+
 
 ## PARAMETERS
 
