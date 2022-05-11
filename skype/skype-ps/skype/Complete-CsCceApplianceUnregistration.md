@@ -13,7 +13,7 @@ ms.reviewer:
 # Complete-CsCceApplianceUnregistration
 
 ## SYNOPSIS
-Provide the topic introduction here.
+This cmdlet has been deprecated and is no longer used.
 
 ## SYNTAX
 
