@@ -60,7 +60,7 @@ Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -184,6 +184,7 @@ Specifies whether voicemail and transcription data is shared with the service fo
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
