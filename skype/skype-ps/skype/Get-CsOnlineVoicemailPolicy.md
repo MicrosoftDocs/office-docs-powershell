@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Use the `Get-CsOnlineVoicemailPolicy` cmdlet to get a list of all pre-configured policy instances for Voicemail service.
+Use the `Get-CsOnlineVoicemailPolicy` cmdlet to get a list of all pre-configured policy instances related to Cloud Voicemail service.
 
 ## SYNTAX
 
@@ -78,7 +78,7 @@ This parameter accepts a wildcard string and returns all voicemail policies with
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
