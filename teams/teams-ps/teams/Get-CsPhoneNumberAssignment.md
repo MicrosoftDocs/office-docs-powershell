@@ -15,9 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet displays information about one or more phone numbers.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-
 ## SYNTAX
 
 ### Assignment (Default)
@@ -102,6 +99,13 @@ This example returns information about the phone number assigned to resource acc
 Get-CsPhoneNumberAssignment -ActivationState Activated -CapabilitiesContain VoiceApplicationAssignment -PstnAssignmentStatus Unassigned
 ```
 This example returns information about all activated phone numbers with the capability VoiceApplicationAssignment that are not assigned.
+
+### Example 7
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumberContain "524"
+```
+This example returns information about all phone numbers that contain the digits 524, including the phone number with extension 524 used in example 2.
+
 
 ## PARAMETERS
 
@@ -266,8 +270,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TelephoneNumberContains
-Filters the returned results based on substring match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber.
+### -TelephoneNumberContain
+
+Filters the returned results based on substring match for the specified string on TelephoneNumber. To search for a number with an extension, you need to specify
+the digits of the extension. For supported formats see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -397,6 +403,8 @@ The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNu
 
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
+
+The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)

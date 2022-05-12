@@ -131,6 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 3.0.0 or later.
 
+The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
 [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
