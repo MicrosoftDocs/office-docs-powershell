@@ -192,6 +192,7 @@ Specifies whether voicemail and transcription data is shared with the service fo
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
