@@ -18,10 +18,10 @@ Use the `Get-CsOnlineVoicemailPolicy` cmdlet to get a list of all pre-configured
 ## SYNTAX
 
 ### Identity (Default)
-
 ```
 Get-CsOnlineVoicemailPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
+
 ### Filter
 ```
 Get-CsOnlineVoicemailPolicy [-Filter <string>] [<CommonParameters>]
