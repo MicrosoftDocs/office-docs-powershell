@@ -5,8 +5,8 @@ applicable: Microsoft Teams, Skype for Business Online
 title: New-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
