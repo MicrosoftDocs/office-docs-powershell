@@ -27,9 +27,9 @@ Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-EnableEditingCallAnswerRule
 ## DESCRIPTION
 Cloud Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
 
-By default, users enabled for Phone System will be enabled for Online Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages. 
+By default, users enabled for Phone System will be enabled for Cloud Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages. 
 
-- Online Voicemail transcription is enabled by default
+- Voicemail transcription is enabled by default
 - Transcription profanity masking is disabled by default
 - Transcription translation is enabled by default
 - Editing call answer rule settings is enabled by default
@@ -57,14 +57,30 @@ The command shown in Example 2 changes the EnableTranscriptionProfanityMasking t
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before executing the command.
+### -Identity
+A unique identifier specifying the scope, and in some cases the name, of the policy.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableEditingCallAnswerRulesSetting
+Controls if editing call answer rule settings are enabled or disabled for a user. Possible values are $true or $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -80,7 +96,7 @@ Allows you to disable or enable voicemail transcription. Possible values are $tr
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -96,7 +112,7 @@ Allows you to disable or enable profanity masking for the voicemail transcriptio
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -112,23 +128,7 @@ Allows you to disable or enable translation for the voicemail transcriptions. Po
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableEditingCallAnswerRulesSetting
-Controls if editing call answer rule settings are enabled or disabled for a user. Possible values are $true or $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ A duration of voicemail maximum recording length. The length should be between 3
 Type: Duration
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -154,13 +154,13 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySystemPromptLanguage
-The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. Please see [Set-CsOnlineVoicemailUserSettings](Set-CsOnlineVoicemailUserSettings.md) -PromptLanguage for supported languages.
+The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. Please see [Set-CsOnlineVoicemailUserSettings](/powershell/module/skype/set-csonlinevoicemailusersettings?view=skype-ps) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -170,13 +170,13 @@ Accept wildcard characters: False
 ```
 
 ### -SecondarySystemPromptLanguage
-The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  Please see [Set-CsOnlineVoicemailUserSettings](Set-CsOnlineVoicemailUserSettings.md) -PromptLanguage for supported languages.
+The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  Please see [Set-CsOnlineVoicemailUserSettings](/powershell/module/skype/set-csonlinevoicemailusersettings?view=skype-ps) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -186,36 +186,19 @@ Accept wildcard characters: False
 ```
 
 ### -ShareData
-{{ Fill ShareData Description }}
+Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy. Possible values are Defer and Deny.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-### -Identity
-A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, Set-CsOnlineVoicemailPolicy would update tenant level Global policy value.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### -WhatIf
 Describes what would happen if you executed the command without actually executing the command.
@@ -224,7 +207,23 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
