@@ -47,10 +47,10 @@ This example changes PromptLanguage setting to "en-US" and OofGreetingFollowCale
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-CsOnlineVoicemailUserSettings -Identity user3@contoso.com -CallAnswerRule PromptOnlyWithTransfer -TransferTarget user4@contoso.com
+Set-CsOnlineVoicemailUserSettings -Identity user3@contoso.com -CallAnswerRule PromptOnlyWithTransfer -TransferTarget sip:user4@contoso.com
 ```
 
-This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set TransferTarget to "user4@contoso.com" for user3@contoso.com.
+This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set TransferTarget to "sip:user4@contoso.com" for user3@contoso.com.
 
 ### -------------------------- Example 4 --------------------------
 ```
@@ -249,7 +249,6 @@ The following languages are supported:
 - "zh-TW" (Chinese - Traditional, Taiwan)
 - "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -264,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareData
-The VoicemailEnabled parameter represents whether to enable voicemail service.
+Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy.
 
 ```yaml
 Type: System.Boolean
@@ -281,9 +280,8 @@ Accept wildcard characters: False
 
 ### -TransferTarget
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
-Value of this parameter should be a SIP URI of another user in your organization.
+Value of this parameter should be a SIP URI of another user in your organization. 
 For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
-
 
 ```yaml
 Type: System.String
@@ -299,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoicemailEnabled
-The VoicemailEnabled parameter represents whether to enable voicemail service.
+The VoicemailEnabled parameter represents whether to enable voicemail service. If set to $false, the user has no voicemail service.
 
 ```yaml
 Type: System.Boolean
@@ -313,8 +311,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -335,4 +331,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CsOnlineVoicemailUserSettings](Get-CsOnlineVoicemailUserSettings.md)
-
