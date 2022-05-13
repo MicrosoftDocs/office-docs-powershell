@@ -19,8 +19,8 @@ Creates a new Online Voicemail policy. Online Voicemail policies determine wheth
 ### Identity (Default)
 
 ```
-New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesSetting <bool>] [-EnableTranscription <bool>]
-[-EnableTranscriptionProfanityMasking <bool>] [-EnableTranscriptionTranslation <bool>] [-MaximumRecordingLength <timespan>]
+New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
+[-EnableTranscriptionProfanityMasking <boolean>] [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
 [-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
