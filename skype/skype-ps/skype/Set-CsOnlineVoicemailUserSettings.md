@@ -20,9 +20,9 @@ New online voicemail user settings of the user would be returned after executing
 
 ```
 Set-CsOnlineVoicemailUserSettings [-Identity] <string> [-CallAnswerRule <Object>] [-DefaultGreetingPromptOverwrite <string>]
-[-DefaultOofGreetingPromptOverwrite <string>] [-Force] [-OofGreetingEnabled <bool>] [-OofGreetingFollowAutomaticRepliesEnabled <bool>]
-[-OofGreetingFollowCalendarEnabled <bool>] [-PromptLanguage <string>] [-ShareData <bool>] [-TransferTarget <string>]
-[-VoicemailEnabled <bool>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-DefaultOofGreetingPromptOverwrite <string>] [-Force] [-OofGreetingEnabled <boolean>] [-OofGreetingFollowAutomaticRepliesEnabled <boolean>]
+[-OofGreetingFollowCalendarEnabled <boolean>] [-PromptLanguage <string>] [-ShareData <boolean>] [-TransferTarget <string>]
+[-VoicemailEnabled <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -137,6 +137,21 @@ Applicable: Microsoft Teams, Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
