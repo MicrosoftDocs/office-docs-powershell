@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareData
-Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy. Possible values are Defer and Deny.
+Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny.
 
 ```yaml
 Type: String
