@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -DefaultOofGreetingPromptOverwrite
 The DefaultOofGreetingPromptOverwrite parameter represents the contents that overwrite the default out-of-office greeting prompt.
-If user out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, voicemail service will play this overwrite greeting instead of default out-of-office greeting in voicemail deposit scenario.
+If the user's out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default out-of-office greeting in the voicemail deposit scenario.
 
 ```yaml
 Type: System.String
