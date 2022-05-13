@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -DefaultGreetingPromptOverwrite
 The DefaultGreetingPromptOverwrite parameter represents the contents that overwrite the default normal greeting prompt.
-If user normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, voicemail service will play this overwrite greeting instead of default normal greeting in voicemail deposit scenario.
+If the user's normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default normal greeting in the voicemail deposit scenario.
 
 ```yaml
 Type: System.String
