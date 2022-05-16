@@ -401,7 +401,7 @@ specified user needs to have one or more members of the user's call group.
 The cmdlet is validating the different settings and is always writing all the parameters in a settings group. You might see validation errors from the cmdlet due to
 this behavior. As an example, if you have ForwardingTargetType set to Group and you want to remove all members of the call group, you will get a validation error.
 
-You can specify a SIP URI without sip: on input, but the output from Get-CsUserCallingSettings will show the full SIP URI.
+You can specify a SIP URI without 'sip:' on input, but the output from Get-CsUserCallingSettings will show the full SIP URI.
 
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
 
