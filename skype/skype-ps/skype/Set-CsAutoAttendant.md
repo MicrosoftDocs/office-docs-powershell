@@ -24,6 +24,7 @@ Set-CsAutoAttendant -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ## DESCRIPTION
 The Set-CsAutoAttendant cmdlet lets you modify the properties of an auto attendant. For example, you can change the operator, the greeting, or the menu prompts.
 
+|NOTE|: Please use powershell 7.0 or above, since 7.0 we have started using lists
 
 ## EXAMPLES
 
