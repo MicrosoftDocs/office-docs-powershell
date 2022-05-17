@@ -134,7 +134,7 @@ Valid values for this parameter are:
 
 You can enter multiple values separated by commas. Don't use quotation marks.
 
-**Note**: Please refer to the table in the beginning of this article to understand what authentication types may be used with what protocols.
+**Note**: Refer to the Description section to see which authentication types can be used with what protocols.
 
 ```yaml
 Type: MultiValuedProperty
@@ -292,7 +292,7 @@ Valid values for this parameter are:
 
 You can enter multiple values separated by commas. Don't use quotation marks.
 
-**Note**: Please refer to the table in the beginning of this article to understand what authentication types may be used with what protocols.
+**Note**: Refer to the Description section to see which authentication types can be used with what protocols.
 
 ```yaml
 Type: MultiValuedProperty
