@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailboxIRMAccess cmdlet to view delegate access to IRM-protected messages in other peoples' mailboxes.
+Use the Get-MailboxIRMAccess cmdlet to view delegate access to IRM-protected messages in other mailboxes (shared mailboxes or user mailboxes where delegates have Full Access permission).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,6 +29,8 @@ Get-MailboxIRMAccess [[-Identity] <MailboxIdParameter>]
 ## DESCRIPTION
 > [!NOTE]
 > This cmdlet works only for delegates who already have Full Access permission to the mailbox. For more information, see [Manage permissions for recipients in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-permissions-for-recipients).
+>
+> If delegates who have Full Access permission to the mailbox don't appear in the results of this cmdlets, those delegates have access to IRM-protected messages in the mailbox. Only Full Access delegates who are blocked from reading IRM-protected messages in the mailbox appear in the results of this cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -39,14 +41,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxIRMAccess -Identity lynette@contoso.onmicrosoft.com
 ```
 
-This example returns information about all delegate access to IRM-protected messages in Lynette's mailbox.
+This example returns information about delegate access to IRM-protected messages in Lynette's mailbox:
+
+- Full Access delegates who appear in the results are blocked from reading IRM-protected messages in the mailbox.
+- Full Access delegates who don't appear in the results can read IRM-protected messages in the mailbox.
 
 ### Example 2
 ```powershell
 Get-MailboxIRMAccess -Identity lynette@contoso.onmicrosoft.com -User chris@contoso.onmicrosoft.com
 ```
 
-This example returns information about delegate Chris' acces access to IRM-protected messages in Lynette's mailbox.
+This example returns information about delegate Chris' access access to IRM-protected messages in Lynette's mailbox.
 
 ## PARAMETERS
 
