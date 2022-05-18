@@ -80,7 +80,7 @@ Accept wildcard characters: True
 ```
 
 ### -SpoofedUser
-The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry. 
+The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry.
 
 - For domains outside your organization (cross-org), use the domain of the email address that appears in the From field of the message.
 - For domains inside your organization (intra-org), use the full email address that appears in the From field of the message.
