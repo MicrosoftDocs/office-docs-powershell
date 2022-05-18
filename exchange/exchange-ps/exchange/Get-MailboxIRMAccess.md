@@ -30,7 +30,7 @@ Get-MailboxIRMAccess [[-Identity] <MailboxIdParameter>]
 > [!NOTE]
 > This cmdlet works only for delegates who already have Full Access permission to the mailbox. For more information, see [Manage permissions for recipients in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-permissions-for-recipients).
 >
-> If delegates who have Full Access permission to the mailbox don't appear in the results of this cmdlets, those delegates have access to IRM-protected messages in the mailbox. Only Full Access delegates who are blocked from reading IRM-protected messages in the mailbox appear in the results of this cmdlet.
+> Delegates with Full Access permission to the mailbox who don't appear in the results of this cmdlet have access to IRM-protected messages. Only Full Access delegates who are blocked from reading IRM-protected messages in the mailbox appear in the results.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
