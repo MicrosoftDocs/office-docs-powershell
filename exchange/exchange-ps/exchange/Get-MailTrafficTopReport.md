@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: This cmdlet is in the process of being deprecated. Use the Get-MailTrafficATPReport and Get-MailDetailATPReport cmdlets instead.
+**Note**: This cmdlet is in the process of being deprecated. Use the [Get-MailTrafficSummaryReport](https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport) cmdlet instead.
 
 Use the Get-MailTrafficTopReport cmdlet to view a report of the highest volume senders, recipients, malware recipients and spam recipients in your organization.
 
