@@ -83,6 +83,8 @@ This example uses the Database and StoreMailbox parameters to display the Identi
 ### -Identity
 The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is `DatabaseGuid\RequestGuid\JobGuid`.
 
+You can't use this parameter with the Database or Mailbox parameters.
+
 ```yaml
 Type: StoreIntegrityCheckJobIdParameter
 Parameter Sets: Identity
@@ -103,7 +105,7 @@ The Database parameter returns mailbox repair requests for all mailboxes on the 
 - Distinguished name (DN)
 - GUID
 
-You can't use this parameter with the Mailbox parameter.
+You can't use this parameter with the Identity or Mailbox parameters.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -132,7 +134,7 @@ The Mailbox parameter specifies the mailbox that you want to get mailbox repair 
 - SamAccountName
 - User ID or user principal name (UPN)
 
-You can't use this parameter with the Database parameter.
+You can't use this parameter with the Database or Identity parameters.
 
 ```yaml
 Type: MailboxIdParameter
