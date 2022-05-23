@@ -172,6 +172,10 @@ The cmdlet is available in Teams PS module 2.5.1 or later.
 
 The parameters Identity and TreatmentId are mutually exclusive.
 
+To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
+
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Phone System – Virtual User license.
+
 Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
 
 If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
