@@ -112,6 +112,7 @@ The ComponentName parameter specifies the component that you want to retrieve th
 - MRM
 - OnlineMeetings
 - OOFRules
+- RBA
 - RemindersAssistant
 - SharingMigrationAssistant
 - SharingSyncAssistant
