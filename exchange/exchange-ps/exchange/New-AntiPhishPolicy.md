@@ -639,7 +639,6 @@ The RecommendedPolicyType parameter is used for Standard and Strict policy creat
 Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
-Accepted values: Custom, Standard, Strict
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
