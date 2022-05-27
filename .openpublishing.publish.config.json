@@ -28,20 +28,6 @@
       ]
     },
     {
-      "docset_name": "ms-commerce",
-      "build_source_folder": "ms-commerce",
-      "build_output_subfolder": "ms-commerce",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "officewebapps-ps",
       "build_source_folder": "officewebapps",
       "build_output_subfolder": "officewebapps-ps",
@@ -85,47 +71,12 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+      "version": 0
     },
     {
       "docset_name": "skype-ps",
       "build_source_folder": "skype",
       "build_output_subfolder": "skype-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "spmt-ps",
-      "build_source_folder": "spmt",
-      "build_output_subfolder": "spmt-ps",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -204,6 +155,33 @@
       ]
     },
     {
+      "docset_name": "spmt-ps",
+      "build_source_folder": "spmt",
+      "build_output_subfolder": "spmt-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
+        ]
+      },
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
+    },
+    {
       "docset_name": "whiteboard-ps",
       "build_source_folder": "whiteboard",
       "build_output_subfolder": "whiteboard-ps",
@@ -237,6 +215,8 @@
   "git_repository_branch_open_to_public_contributors": "main",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+  "enable_incremental_build": false,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -256,9 +236,6 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "docs_build_engine": {},
-  "enable_incremental_build": false,
-  "contribution_branch_mappings": {},
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
@@ -268,5 +245,8 @@
       "target_framework": "net45",
       "version": "latest"
     }
-  ]
+  ],
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
