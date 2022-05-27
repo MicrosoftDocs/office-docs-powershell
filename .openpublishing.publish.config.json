@@ -72,6 +72,7 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0
+    },
     {
       "docset_name": "skype-ps",
       "build_source_folder": "skype",
