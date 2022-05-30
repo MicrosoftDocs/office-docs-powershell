@@ -107,6 +107,7 @@ Example 5 returns information for user accounts that have been assigned a design
 Indicates the Identity of the user account to be retrieved.
 
 For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account:
+(Note: The mentioned changes are currently applicable only for Tenants in Public Cloud without a 
 
 - GUID
 - SIP address
@@ -261,6 +262,10 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 - Filter "TeamsMessagingPolicy -eq 'Tenant:TestDemoPolicy'"
 
 - In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
+
+- Filtering for null polices: Admins need to query for null polices by including an empty value.
+E.g., Get-csonlineuser -filter "TeamsMeetingBroadcastPolicy -eq ' ' "
+
 
 *Change in Filter operators*:
 
@@ -580,6 +585,7 @@ The following attributes are temporarily unavailable in the output when using th
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 - CountryOrRegionDisplayName introduced as Country (in versions 4.2.0 and later)
+- InterpretedUserType: "AADConnectEnabledOnline" prefix for the InterpretedUserType output value has now been renamed to DirSyncEnabledOnline. E.g., AADConnectEnabledOnlineTeamsOnlyUser is now DirSyncEnabledOnlineTeamsOnlyUser
 
 *Attributes that have changed in meaning/format*:
 
@@ -596,7 +602,8 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
-The changes mentioned in these sections, including changes under "-Identity" and "-Filter" parameters, are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
+- The changes mentioned in these sections, including changes under "-Identity" and "-Filter" parameters, are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
+- These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments
 
 ## RELATED LINKS
 
