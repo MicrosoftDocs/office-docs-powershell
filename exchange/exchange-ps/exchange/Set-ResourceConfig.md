@@ -44,8 +44,7 @@ This example adds the custom resource properties Room/Whiteboard and Equipment/V
 
 ### Example 2
 ```powershell
-Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"
-Remove="Equipment/Laptop"}
+Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
 ```
 
 This example adds the custom resource property Room/TV and removes Equipment/Laptop without affecting other custom resource properties that are already configured.
