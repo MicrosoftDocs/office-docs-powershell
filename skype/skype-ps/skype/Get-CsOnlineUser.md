@@ -107,7 +107,8 @@ Example 5 returns information for user accounts that have been assigned a design
 Indicates the Identity of the user account to be retrieved.
 
 For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account:
-(Note: The mentioned changes are currently applicable only for Tenants in Public Cloud without a 
+(Note: These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments)
+
 
 - GUID
 - SIP address
@@ -177,6 +178,8 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes:
+(Note: These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments)
+
 
 - accountEnabled
 - AssignedPlan
@@ -263,7 +266,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 
 - In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
 
-- Filtering for null polices: Admins need to query for null polices by including an empty value.
+- Filtering for null polices: Admins can query for users that do not have any policies assigned (null polices) by including an empty value in the query.
 E.g., Get-csonlineuser -filter "TeamsMeetingBroadcastPolicy -eq ' ' "
 
 
@@ -438,6 +441,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Notes
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
+(Note: These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments)
 
 *New user attributes*:
 
@@ -602,8 +606,8 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
-- The changes mentioned in these sections, including changes under "-Identity" and "-Filter" parameters, are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
-- These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments
+- The changes mentioned under the "-Identity" and "-Filter" sections are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
+- These changes are currently only rolled out in Commercial Environments and **not** applicable to Government Environments
 
 ## RELATED LINKS
 
