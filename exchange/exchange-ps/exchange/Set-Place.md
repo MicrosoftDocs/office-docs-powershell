@@ -306,7 +306,7 @@ Accept wildcard characters: False
 The MTREnabled parameter identfies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
 
 - $true: The room is has a Teams room system. You can add the Teams room system to Microsoft Teams meetings when selecting to join a meeting with room audio.
-- $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value. 
+- $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value.
 
 For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://docs.microsoft.com/microsoftteams/rooms/).
 
@@ -444,11 +444,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

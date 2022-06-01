@@ -409,7 +409,7 @@ The InheritanceType parameter specifies how permissions are inherited by folders
 
 ```yaml
 Type: ActiveDirectorySecurityInheritance
-Parameter Sets: AccessRights, Instance 
+Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
