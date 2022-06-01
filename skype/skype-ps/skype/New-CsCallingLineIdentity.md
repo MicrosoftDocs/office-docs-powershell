@@ -28,7 +28,7 @@ You can either change or block the Caller ID (also called a Calling Line ID) for
 
 Note:  
 - Identity must be unique.
-- ServiceNumber must be a valid Service Number in the Skype for Business Online online telephone number inventory.
+- ServiceNumber must be a valid Service Number in the tenant telephone number inventory.
 - If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
 - If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
  
@@ -101,9 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-PARAMVALUE: Anonymous | Service | LineUri | Resource
-
-The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri.
+The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, Service, LineUri and Resource.
 
 ```yaml
 Type: String
@@ -207,7 +205,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
