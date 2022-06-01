@@ -49,7 +49,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-SafeLinksRule -Identity "Engineering Department URL Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
 
-This example modifies the existing Safe Links Rule named Engineering Department URL Rule to exclude messages sent to the fabrikam.com domain.
+This example modifies the existing Safe Links rule named Engineering Department URL Rule to exclude messages sent to recipients in the fabrikam.com domain.
+
+### Example 2
+```powershell
+Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
+```
+
+This example modifies the existing Safe Links rule named Contoso All to include messages sent to recipients in all accepted domains in the organization.
+
+### Example 3
+```powershell
+$Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+$SLDomains = $Data.Domains
+Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
+```
+
+This example is similar to Example 2, but in this example, the Safe Links rule includes messages sent to recipients in the accepted domains specified in a .csv file.
 
 ## PARAMETERS
 
@@ -331,11 +347,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

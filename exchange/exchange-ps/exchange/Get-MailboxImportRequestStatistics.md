@@ -110,6 +110,8 @@ This example returns additional information for all the import requests that hav
 ### -Identity
 The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you specified a name when you created the import request, use the following syntax: `Alias\Name`.
 
+**Note**: In Exchange Online, the alias of a soft-deleted mailbox might match the alias of an active mailbox. To ensure uniqueness, use the RequestGuid value from the output of the Get-MailboxImportRequest cmdlet for the value of this parameter.
+
 ```yaml
 Type: MailboxImportRequestIdParameter
 Parameter Sets: IdentityOnPremises, IdentityCloud

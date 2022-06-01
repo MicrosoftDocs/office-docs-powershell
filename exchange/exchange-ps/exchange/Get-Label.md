@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDetailedLabelActions
-The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. Value values are:
+The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. Valid values are:
 
 - $true: Include detailed label actions.
 - $false: Don't include detailed label actions.
@@ -108,11 +108,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -65,6 +65,7 @@ The SendingInfrastructure parameter specifies the source of the messages sent by
 
 - An email domain (for example contoso.com). The domain is found in the reverse DNS lookup (PTR record) of the source email server's IP address.
 - An IP address using the syntax: \<source IP\>/24 (for example, 192.168.100.100/24). Use the IP address if the source IP address has no PTR record.
+- A verified DKIM domain.
 
 ```yaml
 Type: String
@@ -80,7 +81,7 @@ Accept wildcard characters: True
 ```
 
 ### -SpoofedUser
-The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry. 
+The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry.
 
 - For domains outside your organization (cross-org), use the domain of the email address that appears in the From field of the message.
 - For domains inside your organization (intra-org), use the full email address that appears in the From field of the message.
@@ -176,11 +177,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -107,7 +107,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```powershell
 Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "https://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
 ```
@@ -1014,11 +1014,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

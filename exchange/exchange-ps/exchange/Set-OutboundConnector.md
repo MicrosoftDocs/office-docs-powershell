@@ -35,7 +35,7 @@ Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
  [-Name <String>]
  [-RecipientDomains <MultiValuedProperty>]
  [-RouteAllMessagesViaOnPremises <Boolean>]
- [-SenderRewritingEnabled <Boolean>] 
+ [-SenderRewritingEnabled <Boolean>]
  [-SmartHosts <MultiValuedProperty>]
  [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
