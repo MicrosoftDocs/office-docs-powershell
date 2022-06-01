@@ -95,3 +95,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
+
+[Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
+
+[New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
+
+[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
