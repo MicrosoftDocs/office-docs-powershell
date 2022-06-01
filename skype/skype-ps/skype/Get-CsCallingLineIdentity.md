@@ -32,23 +32,46 @@ Use the `Get-CsCallingLineIdentity` cmdlet to display the Caller ID policies for
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+###  Example 1
 ```
 PS C:\> Get-CsCallingLineIdentity
 ```
 
 The example gets and displays the Caller ID policies for your organization.
 
+###  Example 2
+```
+PS C:\> Get-CsCallingLineIdentity -Filter "tag:Sales*"
+```
+
+The example gets and displays the Caller ID policies with Identity starting with Sales.
+
 ## PARAMETERS
+
+### -Identity
+The Identity parameter identifies the Caller ID policy.
+
+```yaml
+Type: String
+Parameter Sets: (Identity)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Filter
 The Filter parameter lets you insert a string through which your search results are filtered.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: (Filter)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -56,23 +79,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -Identity
-The Identity parameter identifies the Caller ID policy.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -103,11 +109,10 @@ BlockIncomingPstnCallerID : False
 
 
 ## RELATED LINKS
-[Grant-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/grant-cscallinglineidentity?view=skype-ps)
+[Grant-CsCallingLineIdentity] (grant-cscallinglineidentity.md)
 
-[New-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/new-cscallinglineidentity?view=skype-ps)
+[New-CsCallingLineIdentity] (new-cscallinglineidentity.md)
 
-[Remove-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/remove-cscallinglineidentity?view=skype-ps)
+[Remove-CsCallingLineIdentity] (remove-cscallinglineidentity,md)
 
-[Set-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/set-cscallinglineidentity?view=skype-ps)
-
+[Set-CsCallingLineIdentity](set-cscallinglineidentity.md)
