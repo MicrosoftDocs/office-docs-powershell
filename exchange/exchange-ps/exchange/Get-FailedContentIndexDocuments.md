@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-FailedContentIndexDocuments
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Exchange Server 2016 or earlier.
+This cmdlet is functional only in Exchange Server 2016 or earlier.
 
 Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
 

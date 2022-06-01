@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Unregister-CsHybridPSTNAppliance` cmdlet to unregister a previously specified Skype for Business Cloud Connector Edition appliance.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```

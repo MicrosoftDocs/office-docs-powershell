@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpComplianceRule to view Data Loss Prevention (DLP) rules in the Microsoft 365 compliance center. DLP rules identify and protect sensitive information.
+Use the Get-DlpComplianceRule to view data loss prevention (DLP) rules in the Microsoft Purview compliance portal. DLP rules identify and protect sensitive information.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,7 +28,7 @@ Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 Get-DlpComplianceRule
 ```
 
-This example displays summary information for all DLP rules in the Microsoft 365 compliance center.
+This example displays summary information for all DLP rules in the Microsoft Purview compliance portal.
 
 ### Example 2
 ```powershell
@@ -118,11 +118,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

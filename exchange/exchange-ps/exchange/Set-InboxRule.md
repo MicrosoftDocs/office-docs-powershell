@@ -35,7 +35,6 @@ Set-InboxRule [-Identity] <InboxRuleIdParameter>
  [-ExceptIfFlaggedForAction <String>]
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
- [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>]
  [-ExceptIfHasAttachment <Boolean>]
  [-ExceptIfHasClassification <MessageClassificationIdParameter[]>]
  [-ExceptIfHeaderContainsWords <MultiValuedProperty>]
@@ -61,7 +60,6 @@ Set-InboxRule [-Identity] <InboxRuleIdParameter>
  [-ForwardTo <RecipientIdParameter[]>]
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
- [-FromSubscription <AggregationSubscriptionIdentity[]>]
  [-HasAttachment <Boolean>]
  [-HasClassification <MessageClassificationIdParameter[]>]
  [-HeaderContainsWords <MultiValuedProperty>]
@@ -459,26 +457,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfFromSubscription
-This parameter is available only in the cloud-based service.
-
-The ExceptIfFromSubscription parameter specifies an exception for the Inbox rule that looks for messages received from subscriptions (for example, POP or IMAP subscriptions). You can identify the subscription by using the Get-Subscription cmdlet.
-
-The corresponding condition parameter to this exception is FromSubscription.
-
-```yaml
-Type: AggregationSubscriptionIdentity[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1058,26 +1036,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FromSubscription
-This parameter is available only in the cloud-based service.
-
-The FromSubscription parameter specifies a condition for the Inbox rule that looks for messages received from subscriptions (for example, POP or IMAP subscriptions). You can identify the subscription by using the Get-Subscription cmdlet.
-
-The corresponding exception parameter to this condition is ExceptIfFromSubscription.
-
-```yaml
-Type: AggregationSubscriptionIdentity[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named

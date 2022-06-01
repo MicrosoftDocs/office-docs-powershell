@@ -63,13 +63,12 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
 
 ### Default
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter>
- [-PermanentlyDelete]
+Remove-Mailbox [-Identity] <MailboxIdParameter> [-PermanentlyDelete]
  [-Confirm]
  [-Force]
- [-IgnoreLegalHold]
  [-Migration]
  [-PublicFolder]
+ [-RemoveCNFPublicFolderMailboxPermanently]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -348,7 +347,7 @@ After you disable or remove a mailbox, you can't include it in a discovery searc
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets:  Identity, StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -403,7 +402,7 @@ The PermanentlyDelete switch immediately and permanently deletes (purges) the ma
 
 **Notes**:
 
-- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes). Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet as shown in Example 3 in this topic.
+- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes). Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet as shown in Example 4 in this topic.
 - This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).
 
 ```yaml
@@ -449,6 +448,24 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveCNFPublicFolderMailboxPermanently
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveCNFPublicFolderMailboxPermanently Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

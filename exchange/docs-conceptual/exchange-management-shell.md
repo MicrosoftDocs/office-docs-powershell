@@ -21,6 +21,12 @@ The Exchange Management Shell also provides a robust and flexible scripting plat
 
 To start using the Exchange Management Shell immediately, see the [Exchange Management Shell documentation](#exchange-management-shell-documentation) section later in this article.
 
+> [!NOTE]
+> There is no Microsoft-provided module in the PowerShell Gallery for Exchange Server PowerShell. Instead, to use PowerShell in Exchange Server, you have the following options:
+>
+> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
+> - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
+
 ## How the Exchange Management Shell works on all Exchange server roles except Edge Transport
 
 Whether you use the Exchange Management Shell on a local Exchange server or on an Exchange server that's located across the country, remote PowerShell does the work.
@@ -66,8 +72,6 @@ For more information about Edge Transport servers, see [Edge Transport Servers](
 
 The following table provides links to articles that can help you learn about and use the Exchange Management Shell.
 
-****
-
 |Article|Description|
 |---|---|
 |[Open the Exchange Management Shell](open-the-exchange-management-shell.md)|Find and open the Exchange Management Shell on an Exchange server or a computer that has the Exchange management tools installed.|
@@ -77,4 +81,3 @@ The following table provides links to articles that can help you learn about and
 |[Exchange cmdlet syntax](exchange-cmdlet-syntax.md)|Learn about the structure and syntax of cmdlets in Exchange PowerShell.|
 |[Recipient filters in Exchange Management Shell commands](recipient-filters.md)|Learn about recipient filters in the Exchange Management Shell.|
 |[Use Update-ExchangeHelp to update Exchange PowerShell help articles on Exchange servers](use-update-exchangehelp.md)|Learn how to use Update-ExchangeHelp to update help for Exchange cmdlet reference articles on Exchange servers.|
-|

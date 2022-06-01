@@ -22,6 +22,9 @@ Get-CsOnlineDirectoryTenant [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Forc
 ```
 
 ## DESCRIPTION
+**Note**: Starting with Teams PowerShell Module 4.0, this cmdlet will be deprecated. Use the Get-CsTenant or Get-CsOnlineDialInConferencingBridge cmdlet to view information previously present in Get-CsOnlineDirectoryTenant.
+
+
 Use the Get-CsOnlineDirectoryTenant cmdlet to retrieve tenant parameters like AnnouncementsDisabled, NameRecordingDisabled and Bridges from the Business Voice Directory.
 
 ## EXAMPLES

@@ -48,9 +48,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
 
-<br>
-
-****
+- In Exchange Online, you can't use a wildcard character (*) as the first character in the search string.
 
 |Property name|LDAP display name|Value|Comments|
 |---|---|---|---|
@@ -110,7 +108,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_ElcExpirationSuspensionEndDate_|_msExchELCExpirySuspensionEnd_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br> Others: Blank or non-blank.|This property contains a date-time value.|
 |_ElcExpirationSuspensionStartDate_|_msExchELCExpirySuspensionStart_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br> Others: Blank or non-blank.|This property contains a date-time value.|
 |_ElcMailboxFlags_|_msExchELCMailboxFlags_|`None` (0), `ExpirationSuspended` (1), `ElcV2` (2), `DisableCalendarLogging` (4),`LitigationHold` (8), `SingleItemRecovery` (16), `ValidArchiveDatabase` (32), `ShouldUseDefaultRetentionPolicy` (128), `EnableSiteMailboxMessageDedup` (256), `ElcProcessingDisabled` (512), or `ComplianceTagHold` (1024).||
-|_EmailAddresses_|_proxyAddresses_|String (wildcards accepted).|This property contains the recipient's email addresses (the primary email address and all proxy addresses).|
+|_EmailAddresses_|_proxyAddresses_|String (wildcards accepted).|This property contains the recipient's email addresses (the primary email address and all proxy addresses). This is the property used to identify inactive mailboxes.|
 |_EmailAddressPolicyEnabled_|n/a|Boolean (`$true` or `$false`)||
 |_EntryId_|_msExchPublicFolderEntryId_|String (wildcards accepted).||
 |_EwsApplicationAccessPolicy_|_msExchEwsApplicationAccessPolicy_|`EnforceAllowList` or `EnforceBlockList`.||
@@ -298,7 +296,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_UsageLocation_|_msExchUsageLocation_|A valid ISO 3166-1 two-letter country code value or the corresponding display name (for example, `US` or `UnitedStates`). For more information, see [Country Codes - ISO 3166](https://www.iso.org/iso-3166-country-codes.html).||
 |_UseDatabaseQuotaDefaults_|_mDBUseDefaults_|Boolean (`$true` or `$false`)|If the value of this property is $true, the values of these properties are ignored for the mailbox: _IssueWarningQuota_, _ProhibitSendQuota_, _ProhibitSendReceiveQuota_, , _CalendarLoggingQuota_, _RecoverableItemsWarningQuota_, and _RecoverableItemsQuota_.|
 |_UserAccountControl_|_userAccountControl_|For valid values, see the Remarks section in [User-Account-Control attribute](/windows/win32/adschema/a-useraccountcontrol). You need to convert the hexadecimal values to decimal. Most of the text values won't work as described (even if you remove `ADS_UF` and all underscores).||
-|_UserPrincipalName_|_userPrincipalName_|String (wildcards accepted).|This property contains the user principal name (UPN) for this recipient (for example, `kim@contoso.com`).|
+|_UserPrincipalName_|_userPrincipalName_|String (wildcards accepted).|This property contains the user principal name (UPN) for this recipient (for example, `kim@contoso.com`). This property is not supported to identify inactive mailboxes.|
 |_VoiceMailSettings_|_msExchUCVoiceMailSettings_|String (wildcards accepted).|Valid values for this property are: `ExchangeHostedVoiceMail=0`, `ExchangeHostedVoiceMail=1`, `CsHostedVoiceMail=0`, or `CsHostedVoiceMail=1`.|
 |_WebPage_|_wWWHomePage_|String (wildcards accepted).||
 |_WhenChanged_|_whenChanged_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br> Others: Blank or non-blank.||
@@ -309,7 +307,6 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br> Others: Blank or non-blank.||
 |_WindowsEmailAddress_|_mail_|String (wildcards accepted).||
 |_WindowsLiveID_|_msExchWindowsLiveID_|String (wildcards accepted).||
-|
 
 ## For more information
 

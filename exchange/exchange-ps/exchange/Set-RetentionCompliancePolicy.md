@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Microsoft 365 compliance center.
+Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Microsoft Purview compliance portal.
 
 **Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-RetentionCompliancePolicy](https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy).
 
@@ -50,6 +50,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -62,6 +63,20 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSkypeLocation <MultiValuedProperty>]
  [-RemoveSkypeLocationException <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### AdaptiveScopeLocation
+```
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddAdaptiveScopeLocation <MultiValuedProperty>]
+ [-Applications <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -86,7 +101,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_}`.
 
@@ -138,6 +153,28 @@ Aliases:
 Applicable: Security & Compliance Center
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddAdaptiveScopeLocation
+The AddAdaptiveScopeLocation parameter specifies the adaptive scope location to add to the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AdaptiveScopeLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -567,6 +604,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAdaptiveScopeLocation
+The RemoveAdaptiveScopeLocation parameter specifies the adaptive scope location to remove from the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AdaptiveScopeLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveExchangeLocation
 The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -596,7 +671,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationException
-This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
 - A distribution group or mail-enabled security group
@@ -939,11 +1014,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

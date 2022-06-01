@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailDetailTransportRuleReport cmdlet to view the details of messages that matched the conditions defined by any transport rules for the last 10 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -274,7 +272,7 @@ The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-This parameter can´t be older than 30 days from the current day.
+Although you can enter a date up to 30 days old, only data from the last 10 days is returned.
 
 ```yaml
 Type: DateTime

@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnifiedAuditLogIngestionEnabled
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Microsoft 365 audit log. Valid values are:
 

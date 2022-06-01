@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-SafeLinksDetailReport cmdlet to return detailed information about Safe Links results for the last 7 days. Yesterday is the most recent date that you can specify.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -81,8 +79,12 @@ The Action parameter filters the results by action. Valid values are:
 
 - Allowed
 - Blocked
-- ClickedEvenBlocked
 - ClickedDuringScan
+- ClickedEvenBlocked
+- Scanning
+- TenantAllowed
+- TenantBlocked
+- TenantBlockedAndClickedThrough
 
 You can specify multiple values separated by commas.
 
@@ -105,14 +107,8 @@ Accept wildcard characters: False
 The AppNameList parameter filters the results by the app where the link was found. Valid values are:
 
 - Email Client
-- Excel
-- OneNote
-- Others
-- Outlook
-- PowerPoint
+- OfficeDocs
 - Teams
-- Visio
-- Word
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -242,11 +238,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

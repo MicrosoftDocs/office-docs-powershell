@@ -146,7 +146,7 @@ The Domains parameter specifies the email domain that's used by the third-party 
 - The `5321.MailFrom` address (also known as the MAIL FROM address, P1 sender, or envelope sender).
 - The DKIM domain.
 
-You can specify up to 10 values separated by commas.
+You can specify up to 20 values separated by commas.
 
 A phishing simulation requires at least one domain from this parameter and at least one IP address in the SenderIPRanges parameter.
 
@@ -200,11 +200,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -123,6 +121,8 @@ Accept wildcard characters: False
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+If don't use the StartDate and EndDate parameters, only data from the last 48 hours is returned.
 
 ```yaml
 Type: DateTime
@@ -247,6 +247,8 @@ Accept wildcard characters: False
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+If don't use the StartDate and EndDate parameters, only data from the last 48 hours is returned.
 
 ```yaml
 Type: DateTime

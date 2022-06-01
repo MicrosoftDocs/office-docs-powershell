@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Group [-Identity] <GroupIdParameter>
  [-BypassSecurityGroupManagerCheck]
  [-Confirm]
+ [-Description <MultiValueProperty>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
@@ -120,6 +121,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+This parameter is available only in the cloud-based service.
+
+{{ Fill Description Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -231,7 +250,9 @@ To enter multiple owners and overwrite all existing entries, use the following s
 
 To add or remove owners without affecting other existing entries, use the following syntax: `@{Add="Owner1","Owner2",...; Remove="Owner3","Owner4"...}`.
 
-An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
+Owners that you specify with this parameter are not added as group members. You need to manually add the owners as a members.
+
+**Note**: Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
 
 ```yaml
 Type: GeneralRecipientIdParameter[]
