@@ -605,7 +605,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 
 ## NOTES
 - The changes mentioned under the "-Identity" and "-Filter" sections are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
-- These changes are currently only rolled out in Commercial Environments and **not** applicable to Government Environments
+- These changes are currently only rolled out in commercial environments and are **not** applicable to government environments.
 
 ## RELATED LINKS
 
