@@ -66,8 +66,10 @@ NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
 Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    : 
 CivicAddressId          : 00000000-0000-0000-0000-000000000000
 IsoCountryCode          : 
+IsoSubdivision          : 
 LocationId              : 00000000-0000-0000-0000-000000000000
 LocationUpdateSupported : True
 PortInOrderStatus       : 
