@@ -106,8 +106,7 @@ Example 5 returns information for user accounts that have been assigned a design
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
-For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account:
-(Note: These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments)
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
 
 - GUID
