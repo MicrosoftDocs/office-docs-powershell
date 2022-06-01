@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ReportSubmissionPolicy [<CommonParameters>]
+Get-ReportSubmissionPolicy [[-Identity] <ReportSubmissionPolicyIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,6 +37,22 @@ Get-ReportSubmissionPolicy
 This example returns the user submission configuration for your organization.
 
 ## PARAMETERS
+
+### -Identity
+{{ Fill Identity Description }}
+
+```yaml
+Type: ReportSubmissionPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
