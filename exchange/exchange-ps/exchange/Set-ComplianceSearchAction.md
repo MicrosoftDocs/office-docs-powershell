@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-ComplianceSearchAction
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 Use the Set-ComplianceSearchAction cmdlet to change the export key on export compliance search actions in on-premises Exchange.
 
@@ -138,11 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

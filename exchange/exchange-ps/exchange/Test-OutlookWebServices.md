@@ -12,7 +12,7 @@ ms.reviewer:
 # Test-OutlookWebServices
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Exchange Server 2010.
+This cmdlet is functional only in Exchange Server 2010.
 
 Use the Test-OutlookWebServices cmdlet to verify the Autodiscover service settings for Microsoft Outlook on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAccessServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
 

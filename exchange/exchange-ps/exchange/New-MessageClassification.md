@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-This parameter is available or functional on in on-premises Exchange.
+This parameter is functional on in on-premises Exchange.
 
 The Locale parameter specifies a locale-specific version of an existing message classification. You use the -Name parameter to identify the existing message classification, and the SenderDescription parameter to specify the descriptive text in another language.
 

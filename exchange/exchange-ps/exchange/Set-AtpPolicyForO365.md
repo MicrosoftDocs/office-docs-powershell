@@ -20,8 +20,6 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the settings for the following fea
 - Safe Documents: Uses Microsoft Defender for Endpoint to scan documents and files that are opened in Protected View in Microsoft 365 apps for enterprise.
 - Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -35,7 +33,6 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForO365Clients <Boolean>]
- [-EnableSafeLinksForWebAccessCompanion <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -54,7 +51,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $true
+Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
 ```
 
 This example enables Safe Documents and Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
@@ -217,22 +214,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSafeLinksForWebAccessCompanion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TrackClicks
 The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in Safe Links for Office 365 apps. Valid values are:
 
@@ -273,11 +254,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

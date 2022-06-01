@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailTrafficTopReport cmdlet to view a report of the highest volume senders, recipients, malware recipients and spam recipients in your organization.
+**Note**: This cmdlet is in the process of being deprecated. Use the [Get-MailTrafficSummaryReport](https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport) cmdlet instead.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+Use the Get-MailTrafficTopReport cmdlet to view a report of the highest volume senders, recipients, malware recipients and spam recipients in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

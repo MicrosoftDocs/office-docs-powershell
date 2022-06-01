@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-QuarantinePolicy cmdlet to create quarantine policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -228,9 +226,7 @@ The values for the preset end-user permission groups are described in the follow
 - Limited access: Binary = 00011011, so use the decimal value 27.
 - Full access: Binary = 00010111, so use the decimal value 23.
 
-For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use.
-
-Don't use this parameter with the EndUserQuarantinePermissions parameter.
+For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use. Don't use the binary value for this parameter.
 
 ```yaml
 Type: Int32
@@ -399,11 +395,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRMSSupportForUnenlightenedApps
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
 

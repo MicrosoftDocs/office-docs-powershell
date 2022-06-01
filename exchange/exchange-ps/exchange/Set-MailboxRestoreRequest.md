@@ -37,6 +37,8 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-SkipInitialConnectionValidation]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SkippedItemApprovalTime <DateTime>]
+ [-SourceWlmLevel <WlmLevel>]
+ [-TargetWlmLevel <WlmLevel>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -51,6 +53,8 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
  [-RequestExpiryInterval <Unlimited>]
  [-SkipInitialConnectionValidation]
  [-SkippedItemApprovalTime <DateTime>]
+ [-SourceWlmLevel <WlmLevel>]
+ [-TargetWlmLevel <WlmLevel>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -190,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -208,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalFlags
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
 
@@ -253,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
@@ -280,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -RehomeRequest
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The RehomeRequest switch moves the mailbox restore request to a different mailbox database. You don't need to specify a value with this switch.
 
@@ -387,6 +391,42 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: DateTime
 Parameter Sets: Identity, Rehome
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceWlmLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill SourceWlmLevel Description }}
+
+```yaml
+Type: WlmLevel
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetWlmLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill TargetWlmLevel Description }}
+
+```yaml
+Type: WlmLevel
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

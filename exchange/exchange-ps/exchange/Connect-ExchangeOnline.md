@@ -82,28 +82,28 @@ This example connects to Exchange Online PowerShell using modern authentication,
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
 ```
 
-This example connects to Exchange Online in an unattended scripting scenario using the public key of a certificate.
+This example connects to Exchange Online PowerShell in an unattended scripting scenario using the public key of a certificate.
 
 ### Example 4
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
-This example connects to Exchange Online in an unattended scripting scenario using a certificate thumbprint.
+This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
 ### Example 5
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
-This example connects to Exchange Online in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
+This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
 ### Example 6
 ```powershell
 Connect-ExchangeOnline -Device
 ```
 
-In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online in interactive scripting scenarios on computers that don't have web browsers.
+In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online PowerShell in interactive scripting scenarios on computers that don't have web browsers.
 
 The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
@@ -112,7 +112,7 @@ The command returns a URL and unique code that's tied to the session. You need t
 Connect-ExchangeOnline -InlineCredential
 ```
 
-In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online in interactive scripting scenarios by passing credentials directly in the PowerShell window.
+In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online PowerShell in interactive scripting scenarios by passing credentials directly in the PowerShell window.
 
 ## PARAMETERS
 
@@ -507,7 +507,9 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in app-only authentication. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+The Organization parameter specifies the organization that's used in CBA. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -661,11 +663,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

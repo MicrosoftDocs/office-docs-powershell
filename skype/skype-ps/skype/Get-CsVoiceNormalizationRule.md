@@ -17,7 +17,7 @@ Returns information about the voice normalization rules used in your organizatio
 Voice normalization rules convert telephone dialing requirements (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server.
 This cmdlet was introduced in Lync Server 2010.
 
-**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+**Note**: This cmdlet has been deprecated in Teams PowerShell Module 4.0.0.
 
 ## SYNTAX
 

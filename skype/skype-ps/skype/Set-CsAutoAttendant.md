@@ -25,6 +25,7 @@ Set-CsAutoAttendant -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 The Set-CsAutoAttendant cmdlet lets you modify the properties of an auto attendant. For example, you can change the operator, the greeting, or the menu prompts.
 
 
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -94,7 +95,7 @@ $autoAttendant.CallHandlingAssociations
 # CallFlowId : e7dd255b-ee20-57f0-8a2b-fc403321e284
 # Enabled    : True
 
-$autoAttendant.CallHandlingAssociations.Remove(($autoAttendant.CallHandlingAssociations | where-object {$_.ScheduleId -eq "578745b2-1f94-4a38-844c-6bf6996463ee"}))
+$autoAttendant.CallHandlingAssociations = $autoAttendant.CallHandlingAssociations | where-object {$_.ScheduleId -ne "578745b2-1f94-4a38-844c-6bf6996463ee"}
 
 $autoAttendant.CallFlows
 
@@ -108,7 +109,7 @@ $autoAttendant.CallFlows
 # Greetings :
 # Menu      : Christmas Menu
 
-$autoAttendant.CallFlows.Remove(($autoAttendant.CallFlows | where-object {$_.Id -eq "8ab460f0-770c-4d30-a2ff-a6469718844f"}))
+$autoAttendant.CallFlows = $autoAttendant.CallFlows | where-object {$_.Id -ne "8ab460f0-770c-4d30-a2ff-a6469718844f"}
 
 Set-CsAutoAttendant -Instance $autoAttendant
 ```

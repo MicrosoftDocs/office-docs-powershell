@@ -28,7 +28,7 @@ You can use this cmdlet to create a new number manipulation rule. The rule can b
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity 'AddPlus1' -Pattern '^(\d{10})$' -Translation '+$1'
+PS C:\> New-CsTeamsTranslationRule -Identity 'AddPlus1' -Pattern '^(\d{10})$' -Translation '+1$1'
 ```
 
 This example creates a rule that adds +1 to any ten digits number. For example, 2065555555 will be translated to +1206555555

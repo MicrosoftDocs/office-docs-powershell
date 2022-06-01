@@ -62,7 +62,7 @@ You need to run these commands in this example on an Exchange 2010 Hub Transport
 ## PARAMETERS
 
 ### -Identity
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to export. You can use any value that uniquely identifies the rule. For example:
 

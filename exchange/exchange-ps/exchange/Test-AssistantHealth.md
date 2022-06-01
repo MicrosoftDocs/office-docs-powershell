@@ -136,7 +136,6 @@ This command attempts to fix the following issues:
 - Starts the Mailbox Assistants service if it isn't running.
 - Restarts the Mailbox Assistants service if it detects that the service is hung or deadlocked for more than 15 minutes.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

@@ -45,7 +45,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -216,7 +216,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -232,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationId
-{{ Fill MigrationId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -282,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -298,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -314,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -330,7 +332,7 @@ Accept wildcard characters: False
 ```
 
 ### -Setting
-PARAMVALUE: PswsHashtable
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -346,7 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -Settings
-PARAMVALUE: PswsHashtable
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -362,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -378,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -394,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkypeLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -410,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkypeLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -446,11 +448,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

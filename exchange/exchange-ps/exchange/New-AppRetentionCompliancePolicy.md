@@ -51,7 +51,7 @@ New-AppRetentionCompliancePolicy [-Name] <String> -Applications <String[]>
 ## DESCRIPTION
 \*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Yammer chats, and Yammer community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -83,7 +83,11 @@ Accept wildcard characters: False
 ```
 
 ### -AdaptiveScopeLocation
-{{ Fill AdaptiveScopeLocation Description }}
+The AdaptiveScopeLocation parameter specifies the adaptive scope location to include in the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: MultiValuedProperty
@@ -99,7 +103,13 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-{{ Fill Applications Description }}
+The Applications parameter specifies the applications to include in the policy and is relevant only for the following location parameters:
+
+- ExchangeLocation
+- ModernGroupLocation
+- AdaptiveScopeLocation
+
+This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:Yammer"`.
 
 ```yaml
 Type: String[]
@@ -169,7 +179,20 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocation
-{{ Fill ExchangeLocation Description }}
+The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
+- The value All for all mailboxes. You can only use this value by itself.
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -185,7 +208,19 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationException
-{{ Fill ExchangeLocationException Description }}
+The ExchangeLocationException parameter specifies the mailboxes exclude from the policy when you use the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -219,7 +254,19 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocation
-{{ Fill ModernGroupLocation Description }}
+The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
+
+- A Microsoft 365 Group
+- The value All for all Microsoft 365 Groups. You can only use this value by itself.
+
+To identify the Microsoft 365 Group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -235,7 +282,16 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-{{ Fill ModernGroupLocationException Description }}
+The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude from the policy when you use the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -294,11 +350,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

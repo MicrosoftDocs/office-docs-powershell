@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SenderIdConfig [-BypassedRecipients <MultiValuedProperty>]
+Set-SenderIdConfig
+ [-BypassedRecipients <MultiValuedProperty>]
  [-BypassedSenderDomains <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]

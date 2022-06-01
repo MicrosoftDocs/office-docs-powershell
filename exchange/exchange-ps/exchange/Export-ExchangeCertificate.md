@@ -65,24 +65,43 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -FileName "C:\Data\HT cert.pfx" -BinaryEncoded -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
-This example exports a certificate from the local Exchange server to a file with the following settings:
+In **Exchange 2013**, this example exports a certificate from the local Exchange server to a file with the following settings:
 
-The certificate that has the thumbprint value 5113ae0233a72fccb75b1d0198628675333d010e is exported to the file C:\\Data\\HT cert.pfx.
+- The certificate to export has the thumbprint value 5113ae0233a72fccb75b1d0198628675333d010e.
+- The exported certificate file is DER encoded (binary), not Base64.
+- The password for the certificate file is P@ssw0rd1.
+- The certificate is exported to the file C:\\Data\\HT cert.pfx.
 
-The exported certificate file is encoded by DER (not Base64).
-
-The password for the certificate file is P@ssw0rd1.
+**Note**: The FileName parameter is available only in Exchange 2013. To export the certificate in Exchange 2016 or Exchange 2019, see Example 2.
 
 ### Example 2
+```powershell
+$bincert = Export-ExchangeCertificate -BinaryEncoded -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -BinaryEncoded -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
+[System.IO.File]::WriteAllBytes('C:\Data\HT cert.pfx', $bincert.FileData)
+```
+
+This example exports the same certificate from Example 1. This method is required in Exchange 2016 and Exchange 2019 because the FileName parameter is not available.
+
+### Example 3
 ```powershell
 Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01 -FileName "\\FileServer01\Data\Fabrikam.req"
 ```
 
-This example exports a pending certificate request to a file with the following settings:
+In **Exchange 2013**, this example exports a pending certificate request to a file with the following settings:
 
-The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\\\FileServer01\\Data\\Fabrikam.req.
+- The certificate request to export has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 and is located on the Exchange server named Mailbox01.
+- The exported certificate request file is Base64 encoded, so the information that's written to the file is also displayed onscreen.
+- The certificate request is exported to the file \\\\FileServer01\\Data\\Fabrikam.req.
 
-The exported certificate request file is Base64 encoded, so the information that's written to the file is also displayed onscreen.
+**Note**: The FileName parameter is available only in Exchange 2013. To export the pending certificate request in Exchange 2016 or Exchange 2019, see Example 4.
+
+### Example 4
+```powershell
+$txtcert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01
+[System.IO.File]::WriteAllBytes('\\FileServer01\Data\Fabrikam.req', [System.Text.Encoding]::Unicode.GetBytes($txtcert))
+```
+
+This example exports the same pending certificate request from Example 3. This method is required in Exchange 2016 and Exchange 2019 because the FileName parameter is not available.
 
 ## PARAMETERS
 
@@ -185,13 +204,17 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
+**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. To export the certificate or certificate request to a file without using the FileName parameter, use the methods described in Example 2 and Example 4.
+
+This parameter is available only in Exchange 2013.
+
 The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
