@@ -264,9 +264,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 
 - In the Teams PowerShell Module version 3.0.0 or later, the output format of Policies has now changed from String to JSON type UserPolicyDefinition.
 
-- Filtering for null polices: Admins can query for users that do not have any policies assigned (null polices) by including an empty value in the query.
-E.g., Get-csonlineuser -filter "TeamsMeetingBroadcastPolicy -eq ' ' "
-
+- Filtering for null policies: Admins can query for users that do not have any policies assigned (null policies) by including an empty value in the query, for example, Get-csonlineuser -filter "TeamsMeetingBroadcastPolicy -eq ' ' "
 
 *Change in Filter operators*:
 
