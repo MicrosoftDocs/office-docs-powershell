@@ -18,8 +18,6 @@ Use the Set-Place cmdlet to update room mailboxes with additional metadata, whic
 
 **Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties except GeoCoordinates on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -38,6 +36,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
+ [-MTREnabled <Boolean>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -301,6 +300,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MTREnabled
+**Note**: Currently, this parameter is informational only and results in no additional funcationality.
+
+The MTREnabled parameter identfies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
+
+- $true: The room is has a Teams room system. You can add the Teams room system to Microsoft Teams meetings when selecting to join a meeting with room audio.
+- $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value.
+
+For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://docs.microsoft.com/microsoftteams/rooms/).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Phone
 The Phone parameter specifies the room's telephone number.
 
@@ -422,11 +444,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

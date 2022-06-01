@@ -32,8 +32,14 @@ Connect-IPPSSession
  [[-Prefix] <String>]
  [[-CommandName] <String[]>]
  [[-FormatTypeName] <String[]>]
+ [-AppId <String>]
  [-BypassMailboxAnchoring]
+ [-Certificate <X509Certificate2>]
+ [-CertificateFilePath <String>]
+ [-CertificatePassword <SecureString>]
+ [-CertificateThumbprint <String>]
  [-Credential <PSCredential>]
+ [-Organization <String>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -65,6 +71,27 @@ Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.prote
 ```
 
 This example connects to standalone Exchange Online Protection PowerShell in an organization that doesn't have Exchange Online mailboxes.
+
+### Example 3
+```powershell
+Connect-IPPSSession -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
+```
+
+Using the EXO V2 module version 2.0.6-Preview5 or later, this example connects to Security & Compliance Center PowerShell in an unattended scripting scenario using the public key of a certificate.
+
+### Example 4
+```powershell
+Connect-IPPSSession -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
+```
+
+Using the EXO V2 module version 2.0.6-Preview5 or later, this example connects to Security & Compliance Center PowerShell in an unattended scripting scenario using a certificate thumbprint.
+
+### Example 5
+```powershell
+Connect-IPPSSession -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
+```
+
+Using the EXO V2 module version 2.0.6-Preview5 or later, this example connects to Security & Compliance Center PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
 ## PARAMETERS
 
@@ -196,11 +223,111 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AppId
+The AppId parameter specifies the application ID of the service principal that's used in certificate based authentication (CBA). A valid value is the GUID of the application ID (service principal). For example, `36ee4c6c-0812-40a2-b820-b22ebd02bce3`.
+
+For more information, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BypassMailboxAnchoring
 The BypassMailboxAnchoring switch bypasses the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Certificate
+The Certificate parameter specifies the certificate that's used for certificate-based authentication (CBA). A valid value is the X509Certificate2 object value of the certificate.
+
+Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateFilePath
+The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
+
+Don't use this parameter with the Certificate or CertificateThumbprint parameters.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificatePassword
+The CertificatePassword parameter specifies the password that's required to open the certificate file when you use the CertificateFilePath parameter to identify the certificate that's used for CBA.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateThumbprint
+The CertificateThumbprint parameter specifies the certificate that's used for CBA. A valid value is the thumbprint value of the certificate. For example, `83213AEAC56D61C97AEE5C1528F4AC5EBA7321C1`.
+
+Don't use this parameter with the Certificate or CertificateFilePath parameters.
+
+**Note**: The CertificateThumbprint parameter is supported only in Microsoft Windows.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -221,6 +348,24 @@ After the Connect-IPPSSession command is complete, the password key in the varia
 
 ```yaml
 Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+The Organization parameter specifies the organization that's used in CBA. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -255,11 +400,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -15,9 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will change permissions for a delegate for calling in Microsoft Teams.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
 ## SYNTAX
 
 ### Identity (Default)
@@ -45,7 +42,7 @@ This example shows setting the MakeCalls permissions to True for user1@contoso.c
 ## PARAMETERS
 
 ### -Delegate
-The Identity of the delegate to add. Can be specified using the ObjectId, the SIP address or the e-mail address.
+The Identity of the delegate to add. Can be specified using the ObjectId or the SIP address.
 
 A user can have up to 25 delegates.
 
@@ -61,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to add a delegate for. Can be specified using the ObjectId, the SIP address or the e-mail address.
+The Identity of the user to add a delegate for. Can be specified using the ObjectId or the SIP address.
 
 ```yaml
 Type: System.String
@@ -133,7 +130,7 @@ and -WarningVariable. For more information, see [about_CommonParameters](https:/
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 The specified user need to have the Microsoft Phone System license assigned.
 

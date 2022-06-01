@@ -42,11 +42,14 @@ Set-CsUserCallForwardingSettings -EnableSimulRing <String> [-SettingsActiveWorkH
 
 ## DESCRIPTION
 The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user.
+
 The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
-•	CsAdministrator - Get and Set for all cmdlets
-•	CsVoiceAdministrator - Get and Set for all cmdlets
-•	CsServerAdministrator - Get and Set for all cmdlets
-•	CsHelpDesk - Get for all cmdlets
+
+- CsAdministrator - Get and Set for all cmdlets
+- CsVoiceAdministrator - Get and Set for all cmdlets
+- CsServerAdministrator - Get and Set for all cmdlets
+- CsHelpDesk - Get for all cmdlets
+
 Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets.
 
 ## EXAMPLES
@@ -56,14 +59,14 @@ Server auto-discovery needs to be enabled. There are no additional licensing req
 PS C:\> Set-CsUserCallForwardingSettings -User user@contoso.com -DisableForwarding
 ```
 
-This example disables the user’s call forwarding settings.
+This example disables the user's call forwarding settings.
 
 ### Example 2
 ```powershell
 PS C:\> Set-CsUserCallForwardingSettings -User user@contoso.com -EnableForwarding +4721956666
 ```
 
-This example modifies the user’s call forwarding settings, activating call forwarding to a specific phone number.
+This example modifies the user's call forwarding settings, activating call forwarding to a specific phone number.
 
 ### Example 3
 ```powershell

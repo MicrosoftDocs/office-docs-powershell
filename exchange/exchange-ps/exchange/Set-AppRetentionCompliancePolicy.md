@@ -101,7 +101,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -135,7 +135,11 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-{{ Fill RetryDistribution Description }}
+The RetryDistribution switch specifies whether to redistribute the policy to all locations. You don't need to specify a value with this switch.
+
+Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+
+**Note**: Because the process of retrying distribution is a significant operation, run it only if necessary and for one policy at a time. It is not intended to be run every time you update a policy. If you run a script to update multiple policies, wait until the policy distribution is successful before running the command again for the next policy.
 
 ```yaml
 Type: SwitchParameter
@@ -151,7 +155,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddAdaptiveScopeLocation
-{{ Fill AddAdaptiveScopeLocation Description }}
+The AddAdaptiveScopeLocation parameter specifies the adaptive scope location to add to the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -167,7 +177,19 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-{{ Fill AddExchangeLocation Description }}
+The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -183,7 +205,19 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationException
-{{ Fill AddExchangeLocationException Description }}
+The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you're using the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -199,7 +233,16 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocation
-{{ Fill AddModernGroupLocation Description }}
+The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups when you aren't using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -215,7 +258,16 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocationException
-{{ Fill AddModernGroupLocationException Description }}
+The AddModernGroupLocationException parameter specifies the Microsoft 365 Groups to add to the list of excluded Microsoft 365 Groups when you're using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -231,7 +283,13 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-{{ Fill Applications Description }}
+The Applications parameter specifies the applications to include and is relevant only for the following location parameters:
+
+- ExchangeLocation
+- ModernGroupLocation
+- AdaptiveScopeLocation
+
+This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:Yammer"`.
 
 ```yaml
 Type: String[]
@@ -319,7 +377,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAdaptiveScopeLocation
-{{ Fill RemoveAdaptiveScopeLocation Description }}
+The RemoveAdaptiveScopeLocation parameter specifies the adaptive scope location to remove from the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -335,7 +399,19 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-{{ Fill RemoveExchangeLocation Description }}
+The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -351,7 +427,19 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationException
-{{ Fill RemoveExchangeLocationException Description }}
+The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -367,7 +455,16 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocation
-{{ Fill RemoveModernGroupLocation Description }}
+The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -383,7 +480,16 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocationException
-{{ Fill RemoveModernGroupLocationException Description }}
+The RemoveModernGroupLocationException parameter specifies the Microsoft 365 Groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -442,11 +548,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

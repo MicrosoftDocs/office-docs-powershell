@@ -12,7 +12,7 @@ ms.reviewer:
 # New-Fingerprint
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 **Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://docs.microsoft.com/powershell/module/exchange/new-dlpfingerprint) cmdlet in Security & Compliance Center PowerShell.
 
@@ -49,7 +49,7 @@ This example creates a new document fingerprint based on the file C:\\My Documen
 ### -FileData
 The FileData parameter specifies the file to use as a document fingerprint.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the section.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

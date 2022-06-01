@@ -12,7 +12,7 @@ ms.reviewer:
 # New-PartnerApplication
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 Use the New-PartnerApplication cmdlet to create partner application configurations in on-premises Exchange organizations.
 

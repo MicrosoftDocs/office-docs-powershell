@@ -48,7 +48,7 @@ where the audio file MainAnnouncement.wav will be played to the caller.
 
 ### Example 3
 ```powershell
-$UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).ObjectId
+$UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).Identity
 New-CsTeamsUnassignedNumberTreatment -Identity TR2 -Pattern "^\+15552224444$" -TargetType User -Target $UserObjectId -TreatmentPriority 3
 ```
 This example creates a treatment that will route all calls to the number +1 (555) 222-4444 to the user user@contoso.com.
@@ -172,14 +172,23 @@ The cmdlet is available in Teams PS module 2.5.1 or later.
 
 The parameters Identity and TreatmentId are mutually exclusive.
 
-If a specified pattern/range contains phone numbers that are assigned, calls to these phone numbers will be routed to the appropriate target and not routed to the specified
-unassigned number treatment.
+To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
+
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Phone System – Virtual User license.
+
+Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
+
+If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
+the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains
+a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
 
 ## RELATED LINKS
-[Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
 
 [Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
 
 [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
 
 [Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+
+[Test-CsTeamsUnassignedNumberTreatment](Test-CsTeamsUnassignedNumberTreatment.md)

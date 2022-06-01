@@ -285,7 +285,7 @@ To empty the list of email addresses and domains, use the value $null.
 
 **Notes**:
 
-- All email addresses in the global address list (GAL) are automatically considered as trusted senders, so you don't need to add them to the list.
+- You can't add sender email addresses from the same domain as the recipient's email address. All mailboxes in the global address list (GAL) are automatically considered as trusted senders.
 - You can't directly modify the Safe Recipients list by using this cmdlet. You use this parameter to modify the Safe Senders list, and the email addresses and domains are synchronized to the Safe Recipients list.
 - Safe domains aren't recognized in Exchange Online and Exchange Online Protection. For more information, see [KB3019657](https://support.microsoft.com/help/3019657).
 

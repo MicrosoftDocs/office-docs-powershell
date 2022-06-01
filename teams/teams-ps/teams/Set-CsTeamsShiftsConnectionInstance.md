@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet updates a Shifts connection instance.
 
 ## SYNTAX
@@ -59,13 +57,15 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
         "OpenShift",
         "OpenShiftRequest",
         "TimeOff",
-        "TimeOffRequest"
+        "TimeOffRequest",
+        "TimeCard"
     ],
     "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
     "enabledWfiScenarios": [
         "SwapRequest",
         "OpenShiftRequest",
-        "TimeOffRequest"
+        "TimeOffRequest",
+        "TimeCard"
     ],
     "syncFrequencyInMin": 10,
     "designatedActorId": "5d5eaa2d-422c-4d4b-a2db-4cea80f98255",
@@ -78,6 +78,14 @@ Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
 ```
 
 Updates the instance with ID `WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09` with name `MyInstance-Updated`. Returns the object of created connector instance.
+
+In case of error, we can capture the error response as following:
+
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+* To get the entire error message in Json: `$result.ToJsonString()`
+
+* To get the error object and object details: `$result, $result.Detail`
 
 ## PARAMETERS
 

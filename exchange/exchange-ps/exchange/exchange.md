@@ -13,6 +13,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 - [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
+> [!NOTE]
+> For Exchange Online, Security & Compliance Center, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell V2 module](../../docs-conceptual/exchange-online-powershell-v2.md).
+>
+> For Exchange Server, there is no Microsoft-provided module in the PowerShell Gallery. Instead, to use PowerShell in Exchange, you have the following options:
+>
+> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](../../docs-conceptual/open-the-exchange-management-shell.md).
+> - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](../../docs-conceptual/connect-to-exchange-servers-using-remote-powershell.md).
+
 ## active-directory Cmdlets
 ### [Add-ADPermission](Add-ADPermission.md)
 
@@ -68,6 +76,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
 
 ### [Get-ATPTotalTrafficReport](Get-ATPTotalTrafficReport.md)
+
+### [Get-ContentMalwareMdoAggregateReport](Get-ContentMalwareMdoAggregateReport.md)
+
+### [Get-ContentMalwareMdoDetailReport](Get-ContentMalwareMdoDetailReport.md)
 
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
@@ -810,13 +822,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
 
-### [Get-RMSTrustedPublishingDomain](Get-RMSTrustedPublishingDomain.md)
-
 ### [Get-SmimeConfig](Get-SmimeConfig.md)
 
 ### [Import-ExchangeCertificate](Import-ExchangeCertificate.md)
-
-### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
 
 ### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
 
@@ -829,8 +837,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
-
-### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
@@ -845,8 +851,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-OMEMessageRevocation](Set-OMEMessageRevocation.md)
 
 ### [Set-RMSTemplate](Set-RMSTemplate.md)
-
-### [Set-RMSTrustedPublishingDomain](Set-RMSTrustedPublishingDomain.md)
 
 ### [Set-SmimeConfig](Set-SmimeConfig.md)
 
@@ -1629,6 +1633,12 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
 
+### [Get-ExoInformationBarrierPolicy](Get-ExoInformationBarrierPolicy.md)
+
+### [Get-ExoInformationBarrierSegment](Get-ExoInformationBarrierSegment.md)
+
+### [Get-ExoInformationBarrierRelationship](Get-ExoInformationBarrierRelationship.md)
+
 ### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
 ### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
@@ -2004,6 +2014,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Export-FilePlanProperty](Export-FilePlanProperty.md)
 
+### [Get-AdaptiveScope](Get-AdaptiveScope.md)
+
 ### [Get-AppRetentionCompliancePolicy](Get-AppRetentionCompliancePolicy.md)
 
 ### [Get-AppRetentionComplianceRule](Get-AppRetentionComplianceRule.md)
@@ -2058,6 +2070,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Import-FilePlanProperty](Import-FilePlanProperty.md)
 
+### [New-AdaptiveScope](New-AdaptiveScope.md)
+
 ### [New-AppRetentionCompliancePolicy](New-AppRetentionCompliancePolicy.md)
 
 ### [New-AppRetentionComplianceRule](New-AppRetentionComplianceRule.md)
@@ -2098,6 +2112,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-RetentionPolicyTag](New-RetentionPolicyTag.md)
 
+### [Remove-AdaptiveScope](Remove-AdaptiveScope.md)
+
 ### [Remove-AppRetentionCompliancePolicy](Remove-AppRetentionCompliancePolicy.md)
 
 ### [Remove-AppRetentionComplianceRule](Remove-AppRetentionComplianceRule.md)
@@ -2135,6 +2151,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-RetentionPolicy](Remove-RetentionPolicy.md)
 
 ### [Remove-RetentionPolicyTag](Remove-RetentionPolicyTag.md)
+
+### [Set-AdaptiveScope](Set-AdaptiveScope.md)
 
 ### [Set-AppRetentionCompliancePolicy](Set-AppRetentionCompliancePolicy.md)
 

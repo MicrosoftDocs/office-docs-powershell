@@ -12,9 +12,9 @@ ms.reviewer:
 # New-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ComplianceSecurityFilter cmdlet to create compliance security filters in the Microsoft 365 compliance center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Microsoft 365 organization.
+Use the New-ComplianceSecurityFilter cmdlet to create compliance security filters in the Microsoft Purview compliance portal. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Microsoft 365 organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -31,9 +31,9 @@ New-ComplianceSecurityFilter -Action <ComplianceSecurityFilterActionType> -Filte
 ```
 
 ## DESCRIPTION
-Compliance security filters work with compliance searches in the Microsoft 365 compliance center (\*-ComplianceSearch cmdlets), not In-Place eDiscovery searches in Exchange Online (\*-MailboxSearch cmdlets).
+Compliance security filters work with compliance searches in the Microsoft Purview compliance portal (\*-ComplianceSearch cmdlets), not In-Place eDiscovery searches in Exchange Online (\*-MailboxSearch cmdlets).
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -111,7 +111,7 @@ This example prevents the user from performing any compliance search actions on 
 ### -Action
 The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
 
-- Export: The filter is applied when exporting search results, or preparing them for analysis in Microsoft 365 Advanced eDiscovery.
+- Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
 - Preview: The filter is applied when previewing search results.
 - Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
 - Search: The filter is applied when running a search.
@@ -277,11 +277,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -62,7 +62,9 @@ Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePr
 ```
 
 ## DESCRIPTION
-This cmdlet updates the mailbox object that's specified by the Identity parameter.
+
+> [!NOTE]
+> You can use this cmdlet to add a maximum of 500 permission entries (ACEs) to a mailbox. To grant permissions to more than 500 users, use security groups instead of individual users for the User parameter. Security groups contain many members, but only count as one entry.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -240,6 +242,8 @@ The User parameter specifies who gets the permissions on the mailbox. You can sp
 - Mail users
 - Security groups
 
+**Note**: When a security group is used to specify Full Access permissions, the auto-mapping feature won't automatically add the mailbox in Outlook for the group member. See the [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) article for more information.
+
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name
@@ -282,12 +286,12 @@ Accept wildcard characters: False
 ```
 
 ### -AutoMapping
-The AutoMapping parameter specifies whether to enable or disable the auto-mapping feature in Microsoft Outlook that uses Autodiscover to automatically open other mailboxes for the user. Valid values are:
+The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. However, Autodiscover won't enumerate security groups that are given Full Access permission to the mailbox. Valid values are:
 
-- $true: Outlook automatically opens the mailbox where the user is assigned Full Access permission. This is the default value.
-- $false: Outlook doesn't automatically open the mailbox where the user is assigned Full Access permission.
+- $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This is the default value.
+- $false: The mailbox is not automatically added to the user's Outlook profile if the user has Full Access permission.
 
-If you've already assign the user Full Access to the mailbox, and you want to prevent the mailbox from automatically opening in the user's Outlook, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then assign the permission to the user on the mailbox again, but this time include -AutoMapping $false in the command.
+**Note**: To disable auto-mapping for a mailbox where the user was already assigned Full Access permission, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then reassign the user Full Access permission on the mailbox using the AutoMapping parameter with the value $false.
 
 ```yaml
 Type: Boolean
@@ -397,9 +401,10 @@ Accept wildcard characters: False
 ### -InheritanceType
 The InheritanceType parameter specifies how permissions are inherited by folders in the mailbox. Valid values are:
 
-- All
+- None
+- All (this is the default value)
 - Children
-- Descendents[sic]
+- Descendents [sic]
 - SelfAndChildren
 
 ```yaml

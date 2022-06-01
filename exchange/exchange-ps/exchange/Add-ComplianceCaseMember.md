@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Add-ComplianceCaseMember cmdlet to add an individual member to an eDiscovery case in the Microsoft 365 compliance center. To replace all existing members, use the Update-ComplianceCaseMember cmdlet.
+Use the Add-ComplianceCaseMember cmdlet to add an individual member to an eDiscovery case in the Microsoft Purview compliance portal. To replace all existing members, use the Update-ComplianceCaseMember cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,7 +36,7 @@ To add a member of an eDiscovery case, the user needs to be a member of the Revi
 - Create and edit compliance searches associated with a case.
 - Perform compliance actions (for example, export) on the results of a compliance search.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -128,11 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
