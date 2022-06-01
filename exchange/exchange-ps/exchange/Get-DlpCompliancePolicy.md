@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpCompliancePolicy to view Data Loss Prevention (DLP) policies in the Microsoft 365 compliance center.
+Use the Get-DlpCompliancePolicy to view data loss prevention (DLP) policies in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,11 +24,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-IncludeExtendedProperties <Boolean>]
  [-DistributionDetail]
+ [-Summary]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -37,7 +38,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 Get-DlpCompliancePolicy
 ```
 
-This example displays summary information for all DLP policies in the Microsoft 365 compliance center.
+This example displays summary information for all DLP policies in the Microsoft Purview compliance portal.
 
 ### Example 2
 ```powershell
@@ -115,16 +116,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Summary
+{{ Fill Summary Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

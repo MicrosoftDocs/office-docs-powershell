@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-SpoofMailReport cmdlet to view information about spoofed senders in your cloud-based organization for the past 90 days. Spoofing is where the sender of the inbound message is different than the actual source of the message (for example, the sender is lila@contoso.com, but the message was sent from the email infrastructure of fabrikam.com).
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -207,11 +205,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

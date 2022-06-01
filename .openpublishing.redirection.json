@@ -6674,6 +6674,111 @@
       "source_path": "exchange/virtual-folder/exchange/Import-ContactList.md",
       "redirect_url": "https://support.microsoft.com/office/import-contacts-to-outlook-bb796340-b58a-46c1-90c7-b549b8f3c5f8",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/docs-conceptual/index.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/docs-conceptual/intro.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/docs-conceptual/overview.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Add-StaffHubMember.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Add-StaffHubShift.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Add-StaffHubTeam.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Connect-StaffHub.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Get-StaffHubMember.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Get-StaffHubShifts.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Get-StaffHubTeamsForTenant.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Get-StaffHubUsersForTenant.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Import-StaffHubMember.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Import-StaffHubShift.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Import-StaffHubTeam.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Remove-StaffHubMember.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/Remove-StaffHubUser.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "staffhub/staffhub-ps/staffhub/staffhub.md",
+      "redirect_url": "/microsoftteams/expand-teams-across-your-org/shifts-for-teams-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Import-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-RMSTrustedPublishingDomain.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/#encryption-and-certificates",
+      "redirect_document_id": false
     }
   ]
 }

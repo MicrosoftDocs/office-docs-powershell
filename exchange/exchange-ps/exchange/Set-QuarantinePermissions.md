@@ -16,15 +16,12 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-QuarantinePermissions cmdlet to modify quarantine permissions objects that are used in quarantine tags (the New-QuarantineTag or Set-QuarantineTag cmdlets). This cmdlet only works on permissions objects that were created by the New-QuarantinePermissions cmdlet and stored in a variable that's currently available in the Windows PowerShell session.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-QuarantinePermissions -QuarantinePermissionsObject <QuarantinePermissions>
- [-PermissionToAllowSender <Boolean>]
  [-PermissionToBlockSender <Boolean>]
  [-PermissionToDelete <Boolean>]
  [-PermissionToDownload <Boolean>]
@@ -63,27 +60,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PermissionToAllowSender
-The PermissionToAllowSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
-
-- $true: The permission is enabled.
-- $false: The permission is disabled. This is the default value.
-
-Currently, this value has no effect on the buttons that are included in end-user spam notifications or in quarantined message details.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet supports retrieving the available Shifts Connectors.
 
 ## SYNTAX
@@ -36,7 +34,7 @@ PS C:\> Get-CsTeamsShiftsConnectionConnector
 ```
 Id                                   Name           SupportedScenario                                      Version         WfiSupportedScenario
 --                                   ----           -----------------                                      -------         --------------------
-6A51B888-FF44-4FEA-82E1-839401E9CD74 Blue Yonder V1 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
+6A51B888-FF44-4FEA-82E1-839401E9CD74 Contoso V1	  {Shift, SwapRequest, UserShiftPreferences, OpenShift...} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
 ```
 Get the list of Shifts Connectors available on the tenant.
 

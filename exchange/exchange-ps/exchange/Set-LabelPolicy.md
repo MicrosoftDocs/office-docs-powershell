@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy
-applicable: Exchange Online, Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-LabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-LabelPolicy
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity label policies in your organization.
 
@@ -87,7 +87,7 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-LabelPolicy -Identity "Global Policy" -RemoveExchangeLocation $_ }`.
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. You don't need to specify a value with this switch.
+The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online locations. You don't need to specify a value with this switch.
 
 Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddPublicFolderLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSkypeLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSkypeLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationId
-{{ Fill MigrationId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -464,7 +464,11 @@ Accept wildcard characters: False
 ```
 
 ### -NextLabelPolicy
-This parameter is reserved for internal Microsoft use.
+The NextLabelPolicy parameter updates the policy order so the policy that's specified by this parameter is after the current policy that you're modifying. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
@@ -480,7 +484,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreviousLabelPolicy
-This parameter is reserved for internal Microsoft use.
+The PreviousLabelPolicy parameter updates the policy order so the policy that's specified by this parameter is before the current policy that you're modifying. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
@@ -608,7 +616,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -624,7 +632,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -640,7 +648,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePublicFolderLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -656,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -672,7 +680,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -688,7 +696,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSkypeLocation
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -704,7 +712,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSkypeLocationException
-PARAMVALUE: MultiValuedProperty
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -720,7 +728,7 @@ Accept wildcard characters: False
 ```
 
 ### -Setting
-{{ Fill Setting Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -736,7 +744,7 @@ Accept wildcard characters: False
 ```
 
 ### -Settings
-PARAMVALUE: PswsHashtable
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
@@ -772,11 +780,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -14,13 +14,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: Set-UnifiedGroup is not supported under the ApplicationID context. Instead of this cmdlet, we recommend using Microsoft Graph to modify Microsoft 365 groups in that context. For more information, see [Overview of Microsoft 365 groups in Microsoft Graph](https://docs.microsoft.com/graph/office365-groups-concept-overview).
-
 Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Microsoft 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
-**IMPORTANT**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357).
+**Important**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the Microsoft 365 Group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357).
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: You can't use this cmdlet to modify Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Update group](https://docs.microsoft.com/graph/api/group-update).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -66,6 +64,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-HiddenFromExchangeClientsEnabled]
  [-InformationBarrierMode <GroupInformationBarrierMode>]
+ [-IsMemberAllowedToEditContent <System.Boolean>]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -189,9 +188,14 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
+The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value. The maximum length is 64 characters.
 
-The value of Alias can contain letters, numbers and the following characters: !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, }, |, and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The Alias value can contain letters, numbers and the following characters:
+
+- !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
+- Unicode characters U+00A1 to U+00FF.
 
 ```yaml
 Type: String
@@ -215,6 +219,8 @@ The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscript
 Group members can change their own subscription settings, which can override your intended use of this switch.
 
 The AutoSubscribeNewMembers switch overrides this switch.
+
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -254,6 +260,8 @@ The AutoSubscribeNewMembers switch specifies whether to automatically subscribe 
 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
 - If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: `-AutoSubscribeNewMembers:$false`.
+
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -870,6 +878,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsMemberAllowedToEditContent
+{{ Fill IsMemberAllowedToEditContent Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Language
 The Language parameter specifies language preference for the Microsoft 365 Group.
 
@@ -1169,6 +1193,8 @@ The SubscriptionEnabled switch specifies whether the group owners can enable sub
 
 **Note**: You should use the value $false for this switch only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
 
+**Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -1224,11 +1250,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

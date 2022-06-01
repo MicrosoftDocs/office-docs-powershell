@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-DlpCompliancePolicy cmdlet to modify Data Loss Prevention (DLP) policies in the Microsoft 365 compliance center.
+Use the Set-DlpCompliancePolicy cmdlet to modify data loss prevention (DLP) policies in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,6 +30,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddOneDriveLocationException <MultiValuedProperty>]
  [-AddOnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-AddOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-AddPowerBIDlpLocation <MultiValuedProperty>]
+ [-AddPowerBIDlpLocationException <MultiValuedProperty>]
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-AddTeamsLocation <MultiValuedProperty>]
@@ -46,6 +48,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Mode <PolicyMode>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <Int32>]
  [-RemoveEndpointDlpLocation <MultiValuedProperty>]
  [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
@@ -53,7 +56,9 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveOnPremisesScannerDlpLocation <MultiValuedProperty>]
- [-RemovePremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-RemoveOnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-RemovePowerBIDlpLocation <MultiValuedProperty>]
+ [-RemovePowerBIDlpLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
@@ -73,7 +78,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-DlpCompliancePolicy -Identity "Main PII" -RemoveExchangeLocation $_}`.
 
@@ -92,6 +97,13 @@ Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
 
 This example disables the "MainPII" policy.
+
+### Example 3
+```powershell
+Set-DlpCompliancePolicy -Identity "PowerBIPolicy" -AddPowerBILocation "workspaceID1","workspaceID2","workspaceID3"
+```
+
+This example adds the specified workspace IDs to the Power BI location for the DLP policy named PowerBIPolicy without affecting the existing workspace IDs.
 
 ## PARAMETERS
 
@@ -119,7 +131,7 @@ Accept wildcard characters: False
 ### -RetryDistribution
 The RetryDistribution switch redistributes the policy to all OneDrive for Business and SharePoint Online locations. You don't need to specify a value with this switch.
 
-Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported if you used this switch.
 
 **Note**: Because the process of retrying distribution is a significant operation, run it only if necessary and for one policy at a time. It is not intended to be run every time you update a policy. If you run a script to update multiple policies, wait until the policy distribution is successful before running the command again for the next policy.
 
@@ -137,9 +149,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
-The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -155,9 +171,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
-The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -173,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-This parameter is reserved for internal Microsoft use.
+Don't use this parameter. Use the ExchangeSenderMemberOf and ExchangeSenderMemberOfException parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -221,7 +241,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddOnPremisesScannerDlpLocation
-{{ Fill AddOnPremisesScannerDlpLocation Description }}
+The AddOnPremisesScannerDlpLocation parameter specifies the on-premises file shares and SharePoint document libraries and folders to add to the list of included repositories if you used the value All for the OnPremisesScannerDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://docs.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
 
 ```yaml
 Type: MultiValuedProperty
@@ -237,7 +261,59 @@ Accept wildcard characters: False
 ```
 
 ### -AddOnPremisesScannerDlpLocationException
-{{ Fill AddOnPremisesScannerDlpLocationException Description }}
+The AddOnPremisesScannerDlpLocationExclusion parameter specifies the on-premises file shares and SharePoint document libraries and folders to add to the list of excluded repositories if you used the value All for the OnPremisesScannerDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://docs.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPowerBIDlpLocation
+The AddPowerBIDlpLocation parameter specifies the Power BI workspace IDs to add to the list of included workspaces if you used the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can find the workspace ID using one of the following procedures:
+
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPowerBIDlpLocationException
+The AddPowerBIDlpLocationException parameter specifies the Power BI workspace IDs to add to the list of excluded workspaces if you used the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can find the workspace ID using one of the following procedures:
+
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -253,11 +329,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-SharePoint Online sites can't be added to the policy until they have been indexed.
+You can't add SharePoint Online sites to the policy until they have been indexed.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -273,9 +349,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The AddSharePointLocationException parameter specifies the SharePoint Online sites to add to the list of excluded sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+You can't add SharePoint Online sites to the policy until they have been indexed.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -291,9 +369,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocation
-The AddTeamsLocation parameter specifies the Teams accounts to add to the list of included accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to add to the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -309,9 +387,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocationException
-The AddTeamsLocationException parameter specifies the Teams accounts to add to the list of excluded accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+The AddTeamsLocationException parameter specifies the accounts, distribution groups, or mail-enabled security groups to add to the list of excluded Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -327,7 +405,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddThirdPartyAppDlpLocation
-{{ Fill AddThirdPartyAppDlpLocation Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The AddThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to add to the list of included apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://docs.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -343,7 +427,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddThirdPartyAppDlpLocationException
-{{ Fill AddThirdPartyAppDlpLocationException Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The AddThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps to add to the list of excluded apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://docs.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -432,7 +522,7 @@ Accept wildcard characters: False
 ### -ExchangeSenderMemberOf
 The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the DLP policy. You identify the group by its email address.
 
-You can enter multiple values separated by commas.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -452,7 +542,7 @@ Accept wildcard characters: False
 ### -ExchangeSenderMemberOfException
 The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the DLP policy. You identify the group by its email address.
 
-You can enter multiple values separated by commas.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -544,6 +634,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Priority
 The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
 
@@ -569,9 +675,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
-The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts when you aren't using the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -587,9 +697,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
-The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts when you use the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -605,7 +719,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-This parameter is reserved for internal Microsoft use.
+Don't use this parameter. Use the ExchangeSenderMemberOf and ExchangeSenderMemberOfException parameters instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -653,7 +767,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOnPremisesScannerDlpLocation
-{{ Fill RemoveOnPremisesScannerDlpLocation Description }}
+The RemoveOnPremisesScannerDlpLocation parameter specifies the on-premises file shares and SharePoint document libraries and folders to remove from the list of included repositories if you used the value All for the OnPremisesScannerDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://docs.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
 
 ```yaml
 Type: MultiValuedProperty
@@ -669,7 +787,59 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOnPremisesScannerDlpLocationException
-{{ Fill RemoveOnPremisesScannerDlpLocationException Description }}
+The RemoveOnPremisesScannerDlpLocationException parameter specifies the on-premises file shares and SharePoint document libraries and folders to remove from the list of excluded repositories if you used the value All for the OnPremisesScannerDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://docs.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePowerBIDlpLocation
+The RemovePowerBIDlpLocation parameter specifies the Power BI workspace IDs to remove from the list of included workspaces if you used the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can find the workspace ID using one of the following procedures:
+
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePowerBIDlpLocationException
+The RemovePowerBIDlpLocationException parameter specifies the Power BI workspace IDs to remove the list of excluded workspaces if you used the value All for the PowerBIDlpLocation parameter. Only workspaces hosted in Premium Gen2 capacities are permitted.
+
+You can find the workspace ID using one of the following procedures:
+
+- In the Admin portal, choose **Workspaces**, then select a workspace and choose **\> More options (...) \> Details**.
+- Look in the URL of a selected workspace.
+- In PowerShell, use the command **Get-PowerBIWorkspace**.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -685,9 +855,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -703,9 +873,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocationException parameter specifies the SharePoint Online sites to remove from the list of excluded sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -721,9 +891,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of included accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -739,9 +909,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocationException
-The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+The RemoveTeamsLocationException parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of excluded Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -757,7 +927,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdPartyAppDlpLocation
-{{ Fill RemoveThirdPartyAppDlpLocation Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The RemoveThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to remove from the list of included apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://docs.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -773,7 +949,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdPartyAppDlpLocationException
-{{ Fill RemoveThirdPartyAppDlpLocationException Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The RemoveThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps tp remove from the list of excluded apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://docs.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -809,11 +991,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

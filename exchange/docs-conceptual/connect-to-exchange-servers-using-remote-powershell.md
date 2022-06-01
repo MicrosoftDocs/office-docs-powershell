@@ -32,7 +32,7 @@ If you don't have the Exchange management tools installed on your local computer
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Exchange Server permissions](/exchange/permissions/permissions).
 
 - You can use the following versions of Windows:
-
+  - Windows 11
   - Windows 10
   - Windows 8.1
   - Windows Server 2019

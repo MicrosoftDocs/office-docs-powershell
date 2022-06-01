@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Validate-OutboundConnector cmdlet to test the settings of Outbound connectors in Microsoft 365.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: This cmdlet does not set the validation status or timestamp on the connector. To set these values, run the following command: `Set-OutboundConnector -Identity "<ConnectorName>" -IsValidated $true -LastValidationTimestamp (Get-Date).ToUniversalTime()`.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -126,11 +126,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

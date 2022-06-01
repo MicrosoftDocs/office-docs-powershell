@@ -24,7 +24,7 @@ This cmdlet modifies one or more parameters of a exempt number pattern in the te
 ### EXAMPLE 1
 
 ```powershell
-PS C:> Set-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$"
+PS C:> Set-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$"
 ```
 
 Sets the inbound exempt number pattern for AllowContoso1
@@ -32,7 +32,7 @@ Sets the inbound exempt number pattern for AllowContoso1
 ### EXAMPLE 2
 
 ```powershell
-PS C:> Set-CsInboundExemptNumberPattern  -Identity "AllowContoso1" -Enabled $False
+PS C:> Set-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Enabled $False
 ```
 
 Disables the exempt number pattern from usage in call blocking

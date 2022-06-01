@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet creates a Shifts connection instance.
 
 ## SYNTAX
@@ -31,24 +29,24 @@ This cmdlet creates a Shifts connection instance. It allows the admin to set up 
 
 ### Example 1
 ```powershell
-New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "swapRequest", "openShiftRequest", "timeOffRequest" -Name "MyInstance" -SyncFrequencyInMin 10  -ConnectorAdminEmail "test@abc.com", "test2@abc.com"
+New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://www.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://www.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://www.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://www.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://www.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://www.contoso.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "123451fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "swapRequest", "openShiftRequest", "timeOffRequest" -Name "MyInstance" -SyncFrequencyInMin 10  -ConnectorAdminEmail "test@abc.com", "test2@abc.com"
 ```
 ```output
 {
     "id": "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09",
-    "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+    "tenantId": "12345b34-ccb0-47e1-bdb7-e49db9c7c14a",
     "name": "MyInstance",
     "connector": {
         "id": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
-        "name": "Blue Yonder V1"
+        "name": "Contoso V1"
     },
     "connectorSpecificSettings": {
-        "adminApiUrl": "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2",
-        "siteManagerUrl": "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2",
-        "essApiUrl": "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1",
-        "retailWebApiUrl": "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1",
-        "cookieAuthUrl": "https://nehstdevwfm02.contoso.com/retail/data/login",
-        "federatedAuthUrl": "https://nehstdevfas01.contoso.com/retail/data/login"
+        "adminApiUrl": "https://www.contoso.com/retail/data/wfmadmin/api/v1-beta2",
+        "siteManagerUrl": "https://www.contoso.com/retail/data/wfmsm/api/v1-beta2",
+        "essApiUrl": "https://www.contoso.com/retail/data/wfmess/api/v1-beta1",
+        "retailWebApiUrl": "https://www.contoso.com/retail/data/retailwebapi/api/v1",
+        "cookieAuthUrl": "https://www.contoso.com/retail/data/login",
+        "federatedAuthUrl": "https://www.contoso.com/retail/data/login"
     },
     "enabledConnectorScenarios": [
         "Shift",
@@ -57,16 +55,18 @@ New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
         "OpenShift",
         "OpenShiftRequest",
         "TimeOff",
-        "TimeOffRequest"
+        "TimeOffRequest",
+        "TimeCard"
     ],
     "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
     "enabledWfiScenarios": [
         "SwapRequest",
         "OpenShiftRequest",
-        "TimeOffRequest"
+        "TimeOffRequest",
+        "TimeCard"
     ],
     "syncFrequencyInMin": 10,
-    "designatedActorId": "5d5eaa2d-422c-4d4b-a2db-4cea80f98255",
+    "designatedActorId": "12345a2d-422c-4d4b-a2db-4cea80f98255",
     "connectorAdminEmails": [
         "test@abc.com",
         "test2@abc.com"
@@ -76,6 +76,14 @@ New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401
 ```
 
 Returns the object of created connector instance.
+
+In case of error, we can capture the error response as following:
+
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+* To get the entire error message in Json: `$result.ToJsonString()`
+
+* To get the error object and object details: `$result, $result.Detail`
 
 ## PARAMETERS
 

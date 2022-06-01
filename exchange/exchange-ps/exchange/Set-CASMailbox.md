@@ -57,6 +57,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-MAPIEnabled <Boolean>]
  [-MapiHttpEnabled <Boolean>]
  [-Name <String>]
+ [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OutlookMobileEnabled <Boolean>]
  [-OWAEnabled <Boolean>]
  [-OWAforDevicesEnabled <Boolean>]
@@ -699,7 +700,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsOptimizedForAccessibility
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
@@ -882,6 +883,28 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneWinNativeOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The OneWinNativeOutlookEnabled parameter enables or disables access to the mailbox using the new Outlook for Windows.
+Valid values are:
+
+- $true: Access to the mailbox using the new Outlook for Windows is enabled. This is the default value.
+- $false: Access to the mailbox using the new Outlook for Windows is disabled.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

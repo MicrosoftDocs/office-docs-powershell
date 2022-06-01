@@ -78,14 +78,13 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
- [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -134,9 +133,11 @@ Most of the settings that you configure with this parameter are supported only b
 
 Supported settings for built-in labeling:
 
-- **DefaultSharingScope**: For a container label, specifies the default sharing link type for a site. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information about this configuration choice, see [Configure settings for the default sharing link for a site by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings).
+- **DefaultSharingScope**: Specifies the default sharing link type for a site when the label scope includes **Groups & sites**, and the default sharing link type for a document when the label scope includes **Files & emails**. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
-- **DefaultShareLinkPermission**: For a container label, specifies the permissions for the sharing link for a site. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information about this configuration choice, see [Configure settings for the default sharing link for a site by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings).
+- **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+
+- **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `Set-Label -Identity General -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
 
 ```yaml
 Type: PswsHashtable
@@ -526,7 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -ColumnAssetCondition
-{{ Fill ColumnAssetCondition Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -689,7 +690,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEnabled
-The EncryptionEnabled parameter specifies whether encryption in enabled. Value values are:
+The EncryptionEnabled parameter specifies whether encryption in enabled. Valid values are:
 
 - $true: Encryption is enabled.
 - $false: Encryption is disabled.
@@ -947,7 +948,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchematizedDataCondition
-{{ Fill SchematizedDataCondition Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -1119,7 +1120,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionLevel
-{{ Fill SiteAndGroupProtectionLevel Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SiteAndGroupProtectionLevelParameter
@@ -1183,22 +1184,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TeamsLobbyBypassScope
-{{ Fill TeamsLobbyBypassScope Description }}
-
-```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tooltip
 The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
 
@@ -1236,11 +1221,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

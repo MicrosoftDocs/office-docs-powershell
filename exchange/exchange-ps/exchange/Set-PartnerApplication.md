@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-PartnerApplication
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 Use the Set-PartnerApplication cmdlet to configure partner application configurations in on-premises Exchange organizations.
 

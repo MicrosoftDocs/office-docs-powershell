@@ -5,53 +5,39 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Assigns a online voice mail policy at the per-user scope. Online voicemail policies manage usages for Voicemail service.
+Assigns an online voice mail policy at the per-user scope. Online voicemail policies manage usages for Voicemail service.
 
 ## SYNTAX
-
+### GrantToTenant (Default)
 ```
-Grant-CsOnlineVoicemailPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsOnlineVoicemailPolicy [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+### Identity
+```
+Grant-CsOnlineVoicemailPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet assigns an existing user-specific online voicemail policy to a user. Online voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
+This cmdlet assigns an existing user-specific online voicemail policy to a user.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Grant-CsOnlineVoicemailPolicy -Identity "sip:user@contoso.com" -PolicyName TranscriptionDisabled
+Grant-CsOnlineVoicemailPolicy -Identity "user@contoso.com" -PolicyName TranscriptionDisabled
 ```
 
-The command shown in Example 1 assigns the per-user online voicemail policy TranscriptionDisabled to a single user with SIP URI sip:user@contoso.com.
-
+The command shown in Example 1 assigns the per-user online voicemail policy TranscriptionDisabled to a single user user@contoso.com.
 
 ## PARAMETERS
-
-### -Identity
-The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PolicyName
 A unique identifier(name) of the policy.
@@ -63,19 +49,19 @@ Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before executing the command.
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases: 
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -85,11 +71,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy. If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will contact the first available domain controller.
+### -Identity
+The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP address or an Object ID.
 
 ```yaml
-Type: Fqdn
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Microsoft Teams, Skype for Business Online
@@ -117,15 +103,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the Microsoft Teams or Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -135,13 +119,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
+### -Confirm
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False

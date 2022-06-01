@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a specific set of mailboxes by an application that uses APIs (Outlook REST, Microsoft Graph, or Exchange Web Services (EWS)). These policies are complementary to the permission scopes that are declared by the application.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -33,7 +31,7 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-You can create a limited number of policies in your organization based on a fixed amount of space. If your oganization runs out of space for these policies, you'll see the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space character description for the policy. This method will allow aproximately 300 policies (versus a previous limit of 100 policies).
+You can create a limited number of policies in your organization based on a fixed amount of space. If your organization runs out of space for these policies, you'll see the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space character description for the policy. This method will allow approximately 300 policies (versus a previous limit of 100 policies).
 
 While scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read email or events within a mailbox and not do anything else, application access policies allow admins to enforce limits that are based on a list of mailboxes. For example, apps developed for one country shouldn't have access to data from other countries. Or, or a CRM integration application should only access calendars in the Sales organization and no other departments.
 
@@ -212,11 +210,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
