@@ -1,27 +1,28 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-reportsubmissionpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/get-reportsubmissionrule
 applicable: Exchange Online
-title: Remove-ReportSubmissionPolicy
+title: Get-ReportSubmissionRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Remove-ReportSubmissionPolicy
+
+# Get-ReportSubmissionRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ReportSubmissionPolicy cmdlet to remove the user submission configuration from your cloud-based organization.
+Use the Get-ReportSubmissionRule cmdlet to 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter> [<CommonParameters>]
+Get-ReportSubmissionRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,26 +32,43 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy
+{{ Add example code here }}
 ```
 
-This example removes the user submission configuration from your organization.
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user submission configuration that you want to remove. The only available value is DefaultReportSubmissionPolicy.
+{{ Fill Identity Description }}
 
 ```yaml
-Type: ReportSubmissionPolicyIdParameter
+Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -State
+{{ Fill State Description }}
+
+```yaml
+Type: RuleState
+Parameter Sets: (All)
+Aliases:
+Accepted values: Enabled, Disabled
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

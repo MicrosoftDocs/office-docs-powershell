@@ -16,9 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-ReportSubmissionPolicy cmdlet to modify the user submission configuration in your cloud-based organization.
 
-> [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -26,13 +23,36 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-Confirm]
+ [-DisableQuarantineReportingOption <Boolean>]
+ [-DisableUserSubmissionOptions <Boolean>]
+ [-EnableCustomNotificationSender <Boolean>]
  [-EnableCustomizedMsg <Boolean>]
+ [-EnableOrganizationBranding <Boolean>]
  [-EnableReportToMicrosoft <Boolean>]
  [-EnableThirdPartyAddress <Boolean>]
+ [-EnableUserEmailNotification <Boolean>]
+ [-JunkReviewResultMessage <String>]
+ [-NotJunkReviewResultMessage <String>]
+ [-NotificationFooterMessage <String>]
+ [-NotificationSenderAddress <MultiValuedProperty>]
+ [-OnlyShowPhishingDisclaimer <Boolean>]
+ [-PhishingReviewResultMessage <String>]
  [-PostSubmitMessage <String>]
+ [-PostSubmitMessageForJunk <String>]
+ [-PostSubmitMessageForNotJunk <String>]
+ [-PostSubmitMessageForPhishing <String>]
  [-PostSubmitMessageTitle <String>]
+ [-PostSubmitMessageTitleForJunk <String>]
+ [-PostSubmitMessageTitleForNotJunk <String>]
+ [-PostSubmitMessageTitleForPhishing <String>]
  [-PreSubmitMessage <String>]
+ [-PreSubmitMessageForJunk <String>]
+ [-PreSubmitMessageForNotJunk <String>]
+ [-PreSubmitMessageForPhishing <String>]
  [-PreSubmitMessageTitle <String>]
+ [-PreSubmitMessageTitleForJunk <String>]
+ [-PreSubmitMessageTitleForNotJunk <String>]
+ [-PreSubmitMessageTitleForPhishing <String>]
  [-ReportJunkAddresses <MultiValuedProperty>]
  [-ReportJunkToCustomizedAddress <Boolean>]
  [-ReportNotJunkAddresses <MultiValuedProperty>]
@@ -40,6 +60,8 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-ReportPhishAddresses <MultiValuedProperty>]
  [-ReportPhishToCustomizedAddress <Boolean>]
  [-ThirdPartyReportAddresses <MultiValuedProperty>]
+ [-UserSubmissionOptions <Int32>]
+ [-UserSubmissionOptionsMessage <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -91,8 +113,72 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableQuarantineReportingOption
+{{ Fill DisableQuarantineReportingOption Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableUserSubmissionOptions
+{{ Fill DisableUserSubmissionOptions Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCustomNotificationSender
+{{ Fill EnableCustomNotificationSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableCustomizedMsg
 {{ Fill EnableCustomizedMsg Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOrganizationBranding
+{{ Fill EnableOrganizationBranding Description }}
 
 ```yaml
 Type: Boolean
@@ -139,8 +225,168 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableUserEmailNotification
+{{ Fill EnableUserEmailNotification Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JunkReviewResultMessage
+{{ Fill JunkReviewResultMessage Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotJunkReviewResultMessage
+{{ Fill NotJunkReviewResultMessage Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationFooterMessage
+{{ Fill NotificationFooterMessage Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationSenderAddress
+{{ Fill NotificationSenderAddress Description }}
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnlyShowPhishingDisclaimer
+{{ Fill OnlyShowPhishingDisclaimer Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PhishingReviewResultMessage
+{{ Fill PhishingReviewResultMessage Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PostSubmitMessage
 {{ Fill PostSubmitMessage Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostSubmitMessageForJunk
+{{ Fill PostSubmitMessageForJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostSubmitMessageForNotJunk
+{{ Fill PostSubmitMessageForNotJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostSubmitMessageForPhishing
+{{ Fill PostSubmitMessageForPhishing Description }}
 
 ```yaml
 Type: String
@@ -171,6 +417,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PostSubmitMessageTitleForJunk
+{{ Fill PostSubmitMessageTitleForJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostSubmitMessageTitleForNotJunk
+{{ Fill PostSubmitMessageTitleForNotJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostSubmitMessageTitleForPhishing
+{{ Fill PostSubmitMessageTitleForPhishing Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreSubmitMessage
 {{ Fill PreSubmitMessage Description }}
 
@@ -187,8 +481,104 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreSubmitMessageForJunk
+{{ Fill PreSubmitMessageForJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreSubmitMessageForNotJunk
+{{ Fill PreSubmitMessageForNotJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreSubmitMessageForPhishing
+{{ Fill PreSubmitMessageForPhishing Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreSubmitMessageTitle
 {{ Fill PreSubmitMessageTitle Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreSubmitMessageTitleForJunk
+{{ Fill PreSubmitMessageTitleForJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreSubmitMessageTitleForNotJunk
+{{ Fill PreSubmitMessageTitleForNotJunk Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreSubmitMessageTitleForPhishing
+{{ Fill PreSubmitMessageTitleForPhishing Description }}
 
 ```yaml
 Type: String
@@ -304,6 +694,38 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSubmissionOptions
+{{ Fill UserSubmissionOptions Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSubmissionOptionsMessage
+{{ Fill UserSubmissionOptionsMessage Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
