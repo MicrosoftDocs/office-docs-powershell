@@ -436,8 +436,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
-(Note: These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments)
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
 *New user attributes*:
 
