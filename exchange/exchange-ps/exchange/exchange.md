@@ -378,7 +378,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ReportSubmissionPolicy](Set-ReportSubmissionPolicy.md)
 
-### [Set-ReportSubmissionPolicy](Set-ReportSubmissionPolicy.md)
+### [Set-ReportSubmissionRule](Set-ReportSubmissionRule.md)
 
 ### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
 
