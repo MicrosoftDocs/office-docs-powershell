@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-ProtectionAlert cmdlet to modify alert policies in the Microsoft 365 compliance center.
+Use the Set-ProtectionAlert cmdlet to modify alert policies in the Microsoft Purview compliance portal.
 
 **Note**: You can't use this cmdlet to edit default alert policies. You can only modify alerts that you created using the New-ProtectionAlert cmdlet.
 
@@ -50,7 +50,7 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -247,7 +247,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 - Property is a filterable property.
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values in quotation marks (for example, use `500`, `$true`, `$false`, or `$null` instead).
 
 You can chain multiple search criteria together using the `-and` logical operator (for example, `"Criteria1 -and Criteria2"`).
 
@@ -551,11 +551,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-ComplianceSearch cmdlet to modify non-running compliance searches in Exchange Server 2016 or later and in the Microsoft 365 compliance center.
+Use the Set-ComplianceSearch cmdlet to modify non-running compliance searches in Exchange Server 2016 or later and in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -56,7 +56,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -72,7 +72,7 @@ This example changes the existing compliance search named Project X. The scope o
 Set-ComplianceSearch -Identity "Contoso Case Search 1" -HoldNames All -ExchangeLocation $null -SharePointLocation $null
 ```
 
-This example changes an existing compliance search that's associated with an eDiscovery case in the Microsoft 365 compliance center. The scope of the search is changed from searching selected mailboxes and SharePoint sites to searching all content locations that have been placed on hold in the eDiscovery case.
+This example changes an existing compliance search that's associated with an eDiscovery case in the Microsoft Purview compliance portal. The scope of the search is changed from searching selected mailboxes and SharePoint sites to searching all content locations that have been placed on hold in the eDiscovery case.
 
 ### Example 3
 ```powershell
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
 ```yaml
 Type: String
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -485,7 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationExclusion
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -624,11 +624,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

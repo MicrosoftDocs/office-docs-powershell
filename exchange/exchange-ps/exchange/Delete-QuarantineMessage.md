@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Delete-QuarantineMessage cmdlet to delete quarantine messages from your cloud-based organization
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -27,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-Identity <QuarantineMessageIdentity>]
  [-Confirm]
+ [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,6 +34,7 @@ Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
 ```
 Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
+ [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -139,6 +139,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecipientAddress
+{{ Fill RecipientAddress Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -162,11 +178,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

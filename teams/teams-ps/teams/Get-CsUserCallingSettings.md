@@ -15,9 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will show the call forwarding, simultaneous ringing, call group and delegation settings for a user.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
 ## SYNTAX
 
 ```powershell
@@ -63,7 +60,7 @@ Get-CsUserCallingSettings -Identity user2@contoso.com
 SipUri                    : sip:user2@contoso.com
 IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
-ForwardingTarget          : user3@contoso.com
+ForwardingTarget          : sip:user3@contoso.com
 ForwardingTargetType      : SingleTarget
 IsUnansweredEnabled       : True
 UnansweredTarget          :
@@ -77,8 +74,9 @@ GroupMembershipDetails    :
 GroupNotificationOverride :
 ```
 
-This example shows that user2@contoso.com has simultaneous ringing set (IsForwardingEnabled and ForwardingType) to user3@contoso.com (ForwardingTarget and ForwardingTargetType) 
-and if the call has not been answered (IsUnansweredEnabled) within 20 seconds (UnansweredDelay) the call is routed to voicemail (UnansweredTargetType).
+This example shows that user2@contoso.com has simultaneous ringing set (IsForwardingEnabled and ForwardingType) to user3@contoso.com
+(ForwardingTarget and ForwardingTargetType) and if the call has not been answered (IsUnansweredEnabled) within 20 seconds (UnansweredDelay) the call is routed
+to voicemail (UnansweredTargetType).
 
 ### Example 3
 ```powershell
@@ -97,8 +95,8 @@ UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
-CallGroupTargets          : {user5@contoso.com}
-GroupMembershipDetails    : CallGroupOwnerId:user6@contoso.com
+CallGroupTargets          : {sip:user5@contoso.com}
+GroupMembershipDetails    : CallGroupOwnerId:sip:user6@contoso.com
 GroupNotificationOverride : Mute
 ```
 ```powershell
@@ -107,7 +105,7 @@ GroupNotificationOverride : Mute
 ```output
 CallGroupOwnerId            NotificationSetting
 ----------------            -------------------
-user6@contoso.com           Ring
+sip:user6@contoso.com           Ring
 ```
 
 This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com 
@@ -131,7 +129,7 @@ IsUnansweredEnabled       : True
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
-Delegates                 : Id:user8@contoso.com
+Delegates                 : Id:sip:user8@contoso.com
 Delegators                : 
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
@@ -142,14 +140,14 @@ GroupNotificationOverride : Ring
 (Get-CsUserCallingSettings -Identity user7@contoso.com).Delegates
 ```
 ```output
-Id             : user8@contoso.com
+Id             : sip:user8@contoso.com
 MakeCalls      : True
 ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate (Delegates) and 
-that user has all the permissions you can have as a delegate (Delegates).
+This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate
+(Delegates) and that user has all the permissions you can have as a delegate (Delegates).
 
 ### Example 5
 ```powershell
@@ -166,7 +164,7 @@ UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
-Delegators                : Id:user10@contoso.com
+Delegators                : Id:sip:user10@contoso.com
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -176,14 +174,14 @@ GroupNotificationOverride : Ring
 (Get-CsUserCallingSettings -Identity user9@contoso.com).Delegators
 ```
 ```output
-Id             : user10@contoso.com
+Id             : sip:user10@contoso.com
 MakeCalls      : True
 ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the permissions you can
-have as a delegate (Delegators).
+This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the
+permissions you can have as a delegate (Delegators).
 
 ### Example 6
 ```powershell
@@ -207,9 +205,8 @@ GroupMembershipDetails    :
 GroupNotificationOverride : 
 ```
 
-This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings
-
-as shown here, unanswered calls will be forwarded to voicemail by default.
+This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
+unanswered calls will by default be forwarded to voicemail after 30 seconds.
 
 ## PARAMETERS
 
@@ -239,7 +236,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.1-preview and 3.2.0-preview (preferred).
+The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 ## RELATED LINKS
 

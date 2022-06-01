@@ -36,7 +36,7 @@ Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>
 ## DESCRIPTION
  For more information, see [View status of information barrier policy application](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#view-status-of-user-accounts-segments-policies-or-policy-application).
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -95,11 +95,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

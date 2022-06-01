@@ -31,7 +31,7 @@ Enable-ComplianceTagStorage
 ## DESCRIPTION
 If you run this cmdlet more than once, you'll get an error that says a policy already exists.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 Enable-ComplianceTagStorage
 ```
 
-This example creates the label policy in the Microsoft 365 compliance center.
+This example creates the label policy in the Microsoft Purview compliance portal.
 
 ## PARAMETERS
 
@@ -100,11 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

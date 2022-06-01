@@ -30,7 +30,7 @@ Get-AppRetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
 ## DESCRIPTION
 \*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Yammer chats, and Yammer community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -109,11 +109,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

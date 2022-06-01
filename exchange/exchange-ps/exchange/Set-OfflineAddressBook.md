@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-This parameter is available or functional only in Exchange 2010.
+This parameter is functional only in Exchange 2010.
 
 In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
 

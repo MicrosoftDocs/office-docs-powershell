@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-recordreviewnotificationtemplateconfig
-applicable: Exchange Online
+applicable: Security & Compliance Center
 title: Set-RecordReviewNotificationTemplateConfig
 schema: 2.0.0
 author: chrisda
@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-RecordReviewNotificationTemplateConfig cmdlet to set up the customized record review notification and reminder that's sent when an item requires review.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -30,7 +28,7 @@ Set-RecordReviewNotificationTemplateConfig -IsCustomizedNotificationTemplate <Bo
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +51,7 @@ The IsCustomizedNotificationTemplate switch specifies whether to use a customize
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -72,7 +70,7 @@ The IsCustomizedReminderTemplate switch specifies whether to use a customized re
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -90,7 +88,7 @@ The value of this parameter is meaningful only when the value of the IsCustomize
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -108,7 +106,7 @@ The value of this parameter is meaningful only when the value of the IsCustomize
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -122,11 +120,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

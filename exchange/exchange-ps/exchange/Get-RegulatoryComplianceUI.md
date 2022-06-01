@@ -12,7 +12,7 @@ schema: 2.0.0
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 .
 
-Use the Get-RegulatoryComplianceUI cmdlet to view the status of the regulatory compliance UI in the Microsoft 365 compliance center (whether the preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels).
+Use the Get-RegulatoryComplianceUI cmdlet to view the status of the regulatory compliance UI in the Microsoft Purview compliance portal (whether the preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -23,7 +23,7 @@ Get-RegulatoryComplianceUI [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -41,11 +41,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
-
 ## OUTPUTS
-
-### 
 
 ## NOTES
 

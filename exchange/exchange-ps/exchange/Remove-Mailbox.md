@@ -63,13 +63,12 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
 
 ### Default
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter>
- [-PermanentlyDelete]
+Remove-Mailbox [-Identity] <MailboxIdParameter> [-PermanentlyDelete]
  [-Confirm]
  [-Force]
- [-IgnoreLegalHold]
  [-Migration]
  [-PublicFolder]
+ [-RemoveCNFPublicFolderMailboxPermanently]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -348,7 +347,7 @@ After you disable or remove a mailbox, you can't include it in a discovery searc
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets:  Identity, StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -449,6 +448,24 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveCNFPublicFolderMailboxPermanently
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveCNFPublicFolderMailboxPermanently Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

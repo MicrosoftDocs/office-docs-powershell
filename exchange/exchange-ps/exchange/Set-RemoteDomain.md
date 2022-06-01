@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ### -IsInternal
 The IsInternal parameter specifies whether the recipients in the remote domain are considered to be internal recipients. Valid values are:
 
-- $true: All transport components (for example, transport rules or antispam agents) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
+- $true: All transport components (for example, transport rules) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
 - $false: Recipients in the remote domain are treated as external recipients. This is the default value.
 
 ```yaml
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -NDRDiagnosticInfoEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information is included in non-delivery reports (also known NDRs or bounce messages) that are sent to recipients the remote domain. Valid values are:
 

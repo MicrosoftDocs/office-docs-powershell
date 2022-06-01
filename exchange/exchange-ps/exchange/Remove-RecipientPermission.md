@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-RecipientPermission cmdlet to remove SendAs permission from users in a cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -26,6 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
  [-Confirm]
  [-Deny]
+ [-SkipDomainValidationForMailContact]
+ [-SkipDomainValidationForMailUser]
  [-SkipDomainValidationForSharedMailbox]
  [-WhatIf]
  [<CommonParameters>]
@@ -150,6 +150,38 @@ Accept wildcard characters: False
 
 ### -Deny
 {{ Fill Deny Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailContact
+{{ Fill SkipDomainValidationForMailContact Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailUser
+{{ Fill SkipDomainValidationForMailUser Description }}
 
 ```yaml
 Type: SwitchParameter

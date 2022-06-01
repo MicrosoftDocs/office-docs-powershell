@@ -40,6 +40,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-Mode <PolicyMode>]
  [-OverwriteLabel <Boolean>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
@@ -74,7 +75,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -420,6 +421,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Priority
 The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
 
@@ -591,11 +608,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

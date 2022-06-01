@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-AntiPhishPolicy cmdlet to modify antiphish policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -129,7 +127,7 @@ This setting is part of spoof protection.
 
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication (a mixture of traditional SPF, DKIM, and DMARC email authentication checks and proprietary backend intelligence). Valid values are:
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 ```yaml
@@ -316,7 +314,7 @@ This setting is part of spoof protection.
 
 The EnableSpoofIntelligence parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
 
-- $true: Antispoofing is enabled for the policy. This is the default and recommended value. You specify the spoofed senders to allow or block using the Set-PhishFilterPolicy cmdlet.
+- $true: Antispoofing is enabled for the policy. This is the default and recommended value. Use the \*-TenantAllowBlockListSpoofItems, Get-SpoofIntelligenceInsight, and Get-SpoofMailReport cmdlets to view and specify the spoofed senders to allow or block.
 - $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
 
 ```yaml
@@ -517,7 +515,7 @@ The MailboxIntelligenceProtectionAction parameter specifies what to do with mess
 - NoAction: This is the default value. Note that this value has the same result as setting the EnableMailboxIntelligenceProtection parameter to $false when the EnableMailboxIntelligence parameter is $true.
 - BccMessage: Add the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
 
@@ -687,7 +685,7 @@ The TargetedDomainProtectionAction parameter specifies the action to take on det
 - NoAction: This is the default value.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -776,7 +774,7 @@ The TargetedUserProtectionAction parameter specifies the action to take on detec
 - NoAction: This is the default value.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is moved only if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -862,11 +860,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

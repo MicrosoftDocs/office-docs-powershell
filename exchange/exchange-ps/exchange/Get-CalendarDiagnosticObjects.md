@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-CalendarDiagnosticObjects cmdlet to collect a range of calendar logs. The calendar diagnostic logs track important calendar-related event data for each mailbox, and can be used to troubleshoot calendar issues that occur in mailboxes. The logs track all calendar items and meeting messages.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -87,7 +85,7 @@ This example retrieves the calendar diagnostic logs for Pedro Pizarro's mailbox 
 Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Lunch" -StartDate 7/1/2018 -EndDate 7/31/2018 | Export-Csv "C:\My Documents\Team Lunch Meeting.csv" -NoTypeInformation
 ```
 
-This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox in the month of July, 2018, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
+This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox that were modified in the month of July, 2018, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
 
 ## PARAMETERS
 
@@ -153,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The EndDate parameter specifies the end date of the date range.
+The EndDate parameter specifies the end date of the date range for the OriginalLastModifiedTime property (when the meeting was last modified, not created).
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -378,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-The StartDate parameter specifies the start date of the date range.
+The StartDate parameter specifies the start date of the date range for the OriginalLastModifiedTime property (when the meeting was last modified, not created).
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -416,11 +414,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Get-CsHybridPSTNAppliance` cmdlet to retrieve information about your Skype for Business Cloud Connector Edition appliances.
 
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+
 ## SYNTAX
 
 ```

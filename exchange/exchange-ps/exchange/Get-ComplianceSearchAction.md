@@ -71,7 +71,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -84,17 +84,17 @@ This example shows a summary list of all compliance search actions.
 
 ### Example 2
 ```powershell
-Get-ComplianceSearchAction -Identity "Case 1234\_Preview" | Format-List
+Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
 ```
 
-This example shows details about the compliance search action named "Case 1234\_Preview"
+This example shows details about the compliance search action named "Case 1234_Preview"
 
 ## PARAMETERS
 
 ### -Identity
 The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
 
-- Name: The compliance search action name uses the syntax `"Compliance Search Name\_Action"`. For example, `"Case 1234\_Preview"`.
+- Name: The compliance search action name uses the syntax `"Compliance Search Name_Action"`. For example, `"Case 1234_Preview"`.
 - JobRunId (GUID)
 
 You can't use this parameter with the Export, Preview, or Purge parameters.
@@ -265,11 +265,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

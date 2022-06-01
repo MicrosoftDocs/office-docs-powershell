@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-ActivityAlert cmdlet to remove activity alerts from the Microsoft 365 Defender portal or the Microsoft 365 compliance center.
+Use the Remove-ActivityAlert cmdlet to remove activity alerts from the Microsoft 365 Defender portal or the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +29,7 @@ Remove-ActivityAlert [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) or [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) or [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -118,11 +118,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

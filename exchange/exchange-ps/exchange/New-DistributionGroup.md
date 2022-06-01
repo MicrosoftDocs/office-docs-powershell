@@ -28,6 +28,7 @@ New-DistributionGroup [-Name] <String>
  [-BypassNestedModerationEnabled <Boolean>]
  [-Confirm]
  [-CopyOwnerToMember]
+ [-Description <MultiValueProperty>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-HiddenGroupMembershipEnabled]
@@ -235,6 +236,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+This parameter is available only in the cloud-based service.
+
+{{ Fill Description Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name of the group. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -333,11 +352,11 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 - SamAccountName
 - User ID or user principal name (UPN)
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To enter multiple owners, use the following syntax: `Owner1,Owner2,...OwnerN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Owner1","Owner2",..."OwnerN"`.
 
-An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
+Owners that you specify with this parameter are not automatically added as group members. Use the CopyOwnerToMember switch or manually add the owners as members.
 
-Alternatively, you can use the CopyOwnerToMember switch so the owners are automatically made members of the group.
+**Note**: Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
 
 ```yaml
 Type: MultiValuedProperty

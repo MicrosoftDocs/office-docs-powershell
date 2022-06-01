@@ -12,11 +12,9 @@ ms.reviewer:
 # Get-EligibleDistributionGroupForMigration
 
 ## SYNOPSIS
-This cmdlet is available or functional only in the cloud-based service.
+This cmdlet is functional only in the cloud-based service.
 
 Use the Get-EligibleDistributionGroupForMigration cmdlet to identify distribution groups that can be upgraded to Microsoft 365 Groups. You can't upgrade mail-enabled security groups to Microsoft 365 Groups.
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -137,11 +135,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
