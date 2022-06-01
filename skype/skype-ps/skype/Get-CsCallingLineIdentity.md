@@ -88,22 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-
 ## OUTPUTS
-
-### 
-Identity                  : Global
-
-Description               :
-
-EnableUserOverride        : False
-
-ServiceNumber             :
-
-CallingIDSubstitute       : LineUri
-
-BlockIncomingPstnCallerID : False
-
 
 ## NOTES
 
@@ -113,6 +98,6 @@ BlockIncomingPstnCallerID : False
 
 [New-CsCallingLineIdentity] (new-cscallinglineidentity.md)
 
-[Remove-CsCallingLineIdentity] (remove-cscallinglineidentity,md)
+[Remove-CsCallingLineIdentity] (remove-cscallinglineidentity.md)
 
-[Set-CsCallingLineIdentity](set-cscallinglineidentity.md)
+[Set-CsCallingLineIdentity] (set-cscallinglineidentity.md)
