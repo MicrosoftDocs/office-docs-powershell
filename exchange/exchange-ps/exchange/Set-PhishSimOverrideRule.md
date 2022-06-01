@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ### -AddDomains
 The AddDomains parameter specifies an existing entry to add to the list of email domains that are used by the third-party phishing simulation.
 
-You can specify multiple values separated by commas. A maximum of 10 entries are allowed in the list.
+You can specify multiple values separated by commas. A maximum of 20 entries are allowed in the list.
 
 ```yaml
 Type: MultiValuedProperty
@@ -241,11 +241,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

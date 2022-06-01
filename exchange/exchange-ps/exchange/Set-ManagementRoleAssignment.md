@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the role assignment to.
 

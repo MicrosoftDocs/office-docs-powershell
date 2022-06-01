@@ -26,6 +26,8 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 > - **Security & Compliance Center PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
 >
 > For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+>
+> You can't use the procedures in this article to modify Microsoft 365 Groups ([Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)). To use Microsoft Graph instead, see [Update group](/graph/api/group-update).
 
 Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance Center PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
@@ -265,10 +267,6 @@ After you register the certificate with your application, you can use the privat
 
 Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
 
-<br>
-
-****
-
 |Role|Exchange Online PowerShell|Security & Compliance Center PowerShell|
 |---|:---:|:---:|
 |Compliance Administrator|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
@@ -278,7 +276,6 @@ Azure AD has more than 50 admin roles available. The supported roles are describ
 |Helpdesk Administrator|![Check mark.](media/checkmark.png)||
 |Security Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
 |Security Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|
 
 <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
 

@@ -12,7 +12,7 @@ ms.reviewer:
 # Remove-DataClassification
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 In Exchange Online, this cmdlet has been replaced by the [Remove-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/remove-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
 

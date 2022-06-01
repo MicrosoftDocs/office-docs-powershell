@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Microsoft 365 compliance center.
+Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,6 +34,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-ModernGroupLocationException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
+ [-PolicyTemplateInfo <PswsHashtable>]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
@@ -62,21 +63,34 @@ New-RetentionCompliancePolicy [-Name] <String>
  [<CommonParameters>]
 ```
 
+### AdaptiveScopeLocation
+```
+New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValuedProperty>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RestrictiveRetention <Boolean>]
+ [-RetainCloudAttachment <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](New-RetentionComplianceRule.md). In addition, at least one location parameter must be defined to create a retention policy.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
-New-RetentionComplianceRule -Name RetUnlimited -Policy "Regulation 123 Compliance" -RetentionDuration Unlimited
 ```
 
-The first command in this example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
-The second command creates a new retention rule named "RetUnlimited" and adds it to the retention policy created with the fist command.
+This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+
+The next step is to use the New-RetentionComplianceRule cmdlet to add a retention rule to the retention policy.
 
 ## PARAMETERS
 
@@ -91,6 +105,26 @@ Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdaptiveScopeLocation
+The AdaptiveScopeLocation parameter specifies the adaptive scope location to include in the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AdaptiveScopeLocation
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -172,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocation
-The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
+The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
 
 - A mailbox
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
@@ -203,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocationException
-This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The ExchangeLocationException parameter specifies the mailboxes to exclude from the policy when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
 - A distribution group or mail-enabled security group
@@ -277,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude when you're using the value All for the ModernGroupLocation parameter.
+The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude from the policy when you use the value All for the ModernGroupLocation parameter.
 
 You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
@@ -326,6 +360,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplateInfo
+{{ Fill PolicyTemplateInfo Description }}
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance Center
@@ -586,11 +636,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

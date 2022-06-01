@@ -16,14 +16,12 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailDetailEncryptionReport cmdlet to view the details of encryption in your cloud-based organization for the last 10 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailDetailEncryptionReport
+Get-MailDetailEncryptionReport [[-Organization] <OrganizationIdParameter>]
  [-AggregateBy <String>]
  [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
@@ -67,6 +65,22 @@ Get-MailDetailEncryptionReport -StartDate 12/13/2021 -EndDate 12/15/2021
 This example retrieves encryption details for messages between December 13, 2021 and December 15, 2021.
 
 ## PARAMETERS
+
+### -Organization
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AggregateBy
 The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day, or Summary. The default value is Day.
@@ -272,11 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -28,7 +28,7 @@ The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Au
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-$content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
+$content = Get-Content "C:\Media\Hello.wav" -Encoding byte -ReadCount 0
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
@@ -62,7 +62,7 @@ This example uses the `-AsByteStream` parameter instead of the `-Encoding byte` 
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an organizational auto attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a hunt group (call queue), then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal"
+The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an Auto Attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a Call Queue, then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal".
 
 Supported values:
 
@@ -127,6 +127,11 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ### Microsoft.Rtc.Management.Hosted.Online.Models.AudioFile
 
 ## NOTES
+
+When you import an audio file to be used for Auto Attendant or Call Queue, the audio file will automatically be marked for deletion (as seen by running
+Get-CsOnlineAudioFile) and it will be deleted after 48 to 72 hours from the time of import, unless the audio file is associated to an
+Auto Attendant and Call Queue before 48 hours after it was imported.
+
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
 
 ## RELATED LINKS
@@ -137,4 +142,3 @@ You are responsible for independently clearing and securing all necessary rights
 [New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
 
 [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
-

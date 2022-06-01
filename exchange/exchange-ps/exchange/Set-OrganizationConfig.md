@@ -733,7 +733,7 @@ Accept wildcard characters: False
 ### -AutoExpandingArchive
 This parameter is available only in the cloud-based service.
 
-The AutoExpandingArchive switch enables the unlimited archiving feature (called auto-expanding archiving) in an Exchange Online organization. You don't need to specify a value with this switch.
+The AutoExpandingArchive switch enables the auto-expanding archiving feature in an Exchange Online organization. You don't need to specify a value with this switch.
 
 After you enable auto-expanding archiving, additional storage space is automatically added to a user's archive mailbox when it approaches the storage limit. Note that a user's archive mailbox has to be enabled before auto-expanding archiving can take effect. Also note that after you enable auto-expanding archiving for your organization, it can't be disabled.
 
@@ -1476,10 +1476,10 @@ This parameter is available only in the cloud-based service.
 
 The DisablePlusAddressInRecipients parameter specifies whether to enable or disable plus addressing (also known as subaddressing) for Exchange Online mailboxes. Valid values are:
 
-- $true: Plus addressing is enabled. You can no longer use the plus sign in regular email addresses. The plus sign is only available for plus addressing.
-- $false: Plus addressing is disabled. You can use the plus sign in regular email addresses.
+- $true: Plus addressing is disabled. You can no longer use the plus sign in regular email addresses. The plus sign is only available for plus addressing.
+- $false: Plus addressing is enabled. You can use the plus sign in regular email addresses.
 
-For more information about plus addressing, see [Plus addressing in Exchange Online](https://docs.microsoft.com/eexchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).
+For more information about plus addressing, see [Plus addressing in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).
 
 ```yaml
 Type: Boolean
@@ -1914,6 +1914,8 @@ The FindTimeAttendeeAuthenticationEnabled parameter controls whether attendees a
 - $true: Attendees are required to validate their identity and the meeting organizer can't turn off this setting (Always On).
 - $false: By default, attendees are required to verify their identity, but the meeting organizer is allowed to turn this setting off.
 
+This setting overrides individual user settings.
+
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
 ```yaml
@@ -1936,6 +1938,8 @@ The FindTimeAutoScheduleDisabled parameter controls automatically scheduling the
 
 - $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
 - $false: By default, reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to turn on this setting.
+
+This setting overrides individual user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1960,6 +1964,8 @@ The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for att
 - $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
 - $false: By default, **Lock poll for attendees** is off (initial default) or on (the user saved settings from last poll), but the meeting organizer is allowed to turn the setting off or on to allow or prevent attendees from suggesting new times or editing attendees.
 
+This setting overrides individual user settings.
+
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
 ```yaml
@@ -1982,6 +1988,8 @@ The FindTimeOnlineMeetingOptionDisabled parameter controls the availability of t
 
 - $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
 - $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting.
+
+This setting overrides individual user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -2626,7 +2634,7 @@ The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetin
 - $false: All meetings are not online by default.
 - $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
-You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
+If a user has already directly interacted with this setting in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA), the value of this parameter is ignored. Eventually, this parameter will override the Outlook-configured setting.
 
 ```yaml
 Type: Boolean

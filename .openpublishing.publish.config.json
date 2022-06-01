@@ -45,11 +45,6 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
       "monikerPath": [
         "mapping/monikerMapping.json"
       ]
@@ -71,15 +66,7 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+      "version": 0
     },
     {
       "docset_name": "skype-ps",
@@ -125,15 +112,7 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+      "version": 0
     },
     {
       "docset_name": "teams-ps",
@@ -179,15 +158,7 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+      "version": 0
     },
     {
       "docset_name": "whiteboard-ps",

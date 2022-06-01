@@ -1522,7 +1522,9 @@ Accept wildcard characters: False
 ### -EnableLitigationHoldForMigration
 This parameter is available only in the cloud-based service.
 
-{{ Fill EnableLitigationHoldForMigration Description }}
+The EnableLitigationHoldForMigration switch is used in cross-tenant mailbox migrations to increase the quota on the Recoverable Items folder to 100 GB (and also enable Litigation Hold) prior to migration. You don't need to specify a value with this switch.
+
+This feature is not available in hybrid tenants.
 
 ```yaml
 Type: SwitchParameter
@@ -2175,7 +2177,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
@@ -2217,7 +2219,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientLimits
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The RecipientLimits parameter specifies the maximum number of recipients allowed in messages sent by the mail user.
 

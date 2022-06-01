@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-SafeLinksRule cmdlet to create Safe Links rules in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -56,7 +54,30 @@ This example creates a new Safe Links rule named Research Department URL Rule wi
 
 - The rule is associated with the Safe Links policy named Research Block URL.
 - The rule applies to members of the group named Research Department.
+- Because we aren't using the Priority parameter, the default priority is used.
 - The rule doesn't apply to members of the group named Research Department Managers.
+- The rule is enabled (we aren't using the Enabled parameter, and the default value is `$true`).
+
+### Example 2
+```powershell
+New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
+```
+
+This example creates a Safe Links rule named Contoso All with the following conditions:
+
+- The rule is associated with the Safe Links policy named Contoso All.
+- The rule applies to recipients in all accepted domains in the organization.
+- Because we aren't using the Priority parameter, the default priority is used.
+- The rule is enabled (we aren't using the Enabled parameter, and the default value is `$true`).
+
+### Example 3
+```powershell
+$Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+$SLDomains = $Data.Domains
+New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
+```
+
+This example is similar to Example 2, but in this example, the rule applies to recipients in the domains specified in a .csv file.
 
 ## PARAMETERS
 
@@ -337,11 +358,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

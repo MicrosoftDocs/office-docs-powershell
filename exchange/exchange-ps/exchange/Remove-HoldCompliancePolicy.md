@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-HoldCompliancePolicy cmdlet to remove preservation policies from the Microsoft 365 compliance center.
+Use the Remove-HoldCompliancePolicy cmdlet to remove preservation policies from the Microsoft Purview compliance portal.
 
 **Note**: The Remove-HoldCompliancePolicy cmdlet has been replaced by the Remove-RetentionCompliancePolicy cmdlet. If you have scripts that use Remove-HoldCompliancePolicy, update them to use Remove-RetentionCompliancePolicy.
 
@@ -33,7 +33,7 @@ Remove-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 You should also remove the preservation rule that corresponds to the removed policy by using the Remove-HoldComplianceRule cmdlet.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -122,11 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

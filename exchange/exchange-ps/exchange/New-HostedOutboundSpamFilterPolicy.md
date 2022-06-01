@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-HostedOutboundSpamFilterPolicy cmdlet to create outbound spam filter policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -266,7 +264,6 @@ The RecommendedPolicyType parameter is used for Standard and Strict policy creat
 Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
-Accepted values: Custom, Standard, Strict
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -281,11 +278,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

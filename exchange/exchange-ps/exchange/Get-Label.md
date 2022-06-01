@@ -23,11 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-Label [[-Identity] <ComplianceRuleIdParameter>]
  [-IncludeDetailedLabelActions <System.Boolean>]
+ [-SkipValidations]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -68,10 +69,29 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDetailedLabelActions
-{{ Fill IncludeDetailedLabelActions Description }}
+The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. Valid values are:
+
+- $true: Include detailed label actions.
+- $false: Don't include detailed label actions.
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipValidations
+{{ Fill SkipValidations Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance Center
@@ -88,11 +108,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

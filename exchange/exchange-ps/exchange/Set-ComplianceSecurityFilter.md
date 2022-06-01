@@ -12,9 +12,9 @@ ms.reviewer:
 # Set-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-ComplianceSecurityFilter cmdlet to modify compliance security filters in the Microsoft 365 compliance center.
+Use the Set-ComplianceSecurityFilter cmdlet to modify compliance security filters in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -33,7 +33,7 @@ Set-ComplianceSecurityFilter -FilterName <String>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ### -Action
 The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
 
-- Export: The filter is applied when exporting search results, or preparing them for analysis in Microsoft 365 Advanced eDiscovery.
+- Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
 - Preview: The filter is applied when previewing search results.
 - Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
 - Search: The filter is applied when running a search.
@@ -226,11 +226,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-LogonStatistics
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Exchange Server 2010.
+This cmdlet is functional only in Exchange Server 2010.
 
 The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
 
