@@ -92,7 +92,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-
 ## RELATED LINKS
 
-[Grant-CsCallingLineIdentity] (grant-cscallinglineidentity.md)
+[Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
