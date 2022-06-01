@@ -587,7 +587,7 @@ The following attributes are temporarily unavailable in the output when using th
 - Enabled renamed to IsSipEnabled
 - TeamsBranchSurvivabilityPolicy renamed to TeamsSurvivableBranchAppliancePolicy
 - CountryOrRegionDisplayName introduced as Country (in versions 4.2.0 and later)
-- InterpretedUserType: "AADConnectEnabledOnline" prefix for the InterpretedUserType output value has now been renamed to DirSyncEnabledOnline. E.g., AADConnectEnabledOnlineTeamsOnlyUser is now DirSyncEnabledOnlineTeamsOnlyUser
+- InterpretedUserType: "AADConnectEnabledOnline" prefix for the InterpretedUserType output value has now been renamed DirSyncEnabledOnline, for example, AADConnectEnabledOnlineTeamsOnlyUser is now DirSyncEnabledOnlineTeamsOnlyUser.
 
 *Attributes that have changed in meaning/format*:
 
