@@ -372,7 +372,7 @@ The ID of the object the phone number is assigned to.
 The list of capabilities assigned to the phone number.
 
 ### City
-The city where the phone number is located. Only relevant for Microsoft Calling Plan and Operator Connect phone numbers.
+The city where the phone number is located.
 
 ### CivicAddressId
 The ID of the CivicAddress assigned to the phone number.
@@ -381,7 +381,7 @@ The ID of the CivicAddress assigned to the phone number.
 The ISO country code assigned to the phone number.
 
 ### IsoSubDivision
-The sub division within the country assigned to the phone number, for example the state for US phone numbers. Only relevant for Microsoft Calling Plan and Operator Connect phone numbers.
+The sub division within the country assigned to the phone number, for example the state for US phone numbers.
 
 ### LocationId
 The ID of the Location assigned to the phone number.
