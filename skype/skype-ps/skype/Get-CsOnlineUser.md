@@ -176,8 +176,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
 
-In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes:
-(Note: These changes are currently only rolled out in Commercial Environments and currently **not** applicable to Government Environments)
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
 
 - accountEnabled
