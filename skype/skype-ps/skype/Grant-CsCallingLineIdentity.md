@@ -5,51 +5,87 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Grant-CsCallingLineIdentity
 
 ## SYNOPSIS
-Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account.
+Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account or set the tenant Global instance.
 
 ## SYNTAX
 
+### GrantToTenant (Default)
 ```
-Grant-CsCallingLineIdentity [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>] [-PassThru] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+Grant-CsCallingLineIdentity [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+### Identity
+```
+Grant-CsCallingLineIdentity [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed; you can then apply the Caller ID policy to a specific user.
+You can either a Caller ID policy to a specific user or you can set the Global policy instance.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-PS C:\> Grant-CsCallingLineIdentity -Identity "Ken Myer" -PolicyName CallerIDRedmond
-```
-
-This example assigns the Caller ID policy with the Identity CallerIDRedmond to the user with the display name Ken Myer.
-
-### -------------------------- Example 2 --------------------------
-```
-Grant-CsCallingLineIdentity -PolicyName Anonymous -Identity "amos.marble@contoso.com"
+PS C:\> Grant-CsCallingLineIdentity -Identity Ken.Myer@contoso.com -PolicyName CallerIDRedmond
 ```
 
-This example grants the Caller ID policy "Anonymous" to the user Amos Marble. 
+This example assigns the Caller ID policy with the Identity CallerIDRedmond to the user Ken.Myer@contoso.com
+
+### Example 2
+```
+Grant-CsCallingLineIdentity -PolicyName CallerIDSeattle -Global
+```
+
+This example copies the Caller ID policy CallerIDSeattle to the Global policy instance.
 
 
 ## PARAMETERS
 
-### -Identity
-The Identity (unique identifier) of the user to whom the policy is being assigned. User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
-
-You can use the asterisk (\*) wildcard character when using the Display Name as the user Identity. For example, the Identity "\*Smith" returns all the users who have a display name that ends with the string value "Smith".
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: UserIdParameter
+Type: SwitchParameter
+Parameter Sets: (GrantToTenant)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsCallingLineIdentity cmdlet does not pass objects through the pipeline.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyName
+The name (Identity) of the Caller ID policy to be assigned to the user. To remove an existing user level policy assignment, specify PolicyName as $null.
+(Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName).
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Microsoft Teams, Skype for Business Online
@@ -61,89 +97,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PolicyName
-The name (Identity) of the Caller ID policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName).
+### -Identity
+The Identity of the user to whom the policy is being assigned. User Identities can be specified using one of the following formats: 1) the user's
+SIP address; 2) the user's user principal name (UPN); or, 3) the user's ObjectId/Identity.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: (Identity)
 Aliases: 
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Returns the results of the command. By default, this cmdlet does not generate any output.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -165,6 +130,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
@@ -175,11 +156,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/set-cscallinglineidentity?view=skype-ps)
+[Set-CsCallingLineIdentity](set-cscallinglineidentity.md)
 
-[Get-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/get-cscallinglineidentity?view=skype-ps)
+[Get-CsCallingLineIdentity](get-cscallinglineidentity.md)
 
-[Remove-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/remove-cscallinglineidentity?view=skype-ps)
+[Remove-CsCallingLineIdentity](remove-cscallinglineidentity.md)
 
-[New-CsCallingLineIdentity](https://docs.microsoft.com/powershell/module/skype/new-cscallinglineidentity?view=skype-ps)
-
+[New-CsCallingLineIdentity](new-cscallinglineidentity.md)
