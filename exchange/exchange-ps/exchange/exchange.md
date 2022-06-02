@@ -808,6 +808,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-M365DataAtRestEncryptionPolicyAssignment](Get-M365DataAtRestEncryptionPolicyAssignment.md)
 
+### [Get-MailboxIRMAccess](Get-MailboxIRMAccess.md)
+
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
 
 ### [Get-OMEMessageStatus](Get-OMEMessageStatus.md)
@@ -828,6 +830,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
+### [Remove-MailboxIRMAccess](Remove-MailboxIRMAccess.md)
+
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
@@ -837,6 +841,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
 
 ### [Set-M365DataAtRestEncryptionPolicyAssignment](Set-M365DataAtRestEncryptionPolicyAssignment.md)
+
+### [Set-MailboxIRMAccess](Set-MailboxIRMAccess.md)
 
 ### [Set-OMEConfiguration](Set-OMEConfiguration.md)
 
