@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the \`Remove-CsOnlineLisCivicAddress\` cmdlet to delete an existing civic address from the Location Information Server (LIS). You can't remove a civic address if any of its associated locations are assigned to users.
+Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS). You can't remove a civic address if any of its associated locations are assigned to users.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Remove-CsOnlineLisCivicAddress -CivicAddressId <guid> [-Force] [-WhatIf] [-Confi
 ```
 
 ## DESCRIPTION
-Removes the specified emergency address.
+Removes the specified emergency address or addresses.
 
 
 ## EXAMPLES
@@ -45,7 +45,7 @@ This example removes all the emergency civic addresses in the city of Redmond.
 
 ### -CivicAddressId
 Specifies the unique identifier of the civic address to be deleted.
-You can find civic address identifiers by using the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+You can find civic address identifiers by using the Get-CsOnlineLisCivicAddress cmdlet.
 
 ```yaml
 Type: Guid
@@ -116,7 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### This cmdlet accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+### This cmdlet accepts pipelined input from the Get-CsOnlineLisCivicAddress cmdlet.
 
 ## OUTPUTS
 
@@ -126,3 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-CsOnlineLisCivicAddress](set-csonlineliscivicaddress.md)
+
+[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+
+[Get-CsOnlineLisCivicAddress](get-csonlineliscivicaddress.md)
