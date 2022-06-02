@@ -34,17 +34,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-SafeLinksPolicy | Format-Table Name
+Get-SafeLinksPolicy | Format-Table Name,EnableSafe*
 ```
 
-This example shows a list of all Safe Links policies.
+This example shows a summary list of all Safe Links policies.
 
 ### Example 2
 ```powershell
-Get-SafeLinksPolicy -Identity Default
+Get-SafeLinksPolicy -Identity "Contoso All"
 ```
 
-This example shows detailed information about the Safe Links policy named Default.
+This example shows detailed information about the Safe Links policy named Contoso All.
 
 ## PARAMETERS
 
