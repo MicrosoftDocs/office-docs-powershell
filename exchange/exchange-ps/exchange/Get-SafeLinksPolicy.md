@@ -34,10 +34,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-SafeLinksPolicy | Format-Table Name,IsEnabled,IsDefault
+Get-SafeLinksPolicy | Format-Table Name
 ```
 
-This example shows a summary list of all Safe Links policies.
+This example shows a list of all Safe Links policies.
 
 ### Example 2
 ```powershell
