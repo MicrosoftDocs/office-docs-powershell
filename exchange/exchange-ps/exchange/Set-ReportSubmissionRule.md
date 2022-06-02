@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-reportsubmissionrule
+online version: https://docs.microsoft.com/powershell/module/exchange/set-reportsubmissionrule
 applicable: Exchange Online
-title: Remove-ReportSubmissionRule
+title: Set-ReportSubmissionRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/New-reportsubmissionrule
+online version: https://docs.microsoft.com/powershell/module/exchange/new-reportsubmissionrule
 applicable: Exchange Online
 title: New-ReportSubmissionRule
 schema: 2.0.0
