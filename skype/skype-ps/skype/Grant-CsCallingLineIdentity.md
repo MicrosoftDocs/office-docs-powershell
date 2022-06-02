@@ -82,7 +82,6 @@ Accept wildcard characters: False
 
 ### -PolicyName
 The name (Identity) of the Caller ID policy to be assigned to the user. To remove an existing user level policy assignment, specify PolicyName as $null.
-(Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName).
 
 ```yaml
 Type: String
@@ -98,8 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to whom the policy is being assigned. User Identities can be specified using one of the following formats: 1) the user's
-SIP address; 2) the user's user principal name (UPN); or, 3) the user's ObjectId/Identity.
+The Identity of the user to whom the policy is being assigned. User Identities can be specified using the user's SIP address, the user's user principal name (UPN) or,
+the user's ObjectId/Identity.
 
 ```yaml
 Type: String
