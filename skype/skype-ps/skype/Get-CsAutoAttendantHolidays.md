@@ -72,6 +72,21 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Years
 The Years parameter represents the years for the holidays to be retrieved. If this parameter is not specified, then holidays for all years in the AA are returned.
 
