@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -CityAlias
-PARAMVALUE: String
+Specifies the city alias of the new civic address.
 
 ```yaml
 Type: String
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
-PARAMVALUE: String
+Specifies the company tax identifier of the new civic address.
 
 ```yaml
 Type: String
@@ -162,24 +162,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+### -Confidence
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Description
 Specifies an administrator defined description of the new civic address.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Elin
+Specifies the Emergency Location Identification Number.
+This is used in Direct Routing EGW scenarios.
 
 ```yaml
 Type: String
@@ -231,6 +248,54 @@ Accept wildcard characters: False
 ### -HouseNumberSuffix
 Specifies the numeric suffix of the new civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsAzureMapValidationRequired
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Latitude
+Specifies the angular distance of a place north or south of the earth's equator.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Longitude
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
 
 ```yaml
 Type: String
@@ -345,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationStatus
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -377,67 +442,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confidence
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Elin
-Specifies the Emergency Location Identification Number.
-This is used in Direct Routing EGW scenarios.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Latitude
-Specifies the angular distance of a place north or south of the earth's equator.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Longitude
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
