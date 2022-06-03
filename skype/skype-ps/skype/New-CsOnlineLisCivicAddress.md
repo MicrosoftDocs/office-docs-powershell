@@ -19,7 +19,7 @@ Use the New-CsOnlineLisCivicAddress cmdlet to create a civic address in the Loca
 
 ```
 New-CsOnlineLisCivicAddress -CompanyName <string> -CountryOrRegion <string> [-City <string>] [-CityAlias <string>] [-CompanyTaxId <string>]
-[-Confidence <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
+[-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
 [-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>] [-PreDirectional <string>]
 [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -147,22 +147,6 @@ Accept wildcard characters: False
 
 ### -CompanyTaxId
 Specifies the company tax identifier of the new civic address.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confidence
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
