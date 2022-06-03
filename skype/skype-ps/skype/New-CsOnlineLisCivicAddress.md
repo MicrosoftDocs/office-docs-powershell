@@ -20,8 +20,8 @@ Use the New-CsOnlineLisCivicAddress cmdlet to create a civic address in the Loca
 ```
 New-CsOnlineLisCivicAddress -CompanyName <string> -CountryOrRegion <string> [-City <string>] [-CityAlias <string>] [-CompanyTaxId <string>]
 [-Confidence <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
-[-IsAzureMapValidationRequired <boolean>] [-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>]
-[-PreDirectional <string>] [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-ValidationStatus <string>]
+[-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>]
+[-PreDirectional <string>] [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -262,22 +262,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IsAzureMapValidationRequired
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Latitude
 Specifies the angular distance of a place north or south of the earth's equator.
 
@@ -395,22 +379,6 @@ Accept wildcard characters: False
 ### -StreetSuffix
 Specifies the street type of the new civic address.
 The street suffix will typically be something like street, avenue, way, or boulevard.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ValidationStatus
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
