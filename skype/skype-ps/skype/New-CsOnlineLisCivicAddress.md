@@ -20,9 +20,8 @@ Use the New-CsOnlineLisCivicAddress cmdlet to create a civic address in the Loca
 ```
 New-CsOnlineLisCivicAddress -CompanyName <string> -CountryOrRegion <string> [-City <string>] [-CityAlias <string>] [-CompanyTaxId <string>]
 [-Confidence <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
-[-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>]
-[-PreDirectional <string>] [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+[-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>] [-PreDirectional <string>]
+[-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
