@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed. 
+The Confirm switch causes the command to pause processing and requires confirmation to proceed. 
 
 ```yaml
 Type: SwitchParameter
