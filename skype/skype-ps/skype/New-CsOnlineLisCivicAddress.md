@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 ### -PreDirectional
 Specifies the directional attribute of the new civic address which precedes the street name.
-For example, "425 NE Smith Avenue ".
+For example, "425 NE Smith Avenue".
 
 ```yaml
 Type: String
