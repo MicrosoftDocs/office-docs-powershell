@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to whom the policy is being assigned. User Identities can be specified using the user's SIP address, the user's user principal name (UPN) or,
+The Identity of the user to whom the policy is being assigned. User Identities can be specified using the user's SIP address, the user's user principal name (UPN), or
 the user's ObjectId/Identity.
 
 ```yaml
