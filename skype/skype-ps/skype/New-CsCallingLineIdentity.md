@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, Service, LineUri and Resource.
+The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, Service, LineUri, and Resource.
 
 ```yaml
 Type: String
