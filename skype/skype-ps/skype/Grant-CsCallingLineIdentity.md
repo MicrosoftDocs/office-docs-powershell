@@ -27,7 +27,7 @@ Grant-CsCallingLineIdentity [[-Identity] <string>] [[-PolicyName] <string>] [-Pa
 ```
 
 ## DESCRIPTION
-You can either a Caller ID policy to a specific user or you can set the Global policy instance.
+You can either assign a Caller ID policy to a specific user or you can set the Global policy instance.
 
 ## EXAMPLES
 
