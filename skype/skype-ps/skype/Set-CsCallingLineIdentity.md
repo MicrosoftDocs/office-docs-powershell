@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/set-cscallinglineidentity
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,28 +19,18 @@ Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your 
 
 ### Identity (Default)
 ```
-Set-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserOverride <Boolean>]
- [-ServiceNumber <String>] [-CallingIDSubstitute <CallingIDSubstituteType>]
- [-BlockIncomingPstnCallerID <Boolean>] [[-Identity] <XdsIdentity>] [-ResourceAccount <Guid>] [-CompanyName <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsCallingLineIdentity [-Tenant <Guid>] [-Description <String>] [-EnableUserOverride <Boolean>]
- [-ServiceNumber <String>] [-CallingIDSubstitute <CallingIDSubstituteType>]
- [-BlockIncomingPstnCallerID <Boolean>] [-ResourceAccount <Guid>] [-CompanyName <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <boolean>] [-CallingIDSubstitute <string>] [-CompanyName <string>]
+[-Description <string>] [-EnableUserOverride <boolean>] [-ResourceAccount <string>] [-ServiceNumber <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can either change or block the Caller ID (also called a Calling Line ID) for a user.
-By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
+By default, the Microsoft Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
 You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
 Note:  
 - Identity must be unique.
-- ServiceNumber must be a valid Service Number in the Skype for Business Online online telephone number inventory.
+- ServiceNumber must be a valid Service Number in the tenant telephone number inventory.
 - If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
 - If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
 
@@ -90,7 +80,7 @@ If this is set to True and if this policy is assigned to a Lync user, then Calle
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -107,7 +97,7 @@ The possible values are Anonymous, Service, LineUri and Resource.
 Type: CallingIDSubstituteType
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -123,21 +113,7 @@ This parameter sets the Calling party name (typically referred to as CNAM) on th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -153,7 +129,7 @@ The Description parameter briefly describes the Caller ID policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -169,25 +145,7 @@ The EnableUserOverride switch lets the user override the Caller ID policy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages.
-It can be useful in scripting to suppress interactive prompts.
-If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -200,29 +158,13 @@ Accept wildcard characters: False
 The Identity parameter identifies the Caller ID policy.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -235,6 +177,8 @@ This parameter specifies the ObjectId of a resource account/online application i
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
 Required: False
 Position: Named
 Default value: None
@@ -252,34 +196,7 @@ For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxx
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
-Instead, the tenant ID will automatically be filled in for you based on your connection information.
-The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -296,7 +213,23 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
