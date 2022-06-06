@@ -21,8 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DeviceTenantPolicy [-Confirm]
- [-Identity <PolicyIdParameter>]
+Remove-DeviceTenantPolicy [-Identity <PolicyIdParameter>]
+ [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -49,6 +49,22 @@ This example removes your organization's mobile device tenant policy.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the mobile device tenant policy that you want to remove, but there's only one in your organization. The name of the policy is a GUID value. For example, a6958701-c82c-4064-ac11-64e40e7f4032. You can find this value by running the command: `Get-DeviceTenantPolicy | Format-List Name`.
+
+```yaml
+Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -59,22 +75,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the mobile device tenant policy that you want to remove, but there's only one in your organization. The name of the policy is a GUID value. For example, a6958701-c82c-4064-ac11-64e40e7f4032. You can find this value by running the command: Get-DeviceTenantPolicy | Format-List Name.
-
-```yaml
-Type: PolicyIdParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
