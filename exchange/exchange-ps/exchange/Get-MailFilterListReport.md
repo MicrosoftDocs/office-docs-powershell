@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-mailfilterlistreport
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-MailFilterListReport
 schema: 2.0.0
 author: chrisda
@@ -50,7 +50,7 @@ The Domain parameter filters the results by an accepted domain in the cloud-base
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
-This parameter is available only in Security & Compliance Center PowerShell.
+This parameter is available only in Security & Compliance PowerShell.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -68,7 +68,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Expression
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The SelectionTarget parameter filters the report information by object type. Val
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
