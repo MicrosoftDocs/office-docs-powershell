@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-autosensitivitylabelrule
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Set-AutoSensitivityLabelRule
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-AutoSensitivityLabelRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-AutoSensitivityLabelPolicy cmdlet to modify auto-labeling policy rules in your organization.
 
@@ -74,7 +74,7 @@ Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -98,7 +98,7 @@ The Identity parameter specifies the auto-labeling policy rule that you want to 
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -119,7 +119,7 @@ Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Accepted values: InOrganization, NotInOrganization, None
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minC
 Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -248,7 +248,7 @@ The ContentExtensionMatchesWords parameter specifies a condition for the auto-la
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -267,7 +267,7 @@ The Disabled parameter specifies whether the case hold rule is enabled or disabl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -286,7 +286,7 @@ The DocumentIsPasswordProtected parameter specifies a condition for the auto-lab
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -305,7 +305,7 @@ The DocumentIsUnsupported parameter specifies a condition for the auto-labeling 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -326,7 +326,7 @@ Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Accepted values: InOrganization, NotInOrganization, None
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -350,7 +350,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -370,7 +370,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -388,7 +388,7 @@ This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minC
 Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -404,7 +404,7 @@ The ExceptIfContentExtensionMatchesWords parameter specifies an exception for th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -423,7 +423,7 @@ The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -442,7 +442,7 @@ The ExceptIfDocumentIsUnsupported parameter specifies an exception for the auto-
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -465,7 +465,7 @@ The ExceptIfFrom parameter specifies an exception for the auto-labeling policy r
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -489,7 +489,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -509,7 +509,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -527,7 +527,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -545,7 +545,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -564,7 +564,7 @@ The ExceptIfProcessingLimitExceeded parameter specifies an exception for the aut
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -580,7 +580,7 @@ The ExceptIfRecipientDomainIs parameter specifies an exception for the auto-labe
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -598,7 +598,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -620,7 +620,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -647,7 +647,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -665,7 +665,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -685,7 +685,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -701,7 +701,7 @@ This parameter is reserved for internal Microsoft use.
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -717,7 +717,7 @@ This parameter is reserved for internal Microsoft use.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -741,7 +741,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -761,7 +761,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -777,7 +777,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -795,7 +795,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -811,7 +811,7 @@ This parameter is reserved for internal Microsoft use.
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -830,7 +830,7 @@ The ProcessingLimitExceeded parameter specifies a condition for the auto-labelin
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -846,7 +846,7 @@ The RecipientDomainIs parameter specifies a condition for the auto-labeling poli
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -868,7 +868,7 @@ Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Accepted values: Low, Medium, High, None, Informational, Information
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -889,7 +889,7 @@ Type: PolicyRuleErrorAction
 Parameter Sets: (All)
 Aliases:
 Accepted values: Ignore, RetryThenBlock
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -907,7 +907,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -929,7 +929,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -956,7 +956,7 @@ You can use this condition in auto-sensitivity policies that are scoped only to 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -974,7 +974,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -994,7 +994,7 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1004,13 +1004,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1031,7 +1031,7 @@ Type: Workload
 Parameter Sets: (All)
 Aliases:
 Accepted values: Exchange, SharePoint, OneDriveForBusiness
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

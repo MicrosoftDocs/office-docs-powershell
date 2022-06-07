@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-tenantallowblocklistspoofitems
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Remove-TenantAllowBlockListSpoofItems
 schema: 2.0.0
 author: chrisda
@@ -51,7 +51,7 @@ The Identity parameter specifies the accepted domain.
 Type: HostedConnectionFilterPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -67,7 +67,7 @@ The Ids parameter specifies the spoof pair that you want to remove. A valid valu
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
