@@ -92,7 +92,7 @@ The CaseType parameter specifies the type of compliance case that you want to vi
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Microsoft Purview compliance portal, Data investigation cases are displayed on the **Data investigations** page.
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Microsoft Purview compliance portal, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
 - eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. In the Microsoft Purview compliance portal, eDiscovery Standard cases are displayed under **eDiscovery** \> **Standard**. This is the default value.
-- InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview compliance portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on a risk alert.
+- InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview compliance portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the Microsoft Purview compliance portal to further investigate activity based on a risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
 - SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft Purview compliance portal, communication compliance policies are displayed under **Communication compliance** \> **Policies**.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ### -RecentOnly
 The RecentOnly switch returns a list of the most recently modified cases of the specified case type. You don't need to specify a value with this switch.
 
-This switch is used to display data in the "Recent cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
+This switch is used to display data in the "Recent cases" widget in the Microsoft Purview compliance portal for some features that use compliance case objects.
 
 ```yaml
 Type: SwitchParameter
