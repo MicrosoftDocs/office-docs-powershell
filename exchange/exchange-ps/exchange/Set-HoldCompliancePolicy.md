@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-holdcompliancepolicy
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Set-HoldCompliancePolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-HoldCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-HoldCompliancePolicy cmdlet to modify existing preservation policies in the Microsoft Purview compliance portal.
 
@@ -49,7 +49,7 @@ Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_}`.
 
@@ -80,7 +80,7 @@ The Identity parameter specifies the preservation policy that you want to modify
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -100,7 +100,7 @@ Locations whose initial distributions succeeded aren't included in the retry. Po
 Type: SwitchParameter
 Parameter Sets: RetryDistribution
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ The AddPublicFolderLocation parameter specifies that you want to add all public 
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -236,7 +236,7 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -264,7 +264,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ The RemovePublicFolderLocation parameter specifies that you want to remove all p
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -298,7 +298,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -308,13 +308,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
