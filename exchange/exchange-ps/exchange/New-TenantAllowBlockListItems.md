@@ -68,10 +68,10 @@ This example adds a file block entry for the specified files that never expires.
 
 ### Example 3
 ```powershell
-New-TenantAllowBlockListItems -ListType Url -Allow -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
+New-TenantAllowBlockListItems -ListType Url -Allow -ListSubType AdvancedDelivery -Entries *.fabrikam.com -ExpirationDate 2021-05-06 14:30:00z
 ```
 
-This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
+This example adds a URL allow entry for the specified third-party phishing simulation URL with an expiration date (in UTC format). For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
 
 ## PARAMETERS
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoExpiration
-The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
+The NoExpiration switch specifies that the **block** entry should never expire. You don't need to specify a value with this switch.
 
 You can't use this switch with the ExpirationDate parameter.
 
