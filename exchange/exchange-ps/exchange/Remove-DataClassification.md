@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Remove-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/remove-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [Remove-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/remove-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
 
 Use the Remove-DataClassification cmdlet to remove data classification rules that use document fingerprints. You can't use this cmdlet to remove built-in data classification rules.
 
