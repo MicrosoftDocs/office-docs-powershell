@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-compliancecase
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: New-ComplianceCase
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # New-ComplianceCase
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-ComplianceCase cmdlet to create eDiscovery cases in the Microsoft Purview compliance portal. You use eDiscovery cases to place content locations on hold, perform Content Searches associated with the case, and export search results.
 
@@ -34,7 +34,7 @@ New-ComplianceCase [-Name] <String>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ The Name parameter specifies the unique name of the compliance case. The maximum
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -79,7 +79,7 @@ The CaseType parameter specifies the type of compliance case that you want to cr
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents.
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations.
 - eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. This is the default value.
-- InsiderRisk: Insider risk cases are use to manage insider risk management cases. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on an risk alert.
+- InsiderRisk: Insider risk cases are use to manage insider risk management cases. Typically, insider risk management cases are manually created in the Microsoft Purview compliance portal to further investigate activity based on an risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
 - SupervisionPolicy: This type of case corresponds to communication compliance policy.
 
@@ -87,7 +87,7 @@ The CaseType parameter specifies the type of compliance case that you want to cr
 Type: ComplianceCaseType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ The Description parameter specifies a description for the compliance case. The m
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ The ExternalId parameter specifies an optional ID or external case number that y
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -196,13 +196,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

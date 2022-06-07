@@ -24,7 +24,7 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 For connection instructions using the EXO V2 module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
-- [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md)
+- [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
 - [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
 
 The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
@@ -485,7 +485,7 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
   - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
   - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
   For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline) and [App-only authentication for unattended scripts in the EXO V2 module](app-only-auth-powershell-v2.md).
-- Connect to Exchange Online PowerShell and Security Compliance Center PowerShell simultaneously in a single PowerShell window.
+- Connect to Exchange Online PowerShell and Security & Compliance PowerShell simultaneously in a single PowerShell window.
 - The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
 - Optimized latency of the first V2 cmdlet call. Lab results show the first call latency has been reduced from 8 seconds to approximately 1 second. Actual results will depend on the cmdlet result size and the tenant environment.
@@ -510,7 +510,7 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
 
 #### Version 0.4368.1
 
-- Added support for Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
+- Added support for Security & Compliance PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
 - Hiding the announcement banner is available using the _ShowBanner_ switch (`-ShowBanner:$false`).
 - Terminate cmdlet execution on client exception.
 - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.

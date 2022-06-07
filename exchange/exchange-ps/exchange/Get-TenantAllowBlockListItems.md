@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-tenantallowblocklistitems
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
@@ -83,7 +83,7 @@ The ListType parameter specifies the list to view. Valid values are:
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ The Entry parameter filters the results based on the ListType parameter value. V
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ The NoExpiration switch filters the results by entries that are set to never exp
 Type: SwitchParameter
 Parameter Sets: NoExpiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -150,7 +150,7 @@ The Block switch filters the results for block entries. You don't need to specif
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: Expiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ You use this switch to prevent the command from halting on the first entry that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

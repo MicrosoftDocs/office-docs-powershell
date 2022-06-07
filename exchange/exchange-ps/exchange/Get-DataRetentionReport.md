@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dataretentionreport
-applicable: Exchange Online, Security & Compliance Center
+applicable: Exchange Online, Security & Compliance
 title: Get-DataRetentionReport
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-DataRetentionReport
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DataRetentionReport cmdlet to view information about data retention in the Microsoft Purview compliance portal.
 
@@ -38,7 +38,7 @@ The following properties are returned by this cmdlet:
 - DataSource
 - MessageCount
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
