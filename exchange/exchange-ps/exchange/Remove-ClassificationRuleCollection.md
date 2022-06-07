@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-ClassificationRuleCollection to remove classification rule collections from your organization.
 
-In Security & Compliance Center PowerShell, use the Remove-DlpSensitiveInformationTypeRulePackage cmdlet.
+In Security & Compliance PowerShell, use the Remove-DlpSensitiveInformationTypeRulePackage cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
