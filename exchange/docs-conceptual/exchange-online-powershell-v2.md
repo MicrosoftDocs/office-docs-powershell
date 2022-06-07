@@ -24,7 +24,7 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 For connection instructions using the EXO V2 module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
-- [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md)
+- [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
 - [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
 
 The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
@@ -510,7 +510,7 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
 
 #### Version 0.4368.1
 
-- Added support for Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
+- Added support for Security & Compliance PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
 - Hiding the announcement banner is available using the _ShowBanner_ switch (`-ShowBanner:$false`).
 - Terminate cmdlet execution on client exception.
 - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
