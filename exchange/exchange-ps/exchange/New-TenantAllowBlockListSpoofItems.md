@@ -65,7 +65,6 @@ The SendingInfrastructure parameter specifies the source of the messages sent by
 
 - An email domain (for example contoso.com). The domain is found in the reverse DNS lookup (PTR record) of the source email server's IP address.
 - An IP address using the syntax: \<source IP\>/24 (for example, 192.168.100.100/24). Use the IP address if the source IP address has no PTR record.
-- A verified DKIM domain.
 
 ```yaml
 Type: String
