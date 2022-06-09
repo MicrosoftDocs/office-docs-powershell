@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Set-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [Set-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
 
 Use the Set-DataClassification cmdlet to modify data classification rules that use document fingerprints.
 

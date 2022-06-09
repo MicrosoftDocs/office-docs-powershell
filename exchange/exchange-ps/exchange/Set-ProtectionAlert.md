@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-protectionalert
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Set-ProtectionAlert
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-ProtectionAlert
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-ProtectionAlert cmdlet to modify alert policies in the Microsoft Purview compliance portal.
 
@@ -50,7 +50,7 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -81,7 +81,7 @@ The Identity parameter specifies the alert policy that you want to modify. You c
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -101,7 +101,7 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 Type: AlertAggregationType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ You can't use this parameter when the AggregationType parameter value is None (a
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ When an activity occurs that matches the conditions of the alert policy, the ale
 Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ The Description parameter specifies descriptive text for the alert policy. If th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ The Disabled parameter enables or disables the alert policy. Valid values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -302,7 +302,7 @@ You can specify multiple criteria by using the -and comparison operator.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -320,7 +320,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -352,7 +352,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ You can't use this parameter when the AggregationType parameter value is None (a
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -391,7 +391,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -410,7 +410,7 @@ The NotifyUserThrottleThreshold parameter specifies the maximum number of notifi
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -429,7 +429,7 @@ The NotifyUserThrottleWindow parameter specifies the time interval in minutes th
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -449,7 +449,7 @@ You can only use this parameter when the ThreatType parameter has the value Acti
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -469,7 +469,7 @@ The Severity parameter specifies the severity of the detection. Valid values are
 Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -487,7 +487,7 @@ You can only use this parameter when the AggregationType parameter value is Simp
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -505,7 +505,7 @@ You can only use this parameter when the AggregationType parameter value is Simp
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 Type: System.UInt64
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -531,13 +531,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

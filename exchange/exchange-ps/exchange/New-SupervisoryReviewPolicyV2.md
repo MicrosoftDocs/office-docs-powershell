@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-supervisoryreviewpolicyv2
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: New-SupervisoryReviewPolicyV2
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # New-SupervisoryReviewPolicyV2
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-SupervisoryReviewPolicyV2 cmdlet to create supervisory review policies in the Microsoft Purview compliance portal. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
 
@@ -32,7 +32,7 @@ New-SupervisoryReviewPolicyV2 [-Name] <String> -Reviewers <String[]>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ The Name parameter specifies the unique name for the supervisory review policy. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -68,7 +68,7 @@ The Reviewers parameter specifies the SMTP addresses of the reviewers for the su
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -163,13 +163,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
