@@ -66,7 +66,6 @@ New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695e
 
 This example adds a file block entry for the specified files that never expires.
 
-
 ## PARAMETERS
 
 ### -Entries
