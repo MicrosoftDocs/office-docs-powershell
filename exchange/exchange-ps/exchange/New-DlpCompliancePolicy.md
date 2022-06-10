@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the DLP policy. You identify the group by its email address. You can use the value All to include all user groups.
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, non mail-enabled security groups or dynamic distribution groups to include in the DLP policy. You identify the group by its email address. You can use the value All to include all user groups.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
