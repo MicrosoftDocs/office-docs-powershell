@@ -1262,6 +1262,7 @@ Accept wildcard characters: False
 
 ### -WebSuggestedRepliesEnabledForUser
 This parameter is available only in the cloud-based service.
+
 {{ Fill WebSuggestedRepliesEnabledForUser Description }}
 
 ```yaml
