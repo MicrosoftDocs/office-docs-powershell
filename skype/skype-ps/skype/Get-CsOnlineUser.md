@@ -70,7 +70,7 @@ The command shown in Example 1 returns information for all the users configured 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsOnlineUser -Identity "sip:kenmyer@litwareinc.com"
+Get-CsOnlineUser -Identity {sip:kenmyer@litwareinc.com}
 ```
 
 In Example 2 information is returned for a single online user: the user with the SIP address "sip:kenmyer@litwareinc.com".
@@ -562,15 +562,16 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - Office
 - Phone
 - WindowsEmailAddress
+- OnPremHostingProvider (available in Teams PowerShell Module 4.4.1 and later)
+- OnPremSipEnabled (available in Teams PowerShell Module 4.4.1 and later)
+- OnPremSipAddress (available in Teams PowerShell Module 4.4.1 and later)
+- OnPremOptionFlags (available in Teams PowerShell Module 4.4.1 and later)
+- OnPremEnterpriseVoiceEnabled (available in Teams PowerShell Module 4.4.1 and later)
+- SoftDeletionTimeStamp (available in Teams PowerShell Module 4.4.2 and later)
+
 
 The following attributes are temporarily unavailable in the output when using the "-Filter" or when used without the "-Identity" parameter:
-- SoftDeletionTimeStamp
 - WhenChanged
-- OnPremHostingProvider
-- OnPremSipEnabled
-- OnPremSipAddress
-- OnPremOptionFlags
-- OnPremEnterpriseVoiceEnabled
 - CountryAbbreviation
 
 **Note**: These attributes will be available in the near future.
