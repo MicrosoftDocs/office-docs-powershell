@@ -186,9 +186,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the auto-labeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to include in the auto-labeling policy. You identify the group by its email address.
 
-You can enter multiple values separated by commas.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -204,9 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the auto-labeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to exclude from the auto-labeling policy. You identify the group by its email address.
 
-You can enter multiple values separated by commas.
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
