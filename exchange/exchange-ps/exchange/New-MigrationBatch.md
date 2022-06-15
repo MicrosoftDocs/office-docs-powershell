@@ -1190,7 +1190,7 @@ Accept wildcard characters: False
 ### -SkipContacts
 This parameter is available only in the cloud-based service.
 
-The SkipContact switch specifies that you want to skip Contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
+The SkipContacts switch specifies that you want to skip Contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
