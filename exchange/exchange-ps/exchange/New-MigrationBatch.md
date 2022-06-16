@@ -1172,7 +1172,7 @@ Accept wildcard characters: False
 ### -SkipCalendar
 This parameter is available only in the cloud-based service.
 
-The SkipCalendar switch specifies that you want to skip Calendar migration during Google Workspace onboarding. You don't need to specify a value with this switch.
+The SkipCalendar switch specifies that you want to skip calendar migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1190,7 +1190,7 @@ Accept wildcard characters: False
 ### -SkipContacts
 This parameter is available only in the cloud-based service.
 
-The SkipContacts switch specifies that you want to skip Contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
+The SkipContacts switch specifies that you want to skip contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1208,7 +1208,7 @@ Accept wildcard characters: False
 ### -SkipMail
 This parameter is available only in the cloud-based service.
 
-The SkipMail switch specifies that you want to skip Mail migration during Google Workspace onboarding. You don't need to specify a value with this switch.
+The SkipMail switch specifies that you want to skip mail migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
