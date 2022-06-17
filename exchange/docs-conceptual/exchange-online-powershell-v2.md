@@ -344,18 +344,20 @@ If the module is already installed on your computer, you can run the following c
        Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser
        ```
 
-   - To upgrade to **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
+   - To upgrade to **a Preview version** of the module, you can upgrade to the latest available Preview version, or you can use the _RequiredVersion_ parameter to upgrade to a specific Preview version. To see the available Preview versions, run the command: `Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease`.
+
+     Run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
 
      - In an elevated PowerShell window (all users):
 
        ```powershell
-       Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
+       Update-Module -Name ExchangeOnlineManagement -AllowPrerelease [-RequiredVersion <PreviewVersion>]
        ```
 
      - Only for the current user account:
 
        ```powershell
-       Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease -Scope CurrentUser
+       Update-Module -Name ExchangeOnlineManagement -AllowPrerelease -Scope CurrentUser [-RequiredVersion <PreviewVersion>]
        ```
 
    When you're finished, enter **Y** to accept the license agreement.
