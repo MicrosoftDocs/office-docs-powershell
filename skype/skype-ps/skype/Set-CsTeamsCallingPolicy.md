@@ -24,7 +24,7 @@ Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bo
 [-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <boolean>] [-AllowDelegation <boolean>] [-AllowPrivateCalling <boolean>]
 [-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
 [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
-[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
+[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -344,6 +344,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PopoutAppPathForIncomingPstnCalls
+Reserved for internal Microsoft use
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: ""
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PopoutForIncomingPstnCalls
+Reserved for internal Microsoft use
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
@@ -379,38 +411,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopoutForIncomingPstnCalls
-Reserved for internal Microsoft use
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: Disabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopoutAppPathForIncomingPstnCalls
-Reserved for internal Microsoft use
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: ""
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
