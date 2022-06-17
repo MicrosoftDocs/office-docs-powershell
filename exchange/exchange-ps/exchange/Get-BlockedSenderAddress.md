@@ -67,12 +67,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Exchange Management Shell cmdlet input and output types](https://docs.microsoft.com/exchange/client-developer/management/exchange-management-shell-cmdlet-input-and-output-types). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Exchange Management Shell cmdlet input and output types](https://docs.microsoft.com/exchange/client-developer/management/exchange-management-shell-cmdlet-input-and-output-types). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

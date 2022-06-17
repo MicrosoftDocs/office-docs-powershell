@@ -36,7 +36,7 @@ Here are some examples of when you might see this:
 - Creating a new Outlook on the web mailbox policy or modifying a built-in Outlook on the web mailbox policy.
 - Creating a new sharing policy or modifying a built-in sharing policy.
 - Creating a new retention policy or modifying a built-in retention policy.
-- Enabling preset security policies in the Microsoft 365 Security Center.
+- Enabling preset security policies in the Microsoft 365 Defender portal.
 
 Note that you are only required to run the Enable-OrganizationCustomization cmdlet once in your Exchange Online organization. If you attempt to run the cmdlet again, you'll get an error.
 
@@ -95,12 +95,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

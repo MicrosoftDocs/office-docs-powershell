@@ -1,5 +1,5 @@
 ---
-title: "V1 module - Connect to Security & Compliance Center PowerShell using MFA"
+title: "V1 module - Connect to Security & Compliance PowerShell using MFA"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -12,19 +12,19 @@ ms.localizationpriority: medium
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX
-description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell for multi-factor authentication (MFA) or federated authentication."
+description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance PowerShell for multi-factor authentication (MFA) or federated authentication."
 ---
 
-# V1 module - Connect to Security & Compliance Center PowerShell using MFA
+# V1 module - Connect to Security & Compliance PowerShell using MFA
 
 > [!NOTE]
-> The older Exchange Online Remote PowerShell Module that's described in this article will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
+> The older Exchange Online Remote PowerShell Module that's described in this article will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
 
-If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance Center PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to Security & Compliance Center PowerShell. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
+If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to Security & Compliance PowerShell. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance PowerShell.
 
 **Notes**:
 
-- Delegated Access Permission (DAP) partners can't use the procedures in this article to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
+- Delegated Access Permission (DAP) partners can't use the procedures in this article to connect to their customer tenant organizations in Security & Compliance PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
 
 - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
@@ -32,7 +32,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - Estimated time to complete: 5 minutes
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) and [Permissions in the Microsoft 365 security center](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 - You can use the following versions of Windows:
 
@@ -90,7 +90,7 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
    ![Click Install in the Exchange Online PowerShell Module window.](media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-## Connect to Security & Compliance Center PowerShell by using MFA or federated authentication
+## Connect to Security & Compliance PowerShell by using MFA or federated authentication
 
 1. On your local computer, open the **Exchange Online Remote PowerShell Module** (**Microsoft Corporation** > **Microsoft Exchange Online Remote PowerShell Module**).
 
@@ -116,13 +116,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
      |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
      |
 
-   This example connects to Security & Compliance Center PowerShell in Microsoft 365 using the account chris@contoso.com.
+   This example connects to Security & Compliance PowerShell in Microsoft 365 using the account chris@contoso.com.
 
    ```powershell
    Connect-IPPSSession -UserPrincipalName chris@contoso.com
    ```
 
-   This example connects to Security & Compliance Center PowerShell in Office 365 Germany using the account lukas@fabrikam.com.
+   This example connects to Security & Compliance PowerShell in Office 365 Germany using the account lukas@fabrikam.com.
 
    ```powershell
    Connect-IPPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
@@ -152,13 +152,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 ## How do you know this worked?
 
-After you sign in, the Security & Compliance Center PowerShell cmdlets are imported into your Exchange Online Remote PowerShell Module session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Security & Compliance Center cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
+After you sign in, the Security & Compliance PowerShell cmdlets are imported into your Exchange Online Remote PowerShell Module session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Security & Compliance PowerShell cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
 
 If you receive errors, check the following requirements:
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Security & Compliance Center PowerShell.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Security & Compliance PowerShell.
 
-- The account you use to connect to Security & Compliance Center PowerShell must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
+- The account you use to connect to Security & Compliance PowerShell must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 

@@ -1172,7 +1172,7 @@ Accept wildcard characters: False
 ### -SkipCalendar
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipCalendar Description }}
+The SkipCalendar switch specifies that you want to skip calendar migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1190,7 +1190,7 @@ Accept wildcard characters: False
 ### -SkipContacts
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipContacts Description }}
+The SkipContacts switch specifies that you want to skip contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1208,7 +1208,7 @@ Accept wildcard characters: False
 ### -SkipMail
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipMail Description }}
+The SkipMail switch specifies that you want to skip mail migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1276,7 +1276,7 @@ Accept wildcard characters: False
 ### -SkipRules
 This parameter is available only in the cloud-based service.
 
-The SkipRules switch specifies that you want to skip rule migration during GSuite onboarding. You don't need to specify a value with this switch.
+The SkipRules switch specifies that you want to skip rule migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1572,12 +1572,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

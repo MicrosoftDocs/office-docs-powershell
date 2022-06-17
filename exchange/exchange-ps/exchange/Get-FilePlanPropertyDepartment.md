@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-fileplanpropertydepartment
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Get-FilePlanPropertyDepartment
 schema: 2.0.0
 ---
@@ -9,7 +9,7 @@ schema: 2.0.0
 # Get-FilePlanPropertyDepartment
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-FilePlanPropertyDepartment cmdlet to view file plan property departments.
 
@@ -22,7 +22,7 @@ Get-FilePlanPropertyDepartment [[-Identity] <ComplianceRuleIdParameter>] [<Commo
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in Security & Compliance](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ The Identity parameter specifies the custom file plan property department that y
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 0
