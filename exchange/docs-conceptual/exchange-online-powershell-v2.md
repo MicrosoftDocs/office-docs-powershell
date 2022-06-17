@@ -412,7 +412,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
 - You receive the following error:
 
-  > No match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try running `Get-PSReporitory` to see all available registered module repositories.
+  > No match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try running `Get-PSRepository` to see all available registered module repositories.
 
   The default repository for PowerShell modules is not set to PSGallery. To fix this error, run the following command:
   
