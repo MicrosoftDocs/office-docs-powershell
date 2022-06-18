@@ -115,7 +115,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableQuarantineReportingOption
-{{ Fill DisableQuarantineReportingOption Description }}
+The DisableQuarantineReportingOption parameter allows or prevents users from reporting messages in quarantine. Valid values are:
+
+- $true: Users can't report quarantined messages from quarantine.
+- $false: Users can report quarantined messages from quarantine. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -131,7 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableUserSubmissionOptions
-{{ Fill DisableUserSubmissionOptions Description }}
+The DisableUserSubmissionOptions parameters turns on or turns off Microsoft message reporting options. Valid values are:
+
+- $true: You use third-party reporting tools.
+- $false: You use the Report Message add-in, the Report Phishing add-in, or the built-in reporting in Outlook on the web (formerly known as Outlook Web App). This is the default value.
 
 ```yaml
 Type: Boolean
@@ -147,7 +153,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCustomNotificationSender
-{{ Fill EnableCustomNotificationSender Description }}
+The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for user submitted messages. Valid values are:
+
+- $true: Use a custom Microsoft 365 sender email address.
+- $false: Don't use a custom Microsoft 365 sender email address. This is the default value.
+
+You specify the sender email address using the NotificationSenderAddress parameter.
+
+This parameter is meaningful only when the DisableUserSubmissionOptions parameter value is $false.
 
 ```yaml
 Type: Boolean
@@ -163,7 +176,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCustomizedMsg
-{{ Fill EnableCustomizedMsg Description }}
+The EnableCustomizedMsg parameter enables or disables customized email notifications that are sent after an admin reviews and marks a reported message. Valid values are:
+
+- $true:
+- $false:
+
+This parameter is meaningful only when the DisableUserSubmissionOptions parameter value is $false.
 
 ```yaml
 Type: Boolean
@@ -179,7 +197,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationBranding
-{{ Fill EnableOrganizationBranding Description }}
+The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of customized confirmation messages. Valid values are:
+
+- $true:
+- $false:
+
+This parameter is meaningful only when the DisableUserSubmissionOptions parameter value is $false and the EnableCustomizedMsg parameter value is $true.
 
 ```yaml
 Type: Boolean
@@ -195,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReportToMicrosoft
-{{ Fill EnableReportToMicrosoft Description }}
+The EnableReportToMicrosoft parameter
 
 ```yaml
 Type: Boolean
@@ -275,7 +298,9 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationFooterMessage
-{{ Fill NotificationFooterMessage Description }}
+The NotificationFooterMessage parameter specifies the customized text to use in the message footer. If the value contains spaces, enclose the value in quotation marks.
+
+This parameter is meaningful only when the DisableUserSubmissionOptions parameter value is $false and the EnableCustomizedMsg parameter value is $true.
 
 ```yaml
 Type: String
