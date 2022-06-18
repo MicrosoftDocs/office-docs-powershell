@@ -134,10 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableUserSubmissionOptions
-The DisableUserSubmissionOptions parameters turns on or turns off Microsoft message reporting options. Valid values are:
+The DisableUserSubmissionOptions parameters enables or disables the Outlook Report Message button. Valid values are:
 
 - $true: You use third-party reporting tools.
-- $false: You use the Report Message add-in, the Report Phishing add-in, or the built-in reporting in Outlook on the web (formerly known as Outlook Web App). This is the default value.
+- $false: You use Microsoft's integrated reporting experience. For example, the Report Message add-in, the Report Phishing add-in, or the built-in reporting in Outlook on the web (formerly known as Outlook Web App). This is the default value.
 
 ```yaml
 Type: Boolean
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserEmailNotification
-{{ Fill EnableUserEmailNotification Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageForJunk
-{{ Fill PostSubmitMessageForJunk Description }}
+Use the PostSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -396,8 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageForNotJunk
-{{ Fill PostSubmitMessageForNotJunk Description }}
-
+Use the PostSubmitMessage parameter instead.
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -412,7 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageForPhishing
-{{ Fill PostSubmitMessageForPhishing Description }}
+Use the PostSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -444,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitleForJunk
-{{ Fill PostSubmitMessageTitleForJunk Description }}
+Use the PostSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -460,7 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitleForNotJunk
-{{ Fill PostSubmitMessageTitleForNotJunk Description }}
+Use the PostSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -476,7 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitleForPhishing
-{{ Fill PostSubmitMessageTitleForPhishing Description }}
+Use the PostSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -508,7 +507,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageForJunk
-{{ Fill PreSubmitMessageForJunk Description }}
+Use the PreSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -524,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageForNotJunk
-{{ Fill PreSubmitMessageForNotJunk Description }}
+Use the PreSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -540,7 +539,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageForPhishing
-{{ Fill PreSubmitMessageForPhishing Description }}
+Use the PreSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -556,7 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitle
-{{ Fill PreSubmitMessageTitle Description }}
+Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -572,7 +571,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitleForJunk
-{{ Fill PreSubmitMessageTitleForJunk Description }}
+Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -588,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitleForNotJunk
-{{ Fill PreSubmitMessageTitleForNotJunk Description }}
+Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -604,7 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitleForPhishing
-{{ Fill PreSubmitMessageTitleForPhishing Description }}
+Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -620,7 +619,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkAddresses
-{{ Fill ReportJunkAddresses Description }}
+Use the ReportJunkAddresses parameter to specify the email address of the custom mailbox to receive user reported messages.
+
+You can't use this parameter by itself. You need to specify the same email address for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters in the same command.
 
 ```yaml
 Type: MultiValuedProperty
@@ -652,7 +653,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkAddresses
-{{ Fill ReportNotJunkAddresses Description }}
+Use the ReportNotJunkAddresses parameter to specify the email address of the custom mailbox to receive user reported messages.
+
+You can't use this parameter by itself. You need to specify the same email address for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters in the same command.
 
 ```yaml
 Type: MultiValuedProperty
@@ -684,7 +687,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishAddresses
-{{ Fill ReportPhishAddresses Description }}
+Use the ReportPhishAddresses parameter to specify the email address of the custom mailbox to receive user reported messages.
+
+You can't use this parameter by itself. You need to specify the same email address for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters in the same command.
 
 ```yaml
 Type: MultiValuedProperty
@@ -716,7 +721,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyReportAddresses
-{{ Fill ThirdPartyReportAddresses Description }}
+Use the ThirdPartyReportAddresses parameter to specify the email address of the custom mailbox for user reported messages when you use third-party reporting tools instead of the Outlook Report Message button.
+
+This parameter is meaningful only when the DisableUserSubmissionOptions parameter value is $true.
 
 ```yaml
 Type: MultiValuedProperty
@@ -748,7 +755,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSubmissionOptionsMessage
-{{ Fill UserSubmissionOptionsMessage Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
