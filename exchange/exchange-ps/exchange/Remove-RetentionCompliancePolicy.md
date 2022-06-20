@@ -29,7 +29,6 @@ Remove-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
