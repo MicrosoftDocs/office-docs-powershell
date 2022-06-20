@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -PopoutAppPathForIncomingPstnCalls
-Reserved for internal Microsoft use
+Reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -PopoutForIncomingPstnCalls
-Reserved for internal Microsoft use
+Reserved for internal Microsoft use.
 
 ```yaml
 Type: String
