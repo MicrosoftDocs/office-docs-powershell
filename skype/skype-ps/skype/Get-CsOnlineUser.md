@@ -70,7 +70,7 @@ The command shown in Example 1 returns information for all the users configured 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsOnlineUser -Identity {sip:kenmyer@litwareinc.com}
+Get-CsOnlineUser -Identity "sip:kenmyer@litwareinc.com"
 ```
 
 In Example 2 information is returned for a single online user: the user with the SIP address "sip:kenmyer@litwareinc.com".
