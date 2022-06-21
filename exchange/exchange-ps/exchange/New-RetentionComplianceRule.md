@@ -313,6 +313,8 @@ The RetentionComplianceAction parameter specifies the retention action for the r
 - Keep
 - KeepAndDelete
 
+If you don't use this parameter, the retention policy is created as an "UniH" policy instead of a "mbx" policy.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
