@@ -99,7 +99,12 @@ Accept wildcard characters: False
 ```
 
 ### -Threshold
-The Threshold parameter specifies . Valid values are 0 to 100. The default value is 50.
+The Threshold parameter specifies the confidence threshold to use for matches. Valid values are 0 to 100:
+
+- The value 0 matches all items, resulting in many false positives.
+- The value 100 demands a near-perfect match, but might also result in more false negatives.
+
+The default value is 50.
 
 ```yaml
 Type: UInt32
