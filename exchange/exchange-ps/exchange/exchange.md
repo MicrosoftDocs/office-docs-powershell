@@ -10,11 +10,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 - [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-management-shell)
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
-- [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
+- [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 > [!NOTE]
-> For Exchange Online, Security & Compliance Center, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell V2 module](../../docs-conceptual/exchange-online-powershell-v2.md).
+> For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell V2 module](../../docs-conceptual/exchange-online-powershell-v2.md).
 >
 > For Exchange Server, there is no Microsoft-provided module in the PowerShell Gallery. Instead, to use PowerShell in Exchange, you have the following options:
 >
@@ -808,6 +808,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-M365DataAtRestEncryptionPolicyAssignment](Get-M365DataAtRestEncryptionPolicyAssignment.md)
 
+### [Get-MailboxIRMAccess](Get-MailboxIRMAccess.md)
+
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
 
 ### [Get-OMEMessageStatus](Get-OMEMessageStatus.md)
@@ -828,6 +830,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
+### [Remove-MailboxIRMAccess](Remove-MailboxIRMAccess.md)
+
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
@@ -837,6 +841,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
 
 ### [Set-M365DataAtRestEncryptionPolicyAssignment](Set-M365DataAtRestEncryptionPolicyAssignment.md)
+
+### [Set-MailboxIRMAccess](Set-MailboxIRMAccess.md)
 
 ### [Set-OMEConfiguration](Set-OMEConfiguration.md)
 

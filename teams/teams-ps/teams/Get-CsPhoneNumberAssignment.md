@@ -35,16 +35,18 @@ Returned results are sorted by TelephoneNumber in ascending order.
 
 ### Example 1
 ```powershell
-Get-CsPhoneNumberAssignment -TelephoneNumber +12065551234
+Get-CsPhoneNumberAssignment -TelephoneNumber +14025551234
 ```
 ```output
-TelephoneNumber         : +12065551234
+TelephoneNumber         : +14025551234
 NumberType              : CallingPlan
 ActivationState         : Activated
 AssignedPstnTargetId    : dc13d97b-7897-494e-bc28-6b469bf7a70e
 Capability              : {UserAssignment}
+City                    : Omaha
 CivicAddressId          : 703b30e5-dbdd-4132-9809-4c6160a6acc7
 IsoCountryCode          : US
+IsoSubdivision          : Nebraska
 LocationId              : 407c17ae-8c41-431e-894a-38787c682f68
 LocationUpdateSupported : True
 PortInOrderStatus       : 
@@ -52,7 +54,7 @@ PstnAssignmentStatus    : UserAssigned
 PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
 PstnPartnerName         : Microsoft
 ```
-This example displays information about the Microsoft Calling Plan subscriber phone number +1 (206) 555-1234. You can see that it is assigned to a user.
+This example displays information about the Microsoft Calling Plan subscriber phone number +1 (402) 555-1234. You can see that it is assigned to a user.
 
 ### Example 2
 ```powershell
@@ -64,8 +66,10 @@ NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
 Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    : 
 CivicAddressId          : 00000000-0000-0000-0000-000000000000
 IsoCountryCode          : 
+IsoSubdivision          : 
 LocationId              : 00000000-0000-0000-0000-000000000000
 LocationUpdateSupported : True
 PortInOrderStatus       : 
@@ -367,16 +371,21 @@ The ID of the object the phone number is assigned to.
 ### Capability
 The list of capabilities assigned to the phone number.
 
+### City
+The city where the phone number is located.
+
 ### CivicAddressId
 The ID of the CivicAddress assigned to the phone number.
-
 
 ### IsoCountryCode
 The ISO country code assigned to the phone number.
 
+### IsoSubDivision
+The subdivision within the country assigned to the phone number, for example, the state for US phone numbers.
+
+
 ### LocationId
 The ID of the Location assigned to the phone number.
-
 
 ### LocationUpdateSupported
 Boolean stating if updating of the location assigned to the phone number is allowed.
