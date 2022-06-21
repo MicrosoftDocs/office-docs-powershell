@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-dataclassification
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Test-DataClassification
 schema: 2.0.0
 author: chrisda
@@ -59,7 +59,7 @@ You can specify multiple values separated by commas.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ This parameter is available only in the cloud-based service.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ The TestTextExtractionResults parameter specifies the extracted text from the Te
 Type: TestTextExtractionResult[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ The TextToClassify parameter specifies the text string for which classification 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -141,11 +141,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

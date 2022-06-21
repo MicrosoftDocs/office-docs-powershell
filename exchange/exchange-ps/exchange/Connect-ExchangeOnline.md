@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell V2 module. For m
 
 Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
 
-To connect to other PowerShell environments (for example, Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
+To connect to other PowerShell environments (for example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -663,11 +663,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

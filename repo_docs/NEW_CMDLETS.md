@@ -47,7 +47,7 @@ You probably know how to do this already, but the available workloads and connec
 
 - Exchange:
   - Exchange Online: [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
-  - Security & Compliance Center: [Connect to Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell)
+  - Security & Compliance: [Connect to Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell)
   - Exchange Online Protection: [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-protection-powershell)
   - Exchange Server: [Connect to Exchange servers using remote PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-servers-using-remote-powershell)
 

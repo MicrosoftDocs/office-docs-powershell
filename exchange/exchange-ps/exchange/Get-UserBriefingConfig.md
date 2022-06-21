@@ -79,11 +79,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

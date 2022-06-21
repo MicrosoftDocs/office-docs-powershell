@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-appretentioncompliancepolicy
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Get-AppRetentionCompliancePolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-AppRetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-AppRetentionCompliancePolicy to view app retention compliance policies. App retention & labeling policies target new ways to scope and manage policies.
 
@@ -30,7 +30,7 @@ Get-AppRetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
 ## DESCRIPTION
 \*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Yammer chats, and Yammer community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ The Identity parameter specifies the app retention compliance policy that you wa
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -77,7 +77,7 @@ The DistributionDetail switch returns detailed policy distribution information i
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ To see the RetentionRuleTypes property, you need to pipe the command to a format
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -109,11 +109,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

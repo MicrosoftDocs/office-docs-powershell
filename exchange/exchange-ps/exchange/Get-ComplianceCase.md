@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancecase
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Get-ComplianceCase
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-ComplianceCase
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft Purview compliance portal. See the CaseType parameter for a list of these case types.
 
@@ -30,7 +30,7 @@ Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -74,7 +74,7 @@ The Identity parameter specifies the compliance case that you want to view. You 
 Type: ComplianceCaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 1
@@ -92,7 +92,7 @@ The CaseType parameter specifies the type of compliance case that you want to vi
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Microsoft Purview compliance portal, Data investigation cases are displayed on the **Data investigations** page.
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Microsoft Purview compliance portal, DSR cases are displayed under **Data privacy** \> **Data subject requests**.
 - eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. In the Microsoft Purview compliance portal, eDiscovery Standard cases are displayed under **eDiscovery** \> **Standard**. This is the default value.
-- InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview compliance portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on a risk alert.
+- InsiderRisk: Insider risk cases are used to manage insider risk management cases. In the Microsoft Purview compliance portal, insider risk cases are displayed under **Insider risk management** \> **Cases**. Typically, insider risk management cases are manually created in the Microsoft Purview compliance portal to further investigate activity based on a risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
 - SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft Purview compliance portal, communication compliance policies are displayed under **Communication compliance** \> **Policies**.
 
@@ -100,7 +100,7 @@ The CaseType parameter specifies the type of compliance case that you want to vi
 Type: ComplianceCaseType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -128,13 +128,13 @@ Accept wildcard characters: False
 ### -RecentOnly
 The RecentOnly switch returns a list of the most recently modified cases of the specified case type. You don't need to specify a value with this switch.
 
-This switch is used to display data in the "Recent cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
+This switch is used to display data in the "Recent cases" widget in the Microsoft Purview compliance portal for some features that use compliance case objects.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ The RoleGroup parameter returns a list of compliance cases that the specified ro
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -164,11 +164,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

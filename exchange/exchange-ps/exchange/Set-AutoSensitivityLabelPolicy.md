@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-autosensitivitylabelpolicy
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Set-AutoSensitivityLabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-AutoSensitivityLabelPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-AutoSensitivityLabelPolicy cmdlet to modify auto-labeling policies in your organization.
 
@@ -75,7 +75,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -99,7 +99,7 @@ The Identity parameter specifies the auto-labeling policy that you want to modif
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -115,7 +115,7 @@ This AddExchangeLocation parameter specifies new Exchange locations to be added 
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ The ApplySensitivityLabel parameter selects which label to be used for the polic
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Identity, TeamLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ The Enabled parameter enables or disables the policy. Valid values are:
 Type: Boolean
 Parameter Sets: Identity, TeamLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The ExchangeSender parameter specifies the sender list in Exchange for which the
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ The ExchangeSenderException parameter specifies the sender list in Exchange for 
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the autolabeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to include in the autolabeling policy. You identify the group by its email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -311,7 +311,7 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the autolabeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to exclude from the autolabeling policy. You identify the group by its email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -331,7 +331,7 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -351,7 +351,7 @@ To clear an existing email address, use the value $null.
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -369,7 +369,7 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -391,7 +391,7 @@ Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enable, TestWithNotifications, TestWithoutNotifications, Disable, PendingDeletion
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -412,7 +412,7 @@ This parameter works only on Exchange locations.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -428,7 +428,7 @@ Accept wildcard characters: False
 Type: PswsHashtable
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -452,7 +452,7 @@ If you modify the priority value of a policy, the position of the policy in the 
 Type: System.Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -468,7 +468,7 @@ The RemoveExchangeLocation parameter removes locations on Exchange from the poli
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -486,7 +486,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -504,7 +504,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -522,7 +522,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -540,7 +540,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -560,7 +560,7 @@ Locations whose initial distributions succeeded aren't included in the retry. Po
 Type: SwitchParameter
 Parameter Sets: RetryDistributionParameterSet
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -579,7 +579,7 @@ Use the StartSimulation parameter to restart the simulation for updated results.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
@@ -588,13 +588,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -608,11 +608,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

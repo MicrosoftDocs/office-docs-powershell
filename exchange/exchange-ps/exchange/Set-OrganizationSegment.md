@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-organizationsegment
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: Set-OrganizationSegment
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-OrganizationSegment
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-OrganizationSegment cmdlet to modify organization segments in the Microsoft Purview compliance portal. Organization Segments are not in effect until you [apply information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
 
@@ -29,7 +29,7 @@ Set-OrganizationSegment [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 Segments are defined by using certain [attributes](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-attributes) in Azure Active Directory.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ The Identity parameter specifies the organization segment that you want to modif
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -76,7 +76,7 @@ Use the same property for all of your segments, and verify that your segments do
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -90,11 +90,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

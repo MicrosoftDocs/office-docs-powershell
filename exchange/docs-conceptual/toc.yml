@@ -55,16 +55,16 @@
           href: v1-module-mfa-connect-to-exo-powershell.md
         - name: Basic auth - Connect to Exchange Online PowerShell
           href: basic-auth-connect-to-exo-powershell.md
-    - name: Security & Compliance Center PowerShell
+    - name: Security & Compliance PowerShell
       href: scc-powershell.md
       items:
-        - name: Connect to Security & Compliance Center PowerShell - modern auth and MFA
+        - name: Connect to Security & Compliance PowerShell - modern auth and MFA
           href: connect-to-scc-powershell.md
         - name: App-only authentication for unattended scripts
           href: app-only-auth-powershell-v2.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
-        - name: V1 module - Connect to Security & Compliance Center PowerShell
+        - name: V1 module - Connect to Security & Compliance PowerShell
           href: v1-module-mfa-connect-to-scc-powershell.md
         - name: Basic auth - Connect to Exchange Online Protection PowerShell
           href: basic-auth-connect-to-scc-powershell.md

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-dlpcompliancepolicy
-applicable: Security & Compliance Center
+applicable: Security & Compliance
 title: New-DlpCompliancePolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # New-DlpCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-DlpCompliancePolicy cmdlet to create data loss prevention (DLP) policies in the Microsoft Purview compliance portal. DLP policies contain DLP rules that identify, monitor, and protect sensitive information.
 
@@ -54,7 +54,7 @@ New-DlpCompliancePolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -89,7 +89,7 @@ The Name parameter specifies the unique name of the DLP policy. If the value con
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -105,7 +105,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ Don't use this parameter. Use the ExchangeSenderMemberOf and ExchangeSenderMembe
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the DLP policy. You identify the group by its email address. You can use the value All to include all user groups.
+The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to include in the DLP policy. You identify the group by its email address. You can use the value All to include all user groups.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -240,7 +240,7 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the DLP policy when you use the value All for the ExchangeSenderMemberOf parameter. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to exclude from the DLP policy when you use the value All for the ExchangeSenderMemberOf parameter. You identify the group by its email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -260,7 +260,7 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -278,7 +278,7 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -299,7 +299,7 @@ The Mode parameter specifies the action and notification level of the DLP policy
 Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -315,7 +315,7 @@ Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ Don't use this parameter. Use the ExceptIfOneDriveSharedBy and ExceptIfOneDriveS
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +347,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -365,7 +365,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -385,7 +385,7 @@ For more information about the DLP on-premises scanner, see [Learn about the dat
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -405,7 +405,7 @@ For more information about the DLP on-premises scanner, see [Learn about the dat
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -423,7 +423,7 @@ For more information about DLP policy templates, see [What the DLP policy templa
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -449,7 +449,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -473,7 +473,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -497,7 +497,7 @@ If you modify the priority value of a policy, the position of the policy in the 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -517,7 +517,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -537,7 +537,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -555,7 +555,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -573,7 +573,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -595,7 +595,7 @@ For more information about DLP for non-Microsoft cloud apps, see [Use data loss 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -617,7 +617,7 @@ For more information about DLP for non-Microsoft cloud apps, see [Use data loss 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -627,13 +627,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -647,11 +647,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

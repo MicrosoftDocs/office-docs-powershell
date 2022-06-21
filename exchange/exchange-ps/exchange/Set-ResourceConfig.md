@@ -44,8 +44,7 @@ This example adds the custom resource properties Room/Whiteboard and Equipment/V
 
 ### Example 2
 ```powershell
-Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"
-Remove="Equipment/Laptop"}
+Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
 ```
 
 This example adds the custom resource property Room/TV and removes Equipment/Laptop without affecting other custom resource properties that are already configured.
@@ -130,12 +129,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

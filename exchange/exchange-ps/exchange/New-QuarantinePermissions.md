@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 $NoAccess = New-QuarantinePermissions
 ```
 
-This example creates the same permissions that are used by the No access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$NoAccess`.
+This example creates the same permissions that are used by the No access permissions group in quarantine tags in the Security & Compliance. The permissions object is stored in the variable named `$NoAccess`.
 
 In the same Windows PowerShell session, you can use `$NoAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
 
@@ -53,7 +53,7 @@ In the same Windows PowerShell session, you can use `$NoAccess` for the _EndUser
 $LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
 ```
 
-This example creates the same permissions that are used by the Limited access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$LimitedAccess`.
+This example creates the same permissions that are used by the Limited access permissions group in quarantine tags in the Security & Compliance. The permissions object is stored in the variable named `$LimitedAccess`.
 
 In the same Windows PowerShell session, you can use `$LimitedAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
 
@@ -62,7 +62,7 @@ In the same Windows PowerShell session, you can use `$LimitedAccess` for the _En
 $FullAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
 ```
 
-This example creates the same permissions that are used by the Full access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$FullAccess`.
+This example creates the same permissions that are used by the Full access permissions group in quarantine tags in the Security & Compliance. The permissions object is stored in the variable named `$FullAccess`.
 
 In the same Windows PowerShell session, you can use `$FullAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
 
@@ -214,11 +214,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
