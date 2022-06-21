@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessageheader
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-QuarantineMessageHeader
 schema: 2.0.0
 author: chrisda
@@ -59,7 +59,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -75,7 +75,7 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpsidetectionsreport
-applicable: Exchange Online, Security & Compliance Center
+applicable: Exchange Online, Security & Compliance
 title: Get-DlpSiDetectionsReport
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-DlpSiDetectionsReport
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Microsoft Purview compliance portal for the last 90 days.
 
@@ -36,7 +36,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - ProtectionStatus: Values are Unprotected (the sensitive information type is not defined in any DLP policy) or Protected (the sensitive information type is defined in a DLP policy).
 - DlpComplianceRuleIds: The GUID value of the DLP compliance rule that detected the sensitive information type (for ProtectionStatus values of Protected). To match the GUID value to the name of the DLP compliance rule, replace `<GUID>` with the GUID value and run this command: `Get-DlpComplianceRule -Identity <GUID>`.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -65,7 +65,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ You can enter multiple values separated by commas: `"Value1","Value2",..."ValueN
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named

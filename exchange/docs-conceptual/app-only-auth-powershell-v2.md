@@ -23,13 +23,13 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 > The features and procedures described in this article require the following versions of the EXO V2 module:
 >
 > - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
-> - **Security & Compliance Center PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
+> - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
 >
 > For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 >
 > You can't use the procedures in this article to modify Microsoft 365 Groups ([Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)). To use Microsoft Graph instead, see [Update group](/graph/api/group-update).
 
-Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance Center PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
 Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
 
@@ -46,7 +46,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
     Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  - **Security & Compliance Center PowerShell**:
+  - **Security & Compliance PowerShell**:
 
      ```powershell
     Connect-IPPSSession -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
@@ -60,7 +60,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
     Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  - **Security & Compliance Center PowerShell**:
+  - **Security & Compliance PowerShell**:
 
     ```powershell
     Connect-IPPSSession -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
@@ -76,7 +76,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
     Connect-ExchangeOnline -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  - **Security & Compliance Center PowerShell**:
+  - **Security & Compliance PowerShell**:
 
     ```powershell
     Connect-IPPSSession -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
@@ -267,7 +267,7 @@ After you register the certificate with your application, you can use the privat
 
 Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
 
-|Role|Exchange Online PowerShell|Security & Compliance Center PowerShell|
+|Role|Exchange Online PowerShell|Security & Compliance PowerShell|
 |---|:---:|:---:|
 |Compliance Administrator|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
 |Exchange Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)||
@@ -287,7 +287,7 @@ The Security Administrator role does not have the necessary permissions for thos
 For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](/azure/active-directory/roles/manage-roles-portal).
 
 > [!NOTE]
-> The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance Center PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
+> The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
 
 1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
 
@@ -303,9 +303,9 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![Find and select a supported Exchange Online PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-   - **Security & Compliance Center PowerShell**:
+   - **Security & Compliance PowerShell**:
 
-     ![Find and select a supported Security & Compliance Center PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
+     ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
 4. On the **Assignments** page that opens, click **Add assignments**.
 
@@ -313,9 +313,9 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
-   - **Security & Compliance Center PowerShell**:
+   - **Security & Compliance PowerShell**:
 
-     ![Select Add assignments on the role assignments page for Security & Compliance Center PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
+     ![Select Add assignments on the role assignments page for Security & Compliance PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
 
 5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
@@ -329,6 +329,6 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![The role assignments page after to added the app to the role for Exchange Online PowerShell.](media/exo-app-only-auth-app-assigned-to-role.png)
 
-   - **Security & Compliance Center PowerShell**:
+   - **Security & Compliance PowerShell**:
 
-     ![The role assignments page after to added the app to the role for Security & Compliance Center PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
+     ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)

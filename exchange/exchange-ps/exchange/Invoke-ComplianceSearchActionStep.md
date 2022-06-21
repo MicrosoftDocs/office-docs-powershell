@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0
 author: chrisda
@@ -46,7 +46,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: 1
@@ -62,7 +62,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: PSObject
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
