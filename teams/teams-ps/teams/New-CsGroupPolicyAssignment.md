@@ -35,7 +35,7 @@ TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies),
 > - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
 > - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment. 
 > - Get-CsOnlineUser only shows *direct* assignments of policy. It does not show the effect of group policy assignments. To view a specific user's effective policy, use `Get-CsUserPolicyAssignment`. This cmdlet shows whether the effective policy is from a direct assignment or from a group, as well as the ranked order of each group policy assignment in the case where a user is a member of more than 1 group with a group policy assignment of the same policy type. For example, to view all TeamsMeetingPolicy assignments for a given user, $user, run the following powershell cmdlet:  `Get-CsUserPolicyAssignment -Identity $user -PolicyType TeamsMeetingPolicy|select -ExpandProperty PolicySource`.  For details, see [Get-CsUserPolicyAssignment](Get-CsUserPolicyAssignment.md).
-> - Group policy assignment is currently not available in Microsoft 365 Government GCC High or DoD deployments.
+> - Group policy assignment is currently not available in the Microsoft 365 DoD deployment.
 
 
 ## EXAMPLES
