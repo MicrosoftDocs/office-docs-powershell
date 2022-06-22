@@ -54,6 +54,10 @@ This example creates a default sharing policy, which is applied to all mailboxes
 ### -Domains
 The Domains parameter specifies the domains to which this sharing policy applies and the sharing policy actions. Values for this parameter take the format: 'Domain: SharingPolicyAction'.
 
+There are two special domain values:
+- "*" (asterisk a.k.a. 'Sharing with all domains') - used for sharing with external federated organizations such as another Office 365 or on-premises Exchange organization
+- "Anonymous" - used for sharing with external non-federated organizations and individuals with internet access
+
 The following sharing policy action values can be used:
 
 - CalendarSharingFreeBusySimple: Share free/busy hours only
