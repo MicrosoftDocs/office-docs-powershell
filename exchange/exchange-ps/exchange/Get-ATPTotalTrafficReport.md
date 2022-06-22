@@ -47,11 +47,11 @@ For the reporting period you specify, the cmdlet returns the following informati
 - AggregateBy
 - Index
 
-TotalMissedSafeAttachmentCount is when the recipient/Tenant is not included in a Safe Attachments policy, but a message with a detected attachment was removed by Zap after delivery.
+TotalMissedSafeAttachmentCount is when the recipient or tenant is not included in a Safe Attachments policy, but a message with a detected attachment was removed by zero-hour auto purge (ZAP) after delivery.
 
-TotalMissedSafeLinkCount is when the recipient/Tenant is not included in a Safe Links policy, but a message with a detected URL was removed by Zap after delivery.
+TotalMissedSafeLinkCount is when the recipient or tenant is not included in a Safe Links policy, but a message with a detected URL was removed by ZAP after delivery.
 
-in the case the tenant had safe attachment /safe links policy, the message would have been blocked and not delivered at the first instance 
+If the tenant had Safe Attachments or Safe Links policies, the messages would have been blocked and not delivered. 
 
 By default, the command returns data for the last 14 days. Data for the last 90 days is available.
 
