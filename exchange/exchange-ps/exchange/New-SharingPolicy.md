@@ -52,22 +52,22 @@ This example creates a default sharing policy, which is applied to all mailboxes
 ## PARAMETERS
 
 ### -Domains
-The Domains parameter specifies the domains to which this sharing policy applies and the sharing policy actions. Values for this parameter take the format: 'Domain: SharingPolicyAction'.
+The Domains parameter specifies the domains to which this sharing policy applies and the sharing policy actions. Values for this parameter use the syntax `'Domain: SharingPolicyAction'`.
 
-There are two special domain values:
-- "*" (asterisk a.k.a. 'Sharing with all domains') - used for sharing with external federated organizations such as another Office 365 or on-premises Exchange organization
-- "Anonymous" - used for sharing with external non-federated organizations and individuals with internet access
+You can use the following values for `Domain`:
 
-The following sharing policy action values can be used:
+- A domain: For example, `mail.contoso.com`. A domain doesn't include subdomains. You must configure each subdomain separately.
+- \*: Share with external federated organizations. For example, another Microsoft 365 organization or an on-premises Exchange organization.
+- Anonymous: Share with external, non-federated organizations and individuals with internet access.
+
+You can use the following values for `SharingPolicyAction`:
 
 - CalendarSharingFreeBusySimple: Share free/busy hours only
 - CalendarSharingFreeBusyDetail: Share free/busy hours, subject and location
 - CalendarSharingFreeBusyReviewer: Share free/busy hours, subject, location and the body of the message or calendar item
 - ContactsSharing: Share contacts only
 
-Separate multiple domains with a comma, for example, 'mail.contoso.com: CalendarSharingFreeBusySimple', 'mail.fabrikam.com: CalendarSharingFreeBusyDetail, ContactsSharing'.
-
-A domain doesn't include subdomains. You must configure each subdomain separately.
+You can specify multiple `'Domain: SharingPolicyAction'` values separated by commas, and you can specify multiple `SharingPolicyAction` values for the same domain separated by commas. For example, `'mail.contoso.com: CalendarSharingFreeBusySimple', 'mail.fabrikam.com: CalendarSharingFreeBusyDetail, ContactsSharing'`.
 
 ```yaml
 Type: MultiValuedProperty
