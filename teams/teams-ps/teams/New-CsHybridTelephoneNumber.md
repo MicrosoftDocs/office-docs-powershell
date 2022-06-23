@@ -13,7 +13,7 @@ schema: 2.0.0
 # New-CsHybridTelephoneNumber
 
 ## SYNOPSIS
-This cmdlet adds a hybrid telephone number.
+This cmdlet adds a hybrid telephone number to the tenant.
 
 ## SYNTAX
 
@@ -23,13 +23,13 @@ New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] [<CommonParameter
 ```
 
 ## DESCRIPTION
-This cmdlet adds a hybrid telephone number that can be used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
+This cmdlet adds a hybrid telephone number to the tenant that can be used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-CsHybridTelephoneNumber -TelephoneNumber 14025551234
+New-CsHybridTelephoneNumber -TelephoneNumber +14025551234
 ```
 This example adds the hybrid phone number +1 (402) 555-1234.
 
@@ -37,7 +37,7 @@ This example adds the hybrid phone number +1 (402) 555-1234.
 ## PARAMETERS
 
 ### -TelephoneNumber
-The telephone number to add. The number should be specified without a prefixed "+". The phone number can not have "tel:" prefixed.
+The telephone number to add. The number should be specified with a prefixed "+". The phone number can not have "tel:" prefixed.
 
 ```yaml
 Type: System.String
