@@ -36,9 +36,9 @@ Get-ATPTotalTrafficReport
 ```
 
 ## DESCRIPTION
-For the reporting period and organization you specify, the cmdlet returns the following information:
+For the reporting period you specify, the cmdlet returns the following information:
 
-- EventType
+- EventType: TotalBulkCount, TotalMalwareCount, TotalMissedSafeAttachmentCount, TotalMissedSafeLinkCount, TotalPhishCount, TotalSafeAttachmentCount, TotalSafeLinkCount, TotalSpamCount
 - Organization
 - Date
 - MessageCount
@@ -46,6 +46,10 @@ For the reporting period and organization you specify, the cmdlet returns the fo
 - EndDate
 - AggregateBy
 - Index
+
+TotalMissedSafeAttachmentCount is when the recipient is not included in a Safe Attachments policy, but a message with a detected attachment was removed after delivery.
+
+TotalMissedSafeLinkCount is when the recipient is not included in a Safe Links policy, but a message with a detected URL was removed after delivery.
 
 By default, the command returns data for the last 14 days. Data for the last 90 days is available.
 
