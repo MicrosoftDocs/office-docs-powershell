@@ -139,20 +139,22 @@ Accept wildcard characters: False
 ```
 
 ### -Domains
-The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format `Domain:SharingPolicyAction`.
+The Domains parameter specifies the domains and the associated sharing options for those domains in the sharing policy. Values for this parameter use the basic syntax: `'Domain: SharingPolicyAction'`.
 
-The following SharingPolicyAction values can be used:
+You can use the following values for `Domain`:
 
-- CalendarSharingFreeBusySimple: Share free/busy hours only.
-- CalendarSharingFreeBusyDetail: Share free/busy hours, subject, and location.
-- CalendarSharingFreeBusyReviewer: Share free/busy hours, subject, location, and the body of the message or calendar item.
-- ContactsSharing: Share contacts only.
+- A domain: For example, `mail.contoso.com`. A domain doesn't include subdomains. You must configure each subdomain separately.
+- \*: Share with external federated organizations. For example, another Microsoft 365 organization or an on-premises Exchange organization.
+- Anonymous: Share with external, non-federated organizations and individuals with internet access.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+You can use the following values for `SharingPolicyAction`:
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+- CalendarSharingFreeBusySimple: Share free/busy hours only
+- CalendarSharingFreeBusyDetail: Share free/busy hours, subject and location
+- CalendarSharingFreeBusyReviewer: Share free/busy hours, subject, location and the body of the message or calendar item
+- ContactsSharing: Share contacts only
 
-A domain doesn't include subdomains. You need to configure each subdomain separately.
+You can specify multiple `'Domain: SharingPolicyAction'` values separated by commas, and you can specify multiple `SharingPolicyAction` values for the same domain separated by commas. For example, `'mail.contoso.com: CalendarSharingFreeBusySimple', 'mail.fabrikam.com: CalendarSharingFreeBusyDetail, ContactsSharing'`.
 
 ```yaml
 Type: MultiValuedProperty

@@ -52,7 +52,7 @@ This example creates a default sharing policy, which is applied to all mailboxes
 ## PARAMETERS
 
 ### -Domains
-The Domains parameter specifies the domains to which this sharing policy applies and the sharing policy actions. Values for this parameter use the syntax `'Domain: SharingPolicyAction'`.
+The Domains parameter specifies the domains and the associated sharing options for those domains in the sharing policy. Values for this parameter use the basic syntax: `'Domain: SharingPolicyAction'`.
 
 You can use the following values for `Domain`:
 
