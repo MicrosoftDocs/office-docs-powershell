@@ -79,6 +79,8 @@ Accept wildcard characters: False
 The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
 
 - Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
+- ToneStar - Corresponds to DTMF tone *.
+- TonePound - Corresponds to DTMF tone #.
 - Automatic - The action is executed without user response.
 
 
