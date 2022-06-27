@@ -150,7 +150,7 @@ First, a List is created and domains are added to it, then use the Remove method
 Set-CsTenantFederationConfiguration -AllowTeamsConsumer $True -AllowTeamsConsumerInbound $False
 ```
 
-The command shown in Example 7 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
+The command shown in Example 9 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
 
 ## PARAMETERS
 
