@@ -41,7 +41,7 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <Hi
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 50000 results or lines.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 100000 results or lines.
 
 If you specify a distribution group, all messages might not be returned in the results. To ensure that all messages are returned, specify the individual recipient.
 
