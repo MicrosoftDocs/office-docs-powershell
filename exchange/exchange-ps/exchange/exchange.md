@@ -81,6 +81,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ContentMalwareMdoDetailReport](Get-ContentMalwareMdoDetailReport.md)
 
+### [Get-EmailTenantSettings](Get-EmailTenantSettings.md)
+
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
@@ -130,6 +132,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-AntiPhishRule](Set-AntiPhishRule.md)
 
 ### [Set-AtpPolicyForO365](Set-AtpPolicyForO365.md)
+
+### [Set-EmailTenantSettings](Set-EmailTenantSettings.md)
 
 ### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
 
