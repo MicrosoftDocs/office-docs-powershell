@@ -45,7 +45,7 @@ This example enables priority account protection in the organization.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the settings object that you want to modify. The only settings object in the organization is named `<domain>\Default` (for example, `contoso.onmicrosoft.com\Default`).
+The Identity parameter specifies the settings object that you want to modify. The only settings object in the organization is named Default.
 
 ```yaml
 Type: EmailTenantSettingsIdParameter

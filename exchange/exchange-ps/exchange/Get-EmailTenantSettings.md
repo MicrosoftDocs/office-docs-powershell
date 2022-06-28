@@ -39,7 +39,7 @@ This example shows whether priority account protection is enabled or disabled in
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the settings object that you want to view. The only settings object in the organization is named `<domain>\Default` (for example, `contoso.onmicrosoft.com\Default`).
+The Identity parameter specifies the settings object that you want to view. The only settings object in the organization is named Default.
 
 ```yaml
 Type: EmailTenantSettingsIdParameter
