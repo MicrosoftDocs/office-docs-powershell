@@ -1214,6 +1214,8 @@ The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disa
 - To enable this setting, you don't need to specify a value with this switch.
 - To disable this setting, use this exact syntax: `-UnifiedGroupWelcomeMessageEnabled:$false`.
 
+This setting applies only to the Microsoft 365 Group. It doesn't apply to other connected products (for example, Teams or Yammer).
+
 This setting is enabled by default.
 
 ```yaml
