@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.0.0 or later.
+The cmdlet is available in Teams PowerShell module 4.5.0 or later.
 
 The cmdlet is only available in GCC High and DoD cloud instances.
 
