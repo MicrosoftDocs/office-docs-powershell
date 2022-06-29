@@ -129,7 +129,7 @@ The AdvancedSettings parameter enables specific features and capabilities for a 
 
 Specify this parameter with the identity (name or GUID) of the sensitivity label, with key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
 
-Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+Many of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
 
 Supported settings for built-in labeling:
 
@@ -138,6 +138,10 @@ Supported settings for built-in labeling:
 - **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
 - **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `Set-Label -Identity General -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
+
+**SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `Set-Label -Identity "Confidential" -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+ 
+**SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `Set-Label -Identity "Confidential" -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
 
 ```yaml
 Type: PswsHashtable
