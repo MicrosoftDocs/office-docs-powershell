@@ -132,8 +132,6 @@ Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Add=$list}
 Example 7 shows how you can add domains to the existing Allowed Domains using a List object.
 First, a List is created and domains are added to it, then use the Add method in the AllowedDomainsAsAList parameter to add the domains to the existing allowed domains list. When this command completes, the domains in the list will be added to any domains already on the AllowedDomains list.
 
-**Note**: This is supported from Teams PowerShell Module version 4.5.0 onwards.
-
 ### -------------------------- Example 8 --------------------------
 ```
 $list = New-Object Collections.Generic.List[String]
@@ -144,8 +142,6 @@ Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Remove=$list}
 
 Example 8 shows how you can remove domains from the existing Allowed Domains using a List object.
 First, a List is created and domains are added to it, then use the Remove method in the AllowedDomainsAsAList parameter to remove the domains from the existing allowed domains list. When this command completes, the domains in the list will be removed from the AllowedDomains list.
-
-**Note**: This is supported from Teams PowerShell Module version 4.5.0 onwards.
 
 ### -------------------------- Example 9 --------------------------
 ```
