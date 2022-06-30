@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsTeamsTranslationRule
 
 ## SYNOPSIS
-Cmdlet to get an existing number manipulation rule (or list of rules).
+Cmdlet to get an existing number manipulation or translation rule (or list of rules).
 
 ## SYNTAX
 
@@ -105,4 +105,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 [Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
 
 [Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)
-
