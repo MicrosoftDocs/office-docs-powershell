@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/skype/test-csteamstranslationrule
 applicable: Microsoft Teams
 author: jenstrier
