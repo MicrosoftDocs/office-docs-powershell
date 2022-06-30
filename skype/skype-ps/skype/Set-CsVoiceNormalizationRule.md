@@ -96,7 +96,6 @@ Finally, we pass the variable back to the NormalizationRules parameter of the `S
 
 ### -------------------------- Example 5 --------------------------
 ```
-# NOTE: This Example applies to Teams only
 $DP = Get-CsTenantDialPlan -Identity Global
 $Rule = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
 $DP.NormalizationRules.Remove($Rule)
