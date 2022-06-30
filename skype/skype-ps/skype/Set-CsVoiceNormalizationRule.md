@@ -67,32 +67,48 @@ For example, if the existing pattern matched any four-digit number and the numbe
 
 ### -------------------------- Example 3 --------------------------
 ```
+# NOTE: This Example applies to Skype for Business Server only
+$a = Get-CsVoiceNormalizationRule -Identity global/RedmondFourDigit
+$a.name = "RedmondRule"
+Set-CsVoiceNormalizationRule -Instance $a
+```
+
+Example 3 applies to Skype For Business Server only and changes the name of the normalization rule.
+Keep in mind that changing the name also changes the name portion of the Identity.
+The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name we first call the `Get-CsVoiceNormalizationRule` cmdlet to retrieve the rule with the Identity global/RedmondFourDigit and assign the returned object to the variable $a.
+We then assign the string RedmondRule to the Name property of the object.
+Next, we pass the variable to the Instance parameter of the `Set-CsVoiceNormalizationRule` cmdlet to make the change permanent.
+
+
+### -------------------------- Example 4 --------------------------
+```
+# NOTE: This Example applies to Teams only
 $DP = Get-CsTenantDialPlan -Identity Global
 $Rule = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
 $Rule.Name = "RedmondRule"
 Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
 ```
 
-Example 3 changes the name of the normalization rule.
+Example 4 applies to Teams only and changes the name of the normalization rule.
 Keep in mind that changing the name also changes the name portion of the Identity.
 The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name, we first call the `Set-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign the returned object to the variable $Rule.
 We then assign the string RedmondRule to the Name property of the object.
 Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
 
-### -------------------------- Example 4 --------------------------
+### -------------------------- Example 5 --------------------------
 ```
+# NOTE: This Example applies to Teams only
 $DP = Get-CsTenantDialPlan -Identity Global
 $Rule = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
 $DP.NormalizationRules.Remove($Rule)
 Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
 ```
 
-Example 4 removes a normalization rule.
+Example 5 applies to Teams only and removes a normalization rule.
 We utilize the same functionality as for Example 3 to manipulate the Normalization Rule Object and update it with the `Set-CsTenantDialPlan` cmdlet.
 We first call the `Set-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign it to the variable $Rule. Next, we remove this Object with the Remove Method from $DP.NormalizationRules.
 Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
-
 
 
 ## PARAMETERS
