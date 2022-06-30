@@ -25,7 +25,8 @@ Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] [<CommonParameters>]
 ## DESCRIPTION
 This cmdlet displays information about one or more hybrid telephone numbers used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
 
-Returned results are sorted by TelephoneNumber in ascending order.
+Returned results are sorted by telephone number in ascending order.
+
 
 ## EXAMPLES
 
