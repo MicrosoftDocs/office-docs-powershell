@@ -51,7 +51,7 @@ Id              O365Region SourceType TargetType TelephoneNumber UserId
 14025551234                Hybrid                14025551234
 14025551235                Hybrid                14025551235
 ```
-This example displays information about all hybrid telephone phone numbers in the tenant. Note that O365Region, TargetType and UserId will not be populated.
+This example displays information about all hybrid telephone numbers in the tenant. Note that O365Region, TargetType, and UserId will not be populated.
 
 
 ## PARAMETERS
