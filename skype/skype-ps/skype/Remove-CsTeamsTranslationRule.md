@@ -22,7 +22,7 @@ Remove-CsTeamsTranslationRule [-Identity] <string> [-WhatIf] [-Confirm] [<Common
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to remove an existing number manipulation rule. The rule can be used, for example, in the settings of your SBC (Set-CSOnlinePSTNGateway) to convert a callee or caller number to a desired format before entering or leaving Microsoft Phone System.
+You can use this cmdlet to remove an existing number manipulation rule (or list of rules). The rule can be used, for example, in the settings of your SBC (Set-CsOnlinePSTNGateway) to convert a callee or caller number to a desired format before entering or leaving Microsoft Phone System.
 
 ## EXAMPLES
 
@@ -32,6 +32,13 @@ Remove-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
 This example removes the "AddPlus1" translation rule. As the rule can be used in some places, integrity check is preformed to ensure that the rule is not in use. If the rule is in use an error thrown with specifying which SBC use this rule.
+
+### Example 2
+```powershell
+Get-CsTeamsTranslationRule -Filter 'tst*' | Remove-CsTeamsTranslationRule
+```
+
+This example removes all translation rules with Identifier starting with tst.
 
 ## PARAMETERS
 
