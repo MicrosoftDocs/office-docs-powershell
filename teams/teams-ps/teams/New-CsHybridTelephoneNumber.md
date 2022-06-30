@@ -33,7 +33,6 @@ New-CsHybridTelephoneNumber -TelephoneNumber +14025551234
 ```
 This example adds the hybrid phone number +1 (402) 555-1234.
 
-
 ## PARAMETERS
 
 ### -TelephoneNumber
