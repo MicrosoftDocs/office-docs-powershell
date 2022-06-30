@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsTeamsTranslationRule
 
 ## SYNOPSIS
-Cmdlet to get an existing number manipulation or translation rule (or list of rules).
+Cmdlet to get an existing number manipulation rule (or list of rules).
 
 ## SYNTAX
 
@@ -34,25 +34,24 @@ You can use this cmdlet to get an existing number manipulation rule (or list of 
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsTranslationRule
+Get-CsTeamsTranslationRule
 ```
 
 This command will show all translation rules that exist in the tenant. Identity, Name, Description, Pattern and Translation parameters are listed for each rule.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsTranslationRule -Identity AddPlus1
+Get-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
 This command will show Identity, Name, Description, Pattern and Translation parameters for "AddPlus1" rule
 
 ### Example 3
 ```powershell
-PS C:\> Get-CsTeamsTranslationRule -Filter 'Add*'
+Get-CsTeamsTranslationRule -Filter 'Add*'
 ```
 
 This command will show Identity, Name, Description, Pattern and Translation parameters for all rules with Identity starting with Add.
-
 
 ## PARAMETERS
 
