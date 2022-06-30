@@ -75,7 +75,7 @@ Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
 
 Example 3 changes the name of the normalization rule.
 Keep in mind that changing the name also changes the name portion of the Identity.
-The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name we first call `Set-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the the rule RedmondFourDigit and assign the returned object to the variable $Rule.
+The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name, we first call the `Set-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign the returned object to the variable $Rule.
 We then assign the string RedmondRule to the Name property of the object.
 Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
