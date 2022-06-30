@@ -103,7 +103,7 @@ Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
 ```
 
 Example 5 applies to Teams only and removes a normalization rule.
-We utilize the same functionality as for Example 3 to manipulate the Normalization Rule Object and update it with the `Set-CsTenantDialPlan` cmdlet.
+We utilize the same functionality as for Example 4 to manipulate the Normalization Rule Object and update it with the `Set-CsTenantDialPlan` cmdlet.
 We first call the `Set-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign it to the variable $Rule. Next, we remove this Object with the Remove Method from $DP.NormalizationRules.
 Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
