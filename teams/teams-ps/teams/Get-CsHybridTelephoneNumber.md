@@ -27,7 +27,6 @@ This cmdlet displays information about one or more hybrid telephone numbers used
 
 Returned results are sorted by telephone number in ascending order.
 
-
 ## EXAMPLES
 
 ### Example 1
