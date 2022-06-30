@@ -81,7 +81,6 @@ Next, we pass the variable to the Instance parameter of the `Set-CsVoiceNormaliz
 
 ### -------------------------- Example 4 --------------------------
 ```
-# NOTE: This Example applies to Teams only
 $DP = Get-CsTenantDialPlan -Identity Global
 $Rule = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
 $Rule.Name = "RedmondRule"
