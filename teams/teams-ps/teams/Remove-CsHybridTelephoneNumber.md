@@ -33,7 +33,6 @@ Remove-CsHybridTelephoneNumber -TelephoneNumber 14025551234
 ```
 This example removes the hybrid phone number +1 (402) 555-1234.
 
-
 ## PARAMETERS
 
 ### -TelephoneNumber
