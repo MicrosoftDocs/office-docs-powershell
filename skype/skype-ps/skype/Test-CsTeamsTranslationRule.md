@@ -13,7 +13,7 @@ schema: 2.0.0
 # Test-CsTeamsTranslationRule
 
 ## SYNOPSIS
-This cmdlet tests a phone number against the defined teams translation rules and returns information about the matching rules.
+This cmdlet tests a phone number against the defined number manipulation rules and returns information about the matching rules.
 
 ## SYNTAX
 
@@ -23,10 +23,8 @@ Test-CsTeamsTranslationRule [-PhoneNumber <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet tests a phone number against the defined teams translation rules and return information about the matching rules. If not matching rules were found,
+This cmdlet tests a phone number against the defined number manipulation rules and return information about the matching rules. If not matching rules were found,
 the cmdlet returns the message Number translation rule not found.
-
-Returned results are sorted by TelephoneNumber in ascending order.
 
 ## EXAMPLES
 
@@ -39,8 +37,7 @@ Identity        Pattern PhoneNumberTranslated Translation
 --------        ------- --------------------- -----------
 rule1           ^1234$  4321                  4321
 ```
-This example displays information about the translation rule matching the phone number 1234.
-
+This example displays information about the manipulation rule matching the phone number 1234.
 
 ## PARAMETERS
 
@@ -51,7 +48,6 @@ The phone number to test.
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams
 
 Required: True
 Default value: None
