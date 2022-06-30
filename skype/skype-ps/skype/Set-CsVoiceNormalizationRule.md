@@ -67,7 +67,6 @@ For example, if the existing pattern matched any four-digit number and the numbe
 
 ### -------------------------- Example 3 --------------------------
 ```
-# NOTE: This Example applies to Skype for Business Server only
 $a = Get-CsVoiceNormalizationRule -Identity global/RedmondFourDigit
 $a.name = "RedmondRule"
 Set-CsVoiceNormalizationRule -Instance $a
