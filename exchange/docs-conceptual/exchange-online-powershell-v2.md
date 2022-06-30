@@ -189,6 +189,9 @@ After you install PowerShell 7, do the following steps:
 
 Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exo-v2-module) and [install the EXO V2 module](#install-the-exo-v2-module).
 
+> [!NOTE]
+> You configure HTTP proxy settings in Linux using the environment variables `http_proxy`, `https_proxy`, and `no_proxy`. The **Connect-ExchangeOnline** parameter doesn't recognize these settings, and the _PSSessionOption_ parameter isn't available on the **Connect-ExchangeOnline** cmdlet in PowerShell in Linux. To connect to Exchange Online PowerShell from a network that's behind a proxy server, use a Windows client.
+
 #### Windows
 
 All versions of the EXO V2 module are supported in Windows PowerShell 5.1. PowerShell 7 on Windows requires version 2.0.4 or later of the EXO V2 module.
