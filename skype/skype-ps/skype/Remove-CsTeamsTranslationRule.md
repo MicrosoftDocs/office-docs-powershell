@@ -49,6 +49,7 @@ Identifier of the rule. This parameter is required.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: True
 Position: 1
 Default value: None
@@ -63,6 +64,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +79,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
