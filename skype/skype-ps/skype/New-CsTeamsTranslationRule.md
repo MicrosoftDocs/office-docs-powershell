@@ -91,6 +91,7 @@ A friendly description of the normalization rule.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -105,6 +106,7 @@ A regular expression that caller or callee number must match in order for this r
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +121,7 @@ The regular expression pattern that will be applied to the number to convert it.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +136,7 @@ The name of the rule.
 Type: String
 Parameter Sets: (ParentAndRelativeKey)
 Aliases:
+
 Required: True
 Position: Named
 Default value: None
@@ -147,6 +151,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +166,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -186,4 +192,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 [Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
 
 [Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)
-
