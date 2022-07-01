@@ -43,6 +43,7 @@ Identifier of the rule. This parameter is required and later used to assign the 
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: 1
 Default value: None
@@ -57,6 +58,7 @@ A friendly description of the normalization rule.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +74,7 @@ A regular expression that caller or callee number must match in order for this r
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +89,7 @@ The regular expression pattern that will be applied to the number to convert it.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -100,6 +104,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +119,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
