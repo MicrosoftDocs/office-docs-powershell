@@ -12,7 +12,7 @@ schema: 2.0.0
 # Test-CsTeamsTranslationRule
 
 ## SYNOPSIS
-This cmdlet tests a phone number against the defined number manipulation rules and returns information about the matching rules.
+This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule.
 
 ## SYNTAX
 
@@ -22,8 +22,7 @@ Test-CsTeamsTranslationRule [-PhoneNumber <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet tests a phone number against the defined number manipulation rules and return information about the matching rules. If not matching rules were found,
-the cmdlet returns the message Number translation rule not found.
+This cmdlet tests a phone number against the configured number manipulation rules and return information about the matching rule. 
 
 ## EXAMPLES
 
@@ -66,7 +65,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.5.0 or later.
+The cmdlet is available in Teams PowerShell Module 4.5.0 or later.
+
+The matching logic used in the cmdlet is the same as when the manipulation rule has been associated with an SBC and a call is being routed.
+
+If a match is found in two or more manipulation rules, the first one is returned.
+
+There is a short delay before newly created manipulation rules are added to the evaluation.
 
 ## RELATED LINKS
 [New-CsTeamsTranslationRule](New-CsTeamsTranslationRule.md)
