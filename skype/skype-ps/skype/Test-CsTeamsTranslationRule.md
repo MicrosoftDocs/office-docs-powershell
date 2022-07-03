@@ -22,7 +22,8 @@ Test-CsTeamsTranslationRule [-PhoneNumber <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet tests a phone number against the configured number manipulation rules and return information about the matching rule. 
+This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule. 
+
 
 ## EXAMPLES
 
