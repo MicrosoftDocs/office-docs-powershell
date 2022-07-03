@@ -37,7 +37,8 @@ This example modifies the rule that initially configured to strip +1206555 from 
 ## PARAMETERS
 
 ### -Identity
-Identifier of the rule. This parameter is required and later used to assign the rule to Inbound or Outbound Trunk Normalization policy.
+Identifier of the rule. This parameter is required and later used to assign the rule to the Inbound or Outbound Trunk Normalization policy.
+
 
 ```yaml
 Type: String
