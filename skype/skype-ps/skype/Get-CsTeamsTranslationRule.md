@@ -37,7 +37,8 @@ You can use this cmdlet to get an existing number manipulation rule (or list of 
 Get-CsTeamsTranslationRule
 ```
 
-This command will show all translation rules that exist in the tenant. Identity, Name, Description, Pattern and Translation parameters are listed for each rule.
+This command will show all translation rules that exist in the tenant. Identity, Name, Description, Pattern, and Translation parameters are listed for each rule.
+
 
 ### Example 2
 ```powershell
