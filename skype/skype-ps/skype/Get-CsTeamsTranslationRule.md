@@ -45,7 +45,8 @@ This command will show all translation rules that exist in the tenant. Identity,
 Get-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
-This command will show Identity, Name, Description, Pattern and Translation parameters for "AddPlus1" rule
+This command will show Identity, Name, Description, Pattern, and Translation parameters for the "AddPlus1" rule.
+
 
 ### Example 3
 ```powershell
