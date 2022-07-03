@@ -71,7 +71,8 @@ This example creates a rule that strips +1206555 from any E.164 ten digits numbe
 ## PARAMETERS
 
 ### -Identity
-The Identifier of the rule. This parameter is required and later used to assign the rule to Inbound or Outbound Trunk Normalization policy.
+The Identifier of the rule. This parameter is required and later used to assign the rule to the Inbound or Outbound Trunk Normalization policy.
+
 
 ```yaml
 Type: String
