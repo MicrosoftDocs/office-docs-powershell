@@ -53,7 +53,8 @@ This command will show Identity, Name, Description, Pattern, and Translation par
 Get-CsTeamsTranslationRule -Filter 'Add*'
 ```
 
-This command will show Identity, Name, Description, Pattern and Translation parameters for all rules with Identity starting with Add.
+This command will show Identity, Name, Description, Pattern, and Translation parameters for all rules with Identity starting with Add.
+
 
 ## PARAMETERS
 
