@@ -12,7 +12,7 @@ ms.reviewer:
 # Set-CsOnlineLisSwitch
 
 ## SYNOPSIS
-Creates a Location Information Server (LIS) switch, creates an association between a switch and a location (creating a new location if that location doesn't exist), or modifies an existing switch and its associated location. The association between a switch and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+Creates a Location Information Server (LIS) switch, creates an association between a switch and a location, or modifies an existing switch and its associated location. The association between a switch and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 
 ## SYNTAX
 
@@ -28,11 +28,10 @@ Enhanced 9-1-1 allows an emergency operator to identify the location of a caller
 
 ### Example 1
 ```
-Set-CsOnlineLisSwitch -ChassisID 0B-23-CD-16-AA-CC -Description "LIS switch with chassis ID 0B-23-CD-16-AA-CC" -LocationId d26a4935-5997-4bcf-b0db-6ae5a88805fd
+Set-CsOnlineLisSwitch -ChassisID B8-BE-BF-4A-A3-00 -Description "DKSwitch1" -LocationId 9905bca0-6fb0-11ec-84a4-25019013784a
 ```
 
-Example 1 creates the Location Information Server (LIS) switch with Chassis ID "0B-23-CD-16-AA-CC", associated with location ID d26a4935-5997-4bcf-b0db-6ae5a88805fd.
-
+Example 1 creates a switch with Chassis ID "B8-BE-BF-4A-A3-00", and associates it with location ID 9905bca0-6fb0-11ec-84a4-25019013784a.
 
 ## PARAMETERS
 
