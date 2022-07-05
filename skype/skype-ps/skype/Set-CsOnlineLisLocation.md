@@ -108,8 +108,6 @@ Accept wildcard characters: False
 
 **Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
 
-PARAMVALUE: String
-
 ```yaml
 Type: String
 Parameter Sets: (All)
