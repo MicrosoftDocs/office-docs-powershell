@@ -67,6 +67,18 @@ F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
 
 Example 3 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-*" and associated location.
 
+### Example 4
+```
+Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-12
+```
+```output
+BSSID             LocationId                           Description
+-----             ----------                           -----------
+F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+```
+
+Example 4 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-12" and associated location.
+
 ## PARAMETERS
 
 ### -BSSID
