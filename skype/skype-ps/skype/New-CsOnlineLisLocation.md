@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-The latitude of the location.
+The latitude of the civic address.
 
 ```yaml
 Type: String
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-The longitude of the location.
+The longitude of the civic address.
 
 ```yaml
 Type: String
@@ -442,8 +442,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
