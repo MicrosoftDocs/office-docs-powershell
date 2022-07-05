@@ -288,7 +288,7 @@ Accept wildcard characters: False
 
 ### -ValidationStatus
 Specifies the validation status of the addresses to be returned.
-Valid inputs are: Valid, Invalid, and Notvalidated.
+Valid inputs are: Validated, Invalid, and Notvalidated.
 
 ```yaml
 Type: String
