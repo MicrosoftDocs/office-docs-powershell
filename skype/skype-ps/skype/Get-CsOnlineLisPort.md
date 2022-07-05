@@ -48,7 +48,7 @@ PortID  ChassisID         LocationId                           Description
 G1/0/30 B8-BE-BF-4A-A3-00 9905bca0-6fb0-11ec-84a4-25019013784a
 ```
 
-Example 2 retrieves the location information for port 12174 with ChassisID 0B-23-CD-16-AA-CC.
+Example 2 retrieves the location information for port G1/0/30 with ChassisID B8-BE-BF-4A-A3-00.
 
 ## PARAMETERS
 
