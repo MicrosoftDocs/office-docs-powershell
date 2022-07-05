@@ -270,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-The latitude of the location.
+The latitude of the civic address.
 
 ```yaml
 Type: String
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-The longitude of the location.
+The longitude of the civic address.
 
 ```yaml
 Type: String
