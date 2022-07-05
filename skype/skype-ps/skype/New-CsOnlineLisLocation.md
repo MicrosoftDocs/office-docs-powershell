@@ -456,3 +456,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-CsOnlineLisLocation](Set-CsOnlineLisLocation.md)
+
+[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+
+[Remove-CsOnlineLisLocation](Remove-CsOnlineLisLocation.md)
