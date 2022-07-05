@@ -49,7 +49,7 @@ This example creates a new location called "Office 101, 1st Floor" in the civic 
 New-CsOnlineLisLocation -Location "Office 202, 2nd Floor" -CompanyName "Contoso" -HouseNumber 3910 -StreetName 163rd -StreetSuffix St -City Bellevue -StateOrProvince WA -CountryOrRegion US -PostalCode 98004 -Description "New civic address location" -Elin TEST_ELIN -Latitude 47.64499 -Longitude -122.12219
 ```
 
-This example creates a new civic address and a location assigned to the address. Location is called "Office 202, 2st Floor" with Elin string "TEST_ELIN"
+This example creates a new civic address and a location assigned to the address. Location is called "Office 202, 2st Floor" with Elin string "TEST_ELIN" and latitude and longitude set.
 
 ## PARAMETERS
 
