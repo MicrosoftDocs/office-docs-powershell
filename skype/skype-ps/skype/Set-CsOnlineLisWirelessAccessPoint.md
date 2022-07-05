@@ -47,7 +47,7 @@ Example 2 creates the wireless access point with Chassis ID "F0-6E-0B-C2-04-*", 
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
 
 ```yaml
 Type: String
