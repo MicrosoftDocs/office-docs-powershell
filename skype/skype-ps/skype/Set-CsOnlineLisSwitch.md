@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinelisswitch
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsOnlineLisSwitch
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,9 +17,8 @@ Creates a Location Information Server (LIS) switch, creates an association betwe
 ## SYNTAX
 
 ```
-Set-CsOnlineLisSwitch [[-TenantId] <Guid>] [-ChassisID] <String> -LocationId <Guid> [-Description <String>]
- [-IsDebug <Boolean>] [-TargetStore <String>] [-NCSApiUrl <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CsOnlineLisSwitch [-ChassisID] <string> -LocationId <guid> [-Description <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>]
+ [-TargetStore <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +26,7 @@ Enhanced 9-1-1 allows an emergency operator to identify the location of a caller
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Set-CsOnlineLisSwitch -ChassisID 0B-23-CD-16-AA-CC -Description "LIS switch with chassis ID 0B-23-CD-16-AA-CC" -LocationId d26a4935-5997-4bcf-b0db-6ae5a88805fd
 ```
@@ -45,25 +44,25 @@ Otherwise, (different sub type, such as Interface Name), then this value must be
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -LocationId
+The name for this location.
 
 ```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
+Aliases:
+Applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -77,7 +76,7 @@ Specifies the administrator defined description of the switch.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -95,7 +94,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -111,25 +110,9 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocationId
-The name for this location.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -143,7 +126,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -159,7 +142,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -168,17 +151,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TenantId
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -192,7 +175,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -207,21 +190,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-
 ### System.Guid
-
 
 ### System.String
 
-
 ## OUTPUTS
-
 
 ### System.Object
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
+[Get-CsOnlineLisSwitch](Set-CsOnlineLisSwitch.md)
+
+[Remove-CsOnlineLisSwitch](Remove-CsOnlineLisSwitch.md)
