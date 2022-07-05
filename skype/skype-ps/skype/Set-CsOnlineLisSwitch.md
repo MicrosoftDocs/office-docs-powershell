@@ -17,8 +17,8 @@ Creates a Location Information Server (LIS) switch, creates an association betwe
 ## SYNTAX
 
 ```
-Set-CsOnlineLisSwitch [-ChassisID] <string> -LocationId <guid> [-Description <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>]
- [-TargetStore <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineLisSwitch [-ChassisID] <string> -LocationId <guid> [-Description <string>] [-Force] [-IsDebug <bool>]
+ [-NCSApiUrl <string>] [-TargetStore <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
