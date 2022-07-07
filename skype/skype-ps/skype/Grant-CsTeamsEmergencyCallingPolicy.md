@@ -38,10 +38,17 @@ This cmdlet assigns a Teams Emergency Calling policy to a user. Emergency Callin
 
 ### Example 1
 ```powershell
-PS C:> Grant-CsTeamsEmergencyCallingPolicy -Identity user1 -PolicyName TestECP
+Grant-CsTeamsEmergencyCallingPolicy -Identity user1 -PolicyName TestTECP
 ```
 
-This example assigns a Teams Emergency Calling policy to a user
+This example assigns the Teams Emergency Calling policy TestTECP to a user
+
+### Example 2
+```powershell
+Grant-CsTeamsEmergencyCallingPolicy -Global -PolicyName SalesTECP
+```
+
+Assigns the Teams Emergency Calling policy called "SalesTECP" to the Global policy instance. This sets the parameters in the Global policy instance to the values found in the SalesTECP instance.
 
 ## PARAMETERS
 
