@@ -220,6 +220,8 @@ The AutoEnableAfter parameter allows you to automatically turn on the policy aft
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
+A valid value is between 1 hour and 25 days.
+
 You must use this parameter with the -StartSimulation parameter.
 
 ```yaml
