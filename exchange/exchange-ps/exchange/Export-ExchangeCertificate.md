@@ -62,21 +62,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -FileName "C:\Data\HT cert.pfx" -BinaryEncoded -Password:(Get-Credential).password
+Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -FileName "C:\Data\HT cert.pfx" -BinaryEncoded -Password (Get-Credential).password
 ```
 
 In **Exchange 2013**, this example exports a certificate from the local Exchange server to a file with the following settings:
 
 - The certificate to export has the thumbprint value 5113ae0233a72fccb75b1d0198628675333d010e.
 - The exported certificate file is DER encoded (binary), not Base64.
-- The password have to be filled in the credential box.
+- Enter the password when prompted.
 - The certificate is exported to the file C:\\Data\\HT cert.pfx.
 
 **Note**: The FileName parameter is available only in Exchange 2013. To export the certificate in Exchange 2016 or Exchange 2019, see Example 2.
 
 ### Example 2
 ```powershell
-$bincert = Export-ExchangeCertificate -BinaryEncoded -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -BinaryEncoded -Password:(Get-Credential).password
+$bincert = Export-ExchangeCertificate -BinaryEncoded -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -BinaryEncoded -Password (Get-Credential).password
 [System.IO.File]::WriteAllBytes('C:\Data\HT cert.pfx', $bincert.FileData)
 ```
 
@@ -226,8 +226,11 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password for the private key or chain of trust in the exported certificate file. To import the exported certificate file on another server, you need to know the password.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
-Or you can use the cred box to enter the password securely -Password:(Get-Credential).password
+You can use the following methods as a value for this parameter:
+
+- `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
+- Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
+- `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 ```yaml
 Type: SecureString
