@@ -32,6 +32,13 @@ Remove-CsTeamsEmergencyCallingPolicy -Identity testECP
 
 This example removes an existing Teams Emergency Calling policy with identity testECP.
 
+### Example 2
+```powershell
+Remove-CsTeamsEmergencyCallingPolicy -Identity Global
+```
+
+This example resets the Global Policy instance to the default values.
+
 ## PARAMETERS
 
 ### -Identity
