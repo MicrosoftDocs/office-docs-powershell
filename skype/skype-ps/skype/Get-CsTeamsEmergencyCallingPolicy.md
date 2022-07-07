@@ -18,12 +18,12 @@ schema: 2.0.0
 
 ### Identity (Default)
 ```
-Get-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [-MsftInternalProcessingMode <string>] [<CommonParameters>]
+Get-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsEmergencyCallingPolicy [-MsftInternalProcessingMode <string>] [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsEmergencyCallingPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
