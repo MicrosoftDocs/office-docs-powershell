@@ -35,7 +35,7 @@ If a BSSID with wildcard format is already existing, the request for adding one 
 Set-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-23 -Description "USWAP1" -LocationId d7714269-ee52-4635-97b0-d7c228801d24
 ```
 
-Example 1 wireless access point with BSSID "F0-6E-0B-C2-03-23", associated with location ID d7714269-ee52-4635-97b0-d7c228801d24.
+Example 1 creates the wireless access point with BSSID "F0-6E-0B-C2-03-23", associated with location ID d7714269-ee52-4635-97b0-d7c228801d24.
 
 ### Example 2
 ```
