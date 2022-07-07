@@ -49,9 +49,26 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 
 > [!NOTE]
 >
-> - Moving users between your on-premises deployment and Teams now *requires* the OAuth authentication protocol. Previously OAuth was recommended but not required.  Skype for Business Server 2019 and Skype for Business Server 2015 CU12 (KB 3061064) already require OAuth. If you are using Skype for Business Server 2015 with CU8 up to CU11, you must pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, or preferably upgrade to CU12. If you are using a version of Skype for Business Server 2015 prior to CU8, you must upgrade to CU12 or later.  If you are using Lync Server 2013, you must first upgrade to Lync Server 2013 Cumulative Update 10 Hotfix 5 (KB 2809243) or later.
 > - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details. 
 > - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential paremeter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
+
+
+### MINIMUM REQUIRED SERVER VERSIONS
+As of July 31, 2022, moving users between an on-premises deployment and the cloud requires the following minimum version of either Skype for Business Server or Lync Server. In the future, moves between on-premises and the cloud will no longer be possible if you are using a version earlier than the ones listed below. If you are still using an earlier version of Skype for Business Server, you should upgrade to the specified minimum version (or later) before July 31, 2022.
+
+</br>
+</br>
+
+|On-premises product|Required minimum version|Required minimum build|
+|---|---|---|
+|Skype for Business Server 2019| CU6 |7.0.2046.385|
+|Skype for Business Server 2015| CU12|6.0.9319.619|
+|Lync Server 2013| CU10 with Hotfix 7|5.0.8308.1182|
+||||
+
+</br>
+</br>
+
 
 ## EXAMPLES
 
