@@ -6,7 +6,7 @@ title: New-CsTeamsEmergencyCallingPolicy
 author: jenstrier
 ms.author: jenstr
 manager: roykuntz
-ms.reviewer: chenc, pthota
+ms.reviewer: chenc
 schema: 2.0.0
 ---
 
@@ -17,94 +17,30 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-NotificationGroup <String>]
- [-NotificationDialOutNumber <String>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
- [-NotificationMode <Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode>]
- [-EnhancedEmergencyServiceDisclaimer <String>]
- [-Description <String>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
+New-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-Description <string>] [-EnhancedEmergencyServiceDisclaimer <string>]
+ [-ExternalLocationLookupMode <string>] [-NotificationDialOutNumber <string>] [-NotificationGroup <string>]
+ [-NotificationMode <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ ```
 
 ## DESCRIPTION
- This cmdlet creates a new Teams Emergency Calling policy. Emergency calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+This cmdlet creates a new Teams Emergency Calling policy. Emergency calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "4253214567" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
+New-CsTeamsEmergencyCallingPolicy -Identity testECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
 ```
 
- This example creates a Teams Emergency Calling policy that has a identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
+This example creates a Teams Emergency Calling policy that has a identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
- The Description parameter describes the Teams Emergency Calling policy - what it is for, what type of user it applies to and any other information that helps to identify the purpose of this policy. Maximum characters: 512.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalLocationLookupMode
- Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
-
-```yaml
-Type: ExternalLocationLookupMode
-Parameter Sets: (All)
-Aliases:
-Accepted values: Disabled, Enabled
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
- The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
  The Identity parameter is a unique identifier that designates the name of the policy
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -115,59 +51,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InMemory
- The InMemory parameter creates an object reference without actually committing the object as a permanent change.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NotificationDialOutNumber
- This parameter represents PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values
+### -Description
+The Description parameter describes the Teams Emergency Calling policy - what it is for, what type of user it applies to and any other information that helps to identify the purpose of this policy. Maximum characters: 512.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NotificationGroup
- NotificationGroup is a email list of users and groups to be notified of an emergency call
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NotificationMode
- The type of conference experience for security desk notification-support for the ConferenceUnMuted mode is pending.
-
-```yaml
-Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
-Parameter Sets: (All)
-Aliases:
-Accepted values: NotificationOnly, ConferenceMuted, ConferenceUnMuted
 
 Required: False
 Position: Named
@@ -191,13 +81,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
- Specify the tenant id
+### -ExternalLocationLookupMode
+Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
 
 ```yaml
-Type: System.Guid
+Type: String
 Parameter Sets: (All)
 Aliases:
+Accepted values: Disabled, Enabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationDialOutNumber
+This parameter represents PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationGroup
+NotificationGroup is a email list of users and groups to be notified of an emergency call
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationMode
+The type of conference experience for security desk notification. Support for the ConferenceUnMuted mode is pending.
+
+```yaml
+Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: NotificationOnly, ConferenceMuted, ConferenceUnMuted
 
 Required: False
 Position: Named
@@ -214,6 +151,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
