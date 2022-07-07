@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
-The company tax id.
+The company tax ID.
 
 ```yaml
 Type: String
