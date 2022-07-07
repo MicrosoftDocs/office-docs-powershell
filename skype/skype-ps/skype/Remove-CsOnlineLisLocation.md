@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinelislocation
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: serdarsoysal
-ms.author: serdars
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,8 +17,7 @@ Use the \`Remove-CsOnlineLisLocation\` cmdlet to remove an existing emergency lo
 
 ## SYNTAX
 ```
-Remove-CsOnlineLisLocation -LocationId <Guid> [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineLisLocation -LocationId <Guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,13 +25,12 @@ If the location specified for removal is assigned to users, the cmdlet will fail
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-CsOnlineLisLocation -LocationId 788dd820-c136-4255-9f61-24b880ad0763
 ```
 
 This example removes the location specified by its identity.
-
 
 ## PARAMETERS
 
@@ -44,12 +42,12 @@ Location identities can be discovered by using the \`Get-CsOnlineLisLocation\` c
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -60,27 +58,11 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -94,27 +76,11 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -127,7 +93,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,3 +117,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-CsOnlineLisLocation](Set-CsOnlineLisLocation.md)
+
+[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+
+[New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
