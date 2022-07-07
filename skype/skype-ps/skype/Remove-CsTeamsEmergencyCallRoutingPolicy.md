@@ -13,7 +13,7 @@ schema: 2.0.0
 # Remove-CsTeamsEmergencyCallRoutingPolicy
 
 ## SYNOPSIS
-This cmdlet removes an existing Teams Emergency Call Routing policy.
+This cmdlet removes an existing Teams Emergency Call Routing policy instance.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Remove-CsTeamsEmergencyCallRoutingPolicy [-Identity] <string> [-WhatIf] [-Confir
 ```
 
 ## DESCRIPTION
-This cmdlet removes an existing Teams Emergency Call Routing policy.
+This cmdlet removes an existing Teams Emergency Call Routing policy instance.
 
 ## EXAMPLES
 
