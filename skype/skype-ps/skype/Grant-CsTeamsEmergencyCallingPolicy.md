@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The Identity of the Teams Emergency Calling policy to apply to the user.
+The Identity of the Teams Emergency Calling policy to apply to the user. To remove an existing user level policy assignment, specify PolicyName as $null.
 
 ```yaml
 Type: String
