@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies an administrator defined description of the new location.
+Specifies an administrator-defined description of the new location.
 For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
