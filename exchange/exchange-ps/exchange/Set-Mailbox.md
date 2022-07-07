@@ -4139,7 +4139,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
 
-- Exchange Online: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Microsoft 365 for business passwords](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
+- Exchange Online: You can't use this parameter to change another user's password. To change another user's password, use the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Microsoft 365 for business passwords](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
 You can use the following methods as a value for this parameter:
