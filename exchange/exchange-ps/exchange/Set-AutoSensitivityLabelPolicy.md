@@ -29,6 +29,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-ApplySensitivityLabel <String>]
+ [-AutoEnableAfter <Timespan>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -203,6 +204,28 @@ The ApplySensitivityLabel parameter selects which label to be used for the polic
 
 ```yaml
 Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoEnableAfter
+The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation. The time period restarts whenever you modify the policy or when a simulation is triggered.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+A valid value is between 1 hour and 25 days.
+
+You must use this parameter with the -StartSimulation parameter.
+
+```yaml
+Type: System.TimeSpan
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
