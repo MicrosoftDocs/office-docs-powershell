@@ -52,7 +52,7 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 > - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential paremeter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
 
 
-## MINUMUM REQUIRED SERVER VERSIONS
+### MINIMUM REQUIRED SERVER VERSIONS
 As of July 31, 2022, moving users between an on-premises deployment and the cloud requires the following minimum version of either Skype for Business Server or Lync Server. In the future, moves between on-premises and the cloud will no longer be possible if you are using a version earlier than the ones listed below. If you are still using an earlier version of Skype for Business Server, you should upgrade to the specified minimum version (or later) before July 31, 2022.
 
 </br>
