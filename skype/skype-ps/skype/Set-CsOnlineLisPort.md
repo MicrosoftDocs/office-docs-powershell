@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortID
-If PortID sub type is a MAC Address then this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. Otherwise, (different sub type, such as Interface Name), then this value must be in a string format as set on the switch
+If the PortID subtype is a MAC Address, this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. Otherwise (different subtype, such as Interface Name), this value must be in a string format as set on the switch.
 
 ```yaml
 Type: String
