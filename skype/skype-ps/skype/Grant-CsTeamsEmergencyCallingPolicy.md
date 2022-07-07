@@ -17,8 +17,13 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Grant-CsTeamsEmergencyCallingPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
- [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsEmergencyCallingPolicy [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+```
+Grant-CsTeamsEmergencyCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+```
+Grant-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
