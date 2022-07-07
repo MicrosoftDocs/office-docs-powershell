@@ -13,6 +13,7 @@ schema: 2.0.0
 # New-CsTeamsEmergencyCallRoutingPolicy
 
 ## SYNOPSIS
+This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency number.
 
 ## SYNTAX
 
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEnhancedEmergencyServices
-Flag to enable Enhanced Emergency Services
+Flag to enable Enhanced Emergency Services.
 
 ```yaml
 Type: Boolean
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
-One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](new-csteamsemergencynumber.md) cmdlet
+One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](new-csteamsemergencynumber.md) cmdlet.
 
 ```yaml
 Type: Object
