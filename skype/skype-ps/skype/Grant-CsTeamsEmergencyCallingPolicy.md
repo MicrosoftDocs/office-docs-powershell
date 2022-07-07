@@ -16,14 +16,19 @@ schema: 2.0.0
 
 ## SYNTAX
 
+### GrantToTenant (Default)
 ```
 Grant-CsTeamsEmergencyCallingPolicy [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+### Identity
+```
+Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
 ```
 Grant-CsTeamsEmergencyCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-```
-Grant-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,30 +60,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-Allows you to specify a domain controller. If no domain controller is specified, the first available will be used.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 Indicates the Identity of the user account the policy should be assigned to.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
@@ -108,23 +99,8 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Microsoft internal usage only
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
