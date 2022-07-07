@@ -215,11 +215,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoEnforceAfter
-The AutoEnforceAfter parameter allows you to configure your policy to be automatically turned on after set amount of time in simulation. This time period will restart each time the policy is modified or when simulation is triggered. This parameter should only be used in combination with -StartSimulation parameter and cannot be used independently.
+### -AutoEnableAfter
+The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation. The time period restarts whenever you modify the policy or when a simulation is triggered.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+You must use this parameter with the -StartSimulation parameter.
 
 ```yaml
-Type: TimeSpan 
+Type: System.TimeSpan
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
@@ -227,11 +231,7 @@ Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: <DD.HH:MM:SS>
-- Days (DD): 0-25
-- Hours (HH): 0-23
-- Minutes (MM): 0-59
-- Seconds (SS): 0-59
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
