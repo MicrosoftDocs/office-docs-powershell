@@ -42,7 +42,7 @@ Example 1 creates the wireless access point with BSSID "F0-6E-0B-C2-03-23", asso
 Set-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-04-* -LocationId b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a -Description 'SEWAPs'
 ```
 
-Example 2 creates the wireless access point with Chassis ID "F0-6E-0B-C2-04-*", associated with location ID b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a. BSSID "F0-6E-0B-C2-04-*" is in wildcard format which equivalents to adding all BSSIDs with the same LocationID in the range "F0-6E-0B-C2-04-[0-9A-F][0-9A-F]"
+Example 2 creates the wireless access point with Chassis ID "F0-6E-0B-C2-04-*", associated with location ID b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a. BSSID "F0-6E-0B-C2-04-*" is in wildcard format which is equivalent to adding all BSSIDs with the same LocationID in the range "F0-6E-0B-C2-04-[0-9A-F][0-9A-F]".
 
 ## PARAMETERS
 
