@@ -33,12 +33,12 @@ Remove-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP
 
 This example removes Teams Emergency Call Routing policy with identity TestECRP.
 
-### Example 1
+### Example 2
 ```powershell
 Remove-CsTeamsEmergencyCallRoutingPolicy -Identity Global
 ```
 
-This example resets the Teams Emergency Call Routing policy Global instance to its default values.
+This example resets the Teams Emergency Call Routing Global policy instance to its default values.
 
 ## PARAMETERS
 
