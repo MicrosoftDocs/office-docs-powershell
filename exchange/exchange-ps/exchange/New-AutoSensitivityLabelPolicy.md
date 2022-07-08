@@ -125,17 +125,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocation
-The ExchangeLocation parameter specifies whether to include email messages in the policy. A valid for this parameter is All. If you don't want to include email messages in the policy, don't use this parameter.
+The ExchangeLocation parameter specifies whether to include email messages in the policy. The only valid value for this parameter is All. If you don't want to include email messages in the policy, don't use this parameter.
 
-To include only specific internal or external users in the policy, use `-ExchangeLocation All` with the ExchangeSender parameter in the same command. Only email addresses specified by the ExchangeSender parameter are included in the policy.
+If you use `-ExchangeLocation All` by itself, the policy applies to email for all internal users.
 
-To exclude only specific internal users from the policy, use `-ExchangeLocation All` with the ExchangeSenderException parameter in the same command. Only email addresses specified by the ExchangeSenderException parameter are excluded from the policy.
+To include only email of specific internal or external users in the policy, use `-ExchangeLocation All` with the ExchangeSender parameter in the same command. Only email addresses specified by the ExchangeSender parameter are included in the policy.
 
-To include only specific group members in the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOf parameter are included in the policy.
+To exclude only email of specific internal users from the policy, use `-ExchangeLocation All` with the ExchangeSenderException parameter in the same command. Only email addresses specified by the ExchangeSenderException parameter are excluded from the policy.
 
-To exclude only specific group members from the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOfException parameter are excluded from the policy.
+To include only email of specific group members in the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOf parameter are included in the policy.
 
-If you use `-ExchangeLocation All` by itself, the policy applies only to all internal users. To include external users in the policy, use `-ExchangeLocation All` with the ExchangeSender parameter to specify the external email addresses.
+To exclude only email of specific group members from the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOfException parameter are excluded from the policy.
 
 The default value of this parameter is blank ($null).
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-The ExchangeSender parameter specifies email addresses of users to include in the policy. You can specify internal or external email addresses, but you must use this parameter with the ExchangeLocation parameter.
+The ExchangeSender parameter specifies the email addresses of users to include in the policy. You can specify internal or external email addresses, but you must use this parameter with the ExchangeLocation parameter.
 
 You can specify multiple email addresses separated by commas.
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
-The ExchangeSenderException parameter specifies email addresses of internal users to exclude from the policy. You must use this parameter with the ExchangeLocation parameter.
+The ExchangeSenderException parameter specifies the email addresses of internal users to exclude from the policy. You must use this parameter with the ExchangeLocation parameter.
 
 You can specify multiple email addresses separated by commas.
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies email addresses of distribution groups or mail-enabled security groups to include in the policy (the group members are included in the policy). You must use this parameter with the ExchangeLocation parameter.
+The ExchangeSenderMemberOf parameter specifies the email addresses of distribution groups or mail-enabled security groups to include in the policy (the group members are included in the policy). You must use this parameter with the ExchangeLocation parameter.
 
 You can specify multiple email addresses separated by commas.
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You must use this parameter with the ExchangeLocation parameter.
+The ExchangeSenderMemberOfException parameter specifies the email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You must use this parameter with the ExchangeLocation parameter.
 
 You can specify multiple email addresses separated by commas.
 

@@ -110,9 +110,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-The AddExchangeLocation parameter adds email messages as a location in the policy if the policy doesn't already include email messages. A valid for this parameter is All.
+The AddExchangeLocation parameter adds email messages to the policy. The only valid value for this parameter is All.
 
-If the policy doesn't already include email messages (the ExchangeLocation property value isn't already All), you can use this parameter to the following procedures:
+If the policy doesn't already include email messages (the ExchangeLocation property value isn't already All), you can use this parameter in the following procedures:
+
+- If you use `-AddExchangeLocation All` by itself, the policy applies to email for all internal users.
 
 - To add only specific internal or external users in the policy, use `-AddExchangeLocation All` with the ExchangeSender parameter in the same command. Only email addresses specified by the ExchangeSender parameter are included in the policy.
 
@@ -121,8 +123,6 @@ If the policy doesn't already include email messages (the ExchangeLocation prope
 - To add only specific group members in the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOf parameter are included in the policy.
 
 - To exclude only specific group members from the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOfException parameter are excluded from the policy.
-
-- If you use `-AddExchangeLocation All` by itself, the policy applies only to all internal users. To include external users in the policy, use `-AddExchangeLocation All` with the ExchangeSender parameter to specify the external email addresses.
 
 ```yaml
 Type: MultiValuedProperty
@@ -308,7 +308,7 @@ The ExchangeSender parameter specifies email addresses of internal or external u
 
 To use this parameter, one of the following statements must be true:
 
-- The policy must already include email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (the ExchangeLocation property value is already All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
@@ -331,7 +331,7 @@ The ExchangeSenderException parameter specifies email addresses of internal user
 
 To use this parameter, one of the following statements must be true:
 
-- The policy must already include email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (the ExchangeLocation property value is already All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
@@ -354,7 +354,7 @@ The ExchangeSenderMemberOf parameter specifies email addresses of distribution g
 
 To use this parameter, one of the following statements must be true:
 
-- The policy must already include email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (the ExchangeLocation property value is already All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
@@ -375,11 +375,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You can specify multiple email addresses separated by commas.
+The ExchangeSenderMemberOfException parameter specifies the email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You can specify multiple email addresses separated by commas.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy must already include email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (the ExchangeLocation property value is already All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
@@ -521,9 +521,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-The RemoveExchangeLocation parameter removes email messages as a location from the policy. A valid for this parameter is All.
+The RemoveExchangeLocation parameter removes email messages from the policy. The only valid value for this parameter is All.
 
-You can't use this parameter if email (the value Exchange) is in use by any of the rules.
+You can't use this parameter if email (the value Exchange) is used by any of the associated rules.
 
 ```yaml
 Type: MultiValuedProperty
