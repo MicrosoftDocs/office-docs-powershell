@@ -214,7 +214,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocation
-Don't use this parameter. Use the ExchangeSenderMemberOf and ExchangeSenderMemberOfException parameters instead.
+The ExchangeLocation parameter specifies whether to include email messages in the policy. The only valid value for this parameter is All. If you don't want to include email messages in the policy, don't use this parameter.
+
+If you use `-ExchangeLocation All` by itself, the policy applies to email for all users.
+
+To include only email of specific group members in the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOf parameter are included in the policy.
+
+To exclude only email of specific group members from the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOfException parameter are excluded from the policy.
+
+The default value of this parameter is blank ($null).
 
 ```yaml
 Type: MultiValuedProperty
@@ -230,9 +238,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to include in the DLP policy. You identify the group by its email address. You can use the value All to include all user groups.
+The ExchangeSenderMemberOf parameter specifies the email addresses of distribution groups or mail-enabled security groups to include in the policy (the group members are included in the policy). You must use this parameter with the ExchangeLocation parameter.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+You can specify multiple email addresses separated by commas.
+
+You can't use this parameter with the ExchangeSenderMemberOfException parameter.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -250,9 +260,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to exclude from the DLP policy when you use the value All for the ExchangeSenderMemberOf parameter. You identify the group by its email address.
+The ExchangeSenderMemberOfException parameter specifies the email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You must use this parameter with the ExchangeLocation parameter.
 
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+You can specify multiple email addresses separated by commas.
+
+You can't use this parameter with the ExchangeSenderMemberOf parameter.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
