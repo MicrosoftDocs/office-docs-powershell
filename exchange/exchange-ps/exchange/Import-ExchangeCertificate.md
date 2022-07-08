@@ -77,10 +77,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Import-ExchangeCertificate -Server Mailbox01 -FileName "\\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (Get-Credential).password -AsPlainText -Force)
+Import-ExchangeCertificate -Server Mailbox01 -FileName "\\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (Get-Credential).password
 ```
 
-In **Exchange 2013**, this example imports the certificate from the PKCS #12 file from \\\\FileServer01\\Data\\Exported Fabrikam Cert.pfx to the Exchange server named Mailbox01. This file requires the password of the file. This certificate could have been exported from another server, or issued by a certification authority.
+In **Exchange 2013**, this example imports the certificate from the PKCS #12 file from \\\\FileServer01\\Data\\Exported Fabrikam Cert.pfx to the Exchange server named Mailbox01. This file requires the password of the file. This certificate could have been exported from another server or issued by a certification authority.
 
 To export the certificate in Exchange 2016 or Exchange 2019, use the FileData parameter as described in Example 2.
 
