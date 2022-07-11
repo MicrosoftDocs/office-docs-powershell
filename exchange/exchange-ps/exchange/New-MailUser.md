@@ -183,18 +183,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -MicrosoftOnlineServicesID ed@contoso.com -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
+New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -MicrosoftOnlineServicesID ed@contoso.com -Password (Get-Credential).password
 ```
 
 This example creates a new mail user for Ed Meadows in the contoso.com cloud-based organization. The mail user gives Ed an account and email address in the contoso.com domain, but messages sent to Ed are delivered to his tailspintoys.com email address.
-
-### Example 2
-```powershell
-$password = Read-Host "Enter password" -AsSecureString
-New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
-```
-
-This example is similar to the first, except contoso.com is now an on-premises Exchange organization, and you use a separate command to enter the password so it isn't stored in clear text.
 
 ## PARAMETERS
 

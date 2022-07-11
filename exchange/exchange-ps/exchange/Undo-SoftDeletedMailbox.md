@@ -57,14 +57,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Undo-SoftDeletedMailbox -SoftDeletedObject florencef
 ```
 
-This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Windows Live ID was also deleted.
+This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Microsoft account was also deleted.
 
 ### Example 2
 ```powershell
-Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
+Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (Get-Credential).password
 ```
 
-This example recovers the deleted mailbox for the user Brian Johnson. When this mailbox was deleted, the associated Microsoft account (formerly known as a Windows Live ID) wasn't deleted. Note that a new Microsoft account and password have to be created to recover this mailbox. In the scenario, the old Microsoft account is retained as a proxy address for the mailbox.
+This example recovers the deleted mailbox for the user Brian Johnson. When this mailbox was deleted, the associated Microsoft account wasn't deleted. Note that a new Microsoft account and password have to be created to recover this mailbox. In the scenario, the old Microsoft account is retained as a proxy address for the mailbox.
 
 ## PARAMETERS
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsLiveID
-The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
+The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP address for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
 
 You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account that wasn't deleted with the mailbox.
 

@@ -42,10 +42,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-EOPMailUser -Name EdMeadows -MicrosoftOnlineServicesID EdMeadows@Contoso.onmicrosoft.com -ExternalEmailAddress EdMeadows@tailspintoys.com -Password (ConvertTo-SecureString -String 'Pa$$w0rd' -AsPlainText -Force) -FirstName Ed -LastName Meadows -DisplayName "Ed Meadows" -Alias edm
+New-EOPMailUser -Name EdMeadows -MicrosoftOnlineServicesID EdMeadows@Contoso.onmicrosoft.com -ExternalEmailAddress EdMeadows@tailspintoys.com -Password (Get-Credential).password -FirstName Ed -LastName Meadows -DisplayName "Ed Meadows" -Alias edm
 ```
 
-This example creates a mail user object for Ed Meadows while specifying several additional optional parameters and using an in-line method of password encryption.
+This example creates a mail user object for Ed Meadows while specifying several additional optional parameters and prompting you to enter the password.
 
 ## PARAMETERS
 
