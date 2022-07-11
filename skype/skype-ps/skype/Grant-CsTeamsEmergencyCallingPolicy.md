@@ -13,7 +13,7 @@ schema: 2.0.0
 # Grant-CsTeamsEmergencyCallingPolicy
 
 ## SYNOPSIS
-This cmdlet assigns a Teams Emergency Calling policy to a user, a group of users or to the Global policy instance.
+This cmdlet assigns a Teams Emergency Calling policy.
 
 ## SYNTAX
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rank
-{{ Fill Rank Description }}
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
@@ -179,11 +179,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.AD.UserIdParameter
-
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
