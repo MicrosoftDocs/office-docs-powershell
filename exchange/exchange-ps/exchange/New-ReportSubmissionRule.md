@@ -15,7 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ReportSubmissionRule cmdlet to 
+Use the New-ReportSubmissionRule cmdlet to create the report submission rule in your cloud-based organization.
+
+**Note**: If the rule already exists (the Get-ReportSubmissionRule cmdlet returns output), you can't use this cmdlet. To delete the existing rule and start over, use the Remove-ReportSubmissionRule cmdlet first.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -32,21 +34,26 @@ New-ReportSubmissionRule [-Name] <String> -ReportSubmissionPolicy <ReportSubmiss
 ```
 
 ## DESCRIPTION
+You can use this cmdlet only if the following statements are true:
+
+- The report submission rule doesn't exist (the Get-ReportSubmissionRule cmdlet returns no output).
+- The report submission policy exists (the Get-ReportSubmissionPolicy returns output).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SendTo lila@contoso.com
 ```
 
-{{ Add example description here }}
+This example creates the report submission rule. The custom mailbox is lila@contoso.com.
 
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+The Name parameter specifies the name of the report submission rule. When the rule is automatically created, the name of the rule is DefaultReportSubmissionRule. We recommend using this value when you manually create the rule.
 
 ```yaml
 Type: String
@@ -62,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportSubmissionPolicy
-{{ Fill ReportSubmissionPolicy Description }}
+The ReportSubmissionPolicy parameter specifies the report submission policy that's associated with this rule. The only available policy is named DefaultReportSubmissionPolicy.
 
 ```yaml
 Type: ReportSubmissionPolicyIdParameter
@@ -78,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comments
-{{ Fill Comments Description }}
+The Comments parameter specifies informative comments for the rule, such as what the rule is used for or how it has changed over time. The length of the comment can't exceed 1024 characters.
 
 ```yaml
 Type: String
@@ -113,7 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+The Enabled parameter specifies whether the rule is enabled or disabled. Valid values are:
+
+- $true: The rule is enabled. This is the default value.
+- $false: The rule is disabled.
+
+After you create the rule, use the Enable-ReportSubmissionRule and Disable-ReportSubmissionRule cmdlets to enable or disable the rule.
 
 ```yaml
 Type: Boolean
@@ -129,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-{{ Fill SentTo Description }}
+The SentTo parameter specifies the email address of the reporting mailbox that you want to use.
 
 ```yaml
 Type: RecipientIdParameter[]

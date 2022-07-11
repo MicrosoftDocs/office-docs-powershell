@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ReportSubmissionPolicy cmdlet to create the user submission configuration in your cloud-based organization. If you've already done this, the cmdlet returns an error.
+Use the New-ReportSubmissionPolicy cmdlet to create the report submission policy in your cloud-based organization.
+
+**Note**: If the policy already exists (the Get-ReportSubmissionPolicy cmdlet returns output), you can't use this cmdlet. To delete the existing policy and start over with the default settings, use the Remove-ReportSubmissionPolicy cmdlet first.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -71,15 +73,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-ReportSubmissionPolicy 
 ```
 
-{{ Add example description here }}
+This example creates the one and only report submission policy named DefaultReportSubmissionPolicy with the default values.
 
 ## PARAMETERS
 
 ### -DisableQuarantineReportingOption
-{{ Fill DisableQuarantineReportingOption Description }}
+The DisableQuarantineReportingOption parameter allows or prevents users from reporting messages in quarantine. Valid values are:
+
+- $true: Users can't report quarantined messages from quarantine.
+- $false: Users can report quarantined messages from quarantine. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -95,7 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableUserSubmissionOptions
-{{ Fill DisableUserSubmissionOptions Description }}
+The DisableUserSubmissionOptions parameter specifies whether users are allowed to choose if they want to report a message. Valid values are:
+
+- $true: Users aren't allowed to choose if they want to report a message. You specify the one and only option that's available to them using the UserSubmissionOptions parameter.
+- $false: Users are allowed to choose if they want to report a message. You specify the options that are available to them using the UserSubmissionOptions parameter. This is the default value.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -111,7 +121,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCustomNotificationSender
-{{ Fill EnableCustomNotificationSender Description }}
+The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for notifications for user submitted messages. Valid values are:
+
+- $true: Use a custom Microsoft 365 sender email address.
+- $false: Use the default sender email address. This is the default value.
+
+You specify the sender email address using the NotificationSenderAddress parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -127,10 +144,19 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCustomizedMsg
-The  parameter enables or disables the customized message that's presented to users in the Report Message add-in. Valid values are:
+The EnableCustomizedMsg parameter enables or disables the customized messages that are shown to users before and/or after they report messages. Valid values are:
 
-- $true: The customized message is presented to users in the Report Message add-in. You specify the text in the PreSubmitMessage, PreSubmitMessageTitle, PostSubmitMessage, and PostSubmitMessageTitle parameters.
-- $false: A customized message is not presented to users. This is the default value.
+- $true: Customized messages are enabled.
+- $false: Customized messages are disabled. This is the default value.
+
+You customize the messages using the following parameters:
+
+- PostSubmitMessage
+- PostSubmitMessageTitle
+- PreSubmitMessage
+- PreSubmitMessageTitle
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -146,7 +172,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationBranding
-{{ Fill EnableOrganizationBranding Description }}
+The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. Valid values are:
+
+- $true: Use the company logo in the footer text.
+- $false: Don't use the company logo in the footer text.
+
+You can customize the footer in notification messages using the NotificationFooterMessage parameter.
+
+You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -162,10 +197,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReportToMicrosoft
-The  parameter enables or disables sending the reported message to Microsoft. Valid values are:
+The EnableReportToMicrosoft parameter specifies whether user-reported messages are sent to Microsoft for analysis. Valid values are:
 
-- $true: Reported messages are sent to Microsoft. This is the default value.
-- $false: Reported message are not sent to Microsoft.
+- $true: User reported messages are sent to Microsoft.
+- $false: User reported messages are not sent to Microsoft.
+
+To send user-reported messages to the custom mailbox (additionally or exclusively), set the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters to the value $true.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description. Microsoft.
 
 ```yaml
 Type: Boolean
@@ -181,10 +220,22 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyAddress
-The EnableThirdPartyAddres parameter enables or disables using third-party reporting tools for user submissions. Valid values are:
+The EnableThirdPartyAddress parameter specifies whether you're using a third-party user message reporting product instead of the Microsoft integrated reporting experience. Valid values are:
 
-- $true: Users use third-party tools to report messages to the recipients specified by the ThirdPartyAddresses.
-- $false: Users use the Report Message add-in to report messages. This is the default value.
+- $true: The Microsoft integrated reporting experience is turned off. You specify the email address of the custom Exchange Online mailbox to receive user reported messages using the ThirdPartyReportAddresses parameter.
+- $false: The Microsoft user reporting experience is turned on. You allow users to report messages to Microsoft, to a custom mailbox, or both.
+
+To turn off the Microsoft integrated reporting experience, set this parameter to the value $true and specify an email addressing using the ThirdPartyReportAddresses parameter.
+
+To turn on the Microsoft integrated reporting experience, do the following steps:
+
+- Set the value of this parameter to $false.
+- Set the value of the ThirdPartyReportAddresses parameter to blank ($null).
+
+And then do one of the following steps:
+
+- Set the value of the EnableReportToMicrosoft parameter to $true.
+- If you want to prevent user from reporting messages to Microsoft (the value of the EnableReportToMicrosoft parameter is $false), you must set the value of the ReportJunkToCustomizedAddress, ReportNotToCustomizedAddress, and ReportPhishToCustomizedAddress parameters to $true AND specify the same email address for the ReportJunkAddress, ReportNotJunkAddress, ReportPhishAddress parameters in the same command.
 
 ```yaml
 Type: Boolean
@@ -200,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserEmailNotification
-{{ Fill EnableUserEmailNotification Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -216,7 +267,13 @@ Accept wildcard characters: False
 ```
 
 ### -JunkReviewResultMessage
-{{ Fill JunkReviewResultMessage Description }}
+The JunkReviewResultMessage parameter specifies the custom text to use in email notifications after an admin reviews and marks messages that were reported as junk. If the value contains spaces, enclose the value in quotation marks (").
+
+You can customize the footer in notification messages using the NotificationFooterMessage and EnableOrganizationBranding parameters.
+
+You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -232,7 +289,13 @@ Accept wildcard characters: False
 ```
 
 ### -NotJunkReviewResultMessage
-{{ Fill NotJunkReviewResultMessage Description }}
+The NotJunkReviewResultMessage parameter specifies the custom text to use in email notifications after an admin reviews and marks messages that were reported as not junk. If the value contains spaces, enclose the value in quotation marks (").
+
+You can customize the footer in notification messages using the NotificationFooterMessage and EnableOrganizationBranding parameters.
+
+You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -248,7 +311,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationFooterMessage
-{{ Fill NotificationFooterMessage Description }}
+The NotificationFooterMessage parameter specifies the custom footer text to use in email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. If the value contains spaces, enclose the value in quotation marks.
+
+You can use the EnableOrganizationBranding parameter to include your company logo in the message footer.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -264,7 +331,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationSenderAddress
-{{ Fill NotificationSenderAddress Description }}
+The NotificationSenderAddress parameter specifies the sender email address to use in email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. The email address must be in Exchange Online.
+
+This parameter is meaningful only when the EnableCustomNotificationSender parameter value is $true.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: MultiValuedProperty
@@ -280,7 +351,19 @@ Accept wildcard characters: False
 ```
 
 ### -OnlyShowPhishingDisclaimer
-{{ Fill OnlyShowPhishingDisclaimer Description }}
+The OnlyShowPhishingDisclaimer parameter specifies whether to show users the before reporting and after reporting messages only for messages that were reported as phishing. Valid values are:
+
+- $true: Show the before reporting and after reporting messages only when users report messages as phishing. This is the default value.
+- $false: Show the before reporting and after reporting messages when users report messages as junk, not junk, and phishing.
+
+You specify the title and message body for the before reporting and after reporting messages using the following parameters:
+
+- PreSubmitMessageTitle
+- PreSubmitMessage
+- PostSubmitMessageTitle
+- PostSubmitMessage
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -296,7 +379,13 @@ Accept wildcard characters: False
 ```
 
 ### -PhishingReviewResultMessage
-{{ Fill PhishingReviewResultMessage Description }}
+The PhishingReviewResultMessage parameter specifies the custom text to use in email notifications after an admin reviews and marks messages that were reported as phishing. If the value contains spaces, enclose the value in quotation marks (").
+
+You can customize the footer in notification messages using the NotificationFooterMessage and EnableOrganizationBranding parameters.
+
+You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -312,11 +401,13 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessage
-The PostSubmitMessage parameter specifies the main text to use in the custom message that's shown to users in the Report Message add-in after they submit the message. You can use the variable %type% as a placeholder for the type of submission (spam, phish, etc.). If the value contains spaces, enclose the value in quotation marks (").
+The PostSubmitMessage parameter specifies the custom message body text to use in notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You need to use this parameter with the PostSubmitMessageTitle parameter.
+You specify the custom title for after reporting messages using the PostSubmitMessageTitle parameter.
 
-This parameter is meaningful only when the EnableCustomizedMsg parameter value is $true.
+This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -332,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageForJunk
-{{ Fill PostSubmitMessageForJunk Description }}
+Don't use this parameter. Use the PostSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -348,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageForNotJunk
-{{ Fill PostSubmitMessageForNotJunk Description }}
+Don't use this parameter. Use the PostSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -364,7 +455,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageForPhishing
-{{ Fill PostSubmitMessageForPhishing Description }}
+Don't use this parameter. Use the PostSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -380,11 +471,13 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitle
-The PostSubmitMessageTitle parameter specifies the title text to use in the custom message that's shown to users in the Report Message add-in after they submit the message. You can use the variable %type% as a placeholder for the type of submission (spam, phish, etc.). If the value contains spaces, enclose the value in quotation marks (").
+The PostSubmitMessage parameter parameter specifies the custom title text to use in notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You need to use this parameter with the PostSubmitMessage parameter.
+You specify the custom message body for after reporting messages using the PostSubmitMessage parameter.
 
-This parameter is meaningful only when the EnableCustomizedMsg parameter value is $true.
+This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -400,7 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitleForJunk
-{{ Fill PostSubmitMessageTitleForJunk Description }}
+Don't use this parameter. Use the PostSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -416,7 +509,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitleForNotJunk
-{{ Fill PostSubmitMessageTitleForNotJunk Description }}
+Don't use this parameter. Use the PostSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -432,7 +525,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitleForPhishing
-{{ Fill PostSubmitMessageTitleForPhishing Description }}
+Don't use this parameter. Use the PostSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -448,11 +541,13 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessage
-The PreSubmitMessage parameter specifies the main text to use in the custom message that's shown to users in the Report Message add-in before they submit the message. You can use the variable %type% as a placeholder for the type of submission (spam, phish, etc.). If the value contains spaces, enclose the value in quotation marks (").
+The PreSubmitMessage parameter specifies the custom message body text to use in notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You need to use this parameter with the PreSubmitMessageTitle parameter.
+You specify the custom title for after reporting messages using the PreSubmitMessageTitle parameter.
 
-This parameter is meaningful only when the EnableCustomizedMsg parameter value is $true.
+This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -468,7 +563,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageForJunk
-{{ Fill PreSubmitMessageForJunk Description }}
+Don't use this parameter. Use the PreSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -484,7 +579,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageForNotJunk
-{{ Fill PreSubmitMessageForNotJunk Description }}
+Don't use this parameter. Use the PreSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -500,7 +595,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageForPhishing
-{{ Fill PreSubmitMessageForPhishing Description }}
+Don't use this parameter. Use the PreSubmitMessage parameter instead.
 
 ```yaml
 Type: String
@@ -516,11 +611,13 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitle
-The PreSubmitMessageTitle parameter specifies the title text to use in the custom message that's shown to users in the Report Message add-in before they submit the message. You can use the variable %type% as a placeholder for the type of submission (spam, phish, etc.). If the value contains spaces, enclose the value in quotation marks (").
+The PreSubmitMessage parameter parameter specifies the custom title text to use in notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You need to use this parameter with the PreSubmitMessage parameter.
+You specify the custom message body for before reporting messages using the PreSubmitMessage parameter.
 
-This parameter is meaningful only when the EnableCustomizedMsg parameter value is $true.
+This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: String
@@ -536,7 +633,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitleForJunk
-{{ Fill PreSubmitMessageTitleForJunk Description }}
+Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -552,7 +649,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitleForNotJunk
-{{ Fill PreSubmitMessageTitleForNotJunk Description }}
+Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -568,7 +665,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitleForPhishing
-{{ Fill PreSubmitMessageTitleForPhishing Description }}
+Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
@@ -584,7 +681,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkAddresses
-The ReportJunkAddresses parameter specifies the recipients who receive messages that are reported as junk by users. A valid value is an internal email address. You can specify multiple email addresses separated by commas.
+The ReportJunkAddresses parameter to specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
+
+You can't use this parameter by itself. You need to specify the same email address for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters in the same command.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: MultiValuedProperty
@@ -600,12 +701,18 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkToCustomizedAddress
-The ReportJunkToCustomizedAddress parameter enables or disables sending messages reported as junk to custom recipients. Valid values are:
+The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages to the custom mailbox in the Microsoft integrated reporting experience. Valid values are:
 
-- $true: Messages reported as junk are sent to the recipients specified by the ReportJunkAddresses parameter.
-- $false: Messages reported as junk are not sent to custom recipients. This is the default value.
+- $true: User reported messages are sent to the custom mailbox.
+- $false: User reported messages are not sent to the custom mailbox.
 
- Whether or not the messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter (the default value is $true).
+You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
+
+You identify the custom mailbox by using the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters (all three parameters with the same value in the same command).
+
+Whether or not user reported messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -621,7 +728,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkAddresses
-The ReportNoJunkAddresses parameter specifies the recipients who receive messages that are reported as no junk by users. A valid value is an internal email address. You can specify multiple email addresses separated by commas.
+Use the ReportNotJunkAddresses parameter to specify the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
+
+You can't use this parameter by itself. You need to specify the same email address for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters in the same command.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: MultiValuedProperty
@@ -637,12 +748,18 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkToCustomizedAddress
-The ReportNotJunkToCustomizedAddress parameter enables or disables sending messages reported as not junk to custom recipients. Valid values are:
+The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages to the custom mailbox in the Microsoft integrated reporting experience. Valid values are:
 
-- $true: Messages reported as not junk are sent to the recipients specified by the ReportNotJunkAddresses parameter.
-- $false: Messages reported as not junk are not sent to custom recipients. This is the default value.
+- $true: User reported messages are sent to the custom mailbox.
+- $false: User reported messages are not sent to the custom mailbox.
 
- Whether or not the messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter (the default value is $true).
+You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
+
+You identify the custom mailbox by using the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters (all three parameters with the same value in the same command).
+
+Whether or not user reported messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -658,7 +775,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishAddresses
-The ReportPhishAddresses parameter specifies the recipients who receive messages that are reported as phishing by users. A valid value is an internal email address. You can specify multiple email addresses separated by commas.
+The ReportPhishAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
+
+You can't use this parameter by itself. You need to specify the same email address for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters in the same command.
+
+This parameter is meaningful only when the ReportPhishToCustomizedAddress parameter value is $true.
 
 ```yaml
 Type: MultiValuedProperty
@@ -674,12 +795,18 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishToCustomizedAddress
-The ReportPhishToCustomizedAddress parameter enables or disables sending messages reported as phishing to custom recipients. Valid values are:
+The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages to the custom mailbox in the Microsoft integrated reporting experience. Valid values are:
 
-- $true: Messages reported as phishing are sent to the recipients specified by the ReportPhishAddresses parameter.
-- $false: Messages reported as not junk are not sent to custom recipients. This is the default value.
+- $true: User reported messages are sent to the custom mailbox.
+- $false: User reported messages are not sent to the custom mailbox.
 
- Whether or not the messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter (the default value is $true).
+You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
+
+You identify the custom mailbox by using the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters (all three parameters with the same value in the same command).
+
+Whether or not user reported messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean
@@ -695,9 +822,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyReportAddresses
-The ThirdPartyReportAddresses parameter specifies where to send user-reported messages if you're using third-party tools instead of the Report Message add-in. You can specify multiple email addresses separated by commas.
+Use the ThirdPartyReportAddresses parameter to specify the email address of the custom mailbox for user reported messages when you use third-party reporting tools instead of the Microsoft integrated reporting experience.
 
-This parameter is meaningful only when the EnableThirdPartyAddress parameter value is $true.
+If you're using the Microsoft integrated reporting experience, the value of this parameter must be blank ($null).
+
+If you're using third-party reporting tools, you need specify a value for this parameter and turn off the Microsoft integrated reporting experience as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: MultiValuedProperty
@@ -713,7 +842,18 @@ Accept wildcard characters: False
 ```
 
 ### -UserSubmissionOptions
-{{ Fill UserSubmissionOptions Description }}
+The UserSubmissionOptions parameter specifies the reporting options that are available to users. Valid values are:
+
+- 0: No reporting options are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
+- 1: **Ask before reporting the message** is the only available option.
+- 2: **Always report the message** is the only available option.
+- 3: **Ask before reporting the message** and **Always report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
+- 4: **Never report the message** is the only available option.
+- 5: **Ask before reporting the message** and **Never report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
+- 6: **Always report the message** and **Never report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
+- 7: **Ask before reporting the message**, **Always report the message**, and **Never report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Int32
@@ -729,7 +869,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSubmissionOptionsMessage
-{{ Fill UserSubmissionOptionsMessage Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

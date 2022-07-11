@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ReportSubmissionRule cmdlet to 
+Use the Set-ReportSubmissionRule cmdlet to modify the report submission rule in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,12 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 {{ Add example code here }}
 ```
 
-{{ Add example description here }}
+Set-ReportSubmissionRule -Identity DefaultReportSubmissionRule -SentTo lila@contoso.com
+
+This example changes the reporting mailbox to lila@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the report submission rule that you want to modify. The default rule is named DefaultReportSubmissionRule.
 
 ```yaml
 Type: RuleIdParameter
@@ -62,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comments
-{{ Fill Comments Description }}
+The Comments parameter specifies informative comments for the rule, such as what the rule is used for or how it has changed over time. The length of the comment can't exceed 1024 characters.
 
 ```yaml
 Type: String
@@ -97,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The Name parameter specifies the name of the report submission rule. When the rule is automatically created, the name of the rule is DefaultReportSubmissionRule. We recommend using this value.
 
 ```yaml
 Type: String
@@ -113,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportSubmissionPolicy
-{{ Fill ReportSubmissionPolicy Description }}
+The ReportSubmissionPolicy parameter specifies the report submission policy that's associated with this rule. The only available policy is named DefaultReportSubmissionPolicy.
 
 ```yaml
 Type: ReportSubmissionPolicyIdParameter
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-{{ Fill SentTo Description }}
+The SentTo parameter specifies the email address of the reporting mailbox that you want to use.
 
 ```yaml
 Type: RecipientIdParameter[]

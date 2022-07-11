@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ReportSubmissionRule cmdlet to 
+Use the Remove-ReportSubmissionRule cmdlet to remove the report submission rule from your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,21 +28,23 @@ Remove-ReportSubmissionRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+To disable the report submission rule without deleting it, use the Disable-ReportSubmissionRule cmdlet.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ReportSubmissionRule -Identity DefaultReportSubmissionRule
 ```
 
-{{ Add example description here }}
+This example removes the report submission rule from your organization.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the report submission rule that you want to remove. The default rule is named DefaultReportSubmissionRule.
 
 ```yaml
 Type: RuleIdParameter

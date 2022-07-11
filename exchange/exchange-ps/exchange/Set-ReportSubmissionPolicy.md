@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ReportSubmissionPolicy cmdlet to modify the user submission configuration in your cloud-based organization.
+Use the Set-ReportSubmissionPolicy cmdlet to modify the report submission policy in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -66,6 +66,8 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
 ```
 
 ## DESCRIPTION
+The report submission policy controls the settings for user submission in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -80,7 +82,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user submission configuration that you want to modify. The only available value is DefaultReportSubmissionPolicy.
+The Identity parameter specifies the report submission policy that you want to modify. The only available policy is named DefaultReportSubmissionPolicy.
 
 ```yaml
 Type: ReportSubmissionPolicyIdParameter
@@ -158,7 +160,7 @@ Accept wildcard characters: False
 The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for notifications for user submitted messages. Valid values are:
 
 - $true: Use a custom Microsoft 365 sender email address.
-- $false: Don't use a custom Microsoft 365 sender email address. This is the default value.
+- $false: Use the default sender email address. This is the default value.
 
 You specify the sender email address using the NotificationSenderAddress parameter.
 
@@ -206,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationBranding
-The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing.  Valid values are:
+The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. Valid values are:
 
 - $true: Use the company logo in the footer text.
 - $false: Don't use the company logo in the footer text.
@@ -396,6 +398,8 @@ You specify the title and message body for the before reporting and after report
 - PreSubmitMessage
 - PostSubmitMessageTitle
 - PostSubmitMessage
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is turned on as described in the EnableThirdPartyAddress parameter description.
 
 ```yaml
 Type: Boolean

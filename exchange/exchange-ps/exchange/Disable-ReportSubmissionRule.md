@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Disable-ReportSubmissionRule cmdlet to 
+Use the Disable-ReportSubmissionRule cmdlet to disable the report submission rule in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,15 +34,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Disable-ReportSubmissionRule -Identity DefaultReportSubmissionRule.
 ```
 
-{{ Add example description here }}
+This example disables the report submission rule if it's already enabled.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the report submission rule that you want to disable. The default rule is named DefaultReportSubmissionRule.
 
 ```yaml
 Type: RuleIdParameter

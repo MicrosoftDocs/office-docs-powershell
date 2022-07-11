@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ReportSubmissionPolicy cmdlet to view the user submission configuration in your cloud-based organization.
+Use the Get-ReportSubmissionPolicy cmdlet to view the report submission policy in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -25,6 +25,8 @@ Get-ReportSubmissionPolicy [[-Identity] <ReportSubmissionPolicyIdParameter>] [<C
 ```
 
 ## DESCRIPTION
+The report submission policy controls the settings for user submissions in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -34,12 +36,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ReportSubmissionPolicy
 ```
 
-This example returns the user submission configuration for your organization.
+This example returns the settings of the report submission policy in your organization.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the report submission policy that you want to view. The only available policy is named DefaultReportSubmissionPolicy.
 
 ```yaml
 Type: ReportSubmissionPolicyIdParameter
