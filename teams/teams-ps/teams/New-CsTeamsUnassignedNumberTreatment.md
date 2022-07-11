@@ -174,7 +174,7 @@ The parameters Identity and TreatmentId are mutually exclusive.
 
 To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
 
-To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Phone System – Virtual User license.
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Microsoft Teams Phone Resource Account license.
 
 Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
 
