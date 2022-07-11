@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is a email list of users and groups to be notified of an emergency call
+NotificationGroup is a email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ;, for instance "group1@contoso.com;group2@contoso.com".
 
 ```yaml
 Type: String
