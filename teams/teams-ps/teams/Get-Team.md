@@ -53,7 +53,7 @@ Returns all teams that are private and have been archived.
 ```
 PS> Get-Team -MailNickName "BusinessDevelopment"
 ```
-Returns the team that matches the specified MailNickName
+Returns the team that with the specified MailNickName. (This acts as a filter rather than an exact match).
 
 ### Example 4
 ```
