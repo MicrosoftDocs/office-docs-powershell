@@ -36,7 +36,7 @@ Grant-CsTeamsEmergencyCallRoutingPolicy [[-Identity] <string>] [[-PolicyName] <s
 ```
 
 ## DESCRIPTION
-This cmdlet assigns a Teams Emergency Call Routing policy to a user. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
+This cmdlet assigns a Teams Emergency Call Routing policy to a user, a group of users or to the Global policy instance. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
 
 ## EXAMPLES
 
@@ -61,6 +61,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Indicates the Identity of the user account the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (Identity)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -94,23 +124,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-{{ Fill Group Description }}
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rank
-{{ Fill Rank Description }}
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
@@ -121,21 +136,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Indicates the Identity of the user account the policy should be assigned to.
-
-```yaml
-Type: String
-Parameter Sets: (Identity)
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
