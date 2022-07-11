@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
 
-**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](/powershell/module/teams/get-cshybridtelephonenumber) cmdlet instead
+**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](/powershell/module/teams/get-cshybridtelephonenumber) cmdlet instead.
 
 ## SYNTAX
 
