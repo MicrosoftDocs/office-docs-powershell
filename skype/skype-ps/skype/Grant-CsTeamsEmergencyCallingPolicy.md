@@ -13,6 +13,7 @@ schema: 2.0.0
 # Grant-CsTeamsEmergencyCallingPolicy
 
 ## SYNOPSIS
+This cmdlet assigns a Teams Emergency Calling policy to a user, a group of users or to the Global policy instance.
 
 ## SYNTAX
 
@@ -32,7 +33,7 @@ Grant-CsTeamsEmergencyCallingPolicy [-Group] <string> [[-PolicyName] <string>] [
 ```
 
 ## DESCRIPTION
-This cmdlet assigns a Teams Emergency Calling policy to a user. Emergency Calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+This cmdlet assigns a Teams Emergency Calling policy to a user, a group of users or to the Global policy instance. Emergency Calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
 
 ## EXAMPLES
 
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-{{ Fill Group Description }}
+Specifies the group used for the group policy assignment.
 
 ```yaml
 Type: String
