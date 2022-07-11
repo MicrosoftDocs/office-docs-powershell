@@ -42,7 +42,7 @@ Assigning a Teams call hold policy to a user sets an audio file to be played dur
 
 ### Example 1
 ```powershell
-PS C:\> Set-TeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -AudioFileID "c65233-ac2a27-98701b-123ccc" 
+PS C:\> Set-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -AudioFileId "c65233-ac2a27-98701b-123ccc" 
 ```
 
 The command shown in Example 1 modifies an existing per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
@@ -53,7 +53,7 @@ Any Microsoft Teams users who are assigned this policy will have their call hold
 
 ### Example 2
 ```powershell
-PS C:\> Set-TeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music" 
+PS C:\> Set-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music" 
 ```
 
 The command shown in Example 2 modifies an existing per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.

@@ -83,18 +83,43 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 
 ### Updates for version 2.0.6
 
-Version 2.0.6-Preview3 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
+Version 2.0.6-Preview6 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
 
-- 250 additional remote PowerShell cmdlets that are backed by the REST API. These REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module). These REST API cmdlets also work just like their old remote PowerShell equivalent cmdlets, so you don't need to update any of your scripts.
-- The new _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets. The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
-- A small number of existing mailbox remote PowerShell cmdlets have been updated with a new, experimental _UseCustomRoutingSwitch_ parameter. Using this switch routes the command directly to the required Mailbox server, and might improve overall performance.
-  - When you use the _UseCustomRoutingSwitch_, you need to use the following values for identity of the mailbox:
+- Version 2.0.6 includes cmdlets that are backed by the REST API:
+  - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module).
+  - REST API cmdlets work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
+  - Virtually all of the available remote PowerShell cmdlets are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
+
+- The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets as before:
+  - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
+  - If you don't use the _UseRPSSession_ switch when you connect, you can use _only_ the REST API cmdlets.
+
+- A few REST API cmdlets have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
+  - When you use the _UseCustomRouting_ switch, you can use only the following values for identity of the mailbox:
     - User principal name (UPN)
     - Email address
     - Mailbox GUID
-  - Initially, the _UseCustomRoutingSwitch_ is available on the following cmdlets: **Remove-CalendarEvents**, **Get-Clutter**, **Set-Clutter**, **Get-FocusedInbox**, **Set-FocusedInbox**, **Get-InboxRule**, **Get-MailboxAutoReplyConfiguration**, **Get-MailboxCalendarFolder**, **Get-MailboxFolderPermission**, **Get-MailboxFolderStatistics**, **Get-MailboxMessageConfiguration**, **Get-MailboxPermission**, **Get-MailboxRegionalConfiguration**, **Set-MailboxRegionalConfiguration**, **Get-MailboxStatistics**, **Get-MobileDeviceStatistics**, **Get-UserPhoto**, and **Set-UserPhoto**.
+  - The _UseCustomRouting_ switch is available only on the following REST API cmdlets:
+    - **Get-Clutter**
+    - **Get-FocusedInbox**
+    - **Get-InboxRule**
+    - **Get-MailboxAutoReplyConfiguration**
+    - **Get-MailboxCalendarFolder**
+    - **Get-MailboxFolderPermission**
+    - **Get-MailboxFolderStatistics**
+    - **Get-MailboxMessageConfiguration**
+    - **Get-MailboxPermission**
+    - **Get-MailboxRegionalConfiguration**
+    - **Get-MailboxStatistics**
+    - **Get-MobileDeviceStatistics**
+    - **Get-UserPhoto**
+    - **Remove-CalendarEvents**
+    - **Set-Clutter**
+    - **Set-FocusedInbox**
+    - **Set-MailboxRegionalConfiguration**
+    - **Set-UserPhoto**
 
-    Use this parameter experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
+    Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
 
 ## Install and maintain the EXO V2 module
 
@@ -164,6 +189,9 @@ After you install PowerShell 7, do the following steps:
 
 Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exo-v2-module) and [install the EXO V2 module](#install-the-exo-v2-module).
 
+> [!NOTE]
+> If you connect to Exchange Online PowerShell from a network that's behind a proxy server, v2.0.5 or earlier versions of the module don't work in Linux. You need to use v2.0.6 or later in Linux to connect from a network that's behind a proxy server.
+
 #### Windows
 
 All versions of the EXO V2 module are supported in Windows PowerShell 5.1. PowerShell 7 on Windows requires version 2.0.4 or later of the EXO V2 module.
@@ -192,7 +220,9 @@ The EXO V2 module is supported in the following versions of Windows:
 > [!NOTE]
 > The settings described in this section are required in all versions of PowerShell on all operating systems.
 
-- PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
+- **Set the PowerShell execution policy to RemoteSigned**:
+
+  PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
   > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
@@ -204,14 +234,17 @@ The EXO V2 module is supported in the following versions of Windows:
 
   For more information about execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- **Turn on Basic authentication in WinRM**:
 
   > [!NOTE]
-  > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for many cmdlets.
-  >
-  > You must temporarily enable WinRM to run the following winrm commands. You can enable WinRM by running the command: `winrm quickconfig`.
+  > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for REST API cmdlets.
+
+  WinRM needs to allow Basic authentication. We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
+
+  > [!NOTE]
+  > You must temporarily enable WinRM to run the following WinRM commands. You can enable WinRM by running the command: `winrm quickconfig`.
 
   ```DOS
   winrm get winrm/config/client/auth
@@ -240,7 +273,7 @@ The EXO V2 module is supported in the following versions of Windows:
   If Basic authentication for WinRM is disabled, you'll get one of the following errors when you try to connect:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
-
+  >
   > Create Powershell Session is failed using OAuth.
   
 > [!TIP]
@@ -314,18 +347,20 @@ If the module is already installed on your computer, you can run the following c
        Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser
        ```
 
-   - To upgrade to **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
+   - To upgrade to **a Preview version** of the module, you can upgrade to the latest available Preview version, or you can use the _RequiredVersion_ parameter to upgrade to a specific Preview version. To see the available Preview versions, run the command: `Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease`.
+
+     Run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
 
      - In an elevated PowerShell window (all users):
 
        ```powershell
-       Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
+       Update-Module -Name ExchangeOnlineManagement -AllowPrerelease [-RequiredVersion <PreviewVersion>]
        ```
 
      - Only for the current user account:
 
        ```powershell
-       Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease -Scope CurrentUser
+       Update-Module -Name ExchangeOnlineManagement -AllowPrerelease -Scope CurrentUser [-RequiredVersion <PreviewVersion>]
        ```
 
    When you're finished, enter **Y** to accept the license agreement.
@@ -364,7 +399,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
   ```
 
-  To *permanently* enable strong cryptography in the Microsoft .NET Framework version 4.x or later, run one of the following commands based on your Windows architecture:
+  To _permanently_ enable strong cryptography in the Microsoft .NET Framework version 4.x or later, run one of the following commands based on your Windows architecture:
 
   - x64:
 
@@ -380,12 +415,11 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
   For more information, see [SchUseStrongCrypto](/dotnet/framework/network-programming/tls#schusestrongcrypto).
 
-  
 - You receive the following error:
 
-  > No match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try running `Get-PSReporitory` to see all available registered module repositories.
+  > No match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try running `Get-PSRepository` to see all available registered module repositories.
 
-  The default repository for PowerShell modules is not set to PSGallery. To fix this error, run the following command: 
+  The default repository for PowerShell modules is not set to PSGallery. To fix this error, run the following command:
   
   ```powershell
   Register-PSRepository -Default
@@ -413,26 +447,26 @@ For detailed syntax and parameter information, see [Uninstall-Module](/powershel
 
 Traditional Exchange Online cmdlets return all possible object properties in their output, including many properties that are often blank or aren't interesting in many scenarios. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
 
-The **Get-EXO\*** cmdlets in the module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into property sets. Simply put, these property sets are buckets of two or more related properties on the cmdlet.
+The **Get-EXO\*** cmdlets in the module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into _property sets_. Simply put, these property sets are buckets of two or more related properties on the cmdlet.
 
-In the biggest and most used **Get-EXO\*** cmdlets:
+The biggest and most used **Get-EXO\*** cmdlets use property sets:
 
 - [Get-EXOCasMailbox](/powershell/module/exchange/get-exocasmailbox)
 - [Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)
 - [Get-EXOMailboxStatistics](/powershell/module/exchange/get-exomailboxstatistics)
 - [Get-EXORecipient](/powershell/module/exchange/get-exorecipient)
 
-Property sets are controlled by the following parameters:
+In those cmdlets, property sets are controlled by the following parameters:
 
-- *PropertySets*: This parameter accepts one or more available property set names separated by commas. The available property sets are described in [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md).
-- *Properties*: This parameter accepts one or more property names separated by commas.
+- _PropertySets_: This parameter accepts one or more available property set names separated by commas. The available property sets are described in [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md).
+- _Properties_: This parameter accepts one or more property names separated by commas.
 
-You can use the *PropertySets* and *Properties* parameters together in the same command.
+You can use the _PropertySets_ and _Properties_ parameters together in the same command.
 
 We've also included a Minimum property set that includes a bare minimum set of required properties for the cmdlet output (for example, identity properties). The properties in the Minimum property sets are also described in [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md).
 
-- If you don't use the *PropertySets* or *Properties* parameters, you automatically get the properties in the Minimum property set.
-- If you use the *PropertySets* or *Properties* parameters, you get the specified properties **and** the properties in the Minimum property set.
+- If you don't use the _PropertySets_ or _Properties_ parameters, you automatically get the properties in the Minimum property set.
+- If you use the _PropertySets_ or _Properties_ parameters, you get the specified properties **and** the properties in the Minimum property set.
 
 Either way, the cmdlet output will contain far fewer properties, and the time it takes to return those results will be much faster.
 
@@ -533,7 +567,7 @@ Unless otherwise noted, the current release of the EXO V2 module contains all fe
 #### Version 0.3527.4
 
 - Updated Get-Help content.
-- Fixed an issue in **Get-Help** where the *-Online* parameter was redirecting to a non-existent page with error code 400.
+- Fixed an issue in **Get-Help** where the _Online_ parameter was redirecting to a non-existent page with error code 400.
 
 #### Version 0.3527.3
 
