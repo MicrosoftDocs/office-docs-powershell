@@ -43,10 +43,17 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 
 ### Example 1
 ```powershell
-Grant-CsTeamsCallParkPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
+Grant-CsTeamsCallParkPolicy -PolicyName SalesPolicy -Identity Ken.Myer@contoso.com
 ```
 
-Assigns a custom policy "Sales Policy" to the user "Ken Myer"
+Assigns a custom policy "Sales Policy" to the user Ken Myer.
+
+### Example 2
+```powershell
+Grant-CsTeamsCallParkPolicy -Group sales@contoso.com -Rank 10 -PolicyName SalesPolicy
+```
+
+Assigns a custom policy "Sales Policy" to the member of the group sales@contoso.com.
 
 ## PARAMETERS
 
