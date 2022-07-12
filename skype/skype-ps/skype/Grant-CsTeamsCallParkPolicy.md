@@ -61,7 +61,7 @@ Assigns a custom policy "Sales Policy" to the member of the group sales@contoso.
 The User Id of the user to whom the policy is being assigned.
 
 ```yaml
-Type: UserIdParameter
+Type: String
 Parameter Sets: Identity
 Aliases:
 
