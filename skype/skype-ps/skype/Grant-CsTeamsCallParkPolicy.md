@@ -5,8 +5,8 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsCallParkPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -22,14 +22,17 @@ NOTE: the call park feature currently only available in desktop, web clients and
 
 ### Identity (Default)
 ```
-Grant-CsTeamsCallParkPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <System.Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsCallParkPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsTeamsCallParkPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsCallParkPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsCallParkPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,57 +43,12 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsCallParkPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
+Grant-CsTeamsCallParkPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
 ```
 
 Assigns a custom policy "Sales Policy" to the user "Ken Myer"
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Internal Microsoft use only.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-Internal Microsoft use only.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The User Id of the user to whom the policy is being assigned.
@@ -139,12 +97,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Internal Microsoft use only.
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: System.Guid
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: False
@@ -170,14 +158,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### Microsoft.Rtc.Management.AD.UserIdParameter
-
 
 ## OUTPUTS
 
@@ -185,4 +185,13 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## NOTES
 
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+
 ## RELATED LINKS
+[Set-CsTeamsCallParkPolicy](set-csteamscallparkpolicy.md)
+
+[Get-CsTeamsCallParkPolicy](get-csteamscallparkpolicy.md)
+
+[New-CsTeamsCallParkPolicy](new-csteamscallparkpolicy.md)
+
+[Remove-CsTeamsCallParkPolicy](remove-csteamscallparkpolicy.md)
