@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-cscallinglineidentity
-applicable: Microsoft Teams
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
@@ -67,7 +67,7 @@ Sets the parameters of the Global policy instance to the values in the specified
 Type: SwitchParameter
 Parameter Sets: (GrantToTenant)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ The name (Identity) of the Caller ID policy to be assigned to the user. To remov
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -115,7 +115,7 @@ Specifies the group used for the group policy assignment.
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: True
 Position: 0
@@ -131,7 +131,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -196,6 +196,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## OUTPUTS
 
 ## NOTES
+
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
 [Set-CsCallingLineIdentity](set-cscallinglineidentity.md)
