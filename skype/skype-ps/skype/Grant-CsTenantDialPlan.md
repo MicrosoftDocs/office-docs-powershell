@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The PolicyName parameter is the name of the tenant dial plan to assign to the specified user or group.
+The PolicyName parameter is the name of the tenant dial plan to be assigned.
 
 ```yaml
 Type: String
@@ -120,7 +120,7 @@ Specifies the group used for the group policy assignment.
 
 ```yaml
 Type: String
-Parameter Sets: GrantToGroup
+Parameter Sets: (GrantToGroup)
 Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
@@ -136,7 +136,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 
 ```yaml
 Type: Int32
-Parameter Sets: GrantToGroup
+Parameter Sets: (GrantToGroup)
 Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
