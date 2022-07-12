@@ -36,7 +36,7 @@ The command shown in Example 1 sets allowing CQ overflow shared voicemail greeti
 ## PARAMETERS
 
 ### -AllowAutoAttendantAfterHoursGreetingChange
-When set to True users affected by the policy will be allowed to change auto attendant's after hour greeting. When set to False (the default value) users affected by the policy will not be allowed to change auto attendant's after hours greeting.
+When set to True users affected by the policy will be allowed to change auto attendant's after hours greeting. When set to False (the default value) users affected by the policy will not be allowed to change auto attendant's after hours greeting.
 
 ```yaml
 Type: Boolean
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantBusinessHoursGreetingChange
-When set to True users affected by the policy will be allowed to change auto attendant's business hour greeting. When set to False (the default value) users affected by the policy will not be allowed to change auto attendant's business hours greeting.
+When set to True users affected by the policy will be allowed to change auto attendant's business hours greeting. When set to False (the default value) users affected by the policy will not be allowed to change auto attendant's business hours greeting.
 
 ```yaml
 Type: Boolean
