@@ -185,5 +185,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamsvoiceapplicationspolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamsvoiceapplicationspolicy)
+
+[Get-CsTeamsVoiceApplicationsPolicy](Get-CsTeamsVoiceApplicationsPolicy.md)
+
+[Set-CsTeamsVoiceApplicationsPolicy](Grant-CsTeamsVoiceApplicationsPolicy.md)
+
+[Remove-CsTeamsVoiceApplicationsPolicy](Remove-CsTeamsVoiceApplicationsPolicy.md)
+
+[New-CsTeamsVoiceApplicationsPolicy](New-CsTeamsVoiceApplicationsPolicy.md)
 
