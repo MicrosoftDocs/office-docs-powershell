@@ -553,7 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingChatEnabledType
-Specify if users will be able to chat in meetings. Possible values are: Disabled, Enabled and EnabledExceptAnonymous.
+Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
 ```yaml
 Type: String
