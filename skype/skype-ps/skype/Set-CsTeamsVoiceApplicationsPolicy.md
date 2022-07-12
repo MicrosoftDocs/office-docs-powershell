@@ -17,7 +17,7 @@ Set-CsTeamsVoiceApplicationsPolicy [-AllowAutoAttendantAfterHoursGreetingChange 
  [-AllowAutoAttendantHolidayGreetingChange <Boolean>] [-AllowCallQueueMusicOnHoldChange <Boolean>]
  [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]
- [-AllowCallQueueWelcomeGreetingChange <Boolean>] [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+ [-AllowCallQueueWelcomeGreetingChange <Boolean>] [[-Identity] <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
