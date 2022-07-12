@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-cscallinglineidentity
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Grant-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
@@ -13,7 +13,7 @@ ms.reviewer:
 # Grant-CsCallingLineIdentity
 
 ## SYNOPSIS
-Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account or set the tenant Global instance.
+Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account, to a group of users or set the tenant Global instance.
 
 ## SYNTAX
 
@@ -21,13 +21,19 @@ Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a us
 ```
 Grant-CsCallingLineIdentity [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+### GrantToGroup
+```
+Grant-CsCallingLineIdentity [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### Identity
 ```
 Grant-CsCallingLineIdentity [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can either assign a Caller ID policy to a specific user or you can set the Global policy instance.
+You can either assign a Caller ID policy to a specific user, to a group of users or you can set the Global policy instance.
 
 ## EXAMPLES
 
@@ -45,6 +51,12 @@ Grant-CsCallingLineIdentity -PolicyName CallerIDSeattle -Global
 
 This example copies the Caller ID policy CallerIDSeattle to the Global policy instance.
 
+### Example 3
+```
+Grant-CsCallingLineIdentity -Group sales@contoso.com -PolicyName CallerIDSeattle -Rank 10
+```
+
+This example assigns the Caller ID policy with the Identity CallerIDSeattle to the members of the group sales@contoso.com.
 
 ## PARAMETERS
 
@@ -55,7 +67,7 @@ Sets the parameters of the Global policy instance to the values in the specified
 Type: SwitchParameter
 Parameter Sets: (GrantToTenant)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -71,7 +83,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -87,7 +99,7 @@ The name (Identity) of the Caller ID policy to be assigned to the user. To remov
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -96,6 +108,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+Applicable: Microsoft Teams
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Identity
 The Identity of the user to whom the policy is being assigned. User Identities can be specified using the user's SIP address, the user's user principal name (UPN), or
 the user's ObjectId/Identity.
