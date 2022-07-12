@@ -21,14 +21,17 @@ Assigns a per-user Teams call hold policy to one or more users. The Teams call h
 
 ### Identity (Default)
 ```
-grant-CsTeamsCallHoldPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <System.Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsCallHoldPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-grant-CsTeamsCallHoldPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsCallHoldPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsCallHoldPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,21 +44,21 @@ Assigning a teams call hold policy to a user sets an audio file to be played dur
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsCallHoldPolicy -Identity 'KenMyer@contoso.com' -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+Grant-CsTeamsCallHoldPolicy -Identity 'KenMyer@contoso.com' -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
 ```
 
 The command shown in Example 1 assigns the per-user Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, to the user with the user principal name (UPN) "KenMyer@contoso.com".
 
 ### Example 2
 ```powershell
-PS C:\> Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
 ```
 
 The command shown in Example 2 assigns the per-user Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, to the user with the display name "Ken Myer".
 
 ### Example 3
 ```powershell
-PS C:\> Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName $null
+Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName $null
 ```
 
 In Example 3, any per-user Teams call hold policy previously assigned to the user "Ken Myer" is revoked.
@@ -63,57 +66,19 @@ As a result, the user will be managed by the global Teams call hold policy.
 
 ### Example 4
 ```powershell
-PS C:\> Grant-CsTeamsCallHoldPolicy -Global -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+Grant-CsTeamsCallHoldPolicy -Global -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
 ```
 
 The command shown in Example 4 sets the Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, as the Global policy which will apply to all users in your tenant.
 
+### Example 5
+```powershell
+Grant-CsTeamsCallHoldPolicy -Group sales@contoso.com -Rank 10 -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+```
+
+The command shown in Example 5 sets the Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, to the members of the group sales@contoso.com.
+
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 Indicates the Identity of the user account to be assigned the per-user Teams call hold policy.
@@ -171,12 +136,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-This parameter is reserved for internal Microsoft use.
+### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
 
 ```yaml
-Type: System.Guid
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: False
@@ -202,18 +197,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### Microsoft.Rtc.Management.AD.UserIdParameter
 
 ## OUTPUTS
 
 ### System.Object
 
 ## NOTES
+
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
 
