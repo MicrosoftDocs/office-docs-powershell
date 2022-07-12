@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name (Identity) of the Caller ID policy to be assigned to the user. To remove an existing user level policy assignment, specify PolicyName as $null.
+The name (Identity) of the Caller ID policy to be assigned. To remove an existing user level policy assignment, specify PolicyName as $null.
 
 ```yaml
 Type: String
