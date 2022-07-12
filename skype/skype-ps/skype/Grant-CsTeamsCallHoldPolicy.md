@@ -89,7 +89,7 @@ User Identities can be specified using one of the following formats:
 - The user's Active Directory display name (for example, Ken Myer).
 
 ```yaml
-Type: UserIdParameter
+Type: String
 Parameter Sets: Identity
 Aliases:
 
