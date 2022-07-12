@@ -5,8 +5,8 @@ applicable: Skype for Business Online, Microsoft Teams
 title: Grant-CsDialoutPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
