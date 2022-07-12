@@ -18,12 +18,6 @@ Grant-CsTeamsVoiceApplicationsPolicy [[-Identity] <String>] [-PassThru] [[-Polic
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### GrantToTenant
-```
-Grant-CsTeamsVoiceApplicationsPolicy [-PassThru] [[-PolicyName] <String>]
- [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations. 
 
