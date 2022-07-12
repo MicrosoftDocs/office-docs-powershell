@@ -140,7 +140,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Unique identifier assigned to the policy when it was created. Teams voice applications policies can be assigned at the global scope or the per-user scope. To refer to the global instance, use this syntax:
+
+-Identity global
+
+To refer to a per-user policy, use syntax similar to this:
+
+-Identity "SDA-Allow-All"
+
+If you do not specify an Identity, then the Set-CsTeamsVoiceApplicationsPolicy cmdlet will modify the global policy.
 
 ```yaml
 Type: String
