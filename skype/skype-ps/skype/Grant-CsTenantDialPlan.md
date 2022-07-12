@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The PolicyName parameter is the name of the tenant dial plan to assign to the specified user.
+The PolicyName parameter is the name of the tenant dial plan to assign to the specified user or group.
 
 ```yaml
 Type: String
