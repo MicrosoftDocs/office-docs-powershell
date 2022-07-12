@@ -24,13 +24,6 @@ Grant-CsTeamsVoiceApplicationsPolicy [-PassThru] [[-PolicyName] <String>]
  [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### GrantToGroup
-```
-Grant-CsTeamsVoiceApplicationsPolicy [-PassThru] [[-PolicyName] <String>]
- [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations. 
 
@@ -110,37 +103,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -Group
-{{ Fill Group Description }}
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Rank
-{{ Fill Rank Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
