@@ -18,7 +18,7 @@ New-CsTeamsVoiceApplicationsPolicy [-Identity] <String> [-AllowAutoAttendantAfte
  [-AllowAutoAttendantHolidayGreetingChange <Boolean>] [-AllowCallQueueMusicOnHoldChange <Boolean>]
  [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]
- [-AllowCallQueueWelcomeGreetingChange <Boolean>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+ [-AllowCallQueueWelcomeGreetingChange <Boolean>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -32,13 +32,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-Moh -AllowCallQueueMusicOnHoldChange $true
 ```
-The command shown in Example 1 creates a new per-user Temas Voice Applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrator to changes music on hold information.
+The command shown in Example 1 creates a new per-user Teams Voice Applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrator to changes music on hold information.
 
 ### EXAMPLE 
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
 ```
-The command shown in Example 1 creates a new per-user teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrator to changes after hour greeting for auto-attendant.
+The command shown in Example 1 creates a new per-user teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrator to changes after hours greeting for auto-attendant.
 
 
 ## PARAMETERS
