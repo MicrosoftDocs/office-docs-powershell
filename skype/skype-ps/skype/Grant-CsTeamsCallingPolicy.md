@@ -67,8 +67,8 @@ Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the members of the
 The user object to whom the policy is being assigned.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
 
 Required: False
@@ -128,7 +128,7 @@ Specifies the group used for the group policy assignment.
 
 ```yaml
 Type: String
-Parameter Sets: GrantToGroup
+Parameter Sets: (GrantToGroup)
 Aliases:
 
 Required: True
@@ -143,7 +143,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 
 ```yaml
 Type: Int32
-Parameter Sets: GrantToGroup
+Parameter Sets: (GrantToGroup)
 Aliases:
 
 Required: False
