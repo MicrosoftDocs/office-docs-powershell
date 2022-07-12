@@ -221,4 +221,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Get-CsOnlineDialOutPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy?view=skype-ps)
+[Get-CsOnlineDialOutPolicy](get-csonlinedialoutpolicy.md)
