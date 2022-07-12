@@ -5,35 +5,45 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Grant-CsTenantDialPlan
 
 ## SYNOPSIS
-Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user.
+Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user, to a group of users or sets the Global policy instance.
 
 ## SYNTAX
 
+### GrantToTenant (Default)
 ```
-Grant-CsTenantDialPlan [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Identity
+```
+Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
+The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user, a group of users or sets the Global policy instance.
 Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
 A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsOnlineUser "<user name>" | Select-Object TenantDialPlan.`
+You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsUserPolicyAssignment -Identity "<user name>" -PolicyType TenantDialPlan.`
+
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 
-(Skype for Business Online)
 ```
 Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
 ```
