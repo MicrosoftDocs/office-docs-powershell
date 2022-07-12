@@ -44,80 +44,37 @@ You can check whether a user has been granted a per-user tenant dial plan by cal
 
 ### Example 1
 
-```
-Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
+```powershell
+Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity Ken.Myer@contoso.com
 ```
 
-This example grants the Vt1tenantDialPlan9 dial plan to Vt1_User1.
+This example grants the Vt1tenantDialPlan9 dial plan to Ken.Meyer@contoso.com.
 
-### -------------------------- Example 2 -------------------------- 
-```
-Grant-CsTenantDialPlan -Identity "Ken Myer" -PolicyName $Null
+### Example 2
+```powershell
+Grant-CsTenantDialPlan -Identity Ken.Myer@contoso.com -PolicyName $Null
 ```
 
 In Example 2, any dial plan previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global dial plan.
 To unassign a custom tenant dial plan, set the PolicyName to a null value ($Null).
 
+### Example 3
 
+```powershell
+Grant-CsTenantDialPlan -Group sales@contoso.com -Rank 10 -PolicyName Vt1tenantDialPlan9
+```
+
+This example grants the Vt1tenantDialPlan9 dial plan to members of the group sales@contoso.com.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter identifies the user to whom the policy should be assigned.
-
-```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PolicyName
-The PolicyName parameter is the name of the tenant dial plan to assign to the specified user.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Specifies the domain controller that's used by the cmdlet to read or write the specified data.
-Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: (GrantToTenant)
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -142,21 +99,67 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Specifies the globally unique identifier (GUID) of your Microsoft Teams or Skype for Business Online tenant account.
-For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
-You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
+### -PolicyName
+The PolicyName parameter is the name of the tenant dial plan to assign to the specified user.
 
 ```yaml
-Type: Guid
+Type: String
 Parameter Sets: (All)
 Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter identifies the user to whom the policy should be assigned.
+
+```yaml
+Type: String
+Parameter Sets: (Identity)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -167,6 +170,22 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
@@ -187,3 +206,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
+[Set-CsTenantDialPlan](set-cstenantdialplan.md)
+
+[New-CsTenantDialPlan](new-cstenantdialplan.md)
+
+[Remove-CsTenantDialPlan](remove-cstenantdialplan.md)
+
+[Get-CsTenantDialPlan](get-cstenantdialplan.md)
