@@ -103,5 +103,11 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsvoiceapplicationspolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsvoiceapplicationspolicy)
+[Set-CsTeamsVoiceApplicationsPolicy](Get-CsTeamsVoiceApplicationsPolicy.md)
+
+[Grant-CsTeamsVoiceApplicationsPolicy](Grant-CsTeamsVoiceApplicationsPolicy.md)
+
+[Remove-CsTeamsVoiceApplicationsPolicy](Remove-CsTeamsVoiceApplicationsPolicy.md)
+
+[New-CsTeamsVoiceApplicationsPolicy](New-CsTeamsVoiceApplicationsPolicy.md)
 
