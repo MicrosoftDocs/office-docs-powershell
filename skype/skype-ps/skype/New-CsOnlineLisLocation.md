@@ -38,14 +38,14 @@ New-CsOnlineLisLocation -Location <string> -CountryOrRegion <string> [-CityAlias
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-CsOnlineLisLocation -CivicAddressId b39ff77d-db51-4ce5-8d50-9e9c778e1617 -Location "Office 101, 1st Floor"
 ```
 
 This example creates a new location called "Office 101, 1st Floor" in the civic address specified by its identity.
 
 ### Example 2
-```
+```powershell
 New-CsOnlineLisLocation -Location "Office 202, 2nd Floor" -CompanyName "Contoso" -HouseNumber 3910 -StreetName 163rd -StreetSuffix St -City Bellevue -StateOrProvince WA -CountryOrRegion US -PostalCode 98004 -Description "New civic address location" -Elin TEST_ELIN -Latitude 47.64499 -Longitude -122.12219
 ```
 
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-The latitude of the civic address.
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
 
 ```yaml
 Type: String
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-The longitude of the civic address.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England using the decimal degrees format.
 
 ```yaml
 Type: String
