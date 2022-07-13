@@ -65,11 +65,11 @@ NumberOfVoiceUsers : 0
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-CsOnlineLisCivicAddress -HouseNumber 1 -StreetName 'Microsoft Way' -City Redmond -StateorProvince Washington -Country US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso -Latitude 47.63952 -Longitude -122.12781 -Elin MICROSOFT_ELIN 
 ```
 
-This example creates a new civic address described as "West Coast Headquarters": 1 Microsoft Way, Redmond WA, 98052.
+This example creates a new civic address described as "West Coast Headquarters": 1 Microsoft Way, Redmond WA, 98052 and sets the geo-coordinates.
 
 ## PARAMETERS
 
