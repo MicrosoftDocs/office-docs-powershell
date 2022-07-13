@@ -66,17 +66,10 @@ NumberOfVoiceUsers : 0
 
 ### Example 1
 ```
-New-CsOnlineLisCivicAddress -HouseNumber 3910 -StreetName Smith -StreetSuffix Street -PostDirectional NE -City Redmond -StateorProvince Washington -Country US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso
+New-CsOnlineLisCivicAddress -HouseNumber 1 -StreetName 'Microsoft Way' -City Redmond -StateorProvince Washington -Country US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso -Latitude 47.63952 -Longitude -122.12781 -Elin MICROSOFT_ELIN 
 ```
 
-This example creates a new civic address described as "West Coast Headquarters": 3910 Smith Street NE, Redmond WA, 98052.
-
-### Example 2
-```
-New-CsOnlineLisCivicAddress -Latitude 12 -Longitude 34 -HouseNumber 567 -StreetName Main -StreetSuffix St -City Springfield -StateOrProvince WA -CountryOrRegion US -PostalCode 98052 -CompanyName Contoso -Elin MICROSOFT_ELIN -Description "R&D office"
-```
-
-This example creates a new civic address described as "R&D office", with latitude, longitude and ELIN.
+This example creates a new civic address described as "West Coast Headquarters": 1 Microsoft Way, Redmond WA, 98052.
 
 ## PARAMETERS
 
@@ -246,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-Specifies the angular distance of a place north or south of the earth's equator.
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
 
 ```yaml
 Type: String
@@ -262,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England using the decimal degrees format.
 
 ```yaml
 Type: String
@@ -414,11 +407,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### None
 
 ## NOTES
 
