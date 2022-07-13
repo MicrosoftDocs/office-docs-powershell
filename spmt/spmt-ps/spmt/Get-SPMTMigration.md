@@ -20,7 +20,7 @@ The status of current tasks includes:
 1. Count of scanned files
 2. Count of migrated files
 3. Migration error message if there is any.
-
+ 
 ## SYNTAX
 
 ```powershell
