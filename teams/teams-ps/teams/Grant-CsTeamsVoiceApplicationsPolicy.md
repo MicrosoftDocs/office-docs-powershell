@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Assigns a per-user teams voice applications policy to one or more users. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and callqueues.
+Assigns a per-user teams voice applications policy to one or more users. TeamsVoiceApplications policy governs what permissions the supervisors/users have over Auto Attendants and Call Queues.
 
 ## SYNTAX
 
@@ -28,11 +28,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 ```
 Grant-CsTeamsVoiceApplicationsPolicy -Identity "Ken Myer" -PolicyName "SDA-Allow-All"
 ```
+The command shown in Example 1 assigns the per-user teams voice applications policy SDA-Allow-All to the user with the display name "Ken Myer".
 
 ### EXAMPLE 2
 ```
 Grant-CsTeamsVoiceApplicationsPolicy -PolicyName "SDA-Allow-All" -Global
 ```
+Example 2 assigns the per-user online voice routing policy "SDA-Allow-All to all the users in the tenant, except any that have an explicit policy assignment.
 
 ## PARAMETERS
 

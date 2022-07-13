@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Use the Get-CsTeamsVoiceApplicationsPolicy cmdlet to get teams voice applications policy information. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and callqueues.
+Use the Get-CsTeamsVoiceApplicationsPolicy cmdlet to get teams voice applications policy information. TeamsVoiceApplications policy governs what permissions the supervisors/users have over Auto Attendants and Call Queues.
 
 ## SYNTAX
 
@@ -36,11 +36,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 Get-CsTeamsVoiceApplicationsPolicy
 ```
 The command shown in Example 1 returns information for all the teams voice applications policies configured for use in the tenant.
+
 ### EXAMPLE 2
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
 ```
 In Example 2, information is returned for a single teams voice applications policy: the policy with the Identity SDA-Allow-All.
+
 ### EXAMPLE 3
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*"

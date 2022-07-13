@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Creates a new teams voice applications policy. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and callqueues.
+Creates a new teams voice applications policy. TeamsVoiceApplications policy governs what permissions the supervisors/users have over Auto Attendants and Call Queues.
 
 ## SYNTAX
 
@@ -32,13 +32,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-Moh -AllowCallQueueMusicOnHoldChange $true
 ```
-The command shown in Example 1 creates a new per-user Teams Voice Applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrator to changes music on hold information.
+The command shown in Example 1 creates a new per-user Teams Voice Applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrator to change music on hold information.
 
 ### EXAMPLE 
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
 ```
-The command shown in Example 1 creates a new per-user teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrator to changes after hours greeting for auto-attendant.
+The command shown in Example 1 creates a new per-user teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrator to change after hours greeting for auto-attendant.
 
 
 ## PARAMETERS
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueMusicOnHoldChange
-This property allows supervisor/user to change callqueue music on hold information.
+This property allows supervisor/user to change Call Queue music on hold information.
 
 ```yaml
 Type: Boolean
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueOverflowSharedVoicemailGreetingChange
-This property allows supervisor/user to change callqueue overflow shared voicemail information (TTS or AudioFile).
+This property allows supervisor/user to change Call Queue overflow shared voicemail information (TTS or AudioFile).
 
 ```yaml
 Type: Boolean
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueTimeoutSharedVoicemailGreetingChange
-This property allows supervisor/user to change callqueue timeout shared voicemail information (TTS or AudioFile).
+This property allows supervisor/user to change Call Queue timeout shared voicemail information (TTS or AudioFile).
 
 ```yaml
 Type: Boolean
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueWelcomeGreetingChange
-This property allows supervisor/user to change callqueue welcome greeting.
+This property allows supervisor/user to change Call Queue welcome greeting.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

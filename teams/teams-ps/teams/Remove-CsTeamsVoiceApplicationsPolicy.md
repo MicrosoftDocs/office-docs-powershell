@@ -9,6 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Deletes an existing Teams Voice Applications policy.
+
 ## SYNTAX
 
 ```
@@ -27,11 +28,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 Remove-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
 ```
 The command shown in Example 1 deletes the teams voice applications policy SDA-Allow-All.
+
 ### EXAMPLE 2
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*" | Remove-CsTeamsVoiceApplicationsPolicy
 ```
 In Example 2, all teams voice applications policies configured at the per-user scope are removed. To do this, the command first calls the Get-CsTeamsVoiceApplicationsPolicy cmdlet along with the Filter parameter; the filter value "tag:*" limits the returned data to teams voice applications policies configured at the per-user scope. Those per-user policies are then piped to and removed by, the Remove-CsTeamsVoiceApplicationsPolicy cmdlet.
+
 ## PARAMETERS
 
 ### -Identity

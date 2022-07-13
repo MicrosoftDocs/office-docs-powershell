@@ -9,6 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Modifies an existing teams voice applications policy.
+
 ## SYNTAX
 
 ```
@@ -81,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueMusicOnHoldChange
-When set to True users affected by the policy will be allowed to change callqueue's music on hold information. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's music on hold.
+When set to True users affected by the policy will be allowed to change Call Queue's music on hold information. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's music on hold.
 
 ```yaml
 Type: Boolean
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueOverflowSharedVoicemailGreetingChange
-When set to True users affected by the policy will be allowed to change callqueue's overflow shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's overflow shared voicemail greeting.
+When set to True users affected by the policy will be allowed to change Call Queue's overflow shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's overflow shared voicemail greeting.
 
 ```yaml
 Type: Boolean
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueTimeoutSharedVoicemailGreetingChange
-When set to True users affected by the policy will be allowed to change callqueue's timeout shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's timeout shared voicemail greeting.
+When set to True users affected by the policy will be allowed to change Call Queue's timeout shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's timeout shared voicemail greeting.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueWelcomeGreetingChange
-When set to True users affected by the policy will be allowed to change callqueue's welcome greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's welcome greeting.
+When set to True users affected by the policy will be allowed to change Call Queue's welcome greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's welcome greeting.
 
 ```yaml
 Type: Boolean
