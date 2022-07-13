@@ -32,6 +32,7 @@ New-SafeLinksPolicy [-Name] <String>
  [-EnableForInternalSenders <Boolean>]
  [-EnableOrganizationBranding <Boolean>]
  [-EnableSafeLinksForEmail <Boolean>]
+ [-EnableSafeLinksForOffice <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
  [-MakeBuiltInProtection]
  [-RecommendedPolicyType <RecommendedPolicyType>]
@@ -43,7 +44,7 @@ New-SafeLinksPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links to see if they lead to malicious web sites. When a user clicks a link, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeLinksPolicy parameter on the New-SafeLinksRule or Set-SafeLinksRule cmdlets to associate the policy with a rule.
 
@@ -267,6 +268,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSafeLinksForOffice
+The EnableSafeLinksForOffice parameter specifies whether to enable Safe Links protection for supported Office desktop, mobile, or web apps. Valid values are:
+
+- $true: Safe Links scanning is enabled in Office apps. When a user opens a file in a supported Office app and clicks a link in the file, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $false: Safe Links isn't enabled for Office apps.
+
+Note that this protection applies to links in Office documents, not links in email messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSafeLinksForTeams
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
@@ -319,10 +341,10 @@ Accept wildcard characters: False
 ```
 
 ### -ScanUrls
-The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
+The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links. Valid values are:
 
-- $true: Real-time scanning of clicked links in email messages, including links that point to files, is enabled.
-- $false: Real-time scanning of clicked links in email messages, including links that point to files, is disabled. This is the default value.
+- $true: Real-time scanning of clicked links, including links that point to files, is enabled.
+- $false: Real-time scanning of clicked links, including links that point to files, is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -338,10 +360,10 @@ Accept wildcard characters: False
 ```
 
 ### -TrackClicks
-The TrackClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
+The TrackClicks parameter specifies whether to track user clicks related to Safe Links protection of links. Valid values are:
 
-- $true: User clicks in email messages are tracked. This is the default value.
-- $false: User clicks in email messages aren't tracked.
+- $true: User clicks messages are tracked. This is the default value.
+- $false: User clicks messages aren't tracked.
 
 ```yaml
 Type: Boolean
