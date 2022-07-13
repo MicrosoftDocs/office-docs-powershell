@@ -1560,6 +1560,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PartnerApplication](New-PartnerApplication.md)
 
+### [New-ServicePrincipal](New-ServicePrincipal.md)
+
 ### [New-SettingOverride](New-SettingOverride.md)
 
 ### [Remove-ApplicationAccessPolicy](Remove-ApplicationAccessPolicy.md)
@@ -1569,6 +1571,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AuthServer](Remove-AuthServer.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
+
+### [Remove-ServicePrincipal](Remove-ServicePrincipal.md)
 
 ### [Remove-SettingOverride](Remove-SettingOverride.md)
 
