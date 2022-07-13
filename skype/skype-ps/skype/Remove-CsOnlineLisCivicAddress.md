@@ -24,18 +24,17 @@ Remove-CsOnlineLisCivicAddress -CivicAddressId <guid> [-Force] [-WhatIf] [-Confi
 ## DESCRIPTION
 Removes the specified emergency address or addresses.
 
-
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Remove-CsOnlineLisCivicAddress -CivicAddressId ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 ```
 
 This example removes the emergency civic address with the specified identification.
 
 ### Example 2
-```
+```powershell
 Get-CsOnlineLisCivicAddress -City Redmond | Remove-CsOnlineLisCivicAddress
 ```
 
