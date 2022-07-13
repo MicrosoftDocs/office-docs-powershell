@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanUrls
-The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links. Valid values are:
+The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
 - $true: Real-time scanning of clicked links, including links that point to files, is enabled.
 - $false: Real-time scanning of clicked links, including links that point to files, is disabled. This is the default value.
