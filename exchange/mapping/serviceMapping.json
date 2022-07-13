@@ -755,6 +755,7 @@
   "Get-OrganizationConfig": "organization",
   "Get-PartnerApplication": "organization",
   "Get-PerimeterConfig": "organization",
+  "Get-ServicePrincipal": "organization",
   "Get-SettingOverride": "organization",
   "New-ApplicationAccessPolicy": "organization",
   "New-AuthenticationPolicy": "organization",
