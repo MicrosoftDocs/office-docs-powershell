@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineliscivicaddress
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: serdarsoysal
-ms.author: serdars
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -24,31 +24,28 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
  [-PreDirectional <String>] [-PostDirectional <String>] [-City <String>] [-CityAlias <String>]
  [-StateOrProvince <String>] [-CountryOrRegion <String>] [-PostalCode <String>] [-Description <String>]
  [-ValidationStatus <String>] [-Latitude <String>] [-Longitude <String>] [-Confidence <String>]
- [-Elin <String>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+ [-Elin <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify an existing civic address which has not been validated. Validated civic addresses cannot be modified.
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Description "City Center" -CompanyName Contoso
 ```
 
 This example modifies the description and company name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
 
-
-### -------------------------- Example 2 --------------------------
-```
-Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Longitude 12 -Latitude 34 -ELIN MICROSOFT_ELIN
+### Example 2
+```powershell
+Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Latitude 47.63952 -Longitude -122.12781 -ELIN MICROSOFT_ELIN
 ```
 
 This example modifies the latitude, longitude and ELIN name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
-
 
 ## PARAMETERS
 
@@ -171,22 +168,6 @@ Specifies a new description for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
 Applicable: Skype for Business Online
 
 Required: False
@@ -346,22 +327,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ValidationStatus
 Microsoft internal use only
 
@@ -427,7 +392,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-Specifies the angular distance of a place north or south of the earth's equator.
+Specifies the angular distance of a place north or south of the earth's equator in the decimal degrees format.
 
 ```yaml
 Type: String
@@ -442,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, in the decimal degrees format.
 
 ```yaml
 Type: String
@@ -461,13 +426,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CsOnlineLisCivicAddress](get-csonlineliscivicaddress.md)
+
+[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+
+[Remove-CsOnlineLisCivicAddress](remove-csonlineliscivicaddress.md)
