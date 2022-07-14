@@ -63,7 +63,7 @@ To return a policy configured at the per-user scope, use syntax like this:
 
 You cannot use wildcard characters when specifying the Identity.
 
-If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsVoiceApplicationsPolicy returns all the teams voice applications policies configured for use in the tenant.
+If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsVoiceApplicationsPolicy returns all the Teams voice applications policies configured for use in the tenant.
 
 ```yaml
 Type: String
