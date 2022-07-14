@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueTimeoutSharedVoicemailGreetingChange
-This property allows supervisor/user to change Call Queue timeout shared voicemail information (TTS or AudioFile).
+This property allows supervisors and users to change call queue timeout shared voicemail information (TTS or AudioFile).
 
 ```yaml
 Type: Boolean
