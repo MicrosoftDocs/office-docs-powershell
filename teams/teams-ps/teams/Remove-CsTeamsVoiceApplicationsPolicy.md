@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Deletes an existing Teams Voice Applications policy.
+Deletes an existing Teams voice applications policy.
 
 ## SYNTAX
 
