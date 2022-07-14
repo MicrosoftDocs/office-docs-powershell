@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueOverflowSharedVoicemailGreetingChange
-When set to True users affected by the policy will be allowed to change Call Queue's overflow shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's overflow shared voicemail greeting.
+When set to True users affected by the policy will be allowed to change the call queue's overflow shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's overflow shared voicemail greeting.
 
 ```yaml
 Type: Boolean
