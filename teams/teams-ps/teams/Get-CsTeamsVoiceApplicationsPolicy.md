@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 
 ### -Filter
-Enables you to use wildcards when retrieving one or more teams voice applications policies. For example, to return all the policies configured at the per-user scope, use this syntax:
+Enables you to use wildcards when retrieving one or more Teams voice applications policies. For example, to return all the policies configured at the per-user scope, use this syntax:
 
 -Filter "tag:*"
 
