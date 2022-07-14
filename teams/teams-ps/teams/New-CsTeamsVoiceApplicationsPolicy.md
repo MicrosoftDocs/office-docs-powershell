@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantBusinessHoursGreetingChange
-This property allows supervisor/user to change auto-attendant's business hours greeting.
+This property allows supervisors and users to change auto attendants' business hours greetings.
 
 ```yaml
 Type: Boolean
