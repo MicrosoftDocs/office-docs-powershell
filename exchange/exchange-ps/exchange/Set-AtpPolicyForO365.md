@@ -26,14 +26,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
- [-AllowClickThrough <Boolean>]
  [-AllowSafeDocsOpen <Boolean>]
  [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
- [-EnableSafeLinksForO365Clients <Boolean>]
- [-TrackClicks <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -71,25 +68,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -AllowClickThrough
-The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in Safe Links protection for Office apps. Valid values are:
-
-- $true: Users are allowed to click through to the original URL in supported Office apps.
-- $false: Users aren't allowed to click through to the original URL in supported Office apps. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -185,46 +163,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSafeLinksForO365Clients
-The EnableSafeLinksForO365Clients parameter enables or disables Safe Links for Office 365 apps. Valid values are:
-
-- $true: Safe Links scanning is enabled in supported Office 365 apps. This is the default value.
-- $false: Safe Links scanning is disabled in supported Office 365 apps.
-
-Note that this protection applies to links in Office documents, not links in email messages. Safe Links protection for links in email messages is controlled by Safe Links policies (the [New-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy) or [Set-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/set-safelinkspolicy) cmdlets).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TrackClicks
-The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in Safe Links for Office 365 apps. Valid values are:
-
-- $true: User clicks in supported Office 365 apps are tracked.
-- $false: User clicks in supported Office 365 apps aren't tracked. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
