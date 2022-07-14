@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueOverflowSharedVoicemailGreetingChange
-This property allows supervisor/user to change Call Queue overflow shared voicemail information (TTS or AudioFile).
+This property allows supervisors and users to change call queue overflow shared voicemail information (TTS or AudioFile).
 
 ```yaml
 Type: Boolean
