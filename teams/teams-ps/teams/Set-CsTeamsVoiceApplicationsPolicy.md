@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantBusinessHoursGreetingChange
-When set to True users affected by the policy will be allowed to change auto attendant's business hours greeting. When set to False (the default value) users affected by the policy will not be allowed to change auto attendant's business hours greeting.
+When set to True users affected by the policy will be allowed to change the auto attendant's business hours greeting. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hours greeting.
 
 ```yaml
 Type: Boolean
