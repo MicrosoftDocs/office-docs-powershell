@@ -1,4 +1,3 @@
-![image](https://user-images.githubusercontent.com/109289618/178993714-9adba875-0c14-49a7-8a9c-a4b9e1e59d3a.png)
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-transportconfig
@@ -312,7 +311,9 @@ The DSNConversionMode parameter controls how Exchange handles delivery status no
 
 - DoNotConvert: DSNs aren't modified. The DSN is delivered as a standard message.
 - PreserveDSNBody: DSNs are converted to the Exchange 2010 or later format, and the text in the body of the DSN message is retained. 
-- UseExchangeDSNs: DSNs are converted to the Exchange 2010 or later format. However, any customized text or attachments that were associated with the original DSN are overwritten. This is the default value.
+- UseExchangeDSNs: DSNs are converted to the Exchange 2010 or later format. However, any customized text or attachments that were associated with the original DSN are overwritten.
+
+The default value in Exchange 2010 and Exchange 2013 is UseExchangeDSNs. Otherwise, the default value is PreserveDSNBody.
 
 ```yaml
 Type: DSNConversionOption
