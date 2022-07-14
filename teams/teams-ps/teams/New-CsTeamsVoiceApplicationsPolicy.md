@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantHolidayGreetingChange
-This property allows supervisor/user to change auto-attendant's holiday greeting.
+This property allows supervisors and users to change auto attendants' holiday greetings.
 
 ```yaml
 Type: Boolean
