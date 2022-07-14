@@ -179,6 +179,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-preview or later.
+
 ## RELATED LINKS
 
 [New-CsTeamsEmergencyCallRoutingPolicy](New-CsTeamsEmergencyCallRoutingPolicy.md)
