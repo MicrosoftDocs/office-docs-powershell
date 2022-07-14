@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantHolidayGreetingChange
-When set to True users affected by the policy will be allowed to change auto attendant's   holiday greeting. When set to False (the default value) users affected by the policy will not be allowed to change auto attendant's holiday greeting.
+When set to True users affected by the policy will be allowed to change the auto attendant's holiday greeting. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's holiday greeting.
 
 ```yaml
 Type: Boolean
