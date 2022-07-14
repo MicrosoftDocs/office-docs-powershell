@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Modifies an existing teams voice applications policy.
+Modifies an existing Teams voice applications policy.
 
 ## SYNTAX
 
