@@ -38,7 +38,7 @@ The command shown in Example 1 creates a new per-user Teams voice applications p
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
 ```
-The command shown in Example 1 creates a new per-user teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrator to change after hours greeting for auto-attendant.
+The command shown in Example 2 creates a new per-user Teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrators to change after-hours greetings for auto attendants.
 
 
 ## PARAMETERS
