@@ -33,7 +33,7 @@ The command shown in Example 1 deletes the teams voice applications policy SDA-A
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*" | Remove-CsTeamsVoiceApplicationsPolicy
 ```
-In Example 2, all teams voice applications policies configured at the per-user scope are removed. To do this, the command first calls the Get-CsTeamsVoiceApplicationsPolicy cmdlet along with the Filter parameter; the filter value "tag:*" limits the returned data to teams voice applications policies configured at the per-user scope. Those per-user policies are then piped to and removed by, the Remove-CsTeamsVoiceApplicationsPolicy cmdlet.
+In Example 2, all Teams voice applications policies configured at the per-user scope are removed. To do this, the command first calls the Get-CsTeamsVoiceApplicationsPolicy cmdlet along with the Filter parameter; the filter value "tag:*" limits the returned data to Teams voice applications policies configured at the per-user scope. Those per-user policies are then piped to and removed by the Remove-CsTeamsVoiceApplicationsPolicy cmdlet.
 
 ## PARAMETERS
 
