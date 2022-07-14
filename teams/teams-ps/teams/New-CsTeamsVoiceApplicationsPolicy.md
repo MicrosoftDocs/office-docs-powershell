@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueMusicOnHoldChange
-This property allows supervisor/user to change Call Queue music on hold information.
+This property allows supervisors and users to change call queue music on hold information.
 
 ```yaml
 Type: Boolean
