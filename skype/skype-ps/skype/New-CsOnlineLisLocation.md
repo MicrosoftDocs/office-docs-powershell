@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England using the decimal degrees format.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
 
 ```yaml
 Type: String
