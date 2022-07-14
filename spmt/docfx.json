@@ -27,10 +27,7 @@
       },
       {
         "files": [
-          "**/*.yml"
-        ],
-        "exclude": [
-          "toc.yml"
+          "**/*.md"
         ],
         "src": "spmt-ps",
         "version": "spmt-ps",
