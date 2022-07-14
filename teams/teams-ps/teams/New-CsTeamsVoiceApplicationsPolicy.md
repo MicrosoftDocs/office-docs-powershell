@@ -32,7 +32,7 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-Moh -AllowCallQueueMusicOnHoldChange $true
 ```
-The command shown in Example 1 creates a new per-user Teams Voice Applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrator to change music on hold information.
+The command shown in Example 1 creates a new per-user Teams voice applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrators to change the music on hold information.
 
 ### EXAMPLE 
 ```
