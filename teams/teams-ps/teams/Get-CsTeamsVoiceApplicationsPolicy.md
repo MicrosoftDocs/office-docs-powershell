@@ -41,7 +41,7 @@ The command shown in Example 1 returns information for all the teams voice appli
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
 ```
-In Example 2, information is returned for a single teams voice applications policy: the policy with the Identity SDA-Allow-All.
+In Example 2, information is returned for a single Teams voice applications policy; the policy with the Identity SDA-Allow-All.
 
 ### EXAMPLE 3
 ```
