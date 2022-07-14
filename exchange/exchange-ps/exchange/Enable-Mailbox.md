@@ -228,7 +228,7 @@ Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive]
  [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>
+ [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
