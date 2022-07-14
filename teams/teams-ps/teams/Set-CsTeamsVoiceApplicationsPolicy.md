@@ -113,6 +113,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueTimeoutSharedVoicemailGreetingChange
 When set to True users affected by the policy will be allowed to change the call queue's timeout shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's timeout shared voicemail greeting.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
