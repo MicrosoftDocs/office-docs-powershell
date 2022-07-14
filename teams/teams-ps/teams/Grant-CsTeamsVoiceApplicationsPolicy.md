@@ -28,7 +28,7 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 ```
 Grant-CsTeamsVoiceApplicationsPolicy -Identity "Ken Myer" -PolicyName "SDA-Allow-All"
 ```
-The command shown in Example 1 assigns the per-user teams voice applications policy SDA-Allow-All to the user with the display name "Ken Myer".
+The command shown in Example 1 assigns the per-user Teams voice applications policy SDA-Allow-All to the user with the display name "Ken Myer".
 
 ### EXAMPLE 2
 ```
