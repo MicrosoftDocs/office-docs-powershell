@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Creates a new teams voice applications policy. TeamsVoiceApplications policy governs what permissions the supervisors/users have over Auto Attendants and Call Queues.
+Creates a new Teams voice applications policy. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and call queues.
 
 ## SYNTAX
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueWelcomeGreetingChange
-This property allows supervisor/user to change Call Queue welcome greeting.
+This property allows supervisors and users to change the call queue's welcome greeting.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

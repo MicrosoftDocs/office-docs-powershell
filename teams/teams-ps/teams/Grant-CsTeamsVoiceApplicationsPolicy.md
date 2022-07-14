@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsTeamsVoiceApplicationsPolicy
 
 ## SYNOPSIS
-Assigns a per-user teams voice applications policy to one or more users. TeamsVoiceApplications policy governs what permissions the supervisors/users have over Auto Attendants and Call Queues.
+Assigns a per-user Teams voice applications policy to one or more users. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and call queues.
 
 ## SYNTAX
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Enables you to pass a user object through the pipeline that represents the user account being assigned the teams voice applications policy. By default, the Grant-CsTeamsVoiceApplicationsPolicy cmdlet does not pass objects through the pipeline.
+Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams voice applications policy. By default, the Grant-CsTeamsVoiceApplicationsPolicy cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter

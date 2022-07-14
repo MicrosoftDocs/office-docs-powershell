@@ -35,7 +35,7 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 ```
 Get-CsTeamsVoiceApplicationsPolicy
 ```
-The command shown in Example 1 returns information for all the teams voice applications policies configured for use in the tenant.
+The command shown in Example 1 returns information for all the Teams voice applications policies configured for use in the tenant.
 
 ### EXAMPLE 2
 ```
@@ -53,7 +53,7 @@ The command shown in Example 3 returns information about all the Teams voice app
 ## PARAMETERS
 
 ### -Identity
-Unique identifier of the teams voice applications policy to be retrieved. To return the global policy, use this syntax:
+Unique identifier of the Teams voice applications policy to be retrieved. To return the global policy, use this syntax:
 
 -Identity global
 
