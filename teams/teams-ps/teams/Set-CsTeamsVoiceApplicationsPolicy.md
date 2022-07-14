@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueWelcomeGreetingChange
-When set to True users affected by the policy will be allowed to change Call Queue's welcome greeting. When set to False (the default value) users affected by the policy will not be allowed to change callqueue's welcome greeting.
+When set to True users affected by the policy will be allowed to change the call queue's welcome greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's welcome greeting.
 
 ```yaml
 Type: Boolean
