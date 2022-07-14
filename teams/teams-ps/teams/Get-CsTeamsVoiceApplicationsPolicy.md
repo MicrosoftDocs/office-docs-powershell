@@ -47,7 +47,7 @@ In Example 2, information is returned for a single Teams voice applications poli
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*"
 ```
-The command shown in Example 3 returns information about all the teams voice applications policies configured at the per-user scope. To do this, the command uses the Filter parameter and the filter value "tag:*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
+The command shown in Example 3 returns information about all the Teams voice applications policies configured at the per-user scope. To do this, the command uses the Filter parameter and the filter value "tag:*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
 
 
 ## PARAMETERS
