@@ -34,7 +34,7 @@ New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-Moh -AllowCallQueueMusicO
 ```
 The command shown in Example 1 creates a new per-user Teams voice applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrators to change the music on hold information.
 
-### EXAMPLE 
+### EXAMPLE 2
 ```
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
 ```
