@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -44,7 +44,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AppId
-The AppId parameter specifies the AppID GUID value for the service principal. For example, ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
+The AppId parameter specifies the unique AppID GUID value for the service principal. For example, ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceId
-The ServiceId parameter specifies the ServiceID GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
+The ServiceId parameter specifies the unique ServiceID GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the friendly name of the service principal. If the name contains spaces, enclose the name in quotation marks ("). This parameter has a maximum length of 256 characters.
+The DisplayName parameter specifies the friendly name of the service principal. If the name contains spaces, enclose the name in quotation marks (").
 
 ```yaml
 Type: String
