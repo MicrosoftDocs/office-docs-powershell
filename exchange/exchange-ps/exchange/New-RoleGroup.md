@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the friendly name of the role group. If the name contains spaces, enclose the name in quotation marks ("). This parameter can have a maximum length of 256 characters.
+The DisplayName parameter specifies the friendly name of the role group. If the name contains spaces, enclose the name in quotation marks ("). This parameter has a maximum length of 256 characters.
 
 ```yaml
 Type: String
