@@ -189,7 +189,11 @@ Accept wildcard characters: False
 ### -App
 This parameter is available only in the cloud-based service.
 
-{{ Fill App Description }}
+The App parameter specifies the service principal to assign the management role to. Specifically, the ServiceId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
+
+For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+
+You can't use this parameter with the SecurityGroup, Policy, or User cmdlets.
 
 ```yaml
 Type: ServicePrincipalIdParameter
@@ -209,7 +213,7 @@ This parameter is available only in on-premises Exchange.
 
 The Computer parameter specifies the name of the computer to assign the management role to.
 
-If you specify the Computer parameter, you can't specify the SecurityGroup, User, or Policy parameters.
+You can't use this parameter with the SecurityGroup, User, or Policy parameters.
 
 ```yaml
 Type: ComputerIdParameter
@@ -225,11 +229,11 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter specifies the name of the management role assignment policy to assign the management role to.
+The Policy parameter specifies the name of the management role assignment policy to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
 
 The IsEndUserRole property of the role you specify using the Role parameter must be set to $true.
 
-If you specify the Policy parameter, you can't specify the SecurityGroup, Computer, or User parameters. If the policy name contains spaces, enclose the name in quotation marks (").
+You can't use this parameter with the App, SecurityGroup, Computer, or User parameters.
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -245,7 +249,15 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-The Role parameter specifies the existing role to assign. If the role name contains spaces, enclose the name in quotation marks (").
+The Role parameter specifies the existing role to assign. You can use any value that uniquely identifies the role. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If the value contains spaces, enclose the value in quotation marks (").
+
+If you use the App parameter, you can't specify admin or user roles; you can only specify application roles (for example, "Application Mail.Read").
 
 ```yaml
 Type: RoleIdParameter
@@ -261,9 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroup
-The SecurityGroup parameter specifies the name of the management role group or universal USG to assign the management role to.
+The SecurityGroup parameter specifies the name of the management role group or mail-enabled universal security group to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
 
-If you specify the SecurityGroup parameter, you can't specify the Policy, Computer, or User parameters. If the role group or USG name contains spaces, enclose the name in quotation marks (").
+You can't use this parameter with the App, Policy, Computer, or User parameters.
 
 ```yaml
 Type: SecurityGroupIdParameter
@@ -279,9 +291,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the name or alias of the user to assign the management role to.
+The User parameter specifies the name or alias of the user to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
 
-If you specify the User parameter, you can't specify the SecurityGroup, Computer, or Policy parameters. If the value contains spaces, enclose the name in quotation marks (").
+You can't use this parameter with the App, SecurityGroup, Computer, or Policy parameters.
 
 ```yaml
 Type: UserIdParameter
@@ -352,7 +364,15 @@ Accept wildcard characters: False
 ### -CustomResourceScope
 This parameter is available only in the cloud-based service.
 
-{{ Fill CustomResourceScope Description }}
+The CustomResourceScope parameter specifies the custom management scope to associate with this management role assignment. You can use any value that uniquely identifies the management scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If the value contains spaces, enclose the value in quotation marks (").
+
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
 ```yaml
 Type: ManagementScopeIdParameter
