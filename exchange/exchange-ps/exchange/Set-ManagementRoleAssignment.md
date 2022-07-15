@@ -214,7 +214,15 @@ Accept wildcard characters: False
 ### -CustomResourceScope
 This parameter is available only in the cloud-based service.
 
-{{ Fill CustomResourceScope Description }}
+The CustomResourceScope parameter specifies the custom management scope to associate with this management role assignment. You can use any value that uniquely identifies the management scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If the value contains spaces, enclose the value in quotation marks (").
+
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
 ```yaml
 Type: ManagementScopeIdParameter
