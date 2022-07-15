@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantAfterHoursGreetingChange
-This Parameter allows supervisor/user to change auto-attendant's after hours greeting. 
+This parameter allows supervisors and users to change auto attendants' after-hours greetings. 
 
 ```yaml
 Type: Boolean
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantBusinessHoursGreetingChange
-This Parameter allows supervisors and users to change auto attendants' business hours greetings.
+This parameter allows supervisors and users to change auto attendants' business hours greetings.
 
 ```yaml
 Type: Boolean
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantHolidayGreetingChange
-This Parameter allows supervisors and users to change auto attendants' holiday greetings.
+This parameter allows supervisors and users to change auto attendants' holiday greetings.
 
 ```yaml
 Type: Boolean
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueMusicOnHoldChange
-This Parameter allows supervisors and users to change call queue music on hold information.
+This parameter allows supervisors and users to change call queue music on hold information.
 
 ```yaml
 Type: Boolean
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueOverflowSharedVoicemailGreetingChange
-This Parameter allows supervisors and users to change call queue overflow shared voicemail information (TTS or AudioFile).
+This parameter allows supervisors and users to change call queue overflow shared voicemail information (TTS or AudioFile).
 
 ```yaml
 Type: Boolean
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueTimeoutSharedVoicemailGreetingChange
-This Parameter allows supervisors and users to change call queue timeout shared voicemail information (TTS or AudioFile).
+This parameter allows supervisors and users to change call queue timeout shared voicemail information (TTS or AudioFile).
 
 ```yaml
 Type: Boolean
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueWelcomeGreetingChange
-This Parameter allows supervisors and users to change the call queue's welcome greeting.
+This parameter allows supervisors and users to change the call queue's welcome greeting.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
