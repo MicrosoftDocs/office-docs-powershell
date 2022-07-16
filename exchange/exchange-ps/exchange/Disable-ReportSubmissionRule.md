@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Disable-ReportSubmissionRule cmdlet to disable the report submission rule in your cloud-based organization.
+Use the Disable-ReportSubmissionRule cmdlet to disable the report submission rule in your cloud-based organization. The report submission rule identifies the custom mailbox to deliver user reported messages to.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

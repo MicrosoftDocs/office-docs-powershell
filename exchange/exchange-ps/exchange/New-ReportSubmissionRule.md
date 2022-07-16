@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ReportSubmissionRule cmdlet to create the report submission rule in your cloud-based organization.
+Use the New-ReportSubmissionRule cmdlet to create the report submission rule in your cloud-based organization. The report submission rule identifies the custom mailbox to deliver user reported messages to.
 
 **Note**: If the rule already exists (the Get-ReportSubmissionRule cmdlet returns output), you can't use this cmdlet. To delete the existing rule and start over, use the Remove-ReportSubmissionRule cmdlet first.
 
@@ -39,6 +39,15 @@ You can use this cmdlet only if the following statements are true:
 - The report submission rule doesn't exist (the Get-ReportSubmissionRule cmdlet returns no output).
 - The report submission policy exists (the Get-ReportSubmissionPolicy returns output).
 
+The SentTo parameter in the \*-ReportSubmissionRule cmdlets identifies the email address of the custom mailbox.
+
+If you set the email address of the custom mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>, the following properties are also set in the *\-ReportSubmissionPolicy cmdlets:
+
+- Microsoft integrated reporting: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses properties.
+- A third-party product: The ThirdPartyReportAddresses properties.
+
+When you use this cmdlet to set the email address of the custom mailbox, the corresponding properties in the *\-ReportSubmissionPolicy cmdlets are not updated.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -53,7 +62,7 @@ This example creates the report submission rule. The custom mailbox is lila@cont
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name of the report submission rule. When the rule is automatically created, the name of the rule is DefaultReportSubmissionRule. We recommend using this value when you manually create the rule.
+The Name parameter specifies the name of the report submission rule. When the rule is automatically created, the name of the rule is DefaultReportSubmissionRule. We recommend using this value to avoid confusion.
 
 ```yaml
 Type: String
@@ -141,7 +150,19 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies the email address of the reporting mailbox that you want to use.
+The SentTo parameter specifies the email address of the custom mailbox that you want to use. User reported messages are sent to the custom mailbox.
+
+The value of this parameter is meaningful only if user reporting to a custom mailbox is enabled in the \*-ReportSubmissionPolicy cmdlets:
+
+- Microsoft integrated reporting: `-EnableThirdPartyAddress $false`, `-ReportJunkToCustomizedAddress $true`, `-ReportNotJunkToCustomizedAddress $true`, and `-ReportPhishToCustomizedAddress $true`.
+- A third-party product: `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $true`, `-ReportJunkToCustomizedAddress $false`, `-ReportNotJunkToCustomizedAddress $false`, and `-ReportPhishToCustomizedAddress $false`.
+
+If you set the email address of the custom mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
+
+- Microsoft integrated reporting: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
+- A third-party product: ThirdPartyReportAddresses.
+
+When you use this cmdlet to set the email address of the custom mailbox, the related parameter values in the *\-ReportSubmissionPolicy cmdlets are not updated. But, that doesn't matter, because only the value of the SentTo parameter specifies the email address of the custom mailbox. You can update the related values in the \*-ReportSubmissionPolicy cmdlets for consistency and to avoid confusion.
 
 ```yaml
 Type: RecipientIdParameter[]
