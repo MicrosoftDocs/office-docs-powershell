@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Cmdlet to assign a specific Teams Calling Policy to a user, a group of users or sets the Global policy instance.
+Assigns a specific Teams Calling Policy to a user, a group of users, or sets the Global policy instance.
 
 ## SYNTAX
 
