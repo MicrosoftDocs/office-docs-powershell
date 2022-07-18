@@ -13,7 +13,7 @@ ms.reviewer:
 # Grant-CsCallingLineIdentity
 
 ## SYNOPSIS
-Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account, to a group of users or set the tenant Global instance.
+Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account, to a group of users, or to set the tenant Global instance.
 
 ## SYNTAX
 
