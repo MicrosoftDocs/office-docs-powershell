@@ -13,7 +13,7 @@ ms.reviewer:
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Assigns an online voice mail policy to a user account, to a group of users or set the tenant Global instance. Online voicemail policies manage usages for Voicemail service.
+Assigns an online voicemail policy to a user account, to a group of users, or set the tenant Global instance. Online voicemail policies manage usages for Voicemail service.
 
 ## SYNTAX
 ### GrantToTenant (Default)
