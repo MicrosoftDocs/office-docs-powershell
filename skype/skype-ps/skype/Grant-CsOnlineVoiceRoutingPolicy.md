@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-"Name" of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; likewise, a policy with the Identity tag:RedmondOnlineVoiceRoutingPolicy has a PolicyName equal to RedmondOnlineVoiceRoutingPolicy.
+Name of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; likewise, a policy with the Identity tag:RedmondOnlineVoiceRoutingPolicy has a PolicyName equal to RedmondOnlineVoiceRoutingPolicy.
 
 To unassign a per-user policy previously assigned to a user, set the PolicyName to a null value ($Null).
 
