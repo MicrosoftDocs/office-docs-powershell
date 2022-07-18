@@ -32,7 +32,7 @@ This cmdlet creates a new Teams Emergency Calling policy. Emergency calling poli
 New-CsTeamsEmergencyCallingPolicy -Identity testECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
 ```
 
-This example creates a Teams Emergency Calling policy that has a identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
+This example creates a Teams Emergency Calling policy that has an identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
 
 ## PARAMETERS
 
