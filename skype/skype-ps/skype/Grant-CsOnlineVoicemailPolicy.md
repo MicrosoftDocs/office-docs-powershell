@@ -31,7 +31,7 @@ Grant-CsOnlineVoicemailPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-
 ```
 
 ## DESCRIPTION
-This cmdlet assigns an existing user-specific online voicemail policy to a user, a group of users or the Global policy instance.
+This cmdlet assigns an existing user-specific online voicemail policy to a user, a group of users, or the Global policy instance.
 
 ## EXAMPLES
 
