@@ -28,7 +28,7 @@ Get-CsTeamsEmergencyCallRoutingPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
+This cmdlet returns one or more Emergency Call Routing policies. This policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
 
 ## EXAMPLES
 
