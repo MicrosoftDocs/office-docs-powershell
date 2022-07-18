@@ -33,7 +33,7 @@ This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calli
 Set-CsTeamsEmergencyCallingPolicy -Identity "testECP" -NotificationGroup "123@gh.com;567@test.com"
 ```
 
-This example modifies a existing cmdlet with identity testECP.
+This example modifies an existing cmdlet with identity testECP.
 
 ## PARAMETERS
 
