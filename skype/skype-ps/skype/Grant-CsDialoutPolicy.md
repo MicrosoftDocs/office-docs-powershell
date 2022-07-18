@@ -13,7 +13,7 @@ ms.reviewer:
 # Grant-CsDialoutPolicy
 
 ## SYNOPSIS
-Use the `Grant-CsDialoutPolicy` cmdlet to assign the tenant global, a group of users or a per-user outbound calling restriction policy to one or more users.
+Use the `Grant-CsDialoutPolicy` cmdlet to assign the tenant global, a group of users, or a per-user outbound calling restriction policy to one or more users.
 
 ## SYNTAX
 
