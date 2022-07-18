@@ -35,7 +35,7 @@ Grant-CsTeamsCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users, to members of a group or to set the Global policy instance.
+The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users, to members of a group, or to set the Global policy instance.
 
 ## EXAMPLES
 
