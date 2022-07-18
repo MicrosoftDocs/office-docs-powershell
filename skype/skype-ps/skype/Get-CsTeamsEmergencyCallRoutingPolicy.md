@@ -13,7 +13,7 @@ schema: 2.0.0
 # Get-CsTeamsEmergencyCallRoutingPolicy
 
 ## SYNOPSIS
-This cmdlet returns one or more Emergency Call Routing policy.
+This cmdlet returns one or more Emergency Call Routing policies.
 
 ## SYNTAX
 
