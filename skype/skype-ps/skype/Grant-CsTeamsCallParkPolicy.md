@@ -53,7 +53,7 @@ Assigns a custom policy "Sales Policy" to the user Ken Myer.
 Grant-CsTeamsCallParkPolicy -Group sales@contoso.com -Rank 10 -PolicyName SalesPolicy
 ```
 
-Assigns a custom policy "Sales Policy" to the member of the group sales@contoso.com.
+Assigns a custom policy "Sales Policy" to the members of the group sales@contoso.com.
 
 ## PARAMETERS
 
