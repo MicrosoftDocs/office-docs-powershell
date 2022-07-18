@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
-One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](new-csteamsemergencynumber.md) cmdlet.
+One or more emergency number objects obtained from the [New-CsTeamsEmergencyNumber](new-csteamsemergencynumber.md) cmdlet.
 
 ```yaml
 Type: Object
