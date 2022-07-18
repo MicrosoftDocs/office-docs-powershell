@@ -27,7 +27,7 @@ New-CsTrunkConfiguration [-Identity] <XdsIdentity> [-ConcentratedTopology <Boole
  [-RTCPActiveCalls <Boolean>] [-RTCPCallsOnHold <Boolean>]
  [-SipResponseCodeTranslationRulesList <PSListModifier>] [-SRTPMode <SRTPMode>] [-Force] [-InMemory] [-WhatIf]
  [-Confirm] [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
- [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-EnablePAIPassThrough <Boolean>] 
+ [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-ForwardAnonymousCallGatewayPAI <Boolean>] 
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
  [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [<CommonParameters>]
 ```
@@ -598,7 +598,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnablePAIPassThrough
+### -ForwardAnonymousCallGatewayPAI
 Indicates whether the P-Asserted-Identity (PAI) header will be allowed to pass through Gateway. Gateway would not update PAI.
 This helps to capture anonymous call users identity in Call Data Records
 The default value is False ($False).
