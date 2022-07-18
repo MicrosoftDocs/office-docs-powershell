@@ -43,7 +43,7 @@ Retrieves all emergency calling policies that are available in your scope.
 Get-CsTeamsEmergencyCallingPolicy -Identity TestECP
 ```
 
-Retrieves emergency calling policy with the identity TestECP
+Retrieves an emergency calling policy with the identity TestECP
 
 ### Example 3
 ```powershell
