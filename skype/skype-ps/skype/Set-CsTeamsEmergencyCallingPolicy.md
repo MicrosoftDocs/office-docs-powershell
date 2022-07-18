@@ -38,7 +38,7 @@ This example modifies an existing cmdlet with identity testECP.
 ## PARAMETERS
 
 ### -Description
-Provide a description of the Teams Emergency Calling policy to identify purpose of setting it.
+Provides a description of the Teams Emergency Calling policy to identify the purpose of setting it.
 
 ```yaml
 Type: String
