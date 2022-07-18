@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Provide a description of the Teams Emergency Call Routing policy to identify purpose of setting it.
+Provides a description of the Teams Emergency Call Routing policy to identify the purpose of setting it.
 
 ```yaml
 Type: String
