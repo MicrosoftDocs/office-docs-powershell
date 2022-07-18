@@ -77,7 +77,7 @@ Example 5 assigns the online voice routing policy RedmondOnlineVoiceRoutingPolic
 ## PARAMETERS
 
 ### -Identity
-Indicates the Identity of the user account to be assigned the per-user online voice routing policy. User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
+Indicates the Identity of the user account to be assigned the per-user online voice routing policy. User Identities can be specified using one of the following formats: the user's SIP address, the user's user principal name (UPN), or the user's Active Directory display name (for example, Ken Myer).
 
 ```yaml
 Type: String
