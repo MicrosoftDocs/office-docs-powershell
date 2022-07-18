@@ -23,7 +23,7 @@ New-CsTeamsEmergencyCallRoutingPolicy [-Identity] <string> [-AllowEnhancedEmerge
 ```
 
 ## DESCRIPTION
-This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency number. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
+This cmdlet creates a new Teams Emergency Call Routing policy with one or more emergency numbers. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
 
 ## EXAMPLES
 
