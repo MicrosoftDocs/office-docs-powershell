@@ -13,7 +13,7 @@ ms.reviewer:
 # Grant-CsTenantDialPlan
 
 ## SYNOPSIS
-Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user, to a group of users or sets the Global policy instance.
+Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user, to a group of users, or to set the Global policy instance.
 
 ## SYNTAX
 
