@@ -77,7 +77,7 @@ This example assigns the policy instance "InternationalAndDomestic" to the membe
 ## PARAMETERS
 
 ### -Global
-This parameter set the tenant global policy instance. This is the policy that all users in the tenant will get, unless they have a specific policy instance assigned.
+This parameter sets the tenant global policy instance. This is the policy that all users in the tenant will get unless they have a specific policy instance assigned.
 
 ```yaml
 Type: SwitchParameter
