@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationDialOutNumber
-This parameter represents PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values
+This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.
 
 ```yaml
 Type: String
