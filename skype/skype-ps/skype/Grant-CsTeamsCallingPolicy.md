@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Cmdlet to assign a specific Teams Calling Policy to a user.
+Assigns a specific Teams Calling Policy to a user, a group of users, or sets the Global policy instance.
 
 ## SYNTAX
 
@@ -29,25 +29,37 @@ Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-Pas
 Grant-CsTeamsCallingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### GrantToGroup
+```
+Grant-CsTeamsCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users.
+The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users, to members of a group, or to set the Global policy instance.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsCallingPolicy -identity user1@contoso.com -PolicyName SalesCallingPolicy
+Grant-CsTeamsCallingPolicy -identity user1@contoso.com -PolicyName SalesCallingPolicy
 ```
 
 Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to user1@contoso.com
 
 ### Example 2
 ```powershell
-PS C:\> Grant-CsTeamsCallingPolicy -Global -PolicyName SalesCallingPolicy
+Grant-CsTeamsCallingPolicy -Global -PolicyName SalesCallingPolicy
 ```
 
 Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the Global policy instance. This sets the parameters in the Global policy instance to the values found
 in the SalesCallingPolicy instance.
+
+### Example 3
+```powershell
+Grant-CsTeamsCallingPolicy -Group sales@contoso.com -Rank 10 -PolicyName SalesCallingPolicy
+```
+
+Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the members of the group sales@contoso.com.
 
 ## PARAMETERS
 
@@ -55,12 +67,27 @@ in the SalesCallingPolicy instance.
 The user object to whom the policy is being assigned.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsTeamsCallingPolicy cmdlet does not pass objects through the pipeline.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -96,28 +123,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsTeamsCallingPolicy cmdlet does not pass objects through the pipeline.
+### -Group
+Specifies the group used for the group policy assignment.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (GrantToGroup)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: Int32
+Parameter Sets: (GrantToGroup)
+Aliases:
 
 Required: False
 Position: Named
@@ -142,16 +169,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
 
