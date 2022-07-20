@@ -19,7 +19,7 @@ Typically the civic address designates the building, and locations are specific 
 
 ## SYNTAX
 
-### UseCivicAddressId
+### UseCivicAddressId (Default)
 ```
 Set-CsOnlineLisLocation -CivicAddressId <guid> [-City <string>] [-CityAlias <string>] [-CompanyName <string>] [-CompanyTaxId <string>]
  [-Confidence <string>] [-CountryOrRegion <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
@@ -38,14 +38,14 @@ Set-CsOnlineLisLocation -LocationId <guid> [-CityAlias <string>] [-Confidence <s
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e -Location "B5 2nd Floor"
 ```
 
 This example changes the location description of the location specified by its location identity.
 
 ### Example 2
-```
+```powershell
 Set-CsOnlineLisLocation -CivicAddressId 5687eb59-9039-4e99-bb89-71771d723b7a -Location "B5 2nd Floor" -Elin "TEST_ELIN"
 ```
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-The latitude of the civic address.
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
 
 ```yaml
 Type: String
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-The longitude of the civic address.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
 
 ```yaml
 Type: String
