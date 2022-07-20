@@ -32,7 +32,7 @@ Use the `Complete-CsOnlineTelephoneNumberOrder` cmdlet to complete a specific te
 ### -------------------------- Example 1 --------------------------
 ```
 PS C:\> Complete-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
-PS C:\> Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+PS C:\> Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912 | fl
 
 AreaCode              :
 CivicAddressId        :
@@ -53,7 +53,7 @@ SendToServiceDesk     : False
 Status                : Completed
 TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
 
-PS C:\> $order.TelephoneNumber
+PS C:\> (Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912).TelephoneNumber
 
 Location      TelephoneNumber
 --------      ---------------
@@ -87,9 +87,13 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
+
 [Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
 
 [New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
+
 [Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
+
 [Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
+
 [Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)

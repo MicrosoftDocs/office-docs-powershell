@@ -29,14 +29,14 @@ Returns one or more emergency civic addresses.
 ## EXAMPLES
 
 ###  Example 1
-```
+```powershell
 Get-CsOnlineLisCivicAddress -CivicAddressId 235678321ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 ```
 
 This example returns the civic address with the specified identification.
 
 ###  Example 2
-```
+```powershell
 Get-CsOnlineLisCivicAddress -City Seattle
 ```
 
@@ -256,16 +256,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
-
 ## OUTPUTS
 
-### One or more instances of civic address objects.
-
-
 ## NOTES
-
 
 ## RELATED LINKS
 [Set-CsOnlineLisCivicAddress](set-csonlineliscivicaddress.md)
