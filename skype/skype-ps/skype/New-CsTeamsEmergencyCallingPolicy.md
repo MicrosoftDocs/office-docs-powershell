@@ -37,6 +37,13 @@ PS C:>   New-CsTeamsEmergencyCallingPolicy -Identity testECP -Description "Test 
 
  This example creates a Teams Emergency Calling policy that has a identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
 
+### Example 2
+```powershell
+PS C:>  New-CsTeamsEmergencyCallingPolicy -Identity "testECP2" -NotificationGroup "123@gh.com;567@test.com"
+```
+
+ This example creates a Teams Emergency Calling policy that has an identity of testECP2, with default settings except for the Notification Group. This parameter expects a single string with all users and groups separated with ";".
+
 ## PARAMETERS
 
 ### -Confirm
