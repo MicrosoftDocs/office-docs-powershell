@@ -105,7 +105,7 @@ Example 5 returns information for user accounts that have been assigned a design
 ## PARAMETERS
 
 ### -AccountType
-New parameter added for Get-CsOnlineUser which indicates the user type. The possible values for AccountType are: 
+This parameter is added to Get-CsOnlineUser to indicate the user type. The possible values for the AccountType parameter are: 
 - 'User' - to query for user accounts
 - 'ResourceAccount' - to query for app endpoints or resource accounts
 - 'Guest' - to query for guest accounts
