@@ -267,7 +267,13 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
 
 ### EnableRoomMailboxAccount
 ```
-New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnlineServicesID <WindowsLiveId> [-Room] [-RoomMailboxPassword <SecureString>] [-UserPrincipalName <String>]
+New-Mailbox  
+ [-Name] <String>  
+ -EnableRoomMailboxAccount <Boolean>  
+ -MicrosoftOnlineServicesID <WindowsLiveId>  
+ [-Room]  
+ [-RoomMailboxPassword <SecureString>]  
+ [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
