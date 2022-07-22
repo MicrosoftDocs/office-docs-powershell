@@ -110,19 +110,21 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-The AddExchangeLocation parameter adds email messages to the policy. The only valid value for this parameter is All.
+The AddExchangeLocation parameter adds email messages to the policy if they're not already included. The valid value for this parameter is All.
 
-If the policy doesn't already include email messages (the ExchangeLocation property value isn't already All), you can use this parameter in the following procedures:
+If the policy doesn't already include email messages (in the output of the Get-AutoSensitivityLabelPolicy cmdlet, the ExchangeLocation property value is blank), you can use this parameter in the following procedures:
 
 - If you use `-AddExchangeLocation All` by itself, the policy applies to email for all internal users.
 
-- To add only specific internal or external users in the policy, use `-AddExchangeLocation All` with the ExchangeSender parameter in the same command. Only email addresses specified by the ExchangeSender parameter are included in the policy.
+- To include email of specific internal or external users in the policy, use `-AddExchangeLocation All` with the ExchangeSender parameter in the same command. Only email of the specified users is included in the policy.
 
-- To exclude only specific internal users from the policy, use `-AddExchangeLocation All` with the ExchangeSenderException parameter in the same command. Only email addresses specified by the ExchangeSenderException parameter are excluded from the policy.
+- To include email of specific group members in the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only email of members of the specified groups is included in the policy.
 
-- To add only specific group members in the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOf parameter are included in the policy.
+- To exclude email of specific internal users from the policy, use `-AddExchangeLocation All` with the ExchangeSenderException parameter in the same command. Only email of the specified users is excluded from the policy.
 
-- To exclude only specific group members from the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOfException parameter are excluded from the policy.
+- To exclude email of specific group members from the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only email of members of the specified groups is excluded from the policy.
+
+You can't specify inclusions and exclusions in the same policy.
 
 ```yaml
 Type: MultiValuedProperty
@@ -304,11 +306,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-The ExchangeSender parameter specifies email addresses of internal or external users to include in the policy. You can specify multiple email addresses separated by commas.
+The ExchangeSender parameter specifies the users whose email is included in the policy. You specify the users by email address. You can specify internal or external email addresses.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (in the output of the Get-AutoSensitivityLabelPolicy cmdlet, the ExchangeLocation property value is All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
@@ -327,11 +331,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
-The ExchangeSenderException parameter specifies email addresses of internal users to exclude from the policy. You can specify multiple email addresses separated by commas.
+The ExchangeSenderException parameter specifies the internal users whose email is excluded from the policy. You identify the users by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (in the output of Get-AutoSensitivityLabelPolicy, the ExchangeLocation property value is All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
@@ -350,11 +356,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies email addresses of distribution groups or mail-enabled security groups to include in the policy (the group members are included in the policy). You can specify multiple email addresses separated by commas.
+The ExchangeSenderMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the policy (email of the group members is included in the policy). You identify the groups by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (in the output of Get-AutoSensitivityLabelPolicy, the ExchangeLocation property value is All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
@@ -375,11 +383,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies the email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You can specify multiple email addresses separated by commas.
+The ExchangeSenderMemberOfException parameter specifies the distribution groups or mail-enabled security groups to exclude from the policy (email of the group members is excluded from the policy). You identify the groups by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (in the output of Get-AutoSensitivityLabelPolicy, the ExchangeLocation property value is All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
@@ -521,7 +531,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-The RemoveExchangeLocation parameter removes email messages from the policy. The only valid value for this parameter is All.
+The RemoveExchangeLocation parameter removes email messages from the policy if they're already included. The valid value for this parameter is All.
+
+If the policy already includes email messages (in the output of the Get-AutoSensitivityLabelPolicy cmdlet, the ExchangeLocation property value is All), you can use `-RemoveExchangeLocation All` to prevent the policy from applying to email messages.
 
 You can't use this parameter if email (the value Exchange) is used by any of the associated rules.
 
