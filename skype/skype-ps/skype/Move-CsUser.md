@@ -45,6 +45,7 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 - To move a user to Microsoft 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments, there will be variants of this address. For more details, see [Move users between on-premises and cloud](/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
 - When migrating from on-premises to the cloud, users are automatically assigned TeamsOnly mode and their meetings from on-premises are automatically converted to Teams meetings. This happens regardless of which on-premises version of Skype for Business Server or Lync Server is used. It is no longer necessary to specify the `-MoveToTeams` switch, and specifying this switch no longer has any impact. Teams-only users can still *join* meetings hosted in Skype for Business (which may happen if they are invited to a meeting by a user that is using Skype For Business).
 - When migrating from on-premises to the cloud, contacts from Skype for Business Server are migrated to the cloud (unless -force switch is used in move-csuser) and become available in Teams after the user logs on to Teams after the move.
+- If you receive an error while running this cmdlet about multiple federated Edge pools, Skype for Business Federation can only be enabled for a single Edge pool. If you have multiple Edge pools, select one to use as the federating Edge pool.
 
 > [!NOTE]
 >

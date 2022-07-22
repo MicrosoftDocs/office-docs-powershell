@@ -20,7 +20,7 @@ Deletes an existing online voice routing policy. Online voice routing policies m
 ### Identity
 ```
 Remove-CsOnlineVoiceRoutingPolicy [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,21 +52,6 @@ PS C:\> Get-CsOnlineVoiceRoutingPolicy | Where-Object {$_.OnlinePstnUsages -cont
 In Example 3, all the online voice routing polices that include the online PSTN usage "Long Distance" are removed. To carry out this task, the `Get-CsOnlineVoiceRoutingPolicy` cmdlet is first called without any parameters in order to return a collection of all the available online voice routing policies. That collection is then piped to the Where-Object cmdlet, which picks out only those policies where the OnlinePstnUsages property includes (-contains) the usage "Long Distance". Policies that meet that criterion are then piped to the `Remove-CsOnlineVoiceRoutingPolicy`, which removes each online voice routing policy that includes the online PSTN usage "Long Distance".
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 Suppresses the display of any non-fatal error message that might arise when running the command.

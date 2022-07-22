@@ -193,15 +193,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-The AddExchangeLocation parameter adds email messages to the policy. A valid for this parameter is All.
+The AddExchangeLocation parameter adds email messages to the DLP policy if they're not already included. The valid value for this parameter is All.
 
-If the policy doesn't already include email messages (the ExchangeLocation property value isn't already All), you can use this parameter in the following procedures:
+If the policy doesn't already include email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is blank), you can use this parameter in the following procedures:
 
 - If you use `-AddExchangeLocation All` by itself, the policy applies to email for all users.
 
-- To add only specific group members in the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOf parameter are included in the policy.
+- To include email of specific group members in the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only email of members of the specified groups is included in the policy.
 
-- To exclude only specific group members from the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only members of groups specified by the ExchangeSenderMemberOfException parameter are excluded from the policy.
+- To exclude email of specific group members from the policy, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only email of members of the specified groups is excluded from the policy.
 
 ```yaml
 Type: MultiValuedProperty
@@ -217,7 +217,23 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+The AddOneDriveLocation parameter adds OneDrive for Business sites to the DLP policy if they're not already included. The valid value for this parameter is All.
+
+If the policy doesn't already include OneDrive for Business sites (in the output of the Get-DlpCompliancePolicy cmdlet, the OneDriveLocation property value is blank), you can use this parameter in the following procedures:
+
+- If you use `-AddOneDriveLocation All` by itself, the policy applies to all OneDrive for Business sites.
+
+- To include sites of specific OneDrive accounts in the policy, use `-AddOneDriveLocation All` and the OneDriveSharedBy parameter to specify the users. Only the sites of the specified users are included in the policy.
+
+- To include sites of specific group members in the policy, use `-AddOneDriveLocation All` and the OneDriveSharedByMemberOf parameter to specify the groups. Only the sites of members of the specified groups are included in the policy.
+
+- To exclude sites of specific OneDrive accounts from the policy, use `-AddOneDriveLocation All` and the ExceptIfOneDriveSharedBy parameter to specify the users. Only sites of the specified users are excluded from the policy.
+
+- To exclude sites of specific group members from the policy, use `-AddOneDriveLocation All` and the ExceptIfOneDriveSharedByMemberOf parameter to specify the groups. Only sites of members of the specified groups are excluded from the policy.
+
+You can't specify inclusions and exclusions in the same policy.
+
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty
@@ -233,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+Don't use this parameter. See the AddOneDriveLocation parameter for an explanation.
 
 ```yaml
 Type: MultiValuedProperty
@@ -492,9 +508,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-The ExceptIfOneDriveSharedBy parameter specifies the users to exclude in the DLP policy. You identify the user by email address.
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the DLP policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+
+To use this parameter, one of the following statements must be true:
+
+- The policy already includes OneDrive for Business sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the OneDriveSharedBy or OneDriveSharedByMemberOf parameters.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -510,9 +533,18 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
-The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to exclude in the DLP policy. You identify the group by its email address.
+The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to exclude from the DLP policy (the OneDrive for Business sites of group members are excluded from the policy). You identify the groups by email address.
+
+To use this parameter, one of the following statements must be true:
+
+- The policy already includes OneDrive for Business sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the OneDriveSharedBy or OneDriveSharedByMemberOf parameters.
+
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -528,11 +560,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the email addresses of distribution groups or mail-enabled security groups to include in the policy (the group members are included in the policy). You can specify multiple email addresses separated by commas.
+The ExchangeSenderMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the policy (email of the group members is included in the policy). You identify the groups by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (in the output of Get-DlpCOmpliancePolicy, the ExchangeLocation property value is All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderMemberOfException parameter.
@@ -553,11 +587,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies the email addresses of distribution groups or mail-enabled security groups to exclude from the policy (the group members are excluded from the policy). You can specify multiple email addresses separated by commas.
+The ExchangeSenderMemberOfException parameter specifies the distribution groups or mail-enabled security groups to exclude from the policy (email of the group members is excluded from the policy). You identify the groups by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (the ExchangeLocation property value is already All).
+- The policy already includes email messages (in the output of Get-DlpCOmpliancePolicy, the ExchangeLocation property value is Al).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderMemberOf parameter.
@@ -617,9 +653,16 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
-The OneDriveSharedBy parameter specifies the users to include in the DLP policy. You identify the user by email address.
+The OneDriveSharedBy parameter specifies the users to include in the DLP policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+
+To use this parameter, one of the following statements must be true:
+
+- The policy already includes OneDrive for Business sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the ExceptIfOneDriveSharedBy or ExceptIfOneDriveSharedByMemberOf parameters.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -635,9 +678,18 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
-The OneDriveSharedByMemberOf parameter specifies the distribution groups, mail-enabled security groups, or Microsoft 365 groups to include in the DLP policy. You identify the group by its email address.
+The OneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the DLP policy (the OneDrive for Business sites of group members are included in the policy). You identify the groups by email address.
+
+To use this parameter, one of the following statements must be true:
+
+- The policy already includes OneDrive for Business sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the ExceptIfOneDriveSharedBy or ExceptIfOneDriveSharedByMemberOf parameters.
+
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -695,7 +747,7 @@ Accept wildcard characters: False
 ### -RemoveEndpointDlpLocation
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
-The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -717,7 +769,7 @@ Accept wildcard characters: False
 ### -RemoveEndpointDlpLocationException
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
-The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -737,7 +789,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-The RemoveExchangeLocation parameter removes email messages from the policy. The only valid value for this parameter is All.
+The RemoveExchangeLocation parameter removes email messages from the DLP policy if they're already included. The valid value for this parameter is All.
+
+If the policy already includes email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is All), you can use `-RemoveExchangeLocation All` to prevent the policy from applying to email messages.
 
 ```yaml
 Type: MultiValuedProperty
@@ -753,7 +807,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+The RemoveOneDriveLocation parameter removes OneDrive for Business sites from the DLP policy if they're already included. The valid value for this parameter is All.
+
+If the policy already includes OneDrive for Business sites (in the output of the Get-DlpCompliancePolicy cmdlet, the OneDriveLocation property value is All), you can use `-RemoveOneDriveLocation All` to prevent the policy from applying to OneDrive for Business sites.
+
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty
@@ -769,7 +827,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-Don't use this parameter. Use the OneDriveSharedBy and OneDriveSharedByMemberOf parameters instead.
+Don't use this parameter. See the RemoveOneDriveLocation parameter for an explanation.
 
 ```yaml
 Type: MultiValuedProperty
@@ -873,7 +931,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites if you used the value All for the SharePointLocation parameter. You specify the site by its URL value.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -891,7 +949,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-The RemoveSharePointLocationException parameter specifies the SharePoint Online sites to remove from the list of excluded sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocationException parameter specifies the SharePoint Online sites to remove from the list of excluded sites if you used the value All for the SharePointLocation parameter. You specify the site by its URL value.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -909,7 +967,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
