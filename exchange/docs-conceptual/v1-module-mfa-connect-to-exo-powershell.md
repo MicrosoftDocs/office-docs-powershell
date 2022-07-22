@@ -18,7 +18,20 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 # V1 module - Connect to Exchange Online PowerShell using MFA
 
 > [!NOTE]
-> The older Exchange Online Remote PowerShell Module that's described in this article will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+**> Deprecation of MFA Module:**
+We will be removing the ability to use the “Exchange Online Remote PowerShell with MFA module” described in this article, as it is outdated and will be deprecated on 31 Dec 2022. 
+ 
+The support for MFA will end on 31st August 2022. We have ended the support so that we can focus our investment on supporting newer technologies and modern experiences. Microsoft recommends that you move to the latest GA version of V2 Module (v2.0.5) to avoid a situation where you need service or support that is no longer available.
+
+ 
+**How do you migrate to the latest GA version of v2 Module (v2.0.5) ?**
+ 
+The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+ 
+> The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+> For more details on diff versions of Exchange Online Modules, please see-
+https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487
+
 
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
