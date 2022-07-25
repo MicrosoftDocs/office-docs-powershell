@@ -30,6 +30,9 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 
 - The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the article assume that you've already installed the module.
 
+  > [!NOTE]
+  > Security & Compliance PowerShell still requires Basic authentication in WinRM as described [Prerequisites for the EXO V2 module](exchange-online-powershell-v2.md#prerequisites-for-the-exo-v2-module). REST API cmdlets that allow you to turn off Basic authentication in WinRM are not yet available for the **Connect-IPPSSession** cmdlet. For more information, see [Updates for version 2.0.6](exchange-online-powershell-v2.md#updates-for-version-206).
+
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## Connect to Exchange Online PowerShell using modern authentication with or without MFA
