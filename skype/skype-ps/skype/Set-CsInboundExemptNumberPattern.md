@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/set-csinboundexemptnumberpattern
-applicable: Skype for Business Online and Teams
+applicable: Microsoft Teams, Skype for Business Online
 author: jenstrier
 ms.author: jenstr
 ms.reviewer: 
@@ -14,6 +14,14 @@ schema: 2.0.0
 ## SYNOPSIS
 
 Modifies one or more parameters of an exempt number pattern in the tenant list.
+
+## SYNTAX
+
+### Identity (Default)
+```
+Set-CsInboundExemptNumberPattern [[-Identity] <string>] [-Description <string>] [-Enabled <bool>] [-Pattern <string>]
+  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ## DESCRIPTION
 
@@ -39,28 +47,12 @@ Disables the exempt number pattern from usage in call blocking
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 
 Sets the description of the number pattern.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -86,66 +78,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The *Force* switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the *Force* switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier for the exempt number pattern to be changed.
-
-```yaml
-Type: XdsGlobalRelativeIdentity
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Name
-A displayable name describing the exempt number pattern.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: Named
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -Pattern
 
@@ -163,13 +109,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
@@ -178,15 +125,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -201,16 +147,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
 You can use Test-CsInboundBlockedNumberPattern to test your block and exempt phone number ranges.
-
 
 ## RELATED LINKS
 
