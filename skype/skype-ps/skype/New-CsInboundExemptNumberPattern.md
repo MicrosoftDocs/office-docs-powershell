@@ -20,8 +20,8 @@ This cmdlet lets you configure a new number pattern that is exempt from tenant c
 ### Identity (Default)
 
 ```powershell
-New-CsInboundExemptNumberPattern -Identity <String> -Pattern <String>
- [-Description <String>] [-Enabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsInboundExemptNumberPattern -Identity <String> -Pattern <String> [-Description <String>] [-Enabled <Boolean>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
@@ -162,7 +162,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 You can use Test-CsInboundBlockedNumberPattern to test your block and exempt phone number ranges.
-
 
 ## RELATED LINKS
 
