@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeDocs
-The EnableSafeDocs parameter enables or disables Safe Documents in organizations with Microsoft 365 E5 Security licenses. Valid values are:
+The EnableSafeDocs parameter enables or disables Safe Documents in organizations with Microsoft 365 A5 or Microsoft 365 E5 Security licenses. Valid values are:
 
 - $true: Safe Documents is enabled and will upload user files to Microsoft Defender for Endpoint for scanning and verification.
 - $false: Safe Documents is disabled. This is the default value.
