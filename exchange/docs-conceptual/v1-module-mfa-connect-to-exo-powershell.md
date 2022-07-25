@@ -20,7 +20,7 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 > [!NOTE]
 We will be removing the capability to use Exchange Online Remote PowerShell with the MFA module described in this article, as it is outdated and will be deprecated on Dec 31, 2022. 
  
-The support for MFA will end on 31st August 2022. We have ended the support so that we can focus our investment on supporting newer technologies and modern experiences. Microsoft recommends that you move to the latest GA version of V2 Module (v2.0.5) to avoid a situation where you need service or support that is no longer available.
+Support for MFA will end on August 31, 2022, so that we can focus our efforts on supporting newer technologies and modern experiences. We recommend that you move to the latest General Availability (GA) version of the Exchange Online PowerShell V2 (EXO V2) module to avoid a situation where you need service or support that is no longer available.
 
  
 **How do you migrate to the latest GA version of v2 Module (v2.0.5) ?**
