@@ -65,7 +65,7 @@ Example 3 assigns the per-user online voice routing policy RedmondOnlineVoiceRou
 Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy" -Global
 ```
 
-Example 4 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant, except any that have an explicit policy assignment.
+Example 4 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy as the Global Online Voice Routing Policy, this affects all the users in the tenant, except any that have an explicit policy assignment.
 
 ### Example 5
 ```powershell
