@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/new-csinboundexemptnumberpattern
-applicable: Skype for Business Online and Teams
+applicable: Microsoft Teams, Skype for Business Online
 author: jenstrier
 ms.author: jenstr
 ms.reviewer: 
@@ -26,9 +26,8 @@ New-CsInboundExemptNumberPattern -Identity <String> -Pattern <String>
 
 ### ParentAndRelativeKey
 ```
-New-CsInboundExemptNumberPattern [-Tenant <Guid>] -Name <String> [-Enabled <Boolean>]
- [-Description <String>] -Pattern <String> [-InMemory] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CsInboundExemptNumberPattern -Pattern <string> -Name <string> [-Description <string>] [-Enabled <boolean>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## EXAMPLES
@@ -42,22 +41,6 @@ PS C:> New-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Pattern "^\+?
 Creates a new inbound exempt number pattern for the numbers 1 (312) 555-88882 and 1 (312) 555-88883 and enables it
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 
@@ -90,26 +73,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The *Force* switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the *Force* switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier for the exempt number pattern to be created.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -135,7 +103,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Pattern
 
 A regular expression that the calling number must match in order to be exempt from blocking. It is best pratice to start the regular expression with the hat character and end it with the dollar character. You can use various regular expression test sites on the Internet to validate the expression.
@@ -152,13 +119,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
@@ -167,15 +135,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -190,11 +157,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
