@@ -17,17 +17,10 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 
 # V1 module - Connect to Exchange Online PowerShell using MFA
 
-> [!NOTE]
-We will be removing the capability to use Exchange Online Remote PowerShell with the MFA module described in this article, as it is outdated and will be deprecated on Dec 31, 2022. 
- 
-Support for MFA will end on August 31, 2022, so that we can focus our efforts on supporting newer technologies and modern experiences. We recommend that you move to the latest General Availability (GA) version of the Exchange Online PowerShell V2 (EXO V2) module to avoid a situation where you need service or support that is no longer available.
-
- ## How to Migrate to the latest GA version of the EXO V2 module
- 
-Requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
- 
-The EXO V2 module supports MFA. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
-For more details on different versions of Exchange Online Modules, see [Understanding the Different Versions of Exchange Online PowerShell Modules and Basic Auth](https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487).
+> [!IMPORTANT]
+> Support for the older Exchange Online Remote PowerShell Module that's described in this article will end on August 31, 2022. The ability to connect to Exchange Online PowerShell using this version of the module will end on December 31, 2022.
+>
+> We recommend using the Exchange Online PowerShell V2 module (EXO V2 module), which only uses modern authentication, and supports accounts with or without MFA. For installation and connection instructions, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module) and [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md). For more information about the different versions of Exchange Online PowerShell modules, see [Understanding the Different Versions of Exchange Online PowerShell Modules and Basic Auth](https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487).
 
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
