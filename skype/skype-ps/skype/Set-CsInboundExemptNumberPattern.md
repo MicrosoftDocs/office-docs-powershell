@@ -19,7 +19,7 @@ Modifies one or more parameters of an exempt number pattern in the tenant list.
 
 ### Identity (Default)
 ```
-Set-CsInboundExemptNumberPattern [[-Identity] <string>] [-Description <string>] [-Enabled <bool>] [-Pattern <string>]
+Set-CsInboundExemptNumberPattern [[-Identity] <string>] [-Description <string>] [-Enabled <boolean>] [-Pattern <string>]
   [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
