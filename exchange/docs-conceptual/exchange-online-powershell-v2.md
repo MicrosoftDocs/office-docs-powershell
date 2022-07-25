@@ -85,21 +85,21 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 
 Version 2.0.6-Preview6 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
 
-- Version 2.0.6 includes cmdlets that are backed by the REST API:
-  - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module).
-  - REST API cmdlets work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
-  - Virtually all of the available remote PowerShell cmdlets are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
+- Exchange Online PowerShell in version 2.0.6 includes cmdlets that are backed by the REST API:
+  - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) for Exchange Online PowerShell.
+  - REST API cmdlets in Exchange Online PowerShell work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
+  - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
 
 - The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets as before:
   - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
   - If you don't use the _UseRPSSession_ switch when you connect, you can use _only_ the REST API cmdlets.
 
-- A few REST API cmdlets have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
+- A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRouting_ switch, you can use only the following values for identity of the mailbox:
     - User principal name (UPN)
     - Email address
     - Mailbox GUID
-  - The _UseCustomRouting_ switch is available only on the following REST API cmdlets:
+  - The _UseCustomRouting_ switch is available only on the following REST API cmdlets in Exchange Online PowerShell:
     - **Get-Clutter**
     - **Get-FocusedInbox**
     - **Get-InboxRule**
@@ -120,6 +120,9 @@ Version 2.0.6-Preview6 of the EXO V2 module is now available. This Preview versi
     - **Set-UserPhoto**
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
+
+> [!NOTE]
+> Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) to successfully use the **Connect-IPPSSession** cmdlet.
 
 ## Install and maintain the EXO V2 module
 
