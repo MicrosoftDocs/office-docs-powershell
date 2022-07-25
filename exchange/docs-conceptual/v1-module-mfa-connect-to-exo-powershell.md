@@ -28,9 +28,7 @@ Support for MFA will end on August 31, 2022, so that we can focus our efforts on
 Requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
  
 The EXO V2 module supports MFA. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
-> For more details on diff versions of Exchange Online Modules, please see-
-https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487
-
+For more details on different versions of Exchange Online Modules, see [Understanding the Different Versions of Exchange Online PowerShell Modules and Basic Auth](https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487).
 
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
