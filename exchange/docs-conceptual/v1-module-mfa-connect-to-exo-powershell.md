@@ -25,7 +25,7 @@ Support for MFA will end on August 31, 2022, so that we can focus our efforts on
  
 **How do you migrate to the latest GA version of v2 Module (v2.0.5) ?**
  
-The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+Requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
  
 > The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 > For more details on diff versions of Exchange Online Modules, please see-
