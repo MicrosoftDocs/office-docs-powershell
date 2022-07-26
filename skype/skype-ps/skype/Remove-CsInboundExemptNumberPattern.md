@@ -17,7 +17,7 @@ Removes a number pattern exempt from call blocking.
 ## SYNTAX
 
 ```
-Remove-CsInboundBlockedNumberPattern [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsInboundExemptNumberPattern [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
