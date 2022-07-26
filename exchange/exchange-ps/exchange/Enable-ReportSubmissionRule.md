@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Enable-ReportSubmissionRule cmdlet to enable the report submission rule in your cloud-based organization. The report submission rule identifies the custom mailbox to deliver user reported messages to.
+Use the Enable-ReportSubmissionRule cmdlet to enable the report submission rule in your cloud-based organization. The report submission rule identifies the user submissions mailbox to deliver user reported messages to.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -27,7 +27,7 @@ Get-ReportSubmissionPolicy [[-Identity] <ReportSubmissionPolicyIdParameter>] [<C
 ## DESCRIPTION
 The report submission policy controls most of the settings for user submissions in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>.
 
-The report submission rule (\*-ReportSubmissionRule cmdlets) controls the email address of the custom mailbox that's used for user reported messages.
+The report submission rule (\*-ReportSubmissionRule cmdlets) controls the email address of the user submissions mailbox where user reported messages are sent.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
