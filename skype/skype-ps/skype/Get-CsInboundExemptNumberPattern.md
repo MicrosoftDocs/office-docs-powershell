@@ -49,7 +49,8 @@ This returns the exempt number patterns with Identity Exempt1.
 Get-CsInboundExemptNumberPattern -Filter "Exempt*"
 ```
 
-This returns the exempt number patterns with Identity starting with Exempt.
+This example returns the exempt number patterns with Identity starting with Exempt.
+
 
 ## PARAMETERS
 
