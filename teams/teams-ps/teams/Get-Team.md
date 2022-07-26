@@ -66,7 +66,7 @@ Returns the team that includes the specified text in its DisplayName. (This acts
 PS> $team=[uri]::EscapeDataString('AB&C')
 PS> Get-Team -DisplayName $team
 ```
-Returns the team that includes the specified escaped representation of its DisplayName, useful when the DisplayName has special characters. (This acts as a filter rather than an exact match).
+Returns the team that includes the specified escaped representation of its DisplayName, useful when the DisplayName has special characters. (This acts as a filter rather than an exact match.)
 
 ## PARAMETERS
 
