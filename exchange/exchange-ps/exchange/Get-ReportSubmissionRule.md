@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ReportSubmissionRule cmdlet to view the report submission rule in your cloud-based organization. The report submission rule identifies the custom mailbox to deliver user reported messages to.
+Use the Get-ReportSubmissionRule cmdlet to view the report submission rule in your cloud-based organization. The report submission rule identifies the user submissions mailbox (where to deliver user reported messages).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The State parameter filters the results by whether the rule is enabled or disabled. Valid values are:
+The State parameter filters the results by whether the report submission rule is enabled or disabled. Valid values are:
 
 - Disabled
 - Enabled
