@@ -66,7 +66,7 @@ This example retrieves the statistics for the specified mobile phone.
 
 ### Example 2
 ```powershell
-$UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'" | Get-Mailbox
+$UserList = Get-CASMailbox -ResultSize unlimited -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'"
 $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
 ```
 
