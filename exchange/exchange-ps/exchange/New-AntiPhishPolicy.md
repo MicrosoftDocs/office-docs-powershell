@@ -160,10 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter specifies whether the policy is enabled. Valid values are:
+This parameter is reserved for internal Microsoft use.
 
-- $true: The policy is enabled. This is the default value.
-- $false: The policy is disabled.
+To create a disabled anti-phishing policy (the combination of the antiphish rule and the associated antiphish policy), use `-Enabled $false` on the **New-AntiPhishRule** cmdlet.
+
+To enable or disable an existing anti-phishing policy, use the **Enable-AntiPhishRule** or **Disable-AntiPhishRule** cmdlets.
+
+In the output of the **Get-AntiPhishRule** cmdlet, whether the anti-phishing policy is enabled or disabled is visible in the State property.
 
 ```yaml
 Type: Boolean

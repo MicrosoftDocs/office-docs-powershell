@@ -1,5 +1,5 @@
 ---
-title: "Basic auth - Connect to Security & Compliance Center PowerShell"
+title: "Basic auth - Connect to Security & Compliance PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -12,15 +12,15 @@ ms.localizationpriority: medium
 ms.assetid:
 ROBOTS: NOINDEX
 search.appverid: MET150
-description: "Learn how to connect to Security & Compliance Center PowerShell."
+description: "Learn how to connect to Security & Compliance PowerShell."
 ---
 
-# Basic auth - Connect to Security & Compliance Center PowerShell
+# Basic auth - Connect to Security & Compliance PowerShell
 
 > [!NOTE]
-> The connection instructions in this article [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
+> The connection instructions in this article [will be deprecated starting on October 1, 2022](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-may-2022/ba-p/3301866) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Security & Compliance PowerShell. For instructions, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
 
-Security & Compliance Center PowerShell allows you to manage your Microsoft 365 Defender portal and Microsoft Purview compliance portal settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Security & Compliance Center PowerShell. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance Center PowerShell cmdlets into your local Windows PowerShell session so that you can use them.
+Security & Compliance PowerShell allows you to manage your Microsoft 365 Defender portal and Microsoft Purview compliance portal settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Security & Compliance PowerShell. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance PowerShell cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
 > The procedures in this article won't work if:
@@ -31,15 +31,15 @@ Security & Compliance Center PowerShell allows you to manage your Microsoft 365 
 >
 > - A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs.
 >
-> In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
+> In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance PowerShell. For instructions, see [Connect to Security & Compliance PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
 >
-> Some features in the Microsoft 365 Defender portal and Microsoft Purview compliance portal (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+> Some features in the Microsoft 365 Defender portal and Microsoft Purview compliance portal (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) and [Permissions in the Microsoft 365 security center](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 - You can use the following versions of Windows:
 
@@ -87,7 +87,7 @@ Security & Compliance Center PowerShell allows you to manage your Microsoft 365 
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
-## Connect to Security & Compliance Center PowerShell
+## Connect to Security & Compliance PowerShell
 
 1. On your local computer, open Windows PowerShell and run the following command:
 
@@ -115,7 +115,7 @@ Security & Compliance Center PowerShell allows you to manage your Microsoft 365 
    Import-PSSession $Session -DisableNameChecking
    ```
 
-   If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
+   If you want to connect to Security & Compliance PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
@@ -126,15 +126,13 @@ Remove-PSSession $Session
 
 ## How do you know this worked?
 
-After Step 3, the Security & Compliance Center PowerShell cmdlets are imported into your local Windows PowerShell session as tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run a Security & Compliance Center cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
+After Step 3, the Security & Compliance PowerShell cmdlets are imported into your local Windows PowerShell session as tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run a Security & Compliance PowerShell cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
 
 If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- Verify that your account has permission to access the Microsoft 365 Defender portal or the Microsoft Purview compliance portal. For details, see [Give users access to the Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
-
-- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Security & Compliance Center PowerShell.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Security & Compliance PowerShell.
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
@@ -142,7 +140,7 @@ If you receive errors, check the following requirements:
 
   > The request for the Windows Remote Shell with ShellId \<ID\> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.
 
-  To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Security & Compliance Center PowerShell endpoint.
+  To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Security & Compliance PowerShell endpoint.
 
 ## See also
 

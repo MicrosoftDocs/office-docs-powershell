@@ -10,11 +10,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 - [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-management-shell)
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
-- [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
+- [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 > [!NOTE]
-> For Exchange Online, Security & Compliance Center, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell V2 module](../../docs-conceptual/exchange-online-powershell-v2.md).
+> For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell V2 module](../../docs-conceptual/exchange-online-powershell-v2.md).
 >
 > For Exchange Server, there is no Microsoft-provided module in the PowerShell Gallery. Instead, to use PowerShell in Exchange, you have the following options:
 >
@@ -87,6 +87,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ContentMalwareMdoDetailReport](Get-ContentMalwareMdoDetailReport.md)
 
+### [Get-EmailTenantSettings](Get-EmailTenantSettings.md)
+
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
@@ -143,6 +145,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ATPProtectionPolicyRule](Set-ATPProtectionPolicyRule.md)
 
+### [Set-EmailTenantSettings](Set-EmailTenantSettings.md)
+
 ### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
 
 ### [Set-SafeAttachmentPolicy](Set-SafeAttachmentPolicy.md)
@@ -176,6 +180,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disable-MalwareFilterRule](Disable-MalwareFilterRule.md)
 
+### [Disable-ReportSubmissionRule](Disable-ReportSubmissionRule.md)
+
 ### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
 
 ### [Enable-EOPProtectionPolicyRule](Enable-EOPProtectionPolicyRule.md)
@@ -185,6 +191,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Enable-HostedOutboundSpamFilterRule](Enable-HostedOutboundSpamFilterRule.md)
 
 ### [Enable-MalwareFilterRule](Enable-MalwareFilterRule.md)
+
+### [Enable-ReportSubmissionRule](Enable-ReportSubmissionRule.md)
 
 ### [Export-QuarantineMessage](Export-QuarantineMessage.md)
 
@@ -252,6 +260,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
+### [Get-ReportSubmissionPolicy](Get-ReportSubmissionPolicy.md)
+
+### [Get-ReportSubmissionRule](Get-ReportSubmissionRule.md)
+
 ### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
 
 ### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
@@ -285,6 +297,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
 
 ### [New-QuarantinePolicy](New-QuarantinePolicy.md)
+
+### [New-ReportSubmissionPolicy](New-ReportSubmissionPolicy.md)
+
+### [New-ReportSubmissionRule](New-ReportSubmissionRule.md)
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
@@ -329,6 +345,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
 ### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
+
+### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
+
+### [Remove-ReportSubmissionRule](Remove-ReportSubmissionRule.md)
 
 ### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
 
@@ -383,6 +403,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
 
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-ReportSubmissionPolicy](Set-ReportSubmissionPolicy.md)
+
+### [Set-ReportSubmissionRule](Set-ReportSubmissionRule.md)
 
 ### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
 
@@ -832,6 +856,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-M365DataAtRestEncryptionPolicyAssignment](Get-M365DataAtRestEncryptionPolicyAssignment.md)
 
+### [Get-MailboxIRMAccess](Get-MailboxIRMAccess.md)
+
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
 
 ### [Get-OMEMessageStatus](Get-OMEMessageStatus.md)
@@ -852,6 +878,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
+### [Remove-MailboxIRMAccess](Remove-MailboxIRMAccess.md)
+
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
@@ -861,6 +889,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
 
 ### [Set-M365DataAtRestEncryptionPolicyAssignment](Set-M365DataAtRestEncryptionPolicyAssignment.md)
+
+### [Set-MailboxIRMAccess](Set-MailboxIRMAccess.md)
 
 ### [Set-OMEConfiguration](Set-OMEConfiguration.md)
 
@@ -1560,6 +1590,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-PerimeterConfig](Get-PerimeterConfig.md)
 
+### [Get-ServicePrincipal](Get-ServicePrincipal.md)
+
 ### [Get-SettingOverride](Get-SettingOverride.md)
 
 ### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
@@ -1572,6 +1604,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PartnerApplication](New-PartnerApplication.md)
 
+### [New-ServicePrincipal](New-ServicePrincipal.md)
+
 ### [New-SettingOverride](New-SettingOverride.md)
 
 ### [Remove-ApplicationAccessPolicy](Remove-ApplicationAccessPolicy.md)
@@ -1581,6 +1615,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AuthServer](Remove-AuthServer.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
+
+### [Remove-ServicePrincipal](Remove-ServicePrincipal.md)
 
 ### [Remove-SettingOverride](Remove-SettingOverride.md)
 

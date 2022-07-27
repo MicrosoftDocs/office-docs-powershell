@@ -428,7 +428,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 The following Get-CasMailbox parameters are not available or supported in Get-EXOCasMailbox:
 
 - IgnoreDefaultScope
@@ -437,7 +437,7 @@ The following Get-CasMailbox parameters are not available or supported in Get-EX
 
 ## OUTPUTS
 
-###  
+### Output types
 The following properties are removed by design from Get-EXOCasMailbox output:
 
 - RunspaceId

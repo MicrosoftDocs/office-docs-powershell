@@ -17,7 +17,7 @@ ms.reviewer:
 Use the \`Test-CsOnlineLisCivicAddress\` cmdlet to verify that a civic address exists in the master street address guide (MSAG), and is suitable for emergency dispatch.
 
 > [!NOTE]
-> This cmdlet will be deprecated. The validation checks are incorporated into New-CsOnlineLisCivicAddress.
+> This cmdlet has been removed. The validation checks are incorporated into New-CsOnlineLisCivicAddress.
 
 ## SYNTAX
 
