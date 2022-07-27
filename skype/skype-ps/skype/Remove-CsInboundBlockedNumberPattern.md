@@ -28,7 +28,7 @@ This cmdlet removes a blocked number pattern from the tenant list.
 
 ### Example 1
 ```powershell
-PS C:> Remove-CsInboundBlockedNumberPattern -Identity "BlockAutomatic"
+PS> Remove-CsInboundBlockedNumberPattern -Identity "BlockAutomatic"
 ```
 
 This example removes a blocked number pattern identified as "BlockAutomatic".
