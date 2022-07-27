@@ -34,14 +34,14 @@ This cmdlet returns a list of all blocked number patterns added to the tenant li
 
 ### Example 1
 ```powershell
-PS C:> Get-CsInboundBlockedNumberPattern
+PS> Get-CsInboundBlockedNumberPattern
 ```
 
 In this example, the *Get-CsInboundBlockedNumberPattern* cmdlet is called without any parameters in order to return all the blocked number patterns.
 
 ### Example 2
 ```powershell
-PS C:> Get-CsInboundBlockedNumberPattern -Filter Block*
+PS> Get-CsInboundBlockedNumberPattern -Filter Block*
 ```
 
 In this example, the *Get-CsInboundBlockedNumberPattern* cmdlet will return all the blocked number patterns which identity starts with Block.
