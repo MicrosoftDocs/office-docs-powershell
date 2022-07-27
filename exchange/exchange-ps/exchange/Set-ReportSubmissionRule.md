@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ReportSubmissionRule cmdlet to modify the report submission rule in your cloud-based organization. The report submission rule identifies the custom mailbox to deliver user reported messages to.
+Use the Set-ReportSubmissionRule cmdlet to modify the report submission rule in your cloud-based organization. The report submission rule identifies the user submissions mailbox (where to deliver user reported messages).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -32,7 +32,14 @@ Set-ReportSubmissionRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-The Se
+The SentTo parameter identifies the email address of the user submissions mailbox.
+
+If you set the email address of the user submissions mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>, the same email address is also set in the *\-ReportSubmissionPolicy cmdlets:
+
+- Microsoft integrated reporting: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
+- Third-party tools: The ThirdPartyReportAddresses parameter.
+
+When you use this cmdlet to set the email address of the user submissions mailbox, the corresponding parameters in the *\-ReportSubmissionPolicy cmdlets are not updated.
 
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -41,10 +48,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ReportSubmissionRule -Identity DefaultReportSubmissionRule -SentTo lila@contoso.com
+Set-ReportSubmissionRule -Identity DefaultReportSubmissionRule -SentTo "userreportedmessages@contoso.com"
 ```
 
-This example changes the custom mailbox to lila@contoso.com.
+This example changes the user submissions mailbox to userreportedmessages@contoso.com.
 
 ## PARAMETERS
 
@@ -132,19 +139,19 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies the email address of the custom mailbox that you want to use. User reported messages are sent to the custom mailbox.
+The SentTo parameter specifies the email address of the user submissions mailbox that you want to use. User reported messages are sent to the user submissions mailbox.
 
-The value of this parameter is meaningful only if user reporting to a custom mailbox is enabled in the \*-ReportSubmissionPolicy cmdlets:
+The value of this parameter is meaningful only if user reporting to a user submissions mailbox is enabled in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting: `-EnableThirdPartyAddress $false`, `-ReportJunkToCustomizedAddress $true`, `-ReportNotJunkToCustomizedAddress $true`, and `-ReportPhishToCustomizedAddress $true`.
 - A third-party product: `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $true`, `-ReportJunkToCustomizedAddress $false`, `-ReportNotJunkToCustomizedAddress $false`, and `-ReportPhishToCustomizedAddress $false`.
 
-If you set the email address of the custom mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
+If you set the email address of the user submissions mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
 
 - Microsoft integrated reporting: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
 - A third-party product: ThirdPartyReportAddresses.
 
-When you use this cmdlet to set the email address of the custom mailbox, the related parameter values in the *\-ReportSubmissionPolicy cmdlets are not updated. But, that doesn't matter, because only the value of the SentTo parameter specifies the email address of the custom mailbox. You can update the related values in the \*-ReportSubmissionPolicy cmdlets for consistency and to avoid confusion.
+When you use this cmdlet to set the email address of the user submissions mailbox, the related parameter values in the *\-ReportSubmissionPolicy cmdlets are not updated. But, that doesn't matter, because only the value of the SentTo parameter specifies the email address of the user submissions mailbox. You can update the related values in the \*-ReportSubmissionPolicy cmdlets for consistency and to avoid confusion.
 
 ```yaml
 Type: RecipientIdParameter[]
