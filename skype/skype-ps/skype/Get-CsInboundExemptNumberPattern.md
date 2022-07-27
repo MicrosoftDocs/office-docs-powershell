@@ -33,24 +33,23 @@ This cmdlet returns a specific or all exempt number patterns added to the tenant
 
 ### Example 1
 ```powershell
-Get-CsInboundExemptNumberPattern
+PS>Get-CsInboundExemptNumberPattern
 ```
 This returns all exempt number patterns.
 
 ### Example 2
 ```powershell
-Get-CsInboundExemptNumberPattern -Identity "Exempt1"
+PS>Get-CsInboundExemptNumberPattern -Identity "Exempt1"
 ```
 
 This returns the exempt number patterns with Identity Exempt1.
 
 ### Example 3
 ```powershell
-Get-CsInboundExemptNumberPattern -Filter "Exempt*"
+PS>Get-CsInboundExemptNumberPattern -Filter "Exempt*"
 ```
 
 This example returns the exempt number patterns with Identity starting with Exempt.
-
 
 ## PARAMETERS
 
