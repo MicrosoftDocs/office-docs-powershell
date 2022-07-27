@@ -27,7 +27,7 @@ This cmdlet removes a specific exempt number pattern from the tenant list for ca
 
 ### Example 1
 ```powershell
-Remove-CsInboundExemptNumberPattern -Identity "Exempt1"
+PS>Remove-CsInboundExemptNumberPattern -Identity "Exempt1"
 ```
 
 This removes the exempt number patterns with Identity Exempt1.
