@@ -19,7 +19,7 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 
 ```
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
- [-AccountType <String>] (new)
+ [-AccountType <String>] 
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
@@ -105,7 +105,7 @@ Example 5 returns information for user accounts that have been assigned a design
 ## PARAMETERS
 
 ### -AccountType
-This parameter is added to Get-CsOnlineUser to indicate the user type. The possible values for the AccountType parameter are: 
+This parameter is added to Get-CsOnlineUser starting from TPM 2.6.0 to indicate the user type. The possible values for the AccountType parameter are: 
 - `User` - to query for user accounts.
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
