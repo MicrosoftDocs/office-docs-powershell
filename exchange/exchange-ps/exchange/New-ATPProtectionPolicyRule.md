@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ATPProtectionPolicyRule cmdlet to
+Use the New-ATPProtectionPolicyRule cmdlet to create rules that are associated with Microsoft Defender for Office 365 protections in preset security policies.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: Unless you manually removed a rule using the Remove-ATPProtectionPolicyRule cmdlet, we don't recommend using this cmdlet to create rules. To create the rule, you need to specify the existing individual protection feature policies that are associated with the preset security policy. We never recommend creating these required individual policies manually. Turning on the preset security policy for the first time in the Microsoft 365 Defender portal automatically creates the required individual policies, but also creates the associated rules. So, if the rules already exist, you don't need to use this cmdlet to create them.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,21 +39,51 @@ New-ATPProtectionPolicyRule [-Name] <String> -SafeAttachmentPolicy <SafeAttachme
 ```
 
 ## DESCRIPTION
+In organizations with Microsoft Defender for Office 365, the Standard preset security policy and the Strict preset security policy each have a rule that's associated with Defender for Office 365 protections. These rules control the following settings:
+
+- Recipient conditions and exceptions that specify who the Defender for Office 365 protections in the policy (Safe Links and Safe Attachments) apply to. If the conditions and exceptions are blank, then no restrictions are placed on who the Defender for Office 365 protections in the policy apply to.
+- Whether the preset security policy is turned on or turned off (the State property value). To completely turn on or turn off the preset security policy, the State property value in the corresponding Exchange Online Protection (EOP) rule must match the State value of this rule (Enabled or Disabled).
+
+A rule that's associated with the Defender for Office 365 protections in the Standard preset security policy or the Strict preset security policy exists in organizations with Defender for Office 365 if you previously turned on the Standard preset security policy or the Strict preset security policy in the Microsoft 365 Defender portal. Whether it's currently turned on after you initially turned it on doesn't matter.
+
+As previous explained, you should use this cmdlet to create a new rule only if you previously removed the rule using the Remove-ATPProtectionPolicyRule cmdlet.
+
+For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
+
+> [!IMPORTANT]
+> Multiple different conditions or exceptions are not additive; they're inclusive. The conditions or exceptions to Defender for Office 365 protections in preset security policies are applied _only_ to those recipients that match _all_ of the specified recipient filters. For example, you configure a recipient filter condition in the policy with the following values:
+>
+> - The recipient is: romain@contoso.com
+> - The recipient is a member of: Executives
+>
+> The policy is applied to romain@contoso.com _only_ if he's also a member of the Executives group. If he's not a member of the group, then the policy is not applied to him.
+>
+> Likewise, if you use the same recipient filter as an exception to the policy, the policy is not applied to romain@contoso.com _only_ if he's also a member of the Executives group. If he's not a member of the group, then the policy still applies to him.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-ATPProtectionPolicyRule -Name "Standard Preset Security Policy" -SafeAttachmentPolicy "Standard Preset Security Policy1622650008019" -SafeLinksRule "Standard Preset Security Policy1622650008534" Priority 1
 ```
 
-{{ Add example description here }}
+This example creates the rule for the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to. All recipients who aren't affected by the Strict preset security (if it's turned on) receive the Defender for Office 365 protections in the Standard preset security policy. You find the associated Safe Attachments policy and Safe Links policy using the Get-SafeAttachmentPolicy and Get-SafeLinksPolicy cmdlets. These policies are created only after you turned the Standard preset policy on for the first time in the Microsoft 365 Defender portal.
+
+### Example 1
+```powershell
+New-ATPProtectionPolicyRule -Name "Standard Preset Security Policy" -SafeAttachmentPolicy "Standard Preset Security Policy1622650008019" -SafeLinksRule "Standard Preset Security Policy1622650008534" -ExceptIfSentToMemberOf std-exclude-mdo@contoso.com Priority 1
+```
+
+This example creates the rule for the Standard preset security policy. Members of the specified distribution group are excluded from Defender for Office 365 protections. You find the associated Safe Attachments policy and Safe Links policy using the Get-SafeAttachmentPolicy and Get-SafeLinksPolicy cmdlets. These policies are created only after you turned the Standard preset policy on for the first time in the Microsoft 365 Defender portal.
 
 ## PARAMETERS
 
 ### -Name
 The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
+
+By default, the rules are named Standard Preset Security Policy or Strict Preset Security Policy. Since you don't need to create rules other than those used by the Standard preset security policy or the Strict preset security policy, we highly recommend that you use the default rule names for clarity and consistency.
 
 ```yaml
 Type: String
@@ -69,7 +99,14 @@ Accept wildcard characters: False
 ```
 
 ### -SafeAttachmentPolicy
-SafeAttachmentPolicy
+The SafeAttachmentPolicy cmdlet specifies the existing Safe Attachments policy that's part of the preset security policy.
+
+If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the Safe Attachments policy will be one of the following values:
+
+- Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650008019`.
+- Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034872546`.
+
+You can find the name of the policy that's used by the Standard or Strict preset security policies running the command: `Get-SafeAttachmentPolicy | Format-Table Name,RecommendedPolicyType` and looking for policies where the RecommendedPolicyType property value is Standard or Strict.
 
 ```yaml
 Type: SafeAttachmentPolicyIdParameter
@@ -85,7 +122,14 @@ Accept wildcard characters: False
 ```
 
 ### -SafeLinksPolicy
-{{ Fill SafeLinksPolicy Description }}
+The SafeLinksPolicy cmdlet specifies the existing Safe Links policy that's part of the preset security policy.
+
+If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the Safe Attachments policy will be one of the following values:
+
+- Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650008534`.
+- Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034873192`.
+
+You can find the name of the policy that's used by the Standard or Strict preset security policies running the command: `Get-SafeLinksPolicy | Format-Table Name,RecommendedPolicyType` and looking for policies where the RecommendedPolicyType property value is Standard or Strict.
 
 ```yaml
 Type: SafeLinksPolicyIdParameter
@@ -138,8 +182,13 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule is enabled. This is the default value.
-- $false: The rule is disabled.
+- $true: The rule is enabled. The State value of the rule is Enabled. This is the default value.
+- $false: The rule is disabled. The State value of the rule is Disabled.
+
+After you create the rule, you turn on or turn off the preset security policy using both of the following cmdlets (both cmdlets):
+
+- Turn off: Disable-ATPProtectionPolicyRule and Disable-EOPProtectionPolicyRule.
+- Turn on: Enable-ATPProtectionPolicyRule and Enable-EOPProtectionPolicyRule.
 
 ```yaml
 Type: Boolean
@@ -225,13 +274,9 @@ Accept wildcard characters: False
 ### -Priority
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+The default value for the rule that's associated with the Strict preset security policy is 0, and the default value for the rule that's associated with the Standard preset security policy is 1.
 
-- Valid priority values for the existing 8 rules are from 0 through 7.
-- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
-- The default value for a new rule (the 9th rule) is 8.
-
-If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
+When you create the policy, you must use the default value.
 
 ```yaml
 Type: Int32
@@ -335,11 +380,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

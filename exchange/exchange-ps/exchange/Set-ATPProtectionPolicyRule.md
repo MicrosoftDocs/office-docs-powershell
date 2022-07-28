@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ATPProtectionPolicyRule cmdlet to
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+Use the Set-ATPProtectionPolicyRule cmdlet to modify rules that are associated with Microsoft Defender for Office 365 protections in preset security policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,21 +37,51 @@ Set-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+Organizations with Defender for Office 365 have up to four rules that are associated with the Standard preset security policy and the Strict preset security policy:
+
+- Two rules for Exchange Online Protection (EOP) protections: The rule for the Standard Preset security policy and the rule for the Strict preset security policy control who the EOP protections in the policy (anti-malware, anti-spam, and anti-phishing) apply to (the recipient conditions and exceptions for EOP protections).
+- Two rules for Defender for Office 365 protections: The rule for the Standard Preset security policy and the rule for the Strict preset security policy control who the Defender for Office 365 protections in the policy (Safe Links and Safe Attachments) apply to (the recipient conditions and exceptions for Defender for Office 365 protections).
+
+If the command `Get-ATPProtectionPolicyRule | Format-Table Name,State` returns a rule where the State value is Disabled, you can use this cmdlet to enable the rule. However, the corresponding preset security policy isn't turned on until you also use the Enable-EOPProtectionPolicyRule cmdlet to enable the corresponding rule.
+
+A rule that's associated with the Defender for Office 365 protections in the Standard preset security policy or the Strict preset security policy exists in organizations with Defender for Office 365 if either of the following statements are true:
+
+- You previously turned on the Standard preset security policy or the Strict preset security policy in the Microsoft 365 Defender portal. Whether it's currently turned on after you initially turned it on doesn't matter.
+- You previously removed the rule using the Remove-ATPProtectionPolicyRule cmdlet, and then you recreated the rule using the New-ATPProtectionPolicyRule cmdlet.
+
+For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
+
+> [!IMPORTANT]
+> Multiple different conditions or exceptions are not additive; they're inclusive. The conditions or exceptions to Defender for Office 365 protections in preset security policies are applied _only_ to those recipients that match _all_ of the specified recipient filters. For example, you configure a recipient filter condition in the policy with the following values:
+>
+> - The recipient is: romain@contoso.com
+> - The recipient is a member of: Executives
+>
+> The policy is applied to romain@contoso.com _only_ if he's also a member of the Executives group. If he's not a member of the group, then the policy is not applied to him.
+>
+> Likewise, if you use the same recipient filter as an exception to the policy, the policy is not applied to romain@contoso.com _only_ if he's also a member of the Executives group. If he's not a member of the group, then the policy still applies to him.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" -SentTo $null -ExceptIfSentTo $null -SentToMemberOf $null -ExceptIfSentToMemberOf $null -RecipientDomainIs $null -ExceptIfRecipientDomainIs $null
 ```
 
-{{ Add example description here }}
+This example removes any and all conditions and exceptions from the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to. All recipients who aren't affected by the Strict preset security (if it's turned on) receive the Defender for Office 365 protections in the Standard preset security policy.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter
@@ -174,6 +202,8 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
 
+By default, the rules are named Standard Preset Security Policy or Strict Preset Security Policy. We highly recommend that you use the default rule names for clarity and consistency.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -190,13 +220,9 @@ Accept wildcard characters: False
 ### -Priority
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+The default value for the rule that's associated with the Strict preset security policy is 0, and the default value for the rule that's associated with the Standard preset security policy is 1.
 
-- Valid priority values for the existing 8 rules are from 0 through 7.
-- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
-- The default value for a new rule (the 9th rule) is 8.
-
-If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
+You must use the default value for the rule.
 
 ```yaml
 Type: Int32
@@ -300,11 +326,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

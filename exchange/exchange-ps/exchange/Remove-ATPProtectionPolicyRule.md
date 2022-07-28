@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ATPProtectionPolicyRule cmdlet to
+Use the Remove-ATPProtectionPolicyRule cmdlet to remove rules that are associated with Microsoft Defender for Office 365 protections in preset security policies.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: Use this cmdlet to remove a rule only if you plan to immediately recreate the rule using the New-ATPProtectionPolicyRule cmdlet. The affected preset security policy won't function without a corresponding rule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,21 +30,36 @@ Remove-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+You can use this cmdlet to manage the rules that specify conditions and exceptions to the Defender for Office 365 protections in preset security policies only if both of the following statements are true:
+
+- The Standard preset security policy or the Strict preset security is turned on.
+- You've specified user, group, or domain conditions or exceptions to the Defender for Office 365 protections in the policy.
+
+If neither preset policy is turned on, or if you haven't specified conditions or exceptions to the Defender for Office 365 protections in either policy, then no rules are available to this cmdlet.
+
+For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" 
 ```
 
-{{ Add example description here }}
+This example removes the existing rule that's associated with Defender for Office 365 protections in the Standard preset security policy.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter
@@ -99,11 +114,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

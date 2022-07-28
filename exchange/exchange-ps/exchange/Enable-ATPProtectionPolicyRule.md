@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Enable-ATPProtectionPolicyRule cmdlet to
-
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+Use the Enable-ATPProtectionPolicyRule and Enable-EOPProtectionPolicyRule cmdlets together to turn on the Standard preset security policy or the Strict preset security policy in organizations with Microsoft Defender for Office 365.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,21 +28,41 @@ Enable-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+Organizations with Defender for Office 365 have up to four rules that are associated with the Standard preset security policy and the Strict preset security policy:
+
+- Two rules for Exchange Online Protection (EOP) protections: The rule for the Standard Preset security policy and the rule for the Strict preset security policy control who the EOP protections in the policy (anti-malware, anti-spam, and anti-phishing) apply to (the recipient conditions and exceptions for EOP protections).
+- Two rules for Defender for Office 365 protections: The rule for the Standard Preset security policy and the rule for the Strict preset security policy control who the Defender for Office 365 protections in the policy (Safe Links and Safe Attachments) apply to (the recipient conditions and exceptions for Defender for Office 365 protections).
+
+If the command `Get-ATPProtectionPolicyRule | Format-Table Name,State` returns a rule where the State value is Disabled, you can use this cmdlet to enable the rule. However, the corresponding preset security policy isn't turned on until you also use the Enable-EOPProtectionPolicyRule cmdlet to enable the corresponding rule.
+
+A rule that's associated with the Defender for Office 365 protections in the Standard preset security policy or the Strict preset security policy exists in organizations with Defender for Office 365 if either of the following statements are true:
+
+- You previously turned on the Standard preset security policy or the Strict preset security policy in the Microsoft 365 Defender portal. Whether it's currently turned on after you initially turned it on doesn't matter.
+- You previously removed the rule using the Remove-ATPProtectionPolicyRule cmdlet, and then you recreated the rule using the New-ATPProtectionPolicyRule cmdlet.
+
+For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Enable-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy"; Enable-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"
 ```
 
-{{ Add example description here }}
+This example turns on the Standard preset security policy in the Microsoft 365 Defender portal. The State value of both rules is now Enabled.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the rule that you want to enable. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter
@@ -99,11 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
