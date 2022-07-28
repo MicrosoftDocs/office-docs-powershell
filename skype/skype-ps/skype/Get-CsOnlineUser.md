@@ -19,6 +19,7 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 
 ```
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
+ [-AccountType <String>] 
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
@@ -103,6 +104,13 @@ Example 5 returns information for user accounts that have been assigned a design
 
 ## PARAMETERS
 
+### -AccountType
+This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate the user type. The possible values for the AccountType parameter are: 
+- `User` - to query for user accounts.
+- `ResourceAccount` - to query for app endpoints or resource accounts.
+- `Guest` - to query for guest accounts.
+- `Unknown` - to query for a user type that is not known.
+
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
@@ -178,7 +186,7 @@ The following updates are applicable for organizations having TeamsOnly users th
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
-
+- AccountType
 - accountEnabled
 - AssignedPlan
 - Company
@@ -562,11 +570,6 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - Office
 - Phone
 - WindowsEmailAddress
-- OnPremHostingProvider (available in Teams PowerShell Module 4.4.1 and later)
-- OnPremSipEnabled (available in Teams PowerShell Module 4.4.1 and later)
-- OnPremSipAddress (available in Teams PowerShell Module 4.4.1 and later)
-- OnPremOptionFlags (available in Teams PowerShell Module 4.4.1 and later)
-- OnPremEnterpriseVoiceEnabled (available in Teams PowerShell Module 4.4.1 and later)
 - SoftDeletedUsers (available in Teams PowerShell Module 4.4.3 and later)
 
 
