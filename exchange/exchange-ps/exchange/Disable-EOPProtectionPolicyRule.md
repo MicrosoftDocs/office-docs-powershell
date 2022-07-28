@@ -36,7 +36,7 @@ But, if your organization has Defender for Office 365, there are two more rules 
 
 A rule that's associated with EOP protections in the Standard preset security policy or the Strict preset security policy already exists if either of the following statements are true:
 
-- You previously turned on the Standard preset security policy or the Strict preset security policy in the Microsoft 365 Defender portal. Whether it's currently turned on after you initially turned it on doesn't matter.
+- You previously turned on the Standard preset security policy or the Strict preset security policy in the Microsoft 365 Defender portal. Whether it's currently turned on after you initially turned it on doesn't matter (turning off the policy doesn't delete the).
 - You previously removed the rule using the Remove-EOPProtectionPolicyRule cmdlet, and then you recreated the rule using the New-EOPProtectionPolicyRule cmdlet.
 
 For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
