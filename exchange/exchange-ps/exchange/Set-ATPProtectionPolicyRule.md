@@ -70,7 +70,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" -SentTo $null -ExceptIfSentTo $null -SentToMemberOf $null -ExceptIfSentToMemberOf $null -RecipientDomainIs $null -ExceptIfRecipientDomainIs $null
 ```
 
-This example removes any and all conditions and exceptions from the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to. All recipients who aren't affected by the Strict preset security (if it's turned on) receive the Defender for Office 365 protections in the Standard preset security policy.
+This example removes all conditions and exceptions from the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to. All recipients who aren't affected by the Strict preset security (if it's turned on) receive the Defender for Office 365 protections in the Standard preset security policy.
 
 ## PARAMETERS
 
