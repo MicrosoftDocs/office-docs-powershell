@@ -1,34 +1,36 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-reportsubmissionrule
-applicable: Exchange Online
-title: Remove-ReportSubmissionRule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-atpprotectionpolicyrule
+applicable: Exchange Online, Exchange Online Protection
+title: Remove-ATPProtectionPolicyRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Remove-ReportSubmissionRule
+# Remove-ATPProtectionPolicyRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ReportSubmissionRule cmdlet to remove the report submission rule from your cloud-based organization. The report submission rule identifies the user submissions mailbox (where to deliver user reported messages).
+Use the Remove-ATPProtectionPolicyRule cmdlet to remove rules from Microsoft Defender for Office 365 protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+
+**Note**: Use this cmdlet to remove a rule only if you plan to immediately recreate the rule using the New-ATPProtectionPolicyRule cmdlet. The affected preset security policy won't function without a corresponding rule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-ReportSubmissionRule [-Identity] <RuleIdParameter>
+Remove-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To disable the report submission rule without deleting it, use the Disable-ReportSubmissionRule cmdlet.
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -36,21 +38,27 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-ReportSubmissionRule -Identity DefaultReportSubmissionRule
+Remove-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" 
 ```
 
-This example removes the report submission rule from your organization.
+This example removes the existing rule for Defender for Office 365 protections in the Standard preset security policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the report submission rule that you want to remove. The default rule is named DefaultReportSubmissionRule.
+The Identity parameter specifies the rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -62,14 +70,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -85,7 +93,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

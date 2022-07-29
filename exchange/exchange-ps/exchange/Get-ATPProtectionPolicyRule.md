@@ -1,52 +1,68 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-reportsubmissionrule
-applicable: Exchange Online
-title: Get-ReportSubmissionRule
+online version: https://docs.microsoft.com/powershell/module/exchange/get-atpprotectionpolicyrule
+applicable: Exchange Online, Exchange Online Protection
+title: Get-ATPProtectionPolicyRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-
-# Get-ReportSubmissionRule
+# Get-ATPProtectionPolicyRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ReportSubmissionRule cmdlet to view the report submission rule in your cloud-based organization. The report submission rule identifies the user submissions mailbox (where to deliver user reported messages).
+Use the Get-ATPProtectionPolicyRule cmdlet to view rules for Microsoft Defender for Office 365 protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ReportSubmissionRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-ATPProtectionPolicyRule [[-Identity] <RuleIdParameter>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-ReportSubmissionRule
+Get-ATPProtectionPolicyRule | Format-Table Name,State
 ```
 
-This example returns detailed information about the report submission rule in your organization.
+This example returns a summary list of the rules for Defender for Office 365 protections in preset security policies.
+
+### Example 2
+```powershell
+Get-ATPProtectionPolicyRule -Identity "Strict Preset Security Policy"
+```
+
+This example returns detailed information about the rule named Strict Preset Security Policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the report submission rule that you want to view. The default rule is named DefaultReportSubmissionRule.
+The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
@@ -56,19 +72,17 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The State parameter filters the results by whether the report submission rule is enabled or disabled. Valid values are:
+The State parameter filters the results by the state of the rule. Valid values are:
 
-- Disabled
 - Enabled
-
-Remember, there's only one rule in your organization.
+- Disabled
 
 ```yaml
 Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
