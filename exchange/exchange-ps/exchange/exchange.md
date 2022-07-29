@@ -55,11 +55,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## defender-for-office-365 Cmdlets
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
 
+### [Disable-ATPProtectionPolicyRule](Disable-ATPProtectionPolicyRule.md)
+
 ### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
 
 ### [Disable-SafeLinksRule](Disable-SafeLinksRule.md)
 
 ### [Enable-AntiPhishRule](Enable-AntiPhishRule.md)
+
+### [Enable-ATPProtectionPolicyRule](Enable-ATPProtectionPolicyRule.md)
 
 ### [Enable-SafeAttachmentRule](Enable-SafeAttachmentRule.md)
 
@@ -73,7 +77,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
 
+### [Get-ATPBuiltInProtectionRule](Get-ATPBuiltInProtectionRule.md)
+
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
+
+### [Get-ATPProtectionPolicyRule](Get-ATPProtectionPolicyRule.md)
 
 ### [Get-ATPTotalTrafficReport](Get-ATPTotalTrafficReport.md)
 
@@ -107,6 +115,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-AntiPhishRule](New-AntiPhishRule.md)
 
+### [New-ATPBuiltInProtectionRule](New-ATPBuiltInProtectionRule.md)
+
+### [New-ATPProtectionPolicyRule](New-ATPProtectionPolicyRule.md)
+
 ### [New-SafeAttachmentPolicy](New-SafeAttachmentPolicy.md)
 
 ### [New-SafeAttachmentRule](New-SafeAttachmentRule.md)
@@ -118,6 +130,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AntiPhishPolicy](Remove-AntiPhishPolicy.md)
 
 ### [Remove-AntiPhishRule](Remove-AntiPhishRule.md)
+
+### [Remove-ATPProtectionPolicyRule](Remove-ATPProtectionPolicyRule.md)
 
 ### [Remove-SafeAttachmentPolicy](Remove-SafeAttachmentPolicy.md)
 
@@ -131,7 +145,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-AntiPhishRule](Set-AntiPhishRule.md)
 
+### [Set-ATPBuiltInProtectionRule](Set-ATPBuiltInProtectionRule.md)
+
 ### [Set-AtpPolicyForO365](Set-AtpPolicyForO365.md)
+
+### [Set-ATPProtectionPolicyRule](Set-ATPProtectionPolicyRule.md)
 
 ### [Set-EmailTenantSettings](Set-EmailTenantSettings.md)
 
@@ -160,6 +178,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Delete-QuarantineMessage](Delete-QuarantineMessage.md)
 
+### [Disable-EOPProtectionPolicyRule](Disable-EOPProtectionPolicyRule.md)
+
 ### [Disable-HostedContentFilterRule](Disable-HostedContentFilterRule.md)
 
 ### [Disable-HostedOutboundSpamFilterRule](Disable-HostedOutboundSpamFilterRule.md)
@@ -169,6 +189,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Disable-ReportSubmissionRule](Disable-ReportSubmissionRule.md)
 
 ### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
+
+### [Enable-EOPProtectionPolicyRule](Enable-EOPProtectionPolicyRule.md)
 
 ### [Enable-HostedContentFilterRule](Enable-HostedContentFilterRule.md)
 
@@ -195,6 +217,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
 
 ### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
+
+### [Get-EOPProtectionPolicyRule](Get-EOPProtectionPolicyRule.md)
 
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
 
@@ -260,6 +284,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
 
+### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
+
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
 
 ### [New-HostedContentFilterRule](New-HostedContentFilterRule.md)
@@ -297,6 +323,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
 
 ### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
+
+### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
 
@@ -341,6 +369,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ContentFilterConfig](Set-ContentFilterConfig.md)
 
 ### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
+
+### [Set-EOPProtectionPolicyRule](Set-EOPProtectionPolicyRule.md)
 
 ### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
 
