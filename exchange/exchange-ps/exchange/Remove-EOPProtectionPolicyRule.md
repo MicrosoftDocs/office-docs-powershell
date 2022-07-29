@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-EOPProtectionPolicyRule cmdlet to
+Use the Remove-EOPProtectionPolicyRule cmdlet to remove rules from Exchange Online Protection (EOP) protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+
+**Note**: Use this cmdlet to remove a rule only if you plan to immediately recreate the rule using the New-EOPProtectionPolicyRule cmdlet. The affected preset security policy won't function without a corresponding rule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,21 +30,29 @@ Remove-EOPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy" 
 ```
 
-{{ Add example description here }}
+This example removes the existing rule for EOP protections in the Standard preset security policy.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter

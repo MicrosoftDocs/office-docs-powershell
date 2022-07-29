@@ -1,33 +1,31 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-atpprotectionpolicyrule
+online version: https://docs.microsoft.com/powershell/module/exchange/get-atpbuiltinprotectionrule
 applicable: Exchange Online, Exchange Online Protection
-title: Get-ATPProtectionPolicyRule
+title: Get-ATPBuiltInProtectionRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-ATPProtectionPolicyRule
+# Get-ATPBuiltInProtectionRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ATPProtectionPolicyRule cmdlet to view rules for Microsoft Defender for Office 365 protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+Use the Get-ATPBuiltInProtectionRule cmdlet to view the rule for the Built-in protection preset security policy that effectively provides default policies for Safe Links and Safe Attachments in Microsoft Defender for Office 365. The rule specifies exceptions to the policy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ATPProtectionPolicyRule [[-Identity] <RuleIdParameter>]
- [-State <RuleState>]
- [<CommonParameters>]
+Get-ATPBuiltInProtectionRule [[-Identity] <DehydrateableRuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -35,17 +33,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-ATPProtectionPolicyRule | Format-Table Name,State
+Get-ATPBuiltInProtectionRule
 ```
 
-This example returns a summary list of the rules for Defender for Office 365 protections in preset security policies.
-
-### Example 2
-```powershell
-Get-ATPProtectionPolicyRule -Identity "Strict Preset Security Policy"
-```
-
-This example returns detailed information about the rule named Strict Preset Security Policy.
+This example shows the rule for the Built-in protection preset security policy.
 
 ## PARAMETERS
 
@@ -56,10 +47,10 @@ The Identity parameter specifies the rule that you want to view. You can use any
 - Distinguished name (DN)
 - GUID
 
-By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
+The name of the only rule is ATP Built-In Protection Rule.
 
 ```yaml
-Type: RuleIdParameter
+Type: DehydrateableRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -74,8 +65,10 @@ Accept wildcard characters: False
 ### -State
 The State parameter filters the results by the state of the rule. Valid values are:
 
-- Enabled
 - Disabled
+- Enabled
+
+The only rule is always enabled.
 
 ```yaml
 Type: RuleState
@@ -96,7 +89,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+###  
+
 ## OUTPUTS
+
+###  
 
 ## NOTES
 

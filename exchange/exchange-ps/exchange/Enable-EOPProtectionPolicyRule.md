@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Enable-EOPProtectionPolicyRule cmdlet to
+Use the Enable-EOPProtectionPolicyRule cmdlet to turn on the Standard preset security policy or the Strict preset security policy. If your organization has Defender for Office 365, you also need to use the Enable-ATPProtectionPolicyRule cmdlet to turn on the policy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,21 +28,38 @@ Enable-EOPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+The State property in rules that are associated with preset security policies indicates whether the rule is Enabled or Disabled.
+
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Enable-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"
 ```
 
-{{ Add example description here }}
+In organizations without Defender for Office 365, this example turns off the Standard preset security policy. The State property value of the rule is now Enabled.
+
+### Example 2
+```powershell
+Enable-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"; Enable-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy"
+```
+
+In organizations with Defender for Office 365, this example turns off the Standard preset security policy. The State property value of both rules is now Enabled.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the rule that you want to enable. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter

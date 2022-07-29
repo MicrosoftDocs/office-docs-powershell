@@ -1,37 +1,32 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-atpprotectionpolicyrule
+online version: https://docs.microsoft.com/powershell/module/exchange/set-atpbuiltinprotectionrule
 applicable: Exchange Online, Exchange Online Protection
-title: Set-ATPProtectionPolicyRule
+title: Set-ATPBuiltInProtectionRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-ATPProtectionPolicyRule
+# Set-ATPBuiltInProtectionRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ATPProtectionPolicyRule cmdlet to modify rules that are associated with Microsoft Defender for Office 365 protections in preset security policies.
+Use the Set-ATPBuiltInProtectionRule cmdlet to modify the rule for the Built-in protection preset security policy that effectively provides default policies for Safe Links and Safe Attachments in Microsoft Defender for Office 365. The rule specifies exceptions to the policy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
+Set-ATPBuiltInProtectionRule [-Identity] <DehydrateableRuleIdParameter>
  [-Comments <String>]
  [-Confirm]
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
- [-Name <String>]
- [-Priority <Int32>]
- [-RecipientDomainIs <Word[]>]
- [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -48,17 +43,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" -ExceptIfSentToMemberOf "Test Group1","Test Group2"
+Set-ATPBuiltInProtectionRule -Identity "ATP Built-In Protection Rule" -ExceptIfSentToMemberOf "Test Group1","Test Group2"
 ```
 
-This example provides exceptions to Defender for Office 365 protections in the Standard preset security policy for members of the specified groups.
+This example provides exceptions to the Built-in protection preset security policy for members of the specified groups.
 
 ### Example 2
 ```powershell
-Set-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" -SentTo $null -ExceptIfSentTo $null -SentToMemberOf $null -ExceptIfSentToMemberOf $null -RecipientDomainIs $null -ExceptIfRecipientDomainIs $null
+Set-ATPBuiltInProtectionRule -Identity "ATP Built-In Protection Rule" -ExceptIfRecipientDomainIs (Get-AcceptedDomain).Name
 ```
 
-This example removes all conditions and exceptions from the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to.
+This example provides exceptions to the Built-in protection preset security policy for recipients in all accepted domains. To see all of your accepted domains, run the following command: `Get-AcceptedDomain | Format-List Name,DomainName`.
+
+### Example 3
+```powershell
+Set-ATPBuiltInProtectionRule -Identity "ATP Built-In Protection Rule" -ExceptIfRecipientDomainIs $null -ExceptIfSentTo $null -ExceptIfSentToMemberOf $null
+```
+
+This example remove all exceptions from the Built-in protection preset security policy.
 
 ## PARAMETERS
 
@@ -69,10 +71,10 @@ The Identity parameter specifies the rule that you want to modify. You can use a
 - Distinguished name (DN)
 - GUID
 
-By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
+The name of the only rule is ATP Built-In Protection Rule.
 
 ```yaml
-Type: RuleIdParameter
+Type: DehydrateableRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -173,112 +175,6 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If you remove the group after you create the rule, no exception is made for messages that are sent to members of the group.
-
-```yaml
-Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
-
-By default, the rules are named Standard Preset Security Policy or Strict Preset Security Policy. We highly recommend that you use the default rule names for clarity and consistency.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
-
-The default value for the rule that's associated with the Strict preset security policy is 0, and the default value for the rule that's associated with the Standard preset security policy is 1.
-
-You must use the default value for the rule.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientDomainIs
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SentTo
-The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
 
 ```yaml
 Type: RecipientIdParameter[]

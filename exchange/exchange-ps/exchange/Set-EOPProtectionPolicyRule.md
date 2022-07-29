@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-EOPProtectionPolicyRule cmdlet to
+Use the Set-EOPProtectionPolicyRule cmdlet to modify rules that are associated with Exchange Online Protection (EOP) protections in preset security policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,21 +37,39 @@ Set-EOPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+
+> [!IMPORTANT]
+> Multiple different conditions or exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policiesprofiles-in-preset-security-policies).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy" -ExceptIfSentToMemberOf "Test Group1","Test Group2"
 ```
 
-{{ Add example description here }}
+This example provides exceptions to EOP protections in the Standard preset security policy for members of the specified groups.
+
+### Example 2
+```powershell
+Set-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy" -SentTo $null -ExceptIfSentTo $null -SentToMemberOf $null -ExceptIfSentToMemberOf $null -RecipientDomainIs $null -ExceptIfRecipientDomainIs $null
+```
+
+This example removes all conditions and exceptions from the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
 ```yaml
 Type: RuleIdParameter
@@ -172,6 +190,8 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
 
+By default, the rules are named Standard Preset Security Policy or Strict Preset Security Policy. We highly recommend that you use the default rule names for clarity and consistency.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -188,13 +208,9 @@ Accept wildcard characters: False
 ### -Priority
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+The default value for the rule that's associated with the Strict preset security policy is 0, and the default value for the rule that's associated with the Standard preset security policy is 1.
 
-- Valid priority values for the existing 8 rules are from 0 through 7.
-- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
-- The default value for a new rule (the 9th rule) is 8.
-
-If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
+You must use the default value for the rule.
 
 ```yaml
 Type: Int32

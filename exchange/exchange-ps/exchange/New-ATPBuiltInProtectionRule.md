@@ -1,37 +1,35 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-atpprotectionpolicyrule
+online version: https://docs.microsoft.com/powershell/module/exchange/new-atpbuiltinprotectionrule
 applicable: Exchange Online, Exchange Online Protection
-title: Set-ATPProtectionPolicyRule
+title: New-ATPBuiltInProtectionRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-ATPProtectionPolicyRule
+# New-ATPBuiltInProtectionRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ATPProtectionPolicyRule cmdlet to modify rules that are associated with Microsoft Defender for Office 365 protections in preset security policies.
+**Note**: Don't use this cmdlet. This cmdlet is used by the system to create the one and only rule for the Built-in protection preset security policy during the creation of the organization. You can't use this cmdlet if a rule for the Built-in protection preset security policy already exists. The Remove-ATPBuiltInProtectionRule cmdlet is not available to remove rules.
+
+Use the New-ATPBuiltInProtectionRule cmdlet to create the rule for the Built-in protection preset security policy that effectively provides default policies for Safe Links and Safe Attachments in Microsoft Defender for Office 365. The rule specifies exceptions to the policy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
+New-ATPBuiltInProtectionRule -SafeAttachmentPolicy <SafeAttachmentPolicyIdParameter> -SafeLinksPolicy <SafeLinksPolicyIdParameter>
  [-Comments <String>]
  [-Confirm]
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
  [-Name <String>]
- [-Priority <Int32>]
- [-RecipientDomainIs <Word[]>]
- [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -40,7 +38,7 @@ Set-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
 For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
 
 > [!IMPORTANT]
-> Multiple different conditions or exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policiesprofiles-in-preset-security-policies).
+> Multiple different conditions or exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#profiles-in-preset-security-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -48,39 +46,46 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" -ExceptIfSentToMemberOf "Test Group1","Test Group2"
+New-ATPBuiltInProtectionRule -SafeAttachmentPolicy "Built-In Protection Policy" -SafeLinksPolicy "Built-In Protection Policy"
 ```
 
-This example provides exceptions to Defender for Office 365 protections in the Standard preset security policy for members of the specified groups.
-
-### Example 2
-```powershell
-Set-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" -SentTo $null -ExceptIfSentTo $null -SentToMemberOf $null -ExceptIfSentToMemberOf $null -RecipientDomainIs $null -ExceptIfRecipientDomainIs $null
-```
-
-This example removes all conditions and exceptions from the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to.
+This cmdlet creates the rule for the Built-in protection preset security policy. This command will fail if the rule already exists.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
+### -SafeAttachmentPolicy
+The SafeAttachmentPolicy parameter specifies the Safe Attachments policy that's associated with the Built-in preset security policy. Use the following command to identify the policy: `Get-SafeAttachmentPolicy | Where-Object -Property IsBuiltInProtection -eq -Value "True"`.
 
-- Name
-- Distinguished name (DN)
-- GUID
-
-By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
+The name of the default Safe Attachments policy that's used for the Built-in protection preset security policy is Built-In Protection Policy.
 
 ```yaml
-Type: RuleIdParameter
+Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SafeLinksPolicy
+The SafeLinksPolicy parameter specifies the Safe Links policy that's associated with the Built-in preset security policy. Use the following command to identify the policy: `Get-SafeLinksPolicy | Where-Object -Property IsBuiltInProtection -eq -Value "True"`.
+
+The name of the default Safe Links policy that's used for the Built-in protection preset security policy is Built-In Protection Policy.
+
+```yaml
+Type: SafeLinksPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -190,98 +195,10 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
 
-By default, the rules are named Standard Preset Security Policy or Strict Preset Security Policy. We highly recommend that you use the default rule names for clarity and consistency.
+The name of the only rule is ATP Built-In Protection Rule.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
-
-The default value for the rule that's associated with the Strict preset security policy is 0, and the default value for the rule that's associated with the Standard preset security policy is 1.
-
-You must use the default value for the rule.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientDomainIs
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SentTo
-The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
-
-```yaml
-Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -310,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

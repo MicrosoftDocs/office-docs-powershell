@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-EOPProtectionPolicyRule cmdlet to
+Use the New-EOPProtectionPolicyRule cmdlet to create rules for Exchange Online Protection (EOP) protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+
+**Note**: Unless you manually removed a rule using the Remove-EOPProtectionPolicyRule cmdlet, we don't recommend using this cmdlet to create rules. To create the rule, you need to specify the existing individual security policies that are associated with the preset security policy. We never recommend creating these required individual security policies manually. Turning on the preset security policy for the first time in the Microsoft 365 Defender portal automatically creates the required individual security policies, but also creates the associated rules using this cmdlet. So, if the rules already exist, you don't need to use this cmdlet to create them.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,21 +38,28 @@ New-EOPProtectionPolicyRule [-Name] <String> [-Priority <Int32>] -AntiPhishPolic
 ```
 
 ## DESCRIPTION
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+
+> [!IMPORTANT]
+> Multiple different conditions or exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#profiles-in-preset-security-policies).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-EOPProtectionPolicyRule -Name "Standard Preset Security Policy" -AntiPhishPolicy "Standard Preset Security Policy1622650005393" -HostedContentFilterPolicy "Standard Preset Security Policy1622650006407" -MalwareFilterPolicy "Standard Preset Security Policy1622650007658" Priority 1
 ```
 
-{{ Add example description here }}
+This example creates the rule for the Standard preset security policy. No restrictions are placed on who the Defender for Office 365 protections apply to. If the rule already exists, the command will fail.
 
 ## PARAMETERS
 
 ### -Name
 The Name parameter specifies a unique name for the rule. The maximum length is 64 characters.
+
+By default, the rules are named Standard Preset Security Policy or Strict Preset Security Policy. Since you don't need to create rules other than those used by the Standard preset security policy or the Strict preset security policy, we highly recommend that you use the default rule names for clarity and consistency.
 
 ```yaml
 Type: String
@@ -66,7 +75,14 @@ Accept wildcard characters: False
 ```
 
 ### -AntiPhishPolicy
-{{ Fill AntiPhishPolicy Description }}
+The AntiPhishPolicy parameter specifies the existing anti-phishing policy that's associated with the preset security policy.
+
+If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the anti-phishing policy will be one of the following values:
+
+- Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650005393`.
+- Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034844713`.
+
+You can find the anti-phishing policy that's used by the Standard or Strict preset security policies by running the following commands: `Get-AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Standard"` or `AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"`.
 
 ```yaml
 Type: AntiPhishPolicyIdParameter
@@ -82,7 +98,14 @@ Accept wildcard characters: False
 ```
 
 ### -HostedContentFilterPolicy
-{{ Fill HostedContentFilterPolicy Description }}
+The HostedContentFilterPolicy parameter specifies the existing anti-spam policy that's associated with the preset security policy.
+
+If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the anti-spam policy will be one of the following values:
+
+- Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650006407`.
+- Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034847393`.
+
+You can find the anti-spam policy that's used by the Standard or Strict preset security policies by running the following commands: `Get-HostedContentFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Standard"` or `Get-HostedContentFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"`.
 
 ```yaml
 Type: HostedContentFilterPolicyIdParameter
@@ -98,7 +121,14 @@ Accept wildcard characters: False
 ```
 
 ### -MalwareFilterPolicy
-{{ Fill MalwareFilterPolicy Description }}
+The HostedContentFilterPolicy parameter specifies the existing anti-malware policy that's associated with the preset security policy.
+
+If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the anti-malware policy will be one of the following values:
+
+- Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650007658`.
+- Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034871908`.
+
+You can find the anti-malware policy that's used by the Standard or Strict preset security policies by running the following commands: `Get-MalwareFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Standard"` or `Get-MalwareFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"`.
 
 ```yaml
 Type: MalwareFilterPolicyIdParameter
@@ -151,8 +181,13 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule is enabled. This is the default value.
-- $false: The rule is disabled.
+- $true: The rule is enabled. The State value of the rule is Enabled. This is the default value.
+- $false: The rule is disabled. The State value of the rule is Disabled.
+
+After you create the rule, you turn on or turn off the preset security policy using one of the following commands:
+
+- Turn off: Disable-EOPProtectionPolicyRule.
+- Turn on: Enable-EOPProtectionPolicyRule.
 
 ```yaml
 Type: Boolean
@@ -238,13 +273,9 @@ Accept wildcard characters: False
 ### -Priority
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+The default value for the rule that's associated with the Strict preset security policy is 0, and the default value for the rule that's associated with the Standard preset security policy is 1.
 
-- Valid priority values for the existing 8 rules are from 0 through 7.
-- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
-- The default value for a new rule (the 9th rule) is 8.
-
-If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
+When you create the policy, you must use the default value.
 
 ```yaml
 Type: Int32

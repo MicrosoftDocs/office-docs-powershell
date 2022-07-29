@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ATPProtectionPolicyRule cmdlet to remove rules that are associated with Microsoft Defender for Office 365 protections in preset security policies.
+Use the Remove-ATPProtectionPolicyRule cmdlet to remove rules from Microsoft Defender for Office 365 protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
 **Note**: Use this cmdlet to remove a rule only if you plan to immediately recreate the rule using the New-ATPProtectionPolicyRule cmdlet. The affected preset security policy won't function without a corresponding rule.
 
@@ -30,14 +30,7 @@ Remove-ATPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to manage the rules that specify conditions and exceptions to the Defender for Office 365 protections in preset security policies only if both of the following statements are true:
-
-- The Standard preset security policy or the Strict preset security is turned on.
-- You've specified user, group, or domain conditions or exceptions to the Defender for Office 365 protections in the policy.
-
-If neither preset policy is turned on, or if you haven't specified conditions or exceptions to the Defender for Office 365 protections in either policy, then no rules are available to this cmdlet.
-
-For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -48,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" 
 ```
 
-This example removes the existing rule that's associated with Defender for Office 365 protections in the Standard preset security policy.
+This example removes the existing rule for Defender for Office 365 protections in the Standard preset security policy.
 
 ## PARAMETERS
 

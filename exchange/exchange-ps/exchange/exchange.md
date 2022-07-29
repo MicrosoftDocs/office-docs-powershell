@@ -77,6 +77,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
 
+### [Get-ATPBuiltInProtectionRule](Get-ATPBuiltInProtectionRule.md)
+
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
 
 ### [Get-ATPProtectionPolicyRule](Get-ATPProtectionPolicyRule.md)
@@ -113,6 +115,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-AntiPhishRule](New-AntiPhishRule.md)
 
+### [New-ATPBuiltInProtectionRule](New-ATPBuiltInProtectionRule.md)
+
 ### [New-ATPProtectionPolicyRule](New-ATPProtectionPolicyRule.md)
 
 ### [New-SafeAttachmentPolicy](New-SafeAttachmentPolicy.md)
@@ -140,6 +144,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-AntiPhishPolicy](Set-AntiPhishPolicy.md)
 
 ### [Set-AntiPhishRule](Set-AntiPhishRule.md)
+
+### [Set-ATPBuiltInProtectionRule](Set-ATPBuiltInProtectionRule.md)
 
 ### [Set-AtpPolicyForO365](Set-AtpPolicyForO365.md)
 
