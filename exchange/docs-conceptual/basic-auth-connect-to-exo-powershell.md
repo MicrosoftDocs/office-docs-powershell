@@ -64,7 +64,7 @@ The following introductory video shows you how to connect to and use Exchange On
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+  **Note**: You The following commands require that WinRM is enabled. To enable WinRM, run the following command:  `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
 

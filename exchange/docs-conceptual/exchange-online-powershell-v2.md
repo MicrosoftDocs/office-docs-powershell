@@ -247,7 +247,7 @@ The EXO V2 module is supported in the following versions of Windows:
   To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
   > [!NOTE]
-  > You must temporarily enable WinRM to run the following WinRM commands. You can enable WinRM by running the command: `winrm quickconfig`.
+  > The following commands require that WinRM is enabled. To enable WinRM, run the following command:  `winrm quickconfig`.
 
   ```DOS
   winrm get winrm/config/client/auth
