@@ -25,9 +25,9 @@ NOTE: The response is a PowerShell object formatted as a JSON for readability. P
 
 ```powershell
 New-CsTeamTemplate -Locale <String> -DisplayName <String> -ShortDescription <String>
- [-App <ITeamsAppTemplate[]>] [-Category <String[]>] [-Channel <IChannelTemplate[]>]
+ [-App <ITeamsAppTemplate[]>]  [-Channel <IChannelTemplate[]>]
  [-Classification <String>] [-Description <String>] [-DiscoverySetting <ITeamDiscoverySettings>]
- [-FunSetting <ITeamFunSettings>] [-GuestSetting <ITeamGuestSettings>] [-Icon <String>]
+ [-FunSetting <ITeamFunSettings>] [-GuestSetting <ITeamGuestSettings>] 
  [-IsMembershipLimitedToOwner] [-MemberSetting <ITeamMemberSettings>]
  [-MessagingSetting <ITeamMessagingSettings>] [-OwnerUserObjectId <String>] [-PublishedBy <String>]
  [-Specialization <String>] [-TemplateId <String>] [-Uri <String>] [-Visibility <String>] [-Break]
@@ -55,10 +55,10 @@ New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -Body <ITeamTem
 
 ```powershell
 New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName <String>
- -ShortDescription <String> [-App <ITeamsAppTemplate[]>] [-Category <String[]>]
+ -ShortDescription <String> [-App <ITeamsAppTemplate[]>] 
  [-Channel <IChannelTemplate[]>] [-Classification <String>] [-Description <String>]
  [-DiscoverySetting <ITeamDiscoverySettings>] [-FunSetting <ITeamFunSettings>]
- [-GuestSetting <ITeamGuestSettings>] [-Icon <String>] [-IsMembershipLimitedToOwner]
+ [-GuestSetting <ITeamGuestSettings>] [-IsMembershipLimitedToOwner]
  [-MemberSetting <ITeamMemberSettings>] [-MessagingSetting <ITeamMessagingSettings>]
  [-OwnerUserObjectId <String>] [-PublishedBy <String>] [-Specialization <String>] [-TemplateId <String>]
  [-Uri <String>] [-Visibility <String>] [-Break]
@@ -164,9 +164,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Category
+<!-- ### -Category -->
 
-Gets or sets list of categories.
+<!-- Gets or sets list of categories. -->
 
 ```yaml
 Type: System.String[]
@@ -296,9 +296,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Icon
+<!-- ### -Icon -->
 
-Gets or sets template icon.
+<!-- Gets or sets template icon.-->
 
 ```yaml
 Type: System.String
@@ -668,7 +668,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
 - `ShortDescription <String>`: Gets or sets template short description.
 - `[App <ITeamsAppTemplate[]>]`: Gets or sets the set of applications that should be installed in teams created based on the template.         The app catalog is the main directory for information about each app; this set is intended only as a reference.
   - `[Id <String>]`: Gets or sets the app's ID in the global apps catalog.
-- `[Category <String[]>]`: Gets or sets list of categories.
+- <!--`[Category <String[]>]`: Gets or sets list of categories.-->
 - `[Channel <IChannelTemplate[]>]`: Gets or sets the set of channel templates included in the team template.
   - `[Description <String>]`: Gets or sets channel description as displayed to users.
   - `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
@@ -699,7 +699,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
 - `[GuestSetting <ITeamGuestSettings>]`: Guest role settings for the team.
   - `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether guests can create or edit channels in the team.
   - `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether guests can delete team channels.
-- `[Icon <String>]`: Gets or sets template icon.
+- <!--`[Icon <String>]`: Gets or sets template icon.-->
 - `[IsMembershipLimitedToOwner <Boolean?>]`: Gets or sets whether to limit the membership of the team to owners in the AAD group until an owner "activates" the team.
 - `[MemberSetting <ITeamMemberSettings>]`: Member role settings for the team.
   - `AllowAddRemoveApp <Boolean>`: Gets or sets a value indicating whether members can add or remove apps in the team.
