@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-CustomNudgeAssignment -AssigneeId <String> -NudgeName <String>
+ [-EndTime <String>]
  [-ResultSize <Unlimited>]
+ [-StartTime <String>]
  [<CommonParameters>]
 ```
 
@@ -85,22 +87,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StartTime
-The StartTime parameter specifies the date when the Custom Nudge is first shown to the user.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EndTime
 The EndTime parameter specifies the date when the Custom Nudge is no longer shown to the user.
 
@@ -122,6 +108,22 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartTime
+The StartTime parameter specifies the date when the Custom Nudge is first shown to the user.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-CustomNudge -Name <String> -From <String> -Title <String> -Content <String>
+New-CustomNudge -Name <String> -From <String> -Title <String>
+ [-Content <String>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```

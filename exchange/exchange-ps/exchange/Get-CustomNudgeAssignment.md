@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CustomNudgeAssignment -AssigneeId <String> -NudgeName <String>
+Get-CustomNudgeAssignment [-AssigneeId <String>] [-NudgeName <String>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -59,7 +59,7 @@ This example returns all assignments that contain the user roy@contoso.onmicroso
 Get-CustomNudgeAssignment -NudgeName perfReviewNudge -AssigneeId roy@contoso.onmicrosoft.com
 ```
 
-This example returns the StartTime and EndTime values for the assignment of the Custom Nudge named perfReviewNudge to the user roy@contoso.com .
+This example returns the StartTime and EndTime values for the assignment of the Custom Nudge named perfReviewNudge to the user roy@contoso.com.
 
 ## PARAMETERS
 

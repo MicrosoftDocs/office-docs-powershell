@@ -24,8 +24,9 @@ For information about the parameter Sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-CustomNudgeSettings -Enabled <Boolean> -Title <String>
+Set-CustomNudgeSettings [-Enabled <Boolean>]
  [-ResultSize <Unlimited>]
+ [-Title <String>]
  [<CommonParameters>]
 ```
 
@@ -75,11 +76,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Title
-The Title parameter specifies the title of the Custom Nudge section in the Briefing email. If the value contains spaces, enclose the value in quotation marks (").
+### -ResultSize
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: String
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -91,11 +92,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResultSize
-This parameter is reserved for internal Microsoft use.
+### -Title
+The Title parameter specifies the title of the Custom Nudge section in the Briefing email. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
-Type: Unlimited
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
