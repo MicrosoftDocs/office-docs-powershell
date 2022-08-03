@@ -69,7 +69,7 @@ The connection-related cmdlets that are available in the EXO V2 module are liste
 |[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
 |[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)||
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
-|[Get-ConnectionInformation](../exchange-ps/exchange/Get-ConnectionInformation.md)|n\a|Available in v2.0.5-Preview7 or later.|
+|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|n\a|Available in v2.0.5-Preview7 or later.|
 
 Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
 
