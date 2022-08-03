@@ -161,22 +161,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-<!-- ### -Category -->
-
-<!-- Gets or sets list of categories. -->
-
-```yaml
-Type: System.String[]
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Channel
 
 Gets or sets the set of channel templates included in the team template.
@@ -293,21 +277,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<!-- ### -Icon -->
-
-<!-- Gets or sets template icon. -->
-
-```yaml
-Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InputObject
 
