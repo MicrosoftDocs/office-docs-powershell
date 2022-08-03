@@ -166,7 +166,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    ![Select Manifest on the application properties page.](media/exo-app-only-auth-select-manifest.png)
 
-2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 44).
+2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 47).
 
    Modify the `resourceAppId`, `resourceAccess`, `id`, and `type` values as shown in the following code snippet:
 
@@ -193,6 +193,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    On the **API permissions** page that opens, do the following steps:
 
    - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
+
+     > [!NOTE]
+     > If necessary, search for **Office 365 Exchange** under **APIs my organization uses** on the **Request API Permissions** page.
 
    - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
 
