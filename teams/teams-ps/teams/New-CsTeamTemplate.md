@@ -164,21 +164,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-<!-- ### -Category -->
 
-<!-- Gets or sets list of categories. -->
-
-```yaml
-Type: System.String[]
-Parameter Sets: NewExpanded, NewViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Channel
 
@@ -286,22 +272,6 @@ To construct, see NOTES section for GUESTSETTING properties and create a hash ta
 
 ```yaml
 Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamGuestSettings
-Parameter Sets: NewExpanded, NewViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-<!-- ### -Icon -->
-
-<!-- Gets or sets template icon.-->
-
-```yaml
-Type: System.String
 Parameter Sets: NewExpanded, NewViaIdentityExpanded
 Aliases:
 
