@@ -122,6 +122,8 @@ Preview versions of v2.0.6 are now available. v2.0.6 of the EXO V2 module improv
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
 
+- In v2.0.6-Preview7, you can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current PowerShell session with Exchange Online.
+
 > [!NOTE]
 > Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) to successfully use the **Connect-IPPSSession** cmdlet.
 
