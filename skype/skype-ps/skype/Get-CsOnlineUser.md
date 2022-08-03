@@ -106,8 +106,7 @@ Example 5 returns information for user accounts that have been assigned a design
 ```
 Get-CsOnlineUser -AccountType ResourceAccount
 ```
-Example 6 returns information for user accounts that are categorised as resource accounts. 
-
+Example 6 returns information for user accounts that are categorized as resource accounts. 
 
 ## PARAMETERS
 
