@@ -68,13 +68,11 @@ For example, if the existing pattern matched any four-digit number and the numbe
 ### -------------------------- Example 3 --------------------------
 ```
 $a = Get-CsVoiceNormalizationRule -Identity global/RedmondFourDigit
-
 $a.name = "RedmondRule"
-
 Set-CsVoiceNormalizationRule -Instance $a
 ```
 
-Example 3 changes the name of the normalization rule.
+Example 3 applies to Skype For Business Server only and changes the name of the normalization rule.
 Keep in mind that changing the name also changes the name portion of the Identity.
 The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name we first call the `Get-CsVoiceNormalizationRule` cmdlet to retrieve the rule with the Identity global/RedmondFourDigit and assign the returned object to the variable $a.
 We then assign the string RedmondRule to the Name property of the object.

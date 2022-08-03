@@ -59,6 +59,35 @@ Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -N
 This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the US/US Long Distance normalization rules.
 
 
+### -------------------------- Example 3 --------------------------
+```
+$DP = Get-CsTenantDialPlan -Identity Global
+$NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
+$NR.Name = "RedmondRule"
+Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
+```
+
+This example changes the name of an normalization rule.
+Keep in mind that changing the name also changes the name portion of the Identity.
+The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name, we first call the `Get-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign the returned object to the variable $NR.
+We then assign the string RedmondRule to the Name property of the object.
+Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
+
+
+### -------------------------- Example 4 --------------------------
+```
+$DP = Get-CsTenantDialPlan -Identity Global
+$NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
+$DP.NormalizationRules.Remove($NR)
+Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
+```
+
+This example removes a normalization rule.
+We utilize the same functionality as for Example 3 to manipulate the Normalization Rule Object and update it with the `Set-CsTenantDialPlan` cmdlet.
+We first call the `Get-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign it to the variable $NR. Next, we remove this Object with the Remove Method from $DP.NormalizationRules.
+Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
+
+
 ## PARAMETERS
 
 ### -Confirm

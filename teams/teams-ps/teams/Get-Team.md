@@ -53,13 +53,20 @@ Returns all teams that are private and have been archived.
 ```
 PS> Get-Team -MailNickName "BusinessDevelopment"
 ```
-Returns the team that matches the specified MailNickName
+Returns the team with the specified MailNickName. (This acts as a filter rather than an exact match.)
 
 ### Example 4
 ```
 PS> Get-Team -DisplayName "Sales and Marketing"
 ```
 Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
+
+### Example 5
+```
+PS> $team=[uri]::EscapeDataString('AB&C')
+PS> Get-Team -DisplayName $team
+```
+Returns the team that includes the specified escaped representation of its DisplayName, useful when the DisplayName has special characters. (This acts as a filter rather than an exact match.)
 
 ## PARAMETERS
 

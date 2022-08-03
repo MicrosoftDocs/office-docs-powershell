@@ -41,7 +41,7 @@ Safe Links is a feature in Microsoft Defender for Office 365 that checks links i
 This cmdlet returns the following information:
 
 - ClickTime
-- InternalMessageId
+- NetworkMessageId
 - ClientMessageId
 - SenderAddress
 - RecipientAddress

@@ -41,7 +41,7 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
+Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
 
 UserId : roy@contoso.onmicrosoft.com
 IsInsightsHeadspaceEnabled : True
