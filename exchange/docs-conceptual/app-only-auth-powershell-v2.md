@@ -193,6 +193,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    On the **API permissions** page that opens, do the following steps:
 
    - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
+   - **Note: You must search for "Office 365 Exchange" under "APIs my organization uses" under the Request API Permissions screen
 
    - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
 
