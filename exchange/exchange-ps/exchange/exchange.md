@@ -2249,6 +2249,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disconnect-ExchangeOnline](Disconnect-ExchangeOnline.md)
 
+### [Get-ConnectionInformation](Get-ConnectionInformation.md)
+
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
 ### [Get-EXOMailbox](Get-EXOMailbox.md)
