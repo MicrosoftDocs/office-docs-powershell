@@ -2249,6 +2249,12 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disconnect-ExchangeOnline](Disconnect-ExchangeOnline.md)
 
+### [Get-CustomNudge](Get-CustomNudge.md)
+
+### [Get-CustomNudgeAssignment](Get-CustomNudgeAssignment.md)
+
+### [Get-CustomNudgeSettings](Get-CustomNudgeSettings.md)
+
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
 ### [Get-EXOMailbox](Get-EXOMailbox.md)
@@ -2272,6 +2278,20 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
+
+### [New-CustomNudge](New-CustomNudge.md)
+
+### [New-CustomNudgeAssignment](New-CustomNudgeAssignment.md)
+
+### [Remove-CustomNudge](Remove-CustomNudge.md)
+
+### [Remove-CustomNudgeAssignment](Remove-CustomNudgeAssignment.md)
+
+### [Set-CustomNudge](Set-CustomNudge.md)
+
+### [Set-CustomNudgeAssignment](Set-CustomNudgeAssignment.md)
+
+### [Set-CustomNudgeSettings](Set-CustomNudgeSettings.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 
