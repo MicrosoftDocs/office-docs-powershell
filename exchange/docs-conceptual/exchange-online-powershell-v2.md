@@ -88,8 +88,8 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 |[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig).|
 |[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Replaced by [Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig).|
-|[Get-VivaInsightsSettings](/powershell/module/exchange/get-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
-|[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5-Preview2 or later.|
+|[Get-VivaInsightsSettings](/powershell/module/exchange/get-vivainsightssettings)|Available in v2.0.5 or later.|
+|[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5 or later.|
 
 ### Updates for version 2.0.6
 
