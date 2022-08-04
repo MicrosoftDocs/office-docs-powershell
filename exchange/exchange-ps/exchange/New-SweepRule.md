@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-SweepRule cmdlet to create Sweep rules in mailboxes. Sweep rules run a regular intervals to help keep your Inbox clean.
+Use the New-SweepRule cmdlet to create Sweep rules in mailboxes. Sweep rules run at regular intervals to help keep your Inbox clean.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
