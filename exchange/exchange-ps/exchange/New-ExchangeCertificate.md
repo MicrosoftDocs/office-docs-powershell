@@ -437,12 +437,10 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateKeyExportable
-The PrivateKeyExportable parameter specifies whether the new self-signed certificate has an exportable private key, and controls whether you can export the certificate from the server (and import the certificate on other servers). Valid values are:
+The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key, and controls whether you can export the certificate from the server (and import the certificate on other servers). Valid values are:
 
 - $true: The private key is exportable, so you can export the certificate from the server.
 - $false: The private key isn't exportable, so you can't export the certificate. This is the default value.
-
-This parameter is only meaningful for new self-signed certificates.
 
 ```yaml
 Type: Boolean
