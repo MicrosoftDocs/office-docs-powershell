@@ -229,4 +229,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamsmedialoggingpolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamsmedialoggingpolicy)
+[Get-CsTeamsMediaLoggingPolicy](/powershell/module/teams/get-csteamsmedialoggingpolicy)
