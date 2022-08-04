@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/get-csinboundexemptnumberpattern
-applicable: Skype for Business Online and Teams
+applicable: Microsoft Teams, Skype for Business Online
 author: jenstrier
 ms.author: jenstr
 ms.reviewer: 
@@ -16,8 +16,14 @@ Returns a specific or the full list of all number patterns exempt from call bloc
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsInboundExemptNumberPattern [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Filter <Object>] [-LocalStore] [<CommonParameters>]
+Get-CsInboundBlockedNumberPattern [[-Identity] <string>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsInboundBlockedNumberPattern [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,25 +33,32 @@ This cmdlet returns a specific or all exempt number patterns added to the tenant
 
 ### Example 1
 ```powershell
-Get-CsInboundExemptNumberPattern
+PS>Get-CsInboundExemptNumberPattern
 ```
 This returns all exempt number patterns.
 
 ### Example 2
 ```powershell
-Get-CsInboundExemptNumberPattern -Identity "Exempt1"
+PS>Get-CsInboundExemptNumberPattern -Identity "Exempt1"
 ```
 
 This returns the exempt number patterns with Identity Exempt1.
 
+### Example 3
+```powershell
+PS>Get-CsInboundExemptNumberPattern -Filter "Exempt*"
+```
+
+This example returns the exempt number patterns with Identity starting with Exempt.
+
 ## PARAMETERS
 
 ### -Filter
-Enables you to limit the returned data by filtering on specific attributes. The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
+Enables you to limit the returned data by filtering on Identity.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Filter)
 Aliases:
 
 Required: False
@@ -59,42 +72,12 @@ Accept wildcard characters: False
 Unique identifier for the exempt number pattern to be listed.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
 
-Required: True
+Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -102,11 +85,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
@@ -122,4 +101,3 @@ You can use Test-CsInboundBlockedNumberPattern to test your call block and exemp
 [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
 
 [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
-

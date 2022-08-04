@@ -20,12 +20,12 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bool>] [-AllowCallForwardingToUser <bool>] [-AllowCallGroups <bool>]
-[-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <bool>] [-AllowDelegation <bool>] [-AllowNetworkConfigurationSettingsLookup <bool>]
-[-AllowPrivateCalling <bool>] [-AllowSIPDevicesCalling <bool>] [-AllowTranscriptionForCalling <bool>] [-AllowVoicemail <string>]
-[-AllowWebPSTNCalling <bool>] [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>]
-[-Description <string>] [-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PreventTollBypass <bool>]
-[-SafeTransferEnabled <string>] [-SpamFilteringEnabledType <string>] [-MsftInternalProcessingMode <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <boolean>] [-AllowCallForwardingToUser <boolean>] [-AllowCallGroups <boolean>]
+[-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <boolean>] [-AllowDelegation <boolean>] [-AllowPrivateCalling <boolean>]
+[-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
+[-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
+[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -149,22 +149,6 @@ Accept wildcard characters: False
 
 ### -AllowDelegation
 Enables the user to configure delegation in the Microsoft Teams client and that inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowNetworkConfigurationSettingsLookup
-This parameter is deprecated. Use the same parameter in the TeamsMeetingPolicy.
 
 ```yaml
 Type: Boolean
@@ -360,6 +344,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PopoutAppPathForIncomingPstnCalls
+Reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: ""
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PopoutForIncomingPstnCalls
+Reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
@@ -367,22 +383,6 @@ Setting this parameter to True will send calls through PSTN and incur charges ra
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SafeTransferEnabled
-**Note**: This parameter will be deprecated. The Safe Transfer feature in Microsoft Teams is not controlled by this parameter.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams

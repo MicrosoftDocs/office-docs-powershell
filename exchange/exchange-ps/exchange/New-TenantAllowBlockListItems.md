@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-tenantallowblocklistitems
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: New-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
@@ -66,13 +66,6 @@ New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695e
 
 This example adds a file block entry for the specified files that never expires.
 
-### Example 3
-```powershell
-New-TenantAllowBlockListItems -ListType Url -Allow -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
-```
-
-This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
-
 ## PARAMETERS
 
 ### -Entries
@@ -91,7 +84,7 @@ You can't modify the URL or file values after you create the entry.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -114,7 +107,7 @@ You can't use this parameter with the NoExpiration switch.
 Type: DateTime
 Parameter Sets: Expiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -133,7 +126,7 @@ The ListType parameter specifies the type of entry to add. Valid values are:
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -143,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoExpiration
-The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
+The NoExpiration switch specifies that the **block** entry should never expire. You don't need to specify a value with this switch.
 
 You can't use this switch with the ExpirationDate parameter.
 
@@ -151,7 +144,7 @@ You can't use this switch with the ExpirationDate parameter.
 Type: SwitchParameter
 Parameter Sets: NoExpiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -183,7 +176,7 @@ The Block switch specifies that this is a block entry. You don't need to specify
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -218,7 +211,7 @@ The Notes parameters specifies additional information about the object. If the v
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -236,7 +229,7 @@ You use this switch to prevent the command from halting on the first entry that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

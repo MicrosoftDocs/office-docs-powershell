@@ -116,16 +116,39 @@ $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedDomainsAsAList $list
 ```
 
-Example 6 shows how you can add domains to the Allowed Domains using a List collection object.
+Example 6 shows how you can replace domains in the Allowed Domains using a List collection object.
 First, a List collection is created and domains are added to it, then, simply include the AllowedDomainsAsAList parameter and set the parameter value to the List object.
-When this command completes, the allowed domain list will be filled with those domains.
+When this command completes, the allowed domains list will be replaced with those domains.
+
 
 ### -------------------------- Example 7 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Add=$list}
+```
+
+Example 7 shows how you can add domains to the existing Allowed Domains using a List object.
+First, a List is created and domains are added to it, then use the Add method in the AllowedDomainsAsAList parameter to add the domains to the existing allowed domains list. When this command completes, the domains in the list will be added to any domains already on the AllowedDomains list.
+
+### -------------------------- Example 8 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Remove=$list}
+```
+
+Example 8 shows how you can remove domains from the existing Allowed Domains using a List object.
+First, a List is created and domains are added to it, then use the Remove method in the AllowedDomainsAsAList parameter to remove the domains from the existing allowed domains list. When this command completes, the domains in the list will be removed from the AllowedDomains list.
+
+### -------------------------- Example 9 --------------------------
 ```
 Set-CsTenantFederationConfiguration -AllowTeamsConsumer $True -AllowTeamsConsumerInbound $False
 ```
 
-The command shown in Example 7 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
+The command shown in Example 9 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
 
 ## PARAMETERS
 
