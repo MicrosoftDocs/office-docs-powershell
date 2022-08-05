@@ -20,14 +20,25 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> The features and procedures described in this article require the following versions of the EXO V2 module:
 >
-> - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
-> - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
+> - The features and procedures described in this article require the following versions of the EXO V2 module:
+>   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
+>   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
 >
-> For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+>   For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 >
-> You can't use the procedures in this article to modify Microsoft 365 Groups ([Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)). To use Microsoft Graph instead, see [Update group](/graph/api/group-update).
+> - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
+>   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
+>   - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
+>   - [Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)
+>   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
+>   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
+>
+>   You can use Microsoft Graph instead. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
+>
+> - In Security & Compliance PowerShell, you can't use the procedures in this article with the following cmdlets:
+>   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
+>   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
 
 Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
