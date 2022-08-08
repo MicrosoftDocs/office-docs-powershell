@@ -19,6 +19,7 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 
 ```
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
+ [-AccountType <String>] 
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
@@ -101,7 +102,34 @@ Get-CsOnlineUser -Filter {LineURI -eq "1234"}
 ```
 Example 5 returns information for user accounts that have been assigned a designated phone number. 
 
+### -------------------------- Example 6 --------------------------
+```
+Get-CsOnlineUser -AccountType ResourceAccount
+```
+Example 6 returns information for user accounts that are categorized as resource accounts. 
+
 ## PARAMETERS
+
+### -AccountType
+This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate the user type. The possible values for the AccountType parameter are: 
+- `User` - to query for user accounts.
+- `ResourceAccount` - to query for app endpoints or resource accounts.
+- `Guest` - to query for guest accounts.
+- `Unknown` - to query for a user type that is not known.
+
+
+```yaml
+Type: UserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
@@ -178,7 +206,7 @@ The following updates are applicable for organizations having TeamsOnly users th
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
-
+- AccountType
 - accountEnabled
 - AssignedPlan
 - Company
@@ -562,15 +590,11 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - Office
 - Phone
 - WindowsEmailAddress
+- SoftDeletedUsers (available in Teams PowerShell Module 4.4.3 and later)
+
 
 The following attributes are temporarily unavailable in the output when using the "-Filter" or when used without the "-Identity" parameter:
-- SoftDeletionTimeStamp
 - WhenChanged
-- OnPremHostingProvider
-- OnPremSipEnabled
-- OnPremSipAddress
-- OnPremOptionFlags
-- OnPremEnterpriseVoiceEnabled
 - CountryAbbreviation
 
 **Note**: These attributes will be available in the near future.

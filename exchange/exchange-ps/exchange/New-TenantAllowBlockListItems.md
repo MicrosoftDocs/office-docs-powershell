@@ -66,13 +66,6 @@ New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695e
 
 This example adds a file block entry for the specified files that never expires.
 
-### Example 3
-```powershell
-New-TenantAllowBlockListItems -ListType Url -Allow -ListSubType AdvancedDelivery -Entries *.fabrikam.com -ExpirationDate 2021-05-06 14:30:00z
-```
-
-This example adds a URL allow entry for the specified third-party phishing simulation URL with an expiration date (in UTC format). For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
-
 ## PARAMETERS
 
 ### -Entries

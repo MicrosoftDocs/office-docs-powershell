@@ -6,7 +6,7 @@ title: Remove-CsTeamsEmergencyCallingPolicy
 author: jenstrier
 ms.author: jenstr
 manager: roykuntz
-ms.reviewer: chenc, pthota
+ms.reviewer: chenc
 schema: 2.0.0
 ---
 
@@ -17,59 +17,35 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Remove-CsTeamsEmergencyCallingPolicy [-Tenant <System.Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- This cmdlet removes an existing Teams Emergency Calling policy.
+This cmdlet removes an existing Teams Emergency Calling policy.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  Remove-CsTeamsEmergencyCallingPolicy -Identity testECP
+Remove-CsTeamsEmergencyCallingPolicy -Identity testECP
 ```
 
- This example removes an existing Teams Emergency Calling policy with identity testECP.
+This example removes an existing Teams Emergency Calling policy with identity testECP.
+
+### Example 2
+```powershell
+Remove-CsTeamsEmergencyCallingPolicy -Identity Global
+```
+
+This example resets the Global Policy instance to the default values.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
- The Force parameter suppresses any confirmation prompts that are otherwise displayed before the changes are made.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
  The Identity parameter is the unique identifier of the Teams Emergency Calling policy to remove.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -77,21 +53,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tenant
- Specifies the tenant id.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -103,6 +64,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

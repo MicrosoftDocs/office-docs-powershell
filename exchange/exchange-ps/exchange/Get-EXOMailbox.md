@@ -529,7 +529,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 
 The following Get-Mailbox parameters aren't available or functional in Get-EXOMailbox:
 
@@ -541,7 +541,7 @@ The following Get-Mailbox parameters aren't available or functional in Get-EXOMa
 
 ## OUTPUTS
 
-###  
+### Output types
 The following properties aren't included in the output of Get-EXOMailbox:
 
 - RunspaceId

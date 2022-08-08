@@ -56,6 +56,9 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamsEnhancedEncryptionPolicy](Get-TeamsEnhancedEncryptionPolicy.md)
 Returns information about the teams enhanced encryption policies configured for use in your organization.
 
+### [Get-CsTeamsMediaLoggingPolicy](Get-CsTeamsMediaLoggingPolicy.md)
+Returns information about the Teams Media Logging policy.
+
 ### [Get-TeamsShiftsPolicy](Get-TeamsShiftsPolicy.md)
 {{Manually Enter Get-TeamsShiftsPolicy Description Here}}
 
@@ -64,6 +67,9 @@ Returns information about the teams enhanced encryption policies configured for 
 
 ### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
 Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
+
+### [Grant-CsTeamsMediaLoggingPolicy](Grant-CsTeamsMediaLoggingPolicy.md)
+Assigns Teams Media Logging policy to a user, group of users or the entire tenant.
 
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}

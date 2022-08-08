@@ -57,14 +57,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Undo-SoftDeletedMailbox -SoftDeletedObject florencef
 ```
 
-This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Windows Live ID was also deleted.
+This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Microsoft account was also deleted.
 
 ### Example 2
 ```powershell
-Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
+Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (Get-Credential).password
 ```
 
-This example recovers the deleted mailbox for the user Brian Johnson. When this mailbox was deleted, the associated Microsoft account (formerly known as a Windows Live ID) wasn't deleted. Note that a new Microsoft account and password have to be created to recover this mailbox. In the scenario, the old Microsoft account is retained as a proxy address for the mailbox.
+This example recovers the deleted mailbox for the user Brian Johnson. When this mailbox was deleted, the associated Microsoft account wasn't deleted. Note that a new Microsoft account and password have to be created to recover this mailbox. In the scenario, the old Microsoft account is retained as a proxy address for the mailbox.
 
 ## PARAMETERS
 
@@ -156,7 +156,11 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies a new password for the mailbox.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
+You can use the following methods as a value for this parameter:
+
+- `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
+- Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
+- `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 You have to include the Password parameter to recover a deleted mailbox with an existing Microsoft account (formerly known as a Windows Live ID) that wasn't deleted with the mailbox.
 
@@ -190,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsLiveID
-The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
+The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP address for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
 
 You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account that wasn't deleted with the mailbox.
 
@@ -212,12 +216,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

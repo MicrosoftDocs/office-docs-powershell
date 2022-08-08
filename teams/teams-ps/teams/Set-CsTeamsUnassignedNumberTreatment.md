@@ -163,7 +163,7 @@ Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams wi
 
 To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
 
-To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Phone System – Virtual User license.
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Microsoft Teams Phone Resource Account license.
 
 If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
 the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains
