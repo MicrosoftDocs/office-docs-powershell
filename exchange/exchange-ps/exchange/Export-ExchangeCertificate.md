@@ -76,7 +76,8 @@ In **Exchange 2013**, this example exports a certificate from the local Exchange
 
 ### Example 2
 ```powershell
-$bincert = Export-ExchangeCertificate -BinaryEncoded -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -BinaryEncoded -Password (Get-Credential).password
+$bincert = Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -BinaryEncoded -Password (Get-Credential).password
+
 [System.IO.File]::WriteAllBytes('C:\Data\HT cert.pfx', $bincert.FileData)
 ```
 
@@ -98,6 +99,7 @@ In **Exchange 2013**, this example exports a pending certificate request to a fi
 ### Example 4
 ```powershell
 $txtcert = Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 -Server Mailbox01
+
 [System.IO.File]::WriteAllBytes('\\FileServer01\Data\Fabrikam.req', [System.Text.Encoding]::Unicode.GetBytes($txtcert))
 ```
 
