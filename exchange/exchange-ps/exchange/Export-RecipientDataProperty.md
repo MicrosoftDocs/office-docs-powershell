@@ -48,6 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $SN = Export-RecipientDataProperty -Identity tonys@contoso.com -SpokenName
+
 [System.IO.File]::WriteAllBytes('C:\tonysmith.wma', $SN.FileData)
 ```
 
@@ -56,6 +57,7 @@ This example exports Tony Smith's spoken name audio file and saves it to the loc
 ### Example 2
 ```powershell
 $Pic = Export-RecipientDataProperty -Identity "Ayla Kol" -Picture
+
 [System.IO.File]::WriteAllBytes('C:\Data\aylakol.jpg', $Pic.FileData)
 ```
 
