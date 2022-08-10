@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter2
-The Filter2 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple parameters.
+The Filter2 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple filter parameters.
 
 Use this parameter only if you're also using the Filter1 parameter in the same command.
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter3
-The Filter3 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple parameters.
+The Filter3 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple filter parameters.
 
 Use this parameter only if you're also using the Filter2 and Filter1 parameters in the same command.
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter4
-The Filter4 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple parameters.
+The Filter4 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple filter parameters.
 
 Use this parameter only if you're also using the Filter3, Filter2, and Filter1 parameters in the same command.
 
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter5
-The Filter5 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple parameters.
+The Filter5 parameter filters the data to export. This parameter has the same syntax requirements as the Filter1 parameter, the same OR behavior for multiple values in the same parameter, and the same AND behavior for multiple filter parameters.
 
 Use this parameter only if you're also using the Filter4, Filter3, Filter2, and Filter1 parameters in the same command.
 
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageCookie
-The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. For a single query when you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records are returned. To get more records, use the value of the Watermark property from the output of the command as the value for the PageCookie parameter in a new command with the same date range and filters.
+The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters.
 
 ```yaml
 Type: String
