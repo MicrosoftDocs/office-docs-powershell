@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/export-activityexplorerdata
-applicable: Security & Compliance
-title: Get-ComplianceCase
+applicable: Exchange Online, Security & Compliance
+title: Export-ActivityExplorerData
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -39,48 +39,40 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
+Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat JSON
+```
+
+This example exports a maximum of 5000 records for the specified date range in JSON format.
+
+### Example 2
+```powershell
 Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -OutputFormat JSON
 ```
 
 This example exports up to 100 records for the specified date range in JSON format. If more than 100 records are available, the value of the LastPage property in the command output will be False. Use the value of the Watermark property as the value of the PageCookie parameter in a new query to get the next set of records.
 
-### Example 2
-
+### Example 3
 ```powershell
 Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -OutputFormat JSON -PageCookie 'JZDRkpowAEV%2fZYfn6hIQCr4tCwEdoQWT4OalAyQVJEAKUtRO%2f31ZvM%2fnnjtz%2fyneTVb9HVUNV7bK91frVVM17cXaaputAV7eQuWbEmZFWbU8yham002jkqxqs0Y1V3xgq2lcqWA98eE6Dtq6EN3IMinX2WPs%2bbromllxLPpOiJ07990WAnraG8QvRV5Twfyoe3%2f7itOO00rCNvmJsfiDvOmKBbsyYNeFb7gUwzKsvYX0urPNHKpyLNNEdxxM4DUjyQWJ0mB%2bskMqdJ7KR3ojQ3pSuyk87VGcAoQacCUtxQWCQe6Rmk0LCLP9jsBWxETsKUkTF5%2fYiT3KmHvgB65hEAbFonxfyYPu0JoHSYhg0hUkGnJUlhG0jBRTk7el%2fgQPpe2H6YF8qDGgt%2bhBk7zxjNw9qxglkqCoi%2bOF7P0dl7CBAgOWRb74i5ubSC%2bJ%2bQG6eyxgE7XP7fAC6S9n3kjl7yOQPYb7KdYsIwJ2gC5n4%2bjZzvx2kA0lZ%2fHI%2b%2ft8uK5urM3Gtk1L%2bf8J' -JSON
 ```
 
 This example is related to the previous example where more than 100 records were available (the value of the LastPage property from that command was False). We're using the same date range, but this time we're using the value of the Watermark property from the previous command for the PageCookie parameter in this command to get the remaining results.
 
-### Example 3
-```powershell
-Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat JSON
-```
-
-This example exports a maximum of 5000 records for the specified date range in JSON format.
-
 ### Example 4
 ```powershell
-Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 2 -OutputFormat CSV
+Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived") -OutPutFormat CSV
 ```
 
-This example exports a maximum of 2 records for the specified date range, and the output is in CSV format instead of JSON.
+This example exports up to 100 records for the specified date range in CSV format, and filters the output by the Activity value FileArchived.
 
 ### Example 5
-```powershell
-Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived") -OutPutFormat JSON
-```
-
-This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Activity value FileArchived.
-
-### Example 6
 ```powershell
 Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -OutPutFormat JSON
 ```
 
 This example exports up to 100 records for the specified date range, and filters the output by the Activity value FileArchived or ArchiveCreated.
 
-### Example 7
+### Example 6
 ```powershell
 Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -Filter2 @("Workload","Endpoint")  -OutPutFormat JSON
 ```
@@ -98,7 +90,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -118,7 +110,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Accepted values: csv, json
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -136,7 +128,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -158,7 +150,7 @@ If you use this parameter with other filter parameters, AND behavior is used acr
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -176,7 +168,7 @@ Use this parameter only if you're also using the Filter1 parameter in the same c
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -194,7 +186,7 @@ Use this parameter only if you're also using the Filter2 and Filter1 parameters 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -212,7 +204,7 @@ Use this parameter only if you're also using the Filter3, Filter2, and Filter1 p
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -230,7 +222,7 @@ Use this parameter only if you're also using the Filter4, Filter3, Filter2, and 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -246,7 +238,7 @@ The PageCookie parameter specifies whether to get more data when the value of th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -262,7 +254,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
