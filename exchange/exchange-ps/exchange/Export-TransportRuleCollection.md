@@ -42,6 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $file = Export-TransportRuleCollection
+
 [System.IO.File]::WriteAllBytes('C:\My Docs\Rules.xml', $file.FileData)
 ```
 
@@ -50,6 +51,7 @@ This example exports transport rules. Rule data is first exported to the variabl
 ### Example 2
 ```powershell
 $file = Export-TransportRuleCollection -ExportLegacyRules
+
 [System.IO.File]::WriteAllBytes('C:\My Docs\LegacyRules.xml', $file.FileData)
 ```
 
