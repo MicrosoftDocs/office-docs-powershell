@@ -34,7 +34,7 @@ New-CsBatchTeamsDeployment -TeamsFilePath "C:\dscale\Teams.csv" -UsersFilePath "
 ## PARAMETERS
 
 ### -TeamsFilePath
-The path to the teams.csv file.
+The path to the CSV file that defines the teams you're creating.
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsersFilePath
-The path to the users.csv file.
+The path to the CSV file that maps the users you're adding to each team.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsersToNotify
-The tenant admin emailId to send the completion report of the batch deployment.
+The email addresses of up to five recipients to notify about this deployment. The recipients will receive email notifications about deployment status. The email contains the orchestration ID for the batch you submitted and any errors that may have occurred.
 
 ```yaml
 Type: String
