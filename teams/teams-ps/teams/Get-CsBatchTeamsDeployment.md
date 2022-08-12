@@ -30,6 +30,7 @@ To learn more, see [Deploy Teams at scale for frontline workers](https://docs.mi
 ```
 Get-CsBatchTeamsDeployment -OrchestrationId "My-Orchestration-Id"
 ```
+This command provides the status of specified batch deployment orchestrationId.
 
 ## PARAMETERS
 
