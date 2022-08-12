@@ -2131,7 +2131,7 @@ The MessageTypeMatches parameter specifies a condition for the rule that looks f
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
 - Encrypted: S/MIME encrypted messages.
-- PermissionControlled: Messages protected with rights management, Office 365 Message Encryption (OME) and sensitivity label (with encryption).
+- PermissionControlled: Messages protected with Rights Management, Office 365 Message Encryption (OME), and sensitivity labels (with encryption).
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
