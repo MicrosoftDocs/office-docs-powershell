@@ -30,6 +30,7 @@ Deploying Teams at scale enables admins to deploy up to 500 teams and add 25 use
 ```
 New-CsBatchTeamsDeployment -TeamsFilePath "C:\dscale\Teams.csv" -UsersFilePath "C:\dscale\Users.csv" -UsersToNotify "adminteams@contoso.com,adelev@contoso.com"
 ```
+This command runs a batch deployment with the provided parameters in the CSV files and emails the status and errors(if any) to adminteams@contoso.com and adelev@contoso.com.
 
 ## PARAMETERS
 
