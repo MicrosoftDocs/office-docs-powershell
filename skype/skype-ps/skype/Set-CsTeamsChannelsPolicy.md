@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToParticipateInExternalSharedChannel
-Users and teams can be invited to external shared channels, if Azure AD external sharing policies are configured. If a team in your organization is part of an external shared channel, new team members will have access to the channel even if this parameter is set to FALSE. For more information, see [Manage channel policies in Microsoft Teams](/microsoftteams/teams-policies).
+Users and teams can be invited to external shared channels if Azure AD external sharing policies are configured. If a team in your organization is part of an external shared channel, new team members will have access to the channel even if this parameter is set to FALSE. For more information, see [Manage channel policies in Microsoft Teams](/microsoftteams/teams-policies).
 
 ```yaml
 Type: Boolean
