@@ -21,7 +21,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 
 ```powershell
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <string>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowCartCaptionsScheduling <String>] [-LiveInterpretationEnabledType <String>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
  [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>]
  [-AllowAnonymousUsersToJoinMeeting <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
@@ -31,7 +31,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] [-AllowRecordingStorageOutsideRegion <Boolean>]
- [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
+ [-PreferredMeetingProviderForIslandsMode <String>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
  [-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String>] 
@@ -245,6 +245,24 @@ Possible values are:
 - **EnabledUserOverride**, CART captions is available by default but a user can disable.
 - **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
 - **Disabled**, if you'd like to not allow CART captions in meeting.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DisabledUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveInterpretationEnabledType
+Allows meeting organizers to configure a meeting for Language Interpretation, selecting attendees of the meeting to become interpreters that other attendees can select and listen to the real-time translation they provide.
+Possible values are:
+- **DisabledUserOverride**, if you would like users to be able to use interpretation in meetings but by default it is disabled. 
+- **Disabled**, prevents the option to be enabled in Meeting Options
 
 ```yaml
 Type: String
