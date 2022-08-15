@@ -24,13 +24,16 @@ Deploying Teams at scale enables admins to deploy up to 500 teams and add 25 use
 - Add users to teams as owners or members.
 - Manage teams at scale by adding or removing users from existing teams.
 - Stay notified through email, including completion, status, and errors (if any). You can choose to notify up to five people about the status of each batch of teams you deploy. Team owners and members are automatically notified when they're added to a team.
+
 ## EXAMPLES
+
 
 ### EXAMPLE 1
 ```
 New-CsBatchTeamsDeployment -TeamsFilePath "C:\dscale\Teams.csv" -UsersFilePath "C:\dscale\Users.csv" -UsersToNotify "adminteams@contoso.com,adelev@contoso.com"
 ```
-This command runs a batch deployment with the provided parameters in the CSV files and emails the status and errors(if any) to adminteams@contoso.com and adelev@contoso.com.
+This command runs a batch deployment with the provided parameters in the CSV files and emails the status and errors (if any) to adminteams@contoso.com and adelev@contoso.com.
+
 
 ## PARAMETERS
 
@@ -84,8 +87,6 @@ Accept wildcard characters: False
 ## OUTPUTS
 ### OrchestrationId
 The ID of the operation that can be used with the Get-CsBatchTeamsDeployment cmdlet to get the status of the operation.
-
-
 
 ## NOTES
 

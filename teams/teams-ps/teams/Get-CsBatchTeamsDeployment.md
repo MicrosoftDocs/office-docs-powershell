@@ -22,20 +22,20 @@ After deploying teams using New-CsBatchTeamsDeployment, an admin can check the s
 
 To learn more, see [Deploy Teams at scale for frontline workers](https://docs.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
 
-
-
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
 Get-CsBatchTeamsDeployment -OrchestrationId "My-Orchestration-Id"
 ```
-This command provides the status of specified batch deployment orchestrationId.
+This command provides the status of the specified batch deployment orchestrationId.
+
 
 ## PARAMETERS
 
 ### OrchestrationId
-This ID is generated when a batch deployment is submitted with New-CsBatchTeamsDeployment cmdlet.
+This ID is generated when a batch deployment is submitted with the New-CsBatchTeamsDeployment cmdlet.
+
 
 ```yaml
 Type: String
@@ -50,11 +50,11 @@ Accept wildcard characters: False
 ```
 
 ## OUTPUTS
-###Status of the orchestrationId
+### Status of the orchestrationId
+
 
 Running: The orchestration is running.
-Completed: The orchestration is completed, either succeeded, partially succeeded or Failed.
-
+Completed: The orchestration is completed, either succeeded, partially succeeded, or failed.
 
 
 ## NOTES
