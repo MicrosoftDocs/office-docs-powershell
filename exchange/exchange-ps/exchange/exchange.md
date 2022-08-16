@@ -1896,6 +1896,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Stop-MailboxSearch](Stop-MailboxSearch.md)
 
 ## policy-and-compliance-dlp Cmdlets
+### [Export-ActivityExplorerData](Export-ActivityExplorerData.md)
+
 ### [Export-DlpPolicyCollection](Export-DlpPolicyCollection.md)
 
 ### [Get-ClassificationRuleCollection](Get-ClassificationRuleCollection.md)

@@ -929,6 +929,7 @@
   "Start-MailboxSearch": "policy-and-compliance-content-search",
   "Stop-ComplianceSearch": "policy-and-compliance-content-search",
   "Stop-MailboxSearch": "policy-and-compliance-content-search",
+  "Export-ActivityExplorerData": "policy-and-compliance-dlp",
   "Export-DlpPolicyCollection": "policy-and-compliance-dlp",
   "Get-ClassificationRuleCollection": "policy-and-compliance-dlp",
   "Get-DataClassification": "policy-and-compliance-dlp",
