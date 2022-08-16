@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveInterpretationEnabledType
-Allows meeting organizers to configure a meeting for Language Interpretation, selecting attendees of the meeting to become interpreters that other attendees can select and listen to the real-time translation they provide.
+Allows meeting organizers to configure a meeting for language interpretation, selecting attendees of the meeting to become interpreters that other attendees can select and listen to the real-time translation they provide.
 Possible values are:
 - **DisabledUserOverride**, if you would like users to be able to use interpretation in meetings but by default it is disabled. 
 - **Disabled**, prevents the option to be enabled in Meeting Options
