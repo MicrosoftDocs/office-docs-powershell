@@ -61,6 +61,7 @@ This example gathers data about your Exchange system.
 ### Example 2
 ```powershell
 $SysHealth = Test-SystemHealth -OutData
+
 [System.IO.File]::WriteAllBytes('D:\temp\SystemHealthOutData.xml', $SysHealth.FileData)
 ```
 
