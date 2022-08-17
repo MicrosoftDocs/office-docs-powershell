@@ -1106,6 +1106,7 @@
   "Connect-ExchangeOnline": "powershell-v2-module",
   "Connect-IPPSSession": "powershell-v2-module",
   "Disconnect-ExchangeOnline": "powershell-v2-module",
+  "Get-ConnectionInformation": "powershell-v2-module",
   "Get-CustomNudge": "powershell-v2-module",
   "Get-CustomNudgeAssignment": "powershell-v2-module",
   "Get-CustomNudgeSettings": "powershell-v2-module",
