@@ -92,6 +92,13 @@ This example creates a retention policy named "Regulation 123 Compliance" for th
 
 The next step is to use the New-RetentionComplianceRule cmdlet to add a retention rule to the retention policy.
 
+### Example 2
+```powershell
+New-RetentionCompliancePolicy -Name "Marketing Department" -Enabled $true -SharePointLocation https://contoso.sharepoint.com -RetainCloudAttachment $true -Comment "Regulatory compliance for Marketing Dept."
+```
+
+This example creates a new cloud attachment policy named Marketing Department with the specified details.
+
 ## PARAMETERS
 
 ### -Name
@@ -427,7 +434,22 @@ Accept wildcard characters: False
 ```
 
 ### -RetainCloudAttachment
-This parameter is reserved for internal Microsoft use.
+**Note**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
+
+The RetainCloudAttachment parameter specifies that this is a cloud attachment policy. Valid values are:
+
+- $true: The policy is a cloud attachment policy.
+- $false: The policy is not a cloud attachment policy. This is the default value.
+
+For the value $true, you can only use the following location parameters:
+
+- SharePointLocation and SharePointLocationException
+- OneDriveLocation and OneDriveLocationException
+- ModernGroupLocation and ModernGroupLocationException
+
+A tag that uses a cloud attachment policy to create a rule can be a record label or a regulatory label. You can't use a publishing tag for a cloud attachment policy to create a rule; only apply tags are supported.
+
+The RetainCloudAttachment parameter is not available on the Set-RetentionCompliancePolicy cmdlet.
 
 ```yaml
 Type: Boolean

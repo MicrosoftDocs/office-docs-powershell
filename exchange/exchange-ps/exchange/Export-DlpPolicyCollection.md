@@ -38,6 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $DlpPol = Export-DlpPolicyCollection
+
 [System.IO.File]::WriteAllBytes('C:\My Documents\Contoso PII.xml', $DlpPol.FileData)
 ```
 
