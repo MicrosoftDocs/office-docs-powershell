@@ -2251,6 +2251,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disconnect-ExchangeOnline](Disconnect-ExchangeOnline.md)
 
+### [Get-ConnectionInformation](Get-ConnectionInformation.md)
+
 ### [Get-CustomNudge](Get-CustomNudge.md)
 
 ### [Get-CustomNudgeAssignment](Get-CustomNudgeAssignment.md)

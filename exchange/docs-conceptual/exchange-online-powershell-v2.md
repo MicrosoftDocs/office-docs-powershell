@@ -64,11 +64,12 @@ The improved Exchange Online PowerShell cmdlets that are only available in the E
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
 
-|EXO V2 module cmdlet|Older related cmdlet|
-|---|---|
-|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <p> or <p> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)|
-|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
-|[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)|
+|EXO V2 module cmdlet|Older related cmdlet|Comments|
+|---|---|---|
+|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
+|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)||
+|[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
+|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|n\a|Available in v2.0.6-Preview7 or later.|
 
 Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
 
@@ -93,7 +94,7 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 
 ### Updates for version 2.0.6
 
-Version 2.0.6-Preview6 of the EXO V2 module is now available. This Preview version improves upon the historical capabilities of the module with the following features:
+Preview versions of v2.0.6 are now available. v2.0.6 of the EXO V2 module improves upon the historical capabilities of the module with the following features:
 
 - Exchange Online PowerShell in version 2.0.6 includes cmdlets that are backed by the REST API:
   - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) for Exchange Online PowerShell.
@@ -130,6 +131,8 @@ Version 2.0.6-Preview6 of the EXO V2 module is now available. This Preview versi
     - **Set-UserPhoto**
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
+
+- In v2.0.6-Preview7, you can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current PowerShell session with Exchange Online.
 
 > [!NOTE]
 > Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) to successfully use the **Connect-IPPSSession** cmdlet.
