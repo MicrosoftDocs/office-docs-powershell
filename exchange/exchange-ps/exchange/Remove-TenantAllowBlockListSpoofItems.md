@@ -44,7 +44,7 @@ This example removes the specified spoofed sender. You get the Ids parameter val
 ## PARAMETERS
 
 ### -Identity
-The only valid value for this parameter is domain.com\Default.
+Use the value `domain.com\Default` for this parameter. The spoofed sender that you want to remove is really identified by the Ids parameter.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
