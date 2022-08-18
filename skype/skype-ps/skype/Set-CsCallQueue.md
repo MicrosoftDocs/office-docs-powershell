@@ -146,7 +146,6 @@ Accept wildcard characters: False
 ### -OboResourceAccountIds
 The OboResourceAccountIds parameter lets you add resource account with phone number to the Call Queue. The agents in the Call Queue will be able to make outbound calls using the phone number on the resource accounts.  This is a list of resource account GUIDs.
 
-
 ```yaml
 Type: List
 Parameter Sets: (All)
