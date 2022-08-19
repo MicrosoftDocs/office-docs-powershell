@@ -44,7 +44,7 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 The module contains a small set of exclusive Exchange Online PowerShell cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). When you first open the module, you'll only see these exclusive cmdlets. After you [connect to your Exchange Online organization](connect-to-exchange-online-powershell.md), you'll see all of the familiar cmdlets that are available in Exchange Online PowerShell.
 
-The module use modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to enable the Basic authentication setting in WinRM as explained [later in this article](#prerequisites-for-the-exo-v2-module).
+The module use modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to enable the Basic authentication setting in WinRM as explained [later in this article](#turn-on-basic-authentication-in-winrm).
 
 The Exchange Online cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents, but the equivalent cmdlets are still available (after you connect).
 
@@ -97,12 +97,12 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 Preview versions of v2.0.6 are now available. v2.0.6 of the EXO V2 module improves upon the historical capabilities of the module with the following features:
 
 - Exchange Online PowerShell in version 2.0.6 includes cmdlets that are backed by the REST API:
-  - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) for Exchange Online PowerShell.
+  - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) for Exchange Online PowerShell.
   - REST API cmdlets in Exchange Online PowerShell work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
   - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
 
 - The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets as before:
-  - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) on your client computer.
+  - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) on your client computer.
   - If you don't use the _UseRPSSession_ switch when you connect, you can use _only_ the REST API cmdlets.
 
 - A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
@@ -135,7 +135,7 @@ Preview versions of v2.0.6 are now available. v2.0.6 of the EXO V2 module improv
 - In v2.0.6-Preview7, you can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current PowerShell session with Exchange Online.
 
 > [!NOTE]
-> Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#prerequisites-for-the-exo-v2-module) to successfully use the **Connect-IPPSSession** cmdlet.
+> Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
 
 ## Install and maintain the EXO V2 module
 
@@ -210,87 +210,84 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exo
 
 #### Windows
 
-All versions of the EXO V2 module are supported in Windows PowerShell 5.1. PowerShell 7 on Windows requires version 2.0.4 or later of the EXO V2 module.
+All versions of the EXO V2 module are supported in Windows PowerShell 5.1.
 
-The EXO V2 module is supported in the following versions of Windows:
+PowerShell 7 on Windows requires version 2.0.4 or later of the EXO V2 module.
 
-- Windows 11
-- Windows 10
+Version 2.0.5 or later of the EXO V2 module requires the Microsoft .NET Framework 4.7.1 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.1, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-471).
+
+Windows PowerShell requirements and EXO V2 module support in older versions of Windows are described in the following list:
+
 - Windows 8.1<sup>4</sup>
-- Windows Server 2019
-- Windows Server 2016
 - Windows Server 2012 or Windows Server 2012 R2<sup>4</sup>
 - Windows 7 Service Pack 1 (SP1)<sup>1,</sup><sup>2,</sup><sup>3</sup>
 - Windows Server 2008 R2 SP1<sup>1,</sup><sup>2,</sup><sup>3</sup>
 
-<sup>1</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
-
-<sup>2</sup> This version of Windows doesn't support version 2.0.4 or later of the EXO V2 module. Only version 2.0.3 or earlier is supported.
-
-<sup>3</sup> Windows PowerShell 5.1 on this version of Windows requires the Microsoft .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
-
-<sup>4</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
+- <sup>1</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
+- <sup>2</sup> This version of Windows doesn't support version 2.0.4 or later of the EXO V2 module. Only version 2.0.3 or earlier is supported.
+- <sup>3</sup> Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+- <sup>4</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
 
 ### Prerequisites for the EXO V2 module
 
 > [!NOTE]
 > The settings described in this section are required in all versions of PowerShell on all operating systems.
 
-- **Set the PowerShell execution policy to RemoteSigned**:
+#### Set the PowerShell execution policy to RemoteSigned
 
-  PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
+PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
-  > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
+> Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
+To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
 
-  ```powershell
-  Set-ExecutionPolicy RemoteSigned
-  ```
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
 
-  For more information about execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+For more information about execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-- **Turn on Basic authentication in WinRM**:
+#### Turn on Basic authentication in WinRM
 
-  > [!NOTE]
-  > As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for REST API cmdlets.
+> [!NOTE]
+> As described [earlier in this article](#updates-for-version-206), v2.0.6 of the EXO V2 module does not require Basic authentication in WinRM for REST API cmdlets.
 
-  WinRM needs to allow Basic authentication. We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+WinRM needs to allow Basic authentication. We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
+To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
-  > [!NOTE]
-  > The following commands require that WinRM is enabled. To enable WinRM, run the following command:  `winrm quickconfig`.
+> [!NOTE]
+> The following commands require that WinRM is enabled. To enable WinRM, run the following command: `winrm quickconfig`.
+
+```DOS
+winrm get winrm/config/client/auth
+```
+
+If you don't see the value `Basic = true`, you need to run **one** of the following commands to enable Basic authentication for WinRM:
+
+- **In a Command Prompt**:
 
   ```DOS
-  winrm get winrm/config/client/auth
+  winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
-  If you don't see the value `Basic = true`, you need to run **one** of the following commands to enable Basic authentication for WinRM:
+- **In Windows PowerShell**:
 
-  - **In a Command Prompt**:
+  ```powershell
+  winrm set winrm/config/client/auth '@{Basic="true"}'
+  ```
 
-    ```DOS
-    winrm set winrm/config/client/auth @{Basic="true"}
-    ```
-
-  - **In Windows PowerShell**:
-
-      ```DOS
-    winrm set winrm/config/client/auth '@{Basic="true"}'
-    ```
-
-  - **In Windows PowerShell to modify the registry**:
+- **In Windows PowerShell to modify the registry**:
   
-    ```PowerShell
-    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
-    ```
+  ```PowerShell
+  Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
+  ```
 
-  If Basic authentication for WinRM is disabled, you'll get one of the following errors when you try to connect:
+If Basic authentication for WinRM is disabled, you'll get one of the following errors when you try to connect:
 
-  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
-  >
-  > Create Powershell Session is failed using OAuth.
+> The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
+>
+> Create Powershell Session is failed using OAuth.
   
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
@@ -365,7 +362,7 @@ If the module is already installed on your computer, you can run the following c
 
    - To upgrade to **a Preview version** of the module, you can upgrade to the latest available Preview version, or you can use the _RequiredVersion_ parameter to upgrade to a specific Preview version. To see the available Preview versions, run the command: `Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease`.
 
-     Run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
+     Run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `-Scope CurrentUser`):
 
      - In an elevated PowerShell window (all users):
 
