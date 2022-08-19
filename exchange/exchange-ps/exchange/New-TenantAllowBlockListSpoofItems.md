@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-TenantAllowBlockListSpoofItems cmdlet to create spoof entries in the Tenant Allow/Block List.
+Use the New-TenantAllowBlockListSpoofItems cmdlet to create spoofed sender entries in the Tenant Allow/Block List.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,10 +37,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity Default
+New-TenantAllowBlockListSpoofItems -Identity Default -Action Allow -SendingInfrastructure contoso.com -SpoofedUser bob@contoso.com -SpoofType External
 ```
 
-This example creates a new spoof pair and generates an Identity for the pair (a random GUID) which can be used as an Id parameter while updating or deleting the spoof pair through Set-TenantAllowBlockListSpoofItems and Remove-TenantAllowBlockListSpoofItems.
+This example creates an allow entry for the sender bob@contoso.com from the source contoso.com.
 
 ## PARAMETERS
 
@@ -81,7 +81,7 @@ Accept wildcard characters: True
 ```
 
 ### -SpoofedUser
-The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry.
+The SpoofedUser parameter specifies the email address or domain for the spoofed sender entry.
 
 - For domains outside your organization (cross-org), use the domain of the email address that appears in the From field of the message.
 - For domains inside your organization (intra-org), use the full email address that appears in the From field of the message.
@@ -100,7 +100,7 @@ Accept wildcard characters: True
 ```
 
 ### -SpoofType
-The SpoofType parameter specifies whether this is an internal or external spoof entry. Valid values are:
+The SpoofType parameter specifies whether this is an internal or external spoofed sender entry. Valid values are:
 
 - External
 - Internal
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-The Action parameter specifies whether is an allowed or blocked spoof entry. Valid values are:
+The Action parameter specifies whether is an allowed or blocked spoofed sender entry. Valid values are:
 
 - Allow
 - Block

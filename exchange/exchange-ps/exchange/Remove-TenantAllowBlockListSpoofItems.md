@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-TenantAllowBlockListSpoofItems cmdlet to remove spoof entries from the Tenant Allow/Block List.
+Use the Remove-TenantAllowBlockListSpoofItems cmdlet to remove spoofed sender entries from the Tenant Allow/Block List.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,16 +36,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastructure,SpoofType,Action,Identity
 Remove-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
-This example removes the specified spoof pairs. You get the Ids parameter values from the output of Get-TenantAllowBlockListSpoofItems command (the Identity property).
+This example removes the specified spoofed sender. You get the Ids parameter value from the Identity property in the output of Get-TenantAllowBlockListSpoofItems command.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the accepted domain.
+Use the value `domain.com\Default` for this parameter. The spoofed sender that you want to remove is really identified by the Ids parameter.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
@@ -61,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-The Ids parameter specifies the spoof pair that you want to remove. A valid value is the Identity property value from the output of the Get-TenantAllowBlockListSpoofItems cmdlet. You can specify multiple values separated by commas.
+The Ids parameter specifies the spoof pair that you want to remove. A valid value for this parameter is the Identity property value from the output of the Get-TenantAllowBlockListSpoofItems cmdlet. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -96,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
