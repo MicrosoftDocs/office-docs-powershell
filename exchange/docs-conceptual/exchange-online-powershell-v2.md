@@ -214,7 +214,7 @@ All versions of the EXO V2 module are supported in Windows PowerShell 5.1.
 
 PowerShell 7 on Windows requires version 2.0.4 or later of the EXO V2 module.
 
-Version 2.0.5 or later of the EXO V2 module requires the Microsoft .NET Framework 4.7.1 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about which versions of Windows that support the .NET Framework 4.7.1, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-471).
+Version 2.0.5 or later of the EXO V2 module requires the Microsoft .NET Framework 4.7.1 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.1, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-471).
 
 Windows PowerShell requirements and EXO V2 module support in older versions of Windows are described in the following list:
 
