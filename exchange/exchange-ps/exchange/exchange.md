@@ -274,6 +274,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
 
+### [Get-TenantAllowBlockListSpoofItems](Get-TenantAllowBlockListSpoofItems.md)
+
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
 
 ### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
@@ -301,6 +303,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
+
+### [New-TenantAllowBlockListSpoofItems](New-TenantAllowBlockListSpoofItems.md)
 
 ### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
 
@@ -345,6 +349,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
 
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
+
+### [Remove-TenantAllowBlockListSpoofItems](Remove-TenantAllowBlockListSpoofItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
 
@@ -405,6 +411,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
 
 ### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
+
+### [Set-TenantAllowBlockListSpoofItems](Set-TenantAllowBlockListSpoofItems.md)
 
 ### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
 

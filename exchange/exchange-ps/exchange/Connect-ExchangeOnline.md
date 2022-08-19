@@ -687,7 +687,7 @@ This parameter is available in version 2.0.6-Preview3 or later of the Exchange O
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exo-v2-module).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#turn-on-basic-authentication-in-winrm).
 
 If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
 

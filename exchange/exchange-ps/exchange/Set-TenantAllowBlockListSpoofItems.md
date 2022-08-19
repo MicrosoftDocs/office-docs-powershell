@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-TenantAllowBlockListSpoofItems cmdlet to modify spoof entries in the Tenant Allow/Block List.
+Use the Set-TenantAllowBlockListSpoofItems cmdlet to modify spoofed sender entries in the Tenant Allow/Block List.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-The Action parameter specifies whether this spoof entry is an allow or block spoof entry. Valid values are:
+The Action parameter specifies whether this entry is an allow or block spoofed sender entry. Valid values are:
 
 - Allow
 - Block
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-The Ids parameter specifies the spoof pair that you want to allow or block. A valid value is the Identity property value from the output of the Get-TenantAllowBlockListSpoofItems cmdlet. You can specify multiple values separated by commas.
+The Ids parameter specifies the spoof pair that you want to modify. A valid value is the Identity property value from the output of the Get-TenantAllowBlockListSpoofItems cmdlet. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
