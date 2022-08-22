@@ -32,13 +32,6 @@ PS C:\> Remove-CsOnlinePSTNGateway -Identity sbc.contoso.com
 
 This example removes SBC with Identity (and FQDN) sbc.contoso.com.
 
-### Example 2
-```powershell
-PS C:\> Remove-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
-```
-
-This example removes the SBCs with identities (and FQDNs) matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc.
-
 ## PARAMETERS
 
 ### -Identity
