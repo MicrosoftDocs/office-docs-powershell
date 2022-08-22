@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinepstngateway
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsOnlinePSTNGateway
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,7 +17,7 @@ Removes the configuration of the previously defined Session Border Controller(s)
 
 ## SYNTAX
 ```
-Remove-CsOnlinePSTNGateway -Identity <SBCFQDN> 
+Remove-CsOnlinePSTNGateway [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,14 +45,14 @@ This example removes the SBCs with identities (and FQDNs) matching the pattern *
 The parameter is mandatory for the cmdlet. The Identity is the same as the SBC FQDN.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: ByPropertyName
 Accept wildcard characters: False
 ```
 
@@ -61,9 +61,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
-
 
 ## OUTPUTS
 
