@@ -15,11 +15,10 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a treatment for how calls to an unassigned number range should be routed.
 
-
 ## SYNTAX
 
-```powershell
-Remove-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+```
+Remove-CsTeamsUnassignedNumberTreatment [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +32,6 @@ Remove-CsTeamsUnassignedNumberTreatment -Identity MainAA
 ```
 This example removes the treatment MainAA.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -45,23 +43,9 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Accept pipeline input: ByPropertyName
 Accept wildcard characters: False
 ```
 
