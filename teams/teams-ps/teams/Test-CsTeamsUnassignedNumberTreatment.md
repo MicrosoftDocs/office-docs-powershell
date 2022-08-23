@@ -20,7 +20,7 @@ Test-CsTeamsUnassignedNumberTreatment -PhoneNumber <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet tests the given number against the created (by using New-CsTeamsUnassignedNumberTreatment cmdlet) unassigned number treatment configurations.
+This cmdlet tests the given number against the created (by using New-CsTeamsUnassignedNumberTreatment cmdlet) unassigned number treatment configurations. If a match is found, the matching treatment is displayed.
 
 ## EXAMPLES
 
