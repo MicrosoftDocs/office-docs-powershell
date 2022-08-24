@@ -44,7 +44,7 @@ This example shows all SBCs paired with the tenant.
 PS C:\> Get-CsOnlinePSTNGateway -Filter "*.contoso.com"
 ```
 
-This example selects all SBC with Identity matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc
+This example selects all SBCs with identities matching the pattern *.contoso.com, such as sbc1.contoso.com and sbc2.contoso.com.
 
 ## PARAMETERS
 
