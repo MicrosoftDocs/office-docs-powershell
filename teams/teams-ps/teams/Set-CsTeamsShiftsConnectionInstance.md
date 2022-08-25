@@ -18,66 +18,120 @@ This cmdlet updates a Shifts connection instance.
 ## SYNTAX
 
 ```
-Set-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorInstanceId <string> -ConnectorSpecificSettingAdminApiUrl <string> -ConnectorSpecificSettingCookieAuthUrl <string> -ConnectorSpecificSettingEssApiUrl <string> -ConnectorSpecificSettingFederatedAuthUrl <string> -ConnectorSpecificSettingLoginPwd <string> -ConnectorSpecificSettingLoginUserName <string> -ConnectorSpecificSettingRetailWebApiUrl <string> -ConnectorSpecificSettingSiteManagerUrl <string> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> -IfMatch <string> [-ConnectorAdminEmail <string[]>] [<CommonParameters>]
+Set-CsTeamsShiftsConnectionInstance  -ConnectorId <string> -ConnectorInstanceId <string> -ConnectorSpecificSettings <Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorSpecificUkgDimensionsSettingsRequest> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> -IfMatch <string> [-ConnectorAdminEmail <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettingLoginPwd and ConnectorSpecificSettingLoginUserNameusername to be included.
-This cmdlet can update every input fields except -ConnectorId
+This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettings.LoginPwd and ConnectorSpecificSettings.LoginUserNameusername to be included.
+This cmdlet can update every input fields except -ConnectorId and -ConnectorInstanceId
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorInstanceId "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -Name "MyInstance-Updated" -SyncFrequencyInMin 10 -IfMatch '"0a005fd6-0000-0d00-0000-60a76dbf0000"' -ConnectorAdminEmail "test@abc.com", "test2@abc.com"
+PS C:\> $result = Set-CsTeamsShiftsConnectionInstance  
+    -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
+    -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" `
+    -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" `
+    -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" `
+    -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
+    -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
+    -Name "My Connector Instance" `
+    -SyncFrequencyInMin 10 `
+    -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest `
+    -Property @{
+        AdminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta3"
+        SiteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta4"
+        EssApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta2"
+        RetailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"
+        CookieAuthUrl = "https://contoso.com/retail/data/login"
+        FederatedAuthUrl = "https://contoso.com/retail/data/login"
+        LoginUserName = "PlaceholderForUsername"
+        LoginPwd = "PlaceholderForPassword"
+    })`
+    -IfMatch $Etag
 
+PS C:\> $result.ToJsonString()
 ```
 ```output
+
 {
-    "id": "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09",
-    "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
-    "name": "MyInstance-Updated",
+    "id": "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3",
+    "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
+    "name": "My Connector Instance",
     "connector": {
         "id": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
-        "name": "Blue Yonder V1"
+        "name": "Blue Yonder"
     },
     "connectorSpecificSettings": {
-        "adminApiUrl": "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2",
-        "siteManagerUrl": "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2",
-        "essApiUrl": "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1",
-        "retailWebApiUrl": "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1",
-        "cookieAuthUrl": "https://nehstdevwfm02.contoso.com/retail/data/login",
-        "federatedAuthUrl": "https://nehstdevfas01.contoso.com/retail/data/login"
+        "adminApiUrl ": "https://contoso.com/retail/data/wfmadmin/api/v1-beta2",
+        "siteManagerUrl": "https://contoso.com/retail/data/wfmsm/api/v1-beta2",
+        "essApiUrl": "https://contoso.com/retail/data/wfmess/api/v1-beta1",
+        "retailWebApiUrl": "https://contoso.com/retail/data/retailwebapi/api/v1",
+        "cookieAuthUrl": "https://contoso.com/retail/data/login",
+        "federatedAuthUrl": "https://contoso.com/retail/data/login"
     },
-    "enabledConnectorScenarios": [
-        "Shift",
-        "SwapRequest",
-        "UserShiftPreferences",
-        "OpenShift",
-        "OpenShiftRequest",
-        "TimeOff",
-        "TimeOffRequest",
-        "TimeCard"
-    ],
-    "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
-    "enabledWfiScenarios": [
-        "SwapRequest",
-        "OpenShiftRequest",
-        "TimeOffRequest",
-        "TimeCard"
-    ],
+    "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
+    "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
+    "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"   ],
     "syncFrequencyInMin": 10,
-    "designatedActorId": "5d5eaa2d-422c-4d4b-a2db-4cea80f98255",
-    "connectorAdminEmails": [
-        "test@abc.com",
-        "test2@abc.com"
-    ],
-    "etag": "\"28007861-0000-0400-0000-60d3579b0000\""
+    "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
+    "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\""
+    "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
+}
+
+```
+```powershell
+PS C:\> $result = Set-CsTeamsShiftsConnectionInstance `
+    -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
+    -ConnectorId "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0" `
+    -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" `
+    -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" `
+    -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
+    -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
+    -Name "My Connector Instance" `
+    -SyncFrequencyInMin 10 `
+    -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest `
+    -Property @{
+        apiUrl = "https://contoso.com/api"
+        appKey = "myAppKey"
+        clientId = "myClientId"
+        clientSecret = "PlaceholderForClientSecret"
+        LoginUserName = "PlaceholderForUsername"
+        LoginPwd = "PlaceholderForPassword"
+    }) `
+    -IfMatch $Etag
+
+PS C:\> $result.ToJsonString()
+```
+```output
+
+{
+    "id": "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3",
+    "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
+    "name": "My Connector Instance",
+    "connector": {
+        "id": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+        "name": "UKG Dimensions"
+    },
+    "connectorSpecificSettings": {
+        apiUrl = "https://contoso.com/api"
+        appKey = "myAppKey"
+        clientId = "myClientId"
+    },
+    "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
+    "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
+    "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"   ],
+    "syncFrequencyInMin": 10,
+    "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
+    "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\""
+    "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
 }
 ```
 
-Updates the instance with ID `WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09` with name `MyInstance-Updated`. Returns the object of created connector instance.
+
+Updates the instance with the specified -ConnectorInstanceId. Returns the object of updated connector instance.
 
 In case of error, we can capture the error response as following:
 
@@ -217,25 +271,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingLoginUserName
+### -ConnectorSpecificSetting.LoginUserName
 
-The login user name to the WFM team.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingLoginPwd
-
-The login password to the WFM team.
+The login user name to WFM team.
 
 ```yaml
 Type: String
@@ -249,7 +287,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingAdminApiUrl
+### -ConnectorSpecificSetting.LoginPwd
+
+The login password to WFM team.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorSpecificSettings.AdminApiUrl
 
 The admin API URL.
 
@@ -265,7 +319,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingCookieAuthUrl
+### -ConnectorSpecificSettings.CookieAuthUrl
 
 The cookie authorization URL.
 
@@ -281,7 +335,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingEssApiUrl
+### -ConnectorSpecificSettings.EssApiUrl
 
 The essential API URL.
 
@@ -297,7 +351,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingFederatedAuthUrl
+### -ConnectorSpecificSettings.FederatedAuthUrl
 
 The federated authorization URL.
 
@@ -313,9 +367,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingRetailWebApiUrl
+### -ConnectorSpecificSettings.RetailWebApiUrl
 
-The retail web API URL.
+The retail web api URL.
 
 ```yaml
 Type: String
@@ -329,9 +383,89 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingSiteManagerUrl
+### -ConnectorSpecificSettings.SiteManagerUrl
 
 The site manager URL.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorSpecificSettings.ApiUrl
+
+The api URL.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorSpecificSettings.SsoUrl
+
+The SSO URL.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorSpecificSettings.AppKey
+
+The AppKey.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorSpecificSettings.ClientId
+
+The ClientId.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorSpecificSettings.ClientSecret
+
+The client secret.
 
 ```yaml
 Type: String

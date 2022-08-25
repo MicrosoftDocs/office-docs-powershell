@@ -29,31 +29,87 @@ This cmdlet returns the list of existing connections. It can also return the con
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionInstance
+PS C:\> Get-CsTeamsShiftsConnectionInstance | Format-List
 ```
 ```output
-ConnectorAdminEmail     DesignatedActorId                     EnabledConnectorScenario                               EnabledWfiScenario                                             Etag                                   Id                                       Name                                   SyncFrequencyInMin TenantId
--------------------     -----------------                     ------------------------                               ------------------                                             ----                                   --                                       ----                                   ------------------ --------
-user@contoso.com    12345fa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, UserShiftPreferences, OpenShift...} {Shift, TimeOffRequest}                                        "1d004f54-0000-0400-0000-60ce37120000" WCI-01c84e58-9a03-4e56-82f1-6b224132cad8   Test connector instance-1					10                 dfd24b34-ccb0-47e1-bdb...
-user1@contoso.com    12345faf-fd37-4a4d-ab25-ba0b037cb567 {Shift, SwapRequest, OpenShift, OpenShiftRequest...}     {Shift, SwapRequest, OpenShift, TimeOff...}                      "21007c43-0000-0400-0000-60d061300000" WCI-0e2af164-1dcf-4854-8551-631aeda3b437   Test connector instance-2					10                 dfd24b34-ccb0-47e1-bdb...
-user2@contoso.com    123451a9-e74b-4ff0-afe8-ff9dbe824e7f {Shift, SwapRequest, OpenShift, OpenShiftRequest...}     {Shift, SwapRequest, OpenShift, TimeOff...}                      "2100d271-0000-0400-0000-60d07d980000" WCI-8293ff48-f41a-4f00-8cb9-75ac7a01f6d5   Test connector instance-3					10                 dfd24b34-ccb0-47e1-bdb...
-user3@contoso.com    12345fa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, OpenShift, OpenShiftRequest...}     {Shift, SwapRequest, OpenShift, TimeOff...}                      "23005736-0000-0400-0000-60d10a990000" WCI-922cb572-369d-42d2-969a-d4927cd3683b   Test connector instance-4					10                 dfd24b34-ccb0-47e1-bdb...
-user4@contoso.com    12345b9a-6161-4f6a-9067-9ec3eb881e56 {Shift, SwapRequest, UserShiftPreferences, OpenShift...} {Shift, SwapRequest, UserShiftPreferences, OpenShift...}         "2300589a-0000-0400-0000-60d132270000" WCI-da788d04-1bd2-48b1-a261-1dd80bde86db   Test connector instance-5					10                 dfd24b34-ccb0-47e1-bdb...
+
+ConnectorAdminEmail                      : {admin@contoso.com}
+ConnectorId                              : 6A51B888-FF44-4FEA-82E1-839401E9CD74
+ConnectorName                            : Blue Yonder V1
+ConnectorSpecificSettingAdminApiUrl      : https://www.contoso.com/retail/data/wfmadmin/api/v1-beta3
+ConnectorSpecificSettingApiUrl           :
+ConnectorSpecificSettingClientId         :
+ConnectorSpecificSettingCookieAuthUrl    : https://www.contoso.com/retail/data/login
+ConnectorSpecificSettingEssApiUrl        : https://www.contoso.com/retail/data/wfmess/api/v1-beta2
+ConnectorSpecificSettingFederatedAuthUrl : https://www.contoso.com/retail/data/login
+ConnectorSpecificSettingRetailWebApiUrl  : https://www.contoso.com/retail/data/retailwebapi/api/v1
+ConnectorSpecificSettingSiteManagerUrl   : https://www.contoso.com/retail/data/wfmsm/api/v1-beta4
+ConnectorSpecificSettingSsoUrl           :
+DesignatedActorId                        : 538C1F8F-320E-4C46-8109-1F08918B13ED
+EnabledConnectorScenario                 : {Shift, SwapRequest, UserShiftPreferences, OpenShift...}
+EnabledWfiScenario                       : {SwapRequest, OpenShiftRequest, TimeCard, TimeOffRequest}
+Etag                                     : "05004cd2-0000-0400-0000-62fbc3e10000"
+Id                                       : WCI-74710858-44EC-4BC1-B43C-B71479A232D6
+Name                                     : My connector instance 1
+SyncFrequencyInMin                       : 3
+TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
+WorkforceIntegrationId                   : WFI_0D3DCF76-F826-4416-99AC-056F83A4C9F7
+
+ConnectorAdminEmail                      : {admin@contoso.com}
+ConnectorId                              : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+ConnectorName                            : UKG Dimensions
+ConnectorSpecificSettingAdminApiUrl      :
+ConnectorSpecificSettingApiUrl           : https://www.contoso.com/api
+ConnectorSpecificSettingClientId         : 86q446dXbJz6UdZeOr1FrP8chDHDZ66nu
+ConnectorSpecificSettingCookieAuthUrl    :
+ConnectorSpecificSettingEssApiUrl        :
+ConnectorSpecificSettingFederatedAuthUrl :
+ConnectorSpecificSettingRetailWebApiUrl  :
+ConnectorSpecificSettingSiteManagerUrl   :
+ConnectorSpecificSettingSsoUrl           : https://www.contoso.com/sso
+DesignatedActorId                        : 538C1F8F-320E-4C46-8109-1F08918B13ED
+EnabledConnectorScenario                 : {Shift, SwapRequest, UserShiftPreferences, OpenShift...}
+EnabledWfiScenario                       : {SwapRequest, UserShiftPreferences, OpenShiftRequest, TimeCard...}
+Etag                                     : "dd011bc0-0000-0400-0000-62f4dc450000"
+Id                                       : WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
+Name                                     : My connector instance 2
+SyncFrequencyInMin                       : 30
+TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
+WorkforceIntegrationId                   : WFI_6E403D85-CCBA-4506-B62A-35A1D7B49E25
 ```
+
 
 Returns the list of connection instances.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId "WCI-01c84e59-9a03-4e56-82f1-6b224132cad8"
+PS C:\_\> $ci = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
+PS C:\_\> $ci.ToJsonString()
 ```
 ```output
-ConnectorAdminEmail        DesignatedActorId                    EnabledConnectorScenario                               EnabledWfiScenario      Etag                                   Id                                       Name                      SyncFrequencyInMin TenantId                             WorkforceIntegrationId
--------------------        -----------------                    ------------------------                               ------------------      ----                                   --                                       ----                      ------------------ --------                             ----------------------
-user@contoso.com        12345fa7-e92b-40fb-99a7-2d23b3412345 {Shift, SwapRequest, UserShiftPreferences, OpenShift...} {Shift, TimeOffRequest}   "1d004f54-0000-0400-0000-60ce37120000"  WCI-01c84e58-9a03-4e56-82f1-6b224132cad8  Test Connector Instance3 10                 12345b34-ccb0-47e1-bdb7-e49db9c7c14a WFI_3fd79702-15e4-4c97-9b0e-dd725e92c...
+{
+  "connector": {
+    "id": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+    "name": "UKG Dimensions"
+  },
+  "connectorSpecificSettings": {
+    "apiUrl": "https://www.contoso.com/api",
+    "ssoUrl": "https://www.contoso.mykronos.com/sso",
+    "clientId": "86q446dXbJz6UdZeOr1FrP8chDHDZ66nu"
+  },
+  "id": "WCI-78F5116E-9098-45F5-B595-1153DF9D6F70",
+  "tenantId": "3FDCAAF2-863A-4520-97BA-DFA211595876",
+  "name": "My connector instance 2",
+  "enabledConnectorScenarios": [ "Shift", "SwapRequest", "UserShiftPreferences", "OpenShift", "OpenShiftRequest", "TimeCard", "TimeOff", "TimeOffRequest" ],
+  "workforceIntegrationId": "WFI_6E403D85-CCBA-4506-B62A-35A1D7B49E25",
+  "enabledWfiScenarios": [ "SwapRequest", "UserShiftPreferences", "OpenShiftRequest", "TimeCard", "TimeOffRequest" ],
+  "syncFrequencyInMin": 30,
+  "designatedActorId": "538C1F8F-320E-4C46-8109-1F08918B13ED",
+  "connectorAdminEmails": [ "admin@contoso.com" ],
+  "etag": "\"dd011bc0-0000-0400-0000-62f4dc450000\""
+}
 ```
-
-Returns the connection instance with ID `WCI-01c84e59-9a03-4e56-82f1-6b224132cad8`.
+Returns the connection instance with the specified -ConnectorInstanceId.
 
 ## PARAMETERS
 
