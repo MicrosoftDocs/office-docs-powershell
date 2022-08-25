@@ -217,6 +217,8 @@ The DelegatedOrganization parameter specifies the customer organization that you
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
+**Note**: Use an .onmicrosoft.com domain for the parameter value. Not doing so might result in permission-related issues when you run commands in the app context. 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
