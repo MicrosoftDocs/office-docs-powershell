@@ -50,7 +50,7 @@ PS C:\> $result = Set-CsTeamsShiftsConnectionInstance
         LoginUserName = "PlaceholderForUsername"
         LoginPwd = "PlaceholderForPassword"
     })`
-    -IfMatch $Etag
+    -IfMatch "\"0a005fd6-0000-0d00-0000-60a76dbf1234\""
 
 PS C:\> $result.ToJsonString()
 ```
@@ -95,13 +95,14 @@ PS C:\> $result = Set-CsTeamsShiftsConnectionInstance `
     -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest `
     -Property @{
         apiUrl = "https://contoso.com/api"
+        ssoUrl = "https://contoso.com/sso"
         appKey = "myAppKey"
         clientId = "myClientId"
         clientSecret = "PlaceholderForClientSecret"
         LoginUserName = "PlaceholderForUsername"
         LoginPwd = "PlaceholderForPassword"
     }) `
-    -IfMatch $Etag
+    -IfMatch "\"0a005fd6-0000-0d00-0000-60a76dbf2345\""
 
 PS C:\> $result.ToJsonString()
 ```
@@ -117,7 +118,7 @@ PS C:\> $result.ToJsonString()
     },
     "connectorSpecificSettings": {
         apiUrl = "https://contoso.com/api"
-        appKey = "myAppKey"
+        ssoUrl = "https://contoso.com/sso"
         clientId = "myClientId"
     },
     "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
