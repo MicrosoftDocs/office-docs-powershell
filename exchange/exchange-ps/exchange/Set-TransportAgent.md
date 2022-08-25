@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-TransportAgent "Test App" -Priority 3 -TransportService -FrontEnd
+Set-TransportAgent "Test App" -Priority 3 -TransportService FrontEnd
 ```
 
 This example modifies the priority of a fictitious agent named Test App in the Front End Transport service.
