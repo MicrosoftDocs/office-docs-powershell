@@ -172,8 +172,7 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 - Email address
 - GUID
 
-> [!NOTE]
-> Dynamic distribution groups are not supported.
+Dynamic distribution groups are not supported.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
