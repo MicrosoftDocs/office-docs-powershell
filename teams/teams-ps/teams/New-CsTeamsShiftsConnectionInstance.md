@@ -92,7 +92,7 @@ PS C:\> $result.ToJsonString()
 
 Returns the object of created connector instance.
 
-In case of error, we can capture the error response as following:
+In case of an error, we can capture the error response as follows:
 
 * Hold the cmdlet output in a variable: `$result=<CMDLET>`
 
