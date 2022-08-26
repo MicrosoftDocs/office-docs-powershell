@@ -4,9 +4,9 @@ online version: https://docs.microsoft.com/powershell/module/exchange/set-servic
 applicable: Exchange Online
 title: Set-ServicePrincipal
 schema: 2.0.0
-author: bin
-ms.author: bili1
-ms.reviewer:
+author: chrisda
+ms.author: chrisda
+ms.reviewer: bili1
 ---
 
 # Set-ServicePrincipal
@@ -21,18 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ServicePrincipal
- [-Identity] <ServicePrincipalIdParameter>
+Set-ServicePrincipal [-Identity] <ServicePrincipalIdParameter>
+ [-Confirm]
  [-DisplayName <String>]
- [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You can use this cmdlet to change the DisplayName only. If AppId/ServiceId is wrong, delete the service principal and create a new one.
 
-Please note that only DisplayName can be changed, if AppId/ServiceId is wrong, please delete and create a new ServicePricnipal.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -46,16 +45,40 @@ This example sets the service principal in Exchange Online with the specified di
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the unique identity value for the service principal.
+The Identity parameter specifies the service principal that you want to modify. You can use any value that uniquely identifies the service principal. For example:
 
-Both AppId, ServiceId, or DislayName can be used as identity of the service principal. 
+- Name
+- Distinguished name (DN)
+- GUID
+- AppId
+- ServiceId
 
 ```yaml
 Type: ServicePrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -69,21 +92,7 @@ The DisplayName parameter specifies the friendly name of the service principal. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -99,6 +108,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Online
 
 Required: False
 Position: Named
