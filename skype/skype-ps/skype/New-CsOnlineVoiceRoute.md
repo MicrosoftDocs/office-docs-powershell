@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroute
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsOnlineVoiceRoute
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -120,7 +120,7 @@ A name that uniquely identifies the online voice route. Voice routes can be defi
 If Identity is specified, the Name must be left blank. The value of the Identity will be assigned to the Name.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
