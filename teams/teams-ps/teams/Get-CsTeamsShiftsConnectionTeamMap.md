@@ -32,9 +32,9 @@ Workforce management (WFM) systems have locations / sites that are mapped to a M
 PS C:\> Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId "WCI-d1addd70-2684-4723-b8f2-7fa2230648c9"
 ```
 ```output
-TeamId                               TeamName WfmTeamId WfmTeamName
-------                               -------- --------- -----------
-12344689-758c-4598-9206-3e23416da8c2          1000107
+TeamId                               TeamName TimeZone            WfmTeamId WfmTeamName
+------                               -------- --------            --------- -----------
+12344689-758c-4598-9206-3e23416da8c2          America/Los_Angeles 1000107
 ```
 
 Returns the list of team mappings in the instance with ID `WCI-d1addd70-2684-4723-b8f2-7fa2230648c9`.
