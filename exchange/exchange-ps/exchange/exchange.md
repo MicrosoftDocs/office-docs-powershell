@@ -1640,6 +1640,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-PerimeterConfig](Set-PerimeterConfig.md)
 
+### [Set-ServicePrincipal](Set-ServicePrincipal.md)
+
 ### [Set-SettingOverride](Set-SettingOverride.md)
 
 ### [Test-ApplicationAccessPolicy](Test-ApplicationAccessPolicy.md)

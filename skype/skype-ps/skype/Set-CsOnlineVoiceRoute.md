@@ -216,8 +216,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+[Get-CsOnlineVoiceRoute](get-csonlinevoiceroute.md)
 
-[New-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
+[New-CsOnlineVoiceRoute](new-csonlinevoiceroute.md)
 
-[Remove-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroute?view=skype-ps)
+[Remove-CsOnlineVoiceRoute](remove-csonlinevoiceroute.md)

@@ -683,7 +683,7 @@ Accept wildcard characters: False
 ### -Description
 This parameter is available only in the cloud-based service.
 
-{{ Fill Description Description }}
+The Description parameter specifies an optional description for the distribution group. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: MultiValuedProperty

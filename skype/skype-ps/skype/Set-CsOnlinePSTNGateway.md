@@ -5,8 +5,8 @@ applicable: Microsoft Teams
 title: Set-CsOnlinePSTNGateway
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,15 +18,13 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 ## SYNTAX
 
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignalingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
-[-Description <String>] [-FailoverResponseCodes <String>] [-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
-[-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
-[-GatewayLbrEnabledUserOverride <Boolean>] [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride <String>] [-Identity <XdsGlobalRelativeIdentity>] 
-[-BypassMode <String>]  
-[-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
-[-OutboundTeamsNumberTranslationRules <String>] [-PidfloSupported <Boolean>] [-OutboundPSTNNumberTranslationRules <String>] 
-[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
+Set-CsOnlinePSTNGateway [[-Identity] <string>] [-BypassMode <string>] [-Description <string>] [-Enabled <boolean>]
+ [-FailoverResponseCodes <string>] [-FailoverTimeSeconds <int>] [-ForwardCallHistory <boolean>] [-ForwardPai <boolean>] [-GatewayLbrEnabledUserOverride <boolean>]
+ [-GatewaySiteId <string>] [-GatewaySiteLbrEnabled <boolean>] [-InboundPstnNumberTranslationRules <Object>] [-InboundTeamsNumberTranslationRules <Object>]
+ [-MaxConcurrentSessions <int>] [-MediaBypass <boolean>] [-MediaRelayRoutingLocationOverride <string>] [-OutboundPstnNumberTranslationRules <Object>]
+ [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-SendSipOptions <boolean>] [-SipSignalingPort <int>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+ ```
 
 ## DESCRIPTION
 Use this cmdlet to modify the configuration of the previously created Session Border Controller (SBC) configuration. Each configuration contains specific settings for an SBC. These settings configure such entities as SIP signaling port, whether media bypass is enabled on this SBC, will the SBC send SIP options, specify the limit of maximum concurrent sessions, The cmdlet also let drain the SBC by setting parameter -Enabled to true or false state. When the Enabled parameter set to $false, the SBC will continue existing calls, but all new calls routed to another SBC in a route (if exists).
@@ -48,21 +46,6 @@ PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignalingPort 5064
 This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignalingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Free-format string to describe the gateway.
@@ -125,21 +108,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: 10
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -224,7 +192,7 @@ Accept wildcard characters: False
 The parameter is mandatory when modifying an existing SBC.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 Applicable: Microsoft Teams
@@ -232,20 +200,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -344,7 +298,7 @@ Accept wildcard characters: False
 This parameter assigns an ordered list of Teams translation rules, that apply to Teams numbers on inbound direction.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 Required: False
@@ -358,7 +312,7 @@ Accept wildcard characters: False
 Creates an ordered list of Teams translation rules, that apply to PSTN number on inbound direction.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 Required: False
@@ -372,7 +326,7 @@ Accept wildcard characters: False
 Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 Required: False
@@ -386,7 +340,7 @@ Accept wildcard characters: False
 Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 Required: False
@@ -411,20 +365,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -441,14 +381,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### System.Management.Automation.PSObject
-
 
 ## OUTPUTS
 
