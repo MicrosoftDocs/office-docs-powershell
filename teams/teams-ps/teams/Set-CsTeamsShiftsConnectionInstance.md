@@ -24,7 +24,7 @@ Set-CsTeamsShiftsConnectionInstance  -ConnectorId <string> -ConnectorInstanceId 
 ## DESCRIPTION
 
 This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettings.LoginPwd and ConnectorSpecificSettings.LoginUserNameusername to be included.
-This cmdlet can update every input fields except -ConnectorId and -ConnectorInstanceId
+This cmdlet can update every input field except -ConnectorId and -ConnectorInstanceId.
 
 ## EXAMPLES
 
