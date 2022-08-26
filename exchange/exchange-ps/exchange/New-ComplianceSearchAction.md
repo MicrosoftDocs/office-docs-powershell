@@ -599,8 +599,6 @@ The Scope parameter specifies the items to include when the action is Export. Va
 - UnindexedItemsOnly
 - BothIndexedAndUnindexedItems
 
-This parameter is only meaningful for content searches where the IncludeUnindexedItemsEnabled parameter is set to $true.
-
 ```yaml
 Type: ComplianceExportScope
 Parameter Sets: Export
