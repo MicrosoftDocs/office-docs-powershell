@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsShiftsConnectionInstance
-author: gucsun
-ms.author: gucsun
-manager: navinth
+author: lespina
+ms.author: lespina
+manager: valk
 online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
@@ -12,13 +12,29 @@ schema: 2.0.0
 # Get-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
-
 This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
 
 ## SYNTAX
 
+### Get (Default)
 ```
-Get-CsTeamsShiftsConnectionInstance [[-ConnectorInstanceId] <String>] [<CommonParameters>]
+Get-CsTeamsShiftsConnectionInstance [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### Get1
+```
+Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,17 +127,122 @@ PS C:\_\> $ci.ToJsonString()
 ```
 Returns the connection instance with the specified -ConnectorInstanceId.
 
+
 ## PARAMETERS
 
-### -ConnectorInstanceId
+### -Break
+Wait for .NET debugger to attach
 
-The ID of the connection instance.
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorInstanceId
+The connector instance id
 
 ```yaml
 Type: String
+Parameter Sets: Get1
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -130,20 +251,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
+
 ## OUTPUTS
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceResponse
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorDetailsResponse
 
 ## NOTES
 
 ## RELATED LINKS
-
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
-
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
-
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)

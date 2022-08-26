@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: New-CsTeamsShiftsConnectionInstance
-author: gucsun
-ma.author: gucsun
-manager: navinth
+author: lespina
+ms.author: lespina
+manager: valk
 online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
@@ -12,22 +12,35 @@ schema: 2.0.0
 # New-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
-
-This cmdlet creates a Shifts connection instance.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
+### New (Default)
 ```
-New-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorSpecificSettings <Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorSpecificUkgDimensionsSettingsRequest> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> [-ConnectorAdminEmail <String[]>] [<CommonParameters>]
+New-CsTeamsShiftsConnectionInstance -Body <IConnectorInstanceRequest> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewExpanded
+```
+New-CsTeamsShiftsConnectionInstance -ConnectorId <String>
+ -ConnectorSpecificSettings <IConnectorInstanceRequestConnectorSpecificSettings> -DesignatedActorId <String>
+ -EnabledConnectorScenario <String[]> -EnabledWfiScenario <String[]> -Name <String> -SyncFrequencyInMin <Int32>
+ [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
 This cmdlet creates a Shifts connection instance. It allows the admin to set up the environment for further connection settings.
 
 ## EXAMPLES
 
-### Example 1
+
+### Example BlueYonder Connection
+
 ```powershell
    PS C:\> $result = New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -Name "My Connector Instance" -SyncFrequencyInMin 10 -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest -Property @{ AdminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta3"; SiteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta4"; EssApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta2"; RetailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"; CookieAuthUrl = "https://contoso.com/retail/data/login"; FederatedAuthUrl = "https://contoso.com/retail/data/login"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" })
 
@@ -59,6 +72,19 @@ This cmdlet creates a Shifts connection instance. It allows the admin to set up 
     "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
 }
 ```
+
+
+Returns the object of created connector instance.
+
+In case of an error, we can capture the error response as follows:
+
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+* To get the entire error message in Json: `$result.ToJsonString()`
+
+* To get the error object and object details: `$result, $result.Detail`
+
+### Example UKG Dimensions Connection
 
 ```powershell
 PS C:\> $result = New-CsTeamsShiftsConnectionInstance -ConnectorId "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0" -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -Name "My Connector Instance" -SyncFrequencyInMin 10 -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest -Property @{ apiUrl = "https://contoso.com/api"; ssoUrl = "https://contoso.com/sso"; appKey = "myAppKey"; clientId = "myClientId"; clientSecret = "PlaceholderForClientSecret"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" })
@@ -102,16 +128,60 @@ In case of an error, we can capture the error response as follows:
 
 ## PARAMETERS
 
-### -DesignatedActorId
-
-The ID of the connection instance creator. You can retrieve user ID from Azure portal or Graph Explorer.
+### -Body
+The request body 
 
 ```yaml
-Type: String
+Type: IConnectorInstanceRequest
+Parameter Sets: New
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Break
+Wait for .NET debugger to attach
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
-Required: True
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorAdminEmail
+Gets or sets the list of connector admin email addresses.
+
+```yaml
+Type: String[]
+Parameter Sets: NewExpanded
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -119,14 +189,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorId
-
-The ID of the Shifts Connector.
+The connector id
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: NewExpanded
 Aliases:
-Applicable: Microsoft Teams
+
 Required: True
 Position: Named
 Default value: None
@@ -134,15 +203,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
+### -ConnectorSpecificSettings
+The connector specific settings
 
-The connector instance's name.
+```yaml
+Type: IConnectorInstanceRequestConnectorSpecificSettings
+Parameter Sets: NewExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesignatedActorId
+Gets or sets the designated actor id that App acts as for Shifts Graph Api calls.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: NewExpanded
 Aliases:
-Applicable: Microsoft Teams
+
 Required: True
 Position: Named
 Default value: None
@@ -151,14 +234,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledConnectorScenario
-
-The connector enabled scenarios that are synced from the Workforce management (WFM) system to Shifts in Microsoft Teams. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
+The connector enabled scenarios that are synced from WFM system to Shifts in MS Teams.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: NewExpanded
 Aliases:
-Applicable: Microsoft Teams
+
 Required: True
 Position: Named
 Default value: None
@@ -167,15 +249,103 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledWfiScenario
-
-The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
+The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system.
 
 ```yaml
 Type: String[]
+Parameter Sets: NewExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+The connector instance name.
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -183,14 +353,13 @@ Accept wildcard characters: False
 ```
 
 ### -SyncFrequencyInMin
-
 The sync frequency in minutes.
 
 ```yaml
-Type: Integer
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: NewExpanded
 Aliases:
-Applicable: Microsoft Teams
+
 Required: True
 Position: Named
 Default value: None
@@ -198,223 +367,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSetting.LoginUserName
-
-The login user name to WFM team.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSetting.LoginPwd
-
-The login password to WFM team.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Aliases: wi
 
-### -ConnectorSpecificSettings.AdminApiUrl
-
-The admin API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.CookieAuthUrl
-
-The cookie authorization URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.EssApiUrl
-
-The essential API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.FederatedAuthUrl
-
-The federated authorization URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.RetailWebApiUrl
-
-The retail web api URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.SiteManagerUrl
-
-The site manager URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.ApiUrl
-
-The api URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.SsoUrl
-
-The SSO URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.AppKey
-
-The AppKey.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.ClientId
-
-The ClientId.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings.ClientSecret
-
-The client secret.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorAdminEmail
-
-The list of connector admin email addresses that receive result notifications.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -423,20 +384,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceRequest
+
 ## OUTPUTS
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceResponse
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorDetailsResponse
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
-
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
-
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
-
-[Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md)
