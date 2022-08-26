@@ -803,6 +803,7 @@
   "Set-OrganizationConfig": "organization",
   "Set-PartnerApplication": "organization",
   "Set-PerimeterConfig": "organization",
+  "Set-ServicePrincipal": "organization",
   "Set-SettingOverride": "organization",
   "Test-ApplicationAccessPolicy": "organization",
   "Test-OAuthConnectivity": "organization",
