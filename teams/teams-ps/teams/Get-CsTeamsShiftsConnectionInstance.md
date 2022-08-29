@@ -50,8 +50,8 @@ PS C:\> Get-CsTeamsShiftsConnectionInstance | Format-List
 ```output
 
 ConnectorAdminEmail                      : {admin@contoso.com}
-ConnectorId                              : 6A51B888-FF44-4FEA-82E1-839401E9CD74
-ConnectorName                            : Blue Yonder V1
+ConnectorId                              : 6A51B888-FF44-4FEA-82E1-839401E00000
+ConnectorName                            : WFM 1
 ConnectorSpecificSettingAdminApiUrl      : https://www.contoso.com/retail/data/wfmadmin/api/v1-beta3
 ConnectorSpecificSettingApiUrl           :
 ConnectorSpecificSettingClientId         :
@@ -72,8 +72,8 @@ TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 WorkforceIntegrationId                   : WFI_0D3DCF76-F826-4416-99AC-056F83A4C9F7
 
 ConnectorAdminEmail                      : {admin@contoso.com}
-ConnectorId                              : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
-ConnectorName                            : UKG Dimensions
+ConnectorId                              : 95BF2848-2DDA-4425-B0EE-D62AEED00000
+ConnectorName                            : WFM 2
 ConnectorSpecificSettingAdminApiUrl      :
 ConnectorSpecificSettingApiUrl           : https://www.contoso.com/api
 ConnectorSpecificSettingClientId         : 86q446dXbJz6UdZeOr1FrP8chDHDZ66nu
@@ -105,8 +105,8 @@ PS C:\_\> $ci.ToJsonString()
 ```output
 {
   "connector": {
-    "id": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
-    "name": "UKG Dimensions"
+    "id": "95BF2848-2DDA-4425-B0EE-D62AEED00000",
+    "name": "WFM 2"
   },
   "connectorSpecificSettings": {
     "apiUrl": "https://www.contoso.com/api",

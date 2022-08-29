@@ -58,11 +58,11 @@ This cmdlet can update every input field except -ConnectorId and -ConnectorInsta
 
 ## EXAMPLES
 
-### Example Blue Yonder
+### Example WFM 1
 ```powershell
 PS C:\> $result = Set-CsTeamsShiftsConnectionInstance  
     -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
-    -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" `
+    -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" `
     -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" `
     -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" `
     -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
@@ -91,8 +91,8 @@ PS C:\> $result.ToJsonString()
     "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
     "name": "My Connector Instance",
     "connector": {
-        "id": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
-        "name": "Blue Yonder"
+        "id": "6A51B888-FF44-4FEA-82E1-839401E00000",
+        "name": "WFM 1"
     },
     "connectorSpecificSettings": {
         "adminApiUrl ": "https://contoso.com/retail/data/wfmadmin/api/v1-beta2",
@@ -125,11 +125,11 @@ In case of error, we can capture the error response as following:
 * To get the error object and object details: `$result, $result.Detail`
 
 
-### Example UKG Dimensions
+### Example WFM 2
 ```powershell
 PS C:\> $result = Set-CsTeamsShiftsConnectionInstance `
     -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
-    -ConnectorId "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0" `
+    -ConnectorId "95BF2848-2DDA-4425-B0EE-D62AEED00000" `
     -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" `
     -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" `
     -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
@@ -157,8 +157,8 @@ PS C:\> $result.ToJsonString()
     "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
     "name": "My Connector Instance",
     "connector": {
-        "id": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
-        "name": "UKG Dimensions"
+        "id": "95BF2848-2DDA-4425-B0EE-D62AEED00000",
+        "name": "WFM 2"
     },
     "connectorSpecificSettings": {
         apiUrl = "https://contoso.com/api"
