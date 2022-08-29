@@ -81,6 +81,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-NpsSurveysEnabled <Boolean>]
  [-OrganizationEnabled <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
+ [-OneWinNativeOutlookEnabled <Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
@@ -1404,6 +1405,27 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneWinNativeOutlookEnabled
+This parameter is available in Exchange Server 2010 or later.
+
+The OneWinNativeOutlookEnabled parameter controls the availability of the new Outlook for Windows app. Valid values are:
+
+- $true: The New Outlook for Windows App is available. This is the default value.
+- $false: The new Outlook for Windows App isn't available.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
