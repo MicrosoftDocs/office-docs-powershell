@@ -1414,7 +1414,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneWinNativeOutlookEnabled
-This parameter is available in Exchange Server 2010 or later.
+This parameter is available only in the cloud-based service.
 
 The OneWinNativeOutlookEnabled parameter controls the availability of the new Outlook for Windows app. Valid values are:
 
@@ -1425,7 +1425,7 @@ The OneWinNativeOutlookEnabled parameter controls the availability of the new Ou
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Online
 
 Required: False
 Position: Named
