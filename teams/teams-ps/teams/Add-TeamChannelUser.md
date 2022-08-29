@@ -41,6 +41,13 @@ Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "
 
 Promote user dmx@example.com to an owner of private channel with name "Engineering" under the given group.
 
+### Example 2
+```
+Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering" -User 0e4249a7-6cfd-8c93-a510-91cda44c8c73 -TenantId dcd143cb-c4ae-4364-9faf-e1c3242bf4ff
+```
+
+Adds external user 0e4249a7-6cfd-8c93-a510-91cda44c8c73 to a shared channel.
+
 ## PARAMETERS
 
 ### -GroupId
@@ -104,12 +111,28 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TenantId
+TenantId of the external user
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### GroupId, DisplayName, User, Role
+### GroupId, DisplayName, User, Role, TenantId
+
 ## OUTPUTS
 
 ## NOTES

@@ -8,11 +8,9 @@ schema: 2.0.0
 # Get-TeamChannel  
 
 ## SYNOPSIS
-
-Get all the channels for a team.
+Get the channels hosted by a team.
 
 ## SYNTAX
-
 ```
 Get-TeamChannel -GroupId <String> [-MembershipType <String>] [<CommonParameters>]
 ```

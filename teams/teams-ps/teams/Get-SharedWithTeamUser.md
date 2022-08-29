@@ -1,0 +1,102 @@
+---
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Module Name: MicrosoftTeams
+online version: https://docs.microsoft.com/powershell/module/teams/get-sharedwithteamuser
+schema: 2.0.0
+author: zhongxl
+ms.author: zhongxl
+ms.reviewer: dedaniel, robharad
+---
+
+# Get-SharedWithTeamUser
+
+## SYNOPSIS
+This cmdlet supports retrieving users of a shared with team.
+
+## SYNTAX
+```PowerShell
+Get-SharedWithTeamUser -HostTeamId <String> -ChannelId <String> -SharedWithTeamId <String> [-Role <String>]
+```
+
+## DESCRIPTION
+This cmdlet supports retrieving users of a shared with team.
+
+## EXAMPLES
+
+### Example 1
+```PowerShell
+Get-AssociatedTeamUser -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 19:cUfyYYw3h_t-1KG8-WkvVa7KLEsIx-JHmyeG43VJojg1@thread.tacv2
+-SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b
+```
+
+Returns users of a team with which specified channel is shared.
+
+### Example 2
+```PowerShell
+Get-AssociatedTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 19:cUfyYYw3h_t-1KG8-WkvVa7KLEsIx-JHmyeG43VJojg1@thread.tacv2
+-SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b -Role owner
+```
+
+Returns owners of a team with which specified channel is shared.
+
+## PARAMETERS
+
+### -HostTeamId
+Team id of the host team (group id)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChannelId
+Thread id of the shared channel
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SharedWithTeamId
+Team id of the shared with team
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Role
+Filter the results to only users with the given role: Owner or Member.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```

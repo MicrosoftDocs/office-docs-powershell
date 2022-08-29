@@ -1,0 +1,79 @@
+---
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Module Name: MicrosoftTeams
+online version: https://docs.microsoft.com/powershell/module/teams/remove-sharedwithteam
+schema: 2.0.0
+author: zhongxl
+ms.author: zhongxl
+ms.reviewer: dedaniel, robharad
+---
+
+# Remove-SharedWithTeam
+
+## SYNOPSIS
+This cmdlet supports usharing a channel with a team.
+
+## SYNTAX
+```PowerShell
+Remove-SharedWithTeam -HostTeamId <String> -ChannelId <String> -SharedWithTeamId <String>
+```
+
+## DESCRIPTION
+This cmdlet supports usharing a channel with a team.
+
+## EXAMPLES
+
+### Example 1
+```PowerShell
+Remove-SharedWithTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 19:cUfyYYw3h_t-1KG8-WkvVa7KLEsIx-JHmyeG43VJojg1@thread.tacv2
+-SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b
+```
+
+Ushares a channel with a team.
+
+## PARAMETERS
+
+### -HostTeamId
+Team id of the host team (group id)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChannelId
+Thread id of the shared channel
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SharedWithTeamId
+Team id of the shared with team
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
