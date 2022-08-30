@@ -81,7 +81,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-NpsSurveysEnabled <Boolean>]
  [-OrganizationEnabled <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
- [-OneWinNativeOutlookEnabled <Boolean>]
+ [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
@@ -1422,7 +1422,7 @@ The OneWinNativeOutlookEnabled parameter controls the availability of the new Ou
 - $false: The new Outlook for Windows App isn't available.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
