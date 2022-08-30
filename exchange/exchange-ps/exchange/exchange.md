@@ -1292,6 +1292,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-OutboundConnector](Get-OutboundConnector.md)
 
+### [Get-PerimeterMessageTrace](Get-PerimeterMessageTrace.md)
+
 ### [Get-Queue](Get-Queue.md)
 
 ### [Get-QueueDigest](Get-QueueDigest.md)

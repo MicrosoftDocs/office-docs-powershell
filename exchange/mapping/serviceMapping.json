@@ -630,6 +630,7 @@
   "Get-MessageTrackingReport": "mail-flow",
   "Get-NetworkConnectionInfo": "mail-flow",
   "Get-OutboundConnector": "mail-flow",
+  "Get-PerimeterMessageTrace": "mail-flow",
   "Get-Queue": "mail-flow",
   "Get-QueueDigest": "mail-flow",
   "Get-ReceiveConnector": "mail-flow",
