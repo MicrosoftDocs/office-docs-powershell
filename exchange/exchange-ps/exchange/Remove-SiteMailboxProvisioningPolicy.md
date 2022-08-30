@@ -9,14 +9,14 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-# Remove-SiteMailboxProvisioningPolicy
+ProvisioningPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
-
 Use the Remove-SiteMailboxProvisioningPolicy cmdlet to remove site mailbox provisioning policies.
+
+Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
