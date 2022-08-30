@@ -1416,7 +1416,7 @@ Accept wildcard characters: False
 ### -OneWinNativeOutlookEnabled
 This parameter is available only in the cloud-based service.
 
-The OneWinNativeOutlookEnabled parameter controls the availability of the new Outlook for Windows app. Valid values are:
+The OneWinNativeOutlookEnabled parameter controls the availability of the new Outlook for Windows App. Valid values are:
 
 - $true: The New Outlook for Windows App is available. This is the default value.
 - $false: The new Outlook for Windows App isn't available.
