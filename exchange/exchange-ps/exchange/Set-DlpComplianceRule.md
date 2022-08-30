@@ -442,7 +442,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas.
+The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -865,7 +865,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas.
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1717,7 +1717,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfUnscannableDocumentExtensionIs
-The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable.
+The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable.Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 
@@ -2927,7 +2927,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnscannableDocumentExtensionIs
-The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files are unscannable.
+The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files are unscannable. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 
