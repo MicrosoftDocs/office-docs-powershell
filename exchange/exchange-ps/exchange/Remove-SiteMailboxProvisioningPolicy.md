@@ -9,8 +9,6 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-ProvisioningPolicy
-
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
