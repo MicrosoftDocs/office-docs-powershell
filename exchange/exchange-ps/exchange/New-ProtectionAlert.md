@@ -27,6 +27,7 @@ New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <Mu
  [-AlertFor <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-CorrelationPolicyId <System.Guid>]
  [-Description <String>]
  [-Disabled <Boolean>]
  [-Filter <String>]
@@ -38,10 +39,14 @@ New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <Mu
  [-NotifyUserThrottleThreshold <Int32>]
  [-NotifyUserThrottleWindow <Int32>]
  [-Operation <MultiValuedProperty>]
+ [-PrivacyManagementScopedSensitiveInformationTypes <MultiValuedProperty>]
+ [-PrivacyManagementScopedSensitiveInformationTypesForCounting <MultiValuedProperty>]
+ [-PrivacyManagementScopedSensitiveInformationTypesThreshold <System.UInt64>]
  [-CustomProperties <PswsHashtable>]
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
+ [-UseCreatedDateTime <System.Boolean>]
  [-VolumeThreshold <System.UInt64>]
  [-WhatIf]
  [<CommonParameters>]
@@ -223,6 +228,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CorrelationPolicyId
+{{ Fill CorrelationPolicyId Description }}
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
@@ -498,6 +519,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrivacyManagementScopedSensitiveInformationTypes
+{{ Fill PrivacyManagementScopedSensitiveInformationTypes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivacyManagementScopedSensitiveInformationTypesForCounting
+{{ Fill PrivacyManagementScopedSensitiveInformationTypesForCounting Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivacyManagementScopedSensitiveInformationTypesThreshold
+{{ Fill PrivacyManagementScopedSensitiveInformationTypesThreshold Description }}
+
+```yaml
+Type: System.UInt64
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Severity
 The Severity parameter specifies the severity of the detection. Valid values are:
 
@@ -543,6 +612,22 @@ You can only use this parameter when the AggregationType parameter value is Simp
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCreatedDateTime
+{{ Fill UseCreatedDateTime Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
