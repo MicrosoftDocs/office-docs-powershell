@@ -6,7 +6,7 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsTeamsMediaLoggingPolicy
 author: LeoKuhorev
 ms.author: leokukharau
-manager: saurk
+manager: shalages
 schema: 2.0.0
 ---
 
@@ -21,14 +21,13 @@ Returns information about the Teams Media Logging policy.
 ### Identity (Default)
 
 ```
-Get-CsTeamsMediaLoggingPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
- [<CommonParameters>]
+Get-CsTeamsMediaLoggingPolicy [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ### Filter
 
 ```
-Get-CsTeamsMediaLoggingPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
+Get-CsTeamsMediaLoggingPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
