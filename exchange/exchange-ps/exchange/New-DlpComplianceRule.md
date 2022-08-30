@@ -120,6 +120,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
+ [-NotifyUserType <Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType>]
  [-OnPremisesScannerDlpRestrictions <PswsHashtable[]>]
  [-PrependSubject <String>]
  [-Priority <Int32>]
@@ -2343,6 +2344,26 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyUserType
+The NotifyUserType parameter specifies the type of notification that's used for the rule. Valid values are:
+
+- NotSet
+- Email
+- PolicyTip
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
