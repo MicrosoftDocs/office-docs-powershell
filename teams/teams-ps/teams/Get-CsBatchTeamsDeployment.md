@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/get-csbatchte
 schema: 2.0.0
 ---
 
-# Get-CsBatchTeamsDeployment
+# Get-CsBatchTeamsDeploymentStatus
 
 ## SYNOPSIS
 
@@ -26,7 +26,7 @@ To learn more, see [Deploy Teams at scale for frontline workers](https://docs.mi
 
 ### EXAMPLE 1
 ```
-Get-CsBatchTeamsDeployment -OrchestrationId "My-Orchestration-Id"
+Get-CsBatchTeamsDeploymentStatus -OrchestrationId "My-Orchestration-Id"
 ```
 This command provides the status of the specified batch deployment orchestrationId.
 
