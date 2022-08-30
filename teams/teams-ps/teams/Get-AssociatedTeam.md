@@ -26,6 +26,7 @@ This cmdlet supports retrieving all associated teams of a user, including teams 
 ### Example 1
 ```PowerShell
 Get-AssociatedTeam
+```
 
 Returns associated teams of current user.
 
