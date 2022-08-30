@@ -9,6 +9,8 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
+# Remove-SiteMailboxProvisioningPolicy
+
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
