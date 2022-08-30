@@ -50,6 +50,7 @@ Get-MoveRequest [-BatchName <String>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [-SourceDatabase <DatabaseIdParameter>]
+ [-Status <RequestStatus>]
  [-Suspend <Boolean>]
  [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
@@ -443,6 +444,36 @@ Type: DatabaseIdParameter
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Status
+This parameter is available only in the cloud-based service.
+
+The Status parameter filters the results by status. Valid values are:
+
+- AutoSuspended
+- Completed
+- CompletedWithSkippedItems
+- CompletedWithWarning
+- CompletionInProgress
+- Failed
+- InProgress
+- Queued
+- Retrying
+- Suspended
+- Synced
+
+```yaml
+Type: RequestStatus
+Parameter Sets: Filtering
+Aliases: MoveStatus
+Applicable: Exchange Online
 
 Required: False
 Position: Named

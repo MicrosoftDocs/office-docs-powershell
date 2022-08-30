@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-AutoSensitivityLabelPolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
+ [-ForceValidate <Boolean>]
  [-IncludeProgressFeedback]
  [-IncludeTestModeResults <Boolean>]
  [<CommonParameters>]
@@ -67,6 +68,22 @@ The DistributionDetail switch returns detailed policy distribution information i
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceValidate
+{{ Fill ForceValidate Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
