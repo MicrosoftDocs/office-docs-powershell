@@ -23,6 +23,9 @@ The following cmdlet references are for Microsoft Teams.
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Manually Enter Disconnect-MicrosoftTeams Description Here}}
 
+### [Get-CsTeamsEventsPolicy](Get-CsTeamsEventsPolicy.md)
+Returns information about the Teams Events policy. Note that this policy is currently still in preview.
+
 ### [Get-Team](Get-Team.md)
 {{Manually Enter Get-Team Description Here}}
 
@@ -65,6 +68,9 @@ Returns information about the Teams Media Logging policy.
 ### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
 {{Manually Enter Get-TeamTargetingHierarchyStatus Description Here}}
 
+### [Grant-CsTeamsEventsPolicy](Grant-CsTeamsEventsPolicy.md)
+Assigns Teams Events policy to a user, group of users or the entire tenant. Note that this policy is currently still in preview.
+
 ### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
 Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
 
@@ -73,6 +79,9 @@ Assigns Teams Media Logging policy to a user, group of users or the entire tenan
 
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
+
+### [New-CsTeamsEventsPolicy](New-CsTeamsEventsPolicy.md)
+This cmdlet allows you to create a new TeamsEventsPolicy instance and set it's properties. Note that this policy is currently still in preview.
 
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
@@ -88,6 +97,9 @@ Use this cmdlet to create a new Teams enhanced encryption policy.
 
 ### [New-TeamsShiftsPolicy](New-TeamsShiftsPolicy.md)
 {{Manually Enter New-TeamsShiftsPolicy Description Here}}
+
+### [Remove-CsTeamsEventsPolicy](Remove-CsTeamsEventsPolicy)
+Removes a previously created TeamsEventsPolicy. Note that this policy is currently still in preview.
 
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}
@@ -112,6 +124,9 @@ Use this cmdlet to remove an existing Teams enhanced encryption policy.
 
 ### [Remove-TeamTargetingHierarchy](Remove-TeamTargetingHierarchy.md)
 {{Manually Enter Remove-TeamTargetingHierarchy Description Here}}
+
+### [Set-CsTeamsEventsPolicy](Set-CsTeamsEventsPolicy.md)
+Allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
