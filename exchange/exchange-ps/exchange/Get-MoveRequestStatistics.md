@@ -36,6 +36,7 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 ### IdentityCloud
 ```
 Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
+ [-Analysis]
  [-DiagnosticInfo <String>]
  [-DiagnosticOnly]
  [-IncludeReport]
@@ -172,6 +173,24 @@ Aliases:
 Applicable: Exchange Server 2010
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Analysis
+This parameter is available only in the cloud-based service.
+
+{{ Fill Analysis Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

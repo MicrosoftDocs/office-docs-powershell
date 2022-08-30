@@ -26,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Upgrade-DistributionGroup [-DlIdentities] <MultiValuedProperty>
  [-ActionType <String>]
  [-ExecutingUser <RecipientIdParameter>]
+ [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -85,6 +86,22 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

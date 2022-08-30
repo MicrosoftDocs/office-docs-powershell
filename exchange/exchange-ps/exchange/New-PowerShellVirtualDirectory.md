@@ -175,7 +175,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

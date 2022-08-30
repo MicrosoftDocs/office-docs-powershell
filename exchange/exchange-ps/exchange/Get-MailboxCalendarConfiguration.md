@@ -20,10 +20,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+###  Default
 ```
-Get-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
- [-DomainController <Fqdn>]
+Get-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>]
  [<CommonParameters>]
+```
+
+### Identity
+```
+Get-MailboxCalendarConfiguration [[-Identity] <MailboxIdParameter>] [<CommonParameters>]
+```
+
+### MailboxLocation
+```
+Get-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,14 +95,27 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -103,9 +126,27 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxLocation
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxLocation Description }}
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocation
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

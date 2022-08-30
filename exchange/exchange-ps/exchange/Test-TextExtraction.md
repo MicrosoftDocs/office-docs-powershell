@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/test-textextraction
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Test-TextExtraction
 schema: 2.0.0
 author: chrisda
@@ -62,7 +62,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: True
 Position: 0
@@ -81,7 +81,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named

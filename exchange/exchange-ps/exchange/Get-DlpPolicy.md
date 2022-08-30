@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-DlpPolicy [[-Identity] <DlpPolicyIdParameter>]
  [-DomainController <Fqdn>]
+ [-ForceValidate <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -77,6 +78,22 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceValidate
+{{ Fill ForceValidate Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

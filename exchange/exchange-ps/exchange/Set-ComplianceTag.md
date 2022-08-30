@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-Comment <String>]
+ [-ComplianceTagForNextStage <String>]
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
@@ -71,6 +72,22 @@ Accept wildcard characters: False
 
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ComplianceTagForNextStage
+{{ Fill ComplianceTagForNextStage Description }}
 
 ```yaml
 Type: String
