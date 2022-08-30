@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AccessToCustomerDataRequest -ApprovalDecision <AccessToCustomerDataApproverDecision> -RequestId <String>
  [-Comment <String>]
+ [-ServiceName <AccessToCustomerDataRequestServiceName>]
  [<CommonParameters>]
 ```
 
@@ -83,6 +84,27 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceName
+The ServiceName parameter specifies the related service. Valid values are:
+
+- EOP
+- Exchange
+- SharePoint
+- Teams
+
+```yaml
+Type: Microsoft.Exchange.Management.AccessToCustomerDataApproval.AccessToCustomerDataRequestServiceName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
