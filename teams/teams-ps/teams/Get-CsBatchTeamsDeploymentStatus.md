@@ -5,7 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/teams/Get-CsBatchTe
 schema: 2.0.0
 ---
 
-# GGet-CsBatchTeamsDeploymentStatus
+# Get-CsBatchTeamsDeploymentStatus
+
 
 ## SYNOPSIS
 
