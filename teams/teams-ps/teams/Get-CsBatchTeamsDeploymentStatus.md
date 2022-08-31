@@ -19,7 +19,7 @@ Get-CsBatchTeamsDeploymentStatus -OrchestrationId <String> [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-After deploying teams using New-CsBatchTeamsDeployment, an admin can check the status of the job/orchestration using Get-CsBatchTeamsDeployment. 
+After deploying teams using New-CsBatchTeamsDeployment, an admin can check the status of the job/orchestration using Get-CsBatchTeamsDeploymentStatus. 
 
 To learn more, see [Deploy Teams at scale for frontline workers](https://docs.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
 
