@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csdialoutpolicy
-applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams
 title: Grant-CsDialoutPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -82,7 +82,7 @@ This parameter sets the tenant global policy instance. This is the policy that a
 Type: SwitchParameter
 Parameter Sets: GrantToTenant
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specifies the group used for the group policy assignment.
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -114,7 +114,7 @@ Specifies the Identity of the user account to be to be modified. A user identity
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -130,7 +130,7 @@ Returns the results of the command. By default, this cmdlet does not generate an
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -164,7 +164,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
