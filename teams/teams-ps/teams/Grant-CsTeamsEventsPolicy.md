@@ -31,7 +31,8 @@ Grant-CsTeamsEventsPolicy [-PassThru] [[-PolicyName] <String>]
 ```
 
 ## DESCRIPTION
-Assigns Teams Events policy to a user, group of users or the entire tenant.
+Assigns Teams Events policy to a user, group of users, or the entire tenant.
+
 TeamsEventsPolicy is used to configure options for customizing Teams Events experiences. 
 
 ## EXAMPLES
