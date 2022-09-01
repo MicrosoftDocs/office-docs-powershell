@@ -41,7 +41,8 @@ TeamsEventsPolicy is used to configure options for customizing Teams Events expe
 PS C:\> Grant-CsTeamsEventsPolicy -Identity "user1@contoso.com" -Policy DisablePublicWebinars
 ```
 
-The command shown in Example 1 assigns the per-user Teams events policy, DisablePublicWebinars, to the user with the user principal name (UPN) "user1@contoso.com".
+The command shown in Example 1 assigns the per-user Teams Events policy, DisablePublicWebinars, to the user with the user principal name (UPN) "user1@contoso.com".
+
 
 ### Example 2
 ```powershell
