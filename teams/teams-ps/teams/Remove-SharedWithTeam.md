@@ -29,7 +29,7 @@ Remove-SharedWithTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelI
 -SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b
 ```
 
-Ushares a channel with a team.
+Unshares a channel with a team.
 
 ## PARAMETERS
 
