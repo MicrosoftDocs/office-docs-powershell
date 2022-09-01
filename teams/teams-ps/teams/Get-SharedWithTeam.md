@@ -19,7 +19,7 @@ Get-SharedWithTeam -HostTeamId <String> -ChannelId <String> [-SharedWithTeamId <
 ```
 
 ## DESCRIPTION
-This cmdlet supports retrieving teams with which specified channel is shared.
+This cmdlet supports retrieving teams with which a specified channel is shared.
 
 ## EXAMPLES
 
