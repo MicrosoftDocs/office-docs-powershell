@@ -87,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Enables administrators to provide explanatory text to accompany a Teams events policy.
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
 
 ```yaml
 Type: String
