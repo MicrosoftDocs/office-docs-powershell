@@ -47,7 +47,7 @@ Returns associated teams of a given user ID.
 ## PARAMETERS
 
 ### -User
-User's UPN (user principal name - e.g.
+User's UPN (user principal name, for example
 johndoe@example.com) or user id (e.g. 0e4249a7-6cfd-8c93-a510-91cda44c8c73)
 
 ```yaml
