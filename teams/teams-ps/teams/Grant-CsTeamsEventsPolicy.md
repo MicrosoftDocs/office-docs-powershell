@@ -117,7 +117,8 @@ Example: sip:jphillips@contoso.com
 
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
-Use the "Global" Identity if you wish to set the policy for the entire tenant
+Use the "Global" Identity if you wish to set the policy for the entire tenant.
+
 
 ```yaml
 Type: String
