@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/remove-sharedwithteam
 schema: 2.0.0
-author: zhongxl
+author: zhongxlmicrosoft
 ms.author: zhongxl
 ms.reviewer: dedaniel, robharad
 ---
@@ -11,7 +11,7 @@ ms.reviewer: dedaniel, robharad
 # Remove-SharedWithTeam
 
 ## SYNOPSIS
-This cmdlet supports usharing a channel with a team.
+This cmdlet supports unsharing a channel with a team.
 
 ## SYNTAX
 ```PowerShell
@@ -19,7 +19,7 @@ Remove-SharedWithTeam -HostTeamId <String> -ChannelId <String> -SharedWithTeamId
 ```
 
 ## DESCRIPTION
-This cmdlet supports usharing a channel with a team.
+This cmdlet supports unsharing a channel with a team.
 
 ## EXAMPLES
 
@@ -29,7 +29,7 @@ Remove-SharedWithTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelI
 -SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b
 ```
 
-Ushares a channel with a team.
+Unshares a channel with a team.
 
 ## PARAMETERS
 
