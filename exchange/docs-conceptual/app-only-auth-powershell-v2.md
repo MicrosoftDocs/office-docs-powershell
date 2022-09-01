@@ -290,6 +290,7 @@ Azure AD has more than 50 admin roles available. The supported roles are describ
 |Helpdesk Administrator|![Check mark.](media/checkmark.png)||
 |Security Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
 |Security Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
+|Exchange Recipient Administrator|![Check mark.](media/checkmark.png)||
 
 <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
 
