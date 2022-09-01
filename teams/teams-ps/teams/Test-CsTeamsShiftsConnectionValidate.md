@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorSpecificSettings
-The connector specific settings
+The connector specific settings.
 
 ```yaml
 Type: IConnectorInstanceRequestConnectorSpecificSettings
