@@ -28,7 +28,7 @@ This cmdlet supports retrieving teams with which specified channel is shared.
 Get-AssociatedTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 19:cUfyYYw3h_t-1KG8-WkvVa7KLEsIx-JHmyeG43VJojg1@thread.tacv2
 ```
 
-Returns teams with which specified channel is shared.
+Returns teams with which a specified channel is shared.
 
 ### Example 2
 ```PowerShell
