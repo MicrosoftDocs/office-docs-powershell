@@ -42,7 +42,7 @@ Returns associated teams of given user email.
 Get-TeamChannel -user 0e4249a7-6cfd-8c93-a510-91cda44c8c73
 ```
 
-Returns associated teams of given user id.
+Returns associated teams of a given user ID.
 
 ## PARAMETERS
 
