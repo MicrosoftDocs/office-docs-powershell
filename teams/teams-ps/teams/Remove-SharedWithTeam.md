@@ -19,7 +19,7 @@ Remove-SharedWithTeam -HostTeamId <String> -ChannelId <String> -SharedWithTeamId
 ```
 
 ## DESCRIPTION
-This cmdlet supports usharing a channel with a team.
+This cmdlet supports unsharing a channel with a team.
 
 ## EXAMPLES
 
