@@ -72,7 +72,7 @@ Returns information about the Teams Media Logging policy.
 Assigns Teams Events policy to a user, group of users, or the entire tenant. Note that this policy is currently still in preview.
 
 ### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
-Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
+Cmdlet to assign a specific Teams enhanced encryption policy to a user.
 
 ### [Grant-CsTeamsMediaLoggingPolicy](Grant-CsTeamsMediaLoggingPolicy.md)
 Assigns Teams Media Logging policy to a user, group of users or the entire tenant.
