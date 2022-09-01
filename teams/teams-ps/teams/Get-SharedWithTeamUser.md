@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Filter the results to only users with the given role: Owner or Member.
+Filters the results to only users with the given role of "Owner" or "Member".
 
 ```yaml
 Type: String
