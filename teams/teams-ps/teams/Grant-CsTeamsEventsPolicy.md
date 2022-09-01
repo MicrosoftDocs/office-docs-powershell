@@ -8,7 +8,8 @@ schema: 2.0.0
 # Grant-CsTeamsEventsPolicy
 
 ## SYNOPSIS
-Assigns Teams Events policy to a user, group of users or the entire tenant. Note that this policy is currently still in preview.
+Assigns Teams Events policy to a user, group of users, or the entire tenant. Note that this policy is currently still in preview.
+
 
 ## SYNTAX
 
