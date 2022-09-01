@@ -11,7 +11,7 @@ ms.reviewer: dedaniel, robharad
 # Get-SharedWithTeam
 
 ## SYNOPSIS
-This cmdlet supports retrieving teams with which specified channel is shared.
+This cmdlet supports retrieving teams with which a specified channel is shared.
 
 ## SYNTAX
 ```PowerShell
