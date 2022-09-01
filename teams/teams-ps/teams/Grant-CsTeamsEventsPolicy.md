@@ -58,7 +58,8 @@ The command shown in Example 2 revokes the per-user Teams Events policy for the 
 PS C:\> Grant-CsTeamsEventsPolicy -Group "sales@contoso.com" -Rank 10 -Policy DisablePublicWebinars
 ```
 
-The command shown in Example 3 assigns the Teams events policy, DisablePublicWebinars, to the members of the group "sales@contoso.com".
+The command shown in Example 3 assigns the Teams Events policy, DisablePublicWebinars, to the members of the group "sales@contoso.com".
+
 
 ## PARAMETERS
 
