@@ -11,7 +11,7 @@ ms.reviewer: dedaniel, robharad
 # Remove-SharedWithTeam
 
 ## SYNOPSIS
-This cmdlet supports usharing a channel with a team.
+This cmdlet supports unsharing a channel with a team.
 
 ## SYNTAX
 ```PowerShell
