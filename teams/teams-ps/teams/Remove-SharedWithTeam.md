@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelId
-Thread id of the shared channel
+Thread ID of the shared channel.
 
 ```yaml
 Type: String
