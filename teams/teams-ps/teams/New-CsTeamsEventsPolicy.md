@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CsTeamsEventsPolicy
 
 ## SYNOPSIS
-This cmdlet allows you to create a new TeamsEventsPolicy instance and set it's properties. Note that this policy is currently still in preview.
+This cmdlet allows you to create a new TeamsEventsPolicy instance and set its properties. Note that this policy is currently still in preview.
+
 
 ## SYNTAX
 
