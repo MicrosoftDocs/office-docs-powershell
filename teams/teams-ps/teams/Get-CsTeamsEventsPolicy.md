@@ -40,7 +40,8 @@ Returns information for all Teams Events policies available for use in the tenan
 PS C:\> Get-CsTeamsEventsPolicy -Identity Global
 ```
 
-Return information for Teams Events policy with identity "Global".
+Returns information for Teams Events policy with identity "Global".
+
 
 ## PARAMETERS
 
