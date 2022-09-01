@@ -33,7 +33,7 @@ Returns incoming channels of a team.
 ## PARAMETERS
 
 ### -GroupId
-Group id of the team
+Group ID of the team
 
 ```yaml
 Type: String
