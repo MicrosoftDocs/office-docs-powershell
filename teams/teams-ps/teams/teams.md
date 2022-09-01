@@ -126,7 +126,7 @@ Use this cmdlet to remove an existing Teams enhanced encryption policy.
 {{Manually Enter Remove-TeamTargetingHierarchy Description Here}}
 
 ### [Set-CsTeamsEventsPolicy](Set-CsTeamsEventsPolicy.md)
-Allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
+Allows you to configure options for customizing Teams Events experiences. Note that this policy is currently still in preview.
 
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
