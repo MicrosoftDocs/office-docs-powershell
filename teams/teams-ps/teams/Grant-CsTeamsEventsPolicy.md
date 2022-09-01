@@ -49,7 +49,8 @@ The command shown in Example 1 assigns the per-user Teams Events policy, Disable
 PS C:\> Grant-CsTeamsEventsPolicy -Identity "user1@contoso.com" -Policy $null
 ```
 
-The command shown in Example 2 revokes the per-user Teams events policy for the user with the user principal name (UPN) "user1@contoso.com". As a result, the user will be managed by the global Teams events policy.
+The command shown in Example 2 revokes the per-user Teams Events policy for the user with the user principal name (UPN) "user1@contoso.com". As a result, the user will be managed by the global Teams Events policy.
+
 
 ### Example 3
 ```powershell
