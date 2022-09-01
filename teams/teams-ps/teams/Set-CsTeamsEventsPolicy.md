@@ -33,7 +33,9 @@ The command shown in Example 1 sets the value of the Default (Global) Events Pol
 
 ### -AllowWebinars
 This setting governs if a user can create webinars using Teams Events.
-
+Possible values are:
+ - **Enabled**, Enables creating webinars
+ - **Disabled**, Disables creating webinars
 
 ```yaml
 Type: String
@@ -80,7 +82,9 @@ Accept wildcard characters: False
 
 ### -EventAccessType
 This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
-Set this to EveryoneInCompanyExcludingGuests to disable a user from creating public webinars
+Possible values are:
+ - **Everyone**, Allows in tenant + guests + federated + anonymous (external to tenant) users to register and join the event
+ - **EveryoneInCompanyExcludingGuests**, Allows only in tenant users to register and join the event
 
 ```yaml
 Type: String
