@@ -36,7 +36,7 @@ Get-AssociatedTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 1
 -SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b
 ```
 
-Returns detail of a team with which specified channel is shared.
+Returns detail of a team with which a specified channel is shared.
 
 ## PARAMETERS
 
