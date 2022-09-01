@@ -27,7 +27,8 @@ Deletes a previously created TeamsEventsPolicy. Any users with no explicitly ass
 PS C:\> Remove-CsTeamsEventsPolicy -Identity DisablePublicWebinars
 ```
 
-In the example shown above, the command will delete the DisablePublicWebinars policy from the organization's list of policies.
+In this example, the command will delete the DisablePublicWebinars policy from the organization's list of policies.
+
 
 ## PARAMETERS
 
