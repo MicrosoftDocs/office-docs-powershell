@@ -42,7 +42,7 @@ Returns owners of a team with which specified channel is shared.
 ## PARAMETERS
 
 ### -HostTeamId
-Team id of the host team (group id)
+Team ID of the host team (Group ID).
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharedWithTeamId
-Team id of the shared with team
+Team ID of the shared with team.
 
 ```yaml
 Type: String
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Filter the results to only users with the given role: Owner or Member.
+Filters the results to only users with the given role of "Owner" or "Member".
 
 ```yaml
 Type: String

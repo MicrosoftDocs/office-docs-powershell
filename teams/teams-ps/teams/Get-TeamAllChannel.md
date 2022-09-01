@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -MembershipType
-Membership type of the channel to display, Standard, Private, or Shared
+Membership type of the channel to display; Standard, Private, or Shared
 
 ```yaml
 Type: String

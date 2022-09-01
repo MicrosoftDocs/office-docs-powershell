@@ -34,7 +34,7 @@ Unshares a channel with a team.
 ## PARAMETERS
 
 ### -HostTeamId
-Team id of the host team (group id)
+Team ID of the host team (Group ID).
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelId
-Thread id of the shared channel
+Thread ID of the shared channel.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharedWithTeamId
-Team id of the shared with team
+Team ID of the shared with team.
 
 ```yaml
 Type: String
