@@ -35,7 +35,7 @@ Returns associated teams of the current user.
 Get-TeamChannel -user example@example.com
 ```
 
-Returns associated teams of given user email.
+Returns associated teams of a given user email.
 
 ### Example 3
 ```PowerShell
