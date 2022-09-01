@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharedWithTeamId
-Team id of the shared with team
+Team ID of the shared with team.
 
 ```yaml
 Type: String
