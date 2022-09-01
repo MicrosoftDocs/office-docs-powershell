@@ -61,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier assigned to the Teams events policy.
+Unique identifier assigned to the Teams Events policy.
+
 
 ```yaml
 Type: String
