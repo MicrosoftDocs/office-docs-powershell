@@ -32,7 +32,8 @@ Returns information about the Teams Events policy. TeamsEventsPolicy is used to 
 PS C:\> Get-CsTeamsEventsPolicy
 ```
 
-Return information for all Teams Events policies available for use in the tenant.
+Returns information for all Teams Events policies available for use in the tenant.
+
 
 ### Example 2
 ```powershell
