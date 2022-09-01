@@ -28,8 +28,13 @@ Grant-CsTeamsMediaLoggingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName
 ### GrantToTenant
 
 ```
-Grant-CsTeamsMediaLoggingPolicy [-PassThru] [[-PolicyName] <String>]
- [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsMediaLoggingPolicy [-PassThru] [[-PolicyName] <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+
+```
+Grant-CsTeamsMediaLoggingPolicy [-PassThru] [[-PolicyName] <String>] [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,6 +75,14 @@ PS C:\> Grant-CsTeamsMediaLoggingPolicy -Global -PolicyName $null
 ```
 
 Unassign Teams Media Logging policy from the entire tenant.
+
+### EXAMPLE 5
+
+```PowerShell
+PS C:\> Grant-CsTeamsMediaLoggingPolicy -Group 8cc8447a-2e99-4184-a413-7c83e2e489c7 -PolicyName Enabled -Rank 10
+```
+
+Assign Teams Media Logging policy to a group of users.
 
 ## PARAMETERS
 
@@ -150,6 +163,40 @@ Applicable: Microsoft Teams, Skype for Business Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
