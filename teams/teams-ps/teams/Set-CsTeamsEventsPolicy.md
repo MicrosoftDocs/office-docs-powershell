@@ -83,8 +83,8 @@ Accept wildcard characters: False
 ### -EventAccessType
 This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
 Possible values are:
- - **Everyone**, Allows in tenant + guests + federated + anonymous (external to tenant) users to register and join the event
- - **EveryoneInCompanyExcludingGuests**, Allows only in tenant users to register and join the event
+ - **Everyone**, Enables creating events to allow in tenant + guests + federated + anonymous (external to tenant) users to register and join the event
+ - **EveryoneInCompanyExcludingGuests**, Enables creating events to allow only in tenant users to register and join the event
 
 ```yaml
 Type: String
