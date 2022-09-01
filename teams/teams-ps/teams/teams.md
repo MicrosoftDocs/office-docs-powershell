@@ -69,7 +69,7 @@ Returns information about the Teams Media Logging policy.
 {{Manually Enter Get-TeamTargetingHierarchyStatus Description Here}}
 
 ### [Grant-CsTeamsEventsPolicy](Grant-CsTeamsEventsPolicy.md)
-Assigns Teams Events policy to a user, group of users or the entire tenant. Note that this policy is currently still in preview.
+Assigns Teams Events policy to a user, group of users, or the entire tenant. Note that this policy is currently still in preview.
 
 ### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
 Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
