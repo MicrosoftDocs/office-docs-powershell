@@ -34,7 +34,7 @@ Ushares a channel with a team.
 ## PARAMETERS
 
 ### -HostTeamId
-Team id of the host team (group id)
+Team ID of the host team (Group ID).
 
 ```yaml
 Type: String
