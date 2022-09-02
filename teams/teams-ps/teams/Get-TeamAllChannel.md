@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/get-teamallchannel
 schema: 2.0.0
-author: zhongxl
+author: zhongxlmicrosoft
 ms.author: zhongxl
 ms.reviewer: dedaniel, robharad
 ---

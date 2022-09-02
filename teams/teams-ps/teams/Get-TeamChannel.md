@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-TeamChannel  
 
 ## SYNOPSIS
-Get the channels hosted by a team.
+This cmdlet supports retrieving channels hosted by a team.
 
 ## SYNTAX
 ```
@@ -16,6 +16,7 @@ Get-TeamChannel -GroupId <String> [-MembershipType <String>] [<CommonParameters>
 ```
 
 ## DESCRIPTION
+This cmdlet supports retrieving channels hosted by a team.
 
 ## EXAMPLES
 
