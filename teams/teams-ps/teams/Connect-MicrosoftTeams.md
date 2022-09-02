@@ -46,6 +46,8 @@ The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authentica
 
 > [!WARNING]
 >If basic authentication is not enabled, legacy *-Cs cmdlets will not function properly. For Remote PowerShell, basic authentication is necessary.
+>
+>Update: With versions 4.x.x or later, basic authentication enablement is not needed anymore in Commercial Environments. Except for tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online.
 
 ## EXAMPLES
 
