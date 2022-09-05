@@ -38,7 +38,7 @@ Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Microsoft Teams
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
