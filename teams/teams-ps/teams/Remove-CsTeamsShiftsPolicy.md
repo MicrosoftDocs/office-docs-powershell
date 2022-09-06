@@ -26,7 +26,8 @@ Remove-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [<CommonParameters>]
 PS C:\> Remove-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage
 ```
 
-In this example, the policy instance to be removed is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage" 
+In this example, the policy instance to be removed is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage". 
+
 
 ## PARAMETERS
 
