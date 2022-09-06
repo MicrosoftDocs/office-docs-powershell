@@ -8,18 +8,18 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
-ms.reviewer: navgupta
+ms.reviewer: abhishekku
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Admins can learn about the FAQs on the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
+description: "Admins can learn about the FAQs on Exchange Online PowerShell V3 module."
 ---
 
-# How to troubleshoot Exchange Online PowerShell V3 module issues
+# FAQs
 
-Here's a collection of information on how to identify and fix errors that you may run into when you use Exchange Online PowerShell V3 module.
+The following are FAQs on the Exchange Online PowerShell V3 module.
 
 ## Which are the supported operating systems for EXO V3 module?
 
@@ -68,7 +68,7 @@ Your existing PowerShell module connection is similar to the following:
 ```powershell
 $Session = $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection 
 ```
-Using the EXO v3 module, you can connect using: 
+Using the EXO V3 module, you can connect using: 
 
 ```powershell
 Connect-ExchangeOnline -ConnectionUri https://outlook.office365.com/powershell-liveid/ -UserPrincipalName sally@contoso.com 
@@ -90,7 +90,7 @@ Your existing PowerShell connection is similar to the following:
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection 
 ```
 
-Using the Exchange v3 module, you can connect using: 
+Using the Exchange V3 module, you can connect using: 
 
 ```powershell
 Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ 
@@ -112,7 +112,7 @@ Your existing PowerShell connection is similar to the following:
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection 
 ```
 
-Using the Exchange v3 module, you can connect using: 
+Using the Exchange V3 module, you can connect using: 
 
 ```powershell
 Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ 
@@ -126,15 +126,15 @@ You may have to use one of the following URI depending on your service endpoint:
 |Office 365 Germany      | [https://ps.protection.outlook.de/powershell-liveid/ ](https://ps.protection.outlook.de/powershell-liveid/ )        |
 |For Exchange Server organizations with Exchange Enterprise CAL with Services licenses     |[https://outlook.office365.com/powershell-liveid ](https://outlook.office365.com/powershell-liveid )         |
 
-## How to move from Exchange PowerShell v1 to EXO v3 module?
+## How to move from Exchange PowerShell V1 to EXO V3 module?
 
-Refer to [this blog](https://techcommunity.microsoft.com/t5/exchange-team-blog/moving-from-the-exchange-powershell-v1-module-to-the-v2-preview/ba-p/3450679)for more details on moving from the Exchange PowerShell v1 to EXO v3 or v2 preview module.  
+Refer to [this blog](https://techcommunity.microsoft.com/t5/exchange-team-blog/moving-from-the-exchange-powershell-v1-module-to-the-v2-preview/ba-p/3450679)for more details on moving from the Exchange PowerShell v1 to EXO V3 or V2 preview module.  
 
-## How to update the EXO v3 module?
+## How to update the EXO V3 module?
 
-Refer [this document](exchange-online-powershell-v2.md#update-the-exo-v2-module) to update the EXO v3 module.
+Refer [this document](exchange-online-powershell-v2.md#update-the-exo-v2-module) to update the EXO V3 module.
 
-## How to uninstall the EXO v2 module?
+## How to uninstall the EXO V2 module?
 
 To uninstall the module, run one of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. Scope CurrentUser): 
 
@@ -149,10 +149,14 @@ Uninstall-Module -Name ExchangeOnlineManagement
 ```powershell
 Uninstall-Module -Name ExchangeOnlineManagement 
 ```
-For detailed syntax and parameter information, see [Uninstall-Module.](/powershell/module/powershellget/uninstall-module)  
+For details about syntax and parameter information, see [Uninstall-Module.](/powershell/module/powershellget/uninstall-module)  
 
 ## Are Security and Compliance PowerShell and Exchange Online Protection PowerShell cmdlets REST Based? 
 
 No, currently both are available only in their RPS versions. 
 
 If you use the EOP or SCC cmdlets, you need to keep WinRM Basic Auth turned on, on the client machines.  
+
+## How to troubleshoot Exchange Online PowerShell v3 module? 
+
+Here's a collection of information on how to identify and fix errors that you may run into when you use this product. 
