@@ -33,7 +33,7 @@ The EXO V3 module includes REST equivalents of all cmdlets available within the 
 - **More Performant**: The connection establishment improves performance since it avoids setting up a PowerShell Runspace on the service and downloading the format table data XMLs.
 - V3 REST Module comparison with Previously released cmdlets:
 
-    |Column1  |RPS Cmdlets (v.2.0.5 and earlier) |9 EXO Cmdlets (e.g. Get-ExoMailbox) |V3 Module   |
+    | |RPS Cmdlets (v.2.0.5 and earlier) |9 EXO Cmdlets (e.g. Get-ExoMailbox) |V3 Module   |
     |---------|---------|---------|---------|
     |Security     |  Least secure  | Highest security | Highest security |
     |Performance     |  Least performant        | Highest Performant         | Higher performance than RPS cmdlets but lower than the EXO cmdlets         |
