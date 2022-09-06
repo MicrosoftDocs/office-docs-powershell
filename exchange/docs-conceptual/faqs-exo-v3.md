@@ -149,7 +149,7 @@ Uninstall-Module -Name ExchangeOnlineManagement
 ```powershell
 Uninstall-Module -Name ExchangeOnlineManagement 
 ```
-For detailed syntax and parameter information, see [Uninstall-Module.](/powershell/module/powershellget/uninstall-module?view=powershell-7.2)  
+For detailed syntax and parameter information, see [Uninstall-Module.](/powershell/module/powershellget/uninstall-module)  
 
 ## Are Security and Compliance PowerShell and Exchange Online Protection PowerShell cmdlets REST Based? 
 
