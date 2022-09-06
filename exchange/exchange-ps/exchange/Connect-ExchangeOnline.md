@@ -51,6 +51,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
@@ -423,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-**Note**: This parameter is available in version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in version 2.0.4 or later of the EXO V2 module, and only in PowerShell 7.
 
 The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
 
@@ -459,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -InlineCredential
-**Note**: This parameter is available in version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in version 2.0.4 or later of the EXO V2 module, and only in PowerShell 7.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
@@ -515,11 +516,13 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentity
-**Note**: This parameter is available in version 2.0.6-Preview7 or later.
+**Note**: This parameter is available in version 2.0.6-Preview7 or later of the EXO V2 module.
 
 The ManagedIdentity switch connects to Exchange Online using a system-assigned or user-assigned managed identity. You don't need to specify a value with this switch.
 
-Managed identity is currently supported for Azure Virtual Machines and Virtual Machine Scale Sets.
+Managed identity is currently supported for Azure Virtual Machines, Virtual Machine Scale Sets and Azure Functions.
+
+You must use this switch with the Organization parameter.
 
 You must use this switch with the Organization parameter.
 
@@ -537,7 +540,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentityAccountId
-**Note**: This parameter is available in version 2.0.6-Preview7 or later.
+**Note**: This parameter is available in version 2.0.6-Preview7 or later of the EXO V2 module.
 
 The ManagedIdentityAccountId parameter specifies the application ID of the service principal that corresponds to the user-assigned managed identity that's used for authentication.
 
@@ -617,11 +620,33 @@ The ShowProgress parameter specifies whether to show or hide the progress bar of
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingFormatData
+**Note**: This parameter is available in version 2.0.6-Preview8 or later of the EXO V2 module.
+
+The SkipLoadingFormatData switch avoids downloading the format data. You don't need to specify a value with this switch.
+
+When you use this switch, the output of any Exchange cmdlet will be unformatted.
+
+This switch dows not work with the UseRPSSession.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -685,7 +710,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 2.0.6-Preview3 or later of the Exchange Online V2 module.
+This parameter is available in version 2.0.6-Preview3 or later of the EXO V2 module.
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
