@@ -373,7 +373,7 @@ Supported settings for built-in labeling:
 
 - **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+), and also Outlook on Windows (version 2201+). Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
 
-- **HideBarByDefault**: Prevent Office apps from displaying an applied sensitivity label name on the window bar title (Word, Excel, PowerPoint) so there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
+- **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
 
 - **OutlookDefaultLabel**: Outlook apps that support this setting apply a default label, or no label. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
