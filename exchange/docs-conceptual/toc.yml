@@ -29,9 +29,9 @@
       href: exchange-online-powershell.md
       items:
       - name: Exchange Online PowerShell V3 module announcements
-          href: announcements-exov3module.md
+        href: announcements-exov3module.md
       - name: About the Exchange Online PowerShell V3 module
-          href: exchange-online-powershell-v3.md
+        href: exchange-online-powershell-v3.md
         - name: About the Exchange Online PowerShell V2 module
           href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online PowerShell - modern auth and MFA
