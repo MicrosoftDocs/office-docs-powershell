@@ -321,6 +321,8 @@ The GeoCoordinates parameter specifies the contact's location in latitude, longi
 - Latitude and longitude: For example, "47.644125;-122.122411"
 - Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
+**Note**: If period separators don't work for you, use commas instead.
+
 ```yaml
 Type: GeoCoordinates
 Parameter Sets: (All)
