@@ -68,6 +68,8 @@
           href: v1-module-mfa-connect-to-scc-powershell.md
         - name: Basic auth - Connect to Exchange Online Protection PowerShell
           href: basic-auth-connect-to-scc-powershell.md
+    - name: FAQs on Exchange Online PowerShell V3 module
+      href: faqs-exo-v3.md
     - name: Exchange Online Protection PowerShell
       href: exchange-online-protection-powershell.md
       items:
