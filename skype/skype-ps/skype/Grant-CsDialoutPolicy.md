@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csdialoutpolicy
-applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams
 title: Grant-CsDialoutPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -61,18 +61,17 @@ This example assigns the per-user outbound calling restriction policy DialoutCPC
 
 ### Example 4
 ```
-Grant-CsDialoutPolicy -Global -PolicyName "InternationalAndDomestic"
+Grant-CsDialoutPolicy -Global -PolicyName "DialoutCPCandPSTNInternational"
 ```
 
-This example sets the tenant global policy instance to InternationalAndDomestic.
+This example sets the tenant global policy instance to DialoutCPCandPSTNInternational.
 
 ### Example 5
 ```
-Grant-CsDialoutPolicy -Group support@contoso.com -Rank 10 -PolicyName "InternationalAndDomestic"
+Grant-CsDialoutPolicy -Group support@contoso.com -Rank 10 -PolicyName "DialoutCPCandPSTNInternational"
 ```
 
-This example assigns the policy instance "InternationalAndDomestic" to the members of the group support@contoso.com.
-
+This example assigns the policy instance "DialoutCPCandPSTNInternational" to the members of the group support@contoso.com.
 
 ## PARAMETERS
 
@@ -81,9 +80,9 @@ This parameter sets the tenant global policy instance. This is the policy that a
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GrantToTenant
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -99,7 +98,7 @@ Specifies the group used for the group policy assignment.
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -109,18 +108,18 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
+Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of three formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's ObjectId/Identity.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -131,7 +130,7 @@ Returns the results of the command. By default, this cmdlet does not generate an
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -141,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-"Name" of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; likewise, a policy with the Identity tag:RedmondPolicy has a PolicyName equal to RedmondPolicy.
+"Name" of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:DialoutCPCZoneAPSTNDomestic has a PolicyName equal to DialoutCPCZoneAPSTNDomestic.
 
 To unassign a per-user policy previously assigned to a user, set the PolicyName to a null value ($Null).
 
@@ -149,7 +148,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -165,7 +164,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -182,7 +181,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -198,7 +197,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Microsoft Teams
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -219,6 +218,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+
+The cmdlet is not supported for Teams resource accounts.
 
 ## RELATED LINKS
 [Get-CsOnlineDialOutPolicy](get-csonlinedialoutpolicy.md)
