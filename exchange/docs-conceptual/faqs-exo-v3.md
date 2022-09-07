@@ -132,9 +132,9 @@ Refer to [this blog](https://techcommunity.microsoft.com/t5/exchange-team-blog/m
 
 ## How to update the EXO V3 module?
 
-Refer [this document](exchange-online-powershell-v2.md#update-the-exo-v2-module) to update the EXO V3 module.
+Refer [this document](exchange-online-powershell-v2.md#update-the-exo-v2-module) to update the EXO V3 module. It is similar to the EXO V2 module.
 
-## How to uninstall the EXO V2 module?
+## How to uninstall the EXO V3 module?
 
 To uninstall the module, run one of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. Scope CurrentUser): 
 
