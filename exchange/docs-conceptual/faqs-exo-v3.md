@@ -1,5 +1,5 @@
 ---
-title: FAQS about Exchange Online PowerShell V3 module
+title: FAQS on Exchange Online PowerShell V3 module
 ms.author: v-mathavale
 author: v-mathavale
 manager: dansimp
@@ -17,7 +17,7 @@ search.appverid: MET150
 description: "Admins can learn about the FAQs on Exchange Online PowerShell V3 module."
 ---
 
-# FAQs
+# FAQs on Exchange Online PowerShell V3 module
 
 The following are FAQs on the Exchange Online PowerShell V3 module.
 
