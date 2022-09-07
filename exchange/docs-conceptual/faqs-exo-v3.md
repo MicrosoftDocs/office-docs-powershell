@@ -153,8 +153,8 @@ For details about syntax and parameter information, see [Uninstall-Module.](/p
 
 ## Are Security and Compliance PowerShell and Exchange Online Protection PowerShell cmdlets REST Based? 
 
-No, currently both are available only in their RPS versions. 
-If you use the EOP or SCC cmdlets, you need to keep WinRM Basic Auth turned on, on the client machines.  
+No, currently both are available only in their RPS versions.<br> 
+If you use the EOP or SCC cmdlets, you need to keep WinRM Basic Authentication turned on, on the client machines.  
 
 ## How to troubleshoot Exchange Online PowerShell v3 module? 
 
