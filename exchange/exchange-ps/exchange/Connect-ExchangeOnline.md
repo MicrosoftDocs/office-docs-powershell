@@ -524,8 +524,6 @@ Managed identity is currently supported for Azure Virtual Machines, Virtual Mach
 
 You must use this switch with the Organization parameter.
 
-You must use this switch with the Organization parameter.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
