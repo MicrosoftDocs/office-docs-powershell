@@ -95,7 +95,7 @@ Using the Exchange V3 module, you can connect using:
 ```powershell
 Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ 
 ```
-This scenario still uses RPS cmdlets, so it requires client machine basic auth on WinRM. 
+This scenario still uses RPS cmdlets, so it requires client machine basic authentication on WinRM. 
 
 You may have to use one of the following URI depending on your service endpoint: 
 
@@ -117,7 +117,7 @@ Using the Exchange V3 module, you can connect using:
 ```powershell
 Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ 
 ```
-This scenario still uses RPS cmdlets, so it requires client machine basic auth on WinRM. 
+This scenario still uses RPS cmdlets, so it requires client machine basic authentication on WinRM. 
 
 You may have to use one of the following URI depending on your service endpoint: 
 
@@ -154,7 +154,6 @@ For details about syntax and parameter information, see [Uninstall-Module.](/p
 ## Are Security and Compliance PowerShell and Exchange Online Protection PowerShell cmdlets REST Based? 
 
 No, currently both are available only in their RPS versions. 
-
 If you use the EOP or SCC cmdlets, you need to keep WinRM Basic Auth turned on, on the client machines.  
 
 ## How to troubleshoot Exchange Online PowerShell v3 module? 
