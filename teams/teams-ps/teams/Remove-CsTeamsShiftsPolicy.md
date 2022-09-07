@@ -36,7 +36,7 @@ Policy instance name.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
