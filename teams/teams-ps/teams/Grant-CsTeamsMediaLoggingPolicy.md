@@ -6,7 +6,7 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsMediaLoggingPolicy
 author: LeoKuhorev
 ms.author: leokukharau
-manager: saurk
+manager: shalages
 schema: 2.0.0
 ---
 
@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Assigns Teams Media Logging policy to a user, group of users or the entire tenant.
+Assigns Teams Media Logging policy to a user or entire tenant.
 
 ## SYNTAX
 
@@ -22,26 +22,18 @@ Assigns Teams Media Logging policy to a user, group of users or the entire tenan
 
 ```
 Grant-CsTeamsMediaLoggingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 
 ```
-Grant-CsTeamsMediaLoggingPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### GrantToGroup
-
-```
-Grant-CsTeamsMediaLoggingPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsMediaLoggingPolicy [-PassThru] [[-PolicyName] <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Assigns Teams Media Logging policy to a user, group of users or the entire tenant.
+Assigns Teams Media Logging policy to a user or entire tenant.
 TeamsMediaLoggingPolicy allows administrators to enable media logging for users. When assigned, it will enable media logging for the user overriding other settings. After unassigning the policy, media logging setting will revert to the previous value.
 
 ## EXAMPLES
@@ -52,7 +44,7 @@ TeamsMediaLoggingPolicy allows administrators to enable media logging for users.
 PS C:\> Grant-CsTeamsMediaLoggingPolicy -Identity 'KenMyer@contoso.com' -PolicyName Enabled
 ```
 
-Assign Teams Media Logging policy to the user with the user principal name (UPN) "KenMyer@contoso.com".
+Assign Teams Media Logging policy to a single user with the user principal name (UPN) "KenMyer@contoso.com". This will enable media logging for the user.
 
 ### EXAMPLE 2
 
@@ -60,7 +52,7 @@ Assign Teams Media Logging policy to the user with the user principal name (UPN)
 PS C:\> Grant-CsTeamsMediaLoggingPolicy -Identity 'KenMyer@contoso.com' -PolicyName $null
 ```
 
-Unassign Teams Media Logging policy from the user with the user principal name (UPN) "KenMyer@contoso.com".
+Unassign Teams Media Logging policy from a single user with the user principal name (UPN) "KenMyer@contoso.com". This will revert media logging setting to the previous value.
 
 ### EXAMPLE 3
 
@@ -68,7 +60,7 @@ Unassign Teams Media Logging policy from the user with the user principal name (
 PS C:\> Grant-CsTeamsMediaLoggingPolicy -Global -PolicyName Enabled
 ```
 
-Assign Teams Media Logging policy to the entire tenant.
+Assign Teams Media Logging policy to the entire tenant. Note that this will enable logging for every single user in the tenant without a possibility to disable it for individual users.
 
 ### EXAMPLE 4
 
@@ -139,23 +131,6 @@ Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MsftInternalProcessingMode
-
-Internal Microsoft use only.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
