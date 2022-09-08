@@ -23,7 +23,7 @@ The Exchange Online PowerShell V3 module (EXO V3 module) would also contain the 
 
 ## Get-ConnectionInformation
 
-This cmdlet can be used to get current connection information. It is available as part of the module and a user can run this without running Connect-ExchangeOnline. For syntax and other details, see [Get-ConnectionInformation.](https://docs.microsoft.com/powershell/module/exchange/get-connectioninformation?view=exchange-ps)
+This cmdlet can be used to get current connection information. It is available as part of the module and a user can run this without running Connect-ExchangeOnline. For syntax and other details, see [Get-ConnectionInformation.](../exchange-ps/exchange/Get-ConnectionInformation.md)
 
 This command returns the following properties of each Add connection.
 
