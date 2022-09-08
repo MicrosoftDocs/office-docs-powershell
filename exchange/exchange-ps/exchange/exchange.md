@@ -14,7 +14,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 > [!NOTE]
-> For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell V2 module](../../docs-conceptual/exchange-online-powershell-v2.md).
+> For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell module](../../docs-conceptual/exchange-online-powershell-v2.md).
 >
 > For Exchange Server, there is no Microsoft-provided module in the PowerShell Gallery. Instead, to use PowerShell in Exchange, you have the following options:
 >

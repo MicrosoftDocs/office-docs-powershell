@@ -28,6 +28,6 @@ Exchange Online PowerShell is the administrative interface that enables you to m
 
 - To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](recipient-filters.md).
 
-- To learn about authentication in Exchange Online PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the EXO V2 module](app-only-auth-powershell-v2.md).
+- To learn about authentication in Exchange Online PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 
-- To learn about property sets in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md).
+- To learn about property sets in Exchange Online PowerShell module cmdlets, see [Property sets in Exchange Online PowerShell module cmdlets](cmdlet-property-sets.md).

@@ -18,7 +18,7 @@ description: "Learn how to connect to Security & Compliance PowerShell."
 # Basic auth - Connect to Security & Compliance PowerShell
 
 > [!NOTE]
-> The connection instructions in this article [will be deprecated starting on October 1, 2022](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-may-2022/ba-p/3301866) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Security & Compliance PowerShell. For instructions, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
+> The connection instructions in this article [will be deprecated starting on October 1, 2022](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-may-2022/ba-p/3301866) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell module to connect to Security & Compliance PowerShell. For instructions, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
 
 Security & Compliance PowerShell allows you to manage your Microsoft 365 Defender portal and Microsoft Purview compliance portal settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Security & Compliance PowerShell. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance PowerShell cmdlets into your local Windows PowerShell session so that you can use them.
 
@@ -26,12 +26,10 @@ Security & Compliance PowerShell allows you to manage your Microsoft 365 Defende
 > The procedures in this article won't work if:
 >
 > - Your account uses multi-factor authentication (MFA).
->
 > - Your organization uses federated authentication.
->
 > - A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs.
 >
-> In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance PowerShell. For instructions, see [Connect to Security & Compliance PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
+> In these scenarios, you need to download and use the Exchange Online PowerShell module to connect to Security & Compliance PowerShell. For instructions, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
 >
 > Some features in the Microsoft 365 Defender portal and Microsoft Purview compliance portal (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 

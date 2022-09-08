@@ -28,7 +28,7 @@
     - name: Exchange Online PowerShell
       href: exchange-online-powershell.md
       items:
-        - name: About the Exchange Online PowerShell V2 module
+        - name: About the Exchange Online PowerShell module
           href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online PowerShell - modern auth and MFA
           href: connect-to-exchange-online-powershell.md
@@ -47,9 +47,9 @@
               href: filter-properties.md
             - name: Filterable properties for the RecipientFilter parameter
               href: recipientfilter-properties.md
-            - name: Filters in EXO V2 module cmdlets
+            - name: Filters in Exchange Online PowerShell module cmdlets
               href: filters-v2.md
-        - name: Property sets in EXO V2 module cmdlets
+        - name: Property sets in Exchange Online PowerShell module cmdlets
           href: cmdlet-property-sets.md
         - name: V1 module - Connect to Exchange Online PowerShell
           href: v1-module-mfa-connect-to-exo-powershell.md

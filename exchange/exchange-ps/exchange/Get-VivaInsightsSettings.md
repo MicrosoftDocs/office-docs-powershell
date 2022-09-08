@@ -12,9 +12,9 @@ ms.author: chrisda
 # Get-VivaInsightsSettings
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-**Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the EXO V2 module.
+**Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the module.
 
 Use the Get-VivaInsightsSettings cmdlet to check whether a user has access to features in Microsoft Viva Insights in Microsoft Teams. Only users with provisioned Exchange Online mailboxes can access features within the Viva Insights app in Teams.
 

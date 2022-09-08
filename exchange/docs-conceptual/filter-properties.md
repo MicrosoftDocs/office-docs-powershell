@@ -57,7 +57,7 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
-- For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+- For filtering considerations for connections using the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 |Property name|LDAP display name|Available on cmdlets|Value|Comments|
 |---|---|---|---|---|

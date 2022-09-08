@@ -13,9 +13,9 @@ ms.reviewer:
 # Connect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
 
 To connect to other PowerShell environments (for example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
@@ -59,9 +59,9 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a remote PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for the new REST API-backed cmdlets in the Exchange Online PowerShell V2 module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
+This cmdlet allows you to create a remote PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for the new REST API-backed cmdlets in the Exchange Online PowerShell module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
 
-For details about the current and past public versions of the EXO V2 module, see [Release notes](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#release-notes). This topic is written for the current public version. Features or parameters that are only available in a Preview version of the module are specifically noted.
+For details about the current and past public versions of the module, see [Release notes](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#release-notes). This topic is written for the current public version. Features or parameters that are only available in a Preview version of the module are specifically noted.
 
 ## EXAMPLES
 
@@ -105,7 +105,7 @@ This example connects to Exchange Online PowerShell in an unattended scripting s
 Connect-ExchangeOnline -Device
 ```
 
-In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online PowerShell in interactive scripting scenarios on computers that don't have web browsers.
+In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this example connects to Exchange Online PowerShell in interactive scripting scenarios on computers that don't have web browsers.
 
 The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
@@ -114,7 +114,7 @@ The command returns a URL and unique code that's tied to the session. You need t
 Connect-ExchangeOnline -InlineCredential
 ```
 
-In PowerShell 7.0.3 or later using the EXO V2 module version 2.0.4 or later, this example connects to Exchange Online PowerShell in interactive scripting scenarios by passing credentials directly in the PowerShell window.
+In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this example connects to Exchange Online PowerShell in interactive scripting scenarios by passing credentials directly in the PowerShell window.
 
 ## PARAMETERS
 
@@ -233,7 +233,10 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-The Prefix parameter specifies an alias to add to nouns in the names of older remote PowerShell cmdlets (cmdlet with nouns that don't already start with EXO). A valid value is a text string without spaces or special characters like underscrores, asterisks etc, and you can't use the value EXO (this prefix is reserved for PowerShell V2 module cmdlets).
+The Prefix parameter specifies a text value to add to the beginning of remote PowerShell cmdlet names when you connect.
+
+- You can't use spaces or special characters like underscores or asterisks.
+- You can't use the value EXO. This value is reserved for the nine special **Get-EXO\*** cmdlets in the module.
 
 ```yaml
 Type: String
@@ -283,7 +286,7 @@ Accept wildcard characters: False
 ### -AppId
 The AppId parameter specifies the application ID of the service principal that's used in certificate based authentication (CBA). A valid value is the GUID of the application ID (service principal). For example, `36ee4c6c-0812-40a2-b820-b22ebd02bce3`.
 
-For more information, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+For more information, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -319,7 +322,7 @@ The Certificate parameter specifies the certificate that's used for certificate-
 
 Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: X509Certificate2
@@ -339,7 +342,7 @@ The CertificateFilePath parameter specifies the certificate that's used for CBA.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -363,7 +366,7 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: SecureString
@@ -385,7 +388,7 @@ Don't use this parameter with the Certificate or CertificateFilePath parameters.
 
 **Note**: The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -423,7 +426,7 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-**Note**: This parameter is available in version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in version 2.0.4 or later of the module, and only in PowerShell 7.
 
 The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
 
@@ -459,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -InlineCredential
-**Note**: This parameter is available in version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in version 2.0.4 or later of the module, and only in PowerShell 7.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
@@ -515,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentity
-**Note**: This parameter is available in version 2.0.6-Preview7 or later.
+**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
 
 The ManagedIdentity switch connects to Exchange Online using a system-assigned or user-assigned managed identity. You don't need to specify a value with this switch.
 
@@ -537,7 +540,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentityAccountId
-**Note**: This parameter is available in version 2.0.6-Preview7 or later.
+**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
 
 The ManagedIdentityAccountId parameter specifies the application ID of the service principal that corresponds to the user-assigned managed identity that's used for authentication.
 
@@ -557,7 +560,7 @@ Accept wildcard characters: False
 ### -Organization
 The Organization parameter specifies the organization that's used in CBA. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -648,10 +651,10 @@ Accept wildcard characters: False
 ```
 
 ### -UseMultithreading
-The UseMultithreading parameter specifies whether to disable or enable multi-threading in the EXO V2 module. Valid values are:
+The UseMultithreading parameter specifies whether to disable or enable multi-threading in the Exchange Online PowerShell module. Valid values are:
 
 - $true: Enable multi-threading. This is the default value.
-- $false: Disable multi-threading. Note this value will degrade performance of V2 cmdlets.
+- $false: Disable multi-threading. Note this value will degrade performance of cmdlets in the module.
 
 ```yaml
 Type: Boolean
@@ -685,11 +688,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 2.0.6-Preview3 or later of the Exchange Online V2 module.
+This parameter is available in version 2.0.6-Preview3 or later of the module.
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#turn-on-basic-authentication-in-winrm).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#turn-on-basic-authentication-in-winrm).
 
 If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
 

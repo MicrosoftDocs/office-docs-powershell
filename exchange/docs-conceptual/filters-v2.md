@@ -1,5 +1,5 @@
 ---
-title: Filters in the EXO V2 module
+title: Filters in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -14,14 +14,17 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn about how to use filtering for cmdlets in the Exchange Online V2 module."
+description: "Learn about how to use filtering for cmdlets in the Exchange Online module."
 ---
 
-# Filters in the EXO V2 module
+# Filters in the Exchange Online PowerShell module
 
-The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) contains a few exclusive **Get-EXO\*** cmdlets that are optimized for high speed, high volume operations, and (after you connect to your organization) gives you access to the hundreds of existing cmdlets in the service. For more information, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
+The Exchange Online PowerShell module contains nine exclusive **Get-EXO\*** cmdlets that are optimized for high speed, high volume operations, and (after you connect to your organization) gives you access to the hundreds of existing cmdlets in the service. For more information, see [Cmdlets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#cmdlets-in-the-exchange-online-powershell-module).
 
-In order to get the most out of the EXO V2 module, you need to follow the guidance in this article.
+> [!NOTE]
+> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 2.0.6 and later are known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+
+In order to get the most out of the Exchange Online PowerShell module, you need to follow the guidance in this article.
 
 ## Use client-side filtering for the best performance
 
@@ -29,11 +32,11 @@ Server-side filtering uses the available _Filter_ or _RecipientFilter_ parameter
 
 Client-side filtering uses the [Where-Object](/powershell/module/microsoft.powershell.core/where-object) cmdlet (also known as **where** or **?**).
 
-Generally, you get much better performance in Exchange PowerShell cmdlets with server-side filtering. However, for the EXO V2 module, you actually get better performance when you use client-side filtering. We're working on improving the performance of server-side filtering in the module.
+Generally, you get much better performance in Exchange PowerShell cmdlets with server-side filtering. However, for the Exchange Online PowerShell module, you actually get better performance when you use client-side filtering. We're working on improving the performance of server-side filtering in the module.
 
 ## Unsupported filterable properties
 
-The **Get-EXO\*** cmdlets in the EXO V2 module support the majority of [filterable properties](filter-properties.md) that are available in their older, equivalent cmdlets. But, there are currently some properties that don't work with filtering in the **Get-EXO\*** cmdlets. These properties are described in the following table:
+The **Get-EXO\*** cmdlets in the Exchange Online PowerShell module support the majority of [filterable properties](filter-properties.md) that are available in their older, equivalent cmdlets. But, there are currently some properties that don't work with filtering in the **Get-EXO\*** cmdlets. These properties are described in the following table:
 
 |Cmdlet|Unsupported filterable property|LDAP Display Name|
 |---|---|---|
@@ -43,7 +46,7 @@ The **Get-EXO\*** cmdlets in the EXO V2 module support the majority of [filterab
 
 ## Supported operators
 
-The following operators are fully supported for all string formats in the **Get-EXO\*** cmdlets in the EXO V2 module:
+The following operators are fully supported for all string formats in the **Get-EXO\*** cmdlets in the Exchange Online PowerShell module:
 
 - [Logical operators](/powershell/module/microsoft.powershell.core/about/about_logical_operators):
   - `-and`
