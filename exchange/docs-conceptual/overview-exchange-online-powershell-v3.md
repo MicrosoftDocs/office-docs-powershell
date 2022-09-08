@@ -26,20 +26,6 @@ The EXO V3 module includes REST equivalents of all cmdlets available within the 
 > [!NOTE]
 > The cmdlets for Security & Compliance PowerShell and standalone Exchange Online Protection (EOP) PowerShell still have only their RPS versions available. The REST equivalents of these cmdlets should be available in the V3 Module in the upcoming releases.
 
-## Advantages of REST cmdlets over RPS 
-
-- **More Secure**: Has inherent support for modern auth. Therefore, admins can turn off WinRM basic auth on their client machines.
-- **More Reliability**: Handles transient failures with built-in retries. Therefore, it minimizes failures due to network delays, longer query execution times, etc. 
-- **Better Performance**: The connection establishment improves performance since it avoids setting up a PowerShell Runspace on the service and downloading the format table data XMLs.
-- V3 REST module comparison with previously released cmdlets:
-
-    | |RPS Cmdlets (v.2.0.5 and earlier) |9 EXO Cmdlets (e.g. Get-ExoMailbox) |V3 Module   |
-    |---------|---------|---------|---------|
-    |Security     |  Least secure  | Highly secure | Highly secure |
-    |Performance     |  Low performance        | High performance         | Higher performance than RPS cmdlets but lower than the EXO cmdlets         |
-    |Reliability      | least reliable | Highly reliable |Highly reliable          |
-    |Functionality     | Allows More functionality than the EXO cmdlets         |  Minimum functionality available        | functionality at par with RPS cmdlets |
-
 ## Connection Instructions using the V3 module
 
-For detailed instructions, see [How to connect to the Exchange Online PowerShell using V3 Module.](/powershell/exchange/faqs-exo-v3?view=exchange-ps&branch=pr-en-us-9870)
+For detailed instructions, see [How to connect to the Exchange Online PowerShell using V3 Module.](/powershell/exchange/faqs-exo-v3?view=exchange-ps&branch=pr-en-us-9870#)
