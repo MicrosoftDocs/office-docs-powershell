@@ -1,86 +1,70 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
-title: Set-CsTeamsShiftsConnectionInstance
-author: lespina
-ms.author: lespina
-manager: valk
-online version: https://docs.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
+title: Update-CsTeamsShiftsConnectionInstance
+author: nunocorreia-ms
+ms.author: nunocorreia
+manager:
+online version: https://docs.microsoft.com/powershell/module/teams/update-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
-# Set-CsTeamsShiftsConnectionInstance
+# Update-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
-This cmdlet updates a Shifts connection instance.
+This cmdlet updates Shifts connection instance fields.
 
 ## SYNTAX
 
-### Set (Default)
+### Update (Default)
 ```
-Set-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String>
- -Body <IConnectorInstanceRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String>
+ -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
  [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetExpanded
+### UpdateExpanded
 ```
-Set-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String> -ConnectorId <String>
- -ConnectorSpecificSettings <IConnectorInstanceRequestConnectorSpecificSettings> -DesignatedActorId <String>
- -EnabledConnectorScenario <String[]> -EnabledWfiScenario <String[]> -Name <String> -SyncFrequencyInMin <Int32>
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String> [-ConnectorId <String>]
+ [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>] [-DesignatedActorId <String>]
+ [-EnabledConnectorScenario <String[]>] [-EnabledWfiScenario <String[]>] [-Name <String>] [-SyncFrequencyInMin <Int32>]
  [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
  [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetViaIdentityExpanded
+### UpdateViaIdentityExpanded
 ```
-Set-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
- -ConnectorId <String> -ConnectorSpecificSettings <IConnectorInstanceRequestConnectorSpecificSettings>
- -DesignatedActorId <String> -EnabledConnectorScenario <String[]> -EnabledWfiScenario <String[]> -Name <String>
- -SyncFrequencyInMin <Int32> [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
+ [-ConnectorId <String>] [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>]
+ [-DesignatedActorId <String>] [-EnabledConnectorScenario <String[]>] [-EnabledWfiScenario <String[]>] [-Name <String>]
+ [-SyncFrequencyInMin <Int32>] [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
  [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetViaIdentity
+### UpdateViaIdentity
 ```
-Set-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
- -Body <IConnectorInstanceRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
+ -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
  [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettings.LoginPwd and ConnectorSpecificSettings.LoginUserNameusername to be included.
-This cmdlet can update every input field except -ConnectorId and -ConnectorInstanceId.
+This cmdlet updates a Shifts connection instance. Simillarly to the Update-CsTeamsShiftsConnectionInstance cmdlet, it allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. The complete list of fields is not required allowing the user to update single fields of the instance.
+The user can update every input field except -ConnectorId and -ConnectorInstanceId.
 
 ## EXAMPLES
 
-### Example WFM 1
+### Example 1
 ```powershell
-PS C:\> $result = Set-CsTeamsShiftsConnectionInstance  
+PS C:\> $result = Update-CsTeamsShiftsConnectionInstance `
     -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
-    -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" `
-    -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" `
-    -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" `
-    -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
-    -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
-    -Name "My Connector Instance" `
-    -SyncFrequencyInMin 10 `
-    -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest `
-    -Property @{
-        AdminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta3"
-        SiteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta4"
-        EssApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta2"
-        RetailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"
-        CookieAuthUrl = "https://contoso.com/retail/data/login"
-        FederatedAuthUrl = "https://contoso.com/retail/data/login"
-        LoginUserName = "PlaceholderForUsername"
-        LoginPwd = "PlaceholderForPassword"
-    })`
-    -IfMatch "\"0a005fd6-0000-0d00-0000-60a76dbf1234\""
+    -IfMatch "`"0a005fd6-0000-0d00-0000-60a76dbf1234`"" `
+    -Name "My Connector Instance Renamed" `
+    -SyncFrequencyInMin 15
 
 PS C:\> $result.ToJsonString()
 ```
@@ -89,7 +73,7 @@ PS C:\> $result.ToJsonString()
 {
     "id": "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3",
     "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
-    "name": "My Connector Instance",
+    "name": "My Connector Instance Renamed",
     "connector": {
         "id": "6A51B888-FF44-4FEA-82E1-839401E00000",
         "name": "WFM 1"
@@ -105,7 +89,7 @@ PS C:\> $result.ToJsonString()
     "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
     "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
     "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"   ],
-    "syncFrequencyInMin": 10,
+    "syncFrequencyInMin": 15,
     "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
     "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\""
     "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
@@ -113,40 +97,18 @@ PS C:\> $result.ToJsonString()
 
 ```
 
+Updates the instance with the specified -ConnectorInstanceId with the given name and sync frequency. Returns the object of updated connector instance.
 
-Updates the instance with the specified -ConnectorInstanceId. Returns the object of updated connector instance.
-
-In case of error, we can capture the error response as following:
-
-* Hold the cmdlet output in a variable: `$result=<CMDLET>`
-
-* To get the entire error message in Json: `$result.ToJsonString()`
-
-* To get the error object and object details: `$result, $result.Detail`
-
-
-### Example WFM 2
+### Example 2
 ```powershell
-PS C:\> $result = Set-CsTeamsShiftsConnectionInstance `
+PS C:\> $result = Update-CsTeamsShiftsConnectionInstance `
     -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
-    -ConnectorId "95BF2848-2DDA-4425-B0EE-D62AEED00000" `
-    -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" `
-    -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" `
-    -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
-    -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" `
-    -Name "My Connector Instance" `
-    -SyncFrequencyInMin 10 `
+    -IfMatch "`"0a005fd6-0000-0d00-0000-60a76dbf2345`"" `
     -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest `
     -Property @{
-        apiUrl = "https://contoso.com/api"
-        ssoUrl = "https://contoso.com/sso"
-        appKey = "myAppKey"
-        clientId = "myClientId"
-        clientSecret = "PlaceholderForClientSecret"
-        LoginUserName = "PlaceholderForUsername"
-        LoginPwd = "PlaceholderForPassword"
-    }) `
-    -IfMatch "\"0a005fd6-0000-0d00-0000-60a76dbf2345\""
+        apiUrl = "https://contoso.com/api/new_endpoint/"
+    })
+    
 
 PS C:\> $result.ToJsonString()
 ```
@@ -161,7 +123,7 @@ PS C:\> $result.ToJsonString()
         "name": "WFM 2"
     },
     "connectorSpecificSettings": {
-        apiUrl = "https://contoso.com/api"
+        apiUrl = "https://contoso.com/api/new_endpoint"
         ssoUrl = "https://contoso.com/sso"
         clientId = "myClientId"
     },
@@ -175,8 +137,7 @@ PS C:\> $result.ToJsonString()
 }
 ```
 
-
-Updates the instance with the specified -ConnectorInstanceId. Returns the object of updated connector instance.
+Updates the instance with the specified -ConnectorInstanceId with the new api url. Returns the object of updated connector instance.
 
 In case of error, we can capture the error response as following:
 
@@ -193,8 +154,8 @@ In case of error, we can capture the error response as following:
 The request body 
 
 ```yaml
-Type: IConnectorInstanceRequest
-Parameter Sets: Set, SetViaIdentity
+Type: IUpdateConnectorInstanceFieldsRequest
+Parameter Sets: Update, UpdateViaIdentity
 Aliases:
 
 Required: True
@@ -239,7 +200,7 @@ Gets or sets the list of connector admin email addresses.
 
 ```yaml
 Type: String[]
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -254,10 +215,10 @@ The connector id
 
 ```yaml
 Type: String
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -269,10 +230,10 @@ The connector instance id
 
 ```yaml
 Type: String
-Parameter Sets: Set, SetExpanded
+Parameter Sets: Update, UpdateExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -283,11 +244,11 @@ Accept wildcard characters: False
 The connector specific settings
 
 ```yaml
-Type: IConnectorInstanceRequestConnectorSpecificSettings
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Type: IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -295,14 +256,14 @@ Accept wildcard characters: False
 ```
 
 ### -DesignatedActorId
-Gets or sets the designated actor id that App acts as for Shifts Graph Api calls.
+The designated actor id that App acts as for Shifts Graph Api calls.
 
 ```yaml
 Type: String
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -314,10 +275,10 @@ The connector enabled scenarios that are synced from WFM system to Shifts in MS 
 
 ```yaml
 Type: String[]
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -329,10 +290,10 @@ The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system.
 
 ```yaml
 Type: String[]
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -389,7 +350,7 @@ Identity Parameter
 
 ```yaml
 Type: IConfigApiBasedCmdletsIdentity
-Parameter Sets: SetViaIdentityExpanded, SetViaIdentity
+Parameter Sets: UpdateViaIdentityExpanded, UpdateViaIdentity
 Aliases:
 
 Required: True
@@ -404,10 +365,10 @@ The connector instance name.
 
 ```yaml
 Type: String
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -464,10 +425,10 @@ The sync frequency in minutes.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -497,7 +458,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
 
-### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceRequest
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IUpdateConnectorInstanceFieldsRequest
 
 ## OUTPUTS
 
@@ -513,7 +474,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
 
-[Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
 
 [Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
 
