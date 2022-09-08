@@ -19,9 +19,9 @@ description: "This article includes the advantages of the Exchange Online PowerS
 
 # Advantages of REST cmdlets over RPS 
 
-- **More Secure**: Has inherent support for modern auth. Therefore, admins can turn off WinRM basic auth on their client machines.
-- **More Reliability**: Handles transient failures with built-in retries. Therefore, it minimizes failures due to network delays, longer query execution times, etc. 
-- **Better Performance**: The connection establishment improves performance since it avoids setting up a PowerShell Runspace on the service and downloading the format table data XMLs.
+- **More secure**: Has inherent support for modern auth. Therefore, admins can turn off WinRM basic auth on their client machines.
+- **More reliability**: Handles transient failures with built-in retries. Therefore, it minimizes failures due to network delays, longer query execution times, etc. 
+- **Better performance**: The connection establishment improves performance since it avoids setting up a PowerShell Runspace on the service and downloading the format table data XMLs.
 - V3 REST module comparison with previously released cmdlets:
 
     | |RPS Cmdlets (v.2.0.5 and earlier) |9 EXO Cmdlets (e.g. Get-ExoMailbox) |V3 Module   |

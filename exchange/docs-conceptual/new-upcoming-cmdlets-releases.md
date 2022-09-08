@@ -19,7 +19,7 @@ description: "This article describes the new features of the Exchange Online Pow
 
 # New/Upcoming Cmdlets/Parameters/Releases
 
-The Exchange Online PowerShell V3 module (EXO V3 module) would also contain the following additional REST cmdlets
+The Exchange Online PowerShell V3 module (EXO V3 module) would also contain the following additional REST cmdlets:
 
 - Get-ConnectionInformation
 - SkipLoadingFormatData Connect-ExchangeOnline to prevent the default loading of format data
