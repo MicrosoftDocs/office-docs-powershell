@@ -96,9 +96,25 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 
 Preview versions of v2.0.6 are now available. v2.0.6 of the EXO V2 module improves upon the historical capabilities of the module with the following features:
 
-- Exchange Online PowerShell in version 2.0.6 includes cmdlets that are backed by the REST API:
-  - REST API cmdlets don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) for Exchange Online PowerShell.
-  - REST API cmdlets in Exchange Online PowerShell work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
+- Exchange Online PowerShell in version 2.0.6 includes cmdlets that are backed by the REST API. REST API cmdlets have the following advantages over their historical counterparts:
+
+  - **More secure**: REST API cmdlets have built-in support for modern authentication and don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) for Exchange Online PowerShell.
+  - **More reliable**: REST API cmdlets handle transient failures with built-in retries, so failures or delays are minimized. For example:
+    - Failures due to network delays.
+    - Longer query execution times.
+  - **Better performance**: The connection avoids setting up a PowerShell runspace in Exchange Online PowerShell and downloading the format table data XMLs.
+
+  The benefits of REST API cmdlets are described in the following table:
+
+  |&nbsp;|Remote PowerShell cmdlets|Get-EXO\* cmdlets|REST API cmdlets|
+  |---|---|---|---|
+  |Security|Least secure|Highly secure|Highly secure|
+  |Performance|Low performance|High performance|Medium performance|
+  |Reliability|Least reliable|Highly reliable|Highly reliable|
+  |Functionality|All parameters and output properties available|Limited parameters and output properties available|All parameters and output properties available|
+
+  - REST API cmdlets in Exchange Online PowerShell have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
+
   - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
 
 - The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets as before:
@@ -132,7 +148,17 @@ Preview versions of v2.0.6 are now available. v2.0.6 of the EXO V2 module improv
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exo-v2-module) that you encounter.
 
-- In v2.0.6-Preview7, you can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current PowerShell session with Exchange Online.
+- In version 2.0.6-Preview7 or later of the module, you can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current PowerShell session with Exchange Online. Scenarios where you can use this cmdlet are described in the following table:
+
+  |Scenario|Expected output|
+  |---|---|
+  |Run before **Connect-ExchangeOnline** command|Returns nothing.|
+  |Run after **Connect-ExchangeOnline**command |Returns one connection/information object.|
+  |Run after multiple **Connect-ExchangeOnline** commands|Returns a collection of connection/information objects.|
+  |Run after **Connect-ExchangeOnline** command with the _UseRPSSession_ switch|Returns nothing.|
+  |Run after **Connect-ExchangeOnline** commands with and without the _UseRPSSession_ switch|Returns one connection/information object for the REST API session. Ignore the remote PowerShell session information.|
+
+- In version 2.0.6-Preview8 or later of the module, you can use the _SkipLoadingFormatData_ switch on the Connect-ExchangeOnline cmdlet to avoid loading format data and run Connect-ExchangeOnline faster.
 
 > [!NOTE]
 > Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
