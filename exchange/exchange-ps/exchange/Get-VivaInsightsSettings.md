@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-VivaInsightsSettings -Identity <String>
+ [-Feature <String>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -61,6 +62,24 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Feature
+The Feature parameter filters the results by the specified Microsoft Viva Insights feature. Valid values are:
+
+- Headspace: Represents all features of Headspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
