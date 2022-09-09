@@ -25,6 +25,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
  [-AddRecipients <PswsHashtable>]
+ [-AdvancedRule <String>]
  [-AlertProperties <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -167,6 +168,72 @@ Set-DlpComplianceRule -Identity 25bf67b6-3783-4f74-bde9-98dd40333082 -AccessScop
 
 This example modifies the access scope and blocking behavior of a DLP compliance rule that's identified by its GUID value.
 
+### Example 2
+```powershell
+Contents of the file named C:\Data\Sensitive Type.txt:
+
+{
+"Version": "1.0",
+"Condition": {
+  "Operator": "And",
+  "SubConditions": [
+    {
+      "ConditionName": "ContentContainsSensitiveInformation",
+      "Value": [
+        {
+          "groups": [
+            {
+              "Operator": "Or",
+              "labels": [
+                {
+                  "name": "defa4170-0d19-0005-000a-bc88714345d2",
+                  "type": "Sensitivity"
+                }
+              ],
+                "name": "Default",
+                "sensitivetypes": [
+                  {
+                   "confidencelevel": "Low",
+                   "name": "Credit Card Number"
+                  }
+                ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Operator": "Not",
+      "SubConditions": [
+        {
+          "Operator": "OR",
+          "SubConditions": [
+            {
+              "ConditionName": "FromMemberOf",
+              "Value": [
+              "janesteam@contoso.com"
+              ]
+            },
+            {
+              "ConditionName": "SentTo",
+              "Value": [
+              "adele@contoso.com"
+              ]
+            }
+          ],
+        }
+      ]
+    }
+  ]
+ }
+}
+
+$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0
+Set-DLPComplianceRule -Identity "Contoso Rule 1" -AdvancedRule $data
+```
+
+This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
+
 ## PARAMETERS
 
 ### -Identity
@@ -237,6 +304,26 @@ You can use this action in DLP policies that are scoped only to Exchange.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdvancedRule
+The AdvancedRule parameter uses complex rule syntax that supports multiple AND, OR, and NOT operators and nested groups.
+
+This parameter uses JSON syntax that's similar to the traditional advanced syntax, but read from a file that contains additional operators and combinations that aren't traditionally supported.
+
+For syntax details, see Example 2.
+
+```yaml
+Type: String
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance
 
