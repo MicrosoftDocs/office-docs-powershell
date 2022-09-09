@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Scheduled -StartTime "7/10/2018 08:00:00" -EndTime "7/15/2018 17:00:00" -InternalMessage "Internal auto-reply message"
 ```
 
-This example configures Automatic Replies for Tony's mailbox to be sent between the specified start and end dates and includes an internal message.
+This example configures Automatic Replies for Tony's mailbox to be sent between the specified start and end dates and includes an internal reply.
 
 ### Example 2
 ```powershell
-Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Enabled -InternalMessage "Internal auto-reply message." -ExternalMessage "External auto-reply message."
+Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Enabled -InternalMessage "Internal auto-reply message." -ExternalMessage "External auto-reply message." -ExternalAudience All
 ```
 
-This example configures Automatic Replies for Tony's mailbox to be sent and includes an internal and an external message.
+This example configures Automatic Replies for Tony's mailbox to be sent, specifies the reply for messages from internal and external senders, and specifies the external reply is sent to any external address.
 
 ## PARAMETERS
 
