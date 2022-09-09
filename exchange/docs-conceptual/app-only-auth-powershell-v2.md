@@ -25,7 +25,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 >   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
 >   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 2.0.6 Preview5 or later.
 >
->   For instructions on how to install or update the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+>   For instructions on how to install or update the module on clients or servers, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure-docs/articles/automation/shared-resources/modules.md).
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
