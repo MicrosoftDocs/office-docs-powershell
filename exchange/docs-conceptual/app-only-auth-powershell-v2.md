@@ -25,7 +25,7 @@ description: "Learn about using the Exchange Online PowerShell module in scripts
 >   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
 >   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 2.0.6-Preview5 or later.
 >
->   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
+>   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
 >
 > - Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 2.0.6 and later are known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 >

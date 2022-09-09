@@ -51,6 +51,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
@@ -522,7 +523,7 @@ Accept wildcard characters: False
 
 The ManagedIdentity switch connects to Exchange Online using a system-assigned or user-assigned managed identity. You don't need to specify a value with this switch.
 
-Managed identity is currently supported for Azure Virtual Machines and Virtual Machine Scale Sets.
+Managed identity is currently supported for Azure Virtual Machines, Virtual Machine Scale Sets and Azure Functions.
 
 You must use this switch with the Organization parameter.
 
@@ -620,11 +621,33 @@ The ShowProgress parameter specifies whether to show or hide the progress bar of
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingFormatData
+**Note**: This parameter is available in version 2.0.6-Preview8 or later of the EXO V2 module.
+
+The SkipLoadingFormatData switch avoids downloading the format data. You don't need to specify a value with this switch.
+
+When you use this switch, the output of any Exchange cmdlet will be unformatted.
+
+This switch dows not work with the UseRPSSession.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
