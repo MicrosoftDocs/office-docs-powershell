@@ -27,9 +27,7 @@ New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-Networ
 
 ### ParentAndRelativeKey
 ```
-New-CsTenantNetworkSite [-Tenant <System.Guid>] -NetworkSiteID <String> [-Description <String>]
- [-NetworkRegionID <String>] [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>]
- [-EmergencyCallRoutingPolicy <String>] [-NetworkRoamingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
+New-CsTenantNetworkSite [-Identity] <XdsGlobalRelativeIdentity> [-Confirm] [-Description <String>] [-EnableLocationBasedRouting <Boolean>] [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-NetworkRoamingPolicy <String>] [-Force] [-InMemory] [-LocationPolicy <String>] [-NetworkRegionID <String>][-SiteAddress <String>] [-Tenant <System.Guid>] [-WhatIf] [<CommonParameters>]
  [<CommonParameters>]
 ```
 
@@ -53,10 +51,10 @@ NetworkSites can exist without all parameters excepts NetworkSiteID. NetworkRegi
 
 ###-------------------------- Example 2 --------------------------
 ```powershell
-PS C:\> New-CsTenantNetworkSite -NetworkSiteID "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way" -OnlineVoiceRoutingPolicy "OVRP1"
+PS C:\> New-CsTenantNetworkSite -NetworkSiteID "site2" -Description "site 2" -EnableLocationBasedRouting $true -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way" -EmergencyCallRoutingPolicy "ECRP1"
 ```
 
-The command shown in Example 2 created the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and with OnlineVoiceRoutingPolicy "OVRP1"
+The command shown in Example 2 created the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and assign an a emergency policy "ECRP1"
 
 ###-------------------------- Example 3 --------------------------
 ```powershell
@@ -240,23 +238,6 @@ Parameter Sets: ParentAndRelativeKey
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OnlineVoiceRoutingPolicy
-This parameter determines the unique name of existing OnlineVoiceRoutingPolicy that the current network site associates to.
-
-OnlineVoiceRoutingPolicy is used to associate a user with the appropriate PSTN usages.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
