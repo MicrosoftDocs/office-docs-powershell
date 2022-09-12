@@ -19,7 +19,7 @@ This cmdlet retrieves an already existing online call data connection.
 
 ## SYNTAX
 
-```
+```powershell
 Get-CsCloudCallDataConnection [<CommonParameters>]
 ```
 

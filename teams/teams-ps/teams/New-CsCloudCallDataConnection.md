@@ -20,7 +20,7 @@ This cmdlet creates an online call data connection.
 
 ## SYNTAX
 
-```
+```powershell
 New-CsCloudCallDataConnection [<CommonParameters>]
 ```
 
