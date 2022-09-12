@@ -17,7 +17,9 @@ search.appverid: MET150
 description: "This article includes the advantages of the Exchange Online PowerShell V3 module."
 ---
 
-# Advantages of REST cmdlets over RPS (Remote PowerShell) 
+# Advantages of REST cmdlets over Remote PowerShell (RPS)
+
+Exchange Online PowerShell V3 includes cmdlets that are backed by the REST API. REST API cmdlets have the following advantages over their historical counterparts:
 
 - **More secure**: REST API cmdlets Have inherent support for modern authentication. Therefore, admins can turn off WinRM basic auth on their client machines.
 - **More reliable**: REST API cmdlets handle transient failures with built-in retries. Therefore, it minimizes failures due to network delays, longer query execution times, etc. 

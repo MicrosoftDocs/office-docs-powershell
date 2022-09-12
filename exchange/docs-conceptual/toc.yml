@@ -30,13 +30,17 @@
       items:
         - name: Announcements
           items:
-            - name: Cmdlets Disabled/Withdrawn
-              href: cmdlets-disabled-withdrawn.md
-            - name: New/Upcoming Cmdlets/Parameters/Releases
-              href: new-upcoming-cmdlets-releases.md
-            - name: Breaking features announcements
-              href: breaking-feature-announcements.md
-            - name: About the Exchange Online PowerShell V3 
+            - name: Announcements about the Exchange Online PowerShell V3 
+              items:
+                - name: Cmdlets Disabled/Withdrawn
+                  href: cmdlets-disabled-withdrawn.md
+                - name: New/Upcoming Cmdlets/Parameters/Releases
+                  href: new-upcoming-cmdlets-releases.md
+                - name: Breaking features announcements
+                  href: breaking-feature-announcements.md
+        - name: About the Exchange Online PowerShell V3
+          items:
+            - name: Overview 
               href: overview-exchange-online-powershell-v3.md
             - name: Advantages of the Exchange Online PowerShell V3 
               href: advantages-of-rest-cmdlets-over-rps.md
