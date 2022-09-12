@@ -110,7 +110,7 @@ PS C:\_\> $ci.ToJsonString()
   },
   "connectorSpecificSettings": {
     "apiUrl": "https://www.contoso.com/api",
-    "ssoUrl": "https://www.contoso.mykronos.com/sso",
+    "ssoUrl": "https://www.contoso.com/sso",
     "clientId": "86q446dXbJz6UdZeOr1FrP8chDHDZ66nu"
   },
   "id": "WCI-78F5116E-9098-45F5-B595-1153DF9D6F70",

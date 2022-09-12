@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csbatchteamsdeployment
+online version: https://docs.microsoft.com/powershell/module/teams/Get-CsBatchTeamsDeploymentStatus
 schema: 2.0.0
 ---
 
-# Get-CsBatchTeamsDeployment
+# Get-CsBatchTeamsDeploymentStatus
+
 
 ## SYNOPSIS
 
@@ -14,11 +15,11 @@ This cmdlet is used to get the status of the batch deployment orchestration.
 ## SYNTAX
 
 ```
-Get-CsBatchTeamsDeployment -OrchestrationId <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-CsBatchTeamsDeploymentStatus -OrchestrationId <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-After deploying teams using New-CsBatchTeamsDeployment, an admin can check the status of the job/orchestration using Get-CsBatchTeamsDeployment. 
+After deploying teams using New-CsBatchTeamsDeployment, an admin can check the status of the job/orchestration using Get-CsBatchTeamsDeploymentStatus. 
 
 To learn more, see [Deploy Teams at scale for frontline workers](https://docs.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
 
@@ -26,7 +27,7 @@ To learn more, see [Deploy Teams at scale for frontline workers](https://docs.mi
 
 ### EXAMPLE 1
 ```
-Get-CsBatchTeamsDeployment -OrchestrationId "My-Orchestration-Id"
+Get-CsBatchTeamsDeploymentStatus -OrchestrationId "My-Orchestration-Id"
 ```
 This command provides the status of the specified batch deployment orchestrationId.
 
