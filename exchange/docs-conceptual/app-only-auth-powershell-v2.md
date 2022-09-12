@@ -19,6 +19,9 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 
 # App-only authentication for unattended scripts in the EXO V2 module
 
+> [!IMPORTANT]
+> This article also applies to the Exchange Online PowerShell V3 module (EXO V3 module).
+
 > [!NOTE]
 >
 > - The features and procedures described in this article require the following versions of the EXO V2 module:

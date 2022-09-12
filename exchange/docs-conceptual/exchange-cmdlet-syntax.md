@@ -15,6 +15,9 @@ description: "Learn about the structure and syntax of cmdlets in Exchange PowerS
 
 # Exchange cmdlet syntax
 
+> [!IMPORTANT]
+> This article also applies to the Exchange Online PowerShell V3 module (EXO V3 module).
+
 Exchange cmdlet reference articles use a standardized method that describes key aspects about the cmdlet. For example:
 
 - Parameters that are available on the cmdlet.

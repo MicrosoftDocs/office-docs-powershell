@@ -15,6 +15,9 @@ description: "Admins can learn how to use PowerShell to find the permissions req
 
 # Find the permissions required to run any Exchange cmdlet
 
+> [!IMPORTANT]
+> This article also applies to the Exchange Online PowerShell V3 module (EXO V3 module).
+
 You can use PowerShell to find the permissions required to run any Exchange or Exchange Online cmdlet. This procedure shows the role-based access control (RBAC) management roles and role groups that give you access to a specified cmdlet—even if your organization has custom roles, custom role groups, or custom role assignments.
 
 ## What do you need to know before you begin?
