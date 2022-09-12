@@ -25,7 +25,7 @@ New-CsCloudCallDataConnection
 ```
 
 ## DESCRIPTION
-This cmdlet creates an online call data connection. If you get an error that the connection already exists, this means that the call data connection already exists for your tenant. In this case, run Get-CsCloudCallDataConnection.
+This cmdlet creates an online call data connection. If you get an error that the connection already exists, it means that the call data connection already exists for your tenant. In this case, run Get-CsCloudCallDataConnection.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ Returns a token value, which is needed when configuring your on-premises environ
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -56,7 +56,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-New-CsCloudCallDataConnection cmdlet is now supported only from Teams PowerShell Module versions 4.6.0 or later.
+The New-CsCloudCallDataConnection cmdlet is only supported from Teams PowerShell Module versions 4.6.0 or later.
 
 ## RELATED LINKS
 
