@@ -19,7 +19,7 @@ description: "This article lists the new features of the Exchange Online PowerSh
 
 # Breaking feature announcements
 
-1. Get-PSSession cannot be used to get information about the sessions created as PowerShell Remoting is no longer being used. The `Get-ConnectionInformation` cmdlet has been introduced instead, to get information about the existing connections to ExchangeOnline. For more information, see [Get-ConnectionInformation.](/powershell/module/exchange/get-connectioninformation?view=exchange-ps)
+1. Get-PSSession cannot be used to get information about the sessions created as PowerShell Remoting is no longer being used. The `Get-ConnectionInformation` cmdlet has been introduced instead, to get information about the existing connections to ExchangeOnline. For more information, see [Get-ConnectionInformation.](/powershell/module/exchange/get-connectioninformation?view=exchange-ps&preserve-view=true)
 
 2. Certain cmdlets that used to prompt for confirmation in specific scenarios will no longer have this prompt and the cmdlet will run to completion by default.
 
