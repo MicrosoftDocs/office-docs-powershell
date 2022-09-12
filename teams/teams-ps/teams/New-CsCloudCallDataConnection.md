@@ -7,7 +7,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/new-cscloudca
 schema: 2.0.0
 author: 2012ucp1544
 ms.author: uditagrawal
-ms.reviewer: pbafna03
+ms.reviewer: pbafna
 manager: subadjat
 
 ---
@@ -21,7 +21,7 @@ This cmdlet creates an online call data connection.
 ## SYNTAX
 
 ```powershell
-New-CsCloudCallDataConnection [<CommonParameters>]
+New-CsCloudCallDataConnection
 ```
 
 ## DESCRIPTION

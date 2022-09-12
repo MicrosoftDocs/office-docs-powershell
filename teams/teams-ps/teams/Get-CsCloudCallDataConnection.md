@@ -7,7 +7,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/get-cscloudca
 schema: 2.0.0
 author: 2012ucp1544
 ms.author: uditagrawal
-ms.reviewer: pbafna03
+ms.reviewer: pbafna
 manager: subadjat
 
 ---
@@ -20,7 +20,7 @@ This cmdlet retrieves an already existing online call data connection.
 ## SYNTAX
 
 ```powershell
-Get-CsCloudCallDataConnection [<CommonParameters>]
+Get-CsCloudCallDataConnection
 ```
 
 ## DESCRIPTION
