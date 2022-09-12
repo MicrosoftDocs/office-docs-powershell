@@ -4,8 +4,8 @@ Module Name: microsoftteams
 applicable: Microsoft Teams
 title: Get-CsCloudCallDataConnection
 online version: https://docs.microsoft.com/powershell/module/teams/get-cscloudcalldataconnection
-schema: 2.0.0,
-author: 2012ucp1544,
+schema: 2.0.0
+author: 2012ucp1544
 ms.author: uditagrawal
 ms.reviewer: pbafna03
 manager: subadjat
