@@ -38,7 +38,7 @@
                   href: new-upcoming-cmdlets-releases.md
                 - name: Breaking features announcements
                   href: breaking-feature-announcements.md
-        - name: About the Exchange Online PowerShell V3
+        - name: About the Exchange Online PowerShell V3 module
           items:
             - name: Overview 
               href: overview-exchange-online-powershell-v3.md
