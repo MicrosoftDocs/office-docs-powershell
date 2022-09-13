@@ -60,7 +60,7 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-This cmdlet creates a PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for REST API-backed cmdlets in the Exchange Online PowerShell V3 module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
+This cmdlet creates a PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for REST API-backed cmdlets in the Exchange Online PowerShell V3 module and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
 
 ## EXAMPLES
 
