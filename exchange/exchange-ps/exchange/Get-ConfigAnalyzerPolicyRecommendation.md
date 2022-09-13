@@ -16,8 +16,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-ConfigAnalyzerPolicyRecommendation cmdlet to compare the settings in your existing security policies to the settings that are used in the Standard or Strict preset security policies. Settings that are below the recommend value are returned in the results.
 
-**Note**: We recommend that you use the Exchange Online PowerShell module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

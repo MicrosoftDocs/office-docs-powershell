@@ -1233,4 +1233,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-Label](New-Label.md)
+
+[New-Label](https://docs.microsoft.com/powershell/module/exchange/new-label)
