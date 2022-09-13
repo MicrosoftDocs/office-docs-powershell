@@ -54,7 +54,7 @@ NetworkSites can exist without all parameters excepts NetworkSiteID. NetworkRegi
 PS C:\> New-CsTenantNetworkSite -NetworkSiteID "site2" -Description "site 2" -EnableLocationBasedRouting $true -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way" -EmergencyCallRoutingPolicy "ECRP1"
 ```
 
-The command shown in Example 2 created the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and assign an a emergency policy "ECRP1"
+The command shown in Example 2 created the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and assigns an emergency policy 'ECRP1'.
 
 ###-------------------------- Example 3 --------------------------
 ```powershell
