@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-EXOMailboxFolderPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-ExOMailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
@@ -120,7 +120,7 @@ You can't use this parameter with the ExternalDirectoryObjectId, Identity, or Us
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -185,10 +185,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+[Set-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
 
-[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+[Remove-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission)
 
-[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+[Add-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission)

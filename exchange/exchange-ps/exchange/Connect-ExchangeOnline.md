@@ -13,7 +13,7 @@ ms.reviewer:
 # Connect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
 
@@ -60,9 +60,7 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a remote PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for the new REST API-backed cmdlets in the Exchange Online PowerShell module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
-
-For details about the current and past public versions of the module, see [Release notes](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#release-notes). This topic is written for the current public version. Features or parameters that are only available in a Preview version of the module are specifically noted.
+This cmdlet creates a PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for REST API-backed cmdlets in the Exchange Online PowerShell V3 module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
 
 ## EXAMPLES
 
@@ -71,14 +69,14 @@ For details about the current and past public versions of the module, see [Relea
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession parameter, so the connection uses REST and doesn't require Basic authentication to be enabled in WinROM on the local computer. But, only the subset of frequently used REST API parameters are available.
+This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession parameter, so the connection uses REST and doesn't require Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 2
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -UseRPSSession
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession parameter, so the connection requires Basic authentication to be enabled in WinRM on the local computer. But, all Exchange Online PowerShell cmdlets are available using traditional remote PowerShell access.
+This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession parameter, so the connection requires Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 3
 ```powershell
@@ -127,10 +125,10 @@ The ConnectionUri parameter specifies the connection endpoint for the remote Exc
 - Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://outlook.office365.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter.
 - Office 365 Germany: `https://outlook.office.de/PowerShell-LiveID`
 - Office 365 operated by 21Vianet: `https://partner.outlook.cn/PowerShell`
-- Microsoft 365 GCC High: `https://outlook.office365.us/powershell-liveid`
-- Microsoft 365 DoD: `https://webmail.apps.mil/powershell-liveid`
+- Microsoft 365 GCC High: `https://outlook.office365.us/powershell-liveID`
+- Microsoft 365 DoD: `https://webmail.apps.mil/powershell-liveID`
 
-**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection, use the this cmdlet without the _ConnectionUri_ parameter to connect to EOP PowerShell (the same connection instructions as Exchange Online PowerShell in Microsoft 365 or Microsoft GCC).
+**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection, use this cmdlet without the _ConnectionUri_ parameter to connect to EOP PowerShell (the same connection instructions as Exchange Online PowerShell in Microsoft 365 or Microsoft GCC).
 
 ```yaml
 Type: String
@@ -559,7 +557,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+The Organization parameter specifies the organization that's used in CBA or with the ManagedIdentity parameter. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
@@ -637,7 +635,7 @@ The SkipLoadingFormatData switch avoids downloading the format data. You don't n
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 
-This switch dows not work with the UseRPSSession.
+This switch does not work with the UseRPSSession switch.
 
 ```yaml
 Type: SwitchParameter
@@ -677,7 +675,7 @@ Accept wildcard characters: False
 The UseMultithreading parameter specifies whether to disable or enable multi-threading in the Exchange Online PowerShell module. Valid values are:
 
 - $true: Enable multi-threading. This is the default value.
-- $false: Disable multi-threading. Note this value will degrade performance of cmdlets in the module.
+- $false: Disable multi-threading. This value will degrade the performance of the nine special **Get-EXO\*** cmdlets in the module.
 
 ```yaml
 Type: Boolean
@@ -693,7 +691,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the username dialog in the modern authentication prompt for credentials (you only need to enter your password).
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip entering a username in the modern authentication credentials prompt (you're prompted to enter a password).
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
 
@@ -715,9 +713,9 @@ This parameter is available in version 2.0.6-Preview3 or later of the module.
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#turn-on-basic-authentication-in-winrm).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
 
-If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
+If you don't use this switch, Basic authentication in WinRM is not required.
 
 ```yaml
 Type: SwitchParameter

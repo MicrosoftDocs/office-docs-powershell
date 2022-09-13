@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-EXORecipientPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-EXORecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
@@ -183,7 +183,7 @@ You need to use this parameter with the Identity, PrimarySmtpAddress, UserPrinci
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

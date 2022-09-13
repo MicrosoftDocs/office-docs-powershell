@@ -13,7 +13,7 @@ ms.reviewer:
 # Connect-IPPSSession
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
@@ -46,8 +46,6 @@ Connect-IPPSSession
 
 ## DESCRIPTION
 This cmdlet allows you to create a remote PowerShell session to Exchange-related PowerShell environments other than Exchange Online PowerShell. For example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell (for organizations without Exchange Online mailboxes).
-
-For details about the current and past public versions of the Exchang Online PowerShell module, see [Release notes](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#release-notes). This topic is written for the current public version. Features or parameters that are only available in a Preview version of the module are specifically noted.
 
 ## EXAMPLES
 
@@ -229,7 +227,7 @@ Accept wildcard characters: False
 ### -AppId
 The AppId parameter specifies the application ID of the service principal that's used in certificate based authentication (CBA). A valid value is the GUID of the application ID (service principal). For example, `36ee4c6c-0812-40a2-b820-b22ebd02bce3`.
 
-For more information, see [App-only authentication for unattended scripts in the Exchang Online PowerShell module](https://aka.ms/exov2-cba).
+For more information, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -265,7 +263,7 @@ The Certificate parameter specifies the certificate that's used for certificate-
 
 Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchang Online PowerShell module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: X509Certificate2
@@ -285,7 +283,7 @@ The CertificateFilePath parameter specifies the certificate that's used for CBA.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchang Online PowerShell module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -309,7 +307,7 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchang Online PowerShell module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: SecureString
@@ -331,7 +329,7 @@ Don't use this parameter with the Certificate or CertificateFilePath parameters.
 
 **Note**: The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchang Online PowerShell module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -369,7 +367,7 @@ Accept wildcard characters: False
 ### -Organization
 The Organization parameter specifies the organization that's used in CBA. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchang Online PowerShell module](https://aka.ms/exov2-cba).
+For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exov2-cba).
 
 ```yaml
 Type: String
@@ -385,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the username dialog in the modern authentication prompt for credentials (you only need to enter your password).
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip entering a username in the modern authentication credentials prompt (you're prompted to enter a password).
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
 
