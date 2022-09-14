@@ -25,11 +25,11 @@ This cmdlet supports retrieving users of a shared with team.
 
 ### Example 1
 ```PowerShell
-Get-AssociatedTeamUser -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 19:cUfyYYw3h_t-1KG8-WkvVa7KLEsIx-JHmyeG43VJojg1@thread.tacv2
+Get-SharedWithTeamUser -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 19:cUfyYYw3h_t-1KG8-WkvVa7KLEsIx-JHmyeG43VJojg1@thread.tacv2
 -SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b
 ```
 
-Returns users of a team with which specified channel is shared.
+Returns users of a team with which a specified channel is shared.
 
 ### Example 2
 ```PowerShell
@@ -37,7 +37,7 @@ Get-AssociatedTeam -HostTeamId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -ChannelId 1
 -SharedWithTeam d2aad370-c6ca-438b-b4d7-05f0aa911a7b -Role owner
 ```
 
-Returns owners of a team with which specified channel is shared.
+Returns owners of a team with which a specified channel is shared.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelId
-Thread id of the shared channel
+Thread ID of the shared channel.
 
 ```yaml
 Type: String
@@ -103,8 +103,7 @@ Accept wildcard characters: False
 
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -48,7 +48,7 @@ Returns associated teams of a given user ID.
 
 ### -User
 User's UPN (user principal name, for example
-johndoe@example.com) or user id (e.g. 0e4249a7-6cfd-8c93-a510-91cda44c8c73)
+johndoe@example.com) or user ID (for example 0e4249a7-6cfd-8c93-a510-91cda44c8c73).
 
 ```yaml
 Type: String
@@ -63,8 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
