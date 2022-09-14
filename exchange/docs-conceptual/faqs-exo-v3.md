@@ -156,6 +156,3 @@ For details about syntax and parameter information, see [Uninstall-Module.](/p
 No, currently both are available only in their RPS versions.<br> 
 If you use the EOP or SCC cmdlets, you need to keep WinRM Basic Authentication turned on, on the client machines.  
 
-## How to troubleshoot Exchange Online PowerShell V3 module? 
-
-Refer [troubleshooting EXO-V3](troubleshoot-exo-v3.md) to identify and fix errors that you may run into when you use this product. 
