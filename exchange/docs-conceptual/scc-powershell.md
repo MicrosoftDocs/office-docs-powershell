@@ -18,7 +18,14 @@ description: "Learn about using Security & Compliance PowerShell."
 
 Security & Compliance PowerShell is the administrative interface that enables you to manage the features that are available in the Microsoft 365 Defender portal and the Microsoft Purview compliance portal from the command line. For example, you can use Security & Compliance PowerShell to perform Compliance Searches. The following articles provide information about using Security & Compliance PowerShell:
 
-- To create a remote PowerShell session that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). Note that the connection instructions are different from Exchange Online PowerShell or standalone Exchange Online Protection (EOP) PowerShell (the _ConnectionUri_ value is different).
+- To learn about the Exchange Online PowerShell module that's required to connect to Security & Compliance PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+
+  > [!NOTE]
+  > Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+
+- To create a PowerShell session that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). Note that the connection instructions are different from Exchange Online PowerShell or standalone Exchange Online Protection (EOP) PowerShell (the _ConnectionUri_ value is different).
+
+- To learn about app-only authentication (also known as certificate based authentication or CBA) in Security & Compliance PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 
 - To learn about the structure and layout of the cmdlet reference articles in Security & Compliance PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 

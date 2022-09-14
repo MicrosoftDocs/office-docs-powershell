@@ -14,7 +14,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn about how to use filtering for cmdlets in the Exchange Online module."
+description: "Learn about how to use filtering for cmdlets in the Exchange Online V2 module and V3 module."
 ---
 
 # Filters in the Exchange Online PowerShell module
@@ -22,9 +22,9 @@ description: "Learn about how to use filtering for cmdlets in the Exchange Onlin
 The Exchange Online PowerShell module contains nine exclusive **Get-EXO\*** cmdlets that are optimized for high speed, high volume operations, and (after you connect to your organization) gives you access to the hundreds of existing cmdlets in the service. For more information, see [Cmdlets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#cmdlets-in-the-exchange-online-powershell-module).
 
 > [!NOTE]
-> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 2.0.6 and later are known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-In order to get the most out of the Exchange Online PowerShell module, you need to follow the guidance in this article.
+In order to get the most out of filters in the nine exclusive **Get-EXO\*** cmdlets in the module, you need to follow the guidance in this article.
 
 ## Use client-side filtering for the best performance
 
@@ -36,7 +36,7 @@ Generally, you get much better performance in Exchange PowerShell cmdlets with s
 
 ## Unsupported filterable properties
 
-The **Get-EXO\*** cmdlets in the Exchange Online PowerShell module support the majority of [filterable properties](filter-properties.md) that are available in their older, equivalent cmdlets. But, there are currently some properties that don't work with filtering in the **Get-EXO\*** cmdlets. These properties are described in the following table:
+The **Get-EXO\*** cmdlets in the module support the majority of [filterable properties](filter-properties.md) that are available in their older, equivalent cmdlets. But, there are currently some properties that don't work with filtering in the **Get-EXO\*** cmdlets. These properties are described in the following table:
 
 |Cmdlet|Unsupported filterable property|LDAP Display Name|
 |---|---|---|

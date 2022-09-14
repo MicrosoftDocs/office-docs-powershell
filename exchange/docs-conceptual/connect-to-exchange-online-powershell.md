@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V2 module or V3 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Exchange Online PowerShell
@@ -21,22 +21,22 @@ description: "Learn how to use the Exchange Online PowerShell module to connect 
 The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 > [!NOTE]
-> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 2.0.6 and later are known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without MFA.
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md).
+To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
+
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md).
 
 To use the older Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell using MFA, see [V1 module - Connect to Exchange Online PowerShell using MFA](v1-module-mfa-connect-to-exo-powershell.md). Note that this older version of the module will eventually be retired.
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the Exchange Online PowerShell module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
+- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > The rest of the instructions in the article assume that you've already installed the module.
-  >
-  > If you're using version 2.0.6 of the module and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access only to the available REST API cmdlets. For more information, see [Updates for version 2.0.6 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-206-the-exo-v3-module).
+  > If you're using the EXO V3 module (v3.0.0 or v2.0.6-PreviewX) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access only to the available REST API cmdlets. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
@@ -53,7 +53,7 @@ These connection instructions use modern authentication and work with or without
 
 For other sign in methods that are available in PowerShell 7, see the [PowerShell 7 log in experiences](#powershell-7-log-in-experiences) section later in this topic.
 
-1. After you've [installed the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command<sup>\*</sup>:
+1. After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command<sup>\*</sup>:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
@@ -125,9 +125,9 @@ Disconnect-ExchangeOnline
 
 ## PowerShell 7 log in experiences
 
-This section describes the log in experiences that are available in version 2.0.4 or later of the Exchange Online PowerShell module in PowerShell 7.
+This section describes the log in experiences that are available in version 2.0.4 or later of the module in PowerShell 7.
 
-For more information about the operating systems that are supported by the Exchange Online PowerShell module in PowerShell 7, see [Supported operating systems for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exchange-online-powershell-module).
+For more information about the operating systems that are supported by the module in PowerShell 7, see [Supported operating systems for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exchange-online-powershell-module).
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 

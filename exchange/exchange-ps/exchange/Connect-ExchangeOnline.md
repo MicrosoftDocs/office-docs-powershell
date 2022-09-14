@@ -235,7 +235,7 @@ Accept wildcard characters: False
 The Prefix parameter specifies a text value to add to the beginning of remote PowerShell cmdlet names when you connect.
 
 - You can't use spaces or special characters like underscores or asterisks.
-- You can't use the value EXO. This value is reserved for the nine special **Get-EXO\*** cmdlets in the module.
+- You can't use the value EXO. This value is reserved for the nine exclusive **Get-EXO\*** cmdlets in the module.
 
 ```yaml
 Type: String
@@ -675,7 +675,7 @@ Accept wildcard characters: False
 The UseMultithreading parameter specifies whether to disable or enable multi-threading in the Exchange Online PowerShell module. Valid values are:
 
 - $true: Enable multi-threading. This is the default value.
-- $false: Disable multi-threading. This value will degrade the performance of the nine special **Get-EXO\*** cmdlets in the module.
+- $false: Disable multi-threading. This value will degrade the performance of the nine exclusive **Get-EXO\*** cmdlets in the module.
 
 ```yaml
 Type: Boolean

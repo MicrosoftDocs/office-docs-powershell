@@ -46,7 +46,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
-- For filtering considerations for connections using the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
+- For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 - In Exchange Online, you can't use a wildcard character (*) as the first character in the search string.
 

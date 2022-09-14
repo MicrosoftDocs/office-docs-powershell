@@ -18,7 +18,14 @@ description: "Learn about using PowerShell in Exchange Online"
 
 Exchange Online PowerShell is the administrative interface that enables you to manage your Microsoft Exchange Online organization from the command line. For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following articles provide information about using Exchange Online PowerShell:
 
-- To create a remote PowerShell session to your Exchange Online organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+- To learn about the Exchange Online PowerShell module that's required to connect to Exchange Online PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+
+  > [!NOTE]
+  > Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+
+- To create a PowerShell session to your Exchange Online organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+
+- To learn about app-only authentication (also known as certificate based authentication or CBA) in Exchange Online PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 
 - To prevent or allow PowerShell access to your Exchange Online organization, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
@@ -28,6 +35,6 @@ Exchange Online PowerShell is the administrative interface that enables you to m
 
 - To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](recipient-filters.md).
 
-- To learn about authentication in Exchange Online PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+- To learn about recipient filters for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
-- To learn about property sets in Exchange Online PowerShell module cmdlets, see [Property sets in Exchange Online PowerShell module cmdlets](cmdlet-property-sets.md).
+- To learn about property sets in the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Property sets in Exchange Online PowerShell module cmdlets](cmdlet-property-sets.md).

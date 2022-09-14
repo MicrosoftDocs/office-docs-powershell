@@ -177,7 +177,7 @@ Accept wildcard characters: False
 The Prefix parameter specifies a text value to add to the beginning of remote PowerShell cmdlet names when you connect.
 
 - You can't use spaces or special characters like underscores or asterisks.
-- You can't use the value EXO. This value is reserved for the nine special **Get-EXO\*** cmdlets in the module.
+- You can't use the value EXO. This value is reserved for the nine exclusive **Get-EXO\*** cmdlets in the module.
 
 ```yaml
 Type: String

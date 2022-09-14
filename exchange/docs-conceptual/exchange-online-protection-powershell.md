@@ -18,9 +18,14 @@ description: "Learn about using PowerShell in Exchange Online Protection"
 Exchange Online Protection PowerShell is the administrative interface that enables you to manage your standalone Exchange Online Protection (EOP) organization from the command line. For example, you can use Exchange Online Protection PowerShell to configure mail flow rules (also known as transport rules) and connectors.
 
 > [!NOTE]
-> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations. For example, your Microsoft 365 subscription only includes EOP (no Exchange mailboxes), and you use it to protect your on-premises email environment. If you have a Microsoft 365 subscription that includes Exchange Online mailboxes (E3, E5, etc.), you can't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations. For example, your Microsoft 365 subscription only includes EOP (no Exchange mailboxes), and you use EOP to protect your on-premises email environment. If you have a Microsoft 365 subscription that includes Exchange Online mailboxes (A3/E3/G3, A5/E5/G5, Microsoft 365 Business Premium, etc.), you can't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 The following articles provide information about using Exchange Online Protection PowerShell:
+
+- To learn about the Exchange Online PowerShell module that's required to connect to standalone Exchange Online Protection PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+
+  > [!NOTE]
+  > Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 - To create a remote PowerShell session to your standalone Exchange Online Protection organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
 

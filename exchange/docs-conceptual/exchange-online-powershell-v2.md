@@ -1,5 +1,5 @@
 ---
-title: About the Exchange Online PowerShell module
+title: About the Exchange Online PowerShell V2 module and V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -8,13 +8,13 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
-ms.reviewer: navgupta
+ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
+description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V2 module and V3 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
 ---
 
 # About the Exchange Online PowerShell module
@@ -22,9 +22,9 @@ description: "Admins can learn about the installation, maintenance, and design o
 The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell.
 
 > [!NOTE]
-> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 2.0.6 and later are known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-For connection instructions using the Exchange Online PowerShell module, see the following articles:
+For connection instructions using the module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
@@ -41,36 +41,41 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 ```
 
 > [!NOTE]
-> The latest version of Exchange Online PowerShell and frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
+> Frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
 
-### Updates for version 2.0.6 (the EXO V3 module)
+### Updates for version 3.0.0 (the EXO V3 module)
 
-Version 2.0.6 of the EXO V3 module improves upon the historical capabilities of the EXO V2 module (versions 2.0.5 and earlier) with the following features:
+3.0.0 is the officially released version of the 2.0.6-PreviewX versions of the module, and is now known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module). The EXO V3 module improves upon the historical capabilities of the EXO V2 module (version 2.0.5 and earlier) with the following features:
 
-- Exchange Online PowerShell in version 2.0.6 includes cmdlets that are backed by the REST API. REST API cmdlets have the following advantages over their historical counterparts:
+- [Certificate based authentication](app-only-auth-powershell-v2.md) (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
+
+- Cmdlets backed by the REST API are available in Exchange Online PowerShell. REST API cmdlets have the following advantages over their historical counterparts:
 
   - **More secure**: REST API cmdlets have built-in support for modern authentication and don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) for Exchange Online PowerShell.
   - **More reliable**: REST API cmdlets handle transient failures with built-in retries, so failures or delays are minimized. For example:
     - Failures due to network delays.
-    - Longer query execution times.
+    - Delays due to large queries that take a long time to complete.
   - **Better performance**: The connection avoids setting up a PowerShell runspace in Exchange Online PowerShell and downloading the format table data XMLs.
 
-  The benefits of REST API cmdlets are described in the following table:
+  The benefits of REST API cmdlets in Exchange Online PowerShell are described in the following table:
 
   |&nbsp;|Remote PowerShell cmdlets|Get-EXO\* cmdlets|REST API cmdlets|
   |---|---|---|---|
-  |Security|Least secure|Highly secure|Highly secure|
-  |Performance|Low performance|High performance|Medium performance|
-  |Reliability|Least reliable|Highly reliable|Highly reliable|
-  |Functionality|All parameters and output properties available|Limited parameters and output properties available|All parameters and output properties available|
+  |**Security**|Least secure|Highly secure|Highly secure|
+  |**Performance**|Low performance|High performance|Medium performance|
+  |**Reliability**|Least reliable|Highly reliable|Highly reliable|
+  |**Functionality**|All parameters and output properties available|Limited parameters and output properties available|All parameters and output properties available|
+
+  > [!NOTE]
+  > Currently, no cmdlets in Security & Compliance PowerShell cmdlets are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell still rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
 
   - REST API cmdlets in Exchange Online PowerShell have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
 
   - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
 
-- The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets as before:
+- The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets in Exchange Online PowerShell:
   - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) on your client computer.
-  - If you don't use the _UseRPSSession_ switch when you connect, you can use _only_ the REST API cmdlets.
+  - If you don't use the _UseRPSSession_ switch when you connect to Exchange Online PowerShell, you can use _only_ the REST API cmdlets.
 
 - A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRouting_ switch, you can use only the following values for identity of the mailbox:
@@ -99,7 +104,9 @@ Version 2.0.6 of the EXO V3 module improves upon the historical capabilities of 
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exchange-online-powershell-module) that you encounter.
 
-- In version 2.0.6-Preview7 or later of the module, you can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current PowerShell session with Exchange Online. Scenarios where you can use this cmdlet are described in the following table:
+- You can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current Exchange Online PowerShell. This new cmdlet is necessary because the [Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return any information for REST-based connections.
+
+  Scenarios where you can use this cmdlet are described in the following table:
 
   |Scenario|Expected output|
   |---|---|
@@ -109,16 +116,17 @@ Version 2.0.6 of the EXO V3 module improves upon the historical capabilities of 
   |Run after **Connect-ExchangeOnline** command with the _UseRPSSession_ switch|Returns nothing.|
   |Run after **Connect-ExchangeOnline** commands with and without the _UseRPSSession_ switch|Returns one connection/information object for the REST API session. Ignore the remote PowerShell session information.|
 
-- In version 2.0.6-Preview8 or later of the module, you can use the _SkipLoadingFormatData_ switch on the Connect-ExchangeOnline cmdlet to avoid loading format data and run Connect-ExchangeOnline faster.
+- You can use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
-> [!NOTE]
-> Security & Compliance PowerShell in version 2.0.6 does not include cmdlets that are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
+For additional information, see the [Release notes](#release-notes) section later in this article.
+
+For information about switching from the older Exchange Online Remote PowerShell Module (V1) to the current release, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/moving-from-the-exchange-powershell-v1-module-to-the-v2-preview/ba-p/3450679).
 
 ## Cmdlets in the Exchange Online PowerShell module
 
-All versions of the Exchange Online PowerShell module contain a small set of exclusive **Get-EXO\*** Exchange Online PowerShell cmdlets that are optimized for speed in bulk data retrieval scenarios (think: thousands and thousands of objects). These **Get-EXO\*** cmdlets are meant to replace their older, less efficient equivalents in remote PowerShell, but the equivalent cmdlets are still available.
+All versions of the module contain nine exclusive **Get-EXO\*** cmdlets for Exchange Online PowerShell that are optimized for speed in bulk data retrieval scenarios (think: thousands and thousands of objects). These **Get-EXO\*** cmdlets are meant to replace their older, less efficient equivalents in remote PowerShell, but the equivalent cmdlets are still available.
 
-The improved Exchange Online PowerShell cmdlets that are available only in the Exchange Online PowerShell module are listed in the following table:
+The improved Exchange Online PowerShell cmdlets that are available only in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|
 |---|---|
@@ -132,16 +140,16 @@ The improved Exchange Online PowerShell cmdlets that are available only in the E
 |[Get-EXOMailboxFolderPermission](/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics)|
 
-The connection-related cmdlets in the Exchange Online PowerShell module are listed in the following table:
+The connection-related cmdlets in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|Comments|
 |---|---|---|
 |[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
 |[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)||
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
-|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|n\a|Available in v2.0.6-Preview7 or later.|
+|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession)|Available in v2.0.6-Preview7 or later.|
 
-Miscellaneous Exchange Online cmdlets that happen to be in the Exchange Online PowerShell module are listed in the following table:
+Miscellaneous Exchange Online cmdlets that happen to be in the module are listed in the following table:
 
 |Cmdlet|Comments|
 |---|---|
@@ -164,13 +172,13 @@ Miscellaneous Exchange Online cmdlets that happen to be in the Exchange Online P
 
 ## Install and maintain the Exchange Online PowerShell module
 
-You can download the Exchange Online PowerShell module from the PowerShell gallery at <https://www.powershellgallery.com/packages/ExchangeOnlineManagement/>.
+You download the module from the PowerShell gallery at <https://www.powershellgallery.com/packages/ExchangeOnlineManagement/>.
 
-The procedures in this section explain how to install, update, and uninstall the Exchange Online PowerShell module.
+The procedures in this section explain how to install, update, and uninstall the module.
 
 ### Supported operating systems for the Exchange Online PowerShell module
 
-The latest version of the Exchange Online PowerShell module is officially supported in PowerShell 7 on Windows, Linux, and Apple macOS.
+The latest versions of the module are officially supported in PowerShell 7 on Windows, Linux, and Apple macOS.
 
 Specifically, version **2.0.4 or later** is supported in **PowerShell 7.0.3 or later**.
 
@@ -178,7 +186,7 @@ For more information about PowerShell 7, see [Announcing PowerShell 7.0](https:/
 
 #### Apple macOS
 
-The Exchange Online PowerShell module is supported in the following versions of macOS:
+The module is supported in the following versions of macOS:
 
 - macOS 11 Big Sur or later
 - macOS 10.15 Catalina
@@ -206,12 +214,12 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exc
 
 #### Linux
 
-The Exchange Online PowerShell module is officially supported in the following distributions of Linux:
+The module is officially supported in the following distributions of Linux:
 
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
 
-If you have trouble using the Exchange Online PowerShell module on other distributions of Linux, send email to the following address: `exocmdletpreview[at]service[dot]microsoft[dot]com`. The email address is purposefully obfuscated to avoid spam.
+If you have trouble using the module on other distributions of Linux, send email to the following address: `exocmdletpreview[at]service[dot]microsoft[dot]com`. The email address is purposefully obfuscated to avoid spam.
 
 For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true).
 
@@ -231,17 +239,17 @@ After you install PowerShell 7, do the following steps:
 Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install the Exchange Online PowerShell module](#install-the-exchange-online-powershell-module).
 
 > [!NOTE]
-> If you connect to Exchange Online PowerShell from a network that's behind a proxy server, v2.0.5 or earlier versions of the module don't work in Linux. You need to use v2.0.6 or later in Linux to connect from a network that's behind a proxy server.
+> If you connect to Exchange Online PowerShell from a network that's behind a proxy server, the EXO V2 module (version v2.0.5 or earlier) doesn't work in Linux. You need to use the EXO V3 module (v3.0.0 or v2.0.6-PreviewX) in Linux to connect from a network that's behind a proxy server.
 
 #### Windows
 
-All versions of the Exchange Online PowerShell module are supported in Windows PowerShell 5.1.
+All versions of the module are supported in Windows PowerShell 5.1.
 
-PowerShell 7 on Windows requires version 2.0.4 or later of the Exchange Online PowerShell module.
+PowerShell 7 on Windows requires version 2.0.4 or later.
 
-Version 2.0.5 or later of the Exchange Online PowerShell module requires the Microsoft .NET Framework 4.7.1 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.1, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-471).
+Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.1 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.1, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-471).
 
-Windows PowerShell requirements and Exchange Online PowerShell module support in older versions of Windows are described in the following list:
+Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
 
 - Windows 8.1<sup>4</sup>
 - Windows Server 2012 or Windows Server 2012 R2<sup>4</sup>
@@ -249,7 +257,7 @@ Windows PowerShell requirements and Exchange Online PowerShell module support in
 - Windows Server 2008 R2 SP1<sup>1,</sup><sup>2,</sup><sup>3</sup>
 
 - <sup>1</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
-- <sup>2</sup> This version of Windows doesn't support version 2.0.4 or later of the Exchange Online PowerShell module. Only version 2.0.3 or earlier is supported.
+- <sup>2</sup> This version of Windows supports only v2.0.3 or earlier versions of the module.
 - <sup>3</sup> Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 - <sup>4</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
 
@@ -275,9 +283,9 @@ For more information about execution policies, see [About Execution Policies](/p
 #### Turn on Basic authentication in WinRM
 
 > [!NOTE]
-> As described [earlier in this article](#updates-for-version-206-the-exo-v3-module), v2.0.6 of the Exchange Online PowerShell module does not require Basic authentication in WinRM for REST API cmdlets.
+> As described [earlier in this article](#updates-for-version-300-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST API cmdlets.
 
-WinRM needs to allow Basic authentication. We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+WinRM needs to allow Basic authentication. **We do not send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM does not support OAuth.
 
 To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
@@ -319,13 +327,13 @@ If Basic authentication for WinRM is disabled, you'll get one of the following e
   
 ### Install the Exchange Online PowerShell module
 
-To install the Exchange Online PowerShell module for the first time, complete the following steps:
+To install the module for the first time, complete the following steps:
 
 1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget).
 
 2. Close and re-open the Windows PowerShell window.
 
-3. Now you can use the **Install-Module** cmdlet to install the Exchange Online PowerShell module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if one is available.
+3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if are any available.
 
    - To install **the latest public version** of the module, run **one** of the the following commands:
 
@@ -369,7 +377,7 @@ If the module is already installed on your computer, you can run the following c
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-2. You can use the **Update-Module** cmdlet to update the Exchange Online PowerShell module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if one is available.
+2. You can use the **Update-Module** cmdlet to update the module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if any are available.
 
    - To upgrade to **the latest public version** of the module, run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
 
@@ -519,13 +527,23 @@ In contrast, the output of the same **Get-Mailbox** command would return at leas
 > [!NOTE]
 > Although the _PropertySets_ parameter accepts the value All, we highly discourage using this value to retrieve all properties, because it slows down the command and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve the minimum number of properties that are required for your scenario.
 
-For more information about filtering in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
+For more information about filtering in the module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 ## Release notes
 
 Unless otherwise noted, the current release of the Exchange Online PowerShell module contains all features of previous releases.
 
-### Current release: Version 2.0.5
+### Current release: Version 3.0.0 (Preview versions known as v2.0.6-PreviewX)
+
+- [Certificate based authentication](app-only-auth-powershell-v2.md) (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
+- The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet is available to get information about REST-based connections to Exchange Online PowerShell (version 2.0.6-Preview7 or later).
+- The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet is available to avoid loading format data and to run **Connect-ExchangeOnline** commands faster (version 2.0.6-Preview8 or later).
+- Certain cmdlets that used to prompt for confirmation in specific scenarios no longer do so. By default, the cmdlet will run to completion.
+- The format of the error returned from a failed cmdlet execution has been slightly modified. The exception now contains additional data (for example, the exception type), and the `FullyQualifiedErrorId` does not contain the `FailureCategory`. The format of the error is subject to further modification.
+
+### Previous releases
+
+#### Version 2.0.5
 
 - New **Get-OwnerlessGroupPolicy** and **Set-OwnerlessGroupPolicy** cmdlet to manage ownerless Microsoft 365 groups.
 
@@ -534,17 +552,15 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - New **Get-VivaInsightsSettings** and **Set-VivaInsightsSettings** cmdlets to control user access to Headspace features in Viva Insights.
 
-### Previous releases
-
 #### Version 2.0.4
 
 - PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the Exchange Online PowerShell module](#prerequisites-for-the-exchange-online-powershell-module) section in this article.
 
-- The Exchange Online PowerShell module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 log in experiences](connect-to-exchange-online-powershell.md#powershell-7-log-in-experiences).
+- The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 log in experiences](connect-to-exchange-online-powershell.md#powershell-7-log-in-experiences).
 
 - The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets have been replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**.Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
 
-- Real-time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) has been enabled in the Exchange Online PowerShell module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
+- Real-time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) has been enabled in the module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
 
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
 

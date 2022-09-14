@@ -14,17 +14,17 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Admins can lear about the property sets that are available in the Get-EXO* cmdlets in the Exchange Online PowerShell module."
+description: "Admins can lear about the property sets that are available in the nine exclusive Get-EXO cmdlets in the Exchange Online PowerShell V2 module and V3 module."
 ---
 
 # Property sets in Exchange Online PowerShell module cmdlets
 
-This article describes the property sets that are available in the nine **Get-EXO\*** [cmdlets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#cmdlets-in-the-exchange-online-powershell-module). For more information about property sets, see [Properties and property sets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exchange-online-powershell-module).
+This article describes the property sets that are available in the nine exclusive **Get-EXO\*** [cmdlets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#cmdlets-in-the-exchange-online-powershell-module). For more information about property sets, see [Properties and property sets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exchange-online-powershell-module).
 
-For more information about filtering in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
+For more information about filtering with cmdlets in the module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 > [!NOTE]
-> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 2.0.6 and later are known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 ## Get-EXOCasMailbox property sets
 
