@@ -35,11 +35,11 @@ Connect-MicrosoftTeams
 -TenantId <String> 
 -CertificateThumbprint <String> 
 -ApplicationId <String> 
-[-LogLevel <LogLevel>]
-[-LogFilePath <String>]
-[-WhatIf]
-[-Confirm]
-[<CommonParameters>]
+[-LogLevel <LogLevel>] 
+[-LogFilePath <String>] 
+[-WhatIf] 
+[-Confirm] 
+[<CommonParameters>] 
 ```
 
 ### AccessTokens
