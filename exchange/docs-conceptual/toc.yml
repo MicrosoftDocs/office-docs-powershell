@@ -28,6 +28,22 @@
     - name: Exchange Online PowerShell
       href: exchange-online-powershell.md
       items:
+        - name: Announcements
+          items:
+            - name: Announcements about the Exchange Online PowerShell V3 
+              items:
+                - name: Cmdlets Disabled/Withdrawn
+                  href: cmdlets-disabled-withdrawn.md
+                - name: New/Upcoming Cmdlets/Parameters/Releases
+                  href: new-upcoming-cmdlets-releases.md
+                - name: Breaking features announcements
+                  href: breaking-feature-announcements.md
+        - name: About the Exchange Online PowerShell V3 module
+          items:
+            - name: Overview 
+              href: overview-exchange-online-powershell-v3.md
+            - name: Advantages of the Exchange Online PowerShell V3 
+              href: advantages-of-rest-cmdlets-over-rps.md
         - name: About the Exchange Online PowerShell V2 module
           href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online PowerShell - modern auth and MFA

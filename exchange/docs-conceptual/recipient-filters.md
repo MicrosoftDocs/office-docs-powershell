@@ -15,6 +15,9 @@ description: "Learn about creating different kinds of recipient filters in the E
 
 # Recipient filters in Exchange PowerShell commands
 
+> [!IMPORTANT]
+> This article also applies to the Exchange Online PowerShell V3 module (EXO V3 module).
+
 The cmdlets in the Exchange Management Shell and Exchange Online PowerShell support a variety of filters in recipient related cmdlets:
 
 - Precanned filters

@@ -16,6 +16,9 @@ description: "Admins can learn how to enable or disable access to Exchange Onlin
 
 # Enable or disable access to Exchange Online PowerShell
 
+> [!IMPORTANT]
+> This article also applies to the Exchange Online PowerShell V3 module (EXO V3 module).
+
 Exchange Online PowerShell enables you to manage your Exchange Online organization from the command line. By default, all accounts you create in Microsoft 365 are allowed to use Exchange Online PowerShell. Administrators can use Exchange Online PowerShell to enable or disable a user's ability to connect to Exchange Online PowerShell. Note that access to Exchange Online PowerShell doesn't give users extra administrative powers in your organization. A user's capabilities in Exchange Online PowerShell are still defined by role based access control (RBAC) and the roles that are assigned to them.
 
 ## What do you need to know before you begin?
