@@ -34,7 +34,7 @@ Connect-MicrosoftTeams
 Connect-MicrosoftTeams 
 -TenantId <String> 
 -CertificateThumbprint <String> 
--ApplicationId <String>
+-ApplicationId <String> 
 [-LogLevel <LogLevel>]
 [-LogFilePath <String>]
 [-WhatIf]
