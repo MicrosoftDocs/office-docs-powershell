@@ -79,7 +79,45 @@ Account                 Environment 	Tenant                                Tenan
 user@contoso.com        TeamsGCCH   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-### Example 4: Connect to MicrosoftTeams using Access Tokens
+### Example 4: Connect to MicrosoftTeams using a certificate thumbprint
+This example demonstrates how to authenticate using a certificate thumbprint. Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+
+```powershell
+Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+```
+
+### Example 5: Connect to MicrosoftTeams using Application-based Access Tokens
+This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens – “MS Graph” and “Skype and Teams Tenant Admin API” resources.
+
+Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+
+```powershell
+$ClientSecret   = <configured secret with your App> 
+$ApplicationID = <your App id> 
+$TenantID = <your Tenant id> 
+
+$graphtokenBody = @{   
+   Grant_Type    = "client_credentials"   
+   Scope         = "https://graph.microsoft.com/.default"   
+   Client_Id     = $ApplicationID   
+   Client_Secret = $ClientSecret   
+}  
+
+$graphToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $graphtokenBody | Select-Object -ExpandProperty Access_Token 
+
+$teamstokenBody = @{   
+   Grant_Type    = "client_credentials"   
+   Scope         = "48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default"   
+   Client_Id     = $ApplicationID   
+   Client_Secret = $ClientSecret 
+} 
+
+$teamsToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $teamstokenBody | Select-Object -ExpandProperty Access_Token 
+
+Connect-MicrosoftTeams -AccessTokens @("$graphToken", "$teamsToken")
+```
+
+### Example 6: Connect to MicrosoftTeams using Access Tokens in the delegated flow
 This example demonstrates how to sign in using Access Tokens. Admin can retrieve Access Tokens via the login.microsoftonline.com endpoint. It requires two tokens, MS Graph Access Token and Teams Resource token. 
 
 A delegated flow, such as Resource Owner Password Credentials (ROPC) or device code, must be used, with the following delegated app permissions required.
