@@ -26,7 +26,7 @@ Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <S
 
 ### UpdateExpanded
 ```
-Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String> [-ConnectorId <String>]
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String>
  [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>] [-DesignatedActorId <String>]
  [-EnabledConnectorScenario <String[]>] [-EnabledWfiScenario <String[]>] [-Name <String>] [-SyncFrequencyInMin <Int32>]
  [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
@@ -37,7 +37,7 @@ Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <S
 ### UpdateViaIdentityExpanded
 ```
 Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
- [-ConnectorId <String>] [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>]
+ [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>]
  [-DesignatedActorId <String>] [-EnabledConnectorScenario <String[]>] [-EnabledWfiScenario <String[]>] [-Name <String>]
  [-SyncFrequencyInMin <Int32>] [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
@@ -54,7 +54,6 @@ Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdent
 
 ## DESCRIPTION
 This cmdlet updates a Shifts connection instance. Simillarly to the Update-CsTeamsShiftsConnectionInstance cmdlet, it allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. The complete list of fields is not required allowing the user to update single fields of the instance.
-The user can update every input field except -ConnectorId and -ConnectorInstanceId.
 
 ## EXAMPLES
 
@@ -200,21 +199,6 @@ Gets or sets the list of connector admin email addresses.
 
 ```yaml
 Type: String[]
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorId
-The connector id
-
-```yaml
-Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
