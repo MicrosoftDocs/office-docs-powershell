@@ -28,4 +28,4 @@ The EXO V3 module includes REST equivalents of all cmdlets available within the 
 
 ## Connection Instructions using the V3 module
 
-For detailed instructions, see [How to connect to the Exchange Online PowerShell using V3 Module.](/powershell/exchange/faqs-exo-v3?view=exchange-ps&branch=pr-en-us-9870#&preserve-view=true)
+For detailed instructions, see [How to connect to the Exchange Online PowerShell using V3 Module.](faqs-exo-v3.md#how-to-connect-to-the-exchange-online-powershell-using-v3-module)
