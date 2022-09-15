@@ -157,7 +157,7 @@ user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxx
 ## PARAMETERS
 
 ### AccessTokens
-Specifies a access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" resources. Both the tokens used should be of the same type.
+Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" resources. Both the tokens used should be of the same type.
 
 (a) Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
