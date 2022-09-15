@@ -22,7 +22,7 @@ description: "Admins can learn about the installation, maintenance, and design o
 The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell.
 
 > [!NOTE]
-> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 For connection instructions using the module, see the following articles:
 
@@ -45,7 +45,7 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 ### Updates for version 3.0.0 (the EXO V3 module)
 
-3.0.0 is the officially released version of the 2.0.6-PreviewX versions of the module, and is now known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module). The EXO V3 module improves upon the historical capabilities of the EXO V2 module (version 2.0.5 and earlier) with the following features:
+Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX versions of the module, and is now known as the EXO V3 module. This version improves upon the historical capabilities of the EXO V2 module (version 2.0.5 and earlier) with the following features:
 
 - [Certificate based authentication](app-only-auth-powershell-v2.md) (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
@@ -104,19 +104,19 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exchange-online-powershell-module) that you encounter.
 
-- You can use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about all REST-based connections in the current Exchange Online PowerShell. This new cmdlet is necessary because the [Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return any information for REST-based connections.
+- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about REST-based connections to Exchange Online PowerShell. This cmdlet is required because the [Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST-based connections.
 
-  Scenarios where you can use this cmdlet are described in the following table:
+  Scenarios where you can use **Get-ConnectionInformation** are described in the following table:
 
   |Scenario|Expected output|
   |---|---|
-  |Run before **Connect-ExchangeOnline** command|Returns nothing.|
-  |Run after **Connect-ExchangeOnline**command |Returns one connection/information object.|
-  |Run after multiple **Connect-ExchangeOnline** commands|Returns a collection of connection/information objects.|
-  |Run after **Connect-ExchangeOnline** command with the _UseRPSSession_ switch|Returns nothing.|
-  |Run after **Connect-ExchangeOnline** commands with and without the _UseRPSSession_ switch|Returns one connection/information object for the REST API session. Ignore the remote PowerShell session information.|
+  |Run before a **Connect-ExchangeOnline** command.|Returns nothing.|
+  |Run after **Connect-ExchangeOnline** command that uses the _UseRPSSession_ switch.|Returns nothing (use [Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession)).|
+  |Run after a REST-based **Connect-ExchangeOnline** command (no _UseRPSSession_ switch).|Returns one connection information object.|
+  |Run after multiple REST-based **Connect-ExchangeOnline** commands.|Returns a collection of connection information objects.|
+  |Run after multiple **Connect-ExchangeOnline** commands with and without the _UseRPSSession_ switch.|Returns one connection information object for each REST-based session.|
 
-- You can use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
+- Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet in REST-based connections (you didn't use the _UseRPSSession_ switch) to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
 For additional information, see the [Release notes](#release-notes) section later in this article.
 
@@ -283,9 +283,9 @@ For more information about execution policies, see [About Execution Policies](/p
 #### Turn on Basic authentication in WinRM
 
 > [!NOTE]
-> As described [earlier in this article](#updates-for-version-300-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST API cmdlets.
+> As described [earlier in this article](#updates-for-version-300-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections.
 
-WinRM needs to allow Basic authentication. **We do not send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM does not support OAuth.
+For remote PowerShell connections, WinRM needs to allow Basic authentication. **We do not send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM does not support OAuth.
 
 To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
 
@@ -535,11 +535,12 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release: Version 3.0.0 (Preview versions known as v2.0.6-PreviewX)
 
-- [Certificate based authentication](app-only-auth-powershell-v2.md) (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
-- The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet is available to get information about REST-based connections to Exchange Online PowerShell (version 2.0.6-Preview7 or later).
-- The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet is available to avoid loading format data and to run **Connect-ExchangeOnline** commands faster (version 2.0.6-Preview8 or later).
+- Features already described in the [Updates for version 3.0.0 (the EXO V3 module)](#updates-for-version-300-the-exo-v3-module) section:
+  - [Certificate based authentication](app-only-auth-powershell-v2.md) for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
+  - The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
+  - The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet for REST-based connections (version 2.0.6-Preview8 or later).
 - Certain cmdlets that used to prompt for confirmation in specific scenarios no longer do so. By default, the cmdlet will run to completion.
-- The format of the error returned from a failed cmdlet execution has been slightly modified. The exception now contains additional data (for example, the exception type), and the `FullyQualifiedErrorId` does not contain the `FailureCategory`. The format of the error is subject to further modification.
+- The format of the error returned from failed cmdlet execution has been slightly modified. The exception now contains additional data (for example, the exception type), and the `FullyQualifiedErrorId` does not contain the `FailureCategory`. The format of the error is subject to further modification.
 
 ### Previous releases
 

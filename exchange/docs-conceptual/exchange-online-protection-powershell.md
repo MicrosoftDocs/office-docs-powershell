@@ -25,7 +25,7 @@ The following articles provide information about using Exchange Online Protectio
 - To learn about the Exchange Online PowerShell module that's required to connect to standalone Exchange Online Protection PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
   > [!NOTE]
-  > Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+  > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 - To create a remote PowerShell session to your standalone Exchange Online Protection organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
 

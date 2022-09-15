@@ -631,7 +631,7 @@ Accept wildcard characters: False
 ### -SkipLoadingFormatData
 **Note**: This parameter is available in version 2.0.6-Preview8 or later of the module.
 
-The SkipLoadingFormatData switch avoids downloading the format data. You don't need to specify a value with this switch.
+The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 

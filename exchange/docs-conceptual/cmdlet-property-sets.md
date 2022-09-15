@@ -24,7 +24,7 @@ This article describes the property sets that are available in the nine exclusiv
 For more information about filtering with cmdlets in the module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 > [!NOTE]
-> Version 2.0.5 and earlier versions of module are known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 ## Get-EXOCasMailbox property sets
 
