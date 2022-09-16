@@ -94,14 +94,14 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exchange-online-powershell-module) that you encounter.
 
-- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about REST-based connections to Exchange Online PowerShell. This cmdlet is required because the [Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST-based connections.
+- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about REST-based connections to Exchange Online PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST-based connections.
 
   Scenarios where you can use **Get-ConnectionInformation** are described in the following table:
 
   |Scenario|Expected output|
   |---|---|
   |Run before a **Connect-ExchangeOnline** command.|Returns nothing.|
-  |Run after **Connect-ExchangeOnline** command that uses the _UseRPSSession_ switch.|Returns nothing (use [Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession)).|
+  |Run after **Connect-ExchangeOnline** command that uses the _UseRPSSession_ switch.|Returns nothing (use [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)).|
   |Run after a REST-based **Connect-ExchangeOnline** command (no _UseRPSSession_ switch).|Returns one connection information object.|
   |Run after multiple REST-based **Connect-ExchangeOnline** commands.|Returns a collection of connection information objects.|
   |Run after multiple **Connect-ExchangeOnline** commands with and without the _UseRPSSession_ switch.|Returns one connection information object for each REST-based session.|
@@ -148,7 +148,7 @@ The connection-related cmdlets in the module are listed in the following table:
 |[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
 |[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)||
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
-|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession)|Available in v2.0.6-Preview7 or later.|
+|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v2.0.6-Preview7 or later.|
 
 Miscellaneous Exchange Online cmdlets that happen to be in the module are listed in the following table:
 
