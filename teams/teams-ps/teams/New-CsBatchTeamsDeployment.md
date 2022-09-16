@@ -86,10 +86,10 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 ### OrchestrationId
-The ID of the operation that can be used with the Get-CsBatchTeamsDeployment cmdlet to get the status of the operation.
+The ID of the operation that can be used with the Get-CsBatchTeamsDeploymentStatus cmdlet to get the status of the operation.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsBatchTeamsDeployment](Get-CsBatchTeamsDeployment.md)
+[Get-CsBatchTeamsDeploymentStatus](Get-CsBatchTeamsDeploymentStatus.md)
