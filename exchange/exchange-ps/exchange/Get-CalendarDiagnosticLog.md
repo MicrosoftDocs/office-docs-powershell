@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: MeetingId, MeetingSubject
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named

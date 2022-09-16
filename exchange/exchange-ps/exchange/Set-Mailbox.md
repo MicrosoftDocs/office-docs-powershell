@@ -286,7 +286,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
  [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
- [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -418,7 +417,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
  [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
- [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -550,7 +548,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
  [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
- [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -682,7 +679,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
  [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
- [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTracking <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -812,7 +808,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
  [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
- [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -943,7 +938,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-MessageCopyForSendOnBehalfEnabled <Boolean>]
  [-MessageCopyForSentAsEnabled <Boolean>]
  [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
- [-MessageRecallProcessingEnabled <Boolean>]
  [-MessageTrackingReadStatusEnabled <Boolean>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-ModeratedBy <MultiValuedProperty>]
@@ -3801,24 +3795,6 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill MessageCopyForSMTPClientSubmissionEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageRecallProcessingEnabled
-This parameter is available only in the cloud-based service.
-
-{{ Fill MessageRecallProcessingEnabled Description }}
 
 ```yaml
 Type: Boolean

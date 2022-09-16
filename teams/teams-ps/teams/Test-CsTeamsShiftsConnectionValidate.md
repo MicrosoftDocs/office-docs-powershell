@@ -18,7 +18,7 @@ This cmdlet validates workforce management (WFM) connection settings.
 ## SYNTAX
 
 ```
-Test-CsTeamsShiftsConnectionValidate -ConnectorId <string> -ConnectorSpecificSettingAdminApiUrl <string> -ConnectorSpecificSettingCookieAuthUrl <string> -ConnectorSpecificSettingEssApiUrl <string> -ConnectorSpecificSettingFederatedAuthUrl <string> -ConnectorSpecificSettingLoginPwd <string> -ConnectorSpecificSettingLoginUserName <string> -ConnectorSpecificSettingRetailWebApiUrl <string> -ConnectorSpecificSettingSiteManagerUrl <string> -Name <string> [<CommonParameters>]
+Test-CsTeamsShiftsConnectionValidate -ConnectorId <string> -ConnectorSpecificSettings <IConnectorInstanceRequestConnectorSpecificSettings> -Name <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,17 @@ This cmdlet validates Workforce management (WFM) connection settings. It validat
 PS C:\> $InstanceName = "test instance name"
 PS C:\> $WfmUserName = "WfmUserName"
 PS C:\> $plainPwd = "plainPwd"
-PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.contoso.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.contoso.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.contoso.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.contoso.com/retail/data/login" -ConnectorSpecificSettingLoginPwd $plainPwd -ConnectorSpecificSettingLoginUserName $WfmUserName -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.contoso.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.contoso.com/retail/data/wfmsm/api/v1-beta2" -Name $InstanceName
+PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest -Property @{ AdminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta3"; SiteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta4"; EssApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta2"; RetailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"; CookieAuthUrl = "https://contoso.com/retail/data/login"; FederatedAuthUrl = "https://contoso.com/retail/data/login"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" }) -Name $InstanceName
+```
+
+Returns the list of conflicts if there are any. Empty result means there's no conflict.
+
+### Example 2
+```powershell
+PS C:\> $InstanceName = "test instance name"
+PS C:\> $WfmUserName = "WfmUserName"
+PS C:\> $plainPwd = "plainPwd"
+PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest -Property @{ apiUrl = "https://contoso.com/api"; ssoUrl = "https://contoso.com/sso"; appKey = "myAppKey"; clientId = "myClientId"; clientSecret = "PlaceholderForClientSecret"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" }) -Name $InstanceName
 ```
 
 Returns the list of conflicts if there are any. Empty result means there's no conflict.
@@ -71,127 +81,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingLoginUserName
-
-The login user name to the WFM team.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingLoginPwd
-
-The login password to the WFM team.
+### -ConnectorSpecificSettings
+The connector specific settings.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: IConnectorInstanceRequestConnectorSpecificSettings
+Parameter Sets: NewExpanded
 Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -ConnectorSpecificSettingAdminApiUrl
-
-The admin API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingCookieAuthUrl
-
-The cookie authorization URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingEssApiUrl
-
-The essential API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingFederatedAuthUrl
-
-The federated authorization URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingRetailWebApiUrl
-
-The retail web API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingSiteManagerUrl
-
-The site manager URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None

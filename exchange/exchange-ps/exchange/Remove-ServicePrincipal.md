@@ -54,6 +54,7 @@ The Identity parameter specifies the service principal that you want to remove. 
 Type: ServicePrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: 0
@@ -72,6 +73,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -87,6 +89,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Online
 
 Required: False
 Position: Named
