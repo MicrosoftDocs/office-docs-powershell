@@ -20,7 +20,8 @@ description: "Learn how to use remote PowerShell to connect to Exchange Online w
 # Basic auth - Connect to Exchange Online PowerShell
 
 > [!NOTE]
-> The connection instructions in this article [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+> The connection instructions in this article [will be deprecated starting on October 1, 2022](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online PowerShell.
+If you're using PowerShell for administration, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md). If you're using PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
@@ -64,7 +65,7 @@ The following introductory video shows you how to connect to and use Exchange On
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+  **Note**: You The following commands require that WinRM is enabled. To enable WinRM, run the following command:  `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
 

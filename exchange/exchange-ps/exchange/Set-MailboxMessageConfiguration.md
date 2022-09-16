@@ -542,6 +542,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalReadingPanePosition
+This parameter is functional only in Exchange 2016 or later. It doesn't work in Exchange Online.
+
 The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
 
 - Off
@@ -1115,7 +1117,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureHtml
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
 
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 

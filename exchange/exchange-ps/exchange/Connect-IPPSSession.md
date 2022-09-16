@@ -7,7 +7,7 @@ title: Connect-IPPSSession
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer: navgupta
+ms.reviewer:
 ---
 
 # Connect-IPPSSession
@@ -300,7 +300,11 @@ Accept wildcard characters: False
 ### -CertificatePassword
 The CertificatePassword parameter specifies the password that's required to open the certificate file when you use the CertificateFilePath parameter to identify the certificate that's used for CBA.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
+You can use the following methods as a value for this parameter:
+
+- `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
+- Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
+- `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
 

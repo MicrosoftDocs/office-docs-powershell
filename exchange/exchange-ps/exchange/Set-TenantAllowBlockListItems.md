@@ -7,14 +7,11 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX
 ---
 
 # Set-TenantAllowBlockListItems
 
 ## SYNOPSIS
-**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
@@ -50,6 +47,8 @@ Set-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType>
 ```
 
 ## DESCRIPTION
+In most cases, you can't modify the URL, file, or sender values of an existing entry. The only exception is allow URL entries for phishing simulations (Action = Allow, ListType = URL, and ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -66,19 +65,20 @@ This example changes the expiration date of the specified entry.
 Set-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -ExpirationDate 9/11/2021
 ```
 
-This example changes the expiration date of the URL allow entry for the specified third-party phishing simulation URL. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
+This example changes the expiration date of the URL allow entry for the specified third-party phishing simulation URL.
 
 ## PARAMETERS
 
 ### -Entries
 The Entries parameter specifies the entries that you want to modify based on the ListType parameter value. Valid values are:
 
-- Url: The exact URL entry value.
-- File: The exact SHA256 file hash value.
+- FileHash: The exact SHA256 file hash value.
+- Sender domains and email addresses: The exact domain or email address value.
+- Url: The exact URL value.
 
-To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix URL and file values or allow and block actions in the same command.
+You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
@@ -95,11 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-The Ids parameter specifies the entries that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Identity property value (a URL or a file hash).
+The Ids parameter specifies the entries that you want to modify. This value is shown in the Identity property in the output of the Get-TenantAllowBlockListItems cmdlet.
 
 An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
-
-To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the Entries parameter.
 
@@ -117,10 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -ListType
-The ListType parameter specifies the type of entry. Valid values are:
+The ListType parameter specifies the type of entry that you want to modify. Valid values are:
 
 - FileHash
+- Sender
 - Url
+
+Use the Entries or Ids parameter with this parameter to identify the entry itself.
 
 ```yaml
 Type: ListType
@@ -138,6 +139,8 @@ Accept wildcard characters: False
 ### -NoExpiration
 The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
 
+This switch is available to use with block entries or with url allow entries where the ListSubType parameter value is AdvancedDelivery.
+
 You can't use this switch with the ExpirationDate parameter.
 
 ```yaml
@@ -154,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
-The Allow switch specifies that this is an allow entry for advanced delivery (third-party phishing simulation URLs). You don't need to specify a value with this switch.
+The Allow switch specifies that you're modifying an allow entry. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Block
-The Block switch specifies that this is a block entry for the values you specified by the ListType and Entries parameters. You don't need to specify a value with this switch.
+The Block switch specifies that you're modifying a block entry. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -209,9 +212,9 @@ Accept wildcard characters: False
 ```
 
 ### -ListSubType
-The ListSubType parameter specifies the subtype for this entry. Valid values are:
+The ListSubType parameter further specifies the entry that you want to modify. Valid values are:
 
-- AdvancedDelivery
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
 - Tenant: This is the default value.
 
 ```yaml

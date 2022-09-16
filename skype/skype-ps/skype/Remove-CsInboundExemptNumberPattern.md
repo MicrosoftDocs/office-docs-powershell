@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csinboundexemptnumberpattern
-applicable: Skype for Business Online and Teams
+applicable: Microsoft Teams, Skype for Business Online
 author: jenstrier
 ms.author: jenstr
 ms.reviewer: 
@@ -17,17 +17,17 @@ Removes a number pattern exempt from call blocking.
 ## SYNTAX
 
 ```
-Remove-CsInboundExemptNumberPattern -Identity <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsInboundExemptNumberPattern [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet removes a specific exempt number pattern from the tenant list for call blocking
+This cmdlet removes a specific exempt number pattern from the tenant list for call blocking.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-CsInboundExemptNumberPattern -Identity "Exempt1"
+PS>Remove-CsInboundExemptNumberPattern -Identity "Exempt1"
 ```
 
 This removes the exempt number patterns with Identity Exempt1.
@@ -38,7 +38,7 @@ This removes the exempt number patterns with Identity Exempt1.
 Unique identifier for the exempt number pattern to be listed.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -49,13 +49,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -66,11 +82,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

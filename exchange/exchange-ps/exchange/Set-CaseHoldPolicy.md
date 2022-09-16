@@ -25,7 +25,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
  [-RetryDistribution]
  [-Confirm]
- [-UpdateStatistics]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -43,7 +42,6 @@ Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemovePublicFolderLocation <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
- [-UpdateStatistics]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -295,22 +293,6 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UpdateStatistics
-The UpdateStatistics switch specifies whether you want to update the search results for the hold. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

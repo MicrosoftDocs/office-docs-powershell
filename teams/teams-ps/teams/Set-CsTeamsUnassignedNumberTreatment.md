@@ -18,8 +18,9 @@ Changes a treatment for how calls to an unassigned number range should be routed
   
 ## SYNTAX
 
-```powershell
-Set-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Announcement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [-Force] [-Instance <Object>] [-WhatIf]  [-Confirm] <CommonParameters>]
+```
+Set-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [-Description <string>] [-Pattern <string>] [-Target <string>] [-TargetType <string>]
+ [-TreatmentPriority <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +42,6 @@ Set-CsTeamsUnassignedNumberTreatment -Identity User2PSTN -TargetType User -Targe
 ```
 This example changes the treatment User2PSTN to route the calls to the user user2@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Description
@@ -61,13 +61,13 @@ Accept wildcard characters: False
 ### -Identity
 The Id of the specific treatment.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -130,21 +130,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -163,7 +148,7 @@ Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams wi
 
 To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
 
-To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Phone System – Virtual User license.
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Microsoft Teams Phone Resource Account license.
 
 If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
 the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains

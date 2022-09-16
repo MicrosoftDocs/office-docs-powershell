@@ -142,9 +142,11 @@ The PublishComplianceTag parameter specifies the label that's published for the 
 
 You view and create labels by using the Get-ComplianceTag and New-ComplianceTag cmdlets.
 
-You can't use this parameter with the Name or ApplyComplianceTag parameters.
+You can't use this parameter in the following scenarios:
 
-You can't use this parameter for Teams retention rules.
+- With the Name or ApplyComplianceTag parameters.
+- For Teams retention rules.
+- With cloud attachment policies.
 
 ```yaml
 Type: String

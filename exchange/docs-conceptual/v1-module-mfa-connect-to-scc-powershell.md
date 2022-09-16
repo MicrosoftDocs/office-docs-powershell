@@ -18,7 +18,9 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 # V1 module - Connect to Security & Compliance PowerShell using MFA
 
 > [!NOTE]
-> The older Exchange Online Remote PowerShell Module that's described in this article will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
+> > Support for the older Exchange Online Remote PowerShell Module that's described in this article will end on August 31, 2022. The ability to connect to Security & Compliance PowerShell using this version of the module will end on December 31, 2022.
+>
+> We recommend using the Exchange Online PowerShell V2 module (EXO V2 module), which only uses modern authentication, and supports accounts with or without MFA. For installation and connection instructions, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For more information about the different versions of Exchange Online PowerShell modules, see [Understanding the Different Versions of Exchange Online PowerShell Modules and Basic Auth](https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487).
 
 If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to Security & Compliance PowerShell. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance PowerShell.
 
@@ -48,7 +50,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+  **Note**: The following commands require that WinRM is enabled. To enable WinRM, run the following command:  `winrm quickconfig`.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
 

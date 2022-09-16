@@ -70,7 +70,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
 
 [New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
 

@@ -39,6 +39,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-Priority <System.Int32>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
+ [-UnifiedAuditLogEnabled <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -53,7 +54,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode TestWithoutNotifications -ApplySensitivityLabel "Test"
 ```
 
-This example creates an autolabel policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations with the label "Test". The new policy has a descriptive comment and will be in simulation mode on creation.
+This example creates an auto-labeling policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations with the label "Test". The new policy has a descriptive comment and will be in simulation mode on creation.
 
 ## PARAMETERS
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplySensitivityLabel
-The ApplySensitivityLabel parameter specifies the label to use for the autolabel policy.
+The ApplySensitivityLabel parameter specifies the label to use for the auto-labeling policy.
 
 ```yaml
 Type: String
@@ -125,20 +126,21 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeLocation
-The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
+The ExchangeLocation parameter specifies whether to include email messages in the policy. The valid value for this parameter is All. If you don't want to include email messages in the policy, don't use this parameter (the default value is blank or $null).
 
-- A mailbox
-- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-- The value All for all mailboxes. You can only use this value by itself.
+You can use this parameter in the following procedures:
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+- If you use `-ExchangeLocation All` by itself, the policy applies to email for all internal users.
 
-- Name
-- Distinguished name (DN)
-- Email address
-- GUID
+- To include email of specific internal or external users in the policy, use `-ExchangeLocation All` with the ExchangeSender parameter in the same command. Only email of the specified users is included in the policy.
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+- To include only email of specific group members in the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only email of members of the specified groups is included in the policy.
+
+- To exclude email of specific internal users from the policy, use `-ExchangeLocation All` with the ExchangeSenderException parameter in the same command. Only email of the specified users is excluded from the policy.
+
+- To exclude only email of specific group members from the policy, use `-ExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only email of members of the specified groups is excluded from the policy.
+
+You can't specify inclusions and exclusions in the same policy.
 
 ```yaml
 Type: MultiValuedProperty
@@ -154,7 +156,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-The ExchangeSender parameter specifies which senders to include in the policy.
+The ExchangeSender parameter specifies the users whose email is included in the policy. You identify the users by email address. You can specify internal or external email addresses.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You must use this parameter with the ExchangeLocation parameter.
+
+You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
 
 ```yaml
 Type: SmtpAddress[]
@@ -170,7 +178,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
-The ExchangeSenderException parameter specifies which senders to exclude in the policy.
+The ExchangeSenderException parameter specifies the internal users whose email is excluded from the policy. You identify the users by email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You must use this parameter with the ExchangeLocation parameter.
+
+You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
 
 ```yaml
 Type: SmtpAddress[]
@@ -186,9 +200,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to include in the auto-labeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the policy (email of the group members is included in the policy). You identify the groups by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You must use this parameter with the ExchangeLocation parameter.
+
+You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -206,9 +224,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOf parameter specifies the distribution group, security group, or dynamic distribution group to exclude from the auto-labeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOfException parameter specifies the distribution groups or mail-enabled security groups to exclude from the policy (email of the group members is excluded from the policy). You identify the groups by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You must use this parameter with the ExchangeLocation parameter.
+
+You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -284,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-The OneDriveLocation parameter specifies the OneDrive for Business sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
+The OneDriveLocation parameter specifies the OneDrive for Business sites to include in the policy. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -373,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
+The SharePointLocation parameter specifies the SharePoint Online sites to include in the policy. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`. SharePoint Online sites can't be added to a policy until they have been indexed.
 
@@ -397,6 +419,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UnifiedAuditLogEnabled
+{{ Fill UnifiedAuditLogEnabled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

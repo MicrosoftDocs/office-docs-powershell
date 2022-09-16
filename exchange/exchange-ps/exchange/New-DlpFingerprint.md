@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpFingerprint [[-FileData] <Byte[]>] -Description <String>
+ [-Threshold <UInt32>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -43,6 +44,24 @@ $Patent_Fingerprint = New-DlpFingerprint -FileData $Patent_Template -Description
 This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DlpSensitiveInformationType cmdlet in the same PowerShell session.
 
 ## PARAMETERS
+
+### -FileData
+The FileData parameter specifies the file to use as a document fingerprint.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 The Description parameter specifies a description for the document fingerprint.
@@ -79,19 +98,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FileData
-The FileData parameter specifies the file to use as a document fingerprint.
+### -Threshold
+The Threshold parameter specifies the confidence threshold to use for matches. Valid values are 0 to 100:
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+- The value 0 matches all items, resulting in many false positives.
+- The value 100 demands a near-perfect match, but might also result in more false negatives.
+
+The default value is 50.
 
 ```yaml
-Type: Byte[]
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

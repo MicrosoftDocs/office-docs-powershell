@@ -120,6 +120,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
+ [-NotifyUserType <Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType>]
  [-OnPremisesScannerDlpRestrictions <PswsHashtable[]>]
  [-PrependSubject <String>]
  [-Priority <Int32>]
@@ -506,7 +507,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas.
+The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -929,7 +930,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas.
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1368,7 +1369,7 @@ The ExceptIfMessageTypeMatches parameter specifies an exception for the rule tha
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
 - Encrypted: S/MIME encrypted messages.
-- PermissionControlled: RMS protected messages.
+- PermissionControlled: Messages protected with Rights Management, Office 365 Message Encryption (OME), and sensitivity labels (with encryption).
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
@@ -1781,7 +1782,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfUnscannableDocumentExtensionIs
-The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable.
+The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 
@@ -2131,7 +2132,7 @@ The MessageTypeMatches parameter specifies a condition for the rule that looks f
 - AutomaticReply: Out of office (OOF) messages configured by the user.
 - Calendaring: Meeting requests and responses.
 - Encrypted: S/MIME encrypted messages.
-- PermissionControlled: RMS protected messages.
+- PermissionControlled: Messages protected with Rights Management, Office 365 Message Encryption (OME), and sensitivity labels (with encryption).
 - ReadReceipt: Read receipts.
 - Signed: Digitally signed messages.
 
@@ -2260,6 +2261,7 @@ This parameter has a 5000 character limit, and supports plain text, HTML tags an
 - %%AppliedActions%%: The actions applied to the content.
 - %%ContentURL%%: The URL of the document on the SharePoint site or OneDrive for Business site.
 - %%MatchedConditions%%: The conditions that were matched by the content. Use this token to inform people of possible issues with the content.
+- %%BlockedMessageInfo%%: The details of the message that was blocked. Use this token to inform people of the details of the message that was blocked.
 
 ```yaml
 Type: String
@@ -2342,6 +2344,27 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyUserType
+The NotifyUserType parameter specifies the type of notification that's used for the rule. Valid values are:
+
+- NotSet
+- Email
+- PolicyTip
+- Email,PolicyTip
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2995,7 +3018,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnscannableDocumentExtensionIs
-The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files are unscannable.
+The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files are unscannable. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 

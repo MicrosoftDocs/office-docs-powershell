@@ -7,7 +7,7 @@ title: Connect-ExchangeOnline
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer: navgupta
+ms.reviewer:
 ---
 
 # Connect-ExchangeOnline
@@ -45,10 +45,13 @@ Connect-ExchangeOnline
  [-InlineCredential]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
+ [-ManagedIdentity]
+ [-ManagedIdentityAccountId <String>]
  [-Organization <String>]
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
@@ -215,6 +218,8 @@ The DelegatedOrganization parameter specifies the customer organization that you
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
+**Note**: Use an .onmicrosoft.com domain for the parameter value. Not doing so might result in permission-related issues when you run commands in the app context. 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -353,7 +358,11 @@ Accept wildcard characters: False
 ### -CertificatePassword
 The CertificatePassword parameter specifies the password that's required to open the certificate file when you use the CertificateFilePath parameter to identify the certificate that's used for CBA.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
+You can use the following methods as a value for this parameter:
+
+- `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
+- Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
+- `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
 
@@ -415,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-**Note**: This parameter is available only in version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in version 2.0.4 or later of the EXO V2 module, and only in PowerShell 7.
 
 The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
 
@@ -451,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -InlineCredential
-**Note**: This parameter is available only in version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in version 2.0.4 or later of the EXO V2 module, and only in PowerShell 7.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
@@ -492,6 +501,46 @@ Accept wildcard characters: False
 
 ### -LogLevel
 The LogLevel parameter specifies the logging level. Valid values are Default and All.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedIdentity
+**Note**: This parameter is available in version 2.0.6-Preview7 or later of the EXO V2 module.
+
+The ManagedIdentity switch connects to Exchange Online using a system-assigned or user-assigned managed identity. You don't need to specify a value with this switch.
+
+Managed identity is currently supported for Azure Virtual Machines, Virtual Machine Scale Sets and Azure Functions.
+
+You must use this switch with the Organization parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedIdentityAccountId
+**Note**: This parameter is available in version 2.0.6-Preview7 or later of the EXO V2 module.
+
+The ManagedIdentityAccountId parameter specifies the application ID of the service principal that corresponds to the user-assigned managed identity that's used for authentication.
 
 ```yaml
 Type: String
@@ -569,11 +618,33 @@ The ShowProgress parameter specifies whether to show or hide the progress bar of
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingFormatData
+**Note**: This parameter is available in version 2.0.6-Preview8 or later of the EXO V2 module.
+
+The SkipLoadingFormatData switch avoids downloading the format data. You don't need to specify a value with this switch.
+
+When you use this switch, the output of any Exchange cmdlet will be unformatted.
+
+This switch dows not work with the UseRPSSession.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -637,11 +708,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 2.0.6-Preview3 or later of the Exchange Online V2 module.
+This parameter is available in version 2.0.6-Preview3 or later of the EXO V2 module.
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exo-v2-module).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the EXO V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#turn-on-basic-authentication-in-winrm).
 
 If you don't use this switch, Basic authentication in WinRM is not required, but only the subset of frequently used REST API cmdlets are available.
 

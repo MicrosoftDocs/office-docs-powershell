@@ -18,8 +18,18 @@ Creates a new treatment for how calls to an unassigned number range should be ro
   
 ## SYNTAX
 
-```powershell
-New-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Announcement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [-InMemory] [-TreatmentId <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+### Identity (Default)
+```
+New-CsTeamsUnassignedNumberTreatment [-Identity] <string> [-Description <string>] [-Pattern <string>] [-Target <string>]
+ [-TargetType <string>] [-TreatmentPriority <int>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ParentAndRelativeKey
+```
+New-CsTeamsUnassignedNumberTreatment -TreatmentId <string> [-Description <string>] [-Pattern <string>] [-Target <string>]
+ [-TargetType <string>] [-TreatmentPriority <int>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +54,6 @@ New-CsTeamsUnassignedNumberTreatment -Identity TR1 -Pattern "^\+1555333\d{4}$" -
 ```
 This example creates a treatment that will route all calls to unassigned numbers in the range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
 where the audio file MainAnnouncement.wav will be played to the caller.
-
 
 ### Example 3
 ```powershell
@@ -76,7 +85,7 @@ The Id of the treatment.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Identity)
 Aliases:
 
 Required: True
@@ -133,10 +142,10 @@ The identity of the treatment.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (ParentAndRelativeKey)
 Aliases:
 
-Required: False
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -174,7 +183,7 @@ The parameters Identity and TreatmentId are mutually exclusive.
 
 To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
 
-To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Phone System – Virtual User license.
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Microsoft Teams Phone Resource Account license.
 
 Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
 

@@ -77,7 +77,7 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
 ```
 
 ## DESCRIPTION
-New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](New-RetentionComplianceRule.md). In addition, at least one location parameter must be defined to create a retention policy.
+New policies are not valid and will not be applied until a retention rule is added to the policy. For more information, see [New-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission/new-retentioncompliancerule). In addition, at least one location parameter must be defined to create a retention policy.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -91,6 +91,13 @@ New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocatio
 This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
 
 The next step is to use the New-RetentionComplianceRule cmdlet to add a retention rule to the retention policy.
+
+### Example 2
+```powershell
+New-RetentionCompliancePolicy -Name "Marketing Department" -Enabled $true -SharePointLocation https://contoso.sharepoint.com -RetainCloudAttachment $true -Comment "Regulatory compliance for Marketing Dept."
+```
+
+This example creates a new cloud attachment policy named Marketing Department with the specified details.
 
 ## PARAMETERS
 
@@ -427,7 +434,22 @@ Accept wildcard characters: False
 ```
 
 ### -RetainCloudAttachment
-This parameter is reserved for internal Microsoft use.
+**Note**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
+
+The RetainCloudAttachment parameter specifies that this is a cloud attachment policy. Valid values are:
+
+- $true: The policy is a cloud attachment policy.
+- $false: The policy is not a cloud attachment policy. This is the default value.
+
+For the value $true, you can only use the following location parameters:
+
+- SharePointLocation and SharePointLocationException
+- OneDriveLocation and OneDriveLocationException
+- ModernGroupLocation and ModernGroupLocationException
+
+A tag that uses a cloud attachment policy to create a rule can be a record label or a regulatory label. You can't use a publishing tag for a cloud attachment policy to create a rule; only apply tags are supported.
+
+The RetainCloudAttachment parameter is not available on the Set-RetentionCompliancePolicy cmdlet.
 
 ```yaml
 Type: Boolean

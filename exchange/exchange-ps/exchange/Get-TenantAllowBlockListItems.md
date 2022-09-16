@@ -7,14 +7,11 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX
 ---
 
 # Get-TenantAllowBlockListItems
 
 ## SYNOPSIS
-**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
@@ -77,6 +74,7 @@ This example returns information for all allowed third-party phishing simulation
 The ListType parameter specifies the list to view. Valid values are:
 
 - FileHash
+- Sender
 - Url
 
 ```yaml
@@ -95,8 +93,11 @@ Accept wildcard characters: False
 ### -Entry
 The Entry parameter filters the results based on the ListType parameter value. Valid values are:
 
-- Url: The exact URL entry value.
-- File: The exact SHA256 file hash value.
+- FileHash: The exact SHA256 file hash value.
+- Sender: The exact domain or email address value.
+- Url: The exact URL value.
+
+This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
 ```yaml
 Type: String
