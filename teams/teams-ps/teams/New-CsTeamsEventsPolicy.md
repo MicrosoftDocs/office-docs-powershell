@@ -42,8 +42,9 @@ The command shown in Example 2 creates a new per-user Teams Events policy with t
 ### -AllowWebinars
 This setting governs if a user can create webinars using Teams Events. 
 Possible values are:
- - **Enabled**, Enables creating webinars
- - **Disabled**, Disables creating webinars
+ - **Enabled**: Enables creating webinars.
+ - **Disabled**: Disables creating webinars.
+
 
 
 ```yaml
