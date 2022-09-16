@@ -8,7 +8,7 @@ ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-online
-ms.reviewer: navgupta
+ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
