@@ -14,6 +14,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
+keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
 description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V2 module and V3 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
 ---
 
@@ -32,18 +33,7 @@ For connection instructions using the module, see the following articles:
 
 The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
 
-## Report bugs and issues for the Exchange Online PowerShell module
-
-When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
-
-```powershell
-Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
-```
-
-> [!NOTE]
-> Frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
-
-### Updates for version 3.0.0 (the EXO V3 module)
+## Updates for version 3.0.0 (the EXO V3 module)
 
 Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX versions of the module, and is now known as the EXO V3 module. This version improves upon the historical capabilities of the EXO V2 module (version 2.0.5 and earlier) with the following features:
 
@@ -121,6 +111,17 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
 For additional information, see the [Release notes](#release-notes) section later in this article.
 
 For information about switching from the older Exchange Online Remote PowerShell Module (V1) to the current release, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/moving-from-the-exchange-powershell-v1-module-to-the-v2-preview/ba-p/3450679).
+
+## Report bugs and issues for the Exchange Online PowerShell module
+
+When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+
+```powershell
+Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
+```
+
+> [!NOTE]
+> Frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
 
 ## Cmdlets in the Exchange Online PowerShell module
 
