@@ -23,7 +23,7 @@ Exchange Online PowerShell V3 includes cmdlets that are backed by the REST API. 
 
 - **More secure**: REST API cmdlets Have inherent support for modern authentication. Therefore, admins can turn off WinRM basic auth on their client machines.
 - **More reliable**: REST API cmdlets handle transient failures with built-in retries. Therefore, it minimizes failures due to network delays, longer query execution times, etc. 
-- **Better performance**: The connection establishment improves performance since it avoids setting up a PowerShell Runspace on the service and downloading the format table data XMLs.
+- **Better performance**: The connection establishment improves performance since it avoids setting up a PowerShell Runspace on the service.
 - V3 REST module comparison with previously released cmdlets:
 
   |&nbsp;|RPS Cmdlets (v.2.0.5 and earlier)|9 EXO Cmdlets (e.g. Get-ExoMailbox)|V3 Module|
